@@ -5,14 +5,140 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>Spain Daily Subscribe</title>
+ <title>Spain Daily — Your 5-Minute Catch-Up on Spain</title>
  <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { width: 100%; height: 100%; overflow: hidden; }
-  iframe { width: 100%; height: 100%; border: none; display: block; }
+  html, body {
+   width: 100%; min-height: 100%;
+   background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+   font-family: Helvetica, sans-serif;
+   line-height: 1.6;
+  }
+  body {
+   display: flex; align-items: center; justify-content: center;
+   padding: 24px;
+   min-height: 100vh;
+  }
+  .page {
+   max-width: 640px; width: 100%;
+  }
+  .hero {
+   text-align: center;
+   margin-bottom: 32px;
+  }
+  .hero .flag {
+   font-size: 64px;
+   margin-bottom: 8px;
+  }
+  .hero h1 {
+   font-family: Roboto, Helvetica, sans-serif;
+   font-size: 36px; font-weight: 700; color: #3C4858;
+   line-height: 1.2;
+   margin-bottom: 12px;
+  }
+  .hero .tagline {
+   font-size: 18px; color: #6C7A89;
+  }
+  .card {
+   background-color: #ffffff;
+   border: 1px solid #C0CCD9; border-radius: 3px;
+   padding: 32px;
+   margin-bottom: 20px;
+   font-size: 16px; color: #3C4858;
+  }
+  .card h2 {
+   font-family: Roboto, Helvetica, sans-serif;
+   font-size: 22px; font-weight: 700; color: #3C4858;
+   margin-bottom: 16px;
+  }
+  .card p {
+   margin-bottom: 12px;
+  }
+  .card p:last-child { margin-bottom: 0; }
+  .features {
+   list-style: none;
+   margin: 16px 0 0 0;
+  }
+  .features li {
+   padding: 8px 0 8px 28px;
+   position: relative;
+  }
+  .features li::before {
+   content: "✓";
+   position: absolute; left: 0;
+   color: #2ecc71; font-weight: 700;
+  }
+  .cta-card {
+   background-color: #3C4858;
+   border-radius: 3px;
+   padding: 32px;
+   text-align: center;
+   color: #ffffff;
+  }
+  .cta-card h2 {
+   font-family: Roboto, Helvetica, sans-serif;
+   font-size: 22px; font-weight: 700;
+   margin-bottom: 12px;
+  }
+  .cta-card p {
+   font-size: 16px;
+   margin-bottom: 20px;
+   color: #C0CCD9;
+  }
+  .cta-button {
+   display: inline-block;
+   background-color: #ffffff;
+   color: #3C4858;
+   font-family: Roboto, Helvetica, sans-serif;
+   font-size: 18px; font-weight: 700;
+   padding: 14px 40px;
+   border-radius: 3px;
+   text-decoration: none;
+   transition: background-color 0.2s;
+  }
+  .cta-button:hover {
+   background-color: #e8ecf1;
+  }
+  .footer {
+   text-align: center;
+   margin-top: 20px;
+   font-size: 14px; color: #6C7A89;
+  }
  </style>
 </head>
 <body>
- <iframe src="https://43fcc87b.sibforms.com/v2/serve/MUIFAIVBICvYyOQdjlU8kOmJF_BZhp9Y7nuEIdzF1wKS7mhl1qVmcrHxhrfr113LxrXV97MaaGP0kwT_fIVVEDtR38P2o3WmdKhUKauCnxniooHUucFf_ntoZt7EwVcYLZu4lSS4fzwmxZoHQvMohdF5A4OZ5WjBm2Db8P5Lygn-goDOeSGXln9i9aaIbL80jlxc-HSEhQbqCylerg==" allowfullscreen></iframe>
+ <div class="page">
+  <div class="hero">
+   <div class="flag">🇪🇸</div>
+   <h1>Spain Daily</h1>
+   <p class="tagline">Your 5-minute catch-up on what's happening in Spain — every morning.</p>
+  </div>
+
+  <div class="card">
+   <h2>What is this?</h2>
+   <p>Spain Daily is a free newsletter that brings you the most important news from Spain, summarized in clear English. No clickbait, no noise — just the stories that matter.</p>
+   <p>Whether you live in Spain, are planning to move, or just want to stay informed — we've got you covered.</p>
+  </div>
+
+  <div class="card">
+   <h2>What's inside?</h2>
+   <ul class="features">
+    <li>Top stories from Spanish news, curated and summarized</li>
+    <li>Economy, housing, politics, migration — the topics that affect your life</li>
+    <li>Short and to the point — a 5-minute read</li>
+    <li>Delivered to your inbox every morning, Monday to Friday</li>
+   </ul>
+  </div>
+
+  <div class="cta-card">
+   <h2>Ready to stay in the loop?</h2>
+   <p>Join hundreds of readers who start their day with Spain Daily.</p>
+   <a href="/subscribe.html" class="cta-button">Subscribe — It's Free</a>
+  </div>
+
+  <p class="footer">
+   No spam, ever. Unsubscribe anytime in one click.
+  </p>
+ </div>
 </body>
 </html>
