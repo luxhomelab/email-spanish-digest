@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='0' y='0' width='32' height='8' fill='%23C60B1E'/%3E%3Crect x='0' y='8' width='32' height='16' fill='%23FFC400'/%3E%3Crect x='0' y='24' width='32' height='8' fill='%23C60B1E'/%3E%3C/svg%3E">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Заявка принята — Каталог специалистов</title>
+ <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+   width: 100%; min-height: 100%;
+   background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+   font-family: Helvetica, sans-serif;
+   line-height: 1.6;
+  }
+  body {
+   display: flex; align-items: center; justify-content: center;
+   padding: 24px;
+   min-height: 100vh;
+  }
+  .card {
+   max-width: 540px; width: 100%;
+   background-color: #ffffff;
+   border: 1px solid #C0CCD9; border-radius: 3px;
+   padding: 40px 32px; text-align: center;
+  }
+  .checkmark {
+   width: 64px; height: 64px;
+   background-color: #2ecc71;
+   border-radius: 50%;
+   display: flex; align-items: center; justify-content: center;
+   margin: 0 auto 24px;
+  }
+  .checkmark::after {
+   content: "✓";
+   color: #ffffff;
+   font-size: 32px; font-weight: 700;
+  }
+  .card h1 {
+   font-family: Roboto, Helvetica, sans-serif;
+   font-size: 28px; font-weight: 700; color: #3C4858;
+   margin-bottom: 16px;
+  }
+  .card p {
+   font-size: 16px; color: #3C4858;
+   margin-bottom: 12px;
+  }
+  .card .review {
+   margin-top: 24px;
+   padding: 16px 20px;
+   background-color: #f5f7fa;
+   border-radius: 3px;
+   font-size: 15px; color: #6C7A89;
+  }
+  .card .review strong {
+   color: #3C4858;
+  }
+  .card p:last-child { margin-bottom: 0; }
+ </style>
+</head>
+<body>
+ <div class="card">
+  <div class="checkmark"></div>
+  <h1>Заявка принята!</h1>
+  <p>Спасибо за заполнение анкеты. Ваши данные отправлены.</p>
+  <div class="review">
+   <p>Заявка будет <strong>рассмотрена в течение 48 часов</strong>.</p>
+   <p>Мы свяжемся с вами по указанному email, если потребуется уточнить информацию.</p>
+  </div>
+ </div>
+</body>
+</html>
