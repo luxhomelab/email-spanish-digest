@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"{% block html_class %}{% endblock %}>
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CBF70VDX1D"></script>
@@ -16,88 +16,7 @@
  <title>{% block title %}Spanified — Spain Daily{% endblock %}</title>
  {% block description %}{% endblock %}
  {% block extra_head %}{% endblock %}
- <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body {
-   width: 100%; min-height: 100%;
-   font-family: Helvetica, Arial, sans-serif;
-   line-height: 1.6;
-   color: #3C4858;
-  }
-  body {
-   display: flex; flex-direction: column;
-   min-height: 100vh;
-   background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
-  }
-  a { color: inherit; }
-
-  /* Header */
-  .site-header {
-   flex: 0 0 auto;
-   background-color: #ffffff;
-   border-bottom: 1px solid #C0CCD9;
-  }
-  .header-inner {
-   max-width: 760px; margin: 0 auto;
-   display: flex; align-items: center; justify-content: space-between;
-   padding: 14px 24px;
-  }
-  .brand {
-   display: flex; align-items: center; gap: 10px;
-   text-decoration: none; color: #3C4858;
-  }
-  .brand-mark {
-   width: 30px; height: 30px; flex: 0 0 auto;
-   border-radius: 4px; overflow: hidden;
-  }
-  .brand-mark svg { display: block; width: 100%; height: 100%; }
-  .brand-word {
-   font-family: Roboto, Helvetica, Arial, sans-serif;
-   font-size: 20px; font-weight: 700; color: #3C4858;
-  }
-  .site-nav {
-   display: flex; align-items: center; gap: 22px;
-   font-size: 15px;
-  }
-  .site-nav a {
-   color: #3C4858; text-decoration: none;
-  }
-  .site-nav a:hover { color: #1A1A16; }
-  .nav-cta {
-   background-color: #3C4858; color: #ffffff !important;
-   padding: 8px 18px; border-radius: 3px; font-weight: 700;
-   font-family: Roboto, Helvetica, Arial, sans-serif;
-  }
-  .nav-cta:hover { background-color: #2c3645; }
-
-  /* Content */
-  .content {
-   flex: 1 1 auto;
-   width: 100%;
-   padding: 40px 24px;
-  }
-
-  /* Footer */
-  .site-footer {
-   flex: 0 0 auto;
-   background-color: #ffffff;
-   border-top: 1px solid #C0CCD9;
-  }
-  .footer-inner {
-   max-width: 760px; margin: 0 auto;
-   display: flex; align-items: center; justify-content: space-between;
-   padding: 20px 24px;
-   font-size: 14px; color: #6C7A89;
-  }
-  .footer-brand {
-   font-family: Roboto, Helvetica, Arial, sans-serif;
-   font-weight: 700; color: #3C4858;
-  }
-  .site-footer a {
-   color: #6C7A89; text-decoration: underline;
-  }
-  .site-footer a:hover { color: #3C4858; }
- </style>
+ <link rel="stylesheet" href="/static/css/main.css">
 </head>
 <body>
  <header class="site-header">

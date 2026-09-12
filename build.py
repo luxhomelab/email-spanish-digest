@@ -51,6 +51,7 @@ STATIC_COPY = [
     "success.jpg",
     "confirm.jpg",
     "ru",
+    "static",
 ]
 
 # Category emoji — mirrors format_email.py in spain-news-en.
