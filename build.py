@@ -40,6 +40,7 @@ STATIC_PAGES = [
     "success.html",
     "confirm.html",
     "unsubscribe.html",
+    "contact.html",
 ]
 
 # Static assets copied verbatim into the output dir (hand-written pages,
@@ -50,7 +51,6 @@ STATIC_COPY = [
     "x.html",
     "success.jpg",
     "confirm.jpg",
-    "ru",
     "static",
 ]
 
@@ -268,6 +268,7 @@ def main():
         loader=FileSystemLoader(TEMPLATES_DIR),
         autoescape=True,
     )
+    env.globals["current_year"] = datetime.now().year
 
     issues = [issue_context(d) for d in load_digests()]
 
