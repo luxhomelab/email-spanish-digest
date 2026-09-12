@@ -164,7 +164,7 @@ def pagination(page, total_pages):
 def render_static(env, digests):
     latest = digests[0] if digests else None
     topics = [
-        {"emoji": emoji, "name": category.capitalize()}
+        {"emoji": emoji, "name": category.capitalize(), "slug": category.lower()}
         for category, emoji in CATEGORY_EMOJI.items()
     ]
     contexts = {
@@ -210,7 +210,41 @@ def render_archive(env, digests):
         print(f"  wrote {'archive/index.html' if page == 1 else f'archive/page-{page}.html'}")
 
 
-def render_sitemap(digests):
+def collect_categories(digests):
+    """Group all stories by category slug (newest digest first)."""
+    cats = {}
+    for digest in digests:
+        for item in digest.get("stories", []):
+            slug = (item.get("category") or "news").lower()
+            cats.setdefault(slug, []).append({**item, "date": digest["date"]})
+    return cats
+
+
+def render_categories(env, digests):
+    cats = collect_categories(digests)
+    cat_dir = os.path.join(OUT_DIR, "category")
+    os.makedirs(cat_dir, exist_ok=True)
+    # Clear previously generated pages so removed categories don't linger.
+    for filename in os.listdir(cat_dir):
+        if filename.endswith(".html"):
+            os.remove(os.path.join(cat_dir, filename))
+
+    template = env.get_template("category.html")
+    for slug, stories in sorted(cats.items()):
+        name = slug.capitalize()
+        output = template.render(
+            category_name=name,
+            emoji=CATEGORY_EMOJI.get(slug, "\U0001F4F0"),
+            stories=stories,
+        )
+        dest = os.path.join(cat_dir, f"{slug}.html")
+        with open(dest, "w", encoding="utf-8") as fh:
+            fh.write(output)
+        print(f"  wrote category/{slug}.html ({len(stories)} stories)")
+    return sorted(cats.keys())
+
+
+def render_sitemap(digests, categories=()):
     urls = [(SITE_URL + "/", None)] + [(SITE_URL + "/" + name, None) for name in STATIC_PAGES]
     # Archive listing (page 1) plus extra pages.
     total = len(digests)
@@ -220,6 +254,8 @@ def render_sitemap(digests):
         urls.append((SITE_URL + f"/archive/page-{page}.html", None))
     for digest in digests:
         urls.append((SITE_URL + f"/archive/{digest['date']}.html", digest["date"]))
+    for slug in categories:
+        urls.append((SITE_URL + f"/category/{slug}.html", None))
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
@@ -307,8 +343,11 @@ def main():
     print("Building archive listing...")
     render_archive(env, digests)
 
+    print("Building category pages...")
+    categories = render_categories(env, digests)
+
     print("Building sitemap...")
-    render_sitemap(digests)
+    render_sitemap(digests, categories)
 
     print("Done.")
 

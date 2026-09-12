@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}{{ category_name }} news in Spain — Spanified{% endblock %}
+{% block description %}<meta name="description" content="Latest {{ category_name|lower }} news from Spain, summarized in English. Updated every morning.">{% endblock %}
+{% block extra_head %}
+ <style>
+  .cat-list { max-width: 760px; margin: 0 auto; }
+  .cat-list h1 {
+   font-family: Roboto, Helvetica, sans-serif;
+   font-size: 28px; font-weight: 700; color: #3C4858;
+   margin-bottom: 6px;
+  }
+  .cat-sub { color: #6C7A89; font-size: 15px; margin-bottom: 24px; }
+  .cat-item {
+   background-color: #ffffff;
+   border: 1px solid #C0CCD9; border-radius: 3px;
+   padding: 20px 22px; margin-bottom: 16px;
+  }
+  .cat-item h2 {
+   font-family: Roboto, Helvetica, sans-serif;
+   font-size: 19px; font-weight: 700; color: #1A1A16;
+   margin-bottom: 8px; line-height: 1.4;
+  }
+  .cat-item p { font-size: 15px; margin-bottom: 10px; }
+  .cat-meta { font-size: 13px; color: #8B8578; margin-bottom: 8px; }
+  .cat-meta a { color: #8B8578; }
+  .cat-source { font-size: 13px; }
+  .cat-source a { color: #AA151B; text-decoration: none; font-weight: 500; }
+ </style>
+{% endblock %}
+{% block content %}
+ <div class="cat-list">
+  <h1>{{ emoji }} {{ category_name }}</h1>
+  <p class="cat-sub">{{ stories|length }} stor{{ 'ies' if stories|length != 1 else 'y' }} · newest first · updated every morning</p>
+  {% for s in stories %}
+  <article class="cat-item">
+   <div class="cat-meta">{{ s.date }} · <a href="/archive/{{ s.date }}.html">full digest</a></div>
+   <h2>{{ s.title }}</h2>
+   <p>{{ s.body }}</p>
+   {% if s.sources %}
+   <div class="cat-source">
+    {% for src in s.sources %}<a href="{{ src.url }}" rel="noopener">{{ src.name }}</a>{% if not loop.last %} · {% endif %}{% endfor %}
+   </div>
+   {% endif %}
+  </article>
+  {% endfor %}
+ </div>
+{% endblock %}

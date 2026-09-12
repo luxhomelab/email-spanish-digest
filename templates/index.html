@@ -82,8 +82,9 @@
    font-size: 14px; color: #3C4858;
    background-color: #f5f7fa;
    border: 1px solid #e3e9f0; border-radius: 999px;
-   padding: 5px 13px;
+   padding: 5px 13px; text-decoration: none;
   }
+  .topic:hover { border-color: #3C4858; }
   /* How it works */
   .steps {
    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
@@ -183,7 +184,7 @@
     <li>Delivered to your inbox every morning, seven days a week</li>
    </ul>
    <div class="topics">
-    {% for t in topics %}<span class="topic">{{ t.emoji }} {{ t.name }}</span>{% endfor %}
+    {% for t in topics %}<a class="topic" href="/category/{{ t.slug }}.html">{{ t.emoji }} {{ t.name }}</a>{% endfor %}
    </div>
   </div>
 

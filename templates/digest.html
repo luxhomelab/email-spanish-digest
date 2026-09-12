@@ -56,6 +56,8 @@
    font-size: 13px; line-height: 18px; font-weight: 500;
    color: #8B8578;
   }
+  .story-category a { color: #8B8578; text-decoration: none; }
+  .story-category a:hover { text-decoration: underline; }
   .story-important {
    font-size: 10px; line-height: 18px; font-weight: 600;
    color: #AA151B; text-transform: uppercase; letter-spacing: 0.5px;
@@ -108,7 +110,7 @@
     <article class="story">
      <div class="story-meta">
       <span class="story-number">{{ loop.index }}</span>
-      <span class="story-category">{{ emoji.get(item.category, '📰') }} {{ item.category.capitalize() if item.category else 'News' }}</span>
+      <span class="story-category"><a href="/category/{{ (item.category or 'news')|lower }}.html">{{ emoji.get(item.category, '📰') }} {{ item.category.capitalize() if item.category else 'News' }}</a></span>
       {% if item.important %}<span class="story-important">◆ IMPORTANT</span>{% endif %}
      </div>
      <h2 class="story-title">{{ item.title }}</h2>
