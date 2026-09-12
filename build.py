@@ -254,6 +254,9 @@ def copy_static(out_dir):
             print(f"WARN: static asset missing, skipping: {name}", file=sys.stderr)
             continue
         dest = os.path.join(out_dir, name)
+        if os.path.exists(dest) and os.path.samefile(src, dest):
+            print(f"  kept {name} (build in place)")
+            continue
         if os.path.isdir(src):
             shutil.copytree(src, dest, dirs_exist_ok=True)
         else:
