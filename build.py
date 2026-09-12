@@ -40,6 +40,7 @@ STATIC_PAGES = [
     "success.html",
     "confirm.html",
     "unsubscribe.html",
+    "contact.html",
 ]
 
 # Static assets copied verbatim into the output dir (hand-written pages,
@@ -50,7 +51,6 @@ STATIC_COPY = [
     "x.html",
     "success.jpg",
     "confirm.jpg",
-    "ru",
     "static",
 ]
 
