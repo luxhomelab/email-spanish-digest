@@ -9,517 +9,139 @@
   gtag('js', new Date());
   gtag('config', 'G-CBF70VDX1D');
 </script>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23C60B1E'/%3E%3Crect x='6' y='7' width='20' height='4' rx='2' fill='%23FFC400'/%3E%3Ctext x='16' y='26' font-family='Georgia,serif' font-size='15' font-weight='700' fill='%23ffffff' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Spanified — a free English email digest of Spain's most important news. Five minutes, every weekday morning.">
-<title>Spanified — Spain's News in English, Every Morning</title>
-<style>
-  :root {
-    --red: #C60B1E;
-    --red-dark: #9E0817;
-    --gold: #FFC400;
-    --paper: #FBF7EF;
-    --paper-deep: #F4EDDD;
-    --ink: #1B1712;
-    --muted: #6E6455;
-    --line: #E2D7C0;
-    --card: #FFFFFF;
-    --serif: Georgia, "Times New Roman", Times, serif;
-    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
-  }
+ <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='0' y='0' width='32' height='8' fill='%23C60B1E'/%3E%3Crect x='0' y='8' width='32' height='16' fill='%23FFC400'/%3E%3Crect x='0' y='24' width='32' height='8' fill='%23C60B1E'/%3E%3C/svg%3E">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Spain Daily — Your 5-Minute Catch-Up on Spain</title>
+ <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html, body {
+   width: 100%; min-height: 100%;
+   background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+   font-family: Helvetica, sans-serif;
+   line-height: 1.6;
+  }
   body {
-    font-family: var(--sans);
-    background: var(--paper);
-    background-image: radial-gradient(rgba(198,11,30,0.045) 1px, transparent 1px);
-    background-size: 22px 22px;
-    color: var(--ink);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+   display: flex; align-items: center; justify-content: center;
+   padding: 24px;
+   min-height: 100vh;
   }
-  a { color: inherit; }
-
-  /* ---------- flag ribbon ---------- */
-  .flagbar { display: flex; height: 5px; }
-  .flagbar span:nth-child(1) { flex: 1; background: var(--red); }
-  .flagbar span:nth-child(2) { flex: 1; background: var(--gold); }
-  .flagbar span:nth-child(3) { flex: 1; background: var(--red); }
-
-  /* ---------- masthead nav ---------- */
-  .masthead {
-    position: sticky; top: 0; z-index: 20;
-    background: rgba(251, 247, 239, 0.94);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--ink);
+  .page {
+   max-width: 640px; width: 100%;
   }
-  .masthead-inner {
-    max-width: 1120px; margin: 0 auto; padding: 12px 24px;
-    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  .hero {
+   text-align: center;
+   margin-bottom: 32px;
   }
-  .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; }
-  .brand-mark {
-    width: 38px; height: 38px; border-radius: 9px; flex: none;
-    background: var(--red);
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 3px 10px rgba(198, 11, 30, 0.35);
-    overflow: hidden;
+  .hero h1 {
+   font-family: Roboto, Helvetica, sans-serif;
+   font-size: 36px; font-weight: 700; color: #3C4858;
+   line-height: 1.2;
+   margin-bottom: 12px;
   }
-  .brand-name { font-family: var(--serif); font-weight: 700; font-size: 23px; letter-spacing: -0.3px; line-height: 1; }
-  .brand-name em { font-style: normal; color: var(--red); }
-  .brand-tag { display: block; font-family: var(--sans); font-size: 10.5px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--muted); margin-top: 3px; }
-  .nav-links { display: flex; align-items: center; gap: 26px; font-size: 14.5px; font-weight: 600; }
-  .nav-links a { text-decoration: none; color: var(--muted); }
-  .nav-links a:hover { color: var(--red); }
-  .nav-sub {
-    text-decoration: none !important; color: #fff !important;
-    background: var(--red); padding: 10px 22px; border-radius: 999px;
-    box-shadow: 0 4px 14px rgba(198, 11, 30, 0.3);
-    transition: background 0.15s, transform 0.15s;
+  .hero .tagline {
+   font-size: 18px; color: #6C7A89;
   }
-  .nav-sub:hover { background: var(--red-dark); transform: translateY(-1px); }
-
-  /* ---------- hero ---------- */
-  .hero { max-width: 1120px; margin: 0 auto; padding: 64px 24px 20px; text-align: center; }
-  .dateline {
-    display: inline-flex; align-items: center; gap: 10px;
-    font-size: 12.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
-    color: var(--muted); margin-bottom: 22px;
+  .card {
+   background-color: #ffffff;
+   border: 1px solid #C0CCD9; border-radius: 3px;
+   padding: 32px;
+   margin-bottom: 20px;
+   font-size: 16px; color: #3C4858;
   }
-  .dateline::before, .dateline::after { content: ""; width: 44px; height: 1px; background: var(--line); }
-  .dateline .live { width: 8px; height: 8px; border-radius: 50%; background: var(--red); display: inline-block; }
-  h1 {
-    font-family: var(--serif);
-    font-size: clamp(42px, 6.4vw, 76px);
-    line-height: 1.02; letter-spacing: -1.5px; font-weight: 700;
-    max-width: 880px; margin: 0 auto 20px;
+  .card h2 {
+   font-family: Roboto, Helvetica, sans-serif;
+   font-size: 22px; font-weight: 700; color: #3C4858;
+   margin-bottom: 16px;
   }
-  h1 .u-red { color: var(--red); }
-  h1 .u-gold {
-    background: linear-gradient(transparent 62%, rgba(255, 196, 0, 0.65) 62%, rgba(255, 196, 0, 0.65) 94%, transparent 94%);
-    white-space: nowrap;
+  .card p {
+   margin-bottom: 12px;
   }
-  .lede { font-size: clamp(17px, 2.2vw, 20px); color: var(--muted); max-width: 620px; margin: 0 auto 32px; }
-  .lede strong { color: var(--ink); }
-
-  /* email capture */
-  .capture { display: flex; justify-content: center; margin-bottom: 14px; }
-  .capture-btn {
-    display: inline-flex; align-items: center; gap: 12px;
-    background: var(--ink); color: #fff; text-decoration: none;
-    font-size: 17px; font-weight: 700;
-    padding: 16px 20px 16px 34px; border-radius: 999px;
-    box-shadow: 0 12px 30px rgba(27, 23, 18, 0.28);
-    transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+  .card p:last-child { margin-bottom: 0; }
+  .features {
+   list-style: none;
+   margin: 16px 0 0 0;
   }
-  .capture-btn:hover { transform: translateY(-2px); background: var(--red); box-shadow: 0 14px 34px rgba(198, 11, 30, 0.4); }
-  .capture-btn .arrow {
-    width: 38px; height: 38px; border-radius: 50%;
-    background: var(--gold); color: var(--ink);
-    display: inline-flex; align-items: center; justify-content: center; flex: none;
+  .features li {
+   padding: 8px 0 8px 28px;
+   position: relative;
   }
-  .micro { font-size: 13.5px; color: var(--muted); margin-bottom: 8px; }
-  .micro svg { vertical-align: -2px; margin-right: 4px; }
-
-  /* ---------- ticker ---------- */
-  .ticker-wrap {
-    max-width: 1120px; margin: 38px auto 0; padding: 0 24px;
+  .features li::before {
+   content: "✓";
+   position: absolute; left: 0;
+   color: #2ecc71; font-weight: 700;
   }
-  .ticker {
-    border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink);
-    display: flex; align-items: stretch; overflow: hidden;
-    font-size: 13.5px;
+  .cta-card {
+   background-color: #3C4858;
+   border-radius: 3px;
+   padding: 32px;
+   text-align: center;
+   color: #ffffff;
   }
-  .ticker-label {
-    flex: none; background: var(--ink); color: var(--gold);
-    font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; font-size: 12px;
-    display: flex; align-items: center; padding: 10px 18px;
+  .cta-card h2 {
+   font-family: Roboto, Helvetica, sans-serif;
+   font-size: 22px; font-weight: 700;
+   margin-bottom: 12px;
   }
-  .ticker-items {
-    display: flex; gap: 34px; align-items: center; padding: 10px 18px;
-    white-space: nowrap; overflow-x: auto; scrollbar-width: none;
+  .cta-card p {
+   font-size: 16px;
+   margin-bottom: 20px;
+   color: #C0CCD9;
   }
-  .ticker-items::-webkit-scrollbar { display: none; }
-  .ticker-items span { color: var(--muted); }
-  .ticker-items b { color: var(--ink); font-weight: 700; }
-
-  /* ---------- preview section ---------- */
-  .section { max-width: 1120px; margin: 0 auto; padding: 72px 24px 8px; }
-  .section-kicker {
-    font-size: 12.5px; font-weight: 800; letter-spacing: 2.2px; text-transform: uppercase;
-    color: var(--red); margin-bottom: 12px; text-align: center;
+  .cta-button {
+   display: inline-block;
+   background-color: #ffffff;
+   color: #3C4858;
+   font-family: Roboto, Helvetica, sans-serif;
+   font-size: 18px; font-weight: 700;
+   padding: 14px 40px;
+   border-radius: 3px;
+   text-decoration: none;
+   transition: background-color 0.2s;
   }
-  .section-title {
-    font-family: var(--serif); font-size: clamp(28px, 4vw, 42px);
-    letter-spacing: -0.8px; line-height: 1.1; text-align: center;
-    max-width: 640px; margin: 0 auto 10px;
+  .cta-button:hover {
+   background-color: #e8ecf1;
   }
-  .section-sub { text-align: center; color: var(--muted); font-size: 17px; max-width: 560px; margin: 0 auto 40px; }
-
-  .preview-grid { display: grid; grid-template-columns: 1fr 340px; gap: 28px; align-items: start; }
-
-  /* email mock */
-  .mail {
-    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
-    box-shadow: 0 24px 60px rgba(27, 23, 18, 0.12);
-    overflow: hidden;
+  .footer {
+   text-align: center;
+   margin-top: 20px;
+   font-size: 14px; color: #6C7A89;
   }
-  .mail-bar {
-    display: flex; align-items: center; gap: 8px;
-    padding: 13px 18px; border-bottom: 1px solid var(--line);
-    background: var(--paper-deep);
-  }
-  .mail-bar i { width: 11px; height: 11px; border-radius: 50%; display: block; }
-  .mail-bar i:nth-child(1) { background: #E0655F; }
-  .mail-bar i:nth-child(2) { background: #E8B93E; }
-  .mail-bar i:nth-child(3) { background: #62C370; }
-  .mail-subject { margin-left: 8px; font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .mail-redband {
-    background: #AA151B; color: #fff;
-    font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: -0.3px;
-    text-align: center; padding: 15px 20px;
-  }
-  .mail-gold { background: #F1BF00; height: 6px; }
-  .mail-subhead {
-    background: #F9F5F0; border-bottom: 1px solid var(--line);
-    text-align: center; font-size: 13px; color: var(--muted); padding: 12px 20px;
-  }
-  .mail-src { font-size: 12.5px; font-weight: 500; color: #AA151B; text-decoration: none; }
-  .mail-src span { color: #C5BFB4; }
-  .mail-mercadona {
-    font-size: 14.5px; color: var(--ink); background: var(--paper-deep);
-    border: 1px solid var(--line); border-radius: 10px;
-    padding: 12px 16px; margin: 4px 0 14px;
-  }
-  .mail-more { text-align: center; font-size: 13.5px; color: var(--muted); margin-bottom: 14px; }
-  .mail-disc { text-align: center; font-size: 12px; color: var(--muted); margin-top: 14px; }
-  .mail-body { padding: 30px 34px 34px; }
-  .mail-flag { display: flex; gap: 5px; margin-bottom: 14px; }
-  .mail-flag span { height: 5px; border-radius: 3px; }
-  .mail-flag span:nth-child(1) { width: 34px; background: var(--red); }
-  .mail-flag span:nth-child(2) { width: 22px; background: var(--gold); }
-  .mail-head { font-family: var(--serif); font-size: 26px; font-weight: 700; letter-spacing: -0.4px; margin-bottom: 4px; }
-  .mail-date { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
-  .mail-story { border-top: 1px solid var(--line); padding: 16px 0; display: flex; gap: 14px; }
-  .mail-story:last-of-type { border-bottom: 1px solid var(--line); margin-bottom: 18px; }
-  .mail-num {
-    flex: none; width: 30px; height: 30px; border-radius: 50%;
-    background: rgba(198, 11, 30, 0.09); color: var(--red);
-    font-weight: 800; font-size: 14px;
-    display: flex; align-items: center; justify-content: center; margin-top: 2px;
-  }
-  .mail-story h4 { font-size: 16px; font-weight: 700; line-height: 1.35; margin-bottom: 4px; }
-  .mail-story p { font-size: 14.5px; color: var(--muted); line-height: 1.55; }
-  .mail-tag {
-    display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
-    color: var(--red); margin-bottom: 5px;
-  }
-  .mail-cta {
-    display: block; text-align: center; text-decoration: none;
-    background: var(--red); color: #fff; font-weight: 700; font-size: 15.5px;
-    padding: 14px; border-radius: 10px; margin-top: 4px;
-  }
-  .mail-cta:hover { background: var(--red-dark); }
-
-  /* side notes */
-  .side { display: flex; flex-direction: column; gap: 16px; }
-  .note {
-    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
-    padding: 22px 22px 20px;
-  }
-  .note-icon {
-    width: 40px; height: 40px; border-radius: 11px; margin-bottom: 12px;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .note h3 { font-family: var(--serif); font-size: 19px; letter-spacing: -0.2px; margin-bottom: 6px; }
-  .note p { font-size: 14.5px; color: var(--muted); }
-  .readers {
-    background: var(--ink); color: #fff; border-radius: 14px; padding: 22px;
-  }
-  .readers .faces { display: flex; margin-bottom: 12px; }
-  .faces i {
-    width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--ink);
-    display: flex; align-items: center; justify-content: center;
-    font-style: normal; font-size: 12px; font-weight: 800; color: #fff;
-    margin-left: -9px;
-  }
-  .faces i:first-child { margin-left: 0; }
-  .readers p { font-size: 14.5px; color: #D8D0BF; }
-  .readers p b { color: var(--gold); }
-
-  /* ---------- features ---------- */
-  .feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  .feat {
-    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
-    padding: 28px 26px;
-  }
-  .feat:nth-child(2) { background: var(--red); border-color: var(--red); color: #fff; }
-  .feat:nth-child(2) p { color: #F6CFCF; }
-  .feat-icon {
-    width: 44px; height: 44px; border-radius: 12px; margin-bottom: 16px;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .feat h3 { font-family: var(--serif); font-size: 21px; letter-spacing: -0.3px; margin-bottom: 8px; }
-  .feat p { font-size: 15px; color: var(--muted); }
-
-  /* ---------- CTA band ---------- */
-  .band-wrap { max-width: 1120px; margin: 0 auto; padding: 72px 24px 8px; }
-  .band {
-    background: var(--red); color: #fff; border-radius: 20px;
-    padding: clamp(40px, 6vw, 68px) clamp(28px, 6vw, 72px);
-    text-align: center; position: relative; overflow: hidden;
-  }
-  .band::before, .band::after {
-    content: ""; position: absolute; border-radius: 50%;
-    border: 1.5px solid rgba(255, 196, 0, 0.35);
-  }
-  .band::before { width: 340px; height: 340px; left: -120px; top: -120px; }
-  .band::after { width: 420px; height: 420px; right: -160px; bottom: -200px; }
-  .band h2 { font-family: var(--serif); font-size: clamp(30px, 4.6vw, 48px); letter-spacing: -0.8px; line-height: 1.08; margin-bottom: 14px; position: relative; }
-  .band h2 em { font-style: italic; color: var(--gold); }
-  .band p { color: #F6CFCF; font-size: 17px; max-width: 520px; margin: 0 auto 30px; position: relative; }
-  .band-btn {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: #fff; color: var(--red); text-decoration: none;
-    font-weight: 800; font-size: 17px; padding: 16px 38px; border-radius: 999px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-    transition: transform 0.15s;
-    position: relative;
-  }
-  .band-btn:hover { transform: translateY(-2px) scale(1.02); }
-  .band small { display: block; margin-top: 16px; font-size: 13px; color: #F0B9B9; position: relative; }
-
-  /* ---------- footer ---------- */
-  footer { border-top: 1px solid var(--ink); margin-top: 72px; }
-  .foot-inner {
-    max-width: 1120px; margin: 0 auto; padding: 36px 24px 28px;
-    display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; flex-wrap: wrap;
-  }
-  .foot-brand { font-family: var(--serif); font-size: 20px; font-weight: 700; margin-bottom: 6px; }
-  .foot-brand em { font-style: normal; color: var(--red); }
-  .foot-inner p { font-size: 13.5px; color: var(--muted); max-width: 380px; }
-  .foot-links { display: flex; gap: 22px; font-size: 14px; font-weight: 600; }
-  .foot-links a { text-decoration: none; color: var(--muted); }
-  .foot-links a:hover { color: var(--red); }
-  .fine { max-width: 1120px; margin: 0 auto; padding: 0 24px 26px; font-size: 12.5px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-
-  /* ---------- responsive ---------- */
-  @media (max-width: 900px) {
-    .preview-grid { grid-template-columns: 1fr; }
-    .feat-grid { grid-template-columns: 1fr; }
-    .nav-links a:not(.nav-sub) { display: none; }
-  }
-  @media (max-width: 520px) {
-    .hero { padding-top: 44px; }
-    .mail-body { padding: 22px 20px 24px; }
-    .capture-btn { font-size: 15.5px; padding: 14px 14px 14px 26px; }
-  }
-</style>
+ </style>
 </head>
 <body>
-
-<div class="flagbar" aria-hidden="true"><span></span><span></span><span></span></div>
-
-<!-- masthead -->
-<header class="masthead">
-  <div class="masthead-inner">
-    <a class="brand" href="/" aria-label="Spanified home">
-      <span class="brand-mark" aria-hidden="true">
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-          <rect x="2" y="2.5" width="18" height="3.4" rx="1.7" fill="#FFC400"/>
-          <text x="11" y="19" font-family="Georgia,serif" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">S</text>
-        </svg>
-      </span>
-      <span>
-        <span class="brand-name">Spani<em>fied</em></span>
-        <span class="brand-tag">Spain in English · Daily</span>
-      </span>
-    </a>
-    <nav class="nav-links">
-      <a href="#preview">Preview</a>
-      <a href="#why">Why it works</a>
-      <a class="nav-sub" href="/subscribe.html">Subscribe free</a>
-    </nav>
+ <div class="page">
+  <div class="hero">
+   <h1>Spain Daily</h1>
+   <p class="tagline">Your 5-minute catch-up on what's happening in Spain — every morning.</p>
   </div>
-</header>
 
-<!-- hero -->
-<section class="hero">
-  <p class="dateline"><span class="live"></span> Madrid · Every weekday · 5-minute read</p>
-  <h1>Spain's news, <span class="u-red">in English,</span> before your <span class="u-gold">morning coffee.</span></h1>
-  <p class="lede"><strong>Spanified</strong> is a free email digest that turns Spain's noisy headlines into one clear, calm briefing — property, economy, politics, health and more. Read it in five minutes, sound informed all day.</p>
-  <div class="capture">
-    <a class="capture-btn" href="/subscribe.html">
-      Get the free digest
-      <span class="arrow" aria-hidden="true">
-        <svg width="17" height="17" viewBox="0 0 16 16" fill="none"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </span>
-    </a>
+  <div class="card">
+   <h2>What is this?</h2>
+   <p>Spain Daily is a free newsletter that brings you the most important news from Spain, summarized in clear English. No clickbait, no noise — just the stories that matter.</p>
+   <p>Whether you live in Spain, are planning to move, or just want to stay informed — we've got you covered.</p>
   </div>
-  <p class="micro">
-    <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="3" width="13" height="10" rx="2" stroke="#6E6455" stroke-width="1.5"/><path d="m3 5 5 4 5-4" stroke="#6E6455" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Free forever · No spam · Unsubscribe in one click
+
+  <div class="card">
+   <h2>What's inside?</h2>
+   <ul class="features">
+    <li>Top stories from Spanish news, curated and summarized</li>
+    <li>Economy, housing, politics, migration — the topics that affect your life</li>
+    <li>Short and to the point — a 5-minute read</li>
+    <li>Delivered to your inbox every morning, Monday to Friday</li>
+   </ul>
+  </div>
+
+  <div class="cta-card">
+   <h2>Ready to stay in the loop?</h2>
+   <p>Join hundreds of readers who start their day with Spain Daily.</p>
+   <a href="/subscribe.html" class="cta-button">Subscribe — It's Free</a>
+  </div>
+
+  <p class="footer">
+   No spam, ever. Unsubscribe anytime in one click.
   </p>
-</section>
-
-<!-- ticker -->
-<div class="ticker-wrap">
-  <div class="ticker" aria-label="Topics covered">
-    <span class="ticker-label">Inside</span>
-    <div class="ticker-items">
-      <span><b>🏠 Property</b></span>
-      <span><b>💰 Economy</b></span>
-      <span><b>🏛️ Politics</b></span>
-      <span><b>👥 Work</b></span>
-      <span><b>📋 Visa</b></span>
-      <span><b>🏥 Health</b></span>
-      <span><b>🌍 Migration</b></span>
-      <span><b>📊 Taxes</b></span>
-      <span><b>📅 Events</b></span>
-    </div>
-  </div>
-</div>
-
-<!-- preview -->
-<section class="section" id="preview">
-  <p class="section-kicker">A peek inside</p>
-  <h2 class="section-title">One email. The whole country, distilled.</h2>
-  <p class="section-sub">Every edition follows the same calm structure — scan the headlines, dive into what matters to you.</p>
-
-  <div class="preview-grid">
-    <article class="mail" aria-label="Example newsletter edition">
-      <div class="mail-bar"><i></i><i></i><i></i><span class="mail-subject">Spain Daily Digest - 2026-09-12</span></div>
-      <div class="mail-redband">Spain Daily Digest</div>
-      <div class="mail-gold" aria-hidden="true"></div>
-      <div class="mail-subhead">Spain had an ordinary day. Mostly. &nbsp;·&nbsp; 2026-09-12</div>
-      <div class="mail-body">
-
-        <div class="mail-story">
-          <span class="mail-num">1</span>
-          <div>
-            <span class="mail-tag">💰 Economy</span>
-            <h4>All Spanish workers face new payroll deduction from 2027</h4>
-            <p>The MEI pension mechanism rises to 1% from January 1, 2027 — workers contribute 0.17% of base salary, employers 0.83%. It hits all workers, with no salary-level exceptions.</p>
-            <a class="mail-src" href="https://www.heraldo.es/noticias/economia/2026/09/12/confirmado-boe-todas-las-nominas-espana-tendran-un-nuevo-recorte-desde-1-enero-2027-2046052.html">Heraldo <span>→</span></a>
-          </div>
-        </div>
-        <div class="mail-story">
-          <span class="mail-num">2</span>
-          <div>
-            <span class="mail-tag">🏠 Property</span>
-            <h4>Community approval now required for temporary rentals</h4>
-            <p>Spain's Horizontal Property Law, in force since April 2025, requires a three-fifths majority of owners to approve temporary or non-residential rentals — communities can reject the use or raise common expenses by up to 20%.</p>
-            <a class="mail-src" href="https://www.elconfidencial.com/vivienda/2026-09-11/ley-propiedad-horizontal-alquiler-temporal-no-residencial-1qrt_4421123/">El Confidencial <span>→</span></a>
-          </div>
-        </div>
-        <div class="mail-story">
-          <span class="mail-num">3</span>
-          <div>
-            <span class="mail-tag">🏥 Health</span>
-            <h4>Doctors call indefinite national strike starting October 28</h4>
-            <p>Medical unions reject the Estatuto Marco bill and demand a separate statute for doctors — patients may face delays in appointments and hospital care.</p>
-            <a class="mail-src" href="https://www.infosalus.com/actualidad/noticia-medicos-iran-huelga-indefinida-todo-pais-28-octubre-exigir-estatuto-marco-propio-20260911120453.html">Europa Press <span>→</span></a>
-          </div>
-        </div>
-
-        <p class="mail-mercadona">🛒 Mercadona is closed tomorrow — stock up your fridge!</p>
-        <p class="mail-more">… + 10 more stories in the full edition</p>
-
-        <a class="mail-cta" href="/subscribe.html">Get editions like this — free</a>
-        <p class="mail-disc">This digest is based on real news and created with the help of AI.</p>
-      </div>
-    </article>
-
-    <aside class="side">
-      <div class="note">
-        <div class="note-icon" style="background:rgba(198,11,30,.09)">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="#C60B1E" stroke-width="1.8"/><path d="M10 5.8V10l2.8 1.8" stroke="#C60B1E" stroke-width="1.8" stroke-linecap="round"/></svg>
-        </div>
-        <h3>5 minutes, flat</h3>
-        <p>Written to be finished with your coffee. Skim the numbers, read the context, get on with your day.</p>
-      </div>
-      <div class="note">
-        <div class="note-icon" style="background:rgba(255,196,0,.22)">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5.5h14v8H3z" stroke="#9E0817" stroke-width="1.8" stroke-linejoin="round"/><path d="m4 7 6 4.2L16 7" stroke="#9E0817" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h3>Zero noise</h3>
-        <p>No clickbait, no outrage-bait, no 40-tweet threads. Just the stories that actually affect life in Spain.</p>
-      </div>
-      <div class="readers">
-        <div class="faces" aria-hidden="true">
-          <i style="background:#C60B1E">EK</i><i style="background:#2D5DA1">JM</i><i style="background:#3E7C4F">AS</i><i style="background:#8A6D1B">+9</i>
-        </div>
-        <p>Expats, newcomers and Hispanophiles start their morning with <b>Spanified</b> — free, in English, in five minutes.</p>
-      </div>
-    </aside>
-  </div>
-</section>
-
-<!-- features -->
-<section class="section" id="why">
-  <p class="section-kicker">Why Spanified</p>
-  <h2 class="section-title">Made for people who live Spain in English.</h2>
-  <p class="section-sub">Whether you just landed in Madrid or have lived in Málaga for a decade — this is your shortcut.</p>
-
-  <div class="feat-grid">
-    <div class="feat">
-      <div class="feat-icon" style="background:rgba(198,11,30,.09)">
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h8L18 7.5V16A1.5 1.5 0 0 1 16.5 17.5h-11A1.5 1.5 0 0 1 4 16v-10.5Z" stroke="#C60B1E" stroke-width="1.8" stroke-linejoin="round"/><path d="M7.5 9h7M7.5 12h7M7.5 15h4" stroke="#C60B1E" stroke-width="1.8" stroke-linecap="round"/></svg>
-      </div>
-      <h3>Curated, not aggregated</h3>
-      <p>A human editor reads El Diario, El Confidencial, Europa Press, Heraldo and the regional press — and picks the ten-plus stories worth your time.</p>
-    </div>
-    <div class="feat">
-      <div class="feat-icon" style="background:rgba(255,255,255,.18)">
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7.5" stroke="#fff" stroke-width="1.8"/><path d="M11 3.5c-2 2.2-2 12.8 0 15M11 3.5c2 2.2 2 12.8 0 15M3.5 8.5h15M3.5 13.5h15" stroke="#FFC400" stroke-width="1.4"/></svg>
-      </div>
-      <h3>Spain, translated culturally</h3>
-      <p>Not just language — context. We explain the <em>por qué</em> behind the headline so Spanish politics actually makes sense.</p>
-    </div>
-    <div class="feat">
-      <div class="feat-icon" style="background:rgba(255,196,0,.22)">
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2.5 13.6 8l5.9.6-4.4 4 1.2 5.8L11 15.4l-5.3 3 1.2-5.8-4.4-4L8.4 8 11 2.5Z" stroke="#9E0817" stroke-width="1.8" stroke-linejoin="round"/></svg>
-      </div>
-      <h3>Weekday mornings</h3>
-      <p>In your inbox Monday to Friday before 8:00 Madrid time. Weekends are yours — we rest too.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CTA band -->
-<div class="band-wrap">
-  <section class="band">
-    <h2>Wake up knowing <em>qué pasa</em> in Spain.</h2>
-    <p>Join Spanified today — free, in English, in five minutes. Your first edition arrives tomorrow morning.</p>
-    <a class="band-btn" href="/subscribe.html">
-      Subscribe — it's free
-      <svg width="17" height="17" viewBox="0 0 16 16" fill="none"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
-    <small>No spam, ever · Unsubscribe anytime in one click</small>
-  </section>
-</div>
-
-<!-- footer -->
-<footer>
-  <div class="foot-inner">
-    <div>
-      <p class="foot-brand">Spani<em>fied</em></p>
-      <p>The free English email digest of Spain's news. Made with care in Madrid.</p>
-    </div>
-    <nav class="foot-links">
-      <a href="/subscribe.html">Subscribe</a>
-      <a href="/unsubscribe.html">Unsubscribe</a>
-      <a href="/x.html">X</a>
-      <a href="/bsky.html">Bluesky</a>
-    </nav>
-  </div>
-  <div class="fine">
-    <span>© 2026 Spanified · spanified.com</span>
-    <span>Property · Economy · Politics · Health · Events</span>
-  </div>
-</footer>
-
+ </div>
 </body>
 </html>
