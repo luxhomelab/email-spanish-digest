@@ -81,6 +81,32 @@ a { color: inherit; }
  color: #6C7A89; text-decoration: underline;
 }
 .site-footer a:hover { color: #3C4858; }
+.footer-social {
+ max-width: 760px; margin: 0 auto;
+ display: flex; align-items: center; flex-wrap: wrap; gap: 6px 14px;
+ padding: 0 24px 20px 24px;
+ font-size: 14px; color: #6C7A89;
+}
+.footer-social .soc-label { margin-right: 2px; }
+/* Social icon links (shared partial, used in footer + homepage) */
+.soc {
+ display: inline-flex; align-items: center; gap: 6px;
+ text-decoration: none;
+ color: #6C7A89; font-size: 14px;
+}
+.soc svg {
+ width: 16px; height: 16px; flex: 0 0 auto;
+ fill: #6C7A89;
+ transition: fill 0.15s;
+}
+.soc:hover { color: #3C4858; }
+.soc:hover svg { fill: #3C4858; }
+.follow-row {
+ display: flex; flex-wrap: wrap; gap: 10px 18px;
+ margin-top: 16px;
+}
+.follow-row .soc { font-size: 15px; }
+.follow-row .soc svg { width: 18px; height: 18px; }
 
 /* ---------- Shared card ---------- */
 .card {
