@@ -17,11 +17,11 @@ served by GitHub Pages.
 │   ├── success.html         # "You're subscribed" (success.jpg bg)
 │   ├── confirm.html         # "Confirm your subscription" (confirm.jpg bg)
 │   ├── unsubscribe.html     # Brevo unsubscribe iframe
-│   ├── issue.html           # single digest, mirrors the email look
+│   ├── digest.html          # single digest edition, mirrors the email look
 │   └── archive.html         # archive listing + pagination (10/page)
 ├── data/digests/            # digest JSON (one file per edition: YYYY-MM-DD.json)
 ├── *.html                   # GENERATED static pages (root)
-├── archive/                 # GENERATED issue + listing pages
+├── archive/                 # GENERATED digest + listing pages
 │   ├── index.html           # archive page 1
 │   ├── page-N.html          # archive page N
 │   └── YYYY-MM-DD.html      # one page per digest edition
@@ -43,7 +43,7 @@ No arguments, fully idempotent. Running it:
    `unsubscribe`) to the repo root.
 2. Renders every `data/digests/*.json` into `archive/YYYY-MM-DD.html`.
 3. Renders the archive listing (`archive/index.html`) plus `archive/page-N.html`
-   with 10 issues per page.
+   with 10 digests per page.
 4. Regenerates `sitemap.xml`.
 
 Requirements: Python 3 + Jinja2 (`pip install --user jinja2`).

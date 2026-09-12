@@ -125,8 +125,8 @@ def load_digests():
     return digests
 
 
-def issue_context(data):
-    """Normalize a digest dict into the context passed to issue.html."""
+def digest_context(data):
+    """Normalize a digest dict into the context passed to digest.html."""
     items = data.get("items", [])
     date = data.get("date", "")
     headline = data.get("headline") or data.get("variant") or "Spain Daily Digest"
@@ -171,47 +171,47 @@ def render_static(env):
         print(f"  wrote {name}")
 
 
-def render_issues(env, issues):
+def render_digests(env, digests):
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
     # Clear previously generated HTML inside archive/ so removed digests don't linger.
     for filename in os.listdir(ARCHIVE_DIR):
         if filename.endswith(".html"):
             os.remove(os.path.join(ARCHIVE_DIR, filename))
 
-    template = env.get_template("issue.html")
-    for issue in issues:
-        output = template.render(issue=issue, emoji=CATEGORY_EMOJI)
-        dest = os.path.join(ARCHIVE_DIR, f"{issue['date']}.html")
+    template = env.get_template("digest.html")
+    for digest in digests:
+        output = template.render(digest=digest, emoji=CATEGORY_EMOJI)
+        dest = os.path.join(ARCHIVE_DIR, f"{digest['date']}.html")
         with open(dest, "w", encoding="utf-8") as fh:
             fh.write(output)
-        print(f"  wrote archive/{issue['date']}.html")
+        print(f"  wrote archive/{digest['date']}.html")
 
 
-def render_archive(env, issues):
-    total = len(issues)
+def render_archive(env, digests):
+    total = len(digests)
     total_pages = max(1, (total + PAGE_SIZE - 1) // PAGE_SIZE) if total else 1
     template = env.get_template("archive.html")
 
     for page in range(1, total_pages + 1):
         start = (page - 1) * PAGE_SIZE
-        page_issues = issues[start:start + PAGE_SIZE]
-        output = template.render(issues=page_issues, pagination=pagination(page, total_pages))
+        page_digests = digests[start:start + PAGE_SIZE]
+        output = template.render(digests=page_digests, pagination=pagination(page, total_pages))
         dest = os.path.join(ARCHIVE_DIR, "index.html" if page == 1 else f"page-{page}.html")
         with open(dest, "w", encoding="utf-8") as fh:
             fh.write(output)
         print(f"  wrote {'archive/index.html' if page == 1 else f'archive/page-{page}.html'}")
 
 
-def render_sitemap(issues):
+def render_sitemap(digests):
     urls = [(SITE_URL + "/", None)] + [(SITE_URL + "/" + name, None) for name in STATIC_PAGES]
     # Archive listing (page 1) plus extra pages.
-    total = len(issues)
+    total = len(digests)
     total_pages = (total + PAGE_SIZE - 1) // PAGE_SIZE if total else 1
     urls.append((SITE_URL + "/archive/", None))
     for page in range(2, total_pages + 1):
         urls.append((SITE_URL + f"/archive/page-{page}.html", None))
-    for issue in issues:
-        urls.append((SITE_URL + f"/archive/{issue['date']}.html", issue["date"]))
+    for digest in digests:
+        urls.append((SITE_URL + f"/archive/{digest['date']}.html", digest["date"]))
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
@@ -282,7 +282,7 @@ def main():
     env.globals["current_year"] = datetime.now().year
     env.globals["asset_version"] = css_version()
 
-    issues = [issue_context(d) for d in load_digests()]
+    digests = [digest_context(d) for d in load_digests()]
 
     print("Copying static assets...")
     copy_static(out_dir)
@@ -290,14 +290,14 @@ def main():
     print("Building static pages...")
     render_static(env)
 
-    print(f"Building {len(issues)} issue page(s)...")
-    render_issues(env, issues)
+    print(f"Building {len(digests)} digest page(s)...")
+    render_digests(env, digests)
 
     print("Building archive listing...")
-    render_archive(env, issues)
+    render_archive(env, digests)
 
     print("Building sitemap...")
-    render_sitemap(issues)
+    render_sitemap(digests)
 
     print("Done.")
 
