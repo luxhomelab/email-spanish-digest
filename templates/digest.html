@@ -1,10 +1,10 @@
 {% extends "base.html" %}
-{% block title %}Spain Daily Digest — {{ issue.date }}{% endblock %}
-{% block description %}<meta name="description" content="Spain Daily Digest for {{ issue.date }} — the day's top stories from Spain, summarized in English.">{% endblock %}
+{% block title %}Spain Daily Digest — {{ digest.date }}{% endblock %}
+{% block description %}<meta name="description" content="Spain Daily Digest for {{ digest.date }} — the day's top stories from Spain, summarized in English.">{% endblock %}
 {% block extra_head %}
  <style>
-  .issue { background-color: #F5F5F0; }
-  .issue-card {
+  .digest { background-color: #F5F5F0; }
+  .digest-card {
    max-width: 600px; margin: 0 auto;
    background-color: #FFFFFF;
    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
@@ -89,18 +89,6 @@
    padding: 20px 24px 28px 24px;
    text-align: center;
   }
-  .email-brand {
-   font-size: 12px; line-height: 18px; color: #8B8578; font-weight: 600;
-   padding-bottom: 6px;
-  }
-  .email-tagline {
-   font-size: 12px; line-height: 18px; color: #A0998E;
-   padding-bottom: 10px;
-  }
-  .email-footer a {
-   font-size: 12px; line-height: 18px; color: #A0998E;
-   text-decoration: underline;
-  }
   .ai-disclaimer {
    font-size: 12px; line-height: 18px; color: #A0998E;
    padding-top: 10px;
@@ -108,14 +96,14 @@
  </style>
 {% endblock %}
 {% block content %}
- <div class="issue">
-  <div class="issue-card">
+ <div class="digest">
+  <div class="digest-card">
    <div class="email-red-band">Spain Daily Digest</div>
    <div class="email-gold-band"></div>
-   <div class="email-subheader">{{ issue.headline }} &nbsp;·&nbsp; {{ issue.date }}</div>
+   <div class="email-subheader">{{ digest.headline }} &nbsp;·&nbsp; {{ digest.date }}</div>
 
    <div class="email-body">
-   {% for item in issue.stories %}
+   {% for item in digest.stories %}
     <article class="story">
      <div class="story-meta">
       <span class="story-number">{{ loop.index }}</span>
@@ -133,15 +121,12 @@
      {% endif %}
     </article>
    {% endfor %}
-    {% if issue.mercadona %}
-    <div class="mercadona">{{ issue.mercadona }}</div>
+    {% if digest.mercadona %}
+    <div class="mercadona">{{ digest.mercadona }}</div>
     {% endif %}
    </div>
 
    <div class="email-footer">
-    <div class="email-brand">Spain News Digest</div>
-    <div class="email-tagline">Daily news from Spain, for everyone who lives here</div>
-    <a href="/unsubscribe.html">Unsubscribe</a>
     <div class="ai-disclaimer">This digest is based on real news and created with the help of AI.</div>
    </div>
   </div>
