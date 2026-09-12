@@ -202,20 +202,23 @@ def render_archive(env, issues):
 
 
 def render_sitemap(issues):
-    urls = [SITE_URL + "/"] + [SITE_URL + "/" + name for name in STATIC_PAGES]
+    urls = [(SITE_URL + "/", None)] + [(SITE_URL + "/" + name, None) for name in STATIC_PAGES]
     # Archive listing (page 1) plus extra pages.
     total = len(issues)
     total_pages = (total + PAGE_SIZE - 1) // PAGE_SIZE if total else 1
-    urls.append(SITE_URL + "/archive/")
+    urls.append((SITE_URL + "/archive/", None))
     for page in range(2, total_pages + 1):
-        urls.append(SITE_URL + f"/archive/page-{page}.html")
+        urls.append((SITE_URL + f"/archive/page-{page}.html", None))
     for issue in issues:
-        urls.append(SITE_URL + f"/archive/{issue['date']}.html")
+        urls.append((SITE_URL + f"/archive/{issue['date']}.html", issue["date"]))
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
-    for url in urls:
-        lines.append(f"  <url><loc>{url}</loc></url>")
+    for url, lastmod in urls:
+        if lastmod:
+            lines.append(f"  <url><loc>{url}</loc><lastmod>{lastmod}</lastmod></url>")
+        else:
+            lines.append(f"  <url><loc>{url}</loc></url>")
     lines.append("</urlset>")
 
     dest = os.path.join(OUT_DIR, "sitemap.xml")
