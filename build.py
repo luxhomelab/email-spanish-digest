@@ -11,11 +11,13 @@ and renders a static site:
   - Archive listing -> archive/index.html + archive/page-N.html (10 per page)
   - Sitemap        -> sitemap.xml
 
-Usage: python3 build.py   (no arguments; idempotent)
+Usage: python3 build.py [--out dist]   (idempotent)
 """
 
+import argparse
 import json
 import os
+import shutil
 import sys
 from collections import Counter
 from datetime import datetime
@@ -38,6 +40,17 @@ STATIC_PAGES = [
     "success.html",
     "confirm.html",
     "unsubscribe.html",
+]
+
+# Static assets copied verbatim into the output dir (hand-written pages,
+# images, domain config, localized pages).
+STATIC_COPY = [
+    "CNAME",
+    "bsky.html",
+    "x.html",
+    "success.jpg",
+    "confirm.jpg",
+    "ru",
 ]
 
 # Category emoji — mirrors format_email.py in spain-news-en.
@@ -210,13 +223,52 @@ def render_sitemap(issues):
     print(f"  wrote sitemap.xml ({len(urls)} urls)")
 
 
+def parse_args():
+    parser = argparse.ArgumentParser(description="Build the Spanified static site.")
+    parser.add_argument(
+        "--out",
+        default=SCRIPT_DIR,
+        help="Output directory (default: repo root, for local preview). "
+        "CI uses --out dist.",
+    )
+    return parser.parse_args()
+
+
+def copy_static(out_dir):
+    for name in STATIC_COPY:
+        src = os.path.join(SCRIPT_DIR, name)
+        if not os.path.exists(src):
+            print(f"WARN: static asset missing, skipping: {name}", file=sys.stderr)
+            continue
+        dest = os.path.join(out_dir, name)
+        if os.path.isdir(src):
+            shutil.copytree(src, dest, dirs_exist_ok=True)
+        else:
+            os.makedirs(os.path.dirname(dest) or ".", exist_ok=True)
+            shutil.copy2(src, dest)
+        print(f"  copied {name}")
+
+
 def main():
+    args = parse_args()
+    out_dir = os.path.abspath(args.out)
+    archive_dir = os.path.join(out_dir, "archive")
+    os.makedirs(archive_dir, exist_ok=True)
+
+    # Rebind module-level outputs when building into a custom dir.
+    global OUT_DIR, ARCHIVE_DIR
+    OUT_DIR = out_dir
+    ARCHIVE_DIR = archive_dir
+
     env = Environment(
         loader=FileSystemLoader(TEMPLATES_DIR),
         autoescape=True,
     )
 
     issues = [issue_context(d) for d in load_digests()]
+
+    print("Copying static assets...")
+    copy_static(out_dir)
 
     print("Building static pages...")
     render_static(env)
