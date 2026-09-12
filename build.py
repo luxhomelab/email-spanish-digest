@@ -161,10 +161,18 @@ def pagination(page, total_pages):
     }
 
 
-def render_static(env):
+def render_static(env, digests):
+    latest = digests[0] if digests else None
+    topics = [
+        {"emoji": emoji, "name": category.capitalize()}
+        for category, emoji in CATEGORY_EMOJI.items()
+    ]
+    contexts = {
+        "index.html": {"latest": latest, "topics": topics, "emoji": CATEGORY_EMOJI},
+    }
     for name in STATIC_PAGES:
         template = env.get_template(name)
-        output = template.render()
+        output = template.render(**contexts.get(name, {}))
         dest = os.path.join(OUT_DIR, name)
         with open(dest, "w", encoding="utf-8") as fh:
             fh.write(output)
@@ -288,7 +296,7 @@ def main():
     copy_static(out_dir)
 
     print("Building static pages...")
-    render_static(env)
+    render_static(env, digests)
 
     print(f"Building {len(digests)} digest page(s)...")
     render_digests(env, digests)

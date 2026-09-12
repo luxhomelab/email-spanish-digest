@@ -16,7 +16,18 @@
   }
   .hero .tagline {
    font-size: 18px; color: #6C7A89;
+   margin-bottom: 18px;
   }
+  .badges {
+   display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+  }
+  .badge {
+   font-size: 13px; font-weight: 700; color: #3C4858;
+   background-color: #ffffff;
+   border: 1px solid #C0CCD9; border-radius: 999px;
+   padding: 5px 14px;
+  }
+  .badge .dot { color: #2ecc71; margin-right: 4px; }
   .page .card {
    padding: 32px;
    margin-bottom: 20px;
@@ -33,6 +44,64 @@
    content: "✓";
    position: absolute; left: 0;
    color: #2ecc71; font-weight: 700;
+  }
+  /* Latest edition teaser */
+  .teaser {
+   display: block;
+   border-top: 4px solid #AA151B;
+   text-decoration: none;
+   transition: box-shadow 0.15s;
+  }
+  .teaser:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+  .teaser-kicker {
+   font-size: 12px; font-weight: 700; letter-spacing: 0.6px;
+   text-transform: uppercase; color: #AA151B;
+   margin-bottom: 4px;
+  }
+  .teaser-date {
+   font-size: 14px; color: #6C7A89;
+   margin-bottom: 12px;
+  }
+  .teaser h2 { margin-bottom: 12px; }
+  .teaser-story {
+   display: flex; gap: 10px; align-items: baseline;
+   padding: 8px 0;
+   border-top: 1px solid #e8ecf1;
+   font-size: 15px; color: #3C4858;
+  }
+  .teaser-more {
+   margin-top: 12px;
+   font-size: 15px; font-weight: 700; color: #AA151B;
+  }
+  /* Topics chips */
+  .topics {
+   display: flex; flex-wrap: wrap; gap: 8px;
+   margin-top: 16px;
+  }
+  .topic {
+   font-size: 14px; color: #3C4858;
+   background-color: #f5f7fa;
+   border: 1px solid #e3e9f0; border-radius: 999px;
+   padding: 5px 13px;
+  }
+  /* How it works */
+  .steps {
+   display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+   margin-top: 16px;
+  }
+  .step {
+   text-align: center;
+   background-color: #f5f7fa;
+   border: 1px solid #e3e9f0; border-radius: 3px;
+   padding: 18px 10px;
+   font-size: 14px; color: #3C4858;
+  }
+  .step-num {
+   display: inline-flex; align-items: center; justify-content: center;
+   width: 30px; height: 30px; border-radius: 50%;
+   background-color: #3C4858; color: #ffffff;
+   font-weight: 700; font-size: 14px;
+   margin-bottom: 8px;
   }
   .cta-card {
    background-color: #3C4858;
@@ -70,6 +139,10 @@
    margin-top: 20px;
    font-size: 14px; color: #6C7A89;
   }
+  @media (max-width: 520px) {
+   .steps { grid-template-columns: 1fr; }
+   .hero h1 { font-size: 29px; }
+  }
  </style>
 {% endblock %}
 {% block content %}
@@ -77,7 +150,24 @@
   <div class="hero">
    <h1>Spain's top stories, in English, every morning.</h1>
    <p class="tagline">Your 5-minute catch-up on what's happening in Spain — every morning.</p>
+   <div class="badges">
+    <span class="badge"><span class="dot">●</span>Free forever</span>
+    <span class="badge"><span class="dot">●</span>Weekday mornings</span>
+    <span class="badge"><span class="dot">●</span>5-minute read</span>
+   </div>
   </div>
+
+  {% if latest %}
+  <a class="card teaser" href="{{ latest.url }}">
+   <div class="teaser-kicker">Fresh from this morning</div>
+   <div class="teaser-date">{{ latest.date_display }} · {{ latest.story_count }} stories</div>
+   <h2>{{ latest.headline }}</h2>
+   {% for item in latest.stories[:3] %}
+   <div class="teaser-story"><span>{{ emoji.get(item.category, '📰') }}</span><span>{{ item.title }}</span></div>
+   {% endfor %}
+   <div class="teaser-more">Read the full edition →</div>
+  </a>
+  {% endif %}
 
   <div class="card">
    <h2>What is this?</h2>
@@ -89,10 +179,21 @@
    <h2>What's inside?</h2>
    <ul class="features">
     <li>Top stories from Spanish news, curated and summarized</li>
-    <li>Economy, housing, politics, migration — the topics that affect your life</li>
     <li>Short and to the point — a 5-minute read</li>
     <li>Delivered to your inbox every morning, Monday to Friday</li>
    </ul>
+   <div class="topics">
+    {% for t in topics %}<span class="topic">{{ t.emoji }} {{ t.name }}</span>{% endfor %}
+   </div>
+  </div>
+
+  <div class="card">
+   <h2>How it works</h2>
+   <div class="steps">
+    <div class="step"><span class="step-num">1</span><br>We read the Spanish press every morning</div>
+    <div class="step"><span class="step-num">2</span><br>We summarize what matters in plain English</div>
+    <div class="step"><span class="step-num">3</span><br>You read it in 5 minutes with coffee</div>
+   </div>
   </div>
 
   <div class="cta-card">
