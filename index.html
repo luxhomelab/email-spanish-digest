@@ -9,139 +9,208 @@
   gtag('js', new Date());
   gtag('config', 'G-CBF70VDX1D');
 </script>
- <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='0' y='0' width='32' height='8' fill='%23C60B1E'/%3E%3Crect x='0' y='8' width='32' height='16' fill='%23FFC400'/%3E%3Crect x='0' y='24' width='32' height='8' fill='%23C60B1E'/%3E%3C/svg%3E">
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>Spain Daily — Your 5-Minute Catch-Up on Spain</title>
- <style>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23C60B1E'/%3E%3Ctext x='16' y='23' font-family='Arial,sans-serif' font-size='18' font-weight='900' fill='%23FFC400' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Spanified — the free 5-minute English digest of Spain's most important news, every weekday morning.">
+<title>Spanified — Spain's News in 5 Minutes, Every Morning</title>
+<style>
+  :root {
+    --red: #C60B1E;
+    --gold: #FFC400;
+    --ink: #14161a;
+    --muted: #5b6470;
+    --bg: #faf8f4;
+    --card: #ffffff;
+    --line: #ece5d8;
+    --radius: 18px;
+  }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body {
-   width: 100%; min-height: 100%;
-   background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
-   font-family: Helvetica, sans-serif;
-   line-height: 1.6;
-  }
   body {
-   display: flex; align-items: center; justify-content: center;
-   padding: 24px;
-   min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
   }
-  .page {
-   max-width: 640px; width: 100%;
+  /* ---------- nav ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 10;
+    backdrop-filter: blur(12px);
+    background: rgba(250, 248, 244, 0.85);
+    border-bottom: 1px solid var(--line);
   }
+  .nav-inner {
+    max-width: 1080px; margin: 0 auto; padding: 14px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-mark {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: var(--red);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 20px; color: var(--gold);
+    box-shadow: 0 4px 14px rgba(198, 11, 30, 0.35);
+  }
+  .logo-word { font-weight: 800; font-size: 21px; letter-spacing: -0.5px; color: var(--ink); }
+  .logo-word span { color: var(--red); }
+  .nav-cta {
+    text-decoration: none; font-weight: 700; font-size: 15px;
+    background: var(--ink); color: #fff;
+    padding: 10px 22px; border-radius: 999px;
+    transition: transform 0.15s, background 0.15s;
+  }
+  .nav-cta:hover { background: var(--red); transform: translateY(-1px); }
+  /* ---------- hero ---------- */
   .hero {
-   text-align: center;
-   margin-bottom: 32px;
+    max-width: 1080px; margin: 0 auto; padding: 72px 24px 48px;
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px;
+    align-items: center;
   }
-  .hero h1 {
-   font-family: Roboto, Helvetica, sans-serif;
-   font-size: 36px; font-weight: 700; color: #3C4858;
-   line-height: 1.2;
-   margin-bottom: 12px;
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase;
+    color: var(--red); background: rgba(198, 11, 30, 0.08);
+    border: 1px solid rgba(198, 11, 30, 0.2);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;
   }
-  .hero .tagline {
-   font-size: 18px; color: #6C7A89;
+  .badge .dot { width: 8px; height: 8px; border-radius: 50%; background: #2ecc71; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  h1 {
+    font-size: clamp(38px, 5.5vw, 60px);
+    line-height: 1.05; letter-spacing: -2px; font-weight: 800;
+    margin-bottom: 18px;
   }
-  .card {
-   background-color: #ffffff;
-   border: 1px solid #C0CCD9; border-radius: 3px;
-   padding: 32px;
-   margin-bottom: 20px;
-   font-size: 16px; color: #3C4858;
+  h1 .accent { color: var(--red); position: relative; white-space: nowrap; }
+  h1 .accent::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 4px; height: 10px;
+    background: var(--gold); opacity: 0.55; z-index: -1; border-radius: 2px;
   }
-  .card h2 {
-   font-family: Roboto, Helvetica, sans-serif;
-   font-size: 22px; font-weight: 700; color: #3C4858;
-   margin-bottom: 16px;
+  .lede { font-size: 19px; color: var(--muted); max-width: 480px; margin-bottom: 30px; }
+  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
+  .btn-primary {
+    text-decoration: none; font-weight: 800; font-size: 17px;
+    background: var(--red); color: #fff;
+    padding: 15px 36px; border-radius: 999px;
+    box-shadow: 0 10px 28px rgba(198, 11, 30, 0.35);
+    transition: transform 0.15s, box-shadow 0.15s;
   }
-  .card p {
-   margin-bottom: 12px;
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(198, 11, 30, 0.45); }
+  .micro { font-size: 14px; color: var(--muted); }
+  /* preview card */
+  .preview {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: 0 24px 60px rgba(20, 22, 26, 0.12);
+    overflow: hidden;
   }
-  .card p:last-child { margin-bottom: 0; }
-  .features {
-   list-style: none;
-   margin: 16px 0 0 0;
+  .preview-bar {
+    display: flex; gap: 6px; padding: 12px 16px;
+    border-bottom: 1px solid var(--line); background: #f4efe6;
   }
-  .features li {
-   padding: 8px 0 8px 28px;
-   position: relative;
+  .preview-bar i { width: 10px; height: 10px; border-radius: 50%; background: #d8cfbe; display: block; }
+  .preview-bar i:first-child { background: var(--red); }
+  .preview-body { padding: 24px; }
+  .preview-kicker { font-size: 12px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--red); margin-bottom: 12px; }
+  .preview-item { padding: 12px 0; border-top: 1px solid var(--line); }
+  .preview-item:first-of-type { border-top: none; }
+  .preview-item b { display: block; font-size: 15px; letter-spacing: -0.2px; margin-bottom: 2px; }
+  .preview-item span { font-size: 13.5px; color: var(--muted); }
+  /* ---------- features ---------- */
+  .section { max-width: 1080px; margin: 0 auto; padding: 40px 24px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .feat {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 28px 24px;
   }
-  .features li::before {
-   content: "✓";
-   position: absolute; left: 0;
-   color: #2ecc71; font-weight: 700;
+  .feat .icon { font-size: 28px; margin-bottom: 12px; }
+  .feat h3 { font-size: 17px; letter-spacing: -0.3px; margin-bottom: 8px; }
+  .feat p { font-size: 15px; color: var(--muted); }
+  /* ---------- strip CTA ---------- */
+  .strip {
+    background: var(--ink); color: #fff;
+    border-radius: 24px; padding: 56px 32px; text-align: center;
+    margin: 40px 24px 0;
   }
-  .cta-card {
-   background-color: #3C4858;
-   border-radius: 3px;
-   padding: 32px;
-   text-align: center;
-   color: #ffffff;
+  .strip-inner { max-width: 640px; margin: 0 auto; }
+  .strip h2 { font-size: clamp(26px, 4vw, 38px); letter-spacing: -1px; margin-bottom: 12px; }
+  .strip h2 em { color: var(--gold); font-style: normal; }
+  .strip p { color: #b9bfc9; margin-bottom: 28px; font-size: 17px; }
+  .btn-gold {
+    display: inline-block; text-decoration: none;
+    background: var(--gold); color: var(--ink);
+    font-weight: 800; font-size: 17px;
+    padding: 15px 40px; border-radius: 999px;
+    transition: transform 0.15s;
   }
-  .cta-card h2 {
-   font-family: Roboto, Helvetica, sans-serif;
-   font-size: 22px; font-weight: 700;
-   margin-bottom: 12px;
+  .btn-gold:hover { transform: translateY(-2px); }
+  footer {
+    text-align: center; padding: 36px 24px 48px;
+    font-size: 14px; color: var(--muted);
   }
-  .cta-card p {
-   font-size: 16px;
-   margin-bottom: 20px;
-   color: #C0CCD9;
+  footer .flogo { font-weight: 800; color: var(--ink); }
+  footer .flogo span { color: var(--red); }
+  @media (max-width: 820px) {
+    .hero { grid-template-columns: 1fr; padding-top: 48px; }
+    .grid { grid-template-columns: 1fr; }
+    .strip { margin: 24px 12px 0; padding: 40px 20px; }
   }
-  .cta-button {
-   display: inline-block;
-   background-color: #ffffff;
-   color: #3C4858;
-   font-family: Roboto, Helvetica, sans-serif;
-   font-size: 18px; font-weight: 700;
-   padding: 14px 40px;
-   border-radius: 3px;
-   text-decoration: none;
-   transition: background-color 0.2s;
-  }
-  .cta-button:hover {
-   background-color: #e8ecf1;
-  }
-  .footer {
-   text-align: center;
-   margin-top: 20px;
-   font-size: 14px; color: #6C7A89;
-  }
- </style>
+</style>
 </head>
 <body>
- <div class="page">
-  <div class="hero">
-   <h1>Spain Daily</h1>
-   <p class="tagline">Your 5-minute catch-up on what's happening in Spain — every morning.</p>
-  </div>
 
-  <div class="card">
-   <h2>What is this?</h2>
-   <p>Spain Daily is a free newsletter that brings you the most important news from Spain, summarized in clear English. No clickbait, no noise — just the stories that matter.</p>
-   <p>Whether you live in Spain, are planning to move, or just want to stay informed — we've got you covered.</p>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="/" aria-label="Spanified home">
+      <span class="logo-mark">S</span>
+      <span class="logo-word">Span<span>ified</span></span>
+    </a>
+    <a class="nav-cta" href="/subscribe.html">Subscribe — Free</a>
   </div>
+</header>
 
-  <div class="card">
-   <h2>What's inside?</h2>
-   <ul class="features">
-    <li>Top stories from Spanish news, curated and summarized</li>
-    <li>Economy, housing, politics, migration — the topics that affect your life</li>
-    <li>Short and to the point — a 5-minute read</li>
-    <li>Delivered to your inbox every morning, Monday to Friday</li>
-   </ul>
+<section class="hero">
+  <div>
+    <span class="badge"><span class="dot"></span> Weekday mornings · 5-min read</span>
+    <h1>All of <span class="accent">Spain</span>, in five minutes.</h1>
+    <p class="lede">Spanified is the free English digest of Spain's most important news — economy, housing, politics, migration. No clickbait, no noise. Just the stories that affect your life.</p>
+    <div class="cta-row">
+      <a class="btn-primary" href="/subscribe.html">Get it free →</a>
+    </div>
+    <p class="micro">Join hundreds of readers · No spam, ever · Unsubscribe in one click</p>
   </div>
-
-  <div class="cta-card">
-   <h2>Ready to stay in the loop?</h2>
-   <p>Join hundreds of readers who start their day with Spain Daily.</p>
-   <a href="/subscribe.html" class="cta-button">Subscribe — It's Free</a>
+  <div class="preview" aria-hidden="true">
+    <div class="preview-bar"><i></i><i></i><i></i></div>
+    <div class="preview-body">
+      <div class="preview-kicker">☀️ Today's Spanified</div>
+      <div class="preview-item"><b>Housing: rents cool in Madrid, rise in Málaga</b><span>New data shows the two-speed rental market… · 1 min</span></div>
+      <div class="preview-item"><b>Economy: Spain grows faster than EU average</b><span>What it means for jobs and mortgages… · 1 min</span></div>
+      <div class="preview-item"><b>What else: transport strikes, visa rules</b><span>Three more stories you should know… · 2 min</span></div>
+    </div>
   </div>
+</section>
 
-  <p class="footer">
-   No spam, ever. Unsubscribe anytime in one click.
-  </p>
- </div>
+<section class="section">
+  <div class="grid">
+    <div class="feat"><div class="icon">📰</div><h3>Curated, not aggregated</h3><p>A human editor picks the stories that actually matter — from El País to niche regional press.</p></div>
+    <div class="feat"><div class="icon">⏱️</div><h3>Five minutes, done</h3><p>Short summaries in plain English. Read it with your morning coffee and move on.</p></div>
+    <div class="feat"><div class="icon">📬</div><h3>In your inbox by 8:00</h3><p>Every weekday morning (Madrid time). Weekends off — enjoy your vermut.</p></div>
+  </div>
+</section>
+
+<div style="max-width:1080px;margin:0 auto;">
+  <div class="strip">
+    <div class="strip-inner">
+      <h2>Start tomorrow with <em>Spanified</em>.</h2>
+      <p>Free forever. No spam. Unsubscribe anytime in one click.</p>
+      <a class="btn-gold" href="/subscribe.html">Subscribe — It's Free</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="flogo">Span<span style="color:var(--red)">ified</span>.com</div>
+  Made for people who love Spain · spanified.com
+</footer>
+
 </body>
 </html>
