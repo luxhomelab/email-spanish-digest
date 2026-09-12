@@ -268,6 +268,7 @@ def main():
         loader=FileSystemLoader(TEMPLATES_DIR),
         autoescape=True,
     )
+    env.globals["current_year"] = datetime.now().year
 
     issues = [issue_context(d) for d in load_digests()]
 
