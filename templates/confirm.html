@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Spain Daily — Confirm Subscription{% endblock %}
+{% block extra_head %}
+ <style>
+  body { background: url('confirm.jpg') center/cover no-repeat fixed; }
+  .content {
+   display: flex; align-items: center; justify-content: center;
+   padding: 24px;
+  }
+  .card {
+   max-width: 540px; width: 100%;
+   background-color: #ffffff;
+   border: 1px solid #C0CCD9; border-radius: 3px;
+   padding: 32px 24px; text-align: center;
+  }
+  .card h1 {
+   font-family: Roboto, Helvetica, sans-serif;
+   font-size: 32px; font-weight: 700; color: #3C4858;
+   margin-bottom: 20px;
+  }
+  .card p {
+   font-size: 16px; color: #3C4858;
+   margin-bottom: 12px;
+  }
+  .card p:last-child { margin-bottom: 0; }
+ </style>
+{% endblock %}
+{% block content %}
+ <div class="card">
+  <h1>Confirm your subscription</h1>
+  <p>We need to confirm your email address to complete the subscription process.</p>
+  <p>Please click on the link present in the email we just sent you.</p>
+  <p>You won't be subscribed if you don't click the confirmation link.</p>
+ </div>
+{% endblock %}
