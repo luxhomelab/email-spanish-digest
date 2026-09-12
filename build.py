@@ -15,6 +15,7 @@ Usage: python3 build.py [--out dist]   (idempotent)
 """
 
 import argparse
+import hashlib
 import json
 import os
 import shutil
@@ -253,6 +254,16 @@ def copy_static(out_dir):
         print(f"  copied {name}")
 
 
+def css_version():
+    """Short content hash of main.css for cache-busting (?v=...)."""
+    path = os.path.join(SCRIPT_DIR, "static", "css", "main.css")
+    try:
+        with open(path, "rb") as fh:
+            return hashlib.md5(fh.read()).hexdigest()[:8]
+    except OSError:
+        return "dev"
+
+
 def main():
     args = parse_args()
     out_dir = os.path.abspath(args.out)
@@ -269,6 +280,7 @@ def main():
         autoescape=True,
     )
     env.globals["current_year"] = datetime.now().year
+    env.globals["asset_version"] = css_version()
 
     issues = [issue_context(d) for d in load_digests()]
 

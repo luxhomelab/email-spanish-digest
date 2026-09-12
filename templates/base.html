@@ -15,7 +15,7 @@
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
  <title>{% block title %}Spanified — Spain Daily{% endblock %}</title>
  {% block description %}{% endblock %}
- <link rel="stylesheet" href="/static/css/main.css">
+ <link rel="stylesheet" href="/static/css/main.css?v={{ asset_version }}">
  {% block extra_head %}{% endblock %}
 </head>
 <body>
@@ -34,6 +34,7 @@
    <nav class="site-nav">
     <a href="/">Home</a>
     <a href="/archive/">Archive</a>
+    <a href="/contact.html">Contact</a>
     <a href="/subscribe.html" class="nav-cta">Subscribe</a>
    </nav>
   </div>
