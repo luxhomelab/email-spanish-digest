@@ -176,6 +176,25 @@
   .mail-bar i:nth-child(2) { background: #E8B93E; }
   .mail-bar i:nth-child(3) { background: #62C370; }
   .mail-subject { margin-left: 8px; font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .mail-redband {
+    background: #AA151B; color: #fff;
+    font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: -0.3px;
+    text-align: center; padding: 15px 20px;
+  }
+  .mail-gold { background: #F1BF00; height: 6px; }
+  .mail-subhead {
+    background: #F9F5F0; border-bottom: 1px solid var(--line);
+    text-align: center; font-size: 13px; color: var(--muted); padding: 12px 20px;
+  }
+  .mail-src { font-size: 12.5px; font-weight: 500; color: #AA151B; text-decoration: none; }
+  .mail-src span { color: #C5BFB4; }
+  .mail-mercadona {
+    font-size: 14.5px; color: var(--ink); background: var(--paper-deep);
+    border: 1px solid var(--line); border-radius: 10px;
+    padding: 12px 16px; margin: 4px 0 14px;
+  }
+  .mail-more { text-align: center; font-size: 13.5px; color: var(--muted); margin-bottom: 14px; }
+  .mail-disc { text-align: center; font-size: 12px; color: var(--muted); margin-top: 14px; }
   .mail-body { padding: 30px 34px 34px; }
   .mail-flag { display: flex; gap: 5px; margin-bottom: 14px; }
   .mail-flag span { height: 5px; border-radius: 3px; }
@@ -330,7 +349,7 @@
 <section class="hero">
   <p class="dateline"><span class="live"></span> Madrid · Every weekday · 5-minute read</p>
   <h1>Spain's news, <span class="u-red">in English,</span> before your <span class="u-gold">morning coffee.</span></h1>
-  <p class="lede"><strong>Spanified</strong> is a free email digest that turns Spain's noisy headlines into one clear, calm briefing — politics, economy, housing, culture. Read it in five minutes, sound informed all day.</p>
+  <p class="lede"><strong>Spanified</strong> is a free email digest that turns Spain's noisy headlines into one clear, calm briefing — property, economy, politics, health and more. Read it in five minutes, sound informed all day.</p>
   <div class="capture">
     <a class="capture-btn" href="/subscribe.html">
       Get the free digest
@@ -350,11 +369,15 @@
   <div class="ticker" aria-label="Topics covered">
     <span class="ticker-label">Inside</span>
     <div class="ticker-items">
-      <span><b>Politics</b> · what Madrid decided</span>
-      <span><b>Economy</b> · prices &amp; jobs</span>
-      <span><b>Housing</b> · alquiler &amp; hipotecas</span>
-      <span><b>Culture</b> · what Spain is talking about</span>
-      <span><b>Regions</b> · beyond the capital</span>
+      <span><b>🏠 Property</b></span>
+      <span><b>💰 Economy</b></span>
+      <span><b>🏛️ Politics</b></span>
+      <span><b>👥 Work</b></span>
+      <span><b>📋 Visa</b></span>
+      <span><b>🏥 Health</b></span>
+      <span><b>🌍 Migration</b></span>
+      <span><b>📊 Taxes</b></span>
+      <span><b>📅 Events</b></span>
     </div>
   </div>
 </div>
@@ -367,38 +390,45 @@
 
   <div class="preview-grid">
     <article class="mail" aria-label="Example newsletter edition">
-      <div class="mail-bar"><i></i><i></i><i></i><span class="mail-subject">Spanified · Tuesday: housing deal, heatwave, Barça's new era</span></div>
+      <div class="mail-bar"><i></i><i></i><i></i><span class="mail-subject">Spain Daily Digest - 2026-09-12</span></div>
+      <div class="mail-redband">Spain Daily Digest</div>
+      <div class="mail-gold" aria-hidden="true"></div>
+      <div class="mail-subhead">Spain had an ordinary day. Mostly. &nbsp;·&nbsp; 2026-09-12</div>
       <div class="mail-body">
-        <div class="mail-flag" aria-hidden="true"><span></span><span></span></div>
-        <h3 class="mail-head">Good morning from Madrid <svg width="22" height="22" viewBox="0 0 22 22" fill="none" style="vertical-align:-3px"><circle cx="11" cy="11" r="4.4" fill="#FFC400" stroke="#E0A800" stroke-width="1.4"/><g stroke="#E0A800" stroke-width="1.6" stroke-linecap="round"><path d="M11 1.8v2.4M11 17.8v2.4M1.8 11h2.4M17.8 11h2.4M4.5 4.5l1.7 1.7M15.8 15.8l1.7 1.7M17.5 4.5l-1.7 1.7M6.2 15.8l-1.7 1.7"/></g></svg></h3>
-        <p class="mail-date">Tuesday edition · 5-min read · in English</p>
 
         <div class="mail-story">
           <span class="mail-num">1</span>
           <div>
-            <span class="mail-tag">Housing</span>
-            <h4>Government unveils new affordable-rental plan for big cities</h4>
-            <p>12,000 new capped-rent homes promised for Madrid and Barcelona by 2027 — here's who qualifies and when applications open.</p>
+            <span class="mail-tag">💰 Economy</span>
+            <h4>All Spanish workers face new payroll deduction from 2027</h4>
+            <p>The MEI pension mechanism rises to 1% from January 1, 2027 — workers contribute 0.17% of base salary, employers 0.83%. It hits all workers, with no salary-level exceptions.</p>
+            <a class="mail-src" href="https://www.heraldo.es/noticias/economia/2026/09/12/confirmado-boe-todas-las-nominas-espana-tendran-un-nuevo-recorte-desde-1-enero-2027-2046052.html">Heraldo <span>→</span></a>
           </div>
         </div>
         <div class="mail-story">
           <span class="mail-num">2</span>
           <div>
-            <span class="mail-tag">Economy</span>
-            <h4>Inflation cools to 2.1% as olive oil prices finally drop</h4>
-            <p>Spain stays among the eurozone's fastest-growing economies — what the latest data means for your wallet.</p>
+            <span class="mail-tag">🏠 Property</span>
+            <h4>Community approval now required for temporary rentals</h4>
+            <p>Spain's Horizontal Property Law, in force since April 2025, requires a three-fifths majority of owners to approve temporary or non-residential rentals — communities can reject the use or raise common expenses by up to 20%.</p>
+            <a class="mail-src" href="https://www.elconfidencial.com/vivienda/2026-09-11/ley-propiedad-horizontal-alquiler-temporal-no-residencial-1qrt_4421123/">El Confidencial <span>→</span></a>
           </div>
         </div>
         <div class="mail-story">
           <span class="mail-num">3</span>
           <div>
-            <span class="mail-tag">Culture</span>
-            <h4>San Sebastián festival announces its most international lineup yet</h4>
-            <p>Plus: the small Andalusian town that just became Spain's flamenco capital for a weekend.</p>
+            <span class="mail-tag">🏥 Health</span>
+            <h4>Doctors call indefinite national strike starting October 28</h4>
+            <p>Medical unions reject the Estatuto Marco bill and demand a separate statute for doctors — patients may face delays in appointments and hospital care.</p>
+            <a class="mail-src" href="https://www.infosalus.com/actualidad/noticia-medicos-iran-huelga-indefinida-todo-pais-28-octubre-exigir-estatuto-marco-propio-20260911120453.html">Europa Press <span>→</span></a>
           </div>
         </div>
 
+        <p class="mail-mercadona">🛒 Mercadona is closed tomorrow — stock up your fridge!</p>
+        <p class="mail-more">… + 10 more stories in the full edition</p>
+
         <a class="mail-cta" href="/subscribe.html">Get editions like this — free</a>
+        <p class="mail-disc">This digest is based on real news and created with the help of AI.</p>
       </div>
     </article>
 
@@ -421,7 +451,7 @@
         <div class="faces" aria-hidden="true">
           <i style="background:#C60B1E">EK</i><i style="background:#2D5DA1">JM</i><i style="background:#3E7C4F">AS</i><i style="background:#8A6D1B">+9</i>
         </div>
-        <p><b>Hundreds of readers</b> — expats, newcomers and Hispanophiles — start their morning with Spanified.</p>
+        <p>Expats, newcomers and Hispanophiles start their morning with <b>Spanified</b> — free, in English, in five minutes.</p>
       </div>
     </aside>
   </div>
@@ -439,7 +469,7 @@
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h8L18 7.5V16A1.5 1.5 0 0 1 16.5 17.5h-11A1.5 1.5 0 0 1 4 16v-10.5Z" stroke="#C60B1E" stroke-width="1.8" stroke-linejoin="round"/><path d="M7.5 9h7M7.5 12h7M7.5 15h4" stroke="#C60B1E" stroke-width="1.8" stroke-linecap="round"/></svg>
       </div>
       <h3>Curated, not aggregated</h3>
-      <p>A human editor reads El País, El Mundo, Expansión and the regional press — and picks the five stories worth your time.</p>
+      <p>A human editor reads El Diario, El Confidencial, Europa Press, Heraldo and the regional press — and picks the ten-plus stories worth your time.</p>
     </div>
     <div class="feat">
       <div class="feat-icon" style="background:rgba(255,255,255,.18)">
@@ -487,7 +517,7 @@
   </div>
   <div class="fine">
     <span>© 2026 Spanified · spanified.com</span>
-    <span>Politics · Economy · Housing · Culture</span>
+    <span>Property · Economy · Politics · Health · Events</span>
   </div>
 </footer>
 
