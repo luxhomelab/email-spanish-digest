@@ -11,12 +11,13 @@
   }
 
   /* Red header band (Spanish flag red: #AA151B) */
-  .email-red-band {
+  h1.email-red-band {
    background-color: #AA151B;
    padding: 16px 24px;
    text-align: center;
    font-size: 24px; line-height: 30px; font-weight: 700;
    color: #FFFFFF; letter-spacing: -0.3px;
+   margin: 0;
   }
   /* Gold accent band (Spanish flag gold: #F1BF00) */
   .email-gold-band {
@@ -98,7 +99,7 @@
 {% block content %}
  <div class="digest">
   <div class="digest-card">
-   <div class="email-red-band">Spain Daily Digest</div>
+   <h1 class="email-red-band">Spain Daily Digest</h1>
    <div class="email-gold-band"></div>
    <div class="email-subheader">{{ digest.headline }} &nbsp;·&nbsp; {{ digest.date }}</div>
 
