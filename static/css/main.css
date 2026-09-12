@@ -87,6 +87,17 @@ a { color: inherit; }
  padding: 0 24px 20px 24px;
  font-size: 14px; color: #6C7A89;
 }
+.footer-social .soc {
+ display: inline-flex; align-items: center; gap: 6px;
+ text-decoration: none;
+}
+.footer-social .soc svg {
+ width: 16px; height: 16px; flex: 0 0 auto;
+ fill: #6C7A89;
+ transition: fill 0.15s;
+}
+.footer-social .soc:hover svg { fill: #3C4858; }
+.footer-social .soc:hover { color: #3C4858; }
 
 /* ---------- Shared card ---------- */
 .card {
