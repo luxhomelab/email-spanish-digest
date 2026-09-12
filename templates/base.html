@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"{% block html_class %}{% endblock %}>
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CBF70VDX1D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CBF70VDX1D');
+</script>
+ <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='0' y='0' width='32' height='8' fill='%23C60B1E'/%3E%3Crect x='0' y='8' width='32' height='16' fill='%23FFC400'/%3E%3Crect x='0' y='24' width='32' height='8' fill='%23C60B1E'/%3E%3C/svg%3E">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>{% block title %}Spanified — Spain Daily{% endblock %}</title>
+ {% block description %}{% endblock %}
+ <link rel="stylesheet" href="/static/css/main.css">
+ {% block extra_head %}{% endblock %}
+</head>
+<body>
+ <header class="site-header">
+  <div class="header-inner">
+   <a href="/" class="brand" aria-label="Spanified home">
+    <span class="brand-mark" aria-hidden="true">
+     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <rect x="0" y="0" width="32" height="8" fill="#C60B1E"></rect>
+      <rect x="0" y="8" width="32" height="16" fill="#FFC400"></rect>
+      <rect x="0" y="24" width="32" height="8" fill="#C60B1E"></rect>
+     </svg>
+    </span>
+    <span class="brand-word">Spanified</span>
+   </a>
+   <nav class="site-nav">
+    <a href="/">Home</a>
+    <a href="/archive/">Archive</a>
+    <a href="/subscribe.html" class="nav-cta">Subscribe</a>
+   </nav>
+  </div>
+ </header>
+
+ <main class="content">
+{% block content %}{% endblock %}
+ </main>
+
+ <footer class="site-footer">
+  <div class="footer-inner">
+   <span class="footer-brand">Spanified</span>
+   <a href="/unsubscribe.html">Unsubscribe</a>
+  </div>
+ </footer>
+</body>
+</html>
