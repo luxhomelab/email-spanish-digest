@@ -10,7 +10,10 @@
    </span>
    <span class="brand-word">Spanified</span>
   </a>
-  <nav class="site-nav">
+  <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Show menu">
+   <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" fill="currentColor"/></svg>
+  </button>
+  <nav class="site-nav" id="site-nav">
    <a href="/">Home</a>
    <a href="/archive/">Archive</a>
    <a href="/contact.html">Contact</a>
@@ -18,3 +21,6 @@
   </nav>
  </div>
 </header>
+<script>
+(function(){var b=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');if(!b||!n)return;b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Hide menu':'Show menu');});})();
+</script>
