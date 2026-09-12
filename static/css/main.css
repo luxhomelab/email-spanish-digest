@@ -146,3 +146,22 @@ html.iframe-page .content iframe {
  max-width: 540px; width: 100%;
  padding: 32px 24px; text-align: center;
 }
+
+/* ---------- Mobile (first breakpoint: header never overflows) ---------- */
+@media (max-width: 600px) {
+ .header-inner {
+  flex-wrap: wrap; gap: 10px 16px;
+  padding: 12px 16px;
+ }
+ .brand-word { font-size: 18px; }
+ .site-nav {
+  flex-wrap: wrap; gap: 8px 14px;
+  font-size: 14px;
+ }
+ .nav-cta { padding: 6px 14px; }
+ .content { padding: 28px 16px; }
+ .footer-inner {
+  flex-direction: column; gap: 8px; text-align: center;
+ }
+ .footer-social { justify-content: center; }
+}
