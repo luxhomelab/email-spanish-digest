@@ -8,6 +8,8 @@
 {"@context": "https://schema.org", "@graph": [
  {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/",
   "logo": {"@type": "ImageObject", "url": "{{ site_url }}/logo.jpg"},
+  "contactPoint": {"@type": "ContactPoint", "email": "support@spanified.com",
+   "contactType": "customer support", "availableLanguage": "English"},
   "sameAs": {{ site_socials|tojson }}},
  {"@type": "WebSite", "name": "Spanified — Spain Daily", "url": "{{ site_url }}/",
   "description": "Spain Daily — a free newsletter bringing you the most important news from Spain, summarized in clear English. Every morning."}
