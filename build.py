@@ -193,7 +193,12 @@ def render_digests(env, digests):
 
     template = env.get_template("digest.html")
     for digest in digests:
-        output = template.render(digest=digest, emoji=CATEGORY_EMOJI)
+        crumbs = [
+            {"name": "Home", "url": "/"},
+            {"name": "Archive", "url": "/archive/"},
+            {"name": digest["date_display"], "url": digest["url"], "current": True},
+        ]
+        output = template.render(digest=digest, emoji=CATEGORY_EMOJI, crumbs=crumbs)
         dest = os.path.join(ARCHIVE_DIR, f"{digest['date']}.html")
         with open(dest, "w", encoding="utf-8") as fh:
             fh.write(output)
@@ -208,7 +213,13 @@ def render_archive(env, digests):
     for page in range(1, total_pages + 1):
         start = (page - 1) * PAGE_SIZE
         page_digests = digests[start:start + PAGE_SIZE]
-        output = template.render(digests=page_digests, pagination=pagination(page, total_pages))
+        crumbs = [{"name": "Home", "url": "/"}]
+        if page == 1:
+            crumbs.append({"name": "Archive", "url": "/archive/", "current": True})
+        else:
+            crumbs.append({"name": "Archive", "url": "/archive/"})
+            crumbs.append({"name": f"Page {page}", "url": f"/archive/page-{page}.html", "current": True})
+        output = template.render(digests=page_digests, pagination=pagination(page, total_pages), crumbs=crumbs)
         dest = os.path.join(ARCHIVE_DIR, "index.html" if page == 1 else f"page-{page}.html")
         with open(dest, "w", encoding="utf-8") as fh:
             fh.write(output)
@@ -237,10 +248,15 @@ def render_categories(env, digests):
     template = env.get_template("category.html")
     for slug, stories in sorted(cats.items()):
         name = slug.capitalize()
+        crumbs = [
+            {"name": "Home", "url": "/"},
+            {"name": name, "url": f"/category/{slug}.html", "current": True},
+        ]
         output = template.render(
             category_name=name,
             emoji=CATEGORY_EMOJI.get(slug, "\U0001F4F0"),
             stories=stories,
+            crumbs=crumbs,
         )
         dest = os.path.join(cat_dir, f"{slug}.html")
         with open(dest, "w", encoding="utf-8") as fh:
@@ -333,6 +349,7 @@ def main():
     )
     env.globals["current_year"] = datetime.now().year
     env.globals["asset_version"] = css_version()
+    env.globals["site_url"] = SITE_URL
 
     digests = [digest_context(d) for d in load_digests()]
 

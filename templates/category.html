@@ -4,6 +4,7 @@
 {% block description %}<meta name="description" content="Latest {{ category_name|lower }} news from Spain, summarized in English. Updated every morning.">{% endblock %}
 
 {% block content %}
+{% include "partials/breadcrumbs.html" %}
  <div class="cat-list">
   <h1>{{ emoji }} {{ category_name }}</h1>
   <p class="cat-sub">{{ stories|length }} news · newest first · updated every morning</p>

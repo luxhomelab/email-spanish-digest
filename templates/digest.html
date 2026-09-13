@@ -4,6 +4,7 @@
 {% block description %}<meta name="description" content="Spain Daily Digest for {{ digest.date }} — the day's top news from Spain, summarized in English.">{% endblock %}
 
 {% block content %}
+{% include "partials/breadcrumbs.html" %}
  <div class="digest">
   <div class="digest-card">
    <h1 class="email-red-band">Spain Daily Digest: {{ digest.date_display }}</h1>

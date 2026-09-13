@@ -1,0 +1,18 @@
+{# Breadcrumb trail. Expects `crumbs`: list of {"name", "url", "current"?}. #}
+{% if crumbs %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+ {% for c in crumbs %}
+  {% if not loop.first %}<span class="crumb-sep" aria-hidden="true">/</span>{% endif %}
+  {% if c.current %}
+  <span class="crumb-current" aria-current="page">{{ c.name }}</span>
+  {% else %}
+  <a href="{{ c.url }}">{{ c.name }}</a>
+  {% endif %}
+ {% endfor %}
+</nav>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{% for c in crumbs %}
+  {"@type": "ListItem", "position": {{ loop.index }}, "name": {{ c.name|tojson }}, "item": "{{ site_url }}{{ c.url }}"}{% if not loop.last %},{% endif %}{% endfor %}
+]}
+</script>
+{% endif %}
