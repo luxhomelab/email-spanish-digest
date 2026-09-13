@@ -8,7 +8,7 @@ and renders a static site:
   - Static pages   -> repo root (index.html, subscribe.html, success.html,
                       confirm.html, unsubscribe.html)
   - Issue pages    -> archive/YYYY-MM-DD.html
-  - Archive listing -> archive/index.html + archive/page-N.html (10 per page)
+  - Archive listing -> archive/index.html + archive/N.html (10 per page)
   - Sitemap        -> sitemap.xml
 
 Usage: python3 build.py [--out dist]   (idempotent)
@@ -171,7 +171,7 @@ def digest_meta_description(date, headline, items):
 def archive_url(page):
     if page == 1:
         return "/archive/"
-    return f"/archive/page-{page}"
+    return f"/archive/{page}"
 
 
 def pagination(page, total_pages):
@@ -250,12 +250,12 @@ def render_archive(env, digests):
             crumbs.append({"name": "Archive", "url": "/archive/", "current": True})
         else:
             crumbs.append({"name": "Archive", "url": "/archive/"})
-            crumbs.append({"name": f"Page {page}", "url": f"/archive/page-{page}", "current": True})
+            crumbs.append({"name": f"Page {page}", "url": f"/archive/{page}", "current": True})
         output = template.render(digests=page_digests, pagination=pagination(page, total_pages), crumbs=crumbs)
-        dest = os.path.join(ARCHIVE_DIR, "index.html" if page == 1 else f"page-{page}.html")
+        dest = os.path.join(ARCHIVE_DIR, "index.html" if page == 1 else f"{page}.html")
         with open(dest, "w", encoding="utf-8") as fh:
             fh.write(output)
-        print(f"  wrote {'archive/index.html' if page == 1 else f'archive/page-{page}.html'}")
+        print(f"  wrote {'archive/index.html' if page == 1 else f'archive/{page}.html'}")
 
 
 def collect_categories(digests):
@@ -309,7 +309,7 @@ def render_sitemap(digests, categories=()):
     total_pages = (total + PAGE_SIZE - 1) // PAGE_SIZE if total else 1
     urls.append((SITE_URL + "/archive/", None))
     for page in range(2, total_pages + 1):
-        urls.append((SITE_URL + f"/archive/page-{page}", None))
+        urls.append((SITE_URL + f"/archive/{page}", None))
     for digest in digests:
         urls.append((SITE_URL + f"/archive/{digest['date']}", digest["date"]))
     for slug in categories:
