@@ -22,7 +22,7 @@ a { color: inherit; }
  border-bottom: 1px solid #C0CCD9;
 }
 .header-inner {
- max-width: 760px; margin: 0 auto;
+ max-width: 1280px; margin: 0 auto;
  display: flex; align-items: center; justify-content: space-between;
  padding: 14px 24px;
 }
@@ -75,7 +75,7 @@ a { color: inherit; }
  border-top: 1px solid #C0CCD9;
 }
 .footer-inner {
- max-width: 760px; margin: 0 auto;
+ max-width: 1280px; margin: 0 auto;
  display: flex; align-items: center; justify-content: space-between;
  padding: 20px 24px;
  font-size: 14px; color: #6C7A89;
@@ -89,7 +89,7 @@ a { color: inherit; }
 }
 .site-footer a:hover { color: #3C4858; }
 .footer-social {
- max-width: 760px; margin: 0 auto;
+ max-width: 1280px; margin: 0 auto;
  display: flex; align-items: center; flex-wrap: wrap; gap: 6px 14px;
  padding: 0 24px 20px 24px;
  font-size: 14px; color: #6C7A89;
@@ -183,7 +183,7 @@ html.iframe-page .content iframe {
    ============================================================ */
 
 /* ---------- Home (index.html) ---------- */
-.page { max-width: 640px; width: 100%; margin: 0 auto; }
+.page { max-width: 1280px; width: 100%; margin: 0 auto; }
 .hero { text-align: center; margin-bottom: 32px; }
 .hero h1 {
  font-family: Roboto, Helvetica, sans-serif;
@@ -338,7 +338,7 @@ h1.email-red-band {
 .ai-disclaimer { font-size: 12px; line-height: 18px; color: #A0998E; padding-top: 10px; }
 
 /* ---------- Archive (archive.html) ---------- */
-.archive { max-width: 680px; margin: 0 auto; }
+.archive { max-width: 1280px; margin: 0 auto; }
 .archive h1 {
  font-family: Roboto, Helvetica, sans-serif;
  font-size: 30px; font-weight: 700; color: #3C4858;
@@ -396,7 +396,7 @@ body.page-archive .digest-card:hover {
 .pagination .disabled { color: #b0b9c4; cursor: default; }
 
 /* ---------- Category (category.html) ---------- */
-.cat-list { max-width: 760px; margin: 0 auto; }
+.cat-list { max-width: 1280px; margin: 0 auto; }
 .cat-list h1 {
  font-family: Roboto, Helvetica, sans-serif;
  font-size: 28px; font-weight: 700; color: #3C4858;
@@ -420,7 +420,7 @@ body.page-archive .digest-card:hover {
 .cat-source a { color: #AA151B; text-decoration: none; font-weight: 500; }
 
 /* ---------- Contact (contact.html) ---------- */
-.contact { max-width: 640px; width: 100%; margin: 0 auto; }
+.contact { max-width: 1280px; width: 100%; margin: 0 auto; }
 .contact h1 {
  font-family: Roboto, Helvetica, sans-serif;
  font-size: 30px; font-weight: 700; color: #3C4858;
