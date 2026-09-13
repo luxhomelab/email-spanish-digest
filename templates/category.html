@@ -18,7 +18,7 @@
   <p class="cat-sub">{{ stories|length }} news · newest first · updated every morning</p>
   {% for s in stories %}
   <article class="cat-item">
-   <div class="cat-meta">{{ s.date }} · <a href="/archive/{{ s.date }}">full digest</a></div>
+   <div class="cat-meta">{{ s.date_display }} · <a href="/archive/{{ s.date }}">full digest</a></div>
    <h2>{{ s.title }}</h2>
    <p>{{ s.body }}</p>
    {% if s.sources %}

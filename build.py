@@ -264,7 +264,7 @@ def collect_categories(digests):
     for digest in digests:
         for item in digest.get("stories", []):
             slug = (item.get("category") or "news").lower()
-            cats.setdefault(slug, []).append({**item, "date": digest["date"]})
+            cats.setdefault(slug, []).append({**item, "date": digest["date"], "date_display": digest["date_display"]})
     return cats
 
 
