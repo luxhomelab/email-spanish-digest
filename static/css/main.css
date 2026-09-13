@@ -288,7 +288,7 @@ html.iframe-page .content iframe {
 /* ---------- Digest issue (digest.html) ---------- */
 body.page-digest .digest { background-color: #F5F5F0; }
 body.page-digest .digest-card {
- max-width: 600px; margin: 0 auto;
+ max-width: 1200px; margin: 0 auto;
  background-color: #FFFFFF;
  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
