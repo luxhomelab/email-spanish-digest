@@ -626,3 +626,8 @@ body.page-contact .contact .card {
  border-radius: 14px; border: 1px solid #EFE7D8; background-color: #ffffff;
  box-shadow: 0 2px 14px rgba(60,40,20,0.07);
 }
+
+/* Digest H1 fits small screens */
+@media (max-width: 520px) {
+ body.page-digest h1.email-red-band { font-size: 27px; line-height: 33px; padding: 26px 20px 8px 20px; }
+}
