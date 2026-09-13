@@ -23,7 +23,7 @@
    <p>{{ s.body }}</p>
    {% if s.sources %}
    <div class="cat-source">
-    {% for src in s.sources %}<a href="{{ src.url }}" rel="noopener">{{ src.name }}</a>{% if not loop.last %} · {% endif %}{% endfor %}
+    {% for src in s.sources %}<a href="{{ src.url }}" target="_blank" rel="noopener">{{ src.name }}</a>{% if not loop.last %} · {% endif %}{% endfor %}
    </div>
    {% endif %}
   </article>

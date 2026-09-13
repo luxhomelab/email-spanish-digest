@@ -55,7 +55,7 @@
      {% if item.sources %}
      <div class="story-source">
       {% for s in item.sources %}
-      <a href="{{ s.url }}" rel="noopener">{{ s.name }}</a><span class="arrow">&nbsp;→</span>{% if not loop.last %} {% endif %}
+      <a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a><span class="arrow">&nbsp;→</span>{% if not loop.last %} {% endif %}
       {% endfor %}
      </div>
      {% endif %}
