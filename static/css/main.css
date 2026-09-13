@@ -631,3 +631,11 @@ body.page-contact .contact .card {
 @media (max-width: 520px) {
  body.page-digest h1.email-red-band { font-size: 27px; line-height: 33px; padding: 26px 20px 8px 20px; }
 }
+.card-centered { text-align: center; }
+.subscribe-intro { text-align: center; padding: 40px 24px 8px 24px; }
+.subscribe-intro h1 {
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 32px; font-weight: 700; color: #3C4858;
+ letter-spacing: -0.5px; margin-bottom: 8px;
+}
+.subscribe-intro p { color: #6C7A89; font-size: 16px; }
