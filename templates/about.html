@@ -14,6 +14,7 @@
 
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/about">{% endblock %}
 {% block content %}
+{% include "partials/breadcrumbs.html" %}
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "AboutPage",
  "name": "About — Spanified",
