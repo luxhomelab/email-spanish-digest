@@ -454,3 +454,6 @@ body.page-success { background: url('/success.jpg') center/cover no-repeat fixed
 .day-nav a:hover { text-decoration: underline; }
 .day-nav-older { margin-right: auto; }
 .day-nav-newer { margin-left: auto; }
+.byline { font-size: 13px; color: #A0998E; text-align: center; padding: 8px 24px 0 24px; }
+.byline a { color: #B91C1C; text-decoration: none; }
+.byline a:hover { text-decoration: underline; }

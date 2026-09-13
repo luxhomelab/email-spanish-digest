@@ -132,6 +132,11 @@ def digest_context(data):
     items = data.get("items", [])
     date = data.get("date", "")
     headline = data.get("headline") or data.get("variant") or "Spain Daily Digest"
+    words = len(headline.split()) + sum(
+        len((i.get("title", "") + " " + i.get("body", "")).split()) for i in items
+    )
+    tag_cats = [c.capitalize() for c in dict.fromkeys(
+        i.get("category", "") for i in items if i.get("category"))][:3]
     return {
         "date": date,
         "date_display": format_date(date),
@@ -142,6 +147,8 @@ def digest_context(data):
         "top_categories": top_categories(items),
         "url": f"/archive/{date}",
         "meta_description": digest_meta_description(date, headline, items),
+        "word_count": words,
+        "tag_categories": tag_cats,
     }
 
 
