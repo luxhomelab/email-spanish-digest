@@ -1,0 +1,168 @@
+{
+  "items": [
+    {
+      "title": "Land Law changes complicate Spain's new housing decree",
+      "body": "Spain's housing decree failed in July after opposition from Junts, Podemos, Greenpeace and the Sindicato de Inquilinas. Critics warn proposed Land Law changes could \"amnesty\" planning violations, while employers say they would speed up public housing. The Council of Ministers hopes to approve a new text in September; Pedro Sánchez announced the decree in February. Housing policy affects rents and property availability.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/miedo-pelotazo-necesidad-construir-ley-suelo-dificulta-decreto-vivienda_1_13484895.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Spanish self-employed face uncertainty over quotas and benefits",
+      "body": "Around 3.5 million autónomos (self-employed workers) in Spain face unresolved social security contribution quotas and no improvements to their unemployment benefit. Political deadlock has stalled the changes, while rising costs, partly driven by the Middle East war, add pressure. For self-employed foreign residents, the delay leaves contribution levels and unemployment protections unclear.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/09/06/autonomos-incertidumbre-cuotas-aire-sin-mejoras-paro-2049825.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spain faces rising migration pressure in Ceuta and Canaries",
+      "body": "The Spanish government took control of Ceuta's port to set up migrant humanitarian spaces, authorizing 16,000 sq m of port land. Ceuta's government called the move a \"grave error\" and said returns to Morocco should be the priority. Canary Islands Vice President Manuel Domínguez urged border closures after 85 deaths in one patera, with about 49,000 irregular arrivals in 2024.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-09-05/gobierno-control-puerto-ceuta-migrantes-1tna-1tps_4418414/"
+        },
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/09/05/vicepresidente-canarias-alerta-repunte-migratorio-pide-cierre-fronteras-es-mejor-manera-salvar-vidas-2049729.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "US strikes three Iranian tankers as fuel prices climb",
+      "body": "US forces disabled two tankers and destroyed a third after Iran's Revolutionary Guard fired ballistic missiles at US Navy warships. Admiral Brad Cooper said the tankers funded the Revolutionary Guard. The conflict has disrupted the Strait of Hormuz, through which 20% of world crude oil transited before the war. Fuel prices are rising, affecting household budgets in Spain.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/internacional/2026/09/05/estados-unidos-ataca-tres-petroleros-iranies-tras-ataque-contra-buques-guerra-estadounidenses-2049759.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain extends border controls for travelers from Italy to Sept. 22",
+      "body": "Spain's Interior Ministry extended controls at air and sea borders for travelers from Italy for 15 days, from 00:00 on Sept. 8 to 24:00 on Sept. 22, 2026. Interior Minister Fernando Grande-Marlaska signed the order after Italy prolonged its Schengen suspension with Spain. The measure will remain under ongoing evaluation and can be lifted early if threats disappear. Travelers may face additional checks and delays.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-boe-publica-orden-prorroga-controles-viajeros-italia-22-septiembre-20260905102602.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Community debt strips property owners of voting rights",
+      "body": "Under Article 15.2 of Spain's Horizontal Property Law, an owner who owes money to the community can attend meetings and speak but cannot vote. Unemployment or financial hardship does not cancel the obligation to pay community fees. Meeting minutes must identify owners in this situation. Property owners facing unpaid community fees should know they lose their vote in owners' meetings.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-09-05/ley-propiedad-horizontal-confirma-deudas-comunidad-paro-pierde-voto-1qrt_4417896.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Autistic trainee transforms education for children with ASD",
+      "body": "Diego Alfonso, a social integration student with autism, completed internships at Escuela Infantil Adela Abrines in Madrid's Latina district. His shared diagnosis helped children with autism feel more comfortable, according to the school. About 14% of the school's students participate in real inclusion programs. The school's director said the goal is to help children integrate into society.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/madrid/2026/09/06/6a984760fdddffae458b4575.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Spanish teachers start school year with strikes and protests",
+      "body": "Teachers are striking in Catalonia, Madrid, Andalusia and other regions as the new school year begins. The Education Ministry has approved a reduction in teaching hours and students per class as a first step, with reforms on ratios and oposiciones still pending. Unions warn of deteriorating working conditions and impacts on teachers' mental health. Families with school-age children may see disruptions and changes in class sizes.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/conflicto-no-cesa-ultimo-curso-legislatura-profesorado-arranca-huelgas-protestas-docentes_1_13480101.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spanish law allows paying rent with home renovations",
+      "body": "Under Article 17.5 of Spain's Urban Leasing Law (LAU), tenants can agree with landlords to pay rent partially or fully by carrying out renovations. The agreement must be in writing, either in the contract or in an annex. Tenants cannot claim additional compensation for the works at the end of the contract, and the security deposit obligation remains. Renters could use this option to reduce rent by funding improvements.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/09/06/funciona-alquiler-reformas-alternativa-renovar-casa-ahorrar-renta-2049290.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Digital euro could reach Spanish users by 2029",
+      "body": "The digital euro is advancing toward a possible launch in Spain by 2029. Money would be issued directly by the European Central Bank rather than by commercial banks. The user experience would be similar to existing mobile payments. It could eventually become a new official digital currency for everyday payments.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/09/06/euro-digital-avanza-carrera-llegar-bolsillos-espanoles-2029-2049768.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "New labeling rules change canned fish names in Spain",
+      "body": "Royal Decree 1082/2025 introduces mandatory labeling requirements for preserved fishery and seafood products in Spain. Labels must use the official national and scientific denomination matching the FAO ASFIS database. The rules apply to canned mussels, sardines, cockles, tuna and ventresca, among others. Shoppers will see clearer, standardized labels on canned fish.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/gastronomia/2026/09/05/oficial-confirmado-adios-latas-mejillones-berberechos-sardinas-productos-conserva-cambiar-norma-modifica-elaboracion-2029618.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "Autónomos in Spain: how are you handling the uncertainty over social security quotas?",
+  "variant": "The Spain update you actually need",
+  "headline": "The Spain update you actually need",
+  "date": "2026-09-06",
+  "generated_at": "2026-09-06T06:04:21.842905+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 216,
+    "items_selected_pass1": 12,
+    "fact_sheets_extracted": 12,
+    "items_after_importance_filter": 12,
+    "items_in_digest": 11
+  },
+  "selection_reasons": {
+    "89": "Government takes control of Ceuta port for migrant humanitarian aid — direct migration policy affecting foreign residents",
+    "164": "Canary Islands VP warns of migrant surge and calls for border closure — key migration policy for the archipelago",
+    "209": "Spain extends Schengen border controls for travelers from Italy — affects travel plans of international residents",
+    "41": "New housing decree and Ley de Suelo debate — impacts rent regulation and property construction",
+    "172": "LAU allows tenants to pay rent through renovations — practical money-saving option for renters",
+    "198": "Property law confirms unemployed owners with community debts lose voting rights — relevant for property investors",
+    "169": "Autónomos face uncertainty over social security quotas and unemployment benefits — affects self-employed foreigners",
+    "33": "Teachers' strike marks the start of the school year — systemic disruption for families and educators",
+    "177": "Digital euro moves closer to Spanish wallets by 2029 — banking change affecting all residents",
+    "161": "US strikes Iranian tankers and fuel prices spike — direct cost-of-living impact in Spain",
+    "15": "Autistic teacher transforming education for children with TEA — positive inclusion story",
+    "197": "New labeling rules for canned goods in Spain — consumer regulation change affecting everyday purchases"
+  }
+}

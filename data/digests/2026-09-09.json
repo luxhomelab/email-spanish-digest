@@ -1,0 +1,168 @@
+{
+  "items": [
+    {
+      "title": "⚠️ Spain tightens probation periods and demands algorithm transparency",
+      "body": "The cabinet approved a decree curbing abusive probation-period dismissals and requiring companies to inform workers when algorithms affect employment decisions. Probation periods beyond the Workers' Statute default of six months now need clearer justification of conditions and causes. Labour Minister Yolanda Díaz said 75% of companies reviewed by labour authorities commit irregularities in this area. Dismissals during probation topped one million last year, up 51% from 2019.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/gobierno-aprueba-endurecer-uso-periodo-prueba-obliga-las-empresas-informar-sobre-los-algoritmos-que-afectan-sus-trabajadores_7034152_0.html"
+        }
+      ],
+      "category": "work",
+      "important": true
+    },
+    {
+      "title": "Record margins and near-$100 oil fuel Spain's wage battle",
+      "body": "Spanish business margins reached €97 billion in the second quarter, with a 12.8% margin on sales versus the 10.5% average from 2009 to 2021. The energy sector is posting record profits as Brent oil nears $100 and the European TTF gas benchmark trades above €75 per MWh, up 138% since the Iran war began. Inflation has climbed back above 4%, driven by fuel prices. Unions want the minimum wage (SMI) to rise by more than 5% and pay increases of up to 7% in collective bargaining agreements.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/09/09/6aa0182621efa024498b4583.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/petroleo-ronda-100-dolares-gas-europeo-dispara-138-inicio-guerra-iran_1_13495609.html"
+        }
+      ],
+      "category": "economy",
+      "important": true
+    },
+    {
+      "title": "Rent surge spreads to Spain's cheapest regions",
+      "body": "Average rents in Spain rose 8.6% year-on-year in August, with the sharpest increases now in cheaper regions: Castilla y León (24%), Aragón (18.7%), Castilla-La Mancha (17.6%) and Galicia (17.3%). The national average reached €14.9 per m², about €1,190 for an 80 m² flat. Madrid, at €21.8/m², and Baleares, at €19/m², remain the most expensive, with annual increases below 3%.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/subida-alquiler-se-contagia-las-zonas-mas-baratas-aunque-los-precios-mas-inaccesibles-siguen-las-grandes-ciudades_7034119_0.html"
+        }
+      ],
+      "category": "property",
+      "important": true
+    },
+    {
+      "title": "Top court fast-tracks vote eligibility for 2.3 million 'grandchildren'",
+      "body": "The Supreme Court suspended new voter registrations under the 'ley de nietos' at the request of Vox and Iustitia Europa. The precautionary measure affects CERA electoral registrations for up to 2.3 million people who obtained nationality through the law. The court aims to rule within about three months, before the May municipal and regional elections and the general election due by July. The government and the Prosecutor's Office opposed the suspension.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/09/08/6aa04d76fdddfff9658b45ba.html"
+        }
+      ],
+      "category": "politics",
+      "important": true
+    },
+    {
+      "title": "EU eyes limits on second-home purchases in stressed areas",
+      "body": "The European Commission's upcoming housing plan would allow authorities to restrict purchases of non-primary residences in high-pressure areas. The optional measure was requested by the Alliance of Mayors for Housing. Commission Vice-President Teresa Ribera coordinated the work. The proposal requires approval by the Council and the European Parliament, and the European People's Party has said it will oppose it.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/09/08/6aa00f07e4d4d8e37c8b457e.html"
+        }
+      ],
+      "category": "property",
+      "important": true
+    },
+    {
+      "title": "Teresa Perales takes silver in European para swimming",
+      "body": "Aragonese swimmer Teresa Perales, aged 50, won silver in the 100m backstroke S2 at the European Para Swimming Championships in Turkey with a time of 2:34.28, behind Italy's Angela Procida. She added a silver to the bronze she had won in the 50m breaststroke SB2 on Monday, bringing her continental medal tally to 45. Tasy Dmytriv won Spain's first gold, sharing the 200m freestyle S9 title with Poland's Oliwia Jablonska in 2:34.50.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/deportes/2026/09/08/teresa-perales-segunda-medalla-plata-campeoanto-europa-natacion-paralimpica-2050377.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Spain records worst-ever PISA results in reading, math and science",
+      "body": "Spanish 15-year-olds posted their worst-ever PISA results in reading, math and science in the 2025 edition. Spain scored 451 in reading, 23 points below its 2022 score of 474, and 457 in math, 16 points below its 2022 score of 473. The OECD did not include Catalonia's data because of a high student exclusion rate. The results leave students about half a school year behind the OECD average in reading.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/educacion-00468/noticia-espana-vuelve-suspender-pisa-obtiene-2025-peores-resultados-historicos-lectura-matematicas-ciencias-20260908093051.html"
+        }
+      ],
+      "category": "politics",
+      "important": true
+    },
+    {
+      "title": "Casa 47 opens with first affordable rental homes",
+      "body": "Spain has launched the public housing portal Casa 47 with 800 affordable rental properties. A further 1,500 will be added soon, mainly in the Valencian Community and also in Galicia, Asturias, Navarra and Catalonia. Tenants pay no more than 30% of their income, with initial contracts of 14 years extendable to 75 years. The homes remain permanently protected and cannot be removed from the public housing stock.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-09-08/portal-casa-47-comunidades-autonomas_4419608/"
+        }
+      ],
+      "category": "property",
+      "important": true
+    },
+    {
+      "title": "Treasury yields nearly 2.8% on nine-month letras",
+      "body": "Spain's Treasury raised €2.415 billion in short-term debt. Nine-month bill yields reached 2.783%, the highest since October 2024, while three-month bills paid 2.464%. Total demand hit €6.866 billion, 2.8 times the amount awarded. The yield on Spain's 10-year bond reached 3.832%, its highest level since November 2023.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-09-08/tesoro-publico-subasta-letras-rentabilidad-1tps_4419679/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Ceuta leader tells EU: city is 'a pressure cooker'",
+      "body": "The president of Ceuta, Juan Jesús Vivas, asked the EU for a stronger border presence and special status for the city after the arrival of 80,000 people, which he called an unprecedented invasion. He accused Morocco of seeking to asphyxiate, harass and dismantle the city, and criticised the Spanish government for not being up to the task. The Council of Ministers announced on Tuesday that police reports related to the episode will be declassified.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/vivas-reclama-bruselas-mas-presencia-europea-frontera-un-estatus-especial-para-ceuta-ciudad-es-una-olla-presion_7033947_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Italian bid for olive oil giant Deoleo alarms Spanish sector",
+      "body": "Italian group Coricelli has positioned itself as the favourite to buy Spanish olive oil group Deoleo, owner of Carbonell, Koipe, Hojiblanca and Bertolli, with a €500 million offer. Dcoop director general Rafael Sánchez de Puerta asked the Spanish government to get involved, saying Deoleo should remain a Spanish and Andalusian company. He described the process as complicated and said it needs close monitoring.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/empresas/oferta-italiana-deoleo-activa-alarmas-sector-perdida-control-espanol_7034175_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "Are rising rents reaching your part of Spain yet?",
+  "variant": "Quiet day in Spain. Then this.",
+  "headline": "Quiet day in Spain. Then this.",
+  "date": "2026-09-09",
+  "generated_at": "2026-09-09T06:06:41.151425+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 341,
+    "items_selected_pass1": 12,
+    "fact_sheets_extracted": 12,
+    "items_after_importance_filter": 12,
+    "items_in_digest": 11
+  },
+  "selection_reasons": {
+    "1": "The Supreme Court's urgent decision on whether 2.3 million 'law of grandchildren' descendants can vote affects Spanish citizenship rights for thousands of new nationals.",
+    "8": "The EU is moving to allow bans on second-home purchases in stressed areas — a direct hit for foreign property investors and expat buyers in Spain.",
+    "16": "Record corporate margins and union demands for SMI rises above 5% directly affect wages and cost-of-living negotiations ahead of 2027.",
+    "29": "Spain posts its worst PISA results ever in reading, maths and science — a systemic education story that matters for every family with school-age children.",
+    "97": "Oil near $100 and European gas up 138% since the Iran conflict will push household energy bills and inflation across Spain.",
+    "128": "Rental price surges are spreading even to Spain's cheapest provinces while Madrid and Barcelona remain nearly five times more expensive — key affordability data for renters.",
+    "143": "Ceuta's president is taking the migration crisis to Brussels and requesting an EU technical mission — a border-policy issue with direct consequences for all foreign residents.",
+    "194": "Teresa Perales's silver at the European Para Swimming Championship is a positive Spanish sporting record, offering an uplifting story on an otherwise heavy news day.",
+    "298": "Spanish Treasury bill yields hit their highest level in nearly two years at 2.8%, relevant for expats and retirees holding euro savings.",
+    "306": "New rules require companies to explain algorithmic decisions on pay, promotions and dismissals, and to justify long probation periods — a major change in workers' rights.",
+    "315": "The Italian bid for Deoleo, owner of Carbonell, threatens Spanish control of a staple olive-oil brand and raises concerns about consumer prices.",
+    "335": "Casa 47 launches its first 800 affordable rental homes with more to come — the new state housing portal opens eligibility questions for residents across Spain."
+  }
+}
