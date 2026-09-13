@@ -43,8 +43,6 @@
   <nav class="pagination">
    {% if pagination.current > 1 %}
    <a class="first" href="/archive/">« First</a>
-   {% else %}
-   <span class="disabled">« First</span>
    {% endif %}
    {% if pagination.prev_url %}
    <a href="{{ pagination.prev_url }}">← Prev</a>
