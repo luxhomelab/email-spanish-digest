@@ -449,3 +449,8 @@ body.page-archive .digest-card:hover {
 /* ---------- Confirm / success (background photo pages) ---------- */
 body.page-confirm { background: url('/confirm.jpg') center/cover no-repeat fixed; }
 body.page-success { background: url('/success.jpg') center/cover no-repeat fixed; }
+.day-nav { display: flex; justify-content: space-between; gap: 12px; padding-top: 16px; font-size: 14px; }
+.day-nav a { color: #B91C1C; text-decoration: none; }
+.day-nav a:hover { text-decoration: underline; }
+.day-nav-older { margin-right: auto; }
+.day-nav-newer { margin-left: auto; }
