@@ -4,6 +4,15 @@
 {% block description %}<meta name="description" content="Spain Daily — a free newsletter bringing you the most important news from Spain, summarized in clear English. Every morning.">{% endblock %}
 
 {% block content %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [
+ {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/",
+  "logo": {"@type": "ImageObject", "url": "{{ site_url }}/logo.jpg"},
+  "sameAs": {{ site_socials|tojson }}},
+ {"@type": "WebSite", "name": "Spanified — Spain Daily", "url": "{{ site_url }}/",
+  "description": "Spain Daily — a free newsletter bringing you the most important news from Spain, summarized in clear English. Every morning."}
+]}
+</script>
  <div class="page">
   <div class="hero">
    <h1>Spain's top news, in English, every morning.</h1>

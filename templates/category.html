@@ -5,6 +5,13 @@
 
 {% block content %}
 {% include "partials/breadcrumbs.html" %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "ItemList",
+ "name": {{ (category_name + " news in Spain")|tojson }},
+ "itemListElement": [{% for s in stories %}
+  {"@type": "ListItem", "position": {{ loop.index }}, "item": {"@type": "NewsArticle", "headline": {{ s.title|tojson }}, "url": "{{ site_url }}/archive/{{ s.date }}.html", "datePublished": "{{ s.date }}"}}{% if not loop.last %},{% endif %}{% endfor %}
+ ]}
+</script>
  <div class="cat-list">
   <h1>{{ emoji }} {{ category_name }}</h1>
   <p class="cat-sub">{{ stories|length }} news · newest first · updated every morning</p>
