@@ -40,7 +40,7 @@
    <h1 class="email-red-band">Spain Daily Digest: <time datetime="{{ pub_date(digest.date) }}">{{ digest.date_display }}</time></h1>
    <div class="email-gold-band"></div>
    <div class="email-subheader">{{ digest.headline }}</div>
-   <div class="byline">By <a href="/">Spanified</a> · {{ digest.date_display }} · {{ digest.story_count }} {% if digest.story_count == 1 %}story{% else %}stories{% endif %}</div>
+   <div class="byline">By <a href="/about">Spanified</a> · {{ digest.date_display }} · {{ digest.story_count }} {% if digest.story_count == 1 %}story{% else %}stories{% endif %}</div>
 
    <div class="email-body">
    {% for item in digest.stories %}
