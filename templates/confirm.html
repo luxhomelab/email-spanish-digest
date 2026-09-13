@@ -5,11 +5,17 @@
 <meta name="robots" content="noindex, follow">{% endblock %}
 {% block content %}
  <div class="centered-page">
-  <div class="card">
-  <h1>Confirm your subscription</h1>
-  <p>We need to confirm your email address to complete the subscription process.</p>
-  <p>Please click on the link present in the email we just sent you.</p>
-  <p>You won't be subscribed if you don't click the confirmation link.</p>
+  <div class="card confirm-card">
+  <p class="confirm-kicker">Almost done</p>
+  <h1>Check your inbox</h1>
+  <p class="confirm-lead">We've just sent you an email. Click the confirmation link inside it — and you're subscribed.</p>
+  <ol class="confirm-steps">
+   <li><strong>Open the email</strong> from Spain Daily (arrives within a minute)</li>
+   <li><strong>Click the confirmation link</strong> inside</li>
+   <li><strong>Done</strong> — tomorrow's digest is on its way</li>
+  </ol>
+  <p class="confirm-note">Until you click that link, you're <strong>not</strong> subscribed yet.</p>
+  <p class="confirm-trouble">No email? Check spam and Promotions. Wrong address? <a href="/subscribe">Try again</a>.</p>
  </div>
  </div>
 {% endblock %}

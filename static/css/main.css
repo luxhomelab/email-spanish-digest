@@ -681,3 +681,32 @@ body.page-contact .contact .card {
 @media (max-width: 720px) {
  .trust-grid { grid-template-columns: 1fr; }
 }
+
+/* Confirm page: make the required action unmissable */
+.confirm-card { max-width: 560px; text-align: left; }
+.confirm-kicker {
+ font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
+ color: #AA151B; margin-bottom: 8px;
+}
+.confirm-card h1 { margin-bottom: 10px; }
+.confirm-lead { font-size: 17px; line-height: 1.55; }
+.confirm-steps { margin: 20px 0; padding: 0; list-style: none; counter-reset: step; }
+.confirm-steps li {
+ counter-increment: step;
+ display: flex; align-items: flex-start; gap: 12px;
+ padding: 10px 0; border-top: 1px solid #EFE7D8;
+}
+.confirm-steps li:last-child { border-bottom: 1px solid #EFE7D8; }
+.confirm-steps li::before {
+ content: counter(step);
+ flex: 0 0 28px; width: 28px; height: 28px; border-radius: 50%;
+ background: linear-gradient(135deg, #AA151B 0%, #7E1015 100%);
+ color: #ffffff; font-weight: 700; font-size: 14px;
+ display: flex; align-items: center; justify-content: center;
+}
+.confirm-note {
+ background-color: #FDF3E2; border: 1px solid #EFE7D8; border-radius: 10px;
+ padding: 12px 16px; font-size: 15px;
+}
+.confirm-trouble { color: #6C7A89; font-size: 14px; margin-top: 14px; }
+.confirm-trouble a { color: #AA151B; font-weight: 600; }
