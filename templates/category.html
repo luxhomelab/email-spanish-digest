@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body_class %} class="page-category"{% endblock %}
+{% block title %}{{ category_name }} news in Spain — Spanified{% endblock %}
+{% block description %}<meta name="description" content="Latest {{ category_name|lower }} news from Spain, summarized in English. Updated every morning.">{% endblock %}
+
+{% block content %}
+ <div class="cat-list">
+  <h1>{{ emoji }} {{ category_name }}</h1>
+  <p class="cat-sub">{{ stories|length }} stor{{ 'ies' if stories|length != 1 else 'y' }} · newest first · updated every morning</p>
+  {% for s in stories %}
+  <article class="cat-item">
+   <div class="cat-meta">{{ s.date }} · <a href="/archive/{{ s.date }}.html">full digest</a></div>
+   <h2>{{ s.title }}</h2>
+   <p>{{ s.body }}</p>
+   {% if s.sources %}
+   <div class="cat-source">
+    {% for src in s.sources %}<a href="{{ src.url }}" rel="noopener">{{ src.name }}</a>{% if not loop.last %} · {% endif %}{% endfor %}
+   </div>
+   {% endif %}
+  </article>
+  {% endfor %}
+ </div>
+{% endblock %}

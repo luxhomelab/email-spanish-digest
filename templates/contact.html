@@ -1,29 +1,8 @@
 {% extends "base.html" %}
+{% block body_class %} class="page-contact"{% endblock %}
 {% block title %}Contact — Spanified{% endblock %}
 {% block description %}<meta name="description" content="Contact Spanified — questions, feedback, press.">{% endblock %}
-{% block extra_head %}
- <style>
-  .contact { max-width: 640px; width: 100%; margin: 0 auto; }
-  .contact h1 {
-   font-family: Roboto, Helvetica, sans-serif;
-   font-size: 30px; font-weight: 700; color: #3C4858;
-   margin-bottom: 8px; text-align: center;
-  }
-  .contact .subtitle {
-   color: #6C7A89; font-size: 16px; margin-bottom: 28px; text-align: center;
-  }
-  .contact .card { padding: 32px; text-align: center; }
-  .contact .mail-link {
-   font-family: Roboto, Helvetica, sans-serif;
-   font-size: 22px; font-weight: 700; color: #C60B1E;
-   text-decoration: none;
-  }
-  .contact .mail-link:hover { text-decoration: underline; }
-  .contact .note {
-   margin-top: 16px; font-size: 14px; color: #6C7A89;
-  }
- </style>
-{% endblock %}
+
 {% block content %}
  <div class="contact">
   <h1>Contact us</h1>
