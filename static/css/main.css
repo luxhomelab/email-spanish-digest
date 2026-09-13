@@ -11,7 +11,7 @@ html, body {
 body {
  display: flex; flex-direction: column;
  min-height: 100vh;
- background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+ background: linear-gradient(180deg, #FCF3E2 0%, #F6E8CF 100%);
 }
 a { color: inherit; }
 
@@ -472,7 +472,6 @@ body.page-success { background: url('/success.jpg') center/cover no-repeat fixed
 .about .steps { margin: 0; padding-left: 22px; font-size: 15px; line-height: 26px; color: #3C4858; }
 
 /* ---------- Homepage redesign (body.page-home only) ---------- */
-body.page-home .content { background: linear-gradient(180deg, #FCF3E2 0%, #F6E8CF 100%); }
 body.page-home .page .card, body.page-home .cta-card { border-radius: 14px; box-shadow: 0 2px 14px rgba(60,40,20,0.07); border: 1px solid #EFE7D8; }
 /* Hero */
 body.page-home .hero { padding: 36px 20px 8px 20px; }
@@ -521,7 +520,6 @@ body.page-home .cta-card { padding: 48px 40px; }
 body.page-home .page-note { margin-top: 28px; line-height: 1.7; }
 
 /* ---------- Archive in homepage style (body.page-archive only) ---------- */
-body.page-archive .content { background: linear-gradient(180deg, #FCF3E2 0%, #F6E8CF 100%); }
 body.page-archive .archive { padding: 36px 0 16px 0; }
 body.page-archive .archive h1 { font-size: 38px; letter-spacing: -0.5px; }
 body.page-archive .archive .subtitle { margin-bottom: 32px; }
@@ -548,7 +546,6 @@ body.page-archive .pagination .current { background-color: #AA151B; border-color
 body.page-archive .pagination a:hover { border-color: #AA151B; color: #AA151B; }
 
 /* ---------- Digest issue in homepage style (CSS-only, DOM untouched) ---------- */
-body.page-digest .content { background: linear-gradient(180deg, #FCF3E2 0%, #F6E8CF 100%); }
 body.page-digest .digest { background: transparent; padding: 0 16px 24px 16px; }
 body.page-digest .digest-card { border-radius: 16px; border: 1px solid #EFE7D8; box-shadow: 0 4px 22px rgba(60,40,20,0.09); overflow: hidden; }
 body.page-digest h1.email-red-band { padding: 26px 28px; font-size: 30px; line-height: 36px; letter-spacing: -0.5px; }
@@ -592,3 +589,20 @@ body.page-digest h1.email-red-band {
 }
 body.page-digest h1.email-red-band time { color: #AA151B; }
 body.page-digest .email-gold-band { height: 6px; margin: 0 32px; border-radius: 3px; }
+
+/* ---------- Category in homepage style (body.page-category only) ---------- */
+body.page-category .cat-list { padding: 16px 0; }
+body.page-category .cat-list h1 { font-size: 38px; letter-spacing: -0.5px; }
+body.page-category .cat-sub { margin-bottom: 32px; }
+body.page-category .cat-sub::after {
+ content: ""; display: block; width: 72px; height: 4px; border-radius: 2px;
+ background: linear-gradient(90deg, #AA151B 50%, #F1BF00 50%);
+ margin-top: 16px;
+}
+body.page-category .cat-item {
+ border-radius: 14px; border: 1px solid #EFE7D8;
+ box-shadow: 0 2px 14px rgba(60,40,20,0.07);
+ padding: 28px 32px; margin-bottom: 20px;
+}
+body.page-category .cat-meta { color: #AA151B; font-weight: 600; }
+body.page-category .cat-meta a { color: #AA151B; }
