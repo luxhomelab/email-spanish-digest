@@ -6,7 +6,7 @@
 {% block content %}
  <div class="cat-list">
   <h1>{{ emoji }} {{ category_name }}</h1>
-  <p class="cat-sub">{{ stories|length }} stor{{ 'ies' if stories|length != 1 else 'y' }} · newest first · updated every morning</p>
+  <p class="cat-sub">{{ stories|length }} news · newest first · updated every morning</p>
   {% for s in stories %}
   <article class="cat-item">
    <div class="cat-meta">{{ s.date }} · <a href="/archive/{{ s.date }}.html">full digest</a></div>
