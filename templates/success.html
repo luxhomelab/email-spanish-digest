@@ -5,10 +5,16 @@
 <meta name="robots" content="noindex, follow">{% endblock %}
 {% block content %}
  <div class="centered-page">
-  <div class="card">
-  <h1>You're subscribed!</h1>
-  <p>You will now receive the Spain Daily digest every morning.</p>
-  <p>Stay tuned for the latest news from Spain, delivered straight to your inbox.</p>
+  <div class="card confirm-card">
+  <p class="confirm-kicker">You're in</p>
+  <h1>Subscription confirmed!</h1>
+  <p class="confirm-lead">Tomorrow morning the first digest lands in your inbox. Meanwhile — don't wait:</p>
+  <ol class="confirm-steps">
+   <li><strong>Read today's digest</strong> — <a href="/">see what you almost missed</a></li>
+   <li><strong>Browse the archive</strong> — <a href="/archive/">every issue since day one</a></li>
+   <li><strong>Follow us</strong> — <a href="https://www.threads.com/@spaindaily">Threads</a>, <a href="https://bsky.app/profile/spanified.bsky.social">Bluesky</a>, <a href="https://x.com/spanified">X</a></li>
+  </ol>
+  <p class="confirm-note">Changed your mind? <a href="/unsubscribe">Unsubscribe in one click</a> — no questions asked.</p>
  </div>
  </div>
 {% endblock %}
