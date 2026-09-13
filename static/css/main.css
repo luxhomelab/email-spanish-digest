@@ -581,3 +581,13 @@ body.page-digest .day-nav a:hover { text-decoration: none; border-color: #AA151B
  body.page-digest .email-body { padding: 8px 20px 0 20px; }
  body.page-digest .mercadona { margin: 12px 20px 0 20px; }
 }
+
+/* Digest header: light editorial instead of heavy red block */
+body.page-digest h1.email-red-band {
+ background-color: #FFFDF8;
+ color: #3C4858;
+ padding: 34px 32px 8px 32px;
+ font-size: 34px; line-height: 40px; letter-spacing: -0.5px;
+}
+body.page-digest h1.email-red-band time { color: #AA151B; }
+body.page-digest .email-gold-band { height: 6px; margin: 0 32px; border-radius: 3px; }
