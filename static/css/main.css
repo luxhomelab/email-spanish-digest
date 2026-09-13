@@ -710,3 +710,4 @@ body.page-contact .contact .card {
 }
 .confirm-trouble { color: #6C7A89; font-size: 14px; margin-top: 14px; }
 .confirm-trouble a { color: #AA151B; font-weight: 600; }
+.confirm-steps li > div { flex: 1; min-width: 0; }
