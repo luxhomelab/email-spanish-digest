@@ -141,7 +141,23 @@ def digest_context(data):
         "story_count": len(items),
         "top_categories": top_categories(items),
         "url": f"/archive/{date}",
+        "meta_description": digest_meta_description(date, headline, items),
     }
+
+
+def digest_meta_description(date, headline, items):
+    """Unique per-day description: headline plus the top two story titles.
+
+    Falls back to the generic blurb when a digest has no items. Capped at
+    ~155 chars so Google shows it whole in the snippet.
+    """
+    topics = [i.get("title", "").strip() for i in items[:2]]
+    topics = [t for t in topics if t]
+    if topics:
+        desc = f"{headline}: " + " — ".join(topics)
+    else:
+        desc = f"Spain Daily Digest for {date} — the day's top news from Spain, summarized in English."
+    return desc if len(desc) <= 157 else desc[:154].rsplit(" ", 1)[0] + "…"
 
 
 def archive_url(page):
@@ -193,13 +209,20 @@ def render_digests(env, digests):
             os.remove(os.path.join(ARCHIVE_DIR, filename))
 
     template = env.get_template("digest.html")
-    for digest in digests:
+    for i, digest in enumerate(digests):
         crumbs = [
             {"name": "Home", "url": "/"},
             {"name": "Archive", "url": "/archive/"},
             {"name": digest["date_display"], "url": digest["url"], "current": True},
         ]
-        output = template.render(digest=digest, emoji=CATEGORY_EMOJI, crumbs=crumbs)
+        # digests is newest-first: i-1 is the newer day, i+1 the older day.
+        older = digests[i + 1] if i + 1 < len(digests) else None
+        newer = digests[i - 1] if i > 0 else None
+        day_nav = {
+            "older": {"url": older["url"], "date_display": older["date_display"]} if older else None,
+            "newer": {"url": newer["url"], "date_display": newer["date_display"]} if newer else None,
+        }
+        output = template.render(digest=digest, emoji=CATEGORY_EMOJI, crumbs=crumbs, day_nav=day_nav)
         dest = os.path.join(ARCHIVE_DIR, f"{digest['date']}.html")
         with open(dest, "w", encoding="utf-8") as fh:
             fh.write(output)
