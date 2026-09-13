@@ -1,0 +1,191 @@
+{
+  "items": [
+    {
+      "title": "Spain granted record 1.5 million residence permits in 2025",
+      "body": "Spain issued 1,577,842 residence permits in 2025, the highest number since detailed records began in 2014 and a 7.8% increase over 2024. Nationals from Ukraine, Venezuela, and Morocco accounted for 42% of all permits granted. The total includes both first-time permits and renewals, and one person may receive multiple authorizations within a year. The surge reflects Spain's active immigration policy and growing demand from foreign nationals seeking legal residency.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/gobierno-concedio-mas-un-millon-medio-permisos-residencia-2025-cifra-mas-alta-desde-que-hay-registros_7011135_0.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Spain beats Portugal with stoppage-time winner",
+      "body": "Spain advanced to the World Cup quarterfinals with a dramatic 1-0 win over Portugal in the round of 16. Midfielder Mikel Merino scored the decisive goal in the 91st minute, assisted by Ferran Torres, knocking out Cristiano Ronaldo and Portugal. The defending European champions now await their next opponent in the tournament. The match gripped the nation and added another chapter to the Iberian rivalry.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/deportes/futbol/mundial-de-futbol/2026/07/06/6a4beb55fdddff47338b459e.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Spanish savers face higher investment taxes than EU average",
+      "body": "Spain's effective tax rate on financial savings reaches 22%, well above the European Union average of 14% and the OECD's 16%, according to a study by the IEE and EFPA. The personal income tax (IRPF) on capital gains stands at 30% in Spain compared to 18% EU-wide, while taxes on stock returns hit 29% against an EU average of 21%. Investment funds face a 27% rate, and the combined corporate and dividend tax burden reaches 47.5%, far surpassing the EU's 38.8%. These higher levies directly reduce net returns for anyone holding savings or investments in Spain.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/espanoles-pagan-mas-impuestos_7011071_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Average age of renters in Spain rises to 36",
+      "body": "The typical tenant in Spain is now 36.2 years old, up from 31.5 in 2021, a 14.9% increase that reflects the deepening housing affordability crisis. Six out of ten renters are now between 30 and 40, and only 27% of those born between 1986 and 1995 owned a home by age 30—compared to 60% for earlier generations. Shared housing, temporary rentals, and room rentals are the fastest-growing alternatives. The figures underscore how difficult it has become for young people to access stable housing.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/07/07/6a4ba539e9cf4ada2f8b458a.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Foreign marriages valid for pensions, Spanish court rules",
+      "body": "The High Court of Justice of Catalonia (TSJC) ruled that a woman who married in Morocco in 1965 is entitled to a widow's pension, even though the marriage was never registered in Spain. The National Social Security Institute (INSS) had denied the payment, arguing the lack of registration, but the court found that a valid foreign marriage, if uncontested, must be recognized for pension purposes. The ruling sets a pension base of 799 euros per month and reinforces the principle that a lack of Spanish paperwork cannot block survivors' benefits for legally celebrated marriages abroad.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/justicia-reconoce-pension-una-viuda-casada-marruecos-pero-no-inscrita-espana_7011136_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Supreme Court bans mandatory extra hours for part-time workers",
+      "body": "Spain's Supreme Court annulled a company agreement that forced part-time employees of Ryanair and two handling companies to work complementary hours on demand. The court ruled that such extra hours require an express, individual, and voluntary pact, and that giving less than three days' notice is illegal. The annulled clause allowed up to 60% of a normal workday to be added, sometimes with only verbal instruction. The ruling upholds a prior decision by the Audiencia Nacional and offers stronger legal protection to part-time workers.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/supremo-prohibe-imposicion-horas-complementarias-los-empleados-tiempo-parcial_7010913_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "⚠️ Wildfires force 40,000 people to shelter in Catalonia",
+      "body": "Two major wildfires burning simultaneously in Catalonia have forced some 40,000 people to shelter in place, with the Catalan government requesting help from the Military Emergency Unit (UME). The blaze in Anoia alone affects 33,000 residents and has already consumed 400 hectares, while a third fire in Artesa de Segre has been stabilized. Firefighters are battling to avoid operational collapse, and red alerts are active in the affected areas. Anyone in the region should follow official evacuation orders and safety instructions.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/cataluna/2026/07/06/6a4be304fc6c833c398b4599.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "Malaga caravan residents face eviction amid housing crisis",
+      "body": "A group of residents living in caravans on plots in Sacaba, near Malaga, are to be evicted on Tuesday at 7:00 AM over health and waste concerns, according to municipal authorities. The residents say they cannot afford conventional housing; one has lived in Malaga for 25 years and works as a delivery driver. They use solar panels and have basic amenities in their caravans. The case highlights the severe shortage of affordable housing that is pushing even long-term residents into precarious living situations.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/andalucia/malaga/cuenta-caravanistas-milla-oro-malaga-no-pagar-piso-digan_1_13360660.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Spain considers asymmetric deficit targets for regions",
+      "body": "The Spanish government has approved raising regional spending caps from 3.5% to 4% and set a deficit limit of 0.1% of GDP for 2027-2029, opening the door for the first time to allowing some regions to run higher deficits than others. Only socialist-led regions such as Catalonia, Castilla-La Mancha, and Asturias supported the plan, while PP-governed regions voted against it, citing unfunded mandates. The central administration's deficit will drop from 1.8% to 1.5%. If implemented, differing regional budgets could lead to unequal public services and tax pressures depending on where you live.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/macroeconomia/2026/07/06/6a4bc211fc6c833c398b458e.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Bars and restaurants to charge deposit on bottles from November",
+      "body": "Spain will roll out a new deposit return system (SDDR) for beverage containers starting in November 2026, meaning consumers will pay a deposit of around 10 cents per bottle or can. The fee is refunded when the container is returned, a system designed to boost recycling rates from the current 41.3% to the EU-mandated 70%. The measure applies to all purchases at bars, restaurants, and shops, adding a small but recurring cost to everyday spending for everyone in Spain.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/gastronomia/2026/07/06/ya-oficial-bares-restaurantes-cobraran-suplemento-extra-botellas-nueva-normativa-gobierno-2021183.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Heatwave triggers red alerts in three Spanish regions",
+      "body": "A severe heatwave has placed three autonomous communities under red alert, with temperatures forecast to reach 43°C in parts of the Valencian Community and the Ebro valley. Peak heat is expected Tuesday, and 12 other regions are under yellow or orange warnings. The extreme weather poses health risks, especially for vulnerable groups. Authorities urge everyone to stay hydrated, avoid outdoor activity during peak hours, and monitor AEMET updates.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/el-tiempo/ola-calor-abrasa-espana-tres-comunidades-aviso-rojo-12-alertas-pm_1_13359720.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Spanish banks reach record solvency with low delinquency",
+      "body": "Bank of Spain data for the first quarter of 2026 show that the country's banks achieved historic highs in capital ratios and profitability, reaching 17.3%, while delinquency rates hit series lows. The 152 credit entities hold combined assets of €4.555 trillion. The strong indicators reinforce the stability of Spain's financial sector, offering reassurance to those with accounts, mortgages, or investments in the country.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/07/07/banca-alcanza-maximos-historicos-solvencia-con-morosidad-minimos-2035072.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Sánchez heads to NATO summit ready for clash on spending",
+      "body": "Prime Minister Pedro Sánchez arrived at the NATO summit in Ankara prepared to resist pressure from Secretary General Mark Rutte to raise Spain's military spending to 5% of GDP. Sánchez argues that the defense budget has already increased by 154% since 2018, from €11.2 billion to €35.4 billion, making Spain the seventh-largest contributor among 32 allies. The debate could influence future national budget allocations, but its direct effect on daily life remains limited.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/internacional/2026/07/06/6a4beb2be9cf4ae4708b4594.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Spain issued a record 1.5 million residence permits last year — what was your experience with the process? 💬",
+  "variant": "What mattered in Spain today",
+  "headline": "What mattered in Spain today",
+  "date": "2026-07-07",
+  "generated_at": "2026-07-07T06:05:14.848112+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 361,
+    "items_selected_pass1": 15,
+    "fact_sheets_extracted": 15,
+    "items_after_importance_filter": 13,
+    "items_in_digest": 13
+  },
+  "selection_reasons": {
+    "1": "Spain World Cup victory is mandatory — the national team advanced to quarter-finals, a major event with wide public impact.",
+    "17": "Two simultaneous wildfires in Catalonia have confined 40,000 people, a national-scale natural disaster directly affecting residents' safety.",
+    "19": "The rental crisis pushes the average tenant age to 36, a systemic housing trend that affects all foreign residents seeking accommodation.",
+    "130": "Spain granted over 1.5 million residence permits in 2025, a record high that directly impacts the immigrant audience.",
+    "67": "A heatwave with red alerts in three regions affects daily life, health and cooling costs for everyone living in Spain.",
+    "6": "Sánchez heads to the NATO summit facing pressure on military spending, a dispute that could influence Spain's fiscal policy and taxes.",
+    "9": "The government opens the door to asymmetric deficit targets for regions, a major shift in fiscal governance that affects economic stability.",
+    "152": "A court grants a pension to a widow married abroad but not registered in Spain, setting a precedent for immigrant social security rights.",
+    "290": "The Supreme Court bans mandatory extra hours for part-time workers, a labour ruling that protects foreign employees with partial contracts.",
+    "211": "Banks hit record solvency with the lowest bad-loan rate ever, a sign of financial sector health that matters to investors and depositors.",
+    "280": "Spanish investors pay eight percentage points more tax on savings than the EU average, directly affecting expat and retiree investment planning.",
+    "31": "A judge allows Begoña Gómez to travel to London but not to the NATO summit, a politically charged judicial decision that keeps the case in the news.",
+    "96": "San Fermín starts with a tribute to health workers, a major national festival that dominates public conversation across Spain.",
+    "258": "Bars and restaurants will charge a bottle deposit fee under new SDDR rules, a cost-of-living change affecting all consumers.",
+    "65": "Málaga plans to evict caravan dwellers near the 'golden mile', highlighting the severe housing affordability crisis for low-income residents."
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "items": [
+    {
+      "title": "US Official Compares Normandy Landings to 'Immigrant Invasion'",
+      "body": "Pete Hegseth, US Secretary of War, sparked outrage by comparing the Allied landings at Normandy during WWII to a 'cultural invasion' of immigrants in Europe. He made the remarks on the D-Day anniversary at a US cemetery in France.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/internacional/2026/06/07/secretario-guerra-ee-uu-compara-desembarco-normandia-con-invasion-inmigrantes-europa-2026884.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Madrid Demands 10 Years of Padrón for Public Housing",
+      "body": "The Community of Madrid now requires a minimum of 10 years of padrón (municipal registry) enrollment to purchase subsidized housing. Critics say this indirectly discriminates against immigrants, and similar requirements in Canarias (12 years) are already being challenged in court.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/madrid/asociaciones-critican-ayuso-exija-diez-anos-empadronamiento-optar-vivienda-publica-prioridad-nacional_1_13268171.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Hacienda Warns: Cash Over €1,000 May Trigger Fines",
+      "body": "Spain's Tax Agency (Agencia Tributaria) is intensifying monitoring of cash transactions, and amounts over €1,000 deposited or withdrawn from bank accounts can raise fraud suspicions, leading to fines. While no legal limit exists, Hacienda treats such moves as red flags.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/07/confirmado-por-hacienda-multas-para-quienes-ingresen-retiren-efectivo-cajero-esta-manera-2024109.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Tax Inspector Strike Hits Peak of IRPF Campaign",
+      "body": "A 24-hour strike by Tax Agency (AEAT) workers is set for Monday, June 8, during the height of the IRPF (income tax) filing season. The CSIF union demands a professional career plan frozen since 2019, remote work rights, and hazard pay for customs surveillance.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/inspectores-agencia-tributaria-llamados-huelga-plena-campana-renta-claves-conflicto_1_13277796.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Government Admits Delays in Extraordinary Regularization",
+      "body": "Minister Elma Saiz acknowledged some delays in the extraordinary regularization process for migrants, but assured that responses will be given 'in due time and form.' She praised public servants handling the procedure and condemned 'hate speech' about supposed benefits.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/gobierno-asume-algunas-demoras-proceso-regularizacion-pero-aclara-se-va-dar-respuesta-tiempo-forma_6980087_0.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Kitchen Scandal Now Ensnares Sánchez After Toppling Rajoy",
+      "body": "The trial of the PP-era 'Kitchen' operation for alleged state-ordered espionage has taken a twist as new evidence links the PSOE and Pedro Sánchez's inner circle to similar practices. The scandal threatens to implicate both major parties in misusing state security for political gain.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/06/06/6a243a4ce85ecece638b45b5.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Doctors Rebel Against Minister's Reform, Split Government",
+      "body": "Tens of thousands of doctors are protesting the proposed Estatuto Marco reform, which they say ignores demands for improved working conditions, pensions, and salaries. The Health Ministry needs approval from Treasury, Labor, and Social Security, creating a government rift.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/ciencia-y-salud/salud/2026/06/07/6a2301f6fc6c83cd568b45b9.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "Would you support a 10-year residency requirement for affordable housing in your region? 🤔",
+  "headline": "🇪🇸 Spain: daily briefing 📋 07.06.2026",
+  "date": "2026-06-07",
+  "generated_at": "2026-06-07T05:31:38.679791+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 248,
+    "items_selected": 10
+  }
+}

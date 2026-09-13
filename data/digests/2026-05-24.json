@@ -1,0 +1,134 @@
+{
+  "items": [
+    {
+      "title": "Former PM Zapatero accused in corruption case with fake invoices",
+      "body": "A police investigation (Udef) alleges that a network led by former president José Luis Rodríguez Zapatero used false invoices, simulated jobs, and ghost consulting to traffic influence. The report cites Zapatero and his daughters as \"main beneficiaries\" of the scheme.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/05/23/6a120531e9cf4ac3658b45b5.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "New terrace rules: fines up to €50,000 for extreme heat violations",
+      "body": "The hospitality industry's new labor agreement (ALEH) requires bars and restaurants to implement heat mitigation measures during extreme temperatures over 40°C or remove outdoor service. Fines for non-compliance can reach €50,000, effective for summer 2026.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/05/24/terrazas-bares-restaurantes-nueva-normativa-sanciones-hasta-euros-calor-extremo-2022584.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Thousands protest in Spain against Inditex, Mango and Primark labor deal",
+      "body": "Workers in textile and footwear stores held strikes and protests against a new collective agreement signed by employer association ARTE, which includes major brands. Unions claim it worsens working conditions and demand talks on May 27-28.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/miles-trabajadores-manifiestan-espana-convenio-patronal-inditex-mango-primark_1_13245436.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Feijóo vows stricter migration policy: expel those who commit crimes",
+      "body": "PP leader Alberto Núñez Feijóo promised to replace current migration policy with one that protects borders and expels lawbreakers. He also pledged a 24-hour eviction rule for squatters under a new anti-okupación law.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/feijoo-se-compromete-endurecer-politica-migratoria-si-llega-gobierno-quien-venga-delinquir-sera-expulsado_6974217_0.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Over 11,000 Uruguayans get Spanish nationality under Memory Law",
+      "body": "Spain's Democratic Memory Law has granted nationality to 11,670 Uruguayans descended from exiles, with almost 50,000 applications filed. The government calls it a \"moral reparation\" for those forced to flee the Civil War and Franco dictatorship.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/mas-11-000-uruguayos-reciben-nacionalidad-espanola-con-ley-memoria-democratica_6974231_0.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Housing boom slowdown but no general price drops expected",
+      "body": "After the latest real estate boom, prices are moderating but experts say a 2008-style crash is unlikely. The question for buyers remains: should you buy, sell, or wait?",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/05/23/6a0c6a31fc6c83eb6a8b45b4.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Spain loses seat at ECB Executive Board for second time in 28 years",
+      "body": "With Luis de Guindos leaving as Vice President, Croatia's Boris Vujčić takes over, leaving Spain without a seat until at least 2027. The Spanish government failed to secure a replacement from its own nationality.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/macroeconomia/2026/05/24/6a0ef99721efa0aa418b45c3.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain's deposit return system for cans and bottles delayed to 2029",
+      "body": "The planned deposit, return, and refund (SDDR) system for plastic bottles and cans will likely be postponed until January 2029 due to incompatibility with EU regulations. The government has issued a clarifying note but no official confirmation.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/aagesen-apunta-retraso-hasta-2029-sistema-fianza-retorno-latas-botellas-asumir-que-ley-es-incompatible-con-ue_6973467_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spanish firms face Trump's tariffs on olive oil, wine, and chocolate",
+      "body": "Exporters of products like olive oil, wine, and chocolate are grappling with US tariffs under President Trump, a weak dollar, and rising costs from the Iran conflict. Experts recommend diversifying markets and managing margins.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/asi-atraviesan-muro-aranceles-trump-empresas-espanolas-aceite-oliva-vino-chocolate_6973547_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Trump says Iran deal nearly finalized, announcement imminent",
+      "body": "US President Donald Trump stated that the Memorandum of Understanding with Iran is \"largely negotiated\" and only final details remain. The deal includes opening the Strait of Hormuz and has been discussed with Israeli PM Netanyahu.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/internacional/noticia-trump-asegura-estan-negociando-ultimos-detalles-acuerdo-iran-anunciara-pronto-20260523224650.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "The new terrace fines up to €50,000 for heat violations kick in soon. Do you think this will hurt Spain's 'terraza culture' or improve worker safety? 💬",
+  "headline": "🇪🇸 Spain: today's rundown ⚡ 24.05.2026",
+  "date": "2026-05-24",
+  "generated_at": "2026-05-24T05:31:56.025243+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 268,
+    "items_selected": 10
+  }
+}

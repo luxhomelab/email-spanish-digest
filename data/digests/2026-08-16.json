@@ -1,0 +1,127 @@
+{
+  "items": [
+    {
+      "title": "Rents fall 5.3% in Navarre's rent-capped zones",
+      "body": "Average rents in Navarre's 21 rent-capped municipalities fell 5.3% year-on-year to €796.20 in the second quarter, down from €840.90 a year earlier. Outside those zones, the average rent was €594.90, up 4.7%. Across the region, the average fell 5.4% to €779.30. The gap suggests the rent caps are producing measurable savings in capped towns while pressure shifts to uncapped areas.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/navarra/precio-alquileres-municipios-navarros-topado-cae-5-3_1_13447446.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Spanish workers can request salary advance before payday",
+      "body": "Under Article 29 of the Workers' Statute, employees in Spain can ask for an advance on salary already earned before the official monthly payday. Employers must pay the proportional amount for fully completed working days. A worker paid on the 30th, for example, can request payment on the 15th for the first two weeks worked. Collective agreements may set limits on how often advances can be requested.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/08/16/oficial-empleados-tienen-derecho-pedir-adelanto-sueldo-antes-dia-cobro-2041414.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Ceuta migration pressure keeps Italy border checks on Spain",
+      "body": "A floating barrier installed by the Guardia Civil off Ceuta in early August has triggered the legal mechanism for the return to Morocco of migrants who cross it without administrative procedures. The Supreme Court ruled on July 8 that people intercepted at sea must go through the return procedure, not border rejection. Morocco says it intercepted 294 migrants trying to reach Ceuta on Saturday and detained 61 people suspected of inciting irregular migration online. Italy is maintaining temporary controls on travelers from Spain until risks tied to a possible mass entry in Ceuta decline, according to Foreign Minister Antonio Tajani.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/08/15/6a8080f5e9cf4a77488b457b.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/internacional/marruecos-asegura-frenado-cientos-migrantes-alcanzar-ceuta_1_13448944.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/internacional/italia-condiciona-levantar-controles-viajeros-procedentes-espana-disminuyan-riesgos-ceuta_1_13449023.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "⚠️ Spain wildfires burn 265,000 hectares as Riglos forces evacuations",
+      "body": "Wildfires in Spain have already burned more than 265,000 hectares in 2026, surpassing the total for all of 2025. The Riglos fire in Huesca has burned 16,600 hectares, has forced the evacuation of 1,045 residents across 19 towns, and remains active on much of its perimeter. Aragón has asked France for air and ground resources under the 2017 Málaga Agreement. In Huelva, the Niebla fire slowed for the first time in eight days after burning more than 38,000 hectares. José Ramón González Pan, from the College of Forestry Engineers, attributed this year's wildfire season to negligence and environmental conditions.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/los-incendios-han-arrasado-ya-mas-265-000-hectareas-2026-no-es-solo-cambio-climatico-ha-habido-muchas-negligencias_7025575_0.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/incendios-espana-fuego-riglos-avanza-aragon-pide-medios-francia-mientras-que-niebla-se-frena-tras-recorrer-38-000-ha_7026139_0.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "Middle class now means saving for mortgage, says expert",
+      "body": "Finance expert Luis Garvía says that the middle class is disappearing and that the new benchmark is no longer owning a home but saving the down payment and taking on a mortgage. He called it 'an absolute disaster' that one-third of homes entering the market in the next 10 years will do so through inheritance. Garvía also said young people face low salaries and temporary contracts, which limits saving and financial planning.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-08-15/luis-garvia-sobre-la-vivienda-e-hipotecas-lasexta-1qrt_4199872/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Spain renews Almaraz nuclear plant through 2030",
+      "body": "Spain has renewed the operating permit for the two Almaraz nuclear reactors until at least June 8, 2030, pushing back previous closure dates of 2027 and 2028. Spain has seven reactors in five plants, making it the EU's second-largest nuclear operator after France, with total installed capacity of 7,398.77 MW. Nuclear power supplied 19% of Spain's electricity in the first half of 2024, and Almaraz generated about 30% of that nuclear output.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/parque-nuclear-espanol-tras-renovacion-almaraz-como-es-cual-es-calendario-cierres-resto-centrales-pais_7025802_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "98 aftershocks follow Granada earthquake; 13 felt",
+      "body": "Spain's National Geographic Institute recorded 98 aftershocks after Saturday's earthquake in Granada. Of those, 13 were felt by residents, and the largest reached magnitude 3.3 about five hours after the main quake. The activity is regional, but people in the Granada area should remain aware of ongoing seismic movement.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/noticia-registradas-98-replicas-terremoto-granada-13-ellas-sentidas-poblacion-magnitud-33-20260815160410.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Should Spain apply rent caps nationwide after Navarre's 5.3% drop, or do they just push rents up elsewhere?",
+  "variant": "Nothing Happened in Spain Today. Except This.",
+  "headline": "Nothing Happened in Spain Today. Except This.",
+  "date": "2026-08-16",
+  "generated_at": "2026-08-16T08:04:33.758883+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 233,
+    "items_selected_pass1": 11,
+    "fact_sheets_extracted": 11,
+    "items_after_importance_filter": 10,
+    "items_in_digest": 7
+  },
+  "selection_reasons": {
+    "3": "Ceuta's new physical and legal barrier formalizes hot returns, a key migration policy change affecting immigrants.",
+    "35": "Morocco intercepted 294 migrants trying to reach Ceuta, deepening the border crisis that drives Spain's immigration discourse.",
+    "27": "The Granada earthquake and nearly 100 aftershocks are a major natural event with safety and property implications for residents.",
+    "113": "Wildfires have burned over 265,000 hectares this year, making 2026 a record fire season with widespread insurance and safety impact.",
+    "121": "Two major fires—Riglos advancing in Aragón and Niebla stabilizing—show the national scale of Spain's current wildfire emergency.",
+    "81": "Italy ties lifting border controls on travelers from Spain to the Ceuta risk, directly affecting free movement for foreigners.",
+    "83": "Rent caps in 21 Navarra towns produced a real 5.3% price drop, key evidence for tenants and housing investors.",
+    "231": "Housing experts describe home access as the central middle-class crisis in Spain, affecting buyers, tenants, and tourist-let investors.",
+    "221": "Spain's nuclear closure calendar after the Almaraz extension matters for electricity supply and future energy prices.",
+    "205": "Spanish workers have a recognized legal right to request a salary advance before payday, a practical labor rule for employees.",
+    "24": "Spain's rhythmic gymnastics team won a historic world gold and secured a Los Angeles 2028 spot, a major national sports milestone."
+  }
+}

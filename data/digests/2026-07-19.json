@@ -1,0 +1,137 @@
+{
+  "items": [
+    {
+      "title": "PP plans to repeal 100 progressive laws if elected",
+      "body": "The conservative Partido Popular has announced plans to repeal around 100 laws from the current progressive government. Led by Alberto Núñez Feijóo, the party aims to cut unemployment benefits, limit union representation, and reverse protections for trans people and migrants. The approach mirrors that of former president Mariano Rajoy in 2011. These reforms would reshape social and labor rights in Spain.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/pp-feijoo-promete-ambiciosa-contrarreforma-legal-recortes-derechos-sociales-si-llega_1_13387130.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Spain faces Messi's Argentina in World Cup final",
+      "body": "Spain plays Argentina in the World Cup final on July 19 at MetLife Stadium in New Jersey. La Roja seeks its second title, 16 years after its 2010 victory. Argentina, the defending champion, is led by 39-year-old Lionel Messi. The match is a major national event, with millions watching across Spain.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/deportes/futbol/mundial-00639/noticia-espana-reta-messi-campeona-estrella-20260718201918.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Aragon housing prices surge 11.2% in a year",
+      "body": "The average price per square meter for housing in Aragon rose 11.2% in the second quarter of 2026 compared to the same period last year, according to appraisal company Gesvalt. The sharp increase makes it harder for buyers and renters to find affordable homes. The trend reflects a broader national pattern of rising property costs.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/aragon/2026/07/18/precio-vivienda-aragon-sube-gente-compra-por-valores-muy-elevados-2037315.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "UN rapporteur calls on Madrid to cap rental prices",
+      "body": "Koldo Casla, the new UN Special Rapporteur on Housing, has urged Madrid to implement rental price caps. He warns that evicting a resident named Maricarmen would violate Spain's international treaty obligations. Casla points to Navarre, where rent controls reduced prices by 7% in one year, as evidence that the policy works. The intervention adds pressure on Madrid to address housing affordability.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/koldo-casla-relator-vivienda-onu-espero-madrid-cumpla-ley-tope-precios-alquiler_128_13354837.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Third summer heatwave to push temperatures past 45°C",
+      "body": "Spain's meteorological agency Aemet has confirmed a third heatwave starting July 21. Temperatures could exceed 44–45°C in parts of the southeast, Guadalquivir and Ebro valleys, and interior Mallorca. The agency warns of high danger levels for the elderly, children, and those with cardiovascular conditions. The heat lasts at least through July 23 and raises the fire risk to extreme in some areas.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/aemet-confirma-tercera-ola-calor-verano-tempeaturas-extremas_7016211_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "⚠️ Aragon wildfire burns 16,000 hectares, 1,000 evacuated",
+      "body": "A wildfire in the Cinco Villas region of Aragon has burned 16,000 hectares and forced the evacuation of 1,000 people from five towns. Nine additional towns remain on pre-alert as the fire perimeter reaches 80 kilometers. Authorities express cautious optimism but residents must stay informed and follow emergency instructions. The blaze has significantly impacted air quality and daily life in the area.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/aragon/zaragoza/2026/07/18/incendio-zaragoza-ores-cinco-villas-pueblos-evacuados-perimetro-2038322.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "Spain tourism generated €200 billion in 2024",
+      "body": "Spain's tourism industry generated €200 billion in 2024, accounting for 12.6% of GDP and supporting 2.7 million jobs. The country was the second most visited globally, with international tourists spending €105.1 billion. The data comes amid a World Cup final matchup against Argentina, whose economic strength lies in agro-food exports.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/un-gigante-turismo-frente-una-potencia-agroalimentaria-las-dos-grandes-bazas-espana-argentina-mundial-economia_7015932_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Immigration keeps rural schools and bars open, says official",
+      "body": "Francesc Boya, Spain's secretary general for the Demographic Challenge, says immigration is vital for rural areas, helping keep schools open and businesses running. The government has approved a new Territorial Equity Strategy aiming to ensure all residents can access essential services within 30 minutes. The plan could encourage foreign residents to settle in depopulated areas by improving infrastructure.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/secretario-general-reto-demografico-inmigracion-salva-escuelas-abre-bares-agricultura-viable_1_13385518.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "CEOE president calls absenteeism top business problem",
+      "body": "Antonio Garamendi, president of Spain's business confederation CEOE, identifies workplace absenteeism as the biggest issue facing companies, ahead of taxes and labor shortages. He is running for a third term, with elections set for October 1. The stance may influence future labor policy debates.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/07/19/entrevista-antonio-garamendi-presidente-ceoe-absentismo-2038249.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "Who are you backing in today's World Cup final — Spain or Argentina? 🇪🇸🇦🇷⚽",
+  "variant": "What mattered in Spain today",
+  "headline": "What mattered in Spain today",
+  "date": "2026-07-19",
+  "generated_at": "2026-07-19T08:11:22.186775+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 294,
+    "items_selected_pass1": 9,
+    "fact_sheets_extracted": 9,
+    "items_after_importance_filter": 9,
+    "items_in_digest": 9
+  },
+  "selection_reasons": {
+    "24": "Spain vs Argentina World Cup final – mandatory inclusion, top priority.",
+    "133": "Housing prices up 11% year-on-year, directly impacts property market and cost of living.",
+    "115": "AEMET warns of third heatwave with up to 45°C, affecting daily life and health for residents.",
+    "60": "UN housing rapporteur insists Madrid must cap rents, relevant for tenants and property investors.",
+    "120": "Large wildfire in Cinco Villas forces evacuation of 1,000 people, national disaster.",
+    "231": "Economic comparison of Spain and Argentina highlights key sectors for investors.",
+    "58": "Government official argues immigration saves rural schools and businesses, relevant to integration policy.",
+    "32": "PP proposes major rollback of social and labor rights, could affect all workers and residents.",
+    "185": "CEOE president warns about absenteeism as a top business problem, affecting work environment."
+  }
+}

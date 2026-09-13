@@ -1,0 +1,134 @@
+{
+  "headline": "🇪🇸 Spain — 14.05.2026",
+  "items": [
+    {
+      "title": "Spaniards Need Two Full Years' Salary for Average Home Down Payment",
+      "body": "A new study reveals the average down payment and closing costs for a home in Spain is €48,000, requiring nearly two years of net salary. In Madrid and the Balearic Islands, the entry cost exceeds €80,000, demanding double the time.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/espanoles-necesitan-anos-sueldo-integro-doble-madrid-baleares-entrada-compra-vivienda_1_13218260.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Tax Agency Sends 130,000 'Fear Letters' Over Income Tax Return Errors",
+      "body": "Agencia Tributaria (Spanish Tax Agency) is sending 130,000 letters to taxpayers who modified their pre-filled renta (income tax) data, warning of possible penalties ranging from 50% to 150% of unpaid amounts. Recipients can voluntarily correct their returns before official checks.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/13/miles-contribuyentes-reciben-cartas-preventivas-hacienda-hayan-hecho-esto-declaracion-renta-2018548.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "130,000 Migrant Regularization Applications in First Week Amid Legal Battle",
+      "body": "The extraordinary regularization procedure for undocumented migrants has received over 130,000 applications in its first week. Applicants face documentary doubts, and the Supreme Court is now deliberating on the decree's legality.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/epsocial/migracion/noticia-mes-regularizacion-migrantes-130000-solicitudes-semana-dudas-documentales-batalla-ts-20260513181802.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Russian Cargo Ship Sunk Near Spain May Have Carried Nuclear Reactors to North Korea",
+      "body": "The Ursa Major, a Russian state-linked cargo vessel, sank off the coast of Murcia in December 2024 after three mysterious explosions. New reports suggest it may have been transporting submarine nuclear reactors destined for North Korea.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/internacional/theguardian/misterio-carguero-ruso-hundido-cerca-espana-llevaba-reactores-nucleares-corea-norte_1_13216965.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Aldi Slashes Prices on 150 Products, Promises €2,000 Annual Savings",
+      "body": "The supermarket chain has reduced prices on staples like bread, dairy, and meat, claiming customers could save up to €2,000 per year on their weekly shopping. Aldi says its fresh products are already 15% cheaper than the market average.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/aldi-se-suma-rebajas-precios-sector-plena-guerra-abarata-150-productos-pan-lacteos_6969900_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "New Rent-to-Own Housing Aid for Under-35s Offers Up to €60,480 per Home",
+      "body": "The 2026-2030 State Housing Plan expands rent-to-own subsidies for young people, with maximum aid of €60,480 per protected home. Rent paid during the lease period can be fully deducted from the final purchase price.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/14/nuevas-ayudas-vivienda-para-jovenes-menores-35-anos-opcion-compra-hasta-2030-2019955.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Spain's Misuse of EU Recovery Funds for Pensions Sparks Berlin Scandal and Legal Doubt",
+      "body": "The Spanish government diverted €10 billion in EU funds meant for pension liquidity to other spending, confirmed by the European Commission. The move has caused a political scandal in Germany and raised legal questions in Spain.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/05/13/6a04b64ee9cf4a06768b456e.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "EU Advises Six-Week Strict Quarantine for Hantavirus Cruise Ship Passengers",
+      "body": "The ECDC recommends all passengers from the affected HM Hondius cruise ship be considered high-risk and quarantine for at least six weeks. Officials say the hantavirus has not mutated to become more transmissible between humans.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/bruselas-recomienda-una-cuarentena-estricta-seis-semanas-para-todos-los-afectados-por-brote-hantavirus_6970003_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Glovo and Unions Agree to Lay Off 436 Riders, Fewer Than Initially Planned",
+      "body": "The delivery platform will cut 436 jobs, down from the 750 originally proposed, after negotiations with unions. Nine cities were saved from complete service closure, and riders may be relocated to nearby cities with compensation.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/glovo-acuerda-con-los-sindicatos-un-ere-que-afectara-436-repartidores-300-menos-los-previstos_6970222_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Truck and Bus Drivers Union Calls Nationwide Strike Over Early Retirement Delay",
+      "body": "UGT has called a national strike for June to demand the government fulfill a year-old commitment to allow professional drivers early retirement. The strike could disrupt goods supply and passenger travel if unresolved.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/ugt-llama-huelga-camioneros-junio-por-bloqueo-jubilacion-anticipada-los-transportistas_6969949_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "Who else got a 'carta del miedo' from Hacienda? What was your next move? 👇",
+  "date": "2026-05-14",
+  "generated_at": "2026-05-14T05:31:51.327529+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 309,
+    "items_selected": 10
+  }
+}

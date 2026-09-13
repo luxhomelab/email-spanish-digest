@@ -1,0 +1,134 @@
+{
+  "items": [
+    {
+      "title": "Rent swallows 98.7% of youth salary, emancipation hits record low",
+      "body": "In 2025, young Spaniards spent 98.7% of their salary on rent alone and 33.6% when sharing, pushing the emancipation rate for 16–34 year-olds to 14.5% — the lowest since 2006. The average age to leave home rose to 30.2, far above the EU average of 26.2.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/05/22/6a0f2f81fc6c83b91e8b4587.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Zapatero billed €490,000 for trips, court freezes accounts",
+      "body": "Former prime minister José Luis Rodríguez Zapatero charged 490,780 euros in 36 invoices to consulting firm Análisis Relevante for trips to China, Colombia, and Morocco described as 'client acquisition.' A court has blocked his bank accounts, limiting access to that amount.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/05/21/6a0f663cfdddff6b308b45ad.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Supreme Court hears whether to halt migrant regularization of 500,000",
+      "body": "The Supreme Court is considering five appeals to temporarily block the government's extraordinary regularization procedure, which aims to grant residency and work permits to around 500,000 undocumented migrants. The process opened 16 April and has received 200,000 applications; deadline is 30 June.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/supremo-estudia-hoy-si-paraliza-cautelarmente-regularizacion-extraordinaria-migrantes_6973636_0.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Companies must compensate for public holidays falling on Saturday",
+      "body": "The Audiencia Nacional (High Court) ruled that employers must provide an additional day off for public holidays that fall on Saturday when workers already have that day off, ensuring all 14 statutory holidays are enjoyed. The decision, following union complaints, initially applies to contact centers and car rental sectors.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-21/1qrt-confirmado-audiencia-nacional-empresas-devolver-dias-festivos-sabado_4358978/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Tax office to send 130,000 preventive letters about Renta errors",
+      "body": "Spain's tax agency will send around 130,000 warning letters during the current Renta (income tax return) campaign to alert taxpayers of possible discrepancies in their declarations. These are not fines but an invitation to correct errors before a formal investigation.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-21/hacienda-enviara-130000-cartas-preventivas_4358781/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "UGT calls historic textile strike Saturday against Inditex, Mango, Primark",
+      "body": "UGT has called a nationwide strike for Saturday 23 May in the textile and footwear sector to protest a pre-agreement signed by employers' association ARTE (including Inditex, Mango, and Primark) with CCOO and Fetico, claiming it eliminates rights and creates territorial inequality.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ugt-convoca-huelga-sabado-23-textil-calzado-convenio-patronal-inditex-mango-primark_1_13239279.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Supreme Court annuls government's unique tourist rental register",
+      "body": "The Supreme Court annulled the centralised register for short-term and seasonal rentals, ruling it overstepped regional competences. However, the digital window and data transmission obligations remain; the government says the system has already uncovered 11,000 illegal ads.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/supremo-anula-registro-unico-alquiler-turistico-temporada-gobierno-falta-competencias_1_13239352.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Arduous work in other EU countries counts towards Spanish pension",
+      "body": "In a case brought by a Slovak miner who worked in the Czech Republic, the European Court of Justice has ruled that time spent in arduous jobs (trabajos penosos) in other EU member states must be recognized for early retirement purposes in Spain.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/22/los-trabajos-penosos-realizados-otros-paises-ue-computaran-para-jubilacion-2022447.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spain only EU country upgraded to 2.4% growth forecast for 2026",
+      "body": "The European Commission raised Spain's GDP growth projection to 2.4% for 2026, a tenth higher than its autumn forecast, making it the only member state to receive an upgrade despite the energy crisis from the Iran conflict. Unemployment is expected to fall below 10% this year for the first time since 2008.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/espana-unico-pais-europeo-bruselas-eleva-previsiones-crecimiento-2-4-2026_1_13238176.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Iran war nears third month, stagflation risk looms for Europe",
+      "body": "As the conflict in Iran approaches three months with the Strait of Hormuz still blocked, oil prices remain above $100 per barrel. The International Energy Agency warns that commercial reserves will be exhausted in weeks, raising stagflation fears for Europe.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/guerra-iran-se-acerca-su-tercer-mes-riesgo-una-estanflacion-asoma-horizonte_6972493_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "Rent now eats 98.7% of a young person's salary — would you be willing to move to a smaller city or share a flat to survive?",
+  "headline": "🇪🇸 Spain: daily briefing 📋 22.05.2026",
+  "date": "2026-05-22",
+  "generated_at": "2026-05-22T05:32:37.730350+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 362,
+    "items_selected": 10
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "headline": "🇪🇸 16.05.2026 — Parents' donations soar, banks cut jobs, EU billions returned",
+  "items": [
+    {
+      "title": "Donations from parents to children hit record high amid housing crisis",
+      "body": "In 2025, Spain registered 225,662 parental donations, a 13.1% increase from 2024 and the highest on record. Notaries highlight this tripling since 2013 as families increasingly use intergenerational wealth transfer to help with housing costs.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/las-donaciones-padres-hijos-alcanzan-maximos-historicos-espana-plena-crisis-vivienda_6970828_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Spanish banks cut 8,200 staff and 1,250 branches amid AI boom",
+      "body": "Spain's six largest banks reduced their workforce by 8,193 employees and closed 1,247 offices in the last year, as they embrace artificial intelligence. Santander, which now has 185,243 staff versus 196,503 a year ago, signed an OpenAI deal to become an 'AI-native bank.'",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/empresas/gran-banca-espanola-prescinde-casi-8-200-empleados-1-250-oficinas-pleno-auge-ia_6971019_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "EU funds fiasco: €1.4 billion returned due to bureaucracy and silence",
+      "body": "An investigation by EL MUNDO reveals that at least €1.4 billion in Next Generation EU funds were renounced by public entities and companies, representing 3.5% of executed funds. Most ministries refuse to disclose details, raising transparency concerns.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/05/16/6a060de3fc6c83bf678b45ba.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Catalan Comuns push 2% 'Zucman tax' on billionaires",
+      "body": "The Comuns party proposes a minimum 2% effective tax rate on fortunes exceeding €100 million, following economist Gabriel Zucman's ideas. They aim to tighten Spain's temporary wealth tax, with negotiations ongoing for Catalonia's budgets.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/comuns-negocian-illa-impulsar-impuesto-2-multimillonarios-congreso_1_13224183.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Housing minister, Sumar, Junts clash over rental extension and tax breaks",
+      "body": "After PP, Vox, and Junts blocked the rental extension, housing negotiations resume with differing priorities. Sumar insists on contract extension, Junts demands tax deductions for renters and mortgage payers, while the government aims to regulate seasonal rentals.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/vivienda-junts-sumar-toman-posiciones-reimpulsar-negociacion-alquileres-prorroga-aire_1_13222314.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "EU budget chief: Spain's year without a budget is 'unacceptable'",
+      "body": "Johan Van Overtveldt, chair of the European Parliament's budget committee, criticizes Spain for not passing a budget since 2023, creating suspicion among EU partners. He also calls for an investigation into alleged misuse of EU funds for pensions.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/05/15/6a07401821efa0e12c8b4582.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Government keeps fuel and transport aid, drops electricity VAT cut",
+      "body": "The government will continue aid for fuel, agriculture, and transport due to the Iran war, but will let the electricity and gas IVA (VAT) reduction expire on June 1 as prices normalize. The PP calls to maintain the electricity VAT cut.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gobierno-mantendra-ayudas-combustibles-agricultura-transportistas-guerra_1_13224507.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Central banks cautious as stagflation fears grow from Iran war",
+      "body": "The ECB left rates at 2% and other central banks are on hold, wary of stagflation stemming from the Iran conflict and Hormuz Strait disruption. They avoid aggressive moves, recalling 1970s caution.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bancos-centrales-lamen-heridas-guerra-abordar-temida-estanflacion_1_13222156.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Jerome Powell steps down as Fed chair, legacy and Trump tensions",
+      "body": "Jerome Powell leaves his second term as Fed chair on May 15, though he stays on the board. His tenure was marked by conflict with President Trump over central bank independence.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/finanzas-00340/noticia-powell-deja-presidencia-fed-cronologia-batalla-trump-claves-economia-20260515092948.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Confined hantavirus patients may see family Monday if PCR negative",
+      "body": "Health Minister Mónica García announced that 13 quarantined travelers from the MV Hondius will be allowed family visits and common areas on Monday if they test negative for hantavirus. One positive patient is recovering well.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/monica-garcia-permitira-los-confinados-gomez-ulla-tener-contactos-con-sus-familiares-este-lunes-si-pcr-es-negativa_6970832_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "Parents donating record amounts to children – is this the only way young people can afford a home in Spain now?",
+  "date": "2026-05-16",
+  "generated_at": "2026-05-16T05:32:40.813803+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 284,
+    "items_selected": 10
+  }
+}

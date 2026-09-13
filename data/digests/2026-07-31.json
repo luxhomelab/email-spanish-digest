@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "Home sales drop 11.8% but prices rise 8.8%",
+      "body": "Home purchases fell 11.8% in May from a year earlier, marking eight straight months of declines. The average price reached €2,049 per square meter, up 8.8%. Apartment sales tumbled 14.1%, while single-family home sales slipped 4.7%.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/fuerte-caida-compraventas-pisos-no-frenar-precios-suben-9_1_13417322.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Inflation hits 3.5% in July on fuel and power",
+      "body": "Spain's consumer price index rose to 3.5% in July, up from 3.2% in June, and has now stayed above 3% for five months. Core inflation, which excludes unprocessed food and energy, edged up to 3%. Fuel and electricity costs, partly driven by the Iran conflict, are the main factors.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ipc-escala-julio-3-5-alza-precios-combustibles-electricidad_1_13416789.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Ceuta migrant crisis: 20,000 cross, Army deploys",
+      "body": "More than 20,000 people crossed from Morocco into Ceuta on Thursday, the biggest irregular entry since 2021. Nine bodies were recovered along the coast. The government deployed Army units to reinforce the Guardia Civil and closed the Beni Enzar border crossing in Melilla. Prime Minister Pedro Sánchez will visit Ceuta on Friday.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/miles-personas-cruzan-ceuta-mayor-entrada-crisis-2021-queremos-ayudar-padres-no-hay_1_13419247.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/gobierno-despliega-ejercito-ceuta-entrada-miles-personas-marruecos_1_13419220.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Spain GDP grows 0.7% in Q2, driven by consumption",
+      "body": "Spain's economy expanded 0.7% in the second quarter, accelerating from 0.6% in Q1. Year-on-year growth held at 2.7%. Household consumption grew 0.7%, investment 0.4%, and exports 0.8%. The economy has now grown for 21 consecutive quarters compared to a year earlier.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/economia-crece-0-7-segundo-trimestre-decima-consumo-hogares-inversion_1_13416795.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Fuel discount cut to 10 cents as holiday exodus begins",
+      "body": "The government's fuel discount dropped from 15 to 10 cents per liter on August 1, coinciding with the start of the August holiday exodus. Petrol now costs €1.64 per liter and diesel €1.74. Since early July, petrol has risen 7.8% and diesel 14.3%, pushing the cost of a 50-liter fill-up to around €82–87.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/07/30/6a6b7b6ce85ece51188b45b6.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Italy's Meloni proposes Schengen suspension over Ceuta",
+      "body": "Italian Prime Minister Giorgia Meloni has called for suspending the Schengen free-movement treaty with Spain following the Ceuta migrant influx. Spain's Foreign Minister José Manuel Albares described the proposal as \"improper\" and summoned the Italian ambassador. Albares attributed the Ceuta events to a court ruling, rejecting links to Spain's regularisation of over 500,000 irregular migrants.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/meloni-plantea-cierre-espacio-schengen-albares-convoca-embajador-protesta_1_13419361.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Renfe strike on Friday with minimum services in place",
+      "body": "A nationwide Renfe strike by the SF-I union is disrupting travel on July 31, during the August holiday exodus. Minimum services are set at 73% for high-speed trains, 65% for medium-distance, and 75% for Cercanías during peak hours. The union is protesting the sale of Renfe Mercancías and the closure of maintenance bases.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/huelga-renfe-plena-operacion-salida-agosto-servicios-minimos-73-alta-velocidad-31-julio_1_13416965.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Wildfires force evacuations in Zamora, 1,000 affected",
+      "body": "After Madrid and Ávila were removed from national emergency status, a wildfire in Fermoselle, Zamora, has burned roughly 11,000 hectares in 24 hours. Fourteen villages were evacuated, affecting about 1,000 people. A separate fire in León forced the evacuation of five villages, with 17 military personnel deployed.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/madrid-avila-salen-emergencia-nacional-las-llamas-cercan-ahora-zamora_7021119_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "With house prices still climbing 8.8% despite falling sales, is buying a home in Spain feeling more out of reach? 👇",
+  "variant": "What mattered in Spain today",
+  "headline": "What mattered in Spain today",
+  "date": "2026-07-31",
+  "generated_at": "2026-07-31T06:04:01.622518+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 314,
+    "items_selected_pass1": 11,
+    "fact_sheets_extracted": 11,
+    "items_after_importance_filter": 9,
+    "items_in_digest": 8
+  },
+  "selection_reasons": {
+    "37": "Worst migration crisis in Ceuta in five years with over 20,000 people crossing, directly affecting Spain's border policy.",
+    "36": "Government deploys Army to Ceuta and closes Melilla border as Sánchez visits, a key response to the migration emergency.",
+    "38": "Italy's proposal to suspend Schengen with Spain prompts a diplomatic crisis that could affect free movement within Europe.",
+    "294": "Spain has won its second World Cup, a mandatory national event; article also covers sponsor Adidas's financial fallout.",
+    "91": "Inflation rose to 3.5% in July, the highest in over two years, impacting cost of living for all residents.",
+    "13": "Fuel prices rise again, making summer travel significantly more expensive for drivers.",
+    "301": "Spain's GDP grew 0.7% in Q2, outpacing the Eurozone, driven by consumer spending.",
+    "296": "Property sales fell sharply but prices still rose nearly 9%, crucial data for buyers and investors.",
+    "141": "Wildfires continue across Spain; Madrid and Ávila exit national emergency while Zamora is threatened.",
+    "94": "Renfe rail strike on 31 July disrupts holiday travel during the busiest summer getaway weekend.",
+    "63": "Fourth heatwave of the season continues until Sunday, affecting daily life and health across Spain."
+  }
+}

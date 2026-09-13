@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "title": "Interest rate rise will hit renters too, expert warns",
+      "body": "The European Central Bank raised interest rates for the first time in three years, increasing Euribor and mortgage costs. Real estate expert Sergio Gutiérrez warns that renters will also feel the impact as rising mortgage costs push more people toward renting, boosting demand and prices.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-06-17/experto-inmobiliario-suben-tipos-interes-van-pagar-alquiler_4373478/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain investigates six banks over mortgage rate collusion",
+      "body": "Spain's competition authority CNMC has opened sanction proceedings against Bankinter, Santander, BBVA, Unicaja, CaixaBank and Sabadell for possible anticompetitive practices in fixed mortgage rates. The investigation targets public statements by executives that may have allowed rivals to anticipate future pricing. The inquiry could last up to 24 months.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/competencia-investiga-bankinter-banco-santander-bbva-unicaja-caixabank-sabadell-politicas-comerciales_1_13307237.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain digitizes sick leave notifications from September",
+      "body": "Starting in September 2026, all Social Security notifications for temporary disability will be sent electronically via SMS or email. Workers will need to use digital identification systems like Cl@ve to access the notifications. In-person assistance at CAISS offices remains available for those with limited digital skills.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/16/oficial-boe-modifica-sistema-notificaciones-trabajadores-baja-laboral-2027140.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spain expands paid sick child care benefit",
+      "body": "Spain's Social Security Ministry has initiated a reform to expand the CUME benefit for parents caring for children with cancer or serious illness. The changes include longer initial leave and extensions, and expand the list of covered conditions. The public consultation runs until June 25, 2026.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/seguridad-social-da-primer-paso-ampliar-prestacion-cuidado-hijos-cancer-enfermedad-grave_1_13309149.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spain launches vaccination plan for newly arrived migrants",
+      "body": "Spain's Public Health Commission has approved a strategy to vaccinate irregular migrants and refugees within three weeks of their arrival. Priority vaccines include MMR, polio, tetanus and diphtheria. The plan aims to improve public health coverage and reduce disease spread among the entire population.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/sanidad-lanza-un-plan-comun-vacunacion-todas-las-comunidades-para-migrantes-refugiados-recien-llegados-espana_6983866_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Data leak exposes IDs of one million cannabis club members",
+      "body": "A security breach in software used by Spanish cannabis clubs has exposed the personal data of nearly one million members, including passport images, addresses and consumption habits. The data from Cannabis Club Systems software was accessible online for a long period. An independent researcher discovered the breach.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/millon-documentos-identidad-socios-clubs-cannabis-espanoles-quedan-expuestos-internet_1_13301903.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Barcelona to triple cruise passenger tax to 30 euros",
+      "body": "Catalonia's parliament will allow Barcelona to raise the municipal cruise passenger surcharge from 8 to 24 euros. Combined with the regional tourist tax of 6 euros, the total per passenger will be 30 euros. The move follows a record 3.99 million cruise passengers in 2025.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/catalunya-permitira-subir-30-euros-tasa-pagan-cruceristas-escala-barcelona_1_13309142.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Judge may summon more ministers in the Spanish flood case",
+      "body": "The judge investigating the 2024 DANA flood in Valencia is considering calling more regional ministers as witnesses after WhatsApp messages related to the disaster were released. The flood on October 29, 2024, killed 230 people. The judge has requested additional documents from the infrastructure minister Vicente Martínez Mus.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/comunitat-valenciana/jueza-dana-abre-puerta-citar-consellers-mazon-comprometedor-chat-whatsapp_1_13308971.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Irregular migrant arrivals in Spain down 36% this year",
+      "body": "Between January 1 and June 15, 2026, 10,701 irregular migrants entered Spain, a 36% decrease from the same period in 2025. Arrivals by sea dropped sharply, falling 48.9% to 8,115. However, arrivals by sea to the Peninsula and Balearics increased 5.4% to 4,833.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/epsocial/migracion/noticia-casi-11000-migrantes-entrado-forma-irregular-ano-espana-36-menos-mismo-periodo-2025-20260616165535.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "EU court okays age verification for porn websites",
+      "body": "The EU Court of Justice has ruled that member states can require age verification on porn websites to protect minors, even if the site is based outside the country. The measures must be proportionate and justified. The ruling came from a French case but has EU-wide implications, potentially leading to new regulations in Spain.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/tecnologia/tribunal-justicia-ue-avala-gobiernos-obliguen-usuarios-verificar-edad-webs-porno_1_13308237.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Interest rates are up and experts say rents will follow. How is the increase affecting your household?",
+  "variant": "What everyone in Spain is talking about today",
+  "headline": "What everyone in Spain is talking about today",
+  "date": "2026-06-17",
+  "generated_at": "2026-06-17T06:21:50.587709+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 15,
+    "items_fetched": 378,
+    "items_selected_pass1": 13,
+    "fact_sheets_extracted": 13,
+    "items_after_importance_filter": 10,
+    "items_in_digest": 10
+  },
+  "selection_reasons": {
+    "349": "Rising interest rates directly impact mortgages and rents, a critical wallet issue for all Spanish residents.",
+    "14": "Mandatory inclusion: Spain's disappointing World Cup debut against Cabo Verde dominates national conversation, placed in the top 7.",
+    "40": "Mandatory inclusion: The judge investigating the catastrophic Valencia flood (DANA) moves to cite more officials, a massive ongoing national event.",
+    "306": "The BOE officially digitalizes all sick leave notifications from September, a key administrative change affecting every worker in Spain.",
+    "339": "The CNMC opens a sanctioning procedure against major Spanish banks for alleged price coordination on mortgages, impacting the entire housing market.",
+    "138": "A new common vaccination plan for migrants and refugees aligns health and immigration policy upon arrival, a direct legal status concern.",
+    "36": "Irregular migration to Spain drops 36% this year, a critical data point shifting the immigration policy debate.",
+    "87": "Mandatory inclusion: Fallout from the Pope's visit continues as the head of the Spanish bishops' conference faces contradictions over his political statements.",
+    "100": "Barcelona moves to triple the tourist tax on cruise passengers to 30 euros, a precedent-setting regulation that affects the local economy and tourism sector.",
+    "88": "A massive data leak exposes identity documents of over a million cannabis club members, a severe privacy breach with systemic implications.",
+    "56": "Social Security begins reforming the benefit for parents caring for children with serious illness or cancer, expanding coverage and duration.",
+    "274": "AEMET activates extreme heat warnings as temperatures are expected to hit 42°C, an extreme weather event directly affecting health and daily life.",
+    "98": "The EU Court of Justice rules that governments can mandate age verification for online porn, a digital regulation with direct Spanish implementation (Cartera Digital)."
+  }
+}

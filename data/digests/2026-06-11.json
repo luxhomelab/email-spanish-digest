@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "title": "Iran war drives inflation to 3.8%, ECB set to raise rates",
+      "body": "Iran's Revolutionary Guard launched drone strikes on US bases in Bahrain after US attacks, escalating Middle East conflict. BBVA Research now forecasts Spain's inflation to hit 3.8% in 2026 due to the war's 'intense and persistent' impact. The ECB is expected to raise interest rates for the first time in three years, with the euribor already at 2.8%, making mortgages more expensive.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/internacional/noticia-guerra-estados-unidos-israel-contra-iran-directo-ultima-hora-estado-negociaciones-paz-20260610074451.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bbva-dispara-3-8-prevision-inflacion-2026-golpe-intenso-persistente-guerra-iran_1_13289856.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/mercados-y-bolsa/bce-prepara-primera-subida-tipos-interes_6981657_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain loses €1B green hydrogen investment to Portugal",
+      "body": "Swedish company Stegra selected Portugal for a €1 billion green hydrogen plant, creating 500 jobs, because Red Eléctrica could not guarantee grid connection in Spain. This underscores the saturation of Spain's electricity network, which is losing major industrial investments.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/espana-pierde-ante-portugal-una-inversion-mil-millones-500-empleos-para-generar-hidrogeno-verde-por-falta-capacidad-red_6981578_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Regularised immigrants drive one third of new worker registrations",
+      "body": "In May, 25,000 of over 60,000 new social security affiliates in Spain were immigrants from the extraordinary regularisation process, according to Economy Minister Carlos Cuerpo. This shows the regularisation's direct effect on the labour market.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/sociedad/2026/06/11/un-tercio-los-nuevos-afiliados-son-inmigrantes-acogidos-regularizacion-extraordinaria-2028025.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Doctor strike on Monday after government fails to resolve dispute",
+      "body": "The Ministry of Health and regional governments failed to reach an agreement with doctors, resulting in the fifth strike of the year scheduled for Monday. Minister Mónica García blamed regions for blocking solutions.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/sanidad-comunidades-fracasan-conflicto-medicos-antes-huelga-proximo-lunes_6981594_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "DGT tightens driving checks for seniors born 1956-1961",
+      "body": "From age 65, driving license validity periods are reduced, requiring more frequent medical exams. The DGT increased controls specifically for drivers born between 1956 and 1961 to boost road safety.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/motor/2026/06/10/cambios-permiso-conducir-norma-afecta-conductores-nacieron-entre-1956-1961-2026-2019250.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Lawyer reveals legal loophole to quit job and keep unemployment benefits",
+      "body": "Labour lawyer Víctor Salazar explains that a private transactional agreement negotiated between the worker and employer can allow leaving the company without it being a voluntary resignation, preserving the right to unemployment benefits. Both parties must compromise on terms.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-11/victor-salazar-abogado-laborista-irte-empresa_4370270/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Prosecutor's Office concealed meetings with PSOE corruption suspects",
+      "body": "Diego Villafañe, the former second-in-command of the General Prosecutor's Office, held at least two meetings with Leire Díez and Jacobo Teijelo, individuals investigated in the 'cloacas of Ferraz' scandal. No documentary record was left of the meetings.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/06/10/6a29ab2ae9cf4a4c1a8b4597.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Wealth tax anniversary shows minimal revenue after 15 years",
+      "body": "Fifteen years after its restoration, the wealth tax (Impuesto sobre el Patrimonio) still only generates about 0.15% of GDP in revenue, highlighting its low economic impact despite the controversy.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/triste-aniversario-impuesto-patrimonio_129_13292017.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    }
+  ],
+  "engagement": "With inflation forecast to jump to 3.8% this year, how are you adjusting your budget and spending? 🤔",
+  "headline": "Spain, Explained",
+  "date": "2026-06-11",
+  "generated_at": "2026-06-11T05:33:26.102845+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 294,
+    "items_selected": 10
+  }
+}

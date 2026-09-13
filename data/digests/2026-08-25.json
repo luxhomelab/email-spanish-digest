@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "title": "Room rental supply surges as Barcelona prices hit €600",
+      "body": "Room rental supply in Spain rose 12% in the second quarter, with average prices up 1% to €425. Barcelona remains the most expensive at €600 per month, followed by Palma and Madrid at €550. Supply rose in 35 provincial capitals, led by Lugo (+89%) and Valencia (+52%), while it fell sharply in Ceuta and Bilbao. The cheapest rooms are around €250 in Jaén.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/oferta-habitaciones-alquiler-se-dispara-los-250-euros-jaen-los-600-barcelona_7028624_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Spanish household electricity prices rise 8%, outpacing EU average",
+      "body": "Spanish household electricity prices rose 8.3% year-on-year in July, compared with an EU average of 1.6% and a eurozone average of 2.1%. Among major economies, only Italy posted a bigger increase at 13%, while bills fell 5.3% in Germany and 1% in France. Eurostat links the rise to energy price volatility from the war in Iran.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/08/25/electricidad-que-pagan-los-hogares-se-encarece-un-8-espana-cinco-puntos-mas-que-ue-2046930.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Study: one in three Spanish children at risk of poverty",
+      "body": "A Fedea study finds 33.8% of minors in Spain are at risk of social exclusion, driven mainly by the high cost of raising children rather than parental unemployment. The child monetary poverty rate was 28.3% in 2025, far above the EU average of 19.3%. Around 9.48 million people, or 19.5% of the general population, were at risk of monetary poverty.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/ahorro-y-consumo/2026/08/25/6a8c51e6e4d4d8347d8b457f.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Airbus workers confirm indefinite strike starting this Tuesday",
+      "body": "Airbus Spain workers voted by a wide majority to begin an indefinite strike on August 25 after rejecting management's latest offer. Unions CGT, UGT and ÚTIL called the walkout; the Cádiz assembly will join on September 1. Management had offered an IPC-linked wage increase, restoration of telework conditions, and withdrawal of its Supreme Court appeal on sick-leave supplements.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/08/24/plantilla-airbus-confirma-huelga-indefinida-martes-2046978.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "⚠️ Spain accepts single Ceuta command, seeks EU emergency funds",
+      "body": "Spain accepted Ceuta's demand for a single command and will name Ángel Víctor Torres as coordinator, nearly a month after 80,000 crossed from Morocco. Madrid also asked Brussels for emergency funds for border protection and reception, including for unaccompanied minors. Police warn that almost 10,000 migrants live on the streets and 091 calls have surged. Spain will send 45,000 vaccine doses; experts rejected Feijóo's call for confinement.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/sanchez-acepta-mando-unico-ceuta-mes-despues-crisis-acelera-medidas-choque_1_13464207.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/espana-solicita-bruselas-financiacion-emergencia-ante-crisis-migratoria-ceuta_7028902_0.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.infosalus.com/actualidad/noticia-sanidad-ccaa-acuerdan-enviar-25000-dosis-vacunas-ceuta-medida-preventiva-crisis-migratoria-20260824150741.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/expertos-responden-feijoo-no-existen-razones-salud-publica-justifiquen-confinamiento-ceuta_1_13463790.html"
+        }
+      ],
+      "category": "politics",
+      "important": true
+    },
+    {
+      "title": "Fuel prices 21% higher ahead of holiday return in Spain",
+      "body": "Diesel reached €1.875 per litre on August 23, up 21% since July 1; petrol 95 hit €1.735, up 13% and the highest in four years. Filling a 55-litre diesel tank now costs about €103.10, roughly €18 more than in early July. Prices climbed with international oil markets, with Brent around $72.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/operacion-retorno-llega-con-las-gasolinas-un-21-mas-caras-que-cuando-arrancaron-las-vacaciones_7028899_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Food prices keep rising in August, with potatoes leading increases",
+      "body": "Potatoes recorded the biggest food price increase in August, up 14%, with a 5-kg mesh at Hipercor rising from €5.99 to €7.75. Conference pears at Carrefour rose 20.3% to €2.55, and De Cecco macaroni rose 10% to €2.85. Extra virgin olive oil fell 6%, while seedless white grapes fell 18%.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/precio-alimentos-tampoco-tregua-agosto-patatas-peras-conferencia-macarrones-mayores-subidas_7028783_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Courts back €1,800 compensation for denied maternity supplement",
+      "body": "The Supreme Court has ruled that pensioners who were denied the old maternity supplement and had to sue are entitled to €1,800 compensation without reductions. A retired man in Madrid had initially been awarded only €600. The 2019 EU Court of Justice ruling established that excluding men from the supplement was discriminatory.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-08-24/tribunales-seguridad-social-indemnizar_4410229/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Ryanair denies minister's claims about aircraft shortage in Spain",
+      "body": "Ryanair rejected Transport Minister Óscar Puente's statements as false, saying its capacity decisions in Spain are due to Aena's tariff model, not a shortage of aircraft. The airline says it has received all 210 Boeing MAX-8200 aircraft ordered and has assigned new planes to Morocco, Italy, Albania, Poland, Slovakia and Sweden. It blames Aena's pricing model for reduced service at Spanish regional airports.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ryanair-choque-oscar-puente-dice-declaraciones-falta-aviones-son-falsas_1_13464154.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "Rooms in Barcelona now cost €600/month. What are you paying where you live? 🤔",
+  "variant": "Spain in 30s",
+  "headline": "Spain in 30s",
+  "date": "2026-08-25",
+  "generated_at": "2026-08-25T06:05:41.738491+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 308,
+    "items_selected_pass1": 13,
+    "fact_sheets_extracted": 13,
+    "items_after_importance_filter": 13,
+    "items_in_digest": 9
+  },
+  "selection_reasons": {
+    "40": "Government finally approves a unified command for Ceuta nearly a month after the migrant crisis, a major migration policy shift.",
+    "134": "Spain requests EU emergency funding to manage the Ceuta migrant influx, directly affecting border security and reception capacity.",
+    "33": "45,000 vaccine doses are being sent to Ceuta as a preventive health measure tied to the migration crisis.",
+    "18": "One in three minors in Spain now lives below the poverty line, a systemic economic issue affecting families.",
+    "289": "Room rental prices are surging across Spain, from €250 in Jaén to €600 in Barcelona, crucial housing data for foreigners.",
+    "208": "Household electricity prices rose 8% in Spain, five points above the EU average, a direct impact on cost of living.",
+    "281": "Fuel prices are 21% higher than before the summer holidays, hurting drivers during the return weekend.",
+    "210": "Airbus workers in Spain confirm an indefinite strike, a major labor conflict affecting thousands of jobs.",
+    "272": "Courts confirm Social Security must pay €1,800 compensation to pensioners denied the maternity supplement, a precedent for retirees.",
+    "90": "Ryanair disputes the minister's claims about plane shortages, a dispute affecting flight availability and prices in Spain.",
+    "41": "Scientific societies reject calls to confine Ceuta migrants, saying there is no public health justification, a key immigration debate.",
+    "122": "Nearly 10,000 migrants are living on the streets in Ceuta, with police warning of growing insecurity, a humanitarian emergency.",
+    "285": "Food prices continue to rise in August, with potatoes up 14%, worsening the cost-of-living squeeze for households."
+  }
+}

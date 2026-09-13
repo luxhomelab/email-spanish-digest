@@ -1,0 +1,203 @@
+{
+  "items": [
+    {
+      "title": "Spain vs Belgium World Cup quarter-final tonight",
+      "body": "Spain faces Belgium in the 2026 World Cup quarter-final tonight at 9:00 pm. It’s the team’s first quarter-final appearance since 2010, when they won the tournament. Mikel Merino scored a late winner against Portugal in the round of 16. Belgium advanced by beating the United States 4-1.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/spin/deportes/juega-espana-belgica-horario-partido-cuartos-final-mundial-2026-pm_1_13361268.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Catalonia extends rent control in most municipalities",
+      "body": "Catalonia will extend rent price caps for most of the 271 municipalities currently designated as stressed areas. The regulation, in place since 2024, has been credited with cooling the rental market. Some towns may exit the list if prices have dropped significantly, while others could be added. The extension begins in March 2027 when the current declaration expires.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/catalunya-anuncia-prorroga-tope-precios-alquiler-mayoria-municipios_1_13367259.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "ECB raises rates to 2.25%, citing 2011 lessons",
+      "body": "The European Central Bank raised its key interest rate by 25 basis points to 2.25% in June, its first hike since 2023. The bank avoided forward guidance on future moves to prevent repeating mistakes from the 2011 crisis. It was the first G7 central bank to tighten after the Middle East crisis. The ECB highlighted persistent inflation uncertainty.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/bce-tomo-referencia-errores-anterior-crisis-financiera_7012798_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Fuel prices jump up to 5.6% as VAT returns to 21%",
+      "body": "Gasoline and diesel prices rose sharply in the week ending July 6, with gasoline up 5.56% to 1.517 euros per litre and diesel up 2.13% to 1.535 euros. The hike follows the restoration of VAT to 21% from 10%, though the government approved a 15-cent per litre discount for July. In August, the discount drops to 10 cents, and to 5 cents in September, through a reduced special tax on hydrocarbons.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/las-gasolinas-disparan-su-precio-hasta-un-5-6-tras-decaer-rebaja-iva-pese-bonificacion-los-15-centimos-julio_7012552_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Train strike on July 15 to cancel 328 services",
+      "body": "A strike by the Sindicato Ferroviario on July 15 will force the cancellation of 328 medium and long-distance trains, including 94 high-speed services. Minimum services are set at 73% for high-speed trains and 66% for medium distance. The union is protesting unfulfilled agreements and what it calls the ‘abandonment’ of freight services. Travelers should verify their train before departing.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/huelga-ferroviaria-15-julio-cancelara-328-trenes-media-larga-distancia_1_13368993.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Mutualistas gain path to public pension system",
+      "body": "The Senate passed a law allowing mutualistas (members of self-employed mutual societies) to enter the Social Security system and qualify for state pensions. The ‘pasarela al RETA’ excludes current pensioners except in widowhood cases, but opens access to those with over 15 years of contributions. The text returns to Congress for final approval after Senate amendments.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/senado-envia-pasarela-mutualistas-seguridad-social-votacion-definitiva-acceso-pensionistas_1_13367925.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Supreme Court voids tourist apartment denials",
+      "body": "The Supreme Court nullified 40 government denials of tourist apartment registrations after annulling the unique national registry weeks ago. The apartments remain illegal, and enforcement now falls to autonomous communities. The government’s registry uncovered 110,000 illegal rental contracts, mostly tourist. Spain has 258,000 registered tourist apartments and 83,000 seasonal rentals.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/supremo-deja-papel-mojado-decenas-negativas-gobierno-registro-pisos-turisticos_1_13369773.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Spain hits record 189 million tourist apartment stays",
+      "body": "Spain booked 189 million overnight stays in tourist apartments in 2025, double the 94 million recorded in 2018. Around half a million people per night stay in such accommodations. Andalusia, the Canary Islands, Valencia, and Catalonia rank among Europe’s top regions for these bookings, despite growing regulatory controls and social tensions.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/espana-bate-record-reservas-pisos-turisticos-mapa-airbnb-coloniza-europa-region-region_1_13367542.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Labor Ministry blocks fashion retail collective deal",
+      "body": "The Ministry of Labor suspended the registration of Spain’s first national collective agreement for large fashion retailers, which covers about 120,000 workers at Inditex, Mango, Primark, and H&M. The ministry found several provisions non-compliant with labor law. Signed in early June by the ARTE employer group and unions CC.OO. and Fetico, the deal was opposed by UGT. The negotiating committee must amend the text.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/trabajo-suspende-tramitacion-convenio-patronal-inditex-mango-primark-pide-cambios-texto_1_13367849.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spanish household debt drops to 42.5% of GDP",
+      "body": "The Spanish household debt-to-GDP ratio fell to 42.5% in the first quarter of 2026, the lowest since late 1999 and down from a peak of 85% after the 2008 crisis. Household financial wealth reached a record 2.66 trillion euros, driven by rising equities and investment funds. Lower interest rates and mortgage competition are supporting home purchases.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/riqueza-familias-espanolas-maximos_7012628_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Teacher exam failure rates top 80% in some regions",
+      "body": "Failure rates in Spain’s teacher competitive exams (oposiciones) reached 83% in Castile and León, where 9,771 of 11,776 aspirants failed the first round. In Murcia, 63% of primary teacher candidates failed; in Asturias, 61%; and in Castile-La Mancha, 59%. Observers noted high numbers of spelling errors among young candidates, and in some specialties, fewer passed than positions available.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/07/09/6a4fef65e85ece30158b45c3.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "11 dead in Almería wildfire while fleeing",
+      "body": "Eleven people died and eight were injured in a forest fire in Los Gallardos, Almería, as they tried to escape the flames. Four British victims were found inside a car. The fire spread rapidly, and authorities said the evacuation of nearby Bédar prevented a larger toll. Regional minister Antonio Sanz called it ‘very complex’ and fast-moving.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/andalucia/2026/07/10/6a50257afdddffc3588b45c9.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Supreme Court rules sea returns of migrants illegal",
+      "body": "The Supreme Court ruled that intercepting and returning migrants to Morocco at sea is illegal under Spanish Immigration Law. Following the decision, the Guardia Civil in Ceuta stopped the practice known as ‘hot returns.’ The government had previously defended these returns, which targeted adults except apparent minors attempting to swim into Spanish territory.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/recogidos-aguas-ceuties-devueltos-marruecos-caliente-son-devoluciones-supremo-ordena-frenar_1_13369324.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Sánchez’s NATO explanations satisfied Trump, government says",
+      "body": "The Spanish government claims President Pedro Sánchez’s explanations at the NATO summit in Ankara convinced Donald Trump that Spain is meeting its 2% of GDP defense commitment. The government denies making any extra payments beyond the pledged amount. Sánchez also announced Spain would join an Arctic mission.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-gobierno-defiende-explicaciones-sanchez-otan-convencieron-trump-niegan-nuevos-pagos-20260709130320.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Spain vs Belgium tonight in the World Cup quarter-final — who’s your pick to win? 👇",
+  "variant": "What happened in Spain while you were busy",
+  "headline": "What happened in Spain while you were busy",
+  "date": "2026-07-10",
+  "generated_at": "2026-07-10T06:06:26.627762+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 325,
+    "items_selected_pass1": 15,
+    "fact_sheets_extracted": 15,
+    "items_after_importance_filter": 14,
+    "items_in_digest": 14
+  },
+  "selection_reasons": {
+    "1": "Wildfire in Los Gallardos kills 11, a national-scale disaster affecting many.",
+    "107": "Spain's World Cup quarterfinal against Belgium is a mandatory inclusion for the audience.",
+    "37": "Supreme Court overturns government denials of tourist flat registrations, directly impacting the property market and short-term rental regulations.",
+    "92": "Spain sets record for Airbnb reservations, indicating growing pressure on housing availability for residents.",
+    "95": "Catalonia extends rent control in most municipalities, affecting tenants and property investors across a key region.",
+    "55": "Supreme Court confirms pushbacks at sea are illegal, a major change in migration enforcement border policy.",
+    "94": "Renfe strike on July 15 will cancel 328 trains, disrupting travel plans for thousands of passengers.",
+    "272": "Gasoline prices spike 5.6% in a week after VAT returns to 21%, directly affecting all drivers in Spain.",
+    "268": "Household debt falls to lowest since 1999 at 42.5% of GDP, a key economic indicator for financial stability.",
+    "259": "ECB considered past rate hike errors when debating June rates, signaling potential future changes affecting mortgages and loans.",
+    "274": "Senate advances law allowing mutualists to switch to RETA, influencing retirement planning for many professionals.",
+    "261": "Digi Spain Telecom prices IPO at €5.6/share, opening a new investment opportunity in the telecom sector.",
+    "7": "High failure rates in teacher oposiciones (up to 83%) may concern foreign teachers seeking public sector jobs.",
+    "277": "Labor Ministry suspends the collective agreement for major fashion chains, impacting labor conditions in a large sector.",
+    "30": "Government clarifies that Spain's extra NATO spending is only the 2% commitment, affecting perceptions of fiscal policy."
+  }
+}

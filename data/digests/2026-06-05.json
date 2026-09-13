@@ -1,0 +1,134 @@
+{
+  "items": [
+    {
+      "title": "Home foreclosures surge 34.5% as euribor hikes hit households",
+      "body": "The number of foreclosures on homes due to unpaid mortgages jumped 34.5% in Q1 2026 compared to the same period last year, reaching 4,607 proceedings, of which 72.2% were on primary residences. Over half of these executions correspond to loans signed before 2008, dragging the legacy of the housing bubble exacerbated by euribor fluctuations and loss of purchasing power. This is the highest quarterly increase since 2014, excluding the pandemic period.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/los-embargos-casas-por-impago-hipotecas-crecieron-un-34-5-hasta-marzo-72-fueron-viviendas-habituales_6979000_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Crypto gains must be declared even when swapping coins, warns Hacienda",
+      "body": "The Spanish tax agency (Agencia Tributaria) has included 1.24 million notices in this year's tax returns for detected cryptocurrency investors. Platforms based in Spain must report balances and transactions, but foreign and blockchain-based exchanges also require declaration. Tax advisors caution that failing to report could lead to future inspections, especially for those required to file Model 721.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/05/cuando-declarar-criptomonedas-renta-tambien-si-se-cambian-por-otras-2026183.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "New salary transparency law requires companies to post pay in job ads",
+      "body": "Spain's new Pay Transparency Law mandates companies to publish salary information in job postings, allow employees to access pay-level data, and correct unjustified wage differences exceeding 5%. Firms must also produce detailed reports on the gender pay gap and implement objective job evaluation systems. The regulation aims to boost internal equity and trust within organizations.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-04/transparencia-salarial-igualdad-empresas-normativa-1hms-1svm_4367385/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "EU court sides with mother facing expulsion from Netherlands due to Spanish permit",
+      "body": "The European Court of Justice ruled that a Moroccan mother of a disabled Dutch child must be granted a derivative residence permit in the Netherlands, despite having been granted residency in Spain. The court emphasized the need to respect family life and the risk of separation, as the child has built ties with both parents. The woman, identified as V, had lived and worked in Spain from 1999 to 2014 before moving to the Netherlands.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/pelea-v-madre-hijo-discapacitado-paises-bajos-quiere-expulsar-permiso-residencia-espana_1_13274528.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "First hantavirus patient in Spain discharged after recovery",
+      "body": "The first Spanish passenger from the MV Hondius who tested positive for hantavirus upon arrival in Madrid on May 11 has been discharged after two negative PCR tests and three symptom-free days. The other positive patient has mild symptoms and remains in isolation, while 12 contacts will continue quarantine at home from the weekend. The health ministry updated the management protocol.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/primer-caso-hantavirus-espana-supera-enfermedad-recibido-alta_1_13276555.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "EU opens new infringement case against Spain over BBVA-Sabadell takeover",
+      "body": "The European Commission has sent a new letter to Spain's government, considering its actions to obstruct BBVA's hostile takeover of Sabadell incompatible with EU banking merger rules. The Commission argues that only the ECB and CNMC should have ruled, not the Council of Ministers which imposed extra conditions. The operation failed as only 25% of Sabadell shareholders backed it.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bruselas-abre-nuevo-expediente-espana-incumplir-normativa-bancaria-opa-bbva-sabadell_1_13274817.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain avoids European air traffic decline despite Iran war",
+      "body": "While European airports saw a 0.7% drop in passenger traffic in April 2025—the first decline since the post-Covid recovery—Spain was spared from the downturn caused by the war in Iran. Spanish airports maintained their traffic levels, though the continental data marks a historic slowdown.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/05/turismo-espana-libra-caida-trafico-aereo-europeo-guerra-iran-2026369.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "One month of PP-Vox coalition in Aragon: far-right xenophobic messages dominate",
+      "body": "The coalition government between PP and Vox in Aragon has seen far-right discourse dominate the public agenda, with Vox pushing anti-immigrant messages and the PP appearing overwhelmed by its partner's rhetoric. As the coalition completes its first month, the main opposition comes from the Government Delegation rather than political rivals.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/aragon/politica/mes-coalicion-pp-vox-aragon-extrema-derecha-avasalla-azcon-avalancha-mensajes-xenofobos_1_13274743.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Serbian UN peacekeeper killed, two Spanish soldiers wounded in Lebanon mortar attack",
+      "body": "A Serbian UN peacekeeper died and two Spanish soldiers sustained minor injuries after mortars struck their position near Marjayoun in southern Lebanon. The attack, whose perpetrators are unidentified, occurred amid ongoing clashes between Israeli forces and Hezbollah. The FINUL mission has launched an investigation.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/internacional/muere-casco-azul-serbio-espanoles-resultan-heridos-caida-morteros-posicion-libano_1_13274609.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "PP accuses government of 'state delinquency' over Leire affair",
+      "body": "The Popular Party has escalated pressure on the government, claiming the alleged spy network within the PSOE amounts to 'state delinquency' and calling for Prime Minister Sánchez's resignation. PP spokesperson Alma Ezcurra argued that all corruption investigations converge on Sánchez. The party warned coalition partners that 'with the mafia there is no loyalty that holds'.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/pp-ve-delincuencia-estado-caso-leire-eleva-presion-sobre-los-socios-con-mafia-no-hay-lealtad-que-valga_6979175_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Home foreclosures spike 34.5% — is this the start of a new housing crisis in Spain? What's your take?",
+  "headline": "🇪🇸 Spain: 5-min catch-up ☕ 05.06.2026",
+  "date": "2026-06-05",
+  "generated_at": "2026-06-05T05:32:59.225450+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 353,
+    "items_selected": 10
+  }
+}

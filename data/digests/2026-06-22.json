@@ -1,0 +1,155 @@
+{
+  "items": [
+    {
+      "title": "Zaragoza tops 22,000 regularization requests with a week left",
+      "body": "Zaragoza has received over 22,000 applications for Spain's extraordinary immigrant regularization process. The deadline ends in one week, on June 29. The application period began on April 16. The high number of requests shows the intense demand for legal status among undocumented immigrants.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/aragon/2026/06/22/zaragoza-supera-las-22-000-solicitudes-regularizacion-falta-una-semana-para-que-concluya-plazo-2031044.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Spain beats Saudi Arabia 4-0 in World Cup",
+      "body": "Spain defeated Saudi Arabia 4-0 in their second World Cup group match. Lamine Yamal started the match for the reigning European champions. The victory silenced doubts about Spain's debut performance.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/deportes/futbol/mundial-00639/noticia-espana-da-cara-mundial-20260621200710.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Housing crisis: 17.4 years of income needed to buy a flat",
+      "body": "A Bank of Spain report shows that a family needs 17.4 years of full income to buy an average home in Marbella, 14 years in Palma, and 9 years in Madrid. Meanwhile, El Mundo's podcast calls the housing crisis Spain's biggest social and economic problem. Each year more than twice as many households are formed as new homes are built, and wages do not keep up with rising costs. The report covers other cities: Málaga at 9.9 years, Benidorm at 9.1, and Barcelona at 8. Coastal cities range from 6.4 to 7.7 years.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/podcasts/el-mundo-al-dia/2026/06/22/6a358fc6e4d4d837328b4581.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/linares-marbella-comprarte-un-piso-espana-te-obliga-destinar-hasta-17-4-anos-todo-que-ganas_6985631_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Childcare costs over €700 monthly, deterring larger families",
+      "body": "Private nursery costs in large Spanish cities exceed €700 per month, often taking more than 30% of household income. A single mother in Madrid reported spending €550 for a base spot plus €100 for extended hours, and €800–900 for summer camps. Public nursery places are scarce: Madrid had 4,131 spots last year but 7,200 families were left out. The high cost discourages families from having a second child.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/06/21/6a0c959421efa058188b45df.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "PP pushes for urgent land law amid housing shortage",
+      "body": "The People's Party urged the government to process its Land Law urgently, citing a housing shortage of 750,000 homes between 2021 and 2025. It also criticized Prime Minister Sánchez for not implementing the ICO loan guarantees announced six months ago. The party says the paralysis exacerbates the housing crisis.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-pp-insta-gobierno-tramitar-urgencia-ley-suelo-critica-bloqueo-avales-ico-sanchez-20260621113911.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "New electricity bill to show neighbors' average consumption",
+      "body": "Spain's Ecological Transition Ministry proposes a new electricity bill that will display the average consumption of similar supplies in the same postal code. It will also include self-consumption data, contract type, and the product name. The measure was first proposed in 2022 but was not implemented until now. The change aims to help consumers better understand and compare their energy use.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/datos-autoconsumo-gastan-vecinos-sera-nueva-factura-electricidad_1_13318663.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Fuel stations in Aragón ask to extend tax rebate",
+      "body": "Diesel prices in Aragón have fallen from €1.684 to €1.529 per liter over the past month, but the government's tax rebate on hydrocarbons expires on June 30. Station owners warn that without an extension, prices could rise again. They have called on the government to maintain the rebate to keep fuel affordable.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/aragon/2026/06/22/las-gasolineras-aragon-piden-prorrogar-las-ayudas-para-no-frenar-caida-precios-2030997.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Heatwave hits Spain, alerts in 15 regions",
+      "body": "Spain is experiencing its first summer heatwave, with temperatures reaching up to 42°C in some valleys. Aemet maintains warnings in 15 autonomous communities until Wednesday. Temperatures are expected to drop on Thursday. Residents are advised to stay hydrated and avoid the sun during peak hours.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/el-tiempo/ola-calor-achicharra-espana-aemet-mantiene-avisos-15-comunidades-pm_1_13322155.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "EU Parliament approves EU-US tariff deal",
+      "body": "The European Parliament approved two regulations implementing the EU-US trade agreement from August 2025. The deal eliminates tariffs on all US industrial goods and reduces automotive tariffs from 25% to 15%. It also provides preferential access for some US farm products. The agreement may lower car prices in Spain, a major automotive manufacturing hub.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/motor/sector_y_mercado/automocion-respira-paz-arancelaria-ue-eeuu_1_13315832.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "School bus operators refuse renewal, routes threatened",
+      "body": "Small and medium-sized bus operators in Castilla-La Mancha, Basque Country, and Andalusia are not renewing their school transport contracts due to low funding. In Jaén province, 98% of routes for the 2026–2027 school year remain without bids. The contracts in Castilla-La Mancha reference prices from 2014–2017. The risk may spread to Madrid, Catalonia, and the Valencian Community, potentially disrupting school transport for thousands of families.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/vuelta-cole-sin-ruta-escolar-bus-se-planta-ante-gobierno-ccaa-empieza-no-renovar-contratos-precios-sin-actualizar_6985033_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "The deadline for Spain's extraordinary regularization ends in one week. Have you submitted your application?",
+  "variant": "What happened in Spain while you were busy",
+  "headline": "What happened in Spain while you were busy",
+  "date": "2026-06-22",
+  "generated_at": "2026-06-22T06:03:57.935546+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 15,
+    "items_fetched": 301,
+    "items_selected_pass1": 11,
+    "fact_sheets_extracted": 11,
+    "items_after_importance_filter": 11,
+    "items_in_digest": 10
+  },
+  "selection_reasons": {
+    "31": "Spain national team's 4-0 win over Saudi Arabia in the World Cup is mandatory and boosts morale among fans.",
+    "16": "Housing crisis is the top social and economic problem in Spain, directly affecting affordability for all residents.",
+    "69": "Extreme heat wave alerts across 15 communities impact health and daily life for everyone in Spain.",
+    "4": "High nursery costs over €700 per month in big cities are a major cost-of-living burden for families and affect demographic trends.",
+    "100": "The EU-US tariff deal on cars reduces trade barriers and protects jobs in Spain's important auto industry.",
+    "48": "New electricity bill format with detailed consumption data empowers households to better manage energy costs.",
+    "226": "Data shows buying a home requires up to 17.4 years of salary in some areas, highlighting severe housing affordability issues.",
+    "112": "School bus contract problems threaten transport for many families and signal systemic issues in public services.",
+    "159": "The regularisation process for undocumented immigrants is closing soon, affecting thousands seeking legal status in Spain.",
+    "161": "Extension of fuel price reductions is crucial for lowering transport and household costs amid inflation.",
+    "35": "PP urges urgent housing law with concrete shortage data, indicating potential policy changes affecting the property market."
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "title": "Spain Receives Record 908,288 Migrant Regularization Applications",
+      "body": "The Spanish government has received 908,288 applications for its extraordinary migrant regularization program, surpassing initial projections of 750,000. Authorities have admitted 359,255 applications for processing so far, with two weeks remaining until the deadline. The record volume stems from more flexible requirements, including vulnerability reports and family unity criteria, though hundreds of applicants report significant processing delays.",
+      "sources": [
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/desalambre/gobierno-recibido-908-288-solicitudes-regularizacion-migrantes_1_13302332.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Madrid Restricts Public Transport Pass to Registered Residents",
+      "body": "The Community of Madrid now limits public transport passes exclusively to individuals with empadronamiento (municipal registration) in the region. This policy disproportionately affects foreign residents and migrants, as landlords frequently refuse to register tenants. Advocacy groups warn that the measure severely restricts affordable transit access for undocumented individuals, students, and workers from other regions.",
+      "sources": [
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/madrid/ayuso-apunta-migrantes-nueva-medida-transporte-pleno-debate-prioridad-nacional_1_13305753.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "U.S. and Iran Finalize Peace Deal, Reopening Strait of Hormuz",
+      "body": "The United States and Iran finalized a provisional peace agreement that immediately lifts the blockade of the Strait of Hormuz and resumes maritime traffic. While the deal caused oil prices to drop and pushed the Ibex 35 past 19,000 points, experts warn that lower energy costs will take months to reach consumers. Damaged infrastructure and logistical bottlenecks will delay the full transmission of reduced gas and oil prices to household budgets.",
+      "sources": [
+        {
+          "name": "Europapress",
+          "url": "https://www.europapress.es/internacional/noticia-acuerdo-iran-directo-ultima-hora-fin-guerra-estados-unidos-israel-contra-iran-20260615081708.html"
+        },
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/economia/reapertura-ormuz-tardara-llegar-bolsillo_1_13302331.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Doctors Threaten Indefinite Strike Starting in September",
+      "body": "Medical professionals in Spain announced plans for an indefinite strike beginning in September if negotiations with the Ministry of Health stall. The doctors' committee rejected the professional framework, or Estatuto Marco, that the government approved with other unions earlier this month. A summer truce will pause the current conflict, but the escalation threatens to disrupt healthcare services nationwide.",
+      "sources": [
+        {
+          "name": "20minutos",
+          "url": "https://www.20minutos.es/nacional/los-medicos-elevan-conflicto-contra-sanidad-amenazan-con-una-huelga-indefinida-partir-septiembre_6983383_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Renewable Energy Cuts Monthly Electricity Bills by €10",
+      "body": "Renewable energy sources saved Spanish households an average of €10 per month on electricity bills during the recent energy crisis. Gas sets the wholesale electricity price only 9% of the time, significantly reducing the impact of the 75% spike in gas prices during the Hormuz conflict. Although gas prices have dropped 10% following the peace deal, they remain 46% above pre-war levels, making the renewable buffer crucial for household budgets.",
+      "sources": [
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/economia/renovables-reducen-10-euros-mes-factura-electrica-espana-medio-crisis-energetica-ormuz_1_13305053.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "High Housing Prices Trigger Market Slowdown in Major Cities",
+      "body": "Housing prices across Spain rose 12.9% in the first quarter of 2026, but buyer resistance is now cooling the market. Economist Gonzalo Bernardos notes that upper-middle-class demand in Madrid, Barcelona, and Valencia is rejecting current valuations, leading to a deceleration in housing investments. This pushback signals a potential shift in affordability dynamics for those looking to buy property in major urban centers.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-06-16/economista-vivienda-espana-demanda-clase-media-madrid-barcelona-valencia_4373023/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "High Rent Burdens Drive Mental Health Crisis Among Youth",
+      "body": "A new report by Oxfam and youth organizations links the struggle to pay rent directly to deteriorating mental health among young people in Spain. The study finds that 62.7% of youth face housing access difficulties, with spending more than 30% to 50% of income on rent significantly increasing psychological distress. Researchers urge policymakers to address these socioeconomic factors to protect public well-being.",
+      "sources": [
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/economia/sobreesfuerzo-pagar-alquiler-dispara-problemas-salud-mental-jovenes_1_13305510.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Solidarity Pension Contribution from High Salaries Surges 42%",
+      "body": "The solidarity quota applied to high salaries will generate €567 million in pension contributions this year, marking a 42% increase from 2025. The Social Security Ministry implemented the measure last year as part of broader pension reforms to ensure the system's long-term viability. High-earning residents will see this increased social security deduction reflected in their net monthly income.",
+      "sources": [
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/economia/salarios-altos-disparan-aportacion-solidaridad-pensiones-publicas-567-millones_1_13306656.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Domestic Flight Prices in Spain Surge by Record 25.6%",
+      "body": "The cost of domestic flights in Spain jumped 25.6% in May, marking the largest monthly increase on record. International airfares also rose 2.5%, pushing the overall average ticket price up 8.9%. The surge stems from a 6.44% increase in Aena airport fees and elevated operational costs driven by higher oil prices during the recent geopolitical conflict.",
+      "sources": [
+        {
+          "name": "20minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/precio-los-billetes-avion-para-viajar-por-espana-sufrio-su-mayor-subida-mayo-mas-un-25_6983245_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "Madrid's new transport pass rule locks out unregistered residents. Have you struggled to get empadronamiento because of your landlord? 👇",
+  "variant": "Nothing Happened in Spain Today. Except This.",
+  "headline": "Nothing Happened in Spain Today. Except This.",
+  "date": "2026-06-16",
+  "generated_at": "2026-06-16T06:09:44.809112+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 324,
+    "items_selected_pass1": 11,
+    "fact_sheets_extracted": 11,
+    "items_after_importance_filter": 10,
+    "items_in_digest": 9
+  },
+  "selection_reasons": {
+    "83": "Massive migrant regularization process with nearly 1 million applications directly affects legal status for many undocumented immigrants",
+    "131": "Indefinite doctors strike called for September threatens healthcare access for all residents, including foreign nationals",
+    "322": "Housing expert analysis of falling demand among middle-high class in major cities signals a potential shift in property market dynamics",
+    "46": "Renewable energy deployment cuts electricity bills by €10/month, directly impacting cost of living for households",
+    "306": "Analysis explains why reopening of Ormuz Strait will delay fuel price relief at pumps, affecting inflation expectations",
+    "28": "Spain’s shocking 0-0 draw against debutants Cabo Verde in World Cup opener is a major national sports event",
+    "27": "US-Iran peace deal and reopening of Ormuz Strait is a historic international event with direct consequences for global oil prices and Spain's energy costs",
+    "307": "New solidarity contribution on high salaries already raised €567M for pensions, impacting high-income earners including foreign workers",
+    "304": "Study links housing affordability crisis to rising mental health issues among youth, highlighting systemic social impact of rental prices",
+    "291": "Domestic flight prices surged over 25% in May, a significant cost increase for anyone traveling within Spain",
+    "59": "Madrid’s controversial transport measure excluding non-registered migrants sets a precedent in immigration-related policy for major regions"
+  }
+}

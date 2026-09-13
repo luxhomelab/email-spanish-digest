@@ -1,0 +1,126 @@
+{
+  "items": [
+    {
+      "title": "Electricity bills surge 28% as VAT rebate ends; Díaz demands urgent decree",
+      "body": "Families face a double blow: electricity prices jumped 27.8% in May and the IVA (VAT) reduction expired, restoring the 21% rate. Vice President Yolanda Díaz has demanded an urgent decree to restore tax cuts on energy and freeze rents, but the government previously lacked parliamentary support for similar measures. The government began withdrawing relief after April IPC (CPI) hit 3.2%.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/02/energia-las-familias-afrontan-un-doble-golpe-factura-luz-dispararse-su-precio-un-28-decaer-rebaja-iva-2025366.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/yolanda-diaz-exige-un-decreto-urgente-para-recuperar-rebaja-fiscal-luz-gas-congelacion-los-alquileres_6977566_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Oil prices spike as Iran suspends US negotiations",
+      "body": "Brent crude surged over 4.5% to nearly $95 per barrel after Iran halted talks with the US following Israeli attacks on Lebanon. Although Trump announced a ceasefire in Lebanon, volatility remains high and risks of disruption to energy shipments through the Strait of Hormuz persist.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/mercados-y-bolsa/petroleo-dispara-suspension-negociaciones-iran-eeuu_6977749_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "EU pushes Meloni-style deportation centers, Spain isolated",
+      "body": "The EU has taken a major step towards creating migrant return centers in third countries, inspired by Italian PM Giorgia Meloni's model. Spain is the only member state to oppose the measure, leaving it isolated in EU migration policy.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/internacional/2026/06/01/6a1de38221efa004378b45b3.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Teachers strike escalates as PAU exams begin in Valencia",
+      "body": "The indefinite teachers strike in the Valencian Community entered its fourth week, with the regional president accusing unions of encouraging 'vandalistic acts'. The conflict comes just as students prepare for the PAU (Pruebas de Acceso a la Universidad, university entrance exams), which the Education Department has guaranteed will take place.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/comunidad-valenciana/2026/06/02/6a1dd205e4d4d84e558b45b0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Doctors threaten fifth strike of year over stalled negotiations",
+      "body": "Medical unions have denounced the Health Ministry's 'zero capacity' to resolve the conflict over reform of the Estatuto Marco. A fifth doctors' strike is scheduled for June 15-19 after the latest meeting produced no concrete proposals.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/los-sindicatos-medicos-denuncian-nula-capacidad-sanidad-para-desbloquear-conflicto-evitar-quinta-huelga-ano_6977768_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Feijóo urges Catalan business elite to back censure motion",
+      "body": "PP leader Alberto Núñez Feijóo will tell the influential Cercle d'Economia that Catalonia 'cannot accept this situation of deadlock' and call for an instrumental censure motion to oust PM Sánchez and trigger early elections. The PP aims to pressure Junts and PNV through business leaders.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/06/01/6a1dbda4fc6c8390668b4586.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Spain leads Chinese automaker investment in Europe",
+      "body": "SAIC (MG) has chosen Spain for its first European car factory, joining Chery, Leapmotor, and CATL in a wave of Chinese EV and battery investment. However, the government has almost lost the bid for a third BYD plant in Europe.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/motor/2026/06/02/6a1daaf521efa084728b4598.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Tax agency returns 5.71 billion euros to 8.3 million taxpayers",
+      "body": "In the first two months of the IRPF (income tax) campaign for 2025, the Agencia Tributaria has refunded 5,710 million euros to 8.28 million contributors, representing 61% of claimed amounts. In-person appointment service for filing began Monday.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/agencia-tributaria-devuelve-5-710-millones-que-va-campana-renta-8-3-millones-contribuyentes_6977750_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Boris Vujcic succeeds De Guindos as ECB Vice President",
+      "body": "Croat economist Boris Vujcic took office as ECB Vice President for an eight-year non-renewable term, replacing Spain's Luis de Guindos. His appointment comes amid debate over raising interest rates from 2% to combat inflation from the Iran war.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/nuevo-vicepresidente-bce_6977549_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "Electricity prices jumped 28% and the VAT cut is gone. How is this affecting your household budget?",
+  "headline": "🇪🇸 Spain: daily briefing 📋 02.06.2026",
+  "date": "2026-06-02",
+  "generated_at": "2026-06-02T05:32:13.544527+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 333,
+    "items_selected": 10
+  }
+}

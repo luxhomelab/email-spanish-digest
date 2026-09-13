@@ -1,0 +1,126 @@
+{
+  "headline": "🇪🇸 Spain — 08.05.2026",
+  "items": [
+    {
+      "title": "Housing prices double salary growth over ten years in Spain",
+      "body": "According to Pisos.com, home prices have surged 68.4% since 2016, while average wages only increased 34%. The average price per square meter now stands at €2,164, with Madrid reaching €5,157/m². Experts warn that many buyers, especially young people, are being priced out of the market.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/precio-vivienda-ha-subido-doble-que-los-salarios-los-ultimos-diez-anos-duda-es-si-comprador-aguantara-estos-ritmos_6967559_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Spanish gas stations rake in €800M extra from war in two months",
+      "body": "Since the start of the conflict in Iran, Spanish petrol stations have seen daily revenues jump from €52.2 million in February to €68 million in March. If April holds similar levels, the sector will have earned over €800 million in additional income from the war.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/08/las-gasolineras-espanolas-hacen-caja-con-guerra-recaudan-800-millones-extra-dos-meses-2018445.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Hacienda to send 130,000 'fear letters' to taxpayers with errors",
+      "body": "Spain's tax agency (AEAT) will issue around 130,000 warning letters during the current income tax (IRPF) campaign, allowing taxpayers to voluntarily correct mistakes before penalties. Penalties can range from 50% to 150% of the unpaid amount.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/08/hacienda-enviara-unas-130-000-cartas-preventivas-los-contribuyentes-que-hayan-hecho-esto-declaracion-renta-2018548.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Over 4,600 immigrants apply for regularization in just 10 days in Zaragoza",
+      "body": "Following a surge of immigrants seeking padrón (municipal registry) certificates, attention has shifted to obtaining appointments at 12 government offices. The extraordinary regularization process has overwhelmed the system, with online procedures proving challenging.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/aragon/2026/05/08/mas-4-675-demandas-regularizacion-se-han-presentado-desde-zaragoza-10-dias-2018348.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "EU eases aviation rules to prevent cancellations as kerosene crisis hits airlines",
+      "body": "The European Commission has adopted exceptional guidelines to relax refueling obligations and slot rules due to kerosene shortages from the Ormuz Strait blockade. Meanwhile, IAG (Iberia, British Airways) reported a 71% profit increase to €301 million in Q1 but warned that higher fuel costs will lower yearly earnings.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-08/bruselas-flexibiliza-las-normas-del-sector-aereo-vuelos_4352137/"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/empresas/iag-gana-301-millones-hasta-marzo-pero-rebaja-previsiones-crisis-queroseno_6967869_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Massive international operation to contain hantavirus from cruise ship arriving in Canaries",
+      "body": "23 countries, the EU, and WHO are coordinating a plan for the MV Hondius cruise ship, where 3 people have died and 5 show symptoms of hantavirus. Passengers will be evaluated and immediately evacuated to home countries without contact with local population.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/23-paises-coordinados-ue-oms-dispositivo-precedentes-evitar-propagacion-hantavirus_1_13203608.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "WHO warns of potentially lethal defective injectables distributed globally",
+      "body": "The WHO has issued a global alert for three iodinated contrast media products (Accupaque, Omnipaque, Visipaque) that may contain metallic particles. These can cause complications such as stroke, embolism, or death when injected. Only 100ml plastic containers are affected.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/salud/2026/05/08/oms-lanza-alerta-global-ts-inyectables-defectuosos-potencialmente-letales-2018589.html"
+        }
+      ],
+      "category": "politics",
+      "important": true
+    },
+    {
+      "title": "Stellantis to build new electric Opel in Zaragoza and may transfer Madrid plant to Leapmotor",
+      "body": "Stellantis will produce a new Opel electric C-SUV at its Figueruelas plant from 2028 and is planning to hand over its Villaverde factory in Madrid to Chinese brand Leapmotor. This is part of an expansion of electric vehicle production in Spain.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/stellantis-fabricara-nuevo-electrico-zaragoza-planea-traspasar-leapmotor-planta-madrid_1_13205390.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Renfe takes regulator to court over sharing workshops with private rivals",
+      "body": "Renfe has challenged the CNMC (National Markets and Competition Commission) requirement to let Ouigo and Iryo use its heavy maintenance workshops. Renfe claims this threatens public service, while the regulator insists on non-discriminatory access.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/renfe-choca-competencia-obligar-empresa-publica-ceder-talleres-ouigo-e-iryo_1_13203826.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "Should Spain intervene more on housing prices or let the market adjust? What's been your experience renting or buying?",
+  "date": "2026-05-08",
+  "generated_at": "2026-05-08T13:53:13.787531+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 347,
+    "items_selected": 10
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "headline": "🇪🇸 Spain — 13.05.2026",
+  "items": [
+    {
+      "title": "Mallorca's 'Inheritance Paradise': How wealthy foreigners use a medieval law to dodge taxes",
+      "body": "While locals struggle with soaring housing costs, advisory firms are marketing Mallorca to wealthy expats, particularly Germans, as a haven for minimizing inheritance and donation taxes. They promote the *definición sucesoria*, an ancient Balearic civil law allowing heirs to receive assets in advance and completely sidestep the region's standard inheritance tax framework.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/illes-balears/economia/paraiso-herencias-asesorias-venden-mallorca-extranjeros-pagar-impuestos_1_13201484.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Spain caps prescription costs: monthly medication bills now limited for low and middle incomes",
+      "body": "Spain's government approved a healthcare reform setting maximum monthly spending limits on prescriptions for the first time. Those earning under €9,000 per year will pay no more than €8.23, while middle-income earners (up to €35,000) will see monthly caps between €18.52 and €61.75, a move designed to prevent patients from abandoning long-term treatments due to cost.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/gobierno-reforma-los-copagos-fija-maximos-mensuales-las-rentas-mas-bajas-no-gastaran-mas-8-euros-mes-farmacos_6969356_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Urgent food alert: Listeria found in Goya brand fresh cheese in Spain",
+      "body": "Spain's food safety agency (Aesan) has warned consumers not to eat 'Queso Latino' fresh cow's milk cheese from the brand Goya due to *Listeria monocytogenes* contamination. The affected batches carry lots 011056 and 021046 with expiry dates on May 30 and 31, 2026; authorities recommend returning the product to stores or disposing of it immediately.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/alerta-alimentaria-detectan-presencia-listeria-un-queso-fresco-vaca_6969601_0.html"
+        }
+      ],
+      "category": "health",
+      "important": true
+    },
+    {
+      "title": "€600 monthly aid for owners who turn empty homes into social rentals in Spain",
+      "body": "A new measure in Spain's 2026-2030 State Housing Plan offers property owners a monthly subsidy of €600 for leasing their empty homes through a social or affordable rental scheme for seven years. The initiative aims to boost housing supply and protect vacant properties from squatting or deterioration.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/05/12/adios-vivienda-vacia-ayuda-600-euros-propietarios-como-solicitar-requisitos-2019169.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Key tax breaks for over-65s filing Spain's income tax return (Renta)",
+      "body": "As Spain's *Renta* (income tax) campaign runs until June 30, residents over 65 should review specific *IRPF* (income tax) exemptions. Profits from selling a primary residence are completely tax-free for this age group, and individuals with a single income source under €22,000 are not required to file, though it may be beneficial if a refund is due.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/12/declaracion-renta-mayores-65anos-exenciones-rebajar-irpf-2016883.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Spanish Treasury offers highest returns on short-term debt in over a year",
+      "body": "Spain's *Tesoro Público* auctioned €2.5 billion in 3-month and 9-month *letras* (T-bills) on Tuesday, pushing yields to their highest levels in over a year. The 3-month yield rose to 2.163% and the 9-month yield hit 2.521%, attracting strong demand from investors.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-12/el-tesoro-eleva-la-rentabilidad_4353730/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain extends hantavirus quarantine, allows visits for negative passengers",
+      "body": "Spain's Public Health Commission updated its hantavirus outbreak protocol, resetting the 'day zero' to May 10 (when passengers disembarked) and extending the 42-day quarantine until June 21. The new protocol allows visits for passengers who have tested negative, while only those evacuated directly from the ship remain isolated in the Gómez Ulla Hospital.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/sanidad-amplia-cuarentena-hantavirus-permitira-visitas-negativo-partir-proxima-semana_1_13216139.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Spain's Supreme Court blocks automatic permanent contracts for public workers without exams",
+      "body": "Spain's Supreme Court ruled that public sector workers in abusive temporary positions cannot be automatically granted permanent contracts unless they have passed a competitive *oposición* (exam). The court argued that doing otherwise would violate constitutional principles of equality, merit, and public service access.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/legal-00345/noticia-supremo-falla-abuso-temporalidad-solo-debe-convertirse-empleo-fijo-si-supera-oposicion-20260512112816.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Judge who slammed 'unionized Spain' in Glovo ruling escapes disciplinary sanction",
+      "body": "Spain's General Council of the Judiciary (CGPJ) has archived complaints against Judge Álvaro Lobato, who criticized Labor Inspectorate officials in a ruling on delivery platform Glovo. In his July 2025 ruling, he described the inspectors' testimonies as echoing 'the nostalgic unionized Spain of yesterday' with 'biological psychological anchors', sparking allegations of antisindical bias.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/judicial-descarta-sancionar-juez-critico-espana-sindicalizada-sentencia-caso-glovo_1_13212183.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Supreme Court postpones hearing on suspending Spain's migrant regularization",
+      "body": "Spain's Supreme Court delayed until May 22 the hearing on whether to temporarily suspend the government's decree for an extraordinary regularization of undocumented migrants. The appeal to halt the process was brought by right-wing groups and the Madrid regional government, while the state's legal defense argues a pause would harm the affected migrants and the public interest.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/supremo-retrasa-22-mayo-vista-sobre-medidas-cautelares-contra-regularizacion-extraordinaria-migrantes_6969511_0.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    }
+  ],
+  "engagement": "Wealthy expats use a medieval law to dodge inheritance tax in Mallorca while locals are priced out. Fair play or a step too far? 🏠💶",
+  "date": "2026-05-13",
+  "generated_at": "2026-05-13T05:33:06.209847+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 326,
+    "items_selected": 10
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "headline": "🇪🇸 19.05.2026 — Spain: your 5-min catch-up ☕",
+  "items": [
+    {
+      "title": "Oil reserves could deplete in weeks as Ormuz blockade worsens, EU begs China to intervene",
+      "body": "The IEA warns that global commercial oil stocks will run out within weeks due to the ongoing closure of the Strait of Hormuz, which has blocked 14 million barrels per day. Meanwhile, the EU has admitted its own influence is insufficient and has called on China to mediate between the US and Iran, as the IMF rates the situation as highly critical.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/aie-preve-que-colchon-reservas-petroleo-se-agote-semanas-fmi-cree-que-situacion-es-muy-critica_6971916_0.html"
+        },
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/internacional/2026/05/19/union-europea-se-desespera-pide-ayuda-china-para-reabrir-ormuz-mientras-trump-repasa-los-planes-guerra-2021464.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain triples EU legal limit for critical drug access, waits average 537 days",
+      "body": "According to the WAIT 2025 report, Spanish patients wait an average of 537 days to access new medications—nearly triple the EU legal timeframe. Spain funds only 69% of drugs approved in Europe between 2021 and 2024, ranking 5th, yet the overall availability has slightly decreased from 71%.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/ciencia-y-salud/salud/2026/05/19/6a0c034dfc6c831a0d8b458c.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Court orders Hacienda to return €55 million to Shakira after winning tax residency case",
+      "body": "Spain's Audiencia Nacional ruled that Shakira was not a tax resident in 2011, annulling the tax agency's claim and mandating the return of €55 million. The ruling, which can be appealed, hinges on the singer's 'sporadic absences' and fewer than 183 days in Spain, setting an important precedent for residency disputes.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/shakira-vencio-hacienda-residencia-fiscal-ausencias-esporadicas-relacion-gerard-pique_1_13230331.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "EU salary transparency rule goes live June 7: employers must disclose pay before first interview",
+      "body": "Starting June 7, 2026, all Spanish companies must disclose salary ranges in job postings and before interviews under a new EU directive. The measure aims to eliminate the common practice of hiding pay information to reduce inequality and wasted time in hiring.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/buscar-trabajo-sin-saber-sueldo-nunca-debio-ser-normal_6971881_3.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Ex-PM Zapatero investigated for organized crime and influence peddling in pandemic airline rescue",
+      "body": "Judge José Luis Calama has summoned former prime minister José Luis Rodríguez Zapatero as a suspect in the 'Plus Ultra' case, with charges including organized crime, false documents, and influence peddling. Police raided his office and related companies on Tuesday, investigating the alleged misuse of funds from the government's pandemic bailout of Plus Ultra airline.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/zapatero-imputado-blanqueo-capitales-caso-plus-ultra_1_13231540.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Medical strike enters fourth week with no hope of talks, unions accuse minister of lying",
+      "body": "Relations between medical unions and the Health Ministry have completely broken down, with zero contact during the latest five-day strike. Unions have called for the minister's resignation for 'repeated lies,' while she accuses them of disloyalty, leaving the dispute over a new medical statute unresolved.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/conflicto-sanidad-medicos-negociaciones-rotas-plena-huelga-solucion-vista_1_13230261.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Home sales slump continues: third consecutive monthly drop, new housing down 10.2%",
+      "body": "Property sales fell 2.2% in March compared to last year, marking the third straight monthly decline, with new home sales plummeting 10.2%. The cooling comes after a record 2025 and is attributed to high prices and economic uncertainty from the Iran conflict.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/compraventa-viviendas-cae-tercer-mes-consecutivo-arrastrado-freno-vivienda-nueva_1_13228814.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Pension calculation overhaul in 2026: retirement age rises to 66 years 10 months",
+      "body": "A new double-calculation method for retirement pensions begins in 2026, with the legal retirement age reaching 66 years and 10 months. The reform, explained by Social Security official Alfonso Muñoz, will gradually base pensions on full-career earnings, with exceptions for those with long contribution histories.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-19/alfonso-munoz-funcionario-seguridad-social-2026-cambia-calcular-pension-jubilacion-seguridad-social-doble-calculo-1qrt_4356008/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "US tariffs: Spanish food exports to America tumble 9.6% in 2025",
+      "body": "Exports of Spanish food and beverages to the US fell 9.6% to €3.04 billion in 2025, impacted by Trump's tariff policies. Despite this, the overall sector posted record exports of €52.565 billion, up 2.9%, with growth elsewhere partly offsetting the US decline.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/aranceles-trump-golpean-campo-espanol-hunden-9-6-exportaciones-alimentarias-ano_6972158_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "🤔 Do you think the Shakira €55M tax win changes the game for expats fighting residency rules? Share your thoughts below.",
+  "date": "2026-05-19",
+  "generated_at": "2026-05-19T10:00:09.587080+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 314,
+    "items_selected": 10
+  }
+}

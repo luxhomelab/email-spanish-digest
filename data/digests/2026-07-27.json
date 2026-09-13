@@ -1,0 +1,169 @@
+{
+  "items": [
+    {
+      "title": "Colombians Lead Regularization Requests in Spain",
+      "body": "Colombians now account for 26% of all regularization applications in Spain. A record 812,473 Colombian travelers arrived in 2025, making Spain a primary destination after the pandemic and tighter US immigration rules. This surge could shape future visa policies and processing times.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/espana-destino-frecuente-migracion-colombiana-ahora-lidera-peticiones-regularizacion_1_13403982.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Government Faces Tough Housing Decree Negotiations",
+      "body": "The government’s new housing decree, which would extend rental contracts until July 2028, faces opposition from coalition partners PNV, Podemos, and Junts. PSOE and Sumar agreed on the draft, but PNV demands changes to land laws that Podemos rejects. The decree goes to the Council of Ministers on Tuesday and must be validated in Congress in September.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/exigencias-contrapuestas-socios-complican-nuevo-decreto-vivienda-gobierno_1_13404443.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Chinese Carmakers Geely, Chery Rescue Spanish Auto Jobs",
+      "body": "Geely is investing €221 million for a 34% stake in Ford’s Almussafes plant, raising annual capacity from 90,000 to 400,000 units. The deal secures jobs for 4,296 workers who will return to regular work. Other Chinese groups like Chery have formed similar alliances in Spain.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/geely-chino-salvavidas-empleo-espanol_7018616_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Massive Palma Protest Demands Action on Housing and Tourism",
+      "body": "Between 25,000 and 70,000 people marched in Palma against touristification and the housing crisis. The demonstration, organized by platform ‘Menys Turisme, Més Vida’ with 134 supporting entities, ended in police baton charges and rubber bullets. The protest highlights growing frustration over housing shortages and mass tourism in the Balearics.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/illes-balears/sociedad/miles-personas-convierten-palma-clamor-turistificacion-mallorca-llegado-limite_1_13407939.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "⚠️ Spain’s Largest Wildfire Forces Evacuations, Emergency Zone Declared",
+      "body": "The biggest wildfire in Spanish history has burned at least 77,000 hectares across Madrid, Ávila, and Toledo, affecting around 90,000 people. The government declared a national emergency and, on Tuesday, will officially recognize the damaged areas as zones seriously affected by the civil protection emergency, unlocking aid. Firefighters are working to contain the blaze as evacuations and confinements continue.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/ultima-hora-incendios-madrid-avila-toledo-mayor-fuego-historia-espana-afronta-dia-clave-contencion_133_13408423.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-gobierno-declarara-zonas-gravemente-afectadas-areas-danadas-incendios-20260726124809.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "When Living in Your Parents’ Home May Trigger Tax",
+      "body": "Living in a parent’s habitual residence in Spain is tax-free, regardless of the child’s age. However, free use of a second home—such as an inherited property or vacation house—can trigger tax liabilities. The average age of emancipation in Spain is around 30, meaning many young adults still live with parents and need to understand these rules.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/07/26/entreo-vigor-que-casos-hijos-que-vivan-casas-padres-deberan-pagar-impuestos-2039682.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Fuel Prices Jump 20% as Summer Travel Peaks",
+      "body": "Diesel now costs €1.75 per liter and gasoline €1.664, marking increases of 21.3% and 11.2% compared to last year. Filling a standard 55-liter tank costs over €91 for gasoline and over €96 for diesel. With more than 104 million road trips expected this summer, the end of fiscal fuel measures on June 30 is driving up prices.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/los-espanoles-se-van-vacaciones-con-los-carburantes-hasta-un-20-mas-caros-que-ano-pasado-los-hoteles-disparados_7018742_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Sánchez Hits Poll Low as Right-Wing Surpasses 50%",
+      "body": "Prime Minister Pedro Sánchez’s PSOE has lost 1.37 million potential voters since the last election, a new poll shows. Right-wing parties now combine for more than 50% of voter support, signaling a possible shift after the next general election. Undecided voters are at a minimum, hardening the political landscape.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/encuestas/2026/07/26/6a6629dde4d4d8c4278b459c.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "EU Plans Tighter Control on Foreign Investments",
+      "body": "The European Commission is consulting on a new regulation to expand oversight of foreign investments, particularly targeting critical materials and industries. Spain’s openness to Chinese investments, such as at the Ford plant, is under scrutiny. The rule could also affect US technology investments, creating potential hurdles for foreign business owners.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/07/27/6a623409e4d4d8cd0e8b456d.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "EU Adds €3 Fee to Chinese Packages",
+      "body": "From July 1, 2026, any package from outside the EU valued under €150 incurs a minimum €3 surcharge per product category. Over 90% of such shipments come from China, affecting platforms like AliExpress, Shein, and Temu. Economist Santiago Niño Becerra doubts the fee will shift shoppers to local stores, predicting it will mainly raise tax revenue.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/07/26/nino-becerra-economista-no-veo-nueva-tasa-aliexpress-shein-temu-influir-muchisimo-comercio-local-2039735.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "France Fires Force 250,000 Evacuations Near Bordeaux",
+      "body": "Wildfires in southwestern France have burned a record 115,000 hectares so far this year, with the Gironde fire consuming 42,000 hectares. Over 250,000 people have been evacuated, and the area west of Bordeaux is on maximum alert due to risks to strategic industries. The proximity to Spain may cause travel disruptions.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/internacional/noticia-incendios-francia-dejan-ya-250000-evacuados-mientras-oeste-burdeos-pone-alerta-maxima-20260726172340.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Will extending rental contracts until 2028 help renters or just push landlords out of the market? 🤔",
+  "variant": "If you live in Spain, read this",
+  "headline": "If you live in Spain, read this",
+  "date": "2026-07-27",
+  "generated_at": "2026-07-27T06:04:37.060461+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 242,
+    "items_selected_pass1": 13,
+    "fact_sheets_extracted": 13,
+    "items_after_importance_filter": 12,
+    "items_in_digest": 11
+  },
+  "selection_reasons": {
+    "30": "Largest wildfire in Spanish history forces mass evacuations and affects thousands of residents and properties, making it a critical national event.",
+    "228": "Government declares fire-affected areas as disaster zones, unlocking aid and compensation for residents and businesses impacted by the wildfires.",
+    "28": "Massive wildfires in neighboring France with 250,000 evacuated directly affect travel plans and safety for international residents in Spain.",
+    "238": "Spain’s World Cup victory boosts national pride and increases player market values, a mandatory inclusion for major sports events.",
+    "46": "Large-scale protest in Palma against mass tourism and housing crisis directly impacts expats and immigrants living in tourist-heavy areas.",
+    "35": "The new housing decree debate affects rental regulations and property rights, crucial for landlords and tenants among foreign residents.",
+    "39": "Colombian migration leading regularization requests highlights key immigration trends important for non-EU immigrants seeking residency in Spain.",
+    "224": "Sharp increase in fuel and hotel prices raises the cost of living and travel for all residents and tourists in Spain.",
+    "14": "EU moves to tighten control on foreign investments with Spain remaining open to China affects business and investment opportunities for international investors.",
+    "222": "Chinese automotive investments rescuing Spanish jobs signal economic shifts and employment opportunities for workers in the auto sector.",
+    "211": "New EU tax on Chinese e-commerce platforms like AliExpress may increase import costs for goods, impacting online shoppers and cost of living.",
+    "212": "Tax changes requiring dependent children living at home to pay taxes affect household finances and tax planning for families in Spain.",
+    "6": "Prime Minister Sánchez’s falling approval and right-wing lead above 50% signal potential political shifts that could affect policy stability for investors and residents."
+  }
+}

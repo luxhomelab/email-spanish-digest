@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "title": "PSOE paid criminal network to sabotage corruption cases, judge alleges",
+      "body": "A National Court judge accused Spain's ruling Socialist Party (PSOE) of employing a criminal network, led by ex-organization secretary Santos Cerdán, to derail investigations into the party and Prime Minister Pedro Sánchez's family — acting 'on orders of the One,' a reference to Sánchez. The Guardia Civil's UCO (Central Operations Unit) raided the PSOE headquarters in Madrid on Wednesday.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/05/27/6a17267c21efa01a188b45be.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Court rules patients not liable for treatment costs insurers refuse to cover",
+      "body": "A Spanish court set a precedent by ruling that a patient who was charged €1,221 for hyaluronic acid during surgery without his consent does not have to pay, because he was unconscious and not informed. The Defensor del Paciente (Patient Ombudsman) says this overturns common clauses in private clinic admission forms that hold patients responsible for uncovered costs. The case involved insurer Caser and Quirón hospital.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/salud/2026/05/28/juez-sentencia-ya-no-tendra-abonar-clinica-privada-no-cubre-seguro-2024057.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Mortgage signings jump 9% in March despite falling home sales",
+      "body": "New mortgages for home purchases rose 9% year-on-year to 46,661 in March, while home sales fell 2.2% for the third straight quarter. The average loan amount increased 10.1% to €174,132, and fixed-rate mortgages accounted for 63.8% of new contracts as the average interest rate held at 2.8%. The euríbor rebound is expected to push rates higher in coming months.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/hipotecas-vivienda-encadenan-21-meses-subidas-pese-freno-compraventas_1_13253089.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Trump strikes Iran again, threatens to 'blow up Oman' as war escalates",
+      "body": "US President Trump ordered new airstrikes on Iran and threatened Oman over the Strait of Hormuz, while Iran retaliated by attacking a US base in Kuwait with missiles and drones. Israel declared southern Lebanon a 'combat zone', accelerating the conflict. The fragile April ceasefire continues to break down despite claims of an imminent deal.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/internacional/trump-ataca-nuevo-iran-plenas-negociaciones-amenaza-volar-oman-e-israel-acelera-libano_1_13255881.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Homeowners can deduct up to €1,356 for home insurance on this year's tax return",
+      "body": "Spain's tax agency Hacienda confirmed that homeowners who bought before January 2013 and still have a mortgage can deduct home insurance costs up to €1,356 in their IRPF (income tax) return for fiscal 2025. The filing period opened April 8; those earning over €22,000 (or €15,876 from multiple payers) must file by June 30. The deduction is part of the permanent home investment tax break.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/27/ya-oficial-hacienda-confirma-que-personas-seguro-hogar-deducir-mas-1000-euros-declaracion-renta-1894682.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Study: Immigrant regularization will barely boost Spain's GDP",
+      "body": "A report from the Fundación de Estudios de Economía Aplicada (Fedea) concludes that the government's extraordinary regularization of undocumented immigrants will have no significant impact on Spain's economic growth. The finding was published in the latest Labor Market Observatory on Wednesday.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/05/28/regularizacion-inmigrantes-apenas-tendra-impacto-economia-espanola-2024048.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "ECB warns Iran war and energy crisis top risk to euro area stability",
+      "body": "The European Central Bank's Financial Stability Report identifies the Iran conflict and energy supply crisis as the main threats to euro zone stability, warning of higher inflation and weaker growth. ECB Vice President Luis de Guindos cautioned the shock could increase market volatility and strain debt repayments. The European Commission recently cut its euro area growth forecast to 0.9% for 2026.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/bce-ve-guerra-iran-crisis-energetica-mayor-riesgo-para-estabilidad-euro_6975691_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain's economy shows 'remarkable resilience' but housing costs bite",
+      "body": "Spain's Economic and Social Council (CES) annual report highlights that the economy created 45% of all EU jobs in 2025, calling it a stress test passed with flying colours. However, it warns that citizens remain pessimistic due to high housing costs and the cost of living, and that job growth hasn't sufficiently reduced poverty and inequality.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ces-subraya-notable-resiliencia-economia-espanola-pese-lastre-vivienda-coste-vida_1_13254570.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "Were you ever billed for a treatment your insurance didn't cover at a private clinic in Spain? Share your experience 👇",
+  "headline": "🇪🇸 Spain: what you missed 👀 28.05.2026",
+  "date": "2026-05-28",
+  "generated_at": "2026-05-28T05:33:01.174252+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 312,
+    "items_selected": 8
+  }
+}

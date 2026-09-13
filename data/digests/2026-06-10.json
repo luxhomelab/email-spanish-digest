@@ -1,0 +1,98 @@
+{
+  "items": [
+    {
+      "title": "Rent crisis forces over half of Spaniards to move or share",
+      "body": "Rental prices hit a record €15.1/m² in May, forcing 53.7% of citizens to take action like moving to cheaper homes, sharing flats, or moving to suburbs. Meanwhile, 66% of households now spend over 30% of income on rent.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/precio-alquiler-condiciona-cada-vez-mas-vida-los-espanoles-mas-mitad-se-ve-obligado-mudarse-compartir-piso_6981032_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "ECB expected to raise rates for first time in three years",
+      "body": "The ECB is expected to raise its benchmark rate to 2.25% this week, the first hike since 2023. Pimco and Vanguard predict two more increases by year-end and another in early 2027, as inflation reached 3.2% in May.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/cuenta-atras-para-bce-las-grandes-gestoras-preven-dos-subidas-tipos-hasta-final-ano-otra-principios-2027_6981249_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Union demands €1,500 minimum net salary for all state employees",
+      "body": "CCOO demands that no state employee earn less than €1,500 net per month, as 15% of the workforce earns near the SMI (minimum wage) of €1,221 in 14 payments. The union says rising costs are causing job offer rejections in expensive cities.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-09/comisiones-obreras-1500-euros-administracion-1qrt_4369759/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Former Sepi chief and PSOE official in public company scandal",
+      "body": "Between 2019 and 2022, Vicente Martínez and Leire Díez allegedly pressured executives of state-owned companies for business opportunities under the political cover of ex-Vice President María Jesús Montero. Some deals went through while others were aborted, according to El Mundo.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/06/09/6a26e6a721efa023568b45ad.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "US bombs Iran in retaliation for Apache helicopter downing",
+      "body": "The US launched airstrikes on Iran in retaliation for the downing of an Apache helicopter. Iran responded by attacking US bases in Kuwait, Jordan, and radar installations in Bahrain.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/internacional/2026/06/09/6a2886e7e9cf4a07318b458a.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Tax agency staff strike during Renta campaign over conditions",
+      "body": "Tax agency (AEAT) employees held a 24-hour strike during the Renta (income tax) campaign, citing breaches of labor agreements. The agency said citizen services were not affected, according to Heraldo.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/09/huelga-funcionarios-agencia-tributaria-zaragoza-renta-2027642.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Spain to phase out paper medication vouchers in pharmacies",
+      "body": "The Ministry of Health approved a decree to replace paper cupón precinto (seal voucher) with a digital verification system. Minister Mónica García said it ends 'the cutter, stickers, and bureaucracy' in pharmacies.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/adios-cuter-las-farmacias-sanidad-avanza-hacia-un-modelo-digital-para-eliminar-cupon-precinto-los-medicamentos_6981144_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "Has the rental crisis forced you to change your living situation in Spain? Share your story.",
+  "headline": "Spain in 30 Seconds",
+  "date": "2026-06-10",
+  "generated_at": "2026-06-10T05:32:54.346594+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 316,
+    "items_selected": 7
+  }
+}

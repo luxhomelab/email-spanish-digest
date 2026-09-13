@@ -1,0 +1,117 @@
+{
+  "items": [
+    {
+      "title": "Oil surpasses $100 as Iran conflict escalates",
+      "body": "Brent crude oil crossed the $100 per barrel threshold as the Iran conflict intensifies, threatening global supply. Around 20% of world oil transits the Strait of Hormuz, now highly militarized, while disruption at Bab el-Mandeb could cut another 7%. European gas prices have climbed above €62 per megawatt-hour. The spike risks higher inflation and prolonged elevated interest rates, directly squeezing household budgets and mortgage costs across Spain.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/petroleo-120-dolares-inflacion-tipos-altos-tiempo-afectar-escalada-guerra-iran_1_13405256.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "New housing decree extends tenant protections to rooms and seasonal rentals",
+      "body": "The government’s proposed housing decree would bring room rentals and seasonal contracts under Spain’s Urban Leases Act. Seasonal leases would be capped at 12 months and require proof of temporality, while room rentals would become habitual residences with five-year contracts—seven if the landlord is a company. Landlords would also need permission to enter rented rooms. The measure still requires approval from parliamentary factions including Podemos, PNV, and Junts. These changes would give tenants renting rooms or short-term leases stronger legal safeguards against eviction and arbitrary conditions.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/nuevo-decreto-vivienda-pretende-aprobar-gobierno_1_13405484.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Ceuta migrant death toll reaches 24 this year as body recovered",
+      "body": "Guardia Civil recovered the body of a young migrant who drowned attempting to reach Ceuta, marking the 24th such death in Ceuta waters in 2026. Irregular entries have risen, with over 100 people now waiting outside the overcrowded CETI reception center. The tragedy underscores the humanitarian pressures at Spain’s land border in North Africa, where many migrants attempt to swim or climb the border fence.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/07/25/guardia-civil-recupera-ceuta-cadaver-joven-migrante-2040026.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "⚠️ Wildfires force evacuation of 115,000 people, Sánchez takes command",
+      "body": "Wildfires forced 115,000 people to evacuate across 39 municipalities in Madrid, Ávila, and Castellón. Prime Minister Pedro Sánchez activated Situación Operativa 3, centralizing firefighting command. Madrid officials described the blaze as 'a real monster' that generates its own atmosphere, with President Isabel Díaz Ayuso calling it 'totally unprecedented.' Over 3,000 displaced residents are in shelters, and authorities focus on protecting populated areas.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-07-26/emergencia-incendios-toledo-viento-avila-madrid-evacuaciones_4396051/"
+        },
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-07-25/sanchez-asume-el-mando-unico-del-incendio-de-madrid-y-avila-y-urge-a-un_4395882/"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "Luxury Palma villa fined €30,601 for illegal year-round rentals",
+      "body": "The Balearic High Court fined DUX Mansion, a luxury villa in Palma, €30,601 for renting year-round despite holding a license for only two months. Advertised at over €18,000 per week, the property was among several cases recently scrutinized for illegal tourist activity. Such enforcement aims to protect the long-term rental market in the Balearic Islands, where many struggle to find housing.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/illes-balears/sociedad/villas-18-000-euros-semana-agroturismos-licencia-cara-judicial-turistificacion-balears_1_13403786.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Military service can now count toward early retirement in Spain",
+      "body": "Spain’s Social Security confirmed that up to 12 months of compulsory military service or substitute social service can be counted towards the minimum contribution period for early retirement. The measure does not increase the pension amount or apply to ordinary retirement. Those who completed their 'mili' in Spain could now access retirement sooner than expected.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-07-26/seguridad-social-mili_4395507/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "New law improves pensions for over 100,000 mutualist professionals",
+      "body": "A new law allows more than 100,000 professionals—such as lawyers and architects—to transfer contributions from alternative mutual schemes to the Social Security system, improving future pensions. The reform excludes 47,000 already retired mutualists and applies to those who started before 2013 and were contributing by the end of 2022. Further regulation on the exact contribution exchange mechanism is pending. Self-employed professionals in these fields stand to benefit from higher retirement income.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/mutualistas-mejoraran-pension-ley-excluye-pensionistas_7018940_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "Will Spain’s new rental decree make it easier for you to find a stable home, or will landlords find ways around it? 🤔",
+  "variant": "Nothing happened in Spain today. Except this.",
+  "headline": "Nothing happened in Spain today. Except this.",
+  "date": "2026-07-26",
+  "generated_at": "2026-07-26T08:04:33.180491+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 248,
+    "items_selected_pass1": 9,
+    "fact_sheets_extracted": 9,
+    "items_after_importance_filter": 8,
+    "items_in_digest": 7
+  },
+  "selection_reasons": {
+    "93": "Massive wildfires across Madrid, Ávila, and Castellón have forced 115,000 evacuations, directly threatening lives and property of all residents including immigrants and expats.",
+    "96": "Prime Minister Sánchez declares a national emergency and calls for a pact of state on climate, which will shape future disaster response and possibly property insurance rules.",
+    "41": "New housing decree tightens rental protections, taxes socimis, and expands public housing — directly impacting property owners and tenants in Spain.",
+    "44": "Oil surges to $120 due to Iran conflict, driving inflation and keeping interest rates high, raising living costs for everyone in Spain and affecting mortgage holders.",
+    "90": "Spain's World Cup victory is a mandatory inclusion; the article covers the win and its political fallout in Catalonia, showing national unity and regional tensions.",
+    "55": "Court rulings and inspections reveal the scale of illegal tourist rentals in the Balearics, affecting property investment and housing availability for long-term renters.",
+    "181": "A young migrant's body recovered in Ceuta highlights ongoing migration pressure and border policies that directly affect non-EU immigrants seeking entry to Spain.",
+    "225": "Social Security confirms compulsory military service counts toward early retirement, which could benefit older foreign residents who completed similar service abroad.",
+    "231": "A new law improves pensions for over 100,000 mutualistas (self-employed professionals), many of whom are foreign lawyers, architects, or consultants in Spain."
+  }
+}

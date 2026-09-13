@@ -1,0 +1,164 @@
+{
+  "items": [
+    {
+      "title": "Inheritance tax savings require genuine relocation, not paper moves",
+      "body": "Inheritance tax rates differ sharply across Spain's autonomous communities — some slash bills by up to 99%. The applicable tax is set by where the deceased lived most in the five years before death. Moving your residence to a lower-tax region is legal, but faking your empadronamiento (municipal registration) is fraud and can trigger an investigation. Foreign property owners should plan ahead.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/es-legal-mudarte-para-evitar-impuesto-sucesiones-david-jimenez-senala-que-un-falso-empadronamiento-puede-salirte-muy-caro_7015491_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Eurozone inflation drops to 2.8% in June, lowest since March",
+      "body": "Eurozone annual inflation fell to 2.8% in June from 3.2% in May, hitting its lowest level since March. Energy price growth slowed to 8.5%, helping push core inflation down to 2.4%. The drop eases cost-of-living pressures and could strengthen the case for the ECB to cut rates, affecting mortgages and savings. Sweden, the Czech Republic and Denmark posted the lowest rates in the bloc.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-07-17/inflacion-de-la-eurozona-cae-cuatro-decimas_4391689/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain World Cup final: shops and offices adjust hours",
+      "body": "Companies across Spain are adapting work hours and closing times for the Spain-Argentina World Cup final. Alusin Solar workers start 2.5 hours later at 10:00, Inditex shops close at 20:00 instead of 21:00, and other retailers like Apple, Ikea and El Corte Inglés are also adjusting schedules. The widespread changes may affect shopping and work routines.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/07/18/6a5a50bfe85ecefc168b45d4.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Legal doubts cloud 'Law of Grandchildren' nationality expansion",
+      "body": "The Central Electoral Commission says it has no authority over nationality grants under the Democratic Memory Law, but a dissenting minority within the body argues the recent expansion of the so-called 'Law of Grandchildren' contradicts the law. Four of the 13 members dissented, warning that the instruction contains illegal provisions. The dispute adds uncertainty for descendants of Spaniards abroad seeking citizenship.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/07/18/6a5a64fee9cf4ac0638b45b5.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Tenants face opaque landlords as investment funds own more homes",
+      "body": "Large investment funds like Blackstone and Brookfield have bought thousands of homes in Spain but often operate with little transparency, making it difficult for tenants to assert their rights. In Madrid alone, Blackstone acquired over 5,000 public housing units and later raised rents before selling to Brookfield. Tenants' associations say the information gap between renters and opaque institutional owners fuels conflicts.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/una-casa-para-vivir/opacidad-grandes-fondos-inversion-complica-informacion-vida-inquilinos_132_13387962.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Spain again refuses to fund Alzheimer's drugs, patients outraged",
+      "body": "Spanish health authorities have again rejected public funding for lecanemab and donanemab — the only two approved Alzheimer's drugs. Ceafa, the main Alzheimer's patient association, expressed indignation at the decision. The treatments remain out of reach for many patients unless they pay privately.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/sociedad/2026/07/18/indignacion-entre-los-enfermos-alzheimer-por-rechazo-financiar-sus-tratamientos-2038049.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "EU pushes for bigger banks and end to 'zero-risk' culture",
+      "body": "The European Commission wants to simplify banking regulation and move Europe away from a 'zero tolerance to risk' culture, aiming to make EU banks more competitive. The non-binding plan calls for focusing on systemic risks rather than eliminating all risk. The ECB has voiced concerns about deregulation. Legislative proposals are expected in early 2027, which could eventually affect mortgage and loan access in Spain.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-07-17/bruselas-pide-bancos-mas-grandes_4391947/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Santander offers early retirement from 55 with up to 95% pension",
+      "body": "Banco Santander and unions agreed on a voluntary early retirement plan for workers aged 55 and older. Eligible employees can receive up to 95% of their pension. About 5,000 workers currently qualify, and the bank expects 2,500 to 3,000 departures over the next 2.5 years. The deal could set a precedent in Spain's banking sector.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/banco-santander-ofrecera-prejubilaciones-partir-55-anos-95-pension_1_13387084.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "State investment per capita varies sixfold across Spanish regions",
+      "body": "Government investment per inhabitant ranged from €590 in Murcia to just €101 in the Canary Islands in 2025, with a total exceeding €15.3 billion. Galicia received €582 per capita, while Catalonia got €163. In absolute terms, Madrid attracted €3.2 billion, followed by Valencia and Andalusia. These gaps affect the quality of public services and infrastructure available to residents.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/caras-inversion-murcia-acapara-seis-veces-canarias-madrid-triple-catalunya_1_13388622.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Brussels tells Spain to strengthen high-level corruption fight",
+      "body": "The European Commission's annual rule-of-law report recommends Spain do more to combat high-level corruption and tighten conflict-of-interest rules. It notes limited progress in these areas. The recommendations are non-binding, but the report raises pressure on the government ahead of upcoming legislative reviews.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-bruselas-reclama-espana-mas-medidas-contra-corrupcion-alto-nivel-endurecer-normas-contra-conflictos-interes-20260717134144.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Aragón wildfire burns 15,000 hectares, six towns evacuated",
+      "body": "A wildfire in the Cinco Villas region of Aragón has consumed roughly 15,400 hectares and forced the evacuation of six population centers. Firefighters are battling flames driven by wind and difficult terrain, focusing efforts on protecting the towns of Luesia and the Sierra de Santo Domingo. The blaze may cause travel disruptions and poor air quality in the area.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/aragon/sociedad/incendio-cinco-villas-supera-15-000-hectareas-favorecido-viento-topografia_1_13389869.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Is your employer adjusting your schedule for today's World Cup final? 👇",
+  "variant": "Spain today, minus the noise",
+  "headline": "Spain today, minus the noise",
+  "date": "2026-07-18",
+  "generated_at": "2026-07-18T08:03:37.152831+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 321,
+    "items_selected_pass1": 12,
+    "fact_sheets_extracted": 12,
+    "items_after_importance_filter": 11,
+    "items_in_digest": 11
+  },
+  "selection_reasons": {
+    "13": "Companies across Spain adjust work hours for the World Cup final — directly affects daily routine and work-life balance for many employees.",
+    "26": "Preview of Luis de la Fuente's successful coaching career ahead of the mandatory World Cup final coverage.",
+    "41": "Wildfire in Cinco Villas reaches 15,000 hectares, a national-scale disaster forcing evacuations and threatening homes.",
+    "239": "Eurozone inflation falls to 2.8% — directly impacts cost of living and purchasing power for residents.",
+    "24": "EU calls on Spain to strengthen high-level corruption measures, affecting governance and business environment.",
+    "15": "Expansion of the 'law of grandchildren' creates doubts at the Electoral Board — critical for foreigners seeking Spanish nationality.",
+    "91": "Banco Santander offers early retirement to 5,000 employees with generous conditions — major labor market news for banking sector.",
+    "238": "EU pushes for larger banks and less risk aversion — shapes the financial landscape for investors and expats.",
+    "250": "Moving to avoid inheritance tax may backfire — essential tax planning information for property owners.",
+    "256": "Opacity of investment funds complicates renters' lives — highlights housing market transparency issues.",
+    "225": "Government refuses to fund Alzheimer drugs despite approval — critical healthcare access news for older residents.",
+    "253": "State investment per capita varies hugely by region — influences where foreigners may choose to live and invest."
+  }
+}

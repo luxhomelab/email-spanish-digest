@@ -1,0 +1,102 @@
+{
+  "headline": "🇪🇸 Spain — 12.05.2026",
+  "items": [
+    {
+      "title": "New rental contracts surged 8.8% in 2024, double the previous year despite Housing Law",
+      "body": "According to INE data, new rental contracts signed in 2024 increased by 8.8%, nearly double the 4.1% rise in 2023 and almost three times the 2.8% increase for existing contracts. The Housing Law, which aimed to protect tenants, does not appear to have slowed price growth — new contract prices have risen 12.9% in five years.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/nuevos-contratos-alquiler-subieron-8-8-2024-doble-ley-vivienda_1_13212470.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Prolonged energy crisis warning from Saudi Aramco; Spain faces pension rise and tax debate",
+      "body": "The CEO of Saudi Aramco warned that oil market disruption from the Hormuz blockade could delay normalization until 2027, as the company's profits jumped 25% to $32 billion. Spain's pensions are expected to rise over 3% due to inflation, adding some €2,000 million in spending, while the government has parked a proposed windfall tax on electricity companies but may raise taxes on gas and fuels.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/ormuz-retrasa-presion-mercado-petrolero_6969062_0.html"
+        },
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/12/pensiones-factura-guerra-pensiones-subiran-gasto-2019380.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/gobierno-aparca-impuesto-por-ganancias-extraordinarias-las-electricas-por-guerra-pero-apunta-subirlos-gas-carburantes_6968820_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain confirms first hantavirus case, but public health agency still not operational",
+      "body": "A Spanish national has tested positive for hantavirus and been transferred to a high-level isolation unit in Madrid's Gómez Ulla Hospital. The case highlights gaps in preparedness: Spain's State Public Health Agency (AESAP), approved by Congress in July 2025, still lacks statutes, funding, or a headquarters — hampering coordination of health alerts.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/ciencia-y-salud/salud/2026/05/11/6a023a7dfc6c831a1b8b45a4.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/agencia-salud-publica-sigue-sin-estatutos-fondos-ni-sede-pese-que-su-creacion-se-aprobo-hace-casi-un-ano_6968845_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Nissan plans to cut 211 jobs in Catalonia while economist predicts 500,000 new roles in 2026",
+      "body": "Nissan has announced an ERE (layoff plan) affecting 211 workers in Catalonia, 37% of its local workforce. In a contrasting outlook, economist Gonzalo Bernardos predicts Spain will create over 500,000 new jobs this year, despite recent unemployment rising above 10%.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/nissan-prepara-ere-211-trabajadores-catalunya-31-plantilla_1_13212464.html"
+        },
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-11/economista-ano-vamos-generar-nuevos-puestos-trabajo_4353257/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "State lawyers oppose court suspension of migrant regularization decree",
+      "body": "Spain's State Attorney has asked the Supreme Court to reject a precautionary suspension of the extraordinary migrant regularization approved by the government. They argue that the applicants do not immediately gain irreversible rights and that the measure promotes integration and social security contributions.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/abogacia-opone-supremo-pueda-rechazar-suspension-regularizacion-migrantes_1_13210780.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "US nuclear submarine docks in Gibraltar, near Spanish coast",
+      "body": "A US Navy Ohio-class ballistic missile submarine, the largest in the fleet, docked at Gibraltar's port on May 10, 2026. A 200-meter exclusion zone has been set up around the vessel, underscoring NATO's presence near Spanish waters.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/internacional/2026/05/11/6a02267521efa03f408b45b1.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "How has the Housing Law affected your rent? 💬 Share your experience below.",
+  "date": "2026-05-12",
+  "generated_at": "2026-05-12T05:33:14.394348+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 305,
+    "items_selected": 10
+  }
+}

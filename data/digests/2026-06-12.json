@@ -1,0 +1,126 @@
+{
+  "items": [
+    {
+      "title": "Landlords Can Raise Rent for Installing Air Conditioning",
+      "body": "Spain's Urban Leases Law allows landlords to increase rent after carrying out improvement works such as installing air conditioning. The increase is capped at 20% of current rent and calculated based on the investment plus three points above the legal interest rate. Works can only be done after five years of contract, and tenants must be properly notified.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-06-11/ley-arrendamientos-urbanos-casero_4370922/"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Homeowners Can Deduct Up to €1,356 for Insurance on 2026 Tax Return",
+      "body": "Spain's tax agency confirms homeowners who bought their property before January 2013 and have home insurance linked to their mortgage can deduct up to €1,356 on their IRPF return. The deduction is available for the current campaign, which started April 8. The mortgage must still be active and the insurance tied to the loan.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/11/ya-oficial-hacienda-confirma-quienes-seguro-hogar-deducir-1000euros-declaracion-renta-2026-1894682.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Congress Boosts Pensions for Mutualists but Penalizes Early Retirees",
+      "body": "The Spanish Congress approved a law improving pensions for up to 150,000 professionals in alternative mutual societies (such as lawyers, architects, and doctors) who switch to the RETA system. However, a proposed amendment to remove the penalty for those who retired early after contributing over 40 years was rejected due to a €5.2 billion budget impact.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/06/11/6a2aca8721efa0b40d8b45a5.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "ECB Hikes Rates and Warns of 3% Inflation as Oil Hits $97 Due to Iran War",
+      "body": "The European Central Bank raised interest rates by 0.25 points to 2.25%—the first hike in three years—to combat inflation fueled by the conflict in Iran. New projections show inflation back to 3% by year-end and oil prices at $97 per barrel, worsening the cost-of-living crisis and lowering growth outlook for the eurozone.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/macroeconomia/2026/06/11/6a2ac2b4fc6c83d5378b45b9.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/bce-sube-los-tipos-interes-0-25-puntos-hasta-su-nivel-mas-alto-casi-tres-anos-por-guerra-iran_6982102_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "EU Migration Pact Takes Effect but Spain and Others Not Ready",
+      "body": "The European Union's new migration pact, tightening asylum procedures and accelerating deportations, entered into force on Friday, but many member states including Spain have not passed the necessary legislation. The Spanish government has not announced how it will implement border controls, detention, and swift returns. The EU Commission acknowledges key elements remain unactivated.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/pacto-europeo-endurece-politica-migratoria-entra-vigor-estados-tengan-listo-sistema-aplicarlo_1_13295439.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Home Sales in Spain Drop 11.2% in Q1 After Record-Breaking 2025",
+      "body": "Property transactions fell to 163,322 in the first quarter of 2026, an 11.2% decline year-on-year, following a record high of over 750,000 sales in 2025. Experts attribute the cooling to high prices and mortgage rates, predicting this may slow price growth in 2027 rather than trigger drops.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/compraventa-viviendas-cae-11-2-primer-trimestre-tocar-techo-2025_1_13293939.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Diesel Price Hits €1.61, Lowest Since Start of Iran War",
+      "body": "The average diesel price in Spain dropped 2% this week to €1.615 per litre, the lowest since early March when the Iran conflict began. Gasoline also fell 1.74% to €1.52. The decrease follows earlier spikes and is aided by government tax measures.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/diesel-se-abarata-un-2-se-situa-los-1-61-euros-su-precio-mas-bajo-desde-inicio-guerra-iran_6982071_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "BBVA, Santander, Caixabank Step Up Offers to Win Young Clients from Neobanks",
+      "body": "Major Spanish banks are launching new digital products targeting young clients to compete with neobanks like Revolut and N26, which already have about 12 million customers in Spain. Executives acknowledge they must prove they offer similar tools, including ETFs and seamless digital experiences.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bbva-santander-sabadell-caixabank-aceleran-oferta-jovenes-frenar-neobancos-revolut-n26_1_13285324.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Supreme Court Opposes Pardon for Former Attorney General García Ortiz",
+      "body": "Spain's Supreme Court rejected a potential pardon for ex-Attorney General Álvaro García Ortiz, convicted of revealing secrets, arguing no reasons of justice, equity, or public utility justify it. The final decision rests with the government, but the court's opposition is a strong legal obstacle.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-supremo-opone-indulte-garcia-ortiz-no-ve-razones-justicia-equidad-utilidad-publica-20260611140521.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Would you let your landlord raise your rent for a new air conditioning unit? Share your thoughts! 🗣️",
+  "headline": "What Happened in Spain Today",
+  "date": "2026-06-12",
+  "generated_at": "2026-06-12T05:32:12.205368+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 317,
+    "items_selected": 10
+  }
+}

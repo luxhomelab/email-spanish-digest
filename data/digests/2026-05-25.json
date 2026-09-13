@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "title": "New savings tax brackets: why your deposits pay more",
+      "body": "Spain's IRPF (income tax) on savings now has progressive brackets from 19% on gains up to €6,000 up to 30% over €300,000. This applies to interest from deposits, accounts, and Letras del Tesoro (Treasury bills), taxed separately from salary. Many investors are only now realizing the higher rates.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/nuevo-irpf-ahorro-por-que-depositos-tributan-mas_6972789_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Andalusia estimates €500M hit from cancelled state rental registry",
+      "body": "The annulled state registry of short-term rentals has cost Andalusia over €500 million in administrative costs and lost profits, according to the regional government. The Supreme Court ruled the state lacked competence, siding with Andalusia, Valencia, Canarias, and Murcia.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/andalucia/2026-05-25/andalucia-cifra-en-500-m-el-impacto-del-registro-estatal-tumbado-por-el-supremo_4359958/"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Spain lowers medicine co-payments for middle and low-income patients",
+      "body": "A new Royal Decree Law effective May 14 reduces the pharmaceutical co-payment for workers with medium and low incomes, especially benefiting chronic and multi-medicated patients. The change modifies the percentage paid based on income and employment status.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/salud/2026/05/25/gobierno-cambia-precio-algunos-medicamentos-estas-son-las-personas-menos-afectadas-2022296.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Spain negotiates to avoid diesel tax increase amid Iran war",
+      "body": "The government is trying to convince the European Commission to unblock €475 million in frozen Next Generation EU funds by waiving a required diesel tax hike, now politically impossible due to soaring oil prices from the Iran conflict. The fiscal reform originally promised the increase.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gobierno-negocia-bruselas-no-subir-impuesto-diesel-plena-guerra-iran-descongelar-fondos-europeos_1_13218944.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Solar boom causes grid instability, Red Eléctrica demands 600M fix",
+      "body": "Six years of uncontrolled solar panel expansion have destabilized Spain's electricity grid, forcing operator Red Eléctrica to request an emergency €600 million investment to compensate for severe oscillations, especially in Andalusia, Extremadura, and Castilla-La Mancha.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/05/25/6a101913fdddff867e8b45ee.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Zapatero at center of Plus Ultra corruption network, police say",
+      "body": "Former Prime Minister Zapatero has been imputed as the strategic supervisor of a €53 million rescue of Plus Ultra airline during the pandemic. Police reports describe a web of influence peddling, shell companies, and false invoices orchestrated to secure the public aid.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/asi-operaba-trama-plus-ultra-zapatero-centro-una-red-testaferros-facturas-millonarias-falsas-trafico-influencias_6974380_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Israel summons Spanish charge d'affaires over police action against flotilla activists",
+      "body": "Israel demanded explanations from Spain after the Ertzaintza (Basque police) charged activists returning from a Gaza flotilla in Bilbao. Israel accused Spain of hypocrisy for condemning Israel while remaining silent on the incident.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/internacional/noticia-israel-convoca-encargada-negocios-espana-actuacion-ertzaintza-contra-activistas-20260524162006.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "EU and UK urge Iran and US to formalize ceasefire agreement",
+      "body": "European Commission President von der Leyen and UK officials have called on Iran and the United States to sign a principles agreement paving the way for an indefinite ceasefire. This follows predictions from Trump and Rubio that the deal was imminent.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/internacional/noticia-ue-runido-piden-iran-eeuu-certifiquen-acercamiento-firma-esperado-acuerdo-20260524134053.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "How much more are you paying in taxes on your savings this year in Spain? The new brackets go up to 30%! 💬",
+  "headline": "🇪🇸 Spain: 5-min catch-up ☕ 25.05.2026",
+  "date": "2026-05-25",
+  "generated_at": "2026-05-25T05:32:12.199921+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 266,
+    "items_selected": 8
+  }
+}

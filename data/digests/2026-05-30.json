@@ -1,0 +1,126 @@
+{
+  "items": [
+    {
+      "title": "Rent surge leaves tenants 19% poorer in a decade",
+      "body": "A new CCOO union report reveals that new rental contracts have risen 37% since 2015, far exceeding wage growth of 26% and existing contract rises of 21%. In the worst-hit Comunidad Valenciana, new rents soared 55%, leading to a 19% loss in purchasing power for tenants.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/nuevos-contratos-alquiler-comen-19-adquisitivo-decada-empobrecimiento-provincia-provincia_1_13259751.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Euribor rise adds up to €133 to monthly mortgage payments",
+      "body": "The Euribor closed May at a provisional 2.80%, the highest since September 2024. For a typical €350,000, 30-year variable mortgage, the annual review pushes the monthly payment up €133, from €1,416 to €1,549.50.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/mercados/finanzas-personales/2026-05-30/euribor-hipotecas-cuota-tipos-de-interes-bce_4363587/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "B-label and old diesel cars banned in Spanish cities",
+      "body": "Low emission zones (ZBE) have expanded restrictions, now banning cars with the yellow B environmental label (gasoline from 2001, diesel from 2006) and all diesel vehicles over 10 years old. The measure affects more than 15 million vehicles across many urban areas.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/29/ya-ha-entra-vigor-las-nuevas-restricciones-para-los-coches-con-etiqueta-b-los-diesel-con-mas-10-anos-2024082.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Sánchez's partners demand early elections as new corruption revelations emerge",
+      "body": "Junts and PNV, key parliamentary allies, are calling on Pedro Sánchez to call early elections amidst a series of corruption scandals. Meanwhile, judicial investigations place Santos Cerdán, the 'number two' of the PSOE, at the head of three criminal networks, deepening the government's crisis.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/05/29/6a19d320e85ecec4258b45bb.html"
+        },
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/05/30/justicia-situa-ya-cerdan-frente-tres-tramas-delictivas-mientras-era-numero-dos-sanchez-2024789.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Energy VAT cuts expire June 1, inflation at 3.2%",
+      "body": "Spain's CPI held at 3.2% in May, but core inflation rose to 2.9%. The temporary VAT (IVA) reductions on electricity and natural gas end on Monday, June 1, raising household bills, while the government debates whether to extend other fiscal measures beyond June 30.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ipc-mantiene-3-2-mayo-expiren-rebajas-iva-electricidad-gas-natural_1_13259168.html"
+        }
+      ],
+      "category": "economy",
+      "important": true
+    },
+    {
+      "title": "EU approves €9 billion state aid for Spain's anti-blackout system",
+      "body": "The European Commission has authorized a €9 billion aid package to create a capacity market for electricity supply flexibility. The system rewards power plants and storage for supplying energy on demand and large industrial users for reducing consumption at peak times, developed after the April 2025 blackout.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bruselas-aprueba-ayuda-9-000-millones-sistema-antiapagones-espana_1_13259936.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Russian drone hits Romanian apartment block; NATO warns of readiness",
+      "body": "A Russian Geran-2 drone struck a residential building in Galați, Romania, near the Ukrainian border, injuring a woman and a child and forcing the evacuation of 70 people. NATO said it is ready to defend all allied territory, while Romania called it the most serious incident since the war began.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/internacional/heridos-impactar-dron-edificio-rumania_1_13259120.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Spain to reform dismissal law with unions, ignoring employer opposition",
+      "body": "The Labour Ministry and unions CCOO and UGT will jointly draft a reform to align dismissal rules with European Social Charter rulings, introducing higher compensation for unfair firings and reinstatement rights. The CEOE employers' federation strongly opposes the plan.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/trabajo-disenara-con-los-sindicatos-reforma-legal-despido-contra-ceoe_6976897_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Public employees union CSIF starts mobilizations amid political uncertainty",
+      "body": "CSIF, the largest public sector union, announced protests over stalled negotiations on the 5th Collective Agreement and partial retirement access. The union accuses the government's political weakness of blocking progress on pay, career development, and conditions for state employees.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-29/funcionarios-aprovechan-debilidad-gobierno-movilizaciones_4363896/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "How much has your rent increased in the last five years? Share your story 👇",
+  "headline": "🇪🇸 Spain: 5-min catch-up ☕ 30.05.2026",
+  "date": "2026-05-30",
+  "generated_at": "2026-05-30T05:32:15.618560+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 300,
+    "items_selected": 10
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "items": [
+    {
+      "title": "Guardia Civil uncovers PSOE 'sewer network' to protect government",
+      "body": "The Guardia Civil's UCO unit has concluded that a clandestine network within the PSOE, allegedly led by ex-party number three Santos Cerdán, was activated in 2024 to protect the government and President Sánchez from judicial investigations. The network allegedly sought to influence or shut down legal cases affecting the party and its leaders.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/uco-concluye-que-trama-cloacas-psoe-se-activo-para-proteger-los-intereses-gobierno-presidente_6978673_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Government blows €32.2B in budget modifications without approved budget",
+      "body": "Spain's government has used a record €32.2 billion in budget modifications (modificaciones de crédito) in the first four months of 2026, a 64% increase from last year, as it continues to operate with the 2023 budget. This is more than triple the modifications made during normal times and reflects reliance on legal loopholes to pass spending without congressional approval.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/macroeconomia/2026/06/04/6a2008c0fc6c83bf208b45c5.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "EU demands Spain tackle housing crisis by cutting red tape",
+      "body": "The European Commission has called on Spain to take decisive action on its housing crisis, recommending less bureaucracy, converting commercial buildings into homes, and expanding social housing stock. The Commission warns that rising prices are disproportionately affecting low-income and vulnerable groups.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/bruselas-pide-espana-actuar-contra-crisis-vivienda-menos-burocracia-reconvertir-edificios-aumentar-alquiler-social_6978690_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "EU warns Spain over pension costs, urges generational rebalancing",
+      "body": "The European Commission has recommended Spain 'rebalance social spending between generations' amid rising pension costs and a growing reliance on labour taxes. It also noted Spain has the largest IVA (VAT) gap in the EU and suggested raising VAT on hospitality, which currently benefits higher incomes.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bruselas-advierte-espana-debe-reequilibrar-gasto-publico-social-generaciones-frente-pensiones_1_13270980.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "US proposes 10-12.5% tariffs on 60 trade partners including EU",
+      "body": "The US Trade Representative has proposed imposing tariffs of 10% or 12.5% on 60 economies, including the European Union, for failing to effectively ban imports made with forced labor. The move could affect Spanish exports and global trade.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-03/eeuu-plantea-aranceles-del-10-para-60-socios_4366485/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "OECD: Spain fastest-growing in 2026, must cut deficit faster",
+      "body": "The OECD projects Spain's GDP will grow 2.2% in 2026, outpacing the US, UK, and major European economies. However, it advises the government to reduce the deficit more quickly and limit spending on Iran-related relief measures.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/ocde-situa-espana-como-economia-avanzada-que-mas-crecera-2026-pero-le-pide-reducir-deficit-mas-rapido_6978399_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "UGT postpones transport strike to June 22 due to Pope's visit",
+      "body": "The UGT union has delayed its planned indefinite strike for truck and bus drivers, originally set for June 8, to June 22, citing the need for mobility during the Pope's visit to Spain. The strike demands early retirement for drivers with no pension penalties.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ugt-retrasa-22-junio-huelga-indefinida-transporte-visita-leon-xiv_1_13272479.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "Spain's housing crisis is getting EU attention—do you think cutting red tape will actually solve the problem?",
+  "headline": "🇪🇸 Spain: today's rundown ⚡ 04.06.2026",
+  "date": "2026-06-04",
+  "generated_at": "2026-06-04T05:32:01.197014+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 348,
+    "items_selected": 7
+  }
+}

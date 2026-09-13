@@ -1,0 +1,134 @@
+{
+  "items": [
+    {
+      "title": "Spaniards spend record 50% of gross salary on rent",
+      "body": "In 2025, the average rent consumed 50% of gross salary, the highest share since 2019, according to a study by InfoJobs and Fotocasa. Rents rose 6.9% while wages increased only 1%. Only Aragón saw a decrease in the salary-to-rent ratio.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/05/infojobs-fotocasa-coinciden-aragon-descenso-sueldo-pagar-alquiler-vivienda-2025248.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Spain misses EU pay transparency deadline, firms in chaos",
+      "body": "The government failed to transpose the EU directive on salary transparency by the June 7 deadline, leaving companies in legal uncertainty. The Labour Ministry hasn't sent a formal proposal to social partners, risking heavy fines from Brussels.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/06/05/6a22f446e9cf4a65258b4595.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "8,000 patients flee private Galician hospital after scandals",
+      "body": "Nearly 8,000 patients in Vigo requested to switch from private Povisa to the public CHUVI hospital, the largest mass transfer in the region. The exodus follows controversies over waiting lists and material reuse at Ribera Salud hospitals.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/galicia/huyen-gallegos-ribera-salud-8-000-pacientes-principal-hospital-concertado-piden-traslado-publica_1_13278229.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Retirement delay bonus jumps to over €20,000 on average",
+      "body": "The lump-sum payment for postponing retirement has quintupled since its creation, now exceeding €20,000. Nearly 30,000 workers chose this option, even though a 4% lifelong pension increase might be more profitable in the long run.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/06/pensiones-cheque-por-retrasar-jubilacion-se-multiplica-por-cinco-desde-su-creacion-sobrepasa-los-20-000-euros-2026646.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Leire Díez agenda has four references to 'PS' initials",
+      "body": "The UCO seized agenda of the PSOE 'fontanera' shows a 'meeting with PS' and three other mentions of the initials, raising questions about Pedro Sánchez's involvement. The government denies the initials refer to the prime minister.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/06/05/6a2300bae4d4d80e798b458d.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Sánchez denies knowledge of plot, leans on nationalists to save term",
+      "body": "Pedro Sánchez said he 'neither knew nor approved' Leire Díez's actions in the corruption case, as his government relies on PNV and Junts rejection of Feijóo's motion. He now talks about 2027 budgets to project continuity.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/sanchez-aferra-portazo-pnv-junts-feijoo-salvar-legislatura_1_13277881.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Eurozone GDP shrinks 0.2% in Q1 as war impact hits",
+      "body": "Eurostat revised down its estimate to a 0.2% contraction, the first since Q4 2022, as the Middle East war weighed on the economy. Spain continued to grow, while Ireland plunged 12.1%.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-05/pib-eurozona-primer-trimestre-golpe-guerra_4367896/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Hernández de Cos seen as leading ECB presidential candidate",
+      "body": "AEB chief Alejandra Kindelán called the former Bank of Spain governor a 'first-rate candidate' to replace Christine Lagarde. An OMFIF poll gives him a slight edge over other candidates like Bundesbank's Nagel.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-05/hernandez-cos-banco-central-europeo-1hms-1svm_4368062/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Sick leave notifications to go digital from June",
+      "body": "The BOE confirmed that all communications about temporary disability will now be sent via SMS or email, requiring access via digital ID. In-person attention remains in CAISS centres for those without digital skills.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/boe-aclara-como-se-comunicaran-las-notificaciones-los-trabajadores-baja-partir-ahora_6979715_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Lawyer: Tribunal médico doesn't decide disability, INSS does",
+      "body": "Lawyer Víctor Arpa clarifies that the Equipo de Valoración de Incapacidades (EVI) only evaluates and proposes; the final decision on permanent disability rests with the INSS director. Many applicants misunderstand the process.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-05/victor-arpa-abogado-tribunal-medico_4367681/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "With rents taking half your salary, how do you make ends meet in Spain? Share your story.",
+  "headline": "🇪🇸 Spain: what's up? 🤔 06.06.2026",
+  "date": "2026-06-06",
+  "generated_at": "2026-06-06T05:31:56.795486+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 317,
+    "items_selected": 10
+  }
+}

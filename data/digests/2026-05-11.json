@@ -1,0 +1,134 @@
+{
+  "headline": "🇪🇸 Spain — 11.05.2026",
+  "items": [
+    {
+      "title": "Spain tops EU in child poverty risk for families",
+      "body": "Spain now leads the European Union with 29.9% of people in households with dependent children at risk of poverty or social exclusion (AROPE indicator), overtaking Romania and Bulgaria. The Eurostat figure combines income poverty, severe material deprivation, and low work intensity, affecting one in every three such households in Spain.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/espana-es-pais-ue-con-mas-riesgo-pobreza-familias-con-hijos-dependientes_6968590_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Squatting crimes fall 10% but Catalonia still tops",
+      "body": "Reports of okupación (squatting) offenses in Spain dropped to 14,875 in 2025, nearly 10% fewer than 2024, yet still five times higher than the 2,702 cases of 2010. Catalonia alone accounted for 40% of complaints (5,913), though it also recorded the steepest decline.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/asi-ha-evolucionado-okupacion-espana-los-ultimos-15-anos-cataluna-acumulo-cuatro-cada-diez-denuncias-2025_6968243_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Supreme Court to weigh suspending migrant regularization",
+      "body": "Spain's Supreme Court will hear arguments this Wednesday on requests from Vox, Hazte Oír and others to urgently suspend the government's extraordinary regularization decree for migrants. The government will defend the measure, while opponents claim it oversteps legal limits and structurally changes migration policy.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-supremo-analiza-miercoles-varias-peticiones-suspender-regularizacion-extraordinaria-migrantes-20260510104459.html"
+        }
+      ],
+      "category": "migration",
+      "important": true
+    },
+    {
+      "title": "Government admits EU housing plans may go unfulfilled",
+      "body": "Spain has told the European Commission it cannot fully execute two social housing programs funded by EU recovery funds, coinciding with budget engineering that used the same money to pay pensions. The rental social housing and residential rehabilitation plans are now listed as 'not fully achievable', worsening the housing crisis.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/05/10/6a00778921efa07d5e8b457e.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "EU and regulator changes could raise Spain's electricity bills",
+      "body": "Brussels is pushing Spain to reform its regulated electricity tariff (PVPC), while the CNMC (National Markets and Competition Commission) studies two charge modifications that could increase costs: allowing multiple contracted power levels within a day and distributing system operation costs more evenly among all consumers.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/tarifa-regulada-operacion-reforzada-potencias-para-distintos-usos-los-factores-que-podrian-sacudir-alza-factura-luz_6968049_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Renfe: ceding workshops to Iryo could cost €60M and cut trains",
+      "body": "Renfe estimates it would lose €60 million annually if forced by the CNMC to hand over its heavy maintenance workshops to private operator Iryo, and that key routes like Madrid–Barcelona face reduced service. The company warns that both commercial trains and public service obligations (e.g., Atlantic Axis, Avant to Valladolid) could be affected.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/renfe-calcula-ceder-talleres-iryo-costara-60-millones-exigira-quitar-trenes-rutas-clave-madrid-barcelona_1_13208342.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Andalusia: PP on track for absolute majority in polls",
+      "body": "A Sigma Dos poll for El Mundo gives the Popular Party 44.7% of the vote and 55–58 seats in the 109-seat Andalusian parliament, enough to retain the absolute majority won in 2022. The PSOE and Vox remain stagnant or decline, while 2.7 million voters are still undecided a week before the 17 May election.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/elecciones/elecciones-andalucia/2026/05/10/6a0095f021efa0da448b4583.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Hantavirus cruise repatriation success, Spaniards quarantined",
+      "body": "The government praised the 'unprecedented' operation to disembark passengers from the MV Hondius after a hantavirus outbreak killed three, with Spanish nationals now in quarantine at Madrid's Gómez Ulla military hospital. The WHO expects repatriations from the Canary Islands to conclude Monday and lauded Spain's crisis response.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/sanidad-encara-final-operacion-precedentes-frente-hantavirus-pasajeros-espanoles-cuarentena_1_13209696.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Court first confirms police dirty war against Podemos",
+      "body": "The Audiencia Nacional sentenced ex-commissioner José Manuel Villarejo to 3.5 years for leaking a stolen phone card to two media outlets to discredit Podemos and its leader Pablo Iglesias. The verdict is the first judicial recognition of a police operation aimed at undermining a political party, part of the PP-era 'dirty war'.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/sentencia-caso-dina-certifica-primera-vez-operacion-policial-desprestigio_1_13206211.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Iran threatens France and UK over Hormuz naval deployment",
+      "body": "Iran warned it will deliver a 'firm and immediate response' to French and British warships near the Strait of Hormuz, after the two countries announced a joint naval mission to protect navigation. Iran's deputy foreign minister said only Iran can secure the strait and accused outside forces of militarizing the waterway.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/internacional/2026/05/10/iran-francia-reino-unido-buques-militares-ormuz-2019053.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Spain has the highest child poverty rate in the EU – what do you think is the main cause?",
+  "date": "2026-05-11",
+  "generated_at": "2026-05-11T05:33:26.415292+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 220,
+    "items_selected": 10
+  }
+}
