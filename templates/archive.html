@@ -10,7 +10,7 @@
 {"@context": "https://schema.org", "@type": "ItemList",
  "name": "Spain Daily archive{% if pagination.current > 1 %} — page {{ pagination.current }}{% endif %}",
  "itemListElement": [{% for digest in digests %}
-  {"@type": "ListItem", "position": {{ loop.index }}, "url": "{{ site_url }}{{ digest.url }}", "name": {{ digest.headline|tojson }}, "datePublished": "{{ digest.date }}"}{% if not loop.last %},{% endif %}{% endfor %}
+  {"@type": "ListItem", "position": {{ loop.index }}, "item": {"@type": "Article", "headline": {{ digest.headline|tojson }}, "url": "{{ site_url }}{{ digest.url }}", "datePublished": "{{ digest.date }}"}}{% if not loop.last %},{% endif %}{% endfor %}
  ]}
 </script>
 {% endif %}
