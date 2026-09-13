@@ -1,0 +1,186 @@
+{
+  "items": [
+    {
+      "title": "Used home prices up €34,250 year-on-year",
+      "body": "Buying an 80-square-meter second-hand home in Spain now costs €253,270 on average, €34,250 more than a year ago. Prices rose 15.6% year-on-year in August, with the average price per square meter at €3,166. The market has now seen 70 consecutive months of price increases. Murcia leads regional rises at 28.8%, and 13 regions have increases above 10%.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/09/01/6a9581b4e4d4d8753a8b456f.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Euribor hits 2.95%, highest in two years",
+      "body": "The Euribor closed August at 2.95%, its highest level since August 2024, up 11 basis points from July and 84 basis points year-on-year. A €150,000 variable-rate mortgage will see monthly payments rise by €70.25, or €843 per year. The data is preliminary, pending confirmation by the Bank of Spain.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/euribor-cierra-agosto-2-95-nivel-alto-anos-adelanta-subidas-hipotecarias_1_13476629.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Electricity bills and back-to-school costs squeeze families",
+      "body": "The average regulated electricity bill hit €88.81 in August, up 19% year-on-year and the highest for August since 2022. Back-to-school costs now reach €2,484 per child, 4% more than last year and €514 more than in 2019. Fuel and electricity drove inflation to a three-year high. Madrid and Catalonia remain the most expensive regions.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-08-31/factura-electrica-luz-dispara-precio-agosto-1tps_4415100/"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/las-familias-afrontan-cuesta-septiembre-con-luz-las-gasolinas-disparadas-inflacion-maximos-tres-anos_7031112_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Diesel refill costs €22.70 more than last year",
+      "body": "Filling a 50-liter diesel tank now costs €93.05, €22.70 more than a year ago, while petrol costs €86.15, €12.30 more. Diesel prices rose 15.7% in July, triggering an automatic discount of 20 cents per liter from September; petrol gets a 5-cent discount. Prices have now risen for eight consecutive weeks.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/09/01/6a95aeb3e4d4d851658b4581.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Ceuta migrant capacity doubled, assaults reported",
+      "body": "The government has doubled temporary accommodation places for adult migrants in Ceuta from 1,800 to more than 3,300 in one week and aims for 6,000. Pedro Sánchez ruled out transferring migrants to the mainland. Authorities expelled 200 migrants after detentions for alleged crimes. The Prosecutor's Office recorded 23 sexual assaults in Ceuta in the last month, with eight suspects identified.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/gobierno-duplica-plazas-migrantes-ceuta-semana-descarta-traslado-peninsula_1_13477642.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/fiscalia-eleva-23-las-agresiones-sexuales-registradas-ceuta-desde-entrada-masiva-inmigrantes_7031065_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Heat waves leave record 5,200 deaths",
+      "body": "Deaths attributable to high temperatures this summer reached 5,232, the highest since the MoMo monitoring system began in 2015. The previous deadliest summers were 2022 with 4,789 deaths and 2025 with 3,832. August alone recorded 2,147 deaths, a figure likely to exceed the 2,184 from August 2025.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/las-olas-calor-dejan-mas-5-200-muertos-este-verano-maximo-historico-espana-son-una-amenaza-creciente-para-salud_7030941_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Spain launches largest wetland restoration in EU history",
+      "body": "Spain will restore 26,100 hectares of wetlands across all 17 autonomous communities over a decade, mobilizing up to €271 million. It is the most ambitious project in the EU LIFE program's history. Ten of the 107 sites are already confirmed. Spanish wetlands are the most diverse in Europe and third most numerous in the world.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/singularidad-humedales-espanoles-activa-proyecto-europeo-life-ambicioso-historia_1_13465877.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Ceuta gets €168 million ERTE and hiring boost",
+      "body": "The government will approve a €168 million emergency plan for Ceuta, equal to 8% of the territory's GDP. The reinforced ERTE will grant unemployment benefits without prior contributions, and hiring bonuses will rise from 50% to 75%. Companies can receive 100% bonuses. The measures will also apply in Melilla.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gobierno-reforzara-erte-ceuta-derecho-paro-cotizacion-previa-100-bonificados-empresas_1_13475989.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "INSS switches disability claims to electronic notifications",
+      "body": "Starting Sept. 1, Social Security will replace paper letters with electronic notifications for all temporary or permanent disability applications. Applicants may receive SMS or email alerts, but legal documents are available via the electronic office. Safeguards remain for people with limited digital access.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/manana-entra-vigor-nuevo-sistema-notificaciones-inss-para-las-incapacidades-temporales-permanentes_7030895_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Madrid requires empadronamiento for youth transport pass",
+      "body": "Since June, the Community of Madrid has required applicants to have empadronamiento (municipal registration) to obtain personal transport passes. The change affects thousands of young people, including students arriving for the academic year. A student without registration will see annual transport costs rise from €90 to €500.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/madrid/somos/jovenes-pagan-mueven-gobierno-ayuso-exige-padron-abono-si-elijo-uni_1_13476052.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Spain extends Italy border controls 15 days",
+      "body": "Spain has extended border controls for passengers arriving by sea or air from Italy for 15 more days. The move responds to Italy's decision to prolong the suspension of the Schengen agreement with Spain. Travelers between the two countries may face extra checks and delays.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-espana-prorroga-15-dias-controles-pasajeros-italia-respuesta-decision-gobierno-meloni-20260831125959.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Airbus Spain workers vote to continue strike",
+      "body": "Workers at Airbus plants in Getafe, San Pablo and Tablada voted to continue their indefinite strike. Employees at Illescas voted last Friday to pause the mobilization. The decisions were made in assemblies this Monday. The impact is limited to specific plants.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/transportes-00343/noticia-trabajadores-airbus-espana-deciden-mantener-huelga-indefinida-votacion-lunes-20260831143901.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "With electricity, fuel and school costs all rising, what's been the biggest hit to your household budget in Spain this September? 💬",
+  "variant": "Nothing happened in Spain today. Except this.",
+  "headline": "Nothing happened in Spain today. Except this.",
+  "date": "2026-09-01",
+  "generated_at": "2026-09-01T06:06:49.225009+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 331,
+    "items_selected_pass1": 14,
+    "fact_sheets_extracted": 14,
+    "items_after_importance_filter": 14,
+    "items_in_digest": 12
+  },
+  "selection_reasons": {
+    "41": "Ceuta migration crisis: Government doubles migrant places and rules out transfer to mainland — core migration policy affecting thousands.",
+    "126": "Ceuta: 200 immigrants expelled and 23 sexual assaults registered — security and legal consequences of the crisis.",
+    "320": "Ceuta: €168M emergency aid package including ERTE support for businesses and workers — direct economic impact.",
+    "33": "Spain extends border controls with Italy for 15 more days — affects all travelers between the two countries.",
+    "319": "Euribor closes August at 2.95%, highest in two years — directly raises variable mortgage payments.",
+    "290": "Electricity bill jumps 19% in August, most expensive since 2022 — significant cost-of-living increase.",
+    "19": "Fuel prices up €12.5 for petrol and €23 for diesel year-on-year — direct hit to drivers and household budgets.",
+    "12": "Used housing prices rise 15.6%, adding €34,250 to the average home — key property market trend for buyers and investors.",
+    "38": "Airbus workers in Spain vote to continue indefinite strike — major labor conflict affecting thousands of employees.",
+    "131": "Record 5,232 heat-related deaths this summer — public health crisis with national significance.",
+    "59": "Spain launches largest-ever LIFE wetland restoration project — positive environmental story with international impact.",
+    "130": "Back-to-school costs rise 4% to €2,484 per pupil while energy and fuel stay high — direct family budget pressure.",
+    "57": "Madrid now requires padrón for youth transport passes, adding hundreds of euros in costs for students — affects thousands of residents.",
+    "311": "INSS switches to digital notifications for temporary and permanent disability from September 1 — systemic change for all workers on sick leave."
+  }
+}

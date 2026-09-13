@@ -1,0 +1,189 @@
+{
+  "items": [
+    {
+      "title": "Ceuta migrant crisis persists as government blocks transfers",
+      "body": "More than a month after over 70,000 people arrived in Ceuta, hundreds of minors and thousands of adults remain outdoors in unsanitary conditions with insufficient food. The Interior Ministry says most arrivals have returned to Morocco, but the government refuses transfers to the peninsula despite available space in the state reception network. Tension is rising between migrants and the local population.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/rechazo-gobierno-traslados-migrantes-peninsula-falta-plazas-acogida-prolonga-crisis-humanitaria-ceuta_1_13488957.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Spain to require more contract details and probation justification",
+      "body": "The government will approve a royal decree on Tuesday to transpose the EU directive on transparent and predictable working conditions, which has been awaiting transposition since August 2022. Companies must specify whether algorithms intervene in labor relations, including schedules, salaries or contract termination, and justify probation periods. Brussels has taken Spain to the European Court of Justice over the delay. The measure aims to combat precariousness.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gobierno-obligara-martes-dar-datos-contratos-justificar-periodo-prueba_1_13487324.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Prosecutor seeks trial for Glovo founder over fake self-employed",
+      "body": "Barcelona prosecutors want Glovo founder and CEO Oscar Pierre tried for keeping riders as autónomos (self-employed) despite Labor Inspection orders and Supreme Court rulings. They see evidence of a crime against workers' rights under Penal Code Article 311.2. Pierre's defense sought dismissal in July; Pierre accused the Labor Inspection of bias. Glovo changed its labor model after the 'ley Rider' was approved.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/fiscalia-pide-enviar-juicio-fundador-glovo-por-mantener-falsos-autonomos_7033076_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Early retirement after 41 years can cut pension up to 15%",
+      "body": "Workers who take voluntary early retirement can face a permanent pension cut of up to 15%, even after contributing more than 41 years, according to Social Security. In 2026, the legal retirement age is 66 years and 10 months for those with under 38 years and 3 months of contributions, or 65 years for those with more. Early retirement can be taken up to 24 months before the ordinary age. Penalties range from 3.26% to 21%.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/09/05/seguridad-social-confirma-quienes-adelanten-jubilacion-tras-cotizar-mas-41-anos-podran-sufrir-una-reduccion-hasta-15-2037723.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Housing decree blocked by Podemos, Junts and Ceuta crisis",
+      "body": "The government's housing decree, which includes reactivating a two-year extension of rental contracts, remains blocked by disagreements with Podemos and Junts and by the Ceuta migrant crisis. It was initially planned for July but was postponed, and the government says it still plans to pass it in September. The extension measure would directly affect tenants across Spain.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/tira-afloja-junts-crisis-ceuta-congelan-negociacion-decreto-vivienda_1_13486159.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Spain beats Germany 83-53 in Women's World Cup opener",
+      "body": "Spain's women's basketball team beat host Germany 83-53 in Berlin in their World Cup debut, with Awa Fam as the best player with a performance rating of 25. Spain made 5 of 5 three-pointers at the start, and Raquel Carrera added 10 points and 10 rebounds. Spain leads Group A after the first matchday.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/deportes/2026/09/04/espana-mariona-ortiz-derriba-muro-aleman-berlin-base-triples-mundial-2049620.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Spain approves regional financing reform without Madrid",
+      "body": "The Ministry of Finance pushed through its regional financing reform in the CPFF with votes from Catalonia and the Canary Islands, despite rejection from PP-governed regions and two socialist regions. The plan adds €21 billion and heads to Congress, where approval is not guaranteed. Madrid's government, led by Isabel Díaz Ayuso, boycotted the meeting. The proposal aims to replace the model that has been expired since 2014.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/hacienda-saca-adelante-reforma-financiacion-autonomica-catalunya-canarias-ausencia-madrid_1_13487253.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Volkswagen says investing in Seat increasingly complex",
+      "body": "Volkswagen CEO Oliver Blume said it is increasingly complicated to keep investing in the Seat brand due to the high cost of electrification, but he backed Seat S.A. and Cupra. The future of the Seat brand remains under review, according to a joint statement. Seat has been part of Volkswagen for 40 years; plans could sacrifice the brand by the end of 2029. Seat S.A. has its main industrial center in Martorell.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/motor/sector_y_mercado/volkswagen-futuro-marca-seat-vez-complejo-seguir-invirtiendo_1_13487581.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Global food prices hit highest level since 2022",
+      "body": "Global food prices rose 1.9% in August to their highest level since late 2022, driven by cereals, sugar and dairy, according to the FAO. Wheat prices rose 2.6% month-on-month, while sugar jumped 11.9%. Geopolitical tensions, energy costs and extreme weather such as El Niño are pushing prices up. The Bloomberg Agriculture Spot index rose more than 13% in August, its biggest monthly jump since July 2012.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/los-precios-mundiales-los-alimentos-se-disparan-nivel-mas-alto-desde-2022-con-cereales-azucar-lacteos-cabeza_7032791_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Airbus principle of agreement excludes CGT and ÚTIL unions",
+      "body": "Industry Minister Jordi Hereu announced an agreement in principle between Airbus and majority unions CCOO, ATP, SIPA and UGT after a 35-day strike. The deal would let workers recover purchasing power through raises above inflation and includes telework and canteen rights. CGT and ÚTIL were excluded from the ministry meeting. Airbus CEO Guillaume Faury attended.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ministro-hereu-anuncia-principio-acuerdo-airbus-deja-fuera-sindicatos-cgt-util_1_13487630.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Denmark aims for EU deportation centers by end of 2027",
+      "body": "Denmark proposed that deportation centers outside the European Union be ready by the end of 2027 after meeting with Germany, the Netherlands, Austria and Greece. The centers are not detention centers, according to Minister Morten Bodskov, and would offer a 'second chance' for irregular migrants who cannot return to their home countries. The initiative is part of transforming the EU asylum system.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/internacional/noticia-dinamarca-plantea-centros-deportacion-fuera-ue-esten-listos-tarde-finales-2027-20260904195425.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Spain asks EU for climate adaptation fund with oil taxes",
+      "body": "Spain has asked the European Commission to create a specific European Fund for Climate Change Adaptation, financed with new resources including European debt instruments and a European levy on oil and gas sector profits. The request was made on Friday. Climate adaptation policies can affect energy prices and environmental regulations in Spain.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/noticia-espana-pide-ue-crear-fondo-adaptacion-cambio-climatico-impuestos-petroleras-20260904115513.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La Mierla fire extinguished after 51 days and 34,000 hectares",
+      "body": "The forest fire in La Mierla (Guadalajara) was declared extinguished on Friday after 51 days, affecting 34,447 hectares in the Sierra Norte. Detected on July 16 and controlled on August 3, it forced the evacuation of more than 30 localities and confined residents in 14 others. Over 1,125 personnel and 240 units were mobilized, including the UME. Some areas exceeded 1,000 degrees Celsius.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-09-04/extinguido-incendio-mierla-hectareas-afectadas-1tna_4418263/"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Would you take a permanent 15% pension cut to retire two years early in Spain?",
+  "variant": "Here's Spain today, in under a minute",
+  "headline": "Here's Spain today, in under a minute",
+  "date": "2026-09-05",
+  "generated_at": "2026-09-05T06:05:54.076291+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 339,
+    "items_selected_pass1": 13,
+    "fact_sheets_extracted": 13,
+    "items_after_importance_filter": 13,
+    "items_in_digest": 13
+  },
+  "selection_reasons": {
+    "38": "Ongoing humanitarian crisis in Ceuta with thousands of migrants living in squalor — a major migration policy story affecting Spain's borders.",
+    "96": "New regional financing model approved despite opposition from most regions — will reshape public funding and taxes across Spain.",
+    "98": "Volkswagen warns Seat's future is increasingly uncertain — a major threat to Spanish auto industry jobs.",
+    "97": "Pre-agreement reached to end five-week Airbus strike after government mediation — affects thousands of workers.",
+    "99": "New royal decree will require more transparency in work contracts and justify probation periods — directly affects all employees.",
+    "135": "Glovo founder faces trial for keeping riders as false autónomos — a landmark case for gig economy workers.",
+    "307": "Global food prices hit highest level since 2022 — will push up grocery costs in Spain.",
+    "36": "Five EU countries plan deportation centers outside the bloc by 2027 — a major shift in EU migration policy affecting asylum seekers.",
+    "34": "Spain proposes EU climate fund funded by taxes on oil and gas profits — could impact energy prices.",
+    "279": "Social Security confirms early retirees with 41+ years of contributions can face pension cuts up to 15% — crucial for retirement planning.",
+    "200": "Spain's women's basketball team beats Germany at the World Cup — a positive national sports achievement.",
+    "122": "One of Spain's largest wildfires extinguished after 51 days and 34,000 hectares — a major natural disaster event.",
+    "40": "Housing decree negotiations frozen due to Ceuta crisis — delays potential rent control and housing measures."
+  }
+}
