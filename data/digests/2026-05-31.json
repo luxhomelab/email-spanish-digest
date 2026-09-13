@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "title": "Regularization delays leave hundreds of migrants in limbo",
+      "body": "Out of 549,596 applications for Spain's extraordinary regularization process, only 91,905 have received approval to work provisionally, leaving over 50,000 people waiting beyond the promised 15-day timeline. Many migrants report waiting over 40 days without response, causing anxiety and uncertainty.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/retrasos-regularizacion-inquietan-cientos-migrantes-15-dias-llevamos-40-respuesta_1_13261196.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Housing prices do not fall despite market slowdown",
+      "body": "Home prices rose 12.5% in 2025, pushing the effort rate to 8 years of income, a high since 2011. While sales have slowed, experts predict a 'cooling' but no price drop due to inflation and rising interest rates.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/cambio-ciclo-vivienda-enfriamiento-no-caida-precios-compra_1_13261297.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Autónomos can now work and collect full pension",
+      "body": "A new law allows self-employed workers (autónomos) to return to work after retirement without losing their pension, provided they haven't been registered as autónomos for three years prior. The one-year waiting period has also been removed, making flexible retirement more accessible.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/31/cambios-normativa-jubilacion-flexible-autonomos-jubilados-podran-trabajar-sin-perder-pension-2024344.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Bird flu causes egg price surge in Spain",
+      "body": "Spain has culled 2.7 million laying hens (5.6% of the flock) due to avian flu since autumn, leading to a drop of 32.5 million dozen eggs in production. The supply shortage is contributing to rising egg prices at supermarkets.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/gripe-aviar-impulsa-alza-precio-huevo-espana-tras-sacrificar-2-7-millones-aves_6977063_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Oil price swings amid Iran war and hopes for ceasefire",
+      "body": "The ongoing conflict in Iran and threats to the Strait of Hormuz have sent oil prices on a volatile rollercoaster. Each shift in diplomatic messaging from Trump triggers price spikes or drops, impacting global costs of living.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/petroleo-cotiza-riesgo-geopolitico-esperanza-alto-fuego-desatasque-colapso-ormuz_129_13259764.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "PSOE official accused in conspiracy plot against corruption investigators",
+      "body": "Former PSOE organization secretary Santos Cerdán is under investigation for allegedly orchestrating a conspiracy to find dirt on the Civil Guard and prosecutors investigating socialist corruption. The plot involved a party member and an entrepreneur and was reportedly financed by the PSOE.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/santos-cerdan-impulso-trama-conspiranoica-investigadores-corrupcion-socialista_1_13261462.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "The government promised 15 days for regularisation – are you still waiting? Share your experience below.",
+  "headline": "🇪🇸 Spain: what's up? 🤔 31.05.2026",
+  "date": "2026-05-31",
+  "generated_at": "2026-05-31T05:31:51.168516+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 243,
+    "items_selected": 6
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "title": "PP demands halt to immigrant regularization as black market emerges",
+      "body": "The Popular Party (PP) has filed a motion in Congress demanding the suspension of the government's immigrant regularization process, arguing it has created a black market where appointments are sold for up to €600 and municipal registry (padrón) registrations for €350. The PP claims the process, affecting hundreds of thousands, has been mismanaged and led to 'mafias' exploiting the system.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-06-01/cita-previa-por-regularizacion-mercado-negro-pp_4362341/"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Spain attracts the most EU immigrants but fails to retain them",
+      "body": "Spain has the highest proportion of foreign-born residents in the EU (nearly 2 out of 10), yet also the lowest retention rate due to housing inaccessibility and an unstable labor market. The contrast highlights key challenges for expats and immigrants considering long-term settlement.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/01/empleo-espana-pais-ue-mas-inmigrantes-atrae-menos-retiene-2025025.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "VAT on electricity and gas jumps back to 21% as anti-crisis plan winds down",
+      "body": "Starting June 1, the government has withdrawn the reduced IVA (VAT) of 10% on electricity and gas, restoring the general 21% rate as part of a phased end to the anti-crisis plan. Fuel subsidies remain due to high inflation, but uncertainty persists over which measures will stay beyond June 30, affecting household budgets.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/31/gobierno-empieza-desactivar-plan-anticrisis-lunes-continuidad-2024985.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Top 1% holds 30% of wealth, parties unite to tax super-rich more",
+      "body": "A new report from the Instituto de Estudios Fiscales (IEF) reveals that Spain's richest 1% increased their share of national wealth from 24% to 30% between 2017 and 2023. Strikingly, the PP, PSOE, and Sumar have reached cross-party consensus on raising taxes on the super-rich, signaling a possible shift in fiscal policy.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/vuelven-agenda-impuestos-grandes-fortunas-1-rico-acumula-30-patrimonio-espana_1_13251554.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Europe strikes back with cheap electric cars under €25,000 made in Spain",
+      "body": "In response to Chinese competition, European automakers will launch a dozen electric urban models at or below €25,000 in coming months, with several produced in factories near Barcelona and Pamplona. The 'Made in Europe' offensive includes Cupra, Volkswagen, and Skoda models, aiming to democratize electric mobility.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ue-contraataca-china-llegan-coches-electricos-baratos-europeos_1_13260092.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Anesthesiologists lead nationwide doctors' rebellion, straining hospitals",
+      "body": "A wave of protests by anesthesiologists—who refuse overtime and extra hours—has spread across Spain, severely impacting hospital operations in Madrid and Catalonia, with over 90 services in 26 hospitals joining. The rebellion stems from grievances against the Health Ministry's indifference and reform plans, potentially causing patient delays.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/ciencia-y-salud/salud/2026/06/01/6a198498e4d4d891198b45ae.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "The black market for regularization appointments is shocking — €600 for a cita previa. What should the government do to stop the mafias? 💬",
+  "headline": "🇪🇸 Spain: what's up? 🤔 01.06.2026",
+  "date": "2026-06-01",
+  "generated_at": "2026-06-01T05:31:32.193647+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 243,
+    "items_selected": 9
+  }
+}

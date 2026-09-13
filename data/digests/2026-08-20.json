@@ -1,0 +1,187 @@
+{
+  "items": [
+    {
+      "title": "Coastal housing prices surge 13.5%, pricing out locals",
+      "body": "Coastal housing prices reached 1,992 euros per square meter in Q1 2026, up 13.5% year-on-year. Vacation homes average 3,150 euros per square meter, 11.6% above the national average. Purchase effort on the coast hits 40% of disposable income, above the recommended 35%; Balearics 59%, Málaga coast 57%, Alicante 46%. Second-home and vacation rental demand is squeezing locals out.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/08/20/6a85b45ce4d4d83b6e8b457c.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Eurozone inflation rises to 2.9%, pushing ECB toward rate hike",
+      "body": "Eurozone annual inflation rose to 2.9% in July, up from 2.8% in June, while EU inflation reached 3%. Energy prices jumped 10.3% year-on-year and core inflation edged up to 2.5%. Spain's harmonized inflation was 3.9%, above the eurozone average. The data moves the ECB further from its 2% target and increases the likelihood of another interest rate hike, which would raise borrowing costs for mortgages and loans.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/tasa-inflacion-repunto-julio-2-9-eurozona-3-ue-subida-precio-energia_1_13455341.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/inflacion-eurozona-sube-2-9-julio-por-energia-acerca-otro-alza-tipos-bce_7027210_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Police clear Ceuta beach as government plans to move 500 girls",
+      "body": "Police and Civil Guard cleared more than 3,000 migrants from Trampolín beach on August 20. The Interior Ministry plans to move them to temporary centers, process asylum requests, or return them to Morocco. Separately, the Ministry of Youth and Childhood is developing a plan to transfer about 500 unaccompanied migrant girls from Ceuta to the mainland without transferring guardianship to regional governments.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/08/20/6a8695e8e85ece98148b4594.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/epsocial/infancia/noticia-gobierno-trabaja-traslado-500-ninas-migrantes-ceuta-peninsula-20260819095852.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Ceuta nurses call for state of alarm over health collapse",
+      "body": "Ceuta's College of Nursing has requested a state of alarm over what it calls an unprecedented health collapse. Nurses handle 200 daily assists with peaks above 1,600 interventions, and each nurse attends 14-16 patients with shifts exceeding four hours. President Rosa Fuentes says the system lacks the means to respond, and the General Council of Nursing is urging government intervention.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.infosalus.com/actualidad/noticia-colegio-enfermeria-ceuta-pide-declaracion-estado-alarma-colapso-sanitario-precedentes-20260819121919.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Social Security to move disability notifications online from September 1",
+      "body": "From September 1, 2026, Spain's Social Security will expand electronic notifications for certain procedures, mainly related to disability. Affected workers and beneficiaries must check the Sede Electrónica instead of waiting for letters. Paper notifications will remain in some cases. The change is regulated by Order ISM/541/2026.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/tu-economia/partir-1-septiembre-son-trabajadores-dejaran-recibir-notificaciones-carta-seguridad-social_1_13455044.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Self-employed worker dies every five days in Spain",
+      "body": "In the first half of 2026, 36 autónomos (self-employed workers) died in work accidents, up almost 25% from the same period in 2025. Total work accidents with leave among self-employed fell 2.4% to 13,358, but deaths rose by seven. Construction accounts for nearly half of the fatalities. UATAE warns of fewer accidents but more deaths.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/autonomo-muere-cinco-dias-accidente-laboral-espana-bajan-accidentes-suben-fallecimientos_1_13455333.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Consumer credit grows four times faster than mortgages",
+      "body": "Consumer credit reached 24.5 billion euros in the first half of 2026, up 12% year-on-year, while mortgage lending grew 3.3% to 42.61 billion euros. It is the highest consumer credit volume since 2007. A survey shows 36% of consumers plan to request consumer credit in the second half of 2026, the highest since 2020.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/credito-consumo-crece-mas-hipotecas_7027380_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Landlord's death does not end rental contract",
+      "body": "When a landlord dies, the rental contract continues with the heirs, who inherit the same rights and obligations. Heirs cannot unilaterally raise the rent, alter contract terms, or evict the tenant to re-rent at a higher price. The tenant usually only changes the bank account for payments. Lawyer Alberto Sánchez confirms the contract must be respected for its full duration.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-08-20/alberto-sanchez-abogado-fallecimiento-arrendador_4393284/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Avis fined €1 million for abusive traffic fine fees",
+      "body": "Spain's Ministry of Social Rights, Consumer Affairs and Agenda 2030 has fined car rental company Avis one million euros. Avis charged customers between 33.88 and 45 euros to identify drivers for traffic fines, a step the company is legally required to carry out. The ministry considers the clause abusive because it shifts a legal obligation cost to consumers.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/consumo-sanciona-compania-coches-alquiler-avis-millon-euros-tasa-gestionar-multas_1_13453049.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "International tourists spend 62% more per transaction than residents",
+      "body": "International tourists in Spain spent an average of 46.77 euros per transaction in early summer 2026, 62% more than residents' 28.88 euros. Total international tourist spending reached 63.836 billion euros in Q1, up 7% year-on-year. Spain received 46.6 million international tourists in the first half, up 4.6%.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-08-19/turismo-gasto-hosteleria-consumo-ocio-1hms-1svm_4408319/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Óscar Puente accuses CNMC of letting Iryo and Ouigo 'parasitize' Renfe",
+      "body": "Transport Minister Óscar Puente criticized the CNMC for forcing Renfe to open its workshops to competitors Iryo and Ouigo. He said the foreign companies are \"parasitizing\" Renfe's industrial infrastructure. The dispute comes amid Spain's rail liberalization and may affect competition, prices, and service quality on high-speed routes.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/transportes-00343/noticia-oscar-puente-culpa-cnmc-permitir-iryo-ouigo-parasiten-infraestructura-industrial-renfe-20260819100800.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Spain's safety map: robberies down, perception stable",
+      "body": "Ministry of Interior data shows robberies and intrusions in homes and businesses have decreased in recent years. Nearly three out of four respondents consider Spain a safe country, according to Verisure's Observatory. Safety is among the top three concerns for 6.4% of the population, per CIS. Crime figures have slightly decreased over the last three years.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/sociedad/2026-08-20/seguridad-hogares-negocios-espana-bra_4407066/"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Have rising coastal prices changed your plans to buy or rent in Spain? 👇",
+  "variant": "Here's Spain today, in under a minute",
+  "headline": "Here's Spain today, in under a minute",
+  "date": "2026-08-20",
+  "generated_at": "2026-08-20T06:04:11.647370+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 266,
+    "items_selected_pass1": 15,
+    "fact_sheets_extracted": 15,
+    "items_after_importance_filter": 14,
+    "items_in_digest": 12
+  },
+  "selection_reasons": {
+    "1": "Mass police eviction of 4,000 migrants in Ceuta — major migration policy event affecting border enforcement and immigrant rights.",
+    "28": "Government plan to relocate 500 unaccompanied migrant girls from Ceuta — systemic migration policy change affecting minors.",
+    "31": "Ceuta nurses request state of alarm due to unprecedented healthcare collapse — direct impact on residents and public services.",
+    "6": "Tourist rentals push coastal housing prices up 13.5%, raising homeownership burden to 40% of income — key property market trend.",
+    "78": "Eurozone inflation rises to 2.9% in July, Spain highest among major economies — affects cost of living and ECB rate decisions.",
+    "80": "Social Security switches to electronic notifications from September — affects all workers and benefit recipients.",
+    "226": "Consumer credit growth outpaces mortgages amid stricter bank conditions — financial trend affecting household borrowing.",
+    "229": "Eurozone inflation driven by energy prices, bringing closer another ECB rate hike — impacts mortgages and savings.",
+    "248": "Consumer Ministry fines Avis €1 million for abusive fee on fine management — precedent for car rental companies in Spain.",
+    "259": "Legal clarification: landlord's death does not end rental contract or allow unilateral changes — important for tenants.",
+    "77": "One self-employed worker dies every five days in workplace accidents, deaths up 25% — labor safety issue for autónomos.",
+    "36": "Transport minister criticizes CNMC for forcing Renfe to open workshops to Iryo and Ouigo — affects rail competition and services.",
+    "223": "International tourists spend 62% more per transaction than residents — key economic data for foreigners living in Spain.",
+    "260": "Crime data shows decline in home burglaries — relevant safety information for foreign residents.",
+    "263": "One month since Spain won the World Cup — mandatory national event inclusion."
+  }
+}

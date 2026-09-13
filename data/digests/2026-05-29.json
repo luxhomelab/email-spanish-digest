@@ -1,0 +1,134 @@
+{
+  "items": [
+    {
+      "title": "Murcia prosthetic fraud: expired stents used in operations",
+      "body": "A Murcia surgeon is among 11 arrested in a €7 million fraud involving expired stent implants and unapproved prosthetics. Patients and families express distress over possible health risks and demand transparency from authorities.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/murcia/sociedad/pacientes-familiares-cirujano-detenido-trama-murciana-protesis-denuncian-negligencias-sido-calvario_1_13252489.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Euríbor hits 20-month high at 2.8%, mortgages up €670/year",
+      "body": "The 12-month euríbor has risen for the third consecutive month to 2.8% in May, the highest since September 2024. This will increase annual mortgage payments by over €670 for those with variable-rate loans. The surge is driven by fears of energy crisis and potential ECB rate hikes.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/euribor-repunta-pone-bce-punto-mira_6976422_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Gender pay gap in Spain rises for first time in 11 years to 16%",
+      "body": "In 2024, the average salary for men increased 5.5% to €32,058, while women's pay rose only 5.1% to €26,905, widening the gap to 16%. This is the first increase since 2013, according to INE.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/brecha-salarial-genero-aumento-primera-vez-once-anos-situarse-16-2024_1_13257324.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Autónomos can now work without losing pension under new rules",
+      "body": "The government has approved changes to flexible retirement, allowing self-employed workers (autónomos) to combine a pension with part-time work for the first time. The allowed work range shifts from 25%-75% to 33%-80% of a full-time job, and the one-year waiting period is eliminated.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/los-autonomos-podran-volver-trabajar-sin-perder-pension-asi-cambia-normativa-jubilacion-flexible_6976332_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Supreme Court rejects Ayuso's attempt to block migrant regularization",
+      "body": "The Supreme Court has dismissed the Madrid region's urgent request to suspend the extraordinary regularization of migrants, stating there is no evidence that public services will collapse. Two dissenting judges called it a 'covert administrative amnesty'.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/supremo-rechaza-argumento-ayuso-regularizacion-no-hay-pruebas-madrid-colapsar_1_13257940.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Trump administration tells US Supreme Court Spain must pay renewables awards",
+      "body": "The US Department of Justice has urged the Supreme Court to reject Spain's appeal against arbitration awards for retroactive cuts to renewable energy subsidies. Spain faces payment of millions to investors, with the government arguing the decisions violate sovereignty.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-28/administracion-trump-insta-al-supremo_4363029/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "PNV says legislature has ended, calls for elections this year",
+      "body": "PNV president Aitor Esteban declared the national legislature 'has come to an end' and urged Prime Minister Sánchez to call elections this year, warning that more events are coming. He ruled out a no-confidence motion.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/euskadi/noticia-esteban-afirma-legislatura-llegado-fin-interes-general-demanda-elecciones-ano-20260528102718.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "US and Iran reach agreement to extend truce, reopen Ormuz Strait",
+      "body": "The US confirmed a preliminary agreement with Iran to extend the current truce for two months and guarantee passage through the strategic Strait of Ormuz. The deal also includes initiating talks on Iran's nuclear program, pending President Trump's approval.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/internacional/noticia-eeuu-confirma-principio-acuerdo-iran-extender-tregua-empezar-reabrir-ormuz-20260528210708.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Diesel prices edge up after two-week decline, still below €1.70",
+      "body": "The average price of diesel rose 0.04% to €1.685 per liter, while gasoline increased 1.35% to €1.568, marking its fourth consecutive rise. Despite the uptick, diesel remains well below the €1.883 peak before tax measures took effect in March.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/precio-diesel-frena-su-tendencia-baja-vuelve-subir-pero-aun-sigue-por-debajo-los-1-7-euros_6976213_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Renta 2025 deadline: 30 June, but appointment slots fill early",
+      "body": "The deadline to file your income tax (IRPF) return remains 30 June, but appointments for phone or in-person assistance close sooner. The online method via Renta WEB is available until the last day.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/tu-economia/renta-2025-presentar-declaracion-2026_1_13256894.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    }
+  ],
+  "engagement": "How much more are you paying on your mortgage after the euríbor rise? Tell us in the comments! 👇",
+  "headline": "🇪🇸 Spain: today's rundown ⚡ 29.05.2026",
+  "date": "2026-05-29",
+  "generated_at": "2026-05-29T05:31:59.759129+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 297,
+    "items_selected": 10
+  }
+}

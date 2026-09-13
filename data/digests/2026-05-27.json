@@ -1,0 +1,134 @@
+{
+  "items": [
+    {
+      "title": "Moroccan seasonal worker almost expelled during regularization gets papers: 'I'm not afraid anymore'",
+      "body": "Mounir, a Moroccan temporero (seasonal worker), was detained by police while on his way to apply for Spain's extraordinary regularization process. After spending two weeks in a CIE (immigration detention center) facing imminent deportation, the government canceled his expulsion and granted him provisional residence and work permits. 'A week ago I was packing my bag to leave, now I have papers,' he says.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/temporero-marroqui-expulsado-plena-regularizacion-papeles-no-miedo_1_13252320.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Electricity bill changes take effect in June, prices to spike €7-8 per month",
+      "body": "The government's tax shield on energy ends as inflation moderates: IVA (VAT) on electricity and gas returns to 21% from 10%, and the Special Electricity Tax rises from 0.5% to 5.11%. For an average monthly bill of €60, this means an automatic increase of €7-8. The energy itself isn't more expensive – the discount is simply being removed.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/entran-vigor-cambios-factura-luz-precio-disparara-junio_6974972_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Fake Tax Agency SMS scam targets bank details, warns cybersecurity institute",
+      "body": "The Incibe (National Cybersecurity Institute) has detected a campaign where fraudsters impersonate the Agencia Tributaria via SMS, offering fake tax refunds to trick victims into clicking malicious links. The official tax website always ends in .gob.es or .es, while these fake links use .top or .click domains. The tax agency never requests confidential information by SMS or email.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/alertan-mensajes-texto-falsos-que-suplantan-agencia-tributaria-para-robar-datos-bancarios_6975459_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "ECB's Schnabel signals likely rate hike in June: 'I think it will be necessary'",
+      "body": "Isabel Schnabel, German member of the ECB's executive board, said a rate hike is needed at the June 11 meeting as inflation has reached 3% and is expected to hit 4% by year-end. She warned that ignoring the persistent price pressures is no longer an option, even if a hike could worsen the economic impact.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-26/bce-inflacion-subida-tipos-interes-1hms_4361546/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Government expands flexible retirement to autónomos, allows working while collecting pension",
+      "body": "The Council of Ministers approved a decree reforming 'jubilación flexible' (flexible retirement), now allowing autónomos (self-employed workers) to return to part-time work while drawing a pension, a perk previously limited to salaried employees. The reform also increases the percentage of pension that can be combined with salary and lets forced retirees recalculate future benefits. The changes take effect three months after BOE publication.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gobierno-reforma-jubilacion-flexible-autonomos-podran-volver-trabajar-cobrar-pension_1_13249952.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Bank of Spain urges banks to ease account access for undocumented immigrants",
+      "body": "The Bank of Spain's 2025 Financial Inclusion Report finds that the basic payment account (CPB) is failing to reach irregular immigrants, with only about 25,000 accounts opened annually compared to an estimated 614,000-838,000 undocumented migrants. Banks are reluctant to open CPBs due to anti-money laundering rules. The regulator calls for easier procedures.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/banco-espana-predisposicion-banca_6975176_0.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Moncloa braces for 'long' crisis as Zapatero imputation threatens Sánchez government",
+      "body": "The legal imputation of former Prime Minister Zapatero for alleged corruption is considered the most serious threat to Pedro Sánchez's coalition, adding to the Ábalos scandal, the Begoña Gómez investigation, and strained parliamentary support. Sources in Moncloa describe the situation as a 'long ordeal' with 'five bullets in the government's stomach.'",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/05/26/6a15ebbee85ece9d528b45b2.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Constitutional Court upholds labor reform, rejects Vox appeal over 'mistaken' vote",
+      "body": "The court unanimously dismissed Vox's challenge to the 2021 labour reform, confirming that the government correctly used the decree-law procedure and that PP deputy Alberto Casero's mistaken telephonic vote cannot be rectified. The ruling also rejects claims of constitutional infringement.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/tribunal-constitucional-desestima-recurso-vox-reforma-laboral-yolanda-diaz_1_13251861.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Health Ministry allocates €172.4M to strengthen primary care across Spain",
+      "body": "The funds, approved by the Council of Ministers, will go to all autonomous communities to boost primary healthcare through AI adoption, clinical equipment renewal, STI diagnostic capacity, and gender violence detection in health centres. The investment is part of the Primary and Community Care Action Plan 2025-2027.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/sanidad-aprueba-reparto-172-4-millones-euros-para-que-las-comunidades-refuercen-atencion-primaria_6975114_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Trump withdraws half of NATO bombers and all submarines, German magazine reports",
+      "body": "According to Der Spiegel, the US Defense Department informed allies that Washington will provide 'significantly fewer key military capabilities' in future, including fighters, bombers, warships, drones, and tanker aircraft. The specific cuts include half of all bombers and all submarines stationed in Europe.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/internacional/2026/05/27/trump-retira-otan-mitad-bombarderos-tercio-cazas-todos-submarinos-2023748.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "The electricity bill is going up €7-8 in June. How much do you expect your next bill to increase? Share your numbers below! 👇",
+  "headline": "🇪🇸 Spain: daily briefing 📋 27.05.2026",
+  "date": "2026-05-27",
+  "generated_at": "2026-05-27T05:32:00.336303+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 331,
+    "items_selected": 10
+  }
+}

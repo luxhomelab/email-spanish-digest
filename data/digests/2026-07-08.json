@@ -1,0 +1,176 @@
+{
+  "items": [
+    {
+      "title": "Spain advances to World Cup quarterfinals with stoppage-time winner",
+      "body": "Spain beat Portugal 1-0 in the World Cup Round of 16, with Mikel Merino scoring the winning goal deep into added time. The result sends Spain into the quarterfinals and continues their strong tournament. Fans celebrated nationwide after the dramatic late victory.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/deportes/futbol/mundial-00639/noticia-merino-premio-fe-fuente-20260707172117.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Podemos rejects landlord tax breaks, stalling housing decree",
+      "body": "Podemos leader Ione Belarra announced the party would not support any housing decree that includes tax exemptions for landlords. Junts demands those tax breaks as a condition for backing the decree, creating a political deadlock. The government needs both parties' support to pass the legislation. Without it, rental market reforms aimed at easing the housing crisis remain on hold.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/rechazo-ayudas-fiscales-caseros-exige-junts-complica-nuevo-decreto-vivienda_1_13363008.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "OECD: Spain’s wage growth lags, purchasing power to flatline",
+      "body": "Wage growth remains the ‘weak point’ of the Spanish economy, according to the OECD, with no improvement in purchasing power expected in 2026 or 2027. Low productivity and persistent inflation are holding back real income gains. Unemployment stands at 10.3%, more than double the OECD average. The report warns that living standards for workers will likely stagnate for the next two years.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ocde-advierte-salarios-son-punto-debil-espana-adquisitivo-estancara-2026-2027_1_13361343.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "BlackRock names Spain top global market for equity investment",
+      "body": "BlackRock selected Spain as its preferred country for equity investment in the second half of 2026, citing strong fundamentals. The investment giant highlighted 8% economic growth since the pandemic, a current account surplus of 2.2%, and inflation below 3%. The endorsement reflects rising confidence in Spain’s economic stability and may attract further foreign capital.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/blackrock-escoge-espana-pais-preferido-mundo-invertir-renta-variable_1_13363491.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Funcas lifts Spain’s 2026 growth forecast to 2.5%",
+      "body": "Economic think tank Funcas raised its 2026 growth forecast to 2.5%, up from 2.2%, while keeping 2027 at 1.8%. The group expects over 900,000 net jobs to be created across the two years, pushing unemployment down to 9.1% in 2026. Public deficit is projected to ease to 2.4%, with debt falling below 97% of GDP by end-2027.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/funcas-mejora-prevision-crecimiento-espana_7011747_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Government approves record €226 billion spending limit for 2027",
+      "body": "The Spanish government set a non-financial spending cap of €226.03 billion for the 2027 budget, a 6.6% increase from 2026. The limit, which is 88% higher than in 2018, must now clear Congress before the full budget is presented in September. The expansionary budget signals higher public investment in services and infrastructure, pending parliamentary approval.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gobierno-da-luz-verde-techo-gasto-record-226-032-millones-presupuestos-2027_1_13361864.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "PP blocks pension access for mutualists in Senate vote",
+      "body": "The PP reversed course in the Senate and reintroduced an exclusion that bars existing pensioners from transferring mutual fund rights to the Social Security system. The measure affects professionals like lawyers and architects, many of whom receive pensions as low as €300-400 per month. The law had previously passed the lower house without this restriction, and the Senate vote keeps the pathway closed for those already retired.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/pp-vuelve-excluir-pensionistas-pasarela-mutualistas-seguridad-social-votacion-senado_1_13361248.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Wildfires burn over 50,000 hectares in Spain, EU sends aid",
+      "body": "Wildfires have burned 50,384 hectares in Spain from January to July 1, 2026, a 141% increase from the same period last year. Spain accounts for nearly 40% of all EU-wide burned area, with 300 fires recorded. The EU approved €120.55 million from its Solidarity Fund to help cover damage. The fires pose ongoing risks to air quality and property across affected regions.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/fuego-quema-50-384-hectareas-espana-hasta-1-julio-39-8-total-las-quemadas-ue_7011489_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Multi-property landlords earn quadruple tenants’ income",
+      "body": "Households with two or more rental properties have a median annual income nearly four times that of renting households, according to a government-backed study. Their net worth can be up to 450 times higher. The research identifies housing inequality as the main driver of economic disparity in Spain, not age. The findings come as political debate over rent control and landlord taxes intensifies.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/multiarrendadores-multiplican-cuatro-renta-inquilinos-atesoran-patrimonio-450-veces-mayor_1_13359398.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Heatwave persists with temperatures above 40°C and alerts",
+      "body": "Spain’s second heatwave of the season continues, with temperatures topping 40°C in many areas and weather alerts active across most of the country. Aemet expects the extreme heat to last at least through Thursday. Residents are advised to take precautions against heat-related illness, and the prolonged hot spell also heightens the risk of wildfires.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/el-tiempo/ola-calor-sigue-hoy-maximas-40-grados-avisos-espana-pm_1_13362586.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Sánchez affirms NATO commitment amid Trump criticism",
+      "body": "Prime Minister Pedro Sánchez defended Spain’s role in NATO during the alliance’s summit in Ankara and responded to US President Donald Trump’s criticism of allies over the Iran conflict. Sánchez stressed Spain’s ongoing dedication to collective security. The exchange highlighted a tense moment in transatlantic relations.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-sanchez-defiende-ankara-compromiso-espana-otan-criticas-trump-aliados-20260707212452.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "DGT tightens ITV rules: older motorhomes need more frequent checks",
+      "body": "The DGT issued new instructions requiring motorhomes over 10 years old to pass an ITV inspection every year, and camperized vans of the same age every six months. Vehicles between 4 and 10 years old face inspections every two years for motorhomes and annually for vans. The changes aim to improve road safety and environmental standards. Owners should plan for the updated schedule to avoid fines.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/07/07/dgt-cambia-normas-vehiculos-mas-10anos-antiguedad-deberan-pasar-itv-cada-seis-meses-2024112.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Podemos just blocked landlord tax breaks — do you think that helps or hurts renters? 💬",
+  "variant": "Here's Spain today, in under a minute",
+  "headline": "Here's Spain today, in under a minute",
+  "date": "2026-07-08",
+  "generated_at": "2026-07-08T06:05:24.019970+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 357,
+    "items_selected_pass1": 12,
+    "fact_sheets_extracted": 12,
+    "items_after_importance_filter": 12,
+    "items_in_digest": 12
+  },
+  "selection_reasons": {
+    "34": "Spain beat Portugal 1-0 to reach World Cup quarterfinals; mandatory inclusion of a Spain match.",
+    "26": "PM Sánchez defends Spain's NATO commitment at Ankara summit, directly involving Spanish defense policy.",
+    "142": "Wildfires have burned over 50,000 hectares in Spain, representing 40% of EU total — a national-scale natural disaster.",
+    "59": "Podemos threatens to block the new housing decree if it includes tax breaks for landlords, which directly impacts renters and the rental market.",
+    "107": "Report reveals multi-property landlords earn four times tenant income and hold 450x wealth, highlighting severe housing inequality.",
+    "106": "BlackRock names Spain its top global pick for equity investment, signaling strong economic confidence for investors.",
+    "291": "Funcas raises Spain's 2026 growth forecast to 2.5%, a key economic indicator for residents and investors.",
+    "305": "OECD warns that Spanish salaries are a weak point and purchasing power will stagnate, affecting all workers.",
+    "49": "Government approves a record spending ceiling of €226 billion for 2027, shaping fiscal policy and potential tax implications.",
+    "39": "PP again excludes pensioners from the mutualist social security pathway, directly affecting pension rights.",
+    "67": "Second heat wave pushes temperatures above 40°C across much of Spain, impacting health and daily life.",
+    "261": "DGT changes ITV rules requiring vehicles over 10 years to pass inspection every 6 months, affecting all car owners."
+  }
+}

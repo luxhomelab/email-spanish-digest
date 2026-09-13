@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "title": "Housing prices hit record highs as affordability plummets",
+      "body": "Housing prices reached historic highs in nine autonomous communities during the first quarter of 2026. Madrid leads the market at €4,075/m2, marking a 16.4% year-on-year increase, while Extremadura remains the only region below €1,000/m2. Economist Santiago Niño-Becerra warns that purchasing a home now requires more than eight years' full salary, plus a 20% down payment and additional costs. Without financial help, some buyers may not be able to afford a property until age 52.",
+      "sources": [
+        {
+          "name": "20minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/vivienda-sigue-subiendo-bate-record-burbuja-inmobiliaria-varias-provincias_6982910_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "New web tool simplifies migrant regularization process",
+      "body": "A Catalan cooperative launched Integra, a free multilingual web tool designed to streamline the regularization process. The platform uses a questionnaire to determine eligibility, identify required documents, and help complete forms. This initiative aims to cut through the bureaucratic confusion and reduce processing delays for applicants navigating the system.",
+      "sources": [
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/catalunya/cooperativa-crea-app-facilitar-regularizacion-migrantes-deberia-gobierno_1_13295245.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Vox takes control of immigration in Castile and León",
+      "body": "Castile and León President Alfonso Fernández Mañueco appointed Vox leader Carlos Pollán as first vice president. Pollán will head the new ministry of Deregulation, Family, and Social Assistance, which includes immigration competencies. María Isabel Blanco Llamas takes the second vice presidency with housing and other portfolios in the new PP-Vox coalition government.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/06/13/6a2d2debfdddffa87b8b45aa.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Madrid primary care wait times reach 11 days",
+      "body": "Patients in Madrid face an average 11-day wait to see a family doctor as the primary care system remains overwhelmed. Health centers across the country are absorbing 2,500 new residents, exacerbating existing bureaucracy and heavy patient loads. The prolonged delays highlight the ongoing structural crisis in the public healthcare network.",
+      "sources": [
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/sociedad/salud/10-dias-espera-ver-medico-crisis-perpetua-atencion-primaria_132_13295305.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Work overload violates fundamental rights, expert says",
+      "body": "Labor law professor Adrián Todolí argues that excessive workloads violate fundamental rights, even before reaching clinical burnout. Half of Spanish workers currently experience time pressure or task overload, contributing to high rates of work-related stress and depression. Globally, work-related risks cause 840,000 deaths annually, underscoring the severe physical and mental toll of poor working conditions.",
+      "sources": [
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/economia/adrian-todoli-jurista-sobrecarga-trabajo-no-llegue-burnout-vulneracion-derechos_128_13296840.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Madrid teachers plan indefinite strikes for next year",
+      "body": "More than 20 educational organizations in Madrid are calling for an indefinite teacher strike starting next school year. The action adds to ongoing protests across Spain demanding better working conditions and resources. Meanwhile, teachers in Catalonia and Valencia have already rejected recent regional agreements, signaling a turbulent autumn for classrooms.",
+      "sources": [
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/sociedad/madrid-dara-continuidad-huelgas-indefinidas-profesorado-anticipa-otono-caliente-aulas_1_13297377.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "With housing prices hitting record highs, is buying a home in Spain still a realistic goal for you? 🤔",
+  "variant": "Spain Today: The Essentials",
+  "headline": "Spain Today: The Essentials",
+  "date": "2026-06-13",
+  "generated_at": "2026-06-13T18:00:52.677226+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 263,
+    "items_selected_pass1": 10,
+    "fact_sheets_extracted": 10,
+    "items_after_importance_filter": 7,
+    "items_in_digest": 6
+  },
+  "selection_reasons": {
+    "9": "Pope León XIV concludes historic visit to Spain, a major national event.",
+    "244": "Housing prices surpass previous bubble record in multiple provinces, directly affecting property buyers and investors.",
+    "77": "New app helps migrants navigate the regularization process, a practical tool for thousands.",
+    "78": "Primary care waiting times exceed 10 days, highlighting a systemic healthcare issue.",
+    "91": "Legal expert argues that work overload without burnout violates worker rights.",
+    "84": "Madrid teachers announce indefinite strike for next school year, affecting thousands of families.",
+    "19": "Vox takes over immigration portfolio in Castilla y León, signaling a major policy shift for foreigners.",
+    "240": "Starlink moves its Spanish headquarters, impacting the business and tax landscape for expats.",
+    "246": "Economist warns many may not afford housing until age 52 due to price-income gap.",
+    "249": "Summer electricity costs vary by up to 130 euros between regions, affecting household budgets."
+  }
+}

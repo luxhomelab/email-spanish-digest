@@ -1,0 +1,122 @@
+{
+  "items": [
+    {
+      "title": "⚠️ Spain and Morocco reinforce Ceuta border over possible mass entry",
+      "body": "Spain and Morocco deployed 880 police and 714 Civil Guard officers in Ceuta as social media called for a new mass entry attempt on August 15. More than 80,000 people crossed from Morocco on July 30, and hundreds are still sleeping in the streets without identification or care. PSOE ministers have vowed to expel everyone who entered irregularly, including minors, though Spanish law does not allow mass returns. Interior Minister Fernando Grande-Marlaska called Morocco a close and reliable partner and said collaboration is total.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/gobierno-endurece-discurso-inmigracion-asediado-crisis-ceuta_1_13447409.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/espana-marruecos-blindan-frontera-ceuta-ante-temor-una-nueva-entrada-masiva-880-policias-714-guardias-civiles_7025750_0.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/internacional/ceuta-semanas-desbordada-cientos-personas-duermen-calle-sensacion_1_13447024.html"
+        }
+      ],
+      "category": "politics",
+      "important": true
+    },
+    {
+      "title": "Record 3.5 million foreign workers in Spain",
+      "body": "Spain registered a record 3,512,223 average foreign Social Security affiliates in July, up 66,046 from June and 420,875 year-on-year. Foreign affiliation grew 13.6% compared to 2.9% for the entire system, and foreign workers now represent 15.6% of all affiliates. Hospitality, agriculture, domestic work, and construction drove the increase: 33% of hospitality salaried workers are foreign, nearly 40% in agriculture, and 47% in domestic employment. Total affiliation reached 22.5 million, while registered unemployment rose by 19,500, a rise linked to the extraordinary regularization process.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/sectores-lideran-record-3-5-millones-trabajadores-extranjeros-hosteleria-campo-hogar-construccion_1_13447779.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Tax court limits IRPF exemption on home sale reinvestment",
+      "body": "Spain's Central Economic-Administrative Court (TEAC) has unified its criteria on the IRPF reinvestment exemption for habitual residence sales. A taxpayer who sells their home and buys a new one with another person can only exempt the portion of the sale price reinvested in the ownership share they actually acquired. The exemption depends on the amount effectively reinvested, not on keeping the same ownership percentage. For property acquired as community property (gananciales) without express shares, each spouse's share is 50%.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/hacienda-limita-exencion-irpf-vender-piso-soltero-cuota-propiedad-nueva-casa-pareja_1_13447432.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Almaraz nuclear plant gets extension to 2030",
+      "body": "The Spanish government has extended the operating life of the Almaraz nuclear plant to June 8, 2030, citing the Middle East conflict. The order was published in the Official State Gazette. The PP seized on the decision to demand a review of the agreed nuclear phase-out calendar. The plant is owned by Iberdrola, Endesa, and Naturgy, and Junta de Extremadura president María Guardiola has made its continuity a strategic priority shared by Vox.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/extremadura/politica/batalla-central-nuclear-almaraz-trinchera-politica-junta-gobierno-tregua-2030_1_13447341.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Crimean-Congo hemorrhagic fever cases raise alert in Spain",
+      "body": "Spain has recorded four Crimean-Congo hemorrhagic fever cases in 2026, one of which was fatal in June. A 71-year-old man who visited Salamanca province tested positive and remains isolated at Hospital Gómez Ulla in Madrid. Castilla y León's General Directorate of Public Health reported the third case of 2026 on Thursday and activated outbreak protocols. SEIMC spokesman José Miguel Cisneros said the virus is endemic and should be included in differential diagnosis during warm months; patients must be admitted to High-Level Isolation Units because bodily fluids are highly contagious.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/salud/2026/08/15/6a7f4f52e9cf4ac8658b45a4.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Magnitude 5 earthquake hits Granada area",
+      "body": "A magnitude 5 earthquake centered in Alhendín shook the Granada area at 1:04 a.m. Saturday at a depth of 2 kilometers. It caused material damage in the metropolitan area, including Armilla, but no injuries were reported. More than 40 aftershocks followed during the night, and Andalusia's government activated emergency phase 1 of the Seismic Risk Plan. Emergency services received more than 200 calls.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/andalucia/terremoto-magnitud-5-epicentro-alhendin-sacude-granada_1_13448797.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Huge fire in Huesca burns over 15,000 hectares",
+      "body": "A forest fire that started Monday near Riglos, Huesca, has burned more than 15,000 hectares and forced more than 1,000 people to evacuate. More than 600 professionals and 30 to 35 aerial units are deployed in the highest-level response. The flames reached the surroundings of Santa María de la Peña, Triste, and Yeste but were stopped before affecting urban areas. Teams protected the monasteries of San Juan de la Peña and defended Centenero.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-08-15/incendio-forestal-huesca-extincion-1tps_4406471/"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Foreign residents now make up 15.6% of Social Security affiliates. Which sector gave you your first contract in Spain? 💬",
+  "variant": "If you live in Spain, read this",
+  "headline": "If you live in Spain, read this",
+  "date": "2026-08-15",
+  "generated_at": "2026-08-15T10:03:00.515700+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 255,
+    "items_selected_pass1": 10,
+    "fact_sheets_extracted": 10,
+    "items_after_importance_filter": 9,
+    "items_in_digest": 7
+  },
+  "selection_reasons": {
+    "255": "Spain wins the World Cup final against Argentina — mandatory historic national football victory.",
+    "35": "Government vows to expel all irregular entrants after the Ceuta crisis despite legal limits — a major migration policy shift.",
+    "37": "Ceuta remains overwhelmed two weeks after mass entry, with hundreds still sleeping on the street — the core of the migration crisis.",
+    "40": "Almaraz nuclear plant extended to 2030, reversing energy policy and impacting electricity prices and the coalition government.",
+    "41": "Magnitude 5 earthquake hits Granada, causing material damage and dozens of aftershocks — national emergency response activated.",
+    "99": "Riglos wildfire surpasses 15,000 hectares, forcing over 1,000 evacuations and a maximum emergency deployment.",
+    "112": "Spain and Morocco reinforce the Ceuta border with 880 police and 714 civil guards ahead of a feared mass crossing attempt.",
+    "84": "Foreign workers in Spain hit a record 3.5 million, led by hospitality, agriculture, domestic work and construction.",
+    "83": "Tax authority tightens the IRPF home-sale reinversion exemption, directly affecting property sellers and couples.",
+    "20": "Crimea-Congo hemorrhagic fever cases in Spain reach a record high — a direct public health threat for residents."
+  }
+}

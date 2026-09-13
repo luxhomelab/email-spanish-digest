@@ -1,0 +1,110 @@
+{
+  "headline": "🇪🇸 Spain — 10.05.2026",
+  "items": [
+    {
+      "title": "Room rentals: a legal jungle with rooms up to €1,900",
+      "body": "Landlords are exploiting a loophole by renting out individual rooms, bypassing the Housing Law. Many tenants over 40 are forced to share, with some rooms costing €1,900. A 60-year-old worker with two jobs says, 'With my salary, where can I go?'",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/alquiler-habitaciones-jungla-legal-precariedad-40-adonde-sueldo_1_13203249.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Oil stuck near $100 even if Middle East peace breaks out",
+      "body": "Despite diplomatic progress, Brent crude remains at $100 a barrel, up 80% this year. The IEA forecasts demand at 102.1 million b/d, and supply shortages persist. Some analysts warn stress scenarios could push oil above $200.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/paz-oriente-proximo-ya-no-garantizaria-un-petroleo-lejos-los-100-dolares_6968078_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Sánchez springs surprise electricity tax after denying it",
+      "body": "PSOE confirms its new special tax will apply to all energy companies, not just oil and gas as stated 20 days ago at WindEurope. The move contradicts PM Sánchez’s earlier reassurance and aims to fund Iran‑war‑related costs.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/05/09/69ff1979e4d4d8334d8b45bf.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "New digital time clock 'will destroy micro-enterprises', warns Cepyme",
+      "body": "Cepyme president Ángela de Miguel says the strict digital work‑hour registry is a policy to destroy micro-enterprises, especially in rural areas without internet. The government plans to implement it by royal decree, bypassing parliament.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-09/registro-jornada-microempresas-zonas-rurales-1svm_4352632/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Feijóo vows to declassify migration data, calls for minister’s resignation",
+      "body": "PP leader Feijóo calls the government's state‑secret claim on the mass regularization of one million irregular migrants 'a mockery'. He promises to release all documents within a week of taking office and demands Interior Minister Marlaska step down.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/feijoo-promete-desclasificar-regularizacion-migrantes-si-gobierna-pide-dimision-marlaska-tras-muerte-agentes-huelva_6968382_0.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "WHO confirms 6 hantavirus cases from cruise ship, says 'not another covid'",
+      "body": "The WHO reports three dead and four hospitalized from a hantavirus outbreak on the MV Hondius. The Andes strain, capable of human‑to‑human transmission, is confirmed. Experts are on board, and the WHO director urges calm.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/salud/2026/05/09/oms-eleva-seis-los-casos-confirmados-hantavirus-positivo-un-contagio-sospechoso-2018887.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Spain announces imminent release of activist Saif Abukeshek",
+      "body": "Foreign Minister Albares said Israeli authorities will free the Spanish activist within hours. Abukeshek was detained during a Gaza aid flotilla. Israel will deport him via Egypt, and Spain is working for his swift return.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-albares-anuncia-israel-liberara-activista-espanol-saif-abukeshek-proximas-horas-20260509125833.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Ábalos, Koldo, Aldama trial concludes; ex‑minister faces prison",
+      "body": "The Supreme Court trial of ex‑minister Ábalos and two others ended after 14 sessions. Many witnesses stayed silent due to related corruption charges. The verdict is now pending.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-juicio-abalos-koldo-aldama-visto-sentencia-exministro-preso-testigos-callados-mas-mascarillas-20260509091450.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "With room rents hitting €1,900 in some cities, is it even possible to live in Spain on a typical salary anymore? Share your experience.",
+  "date": "2026-05-10",
+  "generated_at": "2026-05-10T05:34:01.640844+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 221,
+    "items_selected": 8
+  }
+}

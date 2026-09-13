@@ -1,0 +1,161 @@
+{
+  "items": [
+    {
+      "title": "Housing crisis fuels localist party gains in Sevilla and Mallorca",
+      "body": "Anti-tourism sentiment and housing shortages are boosting localist parties in Sevilla and Mallorca, challenging PSOE and PP dominance. Sevilla City Council has already cut permits for converting residential flats into tourist apartments in the city center. A Bank of Spain report shows that nearly half of rental properties in affected neighborhoods are now in the tourist market. Foreign property owners who rent out homes could face tighter regulations if these parties gain more power.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/andalucia/2026-06-23/crisis-vivienda-turismofobia-impulso-partidos-localistas-sevilla-mallorca_4376983/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Mortgage signings hit 16-year high despite rate rises",
+      "body": "Spanish homebuyers signed 40,010 mortgages in April, the best April figure since 2010. The average interest rate climbed to 2.9%, up from 2.84% in March, as growth slowed from double digits earlier in the year. Prospective buyers face rising borrowing costs even as demand stays strong.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/firma-hipotecas-se-enfria-abril-pero-resiste-con-una-subida-2-3-mientras-tipo-interes-medio-se-acerca-3_6986108_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Tenant unions demand immediate vote on rental reform",
+      "body": "The Confederation of Tenant Unions is pressing the PSOE government to vote on a reform of the Urban Leases Law that has been stuck in Congress for two years. The reform targets fraud in room and seasonal rentals and would prevent abusive clauses. President Sánchez promised in January to bring it to a vote. If passed, the law would strengthen protections for tenants, including those in shared or short-term housing.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/sindicatos-inquilinas-exigen-votar-regulacion-alquiler-habitaciones-temporada_1_13322941.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Evictions fall 45% but still surpass 4,000 in first quarter",
+      "body": "Evictions dropped 45.4% year-on-year to 4,005 between January and March, with rental evictions accounting for 2,600 of the total. However, mortgage foreclosures rose 17.5%, signaling potential future evictions. Catalonia, Valencia, Andalusia, and Madrid recorded the highest numbers. Both tenants and homeowners remain vulnerable to housing instability.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/caen-desahucios-45-siguen-ejecutando-4-000-primer-trimestre-ano_1_13322472.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Banks pay 60% less on deposits than they charge for mortgages",
+      "body": "The average deposit rate in Spain stands at 1.77%, while the average mortgage rate is 2.8% — a gap of nearly 60%. Spanish mortgage rates remain among the lowest in the eurozone, where the average is 3.43%. This means savings accounts yield little while mortgage costs are higher, creating a drag on household finances.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/banca-espanola-paga-por-los-depositos-los-hogares-casi-un-60-menos-que-cobra-por-las-hipotecas_6986480_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Foreign investment in Spain falls 17% as US capital flees",
+      "body": "Gross foreign investment reached €6.656 billion in the first quarter, but disinvestment surged 85% to €3.839 billion, dragging net investment down 16.83% year-on-year. US net investment plunged 719% amid political tensions between the Trump and Sánchez administrations. The decline could cool the Spanish economy and affect job prospects, especially for international workers.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/06/22/6a39363efdddffca788b45ac.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Ábalos sentenced to 24 years in prison for mask scandal",
+      "body": "The Supreme Court sentenced former minister José Luis Ábalos to 24 years and three months for corruption in pandemic mask procurement. His advisor Koldo García received 19 years, while businessman Víctor de Aldama got four years and six months for bribery, influence peddling, and embezzlement. The case involved irregularities in contracts worth €13 million and monthly payoffs of €10,000. The ruling underscores deep-rooted corruption issues in Spanish politics.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-supremo-condena-abalos-24-anos-carcel-19-koldo-aldama-caso-mascarillas-20260622121517.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "⚠️ Heatwave triggers red alerts, energy price spike, and work-hour debate",
+      "body": "AEMET issued red warnings for extreme danger in three regions and orange alerts in ten others as temperatures climb 5 to 10 degrees above normal, reaching 40°C in some valleys. The heat pushed average electricity prices to €112.42 per MWh, up 208% from May 23 and the highest since March. Unions called for wider adoption of intensive working hours in July to protect employees from the extreme conditions, with the construction sector already moving to earlier summer schedules. The combination of health risks, higher household bills, and potential workplace changes directly affects people across much of Spain.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/el-tiempo/calor-no-afloja-aemet-activa-martes-avisos-rojos-tres-comunidades-pm_1_13323577.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/ola-calor-derrite-espana-dispara-precio-luz-supera-los-100-euros-por-megavatio-hora_6986377_0.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/jornada-intensiva-julio-primera-ola-calor-obliga-replantear-prevencion-frente-verano-trabajo_1_13323151.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "Gas prices to stay elevated until 2028, Enagás warns",
+      "body": "Gas futures currently trade at around €42 per MWh, down from a peak of €62 in March but still far above the €30 level seen before the Iran conflict. Enagás CEO said normalization is unlikely before late 2027 or early 2028. The conflict has cost Spain an extra €1 billion on gas bills and Europe €8.5 billion, keeping energy costs high for consumers and businesses.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/empresas/precio-gas-normalizacion-guerra-iran_6986341_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Renfe strikes on June 29 and July 15 will disrupt travel",
+      "body": "The Railway Union announced 24-hour strikes on Renfe for June 29 and July 15, coinciding with the start of the summer holiday season. The union accuses Renfe of breaching November 2023 agreements on outsourcing locomotive maintenance and reducing workloads. Travelers planning train travel on those dates should expect delays and cancellations.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/sindicato-ferroviario-convoca-huelga-24-horas-renfe-29-junio-15-julio_1_13322619.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "Temperatures hit 40°C, electricity bills surge – how are you coping with Spain's early heatwave? 💬",
+  "variant": "Spain today. Briefly.",
+  "headline": "Spain today. Briefly.",
+  "date": "2026-06-23",
+  "generated_at": "2026-06-23T06:05:49.754817+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 15,
+    "items_fetched": 336,
+    "items_selected_pass1": 13,
+    "fact_sheets_extracted": 13,
+    "items_after_importance_filter": 12,
+    "items_in_digest": 10
+  },
+  "selection_reasons": {
+    "26": "Historic conviction of former minister Ábalos to 24 years is a major political event that impacts Spain's stability and international image.",
+    "10": "Net foreign investment in Spain drops 17% this year, directly affecting investors and the economic outlook.",
+    "64": "Spain faces the peak of a heatwave with red alerts in three regions, impacting health, energy use, and daily life.",
+    "113": "The housing crisis and tourism phobia are fueling new localist parties, which could reshape property regulation.",
+    "127": "Mortgage signings remain near record highs but begin to cool, key for anyone tracking the property market.",
+    "269": "Banks pay nearly 60% less on deposits than they charge on mortgages, affecting interest rates for borrowers and savers.",
+    "282": "Electricity prices spike above €100/MWh due to the heatwave, directly raising living costs.",
+    "283": "Enagás expects gas prices to stay elevated for nearly two years, prolonging energy cost pressures.",
+    "291": "The heatwave prompts discussions on preventive work schedules (jornada intensiva), relevant for all workers in Spain.",
+    "295": "Tenant unions demand immediate regulation of seasonal and room rentals, a key issue for landlords and tenants.",
+    "296": "Evictions fall 45% but still 4,000 executed in Q1, showing continued housing pressure.",
+    "298": "Renfe strike announced for June 29 and July 15, which will disrupt train services and travel plans.",
+    "15": "Spain's World Cup performance analysis is of high interest and mandatory to include as a national team match."
+  }
+}

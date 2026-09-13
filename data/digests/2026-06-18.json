@@ -1,0 +1,177 @@
+{
+  "items": [
+    {
+      "title": "Average salary of €2,000 needed to buy a home in Spain",
+      "body": "A net monthly salary of €1,999 is needed on average to buy a home in Spain without over-indebtedness, according to a study by Accumin Intelligence. In San Sebastian, buyers require €5,074; in Barcelona and Madrid, more than €4,000. Zamora is the cheapest provincial capital at €1,279.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/comprar-una-vivienda-exige-media-un-sueldo-neto-2-000-euros-pero-las-grandes-ciudades-requiere-mas-4-000_6984438_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Euribor rises above 2.8%; economist urges mortgage switch",
+      "body": "The 12-month Euribor has risen above 2.8% in June, with a daily rate of 2.929%. This could increase variable mortgage payments by up to €133 per month. Economist Gonzalo Bernardos recommends switching to fixed-rate or capped mortgages to secure lower payments.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-17/gonzalo-bernardos-ante-subida-euribor-cambien-de-hipoteca-1qrt_4374572/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Eurozone inflation rises to 3.2% in May",
+      "body": "Eurozone annual inflation accelerated to 3.2% in May, up from 3.0% in April, driven by a 10.8% rise in energy prices. Core inflation, excluding energy and food, stood at 2.6%. The increase raises living costs for households across the eurozone.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-17/inflacion-de-la-eurozona-sigue-al-alza_4374221/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Inditex agrees 12.5% wage increase for store employees",
+      "body": "Inditex has agreed with unions on a 12.5% salary increase until 2028 for nearly 30,000 store employees in Spain. The deal includes 4% annual raises in 2026, 2027, and 2028. Sunday pay rises to €11.25 per hour and holiday pay to €13.50 by 2028. Birth aid increases from €450 to €506.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/inditex-pacta-subida-salarial-12-2028-30-000-empleados-tiendas-espana_1_13311293.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Council of Europe urges Spain to reform unfair dismissal law",
+      "body": "The Council of Europe has reiterated that Spain's unfair dismissal compensation of 33 days per year violates the European Social Charter. It calls for reforms to make compensation cover actual damages and be dissuasive. The Spanish government is urged to amend the legislation, which could strengthen job security for all workers.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/consejo-europa-reitera-espana-debe-reformar-despido-improcedente-hacerlo-restaurativo_1_13312399.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "European Parliament approves toughest EU immigration rules",
+      "body": "The European Parliament has approved what it calls the toughest immigration regulations in EU history. Last year, over 719,000 irregular immigrants were identified in the EU, but only just over a quarter of the 491,000 expulsion orders were executed. In Spain, just 5,705 of 53,700 orders were enforced.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/internacional/2026/06/18/parlamento-europeo-aprueba-normativa-inmigracion-mas-dura-historia-ue-2030021.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Fed chair keeps rates unchanged at 3.5%-3.75%",
+      "body": "Kevin Warsh, the new Federal Reserve chair, kept U.S. interest rates unchanged at 3.5% to 3.75% in his first meeting, citing rising inflation. The decision was unanimous. Oil prices fell after an initial agreement between the US and Iran.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/nuevo-presidente-fed-nombrado-trump-mantiene-tipos-interes-inalterables_1_13312798.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Magnific (Freepik) cuts 30% of Spanish staff in restructuring",
+      "body": "Magnific, formerly Freepik, has started an ERE layoff process affecting 30% of its Spanish workforce, around 100 employees. The company, with 350 staff in Spain and €196 million annual recurring revenue, is restructuring to focus on AI, not due to financial issues.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/andalucia/malaga/magnific-freepik-web-europea-ia-usada-mundo-negocia-ere-30-plantilla-espana_1_13312360.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Catalan doctors hold 12th strike, threaten escalation",
+      "body": "Doctors in Catalonia held their 12th strike day before summer, demanding better conditions. The Metges de Catalunya union threatens to escalate the conflict in September if the government fails to negotiate. The government reported 4.2% strike participation; the union says 29%.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/medicos-movilizan-catalunya-ultima-huelga-verano_1_13312434.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Intense heatwave expected in Spain from Sunday",
+      "body": "Spain's state weather agency AEMET has warned of an intense and persistent heatwave starting Sunday June 21. Temperatures could exceed 36-38°C inland, reaching 40°C in eastern areas and up to 42°C locally. Monday June 22 is expected to be the peak day.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/noticia-aemet-avisa-episodio-calor-intenso-persistente-gran-parte-peninsula-partir-domingo-20260617145228.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Chinese automaker Changan sets up European HQ in Madrid",
+      "body": "Chinese automaker Changan has established its European headquarters in Alcobendas, Madrid. The company aims to sell 300,000 vehicles in Europe within three years and is evaluating the construction of a manufacturing plant in Aragon.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/motor/changan-quiere-conquistar-europa-espana-sede-madrid-posible-planta_1_13313237.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Wildfire burned area in Spain triples so far in 2026",
+      "body": "From January to June 2026, 39,296 hectares have burned in Spain, three times more than the same period in 2025 (12,625 hectares). There have been 254 wildfires, up from 76, with eight large fires recorded, double the average.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/superficie-quemada-espana-supera-ya-las-39-000-hectareas-triple-que-hace-un-ano_6984392_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "With €2,000 salary needed to buy a home, does homeownership still seem possible for foreign residents in Spain?",
+  "variant": "Spain today, minus the noise",
+  "headline": "Spain today, minus the noise",
+  "date": "2026-06-18",
+  "generated_at": "2026-06-18T06:21:37.716843+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 15,
+    "items_fetched": 379,
+    "items_selected_pass1": 13,
+    "fact_sheets_extracted": 13,
+    "items_after_importance_filter": 12,
+    "items_in_digest": 12
+  },
+  "selection_reasons": {
+    "240": "EU approves toughest immigration law, directly affects foreigners' legal status and rights",
+    "35": "AEMET warns of intense heatwave starting Sunday, impacts daily life and health",
+    "134": "Income needed to buy a home in Spain rises, critical for expats and immigrants looking to purchase",
+    "316": "Eurozone inflation rises to 3.2%, increasing cost of living for all residents",
+    "60": "Fed holds interest rates, influencing Euribor and mortgage costs in Spain",
+    "374": "Spain's World Cup goalless streak continues; mandatory inclusion as Spain match coverage",
+    "96": "Inditex agrees 12% wage increase for 30,000 employees, sets labor trend",
+    "91": "Council of Europe urges Spain to reform unfair dismissal rules, affecting all workers",
+    "87": "Catalan doctors strike before summer, affecting healthcare access for residents",
+    "114": "Chinese automaker Changan plans European HQ in Madrid and possible plant, creating jobs and EV market impact",
+    "95": "Freepik (Magnific) announces ERE for 30% of staff in Spain, tech sector job losses",
+    "154": "Wildfire area triples compared to last year, posing property and safety risks",
+    "311": "Economist advises switching mortgages due to Euribor rise, relevant for homeowners"
+  }
+}

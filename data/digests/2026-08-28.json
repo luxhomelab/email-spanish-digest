@@ -1,0 +1,144 @@
+{
+  "items": [
+    {
+      "title": "⚠️ Ceuta crisis escalates as soldiers seek force authorization",
+      "body": "Between 8,000 and 10,000 migrants are living on Ceuta's streets as residents burned camps and blocked Red Cross vehicles. Police charged protesters; four soldiers were injured when about 30 migrants stoned them in Benzú, and 12 Moroccan nationals were detained. Military association AUME asks the Government to authorize 'proportionate' force, with over 400 police and Guardia Civil deployed.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/polvorin-ceuta-se-inflama-los-militares-piden-gobierno-poder-hacer-uso-fuerza-guardia-civil-exige-mano-dura_7029987_0.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-policia-carga-contra-manifestantes-ceuta-quemar-asentamientos-migrantes-playa-20260827200007.html"
+        }
+      ],
+      "category": "politics",
+      "important": true
+    },
+    {
+      "title": "Social Security goes digital-only for some notices September 1",
+      "body": "From September 1, Social Security stops sending paper for temporary and permanent disability, medical leave, and family benefits. Notifications will be available only through Sede Electrónica, with SMS or email alerts. Recipients have 10 calendar days to open documents using Cl@ve, digital certificate, or DNI electrónico. Paper remains only for urgent cases, in-person delivery, or those without phone or email.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-08-27/cambio-seguridad-social-1-septiembre-personas-baja-laboral-incapacidad-1qrt_4413116/"
+        },
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/08/27/adios-correo-postal-seguridad-social-notificara-electronicamente-trabajadores-septiembre-2047537.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "New flexible retirement rules take effect Friday",
+      "body": "The new flexible retirement scheme starts Friday, letting retirees combine part-time work with their pension without waiting. Autónomos (self-employed) are now included. Part-time contracts can range from 33% to 80% of full time, up from the previous 25-75%. Those working 55-80% who start at least six months after retiring can get a 25% pension boost; otherwise the pension is reduced proportionally.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/asi-es-nueva-jubilacion-flexible-que-entra-vigor-este-viernes-mas-incentivos-economicos-podran-pedirla-tambien-los-autonomos_7030124_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Buying a home through your company is a tax trap",
+      "body": "Tax lawyer Luis Miguel Larriba warns that buying a home through a Spanish company makes it a corporate asset, not personal property. Transferring the property later to the owner triggers taxes, usually by sale or dividend distribution. Living in the property counts as private use of a company asset. Many entrepreneurs only seek help years later, when fixing it is expensive.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-08-27/experto-abogado-fiscalista-luis-miguel-larriba-fiscalidad-vivienda-ley-vivienda-declaracion-de-la-renta_4403859/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Government and regions clash over Ceuta migrant relocation",
+      "body": "The Government and 14 autonomous communities approved €25 million for migrant child care in Ceuta, while Aragón, Extremadura, and Castilla y León refused to attend. The Government proposed four legal mechanisms to move about 1,500 unaccompanied minors to the mainland; PP-led regions reject any distribution. Territorial Policy Minister Ángel Víctor Torres said the facilities Ceuta offered would take months to become habitable.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/epsocial/migracion/noticia-gobierno-ccaa-aprueban-ayuda-25-millones-atencion-menores-migrantes-ceuta-20260827122652.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/que-hacer-con-los-1-500-menores-ceuta-estas-son-las-cuatro-opciones-que-propone-gobierno-para-trasladarlos-peninsula_7030058_0.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/torres-advierte-que-los-espacios-ofrecidos-por-ceuta-para-acoger-migrantes-tardarian-meses-ser-habitables_7030147_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Vaccinations for Ceuta migrants start next week",
+      "body": "Health Minister Mónica García said vaccination of migrants in Ceuta begins next week with 45,000 doses, including 15,000 MMR and 10,000 each for diphtheria/tetanus, varicella, and polio. She said migrants do not bring diseases and the risk for residents is low, citing a moderate transmission risk among migrants due to overcrowding and poor hygiene. She criticized PP leader Feijóo's proposal to confine migrants.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/monica-garcia-anuncia-que-vacunacion-los-migrantes-ceuta-arrancara-proxima-semana_7029998_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Consumer watchdog opens first case over hidden management fees",
+      "body": "Consumer Affairs has opened its first sanction case against a transport ticket seller for not including management fees in the initial price, a practice banned since December. The company could face a fine of up to €100,000 or six to eight times the illicit profit. The case is in the opening phase under the modified Customer Service Law.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-08-27/consumo-primer-expediente-ocultar-gastos-gestion_4413015/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "DGT denies driving theory test will change on October 1",
+      "body": "The DGT says viral claims about a new driving theory test on October 1 are false. The exam remains 30 multiple-choice questions with a maximum of three errors in 30 minutes. The October 1 regulation change affects traffic rules, not the exam. Risk-perception videos are being studied but no process has started.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/08/27/6a9049e4fc6c83bb1e8b45c1.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Who's already set up Cl@ve for Social Security? The 10-day deadline starts September 1.",
+  "variant": "Nothing Happened in Spain Today. Except This.",
+  "headline": "Nothing Happened in Spain Today. Except This.",
+  "date": "2026-08-28",
+  "generated_at": "2026-08-28T06:05:29.882114+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 240,
+    "items_selected_pass1": 12,
+    "fact_sheets_extracted": 12,
+    "items_after_importance_filter": 12,
+    "items_in_digest": 8
+  },
+  "selection_reasons": {
+    "31": "Violent clashes in Ceuta as locals burn migrant settlements — major escalation of the migration crisis.",
+    "33": "Government and regions approve €25M for migrant minors in Ceuta — direct funding decision affecting migration policy.",
+    "53": "Government outlines four options to relocate 1,500 unaccompanied minors from Ceuta — key for immigration policy.",
+    "51": "Military and Guardia Civil demand more powers to use force in Ceuta — security situation affecting all residents.",
+    "64": "Vaccination campaign for migrants in Ceuta starts next week — public health response to the crisis.",
+    "61": "Minister warns Ceuta's migrant accommodation spaces won't be habitable for months — highlights crisis logistics.",
+    "219": "New flexible retirement rules take effect, with incentives and coverage for autónomos — affects retirees and self-employed.",
+    "210": "Social Security changes from September 1 for sick leave and disability claims — affects workers.",
+    "181": "Social Security moves to electronic notifications — requires digital certificate, affects all workers.",
+    "213": "First sanction for hidden management fees in ticket sales — consumer protection precedent.",
+    "238": "Tax lawyer warns buying property through a company is a hard-to-escape trap — relevant for investors.",
+    "12": "DGT denies viral rumor of driving test change — clarifies rules for those seeking licenses."
+  }
+}

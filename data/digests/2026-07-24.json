@@ -1,0 +1,161 @@
+{
+  "items": [
+    {
+      "title": "Over 800,000 immigrants gain work permits as government clarifies validity rules",
+      "body": "More than 822,000 immigrants now hold preliminary work and residence permits after the government processed 70% of 1.17 million applications in the extraordinary regularization. Authorities confirmed that provisional permits remain valid until a final decision is issued, not just for three months, after misinterpretations led to job losses and dismissals. By the end of June, 160,000 had already joined the social security system. The measure provides legal certainty to hundreds of thousands of applicants awaiting their final status.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/sociedad/2026/07/24/mas-800-000-inmigrantes-regularizados-tienen-ya-permiso-para-trabajar-2039577.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/interpretacion-erronea-ley-regularizacion-provoca-despidos-migrantes-obliga-gobierno-enviar-directrices-oficiales_1_13401149.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "High rents force one-third of public job winners to decline offers",
+      "body": "Around one in three candidates who pass competitive exams for public sector jobs are turning down the posts because they cannot afford local rental prices. One medical resident refused a post in Ibiza where the €1,300 salary fell far short of the €1,900 rent. A study by Supera Oposiciones warns of a growing talent drain as others accept positions but face nearly unsustainable living conditions. The housing crisis is disrupting Spain’s job market, especially for those trying to settle in expensive cities.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/07/23/6a626160e4d4d8cf468b4573.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "ECB holds rates at 2.25% as oil prices surge to $100 on Iran conflict",
+      "body": "The European Central Bank kept interest rates unchanged at 2.25%, with President Christine Lagarde citing a unanimous decision despite some pressure to raise them due to the Iran conflict and the closure of the Strait of Hormuz. Meanwhile, Brent crude jumped 6.22% to $100 per barrel after Houthi militants attacked two Saudi tankers in the Red Sea and the US continued its offensive against Iran. The spike in oil prices means higher fuel and energy costs for households across Spain.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bce-mantiene-tipos-interes-2-25-incertidumbre-guerra-iran_1_13399223.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/escalda-conflicto-oriente-proximo-dispara-nuevo-precio-petroleo-100-dolares_1_13402422.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Government extends fuel tax cuts until October, rent cap to 2028",
+      "body": "The Spanish government won parliamentary backing for an anti-crisis decree that extends fuel tax cuts through October and continues the rent cap until July 2028. The package also includes aid for farmers and transporters, with a clause allowing measures to be reactivated if the Middle East conflict worsens. The relief comes as oil prices hover near $100, threatening household budgets. Residents benefit directly from lower fuel prices and continued limits on rental increases.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gobierno-salva-escudo-anticrisis-guerra-iran-rebajas-fiscales-carburantes-octubre_1_13401170.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Trump imposes new tariffs on 80 countries, including Spain",
+      "body": "The United States announced new tariffs of 10% to 12.5% on 60 trade partners — 59 countries plus the European Union — citing an ineffective ban on imports made with forced labor. The duties, based on Section 301 of the 1974 Trade Act, replace a temporary tariff that expires Friday. Spanish exports to the US could take a hit, potentially slowing growth and affecting job opportunities.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/trump-anuncia-nuevos-aranceles-80-paises_1_13403341.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Health ministry vetoes funding for two Alzheimer's drugs",
+      "body": "The inter-ministerial commission rejected public funding for lecanemab and donanemab for the second time, arguing limited clinical benefit and high cost. An estimated 50,000 patients could have been treated, and neurologists and patient associations point to real-world data from other countries showing greater effectiveness. Those with aging family members may have fewer options to slow the progression of the disease.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/salud/2026/07/24/6a62407afc6c83037c8b45a7.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "55% of Spaniards say regularization grants papers to too many immigrants",
+      "body": "A new poll shows 55.7% of respondents believe the number of beneficiaries in the extraordinary regularization is excessive, while only 30% consider it adequate and 6.4% insufficient. The opinion splits sharply along political lines: Sumar and PSOE voters are relatively supportive, while PP and Vox voters are overwhelmingly critical. Public sentiment could shape future immigration policy and residency rules.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/mas-mitad-poblacion-ve-excesivo-numero-inmigrantes-que-conseguiran-papeles-con-regularizacion-gobierno_7017362_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Anti-poverty benefit IMV covers fewer poor than EU average despite higher payment",
+      "body": "Spain’s Minimum Vital Income reaches only 31% of the population in poverty, below the EU average of 36%, according to the fiscal authority AIReF. The monthly amount, €733.6 per person in 2026, is above the European average, but design flaws in income calculation, household definition, and work incentives blunt its impact. The median poverty threshold in Spain was €1,790 per month in 2025. Those who fall into poverty may find the IMV less accessible than similar benefits in other EU countries.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/airef-certifica-que-cobertura-ingreso-minimo-contra-pobreza-es-inferior-media-europea-pese-su-mayor-cuantia-no-esta-siendo-eficaz_7018145_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Forest fires force 10,000 evacuations in Madrid and Ávila",
+      "body": "Three active forest fires in Villa del Prado, San Martín de Valdeiglesias, and Almorox (Toledo) have led to the evacuation of more than 10,000 residents, with the entire municipality of Aldea del Fresno emptied. The government declared an emergency of national interest for the Madrid region and Ávila province after regional president Isabel Díaz Ayuso requested level 3 status. Residents in affected areas may face evacuation orders, road closures, and air quality hazards.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/madrid/2026/07/23/6a624211e9cf4a71238b458f.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Congress blocks government’s fiscal path, 2027 budget impossible",
+      "body": "The Spanish Congress rejected the fiscal path for the second time with 176 votes against (PP, Vox, Junts, UPN) and 166 in favor (PSOE, Sumar, PNV, EH Bildu, ERC, BNG, CC), while Podemos and Compromís abstained. The vote makes a 2027 budget impossible, extending the budget freeze for a fourth consecutive year. Both the Congress and Senate have called on Pedro Sánchez to resign, face a confidence vote, or call early elections. Political instability could delay policy making and affect economic confidence.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/07/23/6a625ae8fdddff4a578b45b7.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "One-third of public job winners in Spain reject offers because rent costs more than their salary. Have you ever faced a similar dilemma? 💬",
+  "variant": "You missed this in Spain today",
+  "headline": "You missed this in Spain today",
+  "date": "2026-07-24",
+  "generated_at": "2026-07-24T06:08:02.569059+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 331,
+    "items_selected_pass1": 13,
+    "fact_sheets_extracted": 13,
+    "items_after_importance_filter": 12,
+    "items_in_digest": 10
+  },
+  "selection_reasons": {
+    "8": "Government declares national emergency in Madrid and Ávila due to wildfires, mass evacuations — affects thousands directly.",
+    "197": "Over 800,000 regularized immigrants granted work permits — key for non-EU residents.",
+    "78": "Legal misinterpretation leads to dismissals of regularized migrants; government issues clarifications — directly affects immigrants' rights.",
+    "85": "ECB holds interest rates at 2.25% — critical for Euribor-linked mortgages and borrowers.",
+    "38": "US imposes new tariffs on Spain and EU at 10–12.5% — impacts trade and cost of imported goods.",
+    "86": "Oil surges above $100 on Middle East tensions — raises fuel and transport costs for residents.",
+    "44": "Government extends anti-crisis fuel tax cuts until October — directly lowers petrol/diesel prices.",
+    "6": "Congress rejects fiscal path with PP, Vox, Junts, UPN — threatens budget stability and potential tax changes.",
+    "11": "Health ministry refuses to finance Alzheimer drugs — affects 50,000 patients and healthcare access.",
+    "12": "One third of successful opositores reject public jobs due to unaffordable rents — highlights housing crisis.",
+    "319": "Spain wins World Cup, national reactions — mandatory inclusion of major national event.",
+    "123": "Poll shows half of Spaniards see regularization as excessive — reflects social climate for immigrants.",
+    "274": "AIReF finds IMV coverage below EU average despite higher benefit — relevant for low-income residents."
+  }
+}

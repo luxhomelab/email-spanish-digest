@@ -1,0 +1,126 @@
+{
+  "items": [
+    {
+      "title": "Former Spanish PM Zapatero accused of leading corruption network",
+      "body": "A judge at the Audiencia Nacional has placed former Prime Minister José Luis Rodríguez Zapatero at the head of an alleged stable and hierarchical structure of influence trafficking, marking the first time a former PM is investigated for corruption in democracy. The case revolves around the Plus Ultra rescue operation.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/05/20/6a0c97f121efa03a598b456e.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Donations surge 134% as seven regions slash taxes amid housing crisis",
+      "body": "Spain recorded 225,662 donations in 2025, a 134% increase over a decade, driven by tax cuts in seven autonomous communities that introduced 99%+ deductions for direct family donations. The surge is especially stark in Andalucía (+884%) as families try to help younger members buy property in a crisis.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/las-rebajas-fiscales-disparan-las-donaciones-plena-crisis-vivienda-7-comunidades-han-vaciado-impuesto-desde-2013_6972479_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Divided Supreme Court allows close family to challenge euthanasia",
+      "body": "In a 23-9 vote, the Supreme Court has ruled that family members with a particularly close bond can challenge a medically approved euthanasia in court, a door ultra-Catholic groups have already used to delay deaths. The decision was split.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/supremo-dividido-abre-puerta-familiares-vinculacion-estrecha-impugnen-eutanasias-avaladas-medicos_1_13229450.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Listeria health alert expanded: more brands of fresh cheese affected",
+      "body": "Spain's food safety agency has extended the listeria warning for fresh cow cheese after additional distributors were identified. The affected lots, including brand Goya, are distributed across most of Spain. Consumers are urged not to eat the product.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/consumoclaro/ampliada-alerta-sanitaria-presencia-listeria-queso-fresco-vaca-procedente-espana_1_13231637.html"
+        }
+      ],
+      "category": "health",
+      "important": true
+    },
+    {
+      "title": "EU closes US trade deal as Spanish food exports to America drop 9.6%",
+      "body": "The EU finalized a trade agreement with the US early Wednesday, extending protection until 2029 with new safeguards, after Trump threatened 25% tariffs on European cars. Meanwhile, the impact of previous tariff uncertainty is already visible: Spanish food and drink exports to the US fell 9.6% to 3,041.7 million euros, even as overall food exports hit a record 52,565 million.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ue-cerrar-acuerdo-comercial-eeuu-amenazas-trump_1_13234749.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/aranceles-trump-golpean-campo-espanol-hunden-9-6-exportaciones-alimentarias-ano_6972158_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Migrant regularization one month on: 120,000 applications but Supreme Court could veto",
+      "body": "The extraordinary regularization process for undocumented migrants has seen 120,000 petitions in the first week of the month-long process, due to end June 30. However, the Supreme Court will hear a request from the Madrid region on Friday to suspend the decree, citing strain on public services.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/regularizacion-migrantes-cumple-mes-cientos-miles-peticiones-temor-vista-supremo_1_13234409.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "2026 rental aid guide: up to 350€/month for tenants in stress zones",
+      "body": "The Bono Joven remains at 250€/month for two years with updated income thresholds (max 25,200€, up to 33,600€ in some regions), and a new supplement of up to 100€ extra is available if the rental is in a stressed zone where it exceeds 30% of average salary. Several autonomous communities have also activated this supplement.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/guia-ayudas-alquiler-2026-como-aprovechar-nuevos-incentivos-zona-tensionada_6966471_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "First protocol for companies to support workers with cancer",
+      "body": "The Spanish Cancer Association AECC has launched the first protocol to guide employers on supporting employees from diagnosis to return to work. Testimonials highlight the hidden challenges of returning: 'they think you're the same, but you're not.'",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/primer-protocolo-empresas-trabajadores-cancer-crece-pelo-creen-no_1_13233351.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Construction costs increase 15% due to Middle East conflict",
+      "body": "Nine out of ten construction firms surveyed say the Middle East war has significantly impacted their business, with fuel prices rising over 20% for 60% of companies and energy costs up to 20%. The sector warns viability is at risk if the situation persists.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/constructoras-espanolas-calculan-mas-costes-guerra-oriente-proximo_6972297_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "With donations soaring 134%, has your family helped you buy a home in Spain? Share your story. 👇",
+  "headline": "🇪🇸 Spain: 5-min catch-up ☕ 20.05.2026",
+  "date": "2026-05-20",
+  "generated_at": "2026-05-20T06:11:23.591237+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 315,
+    "items_selected": 10
+  }
+}

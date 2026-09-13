@@ -1,0 +1,168 @@
+{
+  "items": [
+    {
+      "title": "Spain's regularization process allows 1.17 million to work legally",
+      "body": "Spain's extraordinary regularization process has admitted more than 70% of the 1.17 million applications, allowing immigrants to work and reside legally on a provisional basis. The surge in legal workers is already boosting tourism employment, helped by a rebound in autónomo (self-employed) registrations. Social Security data confirm the figures, providing a path to legal status for those already living in Spain.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/08/08/los-autonomos-extranjeros-impulsan-empleo-turistico-plena-regularizacion-2043178.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spain home sales hit best June in 19 years, rising 1.6%",
+      "body": "Home sales in Spain rose 1.6% in June to 59,288 transactions, breaking a five-month decline and reaching the best June since 2007, according to the National Statistics Institute (INE). New home purchases jumped 6.3% to 12,766, while resales edged up 0.3% to 46,522. Year-to-date sales are down 2.6%, but regional gains were led by Navarra (+22.6%) and Castilla-La Mancha (+22.2%).",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/compraventa-viviendas-repunta-descensos-mejor-junio-19-anos_7023486_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Global food prices hit highest level since January 2023",
+      "body": "The UN Food and Agriculture Organization's (FAO) food price index rose 0.6% in July to 131.1 points, the highest since January 2023, though still 18.2% below the March 2022 peak. Cereal prices surged 3.4% month-on-month on wheat supply worries, while vegetable oils hit their highest since June 2022. Rising global costs may feed into higher grocery bills in Spain.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-08-07/coste-alimentos-fao-precios-julio-1tps_4402915/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Ibex 35 dips 0.02% after four record highs, still up 16.7% in 2026",
+      "body": "The Ibex 35 closed Friday at 20,176 points, snapping a streak of four record highs with a fractional loss. The dip followed US jobs data showing 23,000 positions lost in July, the worst since 2010. Despite the slip, the index gained nearly 2% for the week and is up 16.7% year-to-date.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ibex-pone-punto-final-escalada-cierra-viernes-caida-minima-pierde-20-200-puntos_1_13434941.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain imposes temporary border checks on travelers from Italy starting today",
+      "body": "Spain has introduced random identity checks at ports and airports for arrivals from Italy, effective from 00:00 on August 8 through September 7. The move came after Italy refused to lift its own controls on travelers from Spain, with Prime Minister Giorgia Meloni insisting on keeping restrictions. Checks will cover identity, passport, nationality and, for third-country nationals, visa or residence permit.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/espana-reintroduce-controles-viajeros-procedentes-italia-respuesta-negativa-meloni_1_13435354.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Spain reinforces Ceuta with 2,000 soldiers ahead of possible August 15 mass entry",
+      "body": "The government has deployed nearly 300 riot police, 2,000 soldiers and drones to Ceuta after credible calls on social media for a mass border crossing on August 15. Groups with up to 400,000 members are circulating slogans like '15/08' and 'al-hajma'. A 500-metre maritime barrier has been built at the Tarajal jetty to prevent entry by swimming.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/gobierno-blinda-ceuta-ante-posible-entrada-masiva-15-agosto-casi-300-antidisturbios-2-000-soldados-drones_7023647_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Spain counts 1,342 unaccompanied minors in Ceuta, prosecutor warns regions to host them",
+      "body": "Following the mass entry of 72,000 people, the government has identified 1,342 unaccompanied minors in Ceuta and expects the number to rise. Relocation to mainland Spain should begin within weeks, but Spain's Attorney General, Teresa Peramato, has issued guidelines warning that prosecutors will act if autonomous communities refuse to accept them. A technical team will move to Ceuta on August 16.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/gobierno-eleva-1-342-los-menores-ceuta-fija-su-reubicacion-peninsula-pocas-semanas_7023588_0.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-fiscalia-avisa-intervendra-si-comunidades-autonomas-rechazan-acoger-migrantes-ceuta-20260807141050.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Wildfire in Niebla, Huelva remains out of control, UME deployed",
+      "body": "A wildfire in Niebla (Huelva) that started Thursday remains uncontrolled due to shifting winds, forcing the activation of the Military Emergencies Unit (UME). Sixty-six people have been evacuated, two roads have been closed, and 24 aircraft battled the flames on Friday. The fire's erratic behaviour has complicated containment.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/andalucia/huelva/incendio-niebla-sigue-fuera-control-obliga-actuar-ume-inestabilidad-provoca-viento_1_13435431.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Smoke from Castellón wildfire prompts confinement order in Sierra Engarcerán",
+      "body": "Emergency services ordered residents of Sierra Engarcerán (Castellón) to stay indoors, close windows and switch off ventilation due to heavy smoke from a forest fire that started Friday in Vall d'Alba. Situation 2 of the PEIF was activated and some farmhouses were evacuated. The Es-Alert message warned that the smoke posed a health risk.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/comunitat-valenciana/noticia-emergencias-envia-alert-incendio-sierra-engarceran-20260807230756.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Total solar eclipse to cross northern Spain on August 12",
+      "body": "A total solar eclipse will be visible across northern Spain on August 12, with the path entering through Galicia and reaching its maximum at around 20:28 in A Coruña. The northern part of the peninsula and the Balearic Islands are in the full-visibility zone, while southern Spain will see a partial eclipse. The IGN has an interactive map with exact local times.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/horario-eclipse-solar-este-12-agosto-que-horas-se-vera-cada-lugar-espana_7023784_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Yolanda Díaz formalizes her candidacy to lead the International Labour Organization",
+      "body": "Second Vice President Yolanda Díaz has formally presented her bid to become director of the International Labour Organization (ILO), proposing a global charter of labour rights. She warns that the ILO faces an 'existential risk' due to a financial and programmatic crisis. The current director, Gilbert F. Houngbo, is running for re-election.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/diaz-formaliza-candidatura-oig_7023671_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "Home sales in Spain just hit a 19-year high. Are you jumping into the market or waiting it out?",
+  "variant": "Here's Spain today, in under a minute",
+  "headline": "Here's Spain today, in under a minute",
+  "date": "2026-08-08",
+  "generated_at": "2026-08-08T08:03:20.832777+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 290,
+    "items_selected_pass1": 12,
+    "fact_sheets_extracted": 12,
+    "items_after_importance_filter": 12,
+    "items_in_digest": 11
+  },
+  "selection_reasons": {
+    "33": "Spain imposes temporary border controls on travelers from Italy after Meloni refuses to lift her own — a direct hit on Schengen free movement affecting all international residents.",
+    "126": "Government raises Ceuta unaccompanied minors count to 1,342 and announces relocation to the peninsula — core migration policy news for those tracking immigration.",
+    "111": "Spain deploys nearly 300 riot police, 2,000 soldiers and drones to shield Ceuta against a feared new mass entry on August 15 — border-security reality for would-be travelers.",
+    "106": "Practical guide to exact eclipse times across Spain on August 12 — a once-in-a-century event that every resident will experience.",
+    "49": "Out-of-control wildfire in Niebla, Huelva, forces evacuations and UME deployment — a major natural disaster affecting safety and property in southern Spain.",
+    "30": "Second major wildfire in Castellón confines Sierra Engarcerán and mobilizes the UME — a separate national-scale emergency worth tracking.",
+    "266": "Home sales post their best June in 19 years after five months of declines — critical signal for buyers, sellers and property investors.",
+    "189": "Foreign autónomos and immigrants are driving a 5.4% rise in tourism employment during the regularization wave — directly relevant to work and legal-status changes.",
+    "75": "Ibex 35 ends a historic week with a slight drop, losing 20,200 points after four consecutive record highs — a key market indicator for investors.",
+    "258": "Global food prices hit their highest level since 2023 — a cost-of-living alert for households across Spain.",
+    "265": "Yolanda Díaz formalizes her candidacy to lead the ILO with a global labor-rights agenda — potentially a game-changer for work regulations affecting Spain.",
+    "24": "State prosecutor warns it will act against regions that refuse to share unaccompanied migrant minors — a systemic legal threat affecting Spain's asylum and migration framework."
+  }
+}

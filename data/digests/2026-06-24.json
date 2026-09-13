@@ -1,0 +1,168 @@
+{
+  "items": [
+    {
+      "title": "Bank of Spain Governor Calls Housing Shortage a National Emergency",
+      "body": "José Luis Escrivá, governor of the Bank of Spain, declared the housing shortage a national emergency, citing a deficit of 750,000 homes. He urged coordinated action among administrations and called for limiting non-residential uses of housing. Escrivá also acknowledged pressure from the IMF and European Systemic Risk Board to restrict high-risk mortgage lending, saying the Bank of Spain is analyzing options but noted such measures would intrude on banking business.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/macroeconomia-00338/noticia-escriva-pide-abordar-vivienda-emergencia-nacional-reaccion-conjunta-administraciones-20260623121924.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/escriva-banco-espana-hay-razones-economicas-plantear-vivienda-emergencia-nacional_1_13325593.html"
+        }
+      ],
+      "category": "property",
+      "important": true
+    },
+    {
+      "title": "Vacant Land Could Boost Housing in Major Spanish Cities by 18%",
+      "body": "Land lying idle in Spain’s 15 largest urban areas could increase housing supply by 18%, according to a Funcas study. At least 30% of this land is publicly owned, often by municipalities, but developers are not building. In Murcia, for example, the number of homes could double. Sareb alone has open projects for 400,000 potential units. Researcher Ignacio Ezquiaga argues idle land should be penalized to unlock more housing.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/suelo-vacio-elevaria-parque-viviendas-grandes-ciudades_7005831_0.html"
+        }
+      ],
+      "category": "property",
+      "important": true
+    },
+    {
+      "title": "Two-Thirds of Economists Expect Stagflation in Spain This Year",
+      "body": "A survey by the General Council of Economists reveals that 64% of members believe stagflation—low growth with inflation above 2%—is highly or very likely in 2026. Factors include ECB rate hikes, persistent inflation, and energy shocks from the Iran conflict and the closure of the Strait of Hormuz. Additionally, 63.9% are deeply concerned about trade barriers under the Trump presidency. The outlook signals potential erosion of real wages and savings for all residents.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/dos-cada-tres-economistas-colegiados-ve-muy-probable-que-espana-entre-estanflacion-2026_7005801_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": true
+    },
+    {
+      "title": "Spain’s Companies Face EU’s Shortest Sick Leave Costs",
+      "body": "Spanish companies pay for only the first 12 days of employee sick leave, the lowest in the EU, compared to 30 days in Belgium, six weeks in Germany, and up to two years in the Netherlands. The CEOE business association wants Social Security to fully cover the first 15 days. Total sick leave costs for companies reach €17 billion. The stance could influence future reform of sick pay for all workers.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/06/24/6a3ab4f6e4d4d822228b458f.html"
+        }
+      ],
+      "category": "work",
+      "important": true
+    },
+    {
+      "title": "New Traffic Rules Mandate Helmets for Scooters and Bicycles",
+      "body": "The government approved changes making helmets mandatory for electric scooter and bicycle riders, setting a minimum age of 15 for scooter use, and requiring motorcyclists to wear gloves and closed-toe shoes. Motorcycle drivers must use gloves on interurban roads, while closed-toe shoes are required everywhere. Taxi drivers must always wear seatbelts. The new rules directly affect daily mobility for many residents who rely on these vehicles.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/casco-obligatorio-patinetes-bicis-sandalias-prohibidas-motos-claves-nueva-normativa-movilidad_1_13326260.html"
+        }
+      ],
+      "category": "politics",
+      "important": true
+    },
+    {
+      "title": "Spain’s World Cup Round of 16 Opponent Depends on Group Finish",
+      "body": "Spain leads Group H with four points after a 4-0 win over Saudi Arabia. A second-place finish would pit Spain against Argentina, while finishing first would likely see them face Austria or Algeria. The next match, on June 28, will determine the final seeding. This means a high-stakes game for football fans in Spain.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/deportes/futbol/2026/06/24/contra-quien-jugara-espana-dieciseisavos-mundial-primera-segunda-tercera-evitar-argentina-2031517.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "European Parliament Advances Digital Euro Project",
+      "body": "The European Parliament’s Economic and Monetary Affairs Committee approved the legislative package for a digital euro, which will include online and offline versions. The plan aims to reduce EU dependence on US payment giants like Visa and Mastercard. Spanish MEP Fernando Navarrete (PP) served as rapporteur. The initiative also guarantees continued access to cash. A digital euro could eventually reshape how all residents pay and store money.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/parlamento-europeo-desencalla-euro-digital-version-linea-conexion-asegurar-privacidad_1_13325750.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Escrivá Suggests Cutting Contributions for Unemployed to Spur Hiring",
+      "body": "José Luis Escrivá proposed reducing the social contributions paid on behalf of unemployed people, arguing that the current system disincentivizes returning to work. Spain’s contributions for the unemployed are double those of other large European economies. Any change could affect job-seeking conditions for unemployed residents.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/24/jose-luis-escriva-sugiere-reducir-cotizacion-los-parados-para-incentivar-su-vuelta-empleo-2031615.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Early Summer Heatwave Signals Hotter Future for Spain",
+      "body": "An unusual heatwave began in May and peaked in June, with the first official heatwave declared on June 21. Scientists from Copernicus and the IPCC link the trend to human-caused climate change, pointing out that Europe is the fastest-warming continent. The extreme heat affects health, comfort, and electricity costs for everyone living in Spain.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/calor-extremo-no-verano-aviso-futuro_1_13326910.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Taliban Seeks EU Recognition in Exchange for Deportation of Criminals",
+      "body": "In a first meeting with the European Commission and 15 member states, a Taliban delegation asked for diplomatic recognition and consular services for Afghans in the EU. In return, they offered to deport Afghans who have committed serious crimes or pose security threats. Currently, only Germany recognizes Taliban diplomats. The proposal could influence EU deportation policy and migration debates.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/internacional/2026/06/23/6a3a9cb8e85ece27488b4589.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Spain Boosts AI Gigafactory Bid With Extra €300 Million",
+      "body": "The Spanish government added €300 million to its bid for a European AI gigafactory, bringing the total investment to €1.019 billion. The EU will allocate €20 billion for three to five such facilities across member states. Spanish sites include Móra la Nova in Tarragona and San Fernando de Henares in Madrid. While the project could eventually create tech jobs, its immediate impact on most residents is limited.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/tecnologia/espana-invierte-300-millones-euros-ansiada-gigafactoria-europea-ia_1_13326216.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "With 750,000 homes needed, what's been your biggest housing challenge in Spain? 👇",
+  "variant": "You missed this in Spain today",
+  "headline": "You missed this in Spain today",
+  "date": "2026-06-24",
+  "generated_at": "2026-06-24T06:04:00.567838+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 15,
+    "items_fetched": 350,
+    "items_selected_pass1": 12,
+    "fact_sheets_extracted": 12,
+    "items_after_importance_filter": 12,
+    "items_in_digest": 11
+  },
+  "selection_reasons": {
+    "202": "Spain World Cup preview: possible opponents in knockout stages – mandatory event for audience following Spain's matches.",
+    "35": "Government declares housing 'national emergency' – key property market news for investors and residents.",
+    "318": "IMF urges Spain to restrict high-risk mortgages – affects homebuyers and property investors directly.",
+    "289": "Economists see high risk of stagflation in Spain – critical economic indicator for investors.",
+    "17": "Spain has one of lowest employer costs for sick leave in EU – impacts business expenses and remote work policy.",
+    "7": "EU negotiates deportation deal with Taliban – significant migration policy affecting asylum seekers and immigrants.",
+    "94": "Spain invests €300M in AI gigafactory to compete for EU funding – tech industry growth and job creation.",
+    "40": "Extreme heatwave with record temperatures triggers red alerts – practical concern for all residents.",
+    "85": "New DGT rules require helmets for bikes/scooters and ban sandals on motos – daily life regulation.",
+    "96": "European Parliament advances digital euro as alternative to Visa/Mastercard – future payment system affects everyone.",
+    "288": "Study shows empty land could boost housing supply by 18% – potential relief for rental and purchase markets.",
+    "210": "Bank of Spain chief proposes cutting unemployment payroll tax to boost hiring – labor market reform for employers and workers."
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "title": "Workers Win Right to Compensatory Day for Holidays on Saturdays",
+      "body": "Spain's Audiencia Nacional has ruled that contact center employees must receive a compensatory day off when a public holiday falls on a Saturday, a day they already have off. Labor experts say this decision, if upheld by the Supreme Court, could be extended to all sectors, giving millions of Monday-to-Friday workers a new right to claim compensation for lost holidays.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/dia-libre-festivo-perdido-sabado-expertos-creen-extender-empresas_1_13242557.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Hacienda Hasn't Paid Your Tax Refund Yet? Here's How to Check",
+      "body": "Many taxpayers who filed the 2025 income tax (IRPF) declaration haven't received their refund yet. Check the status online via the Agencia Tributaria portal using Cl@ve or digital certificate; look for \"estado de tramitación\" to see if it's pending, under review, or approved. Tax experts also warn that the new €340 deduction must be claimed separately—it's not applied automatically.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-22/hacienda-no-pagado-todavia-devolucion-renta-2025_4359780/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "IMF Warns Spain's Inflation Could Near 5% If Iran War Drags On",
+      "body": "In its worst-case scenario for the Iran conflict, the IMF projects Spain's inflation could reach nearly 5% and growth could slow sharply over 2026–2027, assuming oil stays above $110/barrel and gas triples in price. The fund urges Spain to remove energy VAT cuts and prepare for rising pension spending due to an aging population.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/fmi-anticipa-frenazo-economico-inflacion-cercana-5-espana-si-guerra-iran-enquista_1_13241969.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "IMF Urges Spain to Free Up Land, Cut Bureaucracy to Fix Housing",
+      "body": "The IMF has called on Spain to take more decisive action against the housing crisis by freeing up land for development and streamlining construction license procedures. The fund also warned about rising financial risks from rapidly increasing home prices and loosening credit standards.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/23/fmi-urge-espana-liberar-suelo-agilizar-licencias-para-atajar-crisis-vivienda-2022679.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "US Senators Urge Halt of Santander's Bank Purchase Over Spain Ties",
+      "body": "Two Republican US senators, Sheehy and Moreno, have asked regulators to block Santander's takeover of Webster Bank, claiming Spain is 'not a reliable ally' and citing Santander's alleged Iran sanctions risks. The move reflects deteriorating US-Spain relations over the Iran conflict.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/empresas/senadores-estados-unidos-piden-paralizar-compra-webster_6973863_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Supreme Court Rejects Suspension of Migrant Regularization",
+      "body": "Spain's Supreme Court has denied urgent requests from Vox and the Madrid regional government to suspend the extraordinary regularization of migrants approved in April. The court also threw out appeals from far-right groups for lack of standing, allowing the process to continue.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-supremo-rechaza-frenar-regularizacion-extraordinaria-migrantes-20260522175438.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Nationwide Doctor Strike Ends With Threat of More Walkouts",
+      "body": "The week-long doctors' strike ended Friday, but unions warn of renewed walkouts from June 15–19 if no agreement is reached on a new professional statute. The potential strike would come just before summer, threatening hospital services.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/aragon/2026/05/22/huelga-estatal-medicos-finaliza-este-viernes-aragon-con-amenaza-otra-semana-las-puertas-verano-2022534.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Sánchez Faces Two-Week Legal Onslaught From Multiple Scandals",
+      "body": "Prime Minister Pedro Sánchez faces a grueling two-week period with ex-PM Zapatero testifying over alleged influence peddling, the trial of his brother, the sentencing of former minister Ábalos, and a corruption investigation into party official Cerdán. The cascade of legal troubles has deepened the crisis within the PSOE.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/quince-dias-tregua-zapatero-abalos-cerdan-juicio-hermano-asfixian-sanchez-tribunales_1_13243420.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Many of you are still waiting for your 2025 tax refund—some for weeks. Has the tax agency kept you waiting too long? Let us know! 💬",
+  "headline": "🇪🇸 Spain: what you missed 👀 23.05.2026",
+  "date": "2026-05-23",
+  "generated_at": "2026-05-23T05:32:10.079742+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 334,
+    "items_selected": 8
+  }
+}

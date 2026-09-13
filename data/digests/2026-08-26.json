@@ -1,0 +1,187 @@
+{
+  "items": [
+    {
+      "title": "Spain reforms immigration law and tightens returns in Ceuta",
+      "body": "Spain approved a draft bill to reform asylum and immigration laws, speeding up returns and cutting the identification period from seven days to 72 hours. It updates refugee definitions, explicitly covering gender, gender identity or expression, and disability. A single command in Ceuta will prioritize migrant returns and repatriation. Foreign residents with pending cases may face faster procedures.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/gobierno-aprueba-un-anteproyecto-para-reformar-las-leyes-extranjeria-asilo-plena-crisis-migratoria-ceuta_7029186_0.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-gobierno-aprueba-mando-unico-ceuta-coordinacion-devolucion-repatriacion-inmigrantes-20260825142039.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Hacienda gift tax limits: transfers over €10,000 must be declared",
+      "body": "Bank transfers that can be considered donations are subject to Spain's Inheritance and Gift Tax, with a declaration threshold of €10,000 and extra scrutiny above €6,000. Banks must monitor these transactions under Law 10/2010 against money laundering. Undeclared donations can trigger fines ranging from €600 to 50% of the donation's value.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/08/25/cuanto-dinero-puedo-ingresar-familiar-impuestos-hacienda-limite-transferencias-banco-1796863.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Uber Eats delays Ley Rider compliance to the end of the year",
+      "body": "Uber Eats is still using self-employed delivery riders more than seven months after committing to comply with Spain's Ley Rider. Union talks have been stalled since June, although more than 10,000 autónomos (self-employed workers) have already moved to fleet employment since January. The company has an agreement to settle over €110 million in Social Security debt and aims to finish the transition by year-end.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/08/26/6a8dac7821efa0e3518b4596.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spain has 160,000 unfilled jobs despite high unemployment",
+      "body": "Spain has nearly 160,000 unfilled vacancies despite 2.5 million unemployed. Low salaries, an aging workforce, territorial gaps, and the housing crisis drive the mismatch. Some jobs pay €1,300 gross in cities with rents above €1,500; construction, transport, and hospitality report hiring trouble. Foreign residents may find openings, but low pay and high housing costs persist.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/hay-falta-mano-obra-sectores-vacantes-cubrir-espana-2-5-millones-parados_1_13454215.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Autónomos spend nearly €3,000 monthly just to work",
+      "body": "An autónomo (self-employed worker) without employees and with rented commercial premises spends an average of €2,980 per month, or €35,760 per year, to run their business, according to UPTA. The estimate is based on 286 opening days per year. This shows why self-employment can be financially difficult in Spain.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/08/26/empleo-autonomos-euros-mes-poder-trabajar-2047159.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spanish banks cut branches, jobs as defaults hit 17-year low",
+      "body": "Spain's major banks closed 440 branches in the year to June, reducing the network to 9,984 offices and earning record profits of €20,164 million in H1. Santander closed 266 branches, more than all other banks combined. The non-performing loan ratio fell to 2.54%, the lowest since August 2008, with bad loans down €272 million. Fewer branches can make in-person banking harder in rural areas.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/08/26/6a8d3030e4d4d8716b8b456d.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/morosidad-banca-espanola-nuevo-minimo_7029068_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain assumes full control of data center deployment",
+      "body": "The government will issue a royal decree to take full control of new data center deployment. Companies must submit compliance declarations, and projects without grid access permits can be halted. The aim is to avoid electricity price spikes and grid imbalances seen in Ireland, the Netherlands, and the US.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/08/25/6a8dc83521efa0ba2d8b458b.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain's pension spending hits record €14.47 billion in August",
+      "body": "Spain's monthly pension spending reached a record €14,470 million in August, up 6.2% from a year earlier. Social Security paid 10.5 million pensions to more than 9.5 million people, with the average pension up 4.6% to €1,373.4. The average retirement pension is €1,575; new retirees receive €1,707.2 on average. Rising pension costs matter for long-term system sustainability.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/gasto-pensiones-alcanza-nuevo-maximo-agosto-superar-los-14-470-millones_7029087_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Epidemiologist warns of epidemic risk in Ceuta migrant crisis",
+      "body": "Epidemiologist Joan Caylà warns that Ceuta faces a public health crisis, with thousands of migrants, including over 2,000 minors, at risk of tuberculosis and measles outbreaks. He estimates that 5,000 to 10,000 migrants are in Ceuta and prioritizes housing, food, and health checks over mass confinement. He calls for higher vaccination coverage to achieve herd immunity. An outbreak could spread beyond Ceuta.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/joan-cayla-epidemiologo-si-no-revisamos-diagnosticamos-los-casos-ceuta-se-pueden-generar-brotes-epidemicos_7029110_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "French potato crisis and heat-hit Spanish crop threaten prices",
+      "body": "A 23% drop in the French potato harvest and a Spanish crop hit by high temperatures could push potato prices up. French imports have already risen 33% over a decade, from 708,000 tonnes in 2016 to 941,000 in 2025. Spanish production is estimated at 1.96 million tonnes, but COAG says 20,000 more hectares would be needed to cover demand.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/crisis-patata-francesa-cosecha-espanola-castigada-calor-amenazan-alza-precios_7029191_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Moroccan minister renews claim on Ceuta and Melilla",
+      "body": "Morocco's Minister of Islamic Affairs, Ahmed Toufiq, repeated Morocco's claim to Ceuta and Melilla during a religious celebration presided over by King Mohamed VI. The statement was made before Crown Prince Moulay Hassan and Prime Minister Aziz Ajanuch. This recurring claim highlights diplomatic tensions between Spain and Morocco.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-ministro-marroqui-habla-liberacion-ceuta-melilla-mohamed-vi-celebracion-religiosa-20260825120003.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Ceuta parents fear sending children to school after influx",
+      "body": "In Ceuta, seven schools have been vandalized and some parents say they will not send their children to school when the term starts on September 8. About 8,000 undocumented immigrants remain in the city; over 2,900 minors arrived from Morocco, but only 1,635 vacant school places exist. Sofía Carrión, a 32-year-old Peruvian mother, says she will keep her 9-year-old daughter home until it is safe.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/08/25/6a8dd7f9fc6c83a6318b45bc.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Have you ever transferred more than €10,000 to family and wondered if Hacienda would come asking? 💬",
+  "variant": "Nothing happened in Spain today. Except this.",
+  "headline": "Nothing happened in Spain today. Except this.",
+  "date": "2026-08-26",
+  "generated_at": "2026-08-26T06:13:04.927326+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 290,
+    "items_selected_pass1": 15,
+    "fact_sheets_extracted": 15,
+    "items_after_importance_filter": 14,
+    "items_in_digest": 12
+  },
+  "selection_reasons": {
+    "29": "Government approves unified command in Ceuta prioritizing deportation and repatriation — key immigration policy shift.",
+    "112": "Reform of immigration and asylum laws to speed up returns directly affects all non-EU immigrants in Spain.",
+    "37": "Moroccan minister publicly claims Ceuta and Melilla before King Mohamed VI — major Spain-Morocco sovereignty flashpoint.",
+    "4": "Ceuta schools vandalized and 1,300 places missing for migrant minors — direct impact on families and public services.",
+    "18": "New decree gives government control over data center deployment, affecting tech investors and energy requirements.",
+    "10": "Spanish banks cut nearly 7,000 jobs and 440 branches amid AI rollout — affects banking access for residents.",
+    "16": "Uber Eats still uses self-employed riders seven months after Rider Law commitment — labor rights issue for gig workers.",
+    "41": "Labor shortage with 160,000 unfilled vacancies despite 2.5 million unemployed — key insight for job-seeking foreigners.",
+    "264": "Bank default rate hits lowest since 2008 at 2.54% — sign of financial stability relevant to investors.",
+    "265": "Pension spending reaches record €14.47 billion, average retirement pension up 4.5% — affects retirees and contributors.",
+    "181": "Self-employed workers spend nearly €3,000 a month to run their business — critical cost data for autónomos.",
+    "252": "Hacienda limits on tax-free gifts to family — essential tax rule for immigrants transferring money.",
+    "260": "French potato crisis and Spanish heat damage threaten price rises — cost-of-living alert for consumers.",
+    "258": "Garamendi to be re-elected CEOE president unopposed — shapes business-labor relations in Spain.",
+    "100": "Epidemiologist warns of epidemic risk in Ceuta unless migrants are screened — public health concern."
+  }
+}

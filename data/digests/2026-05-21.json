@@ -1,0 +1,134 @@
+{
+  "items": [
+    {
+      "title": "Spanish house prices to keep rising until 2027, says Oxford Economics",
+      "body": "House prices in Spain continue climbing over 10% annually and will not moderate until 2027, according to Oxford Economics. Despite cooling demand and lower mortgage activity, a supply gap of 800,000 homes since 2021 keeps prices high, though analysts say there's no bubble risk because household debt is not excessive.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/precios-vivienda-seguiran-subiendo-doble-digito-no-frenaran-2027-oxford_1_13236558.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Ayuso's false claims to block migrant regularization face Supreme Court",
+      "body": "The Madrid government asks the Supreme Court to suspend the extraordinary regularization of migrants, arguing it will 'collapse' healthcare and welfare. Critics counter that the migrants already have the right to healthcare and that Madrid's claims about immediate benefit access are false — the Renta Mínima de Inserción requires one year of legal residence.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/bulos-ayuso-pide-supremo-frenar-regularizacion-colapso-sanitario-ayudas-inmediatas_1_13237545.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Doctors on strike accuse Health Minister of ignoring them for campaign",
+      "body": "Madrid's doctors' strike enters its fourth week with the Amyts union claiming Minister Mónica García has ghosted them since announcing her candidacy for regional presidency. The union calls for her resignation, saying she prioritizes Más Madrid over her ministerial duties.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/madrid/2026-05-21/medicos-huelga-monica-garcia-mas-madrid_4358554/"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Supreme Court backs Madrid's right to charge undocumented migrant for healthcare",
+      "body": "The Supreme Court ruled that the Community of Madrid can demand payment for medical care given to a Mexican citizen who was not a legal resident in 2021. The court applied the 2003 law, not the recent decree extending free public healthcare to irregular migrants, so the debt stands.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/supremo-avala-comunidad-madrid-exigiera-ciudadano-mexicano-gastos-asistencia-sanitaria_1_13237524.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Eurozone inflation jumps to 3%, Spain hits 3.5% — highest among big euro economies",
+      "body": "Eurostat confirmed eurozone inflation accelerated to 3% in April, the highest since 2023, driven by energy costs (up 10.8%) due to the Iran conflict. Spain's harmonised inflation rose to 3.5%, above Germany (2.9%), Italy (2.8%), and France (2.5%).",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-20/inflacion-de-la-eurozona-escala-hasta-el-3_4358202/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Wealth tax loopholes cause 80% of potential revenue to be lost",
+      "body": "An Oxfam Intermón study reveals that exemptions for family businesses and the cap combined with IRPF (income tax) mean Spain's wealth tax collects only 0.17% of declared assets on average — and the richest 0.1% pay just 0.1%. The tax is rare in the EU (only Norway and Switzerland have similar schemes) and could yield four times more if reformed.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/agujeros-impuesto-patrimonio-provocan-pierda-80-recaudar_1_13237048.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Companies must compensate public holidays that fall on Saturday, court rules",
+      "body": "Spain's Audiencia Nacional ruled that if a public holiday coincides with a worker's weekly rest day on Saturday, the worker is entitled to an additional day off. The decision directly affects the contact center sector, but unions say it sets a precedent for all industries.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/audiencia-nacional-fija-festivos-caigan-sabado-deben-recuperados_1_13237818.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spain expands breast cancer screening to women aged 45–74",
+      "body": "The Public Health Commission approved extending mammography screenings from the current 50–69 range to 45–74 years old. Communities have up to six years to reach near-100% coverage, following EU and clinical recommendations to detect tumors earlier and reduce mortality.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/sanidad-amplia-cribados-cancer-mama-mujeres-45-74-anos_1_13235316.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Parliament delays debate on mutualist pension transfer to May 26",
+      "body": "The congressional committee reviewing the 'pasarela' (pathway) for mutualists (professionals like lawyers, architects who were outside the Social Security system) postponed the session by a week. Sumar pushed for the quickest possible date, but the debate now awaits government economic reports.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/debate-pasarela-miles-mutualistas-seguridad-social-atrasa-26-mayo_1_13236952.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Gas sector pressures government to increase regulated tariff, citing real costs",
+      "body": "Sedigas (Spanish Gas Association) urges the Ecological Transition Ministry to revise upward the TUR (regulated gas tariff), arguing it uses outdated benchmarks and doesn't cover supply costs. The current TUR is €21/Mwh vs. roughly €50/Mwh on the free market, which the sector says 'destroys the market'.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/sector-gasista-apremia-aagesen-revisar-alza-tarifa-regulada-no-refleja-los-costes-reales-gas_6972994_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "Housing prices in Spain won't go down until 2027 — how is this affecting your plans to buy or rent?👇",
+  "headline": "🇪🇸 Spain: what's up? 🤔 21.05.2026",
+  "date": "2026-05-21",
+  "generated_at": "2026-05-21T05:32:43.040791+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 337,
+    "items_selected": 10
+  }
+}

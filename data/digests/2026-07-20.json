@@ -1,0 +1,176 @@
+{
+  "items": [
+    {
+      "title": "Spain Wins Second World Cup with 1-0 Victory",
+      "body": "Spain defeated Argentina 1-0 in the 2026 FIFA World Cup final in New York. The victory marks Spain's second World Cup title, sparking nationwide celebrations. The festive atmosphere will impact daily life with public gatherings and media coverage across the country.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/deportes/futbol/mundial-de-futbol/2026/07/20/6a5d146bfdddff0b428b45ae.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "39% of Spaniards Need Family Help to Afford Housing",
+      "body": "A new OCU survey reveals 39% of Spaniards relied on family financial aid to buy or rent a home, averaging €26,000 over the past five years. Among those aged 25-44, half needed assistance. Spain faces a deficit of 750,000 public housing units, with only 12,858 officially protected homes approved in 2025. The severe shortage makes independent housing increasingly difficult to secure.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/07/20/ocu-alerta-necesito-ayuda-familiar-acceder-vivienda-espana-2037438.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Italy's Deputy PM Slams Spain's Immigration Regularization as Demagogic",
+      "body": "Italian Deputy Prime Minister Antonio Tajani called Spain's regularization of irregular immigrants a demagogic measure during a visit to Madrid. Tajani warned that regularized immigrants could move freely to Italy under EU rules. The criticism underscores EU tensions over immigration policy, which could influence future regularization efforts.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/internacional/2026/07/20/6a5bb5cf21efa0247d8b45a8.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Aemet Warns of 44°C Heatwave from Tuesday",
+      "body": "Aemet has issued a special warning for Spain's third heatwave of the summer, with temperatures reaching 44°C in the Guadalquivir valley and Segura basin from July 21 to 23. Nighttime temperatures will also stay unusually high. The hot, dry conditions bring extreme fire risk and possible dry thunderstorms.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/aemet-aviso-especial-ola-calor-temperaturas-extremas_7016395_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Spain Has Fifth Lowest Hospital Bed Ratio in EU",
+      "body": "Spain recorded 283.48 hospital beds per 100,000 inhabitants in 2024, the fifth lowest in the EU and well below the bloc's average of 507.35. The country has ranked among the lowest since 2009. The low ratio may lead to longer wait times and reduced hospital access, especially during health crises.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/espana-es-quinto-pais-ue-con-menos-ratio-camas-hospital_7016388_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Foreign Investment in Spanish Luxury Housing Jumps 45%",
+      "body": "Foreign money invested in high-end Spanish property rose 45% last year, with foreign buyers now representing two out of 10 real estate deals in the Valencian Community. Madrid has also joined the international luxury property circuit. The surge risks driving up prices and reducing housing stock available to residents.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/07/20/6a58c53e21efa0dc6e8b4583.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Spain Plans Stricter Building Limits in Flood Zones",
+      "body": "The government is consulting on a royal decree to restrict construction in flood-prone areas, learning from the 2024 Valencia disaster that killed 230 people. A 1957 flood led to a 12-kilometer diversion of the Turia River. Climate change is expected to increase flood frequency, making the new rules critical for future property safety.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/aprender-huella-dejada-dana-valencia_129_13388864.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Sánchez Seeks 10% Gas Increase from Algeria to Stabilize Prices",
+      "body": "Prime Minister Pedro Sánchez traveled to Algeria to normalize diplomatic relations and negotiate a 10% increase in gas supply. Algeria already supplied 35% of Spain's gas imports in 2025, while the US provided 30%. A deal could help stabilize energy costs for households.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/sanchez-viaja-argelia-para-cerrar-crisis-diplomatica-negociar-un-aumento-10-suministro-gas-espana_7016013_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Two Major Wildfires Burn 30,000 Hectares, Force Evacuations",
+      "body": "The Orés fire in Zaragoza and La Mierla fire in Guadalajara have together scorched over 30,000 hectares this year. While Orés is stabilizing, La Mierla remains active and has forced the evacuation of 25 municipalities. Authorities warn of health risks from smoke and potential air quality impacts across wider areas.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/los-dos-peores-incendios-ano-suman-mas-30-000-hectareas-frena-ores-pero-mierla-se-agrava-evacuan-25-municipios_7016423_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Olive Oil Prices Rise for First Time in 19 Months",
+      "body": "Olive oil prices rose 2.2% in June compared to last year, breaking a 19-month streak of declines. The peak was in October 2023 with a 73.5% surge. Asaja warns that 70% of traditional olive groves are unprofitable, and US trade tensions are hurting exports.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/precio-aceite-oliva-vuelve-subir-por-primera-vez-desde-octubre-2024_7016368_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Government Pushes EU-Deficit Targets Despite Expected Rejection",
+      "body": "The government will resubmit its fiscal stability path to Congress, expecting another veto. After a second rejection, it will apply deficit targets agreed with the European Commission. The move aims to maintain fiscal credibility amid political deadlock.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/gobierno-tirara-los-objetivos-deficit-pactados-con-bruselas-ante-nuevo-rechazo-previsto-congreso-su-senda_7015998_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spanish Banks Shift Focus to Wealthy Clients",
+      "body": "Major lenders including Santander, BBVA, and CaixaBank are establishing subsidiaries for family fortunes exceeding €30-50 million. The number of wealthy taxpayers in Spain rose nearly 30% to a record 18,829. Banks are also tailoring savings offers, potentially leaving average savers with less favorable conditions.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bancos-personalizan-ahorro-abrazan-grandes-patrimonios-plena-inestabilidad-politica-boom-bursatil_1_13354913.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "With 39% of Spaniards needing family help to get housing, how do foreign residents ever manage to secure a home?",
+  "variant": "Here's Spain today, in under a minute",
+  "headline": "Here's Spain today, in under a minute",
+  "date": "2026-07-20",
+  "generated_at": "2026-07-20T06:03:29.524363+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 304,
+    "items_selected_pass1": 12,
+    "fact_sheets_extracted": 12,
+    "items_after_importance_filter": 12,
+    "items_in_digest": 12
+  },
+  "selection_reasons": {
+    "1": "Spain wins World Cup — mandatory national event; must be placed in top 7.",
+    "19": "Italian VP criticizes Spain's regularization of irregular migrants — directly affects immigration policy and non-EU residents.",
+    "23": "Record foreign investment in luxury housing in Spain — key for property investors and expats.",
+    "100": "Government pushes deficit targets despite Congress rejection — fiscal policy impacts economy and taxes.",
+    "112": "Spain ranks fifth lowest in EU hospital beds per capita — healthcare capacity affects all residents.",
+    "61": "Banks create specialized subsidiaries for large fortunes — relevant for wealthy expats and investors.",
+    "62": "New regulation proposed to limit construction in flood zones after Valencia floods — affects property buying and development.",
+    "102": "Sánchez travels to Algeria to increase gas supply — energy costs and diplomacy affect economy and households.",
+    "111": "AEMET warns of third heatwave with up to 44°C — immediate daily life and health impact.",
+    "104": "Two largest wildfires of the year exceed 30,000 hectares — national-scale natural disaster.",
+    "229": "Olive oil price rises for first time since October 2024 — directly impacts cost of living.",
+    "203": "OCU reports 39% of Spaniards need family help to access housing — highlights housing affordability crisis."
+  }
+}

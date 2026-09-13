@@ -1,0 +1,155 @@
+{
+  "items": [
+    {
+      "title": "Two-thirds of regularization applicants are Latin American",
+      "body": "Over 900,000 migrants have applied for Spain's extraordinary regularization process. 65% of applicants are from Latin America, with Colombians making up 30% of the total. Moroccans account for 14%, Venezuelans 10%, and Peruvians 9%. Most applicants entered Spain by plane, not irregularly. The procedure will determine the legal status of hundreds of thousands of applicants.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/tercios-900-000-migrantes-han-pedido-regularizacion-son-latinoamericanos-mayoria-colombianos_1_13315436.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Spain faces Saudi Arabia after Cape Verde draw",
+      "body": "Spain drew 0-0 with Cape Verde in their opening World Cup match. Their next game is against Saudi Arabia on Sunday, June 21 at 18:00. Saudi Arabia relies on defensive tactics, as shown in their 1-1 draw with Uruguay, where they had only 27% possession but scored from a corner. Key players include Salem Al-Dawsari and goalkeeper Mohammed Alowais. The match is a must-watch for football fans in Spain.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/deportes/futbol/2026/06/18/contra-quien-juega-espana-proximo-partido-mundial-mejores-jugadores-2026-2029921.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Bank of Spain: housing deficit up to 750,000 homes",
+      "body": "The Bank of Spain has warned that Spain's housing deficit stands between 700,000 and 750,000 homes and is growing. It criticized the government's focus on demand-side measures such as rent caps and youth rental bonds as insufficient. Instead, it urges a focus on increasing supply and recommends temporary limits on tourist and seasonal rentals in stressed areas. Tourist flats now represent about 10% of the rental market. The tight housing market affects all residents, and policy shifts could improve access and affordability.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/06/18/6a33ff70e9cf4adf2f8b457f.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/banco-espana-cifra-hasta-750-000-deficit-viviendas-apuesta-por-un-limite-temporal-los-pisos-turisticos-temporada_6984943_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Doctors end strike with 3 million appointments canceled",
+      "body": "A five-week doctors' strike in Spain ended Friday, with over 3 million medical appointments suspended. The conflict centers on the Estatuto Marco, a new law for healthcare professionals approved on June 2. While unions have declared a truce for summer, they warn of an indefinite strike after summer if the government does not meet their demands. Residents may face continued disruptions in accessing medical care.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/los-medicos-cierran-su-ultima-huelga-con-mas-tres-millones-citas-suspendidas-prevision-un-paro-indefinido-tras-verano_6984965_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Bank of Spain raises inflation forecast to 3.6%",
+      "body": "The Bank of Spain has raised its 2026 inflation forecast to 3.6%, the highest since 2022, due to the energy crisis caused by the Iran war. Growth forecasts remain unchanged at 2.3% for 2026 and 1.7% for 2027. The ECB also projects eurozone inflation at 3.5%. The central bank warns of a partial pass-through of energy price shocks to other goods, raising living costs for all residents.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/banco-espana-dispara-su-prevision-inflacion-maximos-desde-2022-pero-mantiene-crecimiento-pese-guerra-iran_6984668_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Sick leave notifications go digital from September",
+      "body": "Starting in September, Spain's Social Security will notify workers about temporary and permanent disability via SMS or email with a link to the digital portal. Recipients will need Cl@ve, DNIe, or a digital certificate to access the full notification. In-person assistance will remain available at CAISS offices for those with limited digital skills. Workers on sick leave should prepare for the new digital system.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/18/oficial-boe-cambia-sistema-notificaciones-trabajadores-baja-laboral-2027140.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Absenteeism hits record, costing €33 billion",
+      "body": "Spain's absenteeism rate reached 7.68% in 2025, a record high, with 1.6 to 1.7 million workers absent daily. The total cost amounts to €33 billion, with €17 billion borne by companies and €16 billion by Social Security. The CEOE has proposed that Social Security assume all sick leave costs, freeing companies from paying. Any policy changes could affect working conditions for employees and employers.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/06/18/6a33fff2e85ecef35e8b457f.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Anti-tourism commandos sabotage 153 Madrid flats",
+      "body": "In a coordinated attack, 153 tourist apartments across seven districts of Madrid were vandalized overnight. The hooded perpetrators blocked locks, destroyed NFC readers, and sprayed slogans such as 'More neighbors, less Airbnb.' No arrests have been reported. The incident underscores growing tensions around tourist rentals, which could lead to stricter regulations. Property owners who rent out tourist apartments may face heightened risks.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/madrid/2026/06/19/6a345957e9cf4a686b8b457a.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Congress approves restoring old Renfe delay payouts",
+      "body": "The Spanish Congress has approved a PP proposal to force Renfe to reinstate compensation for train delays: 50% refund for delays of 15 minutes and 100% for 30 minutes. The government voted against, but the motion passed with 185 votes in favor, 152 against, and 10 abstentions. The proposal also calls for a national plan to renew the vehicle fleet. Train travelers stand to benefit from improved compensation.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/congreso-aprueba-una-propuesta-pp-que-exige-las-antiguas-indemnizaciones-por-retrasos-renfe-con-gobierno-contra_6985193_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Government to ban ultra-processed foods in schools",
+      "body": "The government will prohibit ultra-processed foods and sugary drinks from breakfasts and snacks in schools, hospitals, and other public centers. The measure will be enacted through a royal decree for healthy eating in public institutions. Families with children in Spanish public schools can expect healthier menu options.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/educacion-00468/noticia-gobierno-excluira-ultraprocesados-bebidas-azucares-anadidos-desayunos-meriendas-colegios-20260619080049.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "Were you one of the 900,000 who applied for Spain's regularization? We'd love to hear your story. 💬",
+  "variant": "What mattered in Spain today",
+  "headline": "What mattered in Spain today",
+  "date": "2026-06-19",
+  "generated_at": "2026-06-19T06:47:33.421633+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 15,
+    "items_fetched": 371,
+    "items_selected_pass1": 11,
+    "fact_sheets_extracted": 11,
+    "items_after_importance_filter": 11,
+    "items_in_digest": 10
+  },
+  "selection_reasons": {
+    "10": "El Banco de España enmienda la política de vivienda del Gobierno: déficit de 750.000 viviendas. Afecta directamente al mercado inmobiliario y a los inquilinos.",
+    "51": "Dos tercios de los 900.000 solicitantes de regularización son latinoamericanos. Información clave para inmigrantes en España.",
+    "315": "El Banco de España eleva la previsión de inflación al 3,6%, máximo desde 2022. Impacta en el poder adquisitivo.",
+    "128": "Los médicos cierran la última huelga con más de 3 millones de citas suspendidas. Afecta gravemente la atención sanitaria.",
+    "206": "Previa del partido decisivo de España contra Arabia Saudí en el Mundial 2026. Inclusión obligatoria.",
+    "7": "Comandos anti-Airbnb sabotean más de 150 pisos en Madrid. Refleja el conflicto por los alquileres turísticos, relevante para inversores.",
+    "35": "El Gobierno prohibirá ultraprocesados y bebidas azucaradas en desayunos y meriendas escolares. Afecta a familias con hijos.",
+    "143": "El Congreso restablece las antiguas indemnizaciones por retrasos de Renfe. Beneficia a viajeros frecuentes.",
+    "314": "El Banco de España propone un límite temporal a los pisos turísticos y de temporada. Futura regulación relevante para propietarios e inversores.",
+    "305": "El BOE cambia el sistema de notificaciones para trabajadores de baja laboral a partir de septiembre. Afecta directamente a empleados.",
+    "11": "El absentismo alcanza récord histórico: 1,7 millones de trabajadores faltan cada día. Indicador relevante del mercado laboral."
+  }
+}

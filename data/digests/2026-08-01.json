@@ -1,0 +1,127 @@
+{
+  "items": [
+    {
+      "title": "⚠️ Italy suspends Schengen with Spain as Ceuta deaths reach 67",
+      "body": "Italy suspended the Schengen free-movement regime with Spain at maritime and air borders, effective Saturday, after the mass migrant influx into Ceuta killed at least 67 people. About 50,000 migrants reached the Spanish enclave in recent days. Spain will install buoys at the Ceuta breakwater to create a visual border for express returns, following a Supreme Court ruling. Italian Prime Minister Giorgia Meloni announced the one-month suspension, citing national security, while Spanish Prime Minister Pedro Sánchez called the events a 'violation of territorial integrity'. Travelers between Italy and Spain now face additional checks.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/internacional/noticia-italia-cierra-frontera-maritima-aerea-espana-pleno-choque-crisis-ceuta-20260731184133.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-numero-muertos-entrada-masiva-ceuta-asciende-67-personas-20260801095044.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/sanchez-anuncia-colocacion-boyas-espigon-ceuta-para-crear-una-barrera-visual-que-permita-repatriaciones-expres_7021358_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": true
+    },
+    {
+      "title": "Euribor hits 2.86% as inflation climbs, raising mortgage costs",
+      "body": "The Euribor closed July at 2.855%, its highest since September 2024, while eurozone inflation reached 2.9% in July, driven by a 10% surge in energy prices. The combination makes a September ECB rate hike more likely. On a typical €150,000 variable mortgage over 30 years with a 0.99% differential, monthly payments will rise by about €65, or €777 per year. Core inflation edged up to 2.5%. The higher Euribor directly burdens homeowners with variable-rate loans.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/euribor-cierra-julio-2-86-nivel-alto-septiembre-2024-avanza-hipotecas-caras_1_13420632.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/inflacion-eurozona-sube-2-9-julio-abre-puerta-subida-tipos-interes-septiembre_1_13419893.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Valencia raises wealth tax exemption to €2 million for 23,000 wealthy residents",
+      "body": "The Valencian government, led by PP with Vox support, raised the wealth tax exemption to €2 million, meaning roughly 8 out of 10 wealthy residents in the region will owe nothing. About 23,000 wealthy residents are now exempt. The regional government also cut the IRPF for earners above €100,000, and cumulative inheritance and donation tax savings have exceeded €630 million this legislative term. High-net-worth individuals in the Valencian Community stand to see a significant reduction in their tax bills.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/comunitat-valenciana/politica/pp-vox-vuelven-bajar-impuestos-ricos-valencianos-perdonan-62-millones-patrimonio-8-10_1_13417473.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Disability pension reviews end at retirement age, Spain confirms",
+      "body": "Spain's Social Security confirmed that permanent disability benefits automatically convert to retirement pensions once the beneficiary reaches ordinary retirement age, with no further medical reviews allowed. The payment amount stays the same, as in the case of a €1,200 monthly total permanent disability pension. Article 200.2 of the General Law of Social Security prohibits reviews after that point. The rule offers financial certainty to older recipients.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-08-01/seguridad-social-incapacidad-permanente_4397502/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "ICO to offer €12.25 billion in affordable housing loans from September 1",
+      "body": "Spain's state credit agency ICO will launch €12.25 billion in loans on September 1 to build affordable housing, with at least half earmarked for rental units. The program, part of the 'España Crece' fund, includes non-repayable aid for rentals capped at €9 per square meter. Only about ten companies have previously used similar ICO financing, which resulted in 3,720 homes. The new funding could expand the supply of affordable housing.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ico-activara-septiembre-prestamos-12-250-millones-construir-vivienda-asequible_1_13421261.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Spain wildfires burn five times more land than last year",
+      "body": "Forest fires across the EU destroyed 457,459 hectares through July 29, a 31.8% increase from 2025, with Spain the hardest hit at 217,609 hectares burned—five times the 41,903 hectares from the previous year. Large fires affected southwestern Madrid, Ávila, Toledo, Guadalajara, Castellón and the French region of Gironde. Environment Minister Sara Aagesen cited a national figure of about 180,000 hectares. Intensifying wildfires pose risks to health and property.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/07/31/incendios-forestales-arrasan-32-superficie-ano-2041500.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Navia, Asturias to see Spain's longest total eclipse on August 12",
+      "body": "The Asturian town of Navia will experience nearly 1 minute 50 seconds of total darkness during the August 12 solar eclipse, the longest duration in Spain. The partial eclipse starts at 19:30, totality runs from 20:26 to 20:28, and the event ends at 21:21. It will be the first total eclipse visible from the Iberian Peninsula in more than a century. The maximum totality on Earth reaches 2 minutes 18 seconds, according to the National Geographic Institute.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-08-01/navia-pueblo-asturias-mas-dura-eclipse-solar-12-agosto-1qrt_4398440/"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Italy just suspended Schengen with Spain - have you ever faced sudden border checks within the EU? Share your experience 👇",
+  "variant": "Spain in 30s",
+  "headline": "Spain in 30s",
+  "date": "2026-08-01",
+  "generated_at": "2026-08-01T08:05:01.672421+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 264,
+    "items_selected_pass1": 11,
+    "fact_sheets_extracted": 11,
+    "items_after_importance_filter": 10,
+    "items_in_digest": 7
+  },
+  "selection_reasons": {
+    "27": "Death toll in Ceuta mass border crossing rises to 67 — the largest migration crisis in Spain's recent history, with 50,000 arrivals and 48,000 returned.",
+    "24": "Italy temporarily suspends Schengen free movement with Spain, adding border checks for travelers — direct impact on anyone moving between Spain and Italy.",
+    "124": "Sánchez announces sea barriers in Ceuta and plans to fast-track repatriation law changes — key immigration policy shift affecting future border management.",
+    "78": "Euribor closes July at 2.86%, highest since 2024, raising variable mortgage payments by about €65 monthly — critical for property owners and buyers.",
+    "79": "Eurozone inflation ticks up to 2.9%, signalling possible ECB rate hikes in September — affects borrowing costs for mortgages and business loans in Spain.",
+    "80": "ICO will open €12.25 billion in loans for affordable housing in September — major funding opportunity for developers and a response to Spain's housing crunch.",
+    "227": "Social Security confirms permanent disability pensions will no longer be reviewed at retirement age — a rule change with lasting consequences for beneficiaries, including immigrants.",
+    "264": "Spain celebrates its World Cup triumph as coach Luis de la Fuente shares the trophy with fans — the country's biggest sporting achievement of the year.",
+    "94": "Spain braces for a total solar eclipse on August 12, with best visibility in northern regions — a once-in-a-century event expected to draw millions of visitors.",
+    "180": "Wildfires have burned 32% more land in the EU this year, with 180,000 hectares lost in Spain — rising fire risk affects property safety and climate policy.",
+    "52": "Valencia's PP-Vox government expands wealth tax exemption to €2 million, saving millions for 8 out of 10 taxpayers — a significant tax break for affluent residents and investors."
+  }
+}

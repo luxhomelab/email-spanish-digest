@@ -1,0 +1,207 @@
+{
+  "items": [
+    {
+      "title": "Police Warn TIE Card Processing Nears Collapse",
+      "body": "Nearly 3 million regularized migrants face severe delays as police cite insufficient resources and illegal appointment trafficking, with slots selling for €100 to €2,000. Over 1,200 appointments are pending. The TIE card is essential for legal identification, work, and services. Those who need their cards should anticipate long waiting times.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/07/15/6a566cede9cf4add058b45b1.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Spain Reaches World Cup Final After Beating France 2-0",
+      "body": "Spain defeated France in the semifinal with goals from Mikel Oyarzabal and Pedro Porro. The team will play for the title on Sunday, July 19, in New York—the second World Cup final appearance in its history. The historic match is a major national event that may disrupt schedules and services.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/deportes/futbol/mundial-de-futbol/2026/07/14/6a5664ace85ecedb0d8b456f.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Foreign Workers Reach Record 15.4% of Spain's Labor Force",
+      "body": "Foreign Social Security affiliates hit 3.45 million in June, growing 11.3% year-on-year—four times the overall rate. Hospitality (31.5%), agriculture (28.9%), and construction (25.9%) depend heavily on immigrant labor. Foreign workers also sign more permanent contracts than Spaniards, reflecting strong labor demand.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/07/14/6a56490afc6c83303f8b4584.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Gibraltar Border Opens, Free Movement Restored After 5 Years",
+      "body": "The Verja fence was removed at midnight, allowing people and goods to move freely between La Línea and Gibraltar for the first time in five years. Gibraltar gains partial Schengen benefits. Spanish PM Pedro Sánchez plans to visit the area. Commuters and cross-border workers will see immediate improvements in daily travel.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/andalucia/cadiz/verja-gibraltar-cae-cinco-anos-intensas-negociaciones_1_13380394.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Home Sales Fall 7.3% in May, Fifth Straight Monthly Decline",
+      "body": "Transactions dropped to 56,462, with existing home sales down 7.6% and new homes down 6%. Despite the cooling market, prices continue rising at double-digit rates. The persistent affordability squeeze makes it harder to purchase property, even as sales slow.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/compraventa-vivienda-cae-7-3-quinto-mes-seguido-baja_1_13379969.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Absenteeism Costs Spain Up to €129B, Young Workers Lead Record Sick Leave",
+      "body": "The real cost of labor absenteeism ranges from €60 billion to €129 billion, far above the official €30 billion. The absenteeism rate hit a record 7.6% in 2025, with 1.6 million people absent daily, 80% on medical leave. Young workers aged 16-34 take more sick leave than older employees, driven by mental health, says economist Gonzalo Bernardos. Rising costs may lead to tighter sick leave rules for all workers.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/07/14/6a56297fe85ece470f8b4578.html"
+        },
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-07-15/economista-jovenes-tienen-bajas-laborales-trabajadores_4389204/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Court Annuls Dismissal of Worker on Anxiety Leave, Awards €6,000",
+      "body": "The Superior Court of Justice of Murcia ruled the firing discriminatory, rejecting the company's unproven claim of a 30% performance drop. The worker receives reinstatement with back pay and €6,000 in moral damages. The decision, based on Law 15/2022, strengthens protection against dismissal during mental health leave for all employees.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/un-tribunal-anula-despido-disciplinario-un-comercial-tras-cogerse-baja-por-ansiedad_7014421_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "PP, Vox and Junts Block Budget Path, Delaying Fiscal Plans",
+      "body": "Congress rejected the government's stability path, the first step toward the 2026 budget. Junts' no vote was decisive, while Podemos also opposed due to defense spending. Finance Minister Arcadi España will resubmit the plan next week. Budget uncertainty could affect taxes and public services.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/pp-vox-junts-unen-fuerzas-asestar-golpe-gobierno-tumban-primer-examen-congreso-presupuesto_1_13379988.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Tourist Apartment Supply Drops 10% Amid Legal Void",
+      "body": "Spain lost 36,911 tourist rental places through May. Valencia (-15.2%) and Alicante (-18.6%) saw the biggest declines, while Madrid and Barcelona still hold 40% of the 330,516 available spots. The Supreme Court annulled the state register, creating regulatory uncertainty that complicates short-term rental plans for hosts and guests.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/exceltur-calcula-una-caida-10-los-pisos-turisticos-hasta-mayo-llama-resolver-vacio-tras-anulacion-registro-unico_7014454_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Congress Passes Reform of Disability and Dependency Laws",
+      "body": "The reform ends benefit incompatibilities, automatically links disability recognition to dependency degrees, and creates the 'asistente personal' figure. The state must now cover 50% of dependency costs. People with disabilities or dependent family members will gain easier access to aid and services.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/epsocial/igualdad/noticia-congreso-aprueba-reforma-leyes-discapacidad-dependencia-abstencion-pp-20260714202102.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "9-Month Treasury Bill Yield Rises to 2.63%, Highest Since 2024",
+      "body": "The Treasury placed €2,126 million, with the 9-month yield reaching 2.630%. The 12-month yield fell to 2.523%. Higher short-term yields signal rising interest rates, which could push up mortgage costs for variable-rate loans and improve returns on savings.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/rentabilidad-letras-nueves-meses-alcanza-2-63-su-nivel-mas-alto-desde-noviembre-2024_7014426_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Morocco Closes Ceuta and Melilla Customs, Citing Summer Travel",
+      "body": "Morocco unilaterally shut the borders, citing Operation Paso del Estrecho as justification. About 3.5 million people cross these borders during the three-month summer period. The closures disrupt trade and daily travel for residents of the Spanish enclaves.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-07-15/marruecos-cierre-aduanas-ceuta-melilla-excusa-operacion-paso-estrecho_4389888/"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Red Alert Heatwave: Temperatures Could Hit 42°C in Valencia and Aragon",
+      "body": "Aemet has issued maximum danger warnings for Valencia and Aragon, with the east expecting 38-40°C. Storms and strong winds also threaten Valencia. Residents in affected areas should take precautions against extreme heat, which can disrupt work and daily life.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/el-tiempo/calor-dispara-miercoles-maximas-42-grados-aviso-rojo-comunidades-pm_1_13379693.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Chinese EV Investment Grows in Spain, Gigafactory Leads the Way",
+      "body": "Electric vehicles now represent 13% of Chinese FDI in Spain, with the CATL-Stellantis gigafactory in Figueruelas standing out. Energy (17%) and logistics (14%) remain top sectors. This investment could create jobs and business opportunities in the automotive and green energy fields.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/aragon/2026/07/15/un-estudio-sobre-inversion-china-espana-destaca-emblematica-gigafactoria-zaragoza-2037201.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "How long have you been waiting for a TIE appointment? Share your experience below 👇",
+  "variant": "If you live in Spain, read this",
+  "headline": "If you live in Spain, read this",
+  "date": "2026-07-15",
+  "generated_at": "2026-07-15T06:05:32.850271+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 386,
+    "items_selected_pass1": 15,
+    "fact_sheets_extracted": 15,
+    "items_after_importance_filter": 15,
+    "items_in_digest": 14
+  },
+  "selection_reasons": {
+    "1": "Spain reaches World Cup final, mandatory inclusion as a national event",
+    "8": "Foreign workers now essential in several sectors and sign more permanent contracts than locals, direct labor impact",
+    "11": "Police warn of collapse in ID card appointments for regularized immigrants, affecting residency processes",
+    "93": "Home sales fell 7.3% for fifth consecutive month, signaling property market slowdown",
+    "148": "Tourist rentals dropped 10% after registry annulment, affecting property investors",
+    "54": "Gibraltar border fully opened after EU-UK agreement, historic change for cross-border life",
+    "34": "Congress approved dependency law reform adding 6.2 billion euros, affecting care system",
+    "50": "Government's budget deficit path rejected by Congress, raising fiscal uncertainty",
+    "12": "Real cost of absenteeism quadruples official figure, concerning employers and investors",
+    "297": "9-month Treasury bills yield reaches 2.63%, highest since November 2024, attracting investors",
+    "128": "Morocco closes Ceuta and Melilla customs for OPE, affecting border trade and travel",
+    "69": "Red alert heat wave with up to 42°C, health risk for residents",
+    "305": "Court nullifies disciplinary dismissal for anxiety leave, setting labor rights precedent",
+    "183": "Chinese investment in Spain highlighted with giant gigafactory in Zaragoza",
+    "285": "Economist points to higher sick leave among young workers, sparking labor debate"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "title": "Fuel prices push inflation to 4.3% in August",
+      "body": "Spain's CPI rose to 4.3% in August, up 0.7 points from July and the highest since early 2023. Underlying inflation moderated to 2.9%. Fuel price increases, linked to the Iran conflict and holiday travel, drove the rise, while food prices fell less than they did a year ago. The prolonged conflict has also pushed Euribor to its highest level since September 2024, worsening the September cost squeeze.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/subida-precio-carburantes-acelera-inflacion-4-3-agosto-alta-2023_1_13471795.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/enquistamiento-conflicto-iran-inflama-precios-energeticos-propicia-peor-cuesta-septiembre-anos_1_13472069.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Government transfers first €800M of housing plan",
+      "body": "The government transferred the first €800 million of the State Housing Plan 2026-2030 to autonomous communities. The plan has a total investment of €7,000 million, 60% from the government and 40% from regions. Public housing built with these funds must remain permanently protected. The ministry opened a public consultation on monitoring mechanisms.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gobierno-transfiere-primeros-800-millones-plan-vivienda-autonomias_1_13472188.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "⚠️ Flexible retirement now opens to self-employed",
+      "body": "The new flexible retirement regime came into force on August 28, three months after approval, allowing autónomos (self-employed) to combine a pension with work. It includes new supplements for those opting in. UPTA says the reform excludes autónomos who contributed to RETA in the three years before retiring, creating a 'quarantine' period. The association argues that former employees who become self-employed after retiring have easier access.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/entra-vigor-jubilacion-flexible-autonomos-volver-trabajar-cobrar-pension-viernes_1_13471856.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/upta-denuncia-que-nueva-jubilacion-flexible-impide-acceso-los-autonomos-que-se-retiran_7030312_0.html"
+        }
+      ],
+      "category": "work",
+      "important": true
+    },
+    {
+      "title": "Marlaska: 5,000 migrants remain in Ceuta, €35M border plan",
+      "body": "Interior Minister Marlaska says 5,000 migrants remain in Ceuta, including 1,500 minors; 72,000 entered on July 30-31 and 70,000 returned. PP and Vox claim the real figure is around 20,000. The government announced €35 million for border reinforcement and requested Frontex, Europol, and EUAA support. Humanitarian aid for Ceuta rose from €6.4 million to €44.51 million, and CETI capacity rose 116% to 1,105 places.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/marlaska-rebaja-5-000-los-migrantes-que-siguen-ceuta-anuncia-35-millones-para-reforzar-permanentemente-frontera_7030326_0.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-espana-solicita-comision-europea-apoyo-frontex-europol-triaje-inmigrantes-irregulares-ceuta-20260828191953.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/directo-crisis-migratoria-ceuta-ultima-hora-comparecencias-marlaska-albares-elma-saiz_7029801_6.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Over 100 migrants expelled for crimes in Ceuta",
+      "body": "More than 100 migrants were detained for crimes in Ceuta, and their expulsion was requested. Officials recorded 17 sexual assaults, including seven rapes and 10 other assaults, with victims mostly vulnerable women. Humanitarian groups report rising intimidation and violence, leading some volunteers to leave. On Thursday, dozens blocked a Red Cross truck at Trampolín beach for over two hours, shouting 'the Red Cross is a mafia.'",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/mas-un-centenar-inmigrantes-han-sido-expulsados-por-delitos-ceuta-donde-se-han-registrado-menos-17-agresiones-sexuales_7030363_0.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/ataques-trabajadores-humanitarios-ceuta-obligan-retirarse-seguridad_1_13473262.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Ibex 35 returns to 20,000 points after rate hints",
+      "body": "The Ibex 35 rose 0.81% to close at 20,041.9 points. The gain returned the index to the 20,000-point mark. Fed President Kevin Warsh's speech at Jackson Hole raised expectations of a possible rate hike.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/bolsa-00348/noticia-ibex-35-retoma-20000-puntos-subir-casi-warsh-adelantando-nuevas-subidas-tipos-20260828181750.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "How has the latest inflation spike changed your monthly budget in Spain? 🤔",
+  "variant": "What everyone in Spain is talking about today",
+  "headline": "What everyone in Spain is talking about today",
+  "date": "2026-08-29",
+  "generated_at": "2026-08-29T06:08:47.926397+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 277,
+    "items_selected_pass1": 11,
+    "fact_sheets_extracted": 11,
+    "items_after_importance_filter": 11,
+    "items_in_digest": 6
+  },
+  "selection_reasons": {
+    "81": "Inflation hits 4.3% in August, the highest in three years, directly impacting cost of living for all residents.",
+    "27": "Spain requests Frontex and Europol support for migrant triage in Ceuta, a key migration policy development.",
+    "35": "Humanitarian workers in Ceuta face attacks and intimidation, forcing some to withdraw amid escalating racist violence.",
+    "42": "Rising energy prices due to the Iran conflict and higher Euribor signal the worst September cost squeeze in years.",
+    "77": "New flexible retirement rules take effect, allowing autónomos and pensioners to combine work with pension.",
+    "117": "Over 100 migrants expelled from Ceuta for crimes and 17 sexual assaults reported, highlighting security concerns.",
+    "119": "Interior Minister says 5,000 migrants remain in Ceuta and announces €35M for permanent border reinforcement.",
+    "264": "Government transfers first €800M of the Housing Plan to regions, with permanent VPO protection requirements.",
+    "32": "Ibex 35 recovers 20,000 points as Fed chief Warsh hints at further rate hikes, affecting mortgages and investments.",
+    "256": "UPTA denounces that the new flexible retirement scheme excludes many autónomos, calling for reform.",
+    "109": "Government expands humanitarian aid for Ceuta to €44.5M, seeking EU funding for migration crisis costs."
+  }
+}

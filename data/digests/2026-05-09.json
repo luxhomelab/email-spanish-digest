@@ -1,0 +1,74 @@
+{
+  "headline": "🇪🇸 Spain — 09.05.2026",
+  "items": [
+    {
+      "title": "Economist: 870,000 'Employed' Spaniards Actually Inactive",
+      "body": "Economist Marc Vidal has criticized employment data, revealing 870,000 people registered as fijos discontinuos (permanent discontinuous workers) who are inactive—neither working nor receiving pay—yet not counted as unemployed. He notes the seasonally adjusted series shows only 41,753 new affiliates, far below the 223,000 celebrated by the government, and that only 16.8% of new contracts were full-time indefinite.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/marc-vidal-personas-espana-llevan-meses-cobrar-trabajar-no-cuentan-parados_6968224_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Hacienda Sends 130,000 'Fear Letters' to Taxpayers",
+      "body": "Spain's tax agency (AEAT) will send around 130,000 preventive letters to taxpayers during the current income tax (Renta) campaign, colloquially known as 'cartas del miedo' (fear letters). The letters, in two phases in May and June, are intended to allow voluntary correction of errors before penalties, which can range from 50% to 150% of unpaid tax. Last year, over 45,000 people amended their returns after receiving such notices.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/08/hacienda-enviara-unas-130-000-cartas-preventivas-los-contribuyentes-que-hayan-hecho-esto-declaracion-renta-2018548.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "EU Eases Airline Rules to Avoid Mass Flight Cancellations",
+      "body": "The European Commission has adopted exceptional guidelines to temporarily relax aviation regulations to prevent flight cancellations and route closures due to potential kerosene shortages from the Middle East crisis. The guidelines clarify passenger compensation rights and prohibit airlines from raising prices on tickets already sold due to higher fuel costs. The double blockade of the Strait of Hormuz affects 40% of global kerosene, and the IEA warned the EU could face supply issues by late May if conflict continues.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-08/bruselas-flexibiliza-las-normas-del-sector-aereo-vuelos_4352137/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Possible Hantavirus Case Detected in Alicante Woman",
+      "body": "Spanish health authorities have identified a possible case of hantavirus in a woman from Alicante who was on the same flight as a passenger who later died in Johannesburg. The woman has been isolated at home and transferred to a hospital, awaiting PCR test results. The European Early Warning and Response System alerted Spain to two people on the flight destined for the country.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/mujer-aislada-espana-sintomas-hantavirus-pasar-ahora_1_13206674.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Aznar Slams Vox: 'Who Will Do Immigrants' Work If We Expel Them?'",
+      "body": "Former Prime Minister José María Aznar has criticized calls for mass deportation of immigrants, arguing that Spain needs immigrant labor as the native population declines. He emphasized the value of legal immigration, particularly from Latin America, citing shared language and culture, and warned against promoting immigration from other regions, citing integration problems in Catalonia.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/aznar-se-lanza-contra-vox-los-que-piden-expulsion-masiva-deberan-explicar-quien-hara-trabajo-los-inmigrantes_6968163_0.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    }
+  ],
+  "engagement": "💬 If you received a 'carta del miedo' from Hacienda this year, would you voluntarily correct your return or wait it out?",
+  "date": "2026-05-09",
+  "generated_at": "2026-05-09T05:33:00.287429+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 292,
+    "items_selected": 5
+  }
+}

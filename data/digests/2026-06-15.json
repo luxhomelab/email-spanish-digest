@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "title": "Finance Ministry launches platform to intercept public debt payments",
+      "body": "The Ministry of Finance introduced the 'Punto Neutro de Embargos,' a digital platform connecting public administrations to share debtor data. When a payment is due to a listed debtor, the system generates an automatic alert. Creditors then have three days to request a seizure of those funds to settle outstanding obligations. Larger entities can join immediately, while smaller administrations have six months to adapt to the new algorithmic system.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/15/oficial-hacienda-confirma-nueva-plataforma-retendra-pagos-tienes-deudas-publicas-2028581.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Landlords must repair rented properties in poor condition",
+      "body": "Article 21 of the Urban Leases Law legally obliges landlords to maintain rental properties in optimal health and habitability conditions. This includes fixing water and electricity installations, roofs, walls, floors, and boilers damaged by normal wear. Tenants can unilaterally terminate their contracts if the property owner refuses to complete these necessary repairs. The mandate protects the roughly 25% of the population that currently rents their housing.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/15/confirmado-ley-alquileres-casero-obligacion-reparar-vivienda-mal-estado-2024104.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "New fashion sector agreement standardizes retail worker conditions",
+      "body": "The first state-level collective agreement for large fashion chains unifies working conditions for over 120,000 employees across Spain. Signed on June 2, the pact covers brands like Zara, H&M, and Mango, ending the previous fragmentation of terms by province. The agreement applies to retail chains with more than 400 employees and a presence in at least three autonomous communities. This standardization establishes uniform nationwide rights for wages and working hours in the sector.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/nuevo-convenio-moda-pone-anomalia-laboral-zara-mango-grandes-marcas_129_13293639.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "University housing crisis leaves students facing severe shortages",
+      "body": "Approximately 650,000 university students studied away from home last year, yet only 122,000 beds are available in residences nationwide. Public university residences offer just 21,000 beds, forcing many to seek expensive private alternatives. Private rooms start at around €400 per month, with premium options exceeding €2,000. The Autonomous University of Barcelona operates the only public facility among the top 10 operators, offering 2,200 beds starting at €281 monthly.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/buscar-alojamiento-universitario-crisis-vivienda-deficit-plazas-residencias-pisos-compartidos-por-mas-400-euros_6982505_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Aging workforce threatens pension sustainability and business operations",
+      "body": "Spain's aging population creates significant risks for businesses, with over 40% of critical positions currently filled by older workers. More than half of the workforce is now over 45, and the average age exceeds 45. Over the next decade, 5.2 million workers will retire while only 1.8 million new employees enter the labor market. This shrinking workforce ratio of one new hire for every three retirees pressures pension sustainability and social security contributions.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/06/14/6a2bf605fc6c8396428b459d.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Major utilities cut renewable investments as electricity prices fall",
+      "body": "Iberdrola, Endesa, and Naturgy are reducing investments in renewable energy due to falling wholesale electricity prices and over 500 hours of negative pricing this year. The companies are shifting their focus toward regulated network assets that offer more predictable returns. Iberdrola now plans to allocate 65% of its €58 billion investment budget for 2026-2028 to networks, up from 60%. These grid networks are expected to contribute 55% of gross operating profit by 2028.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/grandes-electricas-espanolas-frenan-inversiones-renovables-drastica-caida-precios_1_13297933.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Unanimous vote required to use common terraces for rentals",
+      "body": "Article 17 of the Horizontal Property Law mandates unanimous approval from all owners to convert a common terrace into private use for tourist rentals. Without full consensus, any modification affecting the title deed or community bylaws remains invalid. This strict requirement limits the ability of individual property owners to expand short-term rental operations using shared spaces. Homeowners must secure complete agreement from their community before altering common area usage.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-06-15/ley-propiedad-horizontal-usar-terraza-comunitaria-piso-turistico-apoyo-propietarios-1qrt_4372224/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Government bypasses parliament with massive budget modifications",
+      "body": "The Spanish government has executed over 182,000 million euros in budget modifications since 2023 without parliamentary approval due to the lack of an approved state budget. The opposition PP is now demanding the rejection of the General Account of the State, citing this lack of fiscal control. A reviewing commission with a PP and Vox majority is expected to reject the 2024 accounts, marking a first in Spanish democracy. The move highlights ongoing tensions over public spending transparency.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/06/15/6a2e9847fdddff56798b4570.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "PP demands health minister dismissal over ongoing strikes",
+      "body": "The PP's Carmen Fúnez called on Prime Minister Sánchez to dismiss Health Minister Mónica García, blaming her management for an 11-month healthcare strike. A new week of strike action began on Monday across all of Spain, continuing to disrupt medical services. The opposition argues the prolonged conflict remains unsolvable under the current minister's leadership. Persistent walkouts threaten consistent access to care for residents relying on the public health system.",
+      "sources": [
+        {
+          "name": "Infosalus",
+          "url": "https://www.infosalus.com/actualidad/noticia-pp-pide-cese-monica-garcia-huelga-sanitaria-solucion-imposible-mientras-gobierno-20260614124029.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "How have foreign residents handled landlords who refuse essential repairs? 👇",
+  "variant": "What You Missed in Spain in the Last 24 Hours",
+  "headline": "What You Missed in Spain in the Last 24 Hours",
+  "date": "2026-06-15",
+  "generated_at": "2026-06-15T06:10:06.898303+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 242,
+    "items_selected_pass1": 10,
+    "fact_sheets_extracted": 10,
+    "items_after_importance_filter": 9,
+    "items_in_digest": 9
+  },
+  "selection_reasons": {
+    "5": "Aging workforce threatens pension system and labor market, directly impacting all workers and contributors in Spain.",
+    "9": "Government bypasses budget with €182B in adjustments, raising fiscal stability concerns that could affect taxes and economic confidence.",
+    "28": "Pope concludes his visit to Spain, a major national event per digest criteria that also reflects on Spain's international relations.",
+    "30": "Doctors' strike escalates with PP demanding minister's dismissal, directly affecting healthcare access for all residents.",
+    "52": "Major electric companies halt renewable investments due to price drops, potentially increasing electricity costs for consumers.",
+    "69": "First national collective agreement for fashion retail covers 120,000 workers, setting labor standards in a key sector.",
+    "99": "Student housing shortage highlights the broader rental crisis, affecting housing availability and prices for all renters.",
+    "196": "Legal confirmation that landlords must repair dwellings even against their will, strengthening tenant protections.",
+    "197": "Hacienda's new platform can withhold payments for public debts, directly affecting taxpayers and debtors.",
+    "240": "Property law requires unanimous neighbor approval for using common terraces for tourist apartments, critical for short-term rental investors."
+  }
+}

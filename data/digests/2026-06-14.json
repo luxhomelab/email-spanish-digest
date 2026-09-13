@@ -1,0 +1,109 @@
+{
+  "items": [
+    {
+      "title": "Housing Prices Hit Record Highs as Coliving Booms",
+      "body": "Housing prices in nine Spanish regions surpassed previous bubble-era records in the first quarter of 2026. Madrid leads the surge at €4,075 per square meter, a 16.4% year-on-year jump, followed by the Balearic Islands and the Basque Country. Meanwhile, investment funds plan to double coliving and flex-living rentals to 38,000 units, bypassing housing law rent caps. These unregulated seasonal rentals target high-income earners and digital nomads with rooms costing up to €900, further squeezing affordable housing options in city centers.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/vivienda-sigue-subiendo-bate-record-burbuja-inmobiliaria-varias-provincias_6982910_0.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/boom-coliving-flex-living-anglicismos-fondos-esquivar-ley-vivienda-habitaciones-900-euros_1_13297214.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "EU Migration Pact Tightens Border Controls",
+      "body": "The EU Migration and Asylum Pact entered into force on June 12, introducing stricter border controls and faster deportations across the bloc. The agreement includes plans to establish return centers modeled after Italian policies to expedite the expulsion of irregular migrants. European Commissioner Brunner criticized Spain's recent mass regularization of migrants during the policy shift. This EU-wide tightening signals a stricter immigration environment that could eventually impact visa policies and residency requirements.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/internacional/2026/06/13/6a2c166ae85ece04078b456f.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Disciplinary Dismissal for Low Performance Yields Compensation",
+      "body": "Companies in Spain face significant legal hurdles when attempting to fire employees for alleged low performance. Labor lawyer Juanma Lorente notes that disciplinary dismissals based on poor productivity are difficult to prove in court and often result in an unfair dismissal ruling. When a judge declares the firing unfair, the employee becomes entitled to substantial financial compensation, especially those with long tenure. Workers should consult a lawyer rather than automatically accepting such termination notices.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/juanma-lorente-abogado-laboralista-revela-despido-favorece-trabajadores-normal-consigas-indemnizacion_6981766_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spain Objects to Valencian Housing Law Prioritizing Locals",
+      "body": "The Spanish Housing Ministry filed formal objections against a draft law in the Valencian Community that prioritizes local residents for affordable housing. The regional proposal introduces a \"continuous territorial linkage\" criterion for public-private housing projects, which the national ministry argues may be unconstitutional. The changes follow a scandal in Alicante regarding the allocation of protected housing and require support from the Vox party to pass. If enacted, the law could restrict foreign residents' access to publicly subsidized homes in the region.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/comunitat-valenciana/politica/gobierno-alega-ley-vivienda-protegida-perez-llorca-alentar-prioridad-nacional-encubierta_1_13298420.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Lawyer Reminds Passengers of Flight Delay Compensation Rights",
+      "body": "Air passengers often overlook their right to financial compensation for flight disruptions under EU Regulation 261/2004. Lawyer Xavi Abat highlights that travelers can claim compensation for delays exceeding three hours, cancellations, or denied boarding due to overbooking. Despite these clear legal protections, many passengers remain unaware of the process to claim compensation. Foreign residents who travel frequently should verify their eligibility for compensation after any significant travel disruption.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-14/xavi-abat-abogado-vuelo-retrasado-cancelado-derecho-indemnizacion-1qrt_4372242/"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "La Gilda del Norte Owner Appeals Labor Rights Conviction",
+      "body": "The owner of the Bilbao restaurant La Gilda del Norte appealed his criminal conviction for violating the labor rights of foreign workers. He was convicted in April by the Audiencia Provincial de Bizkaia, but his lawyer argues for acquittal based on the principle of double jeopardy. The defense claims that because the owner already accepted administrative sanctions and paid fines from the Labor Inspectorate, a criminal conviction is precluded. The case highlights the ongoing legal enforcement of workplace protections for vulnerable employees.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/euskadi/dueno-gilda-norte-recurre-sentencia-le-condeno-vulnerar-derechos-laborales-extranjeros_1_13298274.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "With Madrid prices hitting €4,075 per square meter, is buying a home in Spain completely out of reach for you now? 🏠",
+  "variant": "Today's Top Stories from Spain",
+  "headline": "Today's Top Stories from Spain",
+  "date": "2026-06-14",
+  "generated_at": "2026-06-14T05:35:25.948295+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 255,
+    "items_selected_pass1": 13,
+    "fact_sheets_extracted": 13,
+    "items_after_importance_filter": 7,
+    "items_in_digest": 6
+  },
+  "selection_reasons": {
+    "9": "EU migration pact signals stricter immigration controls, directly affecting future residency rules for non-EU immigrants.",
+    "50": "Funds double coliving and flex living units to bypass rent caps, critical for tenants and housing investors.",
+    "55": "Spanish government challenges Valencia's housing law prioritizing locals, potentially impacting foreign buyers' access.",
+    "67": "Appeal in landmark labour exploitation case involving foreign workers sets precedent for immigrant rights.",
+    "114": "Wildfires in three regions force evacuations; national-scale disaster affecting property and air quality.",
+    "188": "Clashes between antifascists and far-right groups in Barcelona injure police, raising safety concerns.",
+    "197": "Young Spanish investors flock to stocks, reflecting economic trends and investment opportunities for foreigners.",
+    "198": "Ibex companies lead Europe in dividend growth, signaling strong corporate performance relevant to investors.",
+    "199": "Sixteen new EV models and gigafactories arrive in Spain, boosting industrial sector and job market.",
+    "232": "Flight delay compensation rights explained; practical tip for frequent travelers and expats.",
+    "238": "Housing prices hit record highs in many provinces, surpassing bubble levels; essential for buyers and renters.",
+    "240": "Labour lawyer clarifies dismissal rules and indemnities, helping workers understand their rights.",
+    "244": "Summer energy cost gap of up to €130 across regions affects household budgets significantly."
+  }
+}

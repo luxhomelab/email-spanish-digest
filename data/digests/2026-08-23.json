@@ -1,0 +1,178 @@
+{
+  "items": [
+    {
+      "title": "Rent burden now 10 points above mortgage costs",
+      "body": "An average Spanish family needs to spend 39% of net income on rent for a two-bedroom home, versus 29% for a typical mortgage, according to Idealista data for Q2 2026. Landlords now demand permanent contracts, one year of employment history, detailed bank statements, three months' deposit, and even LinkedIn profiles. One in three tenants moves to a different neighborhood to afford rent.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/08/23/esfuerzo-para-pagar-renta-una-vivienda-se-dispara-diez-puntos-por-encima-destinado-compra-2046575.html"
+        },
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/08/23/uno-cada-tres-inquilinos-se-muda-barrio-para-poder-pagar-alquiler-2046576.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Gibraltar cross-border workers must return to Spain weekly",
+      "body": "Under the new EU-UK-Spain treaty on Gibraltar, more than 10,000 cross-border workers, mostly Spanish, must return to Spain at least once a week. The treaty provisionally entered into force over a month ago, ending the physical border. EU citizens legally residing in Spain but working in Gibraltar, including the self-employed (autónomos), must comply. Worker certificates are valid for 12 months and are renewable, with online applications available.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/andalucia/2026/08/23/6a888cb9e9cf4a706f8b4578.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Social Security official criticizes early retirement penalties",
+      "body": "Workers with over 40 years of contributions are still penalized when taking early retirement, according to Social Security official Alfonso Muñoz. Early retirement is possible with at least 35 years of contributions but permanently reduces the pension. The association ASJUBI40 demands the elimination of reduction coefficients for long contribution histories.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/alfonso-munoz-funcionario-seguridad-social-hay-personas-que-han-trabajado-mas-40-anos-son-penalizados-cuando-solicitan-su-pension-anticipadamente_7028404_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Ceuta still in chaos as migrant crisis persists",
+      "body": "Three weeks after 72,000 migrants crossed from Morocco, Ceuta remains overwhelmed, with thousands still on the streets and the CETI at its limit. Commercial losses have reached €27.7 million, and Minister Carlos Cuerpo will visit to provide aid, including €25 million for unaccompanied minors. Morocco has asked Spain to repatriate surviving migrants and the bodies of those who drowned in the crossing.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/ceuta-sumida-caos-gobierno-fracasa-devolucion-reagrupacion-migrantes-miles-continuan-calles-ciudad_7028289_0.html"
+        },
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/08/23/gobierno-intenta-parar-golpe-economico-crisis-ceuta-con-visita-ministro-carlos-cuerpo-para-inyectar-ayudas-2046594.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/internacional/noticia-marruecos-pide-espana-devuelva-migrantes-supervivientes-fallecidos-paso-ceuta-20260822165043.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Spain shows critical climate vulnerability with heat deaths and fires",
+      "body": "Thousands of deaths this summer are attributable to heat, a quarter of a million hectares have burned, and drought is forcing some northern towns to rely on water trucks. The 2025 government evaluation warns of rising temperatures, more heatwaves, reduced rainfall, and more extreme events. Similar patterns occurred in 2022 and 2025.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/espana-muestra-vulnerabilidad-critica-cambio-climatico-miles-muertes-calor-incendios-sequia_1_13455322.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Doctors' strike suspended in five Spanish regions",
+      "body": "Medical unions have reached agreements in Asturias, Galicia, Comunidad Valenciana, País Vasco, and Andalucía to suspend strikes. Madrid and Aragón still have negotiations pending in September. Common demands include a 35-hour ordinary working week and making on-call shifts voluntary within five years. Salary improvements for MIR medical residents are also included.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/salud/2026/08/22/6a8095a3fdddffc1778b45a3.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Airbus Spain faces new strike over telework and pay",
+      "body": "Airbus Spain workers are considering an indefinite strike starting August 25 after conflicts over telework cuts and dissatisfaction with salaries. Assemblies on Monday will decide on a new indefinite strike from Tuesday, August 25. Airbus has proposed guaranteeing that salary increases keep pace with the IPC (inflation) and accelerating recovery of lost purchasing power. The unions UGT, CGT, and Útil are involved.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/airbus-afronta-nueva-huelga-conflicto-estallo-teletrabajo-revelado-ola-insatisfaccion_1_13458383.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Ceuta tests Spain-Morocco minors return agreement",
+      "body": "The 2007 Spain-Morocco agreement on returning unaccompanied minors has never resulted in a repatriation since it entered into force in 2012. Ceuta has identified 2,168 unaccompanied minors, many of them still on the street without care. Secretary of State for Youth and Childhood, Rubén Pérez Correa, called the situation abnormal and urgent. Experts stress the pact is not a blanket authorization for returns.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/ceuta-vuelve-poner-prueba-acuerdo-retorno-menores-marruecos-no-autorizacion-devolucion_1_13460711.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Spain's border controls on travelers from Italy affect nearly 7,700 people",
+      "body": "Spain's identity checks on travelers from Italy, ordered after Italy suspended Schengen, have affected 7,696 people across Spanish airports as of August 22. Controls began August 8 and have covered 696 flights involving 1,144 agents. Checks are concentrated at Madrid-Barajas, El Prat, Málaga, Sevilla, Valencia, and island airports.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/los-controles-fronterizos-espana-viajeros-procedentes-italia-afectan-ya-casi-7-700-personas_7028369_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Minister rejects second runway for Alicante-Elche airport",
+      "body": "Transport Minister Óscar Puente says Alicante-Elche airport needs terminal expansion, not a second runway, despite record passenger numbers. The Generalitat Valenciana called for the runway after the airport surpassed 19.9 million passengers in 2025, up 8.5% year-on-year. Spain plans €13 billion in airport investment for 2027-2030.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/comunitat-valenciana/noticia-puente-rechaza-segunda-pista-aeropuerto-alicante-elche-no-tiene-sentido-ahora-necesita-terminal-fingers-20260822102249.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "HP Iberia CEO says Spain attractive for investment",
+      "body": "Inés Bermejo, CEO of HP Iberia, highlights Spain's combination of talent, infrastructure, and lifestyle as a draw for investment, despite Spain not being the best in any single area. She started at HP over 25 years ago as an intern. AI is seen as a key opportunity for companies to differentiate themselves.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/08/22/6a6a4186fc6c83551a8b458a.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "Would you move to another neighborhood just to afford rent in Spain?",
+  "variant": "Spain today. Briefly.",
+  "headline": "Spain today. Briefly.",
+  "date": "2026-08-23",
+  "generated_at": "2026-08-23T08:04:43.115264+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 228,
+    "items_selected_pass1": 14,
+    "fact_sheets_extracted": 14,
+    "items_after_importance_filter": 14,
+    "items_in_digest": 11
+  },
+  "selection_reasons": {
+    "119": "Ceuta migration crisis — thousands still on streets, government response failing, directly affects migration policy and public order",
+    "29": "Morocco demands return of migrants and bodies — key diplomatic and migration policy development",
+    "168": "Government economic rescue plan for Ceuta with €25M for minors — direct impact on migration and local economy",
+    "108": "Spain-Italy border controls affect 7,700 travelers — impacts freedom of movement for residents and visitors",
+    "9": "10,000 Spanish workers in Gibraltar must now return weekly — major change for cross-border workers",
+    "8": "Doctors' strike continues with negotiations in five regions — affects healthcare access nationwide",
+    "48": "Airbus faces new strike over pay and telework cuts — labor dispute affecting thousands of workers",
+    "174": "Rent burden exceeds 30% of income — housing affordability crisis affecting all renters",
+    "175": "One in three renters forced to move due to rising rents — evidence of housing market stress",
+    "37": "Spain's critical vulnerability to climate change — heat deaths, fires, drought — affects residents' safety and cost of living",
+    "11": "HP CEO highlights Spain's investment appeal — relevant for investors and digital nomads",
+    "35": "Minister rejects second runway at Alicante-Elche airport — infrastructure decision affecting travelers and investors",
+    "216": "Early retirement pension penalties — directly affects retirees and long-term contributors",
+    "39": "Legal limits on returning migrant minors to Morocco — key migration policy and human rights issue"
+  }
+}

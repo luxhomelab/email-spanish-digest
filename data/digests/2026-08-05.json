@@ -1,0 +1,139 @@
+{
+  "items": [
+    {
+      "title": "⚠️ Ceuta border crisis: 75 dead, asylum screening begins for 2,500",
+      "body": "At least 75 migrants have died and around 2,500 remain in Ceuta as the National Police began individual asylum screenings, following last week's mass crossing that saw 72,000 enter Spanish territory. Moroccan citizens whose asylum claims are rejected face return procedures, while EU interior ministers praised Spain's 'extraordinary work' in returning 70,000 people. Italian Prime Minister Meloni seized on the crisis to relaunch her anti-migration agenda, including deportation plans to third countries. The screening outcomes and EU political reactions may rewrite the rules for anyone seeking protection in Spain.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-policia-nacional-comienza-triaje-valorar-asilo-migrantes-ceuta-entrada-masiva-20260804211759.html"
+        },
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-08-04/cadaveres-migrantes-ceuta-guardia-civil-1tps_4400821/"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/marlaska-dice-que-ue-reconoce-trabajo-extraordinario-espana-ceuta-sube-72-000-los-migrantes-que-cruzaron-frontera_7022485_0.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/internacional/hay-detras-embestida-meloni-espana-crisis-ceuta_1_13428253.html"
+        }
+      ],
+      "category": "visa",
+      "important": true
+    },
+    {
+      "title": "Spain hits 22.5 million workers after huge migrant regularization",
+      "body": "Social Security affiliations averaged a record 22,508,065 in July, boosted by the extraordinary regularization of nearly 262,500 previously undocumented migrant workers. Unemployment rose by 19,500, which the government partly attributed to the same regularization process. The formalization grants these workers full Social Security and labor rights for the first time.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/espana-supera-record-22-5-millones-trabajadores-gracias-regularizacion-paro-sube-19-500-personas_1_13426483.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "New property law arms owners with tools against unpaid community fees",
+      "body": "A reformed Ley de Propiedad Horizontal now lets property owners claim unpaid common expenses under €2,000 and strip delinquent neighbors of voting rights in community meetings. The rules, updated in the BOE on July 24, also require approval from three-fifths of owners for tourist apartment rentals. Debts must first be claimed and notified via a notarial act or burofax, and asset seizure is possible. These enforcement measures apply directly to property owners in Spain.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/08/04/ley-propiedad-horizontal-cambia-normas-si-vecino-no-paga-propietarios-pueden-acudir-articulo-21-1869333.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Ibex 35 breaks new ground, closes above 20,000 points",
+      "body": "Spain's benchmark Ibex 35 index closed at a record 20,023 points, up 0.21%, as European and US markets also advanced. Brent crude oil rose 1.6% to €86 a barrel, and ArcelorMittal shares gained on steel industry recovery signals. The milestone affects investments, pensions, and savings across the country.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ibex-35-bate-registros-superar-20-000-puntos_1_13428045.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain's 12-month bill yield climbs to 2.679%, highest since 2024",
+      "body": "The Treasury sold €6,215 million in six- and twelve-month bills, with the 12-month marginal interest rate jumping from 2.523% to 2.679%. The 6-month bill yield rose to 2.512%, the highest since January 2025, as total demand hit €11,079 million. Rising yields can push up mortgage rates and savings returns for households in Spain.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/mercados/2026-08-04/espana-vende-letras-a-un-ano-con-un-interes-del-2-679-maximos-desde-septiembre-de-2024_4400675/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Plan Auto+ opens with up to €4,500 in electric vehicle subsidies",
+      "body": "The €400 million Plan Auto+ program began accepting applications on August 4 for purchases made from January 1, 2026. Subsidies reach up to €4,500 for passenger cars and €5,000 for light commercial vehicles, and dealers must provide at least a €1,000 discount. Those buying an electric car in Spain can apply online.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/motor/ecomovilidad/solicitar-ayuda-coches-electricos-plan-auto-documentos-necesarios-enviarlos_1_13414017.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Barcelona El Prat airport strike cancels flights, disrupts travel",
+      "body": "Ground handling staff at Barcelona's El Prat airport began an indefinite strike on August 4, causing at least 16 cancellations and affecting around 20 flights. The CGT union says participation is 'very high' among the 1,175 workers, who denounce deteriorating risk prevention and unsustainable workloads. Groundforce serves airlines including Air Europa, Lufthansa, Air France, KLM, Qatar Airways, and Etihad Airways.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/huelga-personal-tierra-facturacion-embarque-aeropuerto-prat-afecta-20-vuelos_1_13426799.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spain confirms its hottest and driest summer on record",
+      "body": "Aemet reported that June–July 2026 averaged 24.5°C, 2.9°C above the 1991–2020 norm, with just 17 liters per square metre of rain—the driest since records began in 1961. Five of the warmest such periods have occurred since 2015. Extreme heat and drought affect health, energy costs, and water supply for everyone in Spain.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/aemet-confirma-que-este-verano-es-mas-calido-seco-espana-desde-1961_7022418_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Do you think the Ceuta crisis will make it harder for migrants to regularize their status in Spain? 👇",
+  "variant": "What everyone in Spain is talking about today",
+  "headline": "What everyone in Spain is talking about today",
+  "date": "2026-08-05",
+  "generated_at": "2026-08-05T06:04:12.466757+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 289,
+    "items_selected_pass1": 11,
+    "fact_sheets_extracted": 11,
+    "items_after_importance_filter": 11,
+    "items_in_digest": 8
+  },
+  "selection_reasons": {
+    "42": "Italy's Schengen suspension with Spain over the Ceuta crisis directly affects freedom of movement and travel for all foreign residents.",
+    "126": "Death toll from the Ceuta crossing rises to 75 — central to the migration crisis and Spain's border policy.",
+    "144": "72,000 migrants entered Ceuta and 70,000 were returned — key figures defining the scale of the crisis and its political fallout.",
+    "28": "Police start asylum triage for migrants in Ceuta — a process that determines their legal status and residency prospects.",
+    "48": "Spain hits a record 22.5 million workers thanks to the regularization of 262,500 foreigners — major labor market data for all foreign residents.",
+    "90": "Ibex 35 breaks the 20,000-point barrier for the first time — a key economic indicator for investors and expats.",
+    "259": "Spanish Treasury pays 2.679% on 12-month bills, the highest since 2024 — affects savings and fixed-income investors.",
+    "92": "The Plan Auto+ opens for applications with up to €4,500 in subsidies for electric vehicles — a direct benefit available to residents.",
+    "94": "Indefinite strike at Barcelona El Prat airport disrupts flights — affects travel for thousands of international residents and visitors.",
+    "148": "AEMET confirms the hottest and driest summer since 1961 — significant climate context for everyday life in Spain.",
+    "247": "Changes to Spain's horizontal property law let communities act against non-paying owners — relevant for property owners and landlords."
+  }
+}

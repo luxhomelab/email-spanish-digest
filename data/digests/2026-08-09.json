@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "title": "⚠️ Spain-Italy border checks begin amid Ceuta migration crisis",
+      "body": "Spain has begun random passport and residence permit checks on travelers from Italy at ports and airports, effective from August 8 through September 7. The move is a direct response to Italy's suspension of Schengen rules and comes amid a bitter diplomatic feud between Prime Minister Pedro Sánchez and Italian PM Giorgia Meloni over the influx of migrants in Ceuta. Ceuta's president estimates 8,000 to 11,000 migrants remain in the city, describing the situation as 'unsustainable' and suggesting Morocco may be responsible. Travelers between Spain and Italy, including foreign residents, should carry their passport and residence permit to avoid delays at airports like Madrid-Barajas and Barcelona-El Prat.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/08/08/6a772d1dfdddff19488b45c1.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/noticia-vivas-estima-todavia-hay-8000-11000-migrantes-ceuta-tacha-situacion-insostenible-20260808142844.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/espana-inicia-los-controles-viajeros-italia-gobierno-decide-establecerlos-hasta-septiembre-como-respuesta-meloni_7023866_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": true
+    },
+    {
+      "title": "Small savers pile into Spanish Treasury bills as yields hit multi-year highs",
+      "body": "Retail investors poured €15 billion into Spanish Treasury bills over six months, driving household holdings to a record €20.331 billion in May. The six-month bill yielded 2.512% at the latest auction, the highest since January 2025, while 12-month bills reached 2.679%, the best since September 2024. The surge reflects oil prices rising over 40%, inflation above 3%, and the ECB's June rate hike. Savers can access these higher returns directly through the Treasury's website.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/pequeno-ahorrador-vuelve-las-letras-tesoro-demanda-15-000-millones-6-meses_7023899_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Delaying retirement could boost payouts for Spain's over-52 workers",
+      "body": "Workers receiving the over-52 subsidy may come out ahead by waiting until ordinary retirement age instead of taking early retirement, according to Social Security official Alfonso Muñoz Cuenca. During the subsidy period, contributions are based on 125% of the minimum base (€1,726 per month), while the subsidy itself pays €480 monthly. An early pensioner collects about €1,300 a month compared to €1,550 at ordinary retirement age—a gap that recoups the €24,000 shortfall from two extra years of subsidy in roughly eight years. Workers approaching retirement should run the numbers for their own situation.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/alfonso-munoz-cuenca-funcionario-seguridad-social-no-haber-solicitado-jubilacion-anticipada-si-se-cobra-subsidio-para-mayores-52-compensa_7023685_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Over-55 workers in Spain hit a record 5 million",
+      "body": "Employment among people over 55 reached 5 million in the second quarter, a historic high, according to the latest EPA survey from the INE. This age group now accounts for 22% of Spain's 22.7 million Social Security affiliates. The trend signals a labor market that increasingly retains and hires older workers, opening opportunities for those seeking jobs later in life.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/08/09/los-trabajadores-mayores-55-anos-se-disparan-superan-los-cinco-millones-2043418.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "More and younger girls in Ceuta's surge of migrant minors",
+      "body": "The Spanish government says the profile of unaccompanied minors arriving in Ceuta has shifted dramatically since the July 30 mass entry, with more girls and children under 13 compared to the mostly 15-to-17-year-old boys seen in May 2021. Minister Sira Rego said police are prioritizing identification of these children, and transfers to the mainland will start soon. The change could influence Spain's child protection policies and the broader migration debate.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/gobierno-advierte-un-cambio-llegada-menores-ceuta-muy-pequenos-muchas-ninas_7023779_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "International police dismantle Mediterranean migrant smuggling network",
+      "body": "Guardia Civil, Policía Nacional and Europol broke up one of the Mediterranean's largest human smuggling rings, arresting 78 people—77 in Spain and one in Algeria. The network brought over 2,000 migrants irregularly into Spain using high-speed boats that also carried drugs, generating profits exceeding €24 million. Authorities said the group used 'very violent' methods and was behind at least 64 migration episodes. The operation signals increased law enforcement pressure along key routes.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/comunitat-valenciana/desarticulada-mayores-estructuras-criminales-especializadas-trafico-maritimo-personas-mediterraneo_1_13435798.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "What time to see Spain's total solar eclipse on August 12",
+      "body": "A total solar eclipse will cross Spain on Wednesday, August 12, with the Moon's shadow entering Galicia and sweeping across the north. Totality will be visible in many northern areas, while the south will see a partial eclipse. Maximum viewing times are A Coruña at 20:28, Madrid at 20:30, and Barcelona at 20:29, according to the Instituto Geográfico Nacional. An interactive map is available to check exact timings by location.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/horario-eclipse-solar-este-12-agosto-que-hora-se-vera-cada-lugar-espana_7023784_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Hotel prices spike tenfold in northern Spain for eclipse night",
+      "body": "Accommodation costs in the path of the August 12 total eclipse have skyrocketed. In Palencia, remaining rooms range from €500 to €1,000, compared to €60–€80 a week later. Soria hotels are charging up to €1,200, with a floor of €300, while A Coruña reaches €800. León prices swing from €300 to €1,000. Travelers hoping for a last-minute trip should brace for steep overnight rates.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/noche-mas-cara-verano-dormir-bajo-eclipse-cuesta-hasta-diez-veces-mas-los-hoteles-norte_7023584_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Wildfire in Huelva forces 410 evacuations, burns 4,000 hectares",
+      "body": "Over 500 firefighters and military personnel are making initial gains against the forest fire in Niebla, Huelva, but 410 people remain evacuated and more than 4,000 hectares have burned. Crews have contained the fire's tail near a landfill, though concern lingers over wind gusts above 25 km/h. Residents in Huelva province should stay alert for evacuation updates and road closures.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/andalucia/huelva/primeros-avances-controlar-incendio-niebla-miedo-nuevos-cambios-viento_1_13436511.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Already traveling to Italy this month? Have you been stopped for these new border checks yet? 👇",
+  "variant": "The Spain update you actually need",
+  "headline": "The Spain update you actually need",
+  "date": "2026-08-09",
+  "generated_at": "2026-08-09T08:03:17.647800+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 249,
+    "items_selected_pass1": 12,
+    "fact_sheets_extracted": 12,
+    "items_after_importance_filter": 11,
+    "items_in_digest": 9
+  },
+  "selection_reasons": {
+    "2": "Spain-Italy clash over migration and border controls — institutional crisis at EU level affecting all travelers",
+    "25": "8,000–11,000 migrants still in Ceuta and 'no papers' pledge — central migration policy story for residents",
+    "121": "Spain reinstates border controls with Italy until September — directly affects travel and mobility for foreign residents",
+    "75": "Major migrant-smuggling network dismantled in Spain — key security and immigration enforcement news",
+    "103": "Practical guide to the historic total solar eclipse on 12 August — nationwide event with timing and visibility details",
+    "234": "Hotel prices for eclipse night up to ten times higher — direct cost impact for anyone planning to travel in northern Spain",
+    "173": "Spain's World Cup-winning hero Ferran Torres transfer news — mandatory inclusion of Spain's major tournament victory",
+    "236": "Small savers return to Spanish Treasury bills amid rate hikes and inflation — key investment and economy news",
+    "237": "Official advice on early retirement vs. 52+ subsidy — relevant for older foreign workers planning pensions in Spain",
+    "161": "Workers over 55 exceed five million — labor market trend affecting older expats and immigrants",
+    "44": "Major wildfire in Huelva with 4,000 hectares burned and evacuations — national-scale natural disaster",
+    "116": "Government warns of shift in unaccompanied minors arriving in Ceuta — important migration policy update"
+  }
+}

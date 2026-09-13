@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "title": "You Don't Pay IRPF on Inherited Property, Expert Says",
+      "body": "Inheriting property in Spain does not trigger IRPF (income tax) as it would be double taxation, explains tax lawyer David Jiménez. Only Inheritance Tax (Impuesto de Sucesiones) applies, which varies by region.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-26/david-jimenez-bienes-adquiridos-herencia-no-tributan-irpf-doble-tributacion_4361351/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Police Report Accuses Zapatero's Daughters in Influence Peddling Network",
+      "body": "A police report from UDEF states that former PM Zapatero's daughters' company, Whathefav, provided no 'technical value' and served to channel payments from two Venezuelan-linked firms totaling over €800,000. The company allegedly only formatted reports and sent them to clients provided by Zapatero.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/sumario-caso-zapatero-atribuye-hijas-presidente-puesto-clave-red-trafico-influencias_1_13249498.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Oil Drops 6% on Peace Hopes as War Adds €6.2 Billion to Pension Costs",
+      "body": "Brent crude fell nearly 6% to $97 amid signs of a US-Iran peace deal, easing fuel prices. Meanwhile, the Spanish government weighs extending its anti-war economic shield, as the conflict drives inflation to 3.1% and is projected to increase annual pension spending by €6.2 billion, pushing the average retirement pension to €1,630.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/petroleo-cae-6-97-dolares-posible-acuerdo-paz-eeuu-e-iran_1_13247104.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/gobierno-se-reunira-con-los-agentes-sociales-para-decidir-si-amplia-modifica-las-medidas-contra-guerra_6974845_0.html"
+        },
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/05/26/6a144097e85ece14148b4593.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "School Ratio Reduction Bill Will Benefit Rich More Than Poor Schools",
+      "body": "A government bill to reduce class sizes and teachers' hours is estimated to cost €2.8 billion annually but will allocate more funds to schools in wealthy areas, according to an EsadeEcPol report. The law, still pending congressional approval, could widen educational inequality.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/proyecto-bajar-ratios-tramita-gobierno-destinara-fondos-colegios-ricos-pobres_1_13248594.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Calls Grow for Sánchez to Call Early Elections as Corruption Scandals Mount",
+      "body": "The PP, PNV, CC, and former PM Felipe González join voices asking Prime Minister Pedro Sánchez to advance general elections, citing multiple corruption investigations involving his government including the 'Zapatero case' and the 'case of the masks'.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-aumentan-voces-pidiendo-sanchez-adelante-elecciones-pp-pnv-cc-felipe-gonzalez-garcia-page-20260525183104.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Sánchez Unveils €9 Billion Climate Plan with €4.7 Billion for Housing",
+      "body": "The Social Climate Plan, now in public consultation, allocates €4.7 billion to help vulnerable households with energy-efficient housing rehabilitation and €4.3 billion to decarbonize mobility. The aim is to reduce energy bills and emissions.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/sanchez-lanza-plan-social-clima-9-000-millones-4-700-rehabilitar-vivienda_1_13248052.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "'RETA Bridge' for Mutualists Stalls in Congress Over Risk to Other Autónomos",
+      "body": "The reform allowing some professionals to switch from private mutualities to the RETA (Régimen Especial de Trabajadores Autónomos, self-employed regime) has been postponed again. ATA warns it must remain financially neutral to avoid harming current autónomos.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-25/pasarela-reta-mutualistas-autonomos-pensiones-1hms-1svm_4361146/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "New Hantavirus Case Found in Cruise Ship Quarantine, Patient Asymptomatic",
+      "body": "Another contact under quarantine at Gómez Ulla hospital tested positive for hantavirus after the Hondius cruise ship outbreak. The patient is asymptomatic and has been transferred to a high-level isolation unit.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.infosalus.com/asistencia/noticia-nuevo-positivo-hantavirus-personas-aisladas-hospital-gomez-ulla-mantiene-asintomatico-20260525195530.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "Did you know inheriting property in Spain doesn't trigger IRPF? Share your experience with inheritance taxes here 💬",
+  "headline": "🇪🇸 Spain: what's up? 🤔 26.05.2026",
+  "date": "2026-05-26",
+  "generated_at": "2026-05-26T05:31:52.482368+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 307,
+    "items_selected": 10
+  }
+}

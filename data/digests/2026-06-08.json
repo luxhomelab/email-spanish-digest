@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "title": "Forced into early retirement, workers with 40+ years of contributions face reduced pensions",
+      "body": "Three people who started working at age 14 and contributed for over 40 years now receive pensions reduced by 24-26% because they were forced into early retirement. They demand the elimination of penalty coefficients for those with 40 or more years of contributions.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/cotizar-mas-40-anos-para-cobrar-una-pension-reducida-nos-obligaron-jubilarnos-anticipadamente-sin-pedirlo_6978013_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Companies sold 45,000 more homes than they bought in 2025 amid exits and regulation changes",
+      "body": "One in ten homes sold in Spain in 2025 was bought by a company, but firms are now net sellers: they sold 123,777 properties while buying 78,669, a difference of 45,108. Experts attribute this to investment funds leaving and regulatory uncertainty, with a smaller role from rising prices.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/salida-fondos-regulacion-alza-precios-animan-las-empresas-soltar-pisos-2025-vendieron-45-000-mas-que-compraron_6979742_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Labor lawyer warns companies are wearing down workers to force voluntary resignation without severance",
+      "body": "Juanma Lorente describes how some Spanish employers gradually make the work environment hostile—increasing pressure and assigning unpleasant tasks—so that employees eventually quit voluntarily. This 'silent dismissal' tactic leaves workers without severance pay or unemployment benefits.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-07/lorente-abogado-laborista-empresas-desgastan_4365664/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spaniards' consumption per capita slows to 0.8% annual growth since COVID, down from 2.3% before pandemic",
+      "body": "According to CaixaBank Research, real consumption per person has stagnated since the pandemic, growing only 0.8% per year on average from 2019-2025 versus 2.3% from 2013-2019. This indicates that well-being has stopped improving despite stronger GDP growth.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/macroeconomia/2026/06/08/6a22ae6721efa036628b45a0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "New family doctors defy primary care crisis: 'They told me not to waste my medical residency spot'",
+      "body": "María Ochoa, a 24-year-old doctor, chose family medicine despite others advising her to pick a more competitive specialty. While dermatology and plastic surgery fill up rapidly in the MIR selection, family medicine slots remain available until the end, yet these new doctors are pushing back against the narrative that no one wants primary care.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/nuevos-medicos-familia-desafian-crisis-atencion-primaria-mir-decian-no-desaprovechara-plaza_1_13277682.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Israel ignores Trump's plea, strikes Iran as ceasefire teeters on the brink",
+      "body": "Despite a U.S. request to avoid escalation, Israel attacked Iranian military targets after Iran launched missiles into northern Israel. The renewed ceasefire is in its worst state yet, with tensions rising after two people were killed in south Beirut.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/internacional/israel-activa-alertas-zonas-pais-lanzamiento-misiles-iran_1_13282902.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Judge’s delay stalls investigation into Madrid president’s partner over alleged bribery",
+      "body": "The UCO (police unit) has been waiting six months for Judge Antonio Viejo to authorize access to bank accounts and company data of Alberto González Amador, partner of Isabel Díaz Ayuso. Despite a meeting in April where the judge promised to issue the orders within a week, he has not done so, leaving the 'Operación Cirbelia' probe in limbo.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/operacion-cirbelia-investigacion-uco-pareja-ayuso-no-arranca-falta-autorizacion-juez_1_13278471.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "OPEC+ approves fourth consecutive production increase of 188,000 barrels per day for July",
+      "body": "Despite the closure of the Strait of Hormuz due to the U.S./Israel war with Iran hindering exports, seven OPEC+ members agreed to raise output in July. The increase is part of a plan to gradually reverse voluntary cuts made in 2023.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/opep-aprueba-un-nuevo-incremento-188-000-barriles-diarios-su-cuota-produccion_6980323_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "Is it fair that workers with 40+ years of contributions still get penalized for early retirement? Share your story.",
+  "headline": "🇪🇸 Spain: what you missed 👀 08.06.2026",
+  "date": "2026-06-08",
+  "generated_at": "2026-06-08T05:31:36.761295+00:00",
+  "source_stats": {
+    "feeds_ok": 14,
+    "feeds_total": 14,
+    "items_fetched": 252,
+    "items_selected": 8
+  }
+}

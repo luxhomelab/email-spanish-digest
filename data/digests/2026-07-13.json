@@ -1,0 +1,156 @@
+{
+  "items": [
+    {
+      "title": "Government hides unemployment data from 1.2 million regularization cases",
+      "body": "The Spanish government is withholding labor market data on the 1.2 million immigrants who applied for regularization. While 160,000 had begun contributing to social security by June 30, an estimated 20,000 may have registered as unemployed. The lack of disclosure reduces transparency for applicants awaiting their status.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/07/12/6a4e094d21efa0b2438b45a1.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "New Spanish rents are 11% above average, with gaps over 20%",
+      "body": "New rental contracts in Spain average €766 per month, 11% above the overall mean of €691. In Baleares, new rents hit €1,071—23.2% higher than the average—and Valencia province sees a 22.1% gap. The disparity is even wider in other high-demand areas like Madrid. Renters signing new leases face significantly higher costs than existing tenants.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/los-nuevos-contratos-alquiler-se-firman-un-11-por-encima-media-brecha-supera-20-las-zonas-mas-tensionadas_7012854_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Real estate ads must reveal total costs from first announcement",
+      "body": "Under Law 10/2025, real estate listings must disclose all costs from the very first advertisement, economist José María Páez warns. Hidden fees that often surprise buyers and renters are now illegal. The measure aims to increase transparency in the housing market. The law offers protection to those navigating Spain’s property sector.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-07-12/economista-vivienda-espana-inmobiliaria-decirte-vas-pagar_4388437/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Renfe strike July 15: minimum services 73% high-speed, 66% medium",
+      "body": "A 24-hour strike by the Railway Union on July 15 will disrupt Renfe services. Minimum services are set at 73% for high-speed trains and 66% for medium-distance lines. Up to 94 of 343 AVE trains and 234 of 650 medium-distance trains could be cancelled. A previous strike on June 29 saw only 1.83% participation, but cancellations are still possible. Travelers should check schedules and plan ahead.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/huelga-renfe-este-miercoles-15-julio-cuantos-trenes-estan-afectados-servicios-minimos_7013599_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Self-employed take four times less sick leave due to weaker rights",
+      "body": "Autónomos in Spain take roughly four times less sick leave than employees, largely because of lower benefits and financial disincentives. The gap highlights unequal labor protections that leave self-employed workers with less economic security when ill. Two case examples illustrate the stark difference in rights and compensation.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/07/13/misma-baja-pero-distinta-factura-derechos-por-que-los-autonomos-enferman-cuatro-veces-menos-que-los-asalariados-2036617.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "13 dead in Almería wildfire; 80% of at-risk towns lack plans",
+      "body": "The Los Gallardos wildfire in Almería killed 13 people, including a 93-year-old British woman, and burned 7,000 hectares. Despite this, Los Gallardos and Bédar—where the disaster occurred—are among the 80% of fire-risk municipalities lacking legally required emergency plans. The disaster highlights dangerous gaps in fire preparedness for rural residents.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/andalucia/almeria-00350/noticia-ascienden-13-fallecidos-incendio-gallardos-almeria-morir-britanica-93-anos-20260712215135.html"
+        },
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/andalucia/2026/07/12/6a53ac8421efa07a138b4591.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "New EU tariffs add €3 per item on AliExpress, Shein, Temu",
+      "body": "A new EU tariff of at least €3 per item type now applies to parcels under €150 from non-EU countries. A package containing multiple item types incurs multiple charges. Economist Niño Becerra says the measure will mainly boost tax revenue and not significantly shift shoppers to local stores, as Chinese platform prices remain lower. The tariff took effect July 1 and affects over 90% of such shipments from China.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/aviso-nino-becerra-sobre-nueva-tasa-aliexpress-shein-temu-solo-servira-una-cosa_7013414_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Outdoor workers say extreme heat is worsening and lasting longer",
+      "body": "Spain’s outdoor workers report that heatwaves are becoming more intense, starting earlier in June and turning unbearable. A 64-year-old temporary worker recently died from heat-related causes in Seròs, Lleida. The trend raises alarm for those in construction, agriculture, and other outdoor sectors.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/calor-no-intemperie-insufrible-vez-dura_1_13368945.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spain leads EU in sick leave rates and posts largest rise since the pandemic",
+      "body": "Spain had the highest share of workers on sick leave in the EU in 2024 at 4.5%, up 1.9 percentage points since 2018. The EU average stands at 2.5%. Spain’s rate surpasses Slovenia, Belgium, and France, marking the steepest increase since the pandemic. The surge may affect workplace dynamics and benefits perceptions.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/espana-lidera-tasa-bajas-ue-es-pais-donde-mas-crece-desde-pandemia_7013380_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Spain ranks second in EU for air conditioning energy consumption",
+      "body": "Spain consumed 14,300 terajoules for space cooling in 2024, second only to Italy in the EU, and has more than doubled its consumption since 2010. Air conditioning accounts for 2.5% of household energy, though that figure is far lower than in Malta or Cyprus. Higher summer usage pushes up electricity bills for residents.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/espana-es-segundo-pais-ue-que-mas-aire-acondicionado-consume_7013643_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "New rental contracts in Spain cost 11% more than the average—gaps exceed 20% in some zones. What's your experience with rent hikes? 💬",
+  "variant": "Spain in 30s",
+  "headline": "Spain in 30s",
+  "date": "2026-07-13",
+  "generated_at": "2026-07-13T06:04:59.372400+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 271,
+    "items_selected_pass1": 12,
+    "fact_sheets_extracted": 12,
+    "items_after_importance_filter": 11,
+    "items_in_digest": 10
+  },
+  "selection_reasons": {
+    "11": "World Cup semifinal update: Spain faces extra travel compared to France – mandatory inclusion and of interest to football fans.",
+    "23": "Major forest fire in Los Gallardos kills 13, including a British woman – national disaster directly affecting foreign residents.",
+    "101": "New rental contracts signed 11% above average rent, with gap exceeding 20% in tense areas – crucial for housing costs for newcomers.",
+    "9": "Government hides unemployment figures among regularized immigrants, up to 20,000 – directly impacts migration policy and immigrant community.",
+    "238": "New EU tax on cheap online imports from AliExpress, Shein, Temu – affects all consumers including expats and immigrants.",
+    "123": "Renfe strike on July 15 with service minimums – disrupts travel plans for residents and visitors alike.",
+    "193": "Autónomos take sick leave four times less than salaried workers due to financial penalties – relevant for self‑employed foreigners.",
+    "99": "Spain leads EU in sick leave rate, with a 73% increase since 2018 – labor market trend affecting all workers.",
+    "45": "Extreme heat worsening for outdoor workers, with rising health risks – public health concern for those working in Spain.",
+    "122": "Spain is second in EU for air‑conditioning consumption – impacts energy bills for all residents.",
+    "4": "80% of at‑risk municipalities lack fire emergency plans – directly affects safety of rural properties and residents.",
+    "251": "Economist warns on housing costs: transparency in upfront pricing needed – key advice for property buyers and tenants."
+  }
+}
