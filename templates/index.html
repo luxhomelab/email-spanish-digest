@@ -6,7 +6,7 @@
 {% block content %}
  <div class="page">
   <div class="hero">
-   <h1>Spain's top stories, in English, every morning.</h1>
+   <h1>Spain's top news, in English, every morning.</h1>
    <p class="tagline">Your 5-minute catch-up on what's happening in Spain — every morning.</p>
    <div class="badges">
     <span class="badge"><span class="dot">●</span>Free forever</span>
@@ -18,7 +18,7 @@
   {% if latest %}
   <a class="card teaser" href="{{ latest.url }}">
    <div class="teaser-kicker">Fresh from this morning</div>
-   <div class="teaser-date">{{ latest.date_display }} · {{ latest.story_count }} stories</div>
+   <div class="teaser-date">{{ latest.date_display }} · {{ latest.story_count }} news</div>
    <h2>{{ latest.headline }}</h2>
    {% for item in latest.stories[:3] %}
    <div class="teaser-story"><span>{{ emoji.get(item.category, '📰') }}</span><span>{{ item.title }}</span></div>
@@ -29,14 +29,14 @@
 
   <div class="card">
    <h2>What is this?</h2>
-   <p>Spain moves fast — rents, taxes, visas, jobs. Every morning we read the Spanish press cover to cover and hand you the stories that actually affect your life: short summaries in plain English, zero clickbait.</p>
+   <p>Spain moves fast — rents, taxes, visas, jobs. Every morning we read the Spanish press cover to cover and hand you the news that actually affects your life: short summaries in plain English, zero clickbait.</p>
    <p>Live in Spain, planning the move, or just watching from afar — five minutes with your coffee and you're up to speed.</p>
   </div>
 
   <div class="card">
    <h2>What's inside?</h2>
    <ul class="features">
-    <li>Top stories from Spanish news, curated and summarized</li>
+    <li>Top Spanish news, curated and summarized</li>
     <li>Short and to the point — a 5-minute read</li>
     <li>Delivered to your inbox every morning, seven days a week</li>
    </ul>
