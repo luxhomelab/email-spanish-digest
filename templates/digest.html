@@ -29,7 +29,7 @@
     <article class="story">
      <div class="story-meta">
       <span class="story-number">{{ loop.index }}</span>
-      <span class="story-category"><a href="/category/{{ (item.category or 'news')|lower }}.html">{{ emoji.get(item.category, '📰') }} {{ item.category.capitalize() if item.category else 'News' }}</a></span>
+      <span class="story-category"><a href="/category/{{ (item.category or 'news')|lower }}">{{ emoji.get(item.category, '📰') }} {{ item.category.capitalize() if item.category else 'News' }}</a></span>
       {% if item.important %}<span class="story-important">◆ IMPORTANT</span>{% endif %}
      </div>
      <h2 class="story-title">{{ item.title }}</h2>
