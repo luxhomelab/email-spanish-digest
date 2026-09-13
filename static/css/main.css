@@ -591,7 +591,7 @@ body.page-digest h1.email-red-band time { color: #AA151B; }
 body.page-digest .email-gold-band { height: 6px; margin: 0 32px; border-radius: 3px; }
 
 /* ---------- Category in homepage style (body.page-category only) ---------- */
-body.page-category .cat-list { padding: 16px 0; }
+body.page-category .cat-list { padding: 36px 0 16px 0; }
 body.page-category .cat-list h1 { font-size: 38px; letter-spacing: -0.5px; }
 body.page-category .cat-sub { margin-bottom: 32px; }
 body.page-category .cat-sub::after {
@@ -606,3 +606,23 @@ body.page-category .cat-item {
 }
 body.page-category .cat-meta { color: #AA151B; font-weight: 600; }
 body.page-category .cat-meta a { color: #AA151B; }
+
+/* ---------- About + Contact in homepage style ---------- */
+body.page-about .about, body.page-contact .contact { padding: 36px 0 16px 0; }
+body.page-about .about h1, body.page-contact .contact h1 { font-size: 38px; letter-spacing: -0.5px; }
+body.page-about .about .subtitle::after, body.page-contact .contact .subtitle::after {
+ content: ""; display: block; width: 72px; height: 4px; border-radius: 2px;
+ background: linear-gradient(90deg, #AA151B 50%, #F1BF00 50%);
+ margin: 16px auto 0 auto;
+}
+body.page-about .about .subtitle { margin-bottom: 32px; }
+body.page-about .about .card {
+ border-radius: 14px; border: 1px solid #EFE7D8; background-color: #ffffff;
+ box-shadow: 0 2px 14px rgba(60,40,20,0.07);
+ padding: 32px 36px; margin-bottom: 20px;
+}
+body.page-about .about .card h2 { font-size: 22px; }
+body.page-contact .contact .card {
+ border-radius: 14px; border: 1px solid #EFE7D8; background-color: #ffffff;
+ box-shadow: 0 2px 14px rgba(60,40,20,0.07);
+}
