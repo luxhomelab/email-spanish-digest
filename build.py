@@ -22,6 +22,7 @@ import shutil
 import sys
 from collections import Counter
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 from jinja2 import Environment, FileSystemLoader
 
@@ -322,6 +323,19 @@ def copy_static(out_dir):
         print(f"  copied {name}")
 
 
+def pub_date(date_str):
+    """Full ISO 8601 with Europe/Madrid offset for schema.org datetimes.
+
+    The digest goes out in the morning; DST offset resolves itself
+    (+02:00 summer, +01:00 winter). Falls back to the raw string."""
+    try:
+        return datetime.strptime(date_str, "%Y-%m-%d").replace(
+            hour=8, tzinfo=ZoneInfo("Europe/Madrid")
+        ).isoformat()
+    except (ValueError, TypeError):
+        return date_str
+
+
 def css_version():
     """Short content hash of main.css for cache-busting (?v=...)."""
     path = os.path.join(SCRIPT_DIR, "static", "css", "main.css")
@@ -350,6 +364,7 @@ def main():
     env.globals["current_year"] = datetime.now().year
     env.globals["asset_version"] = css_version()
     env.globals["site_url"] = SITE_URL
+    env.globals["pub_date"] = pub_date
     env.globals["site_socials"] = [
         "https://www.threads.com/@spaindaily",
         "https://bsky.app/profile/spanified.bsky.social",
