@@ -631,3 +631,4 @@ body.page-contact .contact .card {
 @media (max-width: 520px) {
  body.page-digest h1.email-red-band { font-size: 27px; line-height: 33px; padding: 26px 20px 8px 20px; }
 }
+.card-centered { text-align: center; }

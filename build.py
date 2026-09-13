@@ -36,6 +36,14 @@ SITE_URL = "https://spanified.com"
 PAGE_SIZE = 10
 
 # Static pages rendered 1:1 from templates.
+# Pages listed here are rendered to dist root. NOINDEX_PAGES are still
+# rendered (linked from the site) but kept out of sitemap.xml.
+NOINDEX_PAGES = {
+    "success.html",
+    "confirm.html",
+    "unsubscribe.html",
+    "404.html",
+}
 STATIC_PAGES = [
     "index.html",
     "subscribe.html",
@@ -44,6 +52,7 @@ STATIC_PAGES = [
     "unsubscribe.html",
     "contact.html",
     "about.html",
+    "404.html",
 ]
 
 # Static assets copied verbatim into the output dir (hand-written pages,
@@ -55,6 +64,8 @@ STATIC_COPY = [
     "success.jpg",
     "confirm.jpg",
     "logo.jpg",
+    "favicon.ico",
+    "apple-touch-icon.png",
     "static",
 ]
 
@@ -302,7 +313,7 @@ def render_sitemap(digests, categories=()):
     urls = [(SITE_URL + "/", None)] + [
         (SITE_URL + "/" + name[:-len(".html")], None)
         for name in STATIC_PAGES
-        if name.endswith(".html") and name != "index.html"
+        if name.endswith(".html") and name != "index.html" and name not in NOINDEX_PAGES
     ]
     # Archive listing (page 1) plus extra pages.
     total = len(digests)
