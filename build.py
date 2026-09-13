@@ -437,6 +437,10 @@ def main():
     print(f"Building {len(digests)} digest page(s)...")
     render_digests(env, digests)
 
+    print("Rendering OG images...")
+    from og_images import render_og_images
+    render_og_images(digests, out_dir)
+
     print("Building archive listing...")
     render_archive(env, digests)
 
