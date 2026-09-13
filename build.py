@@ -43,6 +43,7 @@ STATIC_PAGES = [
     "confirm.html",
     "unsubscribe.html",
     "contact.html",
+    "about.html",
 ]
 
 # Static assets copied verbatim into the output dir (hand-written pages,

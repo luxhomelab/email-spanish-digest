@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block body_class %} class="page-about"{% endblock %}
+{% block title %}About — Spanified{% endblock %}
+{% block description %}<meta name="description" content="About Spanified — how the free Spain Daily Digest is made, our sources, and our AI policy.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="About — Spanified">
+<meta property="og:description" content="How the free Spain Daily Digest is made, our sources, and our AI policy.">
+<meta property="og:url" content="{{ site_url }}/about">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="About — Spanified">
+<meta name="twitter:description" content="How the free Spain Daily Digest is made, our sources, and our AI policy.">
+<meta name="twitter:image" content="https://spanified.com/logo.jpg">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/about">{% endblock %}
+{% block content %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "AboutPage",
+ "name": "About — Spanified",
+ "url": "{{ site_url }}/about",
+ "description": "How the free Spain Daily Digest is made, our sources, and our AI policy.",
+ "inLanguage": "en",
+ "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/",
+  "contactPoint": {"@type": "ContactPoint", "email": "support@spanified.com",
+   "contactType": "customer support", "availableLanguage": "English"}}}
+</script>
+ <div class="about">
+  <h1>About Spanified</h1>
+  <p class="subtitle">Spain's daily news, in English, in five minutes.</p>
+
+  <div class="card">
+   <h2>What this is</h2>
+   <p>Spanified publishes the <a href="/">Spain Daily Digest</a> — a free morning briefing with the day's most important Spanish news, summarized in English. It lands every day around 08:00 Madrid time, on this site and by email for <a href="/subscribe">subscribers</a>. Past editions live in the <a href="/archive/">archive</a>.</p>
+  </div>
+
+  <div class="card">
+   <h2>How the digest is made</h2>
+   <ol class="steps">
+    <li><strong>Scan.</strong> Every morning our pipeline reads Spain's leading news outlets — national dailies, wires, and regional press.</li>
+    <li><strong>Select.</strong> The most significant stories of the day are picked across politics, economy, migration, culture, and sport.</li>
+    <li><strong>Summarize.</strong> Each story is condensed into a short English summary with the help of AI — just the facts, no commentary.</li>
+    <li><strong>Link the sources.</strong> Every story carries links to the original reporting, so you can verify anything yourself in one click.</li>
+   </ol>
+  </div>
+
+  <div class="card">
+   <h2>Our AI policy</h2>
+   <p>Every digest states it openly: the summaries are based on real news and created with the help of AI. We never invent events, quotes, or figures — and the linked sources are always there to check us. If you spot a mistake, <a href="/contact">tell us</a> and we'll fix it.</p>
+  </div>
+
+  <div class="card">
+   <h2>Free, no account needed</h2>
+   <p>The site and the archive are free to read. The email edition is free too — <a href="/subscribe">subscribe</a> in one step, <a href="/unsubscribe">unsubscribe</a> anytime.</p>
+  </div>
+ </div>
+{% endblock %}
