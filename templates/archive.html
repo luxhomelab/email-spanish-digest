@@ -22,6 +22,7 @@
   {% if digests %}
   {% for digest in digests %}
   <a class="digest-card" href="{{ digest.url }}">
+   {% if loop.first and pagination.current == 1 %}<span class="latest-badge">Latest</span>{% endif %}
    <div class="digest-date">{{ digest.date_display }}</div>
    <div class="digest-headline">{{ digest.headline }}</div>
    <div class="digest-meta">
