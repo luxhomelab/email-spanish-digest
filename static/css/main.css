@@ -721,8 +721,23 @@ body.page-contact .contact .card {
 .unsub-social { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 20px; }
 
 .unsub-keep {
- max-width: 640px; margin-left: auto; margin-right: auto;
+ max-width: 640px; margin: 32px auto 32px auto;
  background-color: #ffffff; border: 1px solid #EFE7D8; border-radius: 14px;
  box-shadow: 0 2px 14px rgba(60,40,20,0.07);
  padding: 32px 32px 36px 32px;
+}
+.unsub-keep { text-align: center; }
+.unsub-keep .confirm-kicker { text-align: center; }
+.unsub-social { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+.unsub-social .soc {
+ display: inline-flex; align-items: center; gap: 8px;
+ border: 1px solid #E3D9C4; border-radius: 999px;
+ padding: 9px 18px; font-size: 14px; font-weight: 600;
+ color: #3C4858; text-decoration: none; background-color: #FDF9F3;
+ transition: border-color 0.15s, background-color 0.15s, transform 0.15s;
+}
+.unsub-social .soc svg { width: 16px; height: 16px; fill: #AA151B; }
+.unsub-social .soc span { color: #3C4858; }
+.unsub-social .soc:hover {
+ border-color: #AA151B; background-color: #F8EFDD; transform: translateY(-1px);
 }
