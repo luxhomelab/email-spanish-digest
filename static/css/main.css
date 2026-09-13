@@ -639,3 +639,19 @@ body.page-contact .contact .card {
  letter-spacing: -0.5px; margin-bottom: 8px;
 }
 .subscribe-intro p { color: #6C7A89; font-size: 16px; }
+.subscribe-intro { text-align: center; padding: 52px 24px 12px 24px; max-width: 720px; margin: 0 auto; }
+.subscribe-intro .subscribe-kicker {
+ font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
+ color: #AA151B; margin-bottom: 10px;
+}
+.subscribe-intro h1 { font-size: 44px; line-height: 1.1; }
+.subscribe-intro h1 .accent { color: #AA151B; }
+.subscribe-intro h1::after {
+ content: ""; display: block; width: 72px; height: 4px; border-radius: 2px;
+ background: linear-gradient(90deg, #AA151B 50%, #F1BF00 50%);
+ margin: 18px auto 0 auto;
+}
+.subscribe-intro p { margin-top: 16px; }
+@media (max-width: 520px) {
+ .subscribe-intro h1 { font-size: 32px; }
+}
