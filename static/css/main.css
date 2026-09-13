@@ -546,3 +546,48 @@ body.page-archive .pagination { margin-top: 36px; }
 body.page-archive .pagination a, body.page-archive .pagination .current { border-radius: 999px; }
 body.page-archive .pagination .current { background-color: #AA151B; border-color: #AA151B; }
 body.page-archive .pagination a:hover { border-color: #AA151B; color: #AA151B; }
+
+/* ---------- Digest issue in homepage style (CSS-only, DOM untouched) ---------- */
+body.page-digest .digest { background: linear-gradient(180deg, #FDF9F3 0%, #F7F3EC 100%); padding: 36px 16px 24px 16px; }
+body.page-digest .digest-card { border-radius: 16px; border: 1px solid #EFE7D8; box-shadow: 0 4px 22px rgba(60,40,20,0.09); overflow: hidden; }
+body.page-digest h1.email-red-band { padding: 26px 28px; font-size: 30px; line-height: 36px; letter-spacing: -0.5px; }
+body.page-digest .email-gold-band { height: 6px; }
+body.page-digest .email-subheader { padding: 18px 32px; font-size: 15px; line-height: 22px; }
+body.page-digest .byline { padding: 12px 24px 0 24px; }
+body.page-digest .email-body { padding: 12px 32px 0 32px; }
+body.page-digest .story { padding: 30px 0 26px 0; }
+body.page-digest .story-number { background-color: #AA151B; color: #ffffff; font-weight: 700; }
+body.page-digest .story-category a {
+ color: #AA151B; font-weight: 600;
+ background-color: #FBF1F1; border: 1px solid #F0D9D9; border-radius: 999px;
+ padding: 2px 12px;
+}
+body.page-digest .story-category a:hover { text-decoration: none; border-color: #AA151B; }
+body.page-digest .story-important { background-color: #AA151B; color: #ffffff; border-radius: 4px; padding: 2px 8px; }
+body.page-digest .story-title { font-size: 20px; line-height: 27px; }
+body.page-digest .story-body { font-size: 15.5px; line-height: 24px; }
+body.page-digest .mercadona {
+ background-color: #FDF6E3; border: 1px solid #F0DFAE; border-radius: 12px;
+ padding: 18px 22px; margin: 12px 32px 0 32px;
+}
+body.page-digest .email-footer { padding: 26px 32px 34px 32px; }
+body.page-digest .day-nav a {
+ border: 1px solid #E3D9C6; border-radius: 999px; padding: 6px 16px;
+ background-color: #FFFDF8;
+}
+body.page-digest .day-nav a:hover { text-decoration: none; border-color: #AA151B; }
+@media (max-width: 520px) {
+ body.page-digest .digest { padding: 20px 8px 16px 8px; }
+ body.page-digest .email-body { padding: 8px 20px 0 20px; }
+ body.page-digest .mercadona { margin: 12px 20px 0 20px; }
+}
+
+/* Digest header: light editorial instead of heavy red block */
+body.page-digest h1.email-red-band {
+ background-color: #FFFDF8;
+ color: #3C4858;
+ padding: 34px 32px 8px 32px;
+ font-size: 34px; line-height: 40px; letter-spacing: -0.5px;
+}
+body.page-digest h1.email-red-band time { color: #AA151B; }
+body.page-digest .email-gold-band { height: 6px; margin: 0 32px; border-radius: 3px; }
