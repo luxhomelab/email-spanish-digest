@@ -711,3 +711,5 @@ body.page-contact .contact .card {
 .confirm-trouble { color: #6C7A89; font-size: 14px; margin-top: 14px; }
 .confirm-trouble a { color: #AA151B; font-weight: 600; }
 .confirm-steps li > div { flex: 1; min-width: 0; }
+.unsub-keep p { color: #6C7A89; margin-bottom: 18px; }
+.unsub-social { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 20px; }
