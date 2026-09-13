@@ -26,7 +26,7 @@
  "publisher": {"@type": "Organization", "name": "Spanified", "logo": {"@type": "ImageObject", "url": "{{ site_url }}/logo.jpg"}},
  "mainEntityOfPage": "{{ site_url }}{{ digest.url }}",
  "hasPart": [{% for item in digest.stories %}
-  {"@type": "NewsArticle", "headline": {{ item.title|tojson }}, "articleSection": {{ (item.category or "news")|tojson }}, "url": "{{ item.sources[0].url if item.sources else site_url + digest.url }}", "author": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}{% if item.sources %}, "isBasedOn": {"@type": "NewsArticle", "name": {{ item.sources[0].name|tojson }}, "url": {{ item.sources[0].url|tojson }}}{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}
+  {"@type": "NewsArticle", "headline": {{ item.title|tojson }}, "articleSection": {{ (item.category or "news")|tojson }}, "url": "{{ site_url + digest.url }}", "author": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}{% if item.sources %}, "isBasedOn": {"@type": "CreativeWork", "name": {{ item.sources[0].name|tojson }}, "url": {{ item.sources[0].url|tojson }}}{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}
  ]}
 </script>
  <div class="digest">
