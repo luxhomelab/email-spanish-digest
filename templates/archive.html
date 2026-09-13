@@ -4,6 +4,7 @@
 {% block description %}<meta name="description" content="Browse the archive of Spain Daily digests — every edition, summarized in English.{% if pagination.current > 1 %} Page {{ pagination.current }}.{% endif %}">{% endblock %}
 
 {% block content %}
+{% include "partials/breadcrumbs.html" %}
  <div class="archive">
   <h1>Archive{% if pagination.current > 1 %} — Page {{ pagination.current }}{% endif %}</h1>
   <p class="subtitle">Every edition of the Spain Daily digest.</p>

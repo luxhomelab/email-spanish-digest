@@ -436,6 +436,16 @@ body.page-archive .digest-card:hover {
 .contact .mail-link:hover { text-decoration: underline; }
 .contact .note { margin-top: 16px; font-size: 14px; color: #6C7A89; }
 
+/* ---------- Breadcrumbs (shared partial) ---------- */
+.breadcrumbs {
+ max-width: 1200px; margin: 0 auto 16px auto;
+ font-size: 14px; color: #6C7A89;
+}
+.breadcrumbs a { color: #6C7A89; text-decoration: none; }
+.breadcrumbs a:hover { text-decoration: underline; color: #3C4858; }
+.crumb-sep { margin: 0 8px; color: #b0b9c4; }
+.crumb-current { color: #3C4858; font-weight: 600; }
+
 /* ---------- Confirm / success (background photo pages) ---------- */
 body.page-confirm { background: url('/confirm.jpg') center/cover no-repeat fixed; }
 body.page-success { background: url('/success.jpg') center/cover no-repeat fixed; }
