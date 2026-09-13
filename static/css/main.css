@@ -145,12 +145,12 @@ html.iframe-page .content iframe {
  border: none; display: block;
 }
 body.page-unsubscribe iframe, html.iframe-page .page-unsubscribe iframe {
- height: 300px;
+ height: 340px;
 }
 @media (max-width: 520px) {
  html.iframe-page .content iframe { height: 700px; }
  body.page-unsubscribe iframe, html.iframe-page .page-unsubscribe iframe {
-  height: 360px;
+  height: 400px;
  }
 }
 
@@ -719,3 +719,10 @@ body.page-contact .contact .card {
 .confirm-steps li > div { flex: 1; min-width: 0; }
 .unsub-keep p { color: #6C7A89; margin-bottom: 18px; }
 .unsub-social { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 20px; }
+
+.unsub-keep {
+ max-width: 640px; margin-left: auto; margin-right: auto;
+ background-color: #ffffff; border: 1px solid #EFE7D8; border-radius: 14px;
+ box-shadow: 0 2px 14px rgba(60,40,20,0.07);
+ padding: 32px 32px 36px 32px;
+}
