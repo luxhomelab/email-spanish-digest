@@ -140,14 +140,14 @@ def digest_context(data):
         "mercadona": mercadona_line(date),
         "story_count": len(items),
         "top_categories": top_categories(items),
-        "url": f"/archive/{date}.html",
+        "url": f"/archive/{date}",
     }
 
 
 def archive_url(page):
     if page == 1:
         return "/archive/"
-    return f"/archive/page-{page}.html"
+    return f"/archive/page-{page}"
 
 
 def pagination(page, total_pages):
@@ -219,7 +219,7 @@ def render_archive(env, digests):
             crumbs.append({"name": "Archive", "url": "/archive/", "current": True})
         else:
             crumbs.append({"name": "Archive", "url": "/archive/"})
-            crumbs.append({"name": f"Page {page}", "url": f"/archive/page-{page}.html", "current": True})
+            crumbs.append({"name": f"Page {page}", "url": f"/archive/page-{page}", "current": True})
         output = template.render(digests=page_digests, pagination=pagination(page, total_pages), crumbs=crumbs)
         dest = os.path.join(ARCHIVE_DIR, "index.html" if page == 1 else f"page-{page}.html")
         with open(dest, "w", encoding="utf-8") as fh:
@@ -251,10 +251,11 @@ def render_categories(env, digests):
         name = slug.capitalize()
         crumbs = [
             {"name": "Home", "url": "/"},
-            {"name": name, "url": f"/category/{slug}.html", "current": True},
+            {"name": name, "url": f"/category/{slug}", "current": True},
         ]
         output = template.render(
             category_name=name,
+            slug=slug,
             emoji=CATEGORY_EMOJI.get(slug, "\U0001F4F0"),
             stories=stories,
             crumbs=crumbs,
@@ -267,17 +268,21 @@ def render_categories(env, digests):
 
 
 def render_sitemap(digests, categories=()):
-    urls = [(SITE_URL + "/", None)] + [(SITE_URL + "/" + name, None) for name in STATIC_PAGES]
+    urls = [(SITE_URL + "/", None)] + [
+        (SITE_URL + "/" + name[:-len(".html")], None)
+        for name in STATIC_PAGES
+        if name.endswith(".html") and name != "index.html"
+    ]
     # Archive listing (page 1) plus extra pages.
     total = len(digests)
     total_pages = (total + PAGE_SIZE - 1) // PAGE_SIZE if total else 1
     urls.append((SITE_URL + "/archive/", None))
     for page in range(2, total_pages + 1):
-        urls.append((SITE_URL + f"/archive/page-{page}.html", None))
+        urls.append((SITE_URL + f"/archive/page-{page}", None))
     for digest in digests:
-        urls.append((SITE_URL + f"/archive/{digest['date']}.html", digest["date"]))
+        urls.append((SITE_URL + f"/archive/{digest['date']}", digest["date"]))
     for slug in categories:
-        urls.append((SITE_URL + f"/category/{slug}.html", None))
+        urls.append((SITE_URL + f"/category/{slug}", None))
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
