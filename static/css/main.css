@@ -470,3 +470,52 @@ body.page-success { background: url('/success.jpg') center/cover no-repeat fixed
 .about .card a { color: #B91C1C; text-decoration: none; }
 .about .card a:hover { text-decoration: underline; }
 .about .steps { margin: 0; padding-left: 22px; font-size: 15px; line-height: 26px; color: #3C4858; }
+
+/* ---------- Homepage redesign (body.page-home only) ---------- */
+body.page-home .content { background: linear-gradient(180deg, #FDF9F3 0%, #F7F3EC 100%); }
+body.page-home .page .card, body.page-home .cta-card { border-radius: 14px; box-shadow: 0 2px 14px rgba(60,40,20,0.07); border: 1px solid #EFE7D8; }
+/* Hero */
+body.page-home .hero { padding: 36px 20px 8px 20px; }
+body.page-home .hero::before {
+ content: "ESPAÑA AL DÍA"; display: block;
+ font-size: 12px; font-weight: 700; letter-spacing: 3px; color: #AA151B;
+ margin-bottom: 10px;
+}
+body.page-home .hero h1 { font-size: 44px; line-height: 1.12; letter-spacing: -1px; }
+body.page-home .hero h1 .accent { color: #AA151B; }
+body.page-home .hero .tagline { font-size: 19px; }
+body.page-home .hero::after {
+ content: ""; display: block; width: 72px; height: 4px; border-radius: 2px;
+ background: linear-gradient(90deg, #AA151B 50%, #F1BF00 50%);
+ margin: 18px auto 0 auto;
+}
+/* Teaser as feature card */
+body.page-home .teaser { border-top: 6px solid #AA151B; border-radius: 14px; counter-reset: story; }
+body.page-home .teaser-story { counter-increment: story; }
+body.page-home .teaser-story::before {
+ content: counter(story, decimal-leading-zero);
+ font-weight: 700; color: #AA151B; font-size: 13px; min-width: 24px;
+}
+/* Steps */
+body.page-home .step { border-radius: 12px; background: #FFFDF8; }
+body.page-home .step-num { background-color: #AA151B; }
+/* Topics */
+body.page-home .topic:hover { border-color: #AA151B; color: #AA151B; }
+/* CTA band */
+body.page-home .cta-card { background: linear-gradient(135deg, #AA151B 0%, #7E1015 100%); border: none; }
+body.page-home .cta-card p { color: #F6D9DA; }
+@media (max-width: 520px) {
+ body.page-home .hero h1 { font-size: 32px; }
+}
+/* Homepage air: breathing room between sections */
+body.page-home .page { padding-bottom: 16px; }
+body.page-home .page .card, body.page-home .cta-card { margin-bottom: 28px; padding: 40px; }
+body.page-home .hero { padding: 56px 20px 28px 20px; margin-bottom: 36px; }
+body.page-home .hero .tagline { margin-bottom: 22px; }
+body.page-home .teaser-story { padding: 12px 0; }
+body.page-home .teaser-more { margin-top: 18px; }
+body.page-home .teaser h2 { margin: 10px 0 16px 0; }
+body.page-home .steps { gap: 16px; margin-top: 20px; }
+body.page-home .topics { gap: 10px; margin-top: 20px; }
+body.page-home .cta-card { padding: 48px 40px; }
+body.page-home .page-note { margin-top: 28px; line-height: 1.7; }
