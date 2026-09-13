@@ -548,7 +548,8 @@ body.page-archive .pagination .current { background-color: #AA151B; border-color
 body.page-archive .pagination a:hover { border-color: #AA151B; color: #AA151B; }
 
 /* ---------- Digest issue in homepage style (CSS-only, DOM untouched) ---------- */
-body.page-digest .digest { background: linear-gradient(180deg, #FCF3E2 0%, #F6E8CF 100%); padding: 36px 16px 24px 16px; }
+body.page-digest .content { background: linear-gradient(180deg, #FCF3E2 0%, #F6E8CF 100%); }
+body.page-digest .digest { background: transparent; padding: 0 16px 24px 16px; }
 body.page-digest .digest-card { border-radius: 16px; border: 1px solid #EFE7D8; box-shadow: 0 4px 22px rgba(60,40,20,0.09); overflow: hidden; }
 body.page-digest h1.email-red-band { padding: 26px 28px; font-size: 30px; line-height: 36px; letter-spacing: -0.5px; }
 body.page-digest .email-gold-band { height: 6px; }
