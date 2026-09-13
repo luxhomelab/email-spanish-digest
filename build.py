@@ -52,6 +52,7 @@ STATIC_COPY = [
     "x.html",
     "success.jpg",
     "confirm.jpg",
+    "logo.jpg",
     "static",
 ]
 
