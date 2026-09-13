@@ -150,6 +150,10 @@ def archive_url(page):
 
 
 def pagination(page, total_pages):
+    # Compact window: current + up to 2 neighbours each side (max 5 numbers).
+    # Near the edges the window shifts so it stays full when possible.
+    start = min(max(page - 2, 1), max(total_pages - 4, 1))
+    end = min(start + 4, total_pages)
     return {
         "current": page,
         "total_pages": total_pages,
@@ -157,7 +161,7 @@ def pagination(page, total_pages):
         "next_url": archive_url(page + 1) if page < total_pages else None,
         "pages": [
             {"number": p, "url": archive_url(p), "current": p == page}
-            for p in range(1, total_pages + 1)
+            for p in range(start, end + 1)
         ],
     }
 
