@@ -639,3 +639,26 @@ body.page-contact .contact .card {
  letter-spacing: -0.5px; margin-bottom: 8px;
 }
 .subscribe-intro p { color: #6C7A89; font-size: 16px; }
+
+/* ---------- Header restyle ---------- */
+.site-header {
+ position: sticky; top: 0; z-index: 50;
+ background-color: rgba(255,253,248,0.92);
+ -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+ border-bottom: 1px solid #EFE7D8;
+ box-shadow: 0 1px 12px rgba(60,40,20,0.06);
+}
+.brand-mark { width: 34px; height: 34px; border-radius: 8px; box-shadow: 0 1px 4px rgba(60,40,20,0.2); }
+.brand-word { font-size: 21px; font-weight: 800; letter-spacing: -0.3px; }
+.site-nav a {
+ font-weight: 600; padding: 8px 12px; border-radius: 8px;
+ transition: background-color 0.15s, color 0.15s;
+}
+.site-nav a:hover { color: #AA151B; background-color: #F8EFDD; }
+.nav-cta {
+ background: linear-gradient(135deg, #AA151B 0%, #7E1015 100%);
+ padding: 9px 22px; border-radius: 999px;
+ box-shadow: 0 2px 8px rgba(170,21,27,0.3);
+ transition: transform 0.15s, box-shadow 0.15s;
+}
+.nav-cta:hover { background: linear-gradient(135deg, #BE1620 0%, #8C1218 100%); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(170,21,27,0.35); }
