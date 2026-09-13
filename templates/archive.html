@@ -5,6 +5,15 @@
 
 {% block content %}
 {% include "partials/breadcrumbs.html" %}
+{% if digests %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "ItemList",
+ "name": "Spain Daily archive{% if pagination.current > 1 %} — page {{ pagination.current }}{% endif %}",
+ "itemListElement": [{% for digest in digests %}
+  {"@type": "ListItem", "position": {{ loop.index }}, "item": {"@type": "Article", "headline": {{ digest.headline|tojson }}, "url": "{{ site_url }}{{ digest.url }}", "datePublished": "{{ digest.date }}"}}{% if not loop.last %},{% endif %}{% endfor %}
+ ]}
+</script>
+{% endif %}
  <div class="archive">
   <h1>Archive{% if pagination.current > 1 %} — Page {{ pagination.current }}{% endif %}</h1>
   <p class="subtitle">Every edition of the Spain Daily digest.</p>

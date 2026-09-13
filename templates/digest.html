@@ -12,7 +12,10 @@
  "datePublished": "{{ digest.date }}",
  "author": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"},
  "publisher": {"@type": "Organization", "name": "Spanified", "logo": {"@type": "ImageObject", "url": "{{ site_url }}/logo.jpg"}},
- "mainEntityOfPage": "{{ site_url }}{{ digest.url }}"}
+ "mainEntityOfPage": "{{ site_url }}{{ digest.url }}",
+ "hasPart": [{% for item in digest.stories %}
+  {"@type": "NewsArticle", "headline": {{ item.title|tojson }}, "articleSection": {{ (item.category or "news")|tojson }}, "url": "{{ site_url }}{{ digest.url }}"}{% if not loop.last %},{% endif %}{% endfor %}
+ ]}
 </script>
  <div class="digest">
   <div class="digest-card">

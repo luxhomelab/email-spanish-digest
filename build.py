@@ -350,6 +350,12 @@ def main():
     env.globals["current_year"] = datetime.now().year
     env.globals["asset_version"] = css_version()
     env.globals["site_url"] = SITE_URL
+    env.globals["site_socials"] = [
+        "https://www.threads.com/@spaindaily",
+        "https://bsky.app/profile/spanified.bsky.social",
+        "https://www.reddit.com/r/SpainDaily/",
+        "https://x.com/spanified",
+    ]
 
     digests = [digest_context(d) for d in load_digests()]
 
