@@ -352,9 +352,9 @@ h1.email-red-band {
 .archive h1 {
  font-family: Roboto, Helvetica, sans-serif;
  font-size: 30px; font-weight: 700; color: #3C4858;
- margin-bottom: 8px;
+ margin-bottom: 8px; text-align: center;
 }
-.archive .subtitle { color: #6C7A89; font-size: 16px; margin-bottom: 28px; }
+.archive .subtitle { color: #6C7A89; font-size: 16px; margin-bottom: 28px; text-align: center; }
 body.page-archive .digest-card {
  display: block;
  background-color: #ffffff;
@@ -410,9 +410,9 @@ body.page-archive .digest-card:hover {
 .cat-list h1 {
  font-family: Roboto, Helvetica, sans-serif;
  font-size: 28px; font-weight: 700; color: #3C4858;
- margin-bottom: 6px;
+ margin-bottom: 6px; text-align: center;
 }
-.cat-sub { color: #6C7A89; font-size: 15px; margin-bottom: 24px; }
+.cat-sub { color: #6C7A89; font-size: 15px; margin-bottom: 24px; text-align: center; }
 .cat-item {
  background-color: #ffffff;
  border: 1px solid #C0CCD9; border-radius: 3px;
@@ -531,12 +531,12 @@ body.page-home .page-note { margin-top: 28px; line-height: 1.7; }
 
 /* ---------- Archive in homepage style (body.page-archive only) ---------- */
 body.page-archive .archive { padding: 36px 0 16px 0; }
-body.page-archive .archive h1 { font-size: 38px; letter-spacing: -0.5px; }
-body.page-archive .archive .subtitle { margin-bottom: 32px; }
+body.page-archive .archive h1 { font-size: 38px; letter-spacing: -0.5px; text-align: center; }
+body.page-archive .archive .subtitle { margin-bottom: 32px; text-align: center; }
 body.page-archive .archive .subtitle::after {
  content: ""; display: block; width: 72px; height: 4px; border-radius: 2px;
  background: linear-gradient(90deg, #AA151B 50%, #F1BF00 50%);
- margin-top: 16px;
+ margin: 16px auto 0 auto;
 }
 body.page-archive .digest-card {
  position: relative; border-radius: 14px; border: 1px solid #EFE7D8;
@@ -602,12 +602,12 @@ body.page-digest .email-gold-band { height: 6px; margin: 0 32px; border-radius: 
 
 /* ---------- Category in homepage style (body.page-category only) ---------- */
 body.page-category .cat-list { padding: 36px 0 16px 0; }
-body.page-category .cat-list h1 { font-size: 38px; letter-spacing: -0.5px; }
-body.page-category .cat-sub { margin-bottom: 32px; }
+body.page-category .cat-list h1 { font-size: 38px; letter-spacing: -0.5px; text-align: center; }
+body.page-category .cat-sub { margin-bottom: 32px; text-align: center; }
 body.page-category .cat-sub::after {
  content: ""; display: block; width: 72px; height: 4px; border-radius: 2px;
  background: linear-gradient(90deg, #AA151B 50%, #F1BF00 50%);
- margin-top: 16px;
+ margin: 16px auto 0 auto;
 }
 body.page-category .cat-item {
  border-radius: 14px; border: 1px solid #EFE7D8;
