@@ -3,6 +3,7 @@
 {% block title %}Spain Daily Digest — {{ digest.date }}{% endblock %}
 {% block description %}<meta name="description" content="Spain Daily Digest for {{ digest.date }} — the day's top news from Spain, summarized in English.">{% endblock %}
 
+{% block canonical %}<link rel="canonical" href="{{ site_url }}{{ digest.url }}">{% endblock %}
 {% block content %}
 {% include "partials/breadcrumbs.html" %}
 <script type="application/ld+json">

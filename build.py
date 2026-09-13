@@ -255,6 +255,7 @@ def render_categories(env, digests):
         ]
         output = template.render(
             category_name=name,
+            slug=slug,
             emoji=CATEGORY_EMOJI.get(slug, "\U0001F4F0"),
             stories=stories,
             crumbs=crumbs,

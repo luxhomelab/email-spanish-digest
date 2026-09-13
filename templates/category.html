@@ -3,6 +3,7 @@
 {% block title %}{{ category_name }} news in Spain — Spanified{% endblock %}
 {% block description %}<meta name="description" content="Latest {{ category_name|lower }} news from Spain, summarized in English. Updated every morning.">{% endblock %}
 
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/category/{{ slug }}.html">{% endblock %}
 {% block content %}
 {% include "partials/breadcrumbs.html" %}
 <script type="application/ld+json">

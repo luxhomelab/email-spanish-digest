@@ -3,6 +3,7 @@
 {% block title %}Archive — Spain Daily{% if pagination.current > 1 %} — Page {{ pagination.current }}{% endif %}{% endblock %}
 {% block description %}<meta name="description" content="Browse the archive of Spain Daily digests — every edition, summarized in English.{% if pagination.current > 1 %} Page {{ pagination.current }}.{% endif %}">{% endblock %}
 
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/archive/{% if pagination.current > 1 %}page-{{ pagination.current }}.html{% endif %}">{% endblock %}
 {% block content %}
 {% include "partials/breadcrumbs.html" %}
 {% if digests %}
