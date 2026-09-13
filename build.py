@@ -268,7 +268,9 @@ def render_categories(env, digests):
 
 
 def render_sitemap(digests, categories=()):
-    urls = [(SITE_URL + "/", None)] + [(SITE_URL + "/" + name, None) for name in STATIC_PAGES]
+    urls = [(SITE_URL + "/", None)] + [
+        (SITE_URL + "/" + name, None) for name in STATIC_PAGES if name != "index.html"
+    ]
     # Archive listing (page 1) plus extra pages.
     total = len(digests)
     total_pages = (total + PAGE_SIZE - 1) // PAGE_SIZE if total else 1
