@@ -212,6 +212,7 @@ def render_static(env, digests):
         "index.html": {"latest": latest, "topics": topics, "emoji": CATEGORY_EMOJI},
         "about.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "About", "url": "/about", "current": True}]},
         "contact.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Contact", "url": "/contact", "current": True}]},
+        "subscribe.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Subscribe", "url": "/subscribe", "current": True}]},
     }
     for name in STATIC_PAGES:
         template = env.get_template(name)
