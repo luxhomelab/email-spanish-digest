@@ -519,3 +519,30 @@ body.page-home .steps { gap: 16px; margin-top: 20px; }
 body.page-home .topics { gap: 10px; margin-top: 20px; }
 body.page-home .cta-card { padding: 48px 40px; }
 body.page-home .page-note { margin-top: 28px; line-height: 1.7; }
+
+/* ---------- Archive in homepage style (body.page-archive only) ---------- */
+body.page-archive .content { background: linear-gradient(180deg, #FDF9F3 0%, #F7F3EC 100%); }
+body.page-archive .archive { padding: 36px 0 16px 0; }
+body.page-archive .archive h1 { font-size: 38px; letter-spacing: -0.5px; }
+body.page-archive .archive .subtitle { margin-bottom: 32px; }
+body.page-archive .archive .subtitle::after {
+ content: ""; display: block; width: 72px; height: 4px; border-radius: 2px;
+ background: linear-gradient(90deg, #AA151B 50%, #F1BF00 50%);
+ margin-top: 16px;
+}
+body.page-archive .digest-card {
+ position: relative; border-radius: 14px; border: 1px solid #EFE7D8;
+ box-shadow: 0 2px 14px rgba(60,40,20,0.07);
+ padding: 28px 32px; margin-bottom: 20px;
+}
+body.page-archive .digest-card:hover { border-color: #AA151B; box-shadow: 0 4px 18px rgba(170,21,27,0.12); }
+body.page-archive .digest-date { color: #AA151B; }
+body.page-archive .latest-badge {
+ position: absolute; top: 24px; right: 28px;
+ font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+ color: #ffffff; background-color: #AA151B; border-radius: 999px; padding: 4px 12px;
+}
+body.page-archive .pagination { margin-top: 36px; }
+body.page-archive .pagination a, body.page-archive .pagination .current { border-radius: 999px; }
+body.page-archive .pagination .current { background-color: #AA151B; border-color: #AA151B; }
+body.page-archive .pagination a:hover { border-color: #AA151B; color: #AA151B; }
