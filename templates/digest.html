@@ -64,7 +64,7 @@
      </div>
      {% endif %}
      {% if item.related %}
-     <div class="story-related">
+     <div class="story-related" data-pagefind-ignore>
       <div class="story-related-label">More news on this topic:</div>
       <ul>
        {% for r in item.related %}<li><a href="{{ r.url }}">{{ r.title }}</a></li>{% endfor %}

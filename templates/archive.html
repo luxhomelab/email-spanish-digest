@@ -4,6 +4,16 @@
 {% block description %}<meta name="description" content="Browse the archive of Spain Daily digests — every edition, summarized in English.{% if pagination.current > 1 %} Page {{ pagination.current }}.{% endif %}">{% endblock %}
 
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/archive/{% if pagination.current > 1 %}{{ pagination.current }}{% endif %}">{% endblock %}
+{% block extra_head %}
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', function () {
+ new PagefindUI({ element: '#search', showSubResults: true, excerptLength: 15,
+  translations: { placeholder: 'Search all digests\u2026' } });
+});
+</script>
+{% endblock %}
 {% block content %}
 {% include "partials/breadcrumbs.html" %}
 {% if digests %}
@@ -18,6 +28,7 @@
  <div class="archive">
   <h1>Archive{% if pagination.current > 1 %} — Page {{ pagination.current }}{% endif %}</h1>
   <p class="subtitle">Every edition of the Spain Daily digest.</p>
+  <div id="search"></div>
 
   {% if digests %}
   {% for digest in digests %}

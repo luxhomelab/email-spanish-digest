@@ -24,6 +24,7 @@ jobs:
           python-version: "3.12"
       - run: pip install jinja2 pillow
       - run: python3 build.py --out dist
+      - run: npx --yes pagefind --site dist
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
