@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 {% block body_class %} class="page-home"{% endblock %}
-{% block title %}Spain Daily — Your 5-Minute Catch-Up on Spain{% endblock %}
-{% block description %}<meta name="description" content="Spain Daily — a free newsletter bringing you the most important news from Spain, summarized in clear English. Every morning.">{% endblock %}
+{% block title %}Spanified — Spain's Top News in English, Every Morning{% endblock %}
+{% block description %}<meta name="description" content="Spanified's Spain Daily — a free newsletter with the most important news from Spain, summarized in clear English. Every morning.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Spanified — Spain's Top News in English, Every Morning">
+<meta property="og:description" content="Spanified's Spain Daily — a free newsletter with the most important news from Spain, summarized in clear English. Every morning.">
+<meta property="og:url" content="{{ site_url }}/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Spanified — Spain's Top News in English, Every Morning">
+<meta name="twitter:description" content="Spanified's Spain Daily — a free newsletter with the most important news from Spain, summarized in clear English. Every morning.">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
 
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/">{% endblock %}
 {% block content %}
@@ -12,8 +20,8 @@
   "contactPoint": {"@type": "ContactPoint", "email": "support@spanified.com",
    "contactType": "customer support", "availableLanguage": "English"},
   "sameAs": {{ site_socials|tojson }}},
- {"@type": "WebSite", "name": "Spanified — Spain Daily", "url": "{{ site_url }}/",
-  "description": "Spain Daily — a free newsletter bringing you the most important news from Spain, summarized in clear English. Every morning."},
+ {"@type": "WebSite", "name": "Spanified", "url": "{{ site_url }}/",
+  "description": "Spanified's Spain Daily — a free newsletter with the most important news from Spain, summarized in clear English. Every morning."},
  {"@type": "FAQPage", "mainEntity": [{% for q, a in faq %}
   {"@type": "Question", "name": {{ q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ a|tojson }}}}{% if not loop.last %},{% endif %}{% endfor %}
  ]}
@@ -21,8 +29,9 @@
 </script>
  <div class="page">
   <div class="hero">
+   <a class="brand-kicker" href="/about">A Spanified product</a>
    <h1>Spain's top news, <span class="accent">in English</span>, every morning.</h1>
-   <p class="tagline">Your 5-minute catch-up on what's happening in Spain — every morning.</p>
+   <p class="tagline">Spain Daily by <a href="/about">Spanified</a> — your 5-minute catch-up on what's happening in Spain.</p>
    <div class="badges">
     <span class="badge"><span class="dot">●</span>Free forever</span>
     <span class="badge"><span class="dot">●</span>Every morning</span>

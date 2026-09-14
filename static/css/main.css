@@ -201,12 +201,22 @@ body.page-unsubscribe iframe, html.iframe-page .page-unsubscribe iframe {
 /* ---------- Home (index.html) ---------- */
 .page { max-width: 1200px; width: 100%; margin: 0 auto; }
 .hero { text-align: center; margin-bottom: 32px; }
+.hero .brand-kicker {
+ display: inline-block;
+ font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+ color: #AA151B; text-decoration: none;
+ border: 1px solid #EAC9CA; border-radius: 999px; padding: 5px 14px;
+ margin-bottom: 14px;
+}
+.hero .brand-kicker:hover { background-color: #AA151B; border-color: #AA151B; color: #ffffff; }
 .hero h1 {
  font-family: Roboto, Helvetica, sans-serif;
  font-size: 36px; font-weight: 700; color: #3C4858;
  line-height: 1.2; margin-bottom: 12px;
 }
 .hero .tagline { font-size: 18px; color: #6C7A89; margin-bottom: 18px; }
+.hero .tagline a { color: inherit; text-decoration: underline; text-decoration-color: #C9CFD6; text-underline-offset: 2px; }
+.hero .tagline a:hover { color: #AA151B; text-decoration-color: #AA151B; }
 .badges { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 .badge {
  font-size: 13px; font-weight: 700; color: #3C4858;
