@@ -13,6 +13,16 @@ window.addEventListener('DOMContentLoaded', function () {
   translations: { placeholder: 'Search all digests\u2026' } });
  var q = new URLSearchParams(window.location.search).get('q');
  if (q) pf.triggerSearch(q);
+ var syncTimer = null;
+ document.getElementById('search').addEventListener('input', function () {
+  clearTimeout(syncTimer);
+  syncTimer = setTimeout(function () {
+   var box = document.querySelector('#search input');
+   var v = box ? box.value.trim() : '';
+   var url = v ? '/search?q=' + encodeURIComponent(v) : '/search';
+   window.history.replaceState(null, '', url);
+  }, 500);
+ });
  var tries = 0;
  var focusTimer = setInterval(function () {
   var input = document.querySelector('#search input');
