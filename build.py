@@ -54,6 +54,7 @@ STATIC_PAGES = [
     "contact.html",
     "editor.html",
     "about.html",
+    "search.html",
     "404.html",
 ]
 
@@ -218,6 +219,7 @@ def render_static(env, digests):
         "subscribe.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Subscribe", "url": "/subscribe", "current": True}]},
         "unsubscribe.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Unsubscribe", "url": "/unsubscribe", "current": True}]},
         "confirm.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Confirm", "url": "/confirm", "current": True}]},
+        "search.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Search", "url": "/search", "current": True}]},
         "success.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Success", "url": "/success", "current": True}]},
         "404.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Not found", "url": "/404", "current": True}]},
     }

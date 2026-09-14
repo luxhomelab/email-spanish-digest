@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block body_class %} class="page-search"{% endblock %}
+{% block title %}Search — Spanified{% endblock %}
+{% block description %}<meta name="description" content="Search every edition of the Spanified Spain Daily digest — newest first.">{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/search">{% endblock %}
+{% block extra_head %}
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', function () {
+ new PagefindUI({ element: '#search', showSubResults: true, excerptLength: 15, sort: { date: 'desc' },
+  translations: { placeholder: 'Search all digests\u2026' } });
+ var tries = 0;
+ var focusTimer = setInterval(function () {
+  var input = document.querySelector('#search input');
+  if (input || ++tries > 40) {
+   clearInterval(focusTimer);
+   if (input) input.focus({ preventScroll: true });
+  }
+ }, 100);
+});
+</script>
+{% endblock %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+ <div class="search-page">
+  <h1>Search</h1>
+  <p class="subtitle">Every story from every digest — newest first.</p>
+  <div id="search"></div>
+ </div>
+{% endblock %}

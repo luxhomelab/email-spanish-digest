@@ -39,7 +39,7 @@
   {"@type": "NewsArticle", "headline": {{ item.title|tojson }}, "articleSection": {{ (item.category or "news")|tojson }}, "url": "{{ site_url + digest.url }}", "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor"}{% if item.sources %}, "isBasedOn": {"@type": "CreativeWork", "name": {{ item.sources[0].name|tojson }}, "url": {{ item.sources[0].url|tojson }}}{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}
  ]}
 </script>
- <div class="digest">
+ <div class="digest" data-pagefind-sort="date:{{ digest.date }}">
   <div class="digest-card">
    <h1 class="email-red-band">Spain Daily Digest: <time datetime="{{ pub_date(digest.date) }}">{{ digest.date_display }}</time></h1>
    <div class="email-gold-band"></div>
