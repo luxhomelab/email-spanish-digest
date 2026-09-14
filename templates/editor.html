@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block body_class %} class="page-editor"{% endblock %}
+{% block title %}Editor — Dmytro Shvechikov — Spanified{% endblock %}
+{% block description %}<meta name="description" content="Dmytro Shvechikov edits the Spanified Spain Daily Digest — selecting stories, reviewing AI summaries, and verifying them against the original reporting.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Dmytro Shvechikov — Editor, Spanified">
+<meta property="og:description" content="Spain-based engineer curating and editing the daily English digest of Spanish news.">
+<meta property="og:url" content="{{ site_url }}/editor">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dmytro Shvechikov — Editor, Spanified">
+<meta name="twitter:description" content="Spain-based engineer curating and editing the daily English digest of Spanish news.">
+<meta name="twitter:image" content="https://spanified.com/logo.jpg">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/editor">{% endblock %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "ProfilePage",
+ "name": "Dmytro Shvechikov — Editor, Spanified",
+ "url": "{{ site_url }}/editor",
+ "inLanguage": "en",
+ "mainEntity": {"@type": "Person", "name": "Dmytro Shvechikov",
+  "jobTitle": "Senior Software Engineer",
+  "description": "Senior Software Engineer with 10+ years of production software development experience. Based in Spain and actively researching Spanish real estate investments. Edits the Spanified Spain Daily Digest.",
+  "url": "{{ site_url }}/editor",
+  "sameAs": ["https://www.linkedin.com/in/dshvechikov"],
+  "worksFor": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}}}
+</script>
+ <div class="editor">
+  <h1>Dmytro Shvechikov</h1>
+  <p class="subtitle">Editor, Spanified Spain Daily Digest</p>
+
+  <div class="card">
+   <h2>Who I am</h2>
+   <p>I'm a Senior Software Engineer with 10+ years of production software development experience. I'm based in Spain and actively follow the country's agenda — including Spanish real estate as an investor. That daily habit of reading the Spanish press is what Spanified is built on.</p>
+  </div>
+
+  <div class="card">
+   <h2>What I do here</h2>
+   <p>Every morning I shape the <a href="/">Spain Daily Digest</a>: I review the selected stories, check the AI-written summaries against the original reporting, and cut anything that doesn't meet the bar. The summaries are machine-assisted, but what lands in your inbox passed a human who lives the news he edits. <a href="/about">How the digest is made</a>.</p>
+  </div>
+
+  <div class="card">
+   <h2>Reach me</h2>
+   <p>Spotted a mistake or want a topic covered? <a href="/contact">Tell us</a> — I read every message. You can also find me on <a href="https://www.linkedin.com/in/dshvechikov" target="_blank" rel="noopener">LinkedIn</a>.</p>
+  </div>
+ </div>
+{% endblock %}
