@@ -25,6 +25,8 @@ EMOJI_RE = re.compile(
 def _strip_emoji(text):
     return EMOJI_RE.sub("", text).strip()
 
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
 W, H = 1200, 630
 CREAM = (255, 253, 248)
 INK = (60, 72, 88)
@@ -140,6 +142,11 @@ def render_og_images(digests, out_dir):
     os.makedirs(og_dir, exist_ok=True)
     count = 0
     for digest in digests:
+        # date doubles as the output filename — reject anything off-format
+        # so a malformed value can never escape og/ via path traversal.
+        if not DATE_RE.match(digest.get("date", "")):
+            print(f"  WARN: skipping og card, bad date: {digest.get('date')!r}")
+            continue
         stories = [s.get("title", "") for s in digest.get("stories", [])]
         img = render_digest_card(digest["date_display"], digest["headline"], stories)
         img.save(os.path.join(og_dir, f"{digest['date']}.png"))
