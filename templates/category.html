@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block body_class %} class="page-category"{% endblock %}
-{% block title %}{{ category_name }} News in Spain, in English — Spanified{% endblock %}
-{% block description %}<meta name="description" content="{{ category_description|truncate(160) }}">
+{% block title %}{{ meta_title|safe }}{% endblock %}
+{% block description %}<meta name="description" content="{{ meta_description|safe }}">
 <meta property="og:type" content="website">
-<meta property="og:title" content="{{ category_name }} News in Spain, in English — Spanified">
-<meta property="og:description" content="{{ category_description|truncate(160) }}">
+<meta property="og:title" content="{{ meta_title|safe }}">
+<meta property="og:description" content="{{ meta_description|safe }}">
 <meta property="og:url" content="{{ site_url }}/category/{{ slug }}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ category_name }} News in Spain, in English — Spanified">
-<meta name="twitter:description" content="{{ category_description|truncate(160) }}">
+<meta name="twitter:title" content="{{ meta_title|safe }}">
+<meta name="twitter:description" content="{{ meta_description|safe }}">
 <meta name="robots" content="max-image-preview:large">{% endblock %}
 
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/category/{{ slug }}">{% endblock %}

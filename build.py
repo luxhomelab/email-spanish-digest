@@ -86,8 +86,23 @@ CATEGORY_EMOJI = {
     "migration": "🌍",
     "taxes": "📊",
     "events": "📅",
+    "housing": "🏘️",
 }
 DEFAULT_EMOJI = "📰"
+
+# SEO meta titles + descriptions per category (from SEO review, 2026-09-14).
+CATEGORY_META = {
+    "economy": ("Spain Economy News: Inflation, Jobs & GDP — Spanified", "Spain economy explained for expats: GDP growth, inflation, salaries and Bank of Spain data. Track the numbers that hit your prices and savings."),
+    "politics": ("Spanish Politics News: Laws & Elections — Spanified", "Spanish politics without the noise: coalition deals, regional elections, new laws and EU relations. What Madrid decides, explained for residents."),
+    "work": ("Jobs in Spain: Workers' Rights, SMI & Hiring — Spanified", "Jobs and labour in Spain: hiring trends, minimum wage (SMI), workers' rights, strikes and workplace reforms. Essential reading for workers."),
+    "property": ("Spanish Property: Prices, Mortgages & Rent Caps — Spanified", "Spanish property news in English: house prices by region, rental caps, housing laws and mortgage trends. For buyers, renters and landlords."),
+    "events": ("Events in Spain: Holidays, Festivals & Strikes — Spanified", "What's on in Spain: national holidays, festivals, strikes affecting travel, and major cultural moments. Daily life in the country, in brief."),
+    "health": ("Healthcare in Spain: SNS News & Waiting Lists — Spanified", "Healthcare in Spain explained: public system (SNS) updates, waiting lists, new treatments and health alerts. Practical news for residents."),
+    "taxes": ("Spanish Taxes: IRPF, Renta & Deadlines Explained — Spanified", "Spanish taxes without tears: IRPF brackets, renta and modelo 720 deadlines, deductions and Hacienda reforms. What you owe and when."),
+    "visa": ("Spain Visas & Residency: Nomad, NIE & TIE — Spanified", "Visas and residency in Spain: digital nomad permit, Beckham Law, NIE/TIE procedures and immigration rules. The paperwork side, decoded."),
+    "housing": ("Renting in Spain: Tenant Rights & Rental Prices — Spanified", "Renting and housing access in Spain: rental prices, tenant rights (LAU), evictions and regional housing plans. What protects you as a tenant."),
+    "migration": ("Spain Migration: Arrivals, Policy & Integration — Spanified", "Migration and life between countries: arrivals data, integration policies, consular services and stories of people moving to and from Spain."),
+}
 
 # Unique SEO descriptions per category (2-3 sentences each).
 CATEGORY_DESCRIPTIONS = {
@@ -425,11 +440,14 @@ def render_categories(env, digests):
             {"name": "Home", "url": "/"},
             {"name": name, "url": f"/category/{slug}", "current": True},
         ]
+        meta_title, meta_desc = CATEGORY_META.get(slug, (name + " News in Spain, in English — Spanified", ""))
         output = template.render(
             category_name=name,
             slug=slug,
             emoji=CATEGORY_EMOJI.get(slug, "\U0001F4F0"),
             category_description=CATEGORY_DESCRIPTIONS.get(slug, ""),
+            meta_title=meta_title,
+            meta_description=meta_desc,
             stories=stories,
             crumbs=crumbs,
         )
