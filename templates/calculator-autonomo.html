@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+{% block body_class %} class="page-calculator"{% endblock %}
+{% block title %}Self-employed Tax Calculator Spain 2026 — Autónomo IRPF &amp; SS — Spanified{% endblock %}
+{% block description %}<meta name="description" content="Free autónomo tax calculator for Spain: estimate Social Security quotas and IRPF for self-employed workers by region, income and family situation. In English.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Self-employed Tax Calculator Spain 2026 — Autónomo IRPF &amp; SS — Spanified">
+<meta property="og:description" content="Free autónomo tax calculator for Spain: Social Security quotas and IRPF by region, income and family situation. In English.">
+<meta property="og:url" content="{{ site_url }}/calculators/autonomo-tax">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Self-employed Tax Calculator Spain 2026 — Autónomo IRPF &amp; SS — Spanified">
+<meta name="twitter:description" content="Free autónomo tax calculator for Spain: Social Security quotas and IRPF by region, income and family situation. In English.">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/calculators/autonomo-tax">{% endblock %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [
+ {"@type": "WebPage",
+  "name": "Self-employed Tax Calculator Spain 2026 — Autónomo IRPF & SS — Spanified",
+  "url": "{{ site_url }}/calculators/autonomo-tax",
+  "description": "Free autónomo tax calculator for Spain: estimate Social Security quotas and IRPF for self-employed workers by region, income and family situation. In English.",
+  "inLanguage": "en",
+  "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}},
+ {"@type": "FAQPage", "mainEntity": [
+  {"@type": "Question", "name": "How are autónomo SS quotas calculated?", "acceptedAnswer": {"@type": "Answer", "text": "Since 2023, Spain introduced a 15-bracket social security system for autónomos based on actual net income. Your monthly quota depends on which bracket your estimated annual net income falls into. Official quotas are published through 2025. For 2026 onward, this calculator applies the 2025 rates as no new quotas have been approved yet."}},
+  {"@type": "Question", "name": "What is tarifa plana?", "acceptedAnswer": {"@type": "Answer", "text": "Tarifa plana is a reduced flat rate of €80/month for newly registered autónomos during their first 12 months. It reduces the initial burden for new self-employed workers. After the first year, you pay the regular quota based on your income bracket."}},
+  {"@type": "Question", "name": "What deductions can autónomos claim?", "acceptedAnswer": {"@type": "Answer", "text": "Individual autónomos can deduct 7% of net revenues as a general expenses allowance (capped at €2,000/year). Company directors apply a 3% rate (same cap). All autónomos also deduct annual SS contributions from income before calculating IRPF."}},
+  {"@type": "Question", "name": "How is IRPF calculated for autónomos?", "acceptedAnswer": {"@type": "Answer", "text": "IRPF is Spain's income tax. For autónomos, the taxable base is net revenue minus SS contributions minus general expenses, reduced further by the personal minimum allowance. The resulting base is taxed using progressive brackets split between a state component and a regional component set by each community."}}
+ ]}
+]}
+</script>
+ <div class="calc">
+  <h1>Autónomo Tax Calculator <span class="calc-year">2026</span></h1>
+  <p class="subtitle">Self-employed taxes in Spain: Social Security quotas + IRPF, by region, income and family situation.</p>
+
+  <div class="calc-grid">
+   <div class="card calc-form">
+    <p class="calc-kicker">Parameters</p>
+
+    <div class="field">
+     <label for="f-revenue">Annual net revenues <span class="tip" title="Your total annual net revenue before any deductions. This is the starting point for all calculations — SS bracket, expenses deduction, and IRPF base are all derived from this figure.">?</span> <span class="sub">€ / yr ·</span></label>
+     <input id="f-revenue" type="number" min="0" step="1000" value="30000">
+    </div>
+
+    <div class="field-row">
+     <div class="field">
+      <label for="f-year">Fiscal year</label>
+      <select id="f-year">
+       <option value="2026" selected>2026</option>
+       <option value="2027">2027</option>
+       <option value="2028">2028</option>
+       <option value="2029">2029</option>
+       <option value="2030">2030</option>
+       <option value="2031">2031</option>
+      </select>
+     </div>
+     <div class="field">
+      <label for="f-region">Tax region <span class="tip" title="Your autonomous community determines the regional half of your IRPF. Each region sets its own tax brackets and rates independently. Madrid is the lowest (top rate ~20.5%), Valencia among the highest (top rate ~29.5%).">?</span></label>
+      <select id="f-region">
+       <option value="andalucia">Andalusia</option>
+       <option value="aragon">Aragon</option>
+       <option value="asturias">Asturias</option>
+       <option value="baleares">Balearic Islands</option>
+       <option value="canarias">Canary Islands</option>
+       <option value="cantabria">Cantabria</option>
+       <option value="castilla_la_mancha">Castilla-La Mancha</option>
+       <option value="castilla_leon">Castilla and Leon</option>
+       <option value="catalunya">Catalonia</option>
+       <option value="comunidad_valenciana">Valencian Community</option>
+       <option value="ceuta">Ceuta</option>
+       <option value="extremadura">Extremadura</option>
+       <option value="galicia">Galicia</option>
+       <option value="madrid" selected>Madrid</option>
+       <option value="melilla">Melilla</option>
+       <option value="murcia">Murcia</option>
+       <option value="navarra">Navarre</option>
+       <option value="pais_vasco">Basque Country</option>
+       <option value="la_rioja">La Rioja</option>
+      </select>
+     </div>
+    </div>
+
+    <div class="field">
+     <span class="flabel">Autónomo type <span class="tip" title="Affects the general expenses deduction applied before SS and IRPF: Individual autonomo = 7% of revenue (max €2,000). Director of your own SL = 3% of revenue (max €2,000).">?</span></span>
+     <div class="seg" id="f-type" role="group" aria-label="Autónomo type">
+      <button type="button" data-v="individual" class="on">Individual freelancer</button>
+      <button type="button" data-v="director">Company director / shareholder</button>
+     </div>
+    </div>
+
+    <div class="field">
+     <span class="flabel">Time as autónomo <span class="tip" title="New autonomos (first 12 months) pay a flat Tarifa Plana of €80/month. After month 12, the standard bracket-based quota applies.">?</span></span>
+     <div class="seg seg-3" id="f-time" role="group" aria-label="Time as autónomo">
+      <button type="button" data-v="new">&lt; 1 year (tarifa plana €80/mo)</button>
+      <button type="button" data-v="mid">1–2 years</button>
+      <button type="button" data-v="established" class="on">&gt; 2 years</button>
+     </div>
+    </div>
+
+    <div class="personal">
+     <button type="button" id="personal-toggle" aria-expanded="false">
+      <span>Personal circumstances (optional)</span><span class="chev" aria-hidden="true">›</span>
+     </button>
+     <div id="personal-body" hidden>
+      <div class="field">
+       <label for="f-age">Age <span class="tip" title="Age affects your personal minimum allowance, which reduces IRPF. Under 65: base €5,550. Age 65–74: +€1,150. Age 75+: +€1,400 additional.">?</span> <span class="sub">years</span></label>
+       <input id="f-age" type="number" min="18" max="100" step="1" value="35">
+      </div>
+      <div class="field-row">
+       <div class="field">
+        <label for="f-children">Dependent children <span class="tip" title="Dependent children (under 25, living with you, income under €8,000/yr) increase your personal minimum: 1st child +€2,400 · 2nd +€2,700 · 3rd +€4,000 · 4th+ +€4,500 each.">?</span></label>
+        <select id="f-children">
+         <option value="0" selected>0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+        </select>
+       </div>
+       <div class="field">
+        <label for="f-chu3">Of which under 3 years old <span class="tip" title="Each child under 3 adds an extra €2,800 to your personal minimum on top of the base child allowance. Must not exceed the total number of dependent children.">?</span></label>
+        <select id="f-chu3"><option value="0" selected>0</option></select>
+       </div>
+      </div>
+      <div class="field">
+       <span class="flabel">Disability level <span class="tip" title="Disability allowances added to your personal minimum: 33–64% disability +€3,000 · 65%+ disability +€9,000.">?</span></span>
+       <div class="seg seg-3" id="f-dis" role="group" aria-label="Disability level">
+        <button type="button" data-v="0" class="on">None</button>
+        <button type="button" data-v="33">33%+ (moderate)</button>
+        <button type="button" data-v="65">65%+ (severe)</button>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+
+   <div class="calc-results">
+    <div class="notice notice-amber" id="r-tarifa" hidden>Tarifa plana — flat €80/month for first 12 months.</div>
+    <div class="notice notice-red" id="r-ceuta" hidden><strong>⚠️ Ceuta/Melilla tax discount not implemented:</strong> Residents of Ceuta/Melilla are entitled to a 50% discount on IRPF. This calculator does not implement that discount, so the IRPF shown significantly overstates your actual tax liability. Please consult a tax professional for accurate figures.</div>
+    <div class="notice notice-red" id="r-error" hidden><strong>⚠️ Calculation Error:</strong> <span id="r-error-text"></span>. Please check your inputs or contact support if the problem persists.</div>
+
+    <div class="hero-net">
+     <p class="kicker">Net take-home</p>
+     <p class="big" id="r-net">—</p>
+     <p class="permo"><span id="r-net-mo">—</span> / mo</p>
+    </div>
+
+    <div class="duo">
+     <div class="mini mini-ss">
+      <p class="kicker">Monthly SS</p>
+      <p class="val" id="r-ss-mo">—</p>
+      <p class="sub2"><span id="r-ss-yr">—</span> / yr · SS bracket <span id="r-bracket">—</span></p>
+     </div>
+     <div class="mini mini-irpf">
+      <p class="kicker">Total IRPF</p>
+      <p class="val" id="r-irpf">—</p>
+      <p class="sub2"><span id="r-irpf-rate">—</span> effective rate</p>
+     </div>
+    </div>
+
+    <div class="card burden" id="r-burden" hidden>
+     <p class="calc-kicker">Total tax burden</p>
+     <div class="bar"><div id="bar-ss"><span>SS</span></div><div id="bar-irpf"><span>IRPF</span></div><div id="bar-net"><span>Net</span></div></div>
+     <div class="legend"><span><i class="dot dot-ss"></i>SS <b id="l-ss">—</b></span><span><i class="dot dot-irpf"></i>IRPF <b id="l-irpf">—</b></span><span><i class="dot dot-net"></i>Net <b id="l-net">—</b></span></div>
+    </div>
+
+    <div class="card sheet">
+     <table>
+      <thead><tr><th></th><th class="num">%</th><th class="num">Amount</th></tr></thead>
+      <tbody>
+       <tr><td class="row-h">Gross revenues</td><td class="num"></td><td class="num b" id="b-gross">—</td></tr>
+       <tr class="tint-o"><td class="ind">− General expenses deduction</td><td class="num" id="b-exp-p"></td><td class="num o" id="b-exp">—</td></tr>
+       <tr class="tint-o"><td class="ind">− Social Security (annual)</td><td class="num" id="b-ss-p"></td><td class="num o" id="b-ss">—</td></tr>
+       <tr><td class="row-h">Reduced net income</td><td class="num"></td><td class="num b" id="b-taxable">—</td></tr>
+       <tr class="tint-r"><td class="ind">− IRPF — state component</td><td class="num" id="b-st-p"></td><td class="num r" id="b-st">—</td></tr>
+       <tr class="tint-r"><td class="ind">− IRPF — regional component</td><td class="num" id="b-reg-p"></td><td class="num r" id="b-reg">—</td></tr>
+       <tr class="total"><td class="row-h">Net take-home</td><td class="num"></td><td class="num b big" id="b-net">—</td></tr>
+      </tbody>
+     </table>
+    </div>
+
+    <div class="card irpfp">
+     <button type="button" id="irpf-toggle" aria-expanded="false"><span>How IRPF is calculated</span><span class="chev" aria-hidden="true">›</span></button>
+     <div id="irpf-body" hidden>
+      <h4>What is IRPF?</h4>
+      <p>IRPF (Impuesto sobre la Renta de las Personas Físicas) is the Spanish personal income tax. For autonomos it applies to your net profit — revenue after deducting general expenses and Social Security contributions, which become your taxable base (base imponible).</p>
+      <h4>State + regional split</h4>
+      <p>IRPF is split roughly 50/50 between the national government (state) and your autonomous community (region). Each applies its own progressive bracket table independently, so changing your region can significantly affect your total tax bill. Madrid has the lowest regional rates; Valencia, Catalunya and Asturias are among the highest.</p>
+      <h4>Progressive brackets</h4>
+      <p>IRPF is progressive — only the income within each bracket is taxed at that bracket's rate. Earning €1 more never makes your entire income jump to a higher rate. State rates range from 9.5% on the first €12,450 up to 24.5% above €300,000. Regional rates vary by community.</p>
+      <h4>Personal minimum (mínimo personal y familiar)</h4>
+      <p>Spain grants every taxpayer a personal minimum allowance — an amount of income that is effectively tax-free. It works by computing the tax on the allowance and subtracting that from your bill (not by reducing your taxable base). The base allowance is €5,550; it increases with age (65+, 75+), dependent children, and disability.</p>
+      <p class="save" id="irpf-saving" hidden></p>
+      <h4>Autonomo-specific deductions</h4>
+      <p>Before IRPF is calculated, your taxable base is reduced by:</p>
+      <ul>
+       <li>General expenses: 7% of revenue (max €2,000) for individual autonomos; 3% for directors — a flat deduction covering minor business costs without requiring receipts.</li>
+       <li>Social Security contributions: your full annual SS quota is 100% deductible from the IRPF base.</li>
+      </ul>
+      <p class="curbase" id="irpf-base" hidden></p>
+      <p class="note">Note: This calculator uses the direct estimation simplified method (estimación directa simplificada). Results are educational estimates. Consult a gestor or tax advisor for your actual declaration.</p>
+     </div>
+    </div>
+
+    <div class="pills"><span class="pill pill-o">Effective SS rate: <b id="p-ss">—</b></span><span class="pill pill-r">Effective IRPF rate: <b id="p-irpf">—</b></span><span class="pill pill-s">Total tax burden: <b id="p-total">—</b></span></div>
+
+    <div class="notice notice-amber">Results are approximate and for educational purposes only. Tax rules change frequently. Consult a gestor or tax advisor for professional advice.</div>
+   </div>
+  </div>
+
+  <div class="card seobox">
+   <h2>How autónomo taxes work in Spain</h2>
+   <p>Since 2023, Spanish autónomos pay social security contributions based on their actual net income through a 15-bracket system. On top of SS, autónomos pay IRPF (income tax) on their remaining net income. This calculator estimates both SS contributions and IRPF for any region in Spain.</p>
+   <p class="src">SS data source: <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2022-12482" target="_blank" rel="noopener">BOE-A-2022-12482</a></p>
+  </div>
+
+  <div class="card faq-card">
+   <h2>Frequently Asked Questions</h2>
+   <details class="faq-item"><summary>How are autónomo SS quotas calculated?</summary><p>Since 2023, Spain introduced a 15-bracket social security system for autónomos based on actual net income. Your monthly quota depends on which bracket your estimated annual net income falls into. Official quotas are published through 2025. For 2026 onward, this calculator applies the 2025 rates as no new quotas have been approved yet.</p></details>
+   <details class="faq-item"><summary>What is tarifa plana?</summary><p>Tarifa plana is a reduced flat rate of €80/month for newly registered autónomos during their first 12 months. It reduces the initial burden for new self-employed workers. After the first year, you pay the regular quota based on your income bracket.</p></details>
+   <details class="faq-item"><summary>What deductions can autónomos claim?</summary><p>Individual autónomos can deduct 7% of net revenues as a general expenses allowance (capped at €2,000/year). Company directors apply a 3% rate (same cap). All autónomos also deduct annual SS contributions from income before calculating IRPF.</p></details>
+   <details class="faq-item"><summary>How is IRPF calculated for autónomos?</summary><p>IRPF is Spain's income tax. For autónomos, the taxable base is net revenue minus SS contributions minus general expenses, reduced further by the personal minimum allowance. The resulting base is taxed using progressive brackets split between a state component and a regional component set by each community.</p></details>
+  </div>
+ </div>
+<script type="module" src="/static/js/autonomo.js?v={{ js_version }}"></script>
+{% endblock %}
