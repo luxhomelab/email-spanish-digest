@@ -205,6 +205,44 @@ def pagination(page, total_pages):
     }
 
 
+FAQ_ITEMS = [
+    ("What is Spanified?", "Spanified is a free newsletter that summarizes the most important news from Spain in plain English — rents, taxes, visas, jobs and everyday life."),
+    ("How often does the digest arrive?", "Every morning, seven days a week. Five minutes with your coffee and you're up to speed."),
+    ("Is it really free?", "Yes — free forever. No paywall, no trial, just the news."),
+    ("What language is it in?", "The summaries are written in clear English, based on the Spanish press we read cover to cover each morning."),
+    ("Where can I read past editions?", "Every edition stays online in the archive — browse by date or search the whole history."),
+]
+
+
+def render_llms_txt(digests):
+    latest = digests[0]["date"] if digests else "n/a"
+    lines = [
+        "# Spanified — Spain Daily",
+        "> A free newsletter summarizing the most important news from Spain in plain English. Every morning, 5-minute read.",
+        "",
+        f"Latest edition: {latest}",
+        "",
+        "## Key pages",
+        f"- Home: {SITE_URL}/",
+        f"- Archive (all editions): {SITE_URL}/archive/",
+        f"- Search (newest first): {SITE_URL}/search",
+        f"- About & methodology: {SITE_URL}/about",
+        f"- Editor: {SITE_URL}/editor",
+        f"- Subscribe: {SITE_URL}/subscribe",
+        "",
+        "## How to cite",
+        "- Link editions as {SITE_URL}/archive/<YYYY-MM-DD>#news-<N>.",
+        "- Publisher: Spanified. Editor: Dmytro Shvechikov.",
+        "",
+        "## Topics",
+        "- property, economy, politics, work, visa, health, migration, taxes, events",
+    ]
+    dest = os.path.join(OUT_DIR, "llms.txt")
+    with open(dest, "w", encoding="utf-8") as fh:
+        fh.write("\n".join(lines) + "\n")
+    print("  wrote llms.txt")
+
+
 def render_static(env, digests):
     latest = digests[0] if digests else None
     topics = [
@@ -212,7 +250,7 @@ def render_static(env, digests):
         for category, emoji in CATEGORY_EMOJI.items()
     ]
     contexts = {
-        "index.html": {"latest": latest, "topics": topics, "emoji": CATEGORY_EMOJI},
+        "index.html": {"latest": latest, "topics": topics, "emoji": CATEGORY_EMOJI, "faq": FAQ_ITEMS},
         "about.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "About", "url": "/about", "current": True}]},
         "contact.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Contact", "url": "/contact", "current": True}]},
         "editor.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Editor", "url": "/editor", "current": True}]},
@@ -519,6 +557,9 @@ def main():
 
     print("Building sitemap...")
     render_sitemap(digests, categories)
+
+    print("Writing llms.txt...")
+    render_llms_txt(digests)
 
     print("Done.")
 
