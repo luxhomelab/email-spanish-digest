@@ -47,6 +47,8 @@ a { color: inherit; }
  color: #3C4858; text-decoration: none;
 }
 .site-nav a:hover { color: #1A1A16; }
+.nav-search { display: inline-flex; align-items: center; color: #3C4858; margin-right: -14px; }
+.nav-search:hover { color: #AA151B; }
 .nav-cta {
  background-color: #3C4858; color: #ffffff !important;
  padding: 8px 18px; border-radius: 3px; font-weight: 700;
@@ -816,3 +818,4 @@ body.page-editor .editor .card h2 { font-size: 20px; color: #3C4858; margin-bott
 body.page-editor .editor .card p { font-size: 15px; line-height: 24px; color: #3C4858; }
 body.page-editor .editor .card a { color: #B91C1C; text-decoration: none; }
 body.page-editor .editor .card a:hover { text-decoration: underline; }
+body.page-archive #search { max-width: 640px; margin: 0 auto 24px auto; --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #3C4858; --pagefind-ui-background: #FFFDF8; --pagefind-ui-border: #E3D9C4; --pagefind-ui-border-radius: 12px; --pagefind-ui-font: inherit; }
