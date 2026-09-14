@@ -13,7 +13,10 @@
    "contactType": "customer support", "availableLanguage": "English"},
   "sameAs": {{ site_socials|tojson }}},
  {"@type": "WebSite", "name": "Spanified — Spain Daily", "url": "{{ site_url }}/",
-  "description": "Spain Daily — a free newsletter bringing you the most important news from Spain, summarized in clear English. Every morning."}
+  "description": "Spain Daily — a free newsletter bringing you the most important news from Spain, summarized in clear English. Every morning."},
+ {"@type": "FAQPage", "mainEntity": [{% for q, a in faq %}
+  {"@type": "Question", "name": {{ q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ a|tojson }}}}{% if not loop.last %},{% endif %}{% endfor %}
+ ]}
 ]}
 </script>
  <div class="page">
@@ -78,6 +81,16 @@
    <div class="follow-row">
     {% include "partials/social.html" %}
    </div>
+  </div>
+
+  <div class="card faq-card">
+   <h2>Questions, answered</h2>
+   {% for q, a in faq %}
+   <details class="faq-item">
+    <summary>{{ q }}</summary>
+    <p>{{ a }}</p>
+   </details>
+   {% endfor %}
   </div>
 
   <p class="page-note">
