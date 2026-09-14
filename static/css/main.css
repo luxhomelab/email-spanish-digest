@@ -778,3 +778,14 @@ body.page-contact .contact .card {
 .unsub-social .soc:hover {
  border-color: #AA151B; background-color: #F8EFDD; transform: translateY(-1px);
 }
+body.page-digest .share-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; font-size: 13px; }
+body.page-digest .share-label { color: #6C7A89; font-weight: 600; margin-right: 2px; }
+body.page-digest .share-btn {
+ display: inline-flex; align-items: center;
+ border: 1px solid #E3D9C4; border-radius: 999px;
+ padding: 5px 13px; font-size: 13px; font-weight: 600;
+ color: #3C4858; text-decoration: none; background-color: #FFFDF8;
+ cursor: pointer; font-family: inherit;
+ transition: border-color 0.15s, background-color 0.15s;
+}
+body.page-digest .share-btn:hover { border-color: #AA151B; background-color: #F8EFDD; }

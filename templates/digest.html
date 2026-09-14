@@ -45,6 +45,7 @@
    <div class="email-gold-band"></div>
    <div class="email-subheader">{{ digest.headline }}</div>
    <div class="byline">By <a href="/about">Spanified</a> · {{ digest.date_display }} · {{ digest.story_count }} {% if digest.story_count == 1 %}story{% else %}stories{% endif %}</div>
+   {% with share=digest.share %}{% include "partials/share.html" %}{% endwith %}
 
    <div class="email-body">
    {% for item in digest.stories %}
@@ -71,6 +72,7 @@
       </ul>
      </div>
      {% endif %}
+     {% with share=item.share %}{% include "partials/share.html" %}{% endwith %}
     </article>
    {% endfor %}
     {% if digest.mercadona %}
@@ -79,6 +81,7 @@
    </div>
 
    <div class="email-footer">
+    {% with share=digest.share %}{% include "partials/share.html" %}{% endwith %}
     <div class="ai-disclaimer">This digest is based on real news and created with the help of AI.</div>
     {% if day_nav.older or day_nav.newer %}
     <nav class="day-nav" aria-label="More digests">
@@ -89,4 +92,20 @@
    </div>
   </div>
  </div>
+<script>
+document.querySelector('.digest-card').addEventListener('click', function (e) {
+ var btn = e.target.closest('.share-copy');
+ if (!btn) return;
+ var done = function () { btn.textContent = 'Copied!'; setTimeout(function () { btn.textContent = 'Copy link'; }, 1500); };
+ if (navigator.clipboard && navigator.clipboard.writeText) {
+  navigator.clipboard.writeText(btn.dataset.url).then(done, done);
+ } else {
+  var i = document.createElement('input');
+  i.value = btn.dataset.url;
+  document.body.appendChild(i); i.select();
+  try { document.execCommand('copy'); } catch (err) {}
+  document.body.removeChild(i); done();
+ }
+});
+</script>
 {% endblock %}
