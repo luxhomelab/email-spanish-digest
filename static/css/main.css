@@ -575,16 +575,23 @@ body.page-digest .story-important { background-color: #AA151B; color: #ffffff; b
 body.page-digest .story-title { font-size: 20px; line-height: 27px; }
 body.page-digest .story-body { font-size: 15.5px; line-height: 24px; }
 body.page-digest .story-related {
- margin-top: 12px; padding-top: 10px;
- border-top: 1px solid #F0EDE6;
- font-size: 13px; line-height: 20px; color: #8B8578;
+ margin-top: 16px; padding-left: 14px;
+ border-left: 2px solid #F0EDE6;
+ font-size: 13.5px; line-height: 22px; color: #6C7A89;
 }
-body.page-digest .story-related-label { font-weight: 600; color: #6C7A89; margin-bottom: 6px; }
-body.page-digest .story-related ul { margin: 0; padding-left: 20px; }
-body.page-digest .story-related li { margin-bottom: 4px; }
-body.page-digest .story-related li::marker { color: #C5BFB4; }
-body.page-digest .story-related a { color: #AA151B; text-decoration: none; font-weight: 500; }
-body.page-digest .story-related a:hover { text-decoration: underline; }
+body.page-digest .story-related-label {
+ font-weight: 700; color: #3C4858;
+ font-size: 12px; letter-spacing: 0.4px; text-transform: uppercase;
+ margin-bottom: 6px;
+}
+body.page-digest .story-related-label::before {
+ content: "§"; color: #AA151B; margin-right: 7px; font-weight: 700;
+}
+body.page-digest .story-related ul { margin: 0; padding-left: 18px; }
+body.page-digest .story-related li { margin-bottom: 5px; }
+body.page-digest .story-related li::marker { color: #F1BF00; }
+body.page-digest .story-related a { color: #3C4858; text-decoration: none; font-weight: 500; }
+body.page-digest .story-related a:hover { color: #AA151B; text-decoration: underline; }
 body.page-digest .mercadona {
  background-color: #FDF6E3; border: 1px solid #F0DFAE; border-radius: 12px;
  padding: 18px 22px; margin: 12px 32px 0 32px;
