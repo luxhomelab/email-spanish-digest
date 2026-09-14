@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block body_class %} class="page-legal"{% endblock %}
+{% block title %}Privacy Policy — Spanified{% endblock %}
+{% block description %}<meta name="description" content="Privacy Policy of Spanified — what data we collect (newsletter email via Brevo, analytics), why, and your rights under GDPR.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Privacy Policy — Spanified">
+<meta property="og:description" content="What data Spanified collects, why, and your rights under GDPR.">
+<meta property="og:url" content="{{ site_url }}/privacy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Privacy Policy — Spanified">
+<meta name="twitter:description" content="What data Spanified collects, why, and your rights under GDPR.">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/privacy">{% endblock %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebPage",
+ "name": "Privacy Policy — Spanified",
+ "url": "{{ site_url }}/privacy",
+ "description": "Privacy Policy of Spanified — what data we collect, why, and your rights under GDPR.",
+ "inLanguage": "en",
+ "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}}
+</script>
+ <div class="legal">
+  <h1>Privacy Policy</h1>
+  <p class="subtitle">Effective: September 14, 2026. Short version: we collect almost nothing, and never sell anything.</p>
+
+  <div class="card">
+   <h2>Who we are</h2>
+   <p>Spanified publishes the Spain Daily newsletter and this website. For any privacy question, write to <a href="mailto:support@spanified.com">support@spanified.com</a> — we usually reply within a couple of days.</p>
+  </div>
+
+  <div class="card">
+   <h2>What we collect</h2>
+   <p><strong>Newsletter email.</strong> When you subscribe, we store your email address to send you the Spain Daily digest. Subscription and delivery are handled by our email provider Brevo (Sendinblue), which processes your address on our behalf.</p>
+   <p><strong>Anonymous analytics.</strong> We use Google Analytics to understand which pages are read — no names, no emails, no cross-site tracking on our side.</p>
+   <p>We do not run accounts, comments, or trackers beyond that. The site is free to read with no sign-up.</p>
+  </div>
+
+  <div class="card">
+   <h2>Why we use it (GDPR basis)</h2>
+   <p>Your email is used solely to deliver the newsletter you asked for — the legal basis is your consent, given at subscription. Analytics are covered by our legitimate interest in keeping the site useful. You can withdraw consent anytime with one click via the <a href="/unsubscribe">unsubscribe</a> link in every email.</p>
+  </div>
+
+  <div class="card">
+   <h2>How long we keep it</h2>
+   <p>Your email stays on the mailing list until you unsubscribe — unsubscribed addresses are removed. Anonymous analytics are retained per Google's standard retention settings.</p>
+  </div>
+
+  <div class="card">
+   <h2>Your rights</h2>
+   <p>Under the GDPR you can ask us to show, correct, or delete your data, restrict or object to its use, and take it elsewhere (portability). Just email <a href="mailto:support@spanified.com">support@spanified.com</a>. You also have the right to complain to your local data protection authority — in Spain, the AEPD.</p>
+  </div>
+
+  <div class="card">
+   <h2>Sharing</h2>
+   <p>We share your email only with Brevo for delivery. We never sell personal data and never share it with advertisers. If the law requires disclosure, we will comply — and tell you unless forbidden.</p>
+  </div>
+
+  <div class="card">
+   <h2>Changes</h2>
+   <p>If this policy changes materially, we will note it here and, for subscribers, in the newsletter. Continued use of the site after changes means you accept the updated policy.</p>
+  </div>
+ </div>
+{% endblock %}

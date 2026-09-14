@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block body_class %} class="page-legal"{% endblock %}
+{% block title %}Terms of Use — Spanified{% endblock %}
+{% block description %}<meta name="description" content="Terms of Use of Spanified — the free Spain Daily newsletter and website: AI-assisted content, no professional advice, acceptable use.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Terms of Use — Spanified">
+<meta property="og:description" content="Terms of Use of the free Spanified Spain Daily newsletter and website.">
+<meta property="og:url" content="{{ site_url }}/terms">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Terms of Use — Spanified">
+<meta name="twitter:description" content="Terms of Use of the free Spanified Spain Daily newsletter and website.">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/terms">{% endblock %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebPage",
+ "name": "Terms of Use — Spanified",
+ "url": "{{ site_url }}/terms",
+ "description": "Terms of Use of Spanified — the free Spain Daily newsletter and website.",
+ "inLanguage": "en",
+ "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}}
+</script>
+ <div class="legal">
+  <h1>Terms of Use</h1>
+  <p class="subtitle">Effective: September 14, 2026. The plain-English rules for using Spanified.</p>
+
+  <div class="card">
+   <h2>What Spanified is</h2>
+   <p>Spanified publishes the <a href="/">Spain Daily</a> — a free morning briefing on Spanish news in English, delivered on this site and by email. The service is free forever; there is no account and no paywall.</p>
+  </div>
+
+  <div class="card">
+   <h2>How the content is made</h2>
+   <p>Summaries are based on real reporting, drafted with the help of AI and reviewed by a human editor (<a href="/about">how it works</a>). Every story links to its original sources so you can verify anything in one click. If you spot a mistake, <a href="/contact">tell us</a> — we fix errors.</p>
+  </div>
+
+  <div class="card">
+   <h2>Not professional advice</h2>
+   <p>News about visas, taxes, property, or health is information, not advice. Rules change and summaries are short by design — always check official sources or a qualified professional before making decisions.</p>
+  </div>
+
+  <div class="card">
+   <h2>Acceptable use</h2>
+   <p>Read, share, and quote us with a link — that is what we are here for. Do not republish full editions as your own, scrape the site aggressively, abuse the subscribe form, or use our content to mislead. We may block misuse to keep the service running for everyone.</p>
+  </div>
+
+  <div class="card">
+   <h2>Intellectual property</h2>
+   <p>Our design, logo, and selection of stories are ours. The underlying facts belong to the world; the original reporting belongs to its publishers, always linked from every story.</p>
+  </div>
+
+  <div class="card">
+   <h2>No warranties, limited liability</h2>
+   <p>The service is provided "as is", without warranties of any kind. To the extent the law allows, we are not liable for decisions you make based on the digest or for temporary outages. Nothing here limits rights you have under applicable consumer law.</p>
+  </div>
+
+  <div class="card">
+   <h2>Changes and contact</h2>
+   <p>We may update these terms as Spanified grows (new products will get their own notes where needed). Material changes will be noted here. Questions: <a href="mailto:support@spanified.com">support@spanified.com</a>. These terms are governed by the laws of Spain.</p>
+  </div>
+ </div>
+{% endblock %}

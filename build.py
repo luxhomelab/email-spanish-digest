@@ -52,6 +52,8 @@ STATIC_PAGES = [
     "confirm.html",
     "unsubscribe.html",
     "contact.html",
+    "privacy.html",
+    "terms.html",
     "editor.html",
     "about.html",
     "search.html",

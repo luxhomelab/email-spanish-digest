@@ -487,6 +487,23 @@ body.page-archive .digest-card:hover {
 .about .card a:hover { text-decoration: underline; }
 .about .steps { margin: 0; padding-left: 22px; font-size: 15px; line-height: 26px; color: #3C4858; }
 
+/* Legal pages (privacy, terms) — same editorial style as about */
+.legal { max-width: 1200px; width: 100%; margin: 0 auto; }
+.legal h1 {
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 32px; font-weight: 700; color: #3C4858;
+ margin-bottom: 8px; text-align: center;
+}
+.legal .subtitle { color: #6C7A89; font-size: 16px; margin-bottom: 28px; text-align: center; }
+.legal .card { padding: 32px; text-align: left; margin-bottom: 20px; }
+.legal .card h2 { font-size: 20px; color: #3C4858; margin-bottom: 12px; }
+.legal .card p { font-size: 15px; line-height: 24px; color: #3C4858; }
+.legal .card a { color: #B91C1C; text-decoration: none; }
+.legal .card a:hover { text-decoration: underline; }
+.subscribe-consent { text-align: center; font-size: 13px; color: #6C7A89; margin: 12px 0 4px 0; }
+.subscribe-consent a { color: #B91C1C; text-decoration: none; }
+.subscribe-consent a:hover { text-decoration: underline; }
+
 /* ---------- Homepage redesign (body.page-home only) ---------- */
 body.page-home .page .card, body.page-home .cta-card { border-radius: 14px; box-shadow: 0 2px 14px rgba(60,40,20,0.07); border: 1px solid #EFE7D8; }
 /* Hero */
@@ -672,9 +689,9 @@ body.page-category .cat-digest-cta:hover {
 }
 
 /* ---------- About + Contact in homepage style ---------- */
-body.page-about .about, body.page-contact .contact { padding: 36px 0 16px 0; }
-body.page-about .about h1, body.page-contact .contact h1 { font-size: 38px; letter-spacing: -0.5px; }
-body.page-about .about .subtitle::after, body.page-contact .contact .subtitle::after {
+body.page-about .about, body.page-contact .contact, body.page-legal .legal { padding: 36px 0 16px 0; }
+body.page-about .about h1, body.page-contact .contact h1, body.page-legal .legal h1 { font-size: 38px; letter-spacing: -0.5px; }
+body.page-about .about .subtitle::after, body.page-contact .contact .subtitle::after, body.page-legal .legal .subtitle::after {
  content: ""; display: block; width: 72px; height: 4px; border-radius: 2px;
  background: linear-gradient(90deg, #AA151B 50%, #F1BF00 50%);
  margin: 16px auto 0 auto;
@@ -686,6 +703,13 @@ body.page-about .about .card {
  padding: 32px 36px; margin-bottom: 20px;
 }
 body.page-about .about .card h2 { font-size: 22px; }
+body.page-legal .legal .card {
+ border-radius: 14px; border: 1px solid #EFE7D8; background-color: #ffffff;
+ box-shadow: 0 2px 14px rgba(60,40,20,0.07);
+ padding: 32px 36px; margin-bottom: 20px;
+}
+body.page-legal .legal .card h2 { font-size: 22px; }
+body.page-legal .legal .subtitle { margin-bottom: 32px; }
 body.page-contact .contact .card {
  border-radius: 14px; border: 1px solid #EFE7D8; background-color: #ffffff;
  box-shadow: 0 2px 14px rgba(60,40,20,0.07);
