@@ -47,8 +47,9 @@ a { color: inherit; }
  color: #3C4858; text-decoration: none;
 }
 .site-nav a:hover { color: #1A1A16; }
-.nav-search { display: inline-flex; align-items: center; color: #3C4858; margin-right: -14px; }
+.nav-search { display: inline-flex; align-items: center; color: #3C4858; }
 .nav-search:hover { color: #AA151B; }
+.nav-search-text { display: none; }
 .nav-cta {
  background-color: #3C4858; color: #ffffff !important;
  padding: 8px 18px; border-radius: 3px; font-weight: 700;
@@ -180,6 +181,8 @@ body.page-unsubscribe iframe, html.iframe-page .page-unsubscribe iframe {
  .site-nav.open { display: flex; }
  .site-nav a { padding: 10px 4px; border-bottom: 1px solid #eef1f4; }
  .site-nav a:last-child { border-bottom: none; }
+ .nav-search svg { display: none; }
+ .nav-search-text { display: inline; }
  .nav-cta { text-align: center; margin-top: 8px; padding: 10px 14px; }
  .content { padding: 28px 16px; }
  .footer-inner {
@@ -818,4 +821,11 @@ body.page-editor .editor .card h2 { font-size: 20px; color: #3C4858; margin-bott
 body.page-editor .editor .card p { font-size: 15px; line-height: 24px; color: #3C4858; }
 body.page-editor .editor .card a { color: #B91C1C; text-decoration: none; }
 body.page-editor .editor .card a:hover { text-decoration: underline; }
-body.page-archive #search { max-width: 640px; margin: 0 auto 24px auto; --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #3C4858; --pagefind-ui-background: #FFFDF8; --pagefind-ui-border: #E3D9C4; --pagefind-ui-border-radius: 12px; --pagefind-ui-font: inherit; }
+body.page-search .search-page { padding: 36px 0 16px 0; max-width: 760px; margin: 0 auto; }
+body.page-search .search-page h1 { font-size: 38px; letter-spacing: -0.5px; text-align: center; }
+body.page-search .search-page .subtitle { margin-bottom: 32px; text-align: center; }
+body.page-search .search-page .subtitle::after {
+ content: ""; display: block; width: 72px; height: 4px; margin: 14px auto 0 auto;
+ background: linear-gradient(90deg, #AA151B 50%, #F1BF00 50%); border-radius: 2px;
+}
+body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #3C4858; --pagefind-ui-background: #FFFDF8; --pagefind-ui-border: #E3D9C4; --pagefind-ui-border-radius: 12px; --pagefind-ui-font: inherit; }
