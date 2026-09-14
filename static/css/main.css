@@ -285,6 +285,7 @@ body.page-unsubscribe iframe, html.iframe-page .page-unsubscribe iframe {
 .cta-card p { font-size: 16px; margin-bottom: 20px; color: #C0CCD9; }
 .cta-button {
  display: inline-block;
+ white-space: nowrap;
  background-color: #ffffff;
  color: #3C4858;
  font-family: Roboto, Helvetica, sans-serif;
@@ -602,6 +603,13 @@ body.page-digest .mercadona {
  padding: 18px 22px; margin: 12px 32px 0 32px;
 }
 body.page-digest .email-footer { padding: 26px 32px 34px 32px; }
+body.page-digest .email-footer .cta-card {
+ background: linear-gradient(135deg, #AA151B 0%, #7E1015 100%);
+ border: none; border-radius: 12px;
+ margin: 22px 0 6px 0;
+}
+body.page-digest .email-footer .cta-card p { color: #F6D9DA; }
+body.page-digest .email-footer .cta-card .cta-button { color: #7E1015; }
 body.page-digest .day-nav a {
  border: 1px solid #E3D9C6; border-radius: 999px; padding: 6px 16px;
  background-color: #FFFDF8;
@@ -610,6 +618,10 @@ body.page-digest .day-nav a:hover { text-decoration: none; border-color: #AA151B
 @media (max-width: 520px) {
  body.page-digest .digest { padding: 20px 8px 16px 8px; }
  body.page-digest .email-body { padding: 8px 20px 0 20px; }
+ body.page-digest .email-footer { padding: 20px 20px 26px 20px; }
+ body.page-digest .email-footer .cta-card { padding: 28px 20px; }
+ body.page-digest .email-footer .cta-card h2 { font-size: 20px; }
+ body.page-digest .email-footer .cta-button { font-size: 16px; padding: 12px 28px; }
  body.page-digest .mercadona { margin: 12px 20px 0 20px; }
 }
 
