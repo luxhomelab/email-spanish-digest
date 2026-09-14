@@ -29,14 +29,14 @@
  "description": "Spain Daily Digest for {{ digest.date }} — the day's top stories from Spain, summarized in English.",
  "datePublished": "{{ pub_date(digest.date) }}",
  "dateModified": "{{ pub_date(digest.date) }}",
- "author": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"},
+ "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor", "jobTitle": "Senior Software Engineer", "sameAs": ["https://www.linkedin.com/in/dshvechikov"]},
  "publisher": {"@type": "Organization", "name": "Spanified", "logo": {"@type": "ImageObject", "url": "{{ site_url }}/logo.jpg", "width": 640, "height": 640}},
  "inLanguage": "en",
  "wordCount": {{ digest.word_count }},
  "isAccessibleForFree": true,
  "mainEntityOfPage": "{{ site_url }}{{ digest.url }}",
  "hasPart": [{% for item in digest.stories %}
-  {"@type": "NewsArticle", "headline": {{ item.title|tojson }}, "articleSection": {{ (item.category or "news")|tojson }}, "url": "{{ site_url + digest.url }}", "author": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}{% if item.sources %}, "isBasedOn": {"@type": "CreativeWork", "name": {{ item.sources[0].name|tojson }}, "url": {{ item.sources[0].url|tojson }}}{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}
+  {"@type": "NewsArticle", "headline": {{ item.title|tojson }}, "articleSection": {{ (item.category or "news")|tojson }}, "url": "{{ site_url + digest.url }}", "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor"}{% if item.sources %}, "isBasedOn": {"@type": "CreativeWork", "name": {{ item.sources[0].name|tojson }}, "url": {{ item.sources[0].url|tojson }}}{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}
  ]}
 </script>
  <div class="digest">
@@ -44,7 +44,7 @@
    <h1 class="email-red-band">Spain Daily Digest: <time datetime="{{ pub_date(digest.date) }}">{{ digest.date_display }}</time></h1>
    <div class="email-gold-band"></div>
    <div class="email-subheader">{{ digest.headline }}</div>
-   <div class="byline">By <a href="/about">Spanified</a> · {{ digest.date_display }} · {{ digest.story_count }} {% if digest.story_count == 1 %}story{% else %}stories{% endif %}</div>
+   <div class="byline">Edited by <a href="/editor">Dmytro Shvechikov</a> · {{ digest.date_display }} · {{ digest.story_count }} {% if digest.story_count == 1 %}story{% else %}stories{% endif %}</div>
 
    <div class="email-body">
    {% for item in digest.stories %}

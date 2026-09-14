@@ -808,3 +808,11 @@ body.page-digest .share-menu a, body.page-digest .share-menu .share-copy {
 body.page-digest .share-menu a:hover, body.page-digest .share-menu .share-copy:hover { background-color: #F8EFDD; }
 body.page-digest .share-menu svg { width: 16px; height: 16px; fill: #6C7A89; flex-shrink: 0; }
 body.page-digest .share-menu a:hover svg, body.page-digest .share-menu .share-copy:hover svg { fill: #AA151B; }
+body.page-editor .editor { max-width: 1200px; width: 100%; margin: 0 auto; }
+body.page-editor .editor h1 { text-align: center; }
+body.page-editor .editor .subtitle { color: #6C7A89; font-size: 16px; margin-bottom: 28px; text-align: center; }
+body.page-editor .editor .card { padding: 32px; text-align: left; margin-bottom: 20px; }
+body.page-editor .editor .card h2 { font-size: 20px; color: #3C4858; margin-bottom: 12px; }
+body.page-editor .editor .card p { font-size: 15px; line-height: 24px; color: #3C4858; }
+body.page-editor .editor .card a { color: #B91C1C; text-decoration: none; }
+body.page-editor .editor .card a:hover { text-decoration: underline; }
