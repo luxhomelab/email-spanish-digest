@@ -48,7 +48,7 @@
 
    <div class="email-body">
    {% for item in digest.stories %}
-    <article class="story" id="story-{{ loop.index }}">
+    <article class="story" id="news-{{ loop.index }}">
      <div class="story-meta">
       <span class="story-number">{{ loop.index }}</span>
       <span class="story-category"><a href="/category/{{ (item.category or 'news')|lower }}">{{ emoji.get(item.category, '📰') }} {{ item.category.capitalize() if item.category else 'News' }}</a></span>

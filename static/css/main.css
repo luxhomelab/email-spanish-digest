@@ -575,11 +575,11 @@ body.page-digest .story-important { background-color: #AA151B; color: #ffffff; b
 body.page-digest .story-title { font-size: 20px; line-height: 27px; }
 body.page-digest .story-body { font-size: 15.5px; line-height: 24px; }
 body.page-digest .story-related {
- margin-top: 14px; padding: 12px 16px;
- background-color: #FFFDF8; border: 1px solid #EFE7D8; border-radius: 10px;
- font-size: 14px; line-height: 22px; color: #6C7A89;
+ margin-top: 12px; padding-top: 10px;
+ border-top: 1px solid #F0EDE6;
+ font-size: 13px; line-height: 20px; color: #8B8578;
 }
-body.page-digest .story-related-label { font-weight: 700; color: #3C4858; margin-right: 6px; }
+body.page-digest .story-related-label { font-weight: 600; color: #6C7A89; margin-right: 6px; }
 body.page-digest .story-related a { color: #AA151B; text-decoration: none; font-weight: 500; }
 body.page-digest .story-related a:hover { text-decoration: underline; }
 body.page-digest .story-related-sep { color: #C5BFB4; }

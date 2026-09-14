@@ -230,8 +230,8 @@ def render_static(env, digests):
 def attach_related(digests, limit=3):
     """Attach same-category 'More news' links to every story.
 
-    Priority: siblings from the same digest first (same-page #story-N anchors),
-    then stories from older digests, newest first (/archive/<date>#story-N).
+    Priority: siblings from the same digest first (same-page #news-N anchors),
+    then stories from older digests, newest first (/archive/<date>#news-N).
     Stories with no same-category peers get an empty list (block not rendered).
     """
     for i, digest in enumerate(digests):
@@ -249,7 +249,7 @@ def attach_related(digests, limit=3):
                 if (other.get("category") or "").lower() == cat:
                     related.append({
                         "title": other.get("title", ""),
-                        "url": f"{digest['url']}#story-{j}",
+                        "url": f"{digest['url']}#news-{j}",
                     })
             # Older digests (list is newest-first), newest first.
             for older in digests[i + 1:]:
@@ -257,7 +257,7 @@ def attach_related(digests, limit=3):
                     if (other.get("category") or "").lower() == cat:
                         related.append({
                             "title": other.get("title", ""),
-                            "url": f"{older['url']}#story-{k}",
+                            "url": f"{older['url']}#news-{k}",
                         })
                 if len(related) >= limit:
                     break
