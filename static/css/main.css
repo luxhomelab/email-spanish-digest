@@ -798,6 +798,7 @@ body.page-digest .share-menu {
 }
 body.page-digest .email-footer .share-menu { top: auto; bottom: calc(100% + 6px); }
 body.page-digest .email-footer .share-wrap { display: block; text-align: left; margin-top: 0; }
+body.page-digest .email-footer .share-cta { text-align: left; font-size: 14px; font-weight: 600; color: #3C4858; margin-bottom: 10px; }
 body.page-digest .share-menu a, body.page-digest .share-menu .share-copy {
  display: flex; align-items: center; gap: 10px; width: 100%;
  padding: 8px 10px; border: 0; border-radius: 8px;
