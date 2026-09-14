@@ -232,10 +232,14 @@ def attach_related(digests, limit=3):
 
     Only stories from strictly older digests (newest first,
     /archive/<date>#news-N). Same-digest siblings are excluded.
+    Within one digest, links are dealt out without repetition: if two
+    stories share a category, the second one gets the next batch,
+    reaching deeper into the archive.
     Stories with no same-category peers get an empty list (block not rendered).
     """
     for i, digest in enumerate(digests):
         stories = digest.get("stories", [])
+        used = set()  # urls already dealt out within this digest
         for pos, item in enumerate(stories, start=1):
             cat = (item.get("category") or "").lower()
             if not cat:
@@ -245,16 +249,21 @@ def attach_related(digests, limit=3):
             # Only older digests (list is newest-first), newest first.
             for older in digests[i + 1:]:
                 for k, other in enumerate(older.get("stories", []), start=1):
-                    if (other.get("category") or "").lower() == cat:
-                        related.append({
-                            "title": other.get("title", ""),
-                            "url": f"{older['url']}#news-{k}",
-                        })
+                    if (other.get("category") or "").lower() != cat:
+                        continue
+                    title = other.get("title", "")
+                    if not title:
+                        continue
+                    url = f"{older['url']}#news-{k}"
+                    if url in used:
+                        continue
+                    related.append({"title": title, "url": url})
+                    if len(related) >= limit:
+                        break
                 if len(related) >= limit:
                     break
-            item["related"] = [
-                r for r in related if r["title"]
-            ][:limit]
+            item["related"] = related[:limit]
+            used.update(r["url"] for r in item["related"])
 
 
 def render_digests(env, digests):
