@@ -71,6 +71,7 @@
       </ul>
      </div>
      {% endif %}
+     {% with share=item.share %}{% include "partials/share.html" %}{% endwith %}
     </article>
    {% endfor %}
     {% if digest.mercadona %}
@@ -79,6 +80,7 @@
    </div>
 
    <div class="email-footer">
+    {% with share=digest.share %}{% include "partials/share.html" %}{% endwith %}
     <div class="ai-disclaimer">This digest is based on real news and created with the help of AI.</div>
     {% if day_nav.older or day_nav.newer %}
     <nav class="day-nav" aria-label="More digests">
@@ -89,4 +91,47 @@
    </div>
   </div>
  </div>
+<script>
+(function () {
+ var card = document.querySelector('.digest-card');
+ var openMenu = null;
+ function closeMenu() {
+  if (!openMenu) return;
+  openMenu.hidden = true;
+  openMenu.previousElementSibling.setAttribute('aria-expanded', 'false');
+  openMenu = null;
+ }
+ document.addEventListener('click', function (e) {
+  var toggle = e.target.closest('.share-toggle');
+  if (toggle) {
+   var menu = toggle.nextElementSibling;
+   var willOpen = menu.hidden;
+   closeMenu();
+   if (willOpen) {
+    menu.hidden = false;
+    toggle.setAttribute('aria-expanded', 'true');
+    openMenu = menu;
+   }
+   return;
+  }
+  if (!e.target.closest('.share-menu')) closeMenu();
+ });
+ document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+ card.addEventListener('click', function (e) {
+  var btn = e.target.closest('.share-copy');
+  if (!btn) return;
+  var label = btn.querySelector('span');
+  var done = function () { label.textContent = 'Copied!'; setTimeout(function () { label.textContent = 'Copy link'; }, 1500); };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+   navigator.clipboard.writeText(btn.dataset.url).then(done, done);
+  } else {
+   var i = document.createElement('input');
+   i.value = btn.dataset.url;
+   document.body.appendChild(i); i.select();
+   try { document.execCommand('copy'); } catch (err) {}
+   document.body.removeChild(i); done();
+  }
+ });
+})();
+</script>
 {% endblock %}

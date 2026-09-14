@@ -22,6 +22,7 @@ import shutil
 import sys
 from collections import Counter
 from datetime import datetime
+from urllib.parse import quote
 from zoneinfo import ZoneInfo
 
 from jinja2 import Environment, FileSystemLoader
@@ -266,6 +267,30 @@ def attach_related(digests, limit=3):
             used.update(r["url"] for r in item["related"])
 
 
+def share_links(abs_url, text):
+    """Build static share URLs (no JS SDKs) for X/TG/WA/FB + copy link."""
+    u, t = quote(abs_url, safe=""), quote(text, safe="")
+    return {
+        "url": abs_url,
+        "x": f"https://x.com/intent/tweet?text={t}&url={u}",
+        "facebook": f"https://www.facebook.com/sharer/sharer.php?u={u}",
+        "telegram": f"https://t.me/share/url?url={u}&text={t}",
+        "whatsapp": f"https://wa.me/?text={t}%20{u}",
+    }
+
+
+def attach_share(digests):
+    """Attach page-level + per-story share links (absolute URLs)."""
+    for digest in digests:
+        page_url = f"{SITE_URL}{digest['url']}"
+        digest["share"] = share_links(
+            page_url, f"{digest['headline']} — Spain Daily Digest")
+        for pos, item in enumerate(digest.get("stories", []), start=1):
+            abs_url = f"{page_url}#news-{pos}"
+            item["share"] = share_links(
+                abs_url, f"{item.get('title', '')} — via Spanified")
+
+
 def render_digests(env, digests):
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
     # Clear previously generated HTML inside archive/ so removed digests don't linger.
@@ -475,6 +500,7 @@ def main():
 
     print(f"Building {len(digests)} digest page(s)...")
     attach_related(digests)
+    attach_share(digests)
     render_digests(env, digests)
 
     print("Rendering OG images...")
