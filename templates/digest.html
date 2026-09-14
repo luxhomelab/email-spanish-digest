@@ -82,6 +82,11 @@
    <div class="email-footer">
     <div class="share-cta">Enjoyed this digest? Share it with a friend.</div>
     {% with share=digest.share %}{% include "partials/share.html" %}{% endwith %}
+    <div class="cta-card">
+     <h2>Get Spain Daily in your inbox</h2>
+     <p>Top Spanish news in English, every morning. Free forever.</p>
+     <a href="/subscribe" class="cta-button">Subscribe — It's Free</a>
+    </div>
     <div class="ai-disclaimer">This digest is based on real news, created with the help of AI and reviewed by a human.</div>
     {% if day_nav.older or day_nav.newer %}
     <nav class="day-nav" aria-label="More digests">
