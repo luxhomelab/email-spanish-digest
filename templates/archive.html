@@ -11,6 +11,16 @@
 window.addEventListener('DOMContentLoaded', function () {
  new PagefindUI({ element: '#search', showSubResults: true, excerptLength: 15,
   translations: { placeholder: 'Search all digests\u2026' } });
+ if (window.location.hash === '#search') {
+  var tries = 0;
+  var focusTimer = setInterval(function () {
+   var input = document.querySelector('#search input');
+   if (input || ++tries > 40) {
+    clearInterval(focusTimer);
+    if (input) input.focus({ preventScroll: true });
+   }
+  }, 100);
+ }
 });
 </script>
 {% endblock %}

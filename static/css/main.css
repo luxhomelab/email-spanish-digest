@@ -47,6 +47,8 @@ a { color: inherit; }
  color: #3C4858; text-decoration: none;
 }
 .site-nav a:hover { color: #1A1A16; }
+.nav-search { display: inline-flex; align-items: center; color: #3C4858; }
+.nav-search:hover { color: #AA151B; }
 .nav-cta {
  background-color: #3C4858; color: #ffffff !important;
  padding: 8px 18px; border-radius: 3px; font-weight: 700;
