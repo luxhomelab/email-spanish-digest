@@ -45,7 +45,6 @@
    <div class="email-gold-band"></div>
    <div class="email-subheader">{{ digest.headline }}</div>
    <div class="byline">By <a href="/about">Spanified</a> · {{ digest.date_display }} · {{ digest.story_count }} {% if digest.story_count == 1 %}story{% else %}stories{% endif %}</div>
-   {% with share=digest.share %}{% include "partials/share.html" %}{% endwith %}
 
    <div class="email-body">
    {% for item in digest.stories %}
