@@ -1,0 +1,195 @@
+{
+  "items": [
+    {
+      "title": "Spain lacks migrant contingency plan, EU warns",
+      "body": "The European Commission warned in May that Spain lacks a tested contingency plan for mass migrant arrivals and has border staff shortages. Spain recorded 19 deficiencies in the 2026 Schengen report, the highest in the EU. Brussels unlocked €115 million for Ceuta, reinforced Frontex, and moved 864 migrants to a new temporary facility in Los Rosales.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/09/13/6aa3eb3021efa047018b4595.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-mas-860-migrantes-ceuta-son-ubicados-nueva-instalacion-temporal-acondicionada-20260913103819.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Housing prices rise three times faster than wages",
+      "body": "Spanish housing prices climbed 36.3% over the last three years, while wages grew only 12.3%. The housing price index has risen for 49 consecutive quarters and has doubled since 2014. Fotocasa's María Matos warns that demand is starting to run out of headroom, worsening access to housing.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/precio-vivienda-ha-subido-triple-que-los-sueldos-los-ultimos-tres-anos-parte-demanda-empieza-quedarse-sin-margen_7034628_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Rating agencies hold Spain's grade over political deadlock",
+      "body": "S&P and Fitch left Spain's credit ratings unchanged, while Scope upgraded the country from A to A+. Moody's declined to raise Spain's rating in July. Political weakness blocks budgets, reforms, and decrees, limiting economic reforms despite growth.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/09/14/6aa68682fdddff994f8b458f.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Minimum wage rise debate centers on absorbing salary supplements",
+      "body": "As inflation hit 4.3% in August, unions CCOO and UGT demand reform of rules that let companies absorb minimum wage increases through salary supplements. The minimum wage (SMI) is €1,221 gross per month. A worker earning €1,250 — €1,150 base plus €100 night pay — saw no raise when the SMI rose; the Supreme Court has endorsed the absorption practice.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/subida-salario-minimo-centrando-reforma-pendiente-absorcion-pluses_1_13498191.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Labor Ministry targets probation-period dismissals after fivefold rise",
+      "body": "Terminations for failing probation under permanent contracts rose from 132,534 in 2019 to 723,763 last year, more than fivefold. Total probation dismissals exceeded 1 million, up 51.5% from 675,555 in 2019. The Labor Ministry is investigating suspected fraudulent use of probation periods.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/trabajo-declara-guerra-despido-periodo-prueba-tras-dispararse-un-446-indefinidos-desde-2019_7035820_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Tax Agency can request almost everything, ex-employee says",
+      "body": "A former Tax Agency worker says Hacienda can access vast taxpayer data, including bank transactions, though entering a home requires a court order. Companies with turnover above €6 million must submit invoices within days through the SII electronic system. Baena estimates 75% to 80% of Spain's billing is controlled by Hacienda.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-09-13/emilio-baena-trabajador-de-la-agencia-tributaria_4418707/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Spain's women's basketball team wins World Cup bronze",
+      "body": "Spain defeated host nation Germany 81-58 to claim the bronze medal at the FIBA Women's World Cup 2026 in Berlin. The win came after a semifinal loss to the United States.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/deportes/baloncesto-00163/noticia-espana-le-toma-medida-anfitrion-celebra-bronce-mundial-femenino-20260913181909.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Spain's savings taxes among highest in EU, report says",
+      "body": "Effective taxation on financial products in Spain is 22%, above the EU average of 14% and the OECD average of 16%. Deposits and public bonds face around 30% effective taxation, versus 25% in the EU and 29% in the OECD. The report by IEE and EFPA España says Spain's system reduces net savings returns more than comparable countries do.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/sablazo-fiscal-ahorro-se-ceba-con-depositos-bonos-acciones-sistema-espana-reduce-rentabilidad_7020359_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Hospitality sector struggles with severe staff shortages",
+      "body": "A lack of qualified staff is forcing bars and restaurants to close in Spain. According to a report by The Fork, 22% of hospitality owners cite hiring difficulties as the main cause of permanent closure. Hostelería España confirms businesses are cutting hours or service areas, with more than 138,000 vacancies in the services sector in Q1 2026.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/09/13/6aa4356021efa0401e8b4578.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Daily pill gives pancreatic cancer patient months of life",
+      "body": "José María Tejedor, a retired man from Soria with inoperable pancreatic cancer, says a daily pill gives him months of quality life. Less than 20% of pancreatic cancer patients are candidates for surgery at diagnosis, and just over 10% survive for five years. Nearly 300,000 Spaniards received a cancer diagnosis last year; 3.5% were pancreatic.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/salud/2026/09/13/6aa5669ffc6c834b518b4599.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Spain becomes cheap fuel stop for French and Portuguese",
+      "body": "Fuel price spikes driven by the war in Iran, tensions in the Strait of Hormuz, and Ukrainian attacks on Russian refineries are pushing French and Portuguese drivers to refuel in Spain. French drivers fill up in northern Spain, while Portuguese drivers do so in western Spain.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/09/14/energia-espana-convierte-gasolinera-barata-francia-portugal-2051534.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Revolut reaches 7 million clients in Spain",
+      "body": "Revolut has established Spain as its third-largest market with 7 million clients, about 9% of its 80 million global users. Penetration is around 15%, with one third of people aged 25 to 34 holding an account. The company plans to surpass 8 million clients by January and open a physical store in Barcelona in early 2027.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/empresas/revolut-espana-tercer-mercado-siete-millones-clientes_7035701_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Imserso 2026-2027 trips open at €50 flat rate",
+      "body": "Low-income pensioners can apply for Imserso trips at a flat rate of €50 for the 2026-2027 season. Last season, 5,221 benefited from the flat rate, up from 523 places under a previous 50% discount. Minister Pablo Bustinduy presented the season in León, with options for short getaways, islands, and the mainland coast.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/viajes/viajes-imserso-2026-2027-solicitar-lunes-tarifa-plana-50-euros_1_13506899.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "What's the biggest housing cost change you've noticed in Spain over the last three years?",
+  "variant": "Spain in 30s",
+  "headline": "Spain in 30s",
+  "date": "2026-09-14",
+  "generated_at": "2026-09-14T06:05:53.869388+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 250,
+    "items_selected_pass1": 15,
+    "fact_sheets_extracted": 15,
+    "items_after_importance_filter": 14,
+    "items_in_digest": 13
+  },
+  "selection_reasons": {
+    "4": "EU report warns Spain lacks an effective plan for mass migrant arrivals and has border staffing shortages — key migration policy news.",
+    "11": "Rating agencies hold Spain's rating due to political deadlock despite growth — affects investor confidence and borrowing costs.",
+    "14": "Hospitality sector struggles with worker shortages, forcing closures — relevant for job seekers and business owners.",
+    "18": "New pancreatic cancer drug offers months of quality life — positive healthcare breakthrough.",
+    "28": "Over 860 migrants in Ceuta moved to a new temporary shelter — ongoing migration crisis update.",
+    "31": "Antonelli wins the first F1 Grand Prix at the new Madring circuit in Madrid — major national event.",
+    "33": "Spain's women's basketball team wins bronze at the FIBA World Cup — national team success.",
+    "44": "SMI increase debate centers on absorbing salary supplements — affects minimum wage workers.",
+    "88": "Imserso launches 50-euro flat-rate trips for pensioners — relevant for retirees.",
+    "102": "Government moves to curb probation-period dismissals, which quintupled since 2019 — labor reform.",
+    "103": "Housing prices rose triple the rate of salaries in three years — critical property market data.",
+    "201": "Spain becomes a cheap fuel destination for French and Portuguese drivers — cost of living.",
+    "228": "Tax agency can request almost all financial info from taxpayers — important for tax compliance.",
+    "232": "Revolut reaches 7 million clients in Spain, its third-largest market — banking for international residents.",
+    "233": "Spain's tax system hits savings harder than neighboring countries — affects investors and savers."
+  }
+}
