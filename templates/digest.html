@@ -65,8 +65,10 @@
      {% endif %}
      {% if item.related %}
      <div class="story-related">
-      <span class="story-related-label">More news on this topic:</span>
-      {% for r in item.related %}<a href="{{ r.url }}">{{ r.title }}</a>{% if not loop.last %}<span class="story-related-sep"> · </span>{% endif %}{% endfor %}
+      <div class="story-related-label">More news on this topic:</div>
+      <ul>
+       {% for r in item.related %}<li><a href="{{ r.url }}">{{ r.title }}</a></li>{% endfor %}
+      </ul>
      </div>
      {% endif %}
     </article>
