@@ -227,6 +227,45 @@ def render_static(env, digests):
         print(f"  wrote {name}")
 
 
+def attach_related(digests, limit=3):
+    """Attach same-category 'More news' links to every story.
+
+    Priority: siblings from the same digest first (same-page #story-N anchors),
+    then stories from older digests, newest first (/archive/<date>#story-N).
+    Stories with no same-category peers get an empty list (block not rendered).
+    """
+    for i, digest in enumerate(digests):
+        stories = digest.get("stories", [])
+        for pos, item in enumerate(stories, start=1):
+            cat = (item.get("category") or "").lower()
+            if not cat:
+                item["related"] = []
+                continue
+            related = []
+            # Same-digest siblings first.
+            for j, other in enumerate(stories, start=1):
+                if j == pos:
+                    continue
+                if (other.get("category") or "").lower() == cat:
+                    related.append({
+                        "title": other.get("title", ""),
+                        "url": f"{digest['url']}#story-{j}",
+                    })
+            # Older digests (list is newest-first), newest first.
+            for older in digests[i + 1:]:
+                for k, other in enumerate(older.get("stories", []), start=1):
+                    if (other.get("category") or "").lower() == cat:
+                        related.append({
+                            "title": other.get("title", ""),
+                            "url": f"{older['url']}#story-{k}",
+                        })
+                if len(related) >= limit:
+                    break
+            item["related"] = [
+                r for r in related if r["title"]
+            ][:limit]
+
+
 def render_digests(env, digests):
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
     # Clear previously generated HTML inside archive/ so removed digests don't linger.
@@ -435,6 +474,7 @@ def main():
     render_static(env, digests)
 
     print(f"Building {len(digests)} digest page(s)...")
+    attach_related(digests)
     render_digests(env, digests)
 
     print("Rendering OG images...")
