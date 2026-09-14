@@ -49,6 +49,7 @@ a { color: inherit; }
 .site-nav a:hover { color: #1A1A16; }
 .nav-search { display: inline-flex; align-items: center; color: #3C4858; margin-right: -14px; }
 .nav-search:hover { color: #AA151B; }
+.nav-archive-group { display: contents; }
 .nav-cta {
  background-color: #3C4858; color: #ffffff !important;
  padding: 8px 18px; border-radius: 3px; font-weight: 700;
@@ -180,6 +181,9 @@ body.page-unsubscribe iframe, html.iframe-page .page-unsubscribe iframe {
  .site-nav.open { display: flex; }
  .site-nav a { padding: 10px 4px; border-bottom: 1px solid #eef1f4; }
  .site-nav a:last-child { border-bottom: none; }
+ .nav-archive-group { display: flex; align-items: center; gap: 10px; padding: 10px 4px; border-bottom: 1px solid #eef1f4; }
+ .nav-archive-group a { padding: 0; border-bottom: none; }
+ .nav-archive-group .nav-search { margin-right: 0; }
  .nav-cta { text-align: center; margin-top: 8px; padding: 10px 14px; }
  .content { padding: 28px 16px; }
  .footer-inner {
