@@ -89,6 +89,20 @@ CATEGORY_EMOJI = {
 }
 DEFAULT_EMOJI = "📰"
 
+# Unique SEO descriptions per category (2-3 sentences each).
+CATEGORY_DESCRIPTIONS = {
+    "economy": "Spain's economy in plain English: GDP growth, inflation, jobs data, EU funds, and what the Bank of Spain actually says. We track the numbers that affect prices, salaries, and savings — without the jargon.",
+    "politics": "Spanish politics without the noise: coalition deals, regional elections, new laws, and EU relations. Short summaries of what was decided in Madrid — and what it means for people living in Spain.",
+    "work": "Jobs and labour in Spain: hiring trends, workers' rights, minimum wage (SMI), strikes, and workplace reforms. Essential reading if you work here or plan to.",
+    "property": "Spanish property market in English: house prices by region, rental caps, new housing laws, and mortgage trends. For buyers, renters, and landlords watching Spain's bricks.",
+    "events": "What's on in Spain: national holidays, festivals, strikes affecting travel, and major cultural and sporting moments. The day-to-day life of the country, in brief.",
+    "health": "Healthcare in Spain explained: public system (SNS) updates, waiting lists, new treatments, and public-health alerts. Practical news for residents and newcomers alike.",
+    "taxes": "Spanish taxes without tears: IRPF brackets, deadlines (renta, modelo 720), deductions, and reforms from Hacienda. What you owe, when, and what changed this year.",
+    "visa": "Visas and residency in Spain: digital nomad permits, Beckham Law, NIE/TIE procedures, and immigration rule changes. The paperwork side of Spanish life, decoded.",
+    "housing": "Renting and housing access in Spain: rental prices, tenant rights (LAU), evictions data, and regional housing plans. Where the market is going — and what protects you as a tenant.",
+    "migration": "Migration and life between countries: arrivals data, integration policies, consular services, and stories of people moving to and from Spain. The human side of the statistics.",
+}
+
 
 def format_date(date_str):
     """'2026-09-10' -> 'September 10, 2026'."""
@@ -415,6 +429,7 @@ def render_categories(env, digests):
             category_name=name,
             slug=slug,
             emoji=CATEGORY_EMOJI.get(slug, "\U0001F4F0"),
+            category_description=CATEGORY_DESCRIPTIONS.get(slug, ""),
             stories=stories,
             crumbs=crumbs,
         )
