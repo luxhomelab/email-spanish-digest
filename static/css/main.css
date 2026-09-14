@@ -778,14 +778,31 @@ body.page-contact .contact .card {
 .unsub-social .soc:hover {
  border-color: #AA151B; background-color: #F8EFDD; transform: translateY(-1px);
 }
-body.page-digest .share-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; font-size: 13px; }
-body.page-digest .share-label { color: #6C7A89; font-weight: 600; margin-right: 2px; }
-body.page-digest .share-btn {
- display: inline-flex; align-items: center;
+body.page-digest .share-wrap { position: relative; display: inline-block; margin-top: 12px; }
+body.page-digest .share-toggle {
+ display: inline-flex; align-items: center; gap: 7px;
  border: 1px solid #E3D9C4; border-radius: 999px;
- padding: 5px 13px; font-size: 13px; font-weight: 600;
- color: #3C4858; text-decoration: none; background-color: #FFFDF8;
+ padding: 5px 14px; font-size: 13px; font-weight: 600;
+ color: #3C4858; background-color: #FFFDF8;
  cursor: pointer; font-family: inherit;
  transition: border-color 0.15s, background-color 0.15s;
 }
-body.page-digest .share-btn:hover { border-color: #AA151B; background-color: #F8EFDD; }
+body.page-digest .share-toggle:hover { border-color: #AA151B; background-color: #F8EFDD; }
+body.page-digest .share-toggle svg { width: 14px; height: 14px; fill: #6C7A89; }
+body.page-digest .share-toggle:hover svg { fill: #AA151B; }
+body.page-digest .share-menu {
+ position: absolute; top: calc(100% + 6px); left: 0; z-index: 20;
+ min-width: 168px; padding: 6px;
+ background-color: #FFFDF8; border: 1px solid #E3D9C4; border-radius: 12px;
+ box-shadow: 0 6px 24px rgba(60,40,20,0.12);
+}
+body.page-digest .email-footer .share-menu { top: auto; bottom: calc(100% + 6px); }
+body.page-digest .share-menu a, body.page-digest .share-menu .share-copy {
+ display: flex; align-items: center; gap: 10px; width: 100%;
+ padding: 8px 10px; border: 0; border-radius: 8px;
+ font-size: 13px; font-weight: 500; color: #3C4858; text-decoration: none;
+ background: none; cursor: pointer; font-family: inherit; text-align: left;
+}
+body.page-digest .share-menu a:hover, body.page-digest .share-menu .share-copy:hover { background-color: #F8EFDD; }
+body.page-digest .share-menu svg { width: 16px; height: 16px; fill: #6C7A89; flex-shrink: 0; }
+body.page-digest .share-menu a:hover svg, body.page-digest .share-menu .share-copy:hover svg { fill: #AA151B; }

@@ -93,19 +93,46 @@
   </div>
  </div>
 <script>
-document.querySelector('.digest-card').addEventListener('click', function (e) {
- var btn = e.target.closest('.share-copy');
- if (!btn) return;
- var done = function () { btn.textContent = 'Copied!'; setTimeout(function () { btn.textContent = 'Copy link'; }, 1500); };
- if (navigator.clipboard && navigator.clipboard.writeText) {
-  navigator.clipboard.writeText(btn.dataset.url).then(done, done);
- } else {
-  var i = document.createElement('input');
-  i.value = btn.dataset.url;
-  document.body.appendChild(i); i.select();
-  try { document.execCommand('copy'); } catch (err) {}
-  document.body.removeChild(i); done();
+(function () {
+ var card = document.querySelector('.digest-card');
+ var openMenu = null;
+ function closeMenu() {
+  if (!openMenu) return;
+  openMenu.hidden = true;
+  openMenu.previousElementSibling.setAttribute('aria-expanded', 'false');
+  openMenu = null;
  }
-});
+ document.addEventListener('click', function (e) {
+  var toggle = e.target.closest('.share-toggle');
+  if (toggle) {
+   var menu = toggle.nextElementSibling;
+   var willOpen = menu.hidden;
+   closeMenu();
+   if (willOpen) {
+    menu.hidden = false;
+    toggle.setAttribute('aria-expanded', 'true');
+    openMenu = menu;
+   }
+   return;
+  }
+  if (!e.target.closest('.share-menu')) closeMenu();
+ });
+ document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+ card.addEventListener('click', function (e) {
+  var btn = e.target.closest('.share-copy');
+  if (!btn) return;
+  var label = btn.querySelector('span');
+  var done = function () { label.textContent = 'Copied!'; setTimeout(function () { label.textContent = 'Copy link'; }, 1500); };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+   navigator.clipboard.writeText(btn.dataset.url).then(done, done);
+  } else {
+   var i = document.createElement('input');
+   i.value = btn.dataset.url;
+   document.body.appendChild(i); i.select();
+   try { document.execCommand('copy'); } catch (err) {}
+   document.body.removeChild(i); done();
+  }
+ });
+})();
 </script>
 {% endblock %}
