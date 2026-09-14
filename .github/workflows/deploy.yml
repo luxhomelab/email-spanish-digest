@@ -22,7 +22,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install jinja2
+      - run: pip install jinja2 pillow
       - run: python3 build.py --out dist
       - uses: actions/upload-pages-artifact@v3
         with:
