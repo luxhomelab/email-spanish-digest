@@ -838,3 +838,16 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 .faq-card summary::after { content: "+"; color: #AA151B; font-size: 20px; line-height: 1; flex-shrink: 0; }
 .faq-card details[open] summary::after { content: "–"; }
 .faq-card details.faq-item p { margin: 8px 0 4px 0; font-size: 15px; line-height: 24px; color: #3C4858; }
+
+/* ---------- About pipeline flow ---------- */
+.about .pipeline-card .flow { display: flex; align-items: stretch; gap: 8px; margin-top: 4px; }
+.about .flow-node { flex: 1; background: #FFFDF8; border: 1px solid #E3D9C4; border-radius: 12px; padding: 14px 10px; text-align: center; display: flex; flex-direction: column; gap: 4px; align-items: center; }
+.about .flow-node strong { color: #3C4858; font-size: 15px; }
+.about .flow-node span { font-size: 13px; line-height: 18px; color: #6C7A89; }
+.about .flow-ico { font-size: 24px; }
+.about .flow-arrow { align-self: center; color: #AA151B; font-size: 20px; font-weight: 700; flex-shrink: 0; }
+.about .flow-node-last { border-color: #AA151B; }
+@media (max-width: 600px) {
+ .about .pipeline-card .flow { flex-direction: column; }
+ .about .flow-arrow { transform: rotate(90deg); align-self: center; }
+}
