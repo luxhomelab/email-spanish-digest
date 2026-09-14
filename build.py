@@ -68,6 +68,7 @@ STATIC_COPY = [
     "confirm.jpg",
     "logo.jpg",
     "favicon.ico",
+    "favicon.png",
     "apple-touch-icon.png",
     "static",
 ]
