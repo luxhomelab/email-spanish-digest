@@ -9,8 +9,10 @@
 <script src="/pagefind/pagefind-ui.js"></script>
 <script>
 window.addEventListener('DOMContentLoaded', function () {
- new PagefindUI({ element: '#search', showSubResults: true, excerptLength: 15, sort: { date: 'desc' },
+ var pf = new PagefindUI({ element: '#search', showSubResults: true, showImages: false, excerptLength: 15, sort: { date: 'desc' },
   translations: { placeholder: 'Search all digests\u2026' } });
+ var q = new URLSearchParams(window.location.search).get('q');
+ if (q) pf.triggerSearch(q);
  var tries = 0;
  var focusTimer = setInterval(function () {
   var input = document.querySelector('#search input');
