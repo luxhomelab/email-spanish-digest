@@ -560,6 +560,25 @@ body.page-home .teaser h2 { margin: 10px 0 16px 0; }
 body.page-home .steps { gap: 16px; margin-top: 20px; }
 body.page-home .topics { gap: 10px; margin-top: 20px; }
 body.page-home .cta-card { padding: 48px 40px; }
+body.page-home .subscribe-inline {
+ background: #FFFDF8;
+ border: 1px solid #EFE7D8;
+ color: #3C4858;
+}
+body.page-home .subscribe-inline h2 { color: #3C4858; }
+body.page-home .subscribe-inline h2 .accent { color: #AA151B; }
+body.page-home .subscribe-inline > p { color: #6C7A89; }
+body.page-home .subscribe-inline iframe {
+ width: 100%; height: 560px;
+ border: none; display: block;
+ margin-top: 8px;
+}
+body.page-home .subscribe-inline .subscribe-alt { font-size: 14px; margin: 14px 0 0 0; color: #6C7A89; }
+body.page-home .subscribe-inline .subscribe-alt a { color: #AA151B; }
+@media (max-width: 520px) {
+ body.page-home .subscribe-inline { padding: 32px 20px; }
+ body.page-home .subscribe-inline iframe { height: 760px; }
+}
 body.page-home .page-note { margin-top: 28px; line-height: 1.7; }
 
 /* ---------- Archive in homepage style (body.page-archive only) ---------- */

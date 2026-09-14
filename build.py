@@ -36,6 +36,9 @@ ARCHIVE_DIR = os.path.join(OUT_DIR, "archive")
 SITE_URL = "https://spanified.com"
 PAGE_SIZE = 10
 
+# Displayed reader count (homepage subscribe card). Update as the list grows.
+SUBSCRIBER_COUNT = "200+"
+
 # Static pages rendered 1:1 from templates.
 # Pages listed here are rendered to dist root. NOINDEX_PAGES are still
 # rendered (linked from the site) but kept out of sitemap.xml.
@@ -253,7 +256,7 @@ def render_static(env, digests):
         for category, emoji in CATEGORY_EMOJI.items()
     ]
     contexts = {
-        "index.html": {"latest": latest, "topics": topics, "emoji": CATEGORY_EMOJI, "faq": FAQ_ITEMS},
+        "index.html": {"latest": latest, "topics": topics, "emoji": CATEGORY_EMOJI, "faq": FAQ_ITEMS, "subscriber_count": SUBSCRIBER_COUNT},
         "about.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "About", "url": "/about", "current": True}]},
         "contact.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Contact", "url": "/contact", "current": True}]},
         "editor.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Editor", "url": "/editor", "current": True}]},
