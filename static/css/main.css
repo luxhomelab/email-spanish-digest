@@ -429,7 +429,15 @@ body.page-archive .digest-card:hover {
  font-size: 28px; font-weight: 700; color: #3C4858;
  margin-bottom: 6px; text-align: center;
 }
-.cat-sub { color: #6C7A89; font-size: 15px; margin-bottom: 24px; text-align: center; }
+.cat-sub { color: #6C7A89; font-size: 15px; margin-bottom: 12px; text-align: center; }
+.cat-desc { color: #3C4858; font-size: 15px; line-height: 24px; max-width: 760px; margin: 0 auto 14px auto; text-align: center; }
+.cat-subscribe {
+ display: inline-block; font-size: 15px; font-weight: 700; color: #AA151B; text-decoration: none;
+ border: 1px solid #EAC9CA; border-radius: 999px; padding: 6px 18px; margin-bottom: 28px;
+}
+.cat-subscribe:hover { background-color: #AA151B; border-color: #AA151B; color: #ffffff; }
+.cat-list { text-align: center; }
+.cat-list .cat-item { text-align: left; }
 .cat-item {
  background-color: #ffffff;
  border: 1px solid #C0CCD9; border-radius: 3px;
