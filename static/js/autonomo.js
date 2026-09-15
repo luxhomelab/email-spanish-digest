@@ -207,7 +207,6 @@ function init() {
   const state = loadState()
 
   $('f-revenue').value = String(state.annualNetRevenue)
-  $('f-year').value = String(state.year)
   $('f-region').value = state.region
   syncSeg($('f-type'), state.autonomoType)
   syncSeg($('f-time'), state.timeAsAutonomo)
@@ -223,7 +222,6 @@ function init() {
   }
 
   bindNumber('f-revenue', 'annualNetRevenue', state, update, 0)
-  $('f-year').addEventListener('change', e => { state.year = Number(e.target.value); update() })
   $('f-region').addEventListener('change', e => { state.region = e.target.value; update() })
   bindSeg('f-type', 'autonomoType', state, update, false)
   bindSeg('f-time', 'timeAsAutonomo', state, update, false)

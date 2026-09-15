@@ -53,7 +53,23 @@ const SS_MIN_QUOTAS_2026 = [
 ]
 
 // Tarifa plana: €80/month flat quota for new autonomos in their first 12 months.
+// NOTE (C3): €80 was fixed by DT5 RDL 13/2022 for 2023–2025 only; from 2026 the amount
+// is set by each year's Ley de Presupuestos, and neither RDL 3/2026 nor Orden
+// PJC/297/2026 establishes a 2026 amount (see radarfiscal.es/en/guias/tarifa-plana-autonomos/).
+// The calculator keeps €80 as the working estimate and shows an on-page disclaimer
+// (r-tarifa-2026) whenever tarifa plana applies. Revisit when the BOE publishes the 2026 rate.
 const TARIFA_PLANA = 80
+
+// ── C4: societario (director) minimum quota floor ─────────────────────────────
+// Directors/shareholders (autónomo societario) have a higher minimum contribution base.
+// Source: Orden PJC/297/2026 (BOE-A-2026-7296) + Seguridad Social Importass guide,
+// via infoautonomos.com/seguridad-social/cuota-autonomos-societarios/ (verified 2026-09-15):
+// minimum base for annual regularization = €1,424.40 (provisional €1,000 allowed during
+// the year if registered ≥90 days in 2026). Monthly floor quota = base × 31.50% tipo total
+// (28.30% comunes + 1.30% profesionales + 0.90% MEI + 0.90% cese + 0.10% FP).
+// VERIFY: re-check against BOE/Importass if Orden PJC/297/2026 is amended for 2027+.
+const SOCIETARIO_MIN_BASE = 1424.40
+const SOCIETARIO_MIN_QUOTA = Math.round(SOCIETARIO_MIN_BASE * 0.315 * 100) / 100 // = 448.69
 
 /**
  * Returns the minimum monthly SS quotas array for the given year.
@@ -82,12 +98,16 @@ export function findSSBracket(monthlyNetIncome) {
 /**
  * Returns the monthly SS quota for a given net income, year, and autonomo status.
  *
+ * Directors (autónomo societario) get a floor: max(bracket quota, SOCIETARIO_MIN_QUOTA).
+ * Tarifa plana (new) takes precedence over the floor.
+ *
  * @param {number} monthlyNetIncome
  * @param {number} year
  * @param {'new'|'mid'|'established'} timeAsAutonomo
+ * @param {'individual'|'director'} [autonomoType='individual']
  * @returns {{ bracketId: number, monthlyQuota: number, isTarifaPlana: boolean }}
  */
-export function findSSQuota(monthlyNetIncome, year, timeAsAutonomo) {
+export function findSSQuota(monthlyNetIncome, year, timeAsAutonomo, autonomoType = 'individual') {
   const bracket = findSSBracket(monthlyNetIncome)
   if (timeAsAutonomo === 'new') {
     return { bracketId: bracket.id, monthlyQuota: TARIFA_PLANA, isTarifaPlana: true }
@@ -96,7 +116,10 @@ export function findSSQuota(monthlyNetIncome, year, timeAsAutonomo) {
     console.warn(`[autonomo] findSSQuota: unrecognized timeAsAutonomo "${timeAsAutonomo}", using bracket-based quota`)
   }
   const quotas = getSSQuotasForYear(year)
-  const monthlyQuota = quotas[bracket.id - 1]
+  const bracketQuota = quotas[bracket.id - 1]
+  const monthlyQuota = autonomoType === 'director'
+    ? Math.max(bracketQuota, SOCIETARIO_MIN_QUOTA)
+    : bracketQuota
   return { bracketId: bracket.id, monthlyQuota, isTarifaPlana: false }
 }
 
@@ -559,7 +582,7 @@ export function calculateAutonomo({
   // per Spanish law (rendimiento neto for estimación directa simplificada includes this deduction).
   const monthlyIncomeForSS = Math.max(0, revenue - ssDeduction) / 12
   const { bracketId: ssBracketId, monthlyQuota: monthlySSQuota, isTarifaPlana } =
-    findSSQuota(monthlyIncomeForSS, year, timeAsAutonomo)
+    findSSQuota(monthlyIncomeForSS, year, timeAsAutonomo, autonomoType)
   const annualSSTotal = Math.round(monthlySSQuota * 12 * 100) / 100
 
   // IRPF base (base imponible) = revenue after SS contributions and the 5% IRPF deduction

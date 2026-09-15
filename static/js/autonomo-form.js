@@ -1,7 +1,8 @@
 // Pure state validation for the Spanified autónomo calculator.
 // No DOM access here — unit-tested with node:test, reused by autonomo.js.
 
-export const YEARS = [2026, 2027, 2028, 2029, 2030, 2031]
+export const CURRENT_YEAR = 2026
+export const YEARS = [CURRENT_YEAR]
 export const VALID_TYPES = ['individual', 'director']
 export const VALID_TIMES = ['new', 'mid', 'established']
 export const VALID_DISABILITY = [0, 33, 65]
