@@ -302,7 +302,8 @@ const IRPF_REGIONAL_BRACKETS = {
     { upTo: 120000,   rate: 0.245  },
     { upTo: Infinity, rate: 0.27   },
   ],
-  // Foral regimes — educational estimates only
+  // Foral regimes — UNUSED (regions removed from selector, see M3).
+  // Reserved for future foral support: state=0 + real foral scales + foral minimums.
   navarra: [
     { upTo: 12450,    rate: 0.085  },
     { upTo: 20200,    rate: 0.105  },
