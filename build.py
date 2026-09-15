@@ -308,7 +308,6 @@ def render_calculators(env):
     calcs = [
         ("calculator-autonomo.html", "calculators/autonomo-tax.html", [
             {"name": "Home", "url": "/"},
-            {"name": "Calculators", "url": "/calculators/autonomo-tax"},
             {"name": "Autónomo Tax", "url": "/calculators/autonomo-tax", "current": True},
         ]),
     ]
