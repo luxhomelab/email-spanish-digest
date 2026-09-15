@@ -1,0 +1,189 @@
+{
+  "items": [
+    {
+      "title": "Feijóo plans to strip nationality from naturalized citizens convicted of crimes",
+      "body": "PP leader Alberto Núñez Feijóo is preparing a law to toughen access to Spanish nationality. Future applicants would face a harder language exam and a test on constitutional values. Naturalized citizens convicted of murder, sexual assault, terrorism, organized crime or repeat offenses could have their nationality revoked. The measure would apply if Feijóo reaches La Moncloa in 2027.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/09/14/6aa8288121efa01a628b4587.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Electoral board reviews 'ley de nietos' nationality files",
+      "body": "The JEC has accepted the Supreme Court's precautionary order regarding the 'ley de nietos' route under the Democratic Memory Law. It asked the Census Office and consular registries for reports to verify the exile link of people who obtained or are applying for Spanish nationality through this route. Naturalized citizens and applicants could have their files reviewed and called into question.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-jec-atiende-supremo-pide-informes-nacionalizaciones-derivadas-ley-nietos-20260914144048.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Euribor jumps to 3.3%, highest in two years",
+      "body": "The 12-month Euribor daily rate rose to 3.3% after the ECB raised its reference rate to 2.5%. The provisional monthly average sits at 3.109%, a level not seen in two years. Variable-rate mortgage holders in Spain will pay more, with typical increases of around €84 per month on a €150,000, 25-year loan.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/euribor-dispara-maximos-dos-anos_7036461_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Foreign employment hits record, drives most job growth in Spain",
+      "body": "Spain reached 3,551,759 foreign workers registered with Social Security, representing 15.9% of the workforce. Foreign employment grew 15.7% over 12 months, adding nearly 500,000 jobs, while employment among Spanish nationals rose just 1.1%. About 71% of all new contributors in the past year are foreign.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/regularizacion-lleva-empleo-extranjero-un-nuevo-record-agosto-crece-ya-quince-veces-mas-rapido-que-afiliacion-espanoles_7036444_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Economist warns Spanish housing prices will keep rising",
+      "body": "Economist Gonzalo Bernardos links rising housing prices to a structural slowdown in residential construction. Construction represented just 5.35% of GDP in 2025, compared with 10.5% in 2007. Spain added about 241,000 new households from early 2025 to early 2026, but only 91,000 new housing units were registered. Prices and rents face continued upward pressure.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-09-14/gonzalo-bernardos-le-doy-pesame-desean-comprar-vivienda-alquilar-piso-1qrt_4423388/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Oil climbs to $107 as Iran tensions raise energy costs",
+      "body": "Brent crude rose 2.6% to $107.30, and European gas hit €83/MWh, its highest since late 2022, amid tensions over Iran and the Strait of Hormuz. The rise feeds into fuel, electricity and transport costs across Spain.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/petroleo-sigue-escalada-alcanza-107-dolares-medio-tensiones-iran_1_13507163.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Sánchez: 200 migrants returning daily from Ceuta to Morocco",
+      "body": "President Pedro Sánchez says about 200 migrants who entered Ceuta on July 30 are voluntarily returning to Morocco each day. The government aims to approach 10,000 active reception places and has asked Ceuta residents for patience and empathy while cases are processed. Sánchez called the situation a humanitarian crisis and admitted that capacity is not sufficient for the future.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/epsocial/migracion/noticia-sanchez-afirma-200-migrantes-dia-regresan-ceuta-marruecos-espera-llegar-10000-plazas-acogida-activas-20260914224520.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Spain launches Alias Registry to fight bank SMS scams",
+      "body": "Spain's competition authority has launched an Alias Registry that verifies senders of SMS, MMS and RCS messages to Spanish numbers. Entities must prove a link to their brand, trade name, company or domain to use an identifier. The system aims to cut smishing fraud by making fake bank and company texts harder to send.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/se-acabaron-los-sms-que-se-hacen-pasar-por-tu-banco-que-cambia-desde-este-martes-para-frenar-las-estafas_7036353_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Butane cylinder price hits four-year high at €18.84",
+      "body": "The 12.5 kg butane cylinder will rise by 4.96% on Tuesday to €18.84, its highest price in four years. The increase reflects raw material and freight costs, partly offset by a hydrocarbon tax cut. Households in areas off the gas grid will pay more for cooking and heating.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/precio-bombona-butano-sube-nuevo-su-nuevo-coste-desde-este-martes_7036266_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Guide to Spain's eight-week parental leave rules",
+      "body": "Workers in Spain have an individual, non-transferable right to eight weeks of parental leave per child until the child turns 8. It can be taken continuously or discontinuously, full-time or part-time where allowed, with at least 10 days' notice. In practice, it operates as a suspension of the contract with job reservation, though details on pay remain incomplete.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/guia-permiso-parental-ocho-semanas-como-cuando-solicitarlo-cuidar-hijos_7024523_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Bars and restaurants to charge refundable deposit on drink containers",
+      "body": "Under the EU packaging regulation, Spain will introduce a deposit-return and refund system. Supermarkets, bars and restaurants will charge about 10 cents per bottle or can, refundable when containers are returned. The EU requires the collection of at least 70% of these containers; Spain collected only 41.3% of single-use plastic bottles in 2023.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/gastronomia/2026/09/14/ya-oficial-bares-restaurantes-cobraran-suplemento-extra-botellas-virtud-nueva-normativa-gobierno-espana-2021183.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "OECD warns next pandemic could cost Spain €275 billion",
+      "body": "The OECD estimates a 50% probability of another pandemic in the next 25 years. Spain's GDP could fall between 2.1% and 16.3%, equivalent to €35 billion to €275 billion in 2025 euros. The analysis covers five pandemic scenarios.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/proxima-pandemia-podria-costarle-espana-un-agujero-economico-hasta-275-000-millones-euros_7036681_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Two sisters link medicine and cancer research after leukemia survival",
+      "body": "Isabel survived acute lymphoblastic leukemia at 15 and is now an emergency doctor at Hospital Álvaro Cunqueiro in Vigo. Her sister Victoria, who was 11 at the time, works in cancer research to contribute to the field that saved Isabel's life. The story highlights Spain's public healthcare and research systems.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/salud/2026/09/14/6aa70eebfc6c83146b8b458b.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "Would stricter language and values tests change your plans to apply for Spanish nationality? 💬",
+  "variant": "Nothing happened in Spain today. Except this.",
+  "headline": "Nothing happened in Spain today. Except this.",
+  "date": "2026-09-15",
+  "generated_at": "2026-09-15T06:02:57.382758+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 316,
+    "items_selected_pass1": 13,
+    "fact_sheets_extracted": 13,
+    "items_after_importance_filter": 13,
+    "items_in_digest": 13
+  },
+  "selection_reasons": {
+    "1": "PP would strip Spanish nationality from immigrants convicted of serious crimes — a direct change to citizenship rules affecting immigrants.",
+    "30": "Supreme Court suspension of the 'ley de nietos' forces the Electoral Board to verify exile links, affecting nationality and voting rights of up to 400,000 naturalized citizens.",
+    "31": "Sánchez says 200 migrants a day are returning from Ceuta to Morocco and targets 10,000 reception places — core national migration policy.",
+    "139": "Euríbor spikes to 3.3%, a two-year high after the ECB rate hike, directly raising costs for variable-rate mortgage holders.",
+    "282": "Foreign employment hits a record 3.55 million and grows 15 times faster than Spanish affiliation — key labor and immigration trend.",
+    "269": "New SDDR deposit system obliges bars and restaurants to charge extra for bottles — affects consumers' daily spending.",
+    "286": "New 'Registro de Alias' launches to block SMS bank-impersonation scams — protects every bank customer in Spain.",
+    "287": "Guide to the 8-week parental leave — a labor right relevant to all working families.",
+    "298": "Oil tops $107 and European gas hits €83/MWh — surging energy prices that feed into inflation and utility bills.",
+    "279": "Butane cylinder hits a four-year high with a near-5% rise — direct cost-of-living impact on many households.",
+    "285": "OECD warns a future pandemic could cost Spain up to €275 billion — significant health and economic risk analysis.",
+    "308": "Economist warns buyers and renters of a worsening housing market — property is a top concern for residents and investors.",
+    "18": "New childhood leukemia research unit launched in Madrid — a positive health/science story for the mandatory uplifting item."
+  }
+}
