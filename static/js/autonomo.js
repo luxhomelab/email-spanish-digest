@@ -136,6 +136,72 @@ function syncMobVisibility(state) {
   }
 }
 
+function syncShareLinks() {
+  const wrap = document.querySelector('.calc-share .share-wrap')
+  if (!wrap) return
+  const pageUrl = window.location.href
+  const text = 'Autónomo Tax Calculator — Spain self-employed taxes — Spanified'
+  const u = encodeURIComponent(pageUrl)
+  const t = encodeURIComponent(text)
+  const set = (sel, href) => {
+    const a = wrap.querySelector(sel)
+    if (a) a.href = href
+  }
+  set('a[href*="x.com/intent"]', `https://x.com/intent/tweet?text=${t}&url=${u}`)
+  set('a[href*="facebook.com/sharer"]', `https://www.facebook.com/sharer/sharer.php?u=${u}`)
+  set('a[href*="t.me/share"]', `https://t.me/share/url?url=${u}&text=${t}`)
+  set('a[href*="wa.me"]', `https://wa.me/?text=${t}%20${u}`)
+  const copy = wrap.querySelector('.share-copy')
+  if (copy) copy.dataset.url = pageUrl
+}
+
+function wireShareMenu() {
+  const wrap = document.querySelector('.calc-share .share-wrap')
+  if (!wrap) return
+  const toggleBtn = wrap.querySelector('.share-toggle')
+  const menu = wrap.querySelector('.share-menu')
+  if (!toggleBtn || !menu) return
+  const close = () => {
+    menu.hidden = true
+    toggleBtn.setAttribute('aria-expanded', 'false')
+  }
+  toggleBtn.addEventListener('click', e => {
+    e.stopPropagation()
+    const willOpen = menu.hidden
+    close()
+    if (willOpen) {
+      menu.hidden = false
+      toggleBtn.setAttribute('aria-expanded', 'true')
+    }
+  })
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.calc-share .share-wrap')) close()
+  })
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') close()
+  })
+  wrap.addEventListener('click', e => {
+    const btn = e.target.closest('.share-copy')
+    if (!btn) return
+    const label = btn.querySelector('span')
+    const done = () => {
+      label.textContent = 'Copied!'
+      setTimeout(() => { label.textContent = 'Copy link' }, 1500)
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(btn.dataset.url).then(done, done)
+    } else {
+      const inp = document.createElement('input')
+      inp.value = btn.dataset.url
+      document.body.appendChild(inp)
+      inp.select()
+      try { document.execCommand('copy') } catch (err) {}
+      document.body.removeChild(inp)
+      done()
+    }
+  })
+}
+
 function toggle(btnId, bodyId) {
   const btn = $(btnId)
   const body = $(bodyId)
@@ -250,6 +316,7 @@ function init() {
     syncMobVisibility(state)
     render(state)
     persist(state)
+    syncShareLinks()
   }
 
   bindNumber('f-revenue', 'annualNetRevenue', state, update, 0)
@@ -281,8 +348,10 @@ function init() {
 
   toggle('personal-toggle', 'personal-body')
   toggle('irpf-toggle', 'irpf-body')
+  wireShareMenu()
 
   render(state)
+  syncShareLinks()
 }
 
 if (document.readyState === 'loading') {

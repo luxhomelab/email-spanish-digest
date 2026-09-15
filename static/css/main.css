@@ -994,6 +994,35 @@ body.page-digest .share-menu a, body.page-digest .share-menu .share-copy {
 }
 body.page-digest .share-menu a:hover, body.page-digest .share-menu .share-copy:hover { background-color: #F8EFDD; }
 body.page-digest .share-menu svg { width: 16px; height: 16px; fill: #6C7A89; flex-shrink: 0; }
+/* ---------- Calculator share block (body.page-calculator scope) ---------- */
+body.page-calculator .calc-share { margin-top: 20px; text-align: left; }
+body.page-calculator .calc-share .share-cta { font-size: 14px; font-weight: 600; color: #3C4858; margin-bottom: 10px; }
+body.page-calculator .share-wrap { position: relative; display: inline-block; margin-top: 12px; }
+body.page-calculator .share-toggle {
+ display: inline-flex; align-items: center; gap: 7px;
+ border: 1px solid #E3D9C4; border-radius: 999px;
+ padding: 5px 14px; font-size: 13px; font-weight: 600;
+ color: #3C4858; background-color: #FFFDF8;
+ cursor: pointer; font-family: inherit;
+ transition: border-color 0.15s, background-color 0.15s;
+}
+body.page-calculator .share-toggle:hover { border-color: #AA151B; background-color: #F8EFDD; }
+body.page-calculator .share-toggle svg { width: 14px; height: 14px; fill: #6C7A89; }
+body.page-calculator .share-toggle:hover svg { fill: #AA151B; }
+body.page-calculator .share-menu {
+ position: absolute; top: calc(100% + 6px); left: 0; z-index: 20;
+ min-width: 168px; padding: 6px;
+ background-color: #FFFDF8; border: 1px solid #E3D9C4; border-radius: 12px;
+ box-shadow: 0 6px 24px rgba(60,40,20,0.12);
+}
+body.page-calculator .share-menu a, body.page-calculator .share-menu .share-copy {
+ display: flex; align-items: center; gap: 10px; width: 100%;
+ padding: 8px 10px; border: 0; border-radius: 8px;
+ font-size: 13px; font-weight: 500; color: #3C4858; text-decoration: none;
+ background: none; cursor: pointer; font-family: inherit; text-align: left;
+}
+body.page-calculator .share-menu a:hover, body.page-calculator .share-menu .share-copy:hover { background-color: #F8EFDD; }
+body.page-calculator .share-menu svg { width: 16px; height: 16px; fill: #6C7A89; flex-shrink: 0; }
 body.page-digest .share-menu a:hover svg, body.page-digest .share-menu .share-copy:hover svg { fill: #AA151B; }
 body.page-editor .editor { max-width: 1200px; width: 100%; margin: 0 auto; }
 body.page-editor .editor h1 { text-align: center; }

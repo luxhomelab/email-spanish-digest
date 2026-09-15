@@ -313,7 +313,9 @@ def render_calculators(env):
     ]
     for template_name, rel_dest, crumbs in calcs:
         template = env.get_template(template_name)
-        output = template.render(crumbs=crumbs, js_version=js_version())
+        calc_url = f"{SITE_URL}/{rel_dest.replace('.html', '')}"
+        share = share_links(calc_url, "Autónomo Tax Calculator — Spain self-employed taxes — Spanified")
+        output = template.render(crumbs=crumbs, js_version=js_version(), share=share)
         dest = os.path.join(OUT_DIR, rel_dest)
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         with open(dest, "w", encoding="utf-8") as fh:
