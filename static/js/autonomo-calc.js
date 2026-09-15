@@ -6,7 +6,8 @@
  * - Tarifa plana for new autonomos (first 12 months)
  * - IRPF: state + regional components
  * - Personal minimum allowances (age, children, disability)
- * - General expenses deduction (7% individual, 3% director)
+ * - General expenses deduction (7% individual, 3% director) — for SS bracket only
+ * - IRPF deduction (5% flat, estimación directa simplificada)
  *
  * Data sources:
  * - SS quotas 2026: Orden PJC/297/2026 (BOE-A-2026-7296, art. 18: bases × 31.50% tipo total)
@@ -428,7 +429,8 @@ export function calcIrpfRegionalWithBreakdown(base, region) {
 
 // ── Deductions ────────────────────────────────────────────────────────────────
 
-/** General expenses deduction — 7% for individuals (max €2,000), 3% for directors (max €2,000). */
+/** General expenses deduction for SS bracket — 7% for individuals (max €2,000), 3% for directors (max €2,000).
+ *  Art. 308 LGSS: rendimiento neto for RETA includes this deduction. */
 const GENERAL_EXPENSES_RATE = { individual: 0.07, director: 0.03 }
 const GENERAL_EXPENSES_MAX = 2000
 
@@ -443,6 +445,20 @@ export function calcGeneralExpenses(annualNetRevenue, autonomoType) {
     console.warn(`[autonomo] calcGeneralExpenses: unrecognized autonomoType "${autonomoType}", using default 7% rate`)
   }
   return Math.round(Math.min(Math.max(0, annualNetRevenue) * (rate ?? 0.07), GENERAL_EXPENSES_MAX) * 100) / 100
+}
+
+/** IRPF deduction under estimación directa simplificada — 5% flat for everyone (max €2,000).
+ *  Gastos de difícil justificación (Art. 30.2.5ª RIRPF). Unlike the SS deduction, the
+ *  autonomo type (individual vs director) does NOT change this rate. */
+const IRPF_DEDUCTION_RATE = 0.05
+const IRPF_DEDUCTION_MAX = 2000
+
+/**
+ * @param {number} annualNetRevenue
+ * @returns {number}
+ */
+export function calcIrpfDeduction(annualNetRevenue) {
+  return Math.round(Math.min(Math.max(0, annualNetRevenue) * IRPF_DEDUCTION_RATE, IRPF_DEDUCTION_MAX) * 100) / 100
 }
 
 // ── Personal minimum ──────────────────────────────────────────────────────────
@@ -502,7 +518,9 @@ export function calcPersonalMinimum({ age = 35, numChildren = 0, childrenUnder3 
  *   isTarifaPlana: boolean,
  *   monthlySSQuota: number,
  *   annualSSTotal: number,
- *   generalExpensesDeduction: number,
+ *   generalExpensesDeduction: number, // legacy alias of ssDeduction
+ *   ssDeduction: number,
+ *   irpfDeduction: number,
  *   reducedNetIncome: number,
  *   personalMinimum: number,
  *   irpfBase: number,
@@ -530,18 +548,22 @@ export function calculateAutonomo({
   const revenue = Math.max(0, annualNetRevenue)
   const monthlyNetIncome = revenue / 12
 
-  // General expenses deduction (computed first — needed for SS bracket determination)
-  const generalExpensesDeduction = calcGeneralExpenses(revenue, autonomoType)
+  // SS deduction (7% individual / 3% director, cap €2,000) — determines the SS bracket only.
+  const ssDeduction = calcGeneralExpenses(revenue, autonomoType)
+  const generalExpensesDeduction = ssDeduction // legacy alias, kept for compatibility
 
-  // Social Security bracket is determined on income after the general expenses deduction,
+  // IRPF deduction (5% flat for everyone, cap €2,000) — goes into the IRPF base only.
+  const irpfDeduction = calcIrpfDeduction(revenue)
+
+  // Social Security bracket is determined on income after the SS deduction,
   // per Spanish law (rendimiento neto for estimación directa simplificada includes this deduction).
-  const monthlyIncomeForSS = Math.max(0, revenue - generalExpensesDeduction) / 12
+  const monthlyIncomeForSS = Math.max(0, revenue - ssDeduction) / 12
   const { bracketId: ssBracketId, monthlyQuota: monthlySSQuota, isTarifaPlana } =
     findSSQuota(monthlyIncomeForSS, year, timeAsAutonomo)
   const annualSSTotal = Math.round(monthlySSQuota * 12 * 100) / 100
 
-  // IRPF base (base imponible) = revenue after SS and general expenses deductions
-  const reducedNetIncome = Math.max(0, revenue - annualSSTotal - generalExpensesDeduction)
+  // IRPF base (base imponible) = revenue after SS contributions and the 5% IRPF deduction
+  const reducedNetIncome = Math.max(0, revenue - annualSSTotal - irpfDeduction)
 
   // Personal minimum allowances
   const personalMinimum = calcPersonalMinimum({ age, numChildren, childrenUnder3, disabilityLevel })
@@ -570,6 +592,8 @@ export function calculateAutonomo({
     monthlySSQuota,
     annualSSTotal,
     generalExpensesDeduction: Math.round(generalExpensesDeduction * 100) / 100,
+    ssDeduction: Math.round(ssDeduction * 100) / 100,
+    irpfDeduction: Math.round(irpfDeduction * 100) / 100,
     reducedNetIncome: Math.round(reducedNetIncome * 100) / 100,
     personalMinimum,
     irpfBase: Math.round(reducedNetIncome * 100) / 100, // alias for reducedNetIncome, used by UI

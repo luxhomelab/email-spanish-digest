@@ -168,8 +168,8 @@ function render(state) {
   }
 
   $('b-gross').textContent = fmtEur(revenue)
-  $('b-exp-p').textContent = revenue > 0 ? fmtPct(result.generalExpensesDeduction / revenue) : ''
-  $('b-exp').textContent = `−${fmtEur(result.generalExpensesDeduction)}`
+  $('b-exp-p').textContent = revenue > 0 ? fmtPct(result.irpfDeduction / revenue) : ''
+  $('b-exp').textContent = `−${fmtEur(result.irpfDeduction)}`
   $('b-ss-p').textContent = revenue > 0 ? fmtPct(ssRate) : ''
   $('b-ss').textContent = `−${fmtEur(result.annualSSTotal)}`
   $('b-taxable').textContent = fmtEur(result.irpfBase)

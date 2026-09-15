@@ -23,9 +23,9 @@
   "inLanguage": "en",
   "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}},
  {"@type": "FAQPage", "mainEntity": [
-  {"@type": "Question", "name": "How are autónomo SS quotas calculated?", "acceptedAnswer": {"@type": "Answer", "text": "Since 2023, Spain introduced a 15-bracket social security system for autónomos based on actual net income. Your monthly quota depends on which bracket your estimated annual net income falls into. Official quotas are published through 2025. For 2026 onward, this calculator applies the 2025 rates as no new quotas have been approved yet."}},
+  {"@type": "Question", "name": "How are autónomo SS quotas calculated?", "acceptedAnswer": {"@type": "Answer", "text": "Since 2023, Spain introduced a 15-bracket social security system for autónomos based on actual net income. Your monthly quota depends on which bracket your estimated annual net income falls into. Official quotas for 2026 are set by Orden PJC/297/2026. For 2027 onward, this calculator applies the 2026 rates as no new quotas have been approved yet."}},
   {"@type": "Question", "name": "What is tarifa plana?", "acceptedAnswer": {"@type": "Answer", "text": "Tarifa plana is a reduced flat rate of €80/month for newly registered autónomos during their first 12 months. It reduces the initial burden for new self-employed workers. After the first year, you pay the regular quota based on your income bracket."}},
-  {"@type": "Question", "name": "What deductions can autónomos claim?", "acceptedAnswer": {"@type": "Answer", "text": "Individual autónomos can deduct 7% of net revenues as a general expenses allowance (capped at €2,000/year). Company directors apply a 3% rate (same cap). All autónomos also deduct annual SS contributions from income before calculating IRPF."}},
+  {"@type": "Question", "name": "What deductions can autónomos claim?", "acceptedAnswer": {"@type": "Answer", "text": "For Social Security, individual autónomos deduct 7% of net revenues (capped at €2,000/year) when determining their SS bracket; company directors apply a 3% rate (same cap). For IRPF, everyone deducts a flat 5% allowance for hard-to-justify expenses (capped at €2,000/year). All autónomos also deduct annual SS contributions from income before calculating IRPF."}},
   {"@type": "Question", "name": "How is IRPF calculated for autónomos?", "acceptedAnswer": {"@type": "Answer", "text": "IRPF is Spain's income tax. For autónomos, the taxable base is net revenue minus SS contributions minus general expenses, reduced further by the personal minimum allowance. The resulting base is taxed using progressive brackets split between a state component and a regional component set by each community."}}
  ]}
 ]}
@@ -82,7 +82,7 @@
     </div>
 
     <div class="field">
-     <span class="flabel">Autónomo type <span class="tip" title="Affects the general expenses deduction applied before SS and IRPF: Individual autonomo = 7% of revenue (max €2,000). Director of your own SL = 3% of revenue (max €2,000).">?</span></span>
+     <span class="flabel">Autónomo type <span class="tip" title="Affects the SS bracket deduction: Individual = 7% of revenue (max €2,000). Director of your own SL = 3% (max €2,000). IRPF always uses a flat 5% deduction (max €2,000) for everyone.">?</span></span>
      <div class="seg" id="f-type" role="group" aria-label="Autónomo type">
       <button type="button" data-v="individual" class="on">Individual freelancer</button>
       <button type="button" data-v="director">Company director / shareholder</button>
@@ -166,7 +166,7 @@
       <thead><tr><th></th><th class="num">%</th><th class="num">Amount</th></tr></thead>
       <tbody>
        <tr><td class="row-h">Gross revenues</td><td class="num"></td><td class="num b" id="b-gross">—</td></tr>
-       <tr class="tint-o"><td class="ind">General expenses deduction</td><td class="num" id="b-exp-p"></td><td class="num o" id="b-exp">—</td></tr>
+       <tr class="tint-o"><td class="ind">General expenses deduction (IRPF · 5%)</td><td class="num" id="b-exp-p"></td><td class="num o" id="b-exp">—</td></tr>
        <tr class="tint-o"><td class="ind">Social Security (annual)</td><td class="num" id="b-ss-p"></td><td class="num o" id="b-ss">—</td></tr>
        <tr><td class="row-h">Reduced net income</td><td class="num"></td><td class="num b" id="b-taxable">—</td></tr>
        <tr class="tint-r"><td class="ind">IRPF — state component</td><td class="num" id="b-st-p"></td><td class="num r" id="b-st">—</td></tr>
@@ -213,9 +213,9 @@
 
   <div class="card faq-card">
    <h2>Frequently Asked Questions</h2>
-   <details class="faq-item"><summary>How are autónomo SS quotas calculated?</summary><p>Since 2023, Spain introduced a 15-bracket social security system for autónomos based on actual net income. Your monthly quota depends on which bracket your estimated annual net income falls into. Official quotas are published through 2025. For 2026 onward, this calculator applies the 2025 rates as no new quotas have been approved yet.</p></details>
+   <details class="faq-item"><summary>How are autónomo SS quotas calculated?</summary><p>Since 2023, Spain introduced a 15-bracket social security system for autónomos based on actual net income. Your monthly quota depends on which bracket your estimated annual net income falls into. Official quotas for 2026 are set by Orden PJC/297/2026. For 2027 onward, this calculator applies the 2026 rates as no new quotas have been approved yet.</p></details>
    <details class="faq-item"><summary>What is tarifa plana?</summary><p>Tarifa plana is a reduced flat rate of €80/month for newly registered autónomos during their first 12 months. It reduces the initial burden for new self-employed workers. After the first year, you pay the regular quota based on your income bracket.</p></details>
-   <details class="faq-item"><summary>What deductions can autónomos claim?</summary><p>Individual autónomos can deduct 7% of net revenues as a general expenses allowance (capped at €2,000/year). Company directors apply a 3% rate (same cap). All autónomos also deduct annual SS contributions from income before calculating IRPF.</p></details>
+   <details class="faq-item"><summary>What deductions can autónomos claim?</summary><p>For Social Security, individual autónomos deduct 7% of net revenues (capped at €2,000/year) when determining their SS bracket; company directors apply a 3% rate (same cap). For IRPF, everyone deducts a flat 5% allowance for hard-to-justify expenses (capped at €2,000/year). All autónomos also deduct annual SS contributions from income before calculating IRPF.</p></details>
    <details class="faq-item"><summary>How is IRPF calculated for autónomos?</summary><p>IRPF is Spain's income tax. For autónomos, the taxable base is net revenue minus SS contributions minus general expenses, reduced further by the personal minimum allowance. The resulting base is taxed using progressive brackets split between a state component and a regional component set by each community.</p></details>
   </div>
  </div>

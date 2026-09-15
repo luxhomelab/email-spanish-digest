@@ -9,6 +9,7 @@ import {
   calcIrpfState,
   calcIrpfRegional,
   calcGeneralExpenses,
+  calcIrpfDeduction,
   calcPersonalMinimum,
   calculateAutonomo,
 } from '../static/js/autonomo-calc.js'
@@ -203,6 +204,27 @@ describe('calcGeneralExpenses', () => {
   })
 })
 
+// ── calcIrpfDeduction (C2: 5% flat, estimación directa simplificada) ──────────
+describe('calcIrpfDeduction', () => {
+  it('returns 5% for individual autonomo', () => {
+    assert.equal(calcIrpfDeduction(20000), 1000)
+  })
+
+  it('returns 5% for director (same flat rate, unlike SS deduction)', () => {
+    assert.equal(calcIrpfDeduction(20000, 'director'), 1000)
+    assert.equal(calcIrpfDeduction(20000, 'individual'), calcIrpfDeduction(20000, 'director'))
+  })
+
+  it('caps at €2,000', () => {
+    assert.equal(calcIrpfDeduction(40000), 2000)
+    assert.equal(calcIrpfDeduction(100000, 'director'), 2000)
+  })
+
+  it('returns 0 for zero revenue', () => {
+    assert.equal(calcIrpfDeduction(0), 0)
+  })
+})
+
 // ── calcPersonalMinimum ───────────────────────────────────────────────────────
 describe('calcPersonalMinimum', () => {
   it('returns base personal minimum for no special circumstances', () => {
@@ -284,7 +306,7 @@ describe('calculateAutonomo', () => {
     const result = calculateAutonomo(base)
     const expectedKeys = [
       'monthlyNetIncome', 'ssBracketId', 'isTarifaPlana', 'monthlySSQuota',
-      'annualSSTotal', 'generalExpensesDeduction', 'reducedNetIncome',
+      'annualSSTotal', 'generalExpensesDeduction', 'ssDeduction', 'irpfDeduction', 'reducedNetIncome',
       'personalMinimum', 'irpfBase', 'irpfState', 'irpfRegional', 'irpfTotal',
       'effectiveIrpfRate', 'totalBurden', 'effectiveTotalRate',
       'netTakeHome', 'netTakeHomeMonthly',
@@ -376,10 +398,10 @@ describe('calculateAutonomo', () => {
   })
 
   it('SS cost exceeds revenue, reducedNetIncome clamps to 0', () => {
-    // €200/mo = €2400/yr; established → bracket 1 → SS quota 205.23/mo = 2462.76/yr
-    // SS cost (2462.76) exceeds revenue (2400)
-    // generalExpenses = 168 (7% of 2400)
-    // reducedNetIncome = max(0, 2400 - 2462.76 - 168) = max(0, -230.76) = 0 (clamps to zero)
+    // €200/mo = €2400/yr; established → bracket 1 → SS quota 205.88/mo = 2470.56/yr
+    // SS cost (2470.56) exceeds revenue (2400)
+    // ssDeduction = 168 (7% of 2400); irpfDeduction = 120 (5% of 2400)
+    // reducedNetIncome = max(0, 2400 - 2470.56 - 120) = max(0, -190.56) = 0 (clamps to zero)
     // This validates that negative income floors at 0 and IRPF follows correctly
     const revenue = 2400
     const result = calculateAutonomo({ ...base, annualNetRevenue: revenue, timeAsAutonomo: 'established' })
@@ -398,9 +420,9 @@ describe('calculateAutonomo', () => {
   it('IRPF floored at zero when personal minimum exceeds reduced income (Art. 56 LIRPF)', () => {
     // €6000 low income with 4 children (high personal minimum)
     // personalMinimum = 5550 + 2400 + 2700 + 4000 + 4500 = 19150
-    // generalExpenses ≈ 420, SS cost ≈ 280 (using tarifa plana for 'new')
-    // reducedNetIncome = 6000 - 280 - 420 ≈ 5300
-    // Tax(5300) ≈ 503.50; Tax(19150) ≈ 1818.25 → negative IRPF, floored to 0
+    // ssDeduction ≈ 420 (7%), irpfDeduction = 300 (5%), SS = 960/yr (tarifa plana for 'new')
+    // reducedNetIncome = 6000 - 960 - 300 = 4740
+    // Tax(4740) < Tax(19150) → negative IRPF, floored to 0
     const result = calculateAutonomo({ ...base, annualNetRevenue: 6000, numChildren: 4, timeAsAutonomo: 'new' })
     assert.ok(result.personalMinimum > 15000)
     assert.equal(result.irpfTotal, 0) // Floored at zero
@@ -426,6 +448,116 @@ describe('calculateAutonomo', () => {
     const expected = calculateAutonomo({ ...base, annualNetRevenue: 50000, year: 2026 })
     assert.equal(result.monthlySSQuota, expected.monthlySSQuota)
     assert.equal(result.ssBracketId, expected.ssBracketId)
+  })
+})
+
+// ── C2: split SS vs IRPF deductions ─────────────────────────────────────────
+describe('C2 split deductions', () => {
+  const base = {
+    annualNetRevenue: 30000, autonomoType: 'individual', timeAsAutonomo: 'established',
+    region: 'madrid', year: 2026, age: 35, numChildren: 0, childrenUnder3: 0, disabilityLevel: 0,
+  }
+
+  it('exposes ssDeduction (7%) and irpfDeduction (5%) separately', () => {
+    const result = calculateAutonomo(base)
+    assert.equal(result.ssDeduction, 2000) // 7% of 30k = 2100 → cap
+    assert.equal(result.irpfDeduction, 1500) // 5% of 30k
+    assert.equal(result.generalExpensesDeduction, result.ssDeduction) // legacy alias
+  })
+
+  it('director and individual share the same IRPF deduction (5% flat)', () => {
+    const individual = calculateAutonomo(base)
+    const director = calculateAutonomo({ ...base, autonomoType: 'director' })
+    assert.equal(individual.irpfDeduction, director.irpfDeduction)
+    assert.ok(individual.ssDeduction > director.ssDeduction)
+  })
+
+  it('IRPF base uses the 5% deduction, not 7%', () => {
+    // 30k Madrid individual: SS = 427.21×12 = 5126.52, IRPF ded = 1500
+    // reducedNet = 30000 − 5126.52 − 1500 = 23373.48
+    const result = calculateAutonomo(base)
+    assert.equal(result.reducedNetIncome, 23373.48)
+  })
+})
+
+// ── QA scenarios S1–S8 ──────────────────────────────────────────────────────
+describe('QA scenarios S1-S8', () => {
+  const base = {
+    autonomoType: 'individual', timeAsAutonomo: 'established',
+    region: 'madrid', year: 2026, age: 35, numChildren: 0, childrenUnder3: 0, disabilityLevel: 0,
+  }
+
+  it('S1: €15k Madrid individual → bracket 3, quota 267.65', () => {
+    const r = calculateAutonomo({ ...base, annualNetRevenue: 15000 })
+    assert.equal(r.ssDeduction, 1050)
+    assert.equal(r.irpfDeduction, 750)
+    assert.equal(r.ssBracketId, 3)
+    assert.equal(r.monthlySSQuota, 267.65)
+    assert.equal(r.annualSSTotal, 3211.8)
+    assert.equal(r.reducedNetIncome, 11038.2)
+    assert.ok(r.irpfTotal > 0)
+    assert.ok(Math.abs(r.netTakeHome + r.totalBurden - 15000) < 0.02)
+  })
+
+  it('S2: €30k Madrid individual → bracket 10, quota 427.21', () => {
+    const r = calculateAutonomo({ ...base, annualNetRevenue: 30000 })
+    assert.equal(r.ssBracketId, 10)
+    assert.equal(r.monthlySSQuota, 427.21)
+    assert.equal(r.reducedNetIncome, 23373.48)
+  })
+
+  it('S3: €80k Madrid individual → bracket 15, irpfState 10833.66', () => {
+    const r = calculateAutonomo({ ...base, annualNetRevenue: 80000 })
+    assert.equal(r.ssBracketId, 15)
+    assert.equal(r.monthlySSQuota, 607.35)
+    assert.equal(r.irpfState, 10833.66)
+  })
+
+  it('S4: €15k tarifa plana (new) → €80/mo, higher take-home than established', () => {
+    const fresh = calculateAutonomo({ ...base, annualNetRevenue: 15000, timeAsAutonomo: 'new' })
+    const est = calculateAutonomo({ ...base, annualNetRevenue: 15000 })
+    assert.equal(fresh.isTarifaPlana, true)
+    assert.equal(fresh.monthlySSQuota, 80)
+    assert.equal(fresh.annualSSTotal, 960)
+    assert.ok(fresh.netTakeHome > est.netTakeHome)
+  })
+
+  it('S5: €30k Valencia → same SS as Madrid, different regional IRPF', () => {
+    const val = calculateAutonomo({ ...base, annualNetRevenue: 30000, region: 'comunidad_valenciana' })
+    const mad = calculateAutonomo({ ...base, annualNetRevenue: 30000 })
+    assert.equal(val.monthlySSQuota, mad.monthlySSQuota)
+    assert.equal(val.reducedNetIncome, mad.reducedNetIncome)
+    assert.ok(val.irpfRegional !== mad.irpfRegional)
+  })
+
+  it('S6: €50k Catalunya → bracket 13, quota 504.41', () => {
+    const r = calculateAutonomo({ ...base, annualNetRevenue: 50000, region: 'catalunya' })
+    assert.equal(r.ssBracketId, 13)
+    assert.equal(r.monthlySSQuota, 504.41)
+    assert.equal(r.reducedNetIncome, 41947.08)
+    const mad = calculateAutonomo({ ...base, annualNetRevenue: 50000 })
+    assert.ok(r.totalBurden > mad.totalBurden)
+  })
+
+  it('S7: €40k Madrid, 2 children (1 under 3), disability 33% → personal minimum 16450', () => {
+    const r = calculateAutonomo({
+      ...base, annualNetRevenue: 40000, numChildren: 2, childrenUnder3: 1, disabilityLevel: 33,
+    })
+    // 5550 + 2400 + 2700 + 2800 + 3000 = 16450
+    assert.equal(r.personalMinimum, 16450)
+    assert.equal(r.ssBracketId, 11)
+    assert.equal(r.monthlySSQuota, 452.94)
+    const plain = calculateAutonomo({ ...base, annualNetRevenue: 40000 })
+    assert.ok(r.irpfTotal < plain.irpfTotal)
+  })
+
+  it('S8: €15k director Madrid → bracket 4 (3% SS), same 5% IRPF deduction as individual', () => {
+    const dir = calculateAutonomo({ ...base, annualNetRevenue: 15000, autonomoType: 'director' })
+    const ind = calculateAutonomo({ ...base, annualNetRevenue: 15000 })
+    assert.equal(dir.ssDeduction, 450) // 3% of 15k
+    assert.equal(dir.irpfDeduction, ind.irpfDeduction) // 5% flat for both
+    assert.equal(dir.ssBracketId, 4) // (15000−450)/12 = 1212.50 → bracket 4
+    assert.equal(dir.monthlySSQuota, 299.56)
   })
 })
 
