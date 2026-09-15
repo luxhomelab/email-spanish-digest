@@ -72,7 +72,6 @@ STATIC_COPY = [
     "favicon.ico",
     "favicon.png",
     "apple-touch-icon.png",
-    "OneSignalSDKWorker.js",
     "static",
 ]
 
