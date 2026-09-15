@@ -168,6 +168,7 @@
        <tr><td class="row-h">Gross revenues</td><td class="num"></td><td class="num b" id="b-gross">—</td></tr>
        <tr class="tint-o"><td class="ind">General expenses deduction (IRPF · 5%)</td><td class="num" id="b-exp-p"></td><td class="num o" id="b-exp">—</td></tr>
        <tr class="tint-o"><td class="ind">Social Security (annual)</td><td class="num" id="b-ss-p"></td><td class="num o" id="b-ss">—</td></tr>
+       <tr class="tint-o"><td class="ind">SS bracket basis (expenses deduction)</td><td class="num" id="b-ssd-p"></td><td class="num o" id="b-ssd">—</td></tr>
        <tr><td class="row-h">Reduced net income</td><td class="num"></td><td class="num b" id="b-taxable">—</td></tr>
        <tr class="tint-r"><td class="ind">IRPF — state component</td><td class="num" id="b-st-p"></td><td class="num r" id="b-st">—</td></tr>
        <tr class="tint-r"><td class="ind">IRPF — regional component</td><td class="num" id="b-reg-p"></td><td class="num r" id="b-reg">—</td></tr>
@@ -191,7 +192,7 @@
       <h4>Autonomo-specific deductions</h4>
       <p>Before IRPF is calculated, your taxable base is reduced by:</p>
       <ul>
-       <li>General expenses: 7% of revenue (max €2,000) for individual autonomos; 3% for directors — a flat deduction covering minor business costs without requiring receipts.</li>
+       <li>General expenses: 7% of revenue (max €2,000) for individual autonomos and 3% for directors — this sets the income bracket for Social Security. For IRPF, a separate 5% flat deduction (max €2,000) applies to everyone.</li>
        <li>Social Security contributions: your full annual SS quota is 100% deductible from the IRPF base.</li>
       </ul>
       <p class="curbase" id="irpf-base" hidden></p>
