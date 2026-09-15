@@ -63,7 +63,7 @@ describe('findSSQuota', () => {
     const result = findSSQuota(500, 2026, 'established')
     assert.equal(result.isTarifaPlana, false)
     assert.equal(result.bracketId, 1)
-    assert.equal(result.monthlyQuota, 205.23)
+    assert.equal(result.monthlyQuota, 205.88)
   })
 
   it('returns 2026 quota for bracket 15 (established)', () => {
@@ -83,7 +83,7 @@ describe('findSSQuota', () => {
     const result = findSSQuota(1000, 2026, 'mid')
     assert.equal(result.isTarifaPlana, false)
     assert.equal(result.bracketId, 3)
-    assert.equal(result.monthlyQuota, 266.80)
+    assert.equal(result.monthlyQuota, 267.65)
   })
 })
 
@@ -384,7 +384,7 @@ describe('calculateAutonomo', () => {
     const revenue = 2400
     const result = calculateAutonomo({ ...base, annualNetRevenue: revenue, timeAsAutonomo: 'established' })
     assert.equal(result.ssBracketId, 1)
-    assert.equal(result.monthlySSQuota, 205.23)
+    assert.equal(result.monthlySSQuota, 205.88)
     assert.ok(result.annualSSTotal > revenue)
     assert.equal(result.reducedNetIncome, 0) // Clamped to zero
     assert.equal(result.irpfTotal, 0) // No IRPF on zero income
@@ -415,8 +415,8 @@ describe('calculateAutonomo', () => {
     const midAutonomo = calculateAutonomo({ ...base, annualNetRevenue: 12000, timeAsAutonomo: 'mid' })
     const establishedAutonomo = calculateAutonomo({ ...base, annualNetRevenue: 12000, timeAsAutonomo: 'established' })
     assert.equal(newAutonomo.monthlySSQuota, 80) // Tarifa plana (€80/mo flat for first 12 months)
-    assert.equal(midAutonomo.monthlySSQuota, 266.80) // Bracket 3 (after 12 months, months 13–24)
-    assert.equal(establishedAutonomo.monthlySSQuota, 266.80) // Same bracket as 'mid' for this income
+    assert.equal(midAutonomo.monthlySSQuota, 267.65) // Bracket 3 (after 12 months, months 13–24)
+    assert.equal(establishedAutonomo.monthlySSQuota, 267.65) // Same bracket as 'mid' for this income
   })
 
   it('out-of-range year parameter silently uses 2026 SS quotas — contract for future implementation', () => {
@@ -446,7 +446,7 @@ describe('findSSQuotaForCollaborator', () => {
   it('uses bracket 1 minimum quota for income ≤ €670/mo', () => {
     const result = findSSQuotaForCollaborator(500)
     assert.equal(result.bracketId, 1)
-    assert.equal(result.monthlyQuota, 205.23)
+    assert.equal(result.monthlyQuota, 205.88)
   })
 
   it('uses correct quota for bracket 4 (€1166.71–€1300)', () => {

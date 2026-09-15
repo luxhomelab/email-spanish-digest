@@ -9,7 +9,7 @@
  * - General expenses deduction (7% individual, 3% director)
  *
  * Data sources:
- * - SS quotas 2026: officially published (BOE-A-2022-12482)
+ * - SS quotas 2026: Orden PJC/297/2026 (BOE-A-2026-7296, art. 18: bases × 31.50% tipo total)
  * - SS quotas 2027+: 2026 values applied (no approved increases yet)
  * - IRPF brackets: AEAT state brackets + approximate regional rates
  * - Results are approximate; not financial or legal advice.
@@ -40,12 +40,13 @@ const SS_BRACKET_THRESHOLDS = [
 
 /**
  * Official 2026 minimum monthly SS quotas (cuota mínima) per bracket.
- * Source: BOE-A-2022-12482 — https://www.boe.es/buscar/doc.php?id=BOE-A-2022-12482
+ * Source: Orden PJC/297/2026 (BOE-A-2026-7296, art. 18) — minimum bases × 31.50%
+ * (28.30% comunes + 1.30% profesionales + 0.90% MEI + 0.90% cese + 0.10% FP).
  * Index 0 = bracket 1, index 14 = bracket 15.
  * For 2027+: no increases approved yet; 2026 values are used.
  */
 const SS_MIN_QUOTAS_2026 = [
-  205.23, 225.75, 266.80, 299.56, 302.65, 302.65,
+  205.88, 226.47, 267.65, 299.56, 302.65, 302.65,
   360.29, 380.88, 401.47, 427.21, 452.94, 478.68,
   504.41, 545.59, 607.35,
 ]
