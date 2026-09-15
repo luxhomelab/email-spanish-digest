@@ -233,17 +233,21 @@ const IRPF_REGIONAL_BRACKETS = {
     { upTo: Infinity, rate: 0.215  },
   ],
   catalunya: [
-    { upTo: 12450,    rate: 0.105  },
-    { upTo: 17707,    rate: 0.12   },
-    { upTo: 21000,    rate: 0.14   },
-    { upTo: 33007,    rate: 0.15   },
-    { upTo: 53407,    rate: 0.188  },
+    // 2026 scale: AEAT Manual Renta 2025 Cap.15 Catalunya; DL 1/2024 art. 611-1.
+    { upTo: 12500,    rate: 0.095  },
+    { upTo: 22000,    rate: 0.125  },
+    { upTo: 33000,    rate: 0.16   },
+    { upTo: 53000,    rate: 0.19   },
     { upTo: 90000,    rate: 0.215  },
     { upTo: 120000,   rate: 0.235  },
     { upTo: 175000,   rate: 0.245  },
     { upTo: Infinity, rate: 0.255  },
   ],
   comunidad_valenciana: [
+    // NOTE 2026-09-15: fiscal-2025 scale (AEAT Manual Renta). A 2026 deflation was
+    // reported by secondary sources but could NOT be verified against DOGV
+    // (Ley 13/1997 / Ley de medidas fiscales 2026 — DOGV search unavailable).
+    // Kept as-is deliberately; re-check before claiming 2026 accuracy.
     { upTo: 12000,    rate: 0.09   },
     { upTo: 22000,    rate: 0.12   },
     { upTo: 32000,    rate: 0.15   },
