@@ -314,7 +314,7 @@ def render_calculators(env):
     ]
     for template_name, rel_dest, crumbs in calcs:
         template = env.get_template(template_name)
-        output = template.render(crumbs=crumbs)
+        output = template.render(crumbs=crumbs, js_version=js_version())
         dest = os.path.join(OUT_DIR, rel_dest)
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         with open(dest, "w", encoding="utf-8") as fh:
