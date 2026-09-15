@@ -126,6 +126,16 @@ function syncParentsOptions(state) {
   state.numParents75 = cur
 }
 
+function syncMobVisibility(state) {
+  const wrap = $('f-mob-field')
+  const active = Number(state.disabilityLevel) > 0
+  wrap.hidden = !active
+  if (!active && state.reducedMobility) {
+    state.reducedMobility = false
+    $('f-mob').checked = false
+  }
+}
+
 function toggle(btnId, bodyId) {
   const btn = $(btnId)
   const body = $(bodyId)
@@ -230,12 +240,14 @@ function init() {
   syncChildrenOptions(state)
   syncSeg($('f-dis'), state.disabilityLevel)
   $('f-mob').checked = !!state.reducedMobility
+  syncMobVisibility(state)
   $('f-par65').value = String(state.numParents65)
   syncParentsOptions(state)
 
   const update = () => {
     syncChildrenOptions(state)
     syncParentsOptions(state)
+    syncMobVisibility(state)
     render(state)
     persist(state)
   }
