@@ -300,8 +300,30 @@ def render_static(env, digests):
         with open(dest, "w", encoding="utf-8") as fh:
             fh.write(output)
         print(f"  wrote {name}")
+    render_calculators(env)
 
 
+def render_calculators(env):
+    """Render calculator pages (static shell, logic runs client-side)."""
+    calcs = [
+        ("calculator-autonomo.html", "calculators/autonomo-tax.html", [
+            {"name": "Home", "url": "/"},
+            {"name": "Autónomo Tax", "url": "/calculators/autonomo-tax", "current": True},
+        ]),
+    ]
+    for template_name, rel_dest, crumbs in calcs:
+        template = env.get_template(template_name)
+        calc_url = f"{SITE_URL}/{rel_dest.replace('.html', '')}"
+        share = share_links(calc_url, "Autónomo Tax Calculator — Spain self-employed taxes — Spanified")
+        # Fiscal year of the calculator data (SS quotas, IRPF scales). Bump ONLY
+        # together with the engine data (quotas/brackets/deductions), never alone.
+        calc_year = 2026
+        output = template.render(crumbs=crumbs, js_version=js_version(), share=share, calc_year=calc_year)
+        dest = os.path.join(OUT_DIR, rel_dest)
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        with open(dest, "w", encoding="utf-8") as fh:
+            fh.write(output)
+        print(f"  wrote {rel_dest}")
 def attach_related(digests, limit=3):
     """Attach same-category 'More news' links to every story.
 
@@ -474,6 +496,7 @@ def render_sitemap(digests, categories=()):
         urls.append((SITE_URL + f"/archive/{digest['date']}", digest["date"]))
     for slug in categories:
         urls.append((SITE_URL + f"/category/{slug}", None))
+    urls.append((SITE_URL + "/calculators/autonomo-tax", None))
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
@@ -540,6 +563,19 @@ def css_version():
             return hashlib.md5(fh.read()).hexdigest()[:8]
     except OSError:
         return "dev"
+
+
+def js_version():
+    """Short content hash of calculator JS bundle for cache-busting."""
+    h = hashlib.md5()
+    for name in ("autonomo.js", "autonomo-calc.js", "autonomo-form.js"):
+        path = os.path.join(SCRIPT_DIR, "static", "js", name)
+        try:
+            with open(path, "rb") as fh:
+                h.update(fh.read())
+        except OSError:
+            pass
+    return h.hexdigest()[:8] or "dev"
 
 
 def main():
