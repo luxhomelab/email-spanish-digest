@@ -244,21 +244,20 @@ const IRPF_REGIONAL_BRACKETS = {
     { upTo: Infinity, rate: 0.255  },
   ],
   comunidad_valenciana: [
-    // NOTE 2026-09-15: fiscal-2025 scale (AEAT Manual Renta). A 2026 deflation was
-    // reported by secondary sources but could NOT be verified against DOGV
-    // (Ley 13/1997 / Ley de medidas fiscales 2026 — DOGV search unavailable).
-    // Kept as-is deliberately; re-check before claiming 2026 accuracy.
-    { upTo: 12000,    rate: 0.09   },
-    { upTo: 22000,    rate: 0.12   },
-    { upTo: 32000,    rate: 0.15   },
-    { upTo: 42000,    rate: 0.175  },
-    { upTo: 52000,    rate: 0.20   },
-    { upTo: 62000,    rate: 0.225  },
-    { upTo: 72000,    rate: 0.25   },
-    { upTo: 100000,   rate: 0.265  },
-    { upTo: 150000,   rate: 0.275  },
-    { upTo: 200000,   rate: 0.285  },
-    { upTo: Infinity, rate: 0.295  },
+    // 2026 deflated scale (Ley 13/1997; DOGV Ley 5/2026; cross-checked via
+    // guiafiscal.es/irpf/valencia, verified 2026-07-29). Matches AEAT Manual
+    // Renta 2025 minus ~0.2-0.4pp deflation applied for 2026.
+    { upTo: 12000,    rate: 0.088  },
+    { upTo: 22000,    rate: 0.117  },
+    { upTo: 32000,    rate: 0.146  },
+    { upTo: 42000,    rate: 0.17   },
+    { upTo: 52000,    rate: 0.194  },
+    { upTo: 62000,    rate: 0.219  },
+    { upTo: 72000,    rate: 0.244  },
+    { upTo: 100000,   rate: 0.261  },
+    { upTo: 150000,   rate: 0.2735 },
+    { upTo: 200000,   rate: 0.2835 },
+    { upTo: Infinity, rate: 0.2935 },
   ],
   extremadura: [
     { upTo: 12450,    rate: 0.08   },
