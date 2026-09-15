@@ -551,13 +551,63 @@ describe('QA scenarios S1-S8', () => {
     assert.ok(r.irpfTotal < plain.irpfTotal)
   })
 
-  it('S8: €15k director Madrid → bracket 4 (3% SS), same 5% IRPF deduction as individual', () => {
+  it('S8: €15k director Madrid → bracket 4 (3% SS), C4 floor 448.69, same 5% IRPF deduction as individual', () => {
     const dir = calculateAutonomo({ ...base, annualNetRevenue: 15000, autonomoType: 'director' })
     const ind = calculateAutonomo({ ...base, annualNetRevenue: 15000 })
     assert.equal(dir.ssDeduction, 450) // 3% of 15k
     assert.equal(dir.irpfDeduction, ind.irpfDeduction) // 5% flat for both
     assert.equal(dir.ssBracketId, 4) // (15000−450)/12 = 1212.50 → bracket 4
-    assert.equal(dir.monthlySSQuota, 299.56)
+    // C4: bracket-4 quota (299.56) < societario floor (448.69) → floor wins
+    assert.equal(dir.monthlySSQuota, 448.69)
+    assert.equal(dir.annualSSTotal, 5384.28)
+  })
+})
+
+// ── C4: director (societario) minimum quota floor ─────────────────────────────
+describe('C4 director floor', () => {
+  it('director with low income gets societario minimum instead of bracket quota', () => {
+    // €1,212.50/mo → bracket 4 (quota 299.56) < societario floor → floor wins
+    const result = findSSQuota(1212.50, 2026, 'established', 'director')
+    assert.equal(result.bracketId, 4)
+    assert.equal(result.monthlyQuota, 448.69)
+    assert.equal(result.isTarifaPlana, false)
+  })
+
+  it('individual with same low income keeps bracket quota (no floor)', () => {
+    const result = findSSQuota(1212.50, 2026, 'established', 'individual')
+    assert.equal(result.bracketId, 4)
+    assert.equal(result.monthlyQuota, 299.56)
+  })
+
+  it('director with high income keeps bracket quota above the floor', () => {
+    // €6,500/mo → bracket 15 (quota 607.35) > floor → bracket wins
+    const result = findSSQuota(6500, 2026, 'established', 'director')
+    assert.equal(result.bracketId, 15)
+    assert.equal(result.monthlyQuota, 607.35)
+  })
+
+  it('director + new keeps tarifa plana (€80), floor does not override it', () => {
+    const result = findSSQuota(1212.50, 2026, 'new', 'director')
+    assert.equal(result.isTarifaPlana, true)
+    assert.equal(result.monthlyQuota, 80)
+  })
+
+  it('15k director (established, Madrid) → SS floor 448.69/mo = 5384.28/yr', () => {
+    const r = calculateAutonomo({
+      annualNetRevenue: 15000, autonomoType: 'director', timeAsAutonomo: 'established',
+      region: 'madrid', year: 2026, age: 35, numChildren: 0, childrenUnder3: 0, disabilityLevel: 0,
+    })
+    assert.equal(r.ssBracketId, 4)
+    assert.equal(r.monthlySSQuota, 448.69)
+    assert.equal(r.annualSSTotal, 5384.28)
+  })
+
+  it('80k director keeps bracket-15 quota (floor does not apply above it)', () => {
+    const r = calculateAutonomo({
+      annualNetRevenue: 80000, autonomoType: 'director', timeAsAutonomo: 'established',
+      region: 'madrid', year: 2026, age: 35, numChildren: 0, childrenUnder3: 0, disabilityLevel: 0,
+    })
+    assert.equal(r.monthlySSQuota, 607.35)
   })
 })
 
