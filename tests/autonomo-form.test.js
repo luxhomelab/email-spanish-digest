@@ -46,8 +46,10 @@ describe('sanitizeState enums', () => {
   it('rejects unknown timeAsAutonomo', () => {
     assert.equal(sanitizeState({ timeAsAutonomo: 'forever' }).timeAsAutonomo, DEFAULTS.timeAsAutonomo)
   })
-  it('rejects year outside 2026..2031', () => {
+  it('locks year to 2026 (only published year)', () => {
+    assert.equal(sanitizeState({ year: 2026 }).year, 2026)
     assert.equal(sanitizeState({ year: 1999 }).year, DEFAULTS.year)
+    assert.equal(sanitizeState({ year: 2027 }).year, DEFAULTS.year)
     assert.equal(sanitizeState({ year: 2035 }).year, DEFAULTS.year)
   })
   it('rejects unknown region', () => {
@@ -70,7 +72,7 @@ describe('parseStateFromParams', () => {
   it('parses a full valid query string', () => {
     const s = parseStateFromParams('?aut_r=45000&aut_y=2027&aut_t=director&aut_d=new&aut_reg=catalunya&aut_age=40&aut_ch=2&aut_chu3=1&aut_dis=33')
     assert.equal(s.annualNetRevenue, 45000)
-    assert.equal(s.year, 2027)
+    assert.equal(s.year, 2026)
     assert.equal(s.autonomoType, 'director')
     assert.equal(s.region, 'catalunya')
     assert.equal(s.disabilityLevel, 33)
@@ -91,8 +93,8 @@ describe('parseStateFromParams', () => {
 
 // ── constants ────────────────────────────────────────────────────────────────
 describe('constants', () => {
-  it('years cover 2026..2031', () => {
-    assert.deepEqual(YEARS, [2026, 2027, 2028, 2029, 2030, 2031])
+  it('years cover only 2026 (published year)', () => {
+    assert.deepEqual(YEARS, [2026])
   })
   it('types and times match the original', () => {
     assert.deepEqual(VALID_TYPES, ['individual', 'director'])
