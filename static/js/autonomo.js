@@ -135,6 +135,7 @@ function render(state) {
 
   const revenue = state.annualNetRevenue || 0
   $('r-tarifa').hidden = !result.isTarifaPlana
+  $('r-tarifa-2026').hidden = !result.isTarifaPlana
   $('r-ceuta').hidden = !(state.region === 'ceuta' || state.region === 'melilla')
 
   $('r-net').textContent = fmtEur(result.netTakeHome)
