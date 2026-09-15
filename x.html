@@ -3,14 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CBF70VDX1D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-CBF70VDX1D');
-</script>
+<!-- No GA on redirect pages: the destination URL carries UTM params and
+     fires the pageview itself. GA here would log a spurious pageview on
+     /x.html and break attribution (self-referral / direct). -->
 <meta http-equiv="refresh" content="0; url=https://spanified.com/subscribe?utm_source=x&utm_medium=social&utm_content=link_in_bio">
 <link rel="canonical" href="https://spanified.com/subscribe?utm_source=x&utm_medium=social&utm_content=link_in_bio">
 <title>Redirecting…</title>
