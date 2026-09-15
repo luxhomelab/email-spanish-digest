@@ -320,8 +320,8 @@ const IRPF_REGIONAL_BRACKETS = {
     { upTo: Infinity, rate: 0.22   },
   ],
   // Ceuta and Melilla — regional component uses standard bracket estimates only.
-  // NOTE: the 50% IRPF deduction for Ceuta/Melilla residents (Art. 68.4 LIRPF) is NOT
-  // implemented; results for these territories will significantly overstate tax liability.
+  // Art. 68.4 LIRPF 60% reduction for residents is applied in calculateAutonomo
+  // (irpfTotal x 0.4 for these regions).
   ceuta:   [
     { upTo: 12450,    rate: 0.095  },
     { upTo: 20200,    rate: 0.12   },
@@ -434,7 +434,7 @@ export function calcIrpfStateWithBreakdown(base) {
 export function calcIrpfRegional(base, region) {
   const brackets = IRPF_REGIONAL_BRACKETS[region]
   if (!brackets) {
-    console.warn(`[autonomo] calcIrpfRegional: unrecognized region "${region}", using default brackets. Ceuta/Melilla residents: the 50% IRPF deduction is NOT implemented; tax liability will be overstated.`)
+    console.warn(`[autonomo] calcIrpfRegional: unrecognized region "${region}", using default brackets.`)
   }
   return calcProgressiveTax(base, brackets ?? DEFAULT_REGIONAL_BRACKETS)
 }
@@ -616,12 +616,17 @@ export function calculateAutonomo({
   // IRPF: Spanish law computes Tax(base) - Tax(personalMin), NOT Tax(base - personalMin).
   // The personal minimum reduces the tax owed, not the taxable base.
   // Math.max(0, ...) enforces that the personal minimum cannot reduce IRPF below zero (Art. 56 LIRPF).
-  const irpfState = Math.max(0, Math.round(
+  const irpfStateFull = Math.max(0, Math.round(
     (calcIrpfState(reducedNetIncome) - calcIrpfState(personalMinimum)) * 100
   ) / 100)
-  const irpfRegional = Math.max(0, Math.round(
+  const irpfRegionalFull = Math.max(0, Math.round(
     (calcIrpfRegional(reducedNetIncome, region) - calcIrpfRegional(personalMinimum, region)) * 100
   ) / 100)
+  // Art. 68.4 LIRPF: Ceuta/Melilla residents deduct 60% of the cuotas integras
+  // (state + regional), i.e. pay 40% of the full IRPF.
+  const ceutaReduction = (region === 'ceuta' || region === 'melilla')
+  const irpfState = ceutaReduction ? Math.round(irpfStateFull * 0.4 * 100) / 100 : irpfStateFull
+  const irpfRegional = ceutaReduction ? Math.round(irpfRegionalFull * 0.4 * 100) / 100 : irpfRegionalFull
   const irpfTotal = Math.round((irpfState + irpfRegional) * 100) / 100
 
   const effectiveIrpfRate = revenue > 0 ? irpfTotal / revenue : 0

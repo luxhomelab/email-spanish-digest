@@ -197,6 +197,29 @@ describe('catalunya 2026 brackets', () => {
   })
 })
 
+// ── M4: Ceuta/Melilla 60% reduction (art. 68.4 LIRPF) ────────────────────────
+describe('ceuta/melilla reduction', () => {
+  it('pays 40% of full IRPF in Ceuta (30k → ≈€1649)', () => {
+    const mad = calculateAutonomo({ annualNetRevenue: 30000, region: 'madrid' })
+    const ceu = calculateAutonomo({ annualNetRevenue: 30000, region: 'ceuta' })
+    assert.ok(ceu.irpfTotal < mad.irpfTotal)
+    // components stay consistent: total == state + regional
+    assert.equal(ceu.irpfTotal, Math.round((ceu.irpfState + ceu.irpfRegional) * 100) / 100)
+    assert.ok(Math.abs(ceu.irpfTotal - 1649.22) < 0.01, `got ${ceu.irpfTotal}`)
+  })
+
+  it('Melilla matches Ceuta', () => {
+    const ceu = calculateAutonomo({ annualNetRevenue: 30000, region: 'ceuta' })
+    const mel = calculateAutonomo({ annualNetRevenue: 30000, region: 'melilla' })
+    assert.equal(mel.irpfTotal, ceu.irpfTotal)
+  })
+
+  it('mainland regions unaffected (factor 1.0)', () => {
+    const mad = calculateAutonomo({ annualNetRevenue: 30000, region: 'madrid' })
+    assert.ok(mad.irpfTotal > 3800, `got ${mad.irpfTotal}`)
+  })
+})
+
 // ── calcGeneralExpenses ───────────────────────────────────────────────────────
 describe('calcGeneralExpenses', () => {
   it('returns 7% for individual autonomo', () => {
