@@ -21,6 +21,19 @@
  {% block description %}{% endblock %}
  {% block canonical %}{% endblock %}
  <link rel="stylesheet" href="/static/css/main.css?v={{ asset_version }}">
+ <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+ <script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "865f72f1-622b-4909-9b85-c505765a5d3c",
+      safari_web_id: "web.onesignal.auto.4fdd94b0-fa82-44cd-8fe9-7a26a1b4ad72",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+ </script>
  {% block extra_head %}{% endblock %}
 </head>
 <body{% block body_class %}{% endblock %}>
