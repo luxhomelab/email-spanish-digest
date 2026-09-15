@@ -168,15 +168,17 @@ function render(state) {
   }
 
   $('b-gross').textContent = fmtEur(revenue)
-  $('b-exp-p').textContent = revenue > 0 ? fmtPct(result.generalExpensesDeduction / revenue) : ''
-  $('b-exp').textContent = `−${fmtEur(result.generalExpensesDeduction)}`
+  $('b-exp-p').textContent = revenue > 0 ? fmtPct(result.irpfDeduction / revenue) : ''
+  $('b-exp').textContent = fmtEur(result.irpfDeduction)
   $('b-ss-p').textContent = revenue > 0 ? fmtPct(ssRate) : ''
-  $('b-ss').textContent = `−${fmtEur(result.annualSSTotal)}`
+  $('b-ss').textContent = fmtEur(result.annualSSTotal)
+  $('b-ssd-p').textContent = revenue > 0 ? fmtPct(result.ssDeduction / revenue) : ''
+  $('b-ssd').textContent = fmtEur(result.ssDeduction)
   $('b-taxable').textContent = fmtEur(result.irpfBase)
   $('b-st-p').textContent = result.irpfBase > 0 ? fmtPct(result.irpfState / result.irpfBase) : ''
-  $('b-st').textContent = `−${fmtEur(result.irpfState)}`
+  $('b-st').textContent = fmtEur(result.irpfState)
   $('b-reg-p').textContent = result.irpfBase > 0 ? fmtPct(result.irpfRegional / result.irpfBase) : ''
-  $('b-reg').textContent = `−${fmtEur(result.irpfRegional)}`
+  $('b-reg').textContent = fmtEur(result.irpfRegional)
   $('b-net').textContent = fmtEur(result.netTakeHome)
 
   const saving = $('irpf-saving')
