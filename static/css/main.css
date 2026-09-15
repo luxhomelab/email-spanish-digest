@@ -512,6 +512,7 @@ body.page-archive .digest-card:hover {
 .calc .pill-r { background: #FDF0F0; color: #8A1A1A; border-color: #F3C2C2; }
 .calc .pill-s { background: #F5F1E8; color: #3C4858; border-color: #E3D9C6; font-weight: 600; }
 .calc .pill b { font-weight: 800; }
+.calc .seobox { margin-bottom: 20px; }
 .calc .seobox h2, .calc .faq-card h2 { font-size: 20px; color: #3C4858; margin-bottom: 10px; }
 .calc .seobox p { font-size: 15px; line-height: 24px; color: #3C4858; }
 .calc .seobox .src { font-size: 13px; color: #6C7A89; margin-top: 8px; }
