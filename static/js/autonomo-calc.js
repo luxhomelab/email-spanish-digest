@@ -233,17 +233,21 @@ const IRPF_REGIONAL_BRACKETS = {
     { upTo: Infinity, rate: 0.215  },
   ],
   catalunya: [
-    { upTo: 12450,    rate: 0.105  },
-    { upTo: 17707,    rate: 0.12   },
-    { upTo: 21000,    rate: 0.14   },
-    { upTo: 33007,    rate: 0.15   },
-    { upTo: 53407,    rate: 0.188  },
+    // 2026 scale: AEAT Manual Renta 2025 Cap.15 Catalunya; DL 1/2024 art. 611-1.
+    { upTo: 12500,    rate: 0.095  },
+    { upTo: 22000,    rate: 0.125  },
+    { upTo: 33000,    rate: 0.16   },
+    { upTo: 53000,    rate: 0.19   },
     { upTo: 90000,    rate: 0.215  },
     { upTo: 120000,   rate: 0.235  },
     { upTo: 175000,   rate: 0.245  },
     { upTo: Infinity, rate: 0.255  },
   ],
   comunidad_valenciana: [
+    // NOTE 2026-09-15: fiscal-2025 scale (AEAT Manual Renta). A 2026 deflation was
+    // reported by secondary sources but could NOT be verified against DOGV
+    // (Ley 13/1997 / Ley de medidas fiscales 2026 — DOGV search unavailable).
+    // Kept as-is deliberately; re-check before claiming 2026 accuracy.
     { upTo: 12000,    rate: 0.09   },
     { upTo: 22000,    rate: 0.12   },
     { upTo: 32000,    rate: 0.15   },
@@ -316,8 +320,8 @@ const IRPF_REGIONAL_BRACKETS = {
     { upTo: Infinity, rate: 0.22   },
   ],
   // Ceuta and Melilla — regional component uses standard bracket estimates only.
-  // NOTE: the 50% IRPF deduction for Ceuta/Melilla residents (Art. 68.4 LIRPF) is NOT
-  // implemented; results for these territories will significantly overstate tax liability.
+  // Art. 68.4 LIRPF 60% reduction for residents is applied in calculateAutonomo
+  // (irpfTotal x 0.4 for these regions).
   ceuta:   [
     { upTo: 12450,    rate: 0.095  },
     { upTo: 20200,    rate: 0.12   },
@@ -430,7 +434,7 @@ export function calcIrpfStateWithBreakdown(base) {
 export function calcIrpfRegional(base, region) {
   const brackets = IRPF_REGIONAL_BRACKETS[region]
   if (!brackets) {
-    console.warn(`[autonomo] calcIrpfRegional: unrecognized region "${region}", using default brackets. Ceuta/Melilla residents: the 50% IRPF deduction is NOT implemented; tax liability will be overstated.`)
+    console.warn(`[autonomo] calcIrpfRegional: unrecognized region "${region}", using default brackets.`)
   }
   return calcProgressiveTax(base, brackets ?? DEFAULT_REGIONAL_BRACKETS)
 }
@@ -492,14 +496,22 @@ const AGE_75_EXTRA      = 1400  // additional on top of AGE_65_EXTRA
 const CHILD_ALLOWANCES  = [2400, 2700, 4000, 4500]  // 1st, 2nd, 3rd, 4th+
 const CHILD_U3_EXTRA    = 2800                       // per child under 3
 const DISABILITY_ALLOWANCE = { 33: 3000, 65: 9000 } // 33%+ and 65%+ disability
+// Art. 59-60 LIRPF (BOE-A-2006-20764): ascendientes convivientes >65 o discapacitados
+// (cualquier edad) +1150 c/u; +1400 adicional si >75. Movilidad reducida (o ayuda de
+// terceras personas) con 33-65% anade +3000 (total 6000); con >=65% los +3000 aplican
+// siempre (9000 + 3000 = 12000). Requisitos de convivencia/renta (<=8000 EUR) se
+// advierten en el tooltip del UI; no hay checkboxes de renta separados.
+const ASCENDANT_65_EXTRA = 1150
+const ASCENDANT_75_EXTRA = 1400  // additional on top of ASCENDANT_65_EXTRA
+const MOBILITY_EXTRA = 3000
 
 /**
  * Compute the total personal minimum allowance (mínimo personal y familiar).
  *
- * @param {{ age:number, numChildren:number, childrenUnder3:number, disabilityLevel:0|33|65 }} params
+ * @param {{ age:number, numChildren:number, childrenUnder3:number, disabilityLevel:0|33|65, numParents65?:number, numParents75?:number, reducedMobility?:boolean }} params
  * @returns {number}
  */
-export function calcPersonalMinimum({ age = 35, numChildren = 0, childrenUnder3 = 0, disabilityLevel = 0 }) {
+export function calcPersonalMinimum({ age = 35, numChildren = 0, childrenUnder3 = 0, disabilityLevel = 0, numParents65 = 0, numParents75 = 0, reducedMobility = false }) {
   let min = PERSONAL_MIN_BASE
 
   if (age >= 75) min += AGE_65_EXTRA + AGE_75_EXTRA
@@ -513,8 +525,12 @@ export function calcPersonalMinimum({ age = 35, numChildren = 0, childrenUnder3 
   const safeU3 = Math.min(Math.max(0, Math.round(childrenUnder3)), safeChildren)
   min += safeU3 * CHILD_U3_EXTRA
 
-  if (disabilityLevel >= 65) min += DISABILITY_ALLOWANCE[65]
-  else if (disabilityLevel >= 33) min += DISABILITY_ALLOWANCE[33]
+  if (disabilityLevel >= 65) min += DISABILITY_ALLOWANCE[65] + MOBILITY_EXTRA
+  else if (disabilityLevel >= 33) min += DISABILITY_ALLOWANCE[33] + (reducedMobility ? MOBILITY_EXTRA : 0)
+
+  const safeParents65 = Math.min(Math.max(0, Math.round(numParents65)), 4)
+  const safeParents75 = Math.min(Math.max(0, Math.round(numParents75)), safeParents65)
+  min += safeParents65 * ASCENDANT_65_EXTRA + safeParents75 * ASCENDANT_75_EXTRA
 
   return min
 }
@@ -534,6 +550,9 @@ export function calcPersonalMinimum({ age = 35, numChildren = 0, childrenUnder3 
  *   numChildren: number,
  *   childrenUnder3: number,
  *   disabilityLevel: 0|33|65,
+ *   numParents65: number,
+ *   numParents75: number,
+ *   reducedMobility: boolean,
  * }} params
  * @returns {{
  *   monthlyNetIncome: number,
@@ -567,6 +586,9 @@ export function calculateAutonomo({
   numChildren = 0,
   childrenUnder3 = 0,
   disabilityLevel = 0,
+  numParents65 = 0,
+  numParents75 = 0,
+  reducedMobility = false,
 }) {
   const revenue = Math.max(0, annualNetRevenue)
   const monthlyNetIncome = revenue / 12
@@ -589,17 +611,22 @@ export function calculateAutonomo({
   const reducedNetIncome = Math.max(0, revenue - annualSSTotal - irpfDeduction)
 
   // Personal minimum allowances
-  const personalMinimum = calcPersonalMinimum({ age, numChildren, childrenUnder3, disabilityLevel })
+  const personalMinimum = calcPersonalMinimum({ age, numChildren, childrenUnder3, disabilityLevel, numParents65, numParents75, reducedMobility })
 
   // IRPF: Spanish law computes Tax(base) - Tax(personalMin), NOT Tax(base - personalMin).
   // The personal minimum reduces the tax owed, not the taxable base.
   // Math.max(0, ...) enforces that the personal minimum cannot reduce IRPF below zero (Art. 56 LIRPF).
-  const irpfState = Math.max(0, Math.round(
+  const irpfStateFull = Math.max(0, Math.round(
     (calcIrpfState(reducedNetIncome) - calcIrpfState(personalMinimum)) * 100
   ) / 100)
-  const irpfRegional = Math.max(0, Math.round(
+  const irpfRegionalFull = Math.max(0, Math.round(
     (calcIrpfRegional(reducedNetIncome, region) - calcIrpfRegional(personalMinimum, region)) * 100
   ) / 100)
+  // Art. 68.4 LIRPF: Ceuta/Melilla residents deduct 60% of the cuotas integras
+  // (state + regional), i.e. pay 40% of the full IRPF.
+  const ceutaReduction = (region === 'ceuta' || region === 'melilla')
+  const irpfState = ceutaReduction ? Math.round(irpfStateFull * 0.4 * 100) / 100 : irpfStateFull
+  const irpfRegional = ceutaReduction ? Math.round(irpfRegionalFull * 0.4 * 100) / 100 : irpfRegionalFull
   const irpfTotal = Math.round((irpfState + irpfRegional) * 100) / 100
 
   const effectiveIrpfRate = revenue > 0 ? irpfTotal / revenue : 0

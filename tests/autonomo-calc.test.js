@@ -175,6 +175,51 @@ describe('calcIrpfRegional', () => {
   })
 })
 
+// ── M1: Catalunya 2026 regional scale ────────────────────────────────────────
+describe('catalunya 2026 brackets', () => {
+  it('taxes first €12,500 at 9.5%', () => {
+    assert.equal(calcIrpfRegional(12500, 'catalunya'), 1187.5)
+  })
+
+  it('taxes €12,500–22,000 at 12.5%', () => {
+    // 1187.5 + 9500×0.125 = 2375
+    assert.equal(calcIrpfRegional(22000, 'catalunya'), 2375)
+  })
+
+  it('taxes €22,000–33,000 at 16%', () => {
+    // 2375 + 11000×0.16 = 4135
+    assert.equal(calcIrpfRegional(33000, 'catalunya'), 4135)
+  })
+
+  it('30k scenario regional component ≈ €2067', () => {
+    const r = calculateAutonomo({ annualNetRevenue: 30000, region: 'catalunya' })
+    assert.ok(Math.abs(r.irpfRegional - 2067) < 1, `got ${r.irpfRegional}`)
+  })
+})
+
+// ── M4: Ceuta/Melilla 60% reduction (art. 68.4 LIRPF) ────────────────────────
+describe('ceuta/melilla reduction', () => {
+  it('pays 40% of full IRPF in Ceuta (30k → ≈€1649)', () => {
+    const mad = calculateAutonomo({ annualNetRevenue: 30000, region: 'madrid' })
+    const ceu = calculateAutonomo({ annualNetRevenue: 30000, region: 'ceuta' })
+    assert.ok(ceu.irpfTotal < mad.irpfTotal)
+    // components stay consistent: total == state + regional
+    assert.equal(ceu.irpfTotal, Math.round((ceu.irpfState + ceu.irpfRegional) * 100) / 100)
+    assert.ok(Math.abs(ceu.irpfTotal - 1649.22) < 0.01, `got ${ceu.irpfTotal}`)
+  })
+
+  it('Melilla matches Ceuta', () => {
+    const ceu = calculateAutonomo({ annualNetRevenue: 30000, region: 'ceuta' })
+    const mel = calculateAutonomo({ annualNetRevenue: 30000, region: 'melilla' })
+    assert.equal(mel.irpfTotal, ceu.irpfTotal)
+  })
+
+  it('mainland regions unaffected (factor 1.0)', () => {
+    const mad = calculateAutonomo({ annualNetRevenue: 30000, region: 'madrid' })
+    assert.ok(mad.irpfTotal > 3800, `got ${mad.irpfTotal}`)
+  })
+})
+
 // ── calcGeneralExpenses ───────────────────────────────────────────────────────
 describe('calcGeneralExpenses', () => {
   it('returns 7% for individual autonomo', () => {
@@ -285,13 +330,51 @@ describe('calcPersonalMinimum', () => {
     assert.equal(calcPersonalMinimum({ age: 35, numChildren: 0, childrenUnder3: 0, disabilityLevel: 64 }), 5550 + 3000)
   })
 
-  it('adds disability allowance at 65%', () => {
-    assert.equal(calcPersonalMinimum({ age: 35, numChildren: 0, childrenUnder3: 0, disabilityLevel: 65 }), 5550 + 9000)
+  it('adds disability allowance at 65% (9000 + 3000 mobility supplement = 12000)', () => {
+    assert.equal(calcPersonalMinimum({ age: 35, numChildren: 0, childrenUnder3: 0, disabilityLevel: 65 }), 5550 + 12000)
   })
 
   it('combines age + children + disability', () => {
     // 5550 + 1150 + 2400 + 3000 = 12100
     assert.equal(calcPersonalMinimum({ age: 67, numChildren: 1, childrenUnder3: 0, disabilityLevel: 33 }), 12100)
+  })
+
+  // ── M2: ascendientes (art. 59-60 LIRPF) ──
+  it('adds €1150 per cohabiting parent 65+', () => {
+    assert.equal(calcPersonalMinimum({ numParents65: 1 }), 5550 + 1150)
+    assert.equal(calcPersonalMinimum({ numParents65: 2 }), 5550 + 2300)
+  })
+
+  it('adds €1400 extra per parent 75+', () => {
+    // 5550 + 1150 + 1400 = 8100
+    assert.equal(calcPersonalMinimum({ numParents65: 1, numParents75: 1 }), 8100)
+  })
+
+  it('clamps parents75 to parents65', () => {
+    assert.equal(
+      calcPersonalMinimum({ numParents65: 1, numParents75: 3 }),
+      calcPersonalMinimum({ numParents65: 1, numParents75: 1 })
+    )
+  })
+
+  it('clamps parents65 to 0..4', () => {
+    assert.equal(calcPersonalMinimum({ numParents65: 9 }), 5550 + 4 * 1150)
+    assert.equal(calcPersonalMinimum({ numParents65: -2 }), 5550)
+  })
+
+  // ── M2: reduced mobility ──
+  it('adds €3000 mobility supplement at 33-64% disability (total 6000)', () => {
+    assert.equal(
+      calcPersonalMinimum({ age: 35, numChildren: 0, childrenUnder3: 0, disabilityLevel: 33, reducedMobility: true }),
+      5550 + 6000
+    )
+  })
+
+  it('no mobility supplement at 33% without reduced mobility', () => {
+    assert.equal(
+      calcPersonalMinimum({ age: 35, numChildren: 0, childrenUnder3: 0, disabilityLevel: 33, reducedMobility: false }),
+      5550 + 3000
+    )
   })
 })
 

@@ -17,6 +17,9 @@ export const DEFAULTS = {
   numChildren: 0,
   childrenUnder3: 0,
   disabilityLevel: 0,
+  numParents65: 0,
+  numParents75: 0,
+  reducedMobility: false,
 }
 
 export const QUERY_KEYS = {
@@ -29,6 +32,9 @@ export const QUERY_KEYS = {
   numChildren: 'aut_ch',
   childrenUnder3: 'aut_chu3',
   disabilityLevel: 'aut_dis',
+  numParents65: 'aut_par65',
+  numParents75: 'aut_par75',
+  reducedMobility: 'aut_mob',
 }
 
 function safeInt(raw, fallback, min, max) {
@@ -44,6 +50,7 @@ function safeInt(raw, fallback, min, max) {
  */
 export function sanitizeState(raw = {}, regions = null) {
   const numChildren = safeInt(raw.numChildren, DEFAULTS.numChildren, 0, 10)
+  const numParents65 = safeInt(raw.numParents65, DEFAULTS.numParents65, 0, 4)
   const validRegions = regions ? new Set(regions) : null
   return {
     annualNetRevenue: safeInt(raw.annualNetRevenue, DEFAULTS.annualNetRevenue, 0),
@@ -55,6 +62,9 @@ export function sanitizeState(raw = {}, regions = null) {
     numChildren,
     childrenUnder3: Math.min(safeInt(raw.childrenUnder3, DEFAULTS.childrenUnder3, 0, 10), numChildren),
     disabilityLevel: VALID_DISABILITY.includes(Number(raw.disabilityLevel)) ? Number(raw.disabilityLevel) : DEFAULTS.disabilityLevel,
+    numParents65,
+    numParents75: Math.min(safeInt(raw.numParents75, DEFAULTS.numParents75, 0, 4), numParents65),
+    reducedMobility: raw.reducedMobility === true || raw.reducedMobility === 1 || raw.reducedMobility === '1' || raw.reducedMobility === 'true',
   }
 }
 
@@ -80,5 +90,8 @@ export function parseStateFromParams(search, regions = null) {
     numChildren: get('numChildren'),
     childrenUnder3: get('childrenUnder3'),
     disabilityLevel: get('disabilityLevel'),
+    numParents65: get('numParents65'),
+    numParents75: get('numParents75'),
+    reducedMobility: get('reducedMobility'),
   }, regions)
 }
