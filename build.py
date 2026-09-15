@@ -315,7 +315,10 @@ def render_calculators(env):
         template = env.get_template(template_name)
         calc_url = f"{SITE_URL}/{rel_dest.replace('.html', '')}"
         share = share_links(calc_url, "Autónomo Tax Calculator — Spain self-employed taxes — Spanified")
-        output = template.render(crumbs=crumbs, js_version=js_version(), share=share)
+        # Fiscal year of the calculator data (SS quotas, IRPF scales). Bump ONLY
+        # together with the engine data (quotas/brackets/deductions), never alone.
+        calc_year = 2026
+        output = template.render(crumbs=crumbs, js_version=js_version(), share=share, calc_year=calc_year)
         dest = os.path.join(OUT_DIR, rel_dest)
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         with open(dest, "w", encoding="utf-8") as fh:

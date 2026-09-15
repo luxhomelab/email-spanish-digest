@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block body_class %} class="page-calculator"{% endblock %}
-{% block title %}Self-employed Tax Calculator Spain 2026 — Autónomo IRPF &amp; SS — Spanified{% endblock %}
+{% block title %}Self-employed Tax Calculator Spain {{ calc_year }} — Autónomo IRPF &amp; SS — Spanified{% endblock %}
 {% block description %}<meta name="description" content="Free autónomo tax calculator for Spain: estimate Social Security quotas and IRPF for self-employed workers by region, income and family situation. In English.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Self-employed Tax Calculator Spain 2026 — Autónomo IRPF &amp; SS — Spanified">
+<meta property="og:title" content="Self-employed Tax Calculator Spain {{ calc_year }} — Autónomo IRPF &amp; SS — Spanified">
 <meta property="og:description" content="Free autónomo tax calculator for Spain: Social Security quotas and IRPF by region, income and family situation. In English.">
 <meta property="og:url" content="{{ site_url }}/calculators/autonomo-tax">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Self-employed Tax Calculator Spain 2026 — Autónomo IRPF &amp; SS — Spanified">
+<meta name="twitter:title" content="Self-employed Tax Calculator Spain {{ calc_year }} — Autónomo IRPF &amp; SS — Spanified">
 <meta name="twitter:description" content="Free autónomo tax calculator for Spain: Social Security quotas and IRPF by region, income and family situation. In English.">
 <meta name="robots" content="max-image-preview:large">{% endblock %}
 
@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@graph": [
  {"@type": "WebPage",
-  "name": "Self-employed Tax Calculator Spain 2026 — Autónomo IRPF & SS — Spanified",
+  "name": "Self-employed Tax Calculator Spain {{ calc_year }} — Autónomo IRPF & SS — Spanified",
   "url": "{{ site_url }}/calculators/autonomo-tax",
   "description": "Free autónomo tax calculator for Spain: estimate Social Security quotas and IRPF for self-employed workers by region, income and family situation. In English.",
   "inLanguage": "en",
@@ -32,7 +32,7 @@
 ]}
 </script>
  <div class="calc">
-  <h1>Autónomo Tax Calculator <span class="calc-year">2026</span></h1>
+  <h1>Autónomo Tax Calculator <span class="calc-year">{{ calc_year }}</span></h1>
   <p class="subtitle">Self-employed taxes in Spain: Social Security quotas + IRPF, by region, income and family situation.</p>
 
   <div class="calc-grid">
