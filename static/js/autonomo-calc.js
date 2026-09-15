@@ -496,14 +496,22 @@ const AGE_75_EXTRA      = 1400  // additional on top of AGE_65_EXTRA
 const CHILD_ALLOWANCES  = [2400, 2700, 4000, 4500]  // 1st, 2nd, 3rd, 4th+
 const CHILD_U3_EXTRA    = 2800                       // per child under 3
 const DISABILITY_ALLOWANCE = { 33: 3000, 65: 9000 } // 33%+ and 65%+ disability
+// Art. 59-60 LIRPF (BOE-A-2006-20764): ascendientes convivientes >65 o discapacitados
+// (cualquier edad) +1150 c/u; +1400 adicional si >75. Movilidad reducida (o ayuda de
+// terceras personas) con 33-65% anade +3000 (total 6000); con >=65% los +3000 aplican
+// siempre (9000 + 3000 = 12000). Requisitos de convivencia/renta (<=8000 EUR) se
+// advierten en el tooltip del UI; no hay checkboxes de renta separados.
+const ASCENDANT_65_EXTRA = 1150
+const ASCENDANT_75_EXTRA = 1400  // additional on top of ASCENDANT_65_EXTRA
+const MOBILITY_EXTRA = 3000
 
 /**
  * Compute the total personal minimum allowance (mínimo personal y familiar).
  *
- * @param {{ age:number, numChildren:number, childrenUnder3:number, disabilityLevel:0|33|65 }} params
+ * @param {{ age:number, numChildren:number, childrenUnder3:number, disabilityLevel:0|33|65, numParents65?:number, numParents75?:number, reducedMobility?:boolean }} params
  * @returns {number}
  */
-export function calcPersonalMinimum({ age = 35, numChildren = 0, childrenUnder3 = 0, disabilityLevel = 0 }) {
+export function calcPersonalMinimum({ age = 35, numChildren = 0, childrenUnder3 = 0, disabilityLevel = 0, numParents65 = 0, numParents75 = 0, reducedMobility = false }) {
   let min = PERSONAL_MIN_BASE
 
   if (age >= 75) min += AGE_65_EXTRA + AGE_75_EXTRA
@@ -517,8 +525,12 @@ export function calcPersonalMinimum({ age = 35, numChildren = 0, childrenUnder3 
   const safeU3 = Math.min(Math.max(0, Math.round(childrenUnder3)), safeChildren)
   min += safeU3 * CHILD_U3_EXTRA
 
-  if (disabilityLevel >= 65) min += DISABILITY_ALLOWANCE[65]
-  else if (disabilityLevel >= 33) min += DISABILITY_ALLOWANCE[33]
+  if (disabilityLevel >= 65) min += DISABILITY_ALLOWANCE[65] + MOBILITY_EXTRA
+  else if (disabilityLevel >= 33) min += DISABILITY_ALLOWANCE[33] + (reducedMobility ? MOBILITY_EXTRA : 0)
+
+  const safeParents65 = Math.min(Math.max(0, Math.round(numParents65)), 4)
+  const safeParents75 = Math.min(Math.max(0, Math.round(numParents75)), safeParents65)
+  min += safeParents65 * ASCENDANT_65_EXTRA + safeParents75 * ASCENDANT_75_EXTRA
 
   return min
 }
@@ -538,6 +550,9 @@ export function calcPersonalMinimum({ age = 35, numChildren = 0, childrenUnder3 
  *   numChildren: number,
  *   childrenUnder3: number,
  *   disabilityLevel: 0|33|65,
+ *   numParents65: number,
+ *   numParents75: number,
+ *   reducedMobility: boolean,
  * }} params
  * @returns {{
  *   monthlyNetIncome: number,
@@ -571,6 +586,9 @@ export function calculateAutonomo({
   numChildren = 0,
   childrenUnder3 = 0,
   disabilityLevel = 0,
+  numParents65 = 0,
+  numParents75 = 0,
+  reducedMobility = false,
 }) {
   const revenue = Math.max(0, annualNetRevenue)
   const monthlyNetIncome = revenue / 12
@@ -593,7 +611,7 @@ export function calculateAutonomo({
   const reducedNetIncome = Math.max(0, revenue - annualSSTotal - irpfDeduction)
 
   // Personal minimum allowances
-  const personalMinimum = calcPersonalMinimum({ age, numChildren, childrenUnder3, disabilityLevel })
+  const personalMinimum = calcPersonalMinimum({ age, numChildren, childrenUnder3, disabilityLevel, numParents65, numParents75, reducedMobility })
 
   // IRPF: Spanish law computes Tax(base) - Tax(personalMin), NOT Tax(base - personalMin).
   // The personal minimum reduces the tax owed, not the taxable base.

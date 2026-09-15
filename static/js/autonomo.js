@@ -111,6 +111,21 @@ function syncChildrenOptions(state) {
   state.childrenUnder3 = cur
 }
 
+function syncParentsOptions(state) {
+  const par75 = $('f-par75')
+  const max = Math.min(state.numParents65, 4)
+  const cur = Math.min(state.numParents75, max)
+  par75.innerHTML = ''
+  for (let i = 0; i <= max; i++) {
+    const o = document.createElement('option')
+    o.value = String(i)
+    o.textContent = String(i)
+    par75.appendChild(o)
+  }
+  par75.value = String(cur)
+  state.numParents75 = cur
+}
+
 function toggle(btnId, bodyId) {
   const btn = $(btnId)
   const body = $(bodyId)
@@ -214,9 +229,13 @@ function init() {
   $('f-children').value = String(state.numChildren)
   syncChildrenOptions(state)
   syncSeg($('f-dis'), state.disabilityLevel)
+  $('f-mob').checked = !!state.reducedMobility
+  $('f-par65').value = String(state.numParents65)
+  syncParentsOptions(state)
 
   const update = () => {
     syncChildrenOptions(state)
+    syncParentsOptions(state)
     render(state)
     persist(state)
   }
@@ -235,6 +254,18 @@ function init() {
     update()
   })
   bindSeg('f-dis', 'disabilityLevel', state, update, true)
+  $('f-mob').addEventListener('change', e => {
+    state.reducedMobility = e.target.checked
+    update()
+  })
+  $('f-par65').addEventListener('change', e => {
+    state.numParents65 = Number(e.target.value)
+    update()
+  })
+  $('f-par75').addEventListener('change', e => {
+    state.numParents75 = Math.min(Number(e.target.value), state.numParents65)
+    update()
+  })
 
   toggle('personal-toggle', 'personal-body')
   toggle('irpf-toggle', 'irpf-body')

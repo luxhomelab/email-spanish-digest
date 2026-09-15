@@ -36,6 +36,18 @@ describe('sanitizeState numbers', () => {
   it('accepts valid disability levels 0/33/65', () => {
     for (const v of [0, 33, 65]) assert.equal(sanitizeState({ disabilityLevel: v }).disabilityLevel, v)
   })
+  it('clamps parents65 to 0..4 and parents75 <= parents65', () => {
+    assert.equal(sanitizeState({ numParents65: 9 }).numParents65, 4)
+    assert.equal(sanitizeState({ numParents65: -1 }).numParents65, 0)
+    assert.equal(sanitizeState({ numParents65: 1, numParents75: 3 }).numParents75, 1)
+    assert.equal(sanitizeState({ numParents65: 2, numParents75: 2 }).numParents75, 2)
+  })
+  it('coerces reducedMobility to boolean (default false)', () => {
+    assert.equal(sanitizeState({}).reducedMobility, false)
+    assert.equal(sanitizeState({ reducedMobility: '1' }).reducedMobility, true)
+    assert.equal(sanitizeState({ reducedMobility: true }).reducedMobility, true)
+    assert.equal(sanitizeState({ reducedMobility: 'yes' }).reducedMobility, false)
+  })
 })
 
 // ── sanitizeState: enums ─────────────────────────────────────────────────────
@@ -88,6 +100,16 @@ describe('parseStateFromParams', () => {
   it('clamps childrenUnder3 from URL to numChildren', () => {
     const s = parseStateFromParams('?aut_ch=1&aut_chu3=3')
     assert.equal(s.childrenUnder3, 1)
+  })
+  it('parses new M2 URL keys and keeps old links working', () => {
+    const s = parseStateFromParams('?aut_r=30000&aut_par65=2&aut_par75=1&aut_mob=1')
+    assert.equal(s.numParents65, 2)
+    assert.equal(s.numParents75, 1)
+    assert.equal(s.reducedMobility, true)
+    const legacy = parseStateFromParams('?aut_r=30000&aut_reg=madrid')
+    assert.equal(legacy.numParents65, DEFAULTS.numParents65)
+    assert.equal(legacy.numParents75, DEFAULTS.numParents75)
+    assert.equal(legacy.reducedMobility, false)
   })
 })
 

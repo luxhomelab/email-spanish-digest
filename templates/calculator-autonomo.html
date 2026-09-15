@@ -26,7 +26,8 @@
   {"@type": "Question", "name": "How are autónomo SS quotas calculated?", "acceptedAnswer": {"@type": "Answer", "text": "Since 2023, Spain introduced a 15-bracket social security system for autónomos based on actual net income. Your monthly quota depends on which bracket your estimated annual net income falls into. Official quotas for 2026 are set by Orden PJC/297/2026. For 2027 onward, this calculator applies the 2026 rates as no new quotas have been approved yet."}},
   {"@type": "Question", "name": "What is tarifa plana?", "acceptedAnswer": {"@type": "Answer", "text": "Tarifa plana is a reduced flat rate of €80/month for newly registered autónomos during their first 12 months. It reduces the initial burden for new self-employed workers. After the first year, you pay the regular quota based on your income bracket."}},
   {"@type": "Question", "name": "What deductions can autónomos claim?", "acceptedAnswer": {"@type": "Answer", "text": "For Social Security, individual autónomos deduct 7% of net revenues (capped at €2,000/year) when determining their SS bracket; company directors apply a 3% rate (same cap). For IRPF, everyone deducts a flat 5% allowance for hard-to-justify expenses (capped at €2,000/year). All autónomos also deduct annual SS contributions from income before calculating IRPF."}},
-  {"@type": "Question", "name": "How is IRPF calculated for autónomos?", "acceptedAnswer": {"@type": "Answer", "text": "IRPF is Spain's income tax. For autónomos, the taxable base is net revenue minus SS contributions minus general expenses, reduced further by the personal minimum allowance. The resulting base is taxed using progressive brackets split between a state component and a regional component set by each community."}}
+  {"@type": "Question", "name": "How is IRPF calculated for autónomos?", "acceptedAnswer": {"@type": "Answer", "text": "IRPF is Spain's income tax. For autónomos, the taxable base is net revenue minus SS contributions minus general expenses, reduced further by the personal minimum allowance. The resulting base is taxed using progressive brackets split between a state component and a regional component set by each community."}},
+  {"@type": "Question", "name": "Do dependent parents and disability reduce IRPF?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Each cohabiting parent over 65 (or disabled) adds €1,150 to your personal minimum, plus €1,400 more if over 75. Disability adds €3,000 at 33%+ (€6,000 with reduced mobility) and €12,000 at 65%+. Ceuta and Melilla residents pay only 40% of the full IRPF (60% reduction, art. 68.4 LIRPF)."}}
  ]}
 ]}
 </script>
@@ -107,11 +108,28 @@
        </div>
       </div>
       <div class="field">
-       <span class="flabel">Disability level <span class="tip" title="Disability allowances added to your personal minimum: 33–64% disability +€3,000 · 65%+ disability +€9,000.">?</span></span>
+       <span class="flabel">Disability level <span class="tip" title="Disability allowances added to your personal minimum: 33–64% disability +€3,000 (plus €3,000 more with reduced mobility, total €6,000) · 65%+ disability +€12,000 always (€9,000 + €3,000 mobility supplement).">?</span></span>
        <div class="seg seg-3" id="f-dis" role="group" aria-label="Disability level">
         <button type="button" data-v="0" class="on">None</button>
         <button type="button" data-v="33">33%+ (moderate)</button>
         <button type="button" data-v="65">65%+ (severe)</button>
+       </div>
+      </div>
+      <div class="field">
+       <label class="check" for="f-mob"><input id="f-mob" type="checkbox"> Reduced mobility <span class="tip" title="Reduced mobility (movilidad reducida) or need for third-party assistance: adds €3,000 on top of a 33–64% disability allowance (total €6,000). At 65%+ disability the €3,000 supplement applies automatically.">?</span></label>
+      </div>
+      <div class="field-row">
+       <div class="field">
+        <label for="f-par65">Dependent parents 65+ <span class="tip" title="Each cohabiting parent over 65 (or disabled, any age) adds €1,150. They must live with you and have annual income under €8,000 (excl. exempt income).">?</span></label>
+        <select id="f-par65">
+         <option value="0" selected>0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
+        </select>
+       </div>
+       <div class="field">
+        <label for="f-par75">Of which over 75 <span class="tip" title="Each cohabiting parent over 75 adds an extra €1,400 on top of the €1,150 above. Cannot exceed the number of dependent parents 65+. Same cohabitation and income conditions apply.">?</span></label>
+        <select id="f-par75">
+         <option value="0" selected>0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
+        </select>
        </div>
       </div>
      </div>
@@ -174,7 +192,7 @@
       <h4>Progressive brackets</h4>
       <p>IRPF is progressive — only the income within each bracket is taxed at that bracket's rate. Earning €1 more never makes your entire income jump to a higher rate. State rates range from 9.5% on the first €12,450 up to 24.5% above €300,000. Regional rates vary by community.</p>
       <h4>Personal minimum (mínimo personal y familiar)</h4>
-      <p>Spain grants every taxpayer a personal minimum allowance — an amount of income that is effectively tax-free. It works by computing the tax on the allowance and subtracting that from your bill (not by reducing your taxable base). The base allowance is €5,550; it increases with age (65+, 75+), dependent children, and disability.</p>
+      <p>Spain grants every taxpayer a personal minimum allowance — an amount of income that is effectively tax-free. It works by computing the tax on the allowance and subtracting that from your bill (not by reducing your taxable base). The base allowance is €5,550; it increases with age (65+, 75+), dependent children, cohabiting parents 65+/75+, and disability (including reduced mobility).</p>
       <p class="save" id="irpf-saving" hidden></p>
       <h4>Autonomo-specific deductions</h4>
       <p>Before IRPF is calculated, your taxable base is reduced by:</p>
@@ -205,6 +223,7 @@
    <details class="faq-item"><summary>What is tarifa plana?</summary><p>Tarifa plana is a reduced flat rate of €80/month for newly registered autónomos during their first 12 months. It reduces the initial burden for new self-employed workers. After the first year, you pay the regular quota based on your income bracket.</p></details>
    <details class="faq-item"><summary>What deductions can autónomos claim?</summary><p>For Social Security, individual autónomos deduct 7% of net revenues (capped at €2,000/year) when determining their SS bracket; company directors apply a 3% rate (same cap). For IRPF, everyone deducts a flat 5% allowance for hard-to-justify expenses (capped at €2,000/year). All autónomos also deduct annual SS contributions from income before calculating IRPF.</p></details>
    <details class="faq-item"><summary>How is IRPF calculated for autónomos?</summary><p>IRPF is Spain's income tax. For autónomos, the taxable base is net revenue minus SS contributions minus general expenses, reduced further by the personal minimum allowance. The resulting base is taxed using progressive brackets split between a state component and a regional component set by each community.</p></details>
+   <details class="faq-item"><summary>Do dependent parents and disability reduce IRPF?</summary><p>Yes. Each cohabiting parent over 65 (or disabled, any age) adds €1,150 to your personal minimum, plus €1,400 more if over 75 (they must live with you and earn under €8,000/year). Disability adds €3,000 at 33%+ (€6,000 with reduced mobility) and €12,000 at 65%+. Ceuta and Melilla residents pay only 40% of the full IRPF (60% reduction, art. 68.4 LIRPF).</p></details>
   </div>
  </div>
 <script type="module" src="/static/js/autonomo.js?v={{ js_version }}"></script>
