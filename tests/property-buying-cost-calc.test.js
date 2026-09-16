@@ -82,13 +82,13 @@ describe('calculateItpAmount', () => {
     ]}
     assert.equal(calculateItpAmount(500000, ar), 40750)
   })
-  it('marginal: Baleares €700k → 32000 + 18000 + 10000 = €60,000', () => {
-    const bal = { id: 'baleares', itp_standard: 8, itp_brackets: [
+  it('marginal: Baleares €2.5M → 32000 + 18000 + 40000 + 120000 + 65000 = €275,000', () => {
+    const bal2 = { id: 'baleares', itp_standard: 8, itp_brackets: [
       { upTo: 400000, rate: 8 }, { upTo: 600000, rate: 9 },
-      { upTo: 1000000, rate: 10 }, { upTo: 3000000, rate: 12 },
+      { upTo: 1000000, rate: 10 }, { upTo: 2000000, rate: 12 },
       { upTo: null, rate: 13 },
     ]}
-    assert.equal(calculateItpAmount(700000, bal), 60000)
+    assert.equal(calculateItpAmount(2500000, bal2), 275000)
   })
 })
 
@@ -142,13 +142,48 @@ describe('calculateBuyingCost', () => {
     const r = calculateBuyingCost({ price: 500000, isNewBuild: false, regionId: 'aragon' })
     assert.equal(r.primaryTaxAmount, 40750)
   })
-  it('Valencia resale €500k post-transition (2026-07-01) → 9% = €45,000', () => {
+  it('Valencia resale €500k → 9% = €45,000', () => {
     const r = calculateBuyingCost({ price: 500000, isNewBuild: false, regionId: 'comunidad_valenciana' })
     assert.equal(r.primaryTaxAmount, 45000)
   })
-  it('Valencia resale €1.2M post-transition → 90000 + 22000 = €112,000', () => {
+  it('Valencia resale €1.2M → 90000 + 22000 = €112,000', () => {
     const r = calculateBuyingCost({ price: 1200000, isNewBuild: false, regionId: 'comunidad_valenciana' })
     assert.equal(r.primaryTaxAmount, 112000)
+  })
+  it('Valencia new-build €200k → IVA 10% + AJD 1.4% = €22,800', () => {
+    const r = calculateBuyingCost({ price: 200000, isNewBuild: true, regionId: 'comunidad_valenciana' })
+    assert.equal(r.ajdRate, 1.4)
+    assert.equal(r.ajdAmount, 2800)
+    assert.equal(r.totalTax, 22800)
+  })
+  it('País Vasco resale €300k → 4% residential = €12,000', () => {
+    const r = calculateBuyingCost({ price: 300000, isNewBuild: false, regionId: 'pais_vasco' })
+    assert.equal(r.taxType, 'ITP')
+    assert.equal(r.primaryTaxAmount, 12000)
+  })
+  it('Murcia resale €200k → 7.75% = €15,500', () => {
+    const r = calculateBuyingCost({ price: 200000, isNewBuild: false, regionId: 'murcia' })
+    assert.equal(r.primaryTaxAmount, 15500)
+  })
+  it('Baleares resale €2.5M marginal → €275,000', () => {
+    const r = calculateBuyingCost({ price: 2500000, isNewBuild: false, regionId: 'baleares' })
+    assert.equal(r.primaryTaxAmount, 275000)
+  })
+  it('Cantabria resale €200k → 7% = €14,000 (vivienda habitual)', () => {
+    const r = calculateBuyingCost({ price: 200000, isNewBuild: false, regionId: 'cantabria' })
+    assert.equal(r.primaryTaxAmount, 14000)
+  })
+  it('Cantabria resale €500k → 300000×7% + 200000×9% = €39,000', () => {
+    const r = calculateBuyingCost({ price: 500000, isNewBuild: false, regionId: 'cantabria' })
+    assert.equal(r.primaryTaxAmount, 39000)
+  })
+  it('Ceuta resale €200k → 3% effective (50% rebate) = €6,000', () => {
+    const r = calculateBuyingCost({ price: 200000, isNewBuild: false, regionId: 'ceuta' })
+    assert.equal(r.primaryTaxAmount, 6000)
+  })
+  it('Ceuta new-build €200k → AJD 0.25% = €500', () => {
+    const r = calculateBuyingCost({ price: 200000, isNewBuild: true, regionId: 'ceuta' })
+    assert.equal(r.ajdAmount, 500)
   })
   it('País Vasco new-build omits AJD row (ajd 0%)', () => {
     const r = calculateBuyingCost({ price: 200000, isNewBuild: true, regionId: 'pais_vasco' })

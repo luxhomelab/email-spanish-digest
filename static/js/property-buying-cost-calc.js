@@ -5,13 +5,14 @@
  * + app/src/data/itp.js. Logic is IDENTICAL to the source; regional rates are
  * copied verbatim from app/src/data/spain-tax-data.json (iva_rate=10).
  *
- * Notes vs source UI strings (kept as-is, flagged for review):
- * - pbc_faq_regions_text claims Basque Country ITP 4%, but the data table used
- *   by the engine says itp_standard 7.0 (4% only for residential property per
- *   the region notes). The engine follows the data table.
- * - Comunidad Valenciana uses date-conditional brackets: 10% before 2026-07-01,
- *   9% (≤€1M) / 11% (>€1M) from 2026-07-01, evaluated against `new Date()` at
- *   runtime — same as source.
+ * Rate notes (all current, no transition dates — removed 2026-09-16):
+ * - pais_vasco 4% flat residential (Alava NF 11/2003 art.43,
+ *   Bizkaia NF 1/2011 art.13, Gipuzkoa NF 18/1987 art.11;
+ *   7% applies only to non-residential).
+ * - cantabria marginal 7% to EUR 300k / 9% on excess,
+ *   vivienda habitual rate (Ley Cantabria 5/2026, BOE-A-2026-10431).
+ * - ceuta/melilla effective 3% ITP / 0.25% AJD: nominal 6% / 0.5%
+ *   with mandatory 50% rebate (art.57 bis RDLeg 1/1993).
  */
 
 export const MIN_PRICE = 10000
@@ -31,11 +32,14 @@ const REGIONS = [
   ], ajd_standard: 1.2, igic_rate: null },
   { id: 'baleares', itp_standard: 8.0, itp_brackets: [
     { upTo: 400000, rate: 8.0 }, { upTo: 600000, rate: 9.0 },
-    { upTo: 1000000, rate: 10.0 }, { upTo: 3000000, rate: 12.0 },
+    { upTo: 1000000, rate: 10.0 }, { upTo: 2000000, rate: 12.0 },
     { upTo: null, rate: 13.0 },
   ], ajd_standard: 1.5, igic_rate: null },
   { id: 'canarias', itp_standard: 6.5, ajd_standard: 0.75, igic_rate: 7.0 },
-  { id: 'cantabria', itp_standard: 9.0, ajd_standard: 1.5, igic_rate: null },
+  { id: 'cantabria', itp_standard: 7.0, itp_brackets: [
+    { upTo: 300000, rate: 7.0 }, { upTo: null, rate: 9.0 },
+    // vivienda habitual rate (Ley Cantabria 5/2026, BOE-A-2026-10431)
+  ], ajd_standard: 1.5, igic_rate: null },
   { id: 'castilla_la_mancha', itp_standard: 9.0, ajd_standard: 1.5, igic_rate: null },
   { id: 'castilla_leon', itp_standard: 8.0, itp_brackets: [
     { upTo: 250000, rate: 8.0 }, { upTo: null, rate: 10.0 },
@@ -44,24 +48,24 @@ const REGIONS = [
     { upTo: 600000, rate: 10.0 }, { upTo: 900000, rate: 11.0 },
     { upTo: 1500000, rate: 12.0 }, { upTo: null, rate: 13.0 },
   ], ajd_standard: 1.5, igic_rate: null },
-  { id: 'comunidad_valenciana', itp_standard: 10.0, itp_brackets: [
-    { upTo: 1000000, rate: 10.0 }, { upTo: null, rate: 11.0 },
-  ], itp_brackets_transition: { effective_from: '2026-07-01', brackets: [
+  { id: 'comunidad_valenciana', itp_standard: 9.0, itp_brackets: [
     { upTo: 1000000, rate: 9.0 }, { upTo: null, rate: 11.0 },
-  ]}, ajd_standard: 1.5, igic_rate: null },
-  { id: 'ceuta', itp_standard: 6.0, ajd_standard: 0.5, igic_rate: null },
+  ], ajd_standard: 1.4, igic_rate: null },
+  // nominal 6% / 0.5% with mandatory 50% rebate (art.57 bis RDLeg 1/1993)
+  { id: 'ceuta', itp_standard: 3.0, ajd_standard: 0.25, igic_rate: null },
   { id: 'extremadura', itp_standard: 8.0, itp_brackets: [
     { upTo: 360000, rate: 8.0 }, { upTo: 600000, rate: 10.0 },
     { upTo: null, rate: 11.0 },
   ], ajd_standard: 1.5, igic_rate: null },
   { id: 'galicia', itp_standard: 8.0, ajd_standard: 1.5, igic_rate: null },
   { id: 'madrid', itp_standard: 6.0, ajd_standard: 0.75, igic_rate: null },
-  { id: 'melilla', itp_standard: 6.0, ajd_standard: 0.5, igic_rate: null },
-  { id: 'murcia', itp_standard: 8.0, ajd_standard: 1.5, igic_rate: null },
+  // nominal 6% / 0.5% with mandatory 50% rebate (art.57 bis RDLeg 1/1993)
+  { id: 'melilla', itp_standard: 3.0, ajd_standard: 0.25, igic_rate: null },
+  { id: 'murcia', itp_standard: 7.75, ajd_standard: 1.5, igic_rate: null },
   { id: 'navarra', itp_standard: 6.0, ajd_standard: 0.5, igic_rate: null },
-  { id: 'pais_vasco', itp_standard: 7.0, itp_brackets: [
-    { upTo: null, rate: 7.0 },
-  ], ajd_standard: 0.0, igic_rate: null },
+  // 4% residential — calculator prices housing (Alava NF 11/2003 art.43,
+  // Bizkaia NF 1/2011 art.13, Gipuzkoa NF 18/1987 art.11)
+  { id: 'pais_vasco', itp_standard: 4.0, ajd_standard: 0.0, igic_rate: null },
   { id: 'la_rioja', itp_standard: 7.0, ajd_standard: 1.0, igic_rate: null },
 ]
 
@@ -73,22 +77,8 @@ const REGIONS = [
 export function calculateItpAmount(price, region) {
   if (region == null || !price || price <= 0) return 0
 
-  let brackets = region.itp_brackets
+  const brackets = region.itp_brackets
   if (!brackets || brackets.length === 0) return price * (region.itp_standard || 0) / 100
-
-  // Date-conditional transition (e.g. Comunidad Valenciana from 2026-07-01)
-  if (region.itp_brackets_transition) {
-    const transitionDate = new Date(region.itp_brackets_transition.effective_from)
-    const transitionBrackets = region.itp_brackets_transition.brackets
-    if (
-      !isNaN(transitionDate.getTime()) &&
-      new Date() >= transitionDate &&
-      Array.isArray(transitionBrackets) &&
-      transitionBrackets.length > 0
-    ) {
-      brackets = transitionBrackets
-    }
-  }
 
   // Marginal calculation: each price tranche taxed at its bracket rate
   let total = 0
