@@ -1041,6 +1041,20 @@ body.page-search .search-page .subtitle::after {
 }
 body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #3C4858; --pagefind-ui-background: #FFFDF8; --pagefind-ui-border: #E3D9C4; --pagefind-ui-border-radius: 12px; --pagefind-ui-font: inherit; }
 
+/* ---------- Property buying cost calculator (calculator-property-buying-cost.html) ---------- */
+.calc .calc-btn { display: inline-block; background: #0E7A3D; color: #fff; border: none; border-radius: 10px; padding: 12px 28px; font-size: 15px; font-weight: 700; cursor: pointer; }
+.calc .calc-btn:hover { background: #0A5C2E; }
+.calc .notice-blue { background: #EFF4FB; border: 1px solid #D3E0F0; color: #3C5A80; }
+.calc .notice-blue .notice-title { font-weight: 700; margin-bottom: 4px; }
+.calc .notice-blue p { margin: 0; font-size: 13px; line-height: 20px; }
+.calc .bar > div.pseg-tax { background: #0E7A3D; }
+.calc .bar > div.pseg-ajd { background: #7BC79A; }
+.calc .bar > div.pseg-fee { background: #B0B9C4; }
+.calc .bar > div.pseg-fee2 { background: #D8DEE5; }
+.calc .sheet td.row-l { text-align: left; }
+.calc .sheet td .rate { font-size: 12px; color: #8A94A0; }
+.calc .burden .sheet { margin-top: 12px; }
+
 /* ---------- FAQ (body.page-home) ---------- */
 .faq-card details.faq-item { border-top: 1px solid #F0EDE6; padding: 12px 0; }
 .faq-card details.faq-item:first-of-type { border-top: none; }
