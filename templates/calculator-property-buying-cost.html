@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+{% block body_class %} class="page-calculator"{% endblock %}
+{% block title %}Spain Property Buying Cost Calculator {{ calc_year }} — ITP, IVA/IGIC &amp; AJD by Region — Spanified{% endblock %}
+{% block description %}<meta name="description" content="Free Spain property buying cost calculator: estimate ITP transfer tax, IVA/IGIC and AJD stamp duty plus notary and registry fees by region. In English.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Spain Property Buying Cost Calculator {{ calc_year }} — ITP, IVA/IGIC &amp; AJD by Region — Spanified">
+<meta property="og:description" content="Estimate ITP, IVA/IGIC, AJD stamp duty plus notary and registry fees for buying property in Spain, by region. In English.">
+<meta property="og:url" content="{{ site_url }}/calculators/property-buying-cost">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Spain Property Buying Cost Calculator {{ calc_year }} — ITP, IVA/IGIC &amp; AJD by Region — Spanified">
+<meta name="twitter:description" content="Estimate ITP, IVA/IGIC, AJD stamp duty plus notary and registry fees for buying property in Spain, by region. In English.">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/calculators/property-buying-cost">{% endblock %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [
+ {"@type": "WebPage",
+  "name": "Spain Property Buying Cost Calculator {{ calc_year }} — ITP, IVA/IGIC & AJD by Region — Spanified",
+  "url": "{{ site_url }}/calculators/property-buying-cost",
+  "description": "Free Spain property buying cost calculator: estimate ITP transfer tax, IVA/IGIC and AJD stamp duty plus notary and registry fees by region. In English.",
+  "inLanguage": "en",
+  "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}},
+ {"@type": "FAQPage", "mainEntity": [
+  {"@type": "Question", "name": "What is ITP and how is the tax calculated when buying a resale property?", "acceptedAnswer": {"@type": "Answer", "text": "ITP (Impuesto sobre Transmisiones Patrimoniales) is a regional transfer tax paid when buying a resale property in Spain. Flat-rate regions apply one rate to the full price (e.g. Madrid 6%, Andalusia 7%). Eight regions use progressive marginal brackets — Aragón, Asturias, Baleares, Cantabria, Castilla y León, Cataluña, Extremadura, and Comunidad Valenciana — where each price tranche is taxed at its own rate, similar to income tax. Example: a €700,000 home in Cataluña — first €600,000 @ 10% + next €100,000 @ 11% = €71,000 ITP."}},
+  {"@type": "Question", "name": "What taxes apply when buying a new build property in Spain?", "acceptedAnswer": {"@type": "Answer", "text": "New build properties are subject to VAT (IVA) at 10% — or 7% IGIC in the Canary Islands — plus Stamp Duty (AJD) at 0–1.5% depending on the region (the Basque Country charges no AJD on new builds). ITP is not paid on new builds. Example: a €200,000 apartment in Madrid = €20,000 IVA + €1,500 AJD = €21,500 in taxes."}},
+  {"@type": "Question", "name": "Which Spanish region has the lowest property purchase taxes?", "acceptedAnswer": {"@type": "Answer", "text": "Ceuta and Melilla have the lowest ITP at 3% effectively (6% nominal with a mandatory 50% rebate), followed by the Basque Country at 4% (residential), Madrid and Navarre at 6%, Andalusia and La Rioja at 7%, Murcia at 7.75%, and Galicia at 8%. Eight regions apply progressive scales: Aragón 8–10%, Asturias 8–10%, Baleares 8–13%, Cantabria 7% up to €300k / 9% above (vivienda habitual), Castilla y León 8–10%, Cataluña 10–13%, Extremadura 8–11%, and Comunidad Valenciana 9% up to €1M / 11% above. Madrid has one of the lowest AJD rates at 0.75%."}},
+  {"@type": "Question", "name": "How much do notary and land registry fees cost in Spain?", "acceptedAnswer": {"@type": "Answer", "text": "Notary fees are regulated by the Spanish government and typically range from €600 to €1,200 depending on the property value. Land registry fees range from €400 to €1,000. Both are mandatory for all property purchases and are broadly similar across all Spanish regions."}},
+  {"@type": "Question", "name": "What is the total additional cost when buying a home in Spain?", "acceptedAnswer": {"@type": "Answer", "text": "Budget 8–13% of the property price on top of the purchase price to cover all taxes and fees. Resale properties typically add around 8–10% (mainly ITP + notary/registry). New builds add 12–13% due to the 10% IVA. Example: a €200,000 property in Madrid — resale: approx. +€13,800; new build: approx. +€23,300."}}
+ ]}
+]}
+</script>
+ <div class="calc">
+  <h1>Spain Property Buying Cost Calculator <span class="calc-year">{{ calc_year }}</span></h1>
+  <p class="subtitle">ITP, IVA/IGIC &amp; AJD stamp duty plus notary and registry fees — by region.</p>
+
+  <div class="calc-grid">
+   <div class="card calc-form">
+    <p class="calc-kicker">Parameters</p>
+
+    <div class="field">
+     <label for="f-price">Property price <span class="tip" title="The agreed purchase price of the property. All taxes (ITP, IVA/IGIC, AJD) are calculated as a percentage of this figure. Minimum €10,000.">?</span> <span class="sub">€ ·</span></label>
+     <input id="f-price" type="number" min="10000" step="1000" value="200000">
+    </div>
+
+    <div class="field">
+     <label for="f-region">Region <span class="tip" title="Your autonomous community sets the ITP transfer-tax rate (3–13%) and the AJD stamp-duty rate (0–1.5%). Madrid and Navarre are among the cheapest at 6% ITP; Catalunya tops out at 13% on high-value resales.">?</span></label>
+     <select id="f-region">
+      <option value="andalucia">Andalusia</option>
+      <option value="aragon">Aragon</option>
+      <option value="asturias">Asturias</option>
+      <option value="baleares">Balearic Islands</option>
+      <option value="canarias">Canary Islands</option>
+      <option value="cantabria">Cantabria</option>
+      <option value="castilla_la_mancha">Castilla-La Mancha</option>
+      <option value="castilla_leon">Castilla and Leon</option>
+      <option value="catalunya">Catalonia</option>
+      <option value="comunidad_valenciana">Valencian Community</option>
+      <option value="ceuta">Ceuta</option>
+      <option value="extremadura">Extremadura</option>
+      <option value="galicia">Galicia</option>
+      <option value="madrid" selected>Madrid</option>
+      <option value="melilla">Melilla</option>
+      <option value="murcia">Murcia</option>
+      <option value="navarra">Navarre</option>
+      <option value="pais_vasco">Basque Country</option>
+      <option value="la_rioja">La Rioja</option>
+     </select>
+     <p class="field-note">ITP rates shown are general rates — reduced rates may apply for first homes, under-35s, families and rural areas.</p>
+    </div>
+
+    <div class="field">
+     <span class="flabel">Property type <span class="tip" title="Resale (second-hand) homes pay ITP transfer tax. New builds pay VAT — 10% IVA everywhere except the Canary Islands (7% IGIC) — plus AJD stamp duty. You never pay both.">?</span></span>
+     <div class="seg" id="f-type" role="group" aria-label="Property type">
+      <button type="button" data-v="resale" class="on">Resale (second-hand)</button>
+      <button type="button" data-v="new">New build</button>
+     </div>
+    </div>
+
+    <div class="field">
+     <button type="button" id="r-calc" class="calc-btn">Calculate buying costs</button>
+    </div>
+   </div>
+
+   <div class="calc-results">
+    <div class="notice notice-red" id="r-error" hidden><strong>⚠️ Calculation Error:</strong> <span id="r-error-text"></span>. Please check your inputs or contact support if the problem persists.</div>
+
+    <div id="r-results">
+     <div class="hero-net">
+      <p class="kicker">Total buying costs</p>
+      <p class="big" id="r-total">—</p>
+      <p class="permo"><span id="r-total-pct">—</span></p>
+     </div>
+
+     <div class="duo">
+      <div class="mini mini-ss">
+       <p class="kicker">Total taxes (<span id="r-taxtype">ITP</span>)</p>
+       <p class="val" id="r-tax">—</p>
+       <p class="sub2"><span id="r-tax-pct">—</span></p>
+      </div>
+      <div class="mini mini-irpf">
+       <p class="kicker">Notary &amp; Registry</p>
+       <p class="val" id="r-fees">—</p>
+       <p class="sub2"><span id="r-fees-pct">—</span></p>
+      </div>
+     </div>
+
+     <div class="card burden">
+      <p class="calc-kicker">Cost breakdown</p>
+      <div class="bar" id="r-bar"></div>
+      <div class="card sheet">
+       <table>
+        <thead><tr><th>Item</th><th class="num">Amount</th></tr></thead>
+        <tbody id="r-breakdown"></tbody>
+       </table>
+      </div>
+     </div>
+
+     <div class="notice notice-blue">
+      <div class="notice-title">You may qualify for a reduced rate</div>
+      <p>Reduced ITP or AJD rates may apply if: you are under 35, this is your first home, you have a large family (3+ children) or a disability ≥33%. Check with your regional tax authority (comunidad autónoma).</p>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <div class="card seobox">
+   <h2>How property purchase taxes work in Spain</h2>
+   <p>When buying a resale property in Spain you pay ITP transfer tax (3–13% depending on the region); new builds pay 10% IVA (7% IGIC in the Canary Islands) plus AJD stamp duty (0–1.5%). On top of taxes, every purchase adds regulated notary and land-registry fees. This calculator estimates all of them for any region in Spain. <a href="/subscribe">Get Spain property news in English every morning</a> / Buying to let? Estimate income tax with our <a href="/calculators/autonomo-tax">Autónomo Tax Calculator</a>.</p>
+   <p class="src">Rates: general ITP/AJD scales per autonomous community, 2026. Reduced rates for first homes, young buyers and families are not included — see the notice above.</p>
+  </div>
+
+  <div class="card faq-card">
+   <h2>Frequently Asked Questions</h2>
+   <details class="faq-item"><summary>What is ITP and how is the tax calculated when buying a resale property?</summary><p>ITP (Impuesto sobre Transmisiones Patrimoniales) is a regional transfer tax paid when buying a resale property in Spain. Flat-rate regions apply one rate to the full price (e.g. Madrid 6%, Andalusia 7%). Eight regions use progressive marginal brackets — Aragón, Asturias, Baleares, Cantabria, Castilla y León, Cataluña, Extremadura, and Comunidad Valenciana — where each price tranche is taxed at its own rate, similar to income tax. Example: a €700,000 home in Cataluña — first €600,000 @ 10% + next €100,000 @ 11% = €71,000 ITP.</p></details>
+   <details class="faq-item"><summary>What taxes apply when buying a new build property in Spain?</summary><p>New build properties are subject to VAT (IVA) at 10% — or 7% IGIC in the Canary Islands — plus Stamp Duty (AJD) at 0–1.5% depending on the region (the Basque Country charges no AJD on new builds). ITP is not paid on new builds. Example: a €200,000 apartment in Madrid = €20,000 IVA + €1,500 AJD = €21,500 in taxes.</p></details>
+   <details class="faq-item"><summary>Which Spanish region has the lowest property purchase taxes?</summary><p>Ceuta and Melilla have the lowest ITP at 3% effectively (6% nominal with a mandatory 50% rebate), followed by the Basque Country at 4% (residential), Madrid and Navarre at 6%, Andalusia and La Rioja at 7%, Murcia at 7.75%, and Galicia at 8%. Eight regions apply progressive scales: Aragón 8–10%, Asturias 8–10%, Baleares 8–13%, Cantabria 7% up to €300k / 9% above (vivienda habitual), Castilla y León 8–10%, Cataluña 10–13%, Extremadura 8–11%, and Comunidad Valenciana 9% up to €1M / 11% above. Madrid has one of the lowest AJD rates at 0.75%.</p></details>
+   <details class="faq-item"><summary>How much do notary and land registry fees cost in Spain?</summary><p>Notary fees are regulated by the Spanish government and typically range from €600 to €1,200 depending on the property value. Land registry fees range from €400 to €1,000. Both are mandatory for all property purchases and are broadly similar across all Spanish regions.</p></details>
+   <details class="faq-item"><summary>What is the total additional cost when buying a home in Spain?</summary><p>Budget 8–13% of the property price on top of the purchase price to cover all taxes and fees. Resale properties typically add around 8–10% (mainly ITP + notary/registry). New builds add 12–13% due to the 10% IVA. Example: a €200,000 property in Madrid — resale: approx. +€13,800; new build: approx. +€23,300.</p></details>
+   <div class="calc-share">
+    <div class="share-cta">Buying in Spain? Share this calculator.</div>
+    {% with share=share %}{% include "partials/share.html" %}{% endwith %}
+   </div>
+  </div>
+ </div>
+<script type="module" src="/static/js/property-buying-cost.js?v={{ js_version }}"></script>
+{% endblock %}
