@@ -1,0 +1,176 @@
+{
+  "items": [
+    {
+      "title": "Spain's inflation hits 4.3% as fuel prices surge",
+      "body": "August inflation rose to 4.3%, the highest since early 2023, driven by a 16.9% year-on-year jump in gasoline prices. Core inflation, excluding energy and fresh food, cooled to 2.9%, while food prices rose 2.3%. Households face higher fuel and food costs.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ine-confirma-inflacion-cerro-4-3-agosto-maximo-2023-rebaja-diesel_1_13510110.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "New labor transparency rules take effect Oct. 5",
+      "body": "From October 5, companies must provide workers with more information on salaries, schedules, probation periods, and any use of algorithms or AI in decisions like pay, promotions, or dismissals. Existing workers can request the data; employers have 30 business days to respond. The decree transposes a 2019 EU directive.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/llega-nueva-transparencia-laboral-trabajadores-datos-salarios-horarios-e-ia-partir-5-octubre_1_13510302.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Congress rejects Sumar law banning home sales to funds",
+      "body": "Congress rejected a Sumar proposal for a second time to prohibit the sale of homes to legal entities, aiming to stop mass purchases by companies for rental purposes. PP, Vox, and Junts voted against; PSOE and PNV abstained. The decision leaves housing policy unchanged for now.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/vivienda-vuelve-dividir-gobierno-psoe-abstiene-ley-sumar-prohibir-compra-pisos-fondos_1_13512576.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "EU allows workers to claim social security across member states",
+      "body": "The European Commission approved rules for fair labor mobility, including a digital European Social Security Passport. Workers and companies across the EU will be able to digitally request and receive documents such as the European Health Insurance Card and the A1 form by the end of the year.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ue-permitira-trabajadores-reclamar-seguridad-social-seguro-enfermedad-pais-ue_1_13510953.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Bolaños accuses Supreme Court of altering electoral census",
+      "body": "Minister Félix Bolaños accused the Supreme Court of altering the electoral census by suspending voting rights for CERA-registered people who obtained nationality through the 'ley de nietos'. He demanded a final ruling before 2027, saying there are now first-class and second-class Spaniards.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/bolanos-acusa-supremo-alterar-censo-electoral-con-su-decision-sobre-ley-nietos-le-exige-resolverla-antes-2027_7037221_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Feijóo proposes stripping nationality for serious crimes",
+      "body": "PP leader Alberto Núñez Feijóo announced an organic law to withdraw Spanish nationality from foreign nationals convicted of serious crimes such as murder, terrorism, or repeated rape. He called nationality 'an act of trust' that must be maintained.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/sociedad/2026/09/15/feijoo-plantea-retirar-nacionalidad-extranjeros-delitos-graves-asesinos-terroristas-violadores-reincidentes-2052023.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "First Diplodocus remains found outside North America in Teruel",
+      "body": "Researchers in Teruel identified 14 tail vertebrae from the Late Jurassic, about 150 million years old, as belonging to the genus Diplodocus. If confirmed, it would be the first evidence of this dinosaur in Europe. The fossils were found at La Tejería in El Castellar.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/ciencia/diplodocus-cruzo-atlantico-hallan-teruel-los-primeros-restos-este-dinosaurio-fuera-norteamerica_7036871_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Ceuta crisis reaches EU as PP targets Morocco",
+      "body": "The PP pushed the European People's Party to raise Morocco's role in the Ceuta border crisis at EU institutions. Around 80,000 people entered Ceuta on July 30 and 31, and Morocco offered to take back 10,000 migrants. The PP describes Morocco's behavior as a 'hybrid war'.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-09-16/defensa-marruecos-psoe-resquebraja-equilibrios-ue-ceuta_4424028/"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Madrid hospitals accused of manipulating waiting lists",
+      "body": "A Madrid hospital lowered the priority of 57 patients awaiting surgery to improve waiting list figures. The Amyts medical union says the practice is widespread, and the health minister said it 'is neither new nor penalized'. Patients may face longer actual wait times than official figures suggest.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/madrid/incentivos-perversos-sanidad-madrid-maquillar-listas-espera-pone-pelos-punta_1_13512500.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Bankinter raises digital account rate to 3% TAE",
+      "body": "Bankinter increased the interest on its digital account to 3% TAE for new clients, up from 2.5%, on balances up to €100,000. The promotion runs from September 15 to October 28, and clients with payroll direct deposit can receive up to €600 gross in the first year. The account has zero fees and a free debit card.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/mercados/2026-09-15/bankinter-rentabilidad-cuenta-digital-pago-nomina_4423999/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain extends border controls with Italy for 15 days",
+      "body": "The government extended border controls on air and sea connections with Italy for 15 days, responding to Italy's similar measure after the Ceuta migrant influx. Temporary controls may affect travel between Spain and Italy.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-gobierno-prorroga-15-dias-controles-fronterizos-italia-respuesta-medida-ejecutivo-meloni-20260915154357.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Aena to invest 13 billion euros in airports by 2031",
+      "body": "The Council of Ministers approved DORA III, Aena's regulatory framework, with nearly €13 billion in investment for 2027-2031 and an average annual airport fee increase of 0.33%. The tariff changes can affect flight prices.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/noticia-gobierno-aprueba-dora-iii-aena-invertira-13000-millones-2031-subida-tasas-033-20260915133342.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "What's hit your monthly budget harder lately — fuel or food?",
+  "variant": "Nothing Happened in Spain Today. Except This.",
+  "headline": "Nothing Happened in Spain Today. Except This.",
+  "date": "2026-09-16",
+  "generated_at": "2026-09-16T06:05:03.189191+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 333,
+    "items_selected_pass1": 12,
+    "fact_sheets_extracted": 12,
+    "items_after_importance_filter": 12,
+    "items_in_digest": 12
+  },
+  "selection_reasons": {
+    "118": "Ceuta crisis escalates to EU level, directly affecting migration policy and Spain's relations with Morocco.",
+    "29": "Spain extends border controls with Italy, impacting travel and Schengen freedom for all passengers.",
+    "95": "Inflation hits 4.3% driven by fuel prices, raising cost of living for everyone in Spain.",
+    "71": "Congress rejects law banning investment funds from buying homes, keeping housing speculation alive.",
+    "92": "New labor transparency rules from October give workers rights to information on salaries and AI decisions.",
+    "90": "EU digital app will let workers claim social security and health insurance across member states.",
+    "134": "Supreme Court suspends voting rights for descendants of Spaniards abroad, affecting citizenship and electoral rights.",
+    "178": "Feijóo proposes stripping nationality from foreigners convicted of serious crimes, a major immigration policy shift.",
+    "42": "Madrid hospitals accused of manipulating surgical waiting lists, a systemic healthcare issue.",
+    "33": "Aena approves €13B airport investment with modest fee increases, affecting air travel costs.",
+    "295": "Bankinter raises digital account rate to 3% TAE, good news for savers amid rising interest rates.",
+    "136": "First diplodocus fossils found outside North America in Teruel, a positive scientific breakthrough."
+  }
+}
