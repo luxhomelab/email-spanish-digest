@@ -543,11 +543,20 @@ body.page-calculator .calc h1 { font-size: 38px; letter-spacing: -0.5px; }
 }
 @media (max-width: 520px) {
  body.page-calculator .calc { padding: 24px 16px 12px 16px; }
- .calc .hero-net .big { font-size: 34px; }
+ body.page-calculator .calc h1 { font-size: 28px; }
+ .calc .subtitle { font-size: 14px; }
+ .calc input[type="number"], .calc select { font-size: 16px; }
+ .calc .hero-net { padding: 20px; }
+ .calc .hero-net .big { font-size: 32px; }
+ .calc .mini { padding: 14px 16px; }
+ .calc .mini .val { font-size: 24px; }
+ .calc .sheet td { padding: 9px 12px; }
+ .calc .tip { width: 22px; height: 22px; font-size: 12px; }
+ .calc .calc-btn { display: block; width: 100%; padding: 14px; font-size: 16px; }
  .calc .duo { grid-template-columns: 1fr; }
  .calc .field-row { grid-template-columns: 1fr; }
  .calc .seg { flex-wrap: wrap; }
- .calc .seg button { flex: 1 1 100%; }
+ .calc .seg button { flex: 1 1 100%; min-height: 44px; }
 }
 
 /* ---------- Category (category.html) ---------- */
