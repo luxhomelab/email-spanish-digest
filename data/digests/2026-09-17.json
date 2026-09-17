@@ -1,0 +1,137 @@
+{
+  "items": [
+    {
+      "title": "Renting pushes millions into hidden poverty in Spain",
+      "body": "Two million people in Spain are in hidden poverty linked to rent, with housing costs creating a new vulnerability. Lucía, 25, pays €650 a month — 41.5% of her net salary in 14 installments — while her parents bought a house at her age. Foreign residents renting face the same affordability squeeze.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/09/16/6aaa718ae85ece9b3c8b45ad.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Euribor surge drives 21% jump in mortgage foreclosures",
+      "body": "Mortgage foreclosures in Spain rose 20.9% year-on-year in Q2 2026 to 4,090 as the Euribor climbs due to the Iran war. Foreclosures on primary residences rose 27.5% to 3,703, the highest since early 2017. More than half involve mortgages signed before 2008.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/escalada-euribor-por-guerra-iran-dispara-un-21-los-embargos-viviendas-por-impago-hipotecas_7037611_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Congress approves biggest dependency reform in 20 years",
+      "body": "Spain's Congress gave final approval to a reform of dependency and disability laws, adding €6.2 billion to expand benefits and cut bureaucracy. The ministry calls it a refoundation of the care model in Spain. PP abstained and Vox voted against; changes will be published in the BOE in the coming days.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/congreso-aprueba-mayor-reforma-dependencia-20-anos_1_13514245.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Iran war adds €90 billion to Europe's energy bill",
+      "body": "European Commission President Ursula von der Leyen said the EU has paid €90 billion extra for fossil fuels since the Iran war began. Spanish industry faces €7.4 billion in additional costs. Higher energy costs can drive up inflation and living expenses across Spain.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/09/17/guerra-iran-deja-una-factura-energetica-90-000-millones-extra-europa-7-400-industria-espanola-2052384.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Government seeks fast track over \"Ley de nietos\" vote",
+      "body": "The government will challenge the Supreme Court's suspension of CERA voter registration for newly naturalized citizens under the \"Ley de nietos\". The state legal service is weighing an appeal for reconsideration and a nullity incident to get the case to the Constitutional Court quickly. The aim is to let new citizens vote in upcoming elections.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-09-17/ley-nietos-recurso-tribunal-constitucional-gobierno_4425197/"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "2027 pension rise likely above 3% as inflation climbs",
+      "body": "Spain's contributory pensions are expected to rise more than 3% in 2027, based on the average CPI from December to November. August inflation hit 4.3%, pushing the provisional increase to 3.2%. Pensioners would see benefits rise, protecting their purchasing power.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/subida-las-pensiones-2027-evolucion-ipc-apunta-un-aumento-superior-3_7037382_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Social Security official warns of 2027 payroll change: MEI rises to 1%",
+      "body": "The Intergenerational Equity Mechanism contribution will rise from 0.90% in 2026 to 1% in 2027. Companies will pay 0.83 percentage points and workers 0.17 percentage points, meaning a small payroll deduction increase for employees. The rate reaches 1.1% in 2028 and 1.2% in 2029.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-09-16/alfonso-munoz-funcionario-seguridad-social-cambio-nominas-trabajadores-1qrt_4424625/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Court suspends migrant camp in Ceuta port after police union appeal",
+      "body": "The Audiencia Nacional has temporarily halted the government's migrant camp in Ceuta port, which was set up for 800 migrants. The SUP police union filed an urgent appeal. The court has required the Transport Ministry to deliver the file and has summoned local officials as witnesses.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/audiencia-nacional-paraliza-campamento-instalado-puerto-ceuta-atender-migrantes_1_13515676.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Deadly storm hits Mediterranean, closes Valencia airport",
+      "body": "A severe Mediterranean storm caused one death in Barcelona, closed Valencia airport and diverted 11 flights to Alicante-Elche. A false ceiling fell at Vall d'Hebron Hospital and its basement flooded. Emergency alerts were issued in Valencia, Catalonia and Andalusia.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/cierre-aeropuerto-valencia-caida-un-techo-vall-d-hebron-calles-inundadas-temporal-azota-con-fuerza-mediterraneo_7037734_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Foreign residents in Spain: how much of your income goes to rent or mortgage?",
+  "variant": "What everyone in Spain is talking about today",
+  "headline": "What everyone in Spain is talking about today",
+  "date": "2026-09-17",
+  "generated_at": "2026-09-17T06:04:48.676952+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 326,
+    "items_selected_pass1": 9,
+    "fact_sheets_extracted": 9,
+    "items_after_importance_filter": 9,
+    "items_in_digest": 9
+  },
+  "selection_reasons": {
+    "12": "Housing costs push nearly 2 million people into hidden poverty — key for renters and cost-of-living concerns.",
+    "35": "Court halts government migrant camp in Ceuta port — major migration policy development affecting border management.",
+    "42": "Congress approves biggest dependency-care reform in 20 years — expands benefits and state funding, relevant for elderly and disabled residents.",
+    "121": "Government moves to challenge Supreme Court suspension of voting rights for those nationalized under the 'ley de nietos' — directly affects new citizens.",
+    "130": "Euribor surge linked to Iran war drives foreclosures up 21% — critical for mortgage holders and the property market.",
+    "138": "Severe Mediterranean storms kill one, close Valencia airport, suspend flights and classes — major weather disruption affecting daily life.",
+    "191": "Iran war adds €90 billion energy bill for Europe, €7.4 billion for Spanish industry — impacts energy prices and household costs.",
+    "286": "Social Security official warns of 2027 payroll rise from MEI pension mechanism — affects all workers' take-home pay.",
+    "302": "Pension increase for 2027 likely above 3% based on IPC — relevant for retirees and future pensioners."
+  }
+}
