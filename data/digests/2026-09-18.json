@@ -1,0 +1,207 @@
+{
+  "items": [
+    {
+      "title": "Spanish housing prices hit record, 12% above bubble peak",
+      "body": "The average price per square meter in Spain reached €2,355 in Q2 2026, 12.1% above the 2008 bubble peak of €2,101. An 80-square-meter home now costs about €188,000 on average. Madrid remains the most expensive region at €4,090 per square meter, followed by Baleares (€3,981) and País Vasco (€3,102). Eleven autonomous communities set new price records.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/precio-vivienda-supera-ya-un-12-record-burbuja-once-comunidades-marcan-maximos_7037966_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Spain urges EU fast-track returns after Ceuta crisis",
+      "body": "Interior Minister Fernando Grande-Marlaska asked the EU to speed up returns after 80,000 people entered Ceuta on July 30; more than 10,000 remain. The European Parliament linked Spain's extraordinary regularization to a \"pull effect\" and warned Morocco over sovereignty. PP and Vox demand that irregular entrants be returned.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/marlaska-recoge-guante-bruselas-le-urge-cambiar-ley-para-agilizar-las-devoluciones-crisis-migratorias_7037980_0.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/epsocial/migracion/noticia-eurocamara-apunta-regularizacion-entrada-masiva-ceuta-avisa-marruecos-soberania-espana-20260917140925.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Court backs landlords' tax deduction for mortgage life insurance",
+      "body": "A court ruling recognizes that landlords can deduct life insurance premiums required by banks for mortgages on rental properties. Hacienda had repeatedly denied the deduction in previous checks. The ruling relies on Article 23 of the IRPF Law and Article 13 of its Regulation. Foreign residents who rent out Spanish property may claim this deduction.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-09-17/experto-abogado-fiscalista-luis-miguel-larriba-fiscalidad-vivienda-ley-vivienda-declaracion-de-la-renta_4403880/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Building permits rise but construction stalls in Spain",
+      "body": "Approved surface area for new builds and major rehabilitation rose 18% in the first half of 2026 to 20.99 million square meters, the best since 2019. But many projects are slowing or halting because of higher material prices and a shortage of construction workers. The housing supply shortage is causing the worst affordability crisis in decades.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/09/18/6aa9309ae4d4d87c728b458c.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Spain's public debt falls below 100% of GDP",
+      "body": "Spain's public debt closed July at 99.9% of GDP, the lowest ratio since February 2020 and the first time below 100% since before the pandemic. Nominal debt still reached a record €1.744 trillion, up 3.8% year-on-year. During the pandemic, the ratio exceeded 120% of GDP.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/deuda-publica-cerro-julio-debajo-100-pib-primera-vez-estallido-pandemia_1_13516813.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Average Spanish salary rises 4.2% but inflation erodes gains",
+      "body": "The average gross salary in Spain rose 4.2% year-on-year in Q2 2026 to €2,464 per month. Hourly wage costs rose 4.4% to €19.41. August inflation of 4.3% erased much of the purchasing power gain, with the largest salary increases in education (9.6%) and public administration (8.4%).",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/salario-medio-acelera-sube-un-4-2-segundo-semestre-pero-inflacion-empieza-comerle-terreno_7038035_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Pensioners abroad face September 30 proof-of-life deadline",
+      "body": "Spanish pensioners living abroad must complete the \"fe de vida\" (proof of life) procedure by September 30, 2026, or their pension will be suspended. The right is not permanently lost, but payments stop until the procedure is done. The VIVESS app allows facial biometric recognition from abroad; consular offices are also an option.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/jubilados-viven-extranjero-deben-hacer-tramite-septiembre-no-perder-pension_7037977_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Santander opens talks on technology unit layoffs",
+      "body": "Banco Santander has begun negotiations with unions for a restructuring process (ERE) in its technology subsidiaries SDS, SGTO and Gravity, which employ around 13,000 people worldwide. No negotiating table has been set up yet, and the number of job cuts is unknown. It would be Santander's first ERE since the pandemic.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/empresas/banco-santander-empieza-negociar-ere-filiales-tecnologicas_7038227_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Pre-2024 interns can buy five years of pension contributions",
+      "body": "People who completed unpaid internships before 2024 can recover up to five years of social security contributions through a special agreement. Applications must be formalized before December 31, 2028. Eligible periods include university, vocational, artistic, sports and research training.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-09-17/practicas-ante-2024-jubilacion_4425492/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spain creates capacity market auctions to prevent blackouts",
+      "body": "The government approved a capacity market system that will auction electricity to guarantee supply during periods of high demand. The mechanism favors combined cycles and nuclear, and penalizes wind and solar. The European Commission estimates the cost at €9 billion, passed on to consumers through electricity bills.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/gobierno-crea-un-sistema-subastas-energia-respaldo-frente-los-apagones-para-garantizar-cobertura-demanda_7037807_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Sumar proposes wealth tax on fortunes over 50 million euros",
+      "body": "Sumar presented a proposal in Congress for a new tax on fortunes above €50 million, affecting about 1,500 taxpayers and aiming to raise €4.5 billion for child benefits. Approval is unlikely. The average payment would be about €3 million per taxpayer.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-09-17/sumar-propone-impuesto-grandes-fortunas-finalista-infancia_4425610/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Moeve breaks ground on 300 MW green hydrogen plant",
+      "body": "Moeve broke ground on its 300 MW renewable hydrogen plant in Palos de la Frontera, Huelva, the first phase of the Valle Andaluz del Hidrógeno Verde. It aims to produce up to 300,000 tonnes of green hydrogen per year and create more than 8,000 direct and indirect jobs. Operations are expected to start in 2029.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/empresas/moeve-coloca-este-jueves-primera-piedra-valle-andaluz-hidrogeno-verde_7037795_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Crime in Spain rises 0.5% on sexual, drug offenses",
+      "body": "Crime in Spain increased 0.5% in the first half of 2026 compared with the same period a year earlier. Sexual offenses rose 4%, aggravated sexual assaults rose 3.5%, and drug trafficking rose 8.3%. Serious and minor injuries and brawls increased 10%.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-criminalidad-espana-sube-05-junio-2026-aumento-delitos-sexuales-rinas-trafico-drogas-20260917154732.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Spain accounts for 44% of EU burned area in 2026",
+      "body": "Spain has recorded 296,815 hectares burned this year, 44.4% of the EU total, and 3.4 times the annual average since 2006. The country registered 446 forest fires in 2026. The Los Gallardos fire in Almería, one of the deadliest in Spain's history, killed 15 people.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/espana-concentra-44-toda-superficie-quemada-union-europa-los-incendios-han-calcinado-296-815-hectareas-este-ano_7038126_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Spanish home prices just hit 12% above the 2008 bubble peak — would you still buy now or wait it out? 🤔",
+  "variant": "What mattered in Spain today",
+  "headline": "What mattered in Spain today",
+  "date": "2026-09-18",
+  "generated_at": "2026-09-18T06:08:01.704185+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 320,
+    "items_selected_pass1": 15,
+    "fact_sheets_extracted": 15,
+    "items_after_importance_filter": 15,
+    "items_in_digest": 14
+  },
+  "selection_reasons": {
+    "27": "EU Parliament resolution calls Ceuta entry an 'invasion' and blames Spain's regularization — key for migration policy watchers.",
+    "130": "Spain urges EU to legalize hot returns in migration crises — a major policy shift affecting asylum seekers.",
+    "134": "House prices now 12% above the 2008 bubble record, with 11 regions at all-time highs — critical for buyers and investors.",
+    "2": "Construction permits hit a 2019 high but builders stall due to labor and material costs — explains Spain's housing shortage.",
+    "314": "Courts recognize a tax deduction for landlords' life insurance that Hacienda long denied — money back for rental property owners.",
+    "277": "Sumar proposes a new wealth tax on fortunes over €50M targeting 1,500 taxpayers — relevant for high-net-worth residents.",
+    "93": "Public debt falls below 100% of GDP for the first time since 2020 — a positive sign for Spain's economy.",
+    "133": "Average salaries rose 4.2% but inflation at 4.3% erodes purchasing power — directly affects cost of living.",
+    "284": "Santander opens ERE negotiations for its tech subsidiaries SDS and Gravity, affecting around 13,000 jobs worldwide.",
+    "292": "Pensioners living abroad must complete a proof-of-life form before September 30 or risk losing their pension.",
+    "274": "Former interns can now buy back up to five years of social security contributions via a special agreement — boosts future pensions.",
+    "135": "New capacity market auctions will pass backup energy costs to consumers — expect higher electricity bills.",
+    "296": "Moeve breaks ground on a 300 MW green hydrogen plant in Huelva — a positive investment and job creation story.",
+    "30": "Crime in Spain rose 0.5% in the first half, with sexual offenses up 4% and drug trafficking up 8.3% — safety concerns.",
+    "150": "Spain accounts for 44% of all EU land burned this year, with 296,815 hectares destroyed — a national-scale environmental issue."
+  }
+}
