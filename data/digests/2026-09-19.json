@@ -1,0 +1,194 @@
+{
+  "items": [
+    {
+      "title": "Spain builds half the homes its new households need",
+      "body": "Spain creates between 220,000 and 230,000 new households every year but builds just over 100,000 homes, economist Jordi Llatzer says. The mismatch keeps housing supply short and prices under pressure, driven by population growth, young people leaving home, and family separations. Construction also faces skilled labor shortages, higher material costs, and stricter technical requirements.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-09-18/jordi-experto-en-economia_4424960/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Marbella approves new urban plan, expands buildable land",
+      "body": "Marbella approved its first general urban plan under Andalusia's territorial law, increasing urban land by 13 million square meters. PP, Vox, and Opción Sanpedreña voted in favor; PSOE abstained. The plan allows hotel development on common rural land and replaces the 1986 PGOU, which was reinstated after a Supreme Court ruling 11 years ago.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/andalucia/malaga/marbella-promete-pasar-pagina-urbanismo-ochentero-ofreciendo-suelo-facilidades-construir_1_13521155.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Agricultural diesel surge pushes Spanish farm costs to record",
+      "body": "Agricultural diesel now averages €1.405 per liter; a 300-liter tractor tank costs €421.50 to fill. Farmers call the surge devastating and demand that subsidies expiring on September 30 be maintained. The Iran conflict is inflating energy prices, likely pushing food costs higher.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/aragon/agro/400-euros-llenar-deposito-tractor-gasoleo-agricola-dispara-costes-campo-espanol_1_13519586.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "INE revises GDP: 2024 stronger, 2025 growth cut to 2.6%",
+      "body": "Spain's INE revised annual GDP figures, raising 2024 growth to 3.7% and lowering 2025 growth to 2.6%. The 2023 growth estimate was trimmed to 2.4%. The revision covers years marked by inflation, EU funds, defense investment, and the US trade conflict.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ine-aflora-6-500-millones-pib-rebaja-crecimiento-2025-2-6_1_13519746.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Pensions to rise over 3% in 2027 as inflation accelerates",
+      "body": "Spain's contributory pensions are on track for a revaluation above 3% in 2027, up from 2.7% in 2026. August CPI hit 4.3%, the first reading above 4% in three years, and BBVA Research's chief economist expects September inflation to reach 4.8%. Higher energy prices are driving the increase.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/09/19/miguel-cardos-pensiones-septiembre-inflacion-acelere-2027-2052519.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Ceuta migrant crisis deepens as abuse probe opens",
+      "body": "Spain's attempt to clear Ceuta's beaches failed as migrants remained, and experts now estimate up to 20,000 irregular migrants in the enclave. Separately, the prosecutor for minors opened an investigation into alleged physical and psychological abuse at a center for migrant girls, including reports of violence and restricted healthcare access.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/09/18/6aad8b1721efa03b4f8b45b8.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/fiscalia-investiga-presuntos-casos-malos-tratos-centro-acogida-ninas-migrantes-ceuta_1_13522288.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Spain leads the world in life expectancy after adding 40 years",
+      "body": "Spain's life expectancy has risen by more than 40 years over the last century, making Mediterranean Europe a global longevity leader. The gains were interrupted only by the 1918 flu, the Spanish Civil War and post-war period, and COVID-19. Europe has the highest life expectancy, while Africa and parts of Asia rank lowest.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/radiografia-esperanza-vida-espana-asaltado-liderazgo-mundial-anadir-40-anos-ultimo-siglo_1_13402341.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Private-label brands now over half of Spain's shopping basket",
+      "body": "Private-label products now represent 53.8% of purchase volume in Spain, the fastest growth in Europe. Consumers save an estimated €2,400 per year as 69.2% fill half or more of their baskets with store brands. Aldi cut private-label prices by 2% while the market average rose 1.9%.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-09-19/cesta-compra-marca-propia-aldi-bra_4401861/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "EU rule brings bottle deposit charges to Spanish bars",
+      "body": "A new EU packaging regulation brings deposit, return, and refund systems to Spanish bars, restaurants, and supermarkets. Consumers will pay a refundable deposit of about 10 cents per bottle or can. The EU requires collection of at least 70% of these containers; Spain collected only 41.3% of single-use plastic bottles in 2023.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/gastronomia/2026/09/18/ya-oficial-bares-restaurantes-cobraran-suplemento-extra-botellas-debido-nueva-norma-gobierno-espana-2021183.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Mercosur-EU deal makes meat cheaper for Europeans",
+      "body": "Three months after the Mercosur-EU trade agreement took effect, meat is expected to become cheaper for European consumers. The pact eliminated 91% of tariffs on European exports and 92% on Mercosur exports on some products. Brazil, Argentina, Paraguay, and Uruguay are among the world's top ten meat exporters.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/los-efectos-pacto-entre-mercosur-ue-ya-impactan-carne-toda-cadena-nota-sera-mas-barata-para-los-europeos_7038466_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Foreign tourist spending in Spain jumps 9% on geopolitics, eclipse",
+      "body": "Foreign tourist card spending in Spain rose 8.8% between May and August, boosted by geopolitical tensions and the August eclipse, according to BBVA Research. International tourists accounted for 85% of total tourism spending in those months, and total tourist spending increased 5.7% year-on-year in the second quarter.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/las-tensiones-geopoliticas-eclipse-agosto-dispararon-un-9-gasto-los-turistas-extranjeros-espana-segun-bbva-research_7038377_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Sánchez announces new university requirements: more in-person classes, 50% doctors",
+      "body": "Pedro Sánchez announced that the government is preparing a royal decree requiring each university degree program to have 50% of professors with a doctorate. The rule tightens the current university-wide 50% requirement and will also require in-person classes where necessary.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/educacion-00468/noticia-sanchez-anuncia-nuevos-requisitos-universidades-exigira-mas-presencialidad-50-profesores-doctores-20260918122915.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "New wildcat species discovered in Bolivia after 100 years",
+      "body": "Scientists identified a new wild feline species, Leopardus tilcayo, in Bolivia's Yungas cloud forests. DNA analysis of museum specimens and live samples showed a group once considered one species is actually at least five species. The tilcayo cat measures about 46 cm and weighs about 1.4 kg, smaller than an average domestic cat.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/equipo-cientificos-encuentra-bolivia-tilcayo-primera-especie-felino-descubierta-100-anos_1_13519656.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "What's hurting your budget more in Spain right now: rent or food prices? 👇",
+  "variant": "Here's Spain today, in under a minute",
+  "headline": "Here's Spain today, in under a minute",
+  "date": "2026-09-19",
+  "generated_at": "2026-09-19T06:03:29.483683+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 274,
+    "items_selected_pass1": 14,
+    "fact_sheets_extracted": 14,
+    "items_after_importance_filter": 14,
+    "items_in_digest": 13
+  },
+  "selection_reasons": {
+    "2": "Ceuta migrant crisis escalates as thousands return to beaches after the government's transfer operation fails — key migration policy story.",
+    "30": "Prosecutors investigate alleged abuse in a Ceuta migrant minors center — systemic child protection issue.",
+    "41": "Spain now leads the world in life expectancy, a positive story relevant for retirees and residents.",
+    "52": "Soaring agricultural diesel prices push Spanish farmers toward protests — affects food costs and the rural economy.",
+    "75": "Marbella approves a new urban plan adding 13 million sqm of land — significant for property investors.",
+    "76": "Scientists discover the first new feline species in over 100 years — positive science news.",
+    "87": "INE revises Spain's GDP growth down to 2.6% for 2025 — key economic indicator.",
+    "104": "Private-label brands now account for 53.8% of grocery purchases in Spain — cost-of-living trend.",
+    "153": "Inflation is expected to accelerate to 4.8% by September, impacting pensions and living costs.",
+    "220": "New Spanish regulation requires bars and restaurants to charge extra for bottles under the deposit system — affects all consumers.",
+    "224": "Housing expert warns new home construction is half the rate of new household formation — explains the housing shortage.",
+    "233": "EU-Mercosur trade deal starts to lower meat prices in Europe — positive for consumers.",
+    "243": "Foreign tourist spending in Spain rises 8.8% — signals a strong economy and travel sector.",
+    "26": "Government announces new university requirements: 50% PhD professors and more in-person classes — affects students and academics."
+  }
+}
