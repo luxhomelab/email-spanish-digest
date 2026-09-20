@@ -159,14 +159,14 @@ html.iframe-page body { min-height: 100vh; }
 html.iframe-page .content { padding: 0; min-height: 0; display: block; }
 html.iframe-page .breadcrumbs { padding: 24px 24px 0 24px; }
 html.iframe-page .content iframe {
- width: 100%; height: 640px;
+ width: 100%; height: 540px;
  border: none; display: block;
 }
 body.page-unsubscribe iframe, html.iframe-page .page-unsubscribe iframe {
  height: 340px;
 }
 @media (max-width: 520px) {
- html.iframe-page .content iframe { height: 700px; }
+  html.iframe-page .content iframe { height: 640px; }
  body.page-unsubscribe iframe, html.iframe-page .page-unsubscribe iframe {
   height: 400px;
  }
@@ -1091,4 +1091,118 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 @media (max-width: 600px) {
  .about .pipeline-card .flow { flex-direction: column; }
  .about .flow-arrow { transform: rotate(90deg); align-self: center; }
+}
+
+/* ---------- Social proof: proof-strip ---------- */
+.proof-strip {
+ display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+ gap: 10px 18px;
+ padding: 16px 24px; margin: 0 auto 20px auto;
+ text-align: center;
+}
+.proof-text {
+ font-size: 15px; font-weight: 600; color: #3C4858;
+}
+.proof-badge {
+ display: inline-flex; align-items: center; gap: 7px;
+ font-size: 14px; font-weight: 600;
+ color: #3C4858; text-decoration: none;
+ background-color: #ffffff;
+ border: 1px solid #EFE7D8; border-radius: 999px;
+ padding: 7px 16px 7px 12px;
+ transition: border-color 0.15s, background-color 0.15s;
+}
+.proof-badge:hover {
+ border-color: #AA151B; background-color: #FFF8F8;
+}
+.proof-badge .proof-icon {
+ width: 18px; height: 18px; flex-shrink: 0;
+ fill: #AA151B;
+ transition: fill 0.15s;
+}
+.proof-badge:hover .proof-icon { fill: #8B1019; }
+.proof-badge .proof-num { font-weight: 700; color: #1A1A2E; }
+.proof-badge .proof-label { font-weight: 400; color: #6C7A89; font-size: 13px; }
+.proof-badge .nowrap { white-space: nowrap; }
+
+/* ---------- Social proof: homepage inline ---------- */
+.proof-inline {
+ font-size: 15px; color: #C0CCD9; margin-bottom: 20px; line-height: 1.6;
+}
+.proof-inline .proof-num { font-weight: 700; color: #ffffff; }
+.proof-inline .proof-label { color: #98A6B5; }
+
+/* ---------- Social proof: testimonials (Reddit comment style) ---------- */
+.testimonials {
+ max-width: 1100px; margin: 28px auto 0 auto; padding: 0 24px 40px 24px; text-align: center;
+}
+.testimonials h2 {
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 26px; font-weight: 700; color: #3C4858; letter-spacing: -0.3px;
+ margin-bottom: 8px;
+}
+.testimonials-sub {
+ font-size: 14px; color: #8A94A0; margin: 0 0 24px 0;
+}
+.testimonials-sub a { color: #8A94A0; font-weight: 600; }
+.testimonials-sub a:hover { color: #AA151B; }
+.testimonials-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 20px;
+ align-items: stretch;
+}
+
+/* — Card shell — */
+.t-card {
+ background-color: #ffffff;
+ border: 1px solid #DAE0E6; border-radius: 8px;
+ padding: 14px 16px 12px 16px;
+ text-align: left;
+ display: flex; flex-direction: column;
+}
+
+/* — Header row: avatar + username + time — */
+.t-header {
+ display: flex; align-items: center; gap: 8px;
+ margin-bottom: 10px;
+}
+.t-avatar {
+ width: 32px; height: 32px; border-radius: 50%;
+ object-fit: cover; flex: none;
+ border: 1px solid #DAE0E6;
+}
+.t-username a {
+ color: #3C4858; text-decoration: none; font-weight: 700;
+ font-size: 13px;
+}
+.t-username a:hover { color: #AA151B; text-decoration: underline; }
+
+/* — Body: quote as normal comment text — */
+.t-quote {
+ font-size: 14px; line-height: 1.55; color: #3C4858;
+ margin: 0 0 12px 0;
+ flex: 1 1 auto;
+}
+
+/* — Meta row: subreddit, view link — */
+.t-meta {
+ display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px;
+ padding-top: 10px;
+ border-top: 1px solid #EDeff1;
+ margin-top: auto; flex-shrink: 0;
+ font-size: 12px; color: #8A94A0;
+}
+.t-subreddit {
+ color: #8A94A0; text-decoration: none; font-weight: 600;
+}
+.t-subreddit:hover { color: #AA151B; text-decoration: underline; }
+.t-view-link {
+ color: #8A94A0; text-decoration: none; margin-left: auto;
+}
+.t-view-link:hover { color: #AA151B; text-decoration: underline; }
+
+@media (max-width: 520px) {
+ .testimonials-grid { grid-template-columns: 1fr; }
+ .proof-strip { flex-direction: column; gap: 8px; }
 }

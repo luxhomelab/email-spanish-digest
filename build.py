@@ -237,6 +237,33 @@ def pagination(page, total_pages):
     }
 
 
+def load_social_stats():
+    """Load social stats from data/social_stats.json with safe defaults."""
+    try:
+        path = os.path.join(SCRIPT_DIR, "data", "social_stats.json")
+        with open(path, encoding="utf-8") as fh:
+            return json.load(fh)
+    except (OSError, json.JSONDecodeError):
+        return {"threads_followers": 4100, "reddit_members": 1000}
+
+
+def load_testimonials():
+    """Load testimonials from data/testimonials.json.
+
+    Avatar files live in static/img/avatars/ and are wired into the
+    template directly via ``avatar_url``.
+    """
+    try:
+        path = os.path.join(SCRIPT_DIR, "data", "testimonials.json")
+        with open(path, encoding="utf-8") as fh:
+            testimonials = json.load(fh)
+    except (OSError, json.JSONDecodeError):
+        return []
+    for t in testimonials:
+        t["avatar_url"] = f"/static/img/avatars/{t.get('avatar')}"
+    return testimonials
+
+
 FAQ_ITEMS = [
     ("What is Spanified?", "Spanified is a free newsletter that summarizes the most important news from Spain in plain English — rents, taxes, visas, jobs and everyday life."),
     ("How often does the digest arrive?", "Every morning, seven days a week. Five minutes with your coffee and you're up to speed."),
@@ -281,12 +308,33 @@ def render_static(env, digests):
         {"emoji": emoji, "name": category.capitalize(), "slug": category.lower()}
         for category, emoji in CATEGORY_EMOJI.items()
     ]
+
+    # --- social proof -------------------------------------------------------
+    social = load_social_stats()
+    testimonials = load_testimonials()
+    total_issues = len(digests)
+    if digests:
+        first_issue = format_date(digests[-1]["date"])
+    else:
+        first_issue = ""
+    threads_n = social.get("threads_followers", 4100)
+    reddit_n = social.get("reddit_members", 1000)
+    proof = {
+        "total_issues": total_issues,
+        "first_issue": first_issue,
+        "threads": threads_n,
+        "reddit": reddit_n,
+        "threads_display": f"{threads_n:,}",
+        "reddit_display": f"{reddit_n:,}",
+        "testimonials": testimonials,
+    }
+
     contexts = {
-        "index.html": {"latest": latest, "topics": topics, "emoji": CATEGORY_EMOJI, "faq": FAQ_ITEMS},
+        "index.html": {"latest": latest, "topics": topics, "emoji": CATEGORY_EMOJI, "faq": FAQ_ITEMS, "proof": proof},
         "about.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "About", "url": "/about", "current": True}]},
         "contact.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Contact", "url": "/contact", "current": True}]},
         "editor.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Editor", "url": "/editor", "current": True}]},
-        "subscribe.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Subscribe", "url": "/subscribe", "current": True}]},
+        "subscribe.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Subscribe", "url": "/subscribe", "current": True}], "proof": proof},
         "unsubscribe.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Unsubscribe", "url": "/unsubscribe", "current": True}]},
         "confirm.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Confirm", "url": "/confirm", "current": True}]},
         "search.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Search", "url": "/search", "current": True}]},

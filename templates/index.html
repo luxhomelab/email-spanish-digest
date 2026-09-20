@@ -90,9 +90,12 @@
 
   <div class="cta-card">
    <h2>Ready to stay in the loop?</h2>
+    <p class="proof-inline">Daily since {{ proof.first_issue }} · {{ proof.total_issues }} issues · <strong class="proof-num"><span data-live="reddit">{{ proof.reddit_display }}</span></strong>&nbsp;<span class="proof-label">on Reddit</span> · <strong class="proof-num">{{ proof.threads_display }}</strong>&nbsp;<span class="proof-label">on Threads</span></p>
    <p>Join hundreds of readers who start their day with Spain Daily.</p>
    <a href="/subscribe" class="cta-button">Subscribe — It's Free</a>
   </div>
+
+  {% include "partials/testimonials.html" %}
 
   <div class="card">
    <h2>Follow along</h2>
@@ -116,5 +119,6 @@
    No spam, ever. Unsubscribe anytime in one click.<br>
    This digest is based on real news, created with the help of AI and reviewed by a human.
   </p>
+  <script src="/static/js/social-proof.js?v={{ asset_version }}" defer></script>
  </div>
 {% endblock %}

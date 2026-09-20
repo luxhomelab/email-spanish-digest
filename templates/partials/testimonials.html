@@ -1,0 +1,21 @@
+{% if proof.testimonials %}
+<section class="testimonials">
+ <h2>Loved by readers</h2>
+ <p class="testimonials-sub">Real comments from <a href="https://www.reddit.com/r/SpainDaily/" target="_blank" rel="noopener">r/SpainDaily</a> — quoted word for word</p>
+ <div class="testimonials-grid">
+  {% for t in proof.testimonials %}
+  <div class="t-card">
+   <div class="t-header">
+     <img class="t-avatar" src="{{ t.avatar_url }}?v={{ asset_version }}" alt="{{ t.author }} avatar" loading="lazy" width="32" height="32">
+     <span class="t-username"><a href="{{ t.url | default('https://www.reddit.com/r/SpainDaily/', true) }}" target="_blank" rel="noopener">{{ t.author }}</a></span>
+   </div>
+   <p class="t-quote">{{ t.quote }}</p>
+    <div class="t-meta">
+     <a href="https://www.reddit.com/r/SpainDaily/" target="_blank" rel="noopener" class="t-subreddit">{{ t.source }}</a>
+    <a href="{{ t.url | default('https://www.reddit.com/r/SpainDaily/', true) }}" target="_blank" rel="noopener" class="t-view-link">View on Reddit ↗</a>
+   </div>
+  </div>
+  {% endfor %}
+ </div>
+</section>
+{% endif %}
