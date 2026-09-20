@@ -251,8 +251,7 @@ def load_testimonials():
     """Load testimonials from data/testimonials.json with safe defaults.
 
     Attaches ``avatar_url`` when the avatar file already exists under
-    static/img/avatars/ (fetched by scripts/fetch_avatars.py or added
-    manually); otherwise the template renders an initial-letter fallback.
+    static/img/avatars/; otherwise the template renders an initial-letter fallback.
     """
     try:
         path = os.path.join(SCRIPT_DIR, "data", "testimonials.json")
