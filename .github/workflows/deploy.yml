@@ -23,6 +23,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install jinja2 pillow
+      - run: python3 scripts/fetch_avatars.py || echo "avatar fetch failed, continuing with fallbacks"
       - run: python3 build.py --out dist
       - run: npx --yes pagefind --site dist
       - uses: actions/upload-pages-artifact@v3
