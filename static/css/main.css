@@ -1172,15 +1172,6 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
  object-fit: cover; flex: none;
  border: 1px solid #DAE0E6;
 }
-.t-avatar-fallback {
- display: inline-flex; align-items: center; justify-content: center;
- width: 32px; height: 32px; border-radius: 50%; flex: none;
- background: linear-gradient(145deg, #F5F0E8 0%, #EFE7D8 100%);
- color: #AA151B; font-weight: 700; font-size: 14px;
- border: 1px solid #DAE0E6;
- letter-spacing: 0.5px;
- font-family: Roboto, Helvetica, sans-serif;
-}
 .t-username a {
  color: #3C4858; text-decoration: none; font-weight: 700;
  font-size: 13px;

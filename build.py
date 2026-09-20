@@ -248,10 +248,10 @@ def load_social_stats():
 
 
 def load_testimonials():
-    """Load testimonials from data/testimonials.json with safe defaults.
+    """Load testimonials from data/testimonials.json.
 
-    Attaches ``avatar_url`` when the avatar file already exists under
-    static/img/avatars/; otherwise the template renders an initial-letter fallback.
+    Avatar files live in static/img/avatars/ and are wired into the
+    template directly via ``avatar_url``.
     """
     try:
         path = os.path.join(SCRIPT_DIR, "data", "testimonials.json")
@@ -259,13 +259,8 @@ def load_testimonials():
             testimonials = json.load(fh)
     except (OSError, json.JSONDecodeError):
         return []
-    avatar_dir = os.path.join(SCRIPT_DIR, "static", "img", "avatars")
     for t in testimonials:
-        filename = t.get("avatar")
-        if filename and os.path.exists(os.path.join(avatar_dir, filename)):
-            t["avatar_url"] = f"/static/img/avatars/{filename}"
-        else:
-            t["avatar_url"] = None
+        t["avatar_url"] = f"/static/img/avatars/{t.get('avatar')}"
     return testimonials
 
 

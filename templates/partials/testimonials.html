@@ -6,7 +6,7 @@
   {% for t in proof.testimonials %}
   <div class="t-card">
    <div class="t-header">
-    {% if t.avatar_url %}<img class="t-avatar" src="{{ t.avatar_url }}?v={{ asset_version }}" alt="{{ t.author }} avatar" loading="lazy" width="32" height="32">{% else %}<span class="t-avatar t-avatar-fallback" aria-hidden="true">{{ t.author[2] | upper }}</span>{% endif %}
+     <img class="t-avatar" src="{{ t.avatar_url }}?v={{ asset_version }}" alt="{{ t.author }} avatar" loading="lazy" width="32" height="32">
      <span class="t-username"><a href="{{ t.url | default('https://www.reddit.com/r/SpainDaily/', true) }}" target="_blank" rel="noopener">{{ t.author }}</a></span>
    </div>
    <p class="t-quote">{{ t.quote }}</p>
