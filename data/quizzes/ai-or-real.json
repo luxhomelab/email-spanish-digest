@@ -1,0 +1,558 @@
+{
+  "slug": "ai-or-real",
+  "title": "AI or Real? — Can you spot fake Spain news?",
+  "questions": [
+    {
+      "id": "r1",
+      "headline": "Spanish Town Mailed Dog Poop Back to Careless Owners",
+      "summary": "The town of Brunete near Madrid hired volunteers to watch owners who skipped scooping. They chatted up culprits to learn the dog's name, matched it to the pet registry, then couriered the mess home in a box marked Lost Property. Violations reportedly dropped by seventy percent after 147 deliveries.",
+      "isReal": true,
+      "explanation": "Sounds like a prank, but Brunete really boxed poop as 'lost property' to shame owners.",
+      "source": "HuffPost, 2013",
+      "source_url": "https://www.huffpost.com/entry/town-mails-dog-poop-spain_n_3390191"
+    },
+    {
+      "id": "r2",
+      "headline": "Malaga DNA-Tests Dog Poop to Fine Owners Who Skip Scooping",
+      "summary": "Malaga requires dogs to be registered with a DNA profile so street samples can be matched to owners. Technicians swab droppings found on sidewalks and cross-check the lab results with the municipal database. Offenders face fines of up to five hundred euros under the cleanliness campaign.",
+      "isReal": true,
+      "explanation": "It sounds like CSI parody, yet Malaga really built a canine DNA census to trace droppings.",
+      "source": "Sur in English, 2025",
+      "source_url": "https://www.surinenglish.com/malaga/axarquia/rincon-fines-pet-owners-for-not-picking-20250620080334-nt.html"
+    },
+    {
+      "id": "r3",
+      "headline": "1,200 Sheep Shut Down Central Madrid in Ancient Rights Parade",
+      "summary": "Shepherds lead more than a thousand Merino sheep plus goats through Puerta del Sol and Plaza Mayor during the Transhumance Festival. The event defends medieval grazing routes that legally cross the capital. Organizers even pay City Hall fifty medieval maravedis coins for passage, honoring a 1418 agreement.",
+      "isReal": true,
+      "explanation": "It reads like a traffic-hoax meme, but Madrid really halts cars for a sheep parade each October.",
+      "source": "AP, 2025",
+      "source_url": "https://apnews.com/article/spain-climate-change-sheep-madrid-festival-09a45dcdacece508efec5f00f5eaadc2"
+    },
+    {
+      "id": "r4",
+      "headline": "22,000 People Hurled 150 Tonnes of Tomatoes in Bunol",
+      "summary": "La Tomatina packs a town of nine thousand with over twenty thousand ticketed throwers for a one-hour battle. Seven trucks unload specially grown, inedible pear tomatoes onto the streets. Fire crews then hose the town clean, and the tomato acid famously leaves some facades cleaner than before.",
+      "isReal": true,
+      "explanation": "One hour, 150 tonnes of tomatoes sounds invented, yet Bunol does exactly that every August.",
+      "source": "El Pais, 2024",
+      "source_url": "https://english.elpais.com/spain/2024-08-28/all-set-for-la-tomatina-2024-22000-people-descend-on-bunol-to-pelt-each-other-with-150000-tomatoes.html"
+    },
+    {
+      "id": "r5",
+      "headline": "Men in Devil Suits Jump Over Babies to Cleanse Their Sins",
+      "summary": "In Castrillo de Murcia, costumed Colachos chase onlookers with whips before leaping over mattresses lined with babies born that year. The jump symbolically absorbs original sin and protects infants from illness. Parents then reclaim the babies, who are sprinkled with rose petals. No injuries have been reported.",
+      "isReal": true,
+      "explanation": "Devils hurdling newborns sounds fake, but this Burgos village has done it since the 1620s.",
+      "source": "Guardian, 2023",
+      "source_url": "https://www.theguardian.com/world/2023/jul/15/leaps-of-faith-the-spanish-festival-where-men-jump-over-babies"
+    },
+    {
+      "id": "r6",
+      "headline": "Barcelona Locals Sprayed Tourists With Water Pistols in Protest",
+      "summary": "About twenty-eight hundred demonstrators marched through Las Ramblas chanting tourists go home during an anti-overtourism protest. Some squirted diners on restaurant terraces and taped off hotel entrances. Organizers demanded limits on visitors, citing housing costs, while the mayor pledged to phase out holiday-apartment licenses.",
+      "isReal": true,
+      "explanation": "Water pistols at tourists sounds like satire, yet Barcelona protesters really did it in 2024.",
+      "source": "CNN, 2024",
+      "source_url": "https://www.cnn.com/2024/07/08/travel/barcelona-tourism-protests-scli-intl"
+    },
+    {
+      "id": "r7",
+      "headline": "Vigo Threatens Beachgoers With 750-Euro Fine for Peeing in Sea",
+      "summary": "Vigo classified physiological evacuation on the beach or in the sea as a minor hygiene infraction punishable by up to seven hundred fifty euros. The city promised more public toilets rather than swim patrols. Officials admitted enforcement is tricky and said the goal is awareness, not lifeguards testing water.",
+      "isReal": true,
+      "explanation": "A fine for peeing in the ocean sounds unenforceable, but Vigo actually wrote it into law.",
+      "source": "Guardian, 2024",
+      "source_url": "https://www.theguardian.com/world/article/2024/jul/04/costa-del-sol-resort-marbella-votes-to-fine-people-who-pee-in-the-sea"
+    },
+    {
+      "id": "r8",
+      "headline": "Worker Skipped Work for Six Years, Caught Only by Service Award",
+      "summary": "Joaquin Garcia, a water-utility supervisor in Cadiz, stopped showing up while still collecting about thirty-seven thousand euros a year. Managers opposite his office assumed he was elsewhere. His absence surfaced only when he qualified for a twenty-year loyalty plaque, and a court ordered him to repay nearly twenty-seven thousand euros.",
+      "isReal": true,
+      "explanation": "Six years of invisible absenteeism sounds impossible, yet a Cadiz court confirmed it in 2016.",
+      "source": "BBC, 2016",
+      "source_url": "https://www.bbc.com/news/world-europe-35557725"
+    },
+    {
+      "id": "r9",
+      "headline": "Catalan Kids Beat a Log Until It Poops Out Christmas Presents",
+      "summary": "Families keep a smiling hollow log called Caga Tio, feed it scraps from early December, then cover it with a blanket on Christmas Eve. Children sing songs and whack it with sticks while adults secretly slip gifts underneath. The log finally excretes nougats, toys, and sweets for delighted kids.",
+      "isReal": true,
+      "explanation": "Beating a log until it defecates gifts sounds made up, but Catalan kids do it each Christmas.",
+      "source": "ABC News, 2022",
+      "source_url": "https://www.abc.net.au/news/2022-12-25/strange-christmas-traditions-yule-krampus-poo-log-tio-de-nadal/101787054"
+    },
+    {
+      "id": "r10",
+      "headline": "Spanish Nativity Scenes Hide a Pooping Farmer for Good Luck",
+      "summary": "The Caganer is a figurine of a peasant caught mid-poop, tucked behind the manger in Catalan Christmas cribs. Tradition says his fertilizing deposit brings prosperity for the new year. Modern versions depict celebrities and footballers, and finding him is a beloved holiday game for children.",
+      "isReal": true,
+      "explanation": "A pooping farmer in the Nativity sounds disrespectful, yet Catalans proudly hide one every year.",
+      "source": "Guardian, 2023",
+      "source_url": "https://www.theguardian.com/world/gallery/2023/dec/22/pooping-christmas-caganer-figurines-of-catalonia"
+    },
+    {
+      "id": "r11",
+      "headline": "Town Held a Mock Funeral for a Tomato to Save Its Fiesta",
+      "summary": "After authorities banned La Tomatina in the nineteen fifties for lacking religious significance, locals protested in 1957 with a full funeral procession. Mourners carried a coffin holding one giant tomato while a band played funeral marches. The surreal stunt worked, and officials permitted the tomato battle again.",
+      "isReal": true,
+      "explanation": "A funeral for a tomato sounds like comedy, but Bunol really staged one to save its festival.",
+      "source": "BBC, 2024",
+      "source_url": "https://www.bbc.co.uk/programmes/articles/2wykvJT2qyxV3y41tFM6xrl/la-tomatina-festival"
+    },
+    {
+      "id": "r12",
+      "headline": "Spanish Town Stages a Flour Coup With Eggs and Firecrackers",
+      "summary": "In Ibi, Alicante, the Els Enfarinats festival sees rebels in mock military dress seize the town hall in a mock coup. They levy absurd fines payable on the spot, then battle the opposition with one hundred sacks of flour, thousands of eggs, and firecrackers. Collected money goes to local charities.",
+      "isReal": true,
+      "explanation": "A flour coup with live chickens sounds staged, yet Ibi reenacts it every December.",
+      "source": "BBC, 2010",
+      "source_url": "https://www.bbc.com/news/av/world-europe-12087635"
+    },
+    {
+      "id": "r13",
+      "headline": "Valencia Burns Giant Sculptures Worth Millions Every March",
+      "summary": "Las Fallas fills Valencia with towering ninots, satirical wood-and-papier-mache sculptures sometimes several stories tall. After days of parades, fireworks, and flower offerings, all but one pardoned figure are torched on March nineteenth. The UNESCO-listed ritual symbolizes renewal, and fire crews hose nearby balconies during the inferno.",
+      "isReal": true,
+      "explanation": "Burning million-euro art after four days sounds wasteful, but Valencia plans it all year.",
+      "source": "AP, 2025",
+      "source_url": "https://apnews.com/article/fallas-burning-sculptures-floods-valencia-spain-a9688ef31f20c2acc5e0b2aa03bec933"
+    },
+    {
+      "id": "r14",
+      "headline": "Spaniards Build Ten-Story Human Towers Topped by Small Children",
+      "summary": "Castellers in Catalonia and Valencia stack hundreds of people into soaring human castles, with the lightest young climbers crowning the top and raising a hand. Teams train year-round for balance, strength, and technique. The UNESCO-recognized tradition draws festival crowds and requires helmets for the youngest enxanetas.",
+      "isReal": true,
+      "explanation": "Ten-story human towers with toddlers on top sound CGI, yet Catalans build them weekly.",
+      "source": "Catalan News, 2022",
+      "source_url": "https://www.catalannews.com/life-style/item/worlds-largest-human-towers-gathering-underway-with-10-tier-constructions"
+    },
+    {
+      "id": "r15",
+      "headline": "Thousands Sprint Ahead of Bulls Through Pamplona's Old Town",
+      "summary": "Each July morning during San Fermin, six fighting bulls plus steers charge eight hundred forty-nine meters to the bullring while runners in white and red dash ahead. The run lasts about three minutes but draws global thrill-seekers. City medics treat gorings, falls, and pileups at the narrow Estafeta curve.",
+      "isReal": true,
+      "explanation": "Outrunning half-ton bulls through old streets sounds suicidal, yet Pamplona sells out for it yearly.",
+      "source": "El Pais, 2024",
+      "source_url": "https://english.elpais.com/international/2024-07-08/falls-and-frazzled-nerves-as-pamplona-celebrates-its-annual-san-fermin-festival.html"
+    },
+    {
+      "id": "r16",
+      "headline": "Sagrada Familia Stood 137 Years Without a Building Permit",
+      "summary": "Gaudi's basilica began in 1882 and welcomed millions yearly while technically lacking a municipal construction license. In 2019 the city finally regularized it, with the church agreeing to pay thirty-six million euros over a decade. Funds support transit, street cleaning, and accessibility around the unfinished masterpiece.",
+      "isReal": true,
+      "explanation": "A world-famous basilica without a building permit sounds absurd, but Barcelona admitted it in 2019.",
+      "source": "Catalan News, 2019",
+      "source_url": "https://www.catalannews.com/life-style/item/sagrada-familia-finally-gets-building-permit-134-years-since-applying"
+    },
+    {
+      "id": "r17",
+      "headline": "Madrid Restaurant Has Served Roast Suckling Pig Since 1725",
+      "summary": "Sobrino de Botin near Plaza Mayor holds the record as the world's oldest continuously operating restaurant. Its wood-fired oven has supposedly never gone out for three centuries. Hemingway drank there and set scenes in The Sun Also Rises, and diners still queue for cochinillo and lamb.",
+      "isReal": true,
+      "explanation": "A restaurant operating since before Mozart sounds legendary, yet Botin keeps its original fire.",
+      "source": "Guinness World Records, 2023",
+      "source_url": "https://www.guinnessworldrecords.com/world-records/76907-oldest-restaurant"
+    },
+    {
+      "id": "r18",
+      "headline": "Seville Collects 5 Million Kilos of Oranges Too Bitter to Eat",
+      "summary": "Seville's fifty thousand bitter-orange trees perfume spring streets but produce inedible fruit. Each winter crews harvest thousands of tonnes to avoid slippery sidewalks. Much becomes British marmalade, compost, or liquor, while pilot projects convert peel methane into electricity for the water utility.",
+      "isReal": true,
+      "explanation": "Five million kilos of useless oranges sounds like failure, but Seville turns bitterness into profit.",
+      "source": "Guardian, 2021",
+      "source_url": "https://www.theguardian.com/environment/2021/feb/23/how-seville-is-turning-leftover-oranges-into-electricity"
+    },
+    {
+      "id": "r19",
+      "headline": "Seville Proposed an Entry Fee Just to Visit Its Famous Plaza",
+      "summary": "Mayor Jose Luis Sanz said Plaza de Espana's tiled alcoves and canal draw millions daily, straining ceramics and security budgets. He proposed ticketing tourists while keeping entry free for residents. The plan followed Venice-style overtourism debates and complaints about street vendors, portrait sellers, and horse carriages.",
+      "isReal": true,
+      "explanation": "Charging to enter an open plaza sounds greedy, yet Seville proposed it to curb crowds.",
+      "source": "Guardian, 2024",
+      "source_url": "https://www.theguardian.com/world/2024/feb/26/seville-to-charge-tourists-to-visit-plaza-de-espana-to-limit-numbers"
+    },
+    {
+      "id": "r20",
+      "headline": "Mallorca Fines Tourists Thousands for Jumping Off Hotel Balconies",
+      "summary": "The Balearic Islands outlawed balconing, leaping between balconies or into pools, after fatal falls linked to party tourism. Offenders and hotels that allow dangerous behavior face fines up to tens of thousands of euros. All-inclusive deals also face drink caps in Magaluf, Playa de Palma, and San Antonio.",
+      "isReal": true,
+      "explanation": "Fining tourists for balcony jumps sounds specific because Mallorca had to stop deaths.",
+      "source": "Independent, 2020",
+      "source_url": "https://www.independent.co.uk/travel/news-and-advice/mallorca-majorca-ibiza-alcohol-restrictions-all-inclusive-ban-party-boats-bar-crawls-a9351151.html"
+    },
+    {
+      "id": "r21",
+      "headline": "Village Once Threw a Goat From a Church Tower, Now Tosses Plush",
+      "summary": "Manganeses de la Polvorosa once marked January by dropping a live goat from the church tower into a sheet held below. Animal-rights pressure ended the rite in 2002. The town now parades and tosses a plush goat, keeping the fiesta, music, and crowds without risking any animal.",
+      "isReal": true,
+      "explanation": "Hurling a live goat from a belfry sounds medieval because it was, until Spain banned it.",
+      "source": "BBC, 2000",
+      "source_url": "http://news.bbc.co.uk/2/hi/europe/616507.stm"
+    },
+    {
+      "id": "r22",
+      "headline": "Saharan Dust Once Turned Spanish Skies Neon Orange Overnight",
+      "summary": "A massive calima carried Saharan sand over the peninsula in March twenty twenty-two, tinting Madrid, Andalusia, and the southeast eerie orange. Air-quality alerts warned asthmatics to stay inside while cars, balconies, and ski slopes caked in red mud. Satellite images showed the plume stretching from Africa to France.",
+      "isReal": true,
+      "explanation": "Orange snow days sound filtered, but Saharan dust genuinely dyes Spanish skies neon.",
+      "source": "Euronews, 2022",
+      "source_url": "https://www.euronews.com/2022/03/16/dust-from-the-sahara-desert-turns-skies-in-spain-orange"
+    },
+    {
+      "id": "r23",
+      "headline": "Wild Boars Now Roam Barcelona Suburbs and Raid Trash Bins",
+      "summary": "Drought and nearby hills push hungry javelinas into Sarria, Vallvidrera, and even beach promenades after dark. Residents film them trotting through roundabouts, tipping bins, and startling dog walkers. The city uses fenced corridors, sterilization, and night captures while warning people never to feed them.",
+      "isReal": true,
+      "explanation": "Boars mugging joggers sounds like a cartoon, yet Collserola boars stroll Barcelona suburbs nightly.",
+      "source": "Guardian, 2021",
+      "source_url": "https://www.theguardian.com/music/2021/sep/30/shakira-wild-boars-attacked-her-barcelona-park"
+    },
+    {
+      "id": "r24",
+      "headline": "Madrid Ordered a Cull of Thousands of Screeching Green Parakeets",
+      "summary": "Argentine monk parakeets colonized Retiro and Casa de Campo, building huge communal nests that toppled branches and evicted sparrows. The city estimated twelve thousand birds and approved nest removal plus sterilization costing millions. Officials cited noise, droppings, crop damage, and hazards to native biodiversity.",
+      "isReal": true,
+      "explanation": "Declaring war on parakeets sounds petty, but Madrid culled thousands of noisy invaders.",
+      "source": "Guardian, 2019",
+      "source_url": "https://www.theguardian.com/world/2019/oct/08/madrid-to-begin-humane-slaughter-of-parakeets"
+    },
+    {
+      "id": "r25",
+      "headline": "Spain's Christmas Lottery Pays Billions in a Single Morning Show",
+      "summary": "El Gordo de Navidad spreads thousands of prizes totaling about two point six billion euros, with the top number paying four million per full ticket. Schoolchildren sing each winning number live for hours on December twenty-second. Friends, offices, and whole villages traditionally split shared decimos.",
+      "isReal": true,
+      "explanation": "One lottery paying two billion euros before lunch sounds fake, but El Gordo does it.",
+      "source": "El Pais, 2023",
+      "source_url": "https://english.elpais.com/spain/2023-12-22/spains-huge-christmas-lottery-el-gordo-showers-winners-with-millions-in-prize-money.html"
+    },
+    {
+      "id": "r26",
+      "headline": "Dying Village Pays Families 3,000 Euros for Each Baby Born",
+      "summary": "Ponga in Asturias, with only a few hundred residents scattered across mountain hamlets, offers three thousand euros per newborn plus more after three years if the family stays. The council hopes young remote workers will repopulate empty schools. Applicants must register locally and live there full time.",
+      "isReal": true,
+      "explanation": "Paying couples to have babies sounds desperate, but tiny Ponga really offers cash per child.",
+      "source": "Time Out, 2023",
+      "source_url": "https://www.timeout.com/news/these-spanish-towns-will-pay-you-thousands-to-move-there-040523"
+    },
+    {
+      "id": "r27",
+      "headline": "Spain Installed Vending Machines That Dispense Whole Cured Hams",
+      "summary": "Artisans and rural shops placed refrigerated dispensers selling vacuum-packed jamon, cheese, and chorizo around the clock. The machines helped producers reach customers during lockdowns and depopulated-area store closures. Shoppers pick a size, pay by card, and collect a whole leg ready for slicing.",
+      "isReal": true,
+      "explanation": "Ham from a vending machine sounds like a joke, yet Spain installed them for emergencies.",
+      "source": "Vending Times, 2023",
+      "source_url": "https://www.vendingtimes.com/news/spain-ham-brand-deploys-digital-vending-machines-at-barcelona-airport"
+    },
+    {
+      "id": "r28",
+      "headline": "Spanish Beach Bans Saving Spots by Leaving Towels at Dawn",
+      "summary": "San Pedro del Pinatar outlawed reserving sand with towels, chairs, or umbrellas left unattended before swimmers arrive. Police can remove items and fine offenders for blocking public access and cleaning crews. The rule sits beside bans on nudity outside zones, ball games near crowds, and shoreline barbecues.",
+      "isReal": true,
+      "explanation": "A beach ban on towels sounds tyrannical, but one town fines dawn towel-reservers.",
+      "source": "Independent, 2024",
+      "source_url": "https://www.independent.co.uk/travel/news-and-advice/sunbed-wars-spain-eu250-fine-b2582560.html"
+    },
+    {
+      "id": "r29",
+      "headline": "Magaluf Banned Happy Hours and Street Drinking to Tame Party Chaos",
+      "summary": "Balearic anti-excess rules prohibit happy hours, two-for-one offers, pub crawls, and off-shop alcohol sales at night in Magaluf, Playa de Palma, and parts of Ibiza. Fines reach thousands of euros for street drinking or insulting residents. Hotels must also remove self-serve alcohol dispensers.",
+      "isReal": true,
+      "explanation": "All-inclusive party bans sound puritanical, yet Magaluf capped drinks to tame chaos.",
+      "source": "Euronews, 2024",
+      "source_url": "https://www.euronews.com/travel/2024/05/13/no-more-sun-sex-and-sangria-tourism-in-ibiza-and-mallorca-under-new-alcohol-laws"
+    },
+    {
+      "id": "r30",
+      "headline": "Spanish Town Voted to Drop Its Name Meaning Kill Jews",
+      "summary": "Castrillo Matajudios near Burgos dated to the sixteen hundreds and likely recorded a pogrom-era slur. Residents voted to become Castrillo Mota de Judios, or Jews Hill Camp, honoring a medieval Jewish community. The council cited dignity and historical accuracy after regional approval and a public referendum.",
+      "isReal": true,
+      "explanation": "A town literally named Kill Jews sounds unthinkable, yet Spain renamed it in 2015.",
+      "source": "BBC, 2015",
+      "source_url": "https://www.bbc.com/news/world-europe-33225466"
+    },
+    {
+      "id": "f1",
+      "headline": "Benidorm hires siesta police to fine tourists making noise at 3pm",
+      "summary": "Benidorm will deploy 20 uniformed siesta officers this summer to patrol beaches, balconies and pool decks between 3pm and 5pm daily. Tourists caught playing music or shouting face a 50 euro nap-interruption ticket on the spot. Repeat offenders get escorted to a dark quiet room with the blinds firmly drawn.",
+      "isReal": false,
+      "explanation": "Tell: Benidorm has noise ordinances, but no municipal nap-enforcement squad exists.",
+      "source": null
+    },
+    {
+      "id": "f2",
+      "headline": "Mercadona to sell Sunday siesta passes to skip Monday queues",
+      "summary": "Mercadona announced a pilot scheme selling 5 euro Sunday siesta passes at stores in Valencia and Madrid this autumn. Holders may nap in a quiet roped-off aisle corner while staff pack their weekly shop for Monday pickup. The chain insists the jamon counter and the freezer aisles remain strictly nap-free zones.",
+      "isReal": false,
+      "explanation": "Tell: Mercadona closes Sundays nationwide, but it has never sold timed siesta slots.",
+      "source": null
+    },
+    {
+      "id": "f3",
+      "headline": "Valencia requires licence to cook paella after tourist rice scandal",
+      "summary": "Valencia will require a 30 euro paella licence for anyone cooking the dish for more than ten guests at once. Applicants must pass a ten-minute practical test on rice, rabbit, garrofo beans and the correct pan size. Chorizo use triggers an automatic fail plus a stern fifteen-minute lecture.",
+      "isReal": false,
+      "explanation": "Tell: Spain loves paella rules, but no town has ever required a license to cook it.",
+      "source": null
+    },
+    {
+      "id": "f4",
+      "headline": "Barcelona introduces 2 euro selfie tax at Park Guell viewpoints",
+      "summary": "Barcelona will charge visitors 2 euros per posed photo at three Park Guell viewpoints starting in July. A new selfie meter detects tripods and extended arms, adding the fee automatically to the entrance ticket. City hall says the funds will repair mosaic benches bent by ambitious influencers.",
+      "isReal": false,
+      "explanation": "Tell: Tourist taxes are real, but no city charges visitors per selfie taken.",
+      "source": null
+    },
+    {
+      "id": "f5",
+      "headline": "Madrid auctions 500 NIE appointments every Friday in live bidding war",
+      "summary": "Madrid's foreigners office will auction 500 coveted NIE appointments each Friday morning to the highest bidders in the waiting hall. Starting bids open at 10 euros, with premium early-morning slots expected to reach 80 euros or more. Officials say all proceeds will buy more chairs and stronger coffee machines.",
+      "isReal": false,
+      "explanation": "Tell: The NIE system is slow, but appointments have never been auctioned with bidding paddles.",
+      "source": null
+    },
+    {
+      "id": "f6",
+      "headline": "New rental law caps tenants at two sangrias per week in shared flats",
+      "summary": "A draft rental reform would limit tenants in shared flats to two sangrias per week on the balcony or terrace. Landlords could inspect recycling bins for excess bottles under a new convivencia clause in the contract. Tenants unions call the rule unenforceable but admit it is strangely specific and very Spanish.",
+      "isReal": false,
+      "explanation": "Tell: Landlords ask for odd paperwork, but no region caps tenants at two sangrias.",
+      "source": null
+    },
+    {
+      "id": "f7",
+      "headline": "Seville rations air conditioning to 6 hours a day during August heat",
+      "summary": "Seville will limit households to six hours of air conditioning daily during August under a new municipal energy decree. Smart meters will cut cooling automatically at the cap, offering one bonus hour to homes with blackout curtains installed. Pensioners, newborns and flamenco dancers rehearsing indoors are fully exempt from the cap.",
+      "isReal": false,
+      "explanation": "Tell: Heatwaves bring advice campaigns, but Spain has never rationed air-con minutes.",
+      "source": null
+    },
+    {
+      "id": "f8",
+      "headline": "Alicante TIE office gives free churros to applicants waiting over 4 hours",
+      "summary": "Alicante's foreigners office will hand out free churros with thick chocolate to anyone waiting longer than four hours in the queue. The catering deal covers 200 portions daily from the Expats Corner kiosk parked just outside the doors. Staff insist that sugar levels correlate strongly with patience and successful fingerprint scans.",
+      "isReal": false,
+      "explanation": "Tell: TIE cards involve fingerprints, but no office rewards applicants with churros.",
+      "source": null
+    },
+    {
+      "id": "f9",
+      "headline": "San Sebastian fines beachgoers 100 euros for bringing cold tortilla",
+      "summary": "San Sebastian will fine beachgoers 100 euros for unpacking cold tortilla within two metres of the shoreline this summer. Councillors argue the smell drives seagulls into aggressive frenzies and ruins the sunbathing atmosphere for everyone nearby. Warm bocadillos, pintxos and chilled gazpacho remain fully legal on the sand.",
+      "isReal": false,
+      "explanation": "Tell: Beach smoking bans exist, but no town fines beachgoers for cold tortilla.",
+      "source": null
+    },
+    {
+      "id": "f10",
+      "headline": "Renfe launches queue-skip subscription for expats at 19.99 a month",
+      "summary": "Renfe will sell a 19.99 euro monthly Queue-Skip pass aimed at expats navigating stations, post offices and foreigners offices in six pilot cities. Subscribers simply scan a golden QR code and glide past the bureaucratic lines while everyone else watches in disbelief.",
+      "isReal": false,
+      "explanation": "Tell: Renfe sells passes, but no subscription includes legally skipping a queue.",
+      "source": null
+    },
+    {
+      "id": "f11",
+      "headline": "Correos to deliver parcels by donkey in white villages this summer",
+      "summary": "Correos will trial donkey deliveries in 12 Andalusian white villages where vans cannot climb the steep cobbled hills. Each mule carries up to 15 parcels and wears a straw hat stamped with the postal logo for visibility. Delivery times will double, but officials admit photo opportunities will happily triple.",
+      "isReal": false,
+      "explanation": "Tell: Correos is slow, but it has never delivered parcels by donkey decree.",
+      "source": null
+    },
+    {
+      "id": "f12",
+      "headline": "Spain sets official flan wobble standard for menu del dia desserts",
+      "summary": "Spain's food agency has defined the official flan wobble at exactly three oscillations per spoon tap for all menu del dia desserts. Restaurant inspectors will carry a certified spoon and a stopwatch for surprise dessert checks nationwide. Flans that stand motionless will be publicly downgraded to natillas with no right of appeal.",
+      "isReal": false,
+      "explanation": "Tell: Menus del dia are sacred, but no law fixes the exact flan wobble.",
+      "source": null
+    },
+    {
+      "id": "f13",
+      "headline": "Pamplona trials silent e-scooter bulls for noise-sensitive runners",
+      "summary": "Pamplona will trial silent electric-scooter bulls that chase runners through the old town at 15 km per hour. The e-bulls flash red lights and play recorded bellows at a considerate low volume for neighbours. Traditionalists call the scheme outrageous while nervous first-time runners call it deeply merciful.",
+      "isReal": false,
+      "explanation": "Tell: Bull-running festivals are strict, but no town uses scooters as bulls.",
+      "source": null
+    },
+    {
+      "id": "f14",
+      "headline": "Malaga charges beach towels by the centimetre via new sand app",
+      "summary": "Malaga will charge beachgoers by towel size through the new ArenaApp starting in June along the central beaches. A standard towel costs 3 euros a day, while XXL family sheets cost 7 euros with an optional shade supplement. Lifeguards will measure suspiciously large picnic blankets with official laser tapes.",
+      "isReal": false,
+      "explanation": "Tell: Beach reservations were debated, but no app charges by towel centimetre.",
+      "source": null
+    },
+    {
+      "id": "f15",
+      "headline": "Digital certificate now needs a hug stamp from your local funcionario",
+      "summary": "Spain's digital certificate process adds a final hug stamp from your assigned funcionario before activation. Applicants must appear in person for a brief handshake, an official embrace and a stamped certificate of warmth. The ministry says human contact measurably reduces both fraud and tears in the waiting room.",
+      "isReal": false,
+      "explanation": "Tell: Spanish bureaucracy loves stamps, but no ministry issues emotional stamps.",
+      "source": null
+    },
+    {
+      "id": "f16",
+      "headline": "Supermarkets lock olive oil bottles with fingerprint caps after thefts",
+      "summary": "Spanish supermarkets will fit extra-virgin olive oil bottles with fingerprint caps after a wave of thefts across Andalusia. Shoppers unlock a single bottle at the till with their index finger while the cashier supervises solemnly. Refills are strictly limited to one litre per household per week, with no exceptions.",
+      "isReal": false,
+      "explanation": "Tell: Olive oil prices soared, but no supermarket locks bottles with fingerprints.",
+      "source": null
+    },
+    {
+      "id": "f17",
+      "headline": "Beach bars must play flamenco 8 hours daily under new culture decree",
+      "summary": "Beach bars along the Costa del Sol must play flamenco at least eight hours daily under a new regional culture decree. Inspectors will log guitar hours alongside hygiene scores, cocktail prices and palmas enthusiasm levels. Reggaeton remains allowed only after midnight, and only at a respectful volume.",
+      "isReal": false,
+      "explanation": "Tell: Chiringuitos face rules, but none must play flamenco on loop by law.",
+      "source": null
+    },
+    {
+      "id": "f18",
+      "headline": "Spain splits into two time zones: siesta and non-siesta regions",
+      "summary": "Spain will split into siesta and non-siesta time zones, with the sunny south running one hour behind the north. Shops in siesta regions close from 2pm to 5pm while northern offices power heroically through the afternoon. Train timetables will show both nap time and standard time to avoid nationwide confusion.",
+      "isReal": false,
+      "explanation": "Tell: Spain debated time zones for years, but never proposed two siesta zones.",
+      "source": null
+    },
+    {
+      "id": "f19",
+      "headline": "Village pays new padron residents 200 euros in tapas vouchers",
+      "summary": "A tiny village in Teruel offers 200 euros in tapas vouchers to anyone registering on the padron this year. Newcomers receive a stamp card valid in four village bars for bravas, croquetas, migas and vermouth. The mayor proudly says twelve people and one extremely loyal dog have already signed up.",
+      "isReal": false,
+      "explanation": "Tell: Padron registration matters, but no town pays residents in tapas vouchers.",
+      "source": null
+    },
+    {
+      "id": "f20",
+      "headline": "Malaga airport offers flamenco queue-jump for delayed passengers",
+      "summary": "Malaga airport will stage live flamenco shows inside the security queue whenever delays exceed 40 minutes this summer. Dancers will perform between the trays and the body scanner to calm frayed nerves and restless children. Passengers who clap along in rhythm get to board a full two minutes earlier.",
+      "isReal": false,
+      "explanation": "Tell: Airport strikes happen, but no airport offers queue-jump flamenco shows.",
+      "source": null
+    },
+    {
+      "id": "f21",
+      "headline": "New law bans sangria buckets larger than one litre on party boats",
+      "summary": "A new coastal law bans sangria buckets larger than one litre on party boats off Mallorca and Ibiza. Boats must serve measured jugs with fruit ratios approved by visiting health inspectors each morning. Violators face heavy fines plus immediate confiscation of all inflatable flamingos on board.",
+      "isReal": false,
+      "explanation": "Tell: Sangria rules exist in tourist zones, but no lab certifies bucket size.",
+      "source": null
+    },
+    {
+      "id": "f22",
+      "headline": "Jamon slicing degree launches at Salamanca university this autumn",
+      "summary": "Salamanca university launches a three-year degree in jamon slicing covering leg anatomy, knife physics and artistic plating. Graduates earn the title Doctor of Ham plus a personal engraved whetstone at the ceremony. Only 40 places exist, yet more than 3,000 hungry applicants have already applied.",
+      "isReal": false,
+      "explanation": "Tell: Ham is serious business, but no academy offers doctorates in slicing.",
+      "source": null
+    },
+    {
+      "id": "f23",
+      "headline": "Madrid taxes bar terraces by decibel of customer gossip",
+      "summary": "Madrid will tax bar terraces according to the decibel level of customer gossip recorded on busy Friday nights. Quiet vermouth crowds cost owners just 50 euros yearly, while roaring late-night terraces pay 400 euros. Microphones will mount on sun umbrellas, cunningly disguised as giant green olives.",
+      "isReal": false,
+      "explanation": "Tell: Terraces are regulated, but no city taxes tables by decibel of gossip.",
+      "source": null
+    },
+    {
+      "id": "f24",
+      "headline": "Employers must provide hammocks for staff naps under new labour deal",
+      "summary": "A new national labour agreement requires firms with over 50 staff to provide hammocks for twenty-minute afternoon naps. The dedicated nap rooms must be dark, silent and smell faintly of lavender at all times. Unions hail the deal as their greatest victory since the invention of the lunch break.",
+      "isReal": false,
+      "explanation": "Tell: Siestas are cultural, but employers have never been forced to provide hammocks.",
+      "source": null
+    },
+    {
+      "id": "f25",
+      "headline": "Fiesta permits now require karaoke insurance up to 10,000 euros",
+      "summary": "Town councils will require fiesta organisers to carry karaoke insurance worth up to 10,000 euros per event. The policy covers burst eardrums, broken microphones and midnight Macarena injuries on the dance floor. Three claims per summer are already forecast in Benalmadena alone, mostly involving uncles.",
+      "isReal": false,
+      "explanation": "Tell: Fiesta permits are real, but no council requires karaoke insurance.",
+      "source": null
+    },
+    {
+      "id": "f26",
+      "headline": "Drought town deputises neighbours to report inflatable pool fillers",
+      "summary": "A drought-hit town near Murcia now deputises neighbours to report anyone secretly filling inflatable pools at night. Volunteer pool sheriffs patrol the streets with whistles and laminated hosepipe rule cards. Rewards include one free public shower and an official drought-hero cap with a badge.",
+      "isReal": false,
+      "explanation": "Tell: Water shortages bring hose bans, but no town has deputised inflatable pools.",
+      "source": null
+    },
+    {
+      "id": "f27",
+      "headline": "Spanish nationality exam adds karaoke verse of Guantanamera test",
+      "summary": "The Spanish nationality exam will add a karaoke verse of Guantanamera to the language and culture section. Applicants must sing one full verse with feeling while correctly naming three regional tapas afterwards. Examiners may award extra points for castanets, emotional eye contact or brave dancing.",
+      "isReal": false,
+      "explanation": "Tell: Language certificates matter for nationality, but exams never include karaoke.",
+      "source": null
+    },
+    {
+      "id": "f28",
+      "headline": "Budget airline charges 8 euros for wearing wide sun hats on board",
+      "summary": "A budget airline flying to Alicante will charge 8 euros for wide sun hats worn on board this summer. Staff say oversized brims block the aisle and trigger chaos every time the seatbelt sign dings. Foldable caps, tiny fans and aggressively small sunglasses remain completely free of charge.",
+      "isReal": false,
+      "explanation": "Tell: Luggage rules tighten often, but no airline weighs hats separately.",
+      "source": null
+    },
+    {
+      "id": "f29",
+      "headline": "Santiago cathedral sells queue-jump compostela for speedy pilgrims",
+      "summary": "Santiago cathedral will sell a 15 euro queue-jump compostela for pilgrims in a terrible hurry. Holders skip the long certificate line and get a stamped selfie beside the famous botafumeiro. Traditional walkers still receive the slower, sweatier certificate completely free, blisters and all.",
+      "isReal": false,
+      "explanation": "Tell: Pilgrims love stamps, but no cathedral issues queue-jump indulgences.",
+      "source": null
+    },
+    {
+      "id": "f30",
+      "headline": "Village holds onion-in-tortilla referendum with bars closed for count",
+      "summary": "A village in La Rioja will hold a binding referendum on onion in tortilla, with all bars closed during the vote count. Voters choose con or sin cebolla on paper ballots lightly scented with olive oil. The losing side must cook breakfast for the entire plaza the following Sunday.",
+      "isReal": false,
+      "explanation": "Tell: Everyone argues about tortilla, but no referendum on onion has ever closed bars.",
+      "source": null
+    }
+  ],
+  "results": [
+    {
+      "max": 2,
+      "min": 0,
+      "shareText": "I got 0-2/10 telling real Spanish news from AI fakes — Certified Guiri! Can you beat my glorious fail?",
+      "slug": "certified-guiri",
+      "text": "You believed the siesta police AND the donkey postmen. Honestly, that takes commitment — Spain is weird, but not quite that weird.\n\nThe good news: this is the fastest way to learn. One month of Spain Daily in your inbox and you will smell a fake headline before your morning café con leche cools down.",
+      "title": "Certified Guiri"
+    },
+    {
+      "max": 4,
+      "min": 3,
+      "shareText": "I got 3-4/10 telling real Spanish news from AI fakes — Suspicious Tourist! Think you can do better?",
+      "slug": "suspicious-tourist",
+      "text": "You can spot a paella crime but still fell for the karaoke insurance. You have been in Spain long enough to order bravas — just not long enough to argue about whether they should come with alioli.\n\nKeep reading Spain Daily and soon you will be the one explaining to newcomers why a town mailed dog poop back to its owners (true story, by the way).",
+      "title": "Suspicious Tourist"
+    },
+    {
+      "max": 6,
+      "min": 5,
+      "shareText": "I got 5-6/10 telling real Spanish news from AI fakes — Half-Spanish! Can you beat me?",
+      "slug": "half-spanish",
+      "text": "Fifty-fifty! You question everything like a true funcionario, but the ham doctorate got you. Half your brain already runs on Spanish bureaucracy logic; the other half still trusts headlines way too much.\n\nOne more summer of terrace gossip, NIE queues and our morning digest, and nobody will slip a fake past you again.",
+      "title": "Half-Spanish, Half-Suspicious"
+    },
+    {
+      "max": 8,
+      "min": 7,
+      "shareText": "I got 7-8/10 telling real Spanish news from AI fakes — Almost Spanish! Bet you can't beat me.",
+      "slug": "almost-spanish",
+      "text": "You sniffed out the flan wobble police and the sangria bucket ban like a local. Only the truly unhinged headlines slipped past you — and frankly, in Spain, “unhinged” is barely a filter.\n\nDefend your honour: subscribe, and next week's edition will give you fresh ammunition for terrace debates.",
+      "title": "Almost Spanish"
+    },
+    {
+      "max": 10,
+      "min": 9,
+      "shareText": "I got 9-10/10 telling real Spanish news from AI fakes — Paella Detector! Can anyone beat me?",
+      "slug": "paella-detector",
+      "text": "Nothing fools you — not fake NIE auctions, not selfie taxes, not hug stamps. You are officially the friend everyone texts before believing Spanish news: the human Snopes of the sobremesa.\n\nJoin the newsletter and lord it over everyone else. You have earned the smugness.",
+      "title": "Paella Detector Intact"
+    }
+  ]
+}

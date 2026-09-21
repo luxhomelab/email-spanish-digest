@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{# Quiz: AI or Real? — multi-quiz ready. One template renders every data/quizzes/*.json. #}
+{# BREVO SETUP (dashboard, quiz-specific sibforms form): #}
+{#  - "Confirmation page after submitting" = https://spanified.com/quiz/ai-or-real-subscribed #}
+{#  - "Confirmation page after validation click" = https://spanified.com/quiz/ai-or-real-success #}
+{# Then paste that form's embed URL into brevo_iframe_src below (data-src). #}
+{% block title %}AI or Real? — Spot fake Spain news — Spanified{% endblock %}
+{% block description %}<meta name="description" content="10 absurd Spain headlines — half are real, half we made up. Can you tell AI slop from actual Spanish news? Take the quiz.">
+{# Quiz is unlisted until launch: no external links, no sitemap, no indexing. #}
+<meta name="robots" content="noindex, nofollow">{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://spanified.com/quiz/ai-or-real">{% endblock %}
+{% block extra_head %}
+<script id="quiz-data" type="application/json">{{ quiz_json | safe }}</script>
+{% endblock %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+<div class="quiz-wrap">
+ <div id="quiz-hook" class="quiz-card quiz-hook">
+  <p class="confirm-kicker">Spanified quiz</p>
+   <h1 class="quiz-hook-headline">Real or fake? 10 crazy news stories from Spain</h1>
+   <p class="quiz-hook-sub">Some of these really happened in Spain. The rest we made up. Can you guess which is which?</p>
+   <p class="quiz-hook-time">2 minutes &middot; 10 questions</p>
+   <p id="quiz-last" class="quiz-hook-last" hidden></p>
+   <button id="quiz-start" class="quiz-cta-btn quiz-start-btn" type="button">Start the quiz</button>
+ </div>
+
+  <div class="quiz-progress-track" aria-hidden="true" hidden><div id="quiz-progress"></div></div>
+
+ <div id="quiz-play" class="quiz-card" hidden>
+  <p id="quiz-step" class="confirm-kicker"></p>
+  <h2 id="quiz-headline" class="quiz-headline"></h2>
+  <p id="quiz-summary"></p>
+  <div id="quiz-choices" class="quiz-choices">
+   <button id="quiz-real" type="button">Real — this happened</button>
+   <button id="quiz-fake" type="button">Fake — AI slop</button>
+  </div>
+  <div id="quiz-feedback" hidden>
+   <p class="quiz-verdict"></p>
+   <p class="quiz-explain"></p>
+   <p class="quiz-source"></p>
+  </div>
+  <div id="quiz-next-wrap" hidden><button id="quiz-next" class="cta-button" type="button">Next story</button></div>
+ </div>
+
+ <div id="quiz-gate" class="quiz-card" hidden>
+  <p class="confirm-kicker">Your result is ready</p>
+  <div class="quiz-score-hero">
+   <div class="quiz-score-badge" aria-hidden="true"><span class="quiz-score-num" id="quiz-score-num">–</span><span class="quiz-score-of">/10</span></div>
+   <div>
+    <p id="quiz-score-line" class="quiz-score-title"></p>
+    <p class="quiz-score-sub">Your persona is hiding below 👇</p>
+   </div>
+  </div>
+  <div id="quiz-blur">
+    <div class="quiz-blurbox">
+     <h2>🔒 Subscribe to reveal your result</h2>
+     <p>Enter your email to subscribe to <strong>Spain Daily</strong> — Spain's top news in English, one free email every morning, unsubscribe anytime. Your persona, score breakdown and shareable badge unlock instantly.</p>
+    </div>
+  </div>
+  <div id="quiz-gate-form" class="quiz-brevo">
+   <iframe id="quiz-brevo-frame" title="Subscribe to reveal your result"
+     data-src="{{ brevo_iframe_src }}" loading="lazy"></iframe>
+   <button id="quiz-skip" class="quiz-skip" type="button">skip, just show my result</button>
+  </div>
+  <div id="quiz-result-full" hidden>
+   <div class="quiz-persona">
+    <p class="confirm-kicker">Your persona</p>
+    <h2 id="quiz-result-title"></h2>
+    <div id="quiz-result-text" class="quiz-result-text"></div>
+   </div>
+   <div class="quiz-cta-row">
+    <div class="quiz-share">{% include "partials/share.html" %}</div>
+    <a class="quiz-cta-btn" href="/subscribe">Subscribe free — Spain news every morning</a>
+   </div>
+   <p class="quiz-cta-note">One sharp email every morning. Share your persona — challenge a friend.</p>
+  </div>
+ </div>
+</div>
+<script type="module" src="/static/js/quiz-ai-or-real.js?v={{ js_version }}"></script>
+{% endblock %}

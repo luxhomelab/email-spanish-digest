@@ -349,6 +349,7 @@ def render_static(env, digests):
             fh.write(output)
         print(f"  wrote {name}")
     render_calculators(env)
+    render_quizzes(env)
 
 
 def render_calculators(env):
@@ -376,6 +377,83 @@ def render_calculators(env):
         with open(dest, "w", encoding="utf-8") as fh:
             fh.write(output)
         print(f"  wrote {rel_dest}")
+
+
+def render_quizzes(env):
+    """Render quiz pages from data/quizzes/*.json (multi-quiz ready).
+
+    Per quiz <slug>: quiz/<slug>.html (app), quiz/<slug>-subscribed.html
+    (Brevo iframe snippet, noindex), quiz/<slug>-success.html (post
+    double-opt-in page, noindex), quiz/<slug>-result-<persona>.html
+    (per-persona share landing, indexable).
+    Main page + result pages go to the sitemap.
+    """
+    import json as _json
+
+    quizzes_dir = os.path.join(SCRIPT_DIR, "data", "quizzes")
+    if not os.path.isdir(quizzes_dir):
+        return
+    # Quiz-specific Brevo sibforms form (email-only, "Subscribe & reveal my result").
+    brevo_iframe_src = "https://43fcc87b.sibforms.com/v2/serve/MUIFADlNywuxES3pVdSYPJLNvM8xOaRyAmznovXPmI4xuL3SlWcqnIFS_2zTeRPv62dtdEWKHltq4D-p57fPFvI5w0ObHcO-d97mhHdiFS9LFytmEegJ3NIbvgRsHjF2R_TFdIW2ov_ttfKCYOM0xcvSds4dQ0IXLsh0URv_eiOn5wQvUzMwDqLlThstEJonrYlPEbZ9VJpFjXBQ3w=="
+    for name in sorted(os.listdir(quizzes_dir)):
+        if not name.endswith(".json"):
+            continue
+        with open(os.path.join(quizzes_dir, name), encoding="utf-8") as fh:
+            quiz = _json.load(fh)
+        slug = quiz["slug"]
+        quiz_json = _json.dumps(quiz)
+        base = f"{SITE_URL}/quiz/{slug}"
+        share = share_links(
+            base,
+            f"{quiz['title']} — Spanified",
+            f"{quiz['title']} — can you tell real Spanish news from AI fakes? "
+            "10 wild headlines, 2 minutes. Take the quiz:",
+        )
+        crumbs = [
+            {"name": "Home", "url": "/"},
+            {"name": "Quiz", "url": f"/quiz/{slug}", "current": True},
+        ]
+        ctx = dict(
+            quiz=quiz, quiz_json=quiz_json, crumbs=crumbs,
+            js_version=js_version(), share=share,
+            brevo_iframe_src=brevo_iframe_src,
+        )
+        pages = [
+            ("quiz.html", f"quiz/{slug}.html"),
+            ("quiz-subscribed.html", f"quiz/{slug}-subscribed.html"),
+            ("quiz-success.html", f"quiz/{slug}-success.html"),
+        ]
+        for template_name, rel_dest in pages:
+            output = env.get_template(template_name).render(**ctx)
+            dest = os.path.join(OUT_DIR, rel_dest)
+            os.makedirs(os.path.dirname(dest), exist_ok=True)
+            with open(dest, "w", encoding="utf-8") as out:
+                out.write(output)
+            print(f"  wrote {rel_dest}")
+
+        # Per-persona share landing pages (static, OG-scrapeable).
+        result_template = env.get_template("quiz-result.html")
+        for result in quiz.get("results", []):
+            result_url = f"{SITE_URL}/quiz/{slug}-result-{result['slug']}"
+            share_text = result.get('shareText', f"{result['title']} — {quiz['title']} — Spanified")
+            first_para = (result.get('text') or '').split('\n\n')[0].strip()
+            share_long = f"{share_text}\n\n{first_para}" if first_para else share_text
+            result_share = share_links(result_url, share_text, share_long)
+            result_ctx = dict(
+                quiz=quiz,
+                result=result,
+                all_results=quiz.get("results", []),
+                friend_score=None,
+                share=result_share,
+                crumbs=crumbs,
+            )
+            dest_path = f"quiz/{slug}-result-{result['slug']}.html"
+            output = result_template.render(**result_ctx)
+            dest = os.path.join(OUT_DIR, dest_path)
+            os.makedirs(os.path.dirname(dest), exist_ok=True)
+            with open(dest, "w", encoding="utf-8") as out:
+                out.write(output)
+            print(f"  wrote {dest_path}")
 def attach_related(digests, limit=3):
     """Attach same-category 'More news' links to every story.
 
@@ -415,15 +493,21 @@ def attach_related(digests, limit=3):
             used.update(r["url"] for r in item["related"])
 
 
-def share_links(abs_url, text):
-    """Build static share URLs (no JS SDKs) for X/TG/WA/FB + copy link."""
+def share_links(abs_url, text, long_text=None):
+    """Build static share URLs (no JS SDKs) for X/TG/WA/FB + copy link.
+
+    X keeps the short text (280-char limit); Telegram/WhatsApp get
+    long_text when provided (falls back to text). Facebook shares only
+    the link — its composer ignores pre-filled text, so the per-persona
+    OG title/description on the target page do the talking."""
     u, t = quote(abs_url, safe=""), quote(text, safe="")
+    tl = quote(long_text or text, safe="")
     return {
         "url": abs_url,
         "x": f"https://x.com/intent/tweet?text={t}&url={u}",
         "facebook": f"https://www.facebook.com/sharer/sharer.php?u={u}",
-        "telegram": f"https://t.me/share/url?url={u}&text={t}",
-        "whatsapp": f"https://wa.me/?text={t}%20{u}",
+        "telegram": f"https://t.me/share/url?url={u}&text={tl}",
+        "whatsapp": f"https://wa.me/?text={tl}%20{u}",
     }
 
 
@@ -550,6 +634,7 @@ def render_sitemap(digests, categories=()):
         urls.append((SITE_URL + f"/category/{slug}", None))
     urls.append((SITE_URL + "/calculators/autonomo-tax", None))
     urls.append((SITE_URL + "/calculators/property-buying-cost", None))
+    # Quiz pages stay out of the sitemap until launch (no external links either).
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
@@ -623,7 +708,8 @@ def js_version():
     h = hashlib.md5()
     for name in ("autonomo.js", "autonomo-calc.js", "autonomo-form.js",
                    "property-buying-cost.js", "property-buying-cost-calc.js",
-                   "property-buying-cost-form.js"):
+                   "property-buying-cost-form.js", "quiz-ai-or-real.js",
+                   "quiz-logic.js"):
         path = os.path.join(SCRIPT_DIR, "static", "js", name)
         try:
             with open(path, "rb") as fh:
