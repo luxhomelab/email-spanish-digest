@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "Euribor hits 3% as Spain's inflation gap widens",
+      "body": "The Euribor hit 3% in daily quotes for September, up from 2.954% in August and 2.114% a year ago, pushing variable mortgage payments higher. Spain's inflation rose to 4.6% in August compared with 3.2% in the eurozone, the widest gap since August 2022, as the Iran conflict drives up energy prices.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/09/20/euribor-alza-arrastra-las-hipotecas-variables-ya-no-se-libra-nadie-una-subida-2052900.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/ola-inflacion-por-iran-llega-antes-espana-abre-una-nueva-brecha-precios-con-resto-ue_7039055_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Autónomos face 2027 quota uncertainty as reform stalls",
+      "body": "Autónomos (self-employed workers) still do not know their 2027 Social Security contributions because the reform remains stalled. Pending changes include cese de actividad and corrections to paternity, maternity and medical leave penalties; unions and associations are urging the Ministry of Social Security to resume negotiations.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/cuenta-cuotas-autonomos-2027-reforma-paralizada-incertidumbre_1_13514168.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Ceuta asylum wait times grow as Melilla reinforces border",
+      "body": "Sub-Saharan asylum seekers in Ceuta wait over three months to formalize their requests, with one person who arrived in late July given a Nov. 2 appointment. The government has also sent Guardia Civil reinforcements to Melilla after calls on social media for new mass entry attempts on Sept. 20 and 23.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/09/21/6aafebb8e4d4d869578b4574.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/ceuta-y-melilla/noticia-gobierno-refuerza-guardia-civil-melilla-llamamientos-nuevas-entradas-masivas-20260920173105.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Rents cost €379 more than mortgages, no bubble seen",
+      "body": "Renting a home in Spain costs an average of €1,204 per month, compared with €825 for a mortgage, a gap of €379 that makes saving harder. Economist Jordi Llatzer says there is no housing bubble and prices will not fall as they did in 2009–2015, with new households far outpacing housing construction.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/trampa-ahorro-imposible-para-los-jovenes-alquilar-una-vivienda-es-casi-400-euros-mas-caro-mes-que-pagar-una-hipoteca_7038219_0.html"
+        },
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-09-21/jordi-experto-en-economia_4424915/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Sánchez slams Supreme Court over 'ley de nietos' block",
+      "body": "Pedro Sánchez described the Supreme Court's suspension of voting rights for 400,000 Spaniards abroad under the 'ley de nietos' as 'very serious' and said he would not forgive PP and Vox. PP leader Alberto Núñez Feijóo proposed an 'orderly' migration policy and a review of how nationality is granted, maintained and lost.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/catalunya/noticia-sanchez-considera-muy-grave-supremo-acepte-cautelares-contra-ley-nietos-20260920133319.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/feijoo-asegura-cerrara-cal-canto-espana-vengan-saltarse-ley_1_13524230.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Ex-partner cannot evict you from rental home",
+      "body": "Under Spain's Urban Leases Law, a separated partner cannot unilaterally evict the other from a rental home. If minor children are involved, a judge awards the home based on custody or economic need, and the partner not named on the lease can take over the lease by notifying the owner within two months.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/sociedad/2026/09/21/oficial-ley-arrendamientos-urbanos-expareja-puede-echarte-piso-alquiler-no-firma-contrato-2052856.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Madrid teen wins tech olympics with anti-bullying game",
+      "body": "Darius Atanasiu, 15, from Pinto (Madrid), won the national phase of the International Technology Olympics using an anti-bullying video game called 'Máscara'. He will represent Spain in the international final on Sept. 22 and 23, having competed against more than 5,000 young people from nine countries.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/madrid/darius-estudiante-madrileno-15-anos-que-sera-olimpico-por-un-videojuego-antibullying-frente-acoso-quien-eres_7037904_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Variable mortgage payments are rising with the Euribor. Are you on: A) Fixed B) Variable C) No mortgage 👇",
+  "variant": "What happened in Spain while you were busy",
+  "headline": "What happened in Spain while you were busy",
+  "date": "2026-09-21",
+  "generated_at": "2026-09-21T06:06:15.552880+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 273,
+    "items_selected_pass1": 11,
+    "fact_sheets_extracted": 11,
+    "items_after_importance_filter": 11,
+    "items_in_digest": 7
+  },
+  "selection_reasons": {
+    "4": "Ceuta asylum system overwhelmed — immigrants waiting six weeks to file claims, a systemic migration crisis",
+    "23": "Supreme Court suspends voting rights for new citizens under the 'ley de nietos' — directly affects thousands of foreign-born Spaniards",
+    "25": "Guardia Civil reinforcements in Melilla amid calls for new mass border entries — migration policy in action",
+    "34": "Feijóo vows to review how Spanish nationality is granted and can be lost — a major policy shift for immigrants",
+    "45": "2027 autónomo social security quotas remain unresolved — uncertainty for all self-employed foreigners",
+    "101": "Renting now costs almost €400 more per month than a mortgage — key housing affordability data",
+    "110": "Positive story: Madrid teen wins international tech olympiad with anti-bullying video game",
+    "147": "Euribor rises again, pushing variable mortgage payments up — affects homeowners and investors",
+    "228": "Urban Leasing Act protects non-contractual partners from eviction — important rental rights clarification",
+    "245": "Housing expert says no bubble and prices won't crash — crucial insight for property buyers and investors",
+    "252": "Iran-driven inflation hits Spain hardest in EU top 4 — rising prices directly impact cost of living"
+  }
+}
