@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{# Final page after the double opt-in click. Quiz-specific (per-quiz Brevo form). #}
+{% block body_class %} class="page-success"{% endblock %}
+{% block title %}Subscribed — your quiz result — Spanified{% endblock %}
+{% block description %}<meta name="description" content="You're subscribed — see your {{ quiz.title }} quiz result.">
+<meta name="robots" content="noindex, nofollow">{% endblock %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+<div class="centered-page"><div class="card confirm-card">
+  <p class="confirm-kicker">You're in</p>
+  <h1>Subscription confirmed!</h1>
+  <p class="confirm-note">You're now getting <strong>Spain Daily</strong> — one free email every morning, unsubscribe anytime.</p>
+  <div id="quiz-success-result" hidden>
+    <div class="quiz-score-hero">
+      <div class="quiz-score-badge" aria-hidden="true"><span class="quiz-score-num" id="quiz-success-num">–</span><span class="quiz-score-of">/10</span></div>
+      <div><p id="quiz-success-line" class="quiz-score-title"></p></div>
+    </div>
+    <div class="quiz-persona">
+      <p class="confirm-kicker">Your persona</p>
+      <h2 id="quiz-success-title"></h2>
+      <div id="quiz-success-text" class="quiz-result-text"></div>
+    </div>
+    <div class="quiz-cta-row">
+      <div class="quiz-share">{% include "partials/share.html" %}</div>
+      <a class="quiz-cta-btn" href="/quiz/{{ quiz.slug }}">Retake the quiz</a>
+    </div>
+    <p class="quiz-cta-note"><a href="/">Read today's digest</a> while you wait for tomorrow's.</p>
+  </div>
+  <div id="quiz-success-fallback" hidden>
+    <p class="confirm-lead">Your result lives on the device and browser where you took the quiz.</p>
+    <p class="confirm-note">Please open this page <strong>from the same device and browser</strong> — or <a href="/quiz/{{ quiz.slug }}">retake the quiz</a> here (2 minutes, no email needed to play).</p>
+  </div>
+</div></div>
+<script id="quiz-success-data" type="application/json">{{ quiz_json | safe }}</script>
+<script type="module">
+import { resultForScore, personalShareText, personalLongShareText, quizResultUrl } from '/static/js/quiz-logic.js?v={{ js_version }}';
+try {
+  const data = JSON.parse(document.getElementById('quiz-success-data').textContent);
+  const TOTAL = 10;
+  let saved = null;
+  try { saved = JSON.parse(window.localStorage.getItem('spanified_quiz_{{ quiz.slug }}')); } catch (e) { saved = null; }
+  if (!saved || !Number.isInteger(saved.score)) {
+    document.getElementById('quiz-success-fallback').hidden = false;
+  } else {
+    const result = resultForScore(data.results, saved.score);
+    document.getElementById('quiz-success-num').textContent = saved.score;
+    document.getElementById('quiz-success-line').textContent = `You scored ${saved.score}/${TOTAL} — ${result.title}`;
+    document.getElementById('quiz-success-title').textContent = result.title;
+    const rt = document.getElementById('quiz-success-text');
+    rt.innerHTML = '';
+    String(result.text).split(/\n\n+/).forEach(p => {
+      const pe = document.createElement('p');
+      pe.textContent = p;
+      rt.appendChild(pe);
+    });
+    document.getElementById('quiz-success-result').hidden = false;
+    // Personal share → per-persona page with the exact score (?score=).
+    // X gets the short line; FB/TG/WA get the longer roast text
+    // (FB scrapes the link's OG tags — no pre-filled text there).
+    const url = quizResultUrl(`${window.location.origin}/quiz/{{ quiz.slug }}`, result.slug, saved.score);
+    const short = personalShareText(result, saved.score, TOTAL);
+    const long = personalLongShareText(result, saved.score, TOTAL);
+    const u = encodeURIComponent(url), t = encodeURIComponent(short), tl = encodeURIComponent(long);
+    const wrap = document.querySelector('.quiz-share .share-wrap');
+    if (wrap) {
+      const set = (sel, href) => { const a = wrap.querySelector(sel); if (a) a.href = href; };
+      set('a[href*="x.com/intent"]', `https://x.com/intent/tweet?text=${t}&url=${u}`);
+      set('a[href*="facebook.com/sharer"]', `https://www.facebook.com/sharer/sharer.php?u=${u}`);
+      set('a[href*="t.me/share"]', `https://t.me/share/url?url=${u}&text=${tl}`);
+      set('a[href*="wa.me"]', `https://wa.me/?text=${tl}%20${u}`);
+      const copy = wrap.querySelector('.share-copy');
+      if (copy) copy.dataset.url = url;
+      // Share menu toggle.
+      const btn = wrap.querySelector('.share-toggle'), menu = wrap.querySelector('.share-menu');
+      if (btn && menu) {
+        const close = () => { menu.hidden = true; btn.setAttribute('aria-expanded', 'false'); };
+        btn.addEventListener('click', e => {
+          e.stopPropagation();
+          const willOpen = menu.hidden; close();
+          if (willOpen) { menu.hidden = false; btn.setAttribute('aria-expanded', 'true'); }
+        });
+        document.addEventListener('click', e => { if (!e.target.closest('.share-wrap')) close(); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+        wrap.addEventListener('click', e => {
+          const c = e.target.closest('.share-copy');
+          if (!c) return;
+          const label = c.querySelector('span');
+          const done = () => { label.textContent = 'Copied!'; setTimeout(() => { label.textContent = 'Copy link'; }, 1500); };
+          if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(c.dataset.url).then(done, done);
+          else done();
+        });
+      }
+    }
+  }
+} catch (e) {
+  document.getElementById('quiz-success-fallback').hidden = false;
+}
+</script>
+{% endblock %}

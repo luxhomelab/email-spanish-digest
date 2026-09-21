@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{# Per-persona share landing for quiz results.
+   Rendered for each persona in data/quizzes/<slug>.json.
+   URL shape: quiz/<slug>-result-<persona-slug>.html
+   Friend context: ?score=<n> query param from shared link. #}
+{% block title %}{{ result.title }} — {{ quiz.title }} — Spanified{% endblock %}
+{% block description %}<meta name="description" content="{{ result.text | replace('\n', ' ') | truncate(155, True, '…') }}">
+{# Quiz is unlisted until launch: no external links, no sitemap, no indexing. #}
+<meta name="robots" content="noindex, nofollow">{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://spanified.com/quiz/{{ quiz.slug }}-result-{{ result.slug }}">{% endblock %}
+{% block og_image %}<meta property="og:image" content="https://spanified.com/og/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">{% endblock %}
+{% block extra_head %}
+<meta property="og:title" content="{{ result.title }} — {{ quiz.title }}">
+<meta property="og:description" content="{{ result.text | replace('\n', ' ') | truncate(200, True, '…') }}">
+{% endblock %}
+{% block content %}
+<div class="quiz-result">
+ <div class="quiz-result-hero">
+  <p class="confirm-kicker">Your persona</p>
+  <h1>{{ result.title }}</h1>
+  <p class="quiz-result-score" id="quiz-friend-score" hidden></p>
+  <a class="quiz-result-cta" href="/quiz/{{ quiz.slug }}">Challenge a friend</a>
+ </div>
+  <div class="quiz-result-body">
+   {% for para in result.text.split('\n\n') %}
+   <p class="quiz-result-text">{{ para }}</p>
+   {% endfor %}
+  <div class="quiz-result-share">
+   <p class="share-label">Share your result</p>
+   {% include "partials/share.html" %}
+  </div>
+  <p class="quiz-result-retake">Not your result? <a href="/quiz/{{ quiz.slug }}">Retake the quiz</a></p>
+  <div class="quiz-result-others">
+   <h2>All personas</h2>
+   <ul class="quiz-result-others-list">
+    {% for r in all_results %}
+    <li{% if r.slug == result.slug %} class="is-current"{% endif %}>
+     <a href="/quiz/{{ quiz.slug }}-result-{{ r.slug }}">
+      <span>{{ r.title }}</span>
+      <span class="arrow" aria-hidden="true">→</span>
+     </a>
+    </li>
+    {% endfor %}
+   </ul>
+  </div>
+ </div>
+</div>
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  if (!params.has('score')) return;
+  var score = Number(params.get('score'));
+  if (!Number.isInteger(score) || score < 0 || score > 10) return;
+  var el = document.getElementById('quiz-friend-score');
+  if (el) {
+    el.hidden = false;
+    el.innerHTML = 'Your friend scored <strong>' + score + '/10</strong> — {{ result.title }}';
+  }
+  // The shared page carries the exact score: append ?score=<n> to every
+  // share target (u/url param, or the text tail for wa.me) + copy button.
+  function withScore(href) {
+    try {
+      var url = new URL(href);
+      var q = url.searchParams;
+      var key = q.has('u') ? 'u' : (q.has('url') ? 'url' : null);
+      if (url.hostname.indexOf('wa.me') !== -1) {
+        var t = q.get('text') || '';
+        if (t.indexOf('score=') === -1) q.set('text', t + '?score=' + score);
+      } else if (key) {
+        var v = q.get(key) || '';
+        if (v.indexOf('score=') === -1) q.set(key, v + '?score=' + score);
+      } else { return href; }
+      return url.toString();
+    } catch (e) { return href; }
+  }
+  try {
+    var wrap = document.querySelector('.quiz-result .share-wrap');
+    if (!wrap) return;
+    wrap.querySelectorAll('a[href]').forEach(function (a) { a.href = withScore(a.href); });
+    wrap.querySelectorAll('.share-copy').forEach(function (c) {
+      if (c.dataset.url && c.dataset.url.indexOf('score=') === -1) c.dataset.url += '?score=' + score;
+    });
+  } catch (e) { /* share links keep the score-less URL */ }
+})();
+// Share menu toggle
+document.addEventListener('DOMContentLoaded', function () {
+  var wrap = document.querySelector('.quiz-result .share-wrap');
+  if (!wrap) return;
+  var btn = wrap.querySelector('.share-toggle');
+  var menu = wrap.querySelector('.share-menu');
+  if (!btn || !menu) return;
+  function close() { menu.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var willOpen = menu.hidden; close();
+    if (willOpen) { menu.hidden = false; btn.setAttribute('aria-expanded', 'true'); }
+  });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.share-wrap')) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  wrap.addEventListener('click', function (e) {
+    var c = e.target.closest('.share-copy');
+    if (!c) return;
+    var label = c.querySelector('span');
+    function done() { label.textContent = 'Copied!'; setTimeout(function () { label.textContent = 'Copy link'; }, 1500); }
+    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(c.dataset.url).then(done, done); }
+    else { done(); }
+  });
+});
+</script>
+{% endblock %}
