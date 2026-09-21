@@ -2,7 +2,7 @@
 {# Final page after the double opt-in click. Quiz-specific (per-quiz Brevo form). #}
 {% block body_class %} class="page-success"{% endblock %}
 {% block title %}Subscribed — your quiz result — Spanified{% endblock %}
-{% block description %}<meta name="description" content="You're subscribed — see your AI or Real? quiz result.">
+{% block description %}<meta name="description" content="You're subscribed — see your {{ quiz.title }} quiz result.">
 <meta name="robots" content="noindex, nofollow">{% endblock %}
 {% block content %}
 {% include "partials/breadcrumbs.html" %}

@@ -137,6 +137,25 @@ function init() {
     if (e.data === 'quiz_subscribed') unlock(false)
   })
 
+  // Fallback path: the subscribed-snippet "Reveal my result" button links
+  // here with #result when postMessage is blocked. finish() already saved
+  // the score pre-gate, so reveal the full result without replaying.
+  try {
+    if (window.location.hash === '#result') {
+      const saved = loadQuizResult(window.localStorage, slug)
+      if (saved && Number.isInteger(saved.score) && saved.score >= 0 && saved.score <= TOTAL
+          && resultForScore(results, saved.score)) {
+        if (hook) hook.hidden = true
+        $('quiz-play').hidden = true
+        if (progressTrack) progressTrack.hidden = false
+        $('quiz-gate').hidden = false
+        $('quiz-score-num').textContent = saved.score
+        $('quiz-score-line').textContent = `You scored ${saved.score}/${TOTAL}`
+        unlock(false)
+      }
+    }
+  } catch { /* corrupted storage — fall through to the normal hook flow */ }
+
   function renderStep() {
     const q = questions[step]
     $('quiz-step').textContent = `Story ${step + 1} of ${TOTAL}`

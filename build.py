@@ -385,8 +385,9 @@ def render_quizzes(env):
     Per quiz <slug>: quiz/<slug>.html (app), quiz/<slug>-subscribed.html
     (Brevo iframe snippet, noindex), quiz/<slug>-success.html (post
     double-opt-in page, noindex), quiz/<slug>-result-<persona>.html
-    (per-persona share landing, indexable).
-    Main page + result pages go to the sitemap.
+    (per-persona share landing, noindex until launch).
+    Quiz pages stay out of the sitemap until launch (see render_sitemap).
+    If the quiz ever goes public, flip the robots meta + sitemap together.
     """
     import json as _json
 

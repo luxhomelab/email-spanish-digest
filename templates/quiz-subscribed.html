@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {# Tiny snippet shown INSIDE the Brevo iframe after the quiz form is submitted. #}
-{# Brevo dashboard: "Confirmation page after submitting" = /quiz/ai-or-real-subscribed #}
+{# Brevo dashboard: "Confirmation page after submitting" = /quiz/{{ quiz.slug }}-subscribed #}
 {% block title %}Quiz signup received — Spanified{% endblock %}
 {% block description %}<meta name="description" content="Quiz signup received. Confirm your email to reveal your result.">
 <meta name="robots" content="noindex, nofollow">{% endblock %}
@@ -20,8 +20,8 @@
   var btn = document.getElementById('quiz-sub-back');
   if (btn) btn.addEventListener('click', function () {
     try {
-      if (window.top) window.top.location.href = '/quiz/ai-or-real#result';
-    } catch (e) { window.location.href = '/quiz/ai-or-real#result'; }
+      if (window.top) window.top.location.href = '/quiz/{{ quiz.slug }}#result';
+    } catch (e) { window.location.href = '/quiz/{{ quiz.slug }}#result'; }
   });
 })();
 </script>

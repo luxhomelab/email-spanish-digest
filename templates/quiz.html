@@ -1,14 +1,14 @@
 {% extends "base.html" %}
-{# Quiz: AI or Real? — multi-quiz ready. One template renders every data/quizzes/*.json. #}
+{# Quiz app — multi-quiz ready. One template renders every data/quizzes/*.json. #}
 {# BREVO SETUP (dashboard, quiz-specific sibforms form): #}
-{#  - "Confirmation page after submitting" = https://spanified.com/quiz/ai-or-real-subscribed #}
-{#  - "Confirmation page after validation click" = https://spanified.com/quiz/ai-or-real-success #}
+{#  - "Confirmation page after submitting" = https://spanified.com/quiz/{{ quiz.slug }}-subscribed #}
+{#  - "Confirmation page after validation click" = https://spanified.com/quiz/{{ quiz.slug }}-success #}
 {# Then paste that form's embed URL into brevo_iframe_src below (data-src). #}
-{% block title %}AI or Real? — Spot fake Spain news — Spanified{% endblock %}
+{% block title %}{{ quiz.title }} — Spanified{% endblock %}
 {% block description %}<meta name="description" content="10 absurd Spain headlines — half are real, half we made up. Can you tell AI slop from actual Spanish news? Take the quiz.">
 {# Quiz is unlisted until launch: no external links, no sitemap, no indexing. #}
 <meta name="robots" content="noindex, nofollow">{% endblock %}
-{% block canonical %}<link rel="canonical" href="https://spanified.com/quiz/ai-or-real">{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://spanified.com/quiz/{{ quiz.slug }}">{% endblock %}
 {% block extra_head %}
 <script id="quiz-data" type="application/json">{{ quiz_json | safe }}</script>
 {% endblock %}
