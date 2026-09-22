@@ -666,6 +666,39 @@ body.page-calculator .calc h1 { font-size: 38px; letter-spacing: -0.5px; }
 .subscribe-consent a { color: #B91C1C; text-decoration: none; }
 .subscribe-consent a:hover { text-decoration: underline; }
 
+/* Native subscribe form (Listmonk API) — replaces the Brevo iframe */
+.subscribe-form {
+ max-width: 480px; margin: 28px auto 4px auto; text-align: left;
+}
+#quiz-gate-form .subscribe-form { max-width: 420px; margin-top: 18px; }
+.subscribe-form-label {
+ display: block; font-size: 13px; font-weight: 700; color: #3C4858;
+ letter-spacing: 0.4px; margin-bottom: 7px;
+}
+.subscribe-form-row { display: flex; gap: 10px; }
+.subscribe-form-input-wrap { display: flex; flex: 1; gap: 10px; min-width: 0; }
+.subscribe-form-input {
+ flex: 1; min-width: 0; padding: 14px 16px; font-size: 16px;
+ border: 1px solid #C0CCD9; border-radius: 12px; background: #fff; color: #3C4858;
+ outline: none; transition: border-color 0.15s; font-family: inherit;
+}
+.subscribe-form-input:focus { border-color: #AA151B; }
+.subscribe-form-btn {
+ background: #AA151B; color: #fff; font-weight: 700; font-size: 1rem;
+ padding: 14px 22px; border: none; border-radius: 12px; cursor: pointer;
+ white-space: nowrap; transition: background 0.15s; font-family: inherit;
+}
+.subscribe-form-btn:hover { background: #8A1019; }
+.subscribe-form-btn:disabled { opacity: 0.7; cursor: default; }
+.subscribe-form-error { color: #b3261e; font-size: 14px; font-weight: 600; margin: 12px 0 0; }
+.subscribe-form-hp {
+ position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+}
+@media (max-width: 520px) {
+ .subscribe-form-row, .subscribe-form-input-wrap { flex-direction: column; }
+ .subscribe-form-btn { width: 100%; }
+}
+
 /* ---------- Homepage redesign (body.page-home only) ---------- */
 body.page-home .page .card, body.page-home .cta-card { border-radius: 14px; box-shadow: 0 2px 14px rgba(60,40,20,0.07); border: 1px solid #EFE7D8; }
 /* Hero */

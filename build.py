@@ -334,7 +334,7 @@ def render_static(env, digests):
         "about.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "About", "url": "/about", "current": True}]},
         "contact.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Contact", "url": "/contact", "current": True}]},
         "editor.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Editor", "url": "/editor", "current": True}]},
-        "subscribe.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Subscribe", "url": "/subscribe", "current": True}], "proof": proof},
+        "subscribe.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Subscribe", "url": "/subscribe", "current": True}], "proof": proof, "js_version": js_version()},
         "unsubscribe.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Unsubscribe", "url": "/unsubscribe", "current": True}]},
         "confirm.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Confirm", "url": "/confirm", "current": True}]},
         "search.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Search", "url": "/search", "current": True}]},
@@ -383,19 +383,17 @@ def render_quizzes(env):
     """Render quiz pages from data/quizzes/*.json (multi-quiz ready).
 
     Per quiz <slug>: quiz/<slug>.html (app), quiz/<slug>-subscribed.html
-    (Brevo iframe snippet, noindex), quiz/<slug>-success.html (post
-    double-opt-in page, noindex), quiz/<slug>-result-<persona>.html
-    (per-persona share landing, noindex until launch).
-    Quiz pages stay out of the sitemap until launch (see render_sitemap).
-    If the quiz ever goes public, flip the robots meta + sitemap together.
+    (legacy Brevo confirmation snippet, kept for old links, noindex),
+    quiz/<slug>-success.html (post double-opt-in page, noindex),
+    quiz/<slug>-result-<persona>.html (per-persona share landing, noindex
+    until launch). Quiz pages stay out of the sitemap until launch
+    (see render_sitemap).
     """
     import json as _json
 
     quizzes_dir = os.path.join(SCRIPT_DIR, "data", "quizzes")
     if not os.path.isdir(quizzes_dir):
         return
-    # Quiz-specific Brevo sibforms form (email-only, "Subscribe & reveal my result").
-    brevo_iframe_src = "https://43fcc87b.sibforms.com/v2/serve/MUIFADlNywuxES3pVdSYPJLNvM8xOaRyAmznovXPmI4xuL3SlWcqnIFS_2zTeRPv62dtdEWKHltq4D-p57fPFvI5w0ObHcO-d97mhHdiFS9LFytmEegJ3NIbvgRsHjF2R_TFdIW2ov_ttfKCYOM0xcvSds4dQ0IXLsh0URv_eiOn5wQvUzMwDqLlThstEJonrYlPEbZ9VJpFjXBQ3w=="
     for name in sorted(os.listdir(quizzes_dir)):
         if not name.endswith(".json"):
             continue
@@ -417,7 +415,6 @@ def render_quizzes(env):
         ctx = dict(
             quiz=quiz, quiz_json=quiz_json, crumbs=crumbs,
             js_version=js_version(), share=share,
-            brevo_iframe_src=brevo_iframe_src,
         )
         pages = [
             ("quiz.html", f"quiz/{slug}.html"),
@@ -710,7 +707,7 @@ def js_version():
     for name in ("autonomo.js", "autonomo-calc.js", "autonomo-form.js",
                    "property-buying-cost.js", "property-buying-cost-calc.js",
                    "property-buying-cost-form.js", "quiz-ai-or-real.js",
-                   "quiz-logic.js"):
+                   "quiz-logic.js", "subscribe-form.js"):
         path = os.path.join(SCRIPT_DIR, "static", "js", name)
         try:
             with open(path, "rb") as fh:
