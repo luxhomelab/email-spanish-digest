@@ -145,6 +145,10 @@ function init() {
     resetQuiz(true)
   })
 
+  // Gate form success (native Listmonk form, inline) → unlock the result.
+  const gateForm = $('quiz-gate-form')
+  if (gateForm) gateForm.addEventListener('subscription:success', () => unlock(false))
+
   window.addEventListener('message', e => {
     if (e.data === 'quiz_subscribed') unlock(false)
   })
@@ -268,9 +272,6 @@ function init() {
       unlock(true)
       return
     }
-    // Lazy-load Brevo form only at the gate (keeps landing fast).
-    const frame = $('quiz-brevo-frame')
-    if (frame && !frame.src && frame.dataset.src) frame.src = frame.dataset.src
   }
 
   function resetQuiz(autostart) {
