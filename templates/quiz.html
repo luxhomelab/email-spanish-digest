@@ -1,9 +1,8 @@
 {% extends "base.html" %}
 {# Quiz app — multi-quiz ready. One template renders every data/quizzes/*.json. #}
-{# BREVO SETUP (dashboard, quiz-specific sibforms form): #}
-{#  - "Confirmation page after submitting" = https://spanified.com/quiz/{{ quiz.slug }}-subscribed #}
-{#  - "Confirmation page after validation click" = https://spanified.com/quiz/{{ quiz.slug }}-success #}
-{# Then paste that form's embed URL into brevo_iframe_src below (data-src). #}
+{# SUBSCRIBE FORM: native Listmonk form (partials/subscribe-form.html) replaces
+   the old Brevo iframe. On success the gate unlocks immediately (no redirect,
+   the result must stay), the confirmation email arrives separately. #}
 {% block title %}{{ quiz.title }} — Spanified{% endblock %}
 {% block description %}<meta name="description" content="10 absurd Spain headlines — half are real, half we made up. Can you tell AI slop from actual Spanish news? Take the quiz.">
 {# Quiz is unlisted until launch: no external links, no sitemap, no indexing. #}
@@ -63,9 +62,9 @@
       <p>Join <strong>Spain Daily</strong>: Spain's top news in English, one free email every morning, unsubscribe anytime. The moment you subscribe, your persona, score breakdown and shareable badge unlock instantly.</p>
      </div>
   </div>
-  <div id="quiz-gate-form" class="quiz-brevo">
-   <iframe id="quiz-brevo-frame" title="Subscribe to reveal your result"
-     data-src="{{ brevo_iframe_src }}" loading="lazy"></iframe>
+  <div id="quiz-gate-form">
+   {% set success_url = "" %}{% set btn_label = "Subscribe & reveal my result" %}{% set field_id = "quiz-subscribe-email" %}
+   {% include "partials/subscribe-form.html" %}
    <button id="quiz-skip" class="quiz-skip" type="button">skip, just show my result</button>
   </div>
    <div id="quiz-result-full" hidden>
@@ -85,4 +84,5 @@
  </div>
 </div>
 <script type="module" src="/static/js/quiz-ai-or-real.js?v={{ js_version }}"></script>
+<script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
 {% endblock %}

@@ -13,7 +13,7 @@ served by GitHub Pages.
 ├── templates/               # Jinja2 source templates
 │   ├── base.html            # doctype/head/GA4/favicon + header + footer (blocks: title, description, content, extra_head)
 │   ├── index.html           # landing page
-│   ├── subscribe.html       # Brevo subscribe iframe
+│   ├── subscribe.html       # native Listmonk subscribe form (partials/subscribe-form.html)
 │   ├── success.html         # "You're subscribed" (success.jpg bg)
 │   ├── confirm.html         # "Confirm your subscription" (confirm.jpg bg)
 │   ├── unsubscribe.html     # Brevo unsubscribe iframe
