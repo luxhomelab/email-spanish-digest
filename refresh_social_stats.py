@@ -3,14 +3,15 @@
 Spain News EN — Social Proof Refresh
 
 Refreshes data/social_stats.json in the site repo before each digest deploy,
-so spanified.com always shows fresh follower/subscriber counts.
+so spanified.com always shows fresh Threads follower counts.
 
 Sources:
 - Threads: official Insights API (metric=followers_count) — works with the
   existing THREADS_EN_* credentials.
-- Reddit: best-effort via the public about.json (several mirrors). Reddit
-  often blocks datacenter IPs (403) — on failure the last known value is kept
-  and a warning printed; we never invent a number.
+- Reddit: STATIC by owner decision (2026-09-22). This server's datacenter
+  IP is blocked by Reddit with 403 on every endpoint (verified repeatedly),
+  so live fetching is pointless — the value is set manually in the JSON
+  and never auto-updated.
 
 Usage:
     python3 refresh_social_stats.py --site /path/to/email-spanish-digest
@@ -27,12 +28,9 @@ import urllib.request
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-REDDIT_SOURCES = [
-    "https://www.reddit.com/r/{sub}/about.json",
-    "https://old.reddit.com/r/{sub}/about.json",
-    "https://api.reddit.com/r/{sub}/about.json",
-]
-REDDIT_SUB = os.environ.get("REDDIT_SUB", "SpainDaily")
+# Reddit is intentionally NOT fetched: datacenter IP is 403-blocked by
+# Reddit, so live fetch is a guaranteed failure (see skill social-stats-
+# refresh). The value in data/social_stats.json is maintained manually.
 
 UA = "Mozilla/5.0 (compatible; SpainDaily-stats/1.0)"
 
@@ -53,7 +51,8 @@ def round_down_5(raw):
 
 def merge_stats(old, reddit=None, threads=None):
     """Merge fetched values into old stats; None keeps the previous value.
-    Reddit is rounded down to nearest 5; Threads stays exact."""
+    Threads stays exact. Reddit is static (owner decision) — callers pass
+    None unless deliberately updating it."""
     out = dict(old)
     if reddit is not None:
         out["reddit_members"] = round_down_5(reddit)
@@ -97,22 +96,6 @@ def parse_threads_insights(payload):
     return None
 
 
-def fetch_reddit_members():
-    """Best-effort subreddit subscriber count; int or None on total failure."""
-    for template in REDDIT_SOURCES:
-        url = template.format(sub=REDDIT_SUB)
-        try:
-            payload = json.loads(_get(url))
-            subs = payload.get("data", {}).get("subscribers")
-            if subs is not None:
-                return int(subs)
-        except Exception as e:
-            print(f"fetch_reddit: {url} failed: {e}", file=sys.stderr)
-    print(f"fetch_reddit: all sources failed — keeping last known value",
-          file=sys.stderr)
-    return None
-
-
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--site", required=True,
@@ -122,7 +105,8 @@ def main():
     target = os.path.join(args.site, "data", "social_stats.json")
     old = load_stats(target)
     threads = fetch_threads_followers()
-    reddit = fetch_reddit_members()
+    # Reddit: static by design (see module docstring) — never fetched.
+    reddit = None
 
     merged = merge_stats(old, reddit=reddit, threads=threads)
     changed = merged != old

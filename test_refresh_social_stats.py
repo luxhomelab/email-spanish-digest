@@ -2,9 +2,9 @@
 """Tests for refresh_social_stats.py — social proof auto-update.
 
 - Threads followers: fetched from the official Insights API.
-- Reddit subscribers: fetched on a best-effort basis; when the fetch fails
-  (e.g. Reddit blocks datacenter IPs with 403), the last known value is kept
-  and a warning is emitted — the site never shows a stale invented number.
+- Reddit subscribers: STATIC since 2026-09-22 (owner decision) — the
+  datacenter IP is 403-blocked on every Reddit endpoint, so live fetch was
+  removed; the value is maintained manually in data/social_stats.json.
 """
 
 import json
@@ -39,26 +39,37 @@ class LoadStatsTests(unittest.TestCase):
 
 
 class MergeStatsTests(unittest.TestCase):
-    def test_reddit_fallback_keeps_last_value(self):
-        old = {"reddit_members": 955, "threads_followers": 4100}
-        merged = rss.merge_stats(old, reddit=None, threads=4194)
-        self.assertEqual(merged["reddit_members"], 955)  # kept, no fake number
-        self.assertEqual(merged["threads_followers"], 4194)
+    def test_reddit_omitted_keeps_stored_value(self):
+        old = {"reddit_members": 1100, "threads_followers": 4212}
+        merged = rss.merge_stats(old, reddit=None, threads=4220)
+        self.assertEqual(merged["reddit_members"], 1100)  # static, kept as-is
+        self.assertEqual(merged["threads_followers"], 4220)
 
-    def test_reddit_new_value_wins(self):
-        old = {"reddit_members": 955, "threads_followers": 4100}
-        merged = rss.merge_stats(old, reddit=1005, threads=4194)
-        self.assertEqual(merged["reddit_members"], 1005)
+    def test_reddit_explicit_value_updates(self):
+        # Manual maintenance path: operator edits the JSON directly; merge
+        # still honours an explicit value (rounded down to nearest 5).
+        old = {"reddit_members": 1000, "threads_followers": 4212}
+        merged = rss.merge_stats(old, reddit=1105, threads=4212)
+        self.assertEqual(merged["reddit_members"], 1105)
 
     def test_threads_fallback_keeps_last_value(self):
-        old = {"reddit_members": 955, "threads_followers": 4100}
-        merged = rss.merge_stats(old, reddit=1005, threads=None)
-        self.assertEqual(merged["threads_followers"], 4100)
+        old = {"reddit_members": 1100, "threads_followers": 4212}
+        merged = rss.merge_stats(old, reddit=None, threads=None)
+        self.assertEqual(merged["threads_followers"], 4212)
 
     def test_rounds_down_reddit(self):
         # "1k+" display semantics: show floor to nearest 5 (like before)
         old = {"reddit_members": 955, "threads_followers": 0}
         self.assertEqual(rss.merge_stats(old, reddit=1002, threads=0)["reddit_members"], 1000)
+
+
+class RedditFetchRemovedTests(unittest.TestCase):
+    def test_reddit_fetch_is_removed(self):
+        # 2026-09-22: no point polling Reddit from a 403-blocked datacenter IP.
+        self.assertFalse(hasattr(rss, "fetch_reddit_members"),
+                         "fetch_reddit_members should have been removed")
+        self.assertFalse(hasattr(rss, "REDDIT_SOURCES"),
+                         "REDDIT_SOURCES should have been removed")
 
 
 class ParseThreadsTests(unittest.TestCase):
