@@ -55,8 +55,8 @@ try {
     });
     document.getElementById('quiz-success-result').hidden = false;
     // Personal share → per-persona page with the exact score (?score=).
-    // X gets the short line; FB/TG/WA get the longer roast text
-    // (FB scrapes the link's OG tags — no pre-filled text there).
+    // X gets the short line; FB gets quote (long text, sometimes pre-filled);
+    // TG/WA get the longer roast text.
     const url = quizResultUrl(`${window.location.origin}/quiz/{{ quiz.slug }}`, result.slug, saved.score);
     const short = personalShareText(result, saved.score, TOTAL);
     const long = personalLongShareText(result, saved.score, TOTAL);
@@ -65,7 +65,7 @@ try {
     if (wrap) {
       const set = (sel, href) => { const a = wrap.querySelector(sel); if (a) a.href = href; };
       set('a[href*="x.com/intent"]', `https://x.com/intent/tweet?text=${t}&url=${u}`);
-      set('a[href*="facebook.com/sharer"]', `https://www.facebook.com/sharer/sharer.php?u=${u}`);
+      set('a[href*="facebook.com/sharer"]', `https://www.facebook.com/sharer/sharer.php?u=${u}&quote=${tl}`);
       set('a[href*="t.me/share"]', `https://t.me/share/url?url=${u}&text=${tl}`);
       set('a[href*="wa.me"]', `https://wa.me/?text=${tl}%20${u}`);
       const copy = wrap.querySelector('.share-copy');
