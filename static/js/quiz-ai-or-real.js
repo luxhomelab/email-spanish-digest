@@ -32,8 +32,8 @@ function syncShareLinks(text, url, longText) {
     if (a) a.href = href
   }
   set('a[href*="x.com/intent"]', `https://x.com/intent/tweet?text=${t}&url=${u}`)
-  // Facebook ignores pre-filled text — it scrapes the link's OG tags instead.
-  set('a[href*="facebook.com/sharer"]', `https://www.facebook.com/sharer/sharer.php?u=${u}`)
+  // Facebook scrapes the link's OG tags; quote sometimes surfaces as pre-filled text.
+  set('a[href*="facebook.com/sharer"]', `https://www.facebook.com/sharer/sharer.php?u=${u}&quote=${tl}`)
   set('a[href*="t.me/share"]', `https://t.me/share/url?url=${u}&text=${tl}`)
   set('a[href*="wa.me"]', `https://wa.me/?text=${tl}%20${u}`)
   const copy = wrap.querySelector('.share-copy')
@@ -85,7 +85,7 @@ function init() {
   const dataEl = $('quiz-data')
   if (!dataEl) return
   const { slug, questions: pool, results } = JSON.parse(dataEl.textContent)
-  const questions = pickQuestions(pool, TOTAL)
+  let questions = pickQuestions(pool, TOTAL)
   const answers = []
   let step = 0
   let unlocked = false
@@ -102,7 +102,7 @@ function init() {
       if (prev && Number.isInteger(prev.score) && persona) {
         const last = $('quiz-last')
         if (last) {
-          last.textContent = `Last time: ${prev.score}/${TOTAL} — ${persona.title}`
+          last.innerHTML = `Last time: <strong>${prev.score}/${TOTAL}</strong> — ${persona.title}`
           last.hidden = false
         }
         startBtn.textContent = 'Play again'
@@ -131,6 +131,18 @@ function init() {
   if (skip) skip.addEventListener('click', () => {
     track('quiz_skip', { quiz: slug })
     unlock(true)
+  })
+
+  // Start over (mid-quiz) + retake (from the result screen).
+  const restartBtn = $('quiz-restart')
+  if (restartBtn) restartBtn.addEventListener('click', () => {
+    track('quiz_restart', { quiz: slug, step: step + 1 })
+    resetQuiz(false)
+  })
+  const retakeBtn = $('quiz-retake')
+  if (retakeBtn) retakeBtn.addEventListener('click', () => {
+    track('quiz_retake', { quiz: slug })
+    resetQuiz(true)
   })
 
   window.addEventListener('message', e => {
@@ -168,8 +180,9 @@ function init() {
     for (const id of ['quiz-real', 'quiz-fake']) {
       const btn = $(id)
       btn.disabled = false
-      btn.classList.remove('quiz-picked', 'quiz-correct', 'quiz-wrong')
+      btn.classList.remove('quiz-correct', 'quiz-wrong')
     }
+    $('quiz-next').classList.remove('quiz-next-final')
     $('quiz-choices').hidden = false
     $('quiz-next-wrap').hidden = true
   }
@@ -208,19 +221,20 @@ function init() {
     } else {
       src.hidden = true
     }
-    // Highlight: user's pick + the right answer; lock both buttons.
+    // Highlight only the user's pick — one button, always.
+    // (The verdict line above already names the right answer.)
     const realBtn = $('quiz-real')
     const fakeBtn = $('quiz-fake')
     realBtn.disabled = true
     fakeBtn.disabled = true
     const picked = guessIsReal ? realBtn : fakeBtn
-    const right = q.isReal ? realBtn : fakeBtn
-    picked.classList.add('quiz-picked')
-    right.classList.add('quiz-correct')
-    if (!correct) picked.classList.add('quiz-wrong')
+    picked.classList.add(correct ? 'quiz-correct' : 'quiz-wrong')
     $('quiz-choices').hidden = false
     $('quiz-next-wrap').hidden = false
-    $('quiz-next').textContent = step === TOTAL - 1 ? 'See my result' : 'Next story'
+    const nx = $('quiz-next')
+    const isLast = step === TOTAL - 1
+    nx.textContent = isLast ? 'See my result' : 'Next story'
+    nx.classList.toggle('quiz-next-final', isLast)
   }
 
   function next() {
@@ -259,6 +273,46 @@ function init() {
     if (frame && !frame.src && frame.dataset.src) frame.src = frame.dataset.src
   }
 
+  function resetQuiz(autostart) {
+    step = 0
+    answers.length = 0
+    unlocked = false
+    questions = pickQuestions(pool, TOTAL)
+    // Restore the gate UI for a fresh run (blur + form back, result away).
+    $('quiz-blur').hidden = false
+    $('quiz-gate-form').hidden = false
+    $('quiz-result-full').hidden = true
+    $('quiz-gate').hidden = true
+    $('quiz-play').hidden = true
+    const rimg = $('quiz-result-img')
+    if (rimg) rimg.hidden = true
+    // Refresh the hook's returning-player card from the saved score.
+    try {
+      const prev = loadQuizResult(window.localStorage, slug)
+      const persona = prev && prev.resultSlug ? resultBySlug(results, prev.resultSlug) : null
+      const last = $('quiz-last')
+      if (prev && Number.isInteger(prev.score) && persona && last) {
+        last.innerHTML = `Last time: <strong>${prev.score}/${TOTAL}</strong> — ${persona.title}`
+        last.hidden = false
+      }
+      if (prev && startBtn) startBtn.textContent = 'Play again'
+    } catch { /* keep default hook copy */ }
+    if (progressTrack) {
+      progressTrack.hidden = true
+      $('quiz-progress').style.width = '0%'
+    }
+    if (autostart && hook) {
+      hook.hidden = true
+      $('quiz-play').hidden = false
+      if (progressTrack) progressTrack.hidden = false
+      track('quiz_start', { quiz: slug })
+      renderStep()
+    } else if (hook) {
+      hook.hidden = false
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   function unlock(skipped) {
     if (unlocked) return
     unlocked = true
@@ -277,6 +331,17 @@ function init() {
     $('quiz-gate-form').hidden = true
     $('quiz-result-full').hidden = false
     $('quiz-result-title').textContent = result.title
+    // Persona card art — same file the static result pages use for OG.
+    const imgPath = `/static/img/quiz/${slug}/og-quiz-${result.slug}.jpg`
+    const rimg = $('quiz-result-img')
+    if (rimg) {
+      rimg.src = imgPath
+      rimg.alt = result.title
+      rimg.hidden = false
+    }
+    // Point the page OG at the persona card so reshares carry the result.
+    const og = document.querySelector('meta[property="og:image"]')
+    if (og) og.setAttribute('content', `https://spanified.com${imgPath}`)
     const rt = $('quiz-result-text')
     rt.innerHTML = ''
     String(result.text).split(/\n\n+/).forEach(p => {

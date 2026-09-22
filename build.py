@@ -498,15 +498,15 @@ def share_links(abs_url, text, long_text=None):
     """Build static share URLs (no JS SDKs) for X/TG/WA/FB + copy link.
 
     X keeps the short text (280-char limit); Telegram/WhatsApp get
-    long_text when provided (falls back to text). Facebook shares only
-    the link — its composer ignores pre-filled text, so the per-persona
-    OG title/description on the target page do the talking."""
+    long_text when provided (falls back to text). Facebook ``quote``
+    carries long_text — FB scrapes OG tags by default, but ``quote``
+    sometimes surfaces as pre-filled text for manual posting."""
     u, t = quote(abs_url, safe=""), quote(text, safe="")
     tl = quote(long_text or text, safe="")
     return {
         "url": abs_url,
         "x": f"https://x.com/intent/tweet?text={t}&url={u}",
-        "facebook": f"https://www.facebook.com/sharer/sharer.php?u={u}",
+        "facebook": f"https://www.facebook.com/sharer/sharer.php?u={u}&quote={tl}",
         "telegram": f"https://t.me/share/url?url={u}&text={tl}",
         "whatsapp": f"https://wa.me/?text={tl}%20{u}",
     }
