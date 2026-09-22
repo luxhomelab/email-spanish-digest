@@ -13,6 +13,8 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">{% endblock %}
 {% block extra_head %}
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://spanified.com/quiz/{{ quiz.slug }}-result-{{ result.slug }}">
 <meta property="og:title" content="{{ result.title }} — {{ quiz.title }}">
 <meta property="og:description" content="{{ result.text | replace('\n', ' ') | truncate(200, True, '…') }}">
 {% endblock %}
@@ -29,24 +31,11 @@
    {% for para in result.text.split('\n\n') %}
    <p class="quiz-result-text">{{ para }}</p>
    {% endfor %}
-  <div class="quiz-result-share">
-   <p class="share-label">Share your result</p>
-   {% include "partials/share.html" %}
-  </div>
-  <p class="quiz-result-retake">Not your result? <a href="/quiz/{{ quiz.slug }}">Retake the quiz</a></p>
-  <div class="quiz-result-others">
-   <h2>All personas</h2>
-   <ul class="quiz-result-others-list">
-    {% for r in all_results %}
-    <li{% if r.slug == result.slug %} class="is-current"{% endif %}>
-     <a href="/quiz/{{ quiz.slug }}-result-{{ r.slug }}">
-      <span>{{ r.title }}</span>
-      <span class="arrow" aria-hidden="true">→</span>
-     </a>
-    </li>
-    {% endfor %}
-   </ul>
-  </div>
+   <div class="quiz-result-share">
+    <p class="share-label">Share your result</p>
+    <div class="quiz-share">{% include "partials/share.html" %}</div>
+   </div>
+   <p class="quiz-retake-wrap"><a class="quiz-cta-btn" href="/quiz/{{ quiz.slug }}">Retake the quiz</a></p>
  </div>
 </div>
 <script>

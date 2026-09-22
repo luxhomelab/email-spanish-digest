@@ -18,6 +18,7 @@
     <div class="quiz-persona">
       <p class="confirm-kicker">Your persona</p>
       <h2 id="quiz-success-title"></h2>
+      <img id="quiz-success-img" class="quiz-result-img" src="/static/img/quiz/ai-or-real/quiz-cover.jpg" alt="" width="1200" height="630" loading="lazy" hidden>
       <div id="quiz-success-text" class="quiz-result-text"></div>
     </div>
     <div class="quiz-cta-row">
@@ -46,6 +47,16 @@ try {
     document.getElementById('quiz-success-num').textContent = saved.score;
     document.getElementById('quiz-success-line').textContent = `You scored ${saved.score}/${TOTAL} — ${result.title}`;
     document.getElementById('quiz-success-title').textContent = result.title;
+    // Persona card art — same file the static result pages use for OG.
+    const simg = document.getElementById('quiz-success-img');
+    if (simg) {
+      simg.src = `/static/img/quiz/{{ quiz.slug }}/og-quiz-${result.slug}.jpg`;
+      simg.alt = result.title;
+      simg.hidden = false;
+    }
+    // Point the page OG at the persona card so reshares carry the result.
+    const og = document.querySelector('meta[property="og:image"]');
+    if (og) og.setAttribute('content', `https://spanified.com/static/img/quiz/{{ quiz.slug }}/og-quiz-${result.slug}.jpg`);
     const rt = document.getElementById('quiz-success-text');
     rt.innerHTML = '';
     String(result.text).split(/\n\n+/).forEach(p => {
