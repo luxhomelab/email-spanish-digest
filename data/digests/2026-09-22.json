@@ -1,0 +1,181 @@
+{
+  "items": [
+    {
+      "title": "Spain faces the biggest pension replacement rate drop in Europe",
+      "body": "Spain faces the largest drop in the pension replacement rate among major European economies by 2050, according to a Fedea study. Aging and baby-boomer retirements will add 2.5 points of GDP to the pension deficit between 2022 and 2050. Workers paying into Spanish Social Security will see public pensions replace a smaller share of their final salary.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/09/21/6ab113a5e85eceee388b458b.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Energy costs add €148 a month for self-employed workers",
+      "body": "Self-employed workers (autónomos) face an extra €148 per month because of higher electricity and fuel prices, according to UPTA. Transport, agriculture and livestock are the most exposed sectors as energy prices climb amid the Iran war. The added cost hits monthly budgets directly.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/09/22/autonomos-factura-autonomo-se-encarece-hasta-150-euros-mes-por-escalada-energia-2053591.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Ceuta raises migrant triage numbers as Spain and Morocco plan talks",
+      "body": "Ceuta is now processing more than 105 triage assessments for adult migrants per day, with an estimated 3,000 to 3,500 people still on the streets. Foreign Minister José Manuel Albares will meet his Moroccan counterpart in New York this week, and Morocco says it will take \"necessary measures\" to prevent another mass entry.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/epsocial/migracion/noticia-interior-eleva-105-triajes-diarios-adultos-migrantes-ceuta-cifra-3500-quedan-calle-20260921190459.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/albares-reunira-nueva-york-homologo-marroqui-llamamiento-entrar-ceuta-tomaran-medidas-necesarias_1_13527529.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Spain to reform medical waiting list registry to end 'makeup'",
+      "body": "The Health Ministry is preparing a Royal Decree to overhaul waiting list registration and avoid \"makeup\". Patients would enter lists from the moment of medical indication, with data broken down by clinical priority. The rule would ban parallel lists, add primary care waiting times and strengthen information rights. Congress must validate it within 30 days.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/gobierno-reformara-registro-listas-espera-medicas-evitar-maquillaje_1_13527013.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Verifactu invoicing rules: Word and Excel still allowed",
+      "body": "Verifactu takes effect January 1, 2027 for companies and July 1, 2027 for self-employed workers (autónomos), under Royal Decree-Law 15/2025. Basic Word or Excel invoicing can continue, says tax advisor José Ramón López. Automated spreadsheets, macros or data-reuse tools must comply with technical requirements. The Tax Agency will target those who have not adapted by the deadlines.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-09-21/jose-rampon-lopez-asesor-fiscal-usar-word-excel-facturas-agencia-tributaria_4428278/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "District real estate fair opens in Madrid amid crisis",
+      "body": "The District, the largest real estate fair, opens on Tuesday in Madrid with backing from Madrid's president Isabel Díaz-Ayuso. About 20,000 professionals and investors are expected, with an estimated economic impact of €40 million. Tenant groups plan an alternative summit, \"El Barrio\", from Thursday to Sunday. Madrid does not apply the housing law or rent caps.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/mayor-feria-inmobiliaria-aterriza-madrid-bendicion-ayuso-hostilidad-inquilinos_1_13525227.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Foreign investment in Spain jumps 31% to €12,446 million",
+      "body": "Foreign investment reached €12,446 million in the first half of 2026, up 31.2% from a year earlier. The US was the main investor, accounting for 23% of the total, with gross investment up 84%. Greenfield project investment grew more than 52%. Rising investment signals confidence and can create jobs.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/inversion-extranjera-espana-crece-hasta-un-31-primer-semestre-roza-ya-los-12-450-millones_7039160_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Brussels questions Spain's deficit safeguard clause request",
+      "body": "The European Fiscal Board doubts Spain's use of the national escape clause to avoid an excessive deficit procedure. It says defense spending has been \"very limited\" and questions the flexibility. Spain is in the very high debt group, above 90% of GDP; debt hit 100.7% in 2025, with 99.6% forecast for 2026. The deficit was 2.4% in 2025.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bruselas-advierte-espana-solicitar-clausula-salvaguarda-deficit-gasto-defensa-no-justifica_1_13525422.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Government challenges Supreme Court ruling on grandchildren voting rights",
+      "body": "The State Legal Service has appealed the Supreme Court's precautionary ruling limiting voting rights for descendants of Franco-era exiles. It argues the decision exceeds the limits of the precautionary measure and rules on a 2022 instruction that was not challenged in the process. People who gained nationality under the grandchildren law could see voting rights affected.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/gobierno-carga-excesos-supremo-ley-nietos-dice-nadie-predecir-votarian_1_13526571.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Flu cases double in Spain as COVID spikes in babies",
+      "body": "Flu positivity in primary care has doubled to 8.2%, from 4% a year ago, though still below epidemic thresholds. COVID incidence among babies under one year jumped from 47.4 to 125.8 cases per 100,000 in two weeks. The increase is mostly due to flu A H3N2 subclade K, according to the ISCIII respiratory report.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/vuelven-los-virus-gripe-se-duplica-respecto-ano-pasado-los-contagios-covid-se-disparan-entre-bebes-menos-un-ano_7039361_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Justice administration staff move to 35-hour week",
+      "body": "Administration of Justice staff and court clerks move to a 35-hour working week on September 22, with an annual total of 1,512 hours. Hours between 17:00 and 22:00 count double; nights, weekends and holidays count as 2.5 times. The rule includes summer intensive hours and flexible entry and exit times.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/estos-son-los-trabajadores-que-pasan-manana-jornada-35-horas-1-512-horas-ano-nuevas-compensaciones_7039187_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spanish doctors achieve organ transplants without rejection",
+      "body": "A team at La Paz hospital has developed an experimental technique that lets recipients' immune systems accept transplanted organs as their own. Yassine, 21, and Nora, 55, are healthy six years after receiving organs through this method. The ONT says the formula could eliminate lifelong immunosuppression.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/medicos-espanoles-crean-trasplantes-futuro-yassine-nora-viven-organos-vida-rechazo_1_13486590.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "Self-employed workers in Spain face €148 more a month in energy costs. What's your move? A) Raise prices B) Cut costs C) Absorb it",
+  "variant": "Spain today. Briefly.",
+  "headline": "Spain today. Briefly.",
+  "date": "2026-09-22",
+  "generated_at": "2026-09-22T06:06:43.141415+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 325,
+    "items_selected_pass1": 13,
+    "fact_sheets_extracted": 13,
+    "items_after_importance_filter": 13,
+    "items_in_digest": 12
+  },
+  "selection_reasons": {
+    "79": "Supreme Court limits voting rights for descendants of Spanish exiles under the 'ley de nietos' — directly affects nationality and residency applicants.",
+    "30": "Interior raises daily migrant screenings in Ceuta to 105 and says 3,500 remain on the street — key numbers on the ongoing migration crisis.",
+    "40": "Spain's foreign minister will meet Morocco's counterpart to discuss the return of migrants still in Ceuta — diplomatic track of the crisis.",
+    "10": "Fedea report warns Spain will see the biggest drop in pension replacement rates among major European economies by 2050 — critical for future retirees.",
+    "288": "Foreign investment in Spain grew 31% in the first half, nearing €12.45 billion — positive signal for investors.",
+    "84": "New royal decree will standardize waiting lists and ban parallel registries — improves transparency in public healthcare.",
+    "51": "The District property fair lands in Madrid amid tenant protests — key event for the housing market and rental policy.",
+    "189": "Autónomos' monthly bills rise up to €150 due to energy costs — affects self-employed workers and small businesses.",
+    "96": "Brussels questions Spain's deficit safeguard clause as defense spending doesn't justify it — fiscal warning with budget implications.",
+    "293": "250,000 public employees move to a 35-hour workweek — labor reform affecting many workers.",
+    "273": "New Verifactu invoicing rules will require adapted software by 2027 — tax compliance change for all autónomos and businesses.",
+    "35": "Spanish doctors develop transplant technique that could eliminate lifelong immunosuppression — positive medical breakthrough.",
+    "139": "Flu cases double and COVID infections surge among infants — health alert for families in Spain."
+  }
+}
