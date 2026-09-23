@@ -1,0 +1,150 @@
+{
+  "items": [
+    {
+      "title": "Room rentals surge as housing crisis deepens",
+      "body": "Renting a room in a shared flat has become the only housing option for many in Spain. 3.2% of Spaniards rented or sought a room in the first half of 2026, up from 2.8% in 2025. Madrid province holds 26.35% of national room supply, up from 19.26%; Madrid city alone lists 22.59%. Barcelona and Valencia account for 16% and 10.9%.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/09/22/6ab253f621efa0f8538b458a.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Regulated gas bill could jump over 50% in October",
+      "body": "OCU estimates the regulated gas tariff (TUR) will rise about 69% in October. A household using 9,000 kWh annually would pay around €910, up from about €600, adding €310 a year. The TUR.2 rate would climb from 4.12 to 6.95 cents per kWh.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/factura-regulada-gas-podria-disparar-su-coste-mas-un-50-octubre_7039658_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain studies shortening migrant expulsion deadlines",
+      "body": "The government is working to shorten administrative and judicial deadlines for expelling migrants who do not qualify for asylum; current limits are 12 weeks. Interior Minister Marlaska will ask the EU next week to relax rules in exceptional situations like Tarajal. Ángel Víctor Torres is negotiating with Ceuta's president, Vivas, to house 3,500 people.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/gobierno-estudia-acortar-ley-plazos-expulsion-migrantes-busca-nuevas-plazas-acogida-ceuta_1_13529861.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Glovo founder to stand trial over false autónomo riders",
+      "body": "A Barcelona judge sent Glovo founder Oscar Pierre to trial for keeping delivery riders as false autónomos (self-employed). The judge rejected his request to archive the case and accepted the request from the Fiscalía and the CGT union. Pierre is accused of undermining workers' rights and cutting costs by not guaranteeing a professional salary.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/juez-sienta-banquillo-fundador-glovo-mantener-falsos-autonomos-repartidores_1_13530140.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Pibank raises savings rates to 3.03% deposit",
+      "body": "Pibank will raise its 12-month deposit to 3.03% TAE from September 29, with no minimum or maximum amount, quarterly interest, and partial or total cancellation. The remunerated account will rise to 2.02% TAE from 1.76%, and the payroll account to 2.50% TIN (2.52% TAE) for balances over €5,000 from October 1.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/mercados/2026-09-22/pibank-ahorro-mejora-rentabilidad-depositos-1hms_4428672/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Congress to debate early retirement with 40 years contributed",
+      "body": "PSOE and Sumar voted to admit Podemos' bill allowing early retirement without pension penalties for people with at least 40 years of contributions. Months ago, PSOE voted against a similar reform. The proposal now moves to the Congress plenary.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/09/22/gobierno-tramitar-prejubilacion-40anos-cotizados-sin-penalizacion-pensiones-2053864.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spain's national team celebrates World Cup triumph",
+      "body": "Spain's national football team held its first open training session at Las Rozas as both European and world champion, drawing huge crowds. Coach De la Fuente called up 26 players, and Lamine Yamal's number 19 shirt was the most popular among fans.",
+      "sources": [
+        {
+          "name": "Marca",
+          "url": "https://www.marca.com/futbol/seleccion/2026/09/22/apoteosis-seleccion.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Spanish doctors create transplants without rejection",
+      "body": "Doctors at Hospital Universitario de La Paz have developed a technique that prevents transplant rejection without lifelong immunosuppressive medication. It uses an immune passport from the donor's bone marrow. The ONT says if it passes the safety phase, it could free up 20-50% of retransplant waiting lists.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/medicos-han-logrado-trasplantes-rechazo-queremos-acabar-retransplantes-pastillas-vida_128_13508254.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Spain hits record exports but trade deficit widens",
+      "body": "Spain's exports reached a record €35,554 million in July, up 3% year-on-year, but imports rose 6% to €40,678 million. The deficit was €5,224 million, and the accumulated deficit through July hit €38,005 million, the highest since 2022. Energy exports surged 61% to €3,319 million.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/espana-bate-un-nuevo-record-exportaciones-julio-pero-eleva-su-deficit-comercial-maximos-desde-guerra-ucrania_7039837_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Constitutional Court backs amnesty for Puigdemont embezzlement",
+      "body": "The Constitutional Court's progressive majority will draft a ruling to amnesty embezzlement charges against Carles Puigdemont and other procés leaders, potentially allowing Puigdemont to return without arrest. The plenary rejected conservative magistrate José María Macías's opposing draft ruling. The next plenary is October 6.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/mayoria-constitucional-avala-amnistiar-malversacion-puigdemont-resto-condenados-proces_1_13528976.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Gas bills could jump over 50% in October. What's your plan? A) Switch tariff B) Use less C) Just pay",
+  "variant": "Quiet day in Spain. Then this.",
+  "headline": "Quiet day in Spain. Then this.",
+  "date": "2026-09-23",
+  "generated_at": "2026-09-23T06:05:26.317967+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 332,
+    "items_selected_pass1": 10,
+    "fact_sheets_extracted": 10,
+    "items_after_importance_filter": 10,
+    "items_in_digest": 10
+  },
+  "selection_reasons": {
+    "37": "Government plans to shorten migrant expulsion deadlines and expand reception capacity in Ceuta — directly affects immigration policy and foreign residents.",
+    "323": "Spain's national team celebrated its first training after winning the World Cup — mandatory inclusion as a major national event.",
+    "10": "Room rental prices rise 4.7% and become the only housing option for many — key housing market trend affecting renters.",
+    "296": "Regulated gas bill could jump 54% in October — significant cost-of-living increase for households.",
+    "245": "Congress advances early retirement without penalties for workers with 40 years of contributions — affects pensioners and future retirees.",
+    "74": "Glovo founder faces trial for keeping riders as false autónomos — labor rights precedent relevant to gig workers and digital nomads.",
+    "51": "Spanish doctors achieve transplants without rejection, eliminating lifelong immunosuppression — positive healthcare breakthrough.",
+    "81": "Constitutional Court backs amnesty for procés embezzlement, paving the way for Puigdemont's return — major political and legal event.",
+    "279": "Pibank raises deposit rate to 3.03% TAE — relevant for savers and investors seeking better returns in Spain.",
+    "292": "Spain hits export record but trade deficit widens to highs since the Ukraine war — key economic indicator for investors."
+  }
+}
