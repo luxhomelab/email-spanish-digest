@@ -788,6 +788,8 @@ def main():
         "https://bsky.app/profile/spanified.bsky.social",
         "https://www.reddit.com/r/SpainDaily/",
         "https://x.com/spanified",
+        "https://substack.com/@spanified",
+        "https://www.facebook.com/spanified",
     ]
 
     digests = [digest_context(d) for d in load_digests()]
