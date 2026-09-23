@@ -68,6 +68,33 @@ export function loadQuizResult(storage, slug) {
   }
 }
 
+export function subscribeKey(slug) {
+  return `spanified_subscribed_${slug}`
+}
+
+// Separate opt-in record, written ONLY on an actual subscribe-form submit
+// (subscription:success event or the legacy Brevo postMessage).
+// A saved quiz score alone must never unlock the result — score ≠ consent.
+export function markQuizSubscribed(storage, slug, email = '') {
+  try {
+    storage.setItem(subscribeKey(slug), JSON.stringify({ subscribed: true, email, at: new Date().toISOString() }))
+    return true
+  } catch {
+    return false
+  }
+}
+
+export function isQuizSubscribed(storage, slug) {
+  try {
+    const raw = storage.getItem(subscribeKey(slug))
+    if (!raw) return false
+    const data = JSON.parse(raw)
+    return !!(data && data.subscribed)
+  } catch {
+    return false
+  }
+}
+
 export function resultBySlug(results, slug) {
   return (results || []).find(r => r.slug === slug) || null
 }

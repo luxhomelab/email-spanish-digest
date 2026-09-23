@@ -51,11 +51,14 @@ a { color: inherit; }
 .nav-search:hover { color: #AA151B; }
 .nav-search-text { display: none; }
 .nav-cta {
- background-color: #3C4858; color: #ffffff !important;
- padding: 8px 18px; border-radius: 3px; font-weight: 700;
- font-family: Roboto, Helvetica, Arial, sans-serif;
+  background-color: #AA151B; color: #ffffff !important;
+  padding: 8px 16px; border-radius: 12px; font-weight: 700;
+  font-size: 14px; line-height: 1.4; white-space: nowrap;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  transition: background-color 0.15s;
 }
-.nav-cta:hover { background-color: #2c3645; }
+.nav-cta:hover { background-color: #8A1019; color: #ffffff !important; }
+.nav-cta:focus-visible { outline: 3px solid rgba(170,21,27,0.4); outline-offset: 2px; }
 .nav-drop { position: relative; }
 .nav-drop summary { cursor: pointer; list-style: none; color: #3C4858; }
 .nav-drop summary::-webkit-details-marker { display: none; }
@@ -200,7 +203,7 @@ body.page-unsubscribe iframe, html.iframe-page .page-unsubscribe iframe {
  .site-nav a:last-child { border-bottom: none; }
  .nav-search svg { display: none; }
  .nav-search-text { display: inline; }
- .nav-cta { text-align: center; margin-top: 8px; padding: 10px 14px; }
+  .nav-cta { display: block; text-align: center; margin-top: 10px; padding: 12px 14px; border-bottom: none; font-size: 15px; }
  .content { padding: 28px 16px; }
  .footer-inner {
   flex-direction: column; gap: 8px; text-align: center;
@@ -666,11 +669,41 @@ body.page-calculator .calc h1 { font-size: 38px; letter-spacing: -0.5px; }
 .subscribe-consent a { color: #B91C1C; text-decoration: none; }
 .subscribe-consent a:hover { text-decoration: underline; }
 
-/* Native subscribe form (Listmonk API) — replaces the Brevo iframe */
+/* Native subscribe form (Listmonk API) — replaces the Brevo iframe.
+   Card highlight so the form reads as the page's main action. */
 .subscribe-form {
- max-width: 480px; margin: 28px auto 4px auto; text-align: left;
+ max-width: 520px; margin: 28px auto 4px auto; text-align: left;
+ background: #FFF8EE; border: 1px solid #EFE7D8; border-top: 3px solid #AA151B;
+ border-radius: 14px; box-shadow: 0 2px 14px rgba(60,40,20,0.07);
+ padding: 22px 22px 18px;
 }
-#quiz-gate-form .subscribe-form { max-width: 420px; margin-top: 18px; }
+#quiz-gate-form .subscribe-form {
+  max-width: none; margin: 18px 0 0 0;
+  /* De-card inside the white .quiz-card: drop the nested cream box/border/
+     shadow so there is only one frame; keep the red top accent so the form
+     still reads as the page's main action. */
+  background: transparent; border: none; border-top: 3px solid #AA151B;
+  border-radius: 0; box-shadow: none;
+  padding: 18px 0 2px;
+}
+#quiz-gate-form .subscribe-form-input-wrap { align-items: stretch; }
+/* Long quiz label ("Subscribe & reveal my result") stays on one line without
+   squeezing the input: lock the button size, trim side padding slightly. */
+#quiz-gate-form .subscribe-form-btn { flex-shrink: 0; padding: 14px 18px; }
+/* Secondary escape hatch sits centered below the main action. */
+#quiz-gate-form .quiz-skip { display: block; margin: 6px auto 0; }
+/* Newsletter micro-pitch under the gate form; the skip link below it
+   stays quiet (no underline until hover) so attention goes to the pitch. */
+#quiz-gate-form .quiz-gate-pitch {
+ font-size: 13px; color: #6C7A89; text-align: center; margin: 12px 0 2px;
+}
+#quiz-gate-form .quiz-skip {
+ font-size: 0.8rem; color: #8a8a8a; text-decoration: none;
+}
+#quiz-gate-form .quiz-skip:hover { text-decoration: underline; }
+/* Quiz gate uses the default row layout (input + button side by side):
+   the card is ~600px wide on desktop, enough for both. Narrow viewports
+   fall back to the stacked layout via the global 520px breakpoint below. */
 .subscribe-form-label {
  display: block; font-size: 13px; font-weight: 700; color: #3C4858;
  letter-spacing: 0.4px; margin-bottom: 7px;
@@ -682,18 +715,42 @@ body.page-calculator .calc h1 { font-size: 38px; letter-spacing: -0.5px; }
  border: 1px solid #C0CCD9; border-radius: 12px; background: #fff; color: #3C4858;
  outline: none; transition: border-color 0.15s; font-family: inherit;
 }
-.subscribe-form-input:focus { border-color: #AA151B; }
+.subscribe-form-input:focus { border-color: #AA151B; box-shadow: 0 0 0 3px rgba(170,21,27,0.12); }
 .subscribe-form-btn {
  background: #AA151B; color: #fff; font-weight: 700; font-size: 1rem;
  padding: 14px 22px; border: none; border-radius: 12px; cursor: pointer;
  white-space: nowrap; transition: background 0.15s; font-family: inherit;
 }
 .subscribe-form-btn:hover { background: #8A1019; }
+.subscribe-form-btn:focus-visible { outline: 3px solid rgba(170,21,27,0.4); outline-offset: 2px; }
 .subscribe-form-btn:disabled { opacity: 0.7; cursor: default; }
-.subscribe-form-error { color: #b3261e; font-size: 14px; font-weight: 600; margin: 12px 0 0; }
+.subscribe-form-error {
+ color: #b3261e; font-size: 14px; font-weight: 600; margin: 12px 0 0;
+ background: #FDECEA; border-radius: 8px; padding: 8px 12px;
+}
+.subscribe-form-error[hidden] { display: none; }
+/* Explicit GDPR consent checkbox (unchecked by default, required to submit). */
+.subscribe-form-consent {
+ display: flex; gap: 10px; align-items: flex-start; margin-top: 14px;
+ font-size: 14px; line-height: 1.45; color: #3C4858; cursor: pointer;
+}
+.subscribe-form-consent input {
+ width: 18px; height: 18px; margin-top: 1px; flex-shrink: 0;
+ accent-color: #AA151B; cursor: pointer;
+}
+.subscribe-form-consent a { color: #B91C1C; text-decoration: none; }
+.subscribe-form-consent a:hover { text-decoration: underline; }
 .subscribe-form-hp {
  position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
 }
+/* Inline "check your inbox" notice shown in the quiz after a fresh subscribe.
+   The result unlocks immediately; the double opt-in click still finishes it. */
+.quiz-confirm-hint {
+ background: #EDF7ED; border: 1px solid #BFE3BF; border-radius: 12px;
+ padding: 12px 16px; margin-bottom: 16px; font-size: 15px; color: #2E5B2E;
+}
+.quiz-confirm-hint p { margin: 0; }
+.quiz-confirm-hint[hidden] { display: none; }
 @media (max-width: 520px) {
  .subscribe-form-row, .subscribe-form-input-wrap { flex-direction: column; }
  .subscribe-form-btn { width: 100%; }

@@ -8,6 +8,8 @@
 //   400 {"message":"..."}            → error, message shown inline
 
 const DEFAULT_ERROR = 'Something went wrong. Please try again.'
+// Fallback endpoint when the form has no data-endpoint. The real value is
+// baked into data-endpoint at build time (build.py --listmonk).
 const ENDPOINT = 'https://api.spanified.com/api/public/subscription'
 
 export function subscribePayload(email, listUuid) {
@@ -40,6 +42,7 @@ export function initSubscribeForm(form) {
   form.dataset.subscribeBound = '1'
 
   const emailInput = form.querySelector('input[name="email"]')
+  const consentInput = form.querySelector('input[name="consent"]')
   const hp = form.querySelector('input[name="company"]')
   const errorEl = form.querySelector('[data-subscribe-error]')
   const button = form.querySelector('[type="submit"]')
@@ -56,8 +59,10 @@ export function initSubscribeForm(form) {
   }
 
   // Emit a success event instead of redirecting (quiz gate needs to unlock).
+  // Must bubble: listeners sit on wrapper divs (e.g. #quiz-gate-form),
+  // not on the <form> itself (CustomEvent defaults to bubbles:false).
   const fireSuccess = email => {
-    form.dispatchEvent(new CustomEvent('subscription:success', { detail: { email } }))
+    form.dispatchEvent(new CustomEvent('subscription:success', { bubbles: true, detail: { email } }))
   }
 
   form.addEventListener('submit', async e => {
@@ -70,6 +75,7 @@ export function initSubscribeForm(form) {
     const email = emailInput.value.trim()
     if (!email) return showError('Please enter your email address.')
     if (!emailInput.checkValidity()) return showError('Please enter a valid email address.')
+    if (consentInput && !consentInput.checked) return showError('Please agree to receive Spain Daily to subscribe.')
 
     const originalLabel = button ? button.textContent : ''
     if (button) { button.disabled = true; button.textContent = 'Subscribing…' }

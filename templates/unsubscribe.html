@@ -1,8 +1,7 @@
 {% extends "base.html" %}
-{% block html_class %} class="iframe-page"{% endblock %}
 {% block body_class %} class="page-unsubscribe"{% endblock %}
 {% block title %}Spain Daily Unsubscribe{% endblock %}
-{% block description %}<meta name="description" content="Unsubscribe from Spain Daily in one click. No questions asked.">
+{% block description %}<meta name="description" content="How to unsubscribe from Spain Daily: use the link at the bottom of any email.">
 <meta name="robots" content="noindex, follow">{% endblock %}
 {% block extra_head %}
 {% endblock %}
@@ -11,10 +10,22 @@
 {% include "partials/breadcrumbs.html" %}
  <div class="subscribe-intro">
   <p class="subscribe-kicker">Sorry to see you go</p>
-  <h1>Unsubscribe <span class="accent">in one click</span></h1>
-  <p>Enter your email below and confirm — no questions asked, no hard feelings. You can always come back.</p>
+  <h1>How to <span class="accent">unsubscribe</span></h1>
+  <p>Every Spain Daily email ends with an unsubscribe link — no login, no hard feelings. You can always come back.</p>
  </div>
-  <iframe src="https://43fcc87b.sibforms.com/v2/serve/MUIFAI6ItYwlAY7qGD7rHkf7ug6hnv3FwCbcAcCe4pxqKXkUReo3V4OpoQPnzfjDv5NjIS1ptjtfgO6lEy0z43Nh_lNtnYoryQfzCViMYSSFbe7JNAfGe2GeY9u2HtBqmhgi_nFgydb6srYEN-6FUPaf074dfPVAmKbs1wmBLV8XQdCKOqB2sEGyEEnsYd9_Vt-uucnnwUsDIyMBlw==" allowfullscreen></iframe>
+ {# No form here by design: Listmonk's public API is subscribe-only, so the
+     per-email link at the bottom of each email is the unsubscribe mechanism.
+    A backend proxy would be needed for an email-input form (see README). #}
+ <div class="unsub-keep">
+  <p class="confirm-kicker">How it works</p>
+  <h2>Three steps</h2>
+  <ol class="confirm-steps">
+   <li><div><strong>Open any Spain Daily email</strong> — the newest one is easiest to find.</div></li>
+   <li><div><strong>Click “Unsubscribe” at the bottom</strong> of the email.</div></li>
+   <li><div><strong>Confirm on the page that opens</strong> — that's it.</div></li>
+  </ol>
+  <p class="confirm-trouble">Lost the email or never received one? <a href="/contact">Write to us</a> — we'll remove you manually.</p>
+ </div>
  <div class="subscribe-trust unsub-keep">
   <p class="confirm-kicker">Stay in touch</p>
   <h2>Prefer headlines without the email?</h2>

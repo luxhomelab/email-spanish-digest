@@ -1,6 +1,6 @@
 import { describe, it, after } from 'node:test'
 import assert from 'node:assert/strict'
-import { subscribePayload, errorMessage, postSubscription } from '../static/js/subscribe-form.js'
+import { subscribePayload, errorMessage, postSubscription, initSubscribeForm } from '../static/js/subscribe-form.js'
 
 // ── subscribePayload ────────────────────────────────────────────────────────
 describe('subscribePayload', () => {
@@ -64,4 +64,74 @@ describe('postSubscription', () => {
   })
 
   after(() => { global.fetch = originalFetch })
+})
+
+// Quiz gate listens for 'subscription:success' on the #quiz-gate-form wrapper
+// div, NOT on the <form> — so the event MUST bubble (regression: CustomEvent
+// defaults to bubbles:false and the quiz result never unlocked).
+describe('initSubscribeForm', () => {
+  const originalFetch = global.fetch
+  const originalWindow = global.window
+
+  function fakeForm({ successUrl = '', email = 'a@b.com', consent = true } = {}) {
+    const handlers = {}
+    const errorEl = { textContent: '', hidden: true }
+    const form = {
+      dataset: { listUuid: 'list-1', successUrl },
+      querySelector: sel => {
+        if (sel === 'input[name="email"]') return { value: email, checkValidity: () => true }
+        if (sel === 'input[name="company"]') return { value: '' }
+        if (sel === 'input[name="consent"]') return { checked: consent }
+        if (sel === '[data-subscribe-error]') return errorEl
+        if (sel === '[type="submit"]') return { disabled: false, textContent: 'Subscribe' }
+        return null
+      },
+      addEventListener: (name, fn) => { handlers[name] = fn },
+      dispatchEvent: evt => { form.dispatched = evt; return true },
+    }
+    return { form, handlers, errorEl }
+  }
+
+  async function submit(form, handlers) {
+    global.fetch = async () => ({ ok: true })
+    await handlers.submit({ preventDefault: () => {} })
+  }
+
+  it('dispatches a BUBBLING subscription:success when successUrl is empty (quiz gate)', async () => {
+    global.window = { location: { assign: () => { throw new Error('must not redirect') } } }
+    const { form, handlers } = fakeForm({ successUrl: '' })
+    initSubscribeForm(form)
+    await submit(form, handlers)
+    assert.equal(form.dispatched.type, 'subscription:success')
+    assert.equal(form.dispatched.bubbles, true)
+    assert.deepEqual(form.dispatched.detail, { email: 'a@b.com' })
+  })
+
+  it('redirects to successUrl when set (subscribe page → /confirm)', async () => {
+    let assigned = null
+    global.window = { location: { assign: url => { assigned = url } } }
+    const { form, handlers } = fakeForm({ successUrl: '/confirm' })
+    initSubscribeForm(form)
+    await submit(form, handlers)
+    assert.equal(assigned, '/confirm')
+    assert.equal(form.dispatched, undefined)
+  })
+
+  it('blocks submit with an inline error when consent is unchecked (no fetch)', async () => {
+    let fetched = false
+    global.fetch = async () => { fetched = true; return { ok: true } }
+    global.window = { location: { assign: () => { throw new Error('must not redirect') } } }
+    const { form, handlers, errorEl } = fakeForm({ consent: false })
+    initSubscribeForm(form)
+    await handlers.submit({ preventDefault: () => {} })
+    assert.equal(fetched, false)
+    assert.equal(form.dispatched, undefined)
+    assert.equal(errorEl.hidden, false)
+    assert.match(errorEl.textContent, /agree to receive Spain Daily/)
+  })
+
+  after(() => {
+    global.fetch = originalFetch
+    global.window = originalWindow
+  })
 })

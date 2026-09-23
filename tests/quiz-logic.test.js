@@ -11,6 +11,9 @@ import {
   quizResultUrl,
   saveQuizResult,
   loadQuizResult,
+  subscribeKey,
+  markQuizSubscribed,
+  isQuizSubscribed,
 } from '../static/js/quiz-logic.js'
 
 function makePool() {
@@ -171,8 +174,7 @@ describe('quizResultUrl', () => {
   })
 })
 
-describe('personalLongShareText', () => {
-  const r = {
+describe('personalLongShareText', () => {  const r = {
     shareText: 'I got 5-6/10 telling real Spanish news from AI fakes — Half-Spanish! Can you beat me?',
     text: 'Fifty-fifty! First para.\n\nSecond para.',
   }
@@ -187,5 +189,28 @@ describe('personalLongShareText', () => {
       personalLongShareText({ shareText: 'I got 1-2/10 — X' }, 2, 10),
       personalShareText({ shareText: 'I got 1-2/10 — X' }, 2, 10),
     )
+  })
+})
+
+describe('subscribe tracking (separate from score)', () => {
+  it('is false with a saved score but no submit — score alone never unlocks', () => {
+    const s = memStorage()
+    saveQuizResult(s, 'ai-or-real', { score: 7, slug: 'ai-or-real', resultSlug: 'd' })
+    assert.equal(isQuizSubscribed(s, 'ai-or-real'), false)
+  })
+
+  it('markQuizSubscribed flips it and keeps the email', () => {
+    const s = memStorage()
+    assert.equal(markQuizSubscribed(s, 'ai-or-real', 'a@b.com'), true)
+    assert.equal(isQuizSubscribed(s, 'ai-or-real'), true)
+    const raw = JSON.parse(s.getItem(subscribeKey('ai-or-real')))
+    assert.equal(raw.subscribed, true)
+    assert.equal(raw.email, 'a@b.com')
+  })
+
+  it('survives broken storage (private mode)', () => {
+    const bad = { getItem: () => { throw new Error('deny') }, setItem: () => { throw new Error('deny') } }
+    assert.equal(isQuizSubscribed(bad, 'ai-or-real'), false)
+    assert.equal(markQuizSubscribed(bad, 'ai-or-real'), false)
   })
 })

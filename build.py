@@ -11,7 +11,12 @@ and renders a static site:
   - Archive listing -> archive/index.html + archive/N.html (10 per page)
   - Sitemap        -> sitemap.xml
 
-Usage: python3 build.py [--out dist]   (idempotent)
+Usage: python3 build.py [--out dist] [--listmonk local]   (idempotent)
+
+  Local dev against the dev Listmonk instead of prod:
+    python3 build.py --listmonk local
+  (endpoint + dev list UUID are picked automatically; override with
+  --list-uuid or env LISTMONK_URL / LISTMONK_LIST_UUID)
 """
 
 import argparse
@@ -35,6 +40,15 @@ ARCHIVE_DIR = os.path.join(OUT_DIR, "archive")
 
 SITE_URL = "https://spanified.com"
 PAGE_SIZE = 10
+
+# Listmonk backend for the native subscribe form (templates/partials/
+# subscribe-form.html renders these into data-endpoint / data-list-uuid).
+# Default is prod; local dev builds pass --listmonk local (or LISTMONK_URL)
+# so the browser talks to the dev instance instead of prod.
+LISTMONK_PROD_URL = "https://api.spanified.com"
+LISTMONK_LOCAL_URL = "https://listmonk.dslab.fyi"
+LISTMONK_PROD_LIST_UUID = "d4edf463-70a3-45e5-a964-a39b48c49b2d"
+LISTMONK_LOCAL_LIST_UUID = "5dcb6e29-0181-4c55-b68a-705133b53e10"
 
 # Static pages rendered 1:1 from templates.
 # Pages listed here are rendered to dist root. NOINDEX_PAGES are still
@@ -657,7 +671,38 @@ def parse_args():
         help="Output directory (default: repo root, for local preview). "
         "CI uses --out dist.",
     )
+    parser.add_argument(
+        "--listmonk",
+        default=os.environ.get("LISTMONK_URL", "prod"),
+        help="Listmonk backend for the subscribe form: 'prod' (default, "
+        "https://api.spanified.com), 'local' (dev instance, "
+        "https://listmonk.dslab.fyi), or a custom base URL. "
+        "Env LISTMONK_URL overrides the default.",
+    )
+    parser.add_argument(
+        "--list-uuid",
+        default=os.environ.get("LISTMONK_LIST_UUID"),
+        help="Listmonk list UUID for the subscribe form (default: prod "
+        "Spain Daily list, or the dev list with --listmonk local). "
+        "Env LISTMONK_LIST_UUID overrides.",
+    )
     return parser.parse_args()
+
+
+def listmonk_endpoint(listmonk):
+    """Resolve the --listmonk value to a public-subscription API endpoint."""
+    base = {"prod": LISTMONK_PROD_URL, "local": LISTMONK_LOCAL_URL}.get(
+        listmonk, listmonk)
+    return base.rstrip("/") + "/api/public/subscription"
+
+
+def listmonk_list_uuid(args):
+    """Resolve the list UUID: explicit --list-uuid wins, otherwise per mode."""
+    if args.list_uuid:
+        return args.list_uuid
+    if args.listmonk == "local":
+        return LISTMONK_LOCAL_LIST_UUID
+    return LISTMONK_PROD_LIST_UUID
 
 
 def copy_static(out_dir):
@@ -735,6 +780,8 @@ def main():
     env.globals["current_year"] = datetime.now().year
     env.globals["asset_version"] = css_version()
     env.globals["site_url"] = SITE_URL
+    env.globals["listmonk_endpoint"] = listmonk_endpoint(args.listmonk)
+    env.globals["listmonk_list_uuid"] = listmonk_list_uuid(args)
     env.globals["pub_date"] = pub_date
     env.globals["site_socials"] = [
         "https://www.threads.com/@spaindaily",
