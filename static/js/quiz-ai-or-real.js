@@ -8,6 +8,8 @@ import {
   quizResultUrl,
   saveQuizResult,
   loadQuizResult,
+  markQuizSubscribed,
+  isQuizSubscribed,
 } from './quiz-logic.js'
 
 const $ = id => document.getElementById(id)
@@ -133,25 +135,53 @@ function init() {
     unlock(true)
   })
 
-  // Start over (mid-quiz) + retake (from the result screen).
-  const restartBtn = $('quiz-restart')
-  if (restartBtn) restartBtn.addEventListener('click', () => {
-    track('quiz_restart', { quiz: slug, step: step + 1 })
-    resetQuiz(false)
-  })
+  // Retake (from the result screen).
   const retakeBtn = $('quiz-retake')
   if (retakeBtn) retakeBtn.addEventListener('click', () => {
     track('quiz_retake', { quiz: slug })
     resetQuiz(true)
   })
 
-  window.addEventListener('message', e => {
-    if (e.data === 'quiz_subscribed') unlock(false)
+  // Subscription lives in its OWN localStorage record (spanified_subscribed_<slug>),
+  // written only on an actual form submit. A saved score alone never unlocks.
+  function hasSubscribed() {
+    try {
+      return isQuizSubscribed(window.localStorage, slug)
+    } catch {
+      return false
+    }
+  }
+
+  function markSubscribed(email = '') {
+    try {
+      markQuizSubscribed(window.localStorage, slug, email)
+    } catch { /* private mode — result still unlocks this session */ }
+  }
+
+  // Gate form success (native Listmonk form, inline) → record the submit,
+  // unlock the result + show the "check your inbox" hint (double opt-in
+  // still needs the click).
+  // NB: subscribe-form.js dispatches subscription:success with bubbles:true
+  // because we listen on the #quiz-gate-form wrapper, not the <form>.
+  const gateForm = $('quiz-gate-form')
+  if (gateForm) gateForm.addEventListener('subscription:success', e => {
+    markSubscribed((e.detail && e.detail.email) || '')
+    unlock(false)
+    const hint = $('quiz-confirm-hint')
+    if (hint) hint.hidden = false
   })
 
-  // Fallback path: the subscribed-snippet "Reveal my result" button links
-  // here with #result when postMessage is blocked. finish() already saved
-  // the score pre-gate, so reveal the full result without replaying.
+  window.addEventListener('message', e => {
+    // Legacy Brevo iframe snippet (kept for old links): a submit happened there.
+    if (e.data === 'quiz_subscribed') {
+      markSubscribed()
+      unlock(false)
+    }
+  })
+
+  // Deep link #result (e.g. "Back to my result" from the subscribed page):
+  // WITHOUT a submit on record this shows the LOCKED gate (score + form),
+  // never the result.
   try {
     if (window.location.hash === '#result') {
       const saved = loadQuizResult(window.localStorage, slug)
@@ -163,7 +193,17 @@ function init() {
         $('quiz-gate').hidden = false
         $('quiz-score-num').textContent = saved.score
         $('quiz-score-line').textContent = `You scored ${saved.score}/${TOTAL}`
-        unlock(false)
+        // The quiz is completed at this point (fresh load, finish() never ran),
+        // so the bar must read 100% in both branches.
+        $('quiz-progress').style.width = '100%'
+        if (hasSubscribed()) {
+          unlock(true)
+        } else {
+          // Locked gate: score teaser + blur + form, result stays hidden.
+          $('quiz-blur').hidden = false
+          $('quiz-gate-form').hidden = false
+          $('quiz-result-full').hidden = true
+        }
       }
     }
   } catch { /* corrupted storage — fall through to the normal hook flow */ }
@@ -241,6 +281,10 @@ function init() {
     if (step < TOTAL - 1) {
       step++
       renderStep()
+      // Next story renders at the top of the card — bring it into view
+      // so the user doesn't have to scroll up manually.
+      const play = $('quiz-play')
+      if (play) play.scrollIntoView({ behavior: 'smooth', block: 'start' })
     } else {
       finish()
     }
@@ -252,10 +296,9 @@ function init() {
     track('quiz_finish', { quiz: slug, score })
     // Preserve a previous subscription: an already-subscribed player
     // retaking the quiz must never see the gate form (or the skip) again.
-    const prev = loadQuizResult(window.localStorage, slug)
-    const subscribed = !!(prev && prev.subscribed)
+    const subscribed = hasSubscribed()
     try {
-      saveQuizResult(window.localStorage, slug, { score, slug, resultSlug: result.slug, ...(subscribed ? { subscribed: true } : {}) })
+      saveQuizResult(window.localStorage, slug, { score, slug, resultSlug: result.slug })
     } catch { /* private mode — result page will show same-device hint */ }
     $('quiz-play').hidden = true
     $('quiz-gate').hidden = false
@@ -268,9 +311,6 @@ function init() {
       unlock(true)
       return
     }
-    // Lazy-load Brevo form only at the gate (keeps landing fast).
-    const frame = $('quiz-brevo-frame')
-    if (frame && !frame.src && frame.dataset.src) frame.src = frame.dataset.src
   }
 
   function resetQuiz(autostart) {
@@ -282,6 +322,8 @@ function init() {
     $('quiz-blur').hidden = false
     $('quiz-gate-form').hidden = false
     $('quiz-result-full').hidden = true
+    const confirmHint = $('quiz-confirm-hint')
+    if (confirmHint) confirmHint.hidden = true
     $('quiz-gate').hidden = true
     $('quiz-play').hidden = true
     const rimg = $('quiz-result-img')
@@ -320,10 +362,9 @@ function init() {
     const saved = loadQuizResult(window.localStorage, slug)
     const score = saved ? saved.score : scoreAnswers(questions, answers)
     const result = resultForScore(results, score)
+    // The submit itself is recorded by markSubscribed() in the event handlers
+    // before unlock() runs — unlock() only tracks analytics here.
     if (!skipped) {
-      try {
-        saveQuizResult(window.localStorage, slug, { score, slug, resultSlug: result.slug, subscribed: true })
-      } catch { /* ignore */ }
       track('quiz_subscribe', { quiz: slug, score })
     }
     // Gate resolved (subscribed or skipped) — the teaser box is pointless now.

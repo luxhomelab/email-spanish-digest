@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block body_class %} class="page-confirm"{% endblock %}
-{# Tiny snippet shown INSIDE the Brevo iframe after the quiz form is submitted. #}
-{# Brevo dashboard: "Confirmation page after submitting" = /quiz/{{ quiz.slug }}-subscribed #}
+{# Legacy Brevo confirmation snippet, kept for old links — the native Listmonk
+   form unlocks the result directly on the quiz page now (no iframe). #}
 {% block title %}Quiz signup received — Spanified{% endblock %}
 {% block description %}<meta name="description" content="Quiz signup received. Confirm your email to reveal your result.">
 <meta name="robots" content="noindex, nofollow">{% endblock %}

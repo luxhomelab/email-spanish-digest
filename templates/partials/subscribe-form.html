@@ -1,0 +1,35 @@
+{# Native subscribe form → Listmonk public API (replaces the Brevo iframe).
+   POSTs JSON {email, list_uuids} to data-endpoint.
+   Endpoint + list UUID are baked in at build time (build.py globals
+   listmonk_endpoint / listmonk_list_uuid; default: prod api.spanified.com).
+   Local dev: `py build.py --listmonk local [--list-uuid <uuid>]`.
+   On HTTP 200 → redirect to success_url (default /confirm).
+   On error → show the API message inline (data-subscribe-error).
+   Logic lives in static/js/subscribe-form.js (auto-binds [data-subscribe-form]).
+   Optional include params: success_url, btn_label, field_id. #}
+{% set success_url = success_url | default('/confirm') %}
+{% set btn_label = btn_label | default('Subscribe free') %}
+{% set field_id = field_id | default('subscribe-email') %}
+{% set autobind = autobind | default(true) %}
+<form class="subscribe-form" {% if autobind %}data-subscribe-form{% endif %}
+      data-endpoint="{{ listmonk_endpoint }}"
+      data-list-uuid="{{ listmonk_list_uuid }}"
+      data-success-url="{{ success_url }}" novalidate>
+  <label class="subscribe-form-label" for="{{ field_id }}">Email address</label>
+  <div class="subscribe-form-row">
+    <div class="subscribe-form-input-wrap">
+      <input class="subscribe-form-input" type="email" id="{{ field_id }}" name="email"
+             placeholder="you@example.com" autocomplete="email" required>
+      <button class="subscribe-form-btn" type="submit">{{ btn_label }}</button>
+    </div>
+  </div>
+  <p class="subscribe-form-error" data-subscribe-error role="alert" hidden></p>
+  <label class="subscribe-form-consent">
+    <input type="checkbox" name="consent" required>
+    <span>I agree to receive Spain Daily and accept the <a href="/privacy">data privacy statement</a> and <a href="/terms">Terms of Use</a>.</span>
+  </label>
+  <label class="subscribe-form-hp" aria-hidden="true">
+    <span>Leave this field empty</span>
+    <input type="text" name="company" tabindex="-1" autocomplete="off">
+  </label>
+</form>
