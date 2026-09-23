@@ -672,10 +672,16 @@ body.page-calculator .calc h1 { font-size: 38px; letter-spacing: -0.5px; }
 /* Native subscribe form (Listmonk API) — replaces the Brevo iframe.
    Card highlight so the form reads as the page's main action. */
 .subscribe-form {
- max-width: 520px; margin: 28px auto 4px auto; text-align: left;
- background: #FFF8EE; border: 1px solid #EFE7D8; border-top: 3px solid #AA151B;
- border-radius: 14px; box-shadow: 0 2px 14px rgba(60,40,20,0.07);
- padding: 22px 22px 18px;
+  max-width: 700px; margin: 32px auto 8px auto; text-align: left;
+  background: #FFF8EE; border: 1px solid #EADFC9;
+  border-radius: 18px; box-shadow: 0 8px 32px rgba(120,60,10,0.12), 0 2px 8px rgba(60,40,20,0.08);
+  padding: 32px 30px 26px;
+  position: relative; overflow: hidden;
+}
+/* Thick gradient top accent — mirrors .subscribe-intro h1::after (red→yellow). */
+.subscribe-form::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 6px;
+  background: linear-gradient(90deg, #AA151B 50%, #F1BF00 50%);
 }
 #quiz-gate-form .subscribe-form {
   max-width: none; margin: 18px 0 0 0;
@@ -685,7 +691,11 @@ body.page-calculator .calc h1 { font-size: 38px; letter-spacing: -0.5px; }
   background: transparent; border: none; border-top: 3px solid #AA151B;
   border-radius: 0; box-shadow: none;
   padding: 18px 0 2px;
+  overflow: visible; position: static;
 }
+/* Quiz gate keeps its own plain red strip — hide the gradient bar so only
+   one frame/accent renders inside .quiz-card. */
+#quiz-gate-form .subscribe-form::before { display: none; }
 #quiz-gate-form .subscribe-form-input-wrap { align-items: stretch; }
 /* Long quiz label ("Subscribe & reveal my result") stays on one line without
    squeezing the input: lock the button size, trim side padding slightly. */
@@ -705,23 +715,27 @@ body.page-calculator .calc h1 { font-size: 38px; letter-spacing: -0.5px; }
    the card is ~600px wide on desktop, enough for both. Narrow viewports
    fall back to the stacked layout via the global 520px breakpoint below. */
 .subscribe-form-label {
- display: block; font-size: 13px; font-weight: 700; color: #3C4858;
- letter-spacing: 0.4px; margin-bottom: 7px;
+  display: block; font-size: 15px; font-weight: 800; color: #3C4858;
+  letter-spacing: 0.4px; margin-bottom: 10px;
 }
-.subscribe-form-row { display: flex; gap: 10px; }
-.subscribe-form-input-wrap { display: flex; flex: 1; gap: 10px; min-width: 0; }
+/* CSS-only envelope micro-icon (no HTML change needed). */
+.subscribe-form-label::before { content: "✉️  "; margin-right: 2px; }
+.subscribe-form-row { display: flex; gap: 12px; }
+.subscribe-form-input-wrap { display: flex; flex: 1; gap: 12px; min-width: 0; }
 .subscribe-form-input {
- flex: 1; min-width: 0; padding: 14px 16px; font-size: 16px;
- border: 1px solid #C0CCD9; border-radius: 12px; background: #fff; color: #3C4858;
- outline: none; transition: border-color 0.15s; font-family: inherit;
+  flex: 1; min-width: 0; padding: 17px 18px; font-size: 17px;
+  border: 1px solid #C0CCD9; border-radius: 12px; background: #fff; color: #3C4858;
+  outline: none; transition: border-color 0.15s, box-shadow 0.15s; font-family: inherit;
 }
-.subscribe-form-input:focus { border-color: #AA151B; box-shadow: 0 0 0 3px rgba(170,21,27,0.12); }
+.subscribe-form-input:focus { border-color: #AA151B; box-shadow: 0 0 0 4px rgba(170,21,27,0.16); }
 .subscribe-form-btn {
- background: #AA151B; color: #fff; font-weight: 700; font-size: 1rem;
- padding: 14px 22px; border: none; border-radius: 12px; cursor: pointer;
- white-space: nowrap; transition: background 0.15s; font-family: inherit;
+  background: #AA151B; color: #fff; font-weight: 800; font-size: 1.1rem;
+  padding: 17px 28px; border: none; border-radius: 12px; cursor: pointer;
+  white-space: nowrap; transition: background 0.15s, transform 0.15s, box-shadow 0.15s; font-family: inherit;
+  box-shadow: 0 4px 14px rgba(170,21,27,0.28);
 }
-.subscribe-form-btn:hover { background: #8A1019; }
+.subscribe-form-btn:hover { background: #8A1019; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(170,21,27,0.35); }
+.subscribe-form-btn:active { transform: translateY(0); box-shadow: 0 2px 8px rgba(170,21,27,0.3); }
 .subscribe-form-btn:focus-visible { outline: 3px solid rgba(170,21,27,0.4); outline-offset: 2px; }
 .subscribe-form-btn:disabled { opacity: 0.7; cursor: default; }
 .subscribe-form-error {
@@ -754,7 +768,7 @@ body.page-calculator .calc h1 { font-size: 38px; letter-spacing: -0.5px; }
 @media (max-width: 520px) {
   /* Mobile: consent goes above the button (input → consent → button).
      Flatten the nested wrappers so flex `order` can reorder all parts. */
-  .subscribe-form { display: flex; flex-direction: column; }
+  .subscribe-form { display: flex; flex-direction: column; padding: 26px 20px 22px; }
   .subscribe-form-row, .subscribe-form-input-wrap { display: contents; }
   .subscribe-form-label { order: 1; }
   .subscribe-form-input { order: 2; width: 100%; margin-bottom: 10px; }
@@ -1072,7 +1086,6 @@ body.page-contact .contact .card {
 .confirm-card .quiz-cta-btn:hover { background-color: #8B1218; }
 button.cta-button { border: none; cursor: pointer; font-family: inherit; }
 .unsub-keep p { color: #6C7A89; margin-bottom: 18px; }
-.unsub-social { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 20px; }
 
 .unsub-keep {
  max-width: 640px; margin: 32px auto 32px auto;
@@ -1082,9 +1095,12 @@ button.cta-button { border: none; cursor: pointer; font-family: inherit; }
 }
 .unsub-keep { text-align: center; }
 .unsub-keep .confirm-kicker { text-align: center; }
-.unsub-social { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+.unsub-social {
+ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+ gap: 12px; max-width: 580px; margin: 6px auto 0;
+}
 .unsub-social .soc {
- display: inline-flex; align-items: center; gap: 8px;
+ display: inline-flex; align-items: center; justify-content: center; gap: 8px;
  border: 1px solid #E3D9C4; border-radius: 999px;
  padding: 9px 18px; font-size: 14px; font-weight: 600;
  color: #3C4858; text-decoration: none; background-color: #FDF9F3;
@@ -1094,6 +1110,10 @@ button.cta-button { border: none; cursor: pointer; font-family: inherit; }
 .unsub-social .soc span { color: #3C4858; }
 .unsub-social .soc:hover {
  border-color: #AA151B; background-color: #F8EFDD; transform: translateY(-1px);
+}
+@media (max-width: 520px) {
+ .unsub-social { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+ .unsub-social .soc { padding: 12px 14px; font-size: 15px; }
 }
 body.page-digest .share-wrap { position: relative; display: inline-block; margin-top: 12px; }
 body.page-digest .share-toggle {
