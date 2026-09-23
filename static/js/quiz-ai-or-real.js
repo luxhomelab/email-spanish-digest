@@ -135,12 +135,7 @@ function init() {
     unlock(true)
   })
 
-  // Start over (mid-quiz) + retake (from the result screen).
-  const restartBtn = $('quiz-restart')
-  if (restartBtn) restartBtn.addEventListener('click', () => {
-    track('quiz_restart', { quiz: slug, step: step + 1 })
-    resetQuiz(false)
-  })
+  // Retake (from the result screen).
   const retakeBtn = $('quiz-retake')
   if (retakeBtn) retakeBtn.addEventListener('click', () => {
     track('quiz_retake', { quiz: slug })
@@ -286,6 +281,10 @@ function init() {
     if (step < TOTAL - 1) {
       step++
       renderStep()
+      // Next story renders at the top of the card — bring it into view
+      // so the user doesn't have to scroll up manually.
+      const play = $('quiz-play')
+      if (play) play.scrollIntoView({ behavior: 'smooth', block: 'start' })
     } else {
       finish()
     }

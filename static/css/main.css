@@ -752,8 +752,18 @@ body.page-calculator .calc h1 { font-size: 38px; letter-spacing: -0.5px; }
 .quiz-confirm-hint p { margin: 0; }
 .quiz-confirm-hint[hidden] { display: none; }
 @media (max-width: 520px) {
- .subscribe-form-row, .subscribe-form-input-wrap { flex-direction: column; }
- .subscribe-form-btn { width: 100%; }
+  /* Mobile: consent goes above the button (input → consent → button).
+     Flatten the nested wrappers so flex `order` can reorder all parts. */
+  .subscribe-form { display: flex; flex-direction: column; }
+  .subscribe-form-row, .subscribe-form-input-wrap { display: contents; }
+  .subscribe-form-label { order: 1; }
+  .subscribe-form-input { order: 2; width: 100%; margin-bottom: 10px; }
+  .subscribe-form-error { order: 3; margin: 0 0 10px; }
+  .subscribe-form-consent { order: 4; margin: 2px 0 14px; line-height: 1.7; padding: 6px 0; }
+  .subscribe-form-consent input { width: 22px; height: 22px; margin-top: 2px; }
+  .subscribe-form-consent a { padding: 4px 0; }
+  .subscribe-form-btn { order: 5; width: 100%; }
+  .subscribe-form-hp { order: 6; }
 }
 
 /* ---------- Homepage redesign (body.page-home only) ---------- */
