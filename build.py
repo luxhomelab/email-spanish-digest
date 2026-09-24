@@ -42,7 +42,11 @@ SITE_URL = "https://spanified.com"
 PAGE_SIZE = 10
 
 # Listmonk backend for the native subscribe form (templates/partials/
-# subscribe-form.html renders these into data-endpoint / data-list-uuid).
+# subscribe-form.html renders these into action / l value).
+# The form POSTs urlencoded natively to <base>/api/public/subscription
+# (Listmonk public API, which also accepts form-encoded `l`). A Cloudflare
+# Worker in front of the endpoint verifies the Turnstile token server-side
+# and issues the post-success redirect (Listmonk itself returns JSON here).
 # Default is prod; local dev builds pass --listmonk local (or LISTMONK_URL)
 # so the browser talks to the dev instance instead of prod.
 LISTMONK_PROD_URL = "https://api.spanified.com"
@@ -689,8 +693,8 @@ def parse_args():
     return parser.parse_args()
 
 
-def listmonk_endpoint(listmonk):
-    """Resolve the --listmonk value to a public-subscription API endpoint."""
+def listmonk_form_action(listmonk):
+    """Resolve the --listmonk value to the Listmonk public API route."""
     base = {"prod": LISTMONK_PROD_URL, "local": LISTMONK_LOCAL_URL}.get(
         listmonk, listmonk)
     return base.rstrip("/") + "/api/public/subscription"
@@ -752,7 +756,7 @@ def js_version():
     for name in ("autonomo.js", "autonomo-calc.js", "autonomo-form.js",
                    "property-buying-cost.js", "property-buying-cost-calc.js",
                    "property-buying-cost-form.js", "quiz-ai-or-real.js",
-                   "quiz-logic.js", "subscribe-form.js"):
+                   "quiz-logic.js", "subscribe-form.js", "subscription-store.js"):
         path = os.path.join(SCRIPT_DIR, "static", "js", name)
         try:
             with open(path, "rb") as fh:
@@ -780,8 +784,12 @@ def main():
     env.globals["current_year"] = datetime.now().year
     env.globals["asset_version"] = css_version()
     env.globals["site_url"] = SITE_URL
-    env.globals["listmonk_endpoint"] = listmonk_endpoint(args.listmonk)
+    env.globals["listmonk_form_action"] = listmonk_form_action(args.listmonk)
     env.globals["listmonk_list_uuid"] = listmonk_list_uuid(args)
+    # Captcha (Cloudflare Turnstile via Worker) only exists in front of the
+    # prod API. Local builds post straight at the dev Listmonk — no Worker,
+    # so no widget is rendered and the JS token check is skipped.
+    env.globals["turnstile_enabled"] = args.listmonk != "local"
     env.globals["pub_date"] = pub_date
     env.globals["site_socials"] = [
         "https://www.threads.com/@spaindaily",

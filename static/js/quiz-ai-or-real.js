@@ -141,9 +141,9 @@ function init() {
     resetQuiz(true)
   })
 
-  // Subscription record (spanified_subscribed_<slug>) is written by the
-  // quiz-success page after the double opt-in click. A saved score alone
-  // never unlocks.
+  // Subscription record (spanified_subscribed, site-wide — set by any
+  // successful subscribe form or by the quiz-success page after the double
+  // opt-in click). A saved score alone never unlocks.
   function hasSubscribed() {
     try {
       return isQuizSubscribed(window.localStorage, slug)

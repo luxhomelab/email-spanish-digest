@@ -2,6 +2,8 @@
 // The question pool comes from data/quizzes/<slug>.json, embedded into
 // templates/quiz.html at build time as <script id="quiz-data" type="application/json">.
 
+import { markSubscribed, isSubscribed } from './subscription-store.js'
+
 export function storageKey(slug) {
   return `spanified_quiz_${slug}`
 }
@@ -73,18 +75,17 @@ export function subscribeKey(slug) {
 }
 
 // Separate opt-in record, written ONLY by the quiz-success page after the
-// double opt-in click. A saved quiz score alone must never unlock the result
-// — score ≠ consent.
+// double opt-in click (and now also by any successful subscribe form,
+// via the shared subscription store below). A saved quiz score alone must
+// never unlock the result — score ≠ consent.
 export function markQuizSubscribed(storage, slug, email = '') {
-  try {
-    storage.setItem(subscribeKey(slug), JSON.stringify({ subscribed: true, email, at: new Date().toISOString() }))
-    return true
-  } catch {
-    return false
-  }
+  void slug
+  return markSubscribed(storage, email)
 }
 
 export function isQuizSubscribed(storage, slug) {
+  if (isSubscribed(storage)) return true
+  // Legacy per-quiz record (pre-site-wide-flag).
   try {
     const raw = storage.getItem(subscribeKey(slug))
     if (!raw) return false

@@ -763,6 +763,8 @@ body.page-calculator .calc h1 { font-size: 38px; letter-spacing: -0.5px; }
 }
 .subscribe-form-consent a { color: #B91C1C; text-decoration: none; }
 .subscribe-form-consent a:hover { text-decoration: underline; }
+/* Cloudflare Turnstile widget: breathing room above the consent line. */
+.subscribe-form .cf-turnstile { margin: 14px 0 2px; min-height: 65px; }
 .subscribe-form-hp {
  position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
 }
@@ -777,8 +779,9 @@ body.page-calculator .calc h1 { font-size: 38px; letter-spacing: -0.5px; }
   .subscribe-form-consent { order: 4; margin: 2px 0 14px; line-height: 1.7; padding: 6px 0; }
   .subscribe-form-consent input { width: 22px; height: 22px; margin-top: 2px; }
   .subscribe-form-consent a { padding: 4px 0; }
-  .subscribe-form-btn { order: 5; width: 100%; }
-  .subscribe-form-hp { order: 6; }
+  .subscribe-form .cf-turnstile { order: 5; margin: 0 0 14px; min-height: 65px; }
+  .subscribe-form-btn { order: 6; width: 100%; }
+  .subscribe-form-hp { order: 7; }
 }
 
 /* ---------- Homepage redesign (body.page-home only) ---------- */

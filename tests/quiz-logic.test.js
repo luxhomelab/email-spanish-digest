@@ -15,6 +15,10 @@ import {
   markQuizSubscribed,
   isQuizSubscribed,
 } from '../static/js/quiz-logic.js'
+import {
+  SUBSCRIBED_KEY,
+  markSubscribed,
+} from '../static/js/subscription-store.js'
 
 function makePool() {
   const pool = []
@@ -199,13 +203,27 @@ describe('subscribe tracking (separate from score)', () => {
     assert.equal(isQuizSubscribed(s, 'ai-or-real'), false)
   })
 
-  it('markQuizSubscribed flips it and keeps the email', () => {
+  it('markQuizSubscribed writes the site-wide record and keeps the email', () => {
     const s = memStorage()
     assert.equal(markQuizSubscribed(s, 'ai-or-real', 'a@b.com'), true)
     assert.equal(isQuizSubscribed(s, 'ai-or-real'), true)
-    const raw = JSON.parse(s.getItem(subscribeKey('ai-or-real')))
+    const raw = JSON.parse(s.getItem(SUBSCRIBED_KEY))
     assert.equal(raw.subscribed, true)
     assert.equal(raw.email, 'a@b.com')
+  })
+
+  it('any subscription unlocks any quiz — subscribe page counts for the quiz', () => {
+    const s = memStorage()
+    assert.equal(markSubscribed(s, 'reader@site.com'), true)
+    assert.equal(isQuizSubscribed(s, 'ai-or-real'), true)
+    assert.equal(isQuizSubscribed(s, 'some-future-quiz'), true)
+  })
+
+  it('legacy per-quiz record still unlocks (pre-site-wide-flag users)', () => {
+    const s = memStorage()
+    s.setItem(subscribeKey('ai-or-real'), JSON.stringify({ subscribed: true, email: 'old@x.com', at: '2026-01-01' }))
+    assert.equal(isQuizSubscribed(s, 'ai-or-real'), true)
+    assert.equal(isQuizSubscribed(s, 'other-quiz'), false)
   })
 
   it('survives broken storage (private mode)', () => {

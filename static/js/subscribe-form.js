@@ -1,22 +1,34 @@
-// Native subscribe form → Listmonk public API.
-// Auto-binds every [data-subscribe-form] when loaded as a module
-// (subscribe page + quiz gate). Pure helpers exported for unit tests.
-//
-// Contract (verified live 2026-09-22): POST JSON {email, list_uuids} to
-//   https://api.spanified.com/api/public/subscription
-//   200 {"data":{"has_optin":true}}  → success (double opt-in email sent)
-//   400 {"message":"..."}            → error, message shown inline
+// AJAX submit for the native Listmonk subscribe form.
+// The form itself is a plain native POST (method=post, urlencoded, action =
+// Listmonk public API via a Cloudflare Worker that verifies the Turnstile
+// token). When this module loads it intercepts submits on
+// [data-subscribe-ajax] and POSTs the same fields via fetch so the browser
+// stays on-site: HTTP 200 → redirect to the `next` field (/confirm,
+// quiz-subscribed); error → inline message; Turnstile widget reset for retry.
+// Without JS the native navigation still works (Listmonk/Worker response page).
 
 const DEFAULT_ERROR = 'Something went wrong. Please try again.'
-// Fallback endpoint when the form has no data-endpoint. The real value is
-// baked into data-endpoint at build time (build.py --listmonk).
-const ENDPOINT = 'https://api.spanified.com/api/public/subscription'
 
-export function subscribePayload(email, listUuid) {
-  return { email: email.trim().toLowerCase(), list_uuids: [listUuid] }
+import { markSubscribed } from './subscription-store.js'
+
+// Captcha is baked at build time: prod forms carry data-captcha="1",
+// local builds (direct to the dev Listmonk, no Worker) carry "0".
+// Absent attribute defaults to required — fail closed.
+function captchaRequired(form) {
+  return form.dataset.captcha !== '0'
 }
 
-export function errorMessage(bodyText, fallback = DEFAULT_ERROR) {
+// Any successful subscription counts site-wide (generic flag for quiz unlock).
+function rememberSubscription(email) {
+  try {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      markSubscribed(window.localStorage, email || '')
+    }
+  } catch { /* private mode etc. — redirect still works */ }
+}
+
+export function errorMessage(bodyText, status = 0, fallback = DEFAULT_ERROR) {
+  if (status === 403) return 'Captcha verification failed. Please try again.'
   try {
     const data = JSON.parse(bodyText)
     if (data && typeof data.message === 'string' && data.message.trim()) {
@@ -26,31 +38,36 @@ export function errorMessage(bodyText, fallback = DEFAULT_ERROR) {
   return fallback
 }
 
-export async function postSubscription(email, listUuid, endpoint = ENDPOINT) {
-  const res = await fetch(endpoint, {
+// Collect named fields (email, l, next, nonce honeypot, consent,
+// cf-turnstile-response injected by the widget) into a plain object.
+export function collectFields(form) {
+  const fields = {}
+  for (const el of form.querySelectorAll('[name]')) {
+    if (!el.name || el.disabled) continue
+    if (el.type === 'checkbox' && !el.checked) continue
+    if (el.type === 'submit') continue
+    fields[el.name] = el.value
+  }
+  return fields
+}
+
+export async function postForm(action, fields) {
+  const res = await fetch(action, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(subscribePayload(email, listUuid)),
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(fields).toString(),
   })
   if (res.ok) return { ok: true }
   const text = await res.text().catch(() => '')
-  return { ok: false, message: errorMessage(text) }
+  return { ok: false, status: res.status, message: errorMessage(text, res.status) }
 }
 
 export function initSubscribeForm(form) {
   if (form.dataset.subscribeBound) return
   form.dataset.subscribeBound = '1'
 
-  const emailInput = form.querySelector('input[name="email"]')
-  const consentInput = form.querySelector('input[name="consent"]')
-  const hp = form.querySelector('input[name="company"]')
   const errorEl = form.querySelector('[data-subscribe-error]')
   const button = form.querySelector('[type="submit"]')
-  const listUuid = form.dataset.listUuid
-  const endpoint = form.dataset.endpoint || ENDPOINT
-  // Empty data-success-url (quiz gate) → unlock via event, no redirect.
-  const successUrl = form.dataset.successUrl || ''
-  if (!emailInput || !listUuid) return
 
   const showError = msg => {
     if (!errorEl) return
@@ -58,35 +75,32 @@ export function initSubscribeForm(form) {
     errorEl.hidden = false
   }
 
-  // Emit a success event instead of redirecting (quiz gate needs to unlock).
-  // Must bubble: listeners sit on wrapper divs (e.g. #quiz-gate-form),
-  // not on the <form> itself (CustomEvent defaults to bubbles:false).
-  const fireSuccess = email => {
-    form.dispatchEvent(new CustomEvent('subscription:success', { bubbles: true, detail: { email } }))
-  }
-
   form.addEventListener('submit', async e => {
     e.preventDefault()
     if (errorEl) { errorEl.textContent = ''; errorEl.hidden = true }
 
-    // Honeypot: bots fill the invisible field; humans can't see it. Silent no-op.
-    if (hp && hp.value.trim() !== '') return
+    const fields = collectFields(form)
 
-    const email = emailInput.value.trim()
-    if (!email) return showError('Please enter your email address.')
-    if (!emailInput.checkValidity()) return showError('Please enter a valid email address.')
-    if (consentInput && !consentInput.checked) return showError('Please agree to receive Spain Daily to subscribe.')
+    // Honeypot: bots fill the invisible field; mimic success without sending.
+    if (fields.nonce && fields.nonce.trim() !== '') {
+      window.location.assign(fields.next || '/confirm')
+      return
+    }
+
+    // Turnstile: the widget injects cf-turnstile-response. No token → the
+    // Worker would 403 anyway; stop early with an inline error.
+    // Skipped on local builds (no captcha rendered, direct to Listmonk).
+    if (captchaRequired(form) && (!fields['cf-turnstile-response'] || !fields['cf-turnstile-response'].trim())) {
+      return showError('Please complete the captcha to subscribe.')
+    }
 
     const originalLabel = button ? button.textContent : ''
     if (button) { button.disabled = true; button.textContent = 'Subscribing…' }
     try {
-      const res = await postSubscription(email, listUuid, endpoint)
+      const res = await postForm(form.action, fields)
       if (res.ok) {
-        if (successUrl) {
-          window.location.assign(successUrl)
-        } else {
-          fireSuccess(email)
-        }
+        rememberSubscription(fields.email)
+        window.location.assign(fields.next || '/confirm')
         return
       }
       showError(res.message)
@@ -94,10 +108,15 @@ export function initSubscribeForm(form) {
       showError('Network error — check your connection and try again.')
     } finally {
       if (button) { button.disabled = false; button.textContent = originalLabel }
+      // Turnstile tokens are single-use: reset the widget after every
+      // attempt so a retry gets a fresh token.
+      try {
+        if (typeof window !== 'undefined' && window.turnstile) window.turnstile.reset()
+      } catch { /* widget not rendered (e.g. tests) */ }
     }
   })
 }
 
 if (typeof document !== 'undefined') {
-  for (const form of document.querySelectorAll('[data-subscribe-form]')) initSubscribeForm(form)
+  for (const form of document.querySelectorAll('[data-subscribe-ajax]')) initSubscribeForm(form)
 }
