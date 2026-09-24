@@ -49,7 +49,7 @@ PAGE_SIZE = 10
 # and issues the post-success redirect (Listmonk itself returns JSON here).
 # Default is prod; local dev builds pass --listmonk local (or LISTMONK_URL)
 # so the browser talks to the dev instance instead of prod.
-LISTMONK_PROD_URL = "https://api.spanified.com"
+LISTMONK_PROD_URL = "https://newsletter.spanified.com"
 LISTMONK_LOCAL_URL = "https://listmonk.dslab.fyi"
 LISTMONK_PROD_LIST_UUID = "d4edf463-70a3-45e5-a964-a39b48c49b2d"
 LISTMONK_LOCAL_LIST_UUID = "5dcb6e29-0181-4c55-b68a-705133b53e10"
@@ -679,7 +679,7 @@ def parse_args():
         "--listmonk",
         default=os.environ.get("LISTMONK_URL", "prod"),
         help="Listmonk backend for the subscribe form: 'prod' (default, "
-        "https://api.spanified.com), 'local' (dev instance, "
+        "https://newsletter.spanified.com), 'local' (dev instance, "
         "https://listmonk.dslab.fyi), or a custom base URL. "
         "Env LISTMONK_URL overrides the default.",
     )

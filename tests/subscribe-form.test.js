@@ -49,7 +49,7 @@ describe('postForm', () => {
 
   it('returns ok on HTTP 200', async () => {
     global.fetch = async () => ({ ok: true })
-    const res = await postForm('https://api.spanified.com/api/public/subscription', { email: 'a@b.com' })
+    const res = await postForm('https://newsletter.spanified.com/api/public/subscription', { email: 'a@b.com' })
     assert.deepEqual(res, { ok: true })
   })
 
@@ -59,10 +59,10 @@ describe('postForm', () => {
       sent = { url, opts }
       return { ok: true }
     }
-    await postForm('https://api.spanified.com/api/public/subscription', {
+    await postForm('https://newsletter.spanified.com/api/public/subscription', {
       email: 'a@b.com', l: 'list-1', 'cf-turnstile-response': 'tok-123',
     })
-    assert.equal(sent.url, 'https://api.spanified.com/api/public/subscription')
+    assert.equal(sent.url, 'https://newsletter.spanified.com/api/public/subscription')
     assert.equal(sent.opts.method, 'POST')
     assert.equal(sent.opts.headers['Content-Type'], 'application/x-www-form-urlencoded')
     const body = new URLSearchParams(sent.opts.body)
@@ -106,7 +106,7 @@ describe('initSubscribeForm', () => {
     const handlers = {}
     const errorEl = { textContent: '', hidden: true }
     const form = {
-      action: 'https://api.spanified.com/api/public/subscription',
+      action: 'https://newsletter.spanified.com/api/public/subscription',
       dataset: { captcha },
       querySelectorAll: () => fakeInputs({ token, nonce, next }),
       querySelector: sel => {
