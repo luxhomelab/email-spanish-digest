@@ -1,20 +1,31 @@
-{# Native subscribe form → Listmonk public API (replaces the Brevo iframe).
-   POSTs JSON {email, list_uuids} to data-endpoint.
-   Endpoint + list UUID are baked in at build time (build.py globals
-   listmonk_endpoint / listmonk_list_uuid; default: prod api.spanified.com).
+{# Native Listmonk subscribe form → POSTs urlencoded to <listmonk>/api/public/subscription
+   (Listmonk public API, which accepts form-encoded `l`; action + list UUID
+   baked in at build time via build.py globals listmonk_form_action /
+   listmonk_list_uuid).
    Local dev: `py build.py --listmonk local [--list-uuid <uuid>]`.
-   On HTTP 200 → redirect to success_url (default /confirm).
-   On error → show the API message inline (data-subscribe-error).
-   Logic lives in static/js/subscribe-form.js (auto-binds [data-subscribe-form]).
+   Fields: email, l (list UUID), nonce (honeypot — must stay empty; the Worker
+   uses it to silently drop bots), next (post-success redirect target, honored
+   by the Cloudflare Worker, NOT by Listmonk on this route),
+    cf-turnstile-response (injected by the Turnstile widget, verified
+    server-side by the Cloudflare Worker in front of the endpoint).
+    Turnstile renders only when the build global turnstile_enabled is true
+    (prod); local builds (`--listmonk local`) omit the widget AND the script,
+    and the JS token check is skipped via data-captcha="0".
+   No `name` field: Listmonk defaults it to the email local-part.
+   No JS needed for the basic path — native browser validation (email + consent)
+   + navigation. When static/js/subscribe-form.js loads it intercepts the
+   submit (see data-subscribe-ajax) and POSTs the same fields via fetch as
+   urlencoded, staying on-site: on HTTP 200 it redirects to `next`, on error
+   it shows the message inline in [data-subscribe-error].
    Optional include params: success_url, btn_label, field_id. #}
 {% set success_url = success_url | default('/confirm') %}
 {% set btn_label = btn_label | default('Subscribe free') %}
 {% set field_id = field_id | default('subscribe-email') %}
-{% set autobind = autobind | default(true) %}
-<form class="subscribe-form" {% if autobind %}data-subscribe-form{% endif %}
-      data-endpoint="{{ listmonk_endpoint }}"
-      data-list-uuid="{{ listmonk_list_uuid }}"
-      data-success-url="{{ success_url }}" novalidate>
+{% set turnstile_on = turnstile_enabled | default(true) %}
+{% if turnstile_on %}
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+{% endif %}
+<form class="subscribe-form" method="post" action="{{ listmonk_form_action }}" data-subscribe-ajax data-captcha="{{ '1' if turnstile_on else '0' }}">
   <label class="subscribe-form-label" for="{{ field_id }}">Email address</label>
   <div class="subscribe-form-row">
     <div class="subscribe-form-input-wrap">
@@ -24,12 +35,17 @@
     </div>
   </div>
   <p class="subscribe-form-error" data-subscribe-error role="alert" hidden></p>
+  <input type="hidden" name="l" value="{{ listmonk_list_uuid }}">
+  <input type="hidden" name="next" value="{{ site_url }}{{ success_url }}">
+  {% if turnstile_on %}
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAAFCU4-TKzjR6JxAK" data-action="subscribe"></div>
+  {% endif %}
   <label class="subscribe-form-consent">
     <input type="checkbox" name="consent" required>
     <span>I agree to receive Spain Daily and accept the <a href="/privacy">data privacy statement</a> and <a href="/terms">Terms of Use</a>.</span>
   </label>
   <label class="subscribe-form-hp" aria-hidden="true">
     <span>Leave this field empty</span>
-    <input type="text" name="company" tabindex="-1" autocomplete="off">
+    <input type="text" name="nonce" tabindex="-1" autocomplete="off">
   </label>
 </form>
