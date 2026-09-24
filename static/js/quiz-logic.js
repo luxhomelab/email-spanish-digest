@@ -72,9 +72,9 @@ export function subscribeKey(slug) {
   return `spanified_subscribed_${slug}`
 }
 
-// Separate opt-in record, written ONLY on an actual subscribe-form submit
-// (subscription:success event or the legacy Brevo postMessage).
-// A saved quiz score alone must never unlock the result — score ≠ consent.
+// Separate opt-in record, written ONLY by the quiz-success page after the
+// double opt-in click. A saved quiz score alone must never unlock the result
+// — score ≠ consent.
 export function markQuizSubscribed(storage, slug, email = '') {
   try {
     storage.setItem(subscribeKey(slug), JSON.stringify({ subscribed: true, email, at: new Date().toISOString() }))

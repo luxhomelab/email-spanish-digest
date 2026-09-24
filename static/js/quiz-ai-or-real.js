@@ -8,7 +8,6 @@ import {
   quizResultUrl,
   saveQuizResult,
   loadQuizResult,
-  markQuizSubscribed,
   isQuizSubscribed,
 } from './quiz-logic.js'
 
@@ -142,8 +141,9 @@ function init() {
     resetQuiz(true)
   })
 
-  // Subscription lives in its OWN localStorage record (spanified_subscribed_<slug>),
-  // written only on an actual form submit. A saved score alone never unlocks.
+  // Subscription record (spanified_subscribed_<slug>) is written by the
+  // quiz-success page after the double opt-in click. A saved score alone
+  // never unlocks.
   function hasSubscribed() {
     try {
       return isQuizSubscribed(window.localStorage, slug)
@@ -151,33 +151,6 @@ function init() {
       return false
     }
   }
-
-  function markSubscribed(email = '') {
-    try {
-      markQuizSubscribed(window.localStorage, slug, email)
-    } catch { /* private mode — result still unlocks this session */ }
-  }
-
-  // Gate form success (native Listmonk form, inline) → record the submit,
-  // unlock the result + show the "check your inbox" hint (double opt-in
-  // still needs the click).
-  // NB: subscribe-form.js dispatches subscription:success with bubbles:true
-  // because we listen on the #quiz-gate-form wrapper, not the <form>.
-  const gateForm = $('quiz-gate-form')
-  if (gateForm) gateForm.addEventListener('subscription:success', e => {
-    markSubscribed((e.detail && e.detail.email) || '')
-    unlock(false)
-    const hint = $('quiz-confirm-hint')
-    if (hint) hint.hidden = false
-  })
-
-  window.addEventListener('message', e => {
-    // Legacy Brevo iframe snippet (kept for old links): a submit happened there.
-    if (e.data === 'quiz_subscribed') {
-      markSubscribed()
-      unlock(false)
-    }
-  })
 
   // Deep link #result (e.g. "Back to my result" from the subscribed page):
   // WITHOUT a submit on record this shows the LOCKED gate (score + form),
@@ -303,6 +276,10 @@ function init() {
     $('quiz-play').hidden = true
     $('quiz-gate').hidden = false
     $('quiz-progress').style.width = '100%'
+    // "See my result" lands at the top of the gate ("Your result is ready"),
+    // not stranded at the form at the bottom.
+    const gate = $('quiz-gate')
+    if (gate) gate.scrollIntoView({ behavior: 'smooth', block: 'start' })
     // Persona title stays hidden behind the blur — only the score shows yet.
     $('quiz-score-num').textContent = score
     $('quiz-score-line').textContent = `You scored ${score}/${TOTAL}`
@@ -322,8 +299,6 @@ function init() {
     $('quiz-blur').hidden = false
     $('quiz-gate-form').hidden = false
     $('quiz-result-full').hidden = true
-    const confirmHint = $('quiz-confirm-hint')
-    if (confirmHint) confirmHint.hidden = true
     $('quiz-gate').hidden = true
     $('quiz-play').hidden = true
     const rimg = $('quiz-result-img')
@@ -362,8 +337,8 @@ function init() {
     const saved = loadQuizResult(window.localStorage, slug)
     const score = saved ? saved.score : scoreAnswers(questions, answers)
     const result = resultForScore(results, score)
-    // The submit itself is recorded by markSubscribed() in the event handlers
-    // before unlock() runs — unlock() only tracks analytics here.
+    // The opt-in itself is recorded by the quiz-success page after the
+    // double opt-in click — unlock() only tracks analytics here.
     if (!skipped) {
       track('quiz_subscribe', { quiz: slug, score })
     }

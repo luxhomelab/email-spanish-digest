@@ -48,6 +48,19 @@ No arguments, fully idempotent. Running it:
 
 Requirements: Python 3 + Jinja2 (`pip install --user jinja2`).
 
+## How to run locally
+
+Always serve via `serve.py` (not `python -m http.server`) — it mimics
+production clean URLs, so `/quiz/ai-or-real` works without the `.html`
+extension:
+
+```bash
+py build.py --listmonk local   # forms point at the dev Listmonk
+py serve.py                    # http://localhost:8000 (optional port arg)
+```
+
+Rebuild with plain `py build.py` (prod Listmonk) before committing/deploying.
+
 ## How the pipeline feeds data later
 
 The newsletter pipeline (`spain-news-en`) produces one `digest.json` per edition

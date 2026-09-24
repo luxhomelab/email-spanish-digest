@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block body_class %} class="page-confirm"{% endblock %}
-{# Legacy Brevo confirmation snippet, kept for old links — the native Listmonk
-   form unlocks the result directly on the quiz page now (no iframe). #}
+{# Quiz analogue of /confirm: shown right after the gate form submit.
+   The result stays LOCKED until the double opt-in click lands on
+   /quiz/<slug>-success, which reveals the persona (score from localStorage). #}
 {% block title %}Quiz signup received — Spanified{% endblock %}
 {% block description %}<meta name="description" content="Quiz signup received. Confirm your email to reveal your result.">
 <meta name="robots" content="noindex, nofollow">{% endblock %}
@@ -10,31 +11,13 @@
 <div class="centered-page"><div class="card confirm-card">
  <p class="confirm-kicker">Check your inbox</p>
  <h1>One click left</h1>
-  <p class="confirm-lead">You're subscribing to <strong>Spain Daily</strong> — one free email every morning. Click the confirmation link in your email to finish — your quiz result unlocks automatically.</p>
- <ol class="confirm-steps">
-  <li><div><strong>Open the email</strong> from Spain Daily (arrives within a minute)</div></li>
-  <li><div><strong>Click the confirmation link</strong> inside</div></li>
-  <li><div><strong>Your quiz result unlocks</strong> automatically — no extra steps</div></li>
- </ol>
- <p class="confirm-note">Until you click that link, you're <strong>not</strong> subscribed yet — your result stays locked.</p>
- <p class="confirm-trouble">No email? Check spam and Promotions. Wrong address? <a href="/quiz/{{ quiz.slug }}">Retake the quiz</a>.</p>
-  <div class="confirm-actions">
-   <p class="confirm-hint">Your result already unlocked in the quiz tab — here just finish the subscription by confirming your email.</p>
-   <button id="quiz-sub-back" class="quiz-back-btn" type="button">← Back to my result</button>
-  </div>
-</div></div>
-<script>
-(function () {
-  try {
-    if (window.parent !== window) window.parent.postMessage('quiz_subscribed', '*');
-  } catch (e) {}
-  // Fallback for blocked postMessage: back to the quiz with the result anchor.
-  var btn = document.getElementById('quiz-sub-back');
-  if (btn) btn.addEventListener('click', function () {
-    try {
-      if (window.top) window.top.location.href = '/quiz/{{ quiz.slug }}#result';
-    } catch (e) { window.location.href = '/quiz/{{ quiz.slug }}#result'; }
-  });
-})();
-</script>
-{% endblock %}
+   <p class="confirm-lead">You're subscribing to <strong>Spain Daily</strong> — one free email every morning. Click the confirmation link in your email — your quiz result will open right after.</p>
+  <ol class="confirm-steps">
+   <li><div><strong>Open the email</strong> from Spain Daily (arrives within a minute)</div></li>
+   <li><div><strong>Click the confirmation link</strong> inside</div></li>
+   <li><div><strong>Your quiz result opens</strong> — persona, score breakdown and shareable badge</div></li>
+  </ol>
+  <p class="confirm-note">Until you click that link, you're <strong>not</strong> subscribed yet — your result stays locked.</p>
+  <p class="confirm-trouble">No email? Check spam and Promotions. Wrong address? <a href="/quiz/{{ quiz.slug }}">Retake the quiz</a>.</p>
+ </div></div>
+ {% endblock %}

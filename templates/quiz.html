@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {# Quiz app — multi-quiz ready. One template renders every data/quizzes/*.json. #}
-{# SUBSCRIBE FORM: native Listmonk form (partials/subscribe-form.html) replaces
-   the old Brevo iframe. On success the gate unlocks immediately (no redirect,
-   the result must stay), the confirmation email arrives separately. #}
+{# SUBSCRIBE FORM: native Listmonk form (partials/subscribe-form.html).
+   Same flow as the main /subscribe page: on success redirect to the
+   quiz-specific confirm page (/quiz/<slug>-subscribed), result stays
+   LOCKED until the double opt-in click lands on /quiz/<slug>-success,
+   which reveals the result (score comes from localStorage). #}
 {% block title %}{{ quiz.title }} — Spanified{% endblock %}
 {% block description %}<meta name="description" content="10 absurd Spain headlines — half are real, half we made up. Can you tell AI slop from actual Spanish news? Take the quiz.">
 {# Quiz is unlisted until launch: no external links, no sitemap, no indexing. #}
@@ -57,21 +59,18 @@
   </div>
   <div id="quiz-blur">
      <div class="quiz-blurbox">
-      <h2>🔒 Your persona is locked — subscribe to reveal it</h2>
-      <p>Join <strong>Spain Daily</strong>: Spain's top news in English, one free email every morning, unsubscribe anytime. The moment you subscribe, your persona, score breakdown and shareable badge unlock instantly.</p>
+       <h2>🔒 Your persona is locked — subscribe to reveal it</h2>
+       <p>Join <strong>Spain Daily</strong>: Spain's top news in English, one free email every morning, unsubscribe anytime. Subscribe, click the confirmation link in your email — and your persona, score breakdown and shareable badge unlock.</p>
      </div>
   </div>
-   <div id="quiz-gate-form">
-    {% set success_url = "" %}{% set btn_label = "Subscribe & reveal my result" %}{% set field_id = "quiz-subscribe-email" %}
+    <div id="quiz-gate-form">
+     {% set success_url = "/quiz/" ~ quiz.slug ~ "-subscribed" %}{% set btn_label = "Subscribe & reveal my result" %}{% set field_id = "quiz-subscribe-email" %}
     {% include "partials/subscribe-form.html" %}
     <p class="quiz-gate-pitch">One free email every morning with Spain's top news in English. No spam, unsubscribe anytime.</p>
     <button id="quiz-skip" class="quiz-skip" type="button">skip, just show my result</button>
    </div>
-    <div id="quiz-result-full" hidden>
-     <div id="quiz-confirm-hint" class="quiz-confirm-hint" hidden>
-      <p><strong>Check your inbox</strong> — we just sent a confirmation link. Click it to finish subscribing; your result below is already unlocked.</p>
-     </div>
-     <div class="quiz-persona">
+     <div id="quiz-result-full" hidden>
+      <div class="quiz-persona">
      <p class="confirm-kicker">Your persona</p>
      <h2 id="quiz-result-title"></h2>
      <img id="quiz-result-img" class="quiz-result-img" src="/static/img/quiz/ai-or-real/quiz-cover.jpg" alt="" width="1200" height="630" loading="lazy" hidden>

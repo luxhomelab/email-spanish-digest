@@ -1,5 +1,8 @@
 {% extends "base.html" %}
-{# Final page after the double opt-in click. Quiz-specific (per-quiz Brevo form). #}
+{# Final page after the double opt-in click. The gate form redirects here
+   via /quiz/<slug>-subscribed; the result is revealed here (score comes
+   from localStorage) and the opt-in record is written so the quiz page
+   unlocks on revisit. #}
 {% block body_class %} class="page-success"{% endblock %}
 {% block title %}Subscribed — your quiz result — Spanified{% endblock %}
 {% block description %}<meta name="description" content="You're subscribed — see your {{ quiz.title }} quiz result.">
@@ -34,7 +37,7 @@
 </div></div>
 <script id="quiz-success-data" type="application/json">{{ quiz_json | safe }}</script>
 <script type="module">
-import { resultForScore, personalShareText, personalLongShareText, quizResultUrl } from '/static/js/quiz-logic.js?v={{ js_version }}';
+import { resultForScore, personalShareText, personalLongShareText, quizResultUrl, markQuizSubscribed } from '/static/js/quiz-logic.js?v={{ js_version }}';
 try {
   const data = JSON.parse(document.getElementById('quiz-success-data').textContent);
   const TOTAL = 10;
@@ -65,6 +68,8 @@ try {
       rt.appendChild(pe);
     });
     document.getElementById('quiz-success-result').hidden = false;
+    // Confirmed opt-in: record it so the quiz page unlocks on revisit.
+    try { markQuizSubscribed(window.localStorage, '{{ quiz.slug }}'); } catch (e) {}
     // Personal share → per-persona page with the exact score (?score=).
     // X gets the short line; FB gets quote (long text, sometimes pre-filled);
     // TG/WA get the longer roast text.

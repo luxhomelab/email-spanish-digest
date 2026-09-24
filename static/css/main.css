@@ -697,9 +697,18 @@ body.page-calculator .calc h1 { font-size: 38px; letter-spacing: -0.5px; }
    one frame/accent renders inside .quiz-card. */
 #quiz-gate-form .subscribe-form::before { display: none; }
 #quiz-gate-form .subscribe-form-input-wrap { align-items: stretch; }
-/* Long quiz label ("Subscribe & reveal my result") stays on one line without
-   squeezing the input: lock the button size, trim side padding slightly. */
-#quiz-gate-form .subscribe-form-btn { flex-shrink: 0; padding: 14px 18px; }
+/* Quiz gate keeps its own compact scale: the global /subscribe form grew
+   (1.1rem/800 button, heavy shadow), but here the long label
+   ("Subscribe & reveal my result") would dwarf the input. Reset both to
+   the old compact size so input ~ button share the row evenly. */
+#quiz-gate-form .subscribe-form-label { font-size: 13px; font-weight: 700; margin-bottom: 7px; }
+#quiz-gate-form .subscribe-form-label::before { display: none; }
+#quiz-gate-form .subscribe-form-input { padding: 14px 16px; font-size: 16px; border-radius: 10px; }
+#quiz-gate-form .subscribe-form-btn {
+ flex-shrink: 0; padding: 14px 20px;
+ font-size: 1rem; font-weight: 700; border-radius: 10px; box-shadow: none;
+}
+#quiz-gate-form .subscribe-form-btn:hover { box-shadow: none; transform: none; }
 /* Secondary escape hatch sits centered below the main action. */
 #quiz-gate-form .quiz-skip { display: block; margin: 6px auto 0; }
 /* Newsletter micro-pitch under the gate form; the skip link below it
@@ -757,14 +766,6 @@ body.page-calculator .calc h1 { font-size: 38px; letter-spacing: -0.5px; }
 .subscribe-form-hp {
  position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
 }
-/* Inline "check your inbox" notice shown in the quiz after a fresh subscribe.
-   The result unlocks immediately; the double opt-in click still finishes it. */
-.quiz-confirm-hint {
- background: #EDF7ED; border: 1px solid #BFE3BF; border-radius: 12px;
- padding: 12px 16px; margin-bottom: 16px; font-size: 15px; color: #2E5B2E;
-}
-.quiz-confirm-hint p { margin: 0; }
-.quiz-confirm-hint[hidden] { display: none; }
 @media (max-width: 520px) {
   /* Mobile: consent goes above the button (input → consent → button).
      Flatten the nested wrappers so flex `order` can reorder all parts. */
@@ -1364,10 +1365,13 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 .quiz-source{margin:4px 0 0;font-size:.88rem;color:#666}
 .quiz-source a{color:inherit}
 #quiz-next-wrap{margin-top:16px}
-#quiz-next{width:100%;padding:15px;font-size:1.05rem;cursor:pointer;background:#B07840;color:#fff;border:none;border-radius:12px}
- #quiz-next:hover{background:#966535}
- #quiz-next.quiz-next-final{background:#1a7f37}
- #quiz-next.quiz-next-final:hover{background:#146c2e}
+ #quiz-next{width:100%;padding:15px;font-size:1.05rem;font-weight:700;cursor:pointer;background:#3C4858;color:#fff;border:none;border-radius:12px;transition:background-color .15s}
+ #quiz-next:hover{background:#232F3D}
+ #quiz-next:focus-visible{outline:3px solid rgba(60,72,88,.4);outline-offset:2px}
+ #quiz-next::after{content:"\2192";display:inline-block;margin-left:10px;font-weight:700;transition:transform .15s}
+ #quiz-next:hover::after{transform:translateX(3px)}
+ #quiz-next.quiz-next-final{background:#3C4858}
+ #quiz-next.quiz-next-final:hover{background:#232F3D}
 .quiz-skip{background:none;border:none;text-decoration:underline;cursor:pointer;color:#666;font-size:.9rem;margin-top:10px;padding:8px}
 .quiz-brevo iframe{width:100%;min-height:420px;border:0}
 #quiz-blur{filter:blur(14px);user-select:none;pointer-events:none}
