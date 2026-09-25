@@ -87,6 +87,9 @@ STATIC_COPY = [
     "success.jpg",
     "confirm.jpg",
     "logo.jpg",
+    "logo-30.webp",
+    "logo-60.webp",
+    "logo-90.webp",
     "favicon.ico",
     "favicon.png",
     "apple-touch-icon.png",
@@ -265,11 +268,23 @@ def load_social_stats():
         return {"threads_followers": 4100, "reddit_members": 1000}
 
 
+AVATAR_DIR_URL = "/static/img/avatars/"
+# Retina ladder for .t-avatar (displayed at 32px, see static/css/main.css).
+# Files are produced by tools/gen_avatar_webp.py: <name>-32/64/96.webp.
+AVATAR_SRCSET_WIDTHS = (32, 64, 96)
+
+
 def load_testimonials():
     """Load testimonials from data/testimonials.json.
 
     Avatar files live in static/img/avatars/ and are wired into the
-    template directly via ``avatar_url``.
+    template directly via ``avatar_url`` (the 64px @2x WebP used as ``src``)
+    plus ``avatar_variants`` (the 32/64/96px ladder rendered as a srcset —
+    the template appends ``?v=`` to every URL so cache-busting stays in one
+    place).
+
+    ``avatar`` in the JSON is a ``-64.webp`` name; anything else falls back
+    to a single-image src with no srcset.
     """
     try:
         path = os.path.join(SCRIPT_DIR, "data", "testimonials.json")
@@ -278,7 +293,15 @@ def load_testimonials():
     except (OSError, json.JSONDecodeError):
         return []
     for t in testimonials:
-        t["avatar_url"] = f"/static/img/avatars/{t.get('avatar')}"
+        name = t.get("avatar") or ""
+        t["avatar_url"] = f"{AVATAR_DIR_URL}{name}"
+        t["avatar_variants"] = []
+        stem = name[: -len("-64.webp")] if name.endswith("-64.webp") else ""
+        if stem:
+            t["avatar_variants"] = [
+                (width, f"{AVATAR_DIR_URL}{stem}-{width}.webp")
+                for width in AVATAR_SRCSET_WIDTHS
+            ]
     return testimonials
 
 

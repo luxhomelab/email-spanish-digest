@@ -127,6 +127,83 @@ def render_digest_card(date_display, headline, stories):
     return img
 
 
+def render_subscribe_card():
+    """High-contrast subscribe card for /subscribe (1200x630).
+
+    Reddit/FB crop link previews to a central square, so every word lives
+    inside the middle 630px column (285..915) with breathing room. The left
+    and right thirds carry only flat colour + thin decor bars, no text.
+    Headline is ~2x the digest card size; CTA is a solid red pill.
+    """
+    img = Image.new("RGB", (W, H), CREAM)
+    draw = ImageDraw.Draw(img)
+    cx = W // 2
+
+    # Edge decor only (no text outside the centre column).
+    draw.rectangle([0, 0, 18, H], fill=RED)
+    draw.rectangle([18, 0, 26, H], fill=GOLD)
+    draw.rectangle([W - 26, 0, W - 18, H], fill=GOLD)
+    draw.rectangle([W - 18, 0, W, H], fill=RED)
+    # Thin frame marking the crop-safe centre column.
+    draw.line([285, 26, 285, H - 26], fill=GOLD, width=3)
+    draw.line([915, 26, 915, H - 26], fill=GOLD, width=3)
+
+    # Kicker, centred.
+    kicker = "SPAIN DAILY"
+    kf = _font(True, 30)
+    tracking = 6
+    kw = sum(draw.textlength(ch, font=kf) for ch in kicker) + tracking * (len(kicker) - 1)
+    _draw_letterspaced(draw, (cx - kw / 2, 66), kicker, kf, RED, tracking=tracking)
+
+    # Headline: largest size that fits the safe column (3 short lines).
+    lines = ["Spain news", "in English", "every morning"]
+    max_w = 915 - 285 - 48
+    size = 60
+    for candidate in (96, 88, 80, 72, 68, 64, 60):
+        f = _font(True, candidate)
+        if all(draw.textlength(line, font=f) <= max_w for line in lines):
+            size = candidate
+            break
+    hf = _font(True, size)
+    line_h = int(size * 1.18)
+    y = 122
+    for line in lines:
+        draw.text((cx - draw.textlength(line, font=hf) / 2, y), line, font=hf, fill=INK)
+        y += line_h
+    # Expose the picked size for the build report.
+    img.info["headline_size"] = size
+
+    # Red/gold divider, centred.
+    y_div = y + 6
+    draw.rectangle([cx - 100, y_div, cx + 20, y_div + 5], fill=RED)
+    draw.rectangle([cx + 20, y_div, cx + 100, y_div + 5], fill=GOLD)
+
+    # Value prop subline, centred.
+    sub = "5-minute read \u2022 free forever"
+    sf = _font(False, 32)
+    draw.text((cx - draw.textlength(sub, font=sf) / 2, y_div + 18), sub, font=sf, fill=MUTED)
+
+    # CTA pill: solid red, white bold text.
+    cta = "Subscribe \u2014 free"
+    cf = _font(True, 40)
+    tw = draw.textlength(cta, font=cf)
+    pill_w, pill_h = int(tw + 110), 86
+    px0, py0 = cx - pill_w / 2, y_div + 68
+    try:
+        draw.rounded_rectangle([px0, py0, px0 + pill_w, py0 + pill_h], radius=43, fill=RED)
+    except AttributeError:
+        draw.rectangle([px0, py0, px0 + pill_w, py0 + pill_h], fill=RED)
+    draw.text((cx - tw / 2, py0 + (pill_h - 40) / 2 - 2), cta, font=cf, fill=(255, 255, 255))
+
+    # Domain line, centred and small.
+    df = _font(True, 26)
+    tag = "spanified.com"
+    draw.text((cx - draw.textlength(tag, font=df) / 2, py0 + pill_h + 14),
+              tag, font=df, fill=RED)
+
+    return img
+
+
 def render_default_card():
     """Fallback OG card for homepage / static pages."""
     return render_digest_card(
@@ -152,5 +229,6 @@ def render_og_images(digests, out_dir):
         img.save(os.path.join(og_dir, f"{digest['date']}.png"))
         count += 1
     render_default_card().save(os.path.join(og_dir, "og-default.png"))
-    print(f"  wrote {count} og cards + og-default.png")
+    render_subscribe_card().save(os.path.join(og_dir, "og-subscribe.png"))
+    print(f"  wrote {count} og cards + og-default.png + og-subscribe.png")
     return count
