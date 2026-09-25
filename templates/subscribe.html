@@ -1,6 +1,19 @@
 {% extends "base.html" %}
 {% block title %}Spain Daily Subscribe{% endblock %}
-{% block description %}<meta name="description" content="Subscribe to Spain Daily — Spain's top news in English, every morning. Free forever.">{% endblock %}
+{% block description %}<meta name="description" content="Subscribe to Spain Daily — Spain's top news in English, every morning. Free forever.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Spain Daily Subscribe">
+<meta property="og:description" content="Spain's top news in English, every morning. Free forever.">
+<meta property="og:url" content="{{ site_url }}/subscribe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Spain Daily Subscribe">
+<meta name="twitter:description" content="Spain's top news in English, every morning. Free forever.">
+<meta name="twitter:image" content="https://spanified.com/og/og-subscribe.png">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+{% block og_image %}<meta property="og:image" content="https://spanified.com/og/og-subscribe.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Spain Daily — Spain news in English, every morning. Subscribe free.">{% endblock %}
 {% block extra_head %}
 {% endblock %}
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/subscribe">{% endblock %}
