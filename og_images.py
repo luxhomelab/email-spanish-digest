@@ -37,16 +37,24 @@ MUTED = (108, 122, 137)
 FONT_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 FONT_REGULAR = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 
+# Same DejaVu typeface on Windows dev machines (fonts ship in C:\Windows\Fonts).
+# Linux/CI paths come first so server output never changes.
+FONT_BOLD_CANDIDATES = (FONT_BOLD, r"C:\Windows\Fonts\DejaVuSans-Bold.ttf")
+FONT_REGULAR_CANDIDATES = (FONT_REGULAR, r"C:\Windows\Fonts\DejaVuSans.ttf")
+
 _font_cache = {}
 
 
 def _font(bold, size):
     key = (bold, size)
     if key not in _font_cache:
-        path = FONT_BOLD if bold else FONT_REGULAR
-        try:
-            _font_cache[key] = ImageFont.truetype(path, size)
-        except OSError:
+        for path in FONT_BOLD_CANDIDATES if bold else FONT_REGULAR_CANDIDATES:
+            try:
+                _font_cache[key] = ImageFont.truetype(path, size)
+                break
+            except OSError:
+                continue
+        else:
             _font_cache[key] = ImageFont.load_default()
     return _font_cache[key]
 
@@ -76,53 +84,141 @@ def _fit_text(draw, text, font_sizes, max_width, bold=True, wrap_width=32):
     return font, lines
 
 
-def render_digest_card(date_display, headline, stories):
-    """Render a 1200x630 OG card. stories: list of up to 3 titles."""
+# Central "crop-safe" column shared with the subscribe card: Reddit and
+# Facebook crop link previews to a centre square, so every word must live
+# inside 285..915px. The outer thirds carry flat colour + decor, no text.
+SAFE_LEFT, SAFE_RIGHT = 285, 915
+
+
+def _wrap_to_width(draw, text, font, max_width):
+    """Greedy word-wrap returning lines that each fit max_width."""
+    lines, current = [], ""
+    for word in text.split():
+        trial = (current + " " + word).strip()
+        if draw.textlength(trial, font=font) <= max_width:
+            current = trial
+        else:
+            if current:
+                lines.append(current)
+            current = word
+    if current:
+        lines.append(current)
+    return lines
+
+
+def render_digest_card(date_display, headline, stories, topics=None):
+    """Render a 1200x630 OG card built for Reddit-cropped link previews.
+
+    Same visual language as render_subscribe_card(): kicker, compact date
+    and an oversized (up to 76pt, max 2 lines) headline, all centred in the
+    crop-safe column; one summary line (story count + topics) instead of
+    tiny bullets; centred domain footer. stories: list of titles (only the
+    count is shown). topics: up to 3 category names for the summary line.
+    """
     headline = _strip_emoji(headline)
+    date_display = _strip_emoji(date_display)
     stories = [_strip_emoji(t) for t in (stories or [])]
+    topics = [t for t in (_strip_emoji(t) for t in (topics or [])) if t]
     img = Image.new("RGB", (W, H), CREAM)
     draw = ImageDraw.Draw(img)
+    cx = W // 2
+    max_w = SAFE_RIGHT - SAFE_LEFT - 48  # 582px with breathing room
 
-    # Kicker
-    _draw_letterspaced(draw, (80, 64), "SPAIN DAILY", _font(True, 30), RED, tracking=6)
+    # Edge decor only (no text outside the centre column).
+    draw.rectangle([0, 0, 18, H], fill=RED)
+    draw.rectangle([18, 0, 26, H], fill=GOLD)
+    draw.rectangle([W - 26, 0, W - 18, H], fill=GOLD)
+    draw.rectangle([W - 18, 0, W, H], fill=RED)
+    draw.line([SAFE_LEFT, 26, SAFE_LEFT, H - 26], fill=GOLD, width=3)
+    draw.line([SAFE_RIGHT, 26, SAFE_RIGHT, H - 26], fill=GOLD, width=3)
 
-    # Date
-    date_font = _font(True, 72)
-    draw.text((76, 110), date_display, font=date_font, fill=INK)
+    # Kicker, centred.
+    kicker = "SPAIN DAILY"
+    kf = _font(True, 30)
+    tracking = 6
+    kw = sum(draw.textlength(ch, font=kf) for ch in kicker) + tracking * (len(kicker) - 1)
+    _draw_letterspaced(draw, (cx - kw / 2, 64), kicker, kf, RED, tracking=tracking)
 
-    # Headline (auto-shrink)
-    font, lines = _fit_text(draw, headline, [46, 40, 34, 28], max_width=W - 160)
-    y = 210
-    line_h = int(font.size * 1.25)
-    for line in lines[:3]:
-        draw.text((80, y), line, font=font, fill=INK)
+    # Date: compact single line, centred (was 72pt full-width).
+    date_font = _font(True, 36)
+    if draw.textlength(date_display, font=date_font) > max_w:
+        date_font = _font(True, 30)
+    date_h = 48
+
+    # Headline: largest size that fits in 2 centred lines (was 46→28pt, 3 lines).
+    best = None
+    for size in (76, 68, 60, 52, 46, 40):
+        font = _font(True, size)
+        lines = _wrap_to_width(draw, headline, font, max_w)
+        if len(lines) <= 2:
+            best = (font, lines)
+            break
+    if best is None:
+        # Outlier long headline: allow a third line at 40pt before cutting text.
+        font = _font(True, 40)
+        lines = _wrap_to_width(draw, headline, font, max_w)
+        if len(lines) > 3:
+            words, idx, cut = headline.split(), 0, []
+            for n in range(3):
+                cur = ""
+                while idx < len(words):
+                    trial = (cur + " " + words[idx]).strip() + ("…" if n == 2 else "")
+                    if draw.textlength(trial, font=font) <= max_w:
+                        cur = (cur + " " + words[idx]).strip()
+                        idx += 1
+                    else:
+                        break
+                cut.append(cur)
+            if idx < len(words) and cut:
+                cut[-1] = (cut[-1] + "…") if cut[-1] else "…"
+            lines = [ln for ln in cut if ln] or ["…"]
+        best = (font, lines)
+    font, lines = best
+    line_h = int(font.size * 1.18)
+
+    # Summary: one centred line — count plus topics, or reading time.
+    # (Replaces the 26pt 3-bullet list, unreadable in feed crops.)
+    count = len(stories)
+    noun = "story" if count == 1 else "stories"
+    if topics:
+        summary = f"{count} {noun}  •  " + ", ".join(t.lower() for t in topics[:3])
+        if draw.textlength(summary, font=_font(False, 32)) > max_w:
+            summary = f"{count} {noun}  •  " + ", ".join(t.lower() for t in topics[:2])
+    else:
+        summary = f"{count} {noun}  •  5-minute read"
+    sum_font = _font(False, 32)
+    if draw.textlength(summary, font=sum_font) > max_w:
+        sum_font = _font(False, 28)
+    while draw.textlength(summary, font=sum_font) > max_w and len(summary) > 24:
+        summary = summary[:-2] + "…"
+
+    # Vertical rhythm: centre the date+headline+summary block between the
+    # kicker (ends ~100) and the domain line (starts ~548).
+    head_h = line_h * len(lines)
+    block_h = date_h + 12 + head_h + 14 + 5 + 20 + 40
+    top, bottom = 112, 540
+    y = top + max(0, (bottom - top - block_h) // 2)
+
+    draw.text((cx - draw.textlength(date_display, font=date_font) / 2, y),
+              date_display, font=date_font, fill=INK)
+    y += date_h + 12
+    for line in lines:
+        draw.text((cx - draw.textlength(line, font=font) / 2, y),
+                  line, font=font, fill=INK)
         y += line_h
 
-    # Red/gold divider
+    # Red/gold divider, centred (same as the subscribe card).
     y_div = y + 14
-    draw.rectangle([80, y_div, 200, y_div + 5], fill=RED)
-    draw.rectangle([200, y_div, 280, y_div + 5], fill=GOLD)
+    draw.rectangle([cx - 100, y_div, cx + 20, y_div + 5], fill=RED)
+    draw.rectangle([cx + 20, y_div, cx + 100, y_div + 5], fill=GOLD)
 
-    # Top stories
-    y_story = y_div + 28
-    story_font = _font(False, 26)
-    for title in (stories or [])[:3]:
-        wrapped = textwrap.wrap(title, width=56)
-        line = wrapped[0] + ("…" if len(wrapped) > 1 else "")
-        if draw.textlength("•  " + line, font=story_font) > W - 160:
-            while line and draw.textlength("•  " + line + "…", font=story_font) > W - 160:
-                line = line[:-1]
-            line = line + "…"
-        draw.text((80, y_story), "•  " + line, font=story_font, fill=MUTED)
-        y_story += 42
+    draw.text((cx - draw.textlength(summary, font=sum_font) / 2, y_div + 25),
+              summary, font=sum_font, fill=MUTED)
 
-    # Footer strip
-    draw.rectangle([0, H - 18, W, H - 18 + 12], fill=RED)
-    draw.rectangle([0, H - 6, W, H], fill=GOLD)
-    foot_font = _font(True, 24)
+    # Domain line, centred (was bottom-right).
+    df = _font(True, 26)
     tag = "spanified.com"
-    draw.text((W - draw.textlength(tag, font=foot_font) - 60, H - 62),
-              tag, font=foot_font, fill=RED)
+    draw.text((cx - draw.textlength(tag, font=df) / 2, 548), tag, font=df, fill=RED)
 
     return img
 
@@ -225,7 +321,8 @@ def render_og_images(digests, out_dir):
             print(f"  WARN: skipping og card, bad date: {digest.get('date')!r}")
             continue
         stories = [s.get("title", "") for s in digest.get("stories", [])]
-        img = render_digest_card(digest["date_display"], digest["headline"], stories)
+        img = render_digest_card(digest["date_display"], digest["headline"], stories,
+                                 topics=digest.get("tag_categories"))
         img.save(os.path.join(og_dir, f"{digest['date']}.png"))
         count += 1
     render_default_card().save(os.path.join(og_dir, "og-default.png"))
