@@ -469,6 +469,10 @@ body.page-archive .digest-card:hover {
   cursor: pointer; text-align: left;
 }
 .tip-pop[hidden] { display: none; }
+/* Glue the "?" mark to its unit ("days \u00b7", "\u20ac/kW/day \u00b7", ...) so the unit never
+   wraps onto its own line as an orphan: the label may wrap between words,
+   but never between the hint mark and its unit. */
+.calc .tip-unit { white-space: nowrap; }
 .calc .tip {
  display: inline-flex; align-items: center; justify-content: center;
  width: 15px; height: 15px; border-radius: 50%;
@@ -595,8 +599,12 @@ body.page-calculator .calc h1 { font-size: 38px; letter-spacing: -0.5px; }
 @media (min-width: 901px) {
   .calc-grid.elec-top .calc-form { position: sticky; top: 16px; }
 }
-/* Keep paired short inputs side-by-side even on phones (fits at 360px) */
-.elec-top .field-row, .calc .prov .field-row { grid-template-columns: 1fr 1fr; gap: 10px; }
+/* Paired short inputs stay side-by-side on tablets/desktops; below ~480px they
+   stack to a single column so labels (title + "?" + unit) fit on one line and
+   controls stay comfortably tappable. */
+@media (min-width: 481px) {
+  .elec-top .field-row, .calc .prov .field-row { grid-template-columns: 1fr 1fr; gap: 10px; }
+}
 
 /* Hero: saving shown as a pill so the total stays the single focal point */
 .calc .hero-net .permo { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
