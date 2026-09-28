@@ -403,6 +403,10 @@ def render_calculators(env):
             {"name": "Home", "url": "/"},
             {"name": "Property Buying Cost", "url": "/calculators/property-buying-cost", "current": True},
         ], "Spain Property Buying Cost Calculator — ITP, IVA/IGIC & AJD by region — Spanified"),
+        ("calculator-electricity.html", "calculators/electricity-bill.html", [
+            {"name": "Home", "url": "/"},
+            {"name": "Electricity Bill", "url": "/calculators/electricity-bill", "current": True},
+        ], "Spain Electricity Bill Calculator — PVPC & Tariff Comparison — Spanified"),
     ]
     for template_name, rel_dest, crumbs, share_text in calcs:
         template = env.get_template(template_name)
@@ -672,6 +676,7 @@ def render_sitemap(digests, categories=()):
         urls.append((SITE_URL + f"/category/{slug}", None))
     urls.append((SITE_URL + "/calculators/autonomo-tax", None))
     urls.append((SITE_URL + "/calculators/property-buying-cost", None))
+    urls.append((SITE_URL + "/calculators/electricity-bill", None))
     # Quiz pages stay out of the sitemap until launch (no external links either).
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
@@ -778,7 +783,8 @@ def js_version():
     for name in ("autonomo.js", "autonomo-calc.js", "autonomo-form.js",
                    "property-buying-cost.js", "property-buying-cost-calc.js",
                    "property-buying-cost-form.js", "quiz-ai-or-real.js",
-                   "quiz-logic.js", "subscribe-form.js", "subscription-store.js"):
+                   "quiz-logic.js", "subscribe-form.js", "subscription-store.js",
+                   "electricity.js", "electricity-calc.js", "electricity-form.js"):
         path = os.path.join(SCRIPT_DIR, "static", "js", name)
         try:
             with open(path, "rb") as fh:
