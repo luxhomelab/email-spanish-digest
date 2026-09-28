@@ -6,7 +6,7 @@
    LOCKED until the double opt-in click lands on /quiz/<slug>-success,
    which reveals the result (score comes from localStorage). #}
 {% block title %}{{ quiz.title }} — Spanified{% endblock %}
-{% block description %}<meta name="description" content="10 absurd Spain headlines — half are real, half we made up. Can you tell AI slop from actual Spanish news? Take the quiz.">
+{% block description %}<meta name="description" content="10 headlines from Spain — half really happened, half we made up. Take the 2-minute quiz.">
 {# Canonical quiz page is indexable and listed in sitemap.xml.
    The flow pages (-success / -subscribed / -result-*) stay noindex,nofollow. #}
 <meta name="robots" content="index, follow">{% endblock %}
