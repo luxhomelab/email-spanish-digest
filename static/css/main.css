@@ -456,6 +456,19 @@ body.page-archive .digest-card:hover {
 .calc label, .calc .flabel { display: block; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #6C7A89; margin-bottom: 6px; }
 .calc label .sub { text-transform: none; letter-spacing: normal; font-weight: 400; }
 .calc .field-note { font-size: 12px; line-height: 18px; color: #8A94A0; margin-top: 6px; }
+.calc .tip:focus-visible { outline: 2px solid #AA151B; outline-offset: 2px; }
+.calc .tip.on { border-color: #AA151B; color: #AA151B; background: rgba(170,21,27,0.08); }
+/* Shared tap-to-show hint popover (static/js/tooltips.js). Single fixed element,
+   positioned + viewport-clamped in JS so it never shifts layout or overflows. */
+.tip-pop {
+  position: fixed; z-index: 200;
+  max-width: min(320px, calc(100vw - 16px));
+  background: #ffffff; border: 1px solid #E3D9C6; border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(60,40,20,0.18);
+  padding: 12px 14px; font-size: 14px; line-height: 21px; color: #3C4858;
+  cursor: pointer; text-align: left;
+}
+.tip-pop[hidden] { display: none; }
 .calc .tip {
  display: inline-flex; align-items: center; justify-content: center;
  width: 15px; height: 15px; border-radius: 50%;
