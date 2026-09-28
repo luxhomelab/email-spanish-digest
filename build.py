@@ -82,7 +82,6 @@ STATIC_PAGES = [
 # images, domain config, localized pages).
 STATIC_COPY = [
     "CNAME",
-    "bsky.html",
     "x.html",
     "success.jpg",
     "confirm.jpg",
@@ -816,7 +815,6 @@ def main():
     env.globals["pub_date"] = pub_date
     env.globals["site_socials"] = [
         "https://www.threads.com/@spaindaily",
-        "https://bsky.app/profile/spanified.bsky.social",
         "https://www.reddit.com/r/SpainDaily/",
         "https://x.com/spanified",
         "https://substack.com/@spanified",
