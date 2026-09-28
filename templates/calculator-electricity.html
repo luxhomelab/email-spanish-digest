@@ -42,33 +42,33 @@
 
     <div class="field-row">
      <div class="field">
-      <label for="f-days">Billing period <span class="tip" title="Length of the bill you are modelling. Most Spanish bills cover 30 days (some meters bill bimonthly — use 60 then).">?</span> <span class="sub">days ·</span></label>
+      <label for="f-days">Billing period <span class="tip-unit"><span class="tip" title="Length of the bill you are modelling. Most Spanish bills cover 30 days (some meters bill bimonthly — use 60 then).">?</span> <span class="sub">days ·</span></span></label>
       <input id="f-days" type="number" min="1" max="366" step="1" value="30">
      </div>
      <div class="field">
-      <label for="f-kw">Contracted power <span class="tip" title="Your contracted capacity in kW (potencia contratada). You pay the capacity charge for it every day — see the supplier cards for the €/kW/day rate. Typical flats: 3.45–5.75 kW.">?</span> <span class="sub">kW ·</span></label>
+      <label for="f-kw">Contracted power <span class="tip-unit"><span class="tip" title="Your contracted capacity in kW (potencia contratada). You pay the capacity charge for it every day — see the supplier cards for the €/kW/day rate. Typical flats: 3.45–5.75 kW.">?</span> <span class="sub">kW ·</span></span></label>
       <input id="f-kw" type="number" min="0" max="100" step="0.1" value="5.7">
      </div>
     </div>
 
     <div class="field" id="wrap-flat">
-     <label for="f-kwh">Consumption <span class="tip" title="Total kWh used during the billing period on a flat (fv) tariff. Check the number on your bill — it is the 'energía consumida' figure.">?</span> <span class="sub">kWh / period ·</span></label>
+     <label for="f-kwh">Consumption <span class="tip-unit"><span class="tip" title="Total kWh used during the billing period on a flat (fv) tariff. Check the number on your bill — it is the 'energía consumida' figure.">?</span> <span class="sub">kWh / period ·</span></span></label>
      <input id="f-kwh" type="number" min="0" max="1000000" step="1" value="300">
     </div>
 
     <div id="wrap-plv" hidden>
      <div class="field-row">
       <div class="field">
-       <label for="f-punta">Punta (peak) <span class="tip" title="kWh consumed during peak hours (typically weekdays 10:00–14:00 and 18:00–22:00). The most expensive period on time-of-use tariffs.">?</span> <span class="sub">kWh ·</span></label>
+       <label for="f-punta">Punta (peak) <span class="tip-unit"><span class="tip" title="kWh consumed during peak hours (typically weekdays 10:00–14:00 and 18:00–22:00). The most expensive period on time-of-use tariffs.">?</span> <span class="sub">kWh ·</span></span></label>
        <input id="f-punta" type="number" min="0" max="1000000" step="1" value="75">
       </div>
       <div class="field">
-       <label for="f-llano">Llano (shoulder) <span class="tip" title="kWh consumed during shoulder hours — usually early morning and midday, priced between punta and valle.">?</span> <span class="sub">kWh ·</span></label>
+       <label for="f-llano">Llano (shoulder) <span class="tip-unit"><span class="tip" title="kWh consumed during shoulder hours — usually early morning and midday, priced between punta and valle.">?</span> <span class="sub">kWh ·</span></span></label>
        <input id="f-llano" type="number" min="0" max="1000000" step="1" value="150">
       </div>
      </div>
      <div class="field">
-      <label for="f-valle">Valle (off-peak) <span class="tip" title="kWh consumed during off-peak hours — nights and weekends. The cheapest period; shift laundry, dishwasher and EV charging here.">?</span> <span class="sub">kWh ·</span></label>
+      <label for="f-valle">Valle (off-peak) <span class="tip-unit"><span class="tip" title="kWh consumed during off-peak hours — nights and weekends. The cheapest period; shift laundry, dishwasher and EV charging here.">?</span> <span class="sub">kWh ·</span></span></label>
       <input id="f-valle" type="number" min="0" max="1000000" step="1" value="75">
      </div>
      <p class="field-note">Total consumption: <strong><span id="plv-total">300</span> kWh</strong></p>

@@ -66,22 +66,22 @@ function persist() {
 function energyFieldHtml(p, i) {
   if (p.energyType === 'flat') {
     return `<div class="field">
-     <label for="f-eflat-${i}">Energy price <span class="tip" title="Price per kWh on a flat tariff — the same price at any hour of the day.">?</span> <span class="sub">€ / kWh ·</span></label>
+     <label for="f-eflat-${i}">Energy price <span class="tip-unit"><span class="tip" title="Price per kWh on a flat tariff — the same price at any hour of the day.">?</span> <span class="sub">€ / kWh ·</span></span></label>
      <input id="f-eflat-${i}" type="number" min="0" max="100" step="0.00001" data-field="energiaFlat" value="${fmtNum(p.energiaFlat)}">
     </div>`
   }
   return `<div class="field-row">
     <div class="field">
-     <label for="f-epunta-${i}">Punta <span class="tip" title="Peak period energy price (€/kWh). Typically weekdays 10:00–14:00 and 18:00–22:00.">?</span> <span class="sub">€ / kWh ·</span></label>
+     <label for="f-epunta-${i}">Punta <span class="tip-unit"><span class="tip" title="Peak period energy price (€/kWh). Typically weekdays 10:00–14:00 and 18:00–22:00.">?</span> <span class="sub">€ / kWh ·</span></span></label>
      <input id="f-epunta-${i}" type="number" min="0" max="100" step="0.00001" data-field="energiaPunta" value="${fmtNum(p.energiaPunta)}">
     </div>
     <div class="field">
-     <label for="f-ellano-${i}">Llano <span class="tip" title="Shoulder-period energy price (€/kWh). Usually early morning and midday hours.">?</span> <span class="sub">€ / kWh ·</span></label>
+     <label for="f-ellano-${i}">Llano <span class="tip-unit"><span class="tip" title="Shoulder-period energy price (€/kWh). Usually early morning and midday hours.">?</span> <span class="sub">€ / kWh ·</span></span></label>
      <input id="f-ellano-${i}" type="number" min="0" max="100" step="0.00001" data-field="energiaLlano" value="${fmtNum(p.energiaLlano)}">
     </div>
    </div>
    <div class="field">
-    <label for="f-evalle-${i}">Valle <span class="tip" title="Off-peak period energy price (€/kWh). Typically nights and weekends — the cheapest hours.">?</span> <span class="sub">€ / kWh ·</span></label>
+    <label for="f-evalle-${i}">Valle <span class="tip-unit"><span class="tip" title="Off-peak period energy price (€/kWh). Typically nights and weekends — the cheapest hours.">?</span> <span class="sub">€ / kWh ·</span></span></label>
     <input id="f-evalle-${i}" type="number" min="0" max="100" step="0.00001" data-field="energiaValle" value="${fmtNum(p.energiaValle)}">
    </div>`
 }
@@ -102,11 +102,11 @@ function providerCardHtml(p, i, canRemove) {
    </div>
    <div class="field-row">
     <div class="field">
-     <label for="f-pp1-${i}">Power P1 <span class="tip" title="Peak-period capacity charge: € per kW of contracted power per day (P1 = peak hours).">?</span> <span class="sub">€ / kW/day ·</span></label>
+     <label for="f-pp1-${i}">Power P1 <span class="tip-unit"><span class="tip" title="Peak-period capacity charge: € per kW of contracted power per day (P1 = peak hours).">?</span> <span class="sub">€ / kW/day ·</span></span></label>
      <input id="f-pp1-${i}" type="number" min="0" max="10" step="0.00001" data-field="potenciaP1" value="${fmtNum(p.potenciaP1)}">
     </div>
     <div class="field">
-     <label for="f-pp2-${i}">Power P2 <span class="tip" title="Off-peak capacity charge: € per kW of contracted power per day (P2 = valle hours). Two-period tariffs bill both.">?</span> <span class="sub">€ / kW/day ·</span></label>
+     <label for="f-pp2-${i}">Power P2 <span class="tip-unit"><span class="tip" title="Off-peak capacity charge: € per kW of contracted power per day (P2 = valle hours). Two-period tariffs bill both.">?</span> <span class="sub">€ / kW/day ·</span></span></label>
      <input id="f-pp2-${i}" type="number" min="0" max="10" step="0.00001" data-field="potenciaP2" value="${fmtNum(p.potenciaP2)}">
     </div>
    </div>
@@ -123,11 +123,11 @@ function providerCardHtml(p, i, canRemove) {
     <div class="prov-adv-body" ${open ? '' : 'hidden'}>
      <div class="field-row">
       <div class="field">
-       <label for="f-bono-${i}">Bono Social <span class="tip" title="Social-bonus discount for vulnerable households, billed as € per day. Leave 0 if it does not apply to you.">?</span> <span class="sub">€ / day ·</span></label>
+       <label for="f-bono-${i}">Bono Social <span class="tip-unit"><span class="tip" title="Social-bonus discount for vulnerable households, billed as € per day. Leave 0 if it does not apply to you.">?</span> <span class="sub">€ / day ·</span></span></label>
        <input id="f-bono-${i}" type="number" min="0" max="10" step="0.001" data-field="bonoSocialDaily" value="${fmtNum(p.bonoSocialDaily)}">
       </div>
       <div class="field">
-       <label for="f-alq-${i}">Meter rental <span class="tip" title="Alquiler de contador: optional regulated meter-rental fee billed per day (usually €0.016–0.025/day).">?</span> <span class="sub">€ / day ·</span></label>
+       <label for="f-alq-${i}">Meter rental <span class="tip-unit"><span class="tip" title="Alquiler de contador: optional regulated meter-rental fee billed per day (usually €0.016–0.025/day).">?</span> <span class="sub">€ / day ·</span></span></label>
        <input id="f-alq-${i}" type="number" min="0" max="10" step="0.001" data-field="alquilerContadorDaily" value="${fmtNum(p.alquilerContadorDaily)}">
       </div>
      </div>
