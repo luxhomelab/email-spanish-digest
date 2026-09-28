@@ -36,9 +36,9 @@
   <h1>Spain Electricity Bill Calculator <span class="calc-year">{{ calc_year }}</span></h1>
   <p class="subtitle">Monthly electricity bill + supplier comparison — contracted power, kWh, taxes and VAT, in English.</p>
 
-  <div class="calc-grid">
+  <div class="calc-grid elec-top">
    <div class="card calc-form">
-    <p class="calc-kicker">Consumption</p>
+    <p class="calc-kicker"><span class="step-n">1</span>Consumption</p>
 
     <div class="field-row">
      <div class="field">
@@ -73,14 +73,6 @@
      </div>
      <p class="field-note">Total consumption: <strong><span id="plv-total">300</span> kWh</strong></p>
     </div>
-
-    <p class="calc-kicker" style="margin-top:22px">Suppliers</p>
-    <div id="providers"></div>
-    <div class="field">
-     <button type="button" id="add-provider" class="ghost-btn">+ Add supplier (up to 5)</button>
-    </div>
-
-    <div class="notice notice-amber">Default rates are illustrative figures based on typical Spanish market offers — always check the current tariff sheet (hoja de información) before switching supplier.</div>
    </div>
 
    <div class="calc-results">
@@ -91,32 +83,40 @@
      <p class="big" id="r-total">—</p>
      <p class="permo"><span id="r-best">—</span><span id="r-saving" hidden></span></p>
     </div>
-
-    <div class="card">
-     <p class="calc-kicker">Supplier comparison</p>
-     <div class="card sheet">
-      <div class="tbl-scroll">
-       <table>
-        <thead><tr>
-         <th>Supplier</th>
-         <th class="num">Power</th>
-         <th class="num">Energy</th>
-         <th class="num">Subtotal</th>
-         <th class="num">Tax (5.11%)</th>
-         <th class="num">VAT</th>
-         <th class="num">Total</th>
-         <th class="num">Saving</th>
-        </tr></thead>
-        <tbody id="r-compare"></tbody>
-       </table>
-      </div>
-     </div>
-    </div>
-
-    <div id="r-breakdowns" class="breakdowns"></div>
-
-    <div class="notice notice-amber">Results are estimates for educational purposes. Regulated charges (electricity tax, network access, metering) change over time and your actual bill may differ.</div>
    </div>
+  </div>
+
+  <div class="card elec-suppliers">
+   <p class="calc-kicker"><span class="step-n">2</span>Suppliers</p>
+   <div id="providers" class="elec-prov-grid"></div>
+   <button type="button" id="add-provider" class="ghost-btn">+ Add supplier (up to 5)</button>
+   <div class="notice notice-amber">Default rates are illustrative figures based on typical Spanish market offers — always check the current tariff sheet (hoja de información) before switching supplier.</div>
+  </div>
+
+  <div class="card elec-compare">
+   <p class="calc-kicker"><span class="step-n">3</span>Supplier comparison</p>
+   <div class="sheet tbl-scroll">
+    <table class="elec-table">
+     <thead><tr>
+      <th>Supplier</th>
+      <th class="num">Power</th>
+      <th class="num">Energy</th>
+      <th class="num">Subtotal</th>
+      <th class="num">Tax (5.11%)</th>
+      <th class="num">VAT</th>
+      <th class="num">Total</th>
+      <th class="num">Saving</th>
+     </tr></thead>
+     <tbody id="r-compare"></tbody>
+    </table>
+   </div>
+   <div id="r-compare-cards" class="elec-cards"></div>
+  </div>
+
+  <div class="elec-details">
+   <p class="calc-kicker"><span class="step-n">4</span>Bill breakdown</p>
+   <div id="r-breakdowns" class="breakdowns"></div>
+   <div class="notice notice-amber">Results are estimates for educational purposes. Regulated charges (electricity tax, network access, metering) change over time and your actual bill may differ.</div>
   </div>
 
   <div class="card seobox">

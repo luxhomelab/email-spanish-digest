@@ -92,8 +92,10 @@ function providerCardHtml(p, i, canRemove) {
   return `<div class="prov" data-i="${i}" data-id="${escapeHtml(p.id)}">
    <div class="prov-head">
     <p class="prov-title">Supplier ${i + 1} <span>${p.name ? escapeHtml(p.name) : '—'}</span></p>
+    <span class="prov-badge" data-role="badge" hidden></span>
     ${canRemove ? '<button type="button" class="prov-remove" data-act="remove">✕ Remove</button>' : ''}
    </div>
+   <p class="prov-total"><span data-role="total">—</span><span class="prov-per"> / month</span></p>
    <div class="field">
     <label for="f-pname-${i}">Supplier name</label>
     <input id="f-pname-${i}" type="text" maxlength="40" data-field="name" value="${escapeHtml(p.name)}" placeholder="Naturgy, Octopus…">
@@ -234,22 +236,25 @@ function breakdownRows(p, b) {
         },
     b.bonoSocial > 0 ? { label: 'Bono Social', value: b.bonoSocial } : null,
     { label: 'Subtotal', value: b.subtotal, bold: true },
-    { label: `Electricity special tax (${(ELECTRICITY_TAX_RATE * 100).toFixed(6)}%)`, value: b.impuestoElectricidad },
-    b.alquilerContador > 0 ? { label: 'Meter rental (alquiler de contador)', value: b.alquilerContador } : null,
+    { label: `Electricity special tax (${(ELECTRICITY_TAX_RATE * 100).toFixed(6)}%)`, value: b.impuestoElectricidad, muted: true },
+    b.alquilerContador > 0 ? { label: 'Meter rental (alquiler de contador)', value: b.alquilerContador, muted: true } : null,
     { label: 'Electricity total (before VAT)', value: b.totalElectricidad, bold: true },
-    { label: `VAT (IVA ${(VAT_RATE * 100).toFixed(0)}%)`, value: b.iva },
+    { label: `VAT (IVA ${(VAT_RATE * 100).toFixed(0)}%)`, value: b.iva, muted: true },
   ].filter(Boolean)
   return rows
 }
 
-function breakdownHtml(p, b, i) {
+function breakdownHtml(p, b, i, isCheapest) {
   const rows = breakdownRows(p, b)
-  return `<div class="card">
-   <p class="calc-kicker">${escapeHtml(p.name || `Supplier ${i + 1}`)} — bill breakdown</p>
-   <div class="card sheet">
+  return `<details class="card elec-bd${isCheapest ? ' is-best' : ''}"${isCheapest ? ' open' : ''}>
+   <summary class="elec-bd-sum">
+    <span class="elec-bd-name">${isCheapest ? '★ ' : ''}${escapeHtml(p.name || `Supplier ${i + 1}`)} — bill breakdown</span>
+    <b class="elec-bd-total">${fmtEur(b.total)}</b>
+   </summary>
+   <div class="sheet">
     <table>
      <tbody>
-      ${rows.map(r => `<tr class="${r.bold ? 'row-h' : ''}">
+      ${rows.map(r => `<tr class="${r.bold ? 'row-h' : ''}${r.muted ? ' tax-row' : ''}">
         <td>${escapeHtml(r.label)}${r.detail ? `<span class="bd-detail">${escapeHtml(r.detail)}</span>` : ''}</td>
         <td class="num">${fmtEur(r.value)}</td>
        </tr>`).join('')}
@@ -257,7 +262,50 @@ function breakdownHtml(p, b, i) {
     </table>
     <div class="total-strip"><span>Total to pay</span><b>${fmtEur(b.total)}</b></div>
    </div>
-  </div>`
+  </details>`
+}
+
+function compareCardHtml(provider, breakdown, rank, isCheapest, savings, count) {
+  const typeLabel = provider.energyType === 'flat' ? 'Flat' : 'Punta · Llano · Valle'
+  return `<article class="elec-card${isCheapest ? ' win' : ''}">
+   <div class="elec-card-top">
+    <div>
+     <p class="elec-card-name">${isCheapest ? '★ ' : ''}${escapeHtml(provider.name || `Supplier ${rank}`)}</p>
+     <p class="elec-card-type">${escapeHtml(typeLabel)}</p>
+    </div>
+    <p class="elec-card-total">${fmtEur(breakdown.total)}</p>
+   </div>
+   <div class="elec-card-grid">
+    <div><span>Power</span><b>${fmtEur(breakdown.terminoPotencia)}</b></div>
+    <div><span>Energy</span><b>${fmtEur(breakdown.terminoEnergia)}</b></div>
+    <div><span>Subtotal</span><b>${fmtEur(breakdown.subtotal)}</b></div>
+    <div><span>Tax + VAT</span><b>${fmtEur(breakdown.impuestoElectricidad + breakdown.iva)}</b></div>
+   </div>
+   <p class="elec-card-save">${count > 1 ? (isCheapest ? 'Cheapest option' : `+${fmtEur(savings)} vs cheapest`) : ''}</p>
+  </article>`
+}
+
+function syncProviderBadges(results) {
+  const wrap = $('providers')
+  if (!wrap) return
+  const byId = new Map(results.map(r => [r.provider.id, r]))
+  wrap.querySelectorAll('.prov').forEach(card => {
+    const r = byId.get(card.dataset.id)
+    const badge = card.querySelector('[data-role="badge"]')
+    const total = card.querySelector('[data-role="total"]')
+    if (!r) return
+    if (total) total.textContent = fmtEur(r.breakdown.total)
+    if (!badge) return
+    if (r.rank === 1 && results.length > 1) {
+      badge.hidden = false
+      badge.textContent = '★ Cheapest'
+      card.classList.add('is-best')
+    } else {
+      badge.hidden = true
+      badge.textContent = ''
+      card.classList.remove('is-best')
+    }
+  })
 }
 
 function renderResults() {
@@ -282,16 +330,27 @@ function renderResults() {
      <td class="num">${fmtEur(breakdown.terminoPotencia)}</td>
      <td class="num">${fmtEur(breakdown.terminoEnergia)}</td>
      <td class="num">${fmtEur(breakdown.subtotal)}</td>
-     <td class="num">${fmtEur(breakdown.impuestoElectricidad)}</td>
-     <td class="num">${fmtEur(breakdown.iva)}</td>
+     <td class="num tax">${fmtEur(breakdown.impuestoElectricidad)}</td>
+     <td class="num tax">${fmtEur(breakdown.iva)}</td>
      <td class="num b">${fmtEur(breakdown.total)}</td>
      <td class="num save">${results.length > 1 ? (isCheapest ? 'Cheapest' : `−${fmtEur(savings)}`) : '—'}</td>
     </tr>`
   }).join('')
 
+  const cards = $('r-compare-cards')
+  if (cards) {
+    cards.innerHTML = results.map(({ provider, breakdown, rank }) => {
+      const isCheapest = rank === 1
+      const savings = breakdown.total - cheapest.breakdown.total
+      return compareCardHtml(provider, breakdown, rank, isCheapest, savings, results.length)
+    }).join('')
+  }
+
   $('r-breakdowns').innerHTML = results
-    .map(({ provider, breakdown }, i) => breakdownHtml(provider, breakdown, i))
+    .map(({ provider, breakdown, rank }, i) => breakdownHtml(provider, breakdown, i, rank === 1))
     .join('')
+
+  syncProviderBadges(results)
 }
 
 function update() {
