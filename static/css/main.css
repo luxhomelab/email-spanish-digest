@@ -1511,7 +1511,7 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 }
 
 /* ── Quiz (shared by quiz app + per-persona result pages) ── */
-.quiz-wrap{max-width:680px;margin:0 auto;padding:clamp(12px,3vw,24px) clamp(8px,2vw,16px);background:linear-gradient(180deg,#FFF8EE 0%,#FFF3E0 100%);border-radius:20px}
+.quiz-wrap{max-width:680px;margin:0 auto;padding:clamp(12px,3vw,24px) clamp(8px,2vw,16px);background:none;border-radius:20px}
 .quiz-progress-track{height:8px;background:rgba(0,0,0,.08);border-radius:99px;overflow:hidden;margin:14px 0 4px}
 #quiz-progress{height:100%;width:0;background:#AA151B;transition:width .3s}
 .quiz-card{background:#fff;border:1px solid #e5e0d8;border-radius:16px;padding:clamp(18px,4vw,28px);margin:16px 0;box-shadow:0 1px 4px rgba(0,0,0,.05)}

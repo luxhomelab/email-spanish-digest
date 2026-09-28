@@ -677,7 +677,10 @@ def render_sitemap(digests, categories=()):
     urls.append((SITE_URL + "/calculators/autonomo-tax", None))
     urls.append((SITE_URL + "/calculators/property-buying-cost", None))
     urls.append((SITE_URL + "/calculators/electricity-bill", None))
-    # Quiz pages stay out of the sitemap until launch (no external links either).
+    # Only the canonical quiz landing page is indexable (quiz.html ships
+    # index,follow). The -success / -subscribed / -result-* variants stay
+    # noindex,nofollow and must never enter the sitemap.
+    urls.append((SITE_URL + "/quiz/ai-or-real", None))
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
