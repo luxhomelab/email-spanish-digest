@@ -66,7 +66,7 @@ function persist() {
 function energyFieldHtml(p, i) {
   if (p.energyType === 'flat') {
     return `<div class="field">
-     <label for="f-eflat-${i}">Energy price <span class="tip" title="Price per kWh on a flat (fv) tariff — the same price at any hour of the day.">?</span> <span class="sub">€ / kWh ·</span></label>
+     <label for="f-eflat-${i}">Energy price <span class="tip" title="Price per kWh on a flat tariff — the same price at any hour of the day.">?</span> <span class="sub">€ / kWh ·</span></label>
      <input id="f-eflat-${i}" type="number" min="0" max="100" step="0.00001" data-field="energiaFlat" value="${fmtNum(p.energiaFlat)}">
     </div>`
   }
@@ -76,7 +76,7 @@ function energyFieldHtml(p, i) {
      <input id="f-epunta-${i}" type="number" min="0" max="100" step="0.00001" data-field="energiaPunta" value="${fmtNum(p.energiaPunta)}">
     </div>
     <div class="field">
-     <label for="f-ellano-${i}">Llano <span class="tip" title="Flat/shoulder period energy price (€/kWh). Usually early morning and midday hours.">?</span> <span class="sub">€ / kWh ·</span></label>
+     <label for="f-ellano-${i}">Llano <span class="tip" title="Shoulder-period energy price (€/kWh). Usually early morning and midday hours.">?</span> <span class="sub">€ / kWh ·</span></label>
      <input id="f-ellano-${i}" type="number" min="0" max="100" step="0.00001" data-field="energiaLlano" value="${fmtNum(p.energiaLlano)}">
     </div>
    </div>
@@ -106,7 +106,7 @@ function providerCardHtml(p, i, canRemove) {
      <input id="f-pp1-${i}" type="number" min="0" max="10" step="0.00001" data-field="potenciaP1" value="${fmtNum(p.potenciaP1)}">
     </div>
     <div class="field">
-     <label for="f-pp2-${i}">Power P2 <span class="tip" title="Off-peak capacity charge: € per kW of contracted power per day (P2 = valley hours). Two-period tariffs bill both.">?</span> <span class="sub">€ / kW/day ·</span></label>
+     <label for="f-pp2-${i}">Power P2 <span class="tip" title="Off-peak capacity charge: € per kW of contracted power per day (P2 = valle hours). Two-period tariffs bill both.">?</span> <span class="sub">€ / kW/day ·</span></label>
      <input id="f-pp2-${i}" type="number" min="0" max="10" step="0.00001" data-field="potenciaP2" value="${fmtNum(p.potenciaP2)}">
     </div>
    </div>
