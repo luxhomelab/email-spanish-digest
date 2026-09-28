@@ -377,7 +377,7 @@ function init() {
   }
 
   wireShareMenu()
-  syncShareLinks('AI or Real? — Can you spot fake Spain news? — Spanified')
+  syncShareLinks('Real or AI? Can You Spot the Fake Spain News? — Spanified')
 }
 
 if (document.readyState === 'loading') {

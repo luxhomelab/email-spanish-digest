@@ -1627,6 +1627,22 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
  .quiz-result-cta{display:block;width:100%;text-align:center;padding:16px}
 }
 
-/* ── Quiz images (result hero + hook teaser) ── */
+/* ── Quiz images (result hero + hook hero) ── */
 .quiz-result-img{width:100%;height:auto;border-radius:14px;margin:16px 0;display:block}
 .quiz-hook-img{width:100%;height:auto;border-radius:14px;margin:16px 0;display:block}
+
+/* ── Quiz teaser card on the homepage (compact, clickable) ── */
+.quiz-teaser-row{display:flex;gap:18px;align-items:flex-start;margin-top:2px}
+.quiz-teaser-thumb{
+ flex:0 0 auto;width:96px;height:128px;display:block;
+ object-fit:cover;object-position:22% 50%;
+ border-radius:12px;background:#FDF3E2;
+}
+.quiz-teaser-body{min-width:0}
+body.page-home .quiz-teaser-row .teaser-kicker{margin-bottom:4px}
+body.page-home .quiz-teaser-row h2{margin:0 0 12px}
+body.page-home .quiz-teaser-row p{margin-bottom:0}
+@media (max-width:560px){
+ .quiz-teaser-row{gap:14px}
+ .quiz-teaser-thumb{width:76px;height:104px}
+}

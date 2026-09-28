@@ -101,11 +101,11 @@ export function resultBySlug(results, slug) {
 }
 
 // Personalize the share text with the exact score:
-// "I got 3-4/10 on AI or Real? — ..." → "I scored 4/10 on AI or Real? — ..."
+// "I got 3-4/10 on Real or AI? — ..." → "I scored 4/10 on Real or AI? — ..."
 export function personalShareText(result, score, total = 10) {
   const base = result && result.shareText
     ? result.shareText
-    : 'I took the AI or Real? quiz — telling real Spanish news from AI fakes — Spanified'
+    : 'I took the Real or AI? quiz — telling real Spanish news from AI fakes — Spanified'
   return base.replace(/I got \d+-\d+\/\d+/, `I scored ${score}/${total}`)
 }
 
