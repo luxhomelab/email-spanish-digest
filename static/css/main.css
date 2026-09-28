@@ -569,6 +569,43 @@ body.page-calculator .calc h1 { font-size: 38px; letter-spacing: -0.5px; }
  .calc .seg button { flex: 1 1 100%; min-height: 44px; }
 }
 
+/* ---------- Electricity calculator (calculator-electricity.html) ---------- */
+.calc .prov { background: #FAF7F0; border: 1px solid #EFE7D8; border-radius: 12px; padding: 14px; margin-bottom: 12px; }
+.calc .prov-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.calc .prov-title { margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #6C7A89; }
+.calc .prov-title span { color: #3C4858; }
+.calc .prov-remove { background: none; border: none; color: #B03A3A; font-size: 12px; font-weight: 600; cursor: pointer; padding: 4px 6px; }
+.calc .prov-remove:hover { color: #8A1A1A; }
+.calc .prov-adv { border-top: 1px solid #EFE7D8; padding-top: 12px; margin-top: 4px; }
+.calc .prov-adv button.prov-adv-btn {
+ display: flex; width: 100%; align-items: center; justify-content: space-between;
+ background: none; border: none; cursor: pointer; padding: 0;
+ font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6C7A89;
+}
+.calc .prov-adv button.prov-adv-btn:hover { color: #AA151B; }
+.calc .prov-adv-body { margin-top: 12px; }
+.calc .ghost-btn {
+ display: block; width: 100%; background: none; border: 2px dashed #E3D9C6; border-radius: 10px;
+ padding: 12px; font-size: 13px; font-weight: 600; color: #8A94A0; cursor: pointer;
+}
+.calc .ghost-btn:hover { border-color: #0E7A3D; color: #0E7A3D; }
+.calc .tbl-scroll { overflow-x: auto; }
+.calc .sheet tr.win td { background: rgba(47,163,95,0.12); }
+.calc .sheet .save { color: #0A5C2E; font-weight: 700; }
+.calc .sheet .bd-detail { display: block; font-size: 12px; line-height: 17px; color: #8A94A0; margin-top: 2px; }
+.calc .total-strip {
+ display: flex; align-items: center; justify-content: space-between;
+ background: rgba(47,163,95,0.12); border-top: 2px solid #BDE5C8;
+ padding: 12px 16px; font-size: 14px; font-weight: 700; color: #0A5C2E;
+}
+.calc .total-strip b { font-size: 18px; font-weight: 800; }
+.calc .breakdowns { display: grid; gap: 12px; grid-template-columns: 1fr; }
+@media (min-width: 1100px) { .calc .breakdowns { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) {
+ .calc .total-strip { font-size: 13px; }
+ .calc .total-strip b { font-size: 16px; }
+}
+
 /* ---------- Category (category.html) ---------- */
 .cat-list { max-width: 1200px; margin: 0 auto; }
 .cat-list h1 {

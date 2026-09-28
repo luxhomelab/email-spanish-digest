@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block body_class %} class="page-calculator"{% endblock %}
+{% block title %}Spain Electricity Bill Calculator {{ calc_year }} — PVPC &amp; Tariff Comparison — Spanified{% endblock %}
+{% block description %}<meta name="description" content="Free Spain electricity bill calculator: estimate your monthly bill (power + energy + taxes) and compare Naturgy, Octopus, Iberdrola and other tariffs — flat or punta/llano/valle. In English.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Spain Electricity Bill Calculator {{ calc_year }} — PVPC &amp; Tariff Comparison — Spanified">
+<meta property="og:description" content="Estimate your Spanish electricity bill and compare supplier tariffs — contracted power, kWh, punta/llano/valle periods, taxes and VAT. In English.">
+<meta property="og:url" content="{{ site_url }}/calculators/electricity-bill">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Spain Electricity Bill Calculator {{ calc_year }} — PVPC &amp; Tariff Comparison — Spanified">
+<meta name="twitter:description" content="Estimate your Spanish electricity bill and compare supplier tariffs — contracted power, kWh, punta/llano/valle periods, taxes and VAT. In English.">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/calculators/electricity-bill">{% endblock %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [
+ {"@type": "WebPage",
+  "name": "Spain Electricity Bill Calculator {{ calc_year }} — PVPC & Tariff Comparison — Spanified",
+  "url": "{{ site_url }}/calculators/electricity-bill",
+  "description": "Free Spain electricity bill calculator: estimate your monthly bill (power + energy + taxes) and compare Naturgy, Octopus, Iberdrola and other tariffs — flat or punta/llano/valle. In English.",
+  "inLanguage": "en",
+  "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}},
+ {"@type": "FAQPage", "mainEntity": [
+  {"@type": "Question", "name": "How is a Spanish electricity bill calculated?", "acceptedAnswer": {"@type": "Answer", "text": "A Spanish bill stacks three charges: the capacity charge (término de potencia = P1 and P2 €/kW/day × days × contracted kW), the energy charge (kWh × €/kWh, either flat or split into punta/llano/valle periods) and any Bono Social discount. That subtotal is taxed with the electricity special tax of 5.112696%, the meter rental is added, then VAT (IVA) of 21% is applied to the result — the grand total is what you pay."}},
+  {"@type": "Question", "name": "What is PVPC and do I have to use it?", "acceptedAnswer": {"@type": "Answer", "text": "PVPC (Precio Voluntario para el Pequeño Consumidor) is Spain's regulated electricity tariff for households with up to 15 kW of contracted power that have not shopped the free market. Prices are indexed to the wholesale market and change every hour of every day. Everyone else is on the libre mercado (free market), where retailers offer fixed or indexed prices — this calculator lets you model either by entering the tariff rates yourself."}},
+  {"@type": "Question", "name": "What is the difference between a flat tariff and punta/llano/valle?", "acceptedAnswer": {"@type": "Answer", "text": "Flat (fv) tariffs charge the same €/kWh at any hour. Punta/llano/valle (2.0TD) tariffs split the day into three periods: punta (peak, the most expensive hours), llano (shoulder) and valle (off-peak — nights and weekends, the cheapest). If you run washing machines, dishwashers or EV charging in valle hours, a time-of-use tariff usually wins; otherwise a flat rate can be simpler and cheaper."}},
+  {"@type": "Question", "name": "What is Bono Social?", "acceptedAnswer": {"@type": "Answer", "text": "Bono Social Eléctrico is a state-funded discount on the energy part of the bill for vulnerable consumers: large families, low-income households, pensioners and people with disabilities. Approved suppliers apply the discount automatically once you register as a vulnerable consumer. In this calculator it is entered as a daily amount in €/day so you can model any percentage discount."}},
+  {"@type": "Question", "name": "Which taxes are added to electricity bills in Spain?", "acceptedAnswer": {"@type": "Answer", "text": "Two charges: the electricity special tax (impuesto especial sobre la electricidad) of 5.112696% applied to the sum of the capacity, energy and Bono Social charges, and VAT (IVA) of 21% applied last, on the total including that tax. Some suppliers also bill an optional meter rental (alquiler de contador / servicio de medida) of a few cents per day."}},
+  {"@type": "Question", "name": "How much contracted power (kW) do I need?", "acceptedAnswer": {"@type": "Answer", "text": "Most Spanish flats contract 3.45–5.75 kW; family homes with oven, air conditioning and EV charging often take 7.3–10 kW. Contracted power drives the capacity charge — you pay for it every day whether you use it or not — so it is worth matching it to your real peak load. Undersizing leads to breaker trips; oversizing just costs money."}}
+ ]}
+]}
+</script>
+ <div class="calc">
+  <h1>Spain Electricity Bill Calculator <span class="calc-year">{{ calc_year }}</span></h1>
+  <p class="subtitle">Monthly electricity bill + supplier comparison — contracted power, kWh, taxes and VAT, in English.</p>
+
+  <div class="calc-grid">
+   <div class="card calc-form">
+    <p class="calc-kicker">Consumption</p>
+
+    <div class="field-row">
+     <div class="field">
+      <label for="f-days">Billing period <span class="tip" title="Length of the bill you are modelling. Most Spanish bills cover 30 days (some meters bill bimonthly — use 60 then).">?</span> <span class="sub">days ·</span></label>
+      <input id="f-days" type="number" min="1" max="366" step="1" value="30">
+     </div>
+     <div class="field">
+      <label for="f-kw">Contracted power <span class="tip" title="Your contracted capacity in kW (potencia contratada). You pay the capacity charge for it every day — see the supplier cards for the €/kW/day rate. Typical flats: 3.45–5.75 kW.">?</span> <span class="sub">kW ·</span></label>
+      <input id="f-kw" type="number" min="0" max="100" step="0.1" value="5.7">
+     </div>
+    </div>
+
+    <div class="field" id="wrap-flat">
+     <label for="f-kwh">Consumption <span class="tip" title="Total kWh used during the billing period on a flat (fv) tariff. Check the number on your bill — it is the 'energía consumida' figure.">?</span> <span class="sub">kWh / period ·</span></label>
+     <input id="f-kwh" type="number" min="0" max="1000000" step="1" value="300">
+    </div>
+
+    <div id="wrap-plv" hidden>
+     <div class="field-row">
+      <div class="field">
+       <label for="f-punta">Punta (peak) <span class="tip" title="kWh consumed during peak hours (typically weekdays 10:00–14:00 and 18:00–22:00). The most expensive period on time-of-use tariffs.">?</span> <span class="sub">kWh ·</span></label>
+       <input id="f-punta" type="number" min="0" max="1000000" step="1" value="75">
+      </div>
+      <div class="field">
+       <label for="f-llano">Llano (shoulder) <span class="tip" title="kWh consumed during shoulder hours — usually early morning and midday, priced between punta and valle.">?</span> <span class="sub">kWh ·</span></label>
+       <input id="f-llano" type="number" min="0" max="1000000" step="1" value="150">
+      </div>
+     </div>
+     <div class="field">
+      <label for="f-valle">Valle (off-peak) <span class="tip" title="kWh consumed during off-peak hours — nights and weekends. The cheapest period; shift laundry, dishwasher and EV charging here.">?</span> <span class="sub">kWh ·</span></label>
+      <input id="f-valle" type="number" min="0" max="1000000" step="1" value="75">
+     </div>
+     <p class="field-note">Total consumption: <strong><span id="plv-total">300</span> kWh</strong></p>
+    </div>
+
+    <p class="calc-kicker" style="margin-top:22px">Suppliers</p>
+    <div id="providers"></div>
+    <div class="field">
+     <button type="button" id="add-provider" class="ghost-btn">+ Add supplier (up to 5)</button>
+    </div>
+
+    <div class="notice notice-amber">Default rates are illustrative figures based on typical Spanish market offers — always check the current tariff sheet (hoja de información) before switching supplier.</div>
+   </div>
+
+   <div class="calc-results">
+    <div class="notice notice-red" id="r-error" hidden><strong>⚠️ Calculation Error:</strong> <span id="r-error-text"></span>. Please check your inputs or contact support if the problem persists.</div>
+
+    <div class="hero-net">
+     <p class="kicker">Lowest estimated bill</p>
+     <p class="big" id="r-total">—</p>
+     <p class="permo"><span id="r-best">—</span><span id="r-saving" hidden></span></p>
+    </div>
+
+    <div class="card">
+     <p class="calc-kicker">Supplier comparison</p>
+     <div class="card sheet">
+      <div class="tbl-scroll">
+       <table>
+        <thead><tr>
+         <th>Supplier</th>
+         <th class="num">Power</th>
+         <th class="num">Energy</th>
+         <th class="num">Subtotal</th>
+         <th class="num">Tax (5.11%)</th>
+         <th class="num">VAT</th>
+         <th class="num">Total</th>
+         <th class="num">Saving</th>
+        </tr></thead>
+        <tbody id="r-compare"></tbody>
+       </table>
+      </div>
+     </div>
+    </div>
+
+    <div id="r-breakdowns" class="breakdowns"></div>
+
+    <div class="notice notice-amber">Results are estimates for educational purposes. Regulated charges (electricity tax, network access, metering) change over time and your actual bill may differ.</div>
+   </div>
+  </div>
+
+  <div class="card seobox">
+   <h2>How electricity bills and tariffs work in Spain</h2>
+   <p>Every Spanish electricity bill has two usage charges — the capacity charge (potencia contratada, billed in €/kW/day for P1 peak and P2 off-peak hours) and the energy charge (kWh consumed × €/kWh) — plus the Bono Social discount if you qualify. On top of that the state levies the electricity special tax of 5.112696% and VAT (IVA) of 21%, and some suppliers bill a small daily meter rental. Consumers with up to 15 kW of contracted power can be on the regulated PVPC tariff, where prices move every hour with the wholesale market; everyone else shops the libre mercado (free market) for fixed or time-of-use offers. Use this calculator to model flat and punta/llano/valle (2.0TD) tariffs side by side. <a href="/subscribe">Get Spain news in English every morning</a> / Moving to Spain? Estimate self-employed taxes with our <a href="/calculators/autonomo-tax">Autónomo Tax Calculator</a> or buying a place with the <a href="/calculators/property-buying-cost">Property Buying Cost Calculator</a>.</p>
+   <p class="src">Tax rates: electricity special tax 5.112696% and IVA 21% (2026). Default supplier rates are illustrative market figures — verify against your retailer's current tariff sheet.</p>
+  </div>
+
+  <div class="card faq-card">
+   <h2>Frequently Asked Questions</h2>
+   <details class="faq-item"><summary>How is a Spanish electricity bill calculated?</summary><p>A Spanish bill stacks three charges: the capacity charge (término de potencia = P1 and P2 €/kW/day × days × contracted kW), the energy charge (kWh × €/kWh, either flat or split into punta/llano/valle periods) and any Bono Social discount. That subtotal is taxed with the electricity special tax of 5.112696%, the meter rental is added, then VAT (IVA) of 21% is applied to the result — the grand total is what you pay.</p></details>
+   <details class="faq-item"><summary>What is PVPC and do I have to use it?</summary><p>PVPC (Precio Voluntario para el Pequeño Consumidor) is Spain's regulated electricity tariff for households with up to 15 kW of contracted power that have not shopped the free market. Prices are indexed to the wholesale market and change every hour of every day. Everyone else is on the libre mercado (free market), where retailers offer fixed or indexed prices — this calculator lets you model either by entering the tariff rates yourself.</p></details>
+   <details class="faq-item"><summary>What is the difference between a flat tariff and punta/llano/valle?</summary><p>Flat (fv) tariffs charge the same €/kWh at any hour. Punta/llano/valle (2.0TD) tariffs split the day into three periods: punta (peak, the most expensive hours), llano (shoulder) and valle (off-peak — nights and weekends). If you run washing machines, dishwashers or EV charging in valle hours, a time-of-use tariff usually wins; otherwise a flat rate can be simpler and cheaper.</p></details>
+   <details class="faq-item"><summary>What is Bono Social?</summary><p>Bono Social Eléctrico is a state-funded discount on the energy part of the bill for vulnerable consumers: large families, low-income households, pensioners and people with disabilities. Approved suppliers apply the discount automatically once you register as a vulnerable consumer. In this calculator it is entered as a daily amount in €/day so you can model any percentage discount.</p></details>
+   <details class="faq-item"><summary>Which taxes are added to electricity bills in Spain?</summary><p>Two charges: the electricity special tax (impuesto especial sobre la electricidad) of 5.112696% applied to the sum of the capacity, energy and Bono Social charges, and VAT (IVA) of 21% applied last, on the total including that tax. Some suppliers also bill an optional meter rental (alquiler de contador / servicio de medida) of a few cents per day.</p></details>
+   <details class="faq-item"><summary>How much contracted power (kW) do I need?</summary><p>Most Spanish flats contract 3.45–5.75 kW; family homes with oven, air conditioning and EV charging often take 7.3–10 kW. Contracted power drives the capacity charge — you pay for it every day whether you use it or not — so it is worth matching it to your real peak load. Undersizing leads to breaker trips; oversizing just costs money.</p></details>
+   <div class="calc-share">
+    <div class="share-cta">Paying too much for electricity? Share this calculator.</div>
+    {% with share=share %}{% include "partials/share.html" %}{% endwith %}
+   </div>
+  </div>
+ </div>
+<script type="module" src="/static/js/electricity.js?v={{ js_version }}"></script>
+{% endblock %}
