@@ -1,0 +1,207 @@
+{
+  "items": [
+    {
+      "title": "Used home prices rise 74% faster than new builds",
+      "body": "Second-hand home prices in Spain rose 12.9% in the past year, while new-build prices climbed 7.4%, according to INE. Between 2021 and 2025 Spain accumulated a deficit of up to 750,000 homes as the population grew from 47.4 million to 49.8 million. The shortage of new flats keeps pressure on resale prices.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/escasez-pisos-nuevos-eleva-presion-sobre-vivienda-usada-precio-las-casas-segunda-mano-crece-un-74-mas-rapido_7041068_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Euribor closes September at 3.22%, mortgage payments jump",
+      "body": "Variable-rate mortgage holders will pay more at their next revision as the Euribor closes September at around 3.22%. An average 178,365-euro mortgage over 25 years rises by 69 euros per month, or 828 euros per year; a 300,000-euro loan jumps 115 euros monthly and about 1,380 euros yearly. The ECB raised its key rates on September 10.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/euribor-cerrara-septiembre-3-22-las-hipotecas-se-encareceran-media-828-euros-ano_7041506_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Ceuta expulsion decree breaches EU pact limits, sources say",
+      "body": "A draft Real Decreto-Ley to speed up migrant expulsions in Ceuta would violate basic guarantees of the EU migration pact, legal sources say. The text would suspend asylum safeguards, breach the 'principio de no devolución' (non-refoulement), and apply retroactively to protection requests pending since July 30. It goes to the Council of Ministers on Tuesday.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/decreto-gobierno-acelerar-expulsiones-ceuta-dinamita-limites-legales-duro-pacto-migratorio-europeo_1_13542250.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "PP proposes 100% home-buying guarantees for young people",
+      "body": "The PP wants to build one million homes in four years, eliminate 'zonas tensionadas' (stressed rental zones), and offer public guarantees of up to 100% for young buyers. It also proposes tax reductions of up to 60%, saving between 21,000 and 26,000 euros. Alberto Núñez Feijóo's plan responds to Pedro Sánchez's housing policy.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/macroeconomia-00338/noticia-pp-propone-acabar-zonas-tensionadas-avales-100-compra-vivienda-jovenes-20260927103759.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Government rushes housing decree as tenant union camps in Madrid",
+      "body": "The Housing Ministry is racing to finalize a decree for Tuesday's Council of Ministers, needing support from both Junts and Podemos. The tenant union's camp in Puerta del Sol continues and demands indefinite rental contracts, which negotiators say are not on the table. The eviction of an 87-year-old woman who had lived in her home for 70 years has intensified pressure.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/gobierno-ultima-decreto-vivienda-aprobarlo-martes-presionado-calle-exigencias-socios_1_13538460.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/noticia-sindicato-inquilinas-exige-contratos-alquiler-indefinidos-no-descarta-acampadas-otras-ciudades-20260927121855.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "UN: Spain breached obligations in Maricarmen eviction",
+      "body": "UN Special Rapporteur Koldo Casla said Spain violated international human rights obligations by evicting Maricarmen, an 87-year-old woman with 50% disability, on September 23. He said Spain ignored a June precautionary measure ordering suspension. Ratified treaties form part of Spanish law, and Casla called the damage irreversible.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/internacional/relator-onu-asegura-que-espana-incumplio-las-obligaciones-internacionales-desalojar-maricarmen_7041893_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Spain wins U-20 Women's World Cup on penalties",
+      "body": "Spain's U-20 women's team became world champions for the second time, beating defending champion North Korea on penalties after 120 goalless minutes. Goalkeeper Laia López of Real Madrid saved two penalties. The team, coached by David Aznar, went unbeaten through the tournament.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/deportes/futbol/futbol-femenino/mundial/2026/09/27/6ab964de21efa014318b457d.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Plan Auto+ 2026 offers up to 7,500 euros for EVs",
+      "body": "The BOE has published Line 2 of the Plan Auto+ 2026, offering subsidies of up to 7,500 euros for autónomos (self-employed) and companies buying electric or electrified vehicles. Self-employed workers can apply for aid for up to three vehicles; companies for up to ten. Dealerships and points of sale are excluded.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/09/28/oficial-plan-auto-2026-ayudas-autonomos-empresas-2054668.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Adif and Renfe hack stole 150 million data records",
+      "body": "The cyberattack on Adif and Renfe websites stole 150 million data records, including names and email addresses. Renfe says there is no evidence of access to bank, financial, payment or DNI data. The National Cryptologic Centre took part in the response after Adif recovered its domain on Saturday.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/09/27/6ab9544a21efa0fd208b4576.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Congress revives ban on social media for under-16s",
+      "body": "Parliamentary groups resume negotiations this week on a law that would ban social media for minors under 16. The text, in Congress since April 2025, will be debated on Tuesday in the Justice Commission. PSOE and Sumar also want new offences for platforms amplifying self-harm, sexual deepfakes or hate content.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/congreso-reactiva-ley-que-prohibira-las-redes-sociales-los-menores-16-anos-con-objetivo-aprobarla-antes-fin-ano_7041062_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Helmets mandatory for e-scooters from October 1",
+      "body": "Starting October 1, e-scooter riders must wear a helmet and use a reflective element at night or in low visibility; the minimum age is set at 15. Non-compliance is a serious infraction with a 200-euro fine. Drivers overtaking cyclists must reduce their speed to at least 20 km/h below the limit.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/09/27/casco-obligatorio-para-patinetes-nuevas-normas-para-ciclistas-desde-1-octubre-2055073.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Switching supermarkets saves up to 4,381 euros in Madrid",
+      "body": "Households can save an average of 1,310 euros per year by choosing the cheapest supermarket, according to OCU. In Madrid, the saving reaches 4,381 euros, and nearby towns such as Alcobendas show 4,270 euros. The study analyzed more than 100,000 prices across 244 products.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/consumo/ocu-revela-cuanto-puedes-ahorrar-cambiando-supermercado-4-381-euros-ano-madrid_7041811_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Police clear migrant settlement near Ceuta desalination plant",
+      "body": "More than 300 National Police officers evacuated migrants camped around Ceuta's desalination plant early Sunday, citing security risks at the strategic water facility. The migrants, who had entered on July 30 and 31, were moved to the vicinity of the Fábrica del Guano.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/ceuta/policia-interviene-desalojar-asentamiento-migrantes-playa-cerca-desaladora-ceuta_7041790_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Hotel stays nearly 70% pricier than a decade ago",
+      "body": "The average hotel overnight price in Spain reached almost 167 euros in August, a record and nearly 70% higher than a decade earlier. Average revenue per occupied room rose from 109.3 euros in 2019 to 166.9 euros this August. Prices range from 64 euros in Extremadura to 230 euros in the Balearic Islands.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/agosto-agosto-por-que-dormir-un-hotel-es-casi-un-70-mas-caro-que-hace-una-decada_7041408_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "PP proposes 100% mortgage guarantees for young buyers. Would that convince you to buy? A) Yes B) No C) Already own",
+  "variant": "Spain in 30s",
+  "headline": "Spain in 30s",
+  "date": "2026-09-28",
+  "generated_at": "2026-09-28T06:05:08.882138+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 243,
+    "items_selected_pass1": 15,
+    "fact_sheets_extracted": 15,
+    "items_after_importance_filter": 15,
+    "items_in_digest": 14
+  },
+  "selection_reasons": {
+    "107": "Spain's housing supply crisis in numbers: second-hand prices up 12.9% in a year and a deficit of 750,000 homes — key data for anyone buying or renting",
+    "108": "Euribor set to close September at 3.22%, raising average mortgage payments by €828/year — direct wallet impact for homeowners",
+    "34": "PP proposes scrapping 'zonas tensionadas', 100% mortgage guarantees for young buyers, IVA exemption under €85,000 and zero-rate for new autónomos — directly affects self-employed and housing rules",
+    "29": "Tenants' union demands indefinite rental contracts and threatens camps in other cities — signals nationwide rental rule changes",
+    "36": "Government racing to approve a national housing decree on Tuesday — a rule change affecting renters and landlords across Spain",
+    "42": "Draft Ceuta deportation decree reportedly breaches EU migration pact safeguards — significant migration policy shift",
+    "110": "Police evict hundreds of migrants in Ceuta with 300 officers — major migration enforcement development",
+    "104": "UN housing rapporteur says Spain breached international obligations in the Maricarmen eviction — precedent-setting for housing rights",
+    "190": "Official Plan Auto+ 2026: up to €7,500 in aid for autónomos and companies buying electric vehicles from October — direct subsidy for self-employed",
+    "11": "Adif and Renfe hack leaked 150 million user records including high-risk data — major cybersecurity issue affecting rail users",
+    "111": "Congress revives law to ban social media for under-16s, aiming to pass before 2027 — affects all families in Spain",
+    "193": "Mandatory helmets for e-scooters and new cyclist rules from 1 October — everyday transport regulation change",
+    "15": "Spain wins U-20 Women's World Cup beating North Korea on penalties — positive national team triumph",
+    "220": "OCU report shows shoppers can save up to €4,381/year by switching supermarkets — actionable cost-of-living data for households",
+    "211": "Hotel prices nearly 70% higher than a decade ago — relevant cost-of-living and tourism marker for residents"
+  }
+}
