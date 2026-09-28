@@ -6,14 +6,21 @@
    LOCKED until the double opt-in click lands on /quiz/<slug>-success,
    which reveals the result (score comes from localStorage). #}
 {% block title %}{{ quiz.title }} — Spanified{% endblock %}
-{% block description %}<meta name="description" content="10 absurd Spain headlines — half are real, half we made up. Can you tell AI slop from actual Spanish news? Take the quiz.">
-{# Quiz is unlisted until launch: no external links, no sitemap, no indexing. #}
-<meta name="robots" content="noindex, nofollow">{% endblock %}
+{% block description %}<meta name="description" content="10 headlines from Spain — half really happened, half we made up. Take the 2-minute quiz.">
+{# Canonical quiz page is indexable and listed in sitemap.xml.
+   The flow pages (-success / -subscribed / -result-*) stay noindex,nofollow. #}
+<meta name="robots" content="index, follow">{% endblock %}
 {% block canonical %}<link rel="canonical" href="https://spanified.com/quiz/{{ quiz.slug }}">{% endblock %}
-{% block og_image %}<meta property="og:image" content="https://spanified.com/static/img/quiz/ai-or-real/quiz-cover.jpg">
+{% block og_image %}<meta property="og:image" content="https://spanified.com/static/img/quiz/ai-or-real/quiz-hook.jpg">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">{% endblock %}
+<meta property="og:image:height" content="805">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://spanified.com/quiz/{{ quiz.slug }}">
+<meta property="og:title" content="{{ quiz.title }} — Spanified">
+<meta property="og:description" content="10 headlines from Spain — half really happened, half we made up. Can you tell which is which? Take the 2-minute quiz.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ quiz.title }} — Spanified">
+<meta name="twitter:description" content="10 headlines from Spain — half really happened, half we made up. Can you tell which is which? Take the 2-minute quiz.">{% endblock %}
 {% block extra_head %}
 <script id="quiz-data" type="application/json">{{ quiz_json | safe }}</script>
 {% endblock %}
@@ -22,8 +29,8 @@
 <div class="quiz-wrap">
  <div id="quiz-hook" class="quiz-card quiz-hook">
   <p class="confirm-kicker">Spanified quiz</p>
-    <h1 class="quiz-hook-headline">Real or fake? 10 crazy news stories from Spain</h1>
-    <img class="quiz-hook-img" src="/static/img/quiz/ai-or-real/quiz-hook.jpg" alt="Real or fake — 10 crazy news stories from Spain" width="1200" height="805" loading="lazy">
+    <h1 class="quiz-hook-headline">Real or AI? Can you spot the fake Spain news?</h1>
+    <img class="quiz-hook-img" src="/static/img/quiz/ai-or-real/quiz-hook.jpg" alt="Real or AI? Can you spot the fake Spain news?" width="1200" height="805" loading="lazy">
     <p class="quiz-hook-sub">Some of these really happened in Spain. The rest we made up. Can you guess which is which?</p>
    <p class="quiz-hook-time">2 minutes &middot; 10 questions</p>
    <p id="quiz-last" class="quiz-hook-last" hidden></p>
