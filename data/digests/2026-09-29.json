@@ -1,0 +1,170 @@
+{
+  "items": [
+    {
+      "title": "Housing decree bans evictions until 2028; rental supply drops 20%",
+      "body": "The government's draft housing decree bans evictions of vulnerable people until 2028, tightens temporary rental rules and grants tax relief to landlords and tenants. Separate data from Idealista shows permanent rental supply has fallen 20% since 2023, while prices have risen 5.8% to over 1,200 euros for 80 square metres.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/construccion-y-vivienda-00342/noticia-decreto-vivienda-prohibe-desahucios-2028-endurece-alquiler-temporal-concede-ayudas-fiscales-20260928185025.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/oferta-pisos-alquiler-cae-un-20-tres-anos-tras-aprobacion-ley-vivienda_7042233_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Empty second homes are always taxed through imputed income",
+      "body": "A Hacienda official says an empty second home must be declared through 'imputación de rentas inmobiliarias' even if it produces no rental income. The tax is calculated on the cadastral value at 2% or 1.1%, and a garage or storage room also counts as imputed income. A primary residence is not affected.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-09-28/roberto-gomez-funcionario-de-hacienda_4433456/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Household mortgage burden nears Bank of Spain's 36% limit",
+      "body": "Spanish households spent slightly more than 36% of net income on mortgage payments in early 2026, the highest since September 2023. The Bank of Spain considers 35% to 40% to be the maximum for total debt. The average home mortgage hit a record 180,785 euros.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/esfuerzo-financiero-hogares-limite-recomendado-bde_7042344_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Fuel, power and gas hit 2022 highs before anti-crisis decree",
+      "body": "Petrol, electricity and gas prices are at their highest since 2022. Gasoline 95 reached 1.952 euros per litre and diesel 1.942 euros on Monday, with 40% of stations selling petrol at 2 euros or more. The government is set to approve a new anti-crisis package on Tuesday before the current one expires on Wednesday.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/las-gasolinas-luz-gas-se-disparan-maximos-desde-2022-presionan-gobierno-para-que-apruebe-un-decreto-anticrisis-ambicioso-este-martes_7042290_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Santander, Caixabank see rates above 3% and 4% in 2027",
+      "body": "Senior bankers expect ECB rates to rise above 3% and even 4% in 2027. Santander's CEO sees rates 'maybe above 3%' before falling, while Caixabank's CEO calls 4% 'a high but reasonable band'. That would push up mortgage costs and improve savings returns.",
+      "sources": [
+        {
+          "name": "elDiario",
+          "url": "https://www.eldiario.es/economia/banco-santander-ve-tipos-interes-3-2027-preve-comiencen-bajar_1_13542815.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "2027 pension rise to top 3%; average over 1,625 euros",
+      "body": "Forecasts point to a pension revaluation of around 3.2% in 2027, taking the average retirement pension above 1,625 euros a month. The move would add at least 7,400 million euros to the Social Security bill.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/09/29/6aba7322e4d4d855368b4583.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "'La bola negra' scores second-best Spanish opening in 10 years",
+      "body": "The film by Javier Calvo and Javier Ambrossi grossed close to 4.7 million euros in its first weekend, the second-best Spanish opening in ten years. It has drawn more than 610,000 spectators since Friday, ahead of Christopher Nolan's La Odisea.",
+      "sources": [
+        {
+          "name": "elDiario",
+          "url": "https://www.eldiario.es/cultura/cine/bola-negra-logra-segundo-mejor-estreno-cine-espanol-diez-anos-supera-odisea_1_13542678.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "⚠️ New DGT rules start October 1: what drivers must know",
+      "body": "A reform of Spain's General Traffic Regulations takes effect on October 1, bringing new safety rules for drivers, motorcyclists, cyclists and scooter users. Drivers must overtake cyclists at least 20 km/h below the maximum speed; changes also cover equipment, traffic lights and emergency corridors.",
+      "sources": [
+        {
+          "name": "elDiario",
+          "url": "https://www.eldiario.es/motor/conductores-ciclistas-motoristas-normas-dgt-entran-vigor-1-octubre_1_13537909.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "Ceuta government delegate resigns after July mass border crossing",
+      "body": "Miguel Ángel Pérez Triano resigned as government delegate in Ceuta and left political life, denouncing a campaign of harassment after the July 30-31 mass entry of immigrants. His chief of staff had already resigned, accusing him of lying about prior warnings.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/ceuta/delegado-gobierno-ceuta-dimite-dos-meses-despues-entrada-masiva-deja-politica-he-sufrido-una-campana-acoso_7042153_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Health Ministry to push abortion pill in primary care centres",
+      "body": "Health Minister Mónica García announced that pharmacological abortion will be added to primary care services, including changes to the mifepristone technical sheet. Women could then access the method at their local health centre instead of a hospital.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/ministerio-sanidad-impulsara-que-aborto-farmacologico-pueda-realizarse-atencion-primaria_7042314_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "CNIO identifies target that could prevent brain metastasis",
+      "body": "CNIO researchers found a previously unknown vulnerable phase in brain metastasis development, called 'pausa proliferativa'. They tested three drugs in animal models, opening a possible route to prevent metastases or relapses. The work appears in Cancer Cell.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/sociedad/2026/09/28/cnio-identifica-diana-permitir-prevenir-metastasis-cerebral-evitar-recaidas-2055385.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "Did you know every Spanish electricity bill has a link + QR code to a government site where you can compare what you'd pay with another provider? A) Knew it B) Didn't know C) Been overpaying for years",
+  "variant": "Nothing happened in Spain today. Except this.",
+  "headline": "Nothing happened in Spain today. Except this.",
+  "date": "2026-09-29",
+  "engagement_source": "manual",
+  "generated_at": "2026-09-29T06:04:20.439037+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 373,
+    "items_selected_pass1": 13,
+    "fact_sheets_extracted": 13,
+    "items_after_importance_filter": 12,
+    "items_in_digest": 11
+  },
+  "selection_reasons": {
+    "28": "Housing decree: bans evictions for vulnerable people until 2028, extends rentals and adds tax breaks — the biggest systemic change affecting renters, landlords and investors.",
+    "126": "Rental supply has fallen 20% in three years since the housing law, while seasonal rentals doubled — key property-market data for tenants and investors.",
+    "312": "Fuel, electricity and gas prices hit highs not seen since 2022, directly hitting household budgets and the cost of living.",
+    "333": "Santander and CaixaBank forecast interest rates above 3-4% in 2027 — crucial for mortgage holders and property buyers.",
+    "310": "Spanish households now spend over 36% of net income on mortgages, already at the Bank of Spain's recommended limit.",
+    "305": "Second homes left empty are taxed via imputed rental income — an important tax rule for foreign property owners.",
+    "18": "Pensions to rise above 3% in 2027, pushing the average retiree payment over €1,625 — relevant to retirees and future pensioners.",
+    "133": "The government delegate in Ceuta resigns amid the migration crisis, a national migration-policy story with political fallout.",
+    "100": "New DGT traffic rules take effect on 1 October for drivers, motorcyclists, cyclists and scooter users — daily-life impact.",
+    "154": "Health Ministry will let primary-care centres prescribe the abortion pill, a systemic healthcare policy change.",
+    "353": "Spain's first home match as double world champions against Croatia in Sevilla — a national sporting moment amid Spain's football dominance.",
+    "79": "'La bola negra' scores the second-best Spanish box-office opening in a decade — a positive cultural story.",
+    "198": "Spanish CNIO team identifies a target to prevent brain metastasis — a positive science breakthrough."
+  }
+}
