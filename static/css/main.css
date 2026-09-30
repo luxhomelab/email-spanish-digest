@@ -1540,6 +1540,15 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 @media (max-width: 520px) {
  .testimonials-grid { grid-template-columns: 1fr; }
  .proof-strip { flex-direction: column; gap: 8px; }
+ /* Tighten /subscribe vertical rhythm on phones: desktop paddings
+    (trust 40/56, intro 52/12, strip margin 20, form margin 32/8,
+    testimonials margin 28) stack up to 60–88px gaps at 360px. */
+ .subscribe-intro { padding-top: 36px; }
+ .proof-strip { padding-top: 12px; padding-bottom: 12px; margin-bottom: 8px; }
+ .subscribe-trust { padding-top: 24px; padding-bottom: 24px; }
+ .subscribe-trust h2 { margin-bottom: 16px; }
+ .subscribe-form { margin-top: 16px; }
+ .testimonials { margin-top: 20px; }
 }
 
 /* ── Quiz (shared by quiz app + per-persona result pages) ── */
