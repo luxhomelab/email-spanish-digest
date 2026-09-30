@@ -246,7 +246,7 @@ function init() {
     $('quiz-next-wrap').hidden = false
     const nx = $('quiz-next')
     const isLast = step === TOTAL - 1
-    nx.textContent = isLast ? 'See my result' : 'Next story'
+    nx.textContent = isLast ? 'See my result' : 'Next question'
     nx.classList.toggle('quiz-next-final', isLast)
   }
 
@@ -254,7 +254,7 @@ function init() {
     if (step < TOTAL - 1) {
       step++
       renderStep()
-      // Next story renders at the top of the card — bring it into view
+      // Next question renders at the top of the card — bring it into view
       // so the user doesn't have to scroll up manually.
       const play = $('quiz-play')
       if (play) play.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -276,7 +276,7 @@ function init() {
     $('quiz-play').hidden = true
     $('quiz-gate').hidden = false
     $('quiz-progress').style.width = '100%'
-    // "See my result" lands at the top of the gate ("Your result is ready"),
+    // "See my result" lands at the top of the gate ("Your persona is ready"),
     // not stranded at the form at the bottom.
     const gate = $('quiz-gate')
     if (gate) gate.scrollIntoView({ behavior: 'smooth', block: 'start' })
