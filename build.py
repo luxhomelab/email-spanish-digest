@@ -313,6 +313,42 @@ FAQ_ITEMS = [
 ]
 
 
+def load_quiz_cards():
+    """Light metadata for every quiz in data/quizzes/*.json.
+
+    Used for the homepage "Quizzes" block and the "try the other quiz"
+    cross-links (neighbours = every quiz except the current one).
+    Cover art lives at /static/img/quiz/<slug>/quiz-cover.jpg by convention.
+    """
+    quizzes_dir = os.path.join(SCRIPT_DIR, "data", "quizzes")
+    cards = []
+    if not os.path.isdir(quizzes_dir):
+        return cards
+    for filename in sorted(os.listdir(quizzes_dir)):
+        if not filename.endswith(".json"):
+            continue
+        try:
+            with open(os.path.join(quizzes_dir, filename), encoding="utf-8") as fh:
+                quiz = json.load(fh)
+        except (OSError, ValueError):
+            continue
+        slug = quiz.get("slug")
+        title = quiz.get("title")
+        if not slug or not title:
+            continue
+        cards.append({
+            "slug": slug,
+            "title": title,
+            "hook": quiz.get("hook_sub") or (
+                "10 headlines from Spain — half really happened, "
+                "half we made up. Can you tell which is which?"
+            ),
+            "cover": f"/static/img/quiz/{slug}/quiz-cover.jpg",
+            "url": f"/quiz/{slug}",
+        })
+    return cards
+
+
 def render_llms_txt(digests):
     latest = digests[0]["date"] if digests else "n/a"
     lines = [
@@ -370,7 +406,7 @@ def render_static(env, digests):
     }
 
     contexts = {
-        "index.html": {"latest": latest, "topics": topics, "emoji": CATEGORY_EMOJI, "faq": FAQ_ITEMS, "proof": proof},
+        "index.html": {"latest": latest, "topics": topics, "emoji": CATEGORY_EMOJI, "faq": FAQ_ITEMS, "proof": proof, "quizzes": load_quiz_cards()},
         "about.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "About", "url": "/about", "current": True}]},
         "contact.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Contact", "url": "/contact", "current": True}]},
         "editor.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Editor", "url": "/editor", "current": True}]},
@@ -443,12 +479,14 @@ def render_quizzes(env, proof=None):
     quizzes_dir = os.path.join(SCRIPT_DIR, "data", "quizzes")
     if not os.path.isdir(quizzes_dir):
         return
+    cards = load_quiz_cards()
     for name in sorted(os.listdir(quizzes_dir)):
         if not name.endswith(".json"):
             continue
         with open(os.path.join(quizzes_dir, name), encoding="utf-8") as fh:
             quiz = _json.load(fh)
         slug = quiz["slug"]
+        others = [c for c in cards if c.get("slug") != slug]
         quiz_json = _json.dumps(quiz)
         base = f"{SITE_URL}/quiz/{slug}"
         share = share_links(
@@ -464,6 +502,7 @@ def render_quizzes(env, proof=None):
         ctx = dict(
             quiz=quiz, quiz_json=quiz_json, crumbs=crumbs,
             js_version=js_version(), share=share, proof=proof,
+            other_quizzes=others,
         )
         pages = [
             ("quiz.html", f"quiz/{slug}.html"),
@@ -493,6 +532,7 @@ def render_quizzes(env, proof=None):
                 friend_score=None,
                 share=result_share,
                 crumbs=crumbs,
+                other_quizzes=others,
             )
             dest_path = f"quiz/{slug}-result-{result['slug']}.html"
             output = result_template.render(**result_ctx)
