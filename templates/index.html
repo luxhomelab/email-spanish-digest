@@ -71,6 +71,7 @@
     <a class="quiz-mini" href="{{ q.url }}" aria-label="Take the quiz: {{ q.title }}">
      <img class="quiz-mini-cover" src="{{ q.cover }}" alt="" width="1200" height="630" loading="lazy">
      <span class="quiz-mini-body">
+      <span class="quiz-mini-kicker">{{ q.kicker }}</span>
       <span class="quiz-mini-title">{{ q.title }}</span>
       <span class="quiz-mini-hook">{{ q.hook }}</span>
       <span class="quiz-mini-cta">Take the quiz →</span>

@@ -339,6 +339,7 @@ def load_quiz_cards():
         cards.append({
             "slug": slug,
             "title": title,
+            "kicker": quiz.get("card_kicker") or "Spanified quiz",
             "hook": quiz.get("hook_sub") or (
                 "10 headlines from Spain — half really happened, "
                 "half we made up. Can you tell which is which?"
