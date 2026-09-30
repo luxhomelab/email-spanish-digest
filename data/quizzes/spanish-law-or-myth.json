@@ -1,0 +1,558 @@
+{
+  "slug": "spanish-law-or-myth",
+  "title": "Real Spanish Law or I Made It Up? — Can You Tell?",
+  "questions": [
+    {
+      "id": "r1",
+      "headline": "Spain Can Fine You €600 for Drinking on the Street",
+      "summary": "A national public-safety law lets police fine anyone who drinks alcohol in the street when the noise, crowd or litter disturbs the peace. The base band runs from €100 to €600, with higher bands for repeat or aggravated cases. The rule targets botellón — mass pre-party gatherings in parks and squares — not a glass of wine with dinner. Most towns enforce it through their own street ordinances on top of the national law.",
+      "isReal": true,
+      "explanation": "Sounds like tourist-baiting folklore, but the botellón ban sits in Spain's national public safety law.",
+      "source": "BOE, Ley Orgánica 4/2015, 2015",
+      "source_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-3442"
+    },
+    {
+      "id": "r2",
+      "headline": "Up to €60,000 for Taking Sand or Shells Off a Beach",
+      "summary": "Spain's coastal law treats beach sand, pebbles and shells as protected state property that visitors may not remove. Fines for carting them off can reach €60,000 in the most serious cases. Customs officers have repeatedly found suitcase after suitcase of sand and shells at airports. The aim is simple: to stop beaches being stripped grain by grain as souvenirs.",
+      "isReal": true,
+      "explanation": "Sounds absurd, but coastal law really sets a €60,000 ceiling for souvenir sand.",
+      "source": "Ley 22/1988 de Costas, 1988",
+      "source_url": "https://www.europapress.es/sociedad/noticia-llevarse-moluscos-arena-conchas-playa-puede-conllevar-multa-60000-euros-legalitas-20250619183805.html"
+    },
+    {
+      "id": "r3",
+      "headline": "Hitchhiking on a Motorway Is Illegal — an €80 Fine",
+      "summary": "Spain's traffic rules bar pedestrians from walking, waiting or hitchhiking on autopistas and autovías. The ticket for trying is €80, on top of the obvious six-lane danger. The same rules keep cyclists, horses and tractors off these roads. Motorways are for motor vehicles only, and the regulation says so plainly.",
+      "isReal": true,
+      "explanation": "Pedestrians on a motorway sounds like pure common sense, but it is an €80 offence on the books.",
+      "source": "RD 1428/2003, Reglamento General de Circulación, 2003",
+      "source_url": "https://www.iberley.es/legislacion/articulo-125-reglamento-general-circulacion"
+    },
+    {
+      "id": "r4",
+      "headline": "New Anti-Tobacco Law Bans Smoking on Beaches and Terraces",
+      "summary": "Spain's updated tobacco law extends the no-smoking zone to beaches, bar and restaurant terraces, university campuses and any car carrying minors. Violations start at €200. Lawmakers framed it as protection from second-hand smoke and a way to stop teenagers normalising cigarettes. It follows regional bans that already cover hundreds of Spanish beaches.",
+      "isReal": true,
+      "explanation": "Sounds like a headline generator, but the updated tobacco law really writes those bans into national rules.",
+      "source": "El País, 2026",
+      "source_url": "https://elpais.com/sociedad/2026-07-21/la-nueva-ley-del-tabaco-prohibe-fumar-a-los-menores-y-hacerlo-en-terrazas-y-campus-universitarios.html"
+    },
+    {
+      "id": "r5",
+      "headline": "E-Scooters Banned from Pavements — Lanes Only, 25 km/h",
+      "summary": "Spanish road rules push personal mobility vehicles off footpaths and into bike lanes and roads, where they are capped at 25 km/h. Riders must be at least 15 and carry third-party insurance or a civil liability policy. From 2026 that cover becomes compulsory for every e-scooter. Police have been running roadside checks for uninsured riders.",
+      "isReal": true,
+      "explanation": "Sounds like a crackdown fantasy, but the pavement ban and the insurance duty are both official DGT rules.",
+      "source": "DGT, 2026",
+      "source_url": "https://www.dgt.es/muevete-con-seguridad/viaja-seguro/en-patinete/"
+    },
+    {
+      "id": "r6",
+      "headline": "Madrid Street Musicians Need an Audition and a Siesta",
+      "summary": "Madrid makes street performers, singers included, pass a municipal audition before they can play for money. Permit holders must keep the volume down between 3pm and 5pm, the city's siesta hours. Playing without papers or during the silent window costs them the permit and a fine. The auditions were introduced to thin out the plazas and raise the average quality.",
+      "isReal": true,
+      "explanation": "Sounds bureaucratic for buskers, but Madrid really grades its street musicians.",
+      "source": "El País, 2013",
+      "source_url": "https://elpais.com/ccaa/2013/12/18/madrid/1387370371_995703.html"
+    },
+    {
+      "id": "r7",
+      "headline": "Feeding Madrid's Pigeons Can Cost You €1,500",
+      "summary": "Madrid classes feeding pigeons in public space as incivility, with fines climbing to €1,500. City hall argues that handouts keep flocks enormous and spread droppings across the plazas. Officers warn bread-carrying tourists before they write tickets. The rule sits alongside fines for littering and for letting dogs foul the pavement.",
+      "isReal": true,
+      "explanation": "Bread for pigeons sounds harmless, but Madrid's ordinance really prices it at up to €1,500.",
+      "source": "OK Diario, 2022",
+      "source_url": "https://okdiario.com/okgreen/almeida-palomas-multa-1500-euros-alimentarlas-madrid-16447539"
+    },
+    {
+      "id": "r8",
+      "headline": "Not Scooping in Madrid Is a 'Grave' Offence: Up to €1,500",
+      "summary": "Madrid treats failing to pick up dog waste as a grave breach of its street-cleaning rules, not a minor slip. Penalties run from €751 to €1,500, well above the ordinary band for lighter incivilities. The city hands out thousands of tickets a year and patrols parks closely. Owners are also expected to carry water to rinse the spot.",
+      "isReal": true,
+      "explanation": "Sounds like an urban legend, but the grave-offence band is straight out of the Madrid bylaw.",
+      "source": "Fotocasa, 2024",
+      "source_url": "https://www.fotocasa.es/fotocasa-life/consultorio/multas-por-no-recoger-las-cacas-de-los-perros-lo-que-cuesta-en-cada-ciudad/"
+    },
+    {
+      "id": "r9",
+      "headline": "Barcelona Fines Shirtless Strolls €120 to €300",
+      "summary": "Barcelona's civic rules sanction walking the streets in swimwear or bare-chested far from the water. The fine band runs from €120 to €300, alongside penalties for urinating in the street and other incivilities. The target is the strip-down culture around Barceloneta, where tourists peel off the moment they leave the sand. Police warn first and ticket afterwards.",
+      "isReal": true,
+      "explanation": "Sounds like a fashion-police myth, but Barcelona really prices shirtless strolls at up to €300.",
+      "source": "Ajuntament de Barcelona, 2024",
+      "source_url": "https://www.barcelona.cat/endrecembarcelona/es/que-estamos-haciendo/sancionamos-las-conductas-incivicas"
+    },
+    {
+      "id": "r10",
+      "headline": "€750 Fines for Smoking on 14 Beaches Near Barcelona",
+      "summary": "Fourteen municipalities around Barcelona have banned smoking on their beaches, with fines of up to €750. Attendants patrol the sand and give warnings before they write tickets. The bans cite cigarette butts as marine litter just as much as second-hand smoke. Towns such as Badalona and Sant Adrià were early adopters.",
+      "isReal": true,
+      "explanation": "Sounds symbolic, but the smoking bans and €750 fines are in force across 14 beach towns.",
+      "source": "El Periódico, 2026",
+      "source_url": "https://www.elperiodico.com/es/barcelona/20260712/multas-750-euros-14-muncipios-fumar-en-playas-area-de-barcelona-131146743"
+    },
+    {
+      "id": "r11",
+      "headline": "Barcelona: Peeing in the Street Costs €750 to €1,500",
+      "summary": "Barcelona's coexistence ordinance puts public urination in the same band as other serious incivilities: €750 to €1,500. Reports of street peeing rose after the rule came into force, mostly around the nightlife streets. Officers warn first and fine anyone caught in the act. The council presents it as a cleanliness and public-health measure.",
+      "isReal": true,
+      "explanation": "Sounds moralising, but the fine band for a midnight leak is right in the city ordinance.",
+      "source": "20 Minutos, 2023",
+      "source_url": "https://www.20minutos.es/cataluna/barcelona/las-denuncias-por-venta-ambulante-orinar-calle-suben-tras-entrada-vigor-ordenanza-convivencia_7017624_0.html"
+    },
+    {
+      "id": "r12",
+      "headline": "Sevilla Bans Dominoes on Bar Terraces — Fines From €300",
+      "summary": "Sevilla's street ordinance forbids playing dominoes or juggling bones on bar terraces, with fines starting at €300. The city argues clattering tiles and flying elbows disturb neighbours and neighbouring tables. Waiters are expected to clear boards and take sets off groups. The ban sits beside rules on standing drinks and rolling beer barrels.",
+      "isReal": true,
+      "explanation": "Sounds invented to annoy tourists, but Sevilla really outlawed terrace dominoes.",
+      "source": "20 Minutos, 2014",
+      "source_url": "https://www.20minutos.es/noticia/5245638/0/popular-juego-que-esta-prohibido-practicar-las-terrazas-sevilla-con-multas-desde-300-euros/"
+    },
+    {
+      "id": "r13",
+      "headline": "Sevilla Also Bans Drinking Standing Up and Rolling Barrels",
+      "summary": "Sevilla outlaws drinking or eating while standing beside street furniture such as lamp posts and bollards. Rolling beer barrels along the pavement or terrace is banned in the same clause. The city says standing drinkers block pavements and barge into passers-by. Bars can be fined along with their customers.",
+      "isReal": true,
+      "explanation": "Sounds like satire aimed at happy hour, but both rules are literal ordinance text.",
+      "source": "Libertad Digital, 2014",
+      "source_url": "https://www.libertaddigital.com/espana/2014-07-25/sevilla-prohibe-jugar-al-domino-en-las-terrazas-comer-de-pie-y-rodar-barriles-de-cerveza-1276524709/"
+    },
+    {
+      "id": "r14",
+      "headline": "Rummaging in Sevilla's Street Bins: €90 to €750",
+      "summary": "Sevilla's cleaning ordinance makes digging through public waste containers an offence punishable by €90 to €750. The council says bin-diving scatters rubbish, attracts vermin and blocks collection crews. Dragging bags out and tipping containers over are covered by the same clause. Disposal at official recycling points is the sanctioned alternative.",
+      "isReal": true,
+      "explanation": "Sounds harsh, but the container rule is written into Sevilla's cleaning bylaws.",
+      "source": "LIPASAM, Ordenanza de Limpieza, 2024",
+      "source_url": "https://www.lipasam.es/actualidad/legislacion/ordenanza-municipal-de-limpieza-publica-y-gestion-de-residuos-municipales2024.htm"
+    },
+    {
+      "id": "r15",
+      "headline": "Sevilla Will Require a Licence for Street Flamenco",
+      "summary": "Sevilla's street-performer rules would make flamenco singers, dancers and guitarists hold a municipal licence before performing for money. Auditions and slot schedules would decide who plays where. Officials say unlicensed troupes have taken over the busiest corners of Santa Cruz. The draft also sets quiet hours and maximum group sizes.",
+      "isReal": true,
+      "explanation": "Sounds impossible to police, but Sevilla really moved to license its street flamenco.",
+      "source": "ABC, 2026",
+      "source_url": "https://www.abc.es/sevilla/ciudad/ordenanza-regulara-musicos-callejeros-pedira-bandas-sevilla-20260512163649-nts.html"
+    },
+    {
+      "id": "r16",
+      "headline": "Zamora Bans Shouting in the Street at Any Hour",
+      "summary": "Zamora's coexistence ordinance forbids shouting, singing or making a racket in the street at any hour of the day or night. Watering balconies and façades is allowed only between 11pm and 9am, when the runoff is less likely to soak passers-by. Fines start low and rise for repeat offences. The same ordinance covers loud music from homes and cars.",
+      "isReal": true,
+      "explanation": "Sounds unenforceable, but both the shout ban and the watering window are literally in Zamora's ordinance.",
+      "source": "Ayuntamiento de Zamora, Ordenanza de Convivencia, 2020",
+      "source_url": "https://www.zamora.es/ficheros/Ordenanza%20de%20Convivencia.pdf"
+    },
+    {
+      "id": "r17",
+      "headline": "A Village Outlawed Mop Buckets on Balconies",
+      "summary": "Villanueva de la Torre, a town in Guadalajara, banned leaving a fregona — mop and bucket — on balcony railings. The council says dripping mops stain façades and rain water onto the people below. The prohibition came in a long list of balcony rules drawn up after neighbour complaints. Residents were given a grace period to clear their rails.",
+      "isReal": true,
+      "explanation": "Sounds like small-town satire, but the mop-bucket ban is real ordinance text.",
+      "source": "HuffPost España, 2021",
+      "source_url": "https://www.huffingtonpost.es/sociedad/pueblo-espan-prohibe-fregona-terraza.html"
+    },
+    {
+      "id": "r18",
+      "headline": "Dogs in One Village May Bark Only Outside Night and Siesta",
+      "summary": "In Villanueva de la Torre, dogs may not bark between 10pm and 8am, nor during the 3pm to 5pm siesta. Owners must quiet their animals or face a fine. The rule arrived after complaints that lockdown-era barking was unbearable. It covers roosters, parrots and other noisy pets too.",
+      "isReal": true,
+      "explanation": "Sounds impossible to enforce, but the barking curfew is written into the village ordinance.",
+      "source": "Xataka, 2021",
+      "source_url": "https://www.xataka.com/magnet/pueblo-espanol-que-prohibe-dejar-cubo-fregona-terraza-que-ladren-perros-noche"
+    },
+    {
+      "id": "r19",
+      "headline": "This Village Forbids Drying Laundry on Visible Balconies",
+      "summary": "Villanueva de la Torre also bans hanging washing on balconies that face the street. The council wants a tidy visual image for the village centre. Residents may dry clothes on the roof or in interior courtyards instead. Repeat offenders are fined after an initial warning.",
+      "isReal": true,
+      "explanation": "Sounds like aesthetic overreach, but the laundry ban really exists.",
+      "source": "La Vanguardia, 2023",
+      "source_url": "https://www.lavanguardia.com/cribeo/20230724/9131176/pueblo-espanol-indigna-prohiben-ladrar-perros-tender-ropa-balcones-mmn.html"
+    },
+    {
+      "id": "r20",
+      "headline": "Reserving Sand With a Towel: Up to €3,000 in Cullera",
+      "summary": "Cullera fines up to €3,000 for claiming a patch of sand with towels, chairs or umbrellas and then leaving it empty. Guards patrol the beach and remove abandoned kit. The town declared war on towel guerrillas who save prime spots from dawn. Neighbouring beaches copied the rule.",
+      "isReal": true,
+      "explanation": "Sounds like a tourist joke, but Cullera really priced a saved sunbed at €3,000.",
+      "source": "ABC, 2017",
+      "source_url": "https://www.abc.es/espana/comunidad-valenciana/abci-guerra-sombrillas-3000-euros-multa-reservar-sitio-cullera-libertad-benidorm-201707071253_noticia.html"
+    },
+    {
+      "id": "r21",
+      "headline": "Calp Bans Beach Umbrellas Before 9:30 in the Morning",
+      "summary": "Calp forbids putting up umbrellas, chairs and hammocks on its beaches before 9:30am. Officials said early risers planted whole gardens of parasols at dawn and blocked the access paths. Attendants remove the kit or fine the first arrivals. The rule runs through the whole bathing season.",
+      "isReal": true,
+      "explanation": "Sounds arbitrary, but Calp's beach ordinance really has a 9:30 cut-off.",
+      "source": "Ayuntamiento de Calp, 2024",
+      "source_url": "https://noticias.calp.es/es/noticia/calp-recuerda-que-se-multar%C3%A1-la-instalaci%C3%B3n-de-sombrillas-y-hamacas-en-las-playas-antes-de"
+    },
+    {
+      "id": "r22",
+      "headline": "Naked in the Street in Valencia: €1,500 to €3,000",
+      "summary": "Valencia classes walking completely naked in the street as a very serious offence, punishable by €1,500 to €3,000. The coexistence rules were tightened ahead of the summer tourist season. Other bands cover noise, illegal short-term rentals and unlicensed street selling. Repeat offenders face the top of the scale.",
+      "isReal": true,
+      "explanation": "Sounds puritanical, but the very-serious nudity band is in Valencia's municipal rules.",
+      "source": "Cadena SER, 2026",
+      "source_url": "https://cadenaser.com/comunitat_valenciana/2026/08/13/valencia-preve-multas-de-hasta-3000-euros-para-los-turistas-que-no-respeten-la-convivencia-radio-valencia/"
+    },
+    {
+      "id": "r23",
+      "headline": "Benidorm Bans Paddle Rackets in the Water: Up to €3,000",
+      "summary": "Benidorm outlaws playing with rackets or paddles in the sea, with fines from €700 to €3,000. The city says stray balls and swinging rackets injure swimmers in crowded water. Games are allowed on designated sand away from bathers. Lifeguards and local police share the enforcement.",
+      "isReal": true,
+      "explanation": "Sounds made up for tourists, but the racket ban and the €3,000 band are official Benidorm rules.",
+      "source": "El Periódico, 2026",
+      "source_url": "https://www.elperiodico.com/es/economia/20260708/multas-3000-euros-jugar-palas-playa-dv-132244671"
+    },
+    {
+      "id": "r24",
+      "headline": "No Fires or Barbecues on Ceuta's Beaches: €150 to €450",
+      "summary": "Ceuta's beach ordinance bans lighting fires, barbecues or any open flame on the shoreline. The fine band runs from €150 to €450. The council points to scorched sand, damaged dunes and smouldering bins. Charcoal kits get confiscated on sight in summer.",
+      "isReal": true,
+      "explanation": "Sounds like common sense, but the ban and its fine band are literally in Ceuta's beach ordinance.",
+      "source": "Ayuntamiento de Ceuta, Ordenanza de Playas, 2002",
+      "source_url": "https://www.ceuta.es/ceuta/46-paginas/paginas/normativa/120-ordenanza-municipal-de-uso-y-aprovechamiento-de-playas-de-17-de-mayo-de-2002"
+    },
+    {
+      "id": "r25",
+      "headline": "Banned: Ball Games at the Water's Edge in Ceuta",
+      "summary": "Ceuta's beach ordinance forbids playing ball or racket games right at the waterline. The fine reaches €150 for anyone who insists. The rule exists because throws land on swimmers and towels end up in the surf. Games must move to open sand away from bathers.",
+      "isReal": true,
+      "explanation": "Sounds fussy, but the waterline game ban is in the same Ceuta ordinance.",
+      "source": "Ayuntamiento de Ceuta, Ordenanza de Playas, 2002",
+      "source_url": "https://www.ceuta.es/ceuta/46-paginas/paginas/normativa/120-ordenanza-municipal-de-uso-y-aprovechamiento-de-playas-de-17-de-mayo-de-2002"
+    },
+    {
+      "id": "r26",
+      "headline": "All Animals Are Banned From Ceuta's Beaches in Season",
+      "summary": "Ceuta's beach ordinance keeps every animal off the sand during bathing season, not only dogs. Cats, birds and anything carried in a basket are covered. Assistance animals are exempt only in designated areas. Fines and a prompt send-home follow.",
+      "isReal": true,
+      "explanation": "Sounds selective, but the ordinance really bans every animal rather than just dogs.",
+      "source": "Ayuntamiento de Ceuta, Ordenanza de Playas, 2002",
+      "source_url": "https://www.ceuta.es/ceuta/46-paginas/paginas/normativa/120-ordenanza-municipal-de-uso-y-aprovechamiento-de-playas-de-17-de-mayo-de-2002"
+    },
+    {
+      "id": "r27",
+      "headline": "San Sebastian Bans Smoking and Speakers on Its Beaches",
+      "summary": "San Sebastian fines beachgoers €100 to €750 for lighting up on La Concha, Ondarreta or Zurriola. The same ordinance outlaws loud speakers and boom boxes on the sand. Attendants shout warnings first and write tickets after that. The rules target both cigarette ends and the soundtrack wars between groups.",
+      "isReal": true,
+      "explanation": "Sounds curated, but the cigarette ban and the speaker ban are both municipal law.",
+      "source": "Orain.eus, 2026",
+      "source_url": "https://orain.eus/es/actualidad/sociedad/2026/06/25/la-multa-impondra-san-sebastian-quien-se-encienda-un-cigarrillo-en-sus-playas/"
+    },
+    {
+      "id": "r28",
+      "headline": "Dogs Banned From Several Beaches in Agüimes, Gran Canaria",
+      "summary": "Agüimes's beach ordinance keeps dogs off Arinaga, Vargas and other beaches in its municipality. Signage marks each closed stretch and local police can fine owners. The town cites sand cleanliness and nesting birds. Walkers are redirected to dog-friendly stretches outside the protected zones.",
+      "isReal": true,
+      "explanation": "Sounds like a generic tourist rule, but the ban is written into Agüimes's 2022 beach ordinance.",
+      "source": "Ayuntamiento de Agüimes, Ordenanza de Playas, 2022",
+      "source_url": "https://aguimes.es/wp-content/uploads/2022/07/nueva-ordenanza-playas-julio-2022.pdf"
+    },
+    {
+      "id": "r29",
+      "headline": "Nudism Off Naturist Beaches: €750 to €3,000 in Murcia",
+      "summary": "Murcia restricts nudism and swinging to a handful of official naturist beaches. Anywhere else, going bare costs €750 to €3,000 depending on severity. The rule also covers partial nudity in car parks and on beach paths. Police ask for swimwear at the entrances to family beaches.",
+      "isReal": true,
+      "explanation": "Sounds prudish, but the fine band is real regional law.",
+      "source": "La Opinión de Murcia, 2017",
+      "source_url": "https://www.laopiniondemurcia.es/ocio/descubre-fds/2017/06/24/750-3-000-euros-nudismo-31865060.html"
+    },
+    {
+      "id": "r30",
+      "headline": "Stag and Hen Parties Can Cost Up to €3,000 in Granada",
+      "summary": "Granada's coexistence ordinance puts organised stag and hen parties in the top fine band, up to €3,000. It targets coach parties of costumed revelers who move bar to bar with amplified music. Organisers need authorisation for group events in public space. Venues that host the noisy groups face parallel penalties.",
+      "isReal": true,
+      "explanation": "Sounds like a war on fun, but Granada really put despedidas into its ordinance.",
+      "source": "Ahoragranada, 2024",
+      "source_url": "https://www.ahoragranada.com/noticias/granada-da-luz-verde-a-la-ordenanza-de-la-convivencia-que-endurece-multas-contra-las-despedidas-de-soltero/"
+    },
+    {
+      "id": "f1",
+      "headline": "Valencia Sets a 3 pm Curfew on Serving Paella",
+      "summary": "Under a draft gastronomy rule, Valencian restaurants may serve paella only before 3pm to protect the rice dish's reputation. After the cut-off, kitchens must switch to other rice dishes or face a €600 fine. Inspectors would check ticket times against the clock. The rule was framed as a defence of tradition against late tourist servings.",
+      "isReal": false,
+      "explanation": "Tell: Valencia argues endlessly about paella, but no city has ever set a serving curfew.",
+      "source": null
+    },
+    {
+      "id": "f2",
+      "headline": "Madrid Fines Open-Air Cinema Laughs Over 60 Decibels",
+      "summary": "A noise rule for summer cinema screenings in Madrid sets 60 decibels as the ceiling for audience laughter. Ushers carry decibel meters, and groups that guffaw above the line get a €150 warning. The measure was pitched as protection for the neighbours living behind the screen. Repeat laughers are asked to move to the back rows.",
+      "isReal": false,
+      "explanation": "Tell: Madrid does police nightlife noise, but nobody meters audience laughter.",
+      "source": null
+    },
+    {
+      "id": "f3",
+      "headline": "Sevilla Mandates a Water Break Every 20 Minutes for Dancers",
+      "summary": "Sevilla's proposed street-performance rules would oblige flamenco dancers to stop for a five-minute water break every twenty minutes. Organisers must provide shaded rest areas and log each pause. Fines apply to troupes that power through the break schedule. The clause was justified as heat-stroke prevention for dancers in full costume.",
+      "isReal": false,
+      "explanation": "Tell: the city cares about performers, but no ordinance regulates a dancer's hydration clock.",
+      "source": null
+    },
+    {
+      "id": "f4",
+      "headline": "Mallorca Bans Sand Holes Deeper Than Your Palm",
+      "summary": "Mallorca's beach rules forbid digging pits deeper than an outstretched hand, roughly fifteen centimetres. Attendants carry laminated hand templates to check the depth. Fines start at €90 for anyone who digs with intent. The rule was framed around rescues from collapsing wet sand.",
+      "isReal": false,
+      "explanation": "Tell: rescuers warn about deep holes, but no island ordinance measures them with your palm.",
+      "source": null
+    },
+    {
+      "id": "f5",
+      "headline": "Granada Tests Taxi Drivers on Three Flamenco Verses",
+      "summary": "Before getting a licence, Granada taxi applicants must recite three verses of a flamenco copla and name its palo. The oral exam is scored by a local musician sitting on the panel. Fail twice and you wait six months to retake it. Officials said the rule roots drivers in Granada's heritage.",
+      "isReal": false,
+      "explanation": "Tell: Granada exams drivers on routes and fares, never on poetry.",
+      "source": null
+    },
+    {
+      "id": "f6",
+      "headline": "Barcelona Fines Tapas Left on Windowsills for 10 Minutes",
+      "summary": "A hygiene clause in Barcelona's draft ordinance bans plates of food left on apartment windowsills for more than ten minutes. Neighbours are told to report dangling tapas with photos. Offenders get a €120 fine and a lecture about olive oil going rancid in the sun. The rule was framed as pest control for pigeons and ants.",
+      "isReal": false,
+      "explanation": "Tell: Barcelona regulates bars, not your lunch on the sill.",
+      "source": null
+    },
+    {
+      "id": "f7",
+      "headline": "Alicante Bans Swimwear in the City Centre From June",
+      "summary": "Alicante's summer rules supposedly prohibit walking the centre in swimwear or sandals with a towel, from June through September. Shoppers must cover up before entering the market streets. Fines run from €100 to €300, with warnings for beachgoers who forget. Signage in five languages marks the covered-up zone.",
+      "isReal": false,
+      "explanation": "Tell: tourist dress codes get debated every summer, but no city has drawn a swimwear boundary line.",
+      "source": null
+    },
+    {
+      "id": "f8",
+      "headline": "You May Not Call Your Dog Señor in Public Parks",
+      "summary": "A village rule supposedly forbids naming a male dog Señor because park announcements for the animal confuse other walkers. Owners must rename the pet within thirty days of registering it. Fines reach €90 if the name appears on the dog's tag. Officials argued the honorific muddles how staff address visitors.",
+      "isReal": false,
+      "explanation": "Tell: registries accept almost any name, and no register polices what you shout in a park.",
+      "source": null
+    },
+    {
+      "id": "f9",
+      "headline": "Toledo Bans Church Bells Before Half Past Eight",
+      "summary": "Toledo's noise ordinance supposedly sets 8:30am as the earliest legal bell ring, pushing the morning peal back by an hour. Monasteries were told to delay if the toll crossed residential windows. Pilgrim groups complained the change scattered the early service. Fines reach €300 for repeat early ringers.",
+      "isReal": false,
+      "explanation": "Tell: bells still ring on the hour in Toledo, and no ordinance tames the cathedral.",
+      "source": null
+    },
+    {
+      "id": "f10",
+      "headline": "Bilbao Fines You for Opening an Umbrella Near Strangers",
+      "summary": "Bilbao's pavement rules supposedly ban opening an umbrella within fifty centimetres of another pedestrian. Violators pay €60 on the spot, and more if someone gets poked. Shop stewards hand out disposable rain hoods instead. The clause cites eye injuries recorded in the rainy old town.",
+      "isReal": false,
+      "explanation": "Tell: Bilbao complains about rain constantly, but no rule meters umbrella swing radius.",
+      "source": null
+    },
+    {
+      "id": "f11",
+      "headline": "Cadiz Limits Carnival Groups to One Four-Minute Song",
+      "summary": "Cadiz carnival rules supposedly cap each chirigota at four minutes per song, with penalties for longer numbers. Judging panels stop the clock mid-verse and dock points for overrun. Groups argue the limit kills their best punchlines. Fines start at €150 for playing the extended cut twice.",
+      "isReal": false,
+      "explanation": "Tell: Cadiz times the competition rounds, but never the length of a song.",
+      "source": null
+    },
+    {
+      "id": "f12",
+      "headline": "Almeria Bans Face-Up Sunbathing for More Than 30 Minutes",
+      "summary": "Almeria's beach code supposedly limits face-up sunbathing to half an hour to prevent sunstroke among tourists. Attendants ask bathers to turn over or move into the shade. Fines reach €120 for stubborn sun worshipers. The rule also caps total consecutive tanning at ninety minutes.",
+      "isReal": false,
+      "explanation": "Tell: lifeguards warn about the midday sun, but they do not run a tanning timer.",
+      "source": null
+    },
+    {
+      "id": "f13",
+      "headline": "Valladolid Requires a Bicycle Bell Ring Every 200 Metres",
+      "summary": "Valladolid's cycling rules supposedly oblige riders to ring the bell at least every two hundred metres, or whenever a pedestrian is within earshot. Police ticket silent cyclists under a noise-avoidance clause. Exceptions apply to groups larger than four, who must ring in single file. The rule was pitched as reassurance for pedestrians.",
+      "isReal": false,
+      "explanation": "Tell: Valladolid encourages bells, but no officer counts your rings.",
+      "source": null
+    },
+    {
+      "id": "f14",
+      "headline": "Ibiza Orders Beach Chairs Parallel to the Waterline",
+      "summary": "Ibiza's beach concession rules supposedly require hired sunbeds to face the sea in perfectly parallel rows. Angled chairs earn operators a €500 fine and a warning letter. Crews check the rows with a rope and stakes every morning. Bathers who bring their own chairs must line up too.",
+      "isReal": false,
+      "explanation": "Tell: operators follow permit lines, but nobody fines a crooked towel.",
+      "source": null
+    },
+    {
+      "id": "f15",
+      "headline": "Murcia Caps Empanada Sales at Three Per Customer",
+      "summary": "A small-bakery protection rule supposedly caps empanada sales at three per transaction during festivals. Bakers must check IDs for bulk orders and log their refusals. Fines reach €200 for selling a fourth to the same person. The council argued it keeps queues moving and stops resellers.",
+      "isReal": false,
+      "explanation": "Tell: bakeries love a big order, and no region caps the empanada.",
+      "source": null
+    },
+    {
+      "id": "f16",
+      "headline": "Jerez Fines Street Whistlers During the Afternoon Siesta",
+      "summary": "Jerez's coexistence rules supposedly ban whistling, humming and finger-whistling between 3pm and 7pm in the old town. Offenders pay €90 for a first offence and double for repeats. Bar owners are told to report persistent whistlers. The clause cites siesta-obsessed neighbours on narrow streets.",
+      "isReal": false,
+      "explanation": "Tell: siestas are sacred, but no Andalusian city tickets you for a whistle.",
+      "source": null
+    },
+    {
+      "id": "f17",
+      "headline": "Jabugo Requires a Licence to Carve Jamón in Public",
+      "summary": "Jabugo supposedly requires carvers to hold a municipal ham licence before slicing jamón at street fairs. Applicants demonstrate a bone-in cut in front of three judges. Unlicensed slicing brings a €150 fine and confiscation of the knife. The licence must be renewed every two years with a tasting exam.",
+      "isReal": false,
+      "explanation": "Tell: ham masters have certificates, but towns do not license street slicing.",
+      "source": null
+    },
+    {
+      "id": "f18",
+      "headline": "Salamanca Bars Must Serve Sangria With a Straw",
+      "summary": "A student-quarter rule supposedly requires sangria to arrive with a paper straw, on pain of a €90 fine. Waiters must replace the straw after thirty minutes. Bars argue the drink then tastes of cardboard and customers refuse it. The clause was framed as a hygiene measure for shared pitchers.",
+      "isReal": false,
+      "explanation": "Tell: no ordinance dictates how you drink your sangria.",
+      "source": null
+    },
+    {
+      "id": "f19",
+      "headline": "Oviedo Requires Dogs to Be Walked on the Left",
+      "summary": "Oviedo's urban rules supposedly oblige owners to keep their dog on the left-hand side of the pavement. Switching sides within five metres of another dog brings a warning. Fines reach €100 after two violations. Officials said a standard side prevents leash tangles in crowds.",
+      "isReal": false,
+      "explanation": "Tell: leash laws are real, but they never prescribe a side of the street.",
+      "source": null
+    },
+    {
+      "id": "f20",
+      "headline": "Madrid Metro Bans Eating Ice Cream, Fined at €300",
+      "summary": "The Madrid metro supposedly bans ice cream outright, citing drips on seats and in tunnels. Inspectors issue €300 fines to anyone unwrapping a cone on board. Shops past the barriers may not sell cones to boarding passengers. Repeat offenders face a suspended monthly pass.",
+      "isReal": false,
+      "explanation": "Tell: the metro bans food and drink broadly, but no cone-specific €300 rule exists.",
+      "source": null
+    },
+    {
+      "id": "f21",
+      "headline": "Toledo Bans Shopping Bags Over Five Kilos in the Old Town",
+      "summary": "Toledo's slope-safety rules supposedly cap shopping bags at five kilos inside the walls. Officers with spring scales would spot-check bags at the main gates. Fines reach €80 for heavier loads, and more if something spills. Delivery riders must split their loads into smaller sacks.",
+      "isReal": false,
+      "explanation": "Tell: heavy bags are a local complaint, not a weighed offence.",
+      "source": null
+    },
+    {
+      "id": "f22",
+      "headline": "Cuenca Forces Bars to Shut for Two Hours of Silent Siesta",
+      "summary": "Cuenca's draft ordinance supposedly orders every bar to close from 2pm to 4pm and keep the terrace silent. Lingerers are asked to leave without being served. Fines reach €300 for bars that keep the espresso machine humming. The rule was pitched as protecting cliff-side neighbours.",
+      "isReal": false,
+      "explanation": "Tell: Spain's lunch break is sacred, but no city shuts its bars on the clock.",
+      "source": null
+    },
+    {
+      "id": "f23",
+      "headline": "Cordoba Limits Street Guitarists to Fifteen Minutes an Hour",
+      "summary": "Cordoba's busker rules supposedly cap guitar playing at fifteen minutes per hour, enforced with a timed card. Performers must display the card and hand it to the next musician. Playing over the limit brings a €100 fine. The measure aimed to share the patios' acoustic space fairly.",
+      "isReal": false,
+      "explanation": "Tell: slots get scheduled, but nobody hands guitarists a punch card.",
+      "source": null
+    },
+    {
+      "id": "f24",
+      "headline": "Gijón Requires a Permit for Sandcastles Over 30 cm",
+      "summary": "Gijón's beach rules supposedly require a free permit for any sandcastle taller than thirty centimetres. Applications need a sketch and a hole plan. Unpermitted turrets are levelled by attendants, and builders may be fined €60. Towers that block access paths are removed immediately.",
+      "isReal": false,
+      "explanation": "Tell: attendants clear hazards, but nobody permits sandcastles.",
+      "source": null
+    },
+    {
+      "id": "f25",
+      "headline": "San Fermín Runners Must Dress in Exactly Two Colours",
+      "summary": "Pamplona's fiesta rules supposedly require runners to wear only red and white, with scarves tied the official way. Multicoloured shirts bring a €200 fine at the enclosure gates. Marshals check outfits before the encierro starts. Repeat offenders are barred from running for three years.",
+      "isReal": false,
+      "explanation": "Tell: white and red is tradition, never a dress code with fines.",
+      "source": null
+    },
+    {
+      "id": "f26",
+      "headline": "Malaga Limits Drinks to Three Ice Cubes in Summer",
+      "summary": "A water-saving rule supposedly caps every mixed drink at three ice cubes between June and September. Bartenders must count them in front of the customer. Overpoured glasses cost bars €120 a round. The clause was framed as protecting the city's reservoir levels during drought warnings.",
+      "isReal": false,
+      "explanation": "Tell: bars get water advice, never an ice-cube quota.",
+      "source": null
+    },
+    {
+      "id": "f27",
+      "headline": "Bilbao Taxis Must Greet Passengers in Basque",
+      "summary": "Bilbao supposedly requires drivers to open with a Basque greeting and name three local landmarks before the ride ends. Inspectors ride unannounced to check pronunciation. A wrong or missing greeting earns a demerit, and three demerits mean a €300 fine. New drivers must pass a phrase test at the rank.",
+      "isReal": false,
+      "explanation": "Tell: drivers learn polite phrases, but no inspector scores your greeting.",
+      "source": null
+    },
+    {
+      "id": "f28",
+      "headline": "Cartagena Fines Sunbathing on Parked Cars",
+      "summary": "Cartagena's street rules supposedly ban lying on parked cars to tan, with fines from €150. Officers cite dented roofs and scorching hot bonnets. A beach towel spread over a windshield counts as an attempt. The rule would apply to buses and motorbikes too.",
+      "isReal": false,
+      "explanation": "Tell: nobody hands out sunbathing permits, and nobody fines you for a nap on the bonnet.",
+      "source": null
+    },
+    {
+      "id": "f29",
+      "headline": "Alhambra Visitors Limited to Four Photos Per Room",
+      "summary": "A visitor rule supposedly caps photography at four shots per room in the Nasrid Palaces. Guards hold up four fingers and stop the phones. Extra photos draw a €100 fine paid at the exit. Selfie sticks are banned outright, and tripods only in the courtyards.",
+      "isReal": false,
+      "explanation": "Tell: the Alhambra limits crowds and tripods, never your photo count.",
+      "source": null
+    },
+    {
+      "id": "f30",
+      "headline": "Ibiza Clubs Must Fade to Silence Within 60 Seconds of 06:00",
+      "summary": "Ibiza's licensing rules supposedly require the music to reach zero within sixty seconds of six in the morning. A DJ still mixing at 06:01 faces a €2,000 fine for the venue. Sound engineers would log the fade on a council form each morning. Clubs argue a slow fade saves both eardrums and neighbours.",
+      "isReal": false,
+      "explanation": "Tell: closing times are real, but no council meters your final fade.",
+      "source": null
+    }
+  ],
+  "results": [
+    {
+      "min": 0,
+      "max": 2,
+      "slug": "lawless-guiri",
+      "title": "Lawless Guiri",
+      "text": "You believed the paella curfew and the ice-cube quota without a flicker of doubt. Spain does have genuinely unhinged rules, but the ones you picked are not among them — you were played by our finest bureaucratic fan fiction.\n\nOne month of Spain Daily and you will smell a made-up bylaw before your café con leche has cooled.",
+      "shareText": "I got 0-2/10 telling real Spanish law from the nonsense we invented — Lawless Guiri! Can you beat my glorious fail?"
+    },
+    {
+      "min": 3,
+      "max": 4,
+      "slug": "petty-offender",
+      "title": "Petty Offender",
+      "text": "You nailed the beach crimes but fell for the whistle police and the empanada cap. Half your instincts are sharp, the other half still believes a town hall can meter your laughter.\n\nRead the digest for a week and you will start checking the fine print before you mock it.",
+      "shareText": "I got 3-4/10 telling real Spanish law from the nonsense we invented — Petty Offender! Think you can do better?"
+    },
+    {
+      "min": 5,
+      "max": 6,
+      "slug": "suspicious-vecino",
+      "title": "Suspicious Vecino",
+      "text": "Fifty-fifty: you question everything like a proper neighbour peering through the blinds, yet the ham licence slipped past you. You already assume every ordinance is invented — you just need to work out which ones actually are.\n\nA few more mornings with Spain Daily and nobody will hand you a fake bylaw again.",
+      "shareText": "I got 5-6/10 telling real Spanish law from the nonsense we invented — Suspicious Vecino! Can you beat me?"
+    },
+    {
+      "min": 7,
+      "max": 8,
+      "slug": "model-citizen",
+      "title": "Model Citizen",
+      "text": "You spotted the mop-bucket ban and the towel war like a veteran of a thousand ayuntamiento noticeboards. Only our silliest inventions got past you — which is the hard part, because in Spain the real rules already sound fake.\n\nSubscribe and keep your record honest: next week's digest brings fresh ordinance gossip.",
+      "shareText": "I got 7-8/10 telling real Spanish law from the nonsense we invented — Model Citizen! Bet you can't beat me."
+    },
+    {
+      "min": 9,
+      "max": 10,
+      "slug": "honorary-funcionario",
+      "title": "Honorary Funcionario",
+      "text": "Nothing fooled you: not the ice-cube quota, not the shouting ban, not the sandcastle permit. You read bylaws the way other people read gossip, and you were right almost every time.\n\nWe hereby award you honorary funcionario status. Subscribe, and we will keep you supplied with the paperwork nobody else has the patience for.",
+      "shareText": "I got 9-10/10 telling real Spanish law from the nonsense we invented — Honorary Funcionario! Can anyone beat me?"
+    }
+  ]
+}

@@ -85,7 +85,7 @@ function wireShareMenu() {
 function init() {
   const dataEl = $('quiz-data')
   if (!dataEl) return
-  const { slug, questions: pool, results } = JSON.parse(dataEl.textContent)
+  const { slug, title, questions: pool, results } = JSON.parse(dataEl.textContent)
   let questions = pickQuestions(pool, TOTAL)
   const answers = []
   let step = 0
@@ -377,7 +377,7 @@ function init() {
   }
 
   wireShareMenu()
-  syncShareLinks('Real or AI? Can You Spot the Fake Spain News? — Spanified')
+  syncShareLinks(title ? `${title} — Spanified` : document.title)
 }
 
 if (document.readyState === 'loading') {

@@ -8,7 +8,7 @@
 {# Quiz is unlisted until launch: no external links, no sitemap, no indexing. #}
 <meta name="robots" content="noindex, nofollow">{% endblock %}
 {% block canonical %}<link rel="canonical" href="https://spanified.com/quiz/{{ quiz.slug }}-result-{{ result.slug }}">{% endblock %}
-{% block og_image %}<meta property="og:image" content="https://spanified.com/static/img/quiz/ai-or-real/og-quiz-{{ result.slug }}.jpg">
+{% block og_image %}<meta property="og:image" content="https://spanified.com/static/img/quiz/{{ quiz.slug }}/og-quiz-{{ result.slug }}.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">{% endblock %}
@@ -23,7 +23,7 @@
  <div class="quiz-result-hero">
   <p class="confirm-kicker">Your persona</p>
    <h1>{{ result.title }}</h1>
-   <img class="quiz-result-img" src="/static/img/quiz/ai-or-real/og-quiz-{{ result.slug }}.jpg" alt="{{ result.title }}" width="1200" height="630" loading="eager" fetchpriority="high">
+   <img class="quiz-result-img" src="/static/img/quiz/{{ quiz.slug }}/og-quiz-{{ result.slug }}.jpg" alt="{{ result.title }}" width="1200" height="630" loading="eager" fetchpriority="high">
    <p class="quiz-result-score" id="quiz-friend-score" hidden></p>
   <a class="quiz-result-cta" href="/quiz/{{ quiz.slug }}">Challenge a friend</a>
  </div>
