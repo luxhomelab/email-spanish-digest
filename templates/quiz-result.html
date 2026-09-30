@@ -67,7 +67,11 @@
       var url = new URL(href);
       var q = url.searchParams;
       var key = q.has('u') ? 'u' : (q.has('url') ? 'url' : null);
-      if (url.hostname.indexOf('wa.me') !== -1) {
+      if (url.hostname.indexOf('threads.com') !== -1) {
+        // Threads intent uses ?text=&url= — score goes on the shared URL.
+        var th = q.get('url') || '';
+        if (th.indexOf('score=') === -1) q.set('url', th + '?score=' + score);
+      } else if (url.hostname.indexOf('wa.me') !== -1) {
         var t = q.get('text') || '';
         if (t.indexOf('score=') === -1) q.set('text', t + '?score=' + score);
       } else if (key) {

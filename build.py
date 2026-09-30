@@ -582,9 +582,9 @@ def attach_related(digests, limit=3):
 
 
 def share_links(abs_url, text, long_text=None):
-    """Build static share URLs (no JS SDKs) for X/TG/WA/FB + copy link.
+    """Build static share URLs (no JS SDKs) for X/TG/WA/FB/Threads + copy link.
 
-    X keeps the short text (280-char limit); Telegram/WhatsApp get
+    X keeps the short text (280-char limit); Telegram/WhatsApp/Threads get
     long_text when provided (falls back to text). Facebook ``quote``
     carries long_text — FB scrapes OG tags by default, but ``quote``
     sometimes surfaces as pre-filled text for manual posting."""
@@ -596,6 +596,7 @@ def share_links(abs_url, text, long_text=None):
         "facebook": f"https://www.facebook.com/sharer/sharer.php?u={u}&quote={tl}",
         "telegram": f"https://t.me/share/url?url={u}&text={tl}",
         "whatsapp": f"https://wa.me/?text={tl}%20{u}",
+        "threads": f"https://www.threads.com/intent/post?text={tl}&url={u}",
     }
 
 

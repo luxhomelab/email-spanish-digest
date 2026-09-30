@@ -37,6 +37,7 @@ function syncShareLinks(text, url, longText) {
   set('a[href*="facebook.com/sharer"]', `https://www.facebook.com/sharer/sharer.php?u=${u}&quote=${tl}`)
   set('a[href*="t.me/share"]', `https://t.me/share/url?url=${u}&text=${tl}`)
   set('a[href*="wa.me"]', `https://wa.me/?text=${tl}%20${u}`)
+  set('a[href*="threads.com/intent"]', `https://www.threads.com/intent/post?text=${tl}&url=${u}`)
   const copy = wrap.querySelector('.share-copy')
   if (copy) copy.dataset.url = pageUrl
 }
