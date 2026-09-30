@@ -1687,3 +1687,29 @@ body.page-home .quiz-teaser-row p{margin-bottom:0}
  .quiz-teaser-row{gap:14px}
  .quiz-teaser-thumb{width:76px;height:104px}
 }
+
+/* ── Quizzes discovery block on the homepage (two cards, stacked on mobile) ── */
+.quizzes-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.quiz-mini{display:block;text-decoration:none;border:1px solid #EFE7D8;border-radius:12px;overflow:hidden;background:#FFFDF8;transition:border-color .15s,box-shadow .15s}
+.quiz-mini:hover{border-color:#AA151B;box-shadow:0 4px 18px rgba(170,21,27,.12)}
+.quiz-mini-cover{width:100%;height:auto;display:block;aspect-ratio:1200/630;object-fit:cover;background:#FDF3E2}
+.quiz-mini-body{display:block;padding:18px 20px 20px}
+.quiz-mini-kicker{display:block;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:#AA151B;margin-bottom:4px}
+.quiz-mini-title{display:block;font-family:Roboto,Helvetica,sans-serif;font-size:18px;font-weight:700;color:#3C4858;line-height:1.35;margin-bottom:8px}
+.quiz-mini-hook{display:block;font-size:14px;line-height:1.55;color:#6C7A89;margin-bottom:10px}
+.quiz-mini-cta{display:block;font-size:15px;font-weight:700;color:#AA151B}
+@media (max-width:560px){
+ .quizzes-grid{grid-template-columns:1fr}
+}
+
+/* ── "Try the other quiz" cross-link (quiz result screen + share pages) ── */
+.quiz-other{display:flex;gap:14px;align-items:center;text-decoration:none;border:1px solid #EFE7D8;border-radius:12px;background:#FFFDF8;padding:12px;margin-top:16px;transition:border-color .15s,box-shadow .15s}
+.quiz-other:hover{border-color:#AA151B;box-shadow:0 4px 18px rgba(170,21,27,.12)}
+.quiz-other-cover{flex:0 0 112px;width:112px;height:74px;object-fit:cover;border-radius:8px;background:#FDF3E2}
+.quiz-other-body{display:block;min-width:0}
+.quiz-other-kicker{display:block;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#AA151B;margin-bottom:2px}
+.quiz-other-title{display:block;font-size:15px;font-weight:700;color:#3C4858;line-height:1.4}
+.quiz-other-go{display:block;font-size:14px;font-weight:700;color:#AA151B;margin-top:2px}
+@media (max-width:560px){
+ .quiz-other-cover{flex-basis:88px;width:88px;height:60px}
+}

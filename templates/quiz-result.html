@@ -36,6 +36,16 @@
     <div class="quiz-share">{% include "partials/share.html" %}</div>
    </div>
    <p class="quiz-retake-wrap"><a class="quiz-cta-btn" href="/quiz/{{ quiz.slug }}">Retake the quiz</a></p>
+   {% for other in other_quizzes %}
+   <a class="quiz-other" href="{{ other.url }}" aria-label="Try the other quiz: {{ other.title }}">
+    <img class="quiz-other-cover" src="{{ other.cover }}" alt="{{ other.title }}" width="1200" height="630" loading="lazy">
+    <span class="quiz-other-body">
+     <span class="quiz-other-kicker">Try the other quiz</span>
+     <span class="quiz-other-title">{{ other.title }}</span>
+     <span class="quiz-other-go">Play now →</span>
+    </span>
+   </a>
+   {% endfor %}
  </div>
 </div>
 <script>
