@@ -449,8 +449,8 @@ def render_quizzes(env):
         share = share_links(
             base,
             f"{quiz['title']} — Spanified",
-            f"{quiz['title']} — can you tell real Spanish news from AI fakes? "
-            "10 wild headlines, 2 minutes. Take the quiz:",
+            f"{quiz['title']} — 10 questions, 2 minutes, half of it really "
+            "happened in Spain. Take the quiz:",
         )
         crumbs = [
             {"name": "Home", "url": "/"},
@@ -681,6 +681,7 @@ def render_sitemap(digests, categories=()):
     # index,follow). The -success / -subscribed / -result-* variants stay
     # noindex,nofollow and must never enter the sitemap.
     urls.append((SITE_URL + "/quiz/ai-or-real", None))
+    urls.append((SITE_URL + "/quiz/spanish-law-or-myth", None))
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
@@ -786,6 +787,7 @@ def js_version():
     for name in ("autonomo.js", "autonomo-calc.js", "autonomo-form.js",
                    "property-buying-cost.js", "property-buying-cost-calc.js",
                    "property-buying-cost-form.js", "quiz-ai-or-real.js",
+                   "quiz-spanish-law-or-myth.js",
                    "quiz-logic.js", "subscribe-form.js", "subscription-store.js",
                    "electricity.js", "electricity-calc.js", "electricity-form.js"):
         path = os.path.join(SCRIPT_DIR, "static", "js", name)
