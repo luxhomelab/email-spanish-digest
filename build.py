@@ -786,8 +786,7 @@ def js_version():
     h = hashlib.md5()
     for name in ("autonomo.js", "autonomo-calc.js", "autonomo-form.js",
                    "property-buying-cost.js", "property-buying-cost-calc.js",
-                   "property-buying-cost-form.js", "quiz-ai-or-real.js",
-                   "quiz-spanish-law-or-myth.js",
+                   "property-buying-cost-form.js", "quiz.js",
                    "quiz-logic.js", "subscribe-form.js", "subscription-store.js",
                    "electricity.js", "electricity-calc.js", "electricity-form.js"):
         path = os.path.join(SCRIPT_DIR, "static", "js", name)

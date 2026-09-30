@@ -377,7 +377,7 @@ function init() {
   }
 
   wireShareMenu()
-  syncShareLinks(`${title || 'Real Spanish Law or I Made It Up?'} — Spanified`)
+  syncShareLinks(title ? `${title} — Spanified` : document.title)
 }
 
 if (document.readyState === 'loading') {
