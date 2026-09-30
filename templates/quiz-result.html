@@ -90,26 +90,22 @@
     });
   } catch (e) { /* share links keep the score-less URL */ }
 })();
-// Share menu toggle
+// Copy-link feedback (share buttons are always visible — no toggle menu).
 document.addEventListener('DOMContentLoaded', function () {
   var wrap = document.querySelector('.quiz-result .share-wrap');
   if (!wrap) return;
-  var btn = wrap.querySelector('.share-toggle');
-  var menu = wrap.querySelector('.share-menu');
-  if (!btn || !menu) return;
-  function close() { menu.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
-  btn.addEventListener('click', function (e) {
-    e.stopPropagation();
-    var willOpen = menu.hidden; close();
-    if (willOpen) { menu.hidden = false; btn.setAttribute('aria-expanded', 'true'); }
-  });
-  document.addEventListener('click', function (e) { if (!e.target.closest('.share-wrap')) close(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
   wrap.addEventListener('click', function (e) {
     var c = e.target.closest('.share-copy');
     if (!c) return;
     var label = c.querySelector('span');
-    function done() { label.textContent = 'Copied!'; setTimeout(function () { label.textContent = 'Copy link'; }, 1500); }
+    function done() {
+      if (label) label.textContent = 'Copied!';
+      c.classList.add('is-copied');
+      setTimeout(function () {
+        if (label) label.textContent = 'Copy link';
+        c.classList.remove('is-copied');
+      }, 1500);
+    }
     if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(c.dataset.url).then(done, done); }
     else { done(); }
   });

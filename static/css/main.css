@@ -1316,65 +1316,34 @@ button.cta-button { border: none; cursor: pointer; font-family: inherit; }
  .unsub-social { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
  .unsub-social .soc { padding: 12px 14px; font-size: 15px; }
 }
-body.page-digest .share-wrap { position: relative; display: inline-block; margin-top: 12px; }
-body.page-digest .share-toggle {
+/* ---------- Share buttons: inline row, always visible (shared partial) ---------- */
+.share-wrap { display: flex; flex-wrap:wrap; align-items: center; gap: 8px; }
+.share-wrap .share-label { font-size: 13px; font-weight: 700; color: #6C7A89; margin-right: 2px; }
+.share-wrap .share-btn, .share-wrap .share-copy {
  display: inline-flex; align-items: center; gap: 7px;
  border: 1px solid #E3D9C4; border-radius: 999px;
- padding: 5px 14px; font-size: 13px; font-weight: 600;
- color: #3C4858; background-color: #FFFDF8;
- cursor: pointer; font-family: inherit;
+ padding: 8px 14px; min-height: 36px;
+ font-size: 13px; font-weight: 600; color: #3C4858; text-decoration: none;
+ background-color: #FFFDF8; cursor: pointer; font-family: inherit;
  transition: border-color 0.15s, background-color 0.15s;
 }
-body.page-digest .share-toggle:hover { border-color: #AA151B; background-color: #F8EFDD; }
-body.page-digest .share-toggle svg { width: 14px; height: 14px; fill: #6C7A89; }
-body.page-digest .share-toggle:hover svg { fill: #AA151B; }
-body.page-digest .share-menu {
- position: absolute; top: calc(100% + 6px); left: 0; z-index: 20;
- min-width: 168px; padding: 6px;
- background-color: #FFFDF8; border: 1px solid #E3D9C4; border-radius: 12px;
- box-shadow: 0 6px 24px rgba(60,40,20,0.12);
+.share-wrap .share-btn:hover, .share-wrap .share-copy:hover { border-color: #AA151B; background-color: #F8EFDD; }
+.share-wrap .share-btn svg, .share-wrap .share-copy svg { width: 16px; height: 16px; fill: #6C7A89; flex-shrink: 0; }
+.share-wrap .share-btn:hover svg, .share-wrap .share-copy:hover svg { fill: #AA151B; }
+.share-wrap .share-btn:focus-visible, .share-wrap .share-copy:focus-visible { outline: 2px solid #AA151B; outline-offset: 2px; }
+.share-wrap .share-copy.is-copied { border-color: #0E7A3D; color: #0E7A3D; }
+.share-wrap .share-copy.is-copied svg { fill: #0E7A3D; }
+@media (max-width: 560px) {
+ .share-wrap { gap: 6px; }
+ .share-wrap .share-btn, .share-wrap .share-copy { padding: 8px 12px; }
 }
-body.page-digest .email-footer .share-menu { top: auto; bottom: calc(100% + 6px); }
-body.page-digest .email-footer .share-wrap { display: block; text-align: left; margin-top: 0; }
+body.page-digest .share-wrap { margin-top: 12px; }
+body.page-digest .email-footer .share-wrap { margin-top: 0; }
 body.page-digest .email-footer .share-cta { text-align: left; font-size: 14px; font-weight: 600; color: #3C4858; margin-bottom: 10px; }
-body.page-digest .share-menu a, body.page-digest .share-menu .share-copy {
- display: flex; align-items: center; gap: 10px; width: 100%;
- padding: 8px 10px; border: 0; border-radius: 8px;
- font-size: 13px; font-weight: 500; color: #3C4858; text-decoration: none;
- background: none; cursor: pointer; font-family: inherit; text-align: left;
-}
-body.page-digest .share-menu a:hover, body.page-digest .share-menu .share-copy:hover { background-color: #F8EFDD; }
-body.page-digest .share-menu svg { width: 16px; height: 16px; fill: #6C7A89; flex-shrink: 0; }
 /* ---------- Calculator share block (body.page-calculator scope) ---------- */
 body.page-calculator .calc-share { margin-top: 20px; text-align: left; }
 body.page-calculator .calc-share .share-cta { font-size: 14px; font-weight: 600; color: #3C4858; margin-bottom: 10px; }
-body.page-calculator .share-wrap { position: relative; display: inline-block; margin-top: 12px; }
-body.page-calculator .share-toggle {
- display: inline-flex; align-items: center; gap: 7px;
- border: 1px solid #E3D9C4; border-radius: 999px;
- padding: 5px 14px; font-size: 13px; font-weight: 600;
- color: #3C4858; background-color: #FFFDF8;
- cursor: pointer; font-family: inherit;
- transition: border-color 0.15s, background-color 0.15s;
-}
-body.page-calculator .share-toggle:hover { border-color: #AA151B; background-color: #F8EFDD; }
-body.page-calculator .share-toggle svg { width: 14px; height: 14px; fill: #6C7A89; }
-body.page-calculator .share-toggle:hover svg { fill: #AA151B; }
-body.page-calculator .share-menu {
- position: absolute; top: calc(100% + 6px); left: 0; z-index: 20;
- min-width: 168px; padding: 6px;
- background-color: #FFFDF8; border: 1px solid #E3D9C4; border-radius: 12px;
- box-shadow: 0 6px 24px rgba(60,40,20,0.12);
-}
-body.page-calculator .share-menu a, body.page-calculator .share-menu .share-copy {
- display: flex; align-items: center; gap: 10px; width: 100%;
- padding: 8px 10px; border: 0; border-radius: 8px;
- font-size: 13px; font-weight: 500; color: #3C4858; text-decoration: none;
- background: none; cursor: pointer; font-family: inherit; text-align: left;
-}
-body.page-calculator .share-menu a:hover, body.page-calculator .share-menu .share-copy:hover { background-color: #F8EFDD; }
-body.page-calculator .share-menu svg { width: 16px; height: 16px; fill: #6C7A89; flex-shrink: 0; }
-body.page-digest .share-menu a:hover svg, body.page-digest .share-menu .share-copy:hover svg { fill: #AA151B; }
+body.page-calculator .share-wrap { margin-top: 12px; }
 body.page-editor .editor { max-width: 1200px; width: 100%; margin: 0 auto; }
 body.page-editor .editor h1 { text-align: center; }
 body.page-editor .editor .subtitle { color: #6C7A89; font-size: 16px; margin-bottom: 28px; text-align: center; }
@@ -1601,15 +1570,7 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 .quiz-cta-btn{display:inline-block;background:#AA151B;color:#fff;font-weight:700;font-size:1rem;padding:13px 26px;border-radius:12px;text-decoration:none;cursor:pointer}
 .quiz-cta-btn:hover{background:#8A1019}
 .quiz-cta-note{margin:12px 0 0;font-size:.9rem;color:#666}
-.quiz-share .share-wrap{position:relative;display:inline-block}
-.quiz-share .share-toggle{display:inline-flex;align-items:center;gap:7px;border:1px solid #E3D9C4;border-radius:999px;padding:11px 20px;font-size:.95rem;font-weight:600;color:#3C4858;background-color:#FFFDF8;cursor:pointer;font-family:inherit;transition:border-color .15s,background-color .15s}
-.quiz-share .share-toggle:hover{border-color:#AA151B;background-color:#F8EFDD}
-.quiz-share .share-toggle svg{width:14px;height:14px;fill:#6C7A89}
-.quiz-share .share-toggle:hover svg{fill:#AA151B}
-.quiz-share .share-menu{position:absolute;top:calc(100% + 6px);left:0;z-index:20;min-width:168px;padding:6px;background-color:#FFFDF8;border:1px solid #E3D9C4;border-radius:12px;box-shadow:0 6px 24px rgba(60,40,20,.12)}
-.quiz-share .share-menu a,.quiz-share .share-menu .share-copy{display:flex;align-items:center;gap:10px;width:100%;padding:8px 10px;border:0;border-radius:8px;font-size:13px;font-weight:500;color:#3C4858;text-decoration:none;background:none;cursor:pointer;font-family:inherit;text-align:left}
-.quiz-share .share-menu a:hover,.quiz-share .share-menu .share-copy:hover{background-color:#F8EFDD}
-.quiz-share .share-menu svg{width:16px;height:16px;fill:#6C7A89;flex-shrink:0}
+.quiz-share .share-wrap .share-btn, .quiz-share .share-wrap .share-copy { padding: 10px 18px; font-size: .9rem; min-height: 44px; }
 .quiz-friend{border:1px solid #E3D9C4;border-left:4px solid #AA151B;background:#FFFDF8;border-radius:0 12px 12px 0;padding:12px 16px;margin:14px 0;font-size:.95rem;line-height:1.5}
 @media (max-width:560px){
  .quiz-choices{grid-template-columns:1fr}
