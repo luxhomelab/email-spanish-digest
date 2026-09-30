@@ -3,7 +3,7 @@
   "title": "Real Spanish Law or I Made It Up? — Can You Tell?",
   "hook_sub": "Half of these are real Spanish law. Half we invented. Can you tell which is which?",
   "real_label": "Real — it's the law",
-  "fake_label": "Fake — I made it up",
+  "fake_label": "Fake — made up",
   "questions": [
     {
       "id": "r1",
