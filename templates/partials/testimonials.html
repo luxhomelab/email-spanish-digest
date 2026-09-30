@@ -1,6 +1,6 @@
 {% if proof.testimonials %}
 <section class="testimonials">
- <h2>Loved by readers</h2>
+ <h2>{{ testimonials_title | default('Loved by readers') }}</h2>
  <p class="testimonials-sub">Real comments from <a href="https://www.reddit.com/r/SpainDaily/" target="_blank" rel="noopener">r/SpainDaily</a> — quoted word for word</p>
  <div class="testimonials-grid">
   {% for t in proof.testimonials %}
