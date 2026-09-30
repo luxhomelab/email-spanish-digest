@@ -389,7 +389,7 @@ def render_static(env, digests):
             fh.write(output)
         print(f"  wrote {name}")
     render_calculators(env)
-    render_quizzes(env)
+    render_quizzes(env, proof=proof)
 
 
 def render_calculators(env):
@@ -423,8 +423,13 @@ def render_calculators(env):
         print(f"  wrote {rel_dest}")
 
 
-def render_quizzes(env):
+def render_quizzes(env, proof=None):
     """Render quiz pages from data/quizzes/*.json (multi-quiz ready).
+
+    ``proof`` is the social-proof dict from render_static (total_issues /
+    first_issue, same data /subscribe shows) so the gate can render a live
+    "N daily editions" line; pages fall back to a static default in the
+    template when it is absent.
 
     Per quiz <slug>: quiz/<slug>.html (app), quiz/<slug>-subscribed.html
     (legacy Brevo confirmation snippet, kept for old links, noindex),
@@ -458,7 +463,7 @@ def render_quizzes(env):
         ]
         ctx = dict(
             quiz=quiz, quiz_json=quiz_json, crumbs=crumbs,
-            js_version=js_version(), share=share,
+            js_version=js_version(), share=share, proof=proof,
         )
         pages = [
             ("quiz.html", f"quiz/{slug}.html"),

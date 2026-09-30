@@ -928,8 +928,10 @@ details.elec-bd[open] .elec-bd-sum::before { transform: rotate(90deg); }
 }
 .subscribe-form-consent a { color: #B91C1C; text-decoration: none; }
 .subscribe-form-consent a:hover { text-decoration: underline; }
-/* Cloudflare Turnstile widget: breathing room above the consent line. */
-.subscribe-form .cf-turnstile { margin: 14px 0 2px; min-height: 65px; }
+/* Cloudflare Turnstile widget: breathing room above the consent line.
+   The widget renders a fixed 300px iframe — contain it so it can never
+   push the page wider on narrow phones (see the ≤370px rule below). */
+.subscribe-form .cf-turnstile { margin: 14px 0 2px; min-height: 65px; max-width: 100%; overflow: hidden; }
 .subscribe-form-hp {
  position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
 }
@@ -947,6 +949,13 @@ details.elec-bd[open] .elec-bd-sum::before { transform: rotate(90deg); }
   .subscribe-form .cf-turnstile { order: 5; margin: 0 0 14px; min-height: 65px; }
   .subscribe-form-btn { order: 6; width: 100%; }
   .subscribe-form-hp { order: 7; }
+}
+/* Very narrow phones (360px and below): the form content box is ~286px,
+   narrower than Turnstile's fixed 300px iframe. Scale the widget subtree
+   to fit and trim the leftover layout height so the gap stays even. */
+@media (max-width: 370px) {
+  .subscribe-form .cf-turnstile > div { transform: scale(0.8); transform-origin: top left; }
+  .subscribe-form .cf-turnstile { margin-bottom: 2px; }
 }
 
 /* ---------- Homepage redesign (body.page-home only) ---------- */
@@ -1204,7 +1213,7 @@ body.page-contact .contact .card {
  border: 2px solid #ffffff; margin-left: -10px;
 }
 .reader-avatar:first-child { margin-left: 0; }
-.reader-proof-text { display: flex; flex-direction: column; line-height: 1.35; text-align: left; }
+.reader-proof-text { display: flex; flex-direction: column; line-height: 1.35; text-align: left; min-width: 0; }
 .reader-proof-text strong { font-size: 15px; color: #1A1A2E; }
 .reader-proof-text span { font-size: 13px; color: #6C7A89; }
 .reader-stars { color: #C2553A; letter-spacing: 1px; }
@@ -1531,6 +1540,15 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 @media (max-width: 520px) {
  .testimonials-grid { grid-template-columns: 1fr; }
  .proof-strip { flex-direction: column; gap: 8px; }
+ /* Tighten /subscribe vertical rhythm on phones: desktop paddings
+    (trust 40/56, intro 52/12, strip margin 20, form margin 32/8,
+    testimonials margin 28) stack up to 60–88px gaps at 360px. */
+ .subscribe-intro { padding-top: 36px; }
+ .proof-strip { padding-top: 12px; padding-bottom: 12px; margin-bottom: 8px; }
+ .subscribe-trust { padding-top: 24px; padding-bottom: 24px; }
+ .subscribe-trust h2 { margin-bottom: 16px; }
+ .subscribe-form { margin-top: 16px; }
+ .testimonials { margin-top: 20px; }
 }
 
 /* ── Quiz (shared by quiz app + per-persona result pages) ── */
