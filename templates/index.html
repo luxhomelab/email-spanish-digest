@@ -29,7 +29,7 @@
 </script>
  <div class="page">
   <div class="hero">
-   <a class="brand-kicker" href="/about">A Spanified product</a>
+   <span class="brand-kicker">Free daily newsletter • 5-minute read</span>
    <h1>Spain's top news, <span class="accent">in English</span>, every morning.</h1>
    <p class="tagline">Spain Daily by <a href="/about">Spanified</a> — your 5-minute catch-up on what's happening in Spain.</p>
    <div class="badges">
@@ -37,6 +37,7 @@
     <span class="badge"><span class="dot">●</span>Every morning</span>
     <span class="badge"><span class="dot">●</span>5-minute read</span>
    </div>
+   <p class="hero-proof">Daily since {{ proof.first_issue }} · {{ proof.total_issues }} issues</p>
   </div>
 
   {% if latest %}
@@ -52,9 +53,15 @@
   {% endif %}
 
   <div class="card">
+   <h2>What is this?</h2>
+   <p>Spain moves fast — rents, taxes, visas, jobs. Every morning we read the Spanish press cover to cover and hand you the news that actually affects your life: short summaries in plain English, zero clickbait.</p>
+   <p>Live in Spain, planning the move, or just watching from afar — five minutes with your coffee and you're up to speed.</p>
+  </div>
+
+  <div class="card">
    <div class="teaser-kicker">Spanified tools</div>
    <h2>Tax calculators for Spain</h2>
-   <p>Practical tools for life in Spain — free, no sign-up.</p>
+   <p>Autónomo Tax, Property Buying Cost and Electricity Bill calculators — practical tools for life in Spain, free, no sign-up.</p>
    <div class="topics">
     <a class="topic" href="/calculators/autonomo-tax">🧮 Autónomo Tax Calculator</a>
     <a class="topic" href="/calculators/property-buying-cost">🏠 Property Buying Cost Calculator</a>
@@ -82,12 +89,6 @@
   </div>
 
   <div class="card">
-   <h2>What is this?</h2>
-   <p>Spain moves fast — rents, taxes, visas, jobs. Every morning we read the Spanish press cover to cover and hand you the news that actually affects your life: short summaries in plain English, zero clickbait.</p>
-   <p>Live in Spain, planning the move, or just watching from afar — five minutes with your coffee and you're up to speed.</p>
-  </div>
-
-  <div class="card">
    <h2>What's inside?</h2>
    <ul class="features">
     <li>Top Spanish news, curated and summarized</li>
@@ -109,10 +110,17 @@
   </div>
 
   <div class="cta-card">
+   <p class="cta-kicker">Free · Every morning · 5-minute read</p>
    <h2>Ready to stay in the loop?</h2>
-     <p class="proof-inline">Daily since {{ proof.first_issue }} · {{ proof.total_issues }} issues · <strong class="proof-num">{{ proof.reddit_display }}</strong>&nbsp;<span class="proof-label">on Reddit</span> · <strong class="proof-num">{{ proof.threads_display }}</strong>&nbsp;<span class="proof-label">on Threads</span></p>
-   <p>Join hundreds of readers who start their day with Spain Daily.</p>
+   <p class="cta-sub">Join 500+ readers who start their day with Spain Daily.</p>
    <a href="/subscribe" class="cta-button">Subscribe — It's Free</a>
+   <p class="cta-microcopy">No spam · one email a day · cancel anytime</p>
+   <ul class="cta-proof">
+    <li>Daily since {{ proof.first_issue }}</li>
+    <li>{{ proof.total_issues }} issues</li>
+    <li><strong>{{ proof.reddit_display }}</strong> on Reddit</li>
+    <li><strong>{{ proof.threads_display }}</strong> on Threads</li>
+   </ul>
   </div>
 
   {% include "partials/testimonials.html" %}
