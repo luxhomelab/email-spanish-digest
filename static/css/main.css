@@ -1316,15 +1316,15 @@ button.cta-button { border: none; cursor: pointer; font-family: inherit; }
  .unsub-social { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
  .unsub-social .soc { padding: 12px 14px; font-size: 15px; }
 }
-/* ---------- Share buttons: single-line icon row on all widths (shared partial) ---------- */
-.share-wrap { display: flex; flex-wrap: nowrap; align-items: center; gap: 8px; max-width: 100%; min-width: 0; }
-.share-wrap .share-label { font-size: 13px; font-weight: 700; color: #6C7A89; margin-right: 2px; }
+/* ---------- Share buttons: always one row, never page scroll (shared partial) ---------- */
+.share-wrap { display: flex; flex-wrap: nowrap; align-items: center; gap: 6px; max-width: 100%; min-width: 0; overflow: hidden; }
+.share-wrap .share-label { font-size: 13px; font-weight: 700; color: #6C7A89; margin-right: 2px; flex: 0 0 auto; }
 .share-wrap .share-btn, .share-wrap .share-copy {
  display: inline-flex; align-items: center; gap: 7px;
- flex: 0 0 auto; min-width: 0; white-space: nowrap;
+ flex: 0 1 auto; min-width: 0; white-space: nowrap;
  border: 1px solid #E3D9C4; border-radius: 999px;
- padding: 8px 14px; min-height: 36px;
- font-size: 13px; font-weight: 600; color: #3C4858; text-decoration: none;
+ padding: 7px 12px; min-height: 36px;
+ font-size: 12.5px; font-weight: 600; color: #3C4858; text-decoration: none;
  background-color: #FFFDF8; cursor: pointer; font-family: inherit;
  transition: border-color 0.15s, background-color 0.15s;
 }
@@ -1339,22 +1339,22 @@ button.cta-button { border: none; cursor: pointer; font-family: inherit; }
 .share-wrap .share-copy.is-copied svg { fill: #0E7A3D; }
 @media (max-width: 560px) {
  .share-wrap { gap: 6px; }
- /* Icon-only pills: 6 round buttons + no "Share:" label fit ~360px in one row. */
+ /* Icon-only circles: 6x34px + gaps = 234px, fits ~270px on a 360px screen with slack. */
  .share-wrap > .share-label { display: none; }
  .share-wrap .share-btn, .share-wrap .share-copy,
  .quiz-share .share-wrap .share-btn, .quiz-share .share-wrap .share-copy {
-  padding: 0; width: 40px; height: 40px; min-height: 40px;
+  padding: 0; width: 34px; height: 34px; min-height: 34px;
   flex: 0 0 auto; justify-content: center; gap: 0; border-radius: 50%;
   font-size: 0;
  }
  .share-wrap .share-btn span, .share-wrap .share-copy span { display: none; }
- .share-wrap .share-btn svg, .share-wrap .share-copy svg { width: 17px; height: 17px; }
+ .share-wrap .share-btn svg, .share-wrap .share-copy svg { width: 16px; height: 16px; }
 }
 @media (max-width: 380px) {
- .share-wrap { gap: 4px; }
+ .share-wrap { gap: 5px; }
  .share-wrap .share-btn, .share-wrap .share-copy,
  .quiz-share .share-wrap .share-btn, .quiz-share .share-wrap .share-copy {
-  width: 35px; height: 35px; min-height: 35px;
+  width: 32px; height: 32px; min-height: 32px;
  }
 }
 /* Quiz success row: share cluster must never push the card wider. */
@@ -1589,24 +1589,31 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 .quiz-persona h2{margin:.2em 0 .4em;font-size:1.5rem}
 .quiz-persona p{margin:0 0 .8em;line-height:1.6}
 .quiz-persona p:last-child{margin-bottom:0}
-.quiz-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:24px}
+.quiz-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:24px;min-width:0;max-width:100%}
+.quiz-cta-row > *{min-width:0}
 .quiz-cta-btn{display:inline-block;background:#AA151B;color:#fff;font-weight:700;font-size:1rem;padding:13px 26px;border-radius:12px;text-decoration:none;cursor:pointer}
 .quiz-cta-btn:hover{background:#8A1019}
 .quiz-cta-note{margin:12px 0 0;font-size:.9rem;color:#666}
-.quiz-share .share-wrap { gap: 6px; }
-.quiz-share .share-wrap .share-btn, .quiz-share .share-wrap .share-copy { padding: 8px 11px; font-size: 13px; min-height: 38px; flex: 0 1 auto; }
-/* Quiz headings ("Share your result") already label the row — drop the
-   redundant inline "Share:" so compact pills fit the ~680px card. */
+/* Quiz cards are max ~680px wide: 6 text pills need ~700px and can never fit
+   one row, so quiz share is icon-only circles at EVERY width.
+   Desktop: 6x36px + 5x6px gaps = 246px — share + CTA button fit side by side.
+   Phone: 6x32px + 5x5px gaps = 217px — fits ~270px with slack. */
+/* Quiz headings ("Share your result", cta-note) already label the row — drop the
+   redundant inline "Share:" so the row is just 6 circles. */
 .quiz-share .share-wrap > .share-label, .quiz-result-share .share-wrap > .share-label { display: none; }
-@media (max-width: 700px) {
- /* Quiz cards go narrow fast: icon-only circles below 700px. */
+.quiz-share .share-wrap { gap: 6px; }
+.quiz-share .share-wrap .share-btn, .quiz-share .share-wrap .share-copy {
+ padding: 0; width: 36px; height: 36px; min-height: 36px;
+ flex: 0 0 auto; justify-content: center; gap: 0; border-radius: 50%; font-size: 0;
+}
+.quiz-share .share-wrap .share-btn span, .quiz-share .share-wrap .share-copy span { display: none; }
+.quiz-share .share-wrap .share-btn svg, .quiz-share .share-wrap .share-copy svg { width: 17px; height: 17px; }
+@media (max-width: 560px) {
+ .quiz-share .share-wrap { gap: 5px; }
  .quiz-share .share-wrap .share-btn, .quiz-share .share-wrap .share-copy {
-  padding: 0; width: 40px; height: 40px; min-height: 40px;
-  flex: 0 0 auto; justify-content: center; gap: 0; border-radius: 50%;
-  font-size: 0;
+  width: 32px; height: 32px; min-height: 32px;
  }
- .quiz-share .share-wrap .share-btn span, .quiz-share .share-wrap .share-copy span { display: none; }
- .quiz-share .share-wrap .share-btn svg, .quiz-share .share-wrap .share-copy svg { width: 17px; height: 17px; }
+ .quiz-share .share-wrap .share-btn svg, .quiz-share .share-wrap .share-copy svg { width: 16px; height: 16px; }
 }
 .quiz-friend{border:1px solid #E3D9C4;border-left:4px solid #AA151B;background:#FFFDF8;border-radius:0 12px 12px 0;padding:12px 16px;margin:14px 0;font-size:.95rem;line-height:1.5}
 @media (max-width:560px){
