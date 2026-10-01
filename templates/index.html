@@ -28,127 +28,155 @@
 ]}
 </script>
  <div class="page">
-  <div class="hero">
-   <span class="brand-kicker">Free daily newsletter • 5-minute read</span>
-   <h1>Spain's top news, <span class="accent">in English</span>, every morning.</h1>
-   <p class="tagline">Spain Daily by <a href="/about">Spanified</a> — your 5-minute catch-up on what's happening in Spain.</p>
-   <div class="badges">
-    <span class="badge"><span class="dot">●</span>Free forever</span>
-    <span class="badge"><span class="dot">●</span>Every morning</span>
-    <span class="badge"><span class="dot">●</span>5-minute read</span>
+  <style>
+   body.page-home .home-zone-tools,
+   body.page-home .home-zone-trust { border-top: 1px solid #EFE7D8; margin-top: 12px; padding-top: 36px; }
+   body.page-home .zone-head { text-align: center; max-width: 560px; margin: 0 auto 24px auto; }
+   body.page-home .zone-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #AA151B; margin: 0 0 8px 0; }
+   body.page-home .zone-head h2 { margin: 0 0 8px 0; }
+   body.page-home .zone-sub { color: #6C7A89; font-size: 16px; line-height: 1.55; margin: 0; }
+   body.page-home .tools-stack { display: flex; flex-direction: column; gap: 28px; }
+   @media (max-width: 860px) {
+    body.page-home .home-zone-tools,
+    body.page-home .home-zone-trust { padding-top: 28px; }
+   }
+  </style>
+
+  <!-- Zone A: the digest, start to finish -->
+  <section class="home-zone-digest" aria-label="Spain Daily digest">
+   <div class="hero">
+    <span class="brand-kicker">Free daily newsletter • 5-minute read</span>
+    <h1>Spain's top news, <span class="accent">in English</span>, every morning.</h1>
+    <p class="tagline">Spain Daily by <a href="/about">Spanified</a> — your 5-minute catch-up on what's happening in Spain.</p>
+    <div class="badges">
+     <span class="badge"><span class="dot">●</span>Free forever</span>
+     <span class="badge"><span class="dot">●</span>Every morning</span>
+     <span class="badge"><span class="dot">●</span>5-minute read</span>
+    </div>
+    <p class="hero-proof">Seven days a week, around 08:00 Madrid time</p>
    </div>
-   <p class="hero-proof">Daily since {{ proof.first_issue }} · {{ proof.total_issues }} issues</p>
-  </div>
 
-  {% if latest %}
-  <a class="card teaser" href="{{ latest.url }}">
-   <div class="teaser-kicker">Fresh from this morning</div>
-   <div class="teaser-date">{{ latest.date_display }} · {{ latest.story_count }} news</div>
-   <h2>{{ latest.headline }}</h2>
-   {% for item in latest.stories[:3] %}
-   <div class="teaser-story"><span>{{ emoji.get(item.category, '📰') }}</span><span>{{ item.title }}</span></div>
-   {% endfor %}
-   <div class="teaser-more">Read the full edition →</div>
-  </a>
-  {% endif %}
+   {% if latest %}
+   <a class="card teaser" href="{{ latest.url }}">
+    <div class="teaser-kicker">Fresh from this morning</div>
+    <div class="teaser-date">{{ latest.date_display }} · {{ latest.story_count }} news</div>
+    <h2>{{ latest.headline }}</h2>
+    {% for item in latest.stories[:3] %}
+    <div class="teaser-story"><span>{{ emoji.get(item.category, '📰') }}</span><span>{{ item.title }}</span></div>
+    {% endfor %}
+    <div class="teaser-more">Read the full edition →</div>
+   </a>
+   {% endif %}
 
-  <div class="card intro-panel">
-   <div class="teaser-kicker">What is this?</div>
-   <p class="intro-lead">Spain moves fast — <strong>rents, taxes, visas, jobs.</strong> Every morning we read the Spanish press cover to cover and hand you only the news that affects your life: short summaries in plain English, zero clickbait.</p>
-   <p class="intro-audience">☕ Live in Spain, planning the move, or just watching from afar — five minutes with coffee and you're up to speed.</p>
-  </div>
-
-  <div class="card">
-   <div class="teaser-kicker">Spanified tools</div>
-   <h2>Tax calculators for Spain</h2>
-   <p>Autónomo Tax, Property Buying Cost and Electricity Bill calculators — practical tools for life in Spain, free, no sign-up.</p>
-   <div class="topics">
-    <a class="topic" href="/calculators/autonomo-tax">🧮 Autónomo Tax Calculator</a>
-    <a class="topic" href="/calculators/property-buying-cost">🏠 Property Buying Cost Calculator</a>
-    <a class="topic" href="/calculators/electricity-bill">⚡ Electricity Bill Calculator</a>
+   <div class="card intro-panel">
+    <h2>What is this?</h2>
+    <p class="intro-lead">Spain moves fast — <strong>rents, taxes, visas, jobs.</strong> Every morning we read the Spanish press cover to cover and hand you only the news that affects your life: short summaries in plain English, zero clickbait.</p>
+    <p class="intro-audience">☕ Live in Spain, planning the move, or just watching from afar — five minutes with coffee and you're up to speed.</p>
    </div>
-  </div>
 
-  <div class="card quizzes-block">
-   <div class="teaser-kicker">Spanified quizzes</div>
-   <h2>Quizzes — two minutes each</h2>
-   <p>Real stories from Spain, mixed with inventions. Can you tell which is which?</p>
-   <div class="quizzes-grid">
-    {% for q in quizzes %}
-    <a class="quiz-mini" href="{{ q.url }}" aria-label="Take the quiz: {{ q.title }}">
-     <img class="quiz-mini-cover" src="{{ q.cover }}" alt="" width="1200" height="630" loading="lazy">
-     <span class="quiz-mini-body">
-      <span class="quiz-mini-kicker">{{ q.kicker }}</span>
-      <span class="quiz-mini-title">{{ q.title }}</span>
-      <span class="quiz-mini-hook">{{ q.hook }}</span>
-      <span class="quiz-mini-cta">Take the quiz →</span>
-     </span>
-    </a>
+   <div class="card">
+    <h2>What's inside?</h2>
+    <ul class="features">
+     <li>Top Spanish news, curated and summarized</li>
+     <li>Short and to the point — a 5-minute read</li>
+     <li>Delivered to your inbox every morning, seven days a week</li>
+    </ul>
+    <div class="topics">
+     {% for t in topics %}<a class="topic" href="/category/{{ t.slug }}">{{ t.emoji }} {{ t.name }}</a>{% endfor %}
+    </div>
+   </div>
+
+   <div class="card how-card">
+    <h2>How it works</h2>
+    <p class="how-sub">From the Spanish press to your inbox — every morning.</p>
+    <ol class="how-chain">
+     <li><span class="how-num" aria-hidden="true">1</span><div class="how-text"><strong>We read the Spanish press</strong><span>National dailies, wires and regional titles — every morning.</span></div></li>
+     <li><span class="how-num" aria-hidden="true">2</span><div class="how-text"><strong>We pick what affects your life</strong><span>Rents, taxes, visas, jobs — not clickbait.</span></div></li>
+     <li><span class="how-num" aria-hidden="true">3</span><div class="how-text"><strong>We summarize in plain English</strong><span>Short factual briefs with links to the sources, created with the help of AI.</span></div></li>
+     <li><span class="how-num" aria-hidden="true">4</span><div class="how-text"><strong>A human checks every edition</strong><span>The editor reviews stories and sources before anything goes out.</span></div></li>
+     <li><span class="how-num how-num-last" aria-hidden="true">5</span><div class="how-text"><strong>You read it in 5 minutes</strong><span>In your inbox around 08:00 Madrid time, seven days a week.</span></div></li>
+    </ol>
+   </div>
+
+   <div class="cta-card">
+    <p class="cta-kicker">Free · Every morning · 5-minute read</p>
+    <h2>Ready to stay in the loop?</h2>
+    <p class="cta-sub">Join 500+ readers who start their day with Spain Daily.</p>
+    <a href="/subscribe" class="cta-button">Subscribe — It's Free</a>
+    <p class="cta-microcopy">No spam · one email a day · cancel anytime</p>
+    <ul class="cta-proof">
+     <li>Daily since {{ proof.first_issue }}</li>
+     <li>{{ proof.total_issues }} issues</li>
+     <li><strong>{{ proof.reddit_display }}</strong> on Reddit</li>
+     <li><strong>{{ proof.threads_display }}</strong> on Threads</li>
+    </ul>
+   </div>
+
+   {% include "partials/testimonials.html" %}
+  </section>
+
+  <!-- Zone B: interactive tools and quizzes -->
+  <section class="home-zone-tools" aria-label="Interactive tools and quizzes">
+   <div class="zone-head">
+    <p class="zone-eyebrow">Spanified tools &amp; quizzes</p>
+    <h2>Try the interactive tools</h2>
+    <p class="zone-sub">Practical calculators and quick quizzes for life in Spain — free, no sign-up.</p>
+   </div>
+   <div class="tools-stack">
+    <div class="card quizzes-block">
+     <h2>Quizzes — two minutes each</h2>
+     <p>Real stories from Spain, mixed with inventions. Can you tell which is which?</p>
+     <div class="quizzes-grid">
+      {% for q in quizzes %}
+      <a class="quiz-mini" href="{{ q.url }}" aria-label="Take the quiz: {{ q.title }}">
+       <img class="quiz-mini-cover" src="{{ q.cover }}" alt="" width="1200" height="630" loading="lazy">
+       <span class="quiz-mini-body">
+        <span class="quiz-mini-kicker">{{ q.kicker }}</span>
+        <span class="quiz-mini-title">{{ q.title }}</span>
+        <span class="quiz-mini-hook">{{ q.hook }}</span>
+        <span class="quiz-mini-cta">Take the quiz →</span>
+       </span>
+      </a>
+      {% endfor %}
+     </div>
+    </div>
+
+    <div class="card">
+     <h2>Tax calculators for Spain</h2>
+     <p>Autónomo Tax, Property Buying Cost and Electricity Bill calculators — practical tools for life in Spain, free, no sign-up.</p>
+     <div class="topics">
+      <a class="topic" href="/calculators/autonomo-tax">🧮 Autónomo Tax Calculator</a>
+      <a class="topic" href="/calculators/property-buying-cost">🏠 Property Buying Cost Calculator</a>
+      <a class="topic" href="/calculators/electricity-bill">⚡ Electricity Bill Calculator</a>
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <!-- Zone C: socials and answers -->
+  <section class="home-zone-trust" aria-label="Socials and questions">
+   <div class="card">
+    <h2>Follow along</h2>
+    <p>Prefer your feed over your inbox? We post every edition on socials too.</p>
+    <div class="follow-row">
+     {% include "partials/social.html" %}
+    </div>
+   </div>
+
+   <div class="card faq-card">
+    <h2>Questions, answered</h2>
+    {% for q, a in faq %}
+    <details class="faq-item">
+     <summary>{{ q }}</summary>
+     <p>{{ a }}</p>
+    </details>
     {% endfor %}
    </div>
-  </div>
 
-  <div class="card">
-   <h2>What's inside?</h2>
-   <ul class="features">
-    <li>Top Spanish news, curated and summarized</li>
-    <li>Short and to the point — a 5-minute read</li>
-    <li>Delivered to your inbox every morning, seven days a week</li>
-   </ul>
-   <div class="topics">
-    {% for t in topics %}<a class="topic" href="/category/{{ t.slug }}">{{ t.emoji }} {{ t.name }}</a>{% endfor %}
-   </div>
-  </div>
-
-  <div class="card how-card">
-   <h2>How it works</h2>
-   <p class="how-sub">From the Spanish press to your inbox — every morning.</p>
-   <ol class="how-chain">
-    <li><span class="how-num" aria-hidden="true">1</span><div class="how-text"><strong>We read the Spanish press</strong><span>National dailies, wires and regional titles — every morning.</span></div></li>
-    <li><span class="how-num" aria-hidden="true">2</span><div class="how-text"><strong>We pick what affects your life</strong><span>Rents, taxes, visas, jobs — not clickbait.</span></div></li>
-    <li><span class="how-num" aria-hidden="true">3</span><div class="how-text"><strong>We summarize in plain English</strong><span>Short factual briefs with links to the sources, created with the help of AI.</span></div></li>
-    <li><span class="how-num" aria-hidden="true">4</span><div class="how-text"><strong>A human checks every edition</strong><span>The editor reviews stories and sources before anything goes out.</span></div></li>
-    <li><span class="how-num how-num-last" aria-hidden="true">5</span><div class="how-text"><strong>You read it in 5 minutes</strong><span>In your inbox around 08:00 Madrid time, seven days a week.</span></div></li>
-   </ol>
-  </div>
-
-  <div class="cta-card">
-   <p class="cta-kicker">Free · Every morning · 5-minute read</p>
-   <h2>Ready to stay in the loop?</h2>
-   <p class="cta-sub">Join 500+ readers who start their day with Spain Daily.</p>
-   <a href="/subscribe" class="cta-button">Subscribe — It's Free</a>
-   <p class="cta-microcopy">No spam · one email a day · cancel anytime</p>
-   <ul class="cta-proof">
-    <li>Daily since {{ proof.first_issue }}</li>
-    <li>{{ proof.total_issues }} issues</li>
-    <li><strong>{{ proof.reddit_display }}</strong> on Reddit</li>
-    <li><strong>{{ proof.threads_display }}</strong> on Threads</li>
-   </ul>
-  </div>
-
-  {% include "partials/testimonials.html" %}
-
-  <div class="card">
-   <h2>Follow along</h2>
-   <p>Prefer your feed over your inbox? We post every edition on socials too.</p>
-   <div class="follow-row">
-    {% include "partials/social.html" %}
-   </div>
-  </div>
-
-  <div class="card faq-card">
-   <h2>Questions, answered</h2>
-   {% for q, a in faq %}
-   <details class="faq-item">
-    <summary>{{ q }}</summary>
-    <p>{{ a }}</p>
-   </details>
-   {% endfor %}
-  </div>
-
-  <p class="page-note">
-   No spam, ever. Unsubscribe anytime in one click.<br>
-   This digest is based on real news, created with the help of AI and reviewed by a human.
-  </p>
-  </div>
+   <p class="page-note">
+    No spam, ever. Unsubscribe anytime in one click.<br>
+    This digest is based on real news, created with the help of AI and reviewed by a human.
+   </p>
+  </section>
+ </div>
 {% endblock %}
