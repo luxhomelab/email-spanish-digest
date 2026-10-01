@@ -313,12 +313,14 @@ FAQ_ITEMS = [
 ]
 
 
-def load_quiz_cards():
+def load_quiz_cards(homepage=False):
     """Light metadata for every quiz in data/quizzes/*.json.
 
     Used for the homepage "Quizzes" block and the "try the other quiz"
     cross-links (neighbours = every quiz except the current one).
-    Cover art lives at /static/img/quiz/<slug>/quiz-cover.jpg by convention.
+    Cover art lives at /static/img/quiz/<slug>/quiz-cover.jpg by convention;
+    on the homepage the first quiz (ai-or-real) is promoted with its OG/hook
+    art (quiz-hook.jpg) instead — cross-link cards keep the default art.
     """
     quizzes_dir = os.path.join(SCRIPT_DIR, "data", "quizzes")
     cards = []
@@ -336,6 +338,9 @@ def load_quiz_cards():
         title = quiz.get("title")
         if not slug or not title:
             continue
+        cover = f"/static/img/quiz/{slug}/quiz-cover.jpg"
+        if homepage and slug == "ai-or-real":
+            cover = f"/static/img/quiz/{slug}/quiz-hook.jpg"
         cards.append({
             "slug": slug,
             "title": title,
@@ -344,7 +349,7 @@ def load_quiz_cards():
                 "10 headlines from Spain — half really happened, "
                 "half we made up. Can you tell which is which?"
             ),
-            "cover": f"/static/img/quiz/{slug}/quiz-cover.jpg",
+            "cover": cover,
             "url": f"/quiz/{slug}",
         })
     return cards
@@ -407,7 +412,7 @@ def render_static(env, digests):
     }
 
     contexts = {
-        "index.html": {"latest": latest, "topics": topics, "emoji": CATEGORY_EMOJI, "faq": FAQ_ITEMS, "proof": proof, "quizzes": load_quiz_cards()},
+        "index.html": {"latest": latest, "topics": topics, "emoji": CATEGORY_EMOJI, "faq": FAQ_ITEMS, "proof": proof, "quizzes": load_quiz_cards(homepage=True)},
         "about.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "About", "url": "/about", "current": True}]},
         "contact.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Contact", "url": "/contact", "current": True}]},
         "editor.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Editor", "url": "/editor", "current": True}]},
