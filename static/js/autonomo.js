@@ -155,38 +155,20 @@ function syncShareLinks() {
   if (copy) copy.dataset.url = pageUrl
 }
 
-function wireShareMenu() {
+function wireShareCopy() {
   const wrap = document.querySelector('.calc-share .share-wrap')
   if (!wrap) return
-  const toggleBtn = wrap.querySelector('.share-toggle')
-  const menu = wrap.querySelector('.share-menu')
-  if (!toggleBtn || !menu) return
-  const close = () => {
-    menu.hidden = true
-    toggleBtn.setAttribute('aria-expanded', 'false')
-  }
-  toggleBtn.addEventListener('click', e => {
-    e.stopPropagation()
-    const willOpen = menu.hidden
-    close()
-    if (willOpen) {
-      menu.hidden = false
-      toggleBtn.setAttribute('aria-expanded', 'true')
-    }
-  })
-  document.addEventListener('click', e => {
-    if (!e.target.closest('.calc-share .share-wrap')) close()
-  })
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') close()
-  })
   wrap.addEventListener('click', e => {
     const btn = e.target.closest('.share-copy')
     if (!btn) return
     const label = btn.querySelector('span')
     const done = () => {
-      label.textContent = 'Copied!'
-      setTimeout(() => { label.textContent = 'Copy link' }, 1500)
+      if (label) label.textContent = 'Copied!'
+      btn.classList.add('is-copied')
+      setTimeout(() => {
+        if (label) label.textContent = 'Copy link'
+        btn.classList.remove('is-copied')
+      }, 1500)
     }
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(btn.dataset.url).then(done, done)
@@ -348,7 +330,7 @@ function init() {
 
   toggle('personal-toggle', 'personal-body')
   toggle('irpf-toggle', 'irpf-body')
-  wireShareMenu()
+  wireShareCopy()
 
   render(state)
   syncShareLinks()

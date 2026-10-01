@@ -37,42 +37,25 @@ function syncShareLinks(text, url, longText) {
   set('a[href*="facebook.com/sharer"]', `https://www.facebook.com/sharer/sharer.php?u=${u}&quote=${tl}`)
   set('a[href*="t.me/share"]', `https://t.me/share/url?url=${u}&text=${tl}`)
   set('a[href*="wa.me"]', `https://wa.me/?text=${tl}%20${u}`)
+  set('a[href*="threads.com/intent"]', `https://www.threads.com/intent/post?text=${tl}&url=${u}`)
   const copy = wrap.querySelector('.share-copy')
   if (copy) copy.dataset.url = pageUrl
 }
 
-function wireShareMenu() {
+function wireShareCopy() {
   const wrap = document.querySelector('.quiz-share .share-wrap')
   if (!wrap) return
-  const toggleBtn = wrap.querySelector('.share-toggle')
-  const menu = wrap.querySelector('.share-menu')
-  if (!toggleBtn || !menu) return
-  const close = () => {
-    menu.hidden = true
-    toggleBtn.setAttribute('aria-expanded', 'false')
-  }
-  toggleBtn.addEventListener('click', e => {
-    e.stopPropagation()
-    const willOpen = menu.hidden
-    close()
-    if (willOpen) {
-      menu.hidden = false
-      toggleBtn.setAttribute('aria-expanded', 'true')
-    }
-  })
-  document.addEventListener('click', e => {
-    if (!e.target.closest('.quiz-share .share-wrap')) close()
-  })
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') close()
-  })
   wrap.addEventListener('click', e => {
     const btn = e.target.closest('.share-copy')
     if (!btn) return
     const label = btn.querySelector('span')
     const done = () => {
-      label.textContent = 'Copied!'
-      setTimeout(() => { label.textContent = 'Copy link' }, 1500)
+      if (label) label.textContent = 'Copied!'
+      btn.classList.add('is-copied')
+      setTimeout(() => {
+        if (label) label.textContent = 'Copy link'
+        btn.classList.remove('is-copied')
+      }, 1500)
     }
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(btn.dataset.url).then(done, done)
@@ -376,7 +359,7 @@ function init() {
     )
   }
 
-  wireShareMenu()
+  wireShareCopy()
   syncShareLinks(title ? `${title} — Spanified` : document.title)
 }
 

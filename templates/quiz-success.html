@@ -94,28 +94,25 @@ try {
       set('a[href*="facebook.com/sharer"]', `https://www.facebook.com/sharer/sharer.php?u=${u}&quote=${tl}`);
       set('a[href*="t.me/share"]', `https://t.me/share/url?url=${u}&text=${tl}`);
       set('a[href*="wa.me"]', `https://wa.me/?text=${tl}%20${u}`);
+      set('a[href*="threads.com/intent"]', `https://www.threads.com/intent/post?text=${tl}&url=${u}`);
       const copy = wrap.querySelector('.share-copy');
       if (copy) copy.dataset.url = url;
-      // Share menu toggle.
-      const btn = wrap.querySelector('.share-toggle'), menu = wrap.querySelector('.share-menu');
-      if (btn && menu) {
-        const close = () => { menu.hidden = true; btn.setAttribute('aria-expanded', 'false'); };
-        btn.addEventListener('click', e => {
-          e.stopPropagation();
-          const willOpen = menu.hidden; close();
-          if (willOpen) { menu.hidden = false; btn.setAttribute('aria-expanded', 'true'); }
-        });
-        document.addEventListener('click', e => { if (!e.target.closest('.share-wrap')) close(); });
-        document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
-        wrap.addEventListener('click', e => {
-          const c = e.target.closest('.share-copy');
-          if (!c) return;
-          const label = c.querySelector('span');
-          const done = () => { label.textContent = 'Copied!'; setTimeout(() => { label.textContent = 'Copy link'; }, 1500); };
-          if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(c.dataset.url).then(done, done);
-          else done();
-        });
-      }
+      // Copy-link feedback (share buttons are always visible — no toggle menu).
+      wrap.addEventListener('click', e => {
+        const c = e.target.closest('.share-copy');
+        if (!c) return;
+        const label = c.querySelector('span');
+        const done = () => {
+          if (label) label.textContent = 'Copied!';
+          c.classList.add('is-copied');
+          setTimeout(() => {
+            if (label) label.textContent = 'Copy';
+            c.classList.remove('is-copied');
+          }, 1500);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(c.dataset.url).then(done, done);
+        else done();
+      });
     }
   }
 } catch (e) {

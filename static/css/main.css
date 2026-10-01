@@ -1316,65 +1316,57 @@ button.cta-button { border: none; cursor: pointer; font-family: inherit; }
  .unsub-social { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
  .unsub-social .soc { padding: 12px 14px; font-size: 15px; }
 }
-body.page-digest .share-wrap { position: relative; display: inline-block; margin-top: 12px; }
-body.page-digest .share-toggle {
+/* ---------- Share buttons: always one row, never page scroll (shared partial) ---------- */
+.share-wrap { display: flex; flex-wrap: nowrap; align-items: center; gap: 6px; max-width: 100%; min-width: 0; overflow: hidden; }
+.share-wrap .share-label { font-size: 13px; font-weight: 700; color: #6C7A89; margin-right: 2px; flex: 0 0 auto; }
+.share-wrap .share-btn, .share-wrap .share-copy {
  display: inline-flex; align-items: center; gap: 7px;
+ flex: 0 1 auto; min-width: 0; white-space: nowrap;
  border: 1px solid #E3D9C4; border-radius: 999px;
- padding: 5px 14px; font-size: 13px; font-weight: 600;
- color: #3C4858; background-color: #FFFDF8;
- cursor: pointer; font-family: inherit;
+ padding: 7px 12px; min-height: 36px;
+ font-size: 12.5px; font-weight: 600; color: #3C4858; text-decoration: none;
+ background-color: #FFFDF8; cursor: pointer; font-family: inherit;
  transition: border-color 0.15s, background-color 0.15s;
 }
-body.page-digest .share-toggle:hover { border-color: #AA151B; background-color: #F8EFDD; }
-body.page-digest .share-toggle svg { width: 14px; height: 14px; fill: #6C7A89; }
-body.page-digest .share-toggle:hover svg { fill: #AA151B; }
-body.page-digest .share-menu {
- position: absolute; top: calc(100% + 6px); left: 0; z-index: 20;
- min-width: 168px; padding: 6px;
- background-color: #FFFDF8; border: 1px solid #E3D9C4; border-radius: 12px;
- box-shadow: 0 6px 24px rgba(60,40,20,0.12);
+.share-wrap .share-btn span, .share-wrap .share-copy span {
+ overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
-body.page-digest .email-footer .share-menu { top: auto; bottom: calc(100% + 6px); }
-body.page-digest .email-footer .share-wrap { display: block; text-align: left; margin-top: 0; }
+.share-wrap .share-btn:hover, .share-wrap .share-copy:hover { border-color: #AA151B; background-color: #F8EFDD; }
+.share-wrap .share-btn svg, .share-wrap .share-copy svg { width: 16px; height: 16px; fill: #6C7A89; flex-shrink: 0; }
+.share-wrap .share-btn:hover svg, .share-wrap .share-copy:hover svg { fill: #AA151B; }
+.share-wrap .share-btn:focus-visible, .share-wrap .share-copy:focus-visible { outline: 2px solid #AA151B; outline-offset: 2px; }
+.share-wrap .share-copy.is-copied { border-color: #0E7A3D; color: #0E7A3D; }
+.share-wrap .share-copy.is-copied svg { fill: #0E7A3D; }
+@media (max-width: 560px) {
+ .share-wrap { gap: 6px; }
+ /* Icon-only circles: 6x34px + gaps = 234px, fits ~270px on a 360px screen with slack. */
+ .share-wrap > .share-label { display: none; }
+ .share-wrap .share-btn, .share-wrap .share-copy,
+ .quiz-share .share-wrap .share-btn, .quiz-share .share-wrap .share-copy {
+  padding: 0; width: 34px; height: 34px; min-height: 34px;
+  flex: 0 0 auto; justify-content: center; gap: 0; border-radius: 50%;
+  font-size: 0;
+ }
+ .share-wrap .share-btn span, .share-wrap .share-copy span { display: none; }
+ .share-wrap .share-btn svg, .share-wrap .share-copy svg { width: 16px; height: 16px; }
+}
+@media (max-width: 380px) {
+ .share-wrap { gap: 5px; }
+ .share-wrap .share-btn, .share-wrap .share-copy,
+ .quiz-share .share-wrap .share-btn, .quiz-share .share-wrap .share-copy {
+  width: 32px; height: 32px; min-height: 32px;
+ }
+}
+/* Quiz success row: share cluster must never push the card wider. */
+.quiz-share { min-width: 0; max-width: 100%; }
+.quiz-cta-row .quiz-share { flex: 1 1 auto; }
+body.page-digest .share-wrap { margin-top: 12px; }
+body.page-digest .email-footer .share-wrap { margin-top: 0; }
 body.page-digest .email-footer .share-cta { text-align: left; font-size: 14px; font-weight: 600; color: #3C4858; margin-bottom: 10px; }
-body.page-digest .share-menu a, body.page-digest .share-menu .share-copy {
- display: flex; align-items: center; gap: 10px; width: 100%;
- padding: 8px 10px; border: 0; border-radius: 8px;
- font-size: 13px; font-weight: 500; color: #3C4858; text-decoration: none;
- background: none; cursor: pointer; font-family: inherit; text-align: left;
-}
-body.page-digest .share-menu a:hover, body.page-digest .share-menu .share-copy:hover { background-color: #F8EFDD; }
-body.page-digest .share-menu svg { width: 16px; height: 16px; fill: #6C7A89; flex-shrink: 0; }
 /* ---------- Calculator share block (body.page-calculator scope) ---------- */
 body.page-calculator .calc-share { margin-top: 20px; text-align: left; }
 body.page-calculator .calc-share .share-cta { font-size: 14px; font-weight: 600; color: #3C4858; margin-bottom: 10px; }
-body.page-calculator .share-wrap { position: relative; display: inline-block; margin-top: 12px; }
-body.page-calculator .share-toggle {
- display: inline-flex; align-items: center; gap: 7px;
- border: 1px solid #E3D9C4; border-radius: 999px;
- padding: 5px 14px; font-size: 13px; font-weight: 600;
- color: #3C4858; background-color: #FFFDF8;
- cursor: pointer; font-family: inherit;
- transition: border-color 0.15s, background-color 0.15s;
-}
-body.page-calculator .share-toggle:hover { border-color: #AA151B; background-color: #F8EFDD; }
-body.page-calculator .share-toggle svg { width: 14px; height: 14px; fill: #6C7A89; }
-body.page-calculator .share-toggle:hover svg { fill: #AA151B; }
-body.page-calculator .share-menu {
- position: absolute; top: calc(100% + 6px); left: 0; z-index: 20;
- min-width: 168px; padding: 6px;
- background-color: #FFFDF8; border: 1px solid #E3D9C4; border-radius: 12px;
- box-shadow: 0 6px 24px rgba(60,40,20,0.12);
-}
-body.page-calculator .share-menu a, body.page-calculator .share-menu .share-copy {
- display: flex; align-items: center; gap: 10px; width: 100%;
- padding: 8px 10px; border: 0; border-radius: 8px;
- font-size: 13px; font-weight: 500; color: #3C4858; text-decoration: none;
- background: none; cursor: pointer; font-family: inherit; text-align: left;
-}
-body.page-calculator .share-menu a:hover, body.page-calculator .share-menu .share-copy:hover { background-color: #F8EFDD; }
-body.page-calculator .share-menu svg { width: 16px; height: 16px; fill: #6C7A89; flex-shrink: 0; }
-body.page-digest .share-menu a:hover svg, body.page-digest .share-menu .share-copy:hover svg { fill: #AA151B; }
+body.page-calculator .share-wrap { margin-top: 12px; }
 body.page-editor .editor { max-width: 1200px; width: 100%; margin: 0 auto; }
 body.page-editor .editor h1 { text-align: center; }
 body.page-editor .editor .subtitle { color: #6C7A89; font-size: 16px; margin-bottom: 28px; text-align: center; }
@@ -1597,19 +1589,32 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 .quiz-persona h2{margin:.2em 0 .4em;font-size:1.5rem}
 .quiz-persona p{margin:0 0 .8em;line-height:1.6}
 .quiz-persona p:last-child{margin-bottom:0}
-.quiz-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:24px}
+.quiz-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:16px;min-width:0;max-width:100%}
+.quiz-cta-row > *{min-width:0}
 .quiz-cta-btn{display:inline-block;background:#AA151B;color:#fff;font-weight:700;font-size:1rem;padding:13px 26px;border-radius:12px;text-decoration:none;cursor:pointer}
 .quiz-cta-btn:hover{background:#8A1019}
-.quiz-cta-note{margin:12px 0 0;font-size:.9rem;color:#666}
-.quiz-share .share-wrap{position:relative;display:inline-block}
-.quiz-share .share-toggle{display:inline-flex;align-items:center;gap:7px;border:1px solid #E3D9C4;border-radius:999px;padding:11px 20px;font-size:.95rem;font-weight:600;color:#3C4858;background-color:#FFFDF8;cursor:pointer;font-family:inherit;transition:border-color .15s,background-color .15s}
-.quiz-share .share-toggle:hover{border-color:#AA151B;background-color:#F8EFDD}
-.quiz-share .share-toggle svg{width:14px;height:14px;fill:#6C7A89}
-.quiz-share .share-toggle:hover svg{fill:#AA151B}
-.quiz-share .share-menu{position:absolute;top:calc(100% + 6px);left:0;z-index:20;min-width:168px;padding:6px;background-color:#FFFDF8;border:1px solid #E3D9C4;border-radius:12px;box-shadow:0 6px 24px rgba(60,40,20,.12)}
-.quiz-share .share-menu a,.quiz-share .share-menu .share-copy{display:flex;align-items:center;gap:10px;width:100%;padding:8px 10px;border:0;border-radius:8px;font-size:13px;font-weight:500;color:#3C4858;text-decoration:none;background:none;cursor:pointer;font-family:inherit;text-align:left}
-.quiz-share .share-menu a:hover,.quiz-share .share-menu .share-copy:hover{background-color:#F8EFDD}
-.quiz-share .share-menu svg{width:16px;height:16px;fill:#6C7A89;flex-shrink:0}
+.quiz-cta-note{margin:8px 0 0;font-size:.9rem;color:#666}
+/* Quiz cards are max ~680px wide: 6 text pills need ~700px and can never fit
+   one row, so quiz share is icon-only circles at EVERY width.
+   Desktop: 6x36px + 5x6px gaps = 246px — share + CTA button fit side by side.
+   Phone: 6x32px + 5x5px gaps = 217px — fits ~270px with slack. */
+/* Quiz headings ("Share your result", cta-note) already label the row — drop the
+   redundant inline "Share:" so the row is just 6 circles. */
+.quiz-share .share-wrap > .share-label, .quiz-result-share .share-wrap > .share-label { display: none; }
+.quiz-share .share-wrap { gap: 6px; }
+.quiz-share .share-wrap .share-btn, .quiz-share .share-wrap .share-copy {
+ padding: 0; width: 36px; height: 36px; min-height: 36px;
+ flex: 0 0 auto; justify-content: center; gap: 0; border-radius: 50%; font-size: 0;
+}
+.quiz-share .share-wrap .share-btn span, .quiz-share .share-wrap .share-copy span { display: none; }
+.quiz-share .share-wrap .share-btn svg, .quiz-share .share-wrap .share-copy svg { width: 17px; height: 17px; }
+@media (max-width: 560px) {
+ .quiz-share .share-wrap { gap: 5px; }
+ .quiz-share .share-wrap .share-btn, .quiz-share .share-wrap .share-copy {
+  width: 32px; height: 32px; min-height: 32px;
+ }
+ .quiz-share .share-wrap .share-btn svg, .quiz-share .share-wrap .share-copy svg { width: 16px; height: 16px; }
+}
 .quiz-friend{border:1px solid #E3D9C4;border-left:4px solid #AA151B;background:#FFFDF8;border-radius:0 12px 12px 0;padding:12px 16px;margin:14px 0;font-size:.95rem;line-height:1.5}
 @media (max-width:560px){
  .quiz-choices{grid-template-columns:1fr}
@@ -1627,7 +1632,7 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 .quiz-restart-wrap{margin:10px 0 0;text-align:center}
 .quiz-restart{background:none;border:none;color:#8a8478;font-size:.85rem;cursor:pointer;text-decoration:underline;padding:6px}
 .quiz-restart:hover{color:#3C4858}
-.quiz-retake-wrap{margin:14px 0 0;text-align:center}
+.quiz-retake-wrap{margin:16px 0 0;text-align:center}
 .quiz-retake-btn{background:#fff;border:2px solid #d4cfc7;color:#3C4858;border-radius:12px;padding:12px 24px;font-size:.95rem;font-weight:700;cursor:pointer}
 .quiz-retake-btn:hover{border-color:#AA151B;color:#AA151B}
 .quiz-start-btn{min-height:52px;min-width:44px;font-size:1.15rem;font-weight:800;padding:16px 40px;border-radius:14px;background:linear-gradient(180deg,#C2342A 0%,#AA151B 100%);color:#fff;border:none;box-shadow:0 4px 14px rgba(170,21,27,.3),0 1px 3px rgba(170,21,27,.15);transition:transform .1s,box-shadow .15s}
@@ -1641,7 +1646,7 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 
 /* ── Per-persona result landing pages ── */
 .quiz-result{max-width:680px;margin:0 auto;padding:clamp(12px,3vw,24px) clamp(8px,2vw,16px);background:linear-gradient(180deg,#FFF8EE 0%,#FFF3E0 100%);border-radius:20px}
-.quiz-result-hero{text-align:center;padding:clamp(28px,7vw,48px) clamp(18px,4vw,28px) clamp(20px,4vw,32px)}
+.quiz-result-hero{text-align:center;padding:clamp(28px,7vw,48px) clamp(18px,4vw,28px) clamp(16px,4vw,24px)}
 .quiz-result-hero .confirm-kicker{margin-bottom:8px}
 .quiz-result-hero h1{font-size:clamp(1.8rem,6vw,2.6rem);line-height:1.15;margin:0 0 .3em;letter-spacing:-.5px}
 .quiz-result-hero .quiz-result-score{font-size:1rem;color:#666;margin:0 0 1.2em}
@@ -1649,8 +1654,8 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 .quiz-result-cta{display:inline-block;min-height:44px;background:#AA151B;color:#fff;font-weight:700;font-size:1.05rem;padding:14px 32px;border-radius:12px;text-decoration:none;cursor:pointer;transition:background .15s}
 .quiz-result-cta:hover{background:#8A1019}
 .quiz-result-body{padding:0 clamp(18px,4vw,28px) clamp(20px,4vw,32px)}
-.quiz-result-text{font-size:1.05rem;line-height:1.65;color:#3C4858;margin:0 0 20px}
-.quiz-result-share{margin:0 0 24px}
+.quiz-result-text{font-size:1.05rem;line-height:1.65;color:#3C4858;margin:0 0 16px}
+.quiz-result-share{margin:0 0 16px}
 .quiz-result-share .share-label{font-size:14px;font-weight:600;color:#3C4858;margin-bottom:8px}
 .quiz-result-retake{text-align:center;margin:20px 0 0;font-size:.9rem;color:#666}
 .quiz-result-retake a{color:#AA151B;text-decoration:none;font-weight:600}
