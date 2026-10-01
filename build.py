@@ -82,6 +82,7 @@ STATIC_PAGES = [
 # images, domain config, localized pages).
 STATIC_COPY = [
     "CNAME",
+    "robots.txt",
     "x.html",
     "success.jpg",
     "confirm.jpg",

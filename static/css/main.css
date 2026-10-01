@@ -227,7 +227,8 @@ body.page-unsubscribe iframe, html.iframe-page .page-unsubscribe iframe {
  border: 1px solid #EAC9CA; border-radius: 999px; padding: 5px 14px;
  margin-bottom: 14px;
 }
-.hero .brand-kicker:hover { background-color: #AA151B; border-color: #AA151B; color: #ffffff; }
+.hero span.brand-kicker { cursor: default; }
+.hero a.brand-kicker:hover { background-color: #AA151B; border-color: #AA151B; color: #ffffff; }
 .hero h1 {
  font-family: Roboto, Helvetica, sans-serif;
  font-size: 36px; font-weight: 700; color: #3C4858;
@@ -982,9 +983,48 @@ body.page-home .teaser-story::before {
  content: counter(story, decimal-leading-zero);
  font-weight: 700; color: #AA151B; font-size: 13px; min-width: 24px;
 }
-/* Steps */
-body.page-home .step { border-radius: 12px; background: #FFFDF8; }
-body.page-home .step-num { background-color: #AA151B; }
+/* How it works — numbered connected chain (no emoji icons).
+   Desktop: 5 steps in one row joined by a single horizontal line.
+   Mobile: vertical chain joined by a single vertical line. */
+body.page-home .how-card .how-sub { color: #6C7A89; font-size: 15px; margin: 2px 0 0 0; }
+body.page-home .how-card .how-chain {
+  list-style: none; margin: 24px 0 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 0;
+  position: relative;
+}
+body.page-home .how-card .how-chain::before {
+  content: ""; position: absolute;
+  top: 19px; left: calc(10% + 8px); right: calc(10% + 8px); height: 2px;
+  background: #E3D9C4;
+}
+body.page-home .how-card .how-chain li {
+  position: relative; margin: 0; padding: 0 10px;
+  display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px;
+}
+body.page-home .how-num {
+  position: relative; z-index: 1;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px; border-radius: 50%; flex: 0 0 auto;
+  background: #FFFDF8; border: 2px solid #AA151B; color: #AA151B;
+  font-size: 15px; font-weight: 800; font-variant-numeric: tabular-nums;
+}
+body.page-home .how-num-last { background: #AA151B; color: #ffffff; }
+body.page-home .how-text { display: flex; flex-direction: column; gap: 4px; }
+body.page-home .how-text strong { color: #3C4858; font-size: 14.5px; line-height: 1.4; }
+body.page-home .how-text span { font-size: 13px; line-height: 1.55; color: #6C7A89; }
+@media (max-width: 700px) {
+  body.page-home .how-card { padding: 28px 22px; }
+  body.page-home .how-card .how-chain { grid-template-columns: 1fr; gap: 0; }
+  body.page-home .how-card .how-chain::before {
+    top: 27px; bottom: 27px; left: 16px; right: auto; width: 2px; height: auto;
+  }
+  body.page-home .how-card .how-chain li {
+    flex-direction: row; text-align: left; align-items: flex-start; gap: 14px;
+    padding: 10px 0;
+  }
+  body.page-home .how-card .how-text { flex: 1; min-width: 0; }
+  body.page-home .how-num { width: 34px; height: 34px; font-size: 14px; }
+}
 /* Topics */
 body.page-home .topic:hover { border-color: #AA151B; color: #AA151B; }
 /* CTA band */
@@ -1001,7 +1041,7 @@ body.page-home .hero .tagline { margin-bottom: 22px; }
 body.page-home .teaser-story { padding: 12px 0; }
 body.page-home .teaser-more { margin-top: 18px; }
 body.page-home .teaser h2 { margin: 10px 0 16px 0; }
-body.page-home .steps { gap: 16px; margin-top: 20px; }
+body.page-home .how-card .how-chain { margin-top: 20px; }
 body.page-home .topics { gap: 10px; margin-top: 20px; }
 body.page-home .cta-card { padding: 48px 40px; }
 body.page-home .page-note { margin-top: 28px; line-height: 1.7; }
@@ -1458,6 +1498,8 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 }
 .proof-inline .proof-num { font-weight: 700; color: #ffffff; }
 .proof-inline .proof-label { color: #98A6B5; }
+.hero-proof { font-size: 13px; color: #6C7A89; margin-top: 12px; margin-bottom: 0; }
+.cta-microcopy { font-size: 13px !important; margin-top: 12px !important; margin-bottom: 0 !important; opacity: 0.85; }
 
 /* ---------- Social proof: testimonials (Reddit comment style) ---------- */
 .testimonials {
@@ -1717,4 +1759,107 @@ body.page-home .quiz-teaser-row p{margin-bottom:0}
 .quiz-other-go{display:block;font-size:14px;font-weight:700;color:#AA151B;margin-top:2px}
 @media (max-width:560px){
  .quiz-other-cover{flex-basis:88px;width:88px;height:60px}
+}
+
+/* ---------- Homepage subscribe CTA hierarchy (scoped to .cta-card only) ----------
+   Intro explainer panel — tinted editorial strip, not another white card */
+body.page-home .intro-panel {
+  background: #FFF8EE;
+  border: 1px solid #EADFC9;
+  border-left: 4px solid #AA151B;
+  border-radius: 14px;
+}
+body.page-home .intro-panel .teaser-kicker { margin-bottom: 10px; }
+body.page-home .intro-lead {
+  font-size: 19px; line-height: 1.6; color: #1A1A16;
+  margin: 0 0 12px 0; max-width: none;
+}
+body.page-home .intro-lead strong { color: #AA151B; }
+body.page-home .intro-audience {
+  font-size: 15px; line-height: 1.6; color: #6C7A89;
+  margin: 0; max-width: none;
+  padding-top: 12px; border-top: 1px solid #EFE7D8;
+}
+@media (max-width: 520px) {
+  body.page-home .intro-panel { border-left-width: 3px; padding: 28px 22px; }
+  body.page-home .intro-lead { font-size: 17px; }
+}
+.cta-card .cta-kicker {
+ display: inline-block;
+ font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+ color: #ffffff; opacity: 0.8;
+ border: 1px solid rgba(255,255,255,0.35); border-radius: 999px;
+ padding: 6px 14px; margin: 0 0 14px 0;
+}
+.cta-card h2 {
+ font-size: 30px; line-height: 1.15; letter-spacing: -0.5px;
+ color: #ffffff; margin: 0 0 10px 0;
+}
+.cta-card .cta-sub {
+ font-size: 17px; line-height: 1.55;
+ margin: 0 auto 26px auto; max-width: 44ch;
+}
+.cta-card .cta-button {
+ font-size: 18px; font-weight: 700;
+ padding: 15px 44px; border-radius: 999px;
+ box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+ transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+.cta-card .cta-button:hover {
+ transform: translateY(-1px);
+ box-shadow: 0 10px 26px rgba(0,0,0,0.3);
+}
+.cta-card .cta-microcopy {
+ margin: 14px 0 0 0;
+}
+.cta-card .cta-proof {
+ list-style: none;
+ display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+ gap: 8px 0;
+ margin: 24px auto 0 auto; padding: 18px 0 0 0;
+ border-top: 1px solid rgba(255,255,255,0.22);
+ max-width: 580px;
+ font-size: 13.5px; line-height: 1.5;
+}
+.cta-card .cta-proof li {
+ padding: 0 14px; position: relative; white-space: nowrap;
+}
+.cta-card .cta-proof li + li::before {
+ content: "·"; position: absolute; left: -3px; top: 0; opacity: 0.5;
+}
+.cta-card .cta-proof strong { color: #ffffff; }
+@media (max-width: 520px) {
+ body.page-home .page .card { padding: 24px 20px; margin-bottom: 20px; }
+ body.page-home .hero { padding: 36px 8px 20px 8px; margin-bottom: 28px; }
+ body.page-home .teaser-story > span:last-child { min-width: 0; overflow-wrap: break-word; }
+ body.page-home .teaser h2, body.page-home .card h2 { overflow-wrap: break-word; }
+ body.page-home .topics { flex-direction: column; align-items: stretch; }
+ body.page-home .topic {
+  display: flex; align-items: center;
+  min-height: 44px; padding: 10px 16px;
+  font-size: 15px; line-height: 1.4;
+ }
+ body.page-home .follow-row { flex-direction: column; align-items: stretch; gap: 2px; }
+ body.page-home .follow-row .soc { min-height: 44px; display: inline-flex; align-items: center; padding: 6px 0; }
+ body.page-home .faq-card summary { min-height: 44px; }
+ body.page-home .cta-card { padding: 32px 20px; }
+ .cta-card { padding-left: 20px; padding-right: 20px; }
+ .cta-card .cta-kicker { font-size: 11px; letter-spacing: 1.5px; }
+ .cta-card h2 { font-size: 24px; }
+ .cta-card .cta-sub { font-size: 16px; margin-bottom: 22px; }
+ .cta-card .cta-button { width: 100%; max-width: 340px; padding: 15px 24px; box-sizing: border-box; white-space: normal; }
+ .cta-card .cta-proof { font-size: 13px; gap: 6px 0; }
+ .cta-card .cta-proof li { padding: 0 10px; }
+}
+/* Homepage tap targets between 521–600px: pills would otherwise stay ~30px
+   tall while the layout is still single-column phone-like. Same stacking as
+   the ≤520px rule, card padding untouched at this width. */
+@media (max-width: 600px) {
+ body.page-home .topics { flex-direction: column; align-items: stretch; }
+ body.page-home .topic {
+  display: flex; align-items: center;
+  min-height: 44px; padding: 10px 16px;
+  font-size: 15px; line-height: 1.4;
+ }
+ body.page-home .follow-row .soc { min-height: 44px; display: inline-flex; align-items: center; }
 }
