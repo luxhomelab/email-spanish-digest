@@ -1589,11 +1589,11 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 .quiz-persona h2{margin:.2em 0 .4em;font-size:1.5rem}
 .quiz-persona p{margin:0 0 .8em;line-height:1.6}
 .quiz-persona p:last-child{margin-bottom:0}
-.quiz-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:24px;min-width:0;max-width:100%}
+.quiz-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:16px;min-width:0;max-width:100%}
 .quiz-cta-row > *{min-width:0}
 .quiz-cta-btn{display:inline-block;background:#AA151B;color:#fff;font-weight:700;font-size:1rem;padding:13px 26px;border-radius:12px;text-decoration:none;cursor:pointer}
 .quiz-cta-btn:hover{background:#8A1019}
-.quiz-cta-note{margin:12px 0 0;font-size:.9rem;color:#666}
+.quiz-cta-note{margin:8px 0 0;font-size:.9rem;color:#666}
 /* Quiz cards are max ~680px wide: 6 text pills need ~700px and can never fit
    one row, so quiz share is icon-only circles at EVERY width.
    Desktop: 6x36px + 5x6px gaps = 246px — share + CTA button fit side by side.
@@ -1632,7 +1632,7 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 .quiz-restart-wrap{margin:10px 0 0;text-align:center}
 .quiz-restart{background:none;border:none;color:#8a8478;font-size:.85rem;cursor:pointer;text-decoration:underline;padding:6px}
 .quiz-restart:hover{color:#3C4858}
-.quiz-retake-wrap{margin:14px 0 0;text-align:center}
+.quiz-retake-wrap{margin:16px 0 0;text-align:center}
 .quiz-retake-btn{background:#fff;border:2px solid #d4cfc7;color:#3C4858;border-radius:12px;padding:12px 24px;font-size:.95rem;font-weight:700;cursor:pointer}
 .quiz-retake-btn:hover{border-color:#AA151B;color:#AA151B}
 .quiz-start-btn{min-height:52px;min-width:44px;font-size:1.15rem;font-weight:800;padding:16px 40px;border-radius:14px;background:linear-gradient(180deg,#C2342A 0%,#AA151B 100%);color:#fff;border:none;box-shadow:0 4px 14px rgba(170,21,27,.3),0 1px 3px rgba(170,21,27,.15);transition:transform .1s,box-shadow .15s}
@@ -1646,7 +1646,7 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 
 /* ── Per-persona result landing pages ── */
 .quiz-result{max-width:680px;margin:0 auto;padding:clamp(12px,3vw,24px) clamp(8px,2vw,16px);background:linear-gradient(180deg,#FFF8EE 0%,#FFF3E0 100%);border-radius:20px}
-.quiz-result-hero{text-align:center;padding:clamp(28px,7vw,48px) clamp(18px,4vw,28px) clamp(20px,4vw,32px)}
+.quiz-result-hero{text-align:center;padding:clamp(28px,7vw,48px) clamp(18px,4vw,28px) clamp(16px,4vw,24px)}
 .quiz-result-hero .confirm-kicker{margin-bottom:8px}
 .quiz-result-hero h1{font-size:clamp(1.8rem,6vw,2.6rem);line-height:1.15;margin:0 0 .3em;letter-spacing:-.5px}
 .quiz-result-hero .quiz-result-score{font-size:1rem;color:#666;margin:0 0 1.2em}
@@ -1654,8 +1654,8 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 .quiz-result-cta{display:inline-block;min-height:44px;background:#AA151B;color:#fff;font-weight:700;font-size:1.05rem;padding:14px 32px;border-radius:12px;text-decoration:none;cursor:pointer;transition:background .15s}
 .quiz-result-cta:hover{background:#8A1019}
 .quiz-result-body{padding:0 clamp(18px,4vw,28px) clamp(20px,4vw,32px)}
-.quiz-result-text{font-size:1.05rem;line-height:1.65;color:#3C4858;margin:0 0 20px}
-.quiz-result-share{margin:0 0 24px}
+.quiz-result-text{font-size:1.05rem;line-height:1.65;color:#3C4858;margin:0 0 16px}
+.quiz-result-share{margin:0 0 16px}
 .quiz-result-share .share-label{font-size:14px;font-weight:600;color:#3C4858;margin-bottom:8px}
 .quiz-result-retake{text-align:center;margin:20px 0 0;font-size:.9rem;color:#666}
 .quiz-result-retake a{color:#AA151B;text-decoration:none;font-weight:600}
