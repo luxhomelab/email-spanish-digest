@@ -91,6 +91,7 @@
     {% endif %}
    </div>
   </div>
+  {% set page_url = site_url + digest.url %}{% include "partials/remark42.html" %}
    {% set field_id = "digest-subscribe-email" %}{% set form_kind = "digest" %}{% set base_class = "cta-form-card" %}{% set indent = "    " %}{% include "partials/cta-form-card.html" %}
  </div>
 <script>
