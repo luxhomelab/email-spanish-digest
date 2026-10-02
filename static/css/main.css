@@ -2020,8 +2020,14 @@ body.page-home .intro-audience {
    /subscribe keep their own rules. Desktop and wider phones render at 100%. */
 @media (max-width: 430px) {
   .cta-form-card .subscribe-form .cf-turnstile > div { transform: scale(0.75); transform-origin: top left; }
+  /* Layout box stays 65px tall while the visual shrinks to ~49px (leftover
+     ~16px). Collapse it so the visual gap to the button matches the 14px
+     rhythm above (consent mb 14 + wrapper mt 0). */
+  .cta-form-card .subscribe-form .cf-turnstile { margin: 0 0 -2px 0; }
 }
 @media (max-width: 372px) {
   .cta-form-card .subscribe-form .cf-turnstile > div { transform: scale(0.6); }
-  .cta-form-card .subscribe-form .cf-turnstile { margin-bottom: 8px; }
+  /* Visual height ~39px (leftover ~26px): deeper pull-up for the same 14px
+     visual gap. Top gap untouched (margin-top 0 + consent mb 14). */
+  .cta-form-card .subscribe-form .cf-turnstile { margin-bottom: -12px; }
 }
