@@ -30,12 +30,14 @@
  "mainEntityOfPage": "{{ site_url }}{{ article.url }}"
 }
 </script>
+{% if article.faq %}
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage",
  "mainEntity": [{% for faq in article.faq %}
   {"@type": "Question", "name": {{ faq.q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ faq.a|tojson }}} }{% if not loop.last %},{% endif %}{% endfor %}
  ]}
 </script>
+{% endif %}
  <div class="digest" data-pagefind-sort="date:{{ article.date }}">
   <div class="digest-card">
    <h1 class="email-red-band">{{ article.title }}</h1>
@@ -63,6 +65,23 @@
        | replace('<blockquote>TIP: ', '<blockquote class="art-tip">')
        | safe }}
    </div>
+
+   {# FAQ authored as a trailing '## FAQ' section in data/articles/*.md
+      (parsed by build.py into article.faq); the same data drives this
+      visible block and the FAQPage JSON-LD above. #}
+   {% if article.faq %}
+   <section class="article-faq">
+    <h2 class="article-faq-title">Frequently asked questions</h2>
+    <div class="article-faq-list">
+     {% for faq in article.faq %}
+     <details class="article-faq-item"{% if loop.first %} open{% endif %}>
+      <summary>{{ faq.q }}</summary>
+      <div class="article-faq-answer">{{ faq.a_html|safe }}</div>
+     </details>
+     {% endfor %}
+    </div>
+   </section>
+   {% endif %}
 
    <div class="email-footer">
     <div class="share-cta">Found this useful? Share it with a friend.</div>

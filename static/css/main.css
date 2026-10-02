@@ -2413,3 +2413,94 @@ body.page-article .article-body > p:first-child { animation: art-in 0.5s ease-ou
  body.page-article .email-body { padding: 14px 20px 4px 20px; }
  body.page-article .email-footer { padding: 22px 20px 26px 20px; }
 }
+
+/* ---------- Article FAQ (body.page-article) ----------
+   Authored as a trailing '## FAQ' section in data/articles/*.md, parsed by
+   build.py into article.faq ({"q", "a", "a_html"}) and rendered in
+   templates/article.html — the SAME data drives the FAQPage JSON-LD. Visible
+   pattern: one cream card with dashed hairline rows (matches the
+   definition-style mini-table), gold square tick on the question (matches
+   article h3), red +/– accordion marker (matches .faq-card on the
+   calculator pages). Title mirrors the body h2. */
+body.page-article .article-faq {
+ clear: both;   /* never wraps around floated stat cards above */
+ padding: 0 32px 8px 32px;
+}
+body.page-article .article-faq-title {
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 25px; line-height: 1.3; letter-spacing: -0.3px;
+ color: #1A1A16; text-wrap: balance;
+ margin: 0 0 0.75em 0; padding: 1.4em 0 0 0;
+ border-top: 1px solid #F0EBE0;
+}
+body.page-article .article-faq-title::before {
+ content: "";
+ display: block;
+ width: 46px; height: 3px; border-radius: 2px;
+ background-color: #AA151B;
+ margin-bottom: 12px;
+}
+body.page-article .article-faq-list {
+ background-color: #FFFDF8;
+ border: 1px solid #EFE7D8; border-radius: 12px;
+ padding: 4px 0;
+}
+body.page-article .article-faq-item { border-bottom: 1px dashed #EFE7D8; }
+body.page-article .article-faq-item:last-child { border-bottom: none; }
+body.page-article .article-faq-item summary {
+ display: flex; align-items: center; gap: 12px;
+ cursor: pointer; list-style: none;
+ padding: 16px 18px;
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 17px; font-weight: 700; line-height: 1.4;
+ color: #1A1A16;
+ transition: color 0.15s;
+}
+body.page-article .article-faq-item summary::-webkit-details-marker { display: none; }
+body.page-article .article-faq-item summary:hover { color: #AA151B; }
+body.page-article .article-faq-item[open] summary { color: #AA151B; }
+body.page-article .article-faq-item summary::before {
+ content: ""; flex: none;
+ width: 9px; height: 9px; border-radius: 2px;
+ background-color: #F1BF00;
+}
+body.page-article .article-faq-item summary::after {
+ content: "+"; flex: none; margin-left: auto;
+ color: #AA151B; font-size: 20px; font-weight: 400; line-height: 1;
+}
+body.page-article .article-faq-item[open] summary::after { content: "–"; }
+/* Answer aligns under the question text (18px card padding + 9px tick + 12px gap). */
+body.page-article .article-faq-answer {
+ padding: 0 18px 18px 39px;
+ font-size: 15.5px; line-height: 1.7; color: #3C4858;
+ text-wrap: pretty;
+}
+body.page-article .article-faq-answer strong { color: #1A1A16; }
+body.page-article .article-faq-answer a {
+ color: #AA151B; text-decoration: underline;
+ text-decoration-thickness: 1px; text-underline-offset: 3px;
+ transition: background-color 0.15s, color 0.15s;
+}
+body.page-article .article-faq-answer a:hover { color: #8A1019; background-color: rgba(170, 21, 27, 0.07); }
+
+/* FAQ card rises into view like the article callout components. */
+body.page-article .article-faq-list {
+ animation: art-rise 0.55s ease both;
+ animation-timeline: view();
+ animation-range: entry 0% cover 28%;
+}
+@media (prefers-reduced-motion: reduce) {
+ body.page-article .article-faq-list { animation: none; }
+}
+
+@media (max-width: 640px) {
+ body.page-article .article-faq-title { font-size: 21px; }
+ body.page-article .article-faq-item summary { font-size: 16px; }
+ body.page-article .article-faq-answer { font-size: 15px; line-height: 1.65; }
+}
+/* FAQ rhythm on phones (must follow the digest 520px rules). */
+@media (max-width: 520px) {
+ body.page-article .article-faq { padding: 0 20px 18px 20px; }
+ body.page-article .article-faq-item summary { padding: 14px 16px; gap: 10px; }
+ body.page-article .article-faq-answer { padding: 0 16px 16px 35px; }
+}

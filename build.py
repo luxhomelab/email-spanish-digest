@@ -21,8 +21,10 @@ Usage: python3 build.py [--out dist] [--listmonk local] [--analytics on|off|auto
 
 import argparse
 import hashlib
+import html
 import json
 import os
+import re
 import shutil
 import sys
 from collections import Counter
@@ -302,12 +304,29 @@ def parse_article_file(path):
     return meta, body
 
 
+def article_inline_md(s):
+    """Escape + inline markdown (bold, italic, links) -> HTML.
+
+    Shared by the article body converter and the FAQ answer parser, so
+    **bold** and links work identically in body text and FAQ answers.
+    """
+    s = html.escape(s)
+    s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
+    s = re.sub(r"(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)", r"<em>\1</em>", s)
+
+    def _link(m):
+        text, url = m.group(1), m.group(2)
+        if url.startswith("http://") or url.startswith("https://"):
+            return f'<a href="{url}" target="_blank" rel="noopener">{text}</a>'
+        return f'<a href="{url}">{text}</a>'
+
+    s = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", _link, s)
+    return s
+
+
 def article_markdown_to_html(md):
     """Minimal markdown -> HTML (stdlib only): headings, bold, italic,
     links, unordered lists, paragraphs, hr. Input is escaped first."""
-    import html as _html
-    import re as _re
-
     lines = md.splitlines()
     out = []
     in_list = False
@@ -316,22 +335,8 @@ def article_markdown_to_html(md):
     def flush_para():
         if in_para:
             text = " ".join(in_para)
-            out.append(f"<p>{inline_md(text)}</p>")
+            out.append(f"<p>{article_inline_md(text)}</p>")
             in_para.clear()
-
-    def inline_md(s):
-        s = _html.escape(s)
-        s = _re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
-        s = _re.sub(r"(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)", r"<em>\1</em>", s)
-
-        def _link(m):
-            text, url = m.group(1), m.group(2)
-            if url.startswith("http://") or url.startswith("https://"):
-                return f'<a href="{url}" target="_blank" rel="noopener">{text}</a>'
-            return f'<a href="{url}">{text}</a>'
-
-        s = _re.sub(r"\[([^\]]+)\]\(([^)]+)\)", _link, s)
-        return s
 
     for line in lines:
         stripped = line.strip()
@@ -353,35 +358,35 @@ def article_markdown_to_html(md):
             if in_list:
                 out.append("</ul>")
                 in_list = False
-            out.append(f"<h2>{inline_md(stripped[3:].strip())}</h2>")
+            out.append(f"<h2>{article_inline_md(stripped[3:].strip())}</h2>")
             continue
         if stripped.startswith("### "):
             flush_para()
             if in_list:
                 out.append("</ul>")
                 in_list = False
-            out.append(f"<h3>{inline_md(stripped[4:].strip())}</h3>")
+            out.append(f"<h3>{article_inline_md(stripped[4:].strip())}</h3>")
             continue
         if stripped.startswith("# "):
             flush_para()
             if in_list:
                 out.append("</ul>")
                 in_list = False
-            out.append(f"<h2>{inline_md(stripped[2:].strip())}</h2>")
+            out.append(f"<h2>{article_inline_md(stripped[2:].strip())}</h2>")
             continue
         if stripped.startswith("> "):
             flush_para()
             if in_list:
                 out.append("</ul>")
                 in_list = False
-            out.append(f"<blockquote>{inline_md(stripped[2:].strip())}</blockquote>")
+            out.append(f"<blockquote>{article_inline_md(stripped[2:].strip())}</blockquote>")
             continue
         if stripped.startswith("- "):
             flush_para()
             if not in_list:
                 out.append("<ul>")
                 in_list = True
-            out.append(f"<li>{inline_md(stripped[2:].strip())}</li>")
+            out.append(f"<li>{article_inline_md(stripped[2:].strip())}</li>")
             continue
         if stripped.startswith("*") and stripped.endswith("*") and len(stripped) > 2 and stripped[1] != "*":
             # Single-line italic emphasis used as author byline -> keep as paragraph.
@@ -394,16 +399,57 @@ def article_markdown_to_html(md):
     return "\n".join(out)
 
 
-ARTICLE_FAQ = [
-    {"q": "Is switching electricity providers in Spain complicated?",
-     "a": "No — the new provider handles the whole switch. You agree on the call, they send the contract, the old one is cancelled."},
-    {"q": "Do I need perfect Spanish to switch?",
-     "a": "No. The calls happen in Spanish, but A2 level is enough to follow the numbers and confirm the terms."},
-    {"q": "How do I know which tariff is actually cheaper?",
-     "a": "You can't eyeball time-of-use tariffs. Check your real peak on Datadis, benchmark with the CNMC comparator on your bill, and run both offers through a calculator before deciding."},
-    {"q": "Will the provider send the offer by email?",
-     "a": "In practice, no — offers are read out over the phone. Decide on the call or turn it down; do the homework beforehand."},
-]
+def split_article_faq(body_md):
+    """Split an article body at its trailing '## FAQ' heading (whole line).
+
+    Returns (body_md_without_faq, faq): the body part renders exactly as
+    before; faq is a list of {"q", "a", "a_html"} dicts parsed by
+    parse_faq_section. Articles without a FAQ section come back with an
+    empty list.
+    """
+    lines = body_md.splitlines()
+    for i, line in enumerate(lines):
+        if line.strip() == "## FAQ":
+            return "\n".join(lines[:i]).rstrip(), parse_faq_section("\n".join(lines[i + 1:]))
+    return body_md, []
+
+
+def parse_faq_section(section_md):
+    """Parse a '## FAQ' section into [{"q", "a", "a_html"}] items.
+
+    '### ' headings are the questions; the paragraphs after a heading
+    (joined with spaces) are its answer. "a" keeps the inline markdown
+    as authored (plain text for the FAQPage JSON-LD); "a_html" is the
+    same answer rendered with article_inline_md so **bold** and links
+    work in the visible FAQ.
+    """
+    faq = []
+    question = None
+    paragraphs = []
+    current = []
+    for line in section_md.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("### "):
+            if current:
+                paragraphs.append(" ".join(current))
+                current = []
+            if question is not None:
+                answer = " ".join(paragraphs)
+                faq.append({"q": question, "a": answer, "a_html": article_inline_md(answer)})
+                paragraphs = []
+            question = stripped[4:].strip()
+        elif not stripped:
+            if current:
+                paragraphs.append(" ".join(current))
+                current = []
+        else:
+            current.append(stripped)
+    if current:
+        paragraphs.append(" ".join(current))
+    if question is not None:
+        answer = " ".join(paragraphs)
+        faq.append({"q": question, "a": answer, "a_html": article_inline_md(answer)})
+    return faq
 
 
 def load_articles():
@@ -421,6 +467,7 @@ def load_articles():
         except OSError as exc:
             print(f"WARN: skipping article {filename}: {exc}", file=sys.stderr)
             continue
+        body_md, faq = split_article_faq(body_md)
         slug = meta.get("slug") or filename[:-3]
         title = meta.get("title") or slug.replace("-", " ").capitalize()
         date = meta.get("date") or "2026-10-02"
@@ -443,7 +490,7 @@ def load_articles():
             "word_count": words,
             "reading_time": reading_time,
             "url": url,
-            "faq": ARTICLE_FAQ,
+            "faq": faq,
             "share": share_links(page_url, f"{title} — Spanified"),
         })
     articles.sort(key=lambda a: a.get("date", ""), reverse=True)

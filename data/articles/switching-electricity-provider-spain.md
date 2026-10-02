@@ -87,3 +87,21 @@ That's why the homework has to come first. Get your real peak from Datadis, benc
 The real cost depends on your own consumption pattern, not the headline price. That's the gap that tripped me up — try the free [Electricity Bill Calculator](/calculators/electricity-bill) on Spanified: plug in your current tariff and the new offer, and see the actual difference.
 
 So next time someone calls you with a deal, you don't have to guess. Have your current figures ready, enter the new ones, and read the number.
+
+## FAQ
+
+### Is switching electricity providers in Spain complicated?
+
+No — the new provider handles the whole switch. You agree on the call, they send the contract, the old one is cancelled.
+
+### Do I need perfect Spanish to switch?
+
+No. The calls happen in Spanish, but A2 level is enough to follow the numbers and confirm the terms.
+
+### How do I know which tariff is actually cheaper?
+
+You can't eyeball time-of-use tariffs. Check your real peak on Datadis, benchmark with the CNMC comparator on your bill, and run both offers through a calculator before deciding.
+
+### Will the provider send the offer by email?
+
+In practice, no — offers are read out over the phone. Decide on the call or turn it down; do the homework beforehand.
