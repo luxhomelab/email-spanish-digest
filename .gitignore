@@ -21,3 +21,4 @@ sitemap.xml
 dist/
 __pycache__/
 og/
+/articles/

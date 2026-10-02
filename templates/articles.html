@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block body_class %} class="page-archive page-articles"{% endblock %}
+{% block title %}Articles — Spanified{% if pagination.current > 1 %} — Page {{ pagination.current }}{% endif %}{% endblock %}
+{% block description %}<meta name="description" content="Spanified articles — practical guides to living in Spain: electricity, taxes, visas, property and everyday life.{% if pagination.current > 1 %} Page {{ pagination.current }}.{% endif %}">{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/articles/{% if pagination.current > 1 %}{{ pagination.current }}{% endif %}">{% endblock %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+{% if articles %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "ItemList",
+ "name": "Spanified articles{% if pagination.current > 1 %} — page {{ pagination.current }}{% endif %}",
+ "itemListElement": [{% for article in articles %}
+  {"@type": "ListItem", "position": {{ loop.index }}, "item": {"@type": "Article", "headline": {{ article.title|tojson }}, "url": "{{ site_url }}{{ article.url }}", "datePublished": "{{ pub_date(article.date) }}"}}{% if not loop.last %},{% endif %}{% endfor %}
+ ]}
+</script>
+{% endif %}
+ <div class="archive">
+  <h1>Articles{% if pagination.current > 1 %} — Page {{ pagination.current }}{% endif %}</h1>
+  <p class="subtitle">Practical guides to living in Spain — learned by doing.</p>
+
+  {% if articles %}
+  {% for article in articles %}
+  <a class="digest-card" href="{{ article.url }}">
+   <div class="digest-date">{{ article.date_display }}</div>
+   <div class="digest-headline">{{ article.title }}</div>
+   <div class="digest-meta">
+    <span class="digest-count">{{ article.reading_time }} min read</span>
+    {% if article.excerpt %}
+    <span class="digest-cats">
+     <span class="digest-cat">{{ article.excerpt[:120] }}{% if article.excerpt|length > 120 %}…{% endif %}</span>
+    </span>
+    {% endif %}
+   </div>
+  </a>
+  {% endfor %}
+  {% else %}
+  <div class="empty">No articles yet. Check back soon.</div>
+  {% endif %}
+
+  {% if pagination.total_pages > 1 %}
+  <nav class="pagination">
+   {% if pagination.current > 1 %}
+   <a class="first" href="/articles/">« First</a>
+   {% endif %}
+   {% if pagination.prev_url %}
+   <a href="{{ pagination.prev_url }}">← Prev</a>
+   {% else %}
+   <span class="disabled">← Prev</span>
+   {% endif %}
+
+   {% for p in pagination.pages %}
+    {% if p.current %}
+    <span class="current">{{ p.number }}</span>
+    {% else %}
+    <a href="{{ p.url }}">{{ p.number }}</a>
+    {% endif %}
+   {% endfor %}
+
+   {% if pagination.next_url %}
+   <a href="{{ pagination.next_url }}">Next →</a>
+   {% else %}
+   <span class="disabled">Next →</span>
+   {% endif %}
+  </nav>
+  {% endif %}
+ </div>
+{% endblock %}

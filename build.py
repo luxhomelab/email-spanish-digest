@@ -21,8 +21,10 @@ Usage: python3 build.py [--out dist] [--listmonk local] [--analytics on|off|auto
 
 import argparse
 import hashlib
+import html
 import json
 import os
+import re
 import shutil
 import sys
 from collections import Counter
@@ -35,11 +37,14 @@ from jinja2 import Environment, FileSystemLoader
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 TEMPLATES_DIR = os.path.join(SCRIPT_DIR, "templates")
 DATA_DIR = os.path.join(SCRIPT_DIR, "data", "digests")
+ARTICLES_SRC_DIR = os.path.join(SCRIPT_DIR, "data", "articles")
 OUT_DIR = SCRIPT_DIR
 ARCHIVE_DIR = os.path.join(OUT_DIR, "archive")
+ARTICLES_DIR = os.path.join(OUT_DIR, "articles")
 
 SITE_URL = "https://spanified.com"
 PAGE_SIZE = 10
+ARTICLES_PAGE_SIZE = 10
 
 # Listmonk backend for the native subscribe form (templates/partials/
 # subscribe-form.html renders these into action / l value).
@@ -259,6 +264,243 @@ def pagination(page, total_pages):
     }
 
 
+def articles_url(page):
+    if page == 1:
+        return "/articles/"
+    return f"/articles/{page}"
+
+
+def articles_pagination(page, total_pages):
+    start = min(max(page - 2, 1), max(total_pages - 4, 1))
+    end = min(start + 4, total_pages)
+    return {
+        "current": page,
+        "total_pages": total_pages,
+        "prev_url": articles_url(page - 1) if page > 1 else None,
+        "next_url": articles_url(page + 1) if page < total_pages else None,
+        "pages": [
+            {"number": p, "url": articles_url(p), "current": p == page}
+            for p in range(start, end + 1)
+        ],
+    }
+
+
+def parse_article_file(path):
+    """Parse data/articles/*.md with --- frontmatter --- + markdown body."""
+    with open(path, encoding="utf-8") as fh:
+        text = fh.read()
+    meta = {}
+    body = text
+    if text.startswith("---"):
+        end = text.find("\n---", 3)
+        if end != -1:
+            front = text[3:end].strip().strip("-\n")
+            body = text[end + 4:].lstrip("\n")
+            for line in front.splitlines():
+                if ":" not in line:
+                    continue
+                key, value = line.split(":", 1)
+                meta[key.strip()] = value.strip()
+    return meta, body
+
+
+def article_inline_md(s):
+    """Escape + inline markdown (bold, italic, links) -> HTML.
+
+    Shared by the article body converter and the FAQ answer parser, so
+    **bold** and links work identically in body text and FAQ answers.
+    """
+    s = html.escape(s)
+    s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
+    s = re.sub(r"(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)", r"<em>\1</em>", s)
+
+    def _link(m):
+        text, url = m.group(1), m.group(2)
+        if url.startswith("http://") or url.startswith("https://"):
+            return f'<a href="{url}" target="_blank" rel="noopener">{text}</a>'
+        return f'<a href="{url}">{text}</a>'
+
+    s = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", _link, s)
+    return s
+
+
+def article_markdown_to_html(md):
+    """Minimal markdown -> HTML (stdlib only): headings, bold, italic,
+    links, unordered lists, paragraphs, hr. Input is escaped first."""
+    lines = md.splitlines()
+    out = []
+    in_list = False
+    in_para = []
+
+    def flush_para():
+        if in_para:
+            text = " ".join(in_para)
+            out.append(f"<p>{article_inline_md(text)}</p>")
+            in_para.clear()
+
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            flush_para()
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            continue
+        if stripped in ("---", "***"):
+            flush_para()
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            out.append("<hr>")
+            continue
+        if stripped.startswith("## "):
+            flush_para()
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            out.append(f"<h2>{article_inline_md(stripped[3:].strip())}</h2>")
+            continue
+        if stripped.startswith("### "):
+            flush_para()
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            out.append(f"<h3>{article_inline_md(stripped[4:].strip())}</h3>")
+            continue
+        if stripped.startswith("# "):
+            flush_para()
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            out.append(f"<h2>{article_inline_md(stripped[2:].strip())}</h2>")
+            continue
+        if stripped.startswith("> "):
+            flush_para()
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            out.append(f"<blockquote>{article_inline_md(stripped[2:].strip())}</blockquote>")
+            continue
+        if stripped.startswith("- "):
+            flush_para()
+            if not in_list:
+                out.append("<ul>")
+                in_list = True
+            out.append(f"<li>{article_inline_md(stripped[2:].strip())}</li>")
+            continue
+        if stripped.startswith("*") and stripped.endswith("*") and len(stripped) > 2 and stripped[1] != "*":
+            # Single-line italic emphasis used as author byline -> keep as paragraph.
+            in_para.append(stripped)
+            continue
+        in_para.append(stripped)
+    flush_para()
+    if in_list:
+        out.append("</ul>")
+    return "\n".join(out)
+
+
+def split_article_faq(body_md):
+    """Split an article body at its trailing '## FAQ' heading (whole line).
+
+    Returns (body_md_without_faq, faq): the body part renders exactly as
+    before; faq is a list of {"q", "a", "a_html"} dicts parsed by
+    parse_faq_section. Articles without a FAQ section come back with an
+    empty list.
+    """
+    lines = body_md.splitlines()
+    for i, line in enumerate(lines):
+        if line.strip() == "## FAQ":
+            return "\n".join(lines[:i]).rstrip(), parse_faq_section("\n".join(lines[i + 1:]))
+    return body_md, []
+
+
+def parse_faq_section(section_md):
+    """Parse a '## FAQ' section into [{"q", "a", "a_html"}] items.
+
+    '### ' headings are the questions; the paragraphs after a heading
+    (joined with spaces) are its answer. "a" keeps the inline markdown
+    as authored (plain text for the FAQPage JSON-LD); "a_html" is the
+    same answer rendered with article_inline_md so **bold** and links
+    work in the visible FAQ.
+    """
+    faq = []
+    question = None
+    paragraphs = []
+    current = []
+    for line in section_md.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("### "):
+            if current:
+                paragraphs.append(" ".join(current))
+                current = []
+            if question is not None:
+                answer = " ".join(paragraphs)
+                faq.append({"q": question, "a": answer, "a_html": article_inline_md(answer)})
+                paragraphs = []
+            question = stripped[4:].strip()
+        elif not stripped:
+            if current:
+                paragraphs.append(" ".join(current))
+                current = []
+        else:
+            current.append(stripped)
+    if current:
+        paragraphs.append(" ".join(current))
+    if question is not None:
+        answer = " ".join(paragraphs)
+        faq.append({"q": question, "a": answer, "a_html": article_inline_md(answer)})
+    return faq
+
+
+def load_articles():
+    """Load data/articles/*.md, newest first. Returns article context dicts."""
+    articles = []
+    src = ARTICLES_SRC_DIR
+    if not os.path.isdir(src):
+        return articles
+    for filename in sorted(os.listdir(src)):
+        if not filename.endswith(".md"):
+            continue
+        path = os.path.join(src, filename)
+        try:
+            meta, body_md = parse_article_file(path)
+        except OSError as exc:
+            print(f"WARN: skipping article {filename}: {exc}", file=sys.stderr)
+            continue
+        body_md, faq = split_article_faq(body_md)
+        slug = meta.get("slug") or filename[:-3]
+        title = meta.get("title") or slug.replace("-", " ").capitalize()
+        date = meta.get("date") or "2026-10-02"
+        body_html = article_markdown_to_html(body_md)
+        words = len(_article_words(body_md))
+        reading_time = max(1, round(words / 200))
+        url = f"/articles/{slug}"
+        page_url = f"{SITE_URL}{url}"
+        articles.append({
+            "slug": slug,
+            "title": title,
+            "meta_title": meta.get("meta_title") or f"{title} — Spanified",
+            "meta_description": meta.get("meta_description") or meta.get("excerpt") or "",
+            "excerpt": meta.get("excerpt") or "",
+            "date": date,
+            "date_display": format_date(date),
+            "author": meta.get("author") or "Dmytro Shvechikov",
+            "image_alt": meta.get("image_alt") or "",
+            "body_html": body_html,
+            "word_count": words,
+            "reading_time": reading_time,
+            "url": url,
+            "faq": faq,
+            "share": share_links(page_url, f"{title} — Spanified"),
+        })
+    articles.sort(key=lambda a: a.get("date", ""), reverse=True)
+    return articles
+
+
+def _article_words(md):
+    return md.split()
+
+
 def load_social_stats():
     """Load social stats from data/social_stats.json with safe defaults."""
     try:
@@ -357,7 +599,7 @@ def load_quiz_cards(homepage=False):
     return cards
 
 
-def render_llms_txt(digests):
+def render_llms_txt(digests, articles=()):
     latest = digests[0]["date"] if digests else "n/a"
     lines = [
         "# Spanified — Spain Daily",
@@ -368,6 +610,7 @@ def render_llms_txt(digests):
         "## Key pages",
         f"- Home: {SITE_URL}/",
         f"- Archive (all editions): {SITE_URL}/archive/",
+        f"- Articles (guides): {SITE_URL}/articles/",
         f"- Search (newest first): {SITE_URL}/search",
         f"- About & methodology: {SITE_URL}/about",
         f"- Editor: {SITE_URL}/editor",
@@ -414,7 +657,7 @@ def render_static(env, digests):
     }
 
     contexts = {
-        "index.html": {"latest": latest, "topics": topics, "emoji": CATEGORY_EMOJI, "faq": FAQ_ITEMS, "proof": proof, "quizzes": load_quiz_cards(homepage=True)},
+        "index.html": {"latest": latest, "topics": topics, "emoji": CATEGORY_EMOJI, "faq": FAQ_ITEMS, "proof": proof, "quizzes": load_quiz_cards(homepage=True), "articles": load_articles()[:3]},
         "about.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "About", "url": "/about", "current": True}]},
         "contact.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Contact", "url": "/contact", "current": True}]},
         "editor.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Editor", "url": "/editor", "current": True}]},
@@ -668,6 +911,60 @@ def render_archive(env, digests):
         print(f"  wrote {'archive/index.html' if page == 1 else f'archive/{page}.html'}")
 
 
+def render_articles_list(env, articles):
+    total = len(articles)
+    total_pages = max(1, (total + ARTICLES_PAGE_SIZE - 1) // ARTICLES_PAGE_SIZE) if total else 1
+    template = env.get_template("articles.html")
+    os.makedirs(ARTICLES_DIR, exist_ok=True)
+    # Clear previously generated listing pages so removed articles don't linger.
+    for filename in os.listdir(ARTICLES_DIR):
+        dest = os.path.join(ARTICLES_DIR, filename)
+        if not os.path.isfile(dest):
+            continue
+        if filename == "index.html" or (filename[:-5].isdigit() and filename.endswith(".html")):
+            os.remove(dest)
+
+    for page in range(1, total_pages + 1):
+        start = (page - 1) * ARTICLES_PAGE_SIZE
+        page_articles = articles[start:start + ARTICLES_PAGE_SIZE]
+        crumbs = [{"name": "Home", "url": "/"}]
+        if page == 1:
+            crumbs.append({"name": "Articles", "url": "/articles/", "current": True})
+        else:
+            crumbs.append({"name": "Articles", "url": "/articles/"})
+            crumbs.append({"name": f"Page {page}", "url": f"/articles/{page}", "current": True})
+        output = template.render(articles=page_articles, pagination=articles_pagination(page, total_pages), crumbs=crumbs)
+        dest = os.path.join(ARTICLES_DIR, "index.html" if page == 1 else f"{page}.html")
+        with open(dest, "w", encoding="utf-8") as fh:
+            fh.write(output)
+        print(f"  wrote {'articles/index.html' if page == 1 else f'articles/{page}.html'}")
+
+
+def render_article_pages(env, articles):
+    os.makedirs(ARTICLES_DIR, exist_ok=True)
+    # Clear previously generated article pages (slug files), keep listing files.
+    for filename in os.listdir(ARTICLES_DIR):
+        dest = os.path.join(ARTICLES_DIR, filename)
+        if not os.path.isfile(dest) or not filename.endswith(".html"):
+            continue
+        if filename == "index.html" or filename[:-5].isdigit():
+            continue
+        os.remove(dest)
+
+    template = env.get_template("article.html")
+    for article in articles:
+        crumbs = [
+            {"name": "Home", "url": "/"},
+            {"name": "Articles", "url": "/articles/"},
+            {"name": article["title"], "url": article["url"], "current": True},
+        ]
+        output = template.render(article=article, crumbs=crumbs, js_version=js_version())
+        dest = os.path.join(ARTICLES_DIR, f"{article['slug']}.html")
+        with open(dest, "w", encoding="utf-8") as fh:
+            fh.write(output)
+        print(f"  wrote articles/{article['slug']}.html")
+
+
 def collect_categories(digests):
     """Group all stories by category slug (newest digest first)."""
     cats = {}
@@ -712,7 +1009,7 @@ def render_categories(env, digests):
     return sorted(cats.keys())
 
 
-def render_sitemap(digests, categories=()):
+def render_sitemap(digests, categories=(), articles=()):
     urls = [(SITE_URL + "/", None)] + [
         (SITE_URL + "/" + name[:-len(".html")], None)
         for name in STATIC_PAGES
@@ -726,6 +1023,14 @@ def render_sitemap(digests, categories=()):
         urls.append((SITE_URL + f"/archive/{page}", None))
     for digest in digests:
         urls.append((SITE_URL + f"/archive/{digest['date']}", digest["date"]))
+    # Articles listing (page 1) plus extra pages + every article.
+    articles_total = len(articles)
+    articles_pages = (articles_total + ARTICLES_PAGE_SIZE - 1) // ARTICLES_PAGE_SIZE if articles_total else 1
+    urls.append((SITE_URL + "/articles/", None))
+    for page in range(2, articles_pages + 1):
+        urls.append((SITE_URL + f"/articles/{page}", None))
+    for article in articles:
+        urls.append((SITE_URL + article["url"], article["date"]))
     for slug in categories:
         urls.append((SITE_URL + f"/category/{slug}", None))
     urls.append((SITE_URL + "/calculators/autonomo-tax", None))
@@ -893,9 +1198,10 @@ def main():
     os.makedirs(archive_dir, exist_ok=True)
 
     # Rebind module-level outputs when building into a custom dir.
-    global OUT_DIR, ARCHIVE_DIR
+    global OUT_DIR, ARCHIVE_DIR, ARTICLES_DIR
     OUT_DIR = out_dir
     ARCHIVE_DIR = archive_dir
+    ARTICLES_DIR = os.path.join(out_dir, "articles")
 
     env = Environment(
         loader=FileSystemLoader(TEMPLATES_DIR),
@@ -926,6 +1232,7 @@ def main():
     ]
 
     digests = [digest_context(d) for d in load_digests()]
+    articles = load_articles()
 
     print("Copying static assets...")
     copy_static(out_dir)
@@ -940,19 +1247,23 @@ def main():
 
     print("Rendering OG images...")
     from og_images import render_og_images
-    render_og_images(digests, out_dir)
+    render_og_images(digests, articles, out_dir)
 
     print("Building archive listing...")
     render_archive(env, digests)
+
+    print("Building articles...")
+    render_articles_list(env, articles)
+    render_article_pages(env, articles)
 
     print("Building category pages...")
     categories = render_categories(env, digests)
 
     print("Building sitemap...")
-    render_sitemap(digests, categories)
+    render_sitemap(digests, categories, articles)
 
     print("Writing llms.txt...")
-    render_llms_txt(digests)
+    render_llms_txt(digests, articles)
 
     print("Done.")
 

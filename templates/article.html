@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% block body_class %} class="page-digest page-article"{% endblock %}
+{% block title %}{{ article.meta_title }}{% endblock %}
+{% block description %}<meta name="description" content="{{ article.meta_description }}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ article.meta_title }}">
+<meta property="og:description" content="{{ article.meta_description }}">
+<meta property="og:url" content="{{ site_url }}{{ article.url }}">
+<meta property="article:published_time" content="{{ pub_date(article.date) }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ article.meta_title }}">
+<meta name="twitter:description" content="{{ article.meta_description }}">
+<meta name="twitter:image" content="{{ site_url }}/og/article-{{ article.slug }}.png">
+<meta name="robots" content="max-image-preview:large">
+{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ site_url }}{{ article.url }}">{% endblock %}
+{% block og_image %}<meta property="og:image" content="{{ site_url }}/og/article-{{ article.slug }}.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+{% if article.image_alt %}<meta property="og:image:alt" content="{{ article.image_alt }}">{% endif %}{% endblock %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article",
+ "headline": {{ article.title|tojson }},
+ "description": {{ article.meta_description|tojson }},
+ "datePublished": "{{ pub_date(article.date) }}",
+ "dateModified": "{{ pub_date(article.date) }}",
+ "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor", "jobTitle": "Founder and Editor", "sameAs": ["https://www.linkedin.com/in/dshvechikov"]},
+ "publisher": {"@type": "Organization", "name": "Spanified", "logo": {"@type": "ImageObject", "url": "{{ site_url }}/logo.jpg", "width": 640, "height": 640}},
+ "inLanguage": "en",
+ "wordCount": {{ article.word_count }},
+ "isAccessibleForFree": true,
+ "mainEntityOfPage": "{{ site_url }}{{ article.url }}"
+}
+</script>
+{% if article.faq %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage",
+ "mainEntity": [{% for faq in article.faq %}
+  {"@type": "Question", "name": {{ faq.q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ faq.a|tojson }}} }{% if not loop.last %},{% endif %}{% endfor %}
+ ]}
+</script>
+{% endif %}
+ <div class="digest" data-pagefind-sort="date:{{ article.date }}">
+  <div class="digest-card">
+   <h1 class="email-red-band">{{ article.title }}</h1>
+   <div class="byline">
+    <span class="byline-part">By <a href="/editor">Dmytro Shvechikov</a></span>
+    <span class="byline-dot" aria-hidden="true"></span>
+    <span class="byline-part">{{ article.date_display }}</span>
+    <span class="byline-dot" aria-hidden="true"></span>
+    <span class="byline-read">{{ article.reading_time }} min read</span>
+   </div>
+   <div class="email-gold-band"></div>
+
+   <div class="email-body article-body">
+    {# Editorial callout conventions authored in the markdown source
+       (rendered by the article styles block in static/css/main.css):
+         > KEY: label **value** caption  -> key-figure stat card (3-up strip)
+         > TAKE: text                    -> key-takeaway box
+         > TIP: text                     -> "good to know" note box
+         > text                          -> pull-quote
+       The converter emits them as <blockquote> lines; class hooks are added
+       here so no build.py change is needed. #}
+    {{ article.body_html
+       | replace('<blockquote>KEY: ', '<blockquote class="art-fig">')
+       | replace('<blockquote>TAKE: ', '<blockquote class="art-take">')
+       | replace('<blockquote>TIP: ', '<blockquote class="art-tip">')
+       | safe }}
+   </div>
+
+   {# FAQ authored as a trailing '## FAQ' section in data/articles/*.md
+      (parsed by build.py into article.faq); the same data drives this
+      visible block and the FAQPage JSON-LD above. #}
+   {% if article.faq %}
+   <section class="article-faq">
+    <h2 class="article-faq-title">Frequently asked questions</h2>
+    <div class="article-faq-list">
+     {% for faq in article.faq %}
+     <details class="article-faq-item"{% if loop.first %} open{% endif %}>
+      <summary>{{ faq.q }}</summary>
+      <div class="article-faq-answer">{{ faq.a_html|safe }}</div>
+     </details>
+     {% endfor %}
+    </div>
+   </section>
+   {% endif %}
+
+   <div class="email-footer">
+    <div class="share-cta">Found this useful? Share it with a friend.</div>
+    {% with share=article.share %}{% include "partials/share.html" %}{% endwith %}
+    <div class="ai-disclaimer">Written from first-hand experience in Spain and reviewed by a human.</div>
+   </div>
+  </div>
+  {% set field_id = "article-subscribe-email" %}{% set form_kind = "article" %}{% set base_class = "cta-form-card" %}{% set indent = "   " %}{% include "partials/cta-form-card.html" %}
+ </div>
+<script>
+(function () {
+ var card = document.querySelector('.digest-card');
+ if (!card) return;
+ card.addEventListener('click', function (e) {
+  var btn = e.target.closest('.share-copy');
+  if (!btn) return;
+  var label = btn.querySelector('span');
+  var done = function () {
+   if (label) label.textContent = 'Copied!';
+   btn.classList.add('is-copied');
+   setTimeout(function () {
+    if (label) label.textContent = 'Copy';
+    btn.classList.remove('is-copied');
+   }, 1500);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+   navigator.clipboard.writeText(btn.dataset.url).then(done, done);
+  } else {
+   var i = document.createElement('input');
+   i.value = btn.dataset.url;
+   document.body.appendChild(i); i.select();
+   try { document.execCommand('copy'); } catch (err) {}
+   document.body.removeChild(i); done();
+  }
+ });
+})();
+</script>
+<script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
+{% endblock %}

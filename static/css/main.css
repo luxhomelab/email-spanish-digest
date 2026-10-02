@@ -25,6 +25,9 @@ a { color: inherit; }
  max-width: 1200px; margin: 0 auto;
  display: flex; align-items: center; justify-content: space-between;
  padding: 14px 24px;
+ /* Floor for the brand↔nav distance — space-between alone lets the logo
+    touch the first nav link when the row runs out of room. */
+ gap: 28px;
 }
 .brand {
  display: flex; align-items: center; gap: 10px;
@@ -60,11 +63,12 @@ a { color: inherit; }
 .nav-cta:hover { background-color: #8A1019; color: #ffffff !important; }
 .nav-cta:focus-visible { outline: 3px solid rgba(170,21,27,0.4); outline-offset: 2px; }
 .nav-drop { position: relative; }
-.nav-drop summary { cursor: pointer; list-style: none; color: #3C4858; }
+.nav-drop summary { cursor: pointer; list-style: none; color: #3C4858; white-space: nowrap; }
 .nav-drop summary::-webkit-details-marker { display: none; }
 .nav-drop summary::marker { content: ""; }
 .nav-drop summary:hover { color: #1A1A16; }
-.nav-drop summary::after { content: " \25BE"; font-size: 12px; }
+/* No-break space: the caret can never wrap onto its own line. */
+.nav-drop summary::after { content: "\00A0\25BE"; font-size: 12px; }
 .nav-drop-menu {
  display: none; position: absolute; top: calc(100% + 8px); left: 0; z-index: 50;
  background: #ffffff; border: 1px solid #E3D9C6; border-radius: 8px;
@@ -185,9 +189,16 @@ body.page-unsubscribe iframe, html.iframe-page .page-unsubscribe iframe {
  padding: 32px 24px; text-align: center;
 }
 
-/* ---------- Mobile (first breakpoint: header never overflows) ---------- */
-@media (max-width: 600px) {
- .header-inner { flex-wrap: wrap; padding: 12px 16px; }
+/* ---------- Header breakpoints ----------
+   The desktop row (brand + 7 links + 2 dropdowns + search + Subscribe)
+   measures ~880px wide at the 22px item gap — it cannot survive tablet
+   widths without wrapping carets or touching the logo.
+   901–1000px: same row, denser item gaps. ≤900px: burger menu. */
+@media (min-width: 901px) and (max-width: 1000px) {
+ .site-nav { gap: 14px; }
+}
+@media (max-width: 900px) {
+ .header-inner { flex-wrap: wrap; padding: 12px 16px; gap: 0; }
  .brand-word { font-size: 18px; }
  .nav-toggle { display: block; }
  .site-nav {
@@ -203,7 +214,10 @@ body.page-unsubscribe iframe, html.iframe-page .page-unsubscribe iframe {
  .site-nav a:last-child { border-bottom: none; }
  .nav-search svg { display: none; }
  .nav-search-text { display: inline; }
-  .nav-cta { display: block; text-align: center; margin-top: 10px; padding: 12px 14px; border-bottom: none; font-size: 15px; }
+ .nav-cta { display: block; text-align: center; margin-top: 10px; padding: 12px 14px; border-bottom: none; font-size: 15px; }
+}
+/* ---------- Content + footer mobile ---------- */
+@media (max-width: 600px) {
  .content { padding: 28px 16px; }
  .footer-inner {
   flex-direction: column; gap: 8px; text-align: center;
@@ -1806,6 +1820,24 @@ body.page-home .quiz-teaser-row p{margin-bottom:0}
  .quizzes-grid{grid-template-columns:1fr}
 }
 
+/* ── Latest articles block on the homepage (1–3 items, no placeholder cards) ── */
+.articles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:16px;margin-top:18px}
+/* A single article keeps a comfortable reading width instead of stretching across the whole card. */
+.articles-grid:has(> .article-mini:only-of-type){grid-template-columns:minmax(0,600px)}
+.article-mini{display:flex;flex-direction:column;text-decoration:none;border:1px solid #EFE7D8;border-radius:12px;background:#FFFDF8;padding:18px 20px 20px;transition:border-color .15s,box-shadow .15s}
+.article-mini:hover{border-color:#AA151B;box-shadow:0 4px 18px rgba(170,21,27,.12)}
+.article-mini:focus-visible{outline:3px solid rgba(170,21,27,.4);outline-offset:2px}
+.article-mini-meta{display:block;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:#AA151B;margin-bottom:6px}
+.article-mini-title{display:block;font-family:Roboto,Helvetica,sans-serif;font-size:18px;font-weight:700;color:#3C4858;line-height:1.35;margin-bottom:8px}
+.article-mini-excerpt{display:block;font-size:14px;line-height:1.55;color:#6C7A89;margin-bottom:14px}
+.article-mini-cta{display:block;margin-top:auto;font-size:15px;font-weight:700;color:#AA151B}
+.articles-all{display:inline-flex;align-items:center;min-height:44px;margin-top:14px;font-size:15px;font-weight:700;color:#AA151B;text-decoration:none}
+.articles-all:hover{text-decoration:underline}
+.articles-all:focus-visible{outline:3px solid rgba(170,21,27,.4);outline-offset:2px;border-radius:4px}
+@media (max-width:560px){
+ .article-mini{padding:16px 18px 18px}
+}
+
 /* ── "Try the other quiz" cross-link (quiz result screen + share pages) ── */
 .quiz-other{display:flex;gap:14px;align-items:center;text-decoration:none;border:1px solid #EFE7D8;border-radius:12px;background:#FFFDF8;padding:12px;margin-top:16px;transition:border-color .15s,box-shadow .15s}
 .quiz-other:hover{border-color:#AA151B;box-shadow:0 4px 18px rgba(170,21,27,.12)}
@@ -2084,4 +2116,388 @@ body.page-home .intro-audience {
    the widget (the base ≤370px rule already scales it there). Bridge the gap. */
 @media (max-width: 430px) and (min-width: 371px) {
  .cta-form-card .subscribe-form .cf-turnstile > div { transform: scale(0.85); transform-origin: top left; }
+}
+/* ---------- Articles: long-form editorial layout (body.page-article) ----------
+   Site-standard width: the article card, breadcrumbs and the subscribe CTA
+   below it all run at the same 1200px measure as the archives and every
+   other page. A faint golden halo behind the card top keeps the cream page
+   from reading as flat emptiness. */
+body.page-article .digest {
+ background: radial-gradient(100% 380px at 50% 0%, rgba(241, 191, 0, 0.10), transparent 72%) no-repeat;
+}
+body.page-article .digest-card { max-width: 1200px; }
+body.page-article .breadcrumbs { max-width: 1200px; }
+body.page-article .digest > .cta-form-card { max-width: 1200px; }
+
+/* Header: title + byline form one cream head-block, closed by the signature
+   red/gold bar (mirrors .subscribe-form::before), then the reading column. */
+body.page-article h1.email-red-band {
+ padding: 36px 32px 10px 32px;
+ font-size: 33px; line-height: 39px;
+ text-wrap: balance;
+}
+body.page-article .byline {
+ display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+ gap: 10px;
+ background-color: #FFFDF8;
+ padding: 2px 32px 20px 32px;
+ font-size: 13.5px; color: #8B8578;
+}
+body.page-article .byline a { color: #B91C1C; font-weight: 600; text-decoration: none; }
+body.page-article .byline a:hover { text-decoration: underline; }
+body.page-article .byline-dot {
+ width: 4px; height: 4px; border-radius: 50%;
+ background-color: #F1BF00; opacity: 0.9;
+}
+body.page-article .byline-read {
+ background-color: #F5F1E8; border: 1px solid #E3D9C6; border-radius: 999px;
+ padding: 3px 11px; font-weight: 700; color: #AA151B;
+ font-variant-numeric: tabular-nums;
+}
+body.page-article .email-gold-band {
+ height: 4px; border-radius: 2px;
+ background: linear-gradient(90deg, #AA151B 50%, #F1BF00 50%);
+}
+body.page-article .email-body { padding: 22px 32px 8px 32px; }
+body.page-article .email-footer { clear: both; padding: 26px 32px 30px 32px; }
+
+/* Orchestrated page load: title, byline, rule and lede rise in, the bar
+   wipes in from the left. Quick (under 0.65s total) and reduced-motion safe. */
+@keyframes art-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes art-band-in { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+body.page-article h1.email-red-band { animation: art-in 0.5s ease-out both; }
+body.page-article .byline { animation: art-in 0.5s ease-out 0.07s both; }
+body.page-article .email-gold-band { transform-origin: left center; animation: art-band-in 0.6s ease-out 0.14s both; }
+body.page-article .article-body > p:first-child { animation: art-in 0.5s ease-out 0.2s both; }
+
+/* ---------- Article body: typography + component conventions ----------
+   The markdown converter (build.py) emits p / h2 / h3 / strong / em / a / ul /
+   hr / blockquote only. Callout components are authored in markdown as
+   conventions and given class hooks in templates/article.html (no build.py
+   logic involved):
+     > text                         -> pull-quote (default blockquote style)
+     > KEY: label **value** caption  -> key-figure stat card (.art-fig)
+     > TAKE: text                   -> key-takeaway box (.art-take)
+     > TIP: text                    -> "good to know" note box (.art-tip)
+   A <ul> whose first item starts with **bold** renders as a definition-style
+   mini-table (progressive enhancement via :has(); plain gold-dot list in
+   browsers without :has). Consecutive KEY cards float into a 3-up strip;
+   every other body element clears below floats so a strip always reads as
+   one self-contained row. */
+.article-body {
+ font-size: 17px; line-height: 1.8; color: #3C4858;
+ text-wrap: pretty;
+}
+.article-body > *:not(blockquote.art-fig) { clear: both; }
+.article-body p { margin: 0 0 1.3em 0; }
+
+/* Lede: first paragraph runs larger and darker, opened by a red drop cap. */
+.article-body > p:first-child {
+ font-size: 19.5px; line-height: 1.75; color: #1A1A16;
+}
+.article-body > p:first-child::first-letter {
+ float: left;
+ font-family: Roboto, Helvetica, sans-serif; font-weight: 800;
+ font-size: 54px; line-height: 44px;
+ padding: 4px 12px 0 0; color: #AA151B;
+}
+
+/* Sections: quiet full hairline, then a short red accent rule above the
+   title (no numbering) — carries the editorial red without the counter. */
+.article-body h2 {
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 25px; line-height: 1.3; letter-spacing: -0.3px;
+ color: #1A1A16; text-wrap: balance;
+ margin: 0 0 0.75em 0; padding: 1.4em 0 0 0;
+ border-top: 1px solid #F0EBE0;
+}
+.article-body h2::before {
+ content: "";
+ display: block;
+ width: 46px; height: 3px; border-radius: 2px;
+ background-color: #AA151B;
+ margin-bottom: 12px;
+}
+/* Sub-sections: gold square tick keeps the hierarchy one degree quieter. */
+.article-body h3 {
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 18.5px; line-height: 1.4; letter-spacing: -0.2px;
+ color: #1A1A16; margin: 1.9em 0 0.6em 0;
+}
+.article-body h3::before {
+ content: ""; display: inline-block;
+ width: 9px; height: 9px; border-radius: 2px;
+ background-color: #F1BF00; margin-right: 10px;
+}
+
+.article-body strong { color: #1A1A16; }
+.article-body a {
+ color: #AA151B; text-decoration: underline;
+ text-decoration-thickness: 1px; text-underline-offset: 3px;
+ transition: background-color 0.15s, color 0.15s;
+}
+.article-body a:hover { color: #8A1019; background-color: rgba(170, 21, 27, 0.07); }
+.article-body a[target="_blank"]::after {
+ content: "\2197"; font-size: 0.8em; margin-left: 3px;
+ text-decoration: none; display: inline-block;
+}
+
+/* Definition-style mini-table: <ul> whose items each open with **term**.
+   Term column left, description right, hairline rows inside a cream card. */
+.article-body ul:has(> li:first-child > strong:first-child) {
+ background-color: #FFFDF8; border: 1px solid #EFE7D8; border-radius: 12px;
+ padding: 4px 0; margin: 0 0 1.7em 0;
+}
+.article-body ul:has(> li:first-child > strong:first-child) li {
+ display: grid; grid-template-columns: minmax(140px, 240px) 1fr;
+ gap: 2px 24px; align-items: start;
+ padding: 12px 18px; margin: 0;
+ border-bottom: 1px dashed #EFE7D8;
+ font-size: 15.5px; line-height: 1.6; color: #3C4858;
+}
+.article-body ul:has(> li:first-child > strong:first-child) li:last-child { border-bottom: none; }
+.article-body ul:has(> li:first-child > strong:first-child) li::before { display: none; }
+.article-body ul:has(> li:first-child > strong:first-child) li strong {
+ font-size: 15.5px; line-height: 1.5;
+}
+
+/* Plain gold-dot list (unchanged signature style) */
+.article-body ul {
+ list-style: none; margin: 0 0 1.5em 0; padding: 0;
+}
+.article-body ul li {
+ position: relative; padding-left: 30px;
+ margin-bottom: 0.75em; line-height: 1.75;
+}
+.article-body ul li::before {
+ content: ""; position: absolute; left: 4px; top: 0.72em;
+ width: 9px; height: 9px; border-radius: 50%;
+ background-color: #F1BF00;
+ box-shadow: 0 0 0 3px rgba(241, 191, 0, 0.22);
+}
+
+/* Pull-quote: plain "> " lines. Oversized hanging gold quotation mark,
+   bold oversized text, wide margins off the text column. */
+.article-body > blockquote:not(.art-fig):not(.art-take):not(.art-tip) {
+ position: relative;
+ margin: 2.4em 8% 2.2em 8%;
+ padding: 0 0 0 46px;
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 21px; line-height: 1.55; font-weight: 700;
+ letter-spacing: -0.2px; color: #1A1A16; text-wrap: balance;
+}
+.article-body > blockquote:not(.art-fig):not(.art-take):not(.art-tip)::before {
+ content: "\201C";
+ position: absolute; left: 0; top: -0.3em;
+ font-family: Georgia, 'Times New Roman', serif;
+ font-size: 72px; line-height: 1; font-weight: 700;
+ color: #F1BF00;
+}
+
+/* Key-figure stat card: "> KEY: label **value** caption". Label and caption
+   are plain text runs, the strong is the figure — in a floated flex column
+   they stack as label / value / caption without extra markup. */
+.article-body blockquote.art-fig {
+ float: left;
+ width: calc(33.333% - 22px);
+ margin: 0.35em 20px 1.15em 0;
+ padding: 16px 18px 15px 18px;
+ display: flex; flex-direction: column; align-items: flex-start; gap: 2px;
+ background-color: #FFFDF8;
+ border: 1px solid #EFE7D8;
+ border-top: 3px solid #F1BF00;
+ border-radius: 10px;
+ font-size: 13.5px; line-height: 1.5; color: #6C7A89;
+}
+.article-body blockquote.art-fig strong {
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 28px; line-height: 1.15; font-weight: 800;
+ letter-spacing: -0.5px; color: #AA151B;
+ margin: 3px 0 1px 0;
+}
+
+/* Key-takeaway box: "> TAKE: text". Warm gold panel, red label. */
+.article-body blockquote.art-take {
+ margin: 2.1em 0 1.9em 0;
+ padding: 18px 28px 17px 30px;
+ background-color: #FDF6E3;
+ border: 1px solid #F0DFAE;
+ border-left: 4px solid #F1BF00;
+ border-radius: 12px;
+ font-size: 17.5px; line-height: 1.65; color: #1A1A16;
+ text-wrap: pretty;
+}
+.article-body blockquote.art-take::before {
+ content: "Key takeaway";
+ display: block;
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 11.5px; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase;
+ color: #AA151B; margin-bottom: 7px;
+}
+
+/* Good-to-know note box: "> TIP: text". Slate utility style, quieter than
+   the gold takeaway (matches .calc .notice-blue). */
+.article-body blockquote.art-tip {
+ margin: 1.8em 0 1.7em 0;
+ padding: 16px 26px 15px 28px;
+ background-color: #EFF4FB;
+ border: 1px solid #D3E0F0;
+ border-left: 4px solid #3C5A80;
+ border-radius: 10px;
+ font-size: 15.5px; line-height: 1.65; color: #3C5A80;
+}
+.article-body blockquote.art-tip::before {
+ content: "Good to know";
+ display: block;
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 11px; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase;
+ color: #35577E; margin-bottom: 6px;
+}
+
+.article-body hr {
+ border: none; height: 1px;
+ background: linear-gradient(90deg, transparent, #E5DCC8 18%, #E5DCC8 82%, transparent);
+ margin: 2.4em auto; max-width: 280px;
+}
+
+/* Scroll reveal for the callout components (progressive enhancement):
+   in browsers with scroll-driven animations they rise as they enter view;
+   elsewhere the animation simply plays once on load. */
+@keyframes art-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+.article-body blockquote.art-fig,
+.article-body blockquote.art-take,
+.article-body blockquote.art-tip,
+.article-body > blockquote:not(.art-fig):not(.art-take):not(.art-tip),
+.article-body ul:has(> li:first-child > strong:first-child) {
+ animation: art-rise 0.55s ease both;
+ animation-timeline: view();
+ animation-range: entry 0% cover 28%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+ body.page-article h1.email-red-band,
+ body.page-article .byline,
+ body.page-article .email-gold-band,
+ body.page-article .article-body > p:first-child,
+ .article-body blockquote.art-fig,
+ .article-body blockquote.art-take,
+ .article-body blockquote.art-tip,
+ .article-body > blockquote:not(.art-fig):not(.art-take):not(.art-tip),
+ .article-body ul:has(> li:first-child > strong:first-child) { animation: none; }
+}
+
+@media (max-width: 640px) {
+ .article-body { font-size: 16px; line-height: 1.75; }
+ .article-body > p:first-child { font-size: 18px; }
+ .article-body > p:first-child::first-letter { font-size: 44px; line-height: 36px; padding: 3px 9px 0 0; }
+ .article-body h2 { font-size: 21px; }
+ .article-body h3 { font-size: 17px; }
+ .article-body ul li { padding-left: 26px; }
+ /* Stat cards stack full-width on phones; two-up would crowd the values. */
+ .article-body blockquote.art-fig { float: none; width: 100%; margin: 0.4em 0 0.95em 0; }
+ .article-body blockquote.art-fig strong { font-size: 24px; }
+ .article-body > blockquote:not(.art-fig):not(.art-take):not(.art-tip) {
+  font-size: 18.5px; line-height: 1.5;
+  padding-left: 34px; margin: 2em 2% 1.8em 2%;
+ }
+ .article-body > blockquote:not(.art-fig):not(.art-take):not(.art-tip)::before { font-size: 56px; }
+ /* Mini-table rows stack: term above, description below. */
+ .article-body ul:has(> li:first-child > strong:first-child) li { grid-template-columns: minmax(0, 1fr); gap: 3px; }
+}
+
+/* Article header rhythm on phones (must follow the digest 520px rules). */
+@media (max-width: 520px) {
+ body.page-article h1.email-red-band { padding: 26px 20px 8px 20px; font-size: 26px; line-height: 32px; }
+ body.page-article .byline { padding: 0 20px 16px 20px; font-size: 12.5px; gap: 8px; }
+ body.page-article .email-gold-band { margin: 0 20px; }
+ body.page-article .email-body { padding: 14px 20px 4px 20px; }
+ body.page-article .email-footer { padding: 22px 20px 26px 20px; }
+}
+
+/* ---------- Article FAQ (body.page-article) ----------
+   Authored as a trailing '## FAQ' section in data/articles/*.md, parsed by
+   build.py into article.faq ({"q", "a", "a_html"}) and rendered in
+   templates/article.html — the SAME data drives the FAQPage JSON-LD. Visible
+   pattern: one cream card with dashed hairline rows (matches the
+   definition-style mini-table), gold square tick on the question (matches
+   article h3), red +/– accordion marker (matches .faq-card on the
+   calculator pages). Title mirrors the body h2. */
+body.page-article .article-faq {
+ clear: both;   /* never wraps around floated stat cards above */
+ padding: 0 32px 8px 32px;
+}
+body.page-article .article-faq-title {
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 25px; line-height: 1.3; letter-spacing: -0.3px;
+ color: #1A1A16; text-wrap: balance;
+ margin: 0 0 0.75em 0; padding: 1.4em 0 0 0;
+ border-top: 1px solid #F0EBE0;
+}
+body.page-article .article-faq-title::before {
+ content: "";
+ display: block;
+ width: 46px; height: 3px; border-radius: 2px;
+ background-color: #AA151B;
+ margin-bottom: 12px;
+}
+body.page-article .article-faq-list {
+ background-color: #FFFDF8;
+ border: 1px solid #EFE7D8; border-radius: 12px;
+ padding: 4px 0;
+}
+body.page-article .article-faq-item { border-bottom: 1px dashed #EFE7D8; }
+body.page-article .article-faq-item:last-child { border-bottom: none; }
+body.page-article .article-faq-item summary {
+ display: flex; align-items: center; gap: 12px;
+ cursor: pointer; list-style: none;
+ padding: 16px 18px;
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 17px; font-weight: 700; line-height: 1.4;
+ color: #1A1A16;
+ transition: color 0.15s;
+}
+body.page-article .article-faq-item summary::-webkit-details-marker { display: none; }
+body.page-article .article-faq-item summary:hover { color: #AA151B; }
+body.page-article .article-faq-item[open] summary { color: #AA151B; }
+body.page-article .article-faq-item summary::before {
+ content: ""; flex: none;
+ width: 9px; height: 9px; border-radius: 2px;
+ background-color: #F1BF00;
+}
+body.page-article .article-faq-item summary::after {
+ content: "+"; flex: none; margin-left: auto;
+ color: #AA151B; font-size: 20px; font-weight: 400; line-height: 1;
+}
+body.page-article .article-faq-item[open] summary::after { content: "–"; }
+/* Answer aligns under the question text (18px card padding + 9px tick + 12px gap). */
+body.page-article .article-faq-answer {
+ padding: 0 18px 18px 39px;
+ font-size: 15.5px; line-height: 1.7; color: #3C4858;
+ text-wrap: pretty;
+}
+body.page-article .article-faq-answer strong { color: #1A1A16; }
+body.page-article .article-faq-answer a {
+ color: #AA151B; text-decoration: underline;
+ text-decoration-thickness: 1px; text-underline-offset: 3px;
+ transition: background-color 0.15s, color 0.15s;
+}
+body.page-article .article-faq-answer a:hover { color: #8A1019; background-color: rgba(170, 21, 27, 0.07); }
+
+/* FAQ card gets NO scroll reveal (unlike the article callouts above): it
+ sits at the end of the article, where the page can run out of scroll
+ before a view()-driven art-rise completes — fill "both" then freezes the
+ card at a partial opacity forever, washing out the Q/A text. Questions
+ (#1A1A16, red #AA151B when open) and answers (#3C4858, the body ink)
+ stay solid full-contrast at all times. */
+
+@media (max-width: 640px) {
+ body.page-article .article-faq-title { font-size: 21px; }
+ body.page-article .article-faq-item summary { font-size: 16px; }
+ body.page-article .article-faq-answer { font-size: 15px; line-height: 1.65; }
+}
+/* FAQ rhythm on phones (must follow the digest 520px rules). */
+@media (max-width: 520px) {
+ body.page-article .article-faq { padding: 0 20px 18px 20px; }
+ body.page-article .article-faq-item summary { padding: 14px 16px; gap: 10px; }
+ body.page-article .article-faq-answer { padding: 0 16px 16px 35px; }
 }

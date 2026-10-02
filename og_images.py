@@ -3,6 +3,7 @@
 
 Generated at build time into <out_dir>/og/:
   - YYYY-MM-DD.png per digest (kicker, date, headline, top-3 stories)
+  - article-<slug>.png per guide article (kicker, title, read time + date)
   - og-default.png fallback for the homepage and static pages
 
 Fonts: DejaVu Sans (preinstalled on Debian/Ubuntu incl. CI runners).
@@ -26,6 +27,11 @@ def _strip_emoji(text):
     return EMOJI_RE.sub("", text).strip()
 
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+# Slugs come from data/articles/*.md filenames (build.py) — reject anything
+# outside lowercase-kebab-case so a malformed value can never escape og/ via
+# path traversal, exactly like DATE_RE above.
+SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 W, H = 1200, 630
 CREAM = (255, 253, 248)
@@ -223,6 +229,107 @@ def render_digest_card(date_display, headline, stories, topics=None):
     return img
 
 
+def render_article_card(title, reading_time, date_display):
+    """Render a 1200x630 OG card for a guide article, in the same visual
+    language as render_digest_card(): crop-safe centred column, red/gold
+    edge decor, letterspaced kicker, auto-fit headline, red/gold divider,
+    one summary line and the domain footer.
+
+    Two differences, both driven by content shape: guide titles run longer
+    than digest headlines, so the size ladder tops out at 64pt and allows
+    a third centred line (digest: 76pt, 2 lines); and the date joins the
+    summary line ("X-minute read • <date>") instead of sitting above the
+    headline, which buys the headline its extra line.
+    """
+    title = _strip_emoji(title)
+    date_display = _strip_emoji(date_display)
+    img = Image.new("RGB", (W, H), CREAM)
+    draw = ImageDraw.Draw(img)
+    cx = W // 2
+    max_w = SAFE_RIGHT - SAFE_LEFT - 48
+
+    # Edge decor only (no text outside the centre column).
+    draw.rectangle([0, 0, 18, H], fill=RED)
+    draw.rectangle([18, 0, 26, H], fill=GOLD)
+    draw.rectangle([W - 26, 0, W - 18, H], fill=GOLD)
+    draw.rectangle([W - 18, 0, W, H], fill=RED)
+    draw.line([SAFE_LEFT, 26, SAFE_LEFT, H - 26], fill=GOLD, width=3)
+    draw.line([SAFE_RIGHT, 26, SAFE_RIGHT, H - 26], fill=GOLD, width=3)
+
+    # Kicker, centred.
+    kicker = "GUIDE"
+    kf = _font(True, 30)
+    tracking = 6
+    kw = sum(draw.textlength(ch, font=kf) for ch in kicker) + tracking * (len(kicker) - 1)
+    _draw_letterspaced(draw, (cx - kw / 2, 64), kicker, kf, RED, tracking=tracking)
+
+    # Headline: largest size that fits in 3 centred lines.
+    best = None
+    for size in (64, 56, 48, 42, 36, 32, 28):
+        font = _font(True, size)
+        lines = _wrap_to_width(draw, title, font, max_w)
+        if len(lines) <= 3:
+            best = (font, lines)
+            break
+    if best is None:
+        # Outlier long title: 3 lines at 28pt before cutting text.
+        font = _font(True, 28)
+        lines = _wrap_to_width(draw, title, font, max_w)
+        if len(lines) > 3:
+            words, idx, cut = title.split(), 0, []
+            for n in range(3):
+                cur = ""
+                while idx < len(words):
+                    trial = (cur + " " + words[idx]).strip() + ("…" if n == 2 else "")
+                    if draw.textlength(trial, font=font) <= max_w:
+                        cur = (cur + " " + words[idx]).strip()
+                        idx += 1
+                    else:
+                        break
+                cut.append(cur)
+            if idx < len(words) and cut:
+                cut[-1] = (cut[-1] + "…") if cut[-1] else "…"
+            lines = [ln for ln in cut if ln] or ["…"]
+        best = (font, lines)
+    font, lines = best
+    line_h = int(font.size * 1.18)
+
+    # Summary: one centred line — reading time + date.
+    summary = f"{reading_time}-minute read  •  {date_display}"
+    sum_font = _font(False, 32)
+    if draw.textlength(summary, font=sum_font) > max_w:
+        sum_font = _font(False, 28)
+    while draw.textlength(summary, font=sum_font) > max_w and len(summary) > 24:
+        summary = summary[:-2] + "…"
+
+    # Vertical rhythm: centre the headline+summary block between the
+    # kicker (ends ~100) and the domain line (starts ~548).
+    head_h = line_h * len(lines)
+    block_h = head_h + 14 + 5 + 20 + 40
+    top, bottom = 112, 540
+    y = top + max(0, (bottom - top - block_h) // 2)
+
+    for line in lines:
+        draw.text((cx - draw.textlength(line, font=font) / 2, y),
+                  line, font=font, fill=INK)
+        y += line_h
+
+    # Red/gold divider, centred (same as the digest card).
+    y_div = y + 14
+    draw.rectangle([cx - 100, y_div, cx + 20, y_div + 5], fill=RED)
+    draw.rectangle([cx + 20, y_div, cx + 100, y_div + 5], fill=GOLD)
+
+    draw.text((cx - draw.textlength(summary, font=sum_font) / 2, y_div + 25),
+              summary, font=sum_font, fill=MUTED)
+
+    # Domain line, centred.
+    df = _font(True, 26)
+    tag = "spanified.com"
+    draw.text((cx - draw.textlength(tag, font=df) / 2, 548), tag, font=df, fill=RED)
+
+    return img
+
+
 def render_subscribe_card():
     """High-contrast subscribe card for /subscribe (1200x630).
 
@@ -309,8 +416,9 @@ def render_default_card():
     )
 
 
-def render_og_images(digests, out_dir):
-    """Render per-digest cards + default card into <out_dir>/og/. Returns count."""
+def render_og_images(digests, articles, out_dir):
+    """Render per-digest + per-article cards + default card into <out_dir>/og/.
+    Returns total count."""
     og_dir = os.path.join(out_dir, "og")
     os.makedirs(og_dir, exist_ok=True)
     count = 0
@@ -324,6 +432,16 @@ def render_og_images(digests, out_dir):
         img = render_digest_card(digest["date_display"], digest["headline"], stories,
                                  topics=digest.get("tag_categories"))
         img.save(os.path.join(og_dir, f"{digest['date']}.png"))
+        count += 1
+    for article in articles or []:
+        # slug doubles as the output filename — reject anything off-format
+        # so a malformed value can never escape og/ via path traversal.
+        if not SLUG_RE.match(article.get("slug", "")):
+            print(f"  WARN: skipping article og card, bad slug: {article.get('slug')!r}")
+            continue
+        img = render_article_card(article["title"], article["reading_time"],
+                                  article["date_display"])
+        img.save(os.path.join(og_dir, f"article-{article['slug']}.png"))
         count += 1
     render_default_card().save(os.path.join(og_dir, "og-default.png"))
     render_subscribe_card().save(os.path.join(og_dir, "og-subscribe.png"))
