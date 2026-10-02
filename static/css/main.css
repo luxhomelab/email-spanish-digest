@@ -2010,3 +2010,18 @@ body.page-home .intro-audience {
   }
   .cta-form-card .subscribe-form-btn { width: 100%; }
 }
+/* Turnstile is a fixed 300px iframe, but on small phones the form column is
+   much narrower than the viewport: on digest pages the nested padding eats
+   ~60px per side (.content 16 + .email-footer 24 + card 20), so the column
+   drops below 300px on viewports under ~420px — where the global ≤370px
+   scale(0.8) rule never kicks in, and overflow:hidden just clips the widget.
+   Scale the widget subtree in two steps (origin left, so it stays pinned to
+   the column start like on desktop). Scoped to .cta-form-card: quiz gate and
+   /subscribe keep their own rules. Desktop and wider phones render at 100%. */
+@media (max-width: 430px) {
+  .cta-form-card .subscribe-form .cf-turnstile > div { transform: scale(0.75); transform-origin: top left; }
+}
+@media (max-width: 372px) {
+  .cta-form-card .subscribe-form .cf-turnstile > div { transform: scale(0.6); }
+  .cta-form-card .subscribe-form .cf-turnstile { margin-bottom: 8px; }
+}
