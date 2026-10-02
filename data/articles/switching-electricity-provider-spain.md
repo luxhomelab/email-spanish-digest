@@ -15,10 +15,6 @@ No warning. No negotiation. Just a bigger bill.
 
 I'd heard that switching electricity providers in Spain is about as easy as switching internet providers. So I tested it on myself. What follows is what actually happened, how Spanish electricity bills are really structured, and a few things I wish someone had told me before I picked up the phone.
 
-> KEY: The trigger **10%** price increase, announced by email — no warning, no negotiation
-> KEY: Rough guess **8 kW** of contracted power, estimated from a mental list of appliances
-> KEY: The saving **€2.41** per bill, after a €10.94 one-off change
-
 ## Switching is easier than you think
 
 An electricity contract in Spain is not a commitment you have to live with. The market is open, and moving from one provider to another is designed to be simple.
@@ -54,19 +50,13 @@ Then I checked Datadis — a free platform run by Spain's distribution companies
 
 So I'm dropping my contracted power to 7.5 kW. The change costs a one-off **€10.94**, and it saves about **€2.41 per bill**. Small, but it adds up — and it's money I was paying on a number I had invented.
 
-> KEY: Old potencia **8 kW** what I was paying for — a guess from my appliances
-> KEY: Real annual peak **6.93 kW** measured on [Datadis](https://datadis.es), hour by hour, across a year
-> KEY: New potencia **7.5 kW** a small buffer above the peak, not below it
-
 Before you compare tariffs, get your actual peak from [Datadis](https://datadis.es).
-
-> Your appliances don't set your contracted power; your meter does.
 
 ## Two things I didn't know (and you should)
 
 ### 1. A switching service can beat the provider's own website
 
-The Octopus tariff I was offered through the comparison service was *cheaper* than the same Octopus tariff listed on Octopus's own site. Had I gone directly to Octopus, I would have paid more. Check both.
+The Octopus tariff I was offered through the [comparison service](https://selectra.es/) was *cheaper* than the same Octopus tariff listed on Octopus's own site. Had I gone directly to Octopus, I would have paid more. Check both.
 
 ### 2. Every bill carries a free government comparator
 
