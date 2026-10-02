@@ -1892,19 +1892,19 @@ body.page-home .intro-audience {
 .cta-form-card::before { display: none; }
 .cta-form-copy { min-width: 0; padding-right: 36px; align-self: start; display: flex; flex-direction: column; justify-content: flex-start; }
 .cta-form-card .cta-kicker {
-  display: inline-block;
-  font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  display: inline-block; align-self: flex-start;
+  font-size: 13px; line-height: 1.4; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
   color: #ffffff; opacity: 0.85;
   border: 1px solid rgba(255,255,255,0.35); border-radius: 999px;
-  padding: 6px 14px; margin: 0 0 14px 0;
+  padding: 7px 15px; margin: 0 0 16px 0;
 }
 .cta-form-card h2 {
-  font-size: 26px; line-height: 1.2; letter-spacing: -0.5px;
-  color: #ffffff; margin: 0 0 10px 0; text-align: left;
+  font-size: 28px; line-height: 1.22; letter-spacing: -0.5px;
+  color: #ffffff; margin: 0 0 14px 0; text-align: left;
   max-width: 22ch;
 }
 .cta-form-card .cta-sub {
-  font-size: 16px; line-height: 1.55; color: #F6D9DA;
+  font-size: 17px; line-height: 1.6; color: #F6D9DA;
   margin: 0; max-width: 38ch; text-align: left;
 }
 /* Right column: the form + its footnotes. Left rule ties the column together
@@ -1961,13 +1961,8 @@ body.page-home .intro-audience {
   align-self: stretch;
   width: 100%; max-width: none;
   margin: 14px 0 2px 0;
-  display: flex; justify-content: center; align-items: center;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.18);
-  border-radius: 12px;
-  padding: 10px 12px;
+  padding: 10px 12px 10px 0;
   min-height: 87px;
-  overflow: hidden;
 }
 /* Consent: full form-column width, white text, links underlined white. */
 .cta-form-card .subscribe-form-consent {
@@ -1985,13 +1980,14 @@ body.page-home .intro-audience {
 }
 /* Compact rhythm inside the calculator column (matches .seobox spacing). */
 .calc .cta-form-card { margin: 0 0 20px 0; padding: 28px 32px; }
-.calc .cta-form-card h2 { font-size: 22px; }
-.calc .cta-form-card .cta-sub { font-size: 15px; }
+.calc .cta-form-card h2 { font-size: 26px; }
+.calc .cta-form-card .cta-sub { font-size: 18px; }
 @media (max-width: 860px) {
   /* Stacked: copy on top (centered), form below full width. The top rule
      replaces the vertical divider so the two blocks stay visibly grouped. */
   .cta-form-card { grid-template-columns: minmax(0, 1fr); padding: 30px 28px 26px; text-align: center; }
   .cta-form-copy { padding-right: 0; display: flex; flex-direction: column; align-items: center; }
+  .cta-form-card .cta-kicker { align-self: center; }
   .cta-form-card h2 { text-align: center; max-width: 28ch; }
   .cta-form-card .cta-sub { text-align: center; margin: 0 auto; max-width: 46ch; }
   .cta-form-side {
@@ -2011,27 +2007,8 @@ body.page-home .intro-audience {
   /* Stack without horizontal scroll: input → error → consent → turnstile → button. */
   .cta-form-card .subscribe-form { max-width: 100%; }
   .cta-form-card .subscribe-form .cf-turnstile {
-    order: 5; margin: 0 0 14px 0; min-height: 0; padding: 8px;
+    order: 5; margin: 0 0 14px 0; min-height: 0; padding: 8px 8px 8px 0;
     align-self: stretch; width: 100%; max-width: none;
   }
   .cta-form-card .subscribe-form-btn { width: 100%; }
-}
-/* Turnstile is a fixed 300px iframe, but on small phones the form column is
-   much narrower than the viewport: on digest pages the nested padding eats
-   ~60px per side (.content 16 + .email-footer 24 + card 20), so the column
-   drops below 300px on viewports under ~420px — where the global ≤370px
-   scale(0.8) rule never kicks in, and overflow:hidden just clips the widget.
-   Scale the widget subtree in two steps (origin top center, matching the
-   centered desktop band). Scoped to .cta-form-card: quiz gate and
-   /subscribe keep their own rules. Desktop and wider phones render at 100%. */
-@media (max-width: 430px) {
-  .cta-form-card .subscribe-form .cf-turnstile > div { transform: scale(0.75); transform-origin: top center; }
-  /* Scaled widget (~49px) + slim band padding: no negative-margin pull-up
-     needed — the band's own box already matches the 14px rhythm. */
-  .cta-form-card .subscribe-form .cf-turnstile { margin: 0 0 14px 0; min-height: 0; padding: 6px; }
-}
-@media (max-width: 372px) {
-  .cta-form-card .subscribe-form .cf-turnstile > div { transform: scale(0.6); }
-  /* Visual height ~39px + padding: same steady gap, no pull-up. */
-  .cta-form-card .subscribe-form .cf-turnstile { margin-bottom: 14px; }
 }
