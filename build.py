@@ -369,6 +369,13 @@ def article_markdown_to_html(md):
                 in_list = False
             out.append(f"<h2>{inline_md(stripped[2:].strip())}</h2>")
             continue
+        if stripped.startswith("> "):
+            flush_para()
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            out.append(f"<blockquote>{inline_md(stripped[2:].strip())}</blockquote>")
+            continue
         if stripped.startswith("- "):
             flush_para()
             if not in_list:

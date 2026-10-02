@@ -9,7 +9,7 @@ excerpt: A year after signing with Naturgy, a 20% price hike pushed me to test s
 image_alt: Spanish electricity bill showing the CNMC comparator QR code and link
 ---
 
-A year after I signed my electricity contract with Naturgy, the email arrived: a roughly 20% price increase.
+A year after I signed my electricity contract with Naturgy, the email arrived: a 10% price increase.
 
 No warning. No negotiation. Just a bigger bill.
 
@@ -85,7 +85,3 @@ That's why the homework has to come first. Get your real peak from Datadis, benc
 The real cost depends on your own consumption pattern, not the headline price. That's the gap that tripped me up — try the free [Electricity Bill Calculator](/calculators/electricity-bill) on Spanified: plug in your current tariff and the new offer, and see the actual difference.
 
 So next time someone calls you with a deal, you don't have to guess. Have your current figures ready, enter the new ones, and read the number.
-
----
-
-*I'm Dmytro, the editor of Spanified. I live in Spain and write about the practical side of living here — the parts you only learn by doing. If you want that without reading the Spanish press yourself, [subscribe to Spain Daily](/subscribe) — Spain's top news in English, every morning, free.*

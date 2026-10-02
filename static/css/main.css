@@ -2088,14 +2088,13 @@ body.page-home .intro-audience {
 /* ---------- Articles: long-form readability ---------- */
 .article-body {
  font-size: 17px; line-height: 1.8; color: #3C4858;
- max-width: 68ch; text-wrap: pretty;
+ text-wrap: pretty;
 }
 .article-body p { margin: 0 0 1.3em 0; }
 .article-body h2 {
  font-size: 23px; line-height: 1.35; letter-spacing: -0.2px;
- color: #1A1A16; margin: 1.9em 0 0.7em 0; text-wrap: balance;
+ color: #1A1A16; margin: 0 0 0.7em 0; text-wrap: balance;
 }
-.article-body h2:first-child { margin-top: 0.4em; }
 .article-body h3 {
  font-size: 19px; line-height: 1.4; color: #1A1A16;
  margin: 1.6em 0 0.6em 0;
@@ -2109,6 +2108,11 @@ body.page-home .intro-audience {
 .article-body a[target="_blank"]::after {
  content: "\2197"; font-size: 0.8em; margin-left: 3px;
  text-decoration: none; display: inline-block;
+}
+.article-body blockquote {
+ margin: 0 0 1.4em 0; padding: 6px 0 6px 22px;
+ border-left: 3px solid #F1BF00; color: #1A1A16;
+ font-size: 19px; line-height: 1.6;
 }
 .article-body ul {
  list-style: none; margin: 0 0 1.5em 0; padding: 0;
@@ -2128,7 +2132,7 @@ body.page-home .intro-audience {
  margin: 2.2em auto; max-width: 240px;
 }
 @media (max-width: 640px) {
- .article-body { font-size: 16px; line-height: 1.75; max-width: 100%; }
+ .article-body { font-size: 16px; line-height: 1.75; }
  .article-body h2 { font-size: 21px; }
  .article-body ul li { padding-left: 26px; }
 }
