@@ -323,7 +323,14 @@ def article_markdown_to_html(md):
         s = _html.escape(s)
         s = _re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
         s = _re.sub(r"(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)", r"<em>\1</em>", s)
-        s = _re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', s)
+
+        def _link(m):
+            text, url = m.group(1), m.group(2)
+            if url.startswith("http://") or url.startswith("https://"):
+                return f'<a href="{url}" target="_blank" rel="noopener">{text}</a>'
+            return f'<a href="{url}">{text}</a>'
+
+        s = _re.sub(r"\[([^\]]+)\]\(([^)]+)\)", _link, s)
         return s
 
     for line in lines:

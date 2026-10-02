@@ -2085,3 +2085,50 @@ body.page-home .intro-audience {
 @media (max-width: 430px) and (min-width: 371px) {
  .cta-form-card .subscribe-form .cf-turnstile > div { transform: scale(0.85); transform-origin: top left; }
 }
+/* ---------- Articles: long-form readability ---------- */
+.article-body {
+ font-size: 17px; line-height: 1.8; color: #3C4858;
+ max-width: 68ch; text-wrap: pretty;
+}
+.article-body p { margin: 0 0 1.3em 0; }
+.article-body h2 {
+ font-size: 23px; line-height: 1.35; letter-spacing: -0.2px;
+ color: #1A1A16; margin: 1.9em 0 0.7em 0; text-wrap: balance;
+}
+.article-body h2:first-child { margin-top: 0.4em; }
+.article-body h3 {
+ font-size: 19px; line-height: 1.4; color: #1A1A16;
+ margin: 1.6em 0 0.6em 0;
+}
+.article-body strong { color: #1A1A16; }
+.article-body a {
+ color: #AA151B; text-decoration: underline;
+ text-decoration-thickness: 1px; text-underline-offset: 3px;
+}
+.article-body a:hover { color: #8A1019; }
+.article-body a[target="_blank"]::after {
+ content: "\2197"; font-size: 0.8em; margin-left: 3px;
+ text-decoration: none; display: inline-block;
+}
+.article-body ul {
+ list-style: none; margin: 0 0 1.5em 0; padding: 0;
+}
+.article-body ul li {
+ position: relative; padding-left: 30px;
+ margin-bottom: 0.75em; line-height: 1.75;
+}
+.article-body ul li::before {
+ content: ""; position: absolute; left: 4px; top: 0.72em;
+ width: 9px; height: 9px; border-radius: 50%;
+ background-color: #F1BF00;
+ box-shadow: 0 0 0 3px rgba(241, 191, 0, 0.22);
+}
+.article-body hr {
+ border: none; border-top: 1px solid #E5DCC8;
+ margin: 2.2em auto; max-width: 240px;
+}
+@media (max-width: 640px) {
+ .article-body { font-size: 16px; line-height: 1.75; max-width: 100%; }
+ .article-body h2 { font-size: 21px; }
+ .article-body ul li { padding-left: 26px; }
+}

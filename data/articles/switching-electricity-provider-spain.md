@@ -25,7 +25,7 @@ The process started with one upload — my latest bill. I submitted it in the ev
 
 ## What happens on the call
 
-They re-checked my usage and asked whether I really needed the 8 kW of contracted power I had. Then they offered two of the cheapest plans they could find: **Octopus** and **TotalEnergies**. With relatively high contracted power, Octopus came out slightly cheaper.
+They re-checked my usage and asked whether I really needed the 8 kW of contracted power I had. Then they offered two of the cheapest plans they could find: Octopus and TotalEnergies. With relatively high contracted power, Octopus came out slightly cheaper.
 
 They read out the full offer. When I agreed, they recorded my consent and handled the entire switch themselves. I didn't visit an office or sign anything in person. The new company sent me a contract, the old one was cancelled, and that was that.
 
@@ -38,7 +38,7 @@ Before you compare anything, you need to know what you're comparing. A Spanish e
 - **Standing charge (potencia):** what you pay for contracted power, split by time period.
 - **Energy charge (consumo):** what you pay for the electricity you actually use.
 
-Energy pricing comes in two flavours: a **flat rate** (one price all day) or a **time-of-use rate** split across periods — day, night, and sometimes an evening peak.
+Energy pricing comes in two flavours: a flat rate (one price all day) or a time-of-use rate split across periods — day, night, and sometimes an evening peak.
 
 Here's the catch: with time-of-use pricing, you cannot eyeball which tariff is cheaper. It depends on your consumption pattern across those periods. That's exactly how people get talked into the wrong plan over the phone.
 
@@ -46,7 +46,7 @@ Here's the catch: with time-of-use pricing, you cannot eyeball which tariff is c
 
 When the switching service asked about my contracted power, I answered from memory: 8 kW, based on a rough mental list of my appliances. That number was a guess.
 
-Then I checked **Datadis** — a free platform run by Spain's distribution companies (the ones that own the cables and read your meter, not the provider you pay). You register with your supply number (*CUPS*), and it shows your actual electricity use, hour by hour, going back months. My real peak over the whole year was **6.93 kW**. I had been paying for headroom I never used.
+Then I checked Datadis — a free platform run by Spain's distribution companies (the ones that own the cables and read your meter, not the provider you pay). You register with your supply number (*CUPS*), and it shows your actual electricity use, hour by hour, going back months. My real peak over the whole year was **6.93 kW**. I had been paying for headroom I never used.
 
 So I'm dropping my contracted power to 7.5 kW. The change costs a one-off **€10.94**, and it saves about **€2.41 per bill**. Small, but it adds up — and it's money I was paying on a number I had invented.
 
@@ -85,15 +85,6 @@ That's why the homework has to come first. Get your real peak from Datadis, benc
 The real cost depends on your own consumption pattern, not the headline price. That's the gap that tripped me up — try the free [Electricity Bill Calculator](/calculators/electricity-bill) on Spanified: plug in your current tariff and the new offer, and see the actual difference.
 
 So next time someone calls you with a deal, you don't have to guess. Have your current figures ready, enter the new ones, and read the number.
-
-## The short version
-
-- Switching electricity providers in Spain is straightforward — the new provider does the work.
-- You'll do it in Spanish; a little goes a long way.
-- Learn the two parts of the bill before you compare anything.
-- Check your real peak on Datadis — don't guess your contracted power.
-- Scan the government QR code on your bill to benchmark offers.
-- They won't put the numbers in an email — decide before the call, or turn the offer down on the call.
 
 ---
 
