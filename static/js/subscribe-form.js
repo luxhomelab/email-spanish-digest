@@ -10,6 +10,11 @@
 const DEFAULT_ERROR = 'Something went wrong. Please try again.'
 
 import { markSubscribed } from './subscription-store.js'
+// Shared gates (flag → hostname) live in analytics.js; isLocalHostname() is
+// re-exported below so this module's public surface stays unchanged.
+import { isAnalyticsEnabled, isLocalHostname } from './analytics.js'
+
+export { isLocalHostname }
 
 // Captcha is baked at build time: prod forms carry data-captcha="1",
 // local builds (direct to the dev Listmonk, no Worker) carry "0".
@@ -51,19 +56,6 @@ export function collectFields(form) {
   return fields
 }
 
-// Second line of defence (after the build-time window.SPANIFIED_ANALYTICS
-// flag rendered by templates/base.html): a dist/ output opened locally still
-// has the snippets inlined, so never send events from a local origin.
-export function isLocalHostname() {
-  try {
-    const loc = window.location
-    if (!loc || loc.protocol === 'file:') return true
-    const host = (loc.hostname || '').toLowerCase()
-    if (!host) return true
-    return /^(localhost$|127(\.\d+){0,3}$|0\.0\.0\.0$|\[::1\]$)/.test(host)
-  } catch { return true }
-}
-
 // Form families that need their own GA4 event (and their own Meta content_name)
 // are tagged in the templates as data-form-kind on the <form> — one distinct
 // event per family, no pathname parsing:
@@ -91,10 +83,9 @@ const FORM_EVENTS = new Map([
 export function trackSubscribe(fields, form) {
   try {
     if (typeof window === 'undefined') return
-    // Build-time flag (templates/base.html, always rendered): false on local
-    // builds → no events. Primary gate; the hostname check below is fallback.
-    if (window.SPANIFIED_ANALYTICS === false) return
-    if (isLocalHostname()) return
+    // Shared gate: build-time flag first (templates/base.html), the hostname
+    // probe as fallback — see isAnalyticsEnabled() in analytics.js.
+    if (!isAnalyticsEnabled()) return
     const next = fields.next || ''
     const isQuiz = next.indexOf('/quiz/') !== -1
     let slug = 'site'

@@ -10,32 +10,16 @@ import {
   loadQuizResult,
   isQuizSubscribed,
 } from './quiz-logic.js'
+// Shared analytics gate (flag → hostname fallback) + gtag wrapper — the local
+// isLocal() + track() duplicates of subscribe-form.js now live in analytics.js.
+import { trackEvent } from './analytics.js'
 
 const $ = id => document.getElementById(id)
 const TOTAL = 10
 
-// Second line of defence: a dist/ prod build opened locally still has the
-// GA4 snippet inlined, so never send events from a local origin
-// (localhost / 127.x / 0.0.0.0 / file:) — mirrors isLocalHostname() in
-// subscribe-form.js. The primary gate is the build-time flag below.
-function isLocal() {
-  try {
-    const loc = window.location
-    const host = loc ? (loc.hostname || '').toLowerCase() : ''
-    return !loc || loc.protocol === 'file:' || !host ||
-      /^(localhost$|127(\.\d+){0,3}$|0\.0\.0\.0$|\[::1\]$)/.test(host)
-  } catch { return true }
-}
-
-function track(name, params = {}) {
-  try {
-    // Build-time flag rendered by templates/base.html (Jinja analytics_enabled):
-    // false on local builds → no events at all, no hostname sniffing needed.
-    if (window.SPANIFIED_ANALYTICS === false) return
-    if (isLocal()) return
-    if (typeof window.gtag === 'function') window.gtag('event', name, params)
-  } catch { /* analytics optional */ }
-}
+// Event name/params unchanged; the guard chain (window.SPANIFIED_ANALYTICS
+// flag → local-origin probe → gtag present) is shared with every other tracker.
+const track = trackEvent
 
 function syncShareLinks(text, url, longText) {
   const wrap = document.querySelector('.quiz-share .share-wrap')

@@ -870,7 +870,8 @@ def css_version():
 def js_version():
     """Short content hash of calculator JS bundle for cache-busting."""
     h = hashlib.md5()
-    for name in ("autonomo.js", "autonomo-calc.js", "autonomo-form.js",
+    for name in ("analytics.js",
+                   "autonomo.js", "autonomo-calc.js", "autonomo-form.js",
                    "property-buying-cost.js", "property-buying-cost-calc.js",
                    "property-buying-cost-form.js", "quiz.js",
                    "quiz-logic.js", "subscribe-form.js", "subscription-store.js",

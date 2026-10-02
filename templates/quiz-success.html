@@ -48,19 +48,12 @@
 <script id="quiz-success-data" type="application/json">{{ quiz_json | safe }}</script>
 <script type="module">
 import { resultForScore, personalShareText, personalLongShareText, quizResultUrl, markQuizSubscribed } from '/static/js/quiz-logic.js?v={{ js_version }}';
-// Build-time flag from base.html is the primary gate; local origins
+import { trackEvent, trackPixel } from '/static/js/analytics.js?v={{ js_version }}';
+// Guard order (flag → local-origin fallback) lives in analytics.js and never
+// throws — so a broken location can't trip the fallback UI below. The build-
+// time flag from base.html is the primary gate; local origins
 // (localhost / 127.x / 0.0.0.0 / file:) are the second line for a dist/
-// build opened locally. The hostname probe is computed outside the try below
-// so a broken location can't trip the fallback UI.
-const analyticsLocal = (window.SPANIFIED_ANALYTICS === false) || (() => {
-  try {
-    const loc = window.location;
-    if (!loc || loc.protocol === 'file:') return true;
-    const host = (loc.hostname || '').toLowerCase();
-    if (!host) return true;
-    return /^(localhost$|127(\.\d+){0,3}$|0\.0\.0\.0$|\[::1\]$)/.test(host);
-  } catch (e) { return false; }
-})();
+// build opened locally.
 try {
   const data = JSON.parse(document.getElementById('quiz-success-data').textContent);
   const TOTAL = 10;
@@ -93,8 +86,8 @@ try {
     document.getElementById('quiz-success-result').hidden = false;
     // Confirmed opt-in: record it so the quiz page unlocks on revisit.
     try { markQuizSubscribed(window.localStorage, '{{ quiz.slug }}'); } catch (e) {}
-    try { if (!analyticsLocal && typeof gtag !== 'undefined') gtag('event', 'quiz_email_confirm', { quiz: '{{ quiz.slug }}' }); } catch (e) {}
-    try { if (!analyticsLocal && typeof fbq !== 'undefined') fbq('track', 'CompleteRegistration', { content_name: '{{ quiz.slug }}' }); } catch (e) {}
+    trackEvent('quiz_email_confirm', { quiz: '{{ quiz.slug }}' });
+    trackPixel('CompleteRegistration', { content_name: '{{ quiz.slug }}' });
     // Personal share → per-persona page with the exact score (?score=).
     // X gets the short line; FB gets quote (long text, sometimes pre-filled);
     // TG/WA get the longer roast text.
@@ -132,8 +125,8 @@ try {
   }
 } catch (e) {
   document.getElementById('quiz-success-fallback').hidden = false;
-  try { if (!analyticsLocal && typeof gtag !== 'undefined') gtag('event', 'quiz_email_confirm', { quiz: '{{ quiz.slug }}', fallback: true }); } catch (err) {}
-  try { if (!analyticsLocal && typeof fbq !== 'undefined') fbq('track', 'CompleteRegistration', { content_name: '{{ quiz.slug }}' }); } catch (err) {}
+  trackEvent('quiz_email_confirm', { quiz: '{{ quiz.slug }}', fallback: true });
+  trackPixel('CompleteRegistration', { content_name: '{{ quiz.slug }}' });
 }
 </script>
 {% endblock %}
