@@ -1890,7 +1890,7 @@ body.page-home .intro-audience {
   position: relative; overflow: hidden;
 }
 .cta-form-card::before { display: none; }
-.cta-form-copy { min-width: 0; padding-right: 36px; align-self: center; display: flex; flex-direction: column; justify-content: center; }
+.cta-form-copy { min-width: 0; padding-right: 36px; align-self: start; display: flex; flex-direction: column; justify-content: flex-start; }
 .cta-form-card .cta-kicker {
   display: inline-block;
   font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
