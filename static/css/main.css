@@ -1129,6 +1129,9 @@ body.page-digest .email-footer .cta-card {
 }
 body.page-digest .email-footer .cta-card p { color: #F6D9DA; }
 body.page-digest .email-footer .cta-card .cta-button { color: #7E1015; }
+/* CTA lives outside .digest-card now (captcha clipping): restore the old
+   banner inset so the red block doesn't stretch to the full card width. */
+body.page-digest .digest > .cta-form-card { margin: 22px 32px 6px 32px; }
 body.page-digest .day-nav a {
  border: 1px solid #E3D9C6; border-radius: 999px; padding: 6px 16px;
  background-color: #FFFDF8;
@@ -1139,6 +1142,7 @@ body.page-digest .day-nav a:hover { text-decoration: none; border-color: #AA151B
  body.page-digest .email-body { padding: 8px 20px 0 20px; }
  body.page-digest .email-footer { padding: 20px 20px 26px 20px; }
  body.page-digest .email-footer .cta-card { padding: 28px 20px; }
+ body.page-digest .digest > .cta-form-card { margin: 22px 12px 6px 12px; }
  body.page-digest .email-footer .cta-card h2 { font-size: 20px; }
  body.page-digest .email-footer .cta-button { font-size: 16px; padding: 12px 28px; }
  body.page-digest .mercadona { margin: 12px 20px 0 20px; }
