@@ -28,20 +28,6 @@
 ]}
 </script>
  <div class="page">
-  <style>
-   body.page-home .home-zone-tools,
-   body.page-home .home-zone-trust { border-top: 1px solid #EFE7D8; margin-top: 12px; padding-top: 36px; }
-   body.page-home .zone-head { text-align: center; max-width: 560px; margin: 0 auto 24px auto; }
-   body.page-home .zone-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #AA151B; margin: 0 0 8px 0; }
-   body.page-home .zone-head h2 { margin: 0 0 8px 0; }
-   body.page-home .zone-sub { color: #6C7A89; font-size: 16px; line-height: 1.55; margin: 0; }
-   body.page-home .tools-stack { display: flex; flex-direction: column; gap: 28px; }
-   @media (max-width: 860px) {
-    body.page-home .home-zone-tools,
-    body.page-home .home-zone-trust { padding-top: 28px; }
-   }
-  </style>
-
   <!-- Zone A: the digest, start to finish -->
   <section class="home-zone-digest" aria-label="Spain Daily digest">
    <div class="hero">
@@ -93,12 +79,31 @@
      <li><span class="how-num" aria-hidden="true">1</span><div class="how-text"><strong>We read the Spanish press</strong><span>National dailies, wires and regional titles — every morning.</span></div></li>
      <li><span class="how-num" aria-hidden="true">2</span><div class="how-text"><strong>We pick what affects your life</strong><span>Rents, taxes, visas, jobs — not clickbait.</span></div></li>
      <li><span class="how-num" aria-hidden="true">3</span><div class="how-text"><strong>We summarize in plain English</strong><span>Short factual briefs with links to the sources, created with the help of AI.</span></div></li>
-     <li><span class="how-num" aria-hidden="true">4</span><div class="how-text"><strong>A human checks every edition</strong><span>The editor reviews stories and sources before anything goes out.</span></div></li>
+     <li><span class="how-num" aria-hidden="true">4</span><div class="how-text"><strong>A human checks every edition</strong><span><a href="/editor">The editor</a> reviews stories and sources before anything goes out.</span></div></li>
      <li><span class="how-num how-num-last" aria-hidden="true">5</span><div class="how-text"><strong>You read it in 5 minutes</strong><span>In your inbox around 08:00 Madrid time, seven days a week.</span></div></li>
     </ol>
    </div>
 
-   <div class="cta-card">
+    <div class="card editor-card">
+     <h2>Who makes the digest</h2>
+     <div class="editor-top">
+      <span class="editor-avatar" aria-hidden="true">DS</span>
+      <div class="editor-id">
+       <p class="editor-eyebrow">Founder &amp; Editor</p>
+       <p class="editor-name">Dmytro Shvechikov</p>
+       <p class="editor-role">Spain-based engineer · 10+ years of experience</p>
+      </div>
+     </div>
+     <p class="editor-text">Dmytro reads the Spanish press every morning and shapes each edition himself: he reviews the selected stories, checks the AI-written summaries against the original reporting, and cuts anything that falls short.</p>
+     <ul class="editor-trust">
+      <li>Based in Spain, follows the agenda daily</li>
+      <li>Human review before every edition</li>
+      <li>Every story links its sources</li>
+     </ul>
+     <a class="editor-link" href="/editor">Meet the editor →</a>
+    </div>
+
+    <div class="cta-card">
     <p class="cta-kicker">Free · Every morning · 5-minute read</p>
     <h2>Ready to stay in the loop?</h2>
     <p class="cta-sub">Join 500+ readers who start their day with Spain Daily.</p>
@@ -129,7 +134,7 @@
      <div class="quizzes-grid">
       {% for q in quizzes %}
       <a class="quiz-mini" href="{{ q.url }}" aria-label="Take the quiz: {{ q.title }}">
-       <img class="quiz-mini-cover" src="{{ q.cover }}" alt="" width="1200" height="630" loading="lazy">
+       <img class="quiz-mini-cover" src="{{ q.cover }}" alt="{{ q.title }} quiz cover" width="1200" height="630" loading="lazy">
        <span class="quiz-mini-body">
         <span class="quiz-mini-kicker">{{ q.kicker }}</span>
         <span class="quiz-mini-title">{{ q.title }}</span>

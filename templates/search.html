@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block body_class %} class="page-search"{% endblock %}
 {% block title %}Search — Spanified{% endblock %}
-{% block description %}<meta name="description" content="Search every edition of the Spanified Spain Daily digest — newest first.">{% endblock %}
+{% block description %}<meta name="description" content="Search every edition of the Spain Daily digest — Spanish politics, economy, rents, taxes and visas in plain English. Newest stories first, free to read.">
+<meta name="robots" content="noindex, nofollow">{% endblock %}
 
-{% block canonical %}<link rel="canonical" href="{{ site_url }}/search">{% endblock %}
+{% block canonical %}{% endblock %}
 {% block extra_head %}
 <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
 <script src="/pagefind/pagefind-ui.js"></script>

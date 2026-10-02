@@ -61,6 +61,7 @@ NOINDEX_PAGES = {
     "success.html",
     "confirm.html",
     "unsubscribe.html",
+    "search.html",
     "404.html",
 }
 STATIC_PAGES = [

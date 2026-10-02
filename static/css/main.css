@@ -1054,6 +1054,48 @@ body.page-home .topics { gap: 10px; margin-top: 20px; }
 body.page-home .cta-card { padding: 48px 40px; }
 body.page-home .page-note { margin-top: 28px; line-height: 1.7; }
 
+/* Homepage zones + Who makes the digest author card (moved from templates/index.html) */
+body.page-home .home-zone-tools,
+body.page-home .home-zone-trust { border-top: 1px solid #EFE7D8; margin-top: 12px; padding-top: 36px; }
+body.page-home .zone-head { text-align: center; max-width: 560px; margin: 0 auto 24px auto; }
+body.page-home .zone-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #AA151B; margin: 0 0 8px 0; }
+body.page-home .zone-head h2 { margin: 0 0 8px 0; }
+body.page-home .zone-sub { color: #6C7A89; font-size: 16px; line-height: 1.55; margin: 0; }
+body.page-home .tools-stack { display: flex; flex-direction: column; gap: 28px; }
+/* Who makes the digest — author card */
+body.page-home .editor-card { background: #FFFDF8; }
+body.page-home .editor-card h2 { text-wrap: balance; }
+body.page-home .editor-id { min-width: 0; }
+body.page-home .editor-top { display: flex; gap: 16px; align-items: center; margin-bottom: 14px; }
+body.page-home .editor-avatar {
+ flex: 0 0 auto; width: 56px; height: 56px; border-radius: 50%;
+ display: inline-flex; align-items: center; justify-content: center;
+ background: linear-gradient(135deg, #AA151B 0%, #7E1015 100%);
+ color: #ffffff; font-weight: 800; font-size: 19px; letter-spacing: 0.5px;
+}
+body.page-home .editor-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #AA151B; margin: 0 0 2px 0; }
+body.page-home .editor-name { font-family: Roboto, Helvetica, sans-serif; font-size: 20px; font-weight: 700; color: #3C4858; margin: 0; line-height: 1.3; }
+body.page-home .editor-role { font-size: 14px; color: #6C7A89; margin: 2px 0 0 0; text-wrap: balance; }
+body.page-home .editor-text { font-size: 16px; line-height: 1.6; color: #3C4858; margin: 0 0 14px 0; max-width: none; text-wrap: pretty; }
+body.page-home .editor-text a { color: #AA151B; font-weight: 600; text-decoration: none; }
+body.page-home .editor-text a:hover { text-decoration: underline; }
+body.page-home .editor-trust { list-style: none; margin: 0 0 16px 0; padding: 14px 0 0 0; border-top: 1px solid #EFE7D8; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+body.page-home .editor-trust li { position: relative; padding-left: 24px; font-size: 14px; color: #3C4858; }
+body.page-home .editor-trust li::before { content: "\2713"; position: absolute; left: 0; color: #2ecc71; font-weight: 700; }
+body.page-home .editor-link { display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 700; color: #AA151B; text-decoration: none; }
+body.page-home .editor-link:hover { text-decoration: underline; }
+body.page-home .editor-link:focus-visible { outline: 3px solid rgba(170,21,27,0.4); outline-offset: 2px; border-radius: 4px; }
+@media (max-width: 520px) {
+ body.page-home .editor-top { align-items: flex-start; }
+ body.page-home .editor-avatar { width: 48px; height: 48px; font-size: 17px; }
+ body.page-home .editor-name { text-wrap: balance; }
+ body.page-home .editor-trust { flex-direction: column; gap: 8px; }
+}
+@media (max-width: 860px) {
+ body.page-home .home-zone-tools,
+ body.page-home .home-zone-trust { padding-top: 28px; }
+}
+
 /* ---------- Archive in homepage style (body.page-archive only) ---------- */
 body.page-archive .archive { padding: 36px 0 16px 0; }
 body.page-archive .archive h1 { font-size: 38px; letter-spacing: -0.5px; text-align: center; }
