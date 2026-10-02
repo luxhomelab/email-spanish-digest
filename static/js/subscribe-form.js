@@ -64,12 +64,31 @@ export function isLocalHostname() {
   } catch { return true }
 }
 
+// Form families that need their own GA4 event (and their own Meta content_name)
+// are tagged in the templates as data-form-kind on the <form> — one distinct
+// event per family, no pathname parsing:
+//   digest.html                       → digest_subscribe
+//   calculator-autonomo.html          → calc_autonomo_lead
+//   calculator-property-buying-cost   → calc_property_lead
+//   calculator-electricity.html       → calc_electricity_lead
+// Forms without the attribute (site/subscribe page, footer) keep 'subscribe';
+// quiz forms keep 'quiz_subscribe' (their `next` points at /quiz/…).
+const FORM_EVENTS = new Map([
+  ['digest', 'digest_subscribe'],
+  ['calc-autonomo', 'calc_autonomo_lead'],
+  ['calc-property', 'calc_property_lead'],
+  ['calc-electricity', 'calc_electricity_lead'],
+])
+
 // Fire a subscribe GA4 event (and the matching Meta Pixel 'Lead') before the
 // redirect. GA4 transport_type 'beacon' lets the hit survive
 // window.location.assign(); fbq queues internally and is best-effort. Quiz
 // forms redirect to /quiz/<slug>-subscribed — slug is parsed from `next`;
 // plain site forms get the generic 'subscribe' event with quiz:'site'.
-export function trackSubscribe(fields) {
+// `form` (the submitting <form>) is optional: when it carries data-form-kind
+// the distinct digest/calc_* event is used for both GA4 (event name) and Meta
+// (Lead content_name), so the two channels stay comparable.
+export function trackSubscribe(fields, form) {
   try {
     if (typeof window === 'undefined') return
     if (isLocalHostname()) return
@@ -78,17 +97,21 @@ export function trackSubscribe(fields) {
     let slug = 'site'
     const m = /\/quiz\/([^/?#]+)/.exec(next)
     if (m) slug = m[1].replace(/-subscribed$/, '')
+    // Known data-form-kind on a non-quiz form → distinct event; otherwise the
+    // pre-existing quiz_subscribe / subscribe branches (params unchanged).
+    const kind = (form && form.dataset && form.dataset.formKind) || ''
+    const kindEvent = !isQuiz ? FORM_EVENTS.get(kind) : undefined
     if (typeof window.gtag === 'function') {
-      window.gtag('event', isQuiz ? 'quiz_subscribe' : 'subscribe', {
+      window.gtag('event', kindEvent || (isQuiz ? 'quiz_subscribe' : 'subscribe'), {
         transport_type: 'beacon',
         method: 'post',
-        quiz: slug,
+        ...(kindEvent ? { form_kind: kind } : { quiz: slug }),
       })
     }
-    // Meta Pixel: same 'Lead' for both form kinds; content_name carries the
-    // quiz slug, or 'site' for the plain site form.
+    // Meta Pixel: always 'Lead'; content_name carries the distinct form name
+    // (digest_subscribe / calc_*_lead), or the quiz slug / 'site' otherwise.
     if (typeof window.fbq === 'function') {
-      window.fbq('track', 'Lead', { content_name: slug })
+      window.fbq('track', 'Lead', { content_name: kindEvent || slug })
     }
   } catch { /* analytics must never break the redirect */ }
 }
@@ -142,7 +165,7 @@ export function initSubscribeForm(form) {
       const res = await postForm(form.action, fields)
       if (res.ok) {
         rememberSubscription(fields.email)
-        trackSubscribe(fields)
+        trackSubscribe(fields, form)
         window.location.assign(fields.next || '/confirm')
         return
       }

@@ -17,19 +17,25 @@
    submit (see data-subscribe-ajax) and POSTs the same fields via fetch as
    urlencoded, staying on-site: on HTTP 200 it redirects to `next`, on error
    it shows the message inline in [data-subscribe-error].
-   Optional include params: success_url, btn_label, field_id. #}
+   Optional include params: success_url, btn_label, field_id, form_kind.
+   form_kind is analytics-only: rendered as data-form-kind on the <form> and
+   turned into a distinct GA4 event + Meta 'Lead' content_name by
+   static/js/subscribe-form.js (digest → digest_subscribe, each calculator →
+   its own calc_*_lead). Leave it unset for generic/quiz forms — they keep
+   the 'subscribe' / 'quiz_subscribe' events. #}
 {% set success_url = success_url | default('/confirm') %}
 {% set btn_label = btn_label | default('Subscribe free') %}
 {% set field_id = field_id | default('subscribe-email') %}
+{% set form_kind = form_kind | default('') %}
 {% set turnstile_on = turnstile_enabled | default(true) %}
 {% if turnstile_on %}
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 {% endif %}
-<form class="subscribe-form" method="post" action="{{ listmonk_form_action }}" data-subscribe-ajax data-captcha="{{ '1' if turnstile_on else '0' }}">
-  <label class="subscribe-form-label" for="{{ field_id }}">Email address</label>
+<form class="subscribe-form" method="post" action="{{ listmonk_form_action }}" data-subscribe-ajax data-captcha="{{ '1' if turnstile_on else '0' }}"{% if form_kind %} data-form-kind="{{ form_kind }}"{% endif %}>
+  <label class="subscribe-form-label sr-only" for="{{ field_id }}">Email address</label>
   <div class="subscribe-form-row">
     <div class="subscribe-form-input-wrap">
-      <input class="subscribe-form-input" type="email" id="{{ field_id }}" name="email"
+      <input class="subscribe-form-input" type="email" id="{{ field_id }}" name="email" aria-label="Email address"
              placeholder="you@example.com" autocomplete="email" required>
       <button class="subscribe-form-btn" type="submit">{{ btn_label }}</button>
     </div>
