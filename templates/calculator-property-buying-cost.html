@@ -125,6 +125,8 @@
    </div>
   </div>
 
+  {% set field_id = "calc-property-email" %}{% set form_kind = "calc-property" %}{% set variant = "cta-form-card--compact" %}{% set indent = "  " %}{% include "partials/cta-form-card.html" %}
+
   <div class="card seobox">
    <h2>How property purchase taxes work in Spain</h2>
    <p>When buying a resale property in Spain you pay ITP transfer tax (3–13% depending on the region); new builds pay 10% IVA (7% IGIC in the Canary Islands) plus AJD stamp duty (0–1.5%). On top of taxes, every purchase adds regulated notary and land-registry fees. This calculator estimates all of them for any region in Spain. <a href="/subscribe">Get Spain property news in English every morning</a> / Buying to let? Estimate income tax with our <a href="/calculators/autonomo-tax">Autónomo Tax Calculator</a>.</p>
@@ -146,4 +148,5 @@
  </div>
 <script type="module" src="/static/js/property-buying-cost.js?v={{ js_version }}"></script>
 <script src="/static/js/tooltips.js?v={{ js_version }}" defer></script>
+<script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
 {% endblock %}

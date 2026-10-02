@@ -889,12 +889,20 @@ details.elec-bd[open] .elec-bd-sum::before { transform: rotate(90deg); }
 /* Quiz gate uses the default row layout (input + button side by side):
    the card is ~600px wide on desktop, enough for both. Narrow viewports
    fall back to the stacked layout via the global 520px breakpoint below. */
+/* Visually hidden but available to screen readers (subscribe email label). */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
 .subscribe-form-label {
   display: block; font-size: 15px; font-weight: 800; color: #3C4858;
   letter-spacing: 0.4px; margin-bottom: 10px;
 }
 /* CSS-only envelope micro-icon (no HTML change needed). */
 .subscribe-form-label::before { content: "✉️  "; margin-right: 2px; }
+/* sr-only label stays hidden incl. the envelope icon (all forms incl. quiz gate). */
+.subscribe-form-label.sr-only::before,
+#quiz-gate-form .subscribe-form-label.sr-only::before { content: none; }
 .subscribe-form-row { display: flex; gap: 12px; }
 .subscribe-form-input-wrap { display: flex; flex: 1; gap: 12px; min-width: 0; }
 .subscribe-form-input {
@@ -1862,4 +1870,145 @@ body.page-home .intro-audience {
   font-size: 15px; line-height: 1.4;
  }
  body.page-home .follow-row .soc { min-height: 44px; display: inline-flex; align-items: center; }
+}
+
+/* ---------- Inline CTA + subscribe form (digest + calculators) ----------
+   Red gradient like the homepage .cta-card (body.page-home). The nested
+   .subscribe-form is de-carded (one frame only — the card itself is the
+   frame). Two columns on desktop: copy left, form right, divided by a soft
+   vertical rule so the wide card reads as designed, not as empty red space.
+   Stacked single column below 860px. Quiz gate (#quiz-gate-form) is scoped
+   separately and untouched. */
+.cta-form-card {
+  background: linear-gradient(135deg, #AA151B 0%, #7E1015 100%);
+  border: none; border-radius: 14px;
+  box-shadow: 0 2px 14px rgba(60,40,20,0.07);
+  padding: 32px 36px; margin: 22px 0 6px 0;
+  display: grid; grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 6px 0; align-items: center;
+  text-align: left; color: #ffffff;
+  position: relative; overflow: hidden;
+}
+.cta-form-card::before { display: none; }
+.cta-form-copy { min-width: 0; padding-right: 36px; align-self: start; display: flex; flex-direction: column; justify-content: flex-start; }
+.cta-form-card .cta-kicker {
+  display: inline-block; align-self: flex-start;
+  font-size: 13px; line-height: 1.4; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: #ffffff; opacity: 0.85;
+  border: 1px solid rgba(255,255,255,0.35); border-radius: 999px;
+  padding: 7px 15px; margin: 0 0 16px 0;
+}
+.cta-form-card h2 {
+  font-size: 28px; line-height: 1.22; letter-spacing: -0.5px;
+  color: #ffffff; margin: 0 0 14px 0; text-align: left;
+  max-width: 22ch;
+}
+.cta-form-card .cta-sub {
+  font-size: 17px; line-height: 1.6; color: #F6D9DA;
+  margin: 0; max-width: 38ch; text-align: left;
+}
+/* Right column: the form + its footnotes. Left rule ties the column together
+   so Turnstile / consent / microcopy read as one block, not stray lines. */
+.cta-form-side {
+  min-width: 0; min-height: 0;
+  border-left: 1px solid rgba(255,255,255,0.22);
+  padding-left: 36px;
+}
+/* De-carded form fills its column (no 560px island in a wide card). */
+.cta-form-card .subscribe-form {
+  background: transparent; border: none; border-radius: 0; box-shadow: none;
+  width: 100%; max-width: none; margin: 0; padding: 0;
+  overflow: visible; position: static;
+  display: flex; flex-direction: column; align-items: stretch;
+  text-align: left;
+}
+.cta-form-card .subscribe-form::before { display: none; }
+.cta-form-card .subscribe-form-label {
+  color: #ffffff; text-align: left;
+  display: block; width: 100%; margin-bottom: 10px;
+}
+.cta-form-card .subscribe-form-row,
+.cta-form-card .subscribe-form-input-wrap {
+  width: 100%;
+}
+/* Input stays white on red. */
+.cta-form-card .subscribe-form-input {
+  background: #ffffff; border-color: transparent;
+}
+.cta-form-card .subscribe-form-input:focus {
+  border-color: #F1BF00; box-shadow: 0 0 0 4px rgba(241,191,0,0.35);
+}
+/* Contrast button on red: white pill, dark-red text (never red-on-red). */
+.cta-form-card .subscribe-form-btn {
+  background: #ffffff; color: #7E1015;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+.cta-form-card .subscribe-form-btn:hover {
+  background: #F6D9DA; color: #7E1015;
+  transform: translateY(-1px); box-shadow: 0 10px 26px rgba(0,0,0,0.3);
+}
+.cta-form-card .subscribe-form-btn:active { transform: translateY(0); }
+.cta-form-card .subscribe-form-btn:focus-visible {
+  outline: 3px solid rgba(255,255,255,0.7); outline-offset: 2px;
+}
+.cta-form-card .subscribe-form-error {
+  align-self: stretch; text-align: left;
+}
+/* Turnstile: full-width band so its right edge meets the input row's edge.
+   The iframe itself is fixed 300px and can't stretch — the band carries the
+   width (subtle fill + centered widget) so there's no stray gap on the right. */
+.cta-form-card .subscribe-form .cf-turnstile {
+  align-self: stretch;
+  width: 100%; max-width: none;
+  margin: 14px 0 2px 0;
+  padding: 10px 12px 10px 0;
+  min-height: 87px;
+}
+/* Consent: full form-column width, white text, links underlined white. */
+.cta-form-card .subscribe-form-consent {
+  width: 100%; margin: 14px 0 0 0;
+  color: #F6D9DA; text-align: left;
+  display: flex; gap: 10px; align-items: flex-start; justify-content: flex-start;
+}
+.cta-form-card .subscribe-form-consent a {
+  color: #ffffff; text-decoration: underline; text-underline-offset: 2px;
+}
+.cta-form-card .subscribe-form-consent a:hover { color: #F1BF00; }
+.cta-form-card .cta-microcopy {
+  font-size: 13px; color: #F6D9DA; margin: 14px 0 0 0;
+  text-align: left;
+}
+/* Compact rhythm inside the calculator column (matches .seobox spacing). */
+.calc .cta-form-card { margin: 0 0 20px 0; padding: 28px 32px; }
+.calc .cta-form-card h2 { font-size: 26px; }
+.calc .cta-form-card .cta-sub { font-size: 18px; }
+@media (max-width: 860px) {
+  /* Stacked: copy on top (centered), form below full width. The top rule
+     replaces the vertical divider so the two blocks stay visibly grouped. */
+  .cta-form-card { grid-template-columns: minmax(0, 1fr); padding: 30px 28px 26px; text-align: center; }
+  .cta-form-copy { padding-right: 0; display: flex; flex-direction: column; align-items: center; }
+  .cta-form-card .cta-kicker { align-self: center; }
+  .cta-form-card h2 { text-align: center; max-width: 28ch; }
+  .cta-form-card .cta-sub { text-align: center; margin: 0 auto; max-width: 46ch; }
+  .cta-form-side {
+    border-left: none; padding-left: 0;
+    border-top: 1px solid rgba(255,255,255,0.22);
+    padding-top: 22px; margin-top: 20px;
+  }
+  .cta-form-card .subscribe-form { max-width: 560px; margin: 0 auto; }
+  .cta-form-card .cta-microcopy { text-align: center; }
+}
+@media (max-width: 520px) {
+  .cta-form-card { padding: 28px 20px 24px; }
+  .cta-form-card .cta-kicker { font-size: 11px; letter-spacing: 1.5px; }
+  .cta-form-card h2 { font-size: 22px; }
+  .calc .cta-form-card { padding: 26px 20px 22px; }
+  .calc .cta-form-card h2 { font-size: 20px; }
+  /* Stack without horizontal scroll: input → error → consent → turnstile → button. */
+  .cta-form-card .subscribe-form { max-width: 100%; }
+  .cta-form-card .subscribe-form .cf-turnstile {
+    order: 5; margin: 0 0 14px 0; min-height: 0; padding: 8px 8px 8px 0;
+    align-self: stretch; width: 100%; max-width: none;
+  }
+  .cta-form-card .subscribe-form-btn { width: 100%; }
 }

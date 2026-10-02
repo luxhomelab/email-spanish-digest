@@ -119,6 +119,8 @@
    <div class="notice notice-amber">Results are estimates for educational purposes. Regulated charges (electricity tax, network access, metering) change over time and your actual bill may differ.</div>
   </div>
 
+  {% set field_id = "calc-electricity-email" %}{% set form_kind = "calc-electricity" %}{% set variant = "cta-form-card--compact" %}{% set indent = "  " %}{% include "partials/cta-form-card.html" %}
+
   <div class="card seobox">
    <h2>How electricity bills and tariffs work in Spain</h2>
    <p>Every Spanish electricity bill has two usage charges — the capacity charge (potencia contratada, billed in €/kW/day for P1 peak and P2 off-peak hours) and the energy charge (kWh consumed × €/kWh) — plus the Bono Social discount if you qualify. On top of that the state levies the electricity special tax of 5.112696% and VAT (IVA) of 21%, and some suppliers bill a small daily meter rental. Consumers with 10 kW or less of contracted power (and a supply voltage up to 1 kV) can use the regulated PVPC tariff, where prices move every hour with the wholesale market; everyone else shops the libre mercado (free market) for fixed or time-of-use offers. Use this calculator to model flat and punta/llano/valle (2.0TD) tariffs side by side. <a href="/subscribe">Get Spain news in English every morning</a> / Moving to Spain? Estimate self-employed taxes with our <a href="/calculators/autonomo-tax">Autónomo Tax Calculator</a> or buying a place with the <a href="/calculators/property-buying-cost">Property Buying Cost Calculator</a>.</p>
@@ -141,4 +143,5 @@
  </div>
 <script type="module" src="/static/js/electricity.js?v={{ js_version }}"></script>
 <script src="/static/js/tooltips.js?v={{ js_version }}" defer></script>
+<script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
 {% endblock %}

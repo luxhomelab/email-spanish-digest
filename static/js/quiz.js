@@ -10,15 +10,16 @@ import {
   loadQuizResult,
   isQuizSubscribed,
 } from './quiz-logic.js'
+// Shared analytics gate (flag → hostname fallback) + gtag wrapper — the local
+// isLocal() + track() duplicates of subscribe-form.js now live in analytics.js.
+import { trackEvent } from './analytics.js'
 
 const $ = id => document.getElementById(id)
 const TOTAL = 10
 
-function track(name, params = {}) {
-  try {
-    if (typeof window.gtag === 'function') window.gtag('event', name, params)
-  } catch { /* analytics optional */ }
-}
+// Event name/params unchanged; the guard chain (window.SPANIFIED_ANALYTICS
+// flag → local-origin probe → gtag present) is shared with every other tracker.
+const track = trackEvent
 
 function syncShareLinks(text, url, longText) {
   const wrap = document.querySelector('.quiz-share .share-wrap')

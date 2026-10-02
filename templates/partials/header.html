@@ -38,5 +38,5 @@
  </div>
 </header>
 <script>
-(function(){var b=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');if(!b||!n)return;b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Hide menu':'Show menu');});})();
+(function(){var b=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');if(b&&n){b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Hide menu':'Show menu');});}var d=n?n.querySelectorAll('.nav-drop'):[];d.forEach(function(el){el.addEventListener('toggle',function(){if(el.open){d.forEach(function(o){if(o!==el&&o.open)o.open=false;});}});});})();
 </script>

@@ -210,6 +210,8 @@
    </div>
   </div>
 
+  {% set field_id = "calc-autonomo-email" %}{% set form_kind = "calc-autonomo" %}{% set variant = "cta-form-card--compact" %}{% set indent = "  " %}{% include "partials/cta-form-card.html" %}
+
   <div class="card seobox">
    <h2>How autónomo taxes work in Spain</h2>
    <p>Since 2023, Spanish autónomos pay social security contributions based on their actual net income through a 15-bracket system. On top of SS, autónomos pay IRPF (income tax) on their remaining net income. This calculator estimates both SS contributions and IRPF for any region in Spain.</p>
@@ -231,4 +233,5 @@
  </div>
 <script type="module" src="/static/js/autonomo.js?v={{ js_version }}"></script>
 <script src="/static/js/tooltips.js?v={{ js_version }}" defer></script>
+<script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
 {% endblock %}

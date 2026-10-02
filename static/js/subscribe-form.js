@@ -10,6 +10,11 @@
 const DEFAULT_ERROR = 'Something went wrong. Please try again.'
 
 import { markSubscribed } from './subscription-store.js'
+// Shared gates (flag → hostname) live in analytics.js; isLocalHostname() is
+// re-exported below so this module's public surface stays unchanged.
+import { isAnalyticsEnabled, isLocalHostname } from './analytics.js'
+
+export { isLocalHostname }
 
 // Captcha is baked at build time: prod forms carry data-captcha="1",
 // local builds (direct to the dev Listmonk, no Worker) carry "0".
@@ -49,6 +54,60 @@ export function collectFields(form) {
     fields[el.name] = el.value
   }
   return fields
+}
+
+// Form families that need their own GA4 event (and their own Meta content_name)
+// are tagged in the templates as data-form-kind on the <form> — one distinct
+// event per family, no pathname parsing:
+//   digest.html                       → digest_subscribe
+//   calculator-autonomo.html          → calc_autonomo_lead
+//   calculator-property-buying-cost   → calc_property_lead
+//   calculator-electricity.html       → calc_electricity_lead
+// Forms without the attribute (site/subscribe page, footer) keep 'subscribe';
+// quiz forms keep 'quiz_subscribe' (their `next` points at /quiz/…).
+const FORM_EVENTS = new Map([
+  ['digest', 'digest_subscribe'],
+  ['calc-autonomo', 'calc_autonomo_lead'],
+  ['calc-property', 'calc_property_lead'],
+  ['calc-electricity', 'calc_electricity_lead'],
+])
+
+// Fire a subscribe GA4 event (and the matching Meta Pixel 'Lead') before the
+// redirect. GA4 transport_type 'beacon' lets the hit survive
+// window.location.assign(); fbq queues internally and is best-effort. Quiz
+// forms redirect to /quiz/<slug>-subscribed — slug is parsed from `next`;
+// plain site forms get the generic 'subscribe' event with quiz:'site'.
+// `form` (the submitting <form>) is optional: when it carries data-form-kind
+// the distinct digest/calc_* event is used for both GA4 (event name) and Meta
+// (Lead content_name), so the two channels stay comparable.
+export function trackSubscribe(fields, form) {
+  try {
+    if (typeof window === 'undefined') return
+    // Shared gate: build-time flag first (templates/base.html), the hostname
+    // probe as fallback — see isAnalyticsEnabled() in analytics.js.
+    if (!isAnalyticsEnabled()) return
+    const next = fields.next || ''
+    const isQuiz = next.indexOf('/quiz/') !== -1
+    let slug = 'site'
+    const m = /\/quiz\/([^/?#]+)/.exec(next)
+    if (m) slug = m[1].replace(/-subscribed$/, '')
+    // Known data-form-kind on a non-quiz form → distinct event; otherwise the
+    // pre-existing quiz_subscribe / subscribe branches (params unchanged).
+    const kind = (form && form.dataset && form.dataset.formKind) || ''
+    const kindEvent = !isQuiz ? FORM_EVENTS.get(kind) : undefined
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', kindEvent || (isQuiz ? 'quiz_subscribe' : 'subscribe'), {
+        transport_type: 'beacon',
+        method: 'post',
+        ...(kindEvent ? { form_kind: kind } : { quiz: slug }),
+      })
+    }
+    // Meta Pixel: always 'Lead'; content_name carries the distinct form name
+    // (digest_subscribe / calc_*_lead), or the quiz slug / 'site' otherwise.
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'Lead', { content_name: kindEvent || slug })
+    }
+  } catch { /* analytics must never break the redirect */ }
 }
 
 export async function postForm(action, fields) {
@@ -100,6 +159,7 @@ export function initSubscribeForm(form) {
       const res = await postForm(form.action, fields)
       if (res.ok) {
         rememberSubscription(fields.email)
+        trackSubscribe(fields, form)
         window.location.assign(fields.next || '/confirm')
         return
       }
