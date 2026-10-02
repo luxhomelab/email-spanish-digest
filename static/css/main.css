@@ -1131,7 +1131,10 @@ body.page-digest .email-footer .cta-card p { color: #F6D9DA; }
 body.page-digest .email-footer .cta-card .cta-button { color: #7E1015; }
 /* CTA lives outside .digest-card now (captcha clipping): restore the old
    banner inset so the red block doesn't stretch to the full card width. */
-body.page-digest .digest > .cta-form-card { margin: 22px 32px 6px 32px; }
+body.page-digest .digest > .cta-form-card {
+  width: calc(100% - 64px); max-width: 1136px;
+  margin: 22px auto 6px auto;
+}
 body.page-digest .day-nav a {
  border: 1px solid #E3D9C6; border-radius: 999px; padding: 6px 16px;
  background-color: #FFFDF8;
@@ -1142,7 +1145,7 @@ body.page-digest .day-nav a:hover { text-decoration: none; border-color: #AA151B
  body.page-digest .email-body { padding: 8px 20px 0 20px; }
  body.page-digest .email-footer { padding: 20px 20px 26px 20px; }
  body.page-digest .email-footer .cta-card { padding: 28px 20px; }
- body.page-digest .digest > .cta-form-card { margin: 22px 12px 6px 12px; }
+ body.page-digest .digest > .cta-form-card { width: calc(100% - 24px); margin: 22px auto 6px auto; }
  body.page-digest .email-footer .cta-card h2 { font-size: 20px; }
  body.page-digest .email-footer .cta-button { font-size: 16px; padding: 12px 28px; }
  body.page-digest .mercadona { margin: 12px 20px 0 20px; }
@@ -2015,4 +2018,28 @@ body.page-home .intro-audience {
     align-self: stretch; width: 100%; max-width: none;
   }
   .cta-form-card .subscribe-form-btn { width: 100%; }
+}
+/* Digest CTA stacks up to 1100px: below that the two-column grid leaves the
+   email row under ~480px and the nowrap button crushes the input (seen at
+   864px). Mirrors the proven ≤860px stacked design, digest-scoped; the
+   521px floor keeps the ≤520px compaction rules untouched. */
+@media (max-width: 1100px) and (min-width: 521px) {
+ body.page-digest .digest > .cta-form-card { grid-template-columns: minmax(0, 1fr); padding: 30px 28px 26px; text-align: center; }
+ body.page-digest .digest > .cta-form-card .cta-form-copy { padding-right: 0; display: flex; flex-direction: column; align-items: center; }
+ body.page-digest .digest > .cta-form-card .cta-kicker { align-self: center; }
+ body.page-digest .digest > .cta-form-card h2 { text-align: center; max-width: 28ch; }
+ body.page-digest .digest > .cta-form-card .cta-sub { text-align: center; margin: 0 auto; max-width: 46ch; }
+ body.page-digest .digest > .cta-form-card .cta-form-side {
+   border-left: none; padding-left: 0;
+   border-top: 1px solid rgba(255,255,255,0.22);
+   padding-top: 22px; margin-top: 20px;
+ }
+ body.page-digest .digest > .cta-form-card .subscribe-form { max-width: 560px; margin: 0 auto; }
+ body.page-digest .digest > .cta-form-card .cta-microcopy { text-align: center; }
+}
+/* Turnstile renders a fixed 300px iframe; between 371px and 430px the digest
+   form column drops below 300px and .cta-form-card's overflow:hidden clips
+   the widget (the base ≤370px rule already scales it there). Bridge the gap. */
+@media (max-width: 430px) and (min-width: 371px) {
+ .cta-form-card .subscribe-form .cf-turnstile > div { transform: scale(0.85); transform-origin: top left; }
 }
