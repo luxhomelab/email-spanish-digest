@@ -146,6 +146,24 @@
      </div>
     </div>
 
+    <div class="card articles-block">
+     <h2>Latest articles</h2>
+     <p>Practical guides to living in Spain — learned by doing, written in plain English.</p>
+     <div class="articles-grid">
+      {% for a in articles %}
+      <a class="article-mini" href="{{ a.url }}" aria-label="Read the article: {{ a.title }}">
+       <span class="article-mini-meta">{{ a.date_display }} · {{ a.reading_time }} min read</span>
+       <span class="article-mini-title">{{ a.title }}</span>
+       {% if a.excerpt %}
+       <span class="article-mini-excerpt">{{ a.excerpt[:150] }}{% if a.excerpt|length > 150 %}…{% endif %}</span>
+       {% endif %}
+       <span class="article-mini-cta">Read the article →</span>
+      </a>
+      {% endfor %}
+     </div>
+     <a class="articles-all" href="/articles/">All articles →</a>
+    </div>
+
     <div class="card">
      <h2>Tax calculators for Spain</h2>
      <p>Autónomo Tax, Property Buying Cost and Electricity Bill calculators — practical tools for life in Spain, free, no sign-up.</p>

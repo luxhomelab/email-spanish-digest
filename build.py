@@ -610,7 +610,7 @@ def render_static(env, digests):
     }
 
     contexts = {
-        "index.html": {"latest": latest, "topics": topics, "emoji": CATEGORY_EMOJI, "faq": FAQ_ITEMS, "proof": proof, "quizzes": load_quiz_cards(homepage=True)},
+        "index.html": {"latest": latest, "topics": topics, "emoji": CATEGORY_EMOJI, "faq": FAQ_ITEMS, "proof": proof, "quizzes": load_quiz_cards(homepage=True), "articles": load_articles()[:3]},
         "about.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "About", "url": "/about", "current": True}]},
         "contact.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Contact", "url": "/contact", "current": True}]},
         "editor.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Editor", "url": "/editor", "current": True}]},
