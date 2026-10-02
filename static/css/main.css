@@ -2483,15 +2483,12 @@ body.page-article .article-faq-answer a {
 }
 body.page-article .article-faq-answer a:hover { color: #8A1019; background-color: rgba(170, 21, 27, 0.07); }
 
-/* FAQ card rises into view like the article callout components. */
-body.page-article .article-faq-list {
- animation: art-rise 0.55s ease both;
- animation-timeline: view();
- animation-range: entry 0% cover 28%;
-}
-@media (prefers-reduced-motion: reduce) {
- body.page-article .article-faq-list { animation: none; }
-}
+/* FAQ card gets NO scroll reveal (unlike the article callouts above): it
+ sits at the end of the article, where the page can run out of scroll
+ before a view()-driven art-rise completes — fill "both" then freezes the
+ card at a partial opacity forever, washing out the Q/A text. Questions
+ (#1A1A16, red #AA151B when open) and answers (#3C4858, the body ink)
+ stay solid full-contrast at all times. */
 
 @media (max-width: 640px) {
  body.page-article .article-faq-title { font-size: 21px; }

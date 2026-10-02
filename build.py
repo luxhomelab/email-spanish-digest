@@ -1232,6 +1232,7 @@ def main():
     ]
 
     digests = [digest_context(d) for d in load_digests()]
+    articles = load_articles()
 
     print("Copying static assets...")
     copy_static(out_dir)
@@ -1246,13 +1247,12 @@ def main():
 
     print("Rendering OG images...")
     from og_images import render_og_images
-    render_og_images(digests, out_dir)
+    render_og_images(digests, articles, out_dir)
 
     print("Building archive listing...")
     render_archive(env, digests)
 
     print("Building articles...")
-    articles = load_articles()
     render_articles_list(env, articles)
     render_article_pages(env, articles)
 
