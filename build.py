@@ -11,7 +11,7 @@ and renders a static site:
   - Archive listing -> archive/index.html + archive/N.html (10 per page)
   - Sitemap        -> sitemap.xml
 
-Usage: python3 build.py [--out dist] [--listmonk local]   (idempotent)
+Usage: python3 build.py [--out dist] [--listmonk local] [--analytics on|off|auto]   (idempotent)
 
   Local dev against the dev Listmonk instead of prod:
     python3 build.py --listmonk local
@@ -639,7 +639,7 @@ def render_digests(env, digests):
             "older": {"url": older["url"], "date_display": older["date_display"]} if older else None,
             "newer": {"url": newer["url"], "date_display": newer["date_display"]} if newer else None,
         }
-        output = template.render(digest=digest, emoji=CATEGORY_EMOJI, crumbs=crumbs, day_nav=day_nav)
+        output = template.render(digest=digest, emoji=CATEGORY_EMOJI, crumbs=crumbs, day_nav=day_nav, js_version=js_version())
         dest = os.path.join(ARCHIVE_DIR, f"{digest['date']}.html")
         with open(dest, "w", encoding="utf-8") as fh:
             fh.write(output)
@@ -774,7 +774,40 @@ def parse_args():
         "Spain Daily list, or the dev list with --listmonk local). "
         "Env LISTMONK_LIST_UUID overrides.",
     )
+    parser.add_argument(
+        "--analytics",
+        choices=("on", "off", "auto"),
+        default=_env_analytics(),
+        help="Bake GA4 + Meta Pixel into the pages: 'auto' (default) = "
+        "enabled only when --out is outside the repo root (CI builds to "
+        "dist/), a local build into the repo root gets no analytics; "
+        "'on'/'off' force it. Env ANALYTICS overrides the default.",
+    )
     return parser.parse_args()
+
+
+def _env_analytics():
+    """Default for --analytics from env ANALYTICS (on/off/auto)."""
+    value = (os.environ.get("ANALYTICS") or "auto").strip().lower()
+    if value not in ("on", "off", "auto"):
+        print(
+            f"WARN: ignoring invalid ANALYTICS={value!r} (expected on/off/auto), "
+            "using 'auto'",
+            file=sys.stderr,
+        )
+        return "auto"
+    return value
+
+
+def analytics_enabled(args):
+    """Whether GA4/Meta Pixel snippets are baked into the rendered pages.
+
+    Explicit --analytics on/off wins; 'auto' enables analytics only for
+    builds that output outside the repo root (CI: --out dist) so local
+    builds into the repo root never ship tracking code."""
+    if args.analytics != "auto":
+        return args.analytics == "on"
+    return os.path.abspath(args.out) != os.path.abspath(SCRIPT_DIR)
 
 
 def listmonk_form_action(listmonk):
@@ -875,6 +908,9 @@ def main():
     # prod API. Local builds post straight at the dev Listmonk — no Worker,
     # so no widget is rendered and the JS token check is skipped.
     env.globals["turnstile_enabled"] = args.listmonk != "local"
+    # Analytics (GA4 + Meta Pixel) snippets are baked at build time; local
+    # builds into the repo root stay tracking-free (see analytics_enabled()).
+    env.globals["analytics_enabled"] = analytics_enabled(args)
     env.globals["pub_date"] = pub_date
     env.globals["site_socials"] = [
         "https://www.threads.com/@spaindaily",

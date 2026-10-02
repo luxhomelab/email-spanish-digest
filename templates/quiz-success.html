@@ -48,6 +48,18 @@
 <script id="quiz-success-data" type="application/json">{{ quiz_json | safe }}</script>
 <script type="module">
 import { resultForScore, personalShareText, personalLongShareText, quizResultUrl, markQuizSubscribed } from '/static/js/quiz-logic.js?v={{ js_version }}';
+// Local origins (localhost / 127.x / 0.0.0.0 / file:) never fire analytics —
+// second line behind the build-time analytics_enabled gate in base.html.
+// Computed outside the try so a broken location can't trip the fallback UI.
+const analyticsLocal = (() => {
+  try {
+    const loc = window.location;
+    if (!loc || loc.protocol === 'file:') return true;
+    const host = (loc.hostname || '').toLowerCase();
+    if (!host) return true;
+    return /^(localhost$|127(\.\d+){0,3}$|0\.0\.0\.0$|\[::1\]$)/.test(host);
+  } catch (e) { return false; }
+})();
 try {
   const data = JSON.parse(document.getElementById('quiz-success-data').textContent);
   const TOTAL = 10;
@@ -80,6 +92,8 @@ try {
     document.getElementById('quiz-success-result').hidden = false;
     // Confirmed opt-in: record it so the quiz page unlocks on revisit.
     try { markQuizSubscribed(window.localStorage, '{{ quiz.slug }}'); } catch (e) {}
+    try { if (!analyticsLocal && typeof gtag !== 'undefined') gtag('event', 'quiz_email_confirm', { quiz: '{{ quiz.slug }}' }); } catch (e) {}
+    try { if (!analyticsLocal && typeof fbq !== 'undefined') fbq('track', 'CompleteRegistration', { content_name: '{{ quiz.slug }}' }); } catch (e) {}
     // Personal share → per-persona page with the exact score (?score=).
     // X gets the short line; FB gets quote (long text, sometimes pre-filled);
     // TG/WA get the longer roast text.
@@ -117,6 +131,8 @@ try {
   }
 } catch (e) {
   document.getElementById('quiz-success-fallback').hidden = false;
+  try { if (!analyticsLocal && typeof gtag !== 'undefined') gtag('event', 'quiz_email_confirm', { quiz: '{{ quiz.slug }}', fallback: true }); } catch (err) {}
+  try { if (!analyticsLocal && typeof fbq !== 'undefined') fbq('track', 'CompleteRegistration', { content_name: '{{ quiz.slug }}' }); } catch (err) {}
 }
 </script>
 {% endblock %}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"{% block html_class %}{% endblock %}>
 <head>
+{% if analytics_enabled %}
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CBF70VDX1D"></script>
 <script>
@@ -26,6 +27,7 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=2597044717425425&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+{% endif %}
  <link rel="icon" href="/favicon.ico" sizes="any">
  <link rel="icon" type="image/png" href="/favicon.png">
  <link rel="apple-touch-icon" href="/apple-touch-icon.png">

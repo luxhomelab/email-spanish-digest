@@ -131,6 +131,16 @@
    <p class="src">Rates: general ITP/AJD scales per autonomous community, 2026. Reduced rates for first homes, young buyers and families are not included — see the notice above.</p>
   </div>
 
+  <div class="card cta-form-card cta-form-card--compact">
+   <p class="cta-kicker">Free · Every morning · 5-minute read</p>
+   <h2>Spain's top news, in English, every morning</h2>
+   <p class="cta-sub">One short email a day — what happened in Spain and why it matters. Free, no spam, unsubscribe anytime.</p>
+   {% set field_id = "calc-property-email" %}
+   {% set btn_label = "Subscribe free" %}
+   {% include "partials/subscribe-form.html" %}
+   <p class="cta-microcopy">Join 500+ readers · cancel anytime</p>
+  </div>
+
   <div class="card faq-card">
    <h2>Frequently Asked Questions</h2>
    <details class="faq-item"><summary>What is ITP and how is the tax calculated when buying a resale property?</summary><p>ITP (Impuesto sobre Transmisiones Patrimoniales) is a regional transfer tax paid when buying a resale property in Spain. Flat-rate regions apply one rate to the full price (e.g. Madrid 6%, Andalusia 7%). Eight regions use progressive marginal brackets — Aragón, Asturias, Baleares, Cantabria, Castilla y León, Cataluña, Extremadura, and Comunidad Valenciana — where each price tranche is taxed at its own rate, similar to income tax. Example: a €700,000 home in Cataluña — first €600,000 @ 10% + next €100,000 @ 11% = €71,000 ITP.</p></details>
@@ -146,4 +156,5 @@
  </div>
 <script type="module" src="/static/js/property-buying-cost.js?v={{ js_version }}"></script>
 <script src="/static/js/tooltips.js?v={{ js_version }}" defer></script>
+<script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
 {% endblock %}

@@ -125,6 +125,16 @@
    <p class="src">Tax rates: electricity special tax 5.112696% and IVA 21% (2026). Default supplier rates are illustrative market figures — verify against your retailer's current tariff sheet.</p>
   </div>
 
+  <div class="card cta-form-card cta-form-card--compact">
+   <p class="cta-kicker">Free · Every morning · 5-minute read</p>
+   <h2>Spain's top news, in English, every morning</h2>
+   <p class="cta-sub">One short email a day — what happened in Spain and why it matters. Free, no spam, unsubscribe anytime.</p>
+   {% set field_id = "calc-electricity-email" %}
+   {% set btn_label = "Subscribe free" %}
+   {% include "partials/subscribe-form.html" %}
+   <p class="cta-microcopy">Join 500+ readers · cancel anytime</p>
+  </div>
+
   <div class="card faq-card">
    <h2>Frequently Asked Questions</h2>
    <details class="faq-item"><summary>How is a Spanish electricity bill calculated?</summary><p>A Spanish bill stacks three charges: the capacity charge (término de potencia = P1 and P2 €/kW/day × days × contracted kW), the energy charge (kWh × €/kWh, either flat or split into punta/llano/valle periods) and any Bono Social discount. That subtotal is taxed with the electricity special tax of 5.112696%, the meter rental is added, then VAT (IVA) of 21% is applied to the result — the grand total is what you pay.</p></details>
@@ -141,4 +151,5 @@
  </div>
 <script type="module" src="/static/js/electricity.js?v={{ js_version }}"></script>
 <script src="/static/js/tooltips.js?v={{ js_version }}" defer></script>
+<script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
 {% endblock %}

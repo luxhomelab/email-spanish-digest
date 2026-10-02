@@ -16,6 +16,13 @@ const TOTAL = 10
 
 function track(name, params = {}) {
   try {
+    // Never send events from a local origin (localhost / 127.x / 0.0.0.0 /
+    // file:) — mirrors isLocalHostname() in subscribe-form.js, a second line
+    // of defence behind the build-time analytics_enabled gate.
+    const loc = window.location
+    const host = loc ? (loc.hostname || '').toLowerCase() : ''
+    if (!loc || loc.protocol === 'file:' || !host ||
+        /^(localhost$|127(\.\d+){0,3}$|0\.0\.0\.0$|\[::1\]$)/.test(host)) return
     if (typeof window.gtag === 'function') window.gtag('event', name, params)
   } catch { /* analytics optional */ }
 }

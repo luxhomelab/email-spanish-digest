@@ -51,6 +51,48 @@ export function collectFields(form) {
   return fields
 }
 
+// Second line of defence (after the build-time {% if analytics_enabled %}
+// gate in templates/base.html): a dist/ output opened locally still has the
+// snippets inlined, so never send events from a local origin.
+export function isLocalHostname() {
+  try {
+    const loc = window.location
+    if (!loc || loc.protocol === 'file:') return true
+    const host = (loc.hostname || '').toLowerCase()
+    if (!host) return true
+    return /^(localhost$|127(\.\d+){0,3}$|0\.0\.0\.0$|\[::1\]$)/.test(host)
+  } catch { return true }
+}
+
+// Fire a subscribe GA4 event (and the matching Meta Pixel 'Lead') before the
+// redirect. GA4 transport_type 'beacon' lets the hit survive
+// window.location.assign(); fbq queues internally and is best-effort. Quiz
+// forms redirect to /quiz/<slug>-subscribed — slug is parsed from `next`;
+// plain site forms get the generic 'subscribe' event with quiz:'site'.
+export function trackSubscribe(fields) {
+  try {
+    if (typeof window === 'undefined') return
+    if (isLocalHostname()) return
+    const next = fields.next || ''
+    const isQuiz = next.indexOf('/quiz/') !== -1
+    let slug = 'site'
+    const m = /\/quiz\/([^/?#]+)/.exec(next)
+    if (m) slug = m[1].replace(/-subscribed$/, '')
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', isQuiz ? 'quiz_subscribe' : 'subscribe', {
+        transport_type: 'beacon',
+        method: 'post',
+        quiz: slug,
+      })
+    }
+    // Meta Pixel: same 'Lead' for both form kinds; content_name carries the
+    // quiz slug, or 'site' for the plain site form.
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'Lead', { content_name: slug })
+    }
+  } catch { /* analytics must never break the redirect */ }
+}
+
 export async function postForm(action, fields) {
   const res = await fetch(action, {
     method: 'POST',
@@ -100,6 +142,7 @@ export function initSubscribeForm(form) {
       const res = await postForm(form.action, fields)
       if (res.ok) {
         rememberSubscription(fields.email)
+        trackSubscribe(fields)
         window.location.assign(fields.next || '/confirm')
         return
       }

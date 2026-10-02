@@ -216,6 +216,16 @@
    <p class="src">SS data source: <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296" target="_blank" rel="noopener">Orden PJC/297/2026 (BOE-A-2026-7296)</a></p>
   </div>
 
+  <div class="card cta-form-card cta-form-card--compact">
+   <p class="cta-kicker">Free · Every morning · 5-minute read</p>
+   <h2>Spain's top news, in English, every morning</h2>
+   <p class="cta-sub">One short email a day — what happened in Spain and why it matters. Free, no spam, unsubscribe anytime.</p>
+   {% set field_id = "calc-autonomo-email" %}
+   {% set btn_label = "Subscribe free" %}
+   {% include "partials/subscribe-form.html" %}
+   <p class="cta-microcopy">Join 500+ readers · cancel anytime</p>
+  </div>
+
   <div class="card faq-card">
    <h2>Frequently Asked Questions</h2>
    <details class="faq-item"><summary>How are autónomo SS quotas calculated?</summary><p>Since 2023, Spain introduced a 15-bracket social security system for autónomos based on actual net income. Your monthly quota depends on which bracket your estimated annual net income falls into. Official quotas for 2026 are set by Orden PJC/297/2026.</p></details>
@@ -231,4 +241,5 @@
  </div>
 <script type="module" src="/static/js/autonomo.js?v={{ js_version }}"></script>
 <script src="/static/js/tooltips.js?v={{ js_version }}" defer></script>
+<script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
 {% endblock %}
