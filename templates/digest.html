@@ -82,7 +82,6 @@
    <div class="email-footer">
     <div class="share-cta">Enjoyed this digest? Share it with a friend.</div>
     {% with share=digest.share %}{% include "partials/share.html" %}{% endwith %}
-    {% set field_id = "digest-subscribe-email" %}{% set form_kind = "digest" %}{% set base_class = "cta-form-card" %}{% set indent = "    " %}{% include "partials/cta-form-card.html" %}
     <div class="ai-disclaimer">This digest is based on real news, created with the help of AI and reviewed by a human.</div>
     {% if day_nav.older or day_nav.newer %}
     <nav class="day-nav" aria-label="More digests">
@@ -92,6 +91,7 @@
     {% endif %}
    </div>
   </div>
+   {% set field_id = "digest-subscribe-email" %}{% set form_kind = "digest" %}{% set base_class = "cta-form-card" %}{% set indent = "    " %}{% include "partials/cta-form-card.html" %}
  </div>
 <script>
 (function () {
