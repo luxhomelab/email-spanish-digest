@@ -11,12 +11,12 @@ and renders a static site:
   - Archive listing -> archive/index.html + archive/N.html (10 per page)
   - Sitemap        -> sitemap.xml
 
-Usage: python3 build.py [--out dist] [--listmonk local] [--analytics on|off|auto]   (idempotent)
+Usage: python3 build.py [--out dist] [--local]   (idempotent)
 
-  Local dev against the dev Listmonk instead of prod:
-    python3 build.py --listmonk local
-  (endpoint + dev list UUID are picked automatically; override with
-  --list-uuid or env LISTMONK_URL / LISTMONK_LIST_UUID)
+  Local dev against homelab instances instead of prod:
+    python3 build.py --local
+  (listmonk + comments endpoints switch to *.dslab.fyi, turnstile and
+  analytics are disabled)
 """
 
 import argparse
@@ -46,18 +46,17 @@ SITE_URL = "https://spanified.com"
 PAGE_SIZE = 10
 ARTICLES_PAGE_SIZE = 10
 
-# Listmonk backend for the native subscribe form (templates/partials/
-# subscribe-form.html renders these into action / l value).
-# The form POSTs urlencoded natively to <base>/api/public/subscription
-# (Listmonk public API, which also accepts form-encoded `l`). A Cloudflare
-# Worker in front of the endpoint verifies the Turnstile token server-side
-# and issues the post-success redirect (Listmonk itself returns JSON here).
-# Default is prod; local dev builds pass --listmonk local (or LISTMONK_URL)
-# so the browser talks to the dev instance instead of prod.
+# Backend endpoints: prod is the default, --local switches everything to
+# homelab dev instances (*.dslab.fyi). No per-service flags — one switch.
 LISTMONK_PROD_URL = "https://newsletter.spanified.com"
 LISTMONK_LOCAL_URL = "https://listmonk.dslab.fyi"
 LISTMONK_PROD_LIST_UUID = "d4edf463-70a3-45e5-a964-a39b48c49b2d"
 LISTMONK_LOCAL_LIST_UUID = "5dcb6e29-0181-4c55-b68a-705133b53e10"
+
+REMARK_PROD_HOST = "https://comments.spanified.com"
+REMARK_LOCAL_HOST = "https://comments.dslab.fyi"
+REMARK_PROD_SITE_ID = "spanified"
+REMARK_LOCAL_SITE_ID = "spanified-dev"
 
 # Static pages rendered 1:1 from templates.
 # Pages listed here are rendered to dist root. NOINDEX_PAGES are still
@@ -1066,70 +1065,41 @@ def parse_args():
         "CI uses --out dist.",
     )
     parser.add_argument(
-        "--listmonk",
-        default=os.environ.get("LISTMONK_URL", "prod"),
-        help="Listmonk backend for the subscribe form: 'prod' (default, "
-        "https://newsletter.spanified.com), 'local' (dev instance, "
-        "https://listmonk.dslab.fyi), or a custom base URL. "
-        "Env LISTMONK_URL overrides the default.",
-    )
-    parser.add_argument(
-        "--list-uuid",
-        default=os.environ.get("LISTMONK_LIST_UUID"),
-        help="Listmonk list UUID for the subscribe form (default: prod "
-        "Spain Daily list, or the dev list with --listmonk local). "
-        "Env LISTMONK_LIST_UUID overrides.",
-    )
-    parser.add_argument(
-        "--analytics",
-        choices=("on", "off", "auto"),
-        default=_env_analytics(),
-        help="Bake GA4 + Meta Pixel into the pages: 'auto' (default) = "
-        "enabled only when --out is outside the repo root (CI builds to "
-        "dist/), a local build into the repo root gets no analytics; "
-        "'on'/'off' force it. Env ANALYTICS overrides the default.",
+        "--local",
+        action="store_true",
+        help="Local dev build: listmonk + comments point at homelab "
+        "(*.dslab.fyi), turnstile and analytics are disabled. "
+        "Default (flag absent) is prod.",
     )
     return parser.parse_args()
-
-
-def _env_analytics():
-    """Default for --analytics from env ANALYTICS (on/off/auto)."""
-    value = (os.environ.get("ANALYTICS") or "auto").strip().lower()
-    if value not in ("on", "off", "auto"):
-        print(
-            f"WARN: ignoring invalid ANALYTICS={value!r} (expected on/off/auto), "
-            "using 'auto'",
-            file=sys.stderr,
-        )
-        return "auto"
-    return value
 
 
 def analytics_enabled(args):
     """Whether GA4/Meta Pixel snippets are baked into the rendered pages.
 
-    Explicit --analytics on/off wins; 'auto' enables analytics only for
-    builds that output outside the repo root (CI: --out dist) so local
-    builds into the repo root never ship tracking code."""
-    if args.analytics != "auto":
-        return args.analytics == "on"
+    --local builds are always tracking-free; prod builds enable analytics
+    only when output goes outside the repo root (CI: --out dist)."""
+    if args.local:
+        return False
     return os.path.abspath(args.out) != os.path.abspath(SCRIPT_DIR)
 
 
-def listmonk_form_action(listmonk):
-    """Resolve the --listmonk value to the Listmonk public API route."""
-    base = {"prod": LISTMONK_PROD_URL, "local": LISTMONK_LOCAL_URL}.get(
-        listmonk, listmonk)
+def listmonk_form_action(local):
+    """Listmonk public API route for the subscribe form."""
+    base = LISTMONK_LOCAL_URL if local else LISTMONK_PROD_URL
     return base.rstrip("/") + "/api/public/subscription"
 
 
-def listmonk_list_uuid(args):
-    """Resolve the list UUID: explicit --list-uuid wins, otherwise per mode."""
-    if args.list_uuid:
-        return args.list_uuid
-    if args.listmonk == "local":
-        return LISTMONK_LOCAL_LIST_UUID
-    return LISTMONK_PROD_LIST_UUID
+def listmonk_list_uuid(local):
+    """Listmonk list UUID: dev list for --local, prod Spain Daily list."""
+    return LISTMONK_LOCAL_LIST_UUID if local else LISTMONK_PROD_LIST_UUID
+
+
+def remark_backend(local):
+    """Remark42 (host, site_id): dev instance for --local, prod otherwise."""
+    if local:
+        return REMARK_LOCAL_HOST, REMARK_LOCAL_SITE_ID
+    return REMARK_PROD_HOST, REMARK_PROD_SITE_ID
 
 
 def copy_static(out_dir):
@@ -1210,18 +1180,23 @@ def main():
     env.globals["current_year"] = datetime.now().year
     env.globals["asset_version"] = css_version()
     env.globals["site_url"] = SITE_URL
-    env.globals["listmonk_form_action"] = listmonk_form_action(args.listmonk)
-    env.globals["listmonk_list_uuid"] = listmonk_list_uuid(args)
+    env.globals["listmonk_form_action"] = listmonk_form_action(args.local)
+    env.globals["listmonk_list_uuid"] = listmonk_list_uuid(args.local)
     # Captcha (Cloudflare Turnstile via Worker) only exists in front of the
-    # prod API. Local builds post straight at the dev Listmonk — no Worker,
+    # prod API. --local posts straight at the dev Listmonk — no Worker,
     # so no widget is rendered and the JS token check is skipped.
-    env.globals["turnstile_enabled"] = args.listmonk != "local"
-    # Analytics (GA4 + Meta Pixel) snippets are baked at build time; local
-    # builds into the repo root stay tracking-free (see analytics_enabled()).
+    env.globals["turnstile_enabled"] = not args.local
+    # Analytics (GA4 + Meta Pixel) snippets are baked at build time; --local
+    # builds stay tracking-free (see analytics_enabled()).
     # The same value is exposed to every template as a JS global —
     # window.SPANIFIED_ANALYTICS in templates/base.html — because
     # static/js/*.js are copied verbatim (STATIC_COPY) and never rendered.
     env.globals["analytics_enabled"] = analytics_enabled(args)
+    # Remark42 comments widget (digest issue + article pages). Prod host by
+    # default, dev instance with --local.
+    remark_host, remark_site_id = remark_backend(args.local)
+    env.globals["remark_host"] = remark_host
+    env.globals["remark_site_id"] = remark_site_id
     env.globals["pub_date"] = pub_date
     env.globals["site_socials"] = [
         "https://www.threads.com/@spaindaily",

@@ -1,0 +1,17 @@
+{# Remark42 comments widget (digest issue + article pages only).
+   Expects: remark_host, remark_site_id (globals from build.py),
+   page_url (set by the including template). #}
+{% if remark_host and remark_site_id %}
+<section class="comments" id="comments">
+ <h2 class="comments-title">Comments</h2>
+ <div id="remark42">Comments loading...</div>
+ <script>
+  var remark_config = {
+   host: {{ remark_host|tojson }},
+   site_id: {{ remark_site_id|tojson }},
+   url: {{ page_url|tojson }},
+  };
+ </script>
+ <script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),d=n.head||n.body;r.type="module",r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+".mjs",d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
+</section>
+{% endif %}

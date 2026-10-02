@@ -55,11 +55,11 @@ production clean URLs, so `/quiz/ai-or-real` works without the `.html`
 extension:
 
 ```bash
-py build.py --listmonk local   # forms point at the dev Listmonk
-py serve.py                    # http://localhost:8000 (optional port arg)
+py build.py --local   # dev backends: listmonk + comments on *.dslab.fyi
+py serve.py           # http://localhost:8000 (optional port arg)
 ```
 
-Rebuild with plain `py build.py` (prod Listmonk) before committing/deploying.
+Rebuild with plain `py build.py` (prod backends) before committing/deploying.
 
 ## How the pipeline feeds data later
 
