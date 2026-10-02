@@ -944,7 +944,7 @@ details.elec-bd[open] .elec-bd-sum::before { transform: rotate(90deg); }
 .subscribe-form-hp {
  position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
 }
-@media (max-width: 520px) {
+@media (max-width: 560px) {
   /* Mobile: consent goes above the button (input → consent → button).
      Flatten the nested wrappers so flex `order` can reorder all parts. */
   .subscribe-form { display: flex; flex-direction: column; padding: 26px 20px 22px; }
@@ -1132,7 +1132,7 @@ body.page-digest .email-footer .cta-card .cta-button { color: #7E1015; }
 /* CTA lives outside .digest-card now (captcha clipping): restore the old
    banner inset so the red block doesn't stretch to the full card width. */
 body.page-digest .digest > .cta-form-card {
-  width: calc(100% - 64px); max-width: 1136px;
+  width: calc(100% - 64px); max-width: 1200px;
   margin: 22px auto 6px auto;
 }
 body.page-digest .day-nav a {
