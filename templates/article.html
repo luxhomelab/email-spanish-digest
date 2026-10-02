@@ -39,11 +39,29 @@
  <div class="digest" data-pagefind-sort="date:{{ article.date }}">
   <div class="digest-card">
    <h1 class="email-red-band">{{ article.title }}</h1>
+   <div class="byline">
+    <span class="byline-part">By <a href="/editor">Dmytro Shvechikov</a></span>
+    <span class="byline-dot" aria-hidden="true"></span>
+    <span class="byline-part">{{ article.date_display }}</span>
+    <span class="byline-dot" aria-hidden="true"></span>
+    <span class="byline-read">{{ article.reading_time }} min read</span>
+   </div>
    <div class="email-gold-band"></div>
-   <div class="byline">By <a href="/editor">Dmytro Shvechikov</a> · {{ article.date_display }} · {{ article.reading_time }} min read</div>
 
    <div class="email-body article-body">
-    {{ article.body_html|safe }}
+    {# Editorial callout conventions authored in the markdown source
+       (rendered by the article styles block in static/css/main.css):
+         > KEY: label **value** caption  -> key-figure stat card (3-up strip)
+         > TAKE: text                    -> key-takeaway box
+         > TIP: text                     -> "good to know" note box
+         > text                          -> pull-quote
+       The converter emits them as <blockquote> lines; class hooks are added
+       here so no build.py change is needed. #}
+    {{ article.body_html
+       | replace('<blockquote>KEY: ', '<blockquote class="art-fig">')
+       | replace('<blockquote>TAKE: ', '<blockquote class="art-take">')
+       | replace('<blockquote>TIP: ', '<blockquote class="art-tip">')
+       | safe }}
    </div>
 
    <div class="email-footer">

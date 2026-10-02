@@ -2085,35 +2085,151 @@ body.page-home .intro-audience {
 @media (max-width: 430px) and (min-width: 371px) {
  .cta-form-card .subscribe-form .cf-turnstile > div { transform: scale(0.85); transform-origin: top left; }
 }
-/* ---------- Articles: long-form readability ---------- */
+/* ---------- Articles: long-form editorial layout (body.page-article) ----------
+   Reading column: the article card is narrowed to one comfortable measure
+   (~88ch) and centered on the cream page; breadcrumbs and the subscribe CTA
+   below it align to the same column. A faint golden halo behind the card top
+   keeps the cream page from reading as flat emptiness. */
+body.page-article .digest {
+ background: radial-gradient(64% 380px at 50% 0%, rgba(241, 191, 0, 0.10), transparent 72%) no-repeat;
+}
+body.page-article .digest-card { max-width: 780px; }
+body.page-article .breadcrumbs { max-width: 780px; }
+body.page-article .digest > .cta-form-card { max-width: 780px; }
+
+/* Header: title + byline form one cream head-block, closed by the signature
+   red/gold bar (mirrors .subscribe-form::before), then the reading column. */
+body.page-article h1.email-red-band {
+ padding: 36px 32px 10px 32px;
+ font-size: 33px; line-height: 39px;
+ text-wrap: balance;
+}
+body.page-article .byline {
+ display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+ gap: 10px;
+ background-color: #FFFDF8;
+ padding: 2px 32px 20px 32px;
+ font-size: 13.5px; color: #8B8578;
+}
+body.page-article .byline a { color: #B91C1C; font-weight: 600; text-decoration: none; }
+body.page-article .byline a:hover { text-decoration: underline; }
+body.page-article .byline-dot {
+ width: 4px; height: 4px; border-radius: 50%;
+ background-color: #F1BF00; opacity: 0.9;
+}
+body.page-article .byline-read {
+ background-color: #F5F1E8; border: 1px solid #E3D9C6; border-radius: 999px;
+ padding: 3px 11px; font-weight: 700; color: #AA151B;
+ font-variant-numeric: tabular-nums;
+}
+body.page-article .email-gold-band {
+ height: 4px; border-radius: 2px;
+ background: linear-gradient(90deg, #AA151B 50%, #F1BF00 50%);
+}
+body.page-article .email-body { padding: 22px 32px 8px 32px; }
+body.page-article .email-footer { clear: both; padding: 26px 32px 30px 32px; }
+
+/* Orchestrated page load: title, byline, rule and lede rise in, the bar
+   wipes in from the left. Quick (under 0.65s total) and reduced-motion safe. */
+@keyframes art-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes art-band-in { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+body.page-article h1.email-red-band { animation: art-in 0.5s ease-out both; }
+body.page-article .byline { animation: art-in 0.5s ease-out 0.07s both; }
+body.page-article .email-gold-band { transform-origin: left center; animation: art-band-in 0.6s ease-out 0.14s both; }
+body.page-article .article-body > p:first-child { animation: art-in 0.5s ease-out 0.2s both; }
+
+/* ---------- Article body: typography + component conventions ----------
+   The markdown converter (build.py) emits p / h2 / h3 / strong / em / a / ul /
+   hr / blockquote only. Callout components are authored in markdown as
+   conventions and given class hooks in templates/article.html (no build.py
+   logic involved):
+     > text                         -> pull-quote (default blockquote style)
+     > KEY: label **value** caption  -> key-figure stat card (.art-fig)
+     > TAKE: text                   -> key-takeaway box (.art-take)
+     > TIP: text                    -> "good to know" note box (.art-tip)
+   A <ul> whose first item starts with **bold** renders as a definition-style
+   mini-table (progressive enhancement via :has(); plain gold-dot list in
+   browsers without :has). Consecutive KEY cards float into a 3-up strip;
+   every other body element clears below floats so a strip always reads as
+   one self-contained row. */
 .article-body {
  font-size: 17px; line-height: 1.8; color: #3C4858;
  text-wrap: pretty;
+ counter-reset: art-h2;
 }
+.article-body > *:not(blockquote.art-fig) { clear: both; }
 .article-body p { margin: 0 0 1.3em 0; }
+
+/* Lede: first paragraph runs larger and darker, opened by a red drop cap. */
+.article-body > p:first-child {
+ font-size: 19.5px; line-height: 1.75; color: #1A1A16;
+}
+.article-body > p:first-child::first-letter {
+ float: left;
+ font-family: Roboto, Helvetica, sans-serif; font-weight: 800;
+ font-size: 54px; line-height: 44px;
+ padding: 4px 12px 0 0; color: #AA151B;
+}
+
+/* Sections: hairline + red zero-padded counter kicker + bigger title. */
 .article-body h2 {
- font-size: 23px; line-height: 1.35; letter-spacing: -0.2px;
- color: #1A1A16; margin: 0 0 0.7em 0; text-wrap: balance;
+ counter-increment: art-h2;
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 25px; line-height: 1.3; letter-spacing: -0.3px;
+ color: #1A1A16; text-wrap: balance;
+ margin: 0 0 0.75em 0; padding: 1.4em 0 0 0;
+ border-top: 1px solid #F0EBE0;
 }
+.article-body h2::before {
+ content: counter(art-h2, decimal-leading-zero) " /";
+ display: block;
+ font-size: 11.5px; font-weight: 700; letter-spacing: 2.6px;
+ color: #AA151B; margin-bottom: 7px;
+}
+/* Sub-sections: gold square tick keeps the hierarchy one degree quieter. */
 .article-body h3 {
- font-size: 19px; line-height: 1.4; color: #1A1A16;
- margin: 1.6em 0 0.6em 0;
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 18.5px; line-height: 1.4; letter-spacing: -0.2px;
+ color: #1A1A16; margin: 1.9em 0 0.6em 0;
 }
+.article-body h3::before {
+ content: ""; display: inline-block;
+ width: 9px; height: 9px; border-radius: 2px;
+ background-color: #F1BF00; margin-right: 10px;
+}
+
 .article-body strong { color: #1A1A16; }
 .article-body a {
  color: #AA151B; text-decoration: underline;
  text-decoration-thickness: 1px; text-underline-offset: 3px;
+ transition: background-color 0.15s, color 0.15s;
 }
-.article-body a:hover { color: #8A1019; }
+.article-body a:hover { color: #8A1019; background-color: rgba(170, 21, 27, 0.07); }
 .article-body a[target="_blank"]::after {
  content: "\2197"; font-size: 0.8em; margin-left: 3px;
  text-decoration: none; display: inline-block;
 }
-.article-body blockquote {
- margin: 0 0 1.4em 0; padding: 6px 0 6px 22px;
- border-left: 3px solid #F1BF00; color: #1A1A16;
- font-size: 19px; line-height: 1.6;
+
+/* Definition-style mini-table: <ul> whose items each open with **term**.
+   Term column left, description right, hairline rows inside a cream card. */
+.article-body ul:has(> li:first-child > strong:first-child) {
+ background-color: #FFFDF8; border: 1px solid #EFE7D8; border-radius: 12px;
+ padding: 4px 0; margin: 0 0 1.7em 0;
 }
+.article-body ul:has(> li:first-child > strong:first-child) li {
+ display: grid; grid-template-columns: minmax(140px, 34%) 1fr;
+ gap: 2px 18px; align-items: start;
+ padding: 12px 18px; margin: 0;
+ border-bottom: 1px dashed #EFE7D8;
+ font-size: 15.5px; line-height: 1.6; color: #3C4858;
+}
+.article-body ul:has(> li:first-child > strong:first-child) li:last-child { border-bottom: none; }
+.article-body ul:has(> li:first-child > strong:first-child) li::before { display: none; }
+.article-body ul:has(> li:first-child > strong:first-child) li strong {
+ font-size: 15.5px; line-height: 1.5;
+}
+
+/* Plain gold-dot list (unchanged signature style) */
 .article-body ul {
  list-style: none; margin: 0 0 1.5em 0; padding: 0;
 }
@@ -2127,12 +2243,141 @@ body.page-home .intro-audience {
  background-color: #F1BF00;
  box-shadow: 0 0 0 3px rgba(241, 191, 0, 0.22);
 }
-.article-body hr {
- border: none; border-top: 1px solid #E5DCC8;
- margin: 2.2em auto; max-width: 240px;
+
+/* Pull-quote: plain "> " lines. Oversized hanging gold quotation mark,
+   bold oversized text, wide margins off the text column. */
+.article-body > blockquote:not(.art-fig):not(.art-take):not(.art-tip) {
+ position: relative;
+ margin: 2.4em 5% 2.2em 5%;
+ padding: 0 0 0 46px;
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 21px; line-height: 1.55; font-weight: 700;
+ letter-spacing: -0.2px; color: #1A1A16; text-wrap: balance;
 }
+.article-body > blockquote:not(.art-fig):not(.art-take):not(.art-tip)::before {
+ content: "\201C";
+ position: absolute; left: 0; top: -0.3em;
+ font-family: Georgia, 'Times New Roman', serif;
+ font-size: 72px; line-height: 1; font-weight: 700;
+ color: #F1BF00;
+}
+
+/* Key-figure stat card: "> KEY: label **value** caption". Label and caption
+   are plain text runs, the strong is the figure — in a floated flex column
+   they stack as label / value / caption without extra markup. */
+.article-body blockquote.art-fig {
+ float: left;
+ width: calc(33.333% - 22px);
+ margin: 0.35em 20px 1.15em 0;
+ padding: 14px 16px 13px 16px;
+ display: flex; flex-direction: column; align-items: flex-start; gap: 2px;
+ background-color: #FFFDF8;
+ border: 1px solid #EFE7D8;
+ border-top: 3px solid #F1BF00;
+ border-radius: 10px;
+ font-size: 13.5px; line-height: 1.5; color: #6C7A89;
+}
+.article-body blockquote.art-fig strong {
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 28px; line-height: 1.15; font-weight: 800;
+ letter-spacing: -0.5px; color: #AA151B;
+ margin: 3px 0 1px 0;
+}
+
+/* Key-takeaway box: "> TAKE: text". Warm gold panel, red label. */
+.article-body blockquote.art-take {
+ margin: 2.1em 0 1.9em 0;
+ padding: 17px 22px 16px 26px;
+ background-color: #FDF6E3;
+ border: 1px solid #F0DFAE;
+ border-left: 4px solid #F1BF00;
+ border-radius: 12px;
+ font-size: 17.5px; line-height: 1.65; color: #1A1A16;
+ text-wrap: pretty;
+}
+.article-body blockquote.art-take::before {
+ content: "Key takeaway";
+ display: block;
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 11.5px; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase;
+ color: #AA151B; margin-bottom: 7px;
+}
+
+/* Good-to-know note box: "> TIP: text". Slate utility style, quieter than
+   the gold takeaway (matches .calc .notice-blue). */
+.article-body blockquote.art-tip {
+ margin: 1.8em 0 1.7em 0;
+ padding: 15px 20px 14px 22px;
+ background-color: #EFF4FB;
+ border: 1px solid #D3E0F0;
+ border-left: 4px solid #3C5A80;
+ border-radius: 10px;
+ font-size: 15.5px; line-height: 1.65; color: #3C5A80;
+}
+.article-body blockquote.art-tip::before {
+ content: "Good to know";
+ display: block;
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 11px; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase;
+ color: #35577E; margin-bottom: 6px;
+}
+
+.article-body hr {
+ border: none; height: 1px;
+ background: linear-gradient(90deg, transparent, #E5DCC8 18%, #E5DCC8 82%, transparent);
+ margin: 2.4em auto; max-width: 280px;
+}
+
+/* Scroll reveal for the callout components (progressive enhancement):
+   in browsers with scroll-driven animations they rise as they enter view;
+   elsewhere the animation simply plays once on load. */
+@keyframes art-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+.article-body blockquote.art-fig,
+.article-body blockquote.art-take,
+.article-body blockquote.art-tip,
+.article-body > blockquote:not(.art-fig):not(.art-take):not(.art-tip),
+.article-body ul:has(> li:first-child > strong:first-child) {
+ animation: art-rise 0.55s ease both;
+ animation-timeline: view();
+ animation-range: entry 0% cover 28%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+ body.page-article h1.email-red-band,
+ body.page-article .byline,
+ body.page-article .email-gold-band,
+ body.page-article .article-body > p:first-child,
+ .article-body blockquote.art-fig,
+ .article-body blockquote.art-take,
+ .article-body blockquote.art-tip,
+ .article-body > blockquote:not(.art-fig):not(.art-take):not(.art-tip),
+ .article-body ul:has(> li:first-child > strong:first-child) { animation: none; }
+}
+
 @media (max-width: 640px) {
  .article-body { font-size: 16px; line-height: 1.75; }
+ .article-body > p:first-child { font-size: 18px; }
+ .article-body > p:first-child::first-letter { font-size: 44px; line-height: 36px; padding: 3px 9px 0 0; }
  .article-body h2 { font-size: 21px; }
+ .article-body h3 { font-size: 17px; }
  .article-body ul li { padding-left: 26px; }
+ /* Stat cards stack full-width on phones; two-up would crowd the values. */
+ .article-body blockquote.art-fig { float: none; width: 100%; margin: 0.4em 0 0.95em 0; }
+ .article-body blockquote.art-fig strong { font-size: 24px; }
+ .article-body > blockquote:not(.art-fig):not(.art-take):not(.art-tip) {
+  font-size: 18.5px; line-height: 1.5;
+  padding-left: 34px; margin: 2em 2% 1.8em 2%;
+ }
+ .article-body > blockquote:not(.art-fig):not(.art-take):not(.art-tip)::before { font-size: 56px; }
+ /* Mini-table rows stack: term above, description below. */
+ .article-body ul:has(> li:first-child > strong:first-child) li { grid-template-columns: minmax(0, 1fr); gap: 3px; }
+}
+
+/* Article header rhythm on phones (must follow the digest 520px rules). */
+@media (max-width: 520px) {
+ body.page-article h1.email-red-band { padding: 26px 20px 8px 20px; font-size: 26px; line-height: 32px; }
+ body.page-article .byline { padding: 0 20px 16px 20px; font-size: 12.5px; gap: 8px; }
+ body.page-article .email-gold-band { margin: 0 20px; }
+ body.page-article .email-body { padding: 14px 20px 4px 20px; }
+ body.page-article .email-footer { padding: 22px 20px 26px 20px; }
 }
