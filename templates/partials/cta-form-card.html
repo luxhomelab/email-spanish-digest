@@ -1,0 +1,39 @@
+{# Reusable subscription CTA card: kicker + headline + lead + Listmonk form + microcopy.
+   Extracted from the block that was inlined in templates/digest.html and the three
+   calculator templates (calculator-autonomo / -property-buying-cost / -electricity).
+
+   Params are passed with {% set %} on the calling line, before the include:
+     field_id    (required) input id, e.g. "digest-subscribe-email"
+     form_kind   (required) analytics key -> data-form-kind on <form>
+     btn_label   submit label             (default 'Subscribe free')
+     variant     extra class after the base ones, e.g. 'cta-form-card--compact'
+                 (default '' -> no extra class)
+     base_class  wrapper class attribute  (default 'card cta-form-card'; the digest
+                 page passes 'cta-form-card' — it has no .card)
+     indent      indentation of the {% include %} line; children render one space
+                 deeper, exactly like the inline markup this partial replaced
+                 (default '  ')
+     title / sub / microcopy   headline / lead / foot texts (defaults below).
+     title, sub, microcopy, field_id and form_kind are template-authored copy/keys,
+     so they are printed unescaped (| safe) to keep the built HTML byte-identical.
+
+   Whitespace is load-bearing: the built HTML must stay byte-identical to the
+   pre-partial output. Hence the leading {%- ... -%} defaults emit nothing at all,
+   and the three {% set %} lines below sit exactly where the original inline
+   {% set %} lines were — they reproduce the same indented blank lines. #}
+{%- set title = title | default("Spain's top news, in English, every morning") -%}
+{%- set sub = sub | default("One short email a day — what happened in Spain and why it matters. Free, no spam, unsubscribe anytime.") -%}
+{%- set microcopy = microcopy | default("Join 500+ readers · cancel anytime") -%}
+{%- set variant = variant | default('') -%}
+{%- set base_class = base_class | default('card cta-form-card') -%}
+{%- set indent = indent | default('  ') -%}
+<div class="{{ base_class }}{% if variant %} {{ variant }}{% endif %}">
+{{ indent }} <p class="cta-kicker">Free · Every morning · 5-minute read</p>
+{{ indent }} <h2>{{ title | safe }}</h2>
+{{ indent }} <p class="cta-sub">{{ sub | safe }}</p>
+{{ indent }} {% set field_id = field_id | default('subscribe-email') %}
+{{ indent }} {% set form_kind = form_kind | default('') %}
+{{ indent }} {% set btn_label = btn_label | default('Subscribe free') %}
+{{ indent }} {% include "partials/subscribe-form.html" %}
+{{ indent }} <p class="cta-microcopy">{{ microcopy | safe }}</p>
+{{ indent }}</div>

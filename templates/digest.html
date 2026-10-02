@@ -82,16 +82,7 @@
    <div class="email-footer">
     <div class="share-cta">Enjoyed this digest? Share it with a friend.</div>
     {% with share=digest.share %}{% include "partials/share.html" %}{% endwith %}
-    <div class="cta-form-card">
-     <p class="cta-kicker">Free · Every morning · 5-minute read</p>
-     <h2>Spain's top news, in English, every morning</h2>
-     <p class="cta-sub">One short email a day — what happened in Spain and why it matters. Free, no spam, unsubscribe anytime.</p>
-     {% set field_id = "digest-subscribe-email" %}
-     {% set form_kind = "digest" %}
-     {% set btn_label = "Subscribe free" %}
-     {% include "partials/subscribe-form.html" %}
-     <p class="cta-microcopy">Join 500+ readers · cancel anytime</p>
-    </div>
+    {% set field_id = "digest-subscribe-email" %}{% set form_kind = "digest" %}{% set base_class = "cta-form-card" %}{% set indent = "    " %}{% include "partials/cta-form-card.html" %}
     <div class="ai-disclaimer">This digest is based on real news, created with the help of AI and reviewed by a human.</div>
     {% if day_nav.older or day_nav.newer %}
     <nav class="day-nav" aria-label="More digests">

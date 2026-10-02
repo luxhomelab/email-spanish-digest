@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en"{% block html_class %}{% endblock %}>
 <head>
+{# Build-time analytics flag. static/js/*.js are copied verbatim by build.py
+   (STATIC_COPY) and never Jinja-rendered, so they read this global instead
+   of guessing from location.hostname. Always rendered — before every other
+   script — so the JS gate works on any page. #}
+<script>window.SPANIFIED_ANALYTICS = {% if analytics_enabled %}true{% else %}false{% endif %};</script>
 {% if analytics_enabled %}
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CBF70VDX1D"></script>

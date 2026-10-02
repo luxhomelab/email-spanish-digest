@@ -14,15 +14,25 @@ import {
 const $ = id => document.getElementById(id)
 const TOTAL = 10
 
-function track(name, params = {}) {
+// Second line of defence: a dist/ prod build opened locally still has the
+// GA4 snippet inlined, so never send events from a local origin
+// (localhost / 127.x / 0.0.0.0 / file:) — mirrors isLocalHostname() in
+// subscribe-form.js. The primary gate is the build-time flag below.
+function isLocal() {
   try {
-    // Never send events from a local origin (localhost / 127.x / 0.0.0.0 /
-    // file:) — mirrors isLocalHostname() in subscribe-form.js, a second line
-    // of defence behind the build-time analytics_enabled gate.
     const loc = window.location
     const host = loc ? (loc.hostname || '').toLowerCase() : ''
-    if (!loc || loc.protocol === 'file:' || !host ||
-        /^(localhost$|127(\.\d+){0,3}$|0\.0\.0\.0$|\[::1\]$)/.test(host)) return
+    return !loc || loc.protocol === 'file:' || !host ||
+      /^(localhost$|127(\.\d+){0,3}$|0\.0\.0\.0$|\[::1\]$)/.test(host)
+  } catch { return true }
+}
+
+function track(name, params = {}) {
+  try {
+    // Build-time flag rendered by templates/base.html (Jinja analytics_enabled):
+    // false on local builds → no events at all, no hostname sniffing needed.
+    if (window.SPANIFIED_ANALYTICS === false) return
+    if (isLocal()) return
     if (typeof window.gtag === 'function') window.gtag('event', name, params)
   } catch { /* analytics optional */ }
 }

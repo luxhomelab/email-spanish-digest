@@ -51,9 +51,9 @@ export function collectFields(form) {
   return fields
 }
 
-// Second line of defence (after the build-time {% if analytics_enabled %}
-// gate in templates/base.html): a dist/ output opened locally still has the
-// snippets inlined, so never send events from a local origin.
+// Second line of defence (after the build-time window.SPANIFIED_ANALYTICS
+// flag rendered by templates/base.html): a dist/ output opened locally still
+// has the snippets inlined, so never send events from a local origin.
 export function isLocalHostname() {
   try {
     const loc = window.location
@@ -91,6 +91,9 @@ const FORM_EVENTS = new Map([
 export function trackSubscribe(fields, form) {
   try {
     if (typeof window === 'undefined') return
+    // Build-time flag (templates/base.html, always rendered): false on local
+    // builds → no events. Primary gate; the hostname check below is fallback.
+    if (window.SPANIFIED_ANALYTICS === false) return
     if (isLocalHostname()) return
     const next = fields.next || ''
     const isQuiz = next.indexOf('/quiz/') !== -1

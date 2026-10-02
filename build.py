@@ -910,6 +910,9 @@ def main():
     env.globals["turnstile_enabled"] = args.listmonk != "local"
     # Analytics (GA4 + Meta Pixel) snippets are baked at build time; local
     # builds into the repo root stay tracking-free (see analytics_enabled()).
+    # The same value is exposed to every template as a JS global —
+    # window.SPANIFIED_ANALYTICS in templates/base.html — because
+    # static/js/*.js are copied verbatim (STATIC_COPY) and never rendered.
     env.globals["analytics_enabled"] = analytics_enabled(args)
     env.globals["pub_date"] = pub_date
     env.globals["site_socials"] = [

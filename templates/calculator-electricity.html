@@ -119,16 +119,7 @@
    <div class="notice notice-amber">Results are estimates for educational purposes. Regulated charges (electricity tax, network access, metering) change over time and your actual bill may differ.</div>
   </div>
 
-  <div class="card cta-form-card cta-form-card--compact">
-   <p class="cta-kicker">Free · Every morning · 5-minute read</p>
-   <h2>Spain's top news, in English, every morning</h2>
-   <p class="cta-sub">One short email a day — what happened in Spain and why it matters. Free, no spam, unsubscribe anytime.</p>
-   {% set field_id = "calc-electricity-email" %}
-   {% set form_kind = "calc-electricity" %}
-   {% set btn_label = "Subscribe free" %}
-   {% include "partials/subscribe-form.html" %}
-   <p class="cta-microcopy">Join 500+ readers · cancel anytime</p>
-  </div>
+  {% set field_id = "calc-electricity-email" %}{% set form_kind = "calc-electricity" %}{% set variant = "cta-form-card--compact" %}{% set indent = "  " %}{% include "partials/cta-form-card.html" %}
 
   <div class="card seobox">
    <h2>How electricity bills and tariffs work in Spain</h2>

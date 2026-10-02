@@ -48,10 +48,11 @@
 <script id="quiz-success-data" type="application/json">{{ quiz_json | safe }}</script>
 <script type="module">
 import { resultForScore, personalShareText, personalLongShareText, quizResultUrl, markQuizSubscribed } from '/static/js/quiz-logic.js?v={{ js_version }}';
-// Local origins (localhost / 127.x / 0.0.0.0 / file:) never fire analytics —
-// second line behind the build-time analytics_enabled gate in base.html.
-// Computed outside the try so a broken location can't trip the fallback UI.
-const analyticsLocal = (() => {
+// Build-time flag from base.html is the primary gate; local origins
+// (localhost / 127.x / 0.0.0.0 / file:) are the second line for a dist/
+// build opened locally. The hostname probe is computed outside the try below
+// so a broken location can't trip the fallback UI.
+const analyticsLocal = (window.SPANIFIED_ANALYTICS === false) || (() => {
   try {
     const loc = window.location;
     if (!loc || loc.protocol === 'file:') return true;
