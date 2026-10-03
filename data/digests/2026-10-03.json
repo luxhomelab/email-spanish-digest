@@ -1,0 +1,156 @@
+{
+  "items": [
+    {
+      "title": "Congress rejects housing decree: eviction protections and rental extensions scrapped",
+      "body": "Congress voted 178 to 172 to reject the government's housing decree-law, with PP, Vox, Junts and UPN opposed. The repeal removes eviction protections for vulnerable tenants, automatic extensions of expiring rental contracts, and limits on investment funds buying homes below 70% of their appraised market value. The decree had been in force for only 24 hours.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/construccion-y-vivienda-00342/noticia-congreso-rechaza-decreto-medidas-vivienda-votos-pp-vox-junts-upn-20261002153000.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/compensaciones-desahucio-alquiler-temporal-prorrogas-medidas-vivienda-decaen-no-junts_1_13555386.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Record 22.4 million Social Security contributors after September surge",
+      "body": "Spain added 92,327 Social Security contributors in September, a record for September, reaching 22,437,553 contributors. Of about 90,000 new contributors, 84,220 were foreigners, driven by the migrant regularization process. Registered unemployment rose by 23,587 to 2,379,505, the lowest since September 2007.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/espana-bate-un-nuevo-record-empleo-tras-sumar-92-300-afiliados-septiembre-mayoria-por-regularizacion-migrantes_7044005_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Sánchez weighs early election after housing decree defeat",
+      "body": "Pedro Sánchez will spend this weekend analyzing the defeat of both housing decree-laws and public reaction before deciding whether to call early general elections. An early vote would freeze pending housing, residency and tax measures and reshape the legislative calendar for foreign residents.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-sanchez-decidira-fin-semana-si-adelanta-elecciones-viendo-reaccion-calle-caida-decretos-20261002170301.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Poll: 65% back suspension of Ley de Nietos",
+      "body": "A Sigma Dos poll for El Mundo finds that 65.1% agree with the Supreme Court's precautionary suspension of the Ley de Nietos; 45% of PSOE voters view it favorably. The suspended law would have allowed descendants of Spaniards who left between 1936 and 1955 to apply for nationality and voting rights, potentially adding more than 500,000 new voters.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/10/03/6abff2f8e4d4d872598b45a8.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Proposed tax changes target empty second homes from 2027",
+      "body": "Royal Decree-law 26/2026 would modify IRPF taxation of second homes and other non-rented properties from 2027, pending validation by Congress. Owners of empty second homes already pay tax on imputed income calculated at 2% of the cadastral value, or 1.1% under certain conditions. The decree would also strengthen municipal IBI surcharges for unoccupied homes.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-10-02/impuesta-pisos-vacios-segunda-residencia-1qrt_4436886/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "73% would back a general strike over housing",
+      "body": "A poll by Ateneo del Dato for El Diario finds that 73% of Spaniards would support a general strike over housing, including more than 60% of PP and Vox voters. The Sindicato de Inquilinas called the strike; Comisiones Obreras and UGT are considering backing it, with mass mobilizations planned this weekend.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/mayoria-ciudadanos-incluidos-votantes-derecha-apoyarian-huelga-general-vivienda_1_13557680.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Eurozone inflation climbs to 3.8% on energy spike",
+      "body": "Eurozone annual inflation rose to 3.8% in September, the highest since September 2023, according to Eurostat's flash estimate. Energy prices climbed 18.8% and core inflation reached 2.5%. Spain posted the largest rise among major EU economies at 4.6%, adding pressure on ECB rates and Euribor.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-10-02/inflacion-eurozona-precios-energia-septiembre-1tps_4436870/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "New Spanish retirees average over 1,700 euros a month",
+      "body": "New retirees in August began receiving an average retirement pension of 1,711.4 euros a month, while the system-wide average reached 1,374.6 euros in September, up 4.6% year-on-year. General scheme workers average 1,734.7 euros, while autónomos (self-employed) average 1,062.8 euros.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/02/subida-pensiones-espana-nuevos-jubilados-superaran-1700euros-media-mes-2027-2055234.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Heavy rain leaves 400,000 students without classes and 20 rescued",
+      "body": "Torrential rain in the Mediterranean region dropped more than 200 litres per square metre, suspending classes for over 400,000 students in Valencia. Around 20 people were rescued from vehicles in Tarragona and Murcia; in Terres de l'Ebre water rose to the height of rear-view mirrors. Alerts remain active until at least Sunday.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/10/02/las-fuertes-lluvias-hasta-200-litros-dejan-una-veintena-rescatados-mas-400-000-alumnos-sin-clase-espana-2056693.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Drivers must yield to pedestrians even without zebra crossings",
+      "body": "From October 1, drivers must yield to pedestrians even where there is no zebra crossing on calles de plataforma única, where the pavement and road are at the same level. The rule is part of Real Decreto 518/2026, published in the BOE, and includes new rules for scooters and motorcyclists.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/10/02/oficial-vigor-gobierno-cambia-normas-conductores-deben-ceder-paso-peatones-aunque-no-haya-paso-cebra-2054062.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Would you join a general strike over housing costs? A) Yes B) No C) Maybe",
+  "variant": "What everyone in Spain is talking about today",
+  "headline": "What everyone in Spain is talking about today",
+  "date": "2026-10-03",
+  "engagement_source": "generated",
+  "generated_at": "2026-10-03T06:03:30.010337+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 347,
+    "items_selected_pass1": 11,
+    "fact_sheets_extracted": 11,
+    "items_after_importance_filter": 11,
+    "items_in_digest": 10
+  },
+  "selection_reasons": {
+    "318": "Congress rejects the housing decrees — the day's biggest story, directly affecting renters, eviction protections and five million tenants pending renewal.",
+    "308": "Details exactly which housing measures collapse (eviction compensation, temporary rentals, lease extensions) — key for anyone renting or owning in Spain.",
+    "316": "Sánchez may call early general elections within days — political uncertainty affecting all residents and investors.",
+    "306": "73% of Spaniards, including PP and Vox voters, back a general strike over housing — signals major labour/rental disruption ahead.",
+    "298": "Record 22.4M Social Security affiliates, 91% driven by the migrant regularization — major economic and migration news.",
+    "285": "Eurozone inflation jumps to 3.8% driven by energy — affects everyone's cost of living and mortgage rates via ECB.",
+    "237": "Torrential rains leave 400,000 students without class and dozens rescued — national-scale weather emergency affecting eastern Spain.",
+    "277": "2027 pension increase announced with new retirees averaging over €1,700/month — directly relevant to retirees in Spain.",
+    "325": "Possible new taxes on empty homes and second residences — directly impacts foreign property investors and owners.",
+    "279": "New DGT rule forcing drivers to yield to pedestrians even without a crosswalk — daily-life regulatory change in force now.",
+    "9": "Poll shows 65% distrust the 'Ley de Nietos' regularization of descendants and most back its suspension — key citizenship and migration policy."
+  }
+}
