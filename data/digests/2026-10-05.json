@@ -1,0 +1,191 @@
+{
+  "items": [
+    {
+      "title": "Snap election and housing decree rescue in the works",
+      "body": "The government is preparing to call early general elections and revive the housing decrees that the right struck down in Congress on Friday. An announcement could come in the next few hours, possibly Monday morning. The political shift follows the eviction of an 87-year-old woman and mobilizations led by the Sindicato de Inquilinas.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/moncloa-prepara-adelanto-electoral-rescate-decretos-vivienda-tumbo-derecha_1_13561276.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Housing prices hit record as social rental lags",
+      "body": "Home prices now amount to 8,4 years of full household income, the highest since 2011 and close to 2005 bubble levels. Families devote 38% of income to a mortgage, above the recommended threshold. Prices have risen 52,6% since 2021 and 12,2% last year, while construction lags behind new household formation.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/como-hemos-llegado-hasta-aqui-vivienda-precios-record-construccion-estancada-cola-europa-alquiler-social_7044234_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Banks forecast fewer, costlier mortgages as Euribor rises",
+      "body": "Large Spanish banks expect a slowdown in mortgage demand and more expensive credit as Euribor climbs and the ECB is expected to raise rates further. CaixaBank CEO Gonzalo Gortázar said the market is approaching an affordability problem, with many buyers unable to afford current prices. Mortgage data already points to slower growth.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/10/04/6abf5d7ce85ece7d488b459f.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Two-thirds of Spanish household wealth is real estate",
+      "body": "Real estate makes up 67% of Spanish household wealth, above the 63% eurozone average. Of the 8,4 billones in net household wealth, 5,6 billones is held in housing, land, offices, retail and farmland, with 288.420 euros per household. About 92% of owners are private individuals.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/elefante-habitacion-vivienda-dos-tercios-riqueza-espana-es-inmobiliaria-92-los-caseros-son-particulares_7044313_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Tarjeta Monedero offers up to 220 euros a month for food",
+      "body": "Vulnerable families with minors can get 100 to 220 euros a month on a prepaid Tarjeta Monedero for fresh food and hygiene products. A one-adult, one-minor household receives 100 euros; families of five or more receive 220 euros. Applicants need income below 200% of IPREM and at least one minor in the household.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/hasta-220-euros-mes-alimentos-solicita-tarjeta-monedero-familias-hijos_7039206_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Uncompensated dismissals soar to 3,2 million after labor reform",
+      "body": "Since the labor reform took effect, 3,2 million workers have been dismissed with no compensation and no obligation for the company to justify the dismissal. It is one of the gaps left by the rule that overhauled hiring by limiting temporary employment. The government says it aims to clamp down on the practice.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/05/despidos-sin-indemnizar-ni-justificar-se-disparan-tras-reforma-laboral-suman-casi-3-millones-2057010.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Police complete Ceuta camp operation with 1,100 relocated",
+      "body": "National Police completed the operation to clear the El Trampolín beach camp in Ceuta, relocating more than 1,100 migrants without major incidents. Many opted for voluntary return to Morocco, while others were registered at the CATE temporary center. Authorities estimated that over 3.500 people had been living in the settlement.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/noticia-policia-nacional-culmina-operativo-trampolin-ceuta-1100-migrantes-desalojados-20261004232450.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Blackstone wins 52,45 million euro state housing contract",
+      "body": "Blackstone, the real estate fund criticized as a vulture fund by government figures, secured a public housing management contract worth 52,45 million euros. Its subsidiary Aliseda will service social and rented housing for state-controlled Sareb from last month through December 2028, extendable to 2030. The fund manages more than 30.000 flats in Spain.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/10/05/6ac2307be85ecee2298b457d.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "CNMC nears first blackout fines under law favoring Red Eléctrica",
+      "body": "CNMC is finalizing its first sanctions over the April 28, 2025 Iberian blackout, aiming to close around 50 cases by March. The case against Red Eléctrica has been left for last, and a flexible interpretation may leave it the least punished. Fines for very serious offenses range from 6 to 60 million euros.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/10/05/6ac22c2b21efa0d9188b45a0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Nearly 100,000 early retirees get pension supplement",
+      "body": "Some 95.499 early retirees with over 40 years of contributions receive a Social Security supplement to correct past pension penalties. It applies to early retirements between 2002 and 2021, requiring at least 44 years and six months of contributions. The supplement equals the difference and is paid in 14 installments a year.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/jubilacion-anticipada-cerca-100-000-beneficiarios-con-mas-40-anos-cotizados-reciben-un-plus-su-pension_7044594_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Sumar parties to launch Frente Amplio candidacy October 17",
+      "body": "The parties within Sumar will officially launch their general election candidacy and coalition brand on October 17 under the name Frente Amplio. The launch will take place regardless of whether early elections are called. The move sets the left coalition's electoral identity for the next campaign.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-partidos-sumar-lanzaran-17-octubre-candidatura-generales-cabeza-lista-20261004152810.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Tropical storm in Catalonia kills two, one missing",
+      "body": "A storm with tropical characteristics hit Catalonia on Saturday night, killing two people and leaving one missing, with record rainfall and flooding. Firefighters responded to 2.055 incidents and rescued 205 people trapped in homes, vehicles and elevators. Mobility restrictions remained in force in Alt Empordà and Baix Empordà until Sunday night.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/sociedad/2026/10/04/insolito-temporal-tropical-cataluna-causa-dos-muertos-deja-records-lluvia-2056977.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Chalk drawing identified as lost work by Édouard Manet",
+      "body": "A small red chalk sketch of a crouching child found in a private Italian collection has been attributed to Édouard Manet and linked to his work The Old Musician. Researchers point to abrupt light-shadow transitions and distinctive fingers. The drawing may have been made in the 1860s.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/spin/identifican-dibujo-tiza-nino-obra-perdida-pintor-frances-edouard-manet-pm_1_13554181.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Spain may call a snap general election. Would that change your plans as a foreign resident? A) Yes B) No C) Not sure",
+  "variant": "Here's Spain today, in under a minute",
+  "headline": "Here's Spain today, in under a minute",
+  "date": "2026-10-05",
+  "engagement_source": "generated",
+  "generated_at": "2026-10-05T06:03:25.551315+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 272,
+    "items_selected_pass1": 14,
+    "fact_sheets_extracted": 14,
+    "items_after_importance_filter": 13,
+    "items_in_digest": 13
+  },
+  "selection_reasons": {
+    "38": "Sánchez preparing to call snap general elections that could reset housing and economic policy for all residents",
+    "124": "Systemic housing crisis: purchase prices up 52.6% and rents up 43.8% in five years",
+    "6": "Euribor at 3.247% adds €115–201/month to variable-rate mortgages — direct wallet impact",
+    "5": "Blackstone–Sareb deal to manage thousands of homes including social housing — major property market move",
+    "245": "Two-thirds of Spanish wealth is real estate and 92% of owners are individuals — key investor context",
+    "261": "Ceuta migrant operation removes 1,100 people — national migration policy affecting residency debate",
+    "187": "Record tropical storm in Catalonia kills two, floods roads and triggers Es-Alert — national-scale event",
+    "14": "Spain vs Croatia World Cup qualifier — mandatory inclusion",
+    "30": "Sumar launches 'Frente Amplio' ahead of likely snap elections — political landscape shift",
+    "10": "CNMC finalizing first fines over the national blackout — electricity system and consumer impact",
+    "254": "Tarjeta Monedero gives families up to €220/month for food — subsidy relevant to low-income residents",
+    "253": "Early-retirement top-up for ~100,000 workers with 40+ years cotizados — affects retirees and pensions",
+    "207": "New rule requires employers to detail trial-period tasks and pay; dismissals without compensation rising — labor reform for workers",
+    "82": "Positive cultural story: child's chalk drawing identified as a lost Manet"
+  }
+}
