@@ -1,0 +1,208 @@
+{
+  "items": [
+    {
+      "title": "Sánchez calls early general election for November 29",
+      "body": "Prime Minister Pedro Sánchez announced early general elections for November 29, framing the vote as a choice between an \"ultra-right wave\" and a progressive government. The announcement puts housing, tax and migration legislation on hold during the campaign.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-sanchez-anuncia-elecciones-anticipadas-29-noviembre-20261005090901.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Election call leaves pension and pay rises in limbo",
+      "body": "Pension revaluation, the agreed pay rise for civil servants and the IMV increase now depend on a government decree, leaving more than 18 million people waiting. Revaluation affects 10,8 million pensioners and 2,7 million IMV recipients. Labour Ministry sources say the SMI increase process will continue.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/adelanto-electoral-deja-aire-subida-las-pensiones-mejora-salarial-los-funcionarios-pero-smi-seguira-adelante_7045008_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Landlords and tenants trade burofaxes over housing decrees",
+      "body": "Congress rejected the Government's two housing decrees, and the early election has reignited uncertainty in rental transactions. The executive will try to revive both decrees through the Diputación Permanente; at least the first is expected to pass, while the second would be rejected again.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/10/05/6ac384dce4d4d8f6438b45a6.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Electricity price tops 200 euros/MWh for first time since 2022",
+      "body": "The wholesale electricity pool will average 201,99 euros/MWh on Tuesday, up 2,6% from Monday. It is the highest daily average since December 5, 2022, driven by higher demand and more expensive gas. Households on variable rates may see higher bills.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-10-05/precio-electricidad-mercado-mayorista-1hms_4438824/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "E-invoicing dates set; Verifactu delayed to October 2028",
+      "body": "Hacienda has published the BOE order setting mandatory B2B e-invoicing: companies billing over 8 million euros must comply from October 6, 2027, and autónomos and smaller firms from October 6, 2028. Verifactu billing software has been delayed to October 2028 to align with e-invoicing calendars.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/factura-electronica-obligatoria-autonomos-empresas-hacienda-activa-calendario-fechas_7044954_0.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/hacienda-retrasa-por-tercera-vez-lanzamiento-verifactu-pospone-un-ano-su-puesta-marcha_7045017_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "New labour transparency rules in force from October 5",
+      "body": "Companies must now give workers more details on salaries, hours, probation periods and any algorithms or AI affecting them. Workers can request the information, and employers must reply within 30 business days. New contracts must include these additional details.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/nueva-informacion-deben-revelar-empresas-trabajadores-lunes_1_13547753.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Nobel Prize in Medicine 2026 awarded for optogenetics",
+      "body": "The Karolinska Institute awarded the Nobel Prize in Physiology or Medicine to Karl Deisseroth, Peter Hegemann and Georg Nagel for discoveries on light-activated ion channels and optogenetics. The method lets researchers control nerve signals with light and is being studied to restore vision.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/premio-nobel-medicina-2026-creadores-optogenetica_1_13561670.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Ley de Nietos voters face uncertainty ahead of November 29",
+      "body": "The Supreme Court has provisionally suspended the vote of Spaniards nationalized under the Ley de Nietos who have not proven their descent from exiles to consulates. The measure affects the CERA electoral census for the November 29 general election.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/quien-puede-votar-las-elecciones-generales-que-pasa-con-los-nacionalizados-por-ley-nietos-los-saharauis_7044997_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "CCOO and UGT join tenants' union for autumn general strike",
+      "body": "CCOO and UGT announced they will join the Sindicat de Inquilinas to call a 24-hour general strike this autumn over housing and wages. The final date will be decided with social organizations, and the stoppage would bring the country to a halt during the election campaign.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-10-05/ccoo-y-ugt-se-unen-al-sindicato-de-inquilinas-para-convocar-una-huelga-general-en-otono_4438914/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spain heads to the polls with macro records and 5% inflation",
+      "body": "Record tax collection, rising GDP and historic employment figures sit alongside inflation near 5% and housing as Spaniards' main concern. The economy is growing but rising prices and rents continue to pressure households.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/06/espana-llega-las-urnas-con-records-macro-bolsillo-bajo-presion-2057290.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Judge annuls Sareb social rental clauses as abusive",
+      "body": "A Madrid judge sided with the PAH and tenant Giselle, annulling seven clauses in a Sareb social rental contract that allowed unilateral rent rises. Her rent jumped 630%, from 110 to 693 euros. The ruling could set a precedent for around 10.000 similar contracts.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/juez-da-razon-giselle-clausulas-alquiler-social-sareb-son-abusivas_1_13563697.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "13 detained after Barcelona housing strike march",
+      "body": "Mossos d'Esquadra detained 13 people, including a minor, and 30 officers suffered minor injuries after disturbances following a Barcelona housing protest. Attendance was put at around 20.000 by the Guardia Urbana, while organizers claimed 120.000.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/cataluna/2026/10/05/6ac3c6b7e4d4d8f67a8b45af.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "⚠️ Two missing in Catalonia storm; catastrophe zone under study",
+      "body": "Two people are missing and two have died after torrential rain in Catalonia. Mayors in Vallès Oriental and Selva have asked the Government to declare a catastrophe zone; Endesa reports 10.259 clients without power, and Barcelona-El Prat has recorded 29 cancelled flights.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/10/05/dos-desaparecidos-por-temporal-cataluna-que-puede-ser-declarada-zona-catastrofica-2057351.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "Key week for Spain's doctors' strike decision",
+      "body": "The early election has opened a new scenario for the indefinite doctors' strike set to begin on October 28 against the Estatuto Marco. Health technicians suspended their October 13 stoppages, while medical organizations decide this week whether to maintain the strike.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/aragon/2026/10/05/semana-clave-para-decidir-si-se-mantiene-huelga-medicos-espana-tras-adelanto-electoral-con-las-demoras-alza-aragon-2057130.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "New work transparency rules are live — will you ask your employer for algorithm details? A) Yes B) No C) Maybe",
+  "variant": "The Spain update you actually need",
+  "headline": "The Spain update you actually need",
+  "date": "2026-10-06",
+  "engagement_source": "generated",
+  "generated_at": "2026-10-06T06:04:11.715001+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 349,
+    "items_selected_pass1": 15,
+    "fact_sheets_extracted": 15,
+    "items_after_importance_filter": 15,
+    "items_in_digest": 14
+  },
+  "selection_reasons": {
+    "26": "Sánchez calls snap general elections for 29 November — dominant national event affecting all residents and policy direction",
+    "286": "Explains how the election freeze affects SMI, pension increases and civil servant pay — direct wallet impact",
+    "127": "Who can vote on 29-N and the situation of those naturalised under the Ley de Nietos — key for immigrants",
+    "9": "Rental market chaos as landlords and tenants clash over the housing decrees — direct impact on renters and landlords",
+    "10": "Barcelona general strike over housing draws mass turnout with 13 arrested and 30 officers injured — national housing crisis flashpoint",
+    "280": "CCOO and UGT call a general strike in autumn over housing — affects workers nationwide",
+    "281": "Electricity pool price tops 200 euros/MWh for first time since 2022 — immediate cost-of-living hit",
+    "170": "Spain heads to the polls with record macro data but inflation near 5% and household finances squeezed — broad economy relevance",
+    "199": "Storm in Catalonia leaves two dead, two missing, flights cancelled and 75M in aid — national-scale disaster",
+    "305": "Mandatory electronic invoicing calendar activated for autónomos and companies — tax/compliance change for self-employed",
+    "297": "Hacienda again delays Verifactu until 2028 — important for autónomos and businesses' tax obligations",
+    "311": "Court rules Sareb's social rental clauses abusive — precedent affecting thousands of tenants and the rental market",
+    "315": "New obligations for companies to disclose more information to workers come into force — labour rights change",
+    "87": "Nobel Prize in Medicine 2026 for optogenetics creators — positive science story with Spanish research interest",
+    "225": "Key week to decide whether the national doctors' strike goes ahead — healthcare system impact"
+  }
+}
