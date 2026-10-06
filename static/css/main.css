@@ -1201,7 +1201,7 @@ body.page-digest .day-nav a:hover { text-decoration: none; border-color: #AA151B
  body.page-digest .email-body { padding: 8px 20px 0 20px; }
  body.page-digest .email-footer { padding: 20px 20px 26px 20px; }
  body.page-digest .email-footer .cta-card { padding: 28px 20px; }
- body.page-digest .digest > .cta-form-card { width: calc(100% - 24px); margin: 22px auto 6px auto; }
+ body.page-digest .digest > .cta-form-card { width: 100%; margin: 22px 0 6px 0; border-radius: 16px; }
  body.page-digest .email-footer .cta-card h2 { font-size: 20px; }
  body.page-digest .email-footer .cta-button { font-size: 16px; padding: 12px 28px; }
  body.page-digest .mercadona { margin: 12px 20px 0 20px; }
