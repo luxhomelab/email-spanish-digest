@@ -1,0 +1,182 @@
+{
+  "items": [
+    {
+      "title": "⚠️ Housing decree enters into force as rental supply falls",
+      "body": "Spain's main housing decree took effect on October 8 after publication in the BOE. It still needs validation by the Diputación Permanente, with the Cortes dissolved ahead of the November 29 elections. Long-term rental listings on Idealista fell 9,2% in Madrid, 7,5% in Valencia and 12,5% in Murcia in six days, according to EsadeEcPol.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/noticia-decreto-vivienda-vigor-afecta-alquiler-hoy-cambia-inquilinos-propietarios-20261008121036.html"
+        },
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-10-08/oferta-pisos-alquiler-redujo-grandes-ciudades-anuncio-decretos_4441006/"
+        }
+      ],
+      "category": "property",
+      "important": true
+    },
+    {
+      "title": "New rental tax deduction up to 1.163 euros from 2027",
+      "body": "The Government approved a state rental deduction letting tenants recover up to 1.163 euros a year through IRPF from 2027. It applies to rent paid in 2027, not to the 2027 tax return on 2026 income, and is phased out for tax bases above 23.007,20 euros, ending at 33.007,20 euros.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/nueva-deduccion-hasta-1-163-euros-por-alquiler-quien-puede-aplicarla-cuales-son-los-limites-renta_7046425_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "ECB avoids signalling future rate moves after hike",
+      "body": "The ECB raised its deposit facility rate by 25 basis points to 2,5% at its September 9-10 meeting but gave no guidance on future rates. It cited the Middle East conflict and an energy shock that has not fully materialised, with August CPI at 3,2%.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/actas-bce-evitan-adelantar-movimientos_7046614_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Yolanda Díaz pushes for minimum wage rise above inflation",
+      "body": "Yolanda Díaz opened the expert commission on the SMI and asked it to recommend a raise that at least offsets inflation, citing CPI running at 4,9% year-on-year. The report is being sought sooner than usual so that the minimum wage could rise before the November 29 elections.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/yolanda-diaz-defiende-salario-minimo-suba-inflacion-empresas-repartan-riqueza_1_13572547.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "76% of Spaniards back state intervention in housing",
+      "body": "A CIS survey of 6.000 interviews found that 76% favour state intervention to guarantee access to housing and 70% support freezing rental prices for two years. It also found that 86% are worried about the housing situation.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/espanoles-apoyan-masivamente-decretos-vivienda-76-cree-hay-intervenir-mercado_1_13572002.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Semaf drivers call six strike days at Ouigo",
+      "body": "The Semaf train drivers' union called six strike days at Ouigo around the November and December public holidays, including 24-hour stoppages on October 30 and November 2. The action affects high-speed travellers in 15 provinces.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/maquinistas-semaf-convocan-seis-dias-huelga-ouigo-durante-puentes-noviembre-diciembre_1_13571932.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Tagliafico joins Messi in praising Spain's World Cup final display",
+      "body": "Argentina defender Nicolás Tagliafico said Spain outplayed Argentina in the World Cup 2026 final and were much the better side. He pointed to physical and mental fatigue on Argentina's part, echoing Lionel Messi's dismissal of conspiracy theories.",
+      "sources": [
+        {
+          "name": "Marca",
+          "url": "https://www.marca.com/futbol/argentina/2026/10/08/tagliafico-une-messi-espana-paso-encima-jugaron-mejor-nosotros.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Changes to free basic bank accounts in Spain",
+      "body": "A new real decreto changes how customers prove they qualify for a free basic payment account if they are in a situation of economic vulnerability or at risk of financial exclusion. Income thresholds remain tied to IPREM, and no family member may own real estate other than the habitual home.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/cambios-cuentas-basicas-gratuitas-que-son-quienes-pueden-pedirlas_7046626_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain eases path for companies to list on Wall Street",
+      "body": "A real decreto published in the BOE lets Spanish companies dual-list on exchanges outside the EU, such as those in New York or London, without moving their headquarters abroad. It would have allowed Ferrovial to keep its registered office in Spain.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/gobierno-facilita-empresas-espanolas-coticen-wall-street_7046678_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Bizum marks 10 years with 310.000 million euros transferred",
+      "body": "Bizum turns 10 with 32,5 million users and 40 payments per second in Spain. Around 70% of adults use it, and the average payment between individuals is 55 euros.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bizum-cumple-10-anos-40-pagos-segundo-espana-han-transferido-310-000-millones-euros_1_13571317.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Tens of thousands protest across Spain over Maricarmen eviction",
+      "body": "Tens of thousands marched in Madrid and other Spanish cities in tribute to Maricarmen, the 87-year-old woman evicted on September 23 who died on Tuesday. In Madrid, 20.000 people gathered, according to the Delegación del Gobierno.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/fotos-espana-sale-calle-maricarmen-imagenes_3_13573853.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Respiratory infections at epidemic levels for second week",
+      "body": "Respiratory infections stayed above the epidemic threshold for a second week, with the rate at 493,8 cases per 100.000 inhabitants. Bronchiolitis is rising among children under five, though hospitalisations remain low at 0,2 per 100.000 thanks to immunisation.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/las-infecciones-respiratorias-encadenan-su-segunda-semana-niveles-epidemicos-sube-bronquiolitis-entre-los-menores-5-anos_7046523_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "ECB rate is 2,5%. What's your mortgage? A) Fixed B) Variable C) No mortgage 🤔",
+  "variant": "Quiet day in Spain. Then this.",
+  "headline": "Quiet day in Spain. Then this.",
+  "date": "2026-10-09",
+  "engagement_source": "generated",
+  "generated_at": "2026-10-09T06:05:10.395364+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 313,
+    "items_selected_pass1": 13,
+    "fact_sheets_extracted": 13,
+    "items_after_importance_filter": 13,
+    "items_in_digest": 12
+  },
+  "selection_reasons": {
+    "33": "Housing decree now in force — changes rental rules, price caps and eviction protections for all tenants and landlords in Spain.",
+    "265": "New EsadeEcPol data shows rental listings fell sharply in major cities after the decree announcement — direct impact on anyone renting in Spain.",
+    "294": "CIS survey: 86% worried about housing, 76% back state intervention — signals where policy is heading after the 29-N election.",
+    "287": "New tax deduction of up to €1,163 for renters — directly relevant to residents filing Spanish income tax.",
+    "292": "Yolanda Díaz pushes minimum wage rise above inflation — affects workers and autónomo-linked contract costs.",
+    "281": "ECB keeps markets guessing on rates and justifies its latest hike — key for Euribor and mortgage holders in Spain.",
+    "274": "'Ley Ferrovial' lets Spanish companies list on Wall Street while keeping HQ in Spain — significant for investors and business residents.",
+    "43": "Tens of thousands march across Spain in memory of Maricarmen — mass national mobilisation over housing, shaping the election campaign.",
+    "139": "Respiratory infections stay at epidemic levels for a second week, bronchiolitis rising among children under 5 — public health alert.",
+    "295": "Ouigo train drivers call six strike days around November and December bank holidays — affects thousands of travellers' plans.",
+    "283": "Changes to rules on free basic bank accounts — practical for foreigners opening or holding accounts in Spain.",
+    "298": "Positive: Bizum turns 10 with 310 billion euros transferred and 7 in 10 adults using it — good news on everyday payments in Spain.",
+    "311": "Argentina's Tagliafico echoes Messi on Spain's World Cup final superiority — Spain national team's historic win is a mandatory inclusion."
+  }
+}
