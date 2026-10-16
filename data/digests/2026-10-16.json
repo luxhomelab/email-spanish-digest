@@ -1,0 +1,203 @@
+{
+  "items": [
+    {
+      "title": "Canarias proposes 10 years of empadronamiento to buy homes",
+      "body": "The Canarias government (CC-PP) has sent Madrid a draft royal decree-law requiring 10 years of empadronamiento on the islands to buy a home, limiting individuals to two homes in different municipalities and companies to buying properties only to sell or rent them. The draft is tied to the Maricarmen decrees, re-approved in the Diputación Permanente.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/canariasahora/politica/canarias-propone-exigir-10-anos-empadronamiento-comprar-casa-islas_1_13587331.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "New decree would compensate tenants if a landlord does not renew",
+      "body": "Real Decreto-ley 28/2026, published in the BOE, would require landlords who decline to renew a habitual-residence lease to pay tenants at least 12 months' rent for a similar home, with renewals in five- or seven-year blocks. Its entry into force has been delayed until after a vote in the Diputación Permanente.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/15/oficial-nuevo-decreto-contempla-indemnizaciones-inquilinos-casero-no-renueva-alquiler-2057837.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Euribor rise to 3,24% cuts homebuyers' purchasing power",
+      "body": "The Euribor ended September at a monthly average of 3,24%, its highest since July 2024. The average financed home value fell from 294.667 euros in Q2 to 268.333 euros in Q3, and from 300.000 euros in July to 248.000 euros in September. Data: Centro de Estudios de Trioteca.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/las-consecuencias-directas-las-nuevas-subidas-las-hipotecas-gran-problema-ya-no-es-solo-conseguir-financiacion_7046971_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain to pay 20.000 million more a year in debt interest",
+      "body": "Funcas keeps GDP forecasts at 2,5% this year and 1,8% in 2027, but sees 1,7% in 2028. Public-debt interest payments would rise by some 20.000 million euros, from 43.500 million in 2026 to 63.700 million in 2031. Without adjustments, the deficit would again exceed the EU's 3% of GDP limit starting in 2030.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/10/16/6ad0d646e85eced3738b456f.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Inflation rise is twice the rent revaluation rate, hurting landlords",
+      "body": "The IRAV, the index used to update rental contracts annually, stood at 2,54% year-on-year in September, almost half the inflation rate. Landlords cannot pass on the full cost-of-living increase to rents. The data hurts property owners who apply the annual increase in September.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/16/subida-ipc-duplica-revalorizacion-los-alquileres-castiga-los-propietarios-2059764.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Pensions debate enters pre-campaign as Sánchez promises revaluation",
+      "body": "Pedro Sánchez promises to revalue pensions before the end of the year, while Alberto Núñez Feijóo commits to an IPC-linked increase. Around 10 million pensioners have a stake in the vote. Feijóo said his government would 'ask for sacrifices'; PP's Juan Bravo conditions pension equalization on a healthy economy.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/futuro-pensiones-irrumpe-precampana-sanchez-promete-revalorizarlas-ano_1_13589415.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Isabel Allende wins 2026 Premio Planeta",
+      "body": "Isabel Allende has won the 2026 Premio Planeta for 'La hora antes del alba', the second part of her classic 'La casa de los espíritus'. The finalist was Sergio Hernández for 'La añoranza'. The winners were announced at a dinner in Barcelona presided over by the King and Queen.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/cat/isabel-allende-gana-premio-planeta-2026-hora-alba_1_13589698.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "CEOE calls SMI rise in electoral period 'incredible'",
+      "body": "CEOE president Antonio Garamendi called it 'incredible' that the government is using its power to raise the SMI during the electoral period. CCOO and UGT demand at least a 7% rise to 1.300 euros in 2027, plus a ban on companies absorbing the increase through salary supplements.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/patronal-ve-increible-gobierno-use-subir-salario-minimo-periodo-electoral_1_13588699.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Exteriores withholds data on 163.000 'ley de nietos' voters",
+      "body": "The Census Office has received no updated data on the 163.000 people naturalized under the 'ley de nietos' whose votes the Supreme Court suspended on September 10. Exteriores has gone 36 days without sending the records; without them, the affected voters cannot cast ballots unless consulates certify they are descendants of exiles.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/15/6ad10f4cfdddfff2788b45b1.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Andalusia to challenge Maricarmen eviction decree at Constitutional Court",
+      "body": "Juanma Moreno's government (PP-Vox) will appeal the Maricarmen housing decrees before the Constitutional Court. They suspend evictions of vulnerable people and extend the vulture-fund purchase veto until 2030. Rejected in Congress, they were re-approved in the Diputación Permanente after Sánchez called elections for November 29.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/andalucia/gobierno-moreno-recurrira-constitucional-decreto-maricarmen-suspende-desahucios-personas-vulnerables_1_13588021.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Facua denounces six property portals over rental ads",
+      "body": "Facua has reported Idealista, Fotocasa, Pisos.com, Habitaclia, Ya Encontré and Milanuncios for rental ads that omit the maximum price in stressed zones, landlord status and previous rent. Of 102 ads analyzed in six stressed cities, only four of 30 in Barcelona complied; all ads in the other five cities violated the rules.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/facua-denuncia-6-grandes-portales-inmobiliarios-incumplir-nuevo-decreto-anuncios-alquiler_1_13588698.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Defense sends Ceuta abuse audio evidence to court and Fiscalía",
+      "body": "The Defense Ministry has sent El Diario's information, including audio recordings of soldiers boasting of beating migrants in Ceuta, to the court and the Fiscalía. The ministry said the move aims to preserve the good name of the Armed Forces. The case follows an Amnesty International complaint about alleged torture and cruel treatment.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-defensa-remite-juzgado-fiscalia-informacion-audios-militares-presumiendo-palizas-migrantes-ceuta-20261015160934.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Madrid-Barcelona AVE service normalisation delayed until 22 October",
+      "body": "Adif does not expect service on the Madrid-Barcelona high-speed line to return to normal until at least October 22 after a locomotive fire near Ricla. It has asked Renfe, Ouigo and Iryo to adapt their services until then. Traffic is running on only one track between Ricla and Plasencia de Jalón.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/adif-no-espera-normalizar-linea-barcelona-madrid-hasta-22-octubre-pide-medidas-hasta-esa-fecha-renfe-ouigo-iryo_7049010_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Thousands of Madrid teachers protest on second strike day",
+      "body": "Thousands of teachers — 10.000 according to government figures — gathered in Madrid on the second day of the education strike to defend public education. The protest took place in front of the Comunidad de Madrid's Education Ministry on Calle Alcalá.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/madrid/noticia-miles-profesores-rodean-consejeria-educacion-segundo-dia-huelga-defensa-publica-20261015134846.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Canarias proposes 10 years of empadronamiento to buy a home. Could you meet that? A) Yes B) No C) Not in Canarias 🤔",
+  "variant": "Nothing Happened in Spain Today. Except This.",
+  "headline": "Nothing Happened in Spain Today. Except This.",
+  "date": "2026-10-16",
+  "engagement_source": "generated",
+  "generated_at": "2026-10-16T06:06:31.428079+00:00",
+  "source_stats": {
+    "feeds_ok": 15,
+    "feeds_total": 16,
+    "items_fetched": 316,
+    "items_selected_pass1": 14,
+    "fact_sheets_extracted": 14,
+    "items_after_importance_filter": 14,
+    "items_in_digest": 14
+  },
+  "selection_reasons": {
+    "92": "Canarias proposes requiring 10 years of empadronamiento to buy a home — directly affects foreign buyers and investors in the islands.",
+    "1": "Government withholds data on 163,000 people affected by the 'ley de nietos' nationality law, a legal-status issue for new Spaniards.",
+    "280": "Rising Euribor pushes up mortgage costs — directly hits homeowners and buyers across Spain.",
+    "226": "Rent increases capped at 2.54% while IPC doubles it — affects every landlord and tenant.",
+    "246": "New decree gives tenants compensation if the landlord refuses to renew — systemic change to rental law.",
+    "74": "Facua denounces six major property portals for breaking the new rental decree on price caps and large-holder disclosure.",
+    "73": "Andalucía challenges the national housing decrees (eviction suspension, vulture-fund ban) at the Constitutional Court — precedent for all regions.",
+    "36": "Pensions revaluation with CPI enters the campaign and the Government pledges to raise them before year-end — affects 10+ million pensioners.",
+    "88": "CEOE chief attacks the Government over the minimum wage (SMI) hike — affects low-wage workers and employers.",
+    "8": "Funcas warns Spain will pay €20bn more a year in debt interest, exhausting fiscal room for the next crisis.",
+    "133": "Adif says the Barcelona-Madrid rail line won't be normal until at least 22 October — disrupts thousands of daily travellers.",
+    "310": "Defence Ministry sends to court audio of soldiers bragging about beating migrants in Ceuta — national-scale migration and rights issue.",
+    "31": "Second day of the Madrid teachers' strike draws 10,000 protesters against the regional Education ministry — systemic regional disruption.",
+    "49": "Isabel Allende wins the Premio Planeta with a sequel to 'La casa de los espíritus' — the day's major positive cultural story."
+  }
+}
