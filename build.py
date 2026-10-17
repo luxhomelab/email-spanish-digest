@@ -1226,8 +1226,6 @@ def main():
     env.globals["site_socials"] = [
         "https://www.threads.com/@spaindaily",
         "https://www.reddit.com/r/SpainDaily/",
-        "https://x.com/spanified",
-        "https://substack.com/@spanified",
         "https://www.facebook.com/spanified",
     ]
 
