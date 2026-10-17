@@ -12,7 +12,7 @@ Static site for [spanified.com](https://spanified.com) (Spain Daily newsletter).
 pip install jinja2 pillow       # build deps (CI uses the same, plus Python 3.12)
 python3 build.py                # build in place (prod Listmonk); idempotent, no required args
 python3 build.py --out dist     # what CI runs; CI then runs `npx pagefind --site dist`
-python3 build.py --listmonk local   # point subscribe forms at the dev Listmonk
+python3 build.py --listmonk local   # subscribe forms use dev Listmonk URL + list UUID and Turnstile captcha is dropped
 python3 serve.py [port]         # local server with clean URLs (/quiz/ai-or-real); don't use http.server
 npm test                        # node --test tests/*.test.js (JS logic for calculators, quizzes, forms)
 node --test tests/quiz-logic.test.js   # single JS test file
