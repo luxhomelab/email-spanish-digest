@@ -1098,6 +1098,9 @@ def _hms(seconds):
 
 def podcast_episode_notes(episode, digest_dates=()):
     lines = []
+    summary = (episode.get("summary") or "").strip()
+    if summary:
+        lines += [summary, ""]
     for ch in episode.get("chapters", []):
         lines.append(f"{_hms(ch['startTime'])} {ch['title']}")
     if episode["date"] in digest_dates:
@@ -1156,6 +1159,7 @@ def render_podcast_feed(episodes, digest_dates=()):
             f"    <link>{link}</link>",
             f"    <pubDate>{_rfc2822(date)}</pubDate>",
             f"    <description>{esc(notes)}</description>",
+            f"    <itunes:summary>{esc(notes)}</itunes:summary>",
             f"    <content:encoded>{esc('<p>' + notes.replace(chr(10), '<br>') + '</p>')}</content:encoded>",
             f'    <enclosure url="{audio}" length="{int(ep["length"])}" type="audio/mpeg"/>',
             f"    <itunes:duration>{int(ep['duration'])}</itunes:duration>",
