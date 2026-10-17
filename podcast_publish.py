@@ -56,11 +56,13 @@ def build_episode(episode_dir):
     audio = os.path.join(episode_dir, "audio")
     mp3 = os.path.join(audio, "episode.mp3")
     meta = read_ffmetadata(os.path.join(audio, "ffmetadata.txt"))
+    if not meta.get("title"):
+        sys.exit("ffmetadata.txt has no title")
     with open(os.path.join(audio, "chapters.json"), encoding="utf-8") as fh:
         chapters = json.load(fh).get("chapters", [])
     episode = {
         "date": date,
-        "title": meta.get("title") or f"Spain Daily — {date}",
+        "title": meta["title"],
         "duration": probe_duration(mp3),
         "length": os.path.getsize(mp3),
         "chapters": chapters,
