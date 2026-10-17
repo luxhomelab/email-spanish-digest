@@ -10,6 +10,7 @@ and renders a static site:
   - Issue pages    -> archive/YYYY-MM-DD.html
   - Archive listing -> archive/index.html + archive/N.html (10 per page)
   - Sitemap        -> sitemap.xml
+  - Podcast feed   -> podcast.xml (+ podcast/chapters/), episodes from data/podcast/
 
 Usage: python3 build.py [--out dist] [--listmonk local] [--analytics on|off|auto]   (idempotent)
 
@@ -29,6 +30,7 @@ import shutil
 import sys
 from collections import Counter
 from datetime import datetime
+from email.utils import format_datetime
 from urllib.parse import quote
 from zoneinfo import ZoneInfo
 
@@ -1057,6 +1059,126 @@ def render_sitemap(digests, categories=(), articles=()):
     print(f"  wrote sitemap.xml ({len(urls)} urls)")
 
 
+PODCAST_SRC_DIR = os.path.join(SCRIPT_DIR, "data", "podcast")
+# MP3s live in Cloudflare R2 (bucket spanified-podcast), never in git.
+PODCAST_MEDIA_URL = "https://media.spanified.com"
+PODCAST_TITLE = "Spain Daily"
+PODCAST_SUMMARY = (
+    "A short daily briefing on Spanish news for expats and English speakers "
+    "living in Spain: law, money, housing, visas and what changes for you."
+)
+PODCAST_OWNER_EMAIL = "support@spanified.com"
+# Podcasting 2.0 GUID: uuidv5(podcast namespace, "spanified.com/podcast.xml").
+# Must never change once the feed is submitted.
+PODCAST_GUID = "b96af1a0-4554-50df-9ac5-f4542bce76ee"
+
+
+def load_podcast_episodes():
+    """data/podcast/YYYY-MM-DD.json, newest first (written by podcast_publish.py)."""
+    if not os.path.isdir(PODCAST_SRC_DIR):
+        return []
+    episodes = []
+    for name in sorted(os.listdir(PODCAST_SRC_DIR), reverse=True):
+        if re.match(r"^\d{4}-\d{2}-\d{2}\.json$", name):
+            with open(os.path.join(PODCAST_SRC_DIR, name), encoding="utf-8") as fh:
+                episodes.append(json.load(fh))
+    return episodes
+
+
+def _rfc2822(date_str):
+    dt = datetime.strptime(date_str, "%Y-%m-%d").replace(
+        hour=8, tzinfo=ZoneInfo("Europe/Madrid"))
+    return format_datetime(dt)
+
+
+def _hms(seconds):
+    seconds = int(seconds)
+    return f"{seconds // 3600:02d}:{seconds % 3600 // 60:02d}:{seconds % 60:02d}"
+
+
+def podcast_episode_notes(episode, digest_dates=()):
+    lines = []
+    summary = (episode.get("summary") or "").strip()
+    if summary:
+        lines += [summary, ""]
+    for ch in episode.get("chapters", []):
+        lines.append(f"{_hms(ch['startTime'])} {ch['title']}")
+    if episode["date"] in digest_dates:
+        lines.append("")
+        lines.append(f"Read the full digest: {SITE_URL}/archive/{episode['date']}")
+    lines.append(f"Subscribe to the newsletter: {SITE_URL}/subscribe")
+    return "\n".join(lines)
+
+
+def render_podcast_feed(episodes, digest_dates=()):
+    """podcast.xml (RSS 2.0 + itunes + podcast namespaces) and
+    podcast/chapters/<date>.json for Apple / Spotify / YouTube."""
+    esc = lambda s: html.escape(str(s), quote=True)
+    cover = f"{SITE_URL}/static/podcast-cover.jpg"
+    feed_url = f"{SITE_URL}/podcast.xml"
+    chapters_dir = os.path.join(OUT_DIR, "podcast", "chapters")
+    os.makedirs(chapters_dir, exist_ok=True)
+
+    out = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"'
+        ' xmlns:podcast="https://podcastindex.org/namespace/1.0"'
+        ' xmlns:atom="http://www.w3.org/2005/Atom"'
+        ' xmlns:content="http://purl.org/rss/1.0/modules/content/">',
+        "<channel>",
+        f"  <title>{esc(PODCAST_TITLE)}</title>",
+        f"  <link>{SITE_URL}/</link>",
+        f'  <atom:link href="{feed_url}" rel="self" type="application/rss+xml"/>',
+        "  <language>en</language>",
+        f"  <description>{esc(PODCAST_SUMMARY)}</description>",
+        f"  <copyright>© {datetime.now().year} Spanified</copyright>",
+        "  <itunes:author>Spanified</itunes:author>",
+        "  <itunes:owner>",
+        "    <itunes:name>Spanified</itunes:name>",
+        f"    <itunes:email>{PODCAST_OWNER_EMAIL}</itunes:email>",
+        "  </itunes:owner>",
+        f'  <itunes:image href="{cover}"/>',
+        f"  <image><url>{cover}</url><title>{esc(PODCAST_TITLE)}</title><link>{SITE_URL}/</link></image>",
+        '  <itunes:category text="News"><itunes:category text="Daily News"/></itunes:category>',
+        "  <itunes:explicit>false</itunes:explicit>",
+        "  <itunes:type>episodic</itunes:type>",
+        f'  <podcast:locked owner="{PODCAST_OWNER_EMAIL}">yes</podcast:locked>',
+        f"  <podcast:guid>{PODCAST_GUID}</podcast:guid>",
+    ]
+    for ep in episodes:
+        date = ep["date"]
+        if not re.match(r"^\d{4}-\d{2}-\d{2}$", date):
+            continue
+        notes = podcast_episode_notes(ep, digest_dates)
+        audio = f"{PODCAST_MEDIA_URL}/episodes/{date}.mp3"
+        link = f"{SITE_URL}/archive/{date}" if date in digest_dates else f"{SITE_URL}/"
+        out += [
+            "  <item>",
+            f"    <title>{esc(ep['title'])}</title>",
+            f'    <guid isPermaLink="false">spanified-podcast-{date}</guid>',
+            f"    <link>{link}</link>",
+            f"    <pubDate>{_rfc2822(date)}</pubDate>",
+            f"    <description>{esc(notes)}</description>",
+            f"    <itunes:summary>{esc(notes)}</itunes:summary>",
+            f"    <content:encoded>{esc('<p>' + notes.replace(chr(10), '<br>') + '</p>')}</content:encoded>",
+            f'    <enclosure url="{audio}" length="{int(ep["length"])}" type="audio/mpeg"/>',
+            f"    <itunes:duration>{int(ep['duration'])}</itunes:duration>",
+            "    <itunes:episodeType>full</itunes:episodeType>",
+            "    <itunes:explicit>false</itunes:explicit>",
+        ]
+        if ep.get("chapters"):
+            with open(os.path.join(chapters_dir, f"{date}.json"), "w", encoding="utf-8") as fh:
+                json.dump({"version": "1.2.0", "chapters": ep["chapters"]}, fh, ensure_ascii=False)
+            out.append(f'    <podcast:chapters url="{SITE_URL}/podcast/chapters/{date}.json"'
+                       ' type="application/json+chapters"/>')
+        out.append("  </item>")
+    out += ["</channel>", "</rss>"]
+
+    with open(os.path.join(OUT_DIR, "podcast.xml"), "w", encoding="utf-8") as fh:
+        fh.write("\n".join(out) + "\n")
+    print(f"  wrote podcast.xml ({len(episodes)} episode(s))")
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Build the Spanified static site.")
     parser.add_argument(
@@ -1262,6 +1384,9 @@ def main():
 
     print("Writing llms.txt...")
     render_llms_txt(digests, articles)
+
+    print("Building podcast feed...")
+    render_podcast_feed(load_podcast_episodes(), {d["date"] for d in digests})
 
     print("Done.")
 

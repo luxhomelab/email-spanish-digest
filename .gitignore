@@ -22,3 +22,5 @@ dist/
 __pycache__/
 og/
 /articles/
+podcast.xml
+/podcast/
