@@ -1,0 +1,270 @@
+{
+  "items": [
+    {
+      "title": "Torrential rain brings flooding across eastern Spain",
+      "body": "Storm Adam brought torrential rain and flooding to eastern and south-eastern Spain on October 17. Firefighters are searching for a woman who fell into a stream in Cabrera de Mar. Emergency alerts warned several Catalan areas of torrential rain, while rescuers freed two elderly people from a trapped car in Sentmenat.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/temporal-lluvia-espana-hoy-directo-comunidad-valenciana-cataluna-murcia-almeria-alerta-las-proximas-horas_7050013_6.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "Rental listings pause as housing decrees await validation",
+      "body": "Housing decrees approved on October 7 await parliamentary validation. Property portals and industry groups report a temporary freeze of 2% to 5% of rental listings, not a mass withdrawal. The extensions would protect tenants whose contracts expire before 2029 from eviction or rent rises at expiry.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/han-retirado-caseros-ofertas-alquiler-decretos-vivienda_1_13591130.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Pensions and housing dominate Spain's election campaign",
+      "body": "Sánchez and Feijóo both see the campaign moving their way, but experts see a map that favours a PP-Vox option. Sánchez launched his pre-campaign on October 17 for the November 29 election and warned of PP pension cuts. Feijóo sees Mínguez's resignation as weakening the PSOE's housing message.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-sanchez-lanza-precampana-apelando-movilizacion-alertando-contra-motosierra-pensiones-20261017133128.html"
+        },
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-10-18/los-dos-grandes-creen-que-la-campana-se-va-colocando-donde-querian.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Court maintains voting restrictions for newly nationalised descendants",
+      "body": "The Supreme Court upheld a temporary voting suspension affecting 163,020 people nationalised through the Ley de Nietos for the November 29 election. It applies to those granted nationality under a later instruction presuming exile status. Those covered directly by the law can vote; legal challenges remain open.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/politica/20261018/11661560/batalla-nietos-voto.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Foreign home purchases fall 13% across Spain",
+      "body": "Home purchases by foreigners fell 13% in the first half of the year, the biggest drop since 2020. Most regions recorded declines, including tourist areas, while buyers faced higher costs. Dutch buyers led among non-residents, and Comunidad Valenciana was the preferred destination of non-resident foreigners.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/frenazo-compra-extranjera-vivienda-donde-se-concentra-cual-es-su-nacionalidad_7050017_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Spain passes 1,000 days without new budget bill",
+      "body": "Spain has gone more than 1,000 days without the government presenting a new budget bill and continues to use the extended 2023 accounts. Experts warn that repeated extensions hinder investment and transparency. Public spending continues, and Spain's rules do not provide for US-style government shutdowns.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/negocios/2026-10-17/mas-de-1000-dias-sin-nuevos-presupuestos-hasta-cuando-puede-vivir-espana-con-las-cuentas-de-2023.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "New retirement pensions average more than €1,700",
+      "body": "New contributory retirement pensions average €1,711.4 a month, passing €1,700 for the first time. That figure applies only to newly awarded retirement pensions. Across the whole pension system, the September average was €1,374.6, up 4.6% over a year.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/17/subida-pensiones-2027-espana-nuevos-jubilados-superaran-1700euros-media-mes-2055234.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Job growth leaves unemployment falling only slowly",
+      "body": "Social Security affiliation rose by almost 750,000 over a year, but unemployment fell by just 42,000. Contributors reached a record 22.43 million. Registered unemployment fell 1.74% year on year in September, compared with 5.97% a year earlier, showing that job growth is not producing an equally sharp fall in unemployment.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/18/empleo-casi-750-000-nuevos-empleos-un-ano-pero-solo-42-000-parados-menos-por-que-2060504.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Court rejects annual cap on paid care leave",
+      "body": "The Supreme Court ruled that employees can claim five days of paid care leave whenever a new qualifying situation arises, rejecting a five-day annual cap. The leave covers serious illness, accidents, hospital stays, and surgery requiring home rest for eligible relatives and people sharing the employee's home.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/cambios-permiso-cuidar-familiar-enfermo-supremo-aclara-cuantas-veces-puedes-pedir-dias_7050024_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Madrid–Barcelona trains face longer journeys and cancellations",
+      "body": "Speed restrictions and cancellations are lengthening journeys on the Madrid–Barcelona high-speed line. Some sections have a 160 km/h cap, and operators have revised timetables and cut services. An AVE train fire in Ricla on October 12 added to disruption on a route already facing restrictions since January.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/catalunya/2026-10-18/la-alta-velocidad-entre-barcelona-y-madrid-pierde-frecuencias-fiabilidad-y-rapidez.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Renfe drivers call strike for October 29",
+      "body": "Semaf has called a 24-hour Renfe drivers' strike for October 29 after talks failed on October 16. The union says safety and staffing commitments have stalled; Renfe says it has met them. Semaf also announced Ouigo strikes on October 30, November 2, 6, and 9, and December 4 and 8.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-10-17/el-sindicato-de-maquinistas-semaf-llama-a-una-huelga-de-24-horas-en-renfe-para-el-dia-29.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Madrid teachers use support funds to sustain strike",
+      "body": "Teachers in Madrid are using rotating shifts and resistance funds to sustain an indefinite strike, with each strike day costing about €100 in lost pay. Early childhood educators in the PLEI platform have been on strike since April. The strike adds pressure on Ayuso.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/sostener-paro-indefinido-educacion-perdiendo-100-euros-dia-huelga-sufrimiento_1_13590517.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Sales calls require 400 prefix from October 17",
+      "body": "Since October 17, commercial calls must use nine-digit numbers starting with 400, so people can tell them apart from customer-service calls. People cannot call these numbers back. Anyone getting commercial calls from other numbers can complain to the telecoms user office (OAUT) or report them to the CNMC.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/sociedad/2026/10/17/llamadas-comerciales-deberan-identificarse-hoy-codigo-400.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Banderas and Cage lead True Detective's fifth season",
+      "body": "HBO Max announced Antonio Banderas and Nicolas Cage as the leads of True Detective's fifth season, with production starting in 2027. Banderas will play Rai García, and Cage will play Henry Logan. Issa López returns as showrunner, and both actors will also serve as executive producers.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/television/series/2026-10-17/antonio-banderas-y-nicolas-cage-protagonizaran-de-la-quinta-temporada-de-true-detective.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "During heavy rain, do you postpone journeys? A) Always B) Sometimes C) Never",
+  "variant": "What mattered in Spain today",
+  "headline": "What mattered in Spain today",
+  "date": "2026-10-18",
+  "engagement_source": "generated",
+  "generated_at": "2026-10-18T06:01:52.026263+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 506,
+    "items_selected_pass1": 15,
+    "fact_sheets_extracted": 15,
+    "items_after_importance_filter": 15,
+    "items_in_digest": 14
+  },
+  "selection_reasons": {
+    "21": "Sánchez launches the campaign for the 29 November general election; pensions are the central issue (developing election story, one item)",
+    "313": "'Ley de nietos': Supreme Court suspended the vote of thousands of CERA registrants, with a Constitutional Court appeal pending. This affects the election's legitimacy (best background of the developing story)",
+    "455": "Rental market after the housing decrees of 7 October: the share of listings withdrawn, with landlords pausing ahead of validation and the elections",
+    "104": "Foreign home purchases in Spain fell 13% while prices rose, with data on where buyers concentrate and their nationalities; directly relevant to expat buyers and investors",
+    "258": "More than 1,000 days without a new national budget; the 2023 accounts remain rolled over, with consequences for public investment",
+    "182": "Around 750,000 new jobs in a year but only 42,000 fewer unemployed, explained by the mass immigrant regularisation and growth in the labour force",
+    "40": "Indefinite teachers' strike in Madrid, a historic regional dispute affecting tens of thousands of families and pressuring the regional government",
+    "246": "Madrid-Barcelona high-speed rail is losing frequencies, reliability and speed after a train fire, and runs under restrictions until Thursday; widespread disruption for travellers",
+    "299": "Semaf drivers' union calls a 24-hour Renfe strike for 29 October, affecting rail passengers nationwide",
+    "94": "Storm 'Adam' brings red alerts in Catalonia, Valencia, Murcia and Almería, with a missing person and dozens of incidents; an extreme-weather event of national scale",
+    "102": "Supreme Court ruling clarifying that the five-day leave to care for a sick relative can be taken for each qualifying situation; a precedent for all workers",
+    "505": "Commercial calls must now identify themselves with the 400 prefix; a consumer-facing rule change from today",
+    "215": "Pension data: new retirees averaged €1,711 a month in August, with the 2027 revalorisation outlook",
+    "223": "Campaign analysis: experts see little movement in a map favouring a PP-Vox option, and the main parties' strategies (pensions, housing)",
+    "307": "Positive item: Antonio Banderas will star in the fifth season of True Detective alongside Nicolas Cage"
+  },
+  "selection_sources": [
+    {
+      "url": "https://www.europapress.es/nacional/noticia-sanchez-lanza-precampana-apelando-movilizacion-alertando-contra-motosierra-pensiones-20261017133128.html",
+      "reason": "Sánchez launches the campaign for the 29 November general election; pensions are the central issue (developing election story, one item)"
+    },
+    {
+      "url": "https://www.lavanguardia.com/politica/20261018/11661560/batalla-nietos-voto.html",
+      "reason": "'Ley de nietos': Supreme Court suspended the vote of thousands of CERA registrants, with a Constitutional Court appeal pending. This affects the election's legitimacy (best background of the developing story)"
+    },
+    {
+      "url": "https://www.eldiario.es/economia/han-retirado-caseros-ofertas-alquiler-decretos-vivienda_1_13591130.html",
+      "reason": "Rental market after the housing decrees of 7 October: the share of listings withdrawn, with landlords pausing ahead of validation and the elections"
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/frenazo-compra-extranjera-vivienda-donde-se-concentra-cual-es-su-nacionalidad_7050017_0.html",
+      "reason": "Foreign home purchases in Spain fell 13% while prices rose, with data on where buyers concentrate and their nationalities; directly relevant to expat buyers and investors"
+    },
+    {
+      "url": "https://elpais.com/economia/negocios/2026-10-17/mas-de-1000-dias-sin-nuevos-presupuestos-hasta-cuando-puede-vivir-espana-con-las-cuentas-de-2023.html",
+      "reason": "More than 1,000 days without a new national budget; the 2023 accounts remain rolled over, with consequences for public investment"
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/10/18/empleo-casi-750-000-nuevos-empleos-un-ano-pero-solo-42-000-parados-menos-por-que-2060504.html",
+      "reason": "Around 750,000 new jobs in a year but only 42,000 fewer unemployed, explained by the mass immigrant regularisation and growth in the labour force"
+    },
+    {
+      "url": "https://www.eldiario.es/sociedad/sostener-paro-indefinido-educacion-perdiendo-100-euros-dia-huelga-sufrimiento_1_13590517.html",
+      "reason": "Indefinite teachers' strike in Madrid, a historic regional dispute affecting tens of thousands of families and pressuring the regional government"
+    },
+    {
+      "url": "https://elpais.com/espana/catalunya/2026-10-18/la-alta-velocidad-entre-barcelona-y-madrid-pierde-frecuencias-fiabilidad-y-rapidez.html",
+      "reason": "Madrid-Barcelona high-speed rail is losing frequencies, reliability and speed after a train fire, and runs under restrictions until Thursday; widespread disruption for travellers"
+    },
+    {
+      "url": "https://elpais.com/economia/2026-10-17/el-sindicato-de-maquinistas-semaf-llama-a-una-huelga-de-24-horas-en-renfe-para-el-dia-29.html",
+      "reason": "Semaf drivers' union calls a 24-hour Renfe strike for 29 October, affecting rail passengers nationwide"
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/temporal-lluvia-espana-hoy-directo-comunidad-valenciana-cataluna-murcia-almeria-alerta-las-proximas-horas_7050013_6.html",
+      "reason": "Storm 'Adam' brings red alerts in Catalonia, Valencia, Murcia and Almería, with a missing person and dozens of incidents; an extreme-weather event of national scale"
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/cambios-permiso-cuidar-familiar-enfermo-supremo-aclara-cuantas-veces-puedes-pedir-dias_7050024_0.html",
+      "reason": "Supreme Court ruling clarifying that the five-day leave to care for a sick relative can be taken for each qualifying situation; a precedent for all workers"
+    },
+    {
+      "url": "https://www.expansion.com/sociedad/2026/10/17/llamadas-comerciales-deberan-identificarse-hoy-codigo-400.html",
+      "reason": "Commercial calls must now identify themselves with the 400 prefix; a consumer-facing rule change from today"
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/10/17/subida-pensiones-2027-espana-nuevos-jubilados-superaran-1700euros-media-mes-2055234.html",
+      "reason": "Pension data: new retirees averaged €1,711 a month in August, with the 2027 revalorisation outlook"
+    },
+    {
+      "url": "https://elpais.com/espana/2026-10-18/los-dos-grandes-creen-que-la-campana-se-va-colocando-donde-querian.html",
+      "reason": "Campaign analysis: experts see little movement in a map favouring a PP-Vox option, and the main parties' strategies (pensions, housing)"
+    },
+    {
+      "url": "https://elpais.com/television/series/2026-10-17/antonio-banderas-y-nicolas-cage-protagonizaran-de-la-quinta-temporada-de-true-detective.html",
+      "reason": "Positive item: Antonio Banderas will star in the fifth season of True Detective alongside Nicolas Cage"
+    }
+  ]
+}
