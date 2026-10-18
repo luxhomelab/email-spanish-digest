@@ -1121,6 +1121,13 @@ def _hms(seconds):
     return f"{seconds // 3600:02d}:{seconds % 3600 // 60:02d}:{seconds % 60:02d}"
 
 
+def podcast_episode_title(episode, number):
+    """"#<n> <title> | Spain Daily News | <d Mon YYYY>"; any leading date in the stored title is dropped."""
+    title = re.sub(r"^\d{4}-\d{2}-\d{2}\s*[:\-–—]\s*", "", episode["title"]).strip()
+    dt = datetime.strptime(episode["date"], "%Y-%m-%d")
+    return f"#{number} {title} | Spain Daily News | {dt.day} {dt:%b %Y}"
+
+
 def podcast_episode_notes(episode, digest_dates=()):
     lines = []
     summary = (episode.get("summary") or "").strip()
@@ -1170,16 +1177,19 @@ def render_podcast_feed(episodes, digest_dates=()):
         f'  <podcast:locked owner="{PODCAST_OWNER_EMAIL}">yes</podcast:locked>',
         f"  <podcast:guid>{PODCAST_GUID}</podcast:guid>",
     ]
+    valid = [e for e in episodes if re.match(r"^\d{4}-\d{2}-\d{2}$", e["date"])]
+    numbers = {e["date"]: n for n, e in enumerate(sorted(valid, key=lambda e: e["date"]), 1)}
     for ep in episodes:
         date = ep["date"]
-        if not re.match(r"^\d{4}-\d{2}-\d{2}$", date):
+        if date not in numbers:
             continue
         notes = podcast_episode_notes(ep, digest_dates)
         audio = f"{PODCAST_MEDIA_URL}/episodes/{date}.mp3"
         link = f"{SITE_URL}/archive/{date}" if date in digest_dates else f"{SITE_URL}/"
         out += [
             "  <item>",
-            f"    <title>{esc(ep['title'])}</title>",
+            f"    <title>{esc(podcast_episode_title(ep, numbers[date]))}</title>",
+            f"    <itunes:episode>{numbers[date]}</itunes:episode>",
             f'    <guid isPermaLink="false">spanified-podcast-{date}</guid>',
             f"    <link>{link}</link>",
             f"    <pubDate>{_rfc2822(date)}</pubDate>",
