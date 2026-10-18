@@ -2512,3 +2512,46 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
  body.page-article .article-faq-item summary { padding: 14px 16px; gap: 10px; }
  body.page-article .article-faq-answer { padding: 0 16px 16px 35px; }
 }
+
+/* ---------- Digest podcast player (templates/partials/podcast-player.html) ---------- */
+.podcast-player { margin: 16px 32px 0 32px; padding: 16px 18px; border: 1px solid #EFE7D8; border-radius: 14px; background: #FFF9EC; }
+.pp-main { display: flex; align-items: center; gap: 14px; }
+.pp-play, .pp-mini-play { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 50%; background: #AA151B; color: #fff; cursor: pointer; }
+.pp-play { width: 52px; height: 52px; }
+.pp-play[hidden] { display: none; }
+.pp-play svg, .pp-mini-play svg { width: 26px; height: 26px; fill: currentColor; }
+.pp-play:hover, .pp-mini-play:hover { background: #8E1116; }
+.pp-play:focus-visible, .pp-mini-play:focus-visible { outline: 3px solid #F1BF00; outline-offset: 2px; }
+.pp-icon-pause, .is-playing .pp-icon-play { display: none; }
+.is-playing .pp-icon-pause { display: block; }
+.pp-info { min-width: 0; }
+.pp-kicker { font-size: 12px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; color: #AA151B; }
+.pp-title { font-size: 16px; line-height: 22px; font-weight: 600; color: #2C2C2C; margin-top: 2px; }
+.pp-controls:not([hidden]) { display: flex; align-items: center; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.pp-seek { flex: 1 1 160px; accent-color: #AA151B; min-height: 32px; }
+.pp-skip, .pp-speed { min-width: 44px; min-height: 36px; padding: 0 8px; border: 1px solid #E3D6BC; border-radius: 999px; background: #fff; color: #3C4858; font-size: 13px; font-weight: 600; cursor: pointer; }
+.pp-skip:hover, .pp-speed:hover { border-color: #AA151B; color: #AA151B; }
+.pp-time { font-size: 13px; color: #6C7A89; font-variant-numeric: tabular-nums; }
+.pp-chapters { margin-top: 12px; }
+.pp-chapters summary { cursor: pointer; font-size: 14px; font-weight: 600; color: #3C4858; }
+.pp-chapters ol { list-style: none; margin: 8px 0 0 0; padding: 0; }
+.pp-chapter { display: block; width: 100%; text-align: left; padding: 8px 6px; min-height: 40px; border: 0; border-radius: 8px; background: none; font-size: 14px; color: #3C4858; cursor: pointer; }
+.pp-chapter:hover { background: #F5ECD9; }
+.pp-chapter.is-current { background: #F5ECD9; color: #AA151B; font-weight: 600; }
+.pp-chapter-time { display: inline-block; min-width: 42px; color: #6C7A89; font-variant-numeric: tabular-nums; }
+.pp-sub { margin-top: 10px; font-size: 12px; color: #A0998E; }
+.pp-sub a { color: #AA151B; }
+
+.pp-mini:not([hidden]) { position: fixed; left: 50%; bottom: 12px; transform: translateX(-50%); z-index: 50; width: min(560px, calc(100% - 24px)); display: flex; align-items: center; gap: 10px; padding: 8px 10px 12px 8px; border-radius: 14px; background: #2C2C2C; color: #fff; box-shadow: 0 6px 24px rgba(0,0,0,0.25); overflow: hidden; }
+.pp-mini-play { width: 40px; height: 40px; }
+.pp-mini-play svg { width: 20px; height: 20px; }
+.pp-mini-label { flex: 1; min-width: 0; color: #fff; text-decoration: none; font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pp-mini-close { width: 36px; height: 36px; border: 0; background: none; color: #ccc; font-size: 16px; cursor: pointer; }
+.pp-mini-progress { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: rgba(255,255,255,0.15); }
+.pp-mini-bar { height: 100%; width: 0; background: #F1BF00; }
+
+@media (max-width: 600px) {
+ .podcast-player { margin: 14px 16px 0 16px; padding: 14px; }
+ .pp-seek { order: -1; flex-basis: 100%; }
+ .pp-time { margin-left: auto; }
+}
