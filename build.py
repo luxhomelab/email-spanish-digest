@@ -1064,8 +1064,11 @@ PODCAST_SRC_DIR = os.path.join(SCRIPT_DIR, "data", "podcast")
 PODCAST_MEDIA_URL = "https://media.spanified.com"
 PODCAST_TITLE = "Spain Daily"
 PODCAST_SUMMARY = (
-    "A short daily briefing on Spanish news for expats and English speakers "
-    "living in Spain: law, money, housing, visas and what changes for you."
+    "Spain news in English, every day in a few minutes. A daily briefing for "
+    "English speakers in Spain: immigrants and residents, Spaniards who "
+    "follow the news in English, and foreigners with a holiday home here. "
+    "New laws, taxes, housing and rent, visas and residency, NIE and "
+    "paperwork, work, prices and travel, and what each change means for you."
 )
 PODCAST_OWNER_EMAIL = "support@spanified.com"
 # Podcasting 2.0 GUID: uuidv5(podcast namespace, "spanified.com/podcast.xml").
