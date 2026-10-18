@@ -45,5 +45,304 @@
       "title": "Outro"
     }
   ],
-  "summary": "Storm Adam brings flooding, rescues and red alerts across eastern and south-eastern Spain. We cover rental uncertainty, election voting restrictions, pensions and budgets, plus care leave, rail disruption and new rules for sales calls.\n\nEnjoying Spain Daily? Support us: https://buymeacoffee.com/spanified"
+  "summary": "Storm Adam brings flooding, rescues and red alerts across eastern and south-eastern Spain. We cover rental uncertainty, election voting restrictions, pensions and budgets, plus care leave, rail disruption and new rules for sales calls.\n\nEnjoying Spain Daily? Support us: https://buymeacoffee.com/spanified",
+  "transcript": {
+    "version": "1.0.0",
+    "segments": [
+      {
+        "speaker": "Inna",
+        "startTime": 1.2,
+        "endTime": 8.605,
+        "body": "Firefighters are searching for a woman who fell into a stream in Cabrera de Mar, as Storm Adam floods eastern Spain."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 8.605,
+        "endTime": 15.946,
+        "body": "And red alerts cover Catalonia, Valencia, Murcia and Almería. We'll start with the affected areas and the warnings."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 19.946,
+        "endTime": 26.032,
+        "body": "Good morning. It's Sunday, the eighteenth of October, and this is Spain Daily, from Spanified dot com!"
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 26.032,
+        "endTime": 33.431,
+        "body": "I'm Dima, here with Inna. Today: uncertainty over rental listings, and a court ruling on paid care leave. First, Storm Adam."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 37.131,
+        "endTime": 54.931,
+        "body": "Storm Adam brought torrential rain and flooding to eastern and south-eastern Spain on October seventeenth, Twenty Minutos reports. Red alerts cover Catalonia, Valencia, Murcia and Almería. Firefighters continue searching for a woman who fell into a stream in Cabrera de Mar, on the Catalan coast."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 54.931,
+        "endTime": 73.271,
+        "body": "Rescuers freed two elderly people from a car trapped by water in Sentmenat, in Catalonia. Emergency messages warned several Catalan districts of occasionally torrential rain until two in the morning. El Ejido, in Almería, recorded widespread incidents, including flooding, vehicles swept away and rescues."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 73.271,
+        "endTime": 82.712,
+        "body": "The affected area stretches across several regions. People should check the official weather alerts from Aemet, the state weather agency, for their own area."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 82.712,
+        "endTime": 86.982,
+        "body": "And the search in Cabrera de Mar continues. The woman is still missing."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 88.982,
+        "endTime": 109.392,
+        "body": "On housing, El Diario reports a temporary pause affecting two to five percent of rental listings. Portals and industry groups deny a mass withdrawal. Housing decrees approved on October seventh await parliamentary validation. Their extensions would protect tenants whose contracts expire before twenty twenty-nine from eviction or rent rises at expiry."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 109.392,
+        "endTime": 114.552,
+        "body": "Hold on, Inna. Landlords are pausing listings while they wait for the parliamentary vote?"
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 114.552,
+        "endTime": 123.308,
+        "body": "That's what several industry voices describe. Some listings could return after validation or the election. right It's an uncertain moment for a search."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 123.308,
+        "endTime": 128.99,
+        "body": "If you're looking for a rental, a paused listing still means one fewer home you can enquire about."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 128.99,
+        "endTime": 149.11,
+        "body": "On the buying side, Twenty Minutos reports that purchases by foreigners fell thirteen percent in the year's first half. It's the biggest decline since twenty twenty. Most regions recorded falls, including tourist areas, while buyers faced higher costs. Dutch buyers led among non-residents, whose preferred destination was the Valencian Community."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 149.11,
+        "endTime": 155.488,
+        "body": "Huh. Fewer purchases, but higher costs. exactly That doesn't sound like much relief for someone trying to buy."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 155.488,
+        "endTime": 161.054,
+        "body": "No, you can have fewer transactions without cheaper homes. Buyers still face that higher outlay."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 163.054,
+        "endTime": 186.929,
+        "body": "Housing and pensions are central to the election campaign, Europa Press reports. Prime Minister Pedro Sánchez launched his pre-campaign on October seventeenth for the November twenty-ninth vote, warning of Popular Party pension cuts. Its leader, Alberto Núñez Feijóo, sees a resignation on the Socialist side, Mínguez's, as weakening their housing message. Experts see a map favouring a Popular Party and Vox option."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 186.929,
+        "endTime": 193.013,
+        "body": "Both sides think they're winning the argument? Even with polls placing the Socialists far from a majority?"
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 193.013,
+        "endTime": 200.13,
+        "body": "That's their reading. But the experts see little movement. mhm Neither side's confidence tells you how the vote will finish."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 200.13,
+        "endTime": 224.12,
+        "body": "Staying with the election, La Vanguardia reports that the Supreme Court maintained a temporary voting suspension for the November twenty-ninth vote. It affects more than a hundred and sixty thousand people nationalised under the grandchildren's law. It applies to those who got nationality under a later instruction that presumes exile status. People covered directly by the law can vote. Legal challenges remain open."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 224.12,
+        "endTime": 230.778,
+        "body": "Wait, Inna. So the route through which someone obtained nationality determines whether this suspension affects them?"
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 230.778,
+        "endTime": 238.698,
+        "body": "It does. And a federation of Spanish associations in Argentina says there's no time to fix the situation through consular or court routes."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 238.698,
+        "endTime": 259.187,
+        "body": "And on pension incomes, Heraldo reports that newly awarded contributory retirement pensions average just over seventeen hundred euros monthly. That's the first time they've crossed that level. Across the whole pension system, September's average was about thirteen hundred and seventy-five euros. The higher figure concerns people newly entering retirement."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 259.187,
+        "endTime": 266.189,
+        "body": "Ah, new pension awards. Someone already receiving a pension shouldn't expect their payment to match that headline average."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 268.189,
+        "endTime": 290.34,
+        "body": "Public finances are running on older plans too. El País reports more than a thousand days without a new government budget bill. Spain continues using extended twenty twenty-three accounts. Experts warn repeated extensions hinder investment and transparency. Public spending continues, and Spanish rules don't provide for American-style government shutdowns."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 290.34,
+        "endTime": 296.111,
+        "body": "Oof. So public money keeps moving, but investment planning is where the experts see problems?"
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 296.111,
+        "endTime": 304.115,
+        "body": "That's their concern, along with transparency. Keeping spending going doesn't answer which new investments Spain could be making."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 306.115,
+        "endTime": 327.299,
+        "body": "On support for people needing care, Twenty Minutos reports a Supreme Court ruling on paid leave. Employees can claim five days whenever a new qualifying situation arises, without an annual cap. It covers serious illness, accidents, hospitalisation and surgery requiring home rest, for eligible relatives and people sharing the employee's home."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 327.299,
+        "endTime": 333.784,
+        "body": "For someone caring for another person, a separate qualifying event can mean another period of paid leave?"
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 333.784,
+        "endTime": 340.393,
+        "body": "It can. Using leave earlier in the year doesn't exhaust the right when another qualifying situation arises."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 340.393,
+        "endTime": 347.001,
+        "body": "And the company had also argued the leave should cover only the hospital stay, not care at home afterwards."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 349.601,
+        "endTime": 369.886,
+        "body": "For rail travellers, El País reports longer journeys and cancellations on the Madrid to Barcelona high-speed line. Some sections have a hundred and sixty kilometre-per-hour limit. Operators have revised timetables and reduced services. A train fire in Ricla, near Zaragoza, on October twelfth added to disruption already continuing since January."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 369.886,
+        "endTime": 375.573,
+        "body": "So someone planning that journey may face both a longer trip and fewer departures to choose from."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 375.573,
+        "endTime": 381.846,
+        "body": "Right. A familiar route doesn't necessarily mean the familiar journey time while those restrictions remain."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 381.846,
+        "endTime": 403.245,
+        "body": "Staying with rail, El País reports that the drivers' union Semaf has called a day-long Renfe strike for Thursday, October twenty-ninth. Talks failed on October sixteenth. Semaf says safety and staffing commitments have stalled; Renfe says it has met them. At Ouigo, a high-speed operator, six strike days are announced between October thirtieth and December eighth."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 403.245,
+        "endTime": 410.281,
+        "body": "That's a separate source of disruption from the speed restrictions, and it reaches beyond the Madrid to Barcelona route."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 410.281,
+        "endTime": 416.378,
+        "body": "The announced Ouigo dates also spread across several weeks, so this concerns more than one day's travel."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 417.878,
+        "endTime": 434.798,
+        "body": "On jobs, Heraldo reports almost seven hundred and fifty thousand additional Social Security contributors over a year. Registered unemployment fell by only forty-two thousand. Employment growth is therefore happening alongside a much slower fall in the number registered as unemployed."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 435.798,
+        "endTime": 451.018,
+        "body": "On a more serious note, Madrid teachers are using rotating shifts and support funds to sustain an indefinite strike. El Diario puts lost pay at about a hundred euros per strike day. Early childhood educators have been on strike since April, and families may see disruption."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 452.018,
+        "endTime": 471.588,
+        "body": "For phone users, Expansión reports that commercial calls must use nine-digit numbers starting with four hundred from October seventeenth. Those numbers can't receive return calls. Commercial calls from other numbers can be reported to the telecoms user office or Spain's markets and competition regulator."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 471.588,
+        "endTime": 478.261,
+        "body": "Oh, a sales call should now identify itself before you even answer. But you can't ring that number back?"
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 478.261,
+        "endTime": 484.356,
+        "body": "You can't. It's a one-way number, designed to separate sales calls from customer-service calls."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 485.106,
+        "endTime": 502.008,
+        "body": "And some television news: El País reports Antonio Banderas and Nicolas Cage will lead True Detective's fifth season. Production starts next year. Banderas plays Rai García, and Cage plays Henry Logan. Issa López returns to lead the series, and both actors will also be executive producers."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 502.008,
+        "endTime": 508.559,
+        "body": "Now that's a pairing I'd be curious to watch. oh nice Though production next year means a little patience first."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 508.559,
+        "endTime": 512.536,
+        "body": "You were already making viewing plans. Let's let them film it first."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 514.936,
+        "endTime": 521.306,
+        "body": "The priority is the flooding: check local official alerts, with several eastern and south-eastern regions affected."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 521.306,
+        "endTime": 528.397,
+        "body": "Get every story in your inbox each morning with our free digest at spanified dot com, with direct links to the original sources."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 528.397,
+        "endTime": 535.155,
+        "body": "And if you enjoy our morning conversations, support Spain Daily on Buy Me a Coffee. The link's in the episode description."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 535.155,
+        "endTime": 538.589,
+        "body": "Thanks for listening and spending part of your Sunday with us."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 538.589,
+        "endTime": 540.417,
+        "body": "That's Spain Daily. Hasta mañana!"
+      }
+    ]
+  }
 }
