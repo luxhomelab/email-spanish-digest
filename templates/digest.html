@@ -13,6 +13,8 @@
 <meta name="twitter:description" content="{{ digest.meta_description }}">
 <meta name="twitter:image" content="{{ site_url }}/og/{{ digest.date }}.png">
 <meta name="robots" content="max-image-preview:large">
+{% if podcast %}<meta property="og:audio" content="{{ podcast.audio_url }}">
+<meta property="og:audio:type" content="audio/mpeg">{% endif %}
 {% for tag in digest.tag_categories %}
 <meta property="article:tag" content="{{ tag }}">
 {% endfor %}{% endblock %}
@@ -34,7 +36,8 @@
  "inLanguage": "en",
  "wordCount": {{ digest.word_count }},
  "isAccessibleForFree": true,
- "mainEntityOfPage": "{{ site_url }}{{ digest.url }}",
+ "mainEntityOfPage": "{{ site_url }}{{ digest.url }}",{% if podcast %}
+ "audio": {"@type": "AudioObject", "name": {{ podcast.title|tojson }}, "contentUrl": "{{ podcast.audio_url }}", "encodingFormat": "audio/mpeg", "duration": "{{ podcast.iso_duration }}"},{% endif %}
  "hasPart": [{% for item in digest.stories %}
   {"@type": "NewsArticle", "headline": {{ item.title|tojson }}, "articleSection": {{ (item.category or "news")|tojson }}, "url": "{{ site_url + digest.url }}", "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor"}{% if item.sources %}, "isBasedOn": {"@type": "CreativeWork", "name": {{ item.sources[0].name|tojson }}, "url": {{ item.sources[0].url|tojson }}}{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}
  ]}
@@ -45,6 +48,7 @@
    <div class="email-gold-band"></div>
    <div class="email-subheader">{{ digest.headline }}</div>
    <div class="byline">Edited by <a href="/editor">Dmytro Shvechikov</a> · {{ digest.date_display }} · {{ digest.story_count }} {% if digest.story_count == 1 %}story{% else %}stories{% endif %}</div>
+   {% if podcast %}{% include "partials/podcast-player.html" %}{% endif %}
 
    <div class="email-body">
    {% for item in digest.stories %}
@@ -121,5 +125,6 @@
  });
 })();
 </script>
+{% if podcast %}<script type="module" src="/static/js/podcast-player.js?v={{ js_version }}"></script>{% endif %}
 <script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
 {% endblock %}

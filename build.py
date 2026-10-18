@@ -864,7 +864,27 @@ def attach_share(digests):
                 abs_url, f"{item.get('title', '')} — via Spanified")
 
 
-def render_digests(env, digests):
+def digest_podcast_context(ep):
+    """Player data for digest.html; None when the day has no episode."""
+    if not ep:
+        return None
+    date = ep["date"]
+    duration = int(ep["duration"])
+    m, sec = divmod(duration, 60)
+    return {
+        "audio_url": f"{PODCAST_MEDIA_URL}/episodes/{date}.mp3",
+        "title": ep["title"],
+        "duration": duration,
+        "minutes": max(1, round(duration / 60)),
+        "iso_duration": f"PT{m}M{sec}S",
+        "chapters": [{"start": round(float(c["startTime"]), 3), "title": c["title"],
+                      "label": f"{int(c['startTime']) // 60}:{int(c['startTime']) % 60:02d}"}
+                     for c in ep.get("chapters", [])],
+    }
+
+
+def render_digests(env, digests, episodes_by_date=None):
+    episodes_by_date = episodes_by_date or {}
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
     # Clear previously generated HTML inside archive/ so removed digests don't linger.
     for filename in os.listdir(ARCHIVE_DIR):
@@ -885,7 +905,9 @@ def render_digests(env, digests):
             "older": {"url": older["url"], "date_display": older["date_display"]} if older else None,
             "newer": {"url": newer["url"], "date_display": newer["date_display"]} if newer else None,
         }
-        output = template.render(digest=digest, emoji=CATEGORY_EMOJI, crumbs=crumbs, day_nav=day_nav, js_version=js_version())
+        podcast = digest_podcast_context(episodes_by_date.get(digest["date"]))
+        output = template.render(digest=digest, emoji=CATEGORY_EMOJI, crumbs=crumbs, day_nav=day_nav,
+                                 podcast=podcast, js_version=js_version())
         dest = os.path.join(ARCHIVE_DIR, f"{digest['date']}.html")
         with open(dest, "w", encoding="utf-8") as fh:
             fh.write(output)
@@ -1356,6 +1378,7 @@ def main():
 
     digests = [digest_context(d) for d in load_digests()]
     articles = load_articles()
+    episodes = load_podcast_episodes()
 
     print("Copying static assets...")
     copy_static(out_dir)
@@ -1366,7 +1389,7 @@ def main():
     print(f"Building {len(digests)} digest page(s)...")
     attach_related(digests)
     attach_share(digests)
-    render_digests(env, digests)
+    render_digests(env, digests, {ep["date"]: ep for ep in episodes})
 
     print("Rendering OG images...")
     from og_images import render_og_images
@@ -1389,7 +1412,7 @@ def main():
     render_llms_txt(digests, articles)
 
     print("Building podcast feed...")
-    render_podcast_feed(load_podcast_episodes(), {d["date"] for d in digests})
+    render_podcast_feed(episodes, {d["date"] for d in digests})
 
     print("Done.")
 

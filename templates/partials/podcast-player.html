@@ -1,0 +1,42 @@
+   <section class="podcast-player" id="listen" aria-label="Listen to this digest" data-pagefind-ignore
+            data-date="{{ digest.date }}" data-title="{{ podcast.title }}" data-duration="{{ podcast.duration }}"
+            data-chapters='{{ podcast.chapters|tojson }}'>
+    <audio class="pp-audio" preload="none" src="{{ podcast.audio_url }}"></audio>
+    <div class="pp-main">
+     <button type="button" class="pp-play" aria-label="Play episode" hidden>
+      <svg class="pp-icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+      <svg class="pp-icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+     </button>
+     <div class="pp-info">
+      <div class="pp-kicker">🎧 Listen to this digest · {{ podcast.minutes }} min</div>
+      <div class="pp-title">{{ podcast.title }}</div>
+     </div>
+    </div>
+    <div class="pp-controls" hidden>
+     <button type="button" class="pp-skip" data-skip="-15" aria-label="Back 15 seconds">−15</button>
+     <input class="pp-seek" type="range" min="0" max="{{ podcast.duration }}" step="1" value="0" aria-label="Seek">
+     <button type="button" class="pp-skip" data-skip="15" aria-label="Forward 15 seconds">+15</button>
+     <span class="pp-time"><span class="pp-current">0:00</span> / {{ (podcast.duration // 60) }}:{{ '%02d' % (podcast.duration % 60) }}</span>
+     <button type="button" class="pp-speed" aria-label="Playback speed">1×</button>
+    </div>
+    <noscript><audio controls preload="none" src="{{ podcast.audio_url }}" style="width:100%"></audio></noscript>
+    {% if podcast.chapters %}
+    <details class="pp-chapters">
+     <summary>Chapters</summary>
+     <ol>
+      {% for c in podcast.chapters %}<li><button type="button" class="pp-chapter" data-start="{{ c.start }}"><span class="pp-chapter-time">{{ c.label }}</span> {{ c.title }}</button></li>
+      {% endfor %}
+     </ol>
+    </details>
+    {% endif %}
+    <div class="pp-sub">Also in your podcast app: <a href="/podcast.xml">RSS feed</a></div>
+   </section>
+   <div class="pp-mini" hidden aria-label="Now playing">
+    <button type="button" class="pp-mini-play" aria-label="Play or pause">
+     <svg class="pp-icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+     <svg class="pp-icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    </button>
+    <a class="pp-mini-label" href="#listen">Spain Daily</a>
+    <button type="button" class="pp-mini-close" aria-label="Close player">✕</button>
+    <div class="pp-mini-progress"><div class="pp-mini-bar"></div></div>
+   </div>
