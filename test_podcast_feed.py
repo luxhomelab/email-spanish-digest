@@ -22,11 +22,18 @@ def test_feed(tmp_path, monkeypatch):
 def test_episode_notes_summary_first():
     ep = dict(EP, summary="Two stories today.")
     notes = build.podcast_episode_notes(ep)
-    assert notes.startswith("Two stories today.\n\n00:00:00 Cold open")
+    assert notes.startswith("🇪🇸 Two stories today.\n\n⏱️ In this episode:\n00:00:00 Cold open")
+
+
+def test_support_line_moves_to_end():
+    ep = dict(EP, summary="Two stories.\n\nEnjoying Spain Daily? Support us: https://buymeacoffee.com/spanified")
+    notes = build.podcast_episode_notes(ep, {"2026-10-17"})
+    assert notes.count("buymeacoffee") == 1
+    assert notes.splitlines()[-1] == "☕ Enjoying Spain Daily? Support us: https://buymeacoffee.com/spanified"
 
 
 def test_episode_notes_without_summary():
-    assert build.podcast_episode_notes(EP).startswith("00:00:00 Cold open")
+    assert build.podcast_episode_notes(EP).startswith("⏱️ In this episode:\n00:00:00 Cold open")
 
 
 def test_feed_summary(tmp_path, monkeypatch):
@@ -34,8 +41,8 @@ def test_feed_summary(tmp_path, monkeypatch):
     build.render_podcast_feed([dict(EP, summary="Two & more.")])
     ns = {"itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd"}
     item = ET.parse(tmp_path / "podcast.xml").find("channel/item")
-    assert item.findtext("description").startswith("Two & more.\n\n00:00:00")
-    assert item.findtext("itunes:summary", namespaces=ns).startswith("Two & more.")
+    assert item.findtext("description").startswith("🇪🇸 Two & more.\n\n⏱️")
+    assert item.findtext("itunes:summary", namespaces=ns).startswith("🇪🇸 Two & more.")
 
 
 def test_show_summary_audience_not_expats():

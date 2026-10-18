@@ -1128,17 +1128,25 @@ def podcast_episode_title(episode, number):
     return f"#{number} {title} | Spain Daily News | {dt.day} {dt:%b %Y}"
 
 
+PODCAST_SUPPORT_URL = "https://buymeacoffee.com/spanified"
+
+
 def podcast_episode_notes(episode, digest_dates=()):
     lines = []
     summary = (episode.get("summary") or "").strip()
+    # The support line always goes last, so drop any copy the pipeline put in the summary.
+    summary = "\n".join(l for l in summary.splitlines() if PODCAST_SUPPORT_URL not in l).strip()
     if summary:
-        lines += [summary, ""]
-    for ch in episode.get("chapters", []):
-        lines.append(f"{_hms(ch['startTime'])} {ch['title']}")
-    if episode["date"] in digest_dates:
+        lines += [f"🇪🇸 {summary}", ""]
+    if episode.get("chapters"):
+        lines.append("⏱️ In this episode:")
+        for ch in episode["chapters"]:
+            lines.append(f"{_hms(ch['startTime'])} {ch['title']}")
         lines.append("")
-        lines.append(f"Read the full digest: {SITE_URL}/archive/{episode['date']}")
-    lines.append(f"Subscribe to the newsletter: {SITE_URL}/subscribe")
+    if episode["date"] in digest_dates:
+        lines.append(f"📰 Read the full digest: {SITE_URL}/archive/{episode['date']}")
+    lines.append(f"📬 Subscribe to the newsletter: {SITE_URL}/subscribe")
+    lines += ["", f"☕ Enjoying Spain Daily? Support us: {PODCAST_SUPPORT_URL}"]
     return "\n".join(lines)
 
 
