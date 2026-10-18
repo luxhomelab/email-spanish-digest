@@ -1198,6 +1198,7 @@ def render_podcast_feed(episodes, digest_dates=()):
             f"    <content:encoded>{esc('<p>' + notes.replace(chr(10), '<br>') + '</p>')}</content:encoded>",
             f'    <enclosure url="{audio}" length="{int(ep["length"])}" type="audio/mpeg"/>',
             f"    <itunes:duration>{int(ep['duration'])}</itunes:duration>",
+            "    <itunes:author>Spanified</itunes:author>",
             "    <itunes:episodeType>full</itunes:episodeType>",
             "    <itunes:explicit>false</itunes:explicit>",
         ]
