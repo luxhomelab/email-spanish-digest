@@ -10,7 +10,7 @@ def test_feed(tmp_path, monkeypatch):
     monkeypatch.setattr(build, "OUT_DIR", str(tmp_path))
     build.render_podcast_feed([EP], {"2026-10-17"})
     item = ET.parse(tmp_path / "podcast.xml").find("channel/item")
-    assert item.findtext("title") == "T & co"
+    assert item.findtext("title") == "#1 T & co | Spain Daily News | 17 Oct 2026"
     assert item.findtext("guid") == "spanified-podcast-2026-10-17"
     assert item.findtext("pubDate") == "Sat, 17 Oct 2026 08:00:00 +0200"
     enc = item.find("enclosure")
@@ -36,3 +36,17 @@ def test_feed_summary(tmp_path, monkeypatch):
     item = ET.parse(tmp_path / "podcast.xml").find("channel/item")
     assert item.findtext("description").startswith("Two & more.\n\n00:00:00")
     assert item.findtext("itunes:summary", namespaces=ns).startswith("Two & more.")
+
+
+def test_show_summary_audience_not_expats():
+    assert "expat" not in build.PODCAST_SUMMARY.lower()
+    assert "English speakers in Spain" in build.PODCAST_SUMMARY
+
+
+def test_title_strips_date_and_numbers_by_date(tmp_path, monkeypatch):
+    monkeypatch.setattr(build, "OUT_DIR", str(tmp_path))
+    old = dict(EP, date="2026-10-16", title="2026-10-16: Old story")
+    build.render_podcast_feed([EP, old])
+    titles = [i.findtext("title") for i in ET.parse(tmp_path / "podcast.xml").findall("channel/item")]
+    assert titles == ["#2 T & co | Spain Daily News | 17 Oct 2026",
+                      "#1 Old story | Spain Daily News | 16 Oct 2026"]
