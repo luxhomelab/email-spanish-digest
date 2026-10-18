@@ -62,7 +62,7 @@ def build_episode(episode_dir):
         chapters = json.load(fh).get("chapters", [])
     episode = {
         "date": date,
-        "title": f"{date}: {meta['title']}",
+        "title": meta["title"],
         "duration": probe_duration(mp3),
         "length": os.path.getsize(mp3),
         "chapters": chapters,
