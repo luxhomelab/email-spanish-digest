@@ -1142,6 +1142,20 @@ def podcast_episode_notes(episode, digest_dates=()):
     return "\n".join(lines)
 
 
+def _transcript_srt(segments):
+    """Podcasting 2.0 JSON transcript segments -> SRT text."""
+    def ts(t):
+        ms = int(round(float(t) * 1000))
+        return f"{ms // 3600000:02d}:{ms // 60000 % 60:02d}:{ms // 1000 % 60:02d},{ms % 1000:03d}"
+    blocks = []
+    for i, seg in enumerate(segments, 1):
+        text = seg["body"].strip()
+        if seg.get("speaker"):
+            text = f"{seg['speaker']}: {text}"
+        blocks.append(f"{i}\n{ts(seg['startTime'])} --> {ts(seg['endTime'])}\n{text}\n")
+    return "\n".join(blocks)
+
+
 def render_podcast_feed(episodes, digest_dates=()):
     """podcast.xml (RSS 2.0 + itunes + podcast namespaces) and
     podcast/chapters/<date>.json for Apple / Spotify / YouTube."""
@@ -1150,6 +1164,8 @@ def render_podcast_feed(episodes, digest_dates=()):
     feed_url = f"{SITE_URL}/podcast.xml"
     chapters_dir = os.path.join(OUT_DIR, "podcast", "chapters")
     os.makedirs(chapters_dir, exist_ok=True)
+    transcripts_dir = os.path.join(OUT_DIR, "podcast", "transcripts")
+    os.makedirs(transcripts_dir, exist_ok=True)
 
     out = [
         '<?xml version="1.0" encoding="UTF-8"?>',
@@ -1207,6 +1223,17 @@ def render_podcast_feed(episodes, digest_dates=()):
                 json.dump({"version": "1.2.0", "chapters": ep["chapters"]}, fh, ensure_ascii=False)
             out.append(f'    <podcast:chapters url="{SITE_URL}/podcast/chapters/{date}.json"'
                        ' type="application/json+chapters"/>')
+        segments = (ep.get("transcript") or {}).get("segments")
+        if segments:
+            base = f"{SITE_URL}/podcast/transcripts/{date}"
+            with open(os.path.join(transcripts_dir, f"{date}.json"), "w", encoding="utf-8") as fh:
+                json.dump(ep["transcript"], fh, ensure_ascii=False)
+            with open(os.path.join(transcripts_dir, f"{date}.srt"), "w", encoding="utf-8") as fh:
+                fh.write(_transcript_srt(segments))
+            out += [
+                f'    <podcast:transcript url="{base}.srt" type="application/x-subrip" language="en" rel="captions"/>',
+                f'    <podcast:transcript url="{base}.json" type="application/json" language="en"/>',
+            ]
         out.append("  </item>")
     out += ["</channel>", "</rss>"]
 
