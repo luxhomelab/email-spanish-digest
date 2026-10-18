@@ -1084,7 +1084,7 @@ def render_sitemap(digests, categories=(), articles=()):
 PODCAST_SRC_DIR = os.path.join(SCRIPT_DIR, "data", "podcast")
 # MP3s live in Cloudflare R2 (bucket spanified-podcast), never in git.
 PODCAST_MEDIA_URL = "https://media.spanified.com"
-PODCAST_TITLE = "Spain Daily"
+PODCAST_TITLE = "Spain Daily — Daily News Digest from Spain in English"
 PODCAST_SUMMARY = (
     "Spain news in English, every day in a few minutes. A daily briefing for "
     "English speakers in Spain: immigrants and residents, Spaniards who "
