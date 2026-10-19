@@ -1,0 +1,251 @@
+{
+  "items": [
+    {
+      "title": "Flood emergencies hit Valencia and Balearic Islands",
+      "body": "The Valencia regional government activated emergency situation 2 on October 19 as floods hit La Safor and Marina Alta. Aemet issued a red rain warning for parts of Mallorca. Classes are suspended on Mallorca, Eivissa, and Formentera on October 19. Follow official alerts, avoid flood-prone areas, and stay out of basements and garages.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/comunidad-valenciana/2026-10-19/maxima-alerta-en-gandia-y-denia-por-las-lluvias-torrenciales-y-las-inundaciones-que-activa-a-la-ume.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/illes-balears/govern-balear-suspende-clases-mallorca-eivissa-formentera-lunes-pide-ayuda-ume_1_13595662.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "Government plans pension rise after November inflation data",
+      "body": "The government plans to approve the 2027 pension rise after inflation data due from November 27. First Vice-President and Economy Minister Carlos Cuerpo says existing law guarantees the increase. He believes a caretaker government could approve the Royal Decree-law before the end of 2026.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/cuerpo-asegura-que-subida-las-pensiones-esta-asegurada-por-una-ley-que-pp-rechazo_7050174_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Retirement age thresholds change in January 2027",
+      "body": "Retirement rule changes take effect on January 1, 2027. Retiring at 65 with a full pension will require at least 38 years and 6 months of contributions; otherwise, the standard age will be 67. Voluntary early retirement remains possible up to 24 months earlier, with pension cuts.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/19/ya-es-oficial-jubilacion-cambiara-mayor-edad-retiro-nuevos-calculos-subida-mei-2027-2059757.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Cabinet plans benefits decree for October 20",
+      "body": "A Social Security Royal Decree-law planned for cabinet approval on October 20 would improve several benefits. Gender violence victims on sick leave would receive 60% of base salary through day 20 and 75% after. Parliament's standing committee would need to confirm it within a month; the government needs left-wing and PNV support.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-10-19/el-gobierno-arranca-los-martes-sociales-con-un-decreto-para-mejorar-las-prestaciones-por-viudedad-incapacidad-para-victimas-del-terrorismo-y-de-violencia-de-genero.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Court considers appeal over descendants' voting suspension",
+      "body": "The Constitutional Court begins considering on October 19 whether to admit the ombudsman's appeal over voting rights suspended for more than 160,000 Spaniards abroad under the Ley de Nietos. The Supreme Court's interim order remains in force. The Foreign Ministry says some consulates cannot compile all data before the November 29 election.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-10-19/el-constitucional-discute-si-intervenir-ya-en-la-controversia-sobre-la-suspension-del-derecho-al-voto-de-160000-espanoles-por-la-ley-de-nietos.html"
+        },
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/19/6ad51e63e85eceb80e8b458c.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Tourist flat VAT decree awaits parliamentary confirmation",
+      "body": "A decree published in the BOE (official state gazette) and awaiting parliamentary confirmation would apply 10% VAT to all tourist flats from December 1, 2026. Owners would also be able to deduct VAT on costs such as cleaning and repairs. Those deductions could limit the measure's effect on shifting homes into long-term rentals.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/10/19/6ad2072c21efa0481e8b457c.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Housing construction falls far behind new household growth",
+      "body": "Spain completed 81,109 homes between July 2025 and June 2026, while 238,585 new households formed: a gap of 157,476. Only Cáceres and Soria avoided a shortfall. The supply shortage is pushing up purchase and rental prices, especially in the most populated areas.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/espana-crea-157-500-viviendas-menos-que-hogares-ultimo-ano-con-escasez-general-todas-las-provincias-salvo-dos_7047011_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Poll projects 201 seats for PP and Vox",
+      "body": "A Sigma Dos poll for El Mundo projects 201 seats combined for PP and Vox in the November 29 election. Its most likely scenario gives PP 136 seats and Vox 65, against 117 for PSOE, Frente Amplio, and Podemos. The survey was conducted in the first half of October.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/encuestas/2026/10/19/6ad4f168e9cf4a2c7a8b458b.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Delayed worker data leaves gap in unemployment picture",
+      "body": "The Economy Ministry has postponed a statistic from INE (national statistics institute) that is more than a year late. Experts estimate 800,000 to 900,000 workers on permanent contracts with intermittent work are inactive but excluded from unemployment figures. Wider use of these contracts since 2021 makes the data gap more significant.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/10/18/6ad24cb721efa0ea438b45ab.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "UGT says employers block remote work for millions",
+      "body": "More than 3.4 million people could work from home but their employers do not allow it, according to a UGT study. They account for 16.1% of employed people, based on a 2025 survey. The union blames a culture of office attendance; more than three million people already work remotely.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/3-4-millones-personas-teletrabajar-no-permiten-empresas_1_13590326.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Feijóo seeks Catalan backing for government change",
+      "body": "PP leader and prime ministerial candidate Alberto Núñez Feijóo urged Catalonia on October 18 to deliver a large majority for a change of government. His appeal comes ahead of the November 29 general election.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/catalunya/noticia-feijoo-pide-catalunya-impulse-gran-mayoria-decencia-si-sanchez-no-20261018125450.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Rufián apologises for failure to unite the left",
+      "body": "ERC lead candidate and congressional spokesman Gabriel Rufián apologised for the left's failure to unite ahead of the November 29 election. In an interview broadcast on October 17, he urged disillusioned supporters to vote and said he wished Podemos and Frente Amplio had reached an agreement.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/rufian-se-disculpa-por-ridiculo-izquierda-pide-voto-aunque-sea-desilusionado-cabreado-29n_7050101_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Would you move to a smaller town for cheaper housing? A) Yes B) No C) Maybe",
+  "variant": "Here's Spain today, in under a minute",
+  "headline": "Here's Spain today, in under a minute",
+  "date": "2026-10-19",
+  "engagement_source": "generated",
+  "generated_at": "2026-10-19T06:02:31.593253+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 542,
+    "items_selected_pass1": 15,
+    "fact_sheets_extracted": 15,
+    "items_after_importance_filter": 14,
+    "items_in_digest": 12
+  },
+  "selection_reasons": {
+    "210": "Government's 'social Tuesdays' decree improves widow's, disability, terror-victim and gender-violence benefits, with a minimum wage (SMI) rise to be approved before the 29-N election",
+    "118": "Minister Cuerpo says the 2027 pension revaluation is guaranteed by law and he expects the SMI rise before the election",
+    "211": "Constitutional Court weighs whether to take up the suspended vote of about 160,000 'ley de nietos' nationals — affects Spanish citizenship rights and voting in the 29-N election",
+    "5": "Foreign Ministry says full compliance with the Supreme Court order on the 'ley de nietos' vote suspension is impossible; the ruling affects the voting rights of many overseas Spaniards",
+    "227": "Dana Adam triggers red alert, ES-Alerts and the UME in Valencia/Alicante, with 600 l/m² recorded and two deaths — an extreme weather disaster of national scale",
+    "47": "Balearic Islands suspend classes across Mallorca, Ibiza and Formentera and request UME help because of dana flood risk",
+    "16": "Countdown to VAT on tourist flats: a measure against tourist rentals that affects property owners and the housing market",
+    "99": "Spain built 157,500 fewer homes than new households in the last year, a cumulative deficit of 684,812 since 2022 — key housing-market data",
+    "205": "Pension changes for 2027: higher retirement age, new calculation rules and a higher MEI contribution — affects all contributors",
+    "26": "The 29 November general election campaign kicks off: Feijóo launches the PP campaign in Catalonia and promises an anti-squatting law",
+    "2": "Projection that the left could lose seats in 29 provinces and the right could win in 80% of the map ahead of the 29-N general election",
+    "120": "Failure of the left's united electoral bid; Rufián warns that PP and Vox are at 210 seats, enough to change the Constitution",
+    "11": "Government delays the INE statistic on 'fijos discontinuos' and buries the figure of 800,000–900,000 inactive workers who do not count in unemployment data",
+    "56": "UGT report: 3.4 million people could telework but their companies do not allow it — remote work regulation",
+    "88": "Princess Leonor's first solo appearance at the Princess of Asturias Awards 2026 — major national royal event",
+    "538": "Wholesale electricity price will hit its 2026 maximum (€215/MWh) on Monday, affecting PVPC consumers' bills"
+  },
+  "selection_sources": [
+    {
+      "url": "https://elpais.com/espana/2026-10-19/el-gobierno-arranca-los-martes-sociales-con-un-decreto-para-mejorar-las-prestaciones-por-viudedad-incapacidad-para-victimas-del-terrorismo-y-de-violencia-de-genero.html",
+      "reason": "Government's 'social Tuesdays' decree improves widow's, disability, terror-victim and gender-violence benefits, with a minimum wage (SMI) rise to be approved before the 29-N election"
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/cuerpo-asegura-que-subida-las-pensiones-esta-asegurada-por-una-ley-que-pp-rechazo_7050174_0.html",
+      "reason": "Minister Cuerpo says the 2027 pension revaluation is guaranteed by law and he expects the SMI rise before the election"
+    },
+    {
+      "url": "https://elpais.com/espana/2026-10-19/el-constitucional-discute-si-intervenir-ya-en-la-controversia-sobre-la-suspension-del-derecho-al-voto-de-160000-espanoles-por-la-ley-de-nietos.html",
+      "reason": "Constitutional Court weighs whether to take up the suspended vote of about 160,000 'ley de nietos' nationals — affects Spanish citizenship rights and voting in the 29-N election"
+    },
+    {
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/19/6ad51e63e85eceb80e8b458c.html",
+      "reason": "Foreign Ministry says full compliance with the Supreme Court order on the 'ley de nietos' vote suspension is impossible; the ruling affects the voting rights of many overseas Spaniards"
+    },
+    {
+      "url": "https://elpais.com/espana/comunidad-valenciana/2026-10-19/maxima-alerta-en-gandia-y-denia-por-las-lluvias-torrenciales-y-las-inundaciones-que-activa-a-la-ume.html",
+      "reason": "Dana Adam triggers red alert, ES-Alerts and the UME in Valencia/Alicante, with 600 l/m² recorded and two deaths — an extreme weather disaster of national scale"
+    },
+    {
+      "url": "https://www.eldiario.es/illes-balears/govern-balear-suspende-clases-mallorca-eivissa-formentera-lunes-pide-ayuda-ume_1_13595662.html",
+      "reason": "Balearic Islands suspend classes across Mallorca, Ibiza and Formentera and request UME help because of dana flood risk"
+    },
+    {
+      "url": "https://www.elmundo.es/economia/vivienda/2026/10/19/6ad2072c21efa0481e8b457c.html",
+      "reason": "Countdown to VAT on tourist flats: a measure against tourist rentals that affects property owners and the housing market"
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/espana-crea-157-500-viviendas-menos-que-hogares-ultimo-ano-con-escasez-general-todas-las-provincias-salvo-dos_7047011_0.html",
+      "reason": "Spain built 157,500 fewer homes than new households in the last year, a cumulative deficit of 684,812 since 2022 — key housing-market data"
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/10/19/ya-es-oficial-jubilacion-cambiara-mayor-edad-retiro-nuevos-calculos-subida-mei-2027-2059757.html",
+      "reason": "Pension changes for 2027: higher retirement age, new calculation rules and a higher MEI contribution — affects all contributors"
+    },
+    {
+      "url": "https://www.europapress.es/catalunya/noticia-feijoo-pide-catalunya-impulse-gran-mayoria-decencia-si-sanchez-no-20261018125450.html",
+      "reason": "The 29 November general election campaign kicks off: Feijóo launches the PP campaign in Catalonia and promises an anti-squatting law"
+    },
+    {
+      "url": "https://www.elmundo.es/espana/encuestas/2026/10/19/6ad4f168e9cf4a2c7a8b458b.html",
+      "reason": "Projection that the left could lose seats in 29 provinces and the right could win in 80% of the map ahead of the 29-N general election"
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/rufian-se-disculpa-por-ridiculo-izquierda-pide-voto-aunque-sea-desilusionado-cabreado-29n_7050101_0.html",
+      "reason": "Failure of the left's united electoral bid; Rufián warns that PP and Vox are at 210 seats, enough to change the Constitution"
+    },
+    {
+      "url": "https://www.elmundo.es/economia/2026/10/18/6ad24cb721efa0ea438b45ab.html",
+      "reason": "Government delays the INE statistic on 'fijos discontinuos' and buries the figure of 800,000–900,000 inactive workers who do not count in unemployment data"
+    },
+    {
+      "url": "https://www.eldiario.es/economia/3-4-millones-personas-teletrabajar-no-permiten-empresas_1_13590326.html",
+      "reason": "UGT report: 3.4 million people could telework but their companies do not allow it — remote work regulation"
+    },
+    {
+      "url": "https://www.elconfidencial.com/espana/2026-10-19/paso-al-frente-leonor-debut-solitario-premios-princesa-asturias-2026-1qrt_4446845/",
+      "reason": "Princess Leonor's first solo appearance at the Princess of Asturias Awards 2026 — major national royal event"
+    }
+  ]
+}
