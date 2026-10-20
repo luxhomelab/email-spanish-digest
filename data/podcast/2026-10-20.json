@@ -1,0 +1,360 @@
+{
+  "date": "2026-10-20",
+  "title": "Storm Adam floods, election pledges and invoicing delay",
+  "duration": 516,
+  "length": 8253061,
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "Cold open"
+    },
+    {
+      "startTime": 14.973,
+      "title": "Intro"
+    },
+    {
+      "startTime": 33.425,
+      "title": "Storm Adam flooding"
+    },
+    {
+      "startTime": 86.112,
+      "title": "Survivor pension proposal"
+    },
+    {
+      "startTime": 117.39,
+      "title": "Verifactu delayed"
+    },
+    {
+      "startTime": 155.328,
+      "title": "Election promises and voting"
+    },
+    {
+      "startTime": 296.746,
+      "title": "Catalan arrest warrants"
+    },
+    {
+      "startTime": 329.974,
+      "title": "Housing strike and working poverty"
+    },
+    {
+      "startTime": 392.229,
+      "title": "In brief"
+    },
+    {
+      "startTime": 468.022,
+      "title": "Outro"
+    }
+  ],
+  "summary": "Storm Adam has left four people dead, with confinement orders across Valencia and Alicante provinces. We cover election promises, a proposed survivor pension expansion, the Verifactu delay, and practical updates on housing, banking and electric car subsidies.\n\nEnjoying Spain Daily? Support us: https://buymeacoffee.com/spanified",
+  "transcript": {
+    "version": "1.0.0",
+    "segments": [
+      {
+        "speaker": "Inna",
+        "startTime": 1.2,
+        "endTime": 5.19,
+        "body": "People across Valencia and Alicante were told to stay indoors—"
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 5.19,
+        "endTime": 8.344,
+        "body": "—as Storm Adam overwhelmed local rescue services."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 8.344,
+        "endTime": 11.24,
+        "body": "Military teams had to join the rescue effort."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 11.24,
+        "endTime": 14.973,
+        "body": "We'll start with what happened, and the official guidance."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 18.973,
+        "endTime": 26.014,
+        "body": "Good morning. It's Tuesday, the twentieth of October, and this is Spain Daily, from Spanified dot com!"
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 26.014,
+        "endTime": 33.125,
+        "body": "I'm Dima, here with Inna. Today: survivor pension plans and another invoicing delay. First, Storm Adam."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 36.825,
+        "endTime": 60.841,
+        "body": "Storm Adam has left four people dead, Europa Press reports. Yesterday, authorities ordered residents in a hundred and forty-five municipalities across Valencia and Alicante provinces to stay indoors. Military emergency teams joined rescues because local and regional services couldn't answer every call. Flooding also disrupted roads and power supplies in the Balearic Islands."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 60.841,
+        "endTime": 66.128,
+        "body": "Oliva, in Alicante province, was one of the worst-hit towns, and people died there."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 66.128,
+        "endTime": 72.498,
+        "body": "People were being rescued from rooftops and vehicle roofs. Helicopters and boats were both involved."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 72.498,
+        "endTime": 77.594,
+        "body": "Inna, what were authorities telling people in the affected municipalities to do?"
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 77.594,
+        "endTime": 85.812,
+        "body": "The instruction was to stay indoors. Check the official alerts for your area, including those from Aemet, Spain's weather agency."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 87.812,
+        "endTime": 106.704,
+        "body": "The government plans to bring a survivor pension decree-law to cabinet today, El País reports. It would cover unmarried couples with children after two years of proven cohabitation. For pension purposes, those couples would be treated like married couples and registered domestic partners. Parliament's standing committee would then need to validate the measure."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 106.704,
+        "endTime": 112.289,
+        "body": "For a surviving partner raising children, access to that pension can be a very immediate household concern."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 112.289,
+        "endTime": 117.09,
+        "body": "And proving the time living together would be central for families covered by this proposal."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 119.09,
+        "endTime": 143.539,
+        "body": "For businesses managing their paperwork, there's another change of timetable. Heraldo reports that Verifactu has been postponed again, from January next year to October twenty twenty-eight. The invoicing system would require businesses to send invoices immediately to the Tax Agency. Firms now have more time to buy equipment and software, but some already invested."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 143.539,
+        "endTime": 150.486,
+        "body": "Oof. If you paid to get ready early, another delay must feel rather different from extra breathing room."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 150.486,
+        "endTime": 155.028,
+        "body": "Exactly. And one quote even says the defrauder is being rewarded. hm"
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 157.028,
+        "endTime": 179.063,
+        "body": "Taxes are part of the election debate too. Europa Press reports that PP leader and prime ministerial candidate Alberto Núñez Feijóo signed a twelve-point pledge yesterday. Ahead of November twenty-ninth, he promises a million new homes, pension increases and lower taxes. His commitments also include changes to immigration policy and investment in water infrastructure."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 179.063,
+        "endTime": 185.436,
+        "body": "That's a broad pitch, Dima. Housing, retirement income and taxes all reach directly into household budgets."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 185.436,
+        "endTime": 193.595,
+        "body": "They do. But these are campaign promises, not measures in force. right The housing one is what people looking for a home will watch most."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 193.595,
+        "endTime": 214.737,
+        "body": "Staying with campaign promises, Prime Minister Pedro Sánchez has pledged annual increases in the minimum wage if re-elected. According to 20 Minutos, he made the commitment at a rally in Valladolid yesterday. He promised four more years of pension increases too. Sánchez argued that higher workers' wages would help keep the public pension system solvent."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 214.737,
+        "endTime": 222.836,
+        "body": "So his argument connects today's pay packets with retirement income, rather than treating workers and pensioners as separate groups. mhm"
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 222.836,
+        "endTime": 230.042,
+        "body": "That's his case. For someone earning the minimum wage, the annual commitment is the part closest to their monthly budget."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 230.042,
+        "endTime": 249.1,
+        "body": "The election could also change control of the Senate, Spain's upper parliamentary chamber. A Sigma Dos poll for El Mundo projects a majority for PP, Vox and UPN after November twenty-ninth. But the projected bloc remains at least six seats short of the hundred and sixty-one needed for Constitutional Court appointments."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 249.1,
+        "endTime": 252.614,
+        "body": "Hold on. So what could PP and Vox still do before the vote?"
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 252.614,
+        "endTime": 264.108,
+        "body": "They have a window, from the twenty-first to the twenty-sixth of October, to withdraw Vox candidacies in some provinces or run shared lists. interesting That way right-wing votes aren't wasted."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 264.108,
+        "endTime": 285.011,
+        "body": "There's a voting-rights case before the Constitutional Court as well. El País reports that a man granted Spanish nationality under the Ley de Nietos, the grandchildren law, wants to vote on November twenty-ninth. He seeks to join the ombudsman's appeal and overturn a Supreme Court suspension. The case is pending, and the suspension remains in place."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 285.011,
+        "endTime": 292.098,
+        "body": "That's a very concrete election question for someone who's gained citizenship: whether they can actually cast a ballot."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 292.098,
+        "endTime": 296.446,
+        "body": "It is. Voting day is the twenty-ninth of November, so the timing matters."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 298.446,
+        "endTime": 321.071,
+        "body": "In another court decision, Supreme Court judge Pablo Llarena has upheld the lifting of arrest warrants for former Catalan president Carles Puigdemont. Two former regional ministers are also covered, La Vanguardia reports. Llarena said Constitutional Court doctrine must apply despite his disagreement. The Supreme Court's trial chamber must decide on Puigdemont's amnesty. The order can still be appealed."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 321.071,
+        "endTime": 323.92,
+        "body": "What happens next with the amnesty decision itself?"
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 323.92,
+        "endTime": 329.674,
+        "body": "That goes to the trial chamber, which legal sources expect to receive the finished case file next week."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 332.274,
+        "endTime": 350.961,
+        "body": "A housing dispute may also reach the courts. El País reports that Spain's employers' confederation plans to challenge the November eleventh general strike over housing. It argues the strike lacks a work-related motive. Unions registered it yesterday. The employers' board is due to debate the challenge tomorrow."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 350.961,
+        "endTime": 356.412,
+        "body": "For workers considering joining, the legal dispute adds uncertainty before the strike date."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 356.412,
+        "endTime": 363.239,
+        "body": "And a general strike could affect work and services across Spain, so the implications go beyond those taking part."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 363.239,
+        "endTime": 381.268,
+        "body": "The pressure behind the housing debate shows up in new figures from Oxfam Intermón, reported by El País. Housing costs push about seven hundred and seventy thousand workers into poverty. Once rent or mortgage payments are deducted from income, around three million workers are counted as working poor."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 381.268,
+        "endTime": 386.179,
+        "body": "Having a job doesn't necessarily mean there's enough left after paying for a home."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 386.179,
+        "endTime": 391.929,
+        "body": "No. Looking at what's left after housing makes that pressure on working households much clearer."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 393.429,
+        "endTime": 411.13,
+        "body": "On access to care, the government says the dependency benefits waiting list has reached a record low. 20 Minutos reports around a hundred and thirty-five thousand people were waiting on September thirtieth. This count includes only people waiting longer than six months. Average processing times have also fallen."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 411.88,
+        "endTime": 428.904,
+        "body": "For electric car buyers, El País reports industry concern about a subsidy gap early next year. The Auto Plus purchase-aid programme runs until December thirty-first, with about seventy-one percent of its funds used. Car brands warn the election could delay support during the first half of next year."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 428.904,
+        "endTime": 432.649,
+        "body": "So after the programme ends in December, there's no new money yet?"
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 432.649,
+        "endTime": 436.678,
+        "body": "Not so far. That's why the sector is nervous about the election timing."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 437.428,
+        "endTime": 456.052,
+        "body": "And there's money on offer for switching bank accounts. Expansión reports payroll bonuses of up to seven hundred and fifty euros. Some commitments last as long as four years. Leaving early means repaying a proportional share, and many offers also require Bizum, the mobile payment service, bill payments or card use."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 456.052,
+        "endTime": 461.062,
+        "body": "Ah, the bonus comes with a relationship. You need to like more than the welcome gift."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 461.062,
+        "endTime": 467.722,
+        "body": "You do. The account needs to suit your everyday banking, including those payment requirements and the commitment."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 470.122,
+        "endTime": 476.509,
+        "body": "Today's immediate priority is the flooding, while election promises and changing deadlines shape the weeks ahead."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 476.509,
+        "endTime": 486.569,
+        "body": "Get all today's stories in your inbox every morning, free, at spanified dot com. The digest has direct links to the original sources, so you can read more and check for yourself."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 486.569,
+        "endTime": 490.808,
+        "body": "Handy when you want to follow one of these stories beyond our conversation."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 490.808,
+        "endTime": 496.064,
+        "body": "Enjoy the show? You can support us on Buy Me a Coffee. The link's in the episode description."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 496.064,
+        "endTime": 499.625,
+        "body": "Thanks for listening and spending part of your morning with us."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 499.625,
+        "endTime": 501.49,
+        "body": "That's Spain Daily. Hasta mañana!"
+      }
+    ]
+  }
+}
