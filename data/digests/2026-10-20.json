@@ -1,0 +1,259 @@
+{
+  "items": [
+    {
+      "title": "Storm Adam brings deadly floods and mass confinements",
+      "body": "Storm Adam has left four people dead and triggered hundreds of rescues. On October 19, authorities ordered residents in 145 municipalities across Valencia and Alicante provinces to stay indoors. Military emergency teams joined rescues as flooding overwhelmed local services; roads and power supplies were also disrupted in the Balearic Islands.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/noticia-adam-ceba-valenciana-muertos-deja-cortes-luz-carreteras-cortadas-baleares-20261019153410.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "Survivor pension plan would cover more unmarried couples",
+      "body": "The government plans to put a survivor pension decree-law before the cabinet on October 20. It would cover unmarried couples with children after two years of proven cohabitation. Parliament's standing committee would then need to validate it.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-10-19/las-parejas-con-hijos-tendran-derecho-a-la-pension-de-viudedad-si-acreditan-dos-anos-de-convivencia.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Verifactu invoicing rollout postponed to October 2028",
+      "body": "A second delay to Verifactu has been announced, moving its start from January 2027 to October 2028. The system would require businesses to send invoices immediately to the Tax Agency. The delay gives firms more time to buy equipment and software but has angered those that already invested.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/20/entre-alivio-enfado-segunda-prorroga-facturas-verifactu-se-esta-premiando-defraudador-2060760.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "PP leader pledges homes, pensions, and tax cuts",
+      "body": "PP leader and prime ministerial candidate Alberto Núñez Feijóo has signed a 12-point election pledge ahead of November 29. His promises include one million new homes, pension increases, lower taxes, and changes to immigration policy. These are campaign commitments, not measures in force.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-feijoo-da-palabra-cumplir-docena-promesas-vivienda-pensiones-inmigracion-no-voy-fallar-20261019125258.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Sánchez promises annual minimum wage rises if re-elected",
+      "body": "Prime Minister Pedro Sánchez has pledged to raise the SMI (minimum wage) every year he governs, after the November 29 election. He also promised four more years of pension increases. He argued that higher wages would help the public pension system stay solvent.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/sanchez-se-compromete-subir-salario-minimo-cada-ano-si-gobierna-pide-una-mayoria-mas-amplia-que-2023_7050735_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Judge confirms lifting Catalan leaders' arrest warrants",
+      "body": "Supreme Court judge Pablo Llarena has upheld the lifting of arrest warrants for former Catalan president Carles Puigdemont and two former regional ministers. He said Constitutional Court doctrine must apply despite his disagreement. The Supreme Court's trial chamber must decide on Puigdemont's amnesty. The order can still be appealed.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/politica/20261020/11663030/llarena-comparte-criterio-tc-asume-definitivamente-amnistia.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Care benefits waiting list reaches record low",
+      "body": "The government says the waiting list for dependency care benefits fell 22.7% in a year to 134,734 people on September 30. The count covers only people waiting more than six months. Average processing time is 48 days shorter than a year earlier.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/lista-espera-dependencia-se-ha-reducido-casi-un-23-ultimo-ano-segun-gobierno_7050634_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Employers plan legal challenge to housing strike",
+      "body": "Employers' group CEOE plans to challenge the November 11 general strike in court, arguing it lacks a work-related motive. Its board is due to debate the move on October 21. Unions registered the housing strike on October 19.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-10-19/los-sindicatos-registran-el-paro-por-la-vivienda-del-11-n-esta-huelga-general-es-de-la-calle.html"
+        },
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-10-19/ceoe-impugnara-la-huelga-general-del-11n_4448113/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Housing costs push 770,000 workers into poverty",
+      "body": "Housing costs push 770,000 workers into poverty, according to Oxfam Intermón. After rent or mortgage payments are deducted from income, the working-poor rate reaches 15.49%, or around three million workers.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/vivienda/2026-10-20/el-coste-de-la-vivienda-empuja-a-770000-trabajadores-a-la-pobreza-segun-oxfam-intermon.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Poll puts right short of Senate supermajority",
+      "body": "A Sigma Dos poll for El Mundo projects a Senate majority for PP, Vox, and UPN after November 29, but at least six seats short of the 161 needed for Constitutional Court appointments. If they run separately, PP would win 125-130 seats and Vox 15-22. An absolute majority requires 134 seats.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/encuestas/2026/10/19/6ad65700fc6c837b168b4590.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Ley de Nietos citizen seeks election voting rights",
+      "body": "A man granted Spanish nationality under the Ley de Nietos has asked the Constitutional Court to let him vote on November 29. He seeks to join the ombudsman's appeal and to overturn a Supreme Court suspension. The case is pending, and the suspension remains in place.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/elecciones-generales/2026-10-20/un-nacionalizado-por-la-ley-de-nietos-acude-al-constitucional-para-poder-votar-el-29-n.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Car brands warn of electric vehicle subsidy gap",
+      "body": "Car brands warn that the election could delay electric vehicle purchase aid in early 2027. The Auto+ programme runs until December 31, 2026, and has used 71% of its funds. The sector fears a gap in incentives during the first half of 2027.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://cincodias.elpais.com/companias/2026-10-20/las-marcas-de-coches-temen-un-nuevo-paron-en-las-ayudas-al-electrico-por-las-elecciones-ya-se-consumio-el-71-de-los-fondos.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Bank payroll bonuses come with lengthy commitments",
+      "body": "Banks are offering up to €750 to customers who move their payroll. Commitment periods run from 12 to 48 months, and leaving early means repaying a proportional share of the bonus. Many offers also require Bizum, bill payments, or card use.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/empresas/banca/2026/10/20/6ad5f04b468aebea578b4595.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "What should Spain build more of? A) Rentals B) Starter homes C) Both",
+  "variant": "The Spain update you actually need",
+  "headline": "The Spain update you actually need",
+  "date": "2026-10-20",
+  "engagement_source": "generated",
+  "generated_at": "2026-10-20T06:03:09.513881+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 718,
+    "items_selected_pass1": 15,
+    "fact_sheets_extracted": 15,
+    "items_after_importance_filter": 14,
+    "items_in_digest": 13
+  },
+  "selection_reasons": {
+    "25": "Dana Adam: 4-5 dead, 145 municipalities confined and 700 l/m2 of rain in Valencia and Alicante. A national-scale natural disaster.",
+    "366": "Unions formally register the 11-N general strike over housing. A national mobilisation of potentially hundreds of thousands.",
+    "560": "CEOE will challenge the 11-N housing strike in court. Developing story on the same strike, with legal uncertainty for workers.",
+    "1": "PP and Vox fall 6 seats short of full Senate control after the left-wing front. Affects the Constitutional Court renewal ahead of the 29-N elections.",
+    "300": "Decree-law extends widow's pension to couples with children after two years of cohabitation. Systemic Social Security change.",
+    "299": "Oxfam: housing costs push 770,000 workers into poverty, with renters hit three times harder than mortgage holders. Hard housing and cost-of-living data.",
+    "31": "Feijóo's 12-point 'Contract with Spain' covers housing, CPI-linked pensions, immigration and taxes. Key election platform for 29-N.",
+    "131": "Sánchez pledges to raise the minimum wage (SMI) every year. A concrete campaign promise affecting workers' wages.",
+    "665": "Rental market shrinks by 16,600 homes this year due to regulatory insecurity. Property market data.",
+    "364": "Podemos drops its logo and campaigns as 'Irene' on housing and cost of living. Campaign development ahead of 29-N.",
+    "455": "Llarena accepts the amnesty for Puigdemont and lifts his arrest order. Major court ruling, with the Constitutional Court applying the amnesty to the last procés leaders.",
+    "286": "Citizens naturalised under the 'ley de nietos' (grandchildren law) may be unable to vote on 29-N. Affects citizenship and voting rights for thousands.",
+    "153": "Verifactu invoicing system postponed a second time. Affects autónomos and businesses.",
+    "337": "EV purchase aid (Auto+) 71% used up, with no new funds before the elections. Affects subsidies for buyers.",
+    "134": "Dependency waiting list down almost 23% to 134,734 people. Positive news on benefits.",
+    "660": "5% pay rise for civil servants pending until the elections. Affects public-sector workers' wages."
+  },
+  "selection_sources": [
+    {
+      "url": "https://www.europapress.es/sociedad/noticia-adam-ceba-valenciana-muertos-deja-cortes-luz-carreteras-cortadas-baleares-20261019153410.html",
+      "reason": "Dana Adam: 4-5 dead, 145 municipalities confined and 700 l/m2 of rain in Valencia and Alicante. A national-scale natural disaster."
+    },
+    {
+      "url": "https://elpais.com/economia/2026-10-19/los-sindicatos-registran-el-paro-por-la-vivienda-del-11-n-esta-huelga-general-es-de-la-calle.html",
+      "reason": "Unions formally register the 11-N general strike over housing. A national mobilisation of potentially hundreds of thousands."
+    },
+    {
+      "url": "https://www.elconfidencial.com/economia/2026-10-19/ceoe-impugnara-la-huelga-general-del-11n_4448113/",
+      "reason": "CEOE will challenge the 11-N housing strike in court. Developing story on the same strike, with legal uncertainty for workers."
+    },
+    {
+      "url": "https://www.elmundo.es/espana/encuestas/2026/10/19/6ad65700fc6c837b168b4590.html",
+      "reason": "PP and Vox fall 6 seats short of full Senate control after the left-wing front. Affects the Constitutional Court renewal ahead of the 29-N elections."
+    },
+    {
+      "url": "https://elpais.com/economia/2026-10-19/las-parejas-con-hijos-tendran-derecho-a-la-pension-de-viudedad-si-acreditan-dos-anos-de-convivencia.html",
+      "reason": "Decree-law extends widow's pension to couples with children after two years of cohabitation. Systemic Social Security change."
+    },
+    {
+      "url": "https://elpais.com/economia/vivienda/2026-10-20/el-coste-de-la-vivienda-empuja-a-770000-trabajadores-a-la-pobreza-segun-oxfam-intermon.html",
+      "reason": "Oxfam: housing costs push 770,000 workers into poverty, with renters hit three times harder than mortgage holders. Hard housing and cost-of-living data."
+    },
+    {
+      "url": "https://www.europapress.es/nacional/noticia-feijoo-da-palabra-cumplir-docena-promesas-vivienda-pensiones-inmigracion-no-voy-fallar-20261019125258.html",
+      "reason": "Feijóo's 12-point 'Contract with Spain' covers housing, CPI-linked pensions, immigration and taxes. Key election platform for 29-N."
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/sanchez-se-compromete-subir-salario-minimo-cada-ano-si-gobierna-pide-una-mayoria-mas-amplia-que-2023_7050735_0.html",
+      "reason": "Sánchez pledges to raise the minimum wage (SMI) every year. A concrete campaign promise affecting workers' wages."
+    },
+    {
+      "url": "https://www.expansion.com/empresas/banca/2026/10/20/6ad5f04b468aebea578b4595.html",
+      "reason": "Rental market shrinks by 16,600 homes this year due to regulatory insecurity. Property market data."
+    },
+    {
+      "url": "https://elpais.com/espana/2026-10-19/podemos-borra-su-logo-y-lo-fia-todo-a-la-marca-irene-montero-para-el-29n.html",
+      "reason": "Podemos drops its logo and campaigns as 'Irene' on housing and cost of living. Campaign development ahead of 29-N."
+    },
+    {
+      "url": "https://www.lavanguardia.com/politica/20261020/11663030/llarena-comparte-criterio-tc-asume-definitivamente-amnistia.html",
+      "reason": "Llarena accepts the amnesty for Puigdemont and lifts his arrest order. Major court ruling, with the Constitutional Court applying the amnesty to the last procés leaders."
+    },
+    {
+      "url": "https://elpais.com/espana/elecciones-generales/2026-10-20/un-nacionalizado-por-la-ley-de-nietos-acude-al-constitucional-para-poder-votar-el-29-n.html",
+      "reason": "Citizens naturalised under the 'ley de nietos' (grandchildren law) may be unable to vote on 29-N. Affects citizenship and voting rights for thousands."
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/10/20/entre-alivio-enfado-segunda-prorroga-facturas-verifactu-se-esta-premiando-defraudador-2060760.html",
+      "reason": "Verifactu invoicing system postponed a second time. Affects autónomos and businesses."
+    },
+    {
+      "url": "https://cincodias.elpais.com/companias/2026-10-20/las-marcas-de-coches-temen-un-nuevo-paron-en-las-ayudas-al-electrico-por-las-elecciones-ya-se-consumio-el-71-de-los-fondos.html",
+      "reason": "EV purchase aid (Auto+) 71% used up, with no new funds before the elections. Affects subsidies for buyers."
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/lista-espera-dependencia-se-ha-reducido-casi-un-23-ultimo-ano-segun-gobierno_7050634_0.html",
+      "reason": "Dependency waiting list down almost 23% to 134,734 people. Positive news on benefits."
+    }
+  ]
+}
