@@ -1,6 +1,6 @@
 // Shared tap-to-show hints for calculator `.tip` ("?") marks.
 // Loaded as a classic deferred script on calculator pages. One file fixes every
-// calculator at once: autonomo, property-buying-cost and electricity (including
+// calculator at once: autonomo, property-buying-cost, rental-yield and electricity (including
 // provider cards rendered dynamically — everything works through delegation,
 // so no per-calculator wiring is needed).
 //

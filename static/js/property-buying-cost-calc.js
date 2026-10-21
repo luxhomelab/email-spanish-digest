@@ -17,9 +17,9 @@
 
 export const MIN_PRICE = 10000
 
-const IVA_RATE = 10.0
+export const IVA_RATE = 10.0
 
-const REGIONS = [
+export const REGIONS = [
   { id: 'andalucia', itp_standard: 7.0, ajd_standard: 1.2, igic_rate: null },
   { id: 'aragon', itp_standard: 8.0, itp_brackets: [
     { upTo: 400000, rate: 8.0 }, { upTo: 450000, rate: 8.5 },

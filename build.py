@@ -692,6 +692,10 @@ def render_calculators(env):
             {"name": "Home", "url": "/"},
             {"name": "Property Buying Cost", "url": "/calculators/property-buying-cost", "current": True},
         ], "Spain Property Buying Cost Calculator — ITP, IVA/IGIC & AJD by region — Spanified"),
+        ("calculator-rental-yield.html", "calculators/rental-yield.html", [
+            {"name": "Home", "url": "/"},
+            {"name": "Rental Yield", "url": "/calculators/rental-yield", "current": True},
+        ], "Spain Rental Yield Calculator — net yield after tax — Spanified"),
         ("calculator-electricity.html", "calculators/electricity-bill.html", [
             {"name": "Home", "url": "/"},
             {"name": "Electricity Bill", "url": "/calculators/electricity-bill", "current": True},
@@ -1059,6 +1063,7 @@ def render_sitemap(digests, categories=(), articles=()):
         urls.append((SITE_URL + f"/category/{slug}", None))
     urls.append((SITE_URL + "/calculators/autonomo-tax", None))
     urls.append((SITE_URL + "/calculators/property-buying-cost", None))
+    urls.append((SITE_URL + "/calculators/rental-yield", None))
     urls.append((SITE_URL + "/calculators/electricity-bill", None))
     # Only the canonical quiz landing page is indexable (quiz.html ships
     # index,follow). The -success / -subscribed / -result-* variants stay
@@ -1372,7 +1377,8 @@ def js_version():
     for name in ("analytics.js",
                    "autonomo.js", "autonomo-calc.js", "autonomo-form.js",
                    "property-buying-cost.js", "property-buying-cost-calc.js",
-                   "property-buying-cost-form.js", "quiz.js",
+                   "property-buying-cost-form.js",
+                   "rental-yield.js", "rental-yield-calc.js", "rental-yield-form.js", "quiz.js",
                    "quiz-logic.js", "subscribe-form.js", "subscription-store.js",
                    "electricity.js", "electricity-calc.js", "electricity-form.js"):
         path = os.path.join(SCRIPT_DIR, "static", "js", name)

@@ -62,6 +62,7 @@ export function collectFields(form) {
 //   digest.html                       → digest_subscribe
 //   calculator-autonomo.html          → calc_autonomo_lead
 //   calculator-property-buying-cost   → calc_property_lead
+//   calculator-rental-yield.html      → calc_rental_lead
 //   calculator-electricity.html       → calc_electricity_lead
 // Forms without the attribute (site/subscribe page, footer) keep 'subscribe';
 // quiz forms keep 'quiz_subscribe' (their `next` points at /quiz/…).
@@ -69,6 +70,7 @@ const FORM_EVENTS = new Map([
   ['digest', 'digest_subscribe'],
   ['calc-autonomo', 'calc_autonomo_lead'],
   ['calc-property', 'calc_property_lead'],
+  ['calc-rental', 'calc_rental_lead'],
   ['calc-electricity', 'calc_electricity_lead'],
 ])
 
