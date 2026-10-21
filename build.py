@@ -1383,6 +1383,23 @@ def css_version():
         return "dev"
 
 
+def js_importmap():
+    """Import map giving every static/js module a ?v=<content hash> URL.
+
+    Entry scripts carry ?v={{ js_version }}, but the modules they import
+    (`import './autonomo-calc.js'`) do not, so a browser could keep a stale
+    module after a deploy. The map rewrites those nested imports per file."""
+    js_dir = os.path.join(SCRIPT_DIR, "static", "js")
+    imports = {}
+    for name in sorted(os.listdir(js_dir)):
+        if not name.endswith(".js"):
+            continue
+        with open(os.path.join(js_dir, name), "rb") as fh:
+            digest = hashlib.md5(fh.read()).hexdigest()[:8]
+        imports[f"/static/js/{name}"] = f"/static/js/{name}?v={digest}"
+    return json.dumps({"imports": imports}, separators=(",", ":"))
+
+
 def js_version():
     """Short content hash of calculator JS bundle for cache-busting."""
     h = hashlib.md5()
@@ -1422,6 +1439,7 @@ def main():
     )
     env.globals["current_year"] = datetime.now().year
     env.globals["asset_version"] = css_version()
+    env.globals["js_importmap"] = js_importmap()
     env.globals["site_url"] = SITE_URL
     env.globals["listmonk_form_action"] = listmonk_form_action(args.listmonk)
     env.globals["listmonk_list_uuid"] = listmonk_list_uuid(args)
