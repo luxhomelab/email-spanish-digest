@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Spanified shared styles — linked from templates/base.html.
    Page-specific styles live in each template's extra_css block. */
 
@@ -2869,4 +2870,31 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
   .ns-calc .ns-sc-table th, .ns-calc .ns-sc-all th { letter-spacing: 0.3px; font-size: 11px; white-space: normal; }
   .ns-calc .ns-sc-table td:first-child { white-space: normal; }
   .ns-calc .ns-scales > .card { padding-left: 12px; padding-right: 12px; }
+}
+
+/* ---------- Net salary amount pages + link grids ---------- */
+.ns-links { display: grid; gap: 20px; }
+.calc .ns-links h2 { margin-bottom: 12px; }
+.ns-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.ns-chips li { margin: 0; }
+.calc .seobox .ns-chips a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 0 14px; border: 1px solid #EFE7D8; border-radius: 999px; background: #FFFDF8; color: #3C4858; font-size: 14px; font-weight: 600; text-decoration: none; font-variant-numeric: tabular-nums; }
+.calc .seobox .ns-chips a:hover, .calc .seobox .ns-chips a:focus-visible { border-color: #AA151B; color: #AA151B; background: #FDF0F0; }
+.ns-seo > * + * { margin-top: 20px; }
+.ns-seo > .subtitle { margin-bottom: 0; }
+.ns-seo-assume { text-align: center; margin: 8px 0 0 0; }
+.ns-seo-cta { text-align: center; }
+.calc .ns-seo-cta .calc-btn { text-decoration: none; }
+.ns-seo-cap { text-align: left; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6C7A89; padding: 16px 16px 4px 16px; }
+.ns-seo-sheet td:first-child { overflow-wrap: anywhere; }
+.ns-seo-regions .ry-table { min-width: 520px; }
+.ns-seo-regions .ry-table-wrap { margin-bottom: 0; }
+.ns-seo-nav { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.ns-seo-nav a { display: inline-flex; flex-direction: column; justify-content: center; min-height: 44px; padding: 8px 16px; border: 1px solid #EFE7D8; border-radius: 12px; background: #FFFDF8; color: #B91C1C; font-weight: 700; text-decoration: none; }
+.ns-seo-nav a span { font-size: 11px; font-weight: 600; color: #6C7A89; }
+.ns-seo-nav .ns-seo-next { text-align: right; margin-left: auto; }
+@media (max-width: 520px) {
+ .ns-seo-kpis { grid-template-columns: minmax(0, 1fr); }
+ .ns-chips { gap: 6px; }
+ .calc .seobox .ns-chips a { padding: 0 12px; }
+ .ns-seo-cta .calc-btn { box-sizing: border-box; }
 }

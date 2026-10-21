@@ -1,0 +1,17 @@
+{# Link grids to the programmatic net salary pages. Expects `ns_links` {annual, monthly} and optional `current_slug` (skipped). #}
+{% if ns_links %}
+<div class="card seobox ns-links">
+ <section aria-labelledby="ns-links-annual">
+  <h2 id="ns-links-annual">Net salary for other common wages</h2>
+  <ul class="ns-chips">
+{% for l in ns_links.annual if l.slug != current_slug %}   <li><a href="/calculators/{{ l.slug }}" title="{{ l.title }}">{{ l.label }}</a></li>
+{% endfor %}  </ul>
+ </section>
+ <section aria-labelledby="ns-links-monthly">
+  <h2 id="ns-links-monthly">Net salary by monthly wage</h2>
+  <ul class="ns-chips">
+{% for l in ns_links.monthly if l.slug != current_slug %}   <li><a href="/calculators/{{ l.slug }}" title="{{ l.title }}">{{ l.label }}</a></li>
+{% endfor %}  </ul>
+ </section>
+</div>
+{% endif %}
