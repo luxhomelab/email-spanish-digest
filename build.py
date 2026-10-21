@@ -695,7 +695,7 @@ def render_calculators(env):
         ("calculator-rental-yield.html", "calculators/rental-yield.html", [
             {"name": "Home", "url": "/"},
             {"name": "Rental Yield", "url": "/calculators/rental-yield", "current": True},
-        ], "Spain Rental Yield Calculator — net yield, cash-on-cash, IRR & taxes — Spanified"),
+        ], "Spain Rental Yield Calculator — net yield after tax — Spanified"),
         ("calculator-electricity.html", "calculators/electricity-bill.html", [
             {"name": "Home", "url": "/"},
             {"name": "Electricity Bill", "url": "/calculators/electricity-bill", "current": True},

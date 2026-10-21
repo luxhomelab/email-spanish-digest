@@ -9,7 +9,7 @@
  * - New build = IVA 10% (IGIC 7% in Canarias) PLUS AJD (the source charged IVA only).
  * - Resident: rental-income reduction is user-selectable (art. 23.2 LIRPF after
  *   Ley 12/2023: 50% general, 60%, 70%, 90%; 100% kept for the RDL 29/2026 scale,
- *   BOE-A-2026-20823, in force since 08.10.2026 for contracts from 01.12.2026,
+ *   BOE-A-2026-20823, in force since 08.10.2026,
  *   pending convalidation). Default 50%.
  * - Non-resident EU/EEA: 19% on income minus expenses, mortgage interest and
  *   amortization (art. 24.6 TRLIRNR). No reduction.
