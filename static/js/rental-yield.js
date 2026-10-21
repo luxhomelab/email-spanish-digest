@@ -185,30 +185,65 @@ function summaryRows(r, state) {
     [`Purchase tax (${r.taxType}, ${fmtPct(r.effectiveTaxRate, 2)})`, fmtEur(r.purchaseTax)],
     ['Closing costs', fmtEur(r.closingCosts)],
   ]
-  if (state.useRenovation) rows.push(['Renovation', fmtEur(state.renovationCost)])
+  if (state.useRenovation) {
+    rows.push(['Renovation', fmtEur(state.renovationCost)])
+    rows.push(['Value after works', fmtEur(r.valueAfterRepairs)])
+  }
   if (state.useLoan) {
+    rows.push(['Total investment (incl. loan)', fmtEur(r.totalInvestment)])
     rows.push(['Loan amount', fmtEur(r.loanAmount)])
     rows.push(['Monthly mortgage payment', fmtEur(r.schedule.monthlyPayment)])
   }
   rows.push(['Cash needed up front', fmtEur(r.initialCashOutlay), 'b'])
   rows.push([`Rental income, ${r.holdYears} yrs`, fmtEur(r.totalRentalIncome)])
   rows.push(['Operating expenses', fmtEur(-r.totalExpenses)])
+  rows.push(['Net operating income', fmtEur(r.totalNetOperatingIncome)])
   if (state.useLoan) rows.push(['Mortgage payments', fmtEur(-r.totalMortgagePayments)])
   rows.push(['Rental income tax', fmtEur(-r.totalIncomeTaxes)])
   rows.push(['Net cash flow from rent', fmtEur(r.totalNetCashFlow), 'b'])
   rows.push([`Sale price after ${r.holdYears} yrs`, fmtEur(r.priceAfterHold)])
   rows.push(['Selling costs (incl. plusvalía)', fmtEur(-r.sellingCostsAmount)])
+  rows.push(['Net sale price', fmtEur(r.netSalePrice)])
   rows.push(['Capital gains tax', fmtEur(-r.exitTax)])
-  if (state.useLoan) rows.push(['Mortgage payoff', fmtEur(-r.remainingMortgagePrincipal)])
+  if (state.useLoan) {
+    rows.push(['Sale proceeds after tax', fmtEur(r.netSaleAfterTax)])
+    rows.push([`Mortgage payoff (${fmtPct(r.principalRepaidPct, 0)} repaid)`, fmtEur(-r.remainingMortgagePrincipal)])
+  }
   rows.push(['Cash from sale', fmtEur(r.netFromSale), 'b'])
+  rows.push(['Total cash received (rent + sale)', fmtEur(r.totalCashReceivedAfterTax)])
+  rows.push(['Cash put in up front', fmtEur(-r.initialCashOutlay)])
   rows.push(['Total profit when sold', fmtEur(r.totalNetProfit), 'total'])
   return rows
 }
 
-function renderSummary(r, state) {
-  const body = $('r-summary')
+// Year-1 rental tax, step by step (the original's "tax breakdown, year 1" block).
+function taxRows(r, state) {
+  const rows = [['Rent after vacancy', fmtEur(r.effectiveGrossIncomes[0])]]
+  const grossOnly = state.taxStatus === 'non_resident_non_eu' && !state.useNonEuDeductions
+  if (!grossOnly) {
+    rows.push(['Operating expenses', fmtEur(-r.operatingExpensesByYear[0])])
+    if (state.useLoan) rows.push(['Mortgage interest', fmtEur(-(r.schedule.interestByYear[0] || 0))])
+    rows.push(['Amortization (3% of building value)', fmtEur(-r.amortizationByYear[0])])
+    rows.push(['Net rental income (not below 0)', fmtEur(r.netBaseByYear[0]), 'b'])
+  }
+  let rate
+  if (state.taxStatus === 'resident') {
+    const red = state.rentalReductionPct
+    rows.push([`Reduction (${red}%)`, fmtEur(-(r.netBaseByYear[0] - r.taxBaseByYear[0]))])
+    rate = `IRPF at ${state.personalTaxRatePct}%`
+  } else {
+    rate = state.taxStatus === 'non_resident_eu' ? 'IRNR at 19%' : 'IRNR at 24%'
+  }
+  rows.push(['Taxable base', fmtEur(r.taxBaseByYear[0]), 'b'])
+  rows.push([rate, fmtEur(r.firstYearTax), 'total'])
+  if (!grossOnly) rows.push([`Amortization deducted over ${r.holdYears} yrs`, fmtEur(r.amortizationUsed)])
+  return rows
+}
+
+function renderRows(tbodyId, rows) {
+  const body = $(tbodyId)
   body.innerHTML = ''
-  for (const [label, value, cls] of summaryRows(r, state)) {
+  for (const [label, value, cls] of rows) {
     const tr = document.createElement('tr')
     if (cls === 'total') tr.className = 'total'
     const a = document.createElement('td')
@@ -230,7 +265,9 @@ function renderYears(r) {
       `<tr><td class="row-l">${i + 1}</td>`
       + `<td class="num">${fmtEur(r.effectiveGrossIncomes[i])}</td>`
       + `<td class="num">${fmtEur(r.operatingExpensesByYear[i])}</td>`
+      + `<td class="num">${fmtEur(r.netOperatingIncomes[i])}</td>`
       + `<td class="num">${fmtEur(mort)}</td>`
+      + `<td class="num">${fmtEur(r.schedule.interestByYear[i] || 0)}</td>`
       + `<td class="num">${fmtEur(r.annualTaxes[i])}</td>`
       + `<td class="num b">${fmtEur(r.annualCashFlows[i])}</td>`
       + `<td class="num">${fmtEur(r.cumulativeCashFlows[i])}</td></tr>`,
@@ -387,10 +424,10 @@ function render(state) {
   $('r-outlay-sub').textContent = `incl. ${fmtEur(r.purchaseTax)} ${r.taxType}`
 
   $('r-taxnote').textContent = taxNote(state, r)
-  $('r-tax1').textContent = `Year-1 rental tax: ${fmtEur(r.firstYearTax)}`
   $('r-hold-label').textContent = String(r.holdYears)
 
-  renderSummary(r, state)
+  renderRows('r-summary', summaryRows(r, state))
+  renderRows('r-taxrows', taxRows(r, state))
   renderYears(r)
   if (chartYear !== null && chartYear > r.holdYears) chartYear = null
   renderChart(r)

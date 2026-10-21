@@ -1599,7 +1599,7 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 .ry-years[open] > summary::after { content: "–"; }
 .ry-years > summary:focus-visible { outline: 2px solid #AA151B; outline-offset: 2px; border-radius: 4px; }
 .ry-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 0 20px 0; border: 1px solid #EFE7D8; border-radius: 10px; }
-.ry-table { width: 100%; min-width: 640px; border-collapse: collapse; }
+.ry-table { width: 100%; min-width: 820px; border-collapse: collapse; }
 .ry-table th { font-size: 10px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #9AA5B1; padding: 10px 12px; text-align: left; background: #FAF7F0; border-bottom: 1px solid #EFE7D8; white-space: nowrap; }
 .ry-table td { padding: 9px 12px; font-size: 13px; color: #3C4858; border-bottom: 1px solid #F3EEE3; white-space: nowrap; }
 .ry-table th.num, .ry-table td.num { text-align: right; }

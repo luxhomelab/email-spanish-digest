@@ -198,3 +198,26 @@ describe('default scenario', () => {
     assert.throws(() => simulateProjection({ ...DEFAULTS, regionId: 'nope' }))
   })
 })
+
+describe('growth and outputs', () => {
+  it('rent and expense growth start in year 2 and move IRR and profit, not year-1 yields', () => {
+  const base = simulateProjection({ ...DEFAULTS })
+  const rent = simulateProjection({ ...DEFAULTS, rentGrowthPct: 10 })
+  const exp = simulateProjection({ ...DEFAULTS, expenseGrowthRatePct: 10 })
+  assert.equal(rent.netYield, base.netYield)
+  assert.equal(rent.effectiveGrossIncomes[0], base.effectiveGrossIncomes[0])
+  assert.ok(rent.effectiveGrossIncomes[1] > base.effectiveGrossIncomes[1])
+  assert.ok(rent.irr > base.irr)
+  assert.ok(rent.totalNetProfit > base.totalNetProfit)
+  assert.ok(exp.operatingExpensesByYear[1] > base.operatingExpensesByYear[1])
+  assert.ok(exp.irr < base.irr)
+})
+
+  it('year-1 tax breakdown: reduction applies to the net base; amortization used sums the hold', () => {
+  const r = simulateProjection({ ...DEFAULTS, rentalReductionPct: 60 })
+  assert.ok(Math.abs(r.taxBaseByYear[0] - r.netBaseByYear[0] * 0.4) < 1e-9)
+  const sum = r.amortizationByYear.slice(0, r.holdYears).reduce((s, v) => s + v, 0)
+  assert.ok(Math.abs(r.amortizationUsed - sum) < 1e-9)
+  assert.ok(Math.abs(r.totalCashReceivedAfterTax - r.initialCashOutlay - r.totalNetProfit) < 1e-6)
+})
+})
