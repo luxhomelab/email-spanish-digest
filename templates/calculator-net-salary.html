@@ -1,0 +1,325 @@
+{% extends "base.html" %}
+{% block body_class %} class="page-calculator"{% endblock %}
+{% set page_title = "Spain Net Salary Calculator " ~ calc_year ~ ": Gross to Net Pay | Spanified" %}
+{% set page_desc = "Free Spain net salary calculator for " ~ calc_year ~ ": your payslip after Social Security and IRPF, the refund at the Renta, all 17 regions compared, 12 or 14 payslips, family, flexible pay and the Beckham law." %}
+{% set faqs = [
+ ("How is net salary calculated in Spain?", "Net pay = gross salary − employee Social Security − IRPF withholding. Social Security is 6.50% of your gross on a permanent contract in " ~ calc_year ~ " (4.70% common contingencies, 1.55% unemployment, 0.10% training and 0.15% MEI), on a base capped at €5,101.20 a month. IRPF is progressive: the state scale plus your region's scale, applied after a €2,000 expense allowance, the work-income reduction and your personal and family minimum. Example: €30,000 gross in Madrid leaves about €23,450 a year once the Renta is filed."),
+ ("Why is the tax on my payslip different from what I pay at the Renta?", "Your employer withholds IRPF with the national AEAT algorithm, which ignores your region and some deductions. The annual Renta applies your region's scale and minimums, the deduction for low earners and joint taxation. The difference comes back as a refund or is paid with the return. The calculator shows both numbers and the difference."),
+ ("What changes with 14 payslips?", "Your yearly gross and net are the same; only the timing changes. With 14 payslips you get 12 ordinary payslips plus two extra ones, usually in June and December. Social Security is spread over the 12 ordinary months, so the extra payslips only withhold IRPF and are a little larger than a normal month's net. With prorated extras you get 12 equal payslips."),
+ ("Which region pays the least income tax on a salary?", "Madrid leaves the most take-home pay at every salary, thanks to the lowest regional scale and higher personal minimums. Catalonia leaves the least up to about €40,000; above that Extremadura and Valencia join it at the bottom. Residents of Ceuta and Melilla pay only 40% of the IRPF. The comparison table under the results ranks all regions for your exact profile."),
+ ("How does the Beckham law change my net salary?", "Under the special regime for workers moving to Spain (art. 93 LIRPF) employment income is taxed at a flat 24% up to €600,000 and 47% above, with no deductions or family minimums. Social Security is unchanged. For a single person it starts to pay off at roughly €60,000 gross, sooner in high-tax regions; compare both regimes with the switch above. You must apply within six months of registering with Social Security."),
+ ("Does flexible pay save tax?", "Meal cards (up to €11 a working day), public transport (up to €1,500 a year), health insurance (up to €500 a person) and nursery fees are exempt from IRPF when paid instead of salary. They still count for Social Security, so the saving is your marginal IRPF rate on the exempt amount. The calculator shows it either taken from your salary or paid on top."),
+ ("How accurate is this calculator?", "It follows the " ~ calc_year ~ " Social Security rates, the AEAT withholding algorithm and the AEAT regional tables, and reproduces published examples to the cent. It does not cover regional deductions (rent, birth, etc.), other income, or the foral regimes of the Basque Country and Navarre. It is an estimate, not tax advice. Last verified: October " ~ calc_year ~ "."),
+] %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block description %}<meta name="description" content="{{ page_desc }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="See your Spanish payslip after Social Security and IRPF, the refund at the Renta, and how every region compares.">
+<meta property="og:url" content="{{ site_url }}/calculators/net-salary">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page_title }}">
+<meta name="twitter:description" content="See your Spanish payslip after Social Security and IRPF, the refund at the Renta, and how every region compares.">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/calculators/net-salary">{% endblock %}
+{# The label's last word and its "?" mark are glued (.tip-unit) so the mark never wraps onto its own line. #}
+{% macro lbl(label, tip='', unit='') %}{% set words = label.split(' ') %}{% if words|length > 1 %}{{ words[:-1]|join(' ') }} {% endif %}<span class="tip-unit">{{ words[-1] }}{% if tip %} <span class="tip" title="{{ tip }}">?</span>{% endif %}</span>{% if unit %} <span class="sub">{{ unit }}</span>{% endif %}{% endmacro %}
+{% macro num(key, label, tip='', unit='', step='any', data_show='') %}
+    <div class="field"{% if data_show %} data-show="{{ data_show }}"{% endif %}>
+     <label for="f-{{ key }}">{{ lbl(label, tip, unit) }}</label>
+     <input id="f-{{ key }}" type="number" inputmode="decimal" step="{{ step }}" min="0" autocomplete="off">
+    </div>
+{% endmacro %}
+{% macro check(key, label, tip='') %}
+    <label class="check ry-check" for="f-{{ key }}"><input id="f-{{ key }}" type="checkbox"> <span>{{ lbl(label, tip) }}</span></label>
+{% endmacro %}
+{% macro seg(key, label, options, tip='') %}
+    <div class="field">
+     <span class="flabel" id="l-{{ key }}">{{ lbl(label, tip) }}</span>
+     <div class="seg ns-seg" id="f-{{ key }}" role="group" aria-labelledby="l-{{ key }}">
+{% for v, text in options %}      <button type="button" data-v="{{ v }}" aria-pressed="false">{{ text }}</button>
+{% endfor %}     </div>
+    </div>
+{% endmacro %}
+{% macro flex(key, label, tip, persons=false) %}
+    <div class="ns-flex" data-flex="{{ key }}">
+     <div class="ns-flex-row">
+      {{ num(key, label, tip, '€/yr', '50') }}
+{% if persons %}      {{ num('healthPersons', 'People', 'Insured people: you, your spouse and children. €500 each is tax-free.', '', '1') }}
+{% endif %}     </div>
+     <div class="seg ns-seg ns-seg-sm" id="f-{{ key }}Mode" role="group" aria-label="{{ label }}: how it is paid">
+      <button type="button" data-v="sacrifice" aria-pressed="false">From my salary</button>
+      <button type="button" data-v="extra" aria-pressed="false">On top of salary</button>
+     </div>
+    </div>
+{% endmacro %}
+{% macro dislist(key, label, tip, add_label) %}
+    <div class="field ns-dislist" id="f-{{ key }}">
+     <div class="ns-dislist-head">
+      <span class="flabel">{{ lbl(label, tip) }}</span>
+      <button type="button" class="ns-add" data-add="{{ key }}">{{ add_label }}</button>
+     </div>
+     <ol class="ns-dislist-items"></ol>
+    </div>
+{% endmacro %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [
+ {"@type": "WebPage",
+  "name": {{ page_title|tojson }},
+  "url": "{{ site_url }}/calculators/net-salary",
+  "description": {{ page_desc|tojson }},
+  "inLanguage": "en",
+  "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}},
+ {"@type": "FAQPage", "mainEntity": [
+{% for q, a in faqs %}  {"@type": "Question", "name": {{ q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ a|tojson }}}}{% if not loop.last %},{% endif %}
+{% endfor %} ]}
+]}
+</script>
+ <div class="calc ry-calc ns-calc">
+  <h1>Spain Net Salary Calculator <span class="calc-year">{{ calc_year }}</span></h1>
+  <p class="subtitle">Your payslip after Social Security and IRPF, what the Renta will refund or charge, and how your take-home pay compares across all 17 regions.</p>
+
+  <div class="calc-grid ry-grid">
+   <div class="card calc-form ry-form">
+    <a class="ry-jump" href="#r-payslip">Jump to your payslip ↓</a>
+
+    <details class="ry-group" open>
+     <summary>Salary</summary>
+     <div class="ry-group-body">
+      {{ seg('mode', 'I know my', [('gross', 'Gross salary'), ('net', 'Target net pay')], 'Gross: work out your net pay. Target net: work out the gross salary you need to take home that amount.') }}
+      <div class="field ns-amount">
+       <label for="f-amount" id="l-amount">Gross salary</label>
+       <div class="ns-amount-row">
+        <input id="f-amount" type="number" inputmode="decimal" step="100" min="0" autocomplete="off">
+        <div class="seg ns-seg ns-period" id="f-period" role="group" aria-label="Amount per">
+         <button type="button" data-v="y" aria-pressed="false">a year</button>
+         <button type="button" data-v="m" aria-pressed="false">a month</button>
+        </div>
+       </div>
+       <input id="f-slider" class="ns-slider" type="range" min="0" max="150000" step="500" aria-label="Adjust the amount">
+       <p class="field-note" id="f-amount-note"></p>
+      </div>
+      {{ seg('payments', 'Payslips a year', [('12', '12'), ('14', '14'), ('14p', '14 prorated')], '14: two extra payslips, usually in June and December. Prorated: the two extras are spread over 12 equal payslips. Your yearly total is the same.') }}
+      <div class="field">
+       <label for="f-region">{{ lbl('Where you live', 'Your region of tax residence on 31 December sets the regional half of IRPF. Ceuta and Melilla residents pay 40% of the IRPF.') }}</label>
+       <select id="f-region">
+        <option value="andalucia">Andalusia</option>
+        <option value="aragon">Aragon</option>
+        <option value="asturias">Asturias</option>
+        <option value="baleares">Balearic Islands</option>
+        <option value="canarias">Canary Islands</option>
+        <option value="cantabria">Cantabria</option>
+        <option value="castilla_leon">Castilla and Leon</option>
+        <option value="castilla_la_mancha">Castilla-La Mancha</option>
+        <option value="catalunya">Catalonia</option>
+        <option value="ceuta">Ceuta</option>
+        <option value="extremadura">Extremadura</option>
+        <option value="galicia">Galicia</option>
+        <option value="la_rioja">La Rioja</option>
+        <option value="madrid" selected>Madrid</option>
+        <option value="melilla">Melilla</option>
+        <option value="murcia">Murcia</option>
+        <option value="comunidad_valenciana">Valencian Community</option>
+       </select>
+      </div>
+      {{ seg('regime', 'Tax regime', [('standard', 'Standard'), ('beckham', 'Beckham law')], 'Beckham law: special regime for people who moved to Spain for work (art. 93 LIRPF). 24% flat up to €600,000, 47% above, no deductions. Region and family do not change the tax.') }}
+     </div>
+    </details>
+
+    <details class="ry-group" id="g-you">
+     <summary>About you <span class="ns-sum" id="s-you"></span></summary>
+     <div class="ry-group-body">
+      {{ seg('age', 'Age', [('u65', 'Under 65'), ('65to74', '65–74'), ('75plus', '75+')], 'From 65 your personal minimum rises by €1,150, and by €1,400 more from 75.') }}
+      {{ seg('contract', 'Contract', [('permanent', 'Permanent'), ('temporary', 'Temporary')], 'Temporary contracts pay 1.60% unemployment contribution instead of 1.55%, and contracts under a year have a 2% minimum withholding.') }}
+      <div class="field">
+       <label for="f-disability">{{ lbl('Your disability', 'Officially recognised degree. It raises your minimum and your deductible expenses. "With help" means you need assistance from others or have reduced mobility.') }}</label>
+       <select id="f-disability">
+        <option value="0">None or under 33%</option>
+        <option value="33">33% to 64%</option>
+        <option value="33h">33% to 64%, with help or reduced mobility</option>
+        <option value="65">65% or more</option>
+       </select>
+      </div>
+      <div class="field">
+       <label for="f-joint">{{ lbl('Joint tax return', 'Joint return (tributación conjunta): €3,400 off the base for a married couple, assumed here with a spouse without income; €2,150 for a single parent living with their children.') }}</label>
+       <select id="f-joint">
+        <option value="none">No, individual return</option>
+        <option value="married">Married, spouse without income</option>
+        <option value="single">Single parent with children</option>
+       </select>
+      </div>
+      {{ check('mobility', 'Moved town for this job', 'Geographic mobility: if you accepted a job that made you move your home to another municipality, you deduct €2,000 more in the year of the move and the next one.') }}
+     </div>
+    </details>
+
+    <details class="ry-group" id="g-family">
+     <summary>Family <span class="ns-sum" id="s-family"></span></summary>
+     <div class="ry-group-body">
+      <div class="field-row">
+       {{ num('kidsU3', 'Children under 3', 'Children (and adopted or fostered children) under 3 who live with you. Each adds an extra €2,800 to the minimum.', '', '1') }}
+       {{ num('kids', 'Children 3–24', 'Children aged 3 to 24 who live with you and earn under €8,000 a year. Disabled children count at any age.', '', '1') }}
+      </div>
+      <div data-show="kids">{{ check('sharedCustody', 'Shared with the other parent', 'Each parent applies half of the child minimum when both are entitled to it, e.g. with shared custody or separate tax returns.') }}</div>
+      {{ dislist('descDisab', 'Children with a disability', 'Add a child with an officially recognised disability. They must also be counted above.', 'Add child') }}
+      <div class="field-row">
+       {{ num('asc65', 'Parents 65–74', 'Parents or grandparents aged 65 to 74 who live with you at least half the year and earn under €8,000.', '', '1') }}
+       {{ num('asc75', 'Parents 75+', 'Parents or grandparents aged 75 or older who live with you. Each adds €1,400 on top.', '', '1') }}
+      </div>
+      {{ dislist('ascDisab', 'Parents with a disability', 'Add a parent or grandparent with an officially recognised disability who lives with you. Count them above if 65 or older; a younger one is counted automatically.', 'Add parent') }}
+     </div>
+    </details>
+
+    <details class="ry-group" id="g-flex">
+     <summary>Flexible pay <span class="ns-sum" id="s-flex"></span></summary>
+     <div class="ry-group-body">
+      <p class="field-note ns-group-note">Benefits paid instead of salary are free of IRPF up to a limit, but still pay Social Security.</p>
+      {{ flex('health', 'Health insurance', 'Private health insurance through your employer. Tax-free up to €500 per insured person (€1,500 if disabled).', persons=true) }}
+      {{ flex('meals', 'Meal card', 'Ticket or card for meals on working days. Tax-free up to €11 a day (about €2,420 a year).') }}
+      {{ flex('transport', 'Public transport', 'Transport card for commuting. Tax-free up to €1,500 a year.') }}
+      {{ flex('nursery', 'Nursery', 'Nursery school fees for children under 3, paid to the school. Fully tax-free.') }}
+     </div>
+    </details>
+
+    <details class="ry-group" id="g-more">
+     <summary>Pension and more <span class="ns-sum" id="s-more"></span></summary>
+     <div class="ry-group-body">
+      <div class="field-row">
+       {{ num('pensionEmployee', 'Your pension plan', 'What you pay into a pension plan. It reduces your taxable base by up to €1,500, or more through a company plan.', '€/yr', '100') }}
+       {{ num('pensionEmployer', 'Employer pension', 'What your employer pays into your company pension plan. It is taxable pay, but you deduct it again, up to €8,500.', '€/yr', '100') }}
+      </div>
+      <div class="field-row">
+       {{ num('hoursPerWeek', 'Hours a week', 'Used for your net hourly pay (hours × 52 weeks).', 'h', '0.5') }}
+       {{ num('atRate', 'Accident insurance', 'Workplace accident premium (AT/EP) your employer pays. It depends on the activity: about 1.5% for offices, up to 7% for construction.', '%', '0.05') }}
+      </div>
+     </div>
+    </details>
+
+    <button type="button" id="r-reset" class="ry-reset">Reset to defaults</button>
+   </div>
+
+   <div class="calc-results ry-results ns-results">
+    <div id="r-results">
+
+     <article class="ns-payslip" id="r-payslip" aria-labelledby="r-payslip-title">
+      <header class="ns-ps-head">
+       <div>
+        <h2 class="ns-ps-title" id="r-payslip-title">Your monthly payslip</h2>
+        <p class="ns-ps-meta" id="r-ps-meta"></p>
+       </div>
+       <span class="ns-ps-stamp" id="r-ps-stamp">Nómina</span>
+      </header>
+      <table class="ns-ps-table">
+       <caption class="sr-only">Monthly payslip breakdown</caption>
+       <tbody id="r-ps-earn"></tbody>
+       <tbody id="r-ps-ded"></tbody>
+      </table>
+      <div class="ns-ps-net">
+       <p class="ns-ps-net-label">Take-home pay <span class="ns-es" lang="es">líquido a percibir</span></p>
+       <p class="ns-ps-net-val" id="r-ps-net">—</p>
+       <p class="ns-ps-net-extra" id="r-ps-extra"></p>
+      </div>
+     </article>
+
+     <div class="ns-kpis">
+      <div class="ns-kpi">
+       <p class="kicker">Net a year</p>
+       <p class="val" id="r-net-year">—</p>
+       <p class="sub2" id="r-net-year-sub">—</p>
+      </div>
+      <div class="ns-kpi">
+       <p class="kicker">You keep</p>
+       <p class="val" id="r-keep">—</p>
+       <p class="sub2" id="r-keep-sub">—</p>
+      </div>
+      <div class="ns-kpi" id="r-renta-kpi">
+       <p class="kicker" id="r-renta-kicker">At the Renta</p>
+       <p class="val" id="r-renta">—</p>
+       <p class="sub2" id="r-renta-sub">—</p>
+      </div>
+     </div>
+
+     <div class="card ns-renta" id="r-renta-card">
+      <p class="calc-kicker">Payslip withholding vs the tax you really owe</p>
+      <div class="ns-renta-bars" id="r-renta-bars"></div>
+      <p class="ns-renta-text" id="r-renta-text"></p>
+     </div>
+
+     <div class="card burden ns-cost">
+      <p class="calc-kicker">Where your employer's money goes</p>
+      <div class="bar ns-bar" id="r-bar" role="img"></div>
+      <ul class="legend ns-legend" id="r-legend"></ul>
+     </div>
+
+     <details class="card ns-details" id="r-details">
+      <summary>How it's calculated</summary>
+      <div class="ns-details-body">
+       <h3>Social Security</h3>
+       <div class="card sheet"><table><tbody id="r-d-ss"></tbody></table></div>
+       <h3>Annual IRPF (your Renta)</h3>
+       <div class="card sheet"><table><tbody id="r-d-irpf"></tbody></table></div>
+       <div class="ns-brackets-head">
+        <h3>Tax brackets</h3>
+        <label class="check ry-check ns-combine" for="f-combine"><input id="f-combine" type="checkbox"> <span>Combine state and regional</span></label>
+       </div>
+       <div class="ry-table-wrap" tabindex="0" role="region" aria-label="Tax brackets, scrolls horizontally">
+        <table class="ry-table ns-br-table">
+         <thead id="r-d-br-head"></thead>
+         <tbody id="r-d-br"></tbody>
+        </table>
+       </div>
+       <h3>Payslip withholding</h3>
+       <div class="card sheet"><table><tbody id="r-d-wh"></tbody></table></div>
+       <h3>Employer cost</h3>
+       <div class="card sheet"><table><tbody id="r-d-er"></tbody></table></div>
+      </div>
+     </details>
+
+     <div class="card ns-regions">
+      <p class="calc-kicker">The same salary in every region</p>
+      <p class="field-note" id="r-regions-note"></p>
+      <div class="ry-table-wrap" tabindex="0" role="region" aria-label="Net pay by region, scrolls horizontally">
+       <table class="ry-table ns-reg-table">
+        <thead><tr><th>Region</th><th class="num">Per month</th><th class="num">Per year</th><th class="num">Difference</th></tr></thead>
+        <tbody id="r-regions"></tbody>
+       </table>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  {% set field_id = "calc-salary-email" %}{% set form_kind = "calc-salary" %}{% set variant = "cta-form-card--compact" %}{% set indent = "  " %}{% include "partials/cta-form-card.html" %}
+
+  <div class="card seobox">
+   <h2>From gross to net in Spain</h2>
+   <p>Two deductions take you from the gross in your contract to the money in your account. <strong>Social Security</strong> is a flat 6.50% on a permanent contract, up to a ceiling of €5,101.20 a month; above it you only pay a small solidarity fee. <strong>IRPF</strong> is progressive and split in two halves: the state scale is the same everywhere, the regional scale depends on where you live. Before the scales apply, you deduct Social Security, a €2,000 expense allowance and, on low salaries, a reduction of up to €7,302; your personal and family minimum is then taxed at 0%.</p>
+   <p>Your employer does not know your full tax situation, so it withholds IRPF with the national AEAT algorithm. The Renta in spring settles the real figure with your region's scale and deductions. That is why many people in Madrid get money back and many in Catalonia or Valencia pay a little more.</p>
+   <p class="src">Sources: Orden PJC/297/2026 (Social Security bases and rates); Ley 35/2006 del IRPF, arts. 19, 20, 56–61, 68.4, 84, 93 and DA 61ª; RD 439/2007, art. 81; AEAT <a href="https://sede.agenciatributaria.gob.es/static_files/Sede/Programas_ayuda/Retenciones/2026/ALGORITMO_2026.pdf" target="_blank" rel="noopener">withholding algorithm 2026</a>; AEAT Manual Renta 2025: <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/irpf-2025/c15-calculo-impuesto-determinacion-cuotas-integras/gravamen-base-liquidable-general/gravamen-autonomico.html" target="_blank" rel="noopener">regional scales</a> and <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/irpf-2025/c14-adecuacion-impuesto-circunstancias-personales/minimo-autonomico-personal-familiar/cuadro-minimos-personales-familiares-estatal-autonomicos.html" target="_blank" rel="noopener">regional minimums</a>. Regional deductions are not included. Last verified: October {{ calc_year }}. An estimate, not tax advice.</p>
+  </div>
+
+  <div class="card seobox">
+   <h2>More Spain calculators</h2>
+   <ul class="related-calcs">
+    <li><a href="/calculators/autonomo-tax">Autónomo Tax Calculator</a> — compare your salary with working as self-employed: quota and IRPF.</li>
+    <li><a href="/calculators/property-buying-cost">Property Buying Cost Calculator</a> — ITP, IVA, AJD, notary and registry fees by region.</li>
+    <li><a href="/calculators/rental-yield">Rental Yield Calculator</a> — net yield, cash flow and IRR of a rental flat after tax.</li>
+    <li><a href="/calculators/electricity-bill">Electricity Bill Calculator</a> — estimate your monthly bill and compare tariffs.</li>
+   </ul>
+  </div>
+
+  <div class="card faq-card">
+   <h2>Frequently Asked Questions</h2>
+{% for q, a in faqs %}   <details class="faq-item"><summary>{{ q }}</summary><p>{{ a }}</p></details>
+{% endfor %}   <div class="calc-share">
+    <div class="share-cta">Share your calculation: the link keeps every setting.</div>
+    {% with share=share %}{% include "partials/share.html" %}{% endwith %}
+   </div>
+  </div>
+ </div>
+<script type="module" src="/static/js/net-salary.js?v={{ js_version }}"></script>
+<script src="/static/js/tooltips.js?v={{ js_version }}" defer></script>
+<script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
+{% endblock %}

@@ -618,6 +618,13 @@ def render_llms_txt(digests, articles=()):
         f"- Editor: {SITE_URL}/editor",
         f"- Subscribe: {SITE_URL}/subscribe",
         "",
+        "## Calculators (2026 tax data)",
+        f"- Net salary (gross to net, payslip, IRPF withholding vs Renta, all regions): {SITE_URL}/calculators/net-salary",
+        f"- Autónomo tax (self-employed quota and IRPF): {SITE_URL}/calculators/autonomo-tax",
+        f"- Property buying cost (ITP, IVA/IGIC, AJD by region): {SITE_URL}/calculators/property-buying-cost",
+        f"- Rental yield (net yield, cash flow, IRR after tax): {SITE_URL}/calculators/rental-yield",
+        f"- Electricity bill (PVPC and tariffs): {SITE_URL}/calculators/electricity-bill",
+        "",
         "## How to cite",
         "- Link editions as {SITE_URL}/archive/<YYYY-MM-DD>#news-<N>.",
         "- Publisher: Spanified. Editor: Dmytro Shvechikov.",
@@ -684,6 +691,10 @@ def render_static(env, digests):
 def render_calculators(env):
     """Render calculator pages (static shell, logic runs client-side)."""
     calcs = [
+        ("calculator-net-salary.html", "calculators/net-salary.html", [
+            {"name": "Home", "url": "/"},
+            {"name": "Net Salary", "url": "/calculators/net-salary", "current": True},
+        ], "Spain Net Salary Calculator — payslip, IRPF and Renta refund by region — Spanified"),
         ("calculator-autonomo.html", "calculators/autonomo-tax.html", [
             {"name": "Home", "url": "/"},
             {"name": "Autónomo Tax", "url": "/calculators/autonomo-tax", "current": True},
@@ -1061,6 +1072,7 @@ def render_sitemap(digests, categories=(), articles=()):
         urls.append((SITE_URL + article["url"], article["date"]))
     for slug in categories:
         urls.append((SITE_URL + f"/category/{slug}", None))
+    urls.append((SITE_URL + "/calculators/net-salary", None))
     urls.append((SITE_URL + "/calculators/autonomo-tax", None))
     urls.append((SITE_URL + "/calculators/property-buying-cost", None))
     urls.append((SITE_URL + "/calculators/rental-yield", None))
@@ -1378,7 +1390,9 @@ def js_version():
                    "autonomo.js", "autonomo-calc.js", "autonomo-form.js",
                    "property-buying-cost.js", "property-buying-cost-calc.js",
                    "property-buying-cost-form.js",
-                   "rental-yield.js", "rental-yield-calc.js", "rental-yield-form.js", "quiz.js",
+                   "rental-yield.js", "rental-yield-calc.js", "rental-yield-form.js",
+                   "net-salary.js", "net-salary-calc.js", "net-salary-form.js", "net-salary-data.js",
+                   "quiz.js",
                    "quiz-logic.js", "subscribe-form.js", "subscription-store.js",
                    "electricity.js", "electricity-calc.js", "electricity-form.js"):
         path = os.path.join(SCRIPT_DIR, "static", "js", name)

@@ -144,7 +144,7 @@ export function findSSQuotaForCollaborator(monthlyIncome, year = 2026) {
  * IRPF state brackets (tramo estatal) — unchanged since 2024; valid for 2026.
  * Applied to "base liquidable general" (taxable income after personal minimums).
  */
-const IRPF_STATE_BRACKETS = [
+export const IRPF_STATE_BRACKETS = [
   { upTo: 12450,    rate: 0.095  },
   { upTo: 20200,    rate: 0.12   },
   { upTo: 35200,    rate: 0.15   },
@@ -156,21 +156,23 @@ const IRPF_STATE_BRACKETS = [
 /**
  * IRPF regional brackets (tramo autonómico) by region — 2026 values.
  * Each region has its own income thresholds and rates, independent of state brackets.
- * Source: taxdown.es/irpf/tabla-tramos
+ * Source: AEAT Manual práctico Renta 2025, cap. 15 "Gravamen autonómico" (pages
+ * updated 17/03/2026; no 2026 change known except Valencia). Every row is checked in
+ * tests/irpf-scales.test.js against the printed "cuota íntegra" column.
  * Navarra and País Vasco have foral regimes; values here are educational estimates.
  *
  * @type {Record<string, Array<{upTo:number, rate:number}>>}
  */
-const IRPF_REGIONAL_BRACKETS = {
+export const IRPF_REGIONAL_BRACKETS = {
   andalucia: [
     { upTo: 13000,    rate: 0.095  },
-    { upTo: 21000,    rate: 0.12   },
+    { upTo: 21100,    rate: 0.12   },
     { upTo: 35200,    rate: 0.15   },
-    { upTo: 50000,    rate: 0.185  },
+    { upTo: 60000,    rate: 0.185  },
     { upTo: Infinity, rate: 0.225  },
   ],
   aragon: [
-    { upTo: 13972.50, rate: 0.095  },
+    { upTo: 13072.50, rate: 0.095  },
     { upTo: 21210,    rate: 0.12   },
     { upTo: 36960,    rate: 0.15   },
     { upTo: 52500,    rate: 0.185  },
@@ -181,14 +183,15 @@ const IRPF_REGIONAL_BRACKETS = {
     { upTo: Infinity, rate: 0.255  },
   ],
   asturias: [
-    { upTo: 12450,    rate: 0.10   },
-    { upTo: 17707,    rate: 0.12   },
-    { upTo: 33007,    rate: 0.14   },
-    { upTo: 53407,    rate: 0.185  },
+    // Ley del Principado de Asturias 3/2025 (BOPA 2-12-2025), from 2025.
+    { upTo: 12450,    rate: 0.09   },
+    { upTo: 17707.20, rate: 0.12   },
+    { upTo: 33007.20, rate: 0.14   },
+    { upTo: 53407.20, rate: 0.192  },
     { upTo: 70000,    rate: 0.215  },
     { upTo: 90000,    rate: 0.225  },
     { upTo: 175000,   rate: 0.25   },
-    { upTo: Infinity, rate: 0.255  },
+    { upTo: Infinity, rate: 0.26   },
   ],
   baleares: [
     { upTo: 10000,    rate: 0.09   },
@@ -202,12 +205,13 @@ const IRPF_REGIONAL_BRACKETS = {
     { upTo: Infinity, rate: 0.2475 },
   ],
   canarias: [
-    { upTo: 12450,    rate: 0.09   },
-    { upTo: 17707,    rate: 0.115  },
-    { upTo: 33007,    rate: 0.14   },
-    { upTo: 53407,    rate: 0.185  },
-    { upTo: 90000,    rate: 0.235  },
-    { upTo: 120000,   rate: 0.25   },
+    // Deflated by Ley 9/2025 (Presupuestos 2026) with effect from 2025.
+    { upTo: 13748,    rate: 0.09   },
+    { upTo: 19422,    rate: 0.115  },
+    { upTo: 35924,    rate: 0.14   },
+    { upTo: 57566,    rate: 0.185  },
+    { upTo: 93268,    rate: 0.235  },
+    { upTo: 123745,   rate: 0.25   },
     { upTo: Infinity, rate: 0.26   },
   ],
   cantabria: [
@@ -229,7 +233,7 @@ const IRPF_REGIONAL_BRACKETS = {
     { upTo: 12450,    rate: 0.09   },
     { upTo: 20200,    rate: 0.12   },
     { upTo: 35200,    rate: 0.14   },
-    { upTo: 53407,    rate: 0.185  },
+    { upTo: 53407.20, rate: 0.185  },
     { upTo: Infinity, rate: 0.215  },
   ],
   catalunya: [
@@ -271,17 +275,17 @@ const IRPF_REGIONAL_BRACKETS = {
     { upTo: Infinity, rate: 0.25   },
   ],
   galicia: [
-    { upTo: 12985,    rate: 0.09   },
-    { upTo: 21068,    rate: 0.1165 },
+    { upTo: 12985.35, rate: 0.09   },
+    { upTo: 21068.60, rate: 0.1165 },
     { upTo: 35200,    rate: 0.149  },
-    { upTo: 47600,    rate: 0.184  },
+    { upTo: 60000,    rate: 0.184  },
     { upTo: Infinity, rate: 0.225  },
   ],
   madrid: [
-    { upTo: 13362,    rate: 0.085  },
-    { upTo: 18004,    rate: 0.107  },
-    { upTo: 35425,    rate: 0.128  },
-    { upTo: 57320,    rate: 0.174  },
+    { upTo: 13362.22, rate: 0.085  },
+    { upTo: 19004.63, rate: 0.107  },
+    { upTo: 35425.68, rate: 0.128  },
+    { upTo: 57320.40, rate: 0.174  },
     { upTo: Infinity, rate: 0.205  },
   ],
   murcia: [
@@ -296,7 +300,7 @@ const IRPF_REGIONAL_BRACKETS = {
     { upTo: 20200,    rate: 0.106  },
     { upTo: 35200,    rate: 0.136  },
     { upTo: 40000,    rate: 0.178  },
-    { upTo: 50000,    rate: 0.185  },
+    { upTo: 50000,    rate: 0.183  },
     { upTo: 60000,    rate: 0.19   },
     { upTo: 120000,   rate: 0.245  },
     { upTo: Infinity, rate: 0.27   },
@@ -319,7 +323,7 @@ const IRPF_REGIONAL_BRACKETS = {
     { upTo: 300000,   rate: 0.20   },
     { upTo: Infinity, rate: 0.22   },
   ],
-  // Ceuta and Melilla — regional component uses standard bracket estimates only.
+  // Ceuta and Melilla — art. 65 LIRPF complementary scale (AEAT Manual Renta 2025).
   // Art. 68.4 LIRPF 60% reduction for residents is applied in calculateAutonomo
   // (irpfTotal x 0.4 for these regions).
   ceuta:   [
@@ -327,16 +331,14 @@ const IRPF_REGIONAL_BRACKETS = {
     { upTo: 20200,    rate: 0.12   },
     { upTo: 35200,    rate: 0.15   },
     { upTo: 60000,    rate: 0.185  },
-    { upTo: 300000,   rate: 0.225  },
-    { upTo: Infinity, rate: 0.245  },
+    { upTo: Infinity, rate: 0.225  },
   ],
   melilla: [
     { upTo: 12450,    rate: 0.095  },
     { upTo: 20200,    rate: 0.12   },
     { upTo: 35200,    rate: 0.15   },
     { upTo: 60000,    rate: 0.185  },
-    { upTo: 300000,   rate: 0.225  },
-    { upTo: Infinity, rate: 0.245  },
+    { upTo: Infinity, rate: 0.225  },
   ],
 }
 
