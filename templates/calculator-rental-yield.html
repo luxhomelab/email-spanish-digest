@@ -182,14 +182,12 @@
      <div class="ry-group-body">
       <div class="field-row">
        {{ num('holdYears', 'Holding period', 'Years until you sell (1–50).', 'years', '1') }}
-       {{ num('appreciationRatePct', 'Price growth', 'Average yearly increase of the property value.', '%/yr', '0.1') }}
+       {{ num('appreciationRatePct', 'Property value growth', 'Average yearly increase of the property value.', '%/yr', '0.1') }}
       </div>
       <div class="field-row">
        {{ num('costToSellPct', 'Selling costs', 'Agent fee and other costs of selling, as a percentage of the sale price.', '% of price', '0.1') }}
        {{ num('plusvalia', 'Municipal plusvalía', 'Local land-value gain tax (plusvalía municipal), paid by the seller. Depends on your town and cadastral data; enter your own estimate.', '€', '100') }}
-      </div>
-      {{ num('benchmarkReturnPct', 'Alternative return', 'What the same cash would earn elsewhere per year, after tax: roughly 2–3% for a deposit or government bonds, 5–7% long-term for a global index fund (with more risk). The IRR is compared with it.', '%/yr', '0.1') }}
-     </div>
+      </div>     </div>
     </details>
 
     <button type="button" id="r-reset" class="ry-reset">Reset to defaults</button>
@@ -199,8 +197,6 @@
     <div class="notice notice-red" id="r-error" role="status" hidden><span id="r-error-text"></span></div>
 
     <div id="r-results">
-     <p class="ry-verdict" id="r-verdict"></p>
-
      <div class="ry-kpis" id="r-kpis">
       <div class="ry-kpi">
        <p class="kicker">Net yield</p>
@@ -293,7 +289,7 @@
 
   <div class="card seobox">
    <h2>Which yield number should you use?</h2>
-   <p><strong>Gross yield</strong> (rent ÷ price) is what listings quote, so use it to compare ads. It ignores taxes, costs and vacancy, so it overstates what you keep. <strong>Net yield</strong> divides your rent after vacancy, running costs and income tax by everything you paid (price, purchase tax, closing costs, renovation), which makes it the fair number for comparing a flat in Madrid with one in Valencia. <strong>Cash-on-cash</strong> and <strong>IRR</strong> matter once you use a mortgage or plan to sell: they measure the return on the cash you actually put in, and IRR adds price growth and the tax on the sale.</p>
+   <p><strong>Gross yield</strong> (rent ÷ price) is what listings quote, so use it to compare ads. It ignores taxes, costs and vacancy, so it overstates what you keep. <strong>Net yield</strong> divides your rent after vacancy, running costs and income tax by everything you paid (price, purchase tax, closing costs, renovation), which makes it the fair number for comparing a flat in Madrid with one in Valencia. <strong>Cash-on-cash</strong> and <strong>IRR</strong> matter once you use a mortgage or plan to sell: they measure the return on the cash you actually put in, and IRR adds property value growth and the tax on the sale.</p>
    <p>Two things move the result most in Spain: the purchase tax (ITP is 6% in Madrid but up to 10–11% in some regions) and your tax status. Residents pay IRPF after a reduction on long-term home lets; non-residents pay a flat 19% (EU/EEA, on net income) or 24% (elsewhere, on gross rent), so the same flat can net very different amounts to different owners.</p>
    <p class="src">Sources: BOE-A-2026-20823 (RDL 29/2026); art. 23.2 LIRPF; arts. 24.6 and 25 TRLIRNR; art. 14 RIRPF (<a href="https://www.boe.es/buscar/act.php?id=BOE-A-2007-6820" target="_blank" rel="noopener">RD 439/2007</a>); AEAT guidance on <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/irpf-2025/c04-rendimientos-capital-inmobiliario/gastos-deducibles/cantidades-destinadas-amortizacion.html" target="_blank" rel="noopener">rental amortization</a> and on the <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/irpf-2025/c11-ganancias-perdidas-patrimoniales/determinacion-importe-ganancias-perdidas-patrimon-generales/derivadas-transmisiones-onerosas-lucrativas/reglas-generales-calculo.html" target="_blank" rel="noopener">capital gain on a sale</a>; Audiencia Nacional 28.07.2025 (rec. 636/2021); savings scale 2026 (guiafiscal.es). Last tax data verification: October 2026. This calculator is an educational simulation and not tax or legal advice.</p>
   </div>

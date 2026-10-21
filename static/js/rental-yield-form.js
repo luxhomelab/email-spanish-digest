@@ -39,7 +39,6 @@ export const DEFAULTS = {
   plusvalia: 0,
   holdYears: 30,
   appreciationRatePct: 3,
-  benchmarkReturnPct: 3,
 }
 
 export const QUERY_KEYS = {
@@ -75,7 +74,6 @@ export const QUERY_KEYS = {
   plusvalia: 'ry_plus',
   holdYears: 'ry_hy',
   appreciationRatePct: 'ry_apr',
-  benchmarkReturnPct: 'ry_alt',
 }
 
 export const FIELD_LIMITS = {
@@ -101,7 +99,6 @@ export const FIELD_LIMITS = {
   constructionSharePct: { type: 'percent', min: 0, max: 100 },
   costToSellPct: { type: 'percent', min: 0, max: 100 },
   appreciationRatePct: { type: 'percent', min: 0, max: 100 },
-  benchmarkReturnPct: { type: 'percent', min: 0, max: 100 },
   renovationDurationMonths: { type: 'int', min: 0, max: 24 },
   loanTermYears: { type: 'int', min: 1, max: 50 },
   holdYears: { type: 'int', min: 1, max: 50 },

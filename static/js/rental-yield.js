@@ -1,4 +1,4 @@
-import { simulateProjection, buildVerdict } from './rental-yield-calc.js'
+import { simulateProjection } from './rental-yield-calc.js'
 import { REGIONS } from './property-buying-cost-calc.js'
 import {
   sanitizeState, parseStateFromParams, stateToParams, clampField,
@@ -177,29 +177,6 @@ function taxNote(state, r) {
     return `Non-resident outside the EU/EEA, Audiencia Nacional 2025 ruling applied: 24% of net rental income. The ruling is under appeal, so treat this as a best case. ${sale}`
   }
   return `Non-resident outside the EU/EEA: 24% of gross rent, no deductions (current rule). ${sale}`
-}
-
-function verdictHtml(v, r, state) {
-  const irr = `<b>IRR ${fmtPct(r.irr, 1)}</b>`
-  const alt = `your ${fmtPct(v.benchmarkPct, 1)} alternative return (set under Exit)`
-  const gap = Math.abs(v.irrGap).toFixed(1)
-  const first = v.beatsBenchmark
-    ? `${irr} beats ${alt} by ${gap} pts a year.`
-    : `${irr} is ${gap} pts a year below ${alt}.`
-  let second
-  if (v.kind === 'loss') {
-    second = `At these numbers you lose <b>${fmtEur(-v.profit)}</b> over ${r.holdYears} years.`
-  } else if (v.kind === 'rent_only') {
-    second = 'All of the profit comes from rent, none from price growth.'
-  } else if (v.kind === 'growth_only') {
-    second = `<b>All of the profit comes from price growth</b> (${fmtPct(state.appreciationRatePct, 1)}/yr assumed): `
-      + `without it you would lose ${fmtEur(-v.rentProfit)}.`
-  } else {
-    const share = Math.round(v.growthSharePct)
-    second = `<b>${share}% of the profit</b> comes from price growth (${fmtPct(state.appreciationRatePct, 1)}/yr assumed), `
-      + `${100 - share}% from rent.`
-  }
-  return `${first} ${second}`
 }
 
 function summaryRows(r, state) {
@@ -441,11 +418,6 @@ function render(state) {
   setSigned($('r-irr'), r.irr)
   // Without a loan cash-on-cash equals net yield, so its card is shown only with a mortgage.
   $('r-kpis').classList.toggle('ry-kpis-5', state.useLoan)
-
-  const flat = simulateProjection({ ...state, appreciationRatePct: 0 })
-  const verdict = buildVerdict(r, flat, state.benchmarkReturnPct)
-  $('r-verdict').innerHTML = verdictHtml(verdict, r, state)
-  $('r-verdict').classList.toggle('neg', !verdict.beatsBenchmark || verdict.kind === 'loss')
 
   $('r-profit').textContent = fmtEur(r.totalNetProfit)
   setSigned($('r-profit'), r.totalNetProfit)

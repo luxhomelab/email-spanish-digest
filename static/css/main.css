@@ -1576,10 +1576,6 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
  .ry-kpis.ry-kpis-5 > .ry-kpi { grid-column: span 2; }
  .ry-kpis.ry-kpis-5 > .ry-kpi:nth-child(n+4) { grid-column: span 3; }
 }
-/* Verdict line, the headline of the results: IRR vs the alternative return and the share of profit from price growth. */
-.calc .ry-verdict { margin: 0 0 12px 0; padding: 18px 20px; background: #FFFDF8; border: 1px solid #EFE7D8; border-left: 5px solid #0E7A3D; border-radius: 14px; font-size: 17px; line-height: 26px; color: #3C4858; }
-.calc .ry-verdict.neg { border-left-color: #AA151B; }
-.calc .ry-verdict b { font-weight: 800; }
 .calc .mini-profit { background: #EEF8F1; border: 1px solid #CFE8D8; }
 .calc .mini-profit .kicker { color: #2F7A4D; } .calc .mini-profit .val { color: #0A5C2E; } .calc .mini-profit .sub2 { color: #5E9475; }
 .calc .mini-profit .val.neg { color: #8A1A1A; }
@@ -1622,7 +1618,6 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
  .ry-kpis { gap: 10px; }
  .ry-kpi { padding: 14px 14px; }
  .ry-kpi .val { font-size: 22px; }
- .calc .ry-verdict { padding: 14px 16px; font-size: 16px; line-height: 24px; }
  .calc details.ry-years { padding: 0 16px; }
 }
 @media (max-width: 520px) {
