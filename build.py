@@ -601,7 +601,7 @@ def load_quiz_cards(homepage=False):
     return cards
 
 
-def render_llms_txt(digests, articles=(), salary_pages=(), autonomo_pages=()):
+def render_llms_txt(digests, articles=(), salary_pages=(), autonomo_pages=(), rental_yield_pages=()):
     latest = digests[0]["date"] if digests else "n/a"
     lines = [
         "# Spanified — Spain Daily",
@@ -625,6 +625,7 @@ def render_llms_txt(digests, articles=(), salary_pages=(), autonomo_pages=()):
         *([f"- Autónomo net pay by revenue and what to earn for a target take-home ({len(autonomo_pages)} pages, e.g. {SITE_URL}{autonomo_pages[0]}); index on {SITE_URL}/calculators/autonomo-tax"] if autonomo_pages else []),
         f"- Property buying cost (ITP, IVA/IGIC, AJD by region): {SITE_URL}/calculators/property-buying-cost",
         f"- Rental yield (net yield, cash flow, IRR after tax): {SITE_URL}/calculators/rental-yield",
+        *([f"- Rental yield and rent needed by purchase price ({len(rental_yield_pages)} pages, e.g. {SITE_URL}{rental_yield_pages[0]}); index on {SITE_URL}/calculators/rental-yield"] if rental_yield_pages else []),
         f"- Electricity bill (PVPC and tariffs): {SITE_URL}/calculators/electricity-bill",
         "",
         "## How to cite",
@@ -722,7 +723,8 @@ def render_calculators(env):
         # together with the engine data (quotas/brackets/deductions), never alone.
         calc_year = 2026
         output = template.render(crumbs=crumbs, js_version=js_version(), share=share, calc_year=calc_year,
-                                 ns_links=net_salary_links(), au_links=autonomo_links(), current_slug="")
+                                 ns_links=net_salary_links(), au_links=autonomo_links(), ry_links=rental_yield_links(),
+                                 current_slug="")
         dest = os.path.join(OUT_DIR, rel_dest)
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         with open(dest, "w", encoding="utf-8") as fh:
@@ -932,6 +934,171 @@ def render_net_salary_pages(env, grid=None):
                 fh.write(output)
             urls.append(f"/calculators/{ctx['slug']}")
     print(f"  wrote {len(urls)} net salary amount pages")
+    return urls
+
+
+RENTAL_YIELD_PAGES_JSON = os.path.join(SCRIPT_DIR, "data", "rental-yield-pages.json")
+RENTAL_YIELD_GRID_SCRIPT = os.path.join(SCRIPT_DIR, "scripts", "rental-yield-grid.mjs")
+RENTAL_YIELD_TEMPLATE = os.path.join(TEMPLATES_DIR, "calculator-rental-yield.html")
+
+
+def rental_yield_slug(price):
+    """URL slug (flat sibling of /calculators/rental-yield) for a purchase-price page."""
+    return f"rental-yield-{price}-euros-property"
+
+
+def ypct(x, digits=1):
+    """Format a yield already expressed in percent: 3.577 -> '3.6%'."""
+    return f"{x:.{digits}f}%"
+
+
+def load_rental_yield_pages():
+    """Price list and reference assumptions for the programmatic rental-yield pages."""
+    with open(RENTAL_YIELD_PAGES_JSON, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def rental_yield_links(pages=None):
+    """Link-grid items for partials/rental-yield-links.html."""
+    pages = pages or load_rental_yield_pages()
+    return [
+        {"amount": p, "slug": rental_yield_slug(p), "label": eur(p), "title": f"Rental yield on a {eur(p)} property in Spain"}
+        for p in pages["prices"]
+    ]
+
+
+def rental_yield_region_names():
+    """Region id -> display name, parsed from the hub's <select id="f-regionId"> (single mapping)."""
+    with open(RENTAL_YIELD_TEMPLATE, encoding="utf-8") as fh:
+        text = fh.read()
+    select = re.search(r'<select id="f-regionId">(.*?)</select>', text, re.S).group(1)
+    return dict(re.findall(r'<option value="([^"]+)"[^>]*>([^<]+)</option>', select))
+
+
+def compute_rental_yield_grid():
+    """Run scripts/rental-yield-grid.mjs with node; fails loudly when node or the script is missing."""
+    import subprocess
+
+    if shutil.which("node") is None:
+        raise RuntimeError("node is required to build the rental yield pages but was not found on PATH")
+    res = subprocess.run(
+        ["node", RENTAL_YIELD_GRID_SCRIPT, RENTAL_YIELD_PAGES_JSON],
+        check=True, stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding="utf-8", cwd=SCRIPT_DIR,
+    )
+    return json.loads(res.stdout)
+
+
+def rental_yield_page_context(item, neighbours, names, calc_year, ref_pct):
+    """Everything the rental-yield amount template shows, computed once and formatted here."""
+    price = item["amount"]
+    res, eu, non_eu = item["byStatus"]["resident"], item["byStatus"]["non_resident_eu"], item["byStatus"]["non_resident_non_eu"]
+    madrid = next(r for r in item["regions"] if r["region"] == "madrid")
+    targets = [{
+        "label": f"{t['targetPct']:g}%", "rent": eur(t["resident"]["rent"]), "annual": eur(t["resident"]["annualRent"]),
+        "net_res": ypct(t["resident"]["netYield"]), "net_eu": ypct(t["non_resident_eu"]["netYield"]),
+        "net_non_eu": ypct(t["non_resident_non_eu"]["netYield"]), "is_ref": t["targetPct"] == ref_pct,
+    } for t in item["targets"]]
+    by_net = sorted(item["regions"], key=lambda r: -r["netYield"])
+    rows = [{
+        "name": names.get(r["region"], r["region"]), "tax": eur(r["purchaseTax"]), "upfront": eur(r["totalInvestment"]),
+        "net": ypct(r["netYield"], 2),
+        "diff": "reference" if r["region"] == "madrid" else f"{r['netYield'] - madrid['netYield']:+.2f} pp".replace("-", "−"),
+        "is_ref": r["region"] == "madrid", "up": r["region"] != "madrid" and r["netYield"] > madrid["netYield"],
+        "down": r["region"] != "madrid" and r["netYield"] < madrid["netYield"],
+    } for r in by_net]
+    common = [r for r in by_net if r["region"] not in ("ceuta", "melilla")]
+    cheapest = min(common, key=lambda r: r["totalInvestment"])
+    dearest = max(common, key=lambda r: r["totalInvestment"])
+    rent6 = next(t for t in item["targets"] if t["targetPct"] == 6)["resident"]["rent"] if any(t["targetPct"] == 6 for t in item["targets"]) else None
+    ctx = {
+        "amount": price, "slug": rental_yield_slug(price), "amount_label": eur(price), "calc_year": calc_year,
+        "ref_pct": f"{ref_pct:g}%", "rent": eur(item["refRent"]), "annual_rent": eur(res["annualRent"]),
+        "gross": ypct(res["grossYield"]), "net_res": ypct(res["netYield"]), "net_eu": ypct(eu["netYield"]), "net_non_eu": ypct(non_eu["netYield"]),
+        "cash_flow": eur(res["monthlyCashFlow"]), "irr": ypct(res["irr"]),
+        "tax_madrid": eur(res["purchaseTax"]), "closing": eur(res["closingCosts"]), "upfront": eur(res["totalInvestment"]),
+        "ibi": eur(item["costs"]["annualIBI"]), "community": eur(item["costs"]["monthlyCommunity"]),
+        "noi": eur(res["firstYearNOI"]), "tax_res": eur(res["firstYearTax"]), "tax_eu": eur(eu["firstYearTax"]), "tax_non_eu": eur(non_eu["firstYearTax"]),
+        "rent6": eur(rent6) if rent6 else None,
+        "targets": targets, "regions": rows,
+        "cheapest_name": names.get(cheapest["region"], cheapest["region"]), "cheapest_upfront": eur(cheapest["totalInvestment"]),
+        "dearest_name": names.get(dearest["region"], dearest["region"]), "dearest_upfront": eur(dearest["totalInvestment"]),
+        "best_name": names.get(common[0]["region"]), "best_net": ypct(common[0]["netYield"], 2),
+        "worst_name": names.get(common[-1]["region"]), "worst_net": ypct(common[-1]["netYield"], 2),
+        "query": item["query"], "prev": neighbours[0], "next": neighbours[1],
+    }
+    ctx["h1"] = f"Rental Yield on a {eur(price)} Property in Spain ({calc_year})"
+    ctx["title"] = f"{eur(price)} Property in Spain: Rental Yield and Rent Needed ({calc_year}) | Spanified"
+    ctx["description"] = (f"A {eur(price)} flat renting for {eur(item['refRent'])} a month is a {ctx['gross']} gross yield and about "
+                          f"{ctx['net_res']} net after costs and tax in Madrid. Rent needed for 4% to 8%, by tax status and region.")
+    ctx["answer"] = (f"A {eur(price)} flat renting for {eur(item['refRent'])} a month is a {ctx['gross']} gross yield, about "
+                     f"{ctx['net_res']} net after costs and tax for a resident in Madrid"
+                     + (f". To reach 6% gross you need {ctx['rent6']} a month." if rent6 else "."))
+    ctx["faqs"] = rental_yield_faqs(ctx)
+    return ctx
+
+
+def rental_yield_faqs(c):
+    a = c["amount_label"]
+    return [
+        (f"What rent do I need for a good yield on a {a} property?",
+         "Annual rent = price × target gross yield. On " + a + ": " + "; ".join(
+             f"{t['label']} needs {t['rent']} a month" for t in c["targets"]) + ". Net yield is lower because of vacancy, IBI, community fees, insurance, maintenance and tax."),
+        (f"What is the net rental yield on a {a} property in Spain?",
+         f"At {c['rent']} a month ({c['gross']} gross) the net yield is {c['net_res']} for a Spanish resident, {c['net_eu']} for an EU/EEA non-resident "
+         f"and {c['net_non_eu']} for a non-resident outside the EU/EEA, who is taxed on gross rent. The figures assume a Madrid resale flat, "
+         f"IBI of {c['ibi']} a year, a community fee of {c['community']} a month, 5% vacancy and 5% maintenance, with no mortgage."),
+        (f"How much cash do I need to buy a {a} property in Spain?",
+         f"In Madrid, {c['tax_madrid']} of ITP and about {c['closing']} of closing costs bring the total to {c['upfront']}. Across the mainland regions the total ranges "
+         f"from {c['cheapest_upfront']} in {c['cheapest_name']} to {c['dearest_upfront']} in {c['dearest_name']}, because the transfer tax differs by region."),
+        (f"Is a {c['gross']} gross yield good in Spain?",
+         f"It is close to the national average gross yield of about 5.5% (Global Property Guide, Q3 2026). After costs and tax it is {c['net_res']} net on {a}, "
+         f"so compare flats on net yield, not on the headline figure in the listing."),
+    ]
+
+
+def render_rental_yield_pages(env, grid=None):
+    """Render calculators/rental-yield-{N}-euros-property.html for every purchase price.
+
+    Figures come from scripts/rental-yield-grid.mjs (the browser calculator modules run in
+    node), so the yield engine stays a single source of truth. Raises when node is missing.
+    Returns the list of URL paths (e.g. "/calculators/rental-yield-200000-euros-property").
+    """
+    import glob
+
+    calc_dir = os.path.join(OUT_DIR, "calculators")
+    os.makedirs(calc_dir, exist_ok=True)
+    for path in glob.glob(os.path.join(calc_dir, "rental-yield-*-euros-property.html")):
+        os.remove(path)
+
+    grid = grid or compute_rental_yield_grid()
+    config = load_rental_yield_pages()
+    names = rental_yield_region_names()
+    links = rental_yield_links()
+    calc_year = 2026
+    template = env.get_template("calculator-rental-yield-amount.html")
+    items = grid["prices"]
+    urls = []
+    for i, item in enumerate(items):
+        def nb(j):
+            if 0 <= j < len(items):
+                return {"label": eur(items[j]["amount"]), "slug": rental_yield_slug(items[j]["amount"])}
+            return None
+        ctx = rental_yield_page_context(item, (nb(i - 1), nb(i + 1)), names, calc_year, config["referenceGrossPct"])
+        crumbs = [
+            {"name": "Home", "url": "/"},
+            {"name": "Rental Yield Calculator", "url": "/calculators/rental-yield"},
+            {"name": ctx["amount_label"], "url": f"/calculators/{ctx['slug']}", "current": True},
+        ]
+        calc_url = f"{SITE_URL}/calculators/{ctx['slug']}"
+        output = template.render(
+            p=ctx, crumbs=crumbs, js_version=js_version(), calc_year=calc_year,
+            share=share_links(calc_url, ctx["title"]), ry_links=links, current_slug=ctx["slug"],
+            build_date=datetime.now().strftime("%Y-%m-%d"),
+        )
+        with open(os.path.join(calc_dir, ctx["slug"] + ".html"), "w", encoding="utf-8") as fh:
+            fh.write(output)
+        urls.append(f"/calculators/{ctx['slug']}")
+    print(f"  wrote {len(urls)} rental yield amount pages")
     return urls
 
 
@@ -1457,7 +1624,7 @@ def render_categories(env, digests):
     return sorted(cats.keys())
 
 
-def render_sitemap(digests, categories=(), articles=(), salary_pages=(), autonomo_pages=()):
+def render_sitemap(digests, categories=(), articles=(), salary_pages=(), autonomo_pages=(), rental_yield_pages=()):
     urls = [(SITE_URL + "/", None)] + [
         (SITE_URL + "/" + name[:-len(".html")], None)
         for name in STATIC_PAGES
@@ -1489,6 +1656,8 @@ def render_sitemap(digests, categories=(), articles=(), salary_pages=(), autonom
         urls.append((SITE_URL + path, None))
     urls.append((SITE_URL + "/calculators/property-buying-cost", None))
     urls.append((SITE_URL + "/calculators/rental-yield", None))
+    for path in rental_yield_pages:
+        urls.append((SITE_URL + path, None))
     urls.append((SITE_URL + "/calculators/electricity-bill", None))
     # Only the canonical quiz landing page is indexable (quiz.html ships
     # index,follow). The -success / -subscribed / -result-* variants stay
@@ -1909,11 +2078,14 @@ def main():
     print("Building autónomo amount pages...")
     autonomo_pages = render_autonomo_pages(env)
 
+    print("Building rental yield amount pages...")
+    rental_yield_pages = render_rental_yield_pages(env)
+
     print("Building sitemap...")
-    render_sitemap(digests, categories, articles, salary_pages, autonomo_pages)
+    render_sitemap(digests, categories, articles, salary_pages, autonomo_pages, rental_yield_pages)
 
     print("Writing llms.txt...")
-    render_llms_txt(digests, articles, salary_pages, autonomo_pages)
+    render_llms_txt(digests, articles, salary_pages, autonomo_pages, rental_yield_pages)
 
     print("Building podcast feed...")
     render_podcast_feed(episodes, {d["date"] for d in digests})

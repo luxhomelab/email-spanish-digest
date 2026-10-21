@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% block body_class %} class="page-calculator"{% endblock %}
+{% set page_url = site_url ~ "/calculators/" ~ p.slug %}
+{% block title %}{{ p.title }}{% endblock %}
+{% block description %}<meta name="description" content="{{ p.description }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ p.title }}">
+<meta property="og:description" content="{{ p.description }}">
+<meta property="og:url" content="{{ site_url }}/calculators/{{ p.slug }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ p.title }}">
+<meta name="twitter:description" content="{{ p.description }}">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/calculators/{{ p.slug }}">{% endblock %}
+
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [
+ {"@type": "WebPage",
+  "name": {{ p.title|tojson }},
+  "url": "{{ site_url }}/calculators/{{ p.slug }}",
+  "description": {{ p.description|tojson }},
+  "inLanguage": "en",
+  "dateModified": "{{ build_date }}",
+  "isPartOf": {"@type": "WebPage", "name": "Spain Rental Yield Calculator", "url": "{{ site_url }}/calculators/rental-yield"},
+  "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}},
+ {"@type": "FAQPage", "mainEntity": [
+{% for q, a in p.faqs %}  {"@type": "Question", "name": {{ q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ a|tojson }}}}{% if not loop.last %},{% endif %}
+{% endfor %} ]}
+]}
+</script>
+ <div class="calc ry-calc ns-calc ns-seo">
+  <h1>{{ p.h1 }}</h1>
+  <p class="subtitle">{{ p.answer }}</p>
+  <p class="field-note ns-seo-assume">Assumes a {{ p.calc_year }} resale flat in Madrid bought without a mortgage, IBI of {{ p.ibi }} a year, a {{ p.community }} monthly community fee, 5% vacancy, 5% maintenance, 2% closing costs and a Spanish resident taxed at 30% on rent after the 50% reduction. Change any of it in the calculator.</p>
+
+  <div class="ns-kpis ns-seo-kpis">
+   <div class="ns-kpi">
+    <p class="kicker">Net yield, resident</p>
+    <p class="val">{{ p.net_res }}</p>
+    <p class="sub2">after costs and tax, year 1</p>
+   </div>
+   <div class="ns-kpi">
+    <p class="kicker">Gross yield</p>
+    <p class="val">{{ p.gross }}</p>
+    <p class="sub2">{{ p.rent }} a month, {{ p.annual_rent }} a year</p>
+   </div>
+   <div class="ns-kpi">
+    <p class="kicker">Cash flow a month</p>
+    <p class="val">{{ p.cash_flow }}</p>
+    <p class="sub2">after costs and tax, no mortgage</p>
+   </div>
+  </div>
+
+  <p class="ns-seo-cta"><a class="calc-btn" href="/calculators/rental-yield?{{ p.query }}">Personalise this calculation</a></p>
+
+  <div class="card ns-regions ns-seo-regions">
+   <p class="calc-kicker">Rent needed on a {{ p.amount_label }} property</p>
+   <p class="field-note">Monthly rent for each target gross yield and the net yield it leaves, by tax status. The {{ p.ref_pct }} row is the Spanish average.</p>
+   <div class="ry-table-wrap" tabindex="0" role="region" aria-label="Rent needed by target yield, scrolls horizontally">
+    <table class="ry-table ns-reg-table">
+     <thead><tr><th>Gross yield</th><th class="num">Rent a month</th><th class="num">Rent a year</th><th class="num">Net, resident</th><th class="num">Net, EU/EEA</th><th class="num">Net, non-EU</th></tr></thead>
+     <tbody>
+{% for t in p.targets %}      <tr{% if t.is_ref %} class="ns-cur"{% endif %}><td>{{ t.label }}</td><td class="num">{{ t.rent }}</td><td class="num">{{ t.annual }}</td><td class="num">{{ t.net_res }}</td><td class="num">{{ t.net_eu }}</td><td class="num">{{ t.net_non_eu }}</td></tr>
+{% endfor %}     </tbody>
+    </table>
+   </div>
+  </div>
+
+  <div class="card sheet ns-seo-sheet">
+   <table>
+    <caption class="ns-seo-cap">From {{ p.rent }} a month to net yield</caption>
+    <thead><tr><th>Item</th><th class="num">Per year</th></tr></thead>
+    <tbody>
+     <tr class="row-h"><td>Rent after 5% vacancy, minus running costs</td><td class="num">{{ p.noi }}</td></tr>
+     <tr><td class="ind">Rental tax, Spanish resident</td><td class="num">−{{ p.tax_res }}</td></tr>
+     <tr><td class="ind">Rental tax, EU/EEA non-resident (19%)</td><td class="num">−{{ p.tax_eu }}</td></tr>
+     <tr><td class="ind">Rental tax, non-EU non-resident (24% on gross rent)</td><td class="num">−{{ p.tax_non_eu }}</td></tr>
+     <tr class="row-h"><td>Net yield: resident / EU/EEA / non-EU</td><td class="num">{{ p.net_res }} / {{ p.net_eu }} / {{ p.net_non_eu }}</td></tr>
+     <tr><td class="ind">Purchase tax (ITP, Madrid)</td><td class="num">{{ p.tax_madrid }}</td></tr>
+     <tr><td class="ind">Closing costs (2%)</td><td class="num">{{ p.closing }}</td></tr>
+     <tr><td class="ind">Total invested</td><td class="num">{{ p.upfront }}</td></tr>
+     <tr><td class="ind">IRR over 30 years, incl. sale</td><td class="num">{{ p.irr }}</td></tr>
+    </tbody>
+   </table>
+  </div>
+
+  <div class="card ns-regions ns-seo-regions">
+   <p class="calc-kicker">{{ p.amount_label }} property in every region</p>
+   <p class="field-note">Net yield for a resident at {{ p.rent }} a month, best first. Madrid is highlighted. Only the purchase tax changes.</p>
+   <div class="ry-table-wrap" tabindex="0" role="region" aria-label="Net yield by region, scrolls horizontally">
+    <table class="ry-table ns-reg-table">
+     <thead><tr><th>Region</th><th class="num">Purchase tax</th><th class="num">Total invested</th><th class="num">Net yield</th><th class="num">Versus Madrid</th></tr></thead>
+     <tbody>
+{% for r in p.regions %}      <tr{% if r.is_ref %} class="ns-cur"{% endif %}><td>{{ r.name }}</td><td class="num">{{ r.tax }}</td><td class="num">{{ r.upfront }}</td><td class="num">{{ r.net }}</td><td class="num{% if r.up %} ns-up{% elif r.down %} ns-down{% endif %}">{{ r.diff }}</td></tr>
+{% endfor %}     </tbody>
+    </table>
+   </div>
+  </div>
+
+  <nav class="ns-seo-nav" aria-label="Neighbouring prices">
+{% if p.prev %}   <a class="ns-seo-prev" href="/calculators/{{ p.prev.slug }}" rel="prev"><span>Lower price</span> {{ p.prev.label }}</a>{% else %}   <span></span>{% endif %}
+{% if p.next %}   <a class="ns-seo-next" href="/calculators/{{ p.next.slug }}" rel="next"><span>Higher price</span> {{ p.next.label }}</a>{% endif %}
+  </nav>
+
+  <div class="card faq-card">
+   <h2>Frequently Asked Questions</h2>
+{% for q, a in p.faqs %}   <details class="faq-item"><summary>{{ q }}</summary><p>{{ a }}</p></details>
+{% endfor %}  </div>
+
+{% include "partials/rental-yield-links.html" %}
+
+  {% set field_id = "calc-rental-email" %}{% set form_kind = "calc-rental" %}{% set variant = "cta-form-card--compact" %}{% set indent = "  " %}{% include "partials/cta-form-card.html" %}
+
+  <div class="card seobox">
+   <h2>More Spain calculators</h2>
+   <ul class="related-calcs">
+    <li><a href="/calculators/rental-yield">Rental Yield Calculator</a> — your own rent, mortgage, tax status, cash-on-cash and IRR.</li>
+    <li><a href="/calculators/property-buying-cost">Property Buying Cost Calculator</a> — ITP, IVA/IGIC, AJD, notary and registry fees by region.</li>
+    <li><a href="/calculators/net-salary">Net Salary Calculator</a> — your payslip after IRPF and Social Security, every region compared.</li>
+    <li><a href="/calculators/autonomo-tax">Autónomo Tax Calculator</a> — quota and IRPF if you are self-employed.</li>
+    <li><a href="/calculators/electricity-bill">Electricity Bill Calculator</a> — estimate the monthly bill and compare tariffs.</li>
+   </ul>
+   <p class="src">Estimate based on {{ p.calc_year }} rules: regional ITP tables, art. 23.2 LIRPF reduction, IRNR rates of 19% and 24%. Rent is rounded to €5. Not tax advice. Last tax data verification: October 2026.</p>
+  </div>
+ </div>
+<script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
+{% endblock %}
