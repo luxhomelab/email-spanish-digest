@@ -1540,10 +1540,26 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 .ry-calc .ry-check input[type="checkbox"] { flex: none; width: 22px; height: 22px; }
 .ry-calc .seg { flex-wrap: nowrap; }
 .ry-calc .seg button { flex: 1 1 0; min-height: 44px; font-size: 13px; line-height: 1.25; }
+.ry-calc .ry-seg button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; padding: 6px 8px; white-space: nowrap; }
+.ry-calc .ry-seg button small { font-size: 11px; font-weight: 500; color: #8A94A0; }
+.ry-calc .ry-seg button.on small { color: #6C7A89; }
+/* Paired fields: labels may wrap to different heights, keep the inputs on one line. */
+.ry-calc .field-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.ry-calc .field-row > .field { display: flex; flex-direction: column; justify-content: flex-end; min-width: 0; }
+.ry-calc label .sub { white-space: nowrap; }
+.calc .ry-field-err { margin: 6px 0 0 0; font-size: 13px; line-height: 18px; font-weight: 600; color: #AA151B; }
+.ry-calc input[aria-invalid="true"] { border-color: #AA151B; }
+.ry-calc .faq-card summary { min-height: 44px; }
+.ry-calc .share-wrap .share-btn, .ry-calc .share-wrap .share-copy { min-height: 44px; }
 .calc .ry-reset { display: inline-flex; align-items: center; min-height: 44px; margin-top: 12px; padding: 0; background: none; border: none; color: #6C7A89; font-size: 14px; font-weight: 600; text-decoration: underline; cursor: pointer; }
 .calc .ry-reset:hover { color: #AA151B; }
-.ry-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
-.ry-kpi { background: #FFFDF8; border: 1px solid #EFE7D8; border-radius: 14px; padding: 16px 18px; min-width: 0; }
+/* Small KPI cards: 2×2, or one row of 4 when the results column is wide enough (never 3+1). */
+.ry-results { container-type: inline-size; }
+.ry-kpis { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@container (min-width: 620px) { .ry-kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+/* Each card spans 3 subgrid rows (kicker / value / caption) so values line up across a row
+   even when a kicker or caption wraps. */
+.ry-kpi { display: grid; grid-row: span 3; grid-template-rows: subgrid; row-gap: 0; align-content: start; background: #FFFDF8; border: 1px solid #EFE7D8; border-radius: 14px; padding: 16px 18px; min-width: 0; }
 .ry-kpi p { margin: 0; }
 .ry-kpi .kicker { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6C7A89; }
 .ry-kpi .val { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; color: #0A5C2E; margin: 4px 0 2px 0; overflow-wrap: anywhere; }
@@ -1559,7 +1575,7 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 .calc .mini-profit .val.neg { color: #8A1A1A; }
 .calc .mini .val { overflow-wrap: anywhere; }
 .calc .dot-equity { background: #0E7A3D; } .calc .dot-cash { background: #E8933C; }
-.ry-chart-card .legend { margin-bottom: 8px; }
+.calc .ry-chart-card .legend { margin-bottom: 8px; column-gap: 16px; row-gap: 6px; }
 .ry-chart { width: 100%; min-width: 0; }
 .ry-chart svg { display: block; width: 100%; max-width: 100%; touch-action: pan-y; cursor: crosshair; }
 .calc .ry-chart-read { min-height: 40px; margin: 8px 0 0 0; font-size: 13px; line-height: 20px; font-weight: 600; color: #3C4858; }
@@ -1585,7 +1601,7 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
  .calc .ry-jump { display: inline-flex; }
 }
 @media (max-width: 640px) {
- .ry-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+ .ry-kpis { gap: 10px; }
  .ry-kpi { padding: 14px 14px; }
  .ry-kpi .val { font-size: 22px; }
  .ry-kpi-main { padding: 20px; }
@@ -1594,7 +1610,7 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 }
 @media (max-width: 520px) {
  .calc .ry-form { padding: 4px 16px 16px 16px; }
- .calc .ry-form .field-row { grid-template-columns: 1fr 1fr; gap: 10px; }
+ .calc .ry-form .field-row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
  .calc .ry-chart-card { padding: 16px 12px; }
 }
 @media (max-width: 340px) {

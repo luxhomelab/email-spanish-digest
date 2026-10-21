@@ -1,4 +1,5 @@
 import { simulateProjection } from './rental-yield-calc.js'
+import { REGIONS } from './property-buying-cost-calc.js'
 import {
   sanitizeState, parseStateFromParams, stateToParams, clampField,
   DEFAULTS, FIELD_LIMITS,
@@ -83,6 +84,12 @@ function syncSeg(type) {
   })
 }
 
+// New builds pay IGIC instead of IVA in regions that define an igic_rate (Canarias).
+function syncNewBuildLabel(regionId) {
+  const region = REGIONS.find(r => r.id === regionId)
+  $('f-newbuild-tax').textContent = region && region.igic_rate != null ? 'IGIC + AJD' : 'IVA + AJD'
+}
+
 function applyVisibility(state) {
   const show = {
     renovation: state.useRenovation,
@@ -136,6 +143,16 @@ function showError(msg) {
   $('r-error').hidden = false
   $('r-error-text').textContent = msg
   $('r-results').hidden = true
+}
+
+// Inline validation message under the purchase price field.
+function setPriceError(msg) {
+  const err = $('e-purchasePrice')
+  const input = $('f-purchasePrice')
+  err.textContent = msg || ''
+  err.hidden = !msg
+  if (msg) input.setAttribute('aria-invalid', 'true')
+  else input.removeAttribute('aria-invalid')
 }
 
 function setSigned(el, value) {
@@ -306,15 +323,19 @@ function renderChart(r) {
 
 function render(state) {
   applyVisibility(state)
+  syncNewBuildLabel(state.regionId)
   if (!(state.purchasePrice >= MIN_PRICE)) {
-    showError(`Please enter a valid purchase price (minimum ${MIN_PRICE.toLocaleString('en-US')} €)`)
+    const min = `${MIN_PRICE.toLocaleString('en-US')} €`
+    setPriceError(`Minimum ${min}.`)
+    showError(`Enter a purchase price of at least ${min} to see the results.`)
     return
   }
+  setPriceError('')
   let r
   try {
     r = simulateProjection(state)
   } catch (e) {
-    showError(e.message)
+    showError(`Calculation error: ${e.message}.`)
     return
   }
   lastResult = r
