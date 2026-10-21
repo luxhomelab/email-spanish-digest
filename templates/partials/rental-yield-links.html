@@ -1,0 +1,11 @@
+{# Link grid to the programmatic rental yield pages. Expects `ry_links` (list) and optional `current_slug` (skipped). #}
+{% if ry_links %}
+<div class="card seobox ns-links">
+ <section aria-labelledby="ry-links-price">
+  <h2 id="ry-links-price">Rental yield by purchase price</h2>
+  <ul class="ns-chips">
+{% for l in ry_links if l.slug != current_slug %}   <li><a href="/calculators/{{ l.slug }}" title="{{ l.title }}">{{ l.label }}</a></li>
+{% endfor %}  </ul>
+ </section>
+</div>
+{% endif %}
