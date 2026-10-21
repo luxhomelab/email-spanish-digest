@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% block body_class %} class="page-calculator"{% endblock %}
+{% set page_url = site_url ~ "/calculators/" ~ p.slug %}
+{% block title %}{{ p.title }}{% endblock %}
+{% block description %}<meta name="description" content="{{ p.description }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ p.title }}">
+<meta property="og:description" content="{{ p.description }}">
+<meta property="og:url" content="{{ site_url }}/calculators/{{ p.slug }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ p.title }}">
+<meta name="twitter:description" content="{{ p.description }}">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/calculators/{{ p.slug }}">{% endblock %}
+
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [
+ {"@type": "WebPage",
+  "name": {{ p.title|tojson }},
+  "url": "{{ site_url }}/calculators/{{ p.slug }}",
+  "description": {{ p.description|tojson }},
+  "inLanguage": "en",
+  "dateModified": "{{ build_date }}",
+  "isPartOf": {"@type": "WebPage", "name": "Spain Net Salary Calculator", "url": "{{ site_url }}/calculators/net-salary"},
+  "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}},
+ {"@type": "FAQPage", "mainEntity": [
+{% for q, a in p.faqs %}  {"@type": "Question", "name": {{ q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ a|tojson }}}}{% if not loop.last %},{% endif %}
+{% endfor %} ]}
+]}
+</script>
+ <div class="calc ry-calc ns-calc ns-seo">
+  <h1>{{ p.h1 }}</h1>
+  <p class="subtitle">{{ p.answer }}</p>
+  <p class="field-note ns-seo-assume">Assumes {{ p.calc_year }} rules, living in Madrid, no dependants, a permanent contract and under 65. Net pay here is what you keep after the Renta; your payslip shows slightly {% if p.refund_value > 0 %}less{% else %}more{% endif %} until it is settled.</p>
+
+  <div class="ns-kpis ns-seo-kpis">
+   <div class="ns-kpi">
+    <p class="kicker">Net a month, 12 payments</p>
+    <p class="val">{{ p.net_month }}</p>
+    <p class="sub2">{{ p.payslip12 }} on the payslip</p>
+   </div>
+   <div class="ns-kpi">
+    <p class="kicker">Net a month, 14 payments</p>
+    <p class="val">{{ p.payslip14 }}</p>
+    <p class="sub2">plus 2 extra payslips of {{ p.extra14 }}</p>
+   </div>
+   <div class="ns-kpi">
+    <p class="kicker">Net a year</p>
+    <p class="val">{{ p.net_year }}</p>
+    <p class="sub2">from {{ p.gross }} gross</p>
+   </div>
+  </div>
+
+  <p class="ns-seo-cta"><a class="calc-btn" href="/calculators/net-salary?{{ p.query }}">Personalise this calculation</a></p>
+
+  <div class="card sheet ns-seo-sheet">
+   <table>
+    <caption class="ns-seo-cap">From {{ p.gross }} gross to net</caption>
+    <thead><tr><th>Item</th><th class="num">Per year</th></tr></thead>
+    <tbody>
+     <tr class="row-h"><td>Gross salary</td><td class="num">{{ p.gross }}</td></tr>
+     <tr><td class="ind">Employee Social Security (6.5%)</td><td class="num">−{{ p.ss }}</td></tr>
+     <tr><td class="ind">IRPF income tax</td><td class="num">−{{ p.irpf }}</td></tr>
+     <tr class="row-h"><td>Net pay after the Renta</td><td class="num">{{ p.net_year }}</td></tr>
+     <tr><td class="ind">Effective rate (Social Security + IRPF)</td><td class="num">{{ p.effective }}</td></tr>
+{% if p.marginal %}     <tr><td class="ind">Tax on your next euro (IRPF)</td><td class="num">{{ p.marginal }}</td></tr>
+{% endif %}     <tr><td class="ind">IRPF withheld on your payslips</td><td class="num">{{ p.withholding }}%</td></tr>
+{% if p.refund_value > 0 %}     <tr><td class="ind">Expected Renta refund</td><td class="num">+{{ p.refund }}</td></tr>
+{% elif p.refund_value < 0 %}     <tr><td class="ind">Expected Renta payment</td><td class="num">−{{ p.refund }}</td></tr>
+{% endif %}     <tr><td class="ind">What the employer pays in total</td><td class="num">{{ p.employer }}</td></tr>
+    </tbody>
+   </table>
+  </div>
+
+{% if p.alt %}  <div class="card seobox ns-seo-alt">
+   <h2>If your {{ p.amount_label }} is paid in 14 payments</h2>
+   <p>{{ p.amount_label }} × 14 payments is {{ p.alt.gross }} a year. That leaves {{ p.alt.payslip }} on each of 12 regular payslips plus two extra payslips of {{ p.alt.extra }}, or {{ p.alt.net_year }} net a year ({{ p.alt.net_month }} a month on average, after the Renta).</p>
+  </div>
+{% endif %}
+  <div class="card ns-regions ns-seo-regions">
+   <p class="calc-kicker">{{ p.gross }} gross in every region</p>
+   <p class="field-note">Net pay after the Renta, best first. Madrid is highlighted.</p>
+   <div class="ry-table-wrap" tabindex="0" role="region" aria-label="Net pay by region, scrolls horizontally">
+    <table class="ry-table ns-reg-table">
+     <thead><tr><th>Region</th><th class="num">Net a year</th><th class="num">Net a month</th><th class="num">IRPF</th><th class="num">Versus Madrid</th></tr></thead>
+     <tbody>
+{% for r in p.regions %}      <tr{% if r.is_ref %} class="ns-cur"{% endif %}><td>{{ r.name }}</td><td class="num">{{ r.net_year }}</td><td class="num">{{ r.net_month }}</td><td class="num">{{ r.irpf }}</td><td class="num{% if r.diff.startswith('+') %} ns-up{% elif r.diff.startswith('−') %} ns-down{% endif %}">{{ r.diff }}</td></tr>
+{% endfor %}     </tbody>
+    </table>
+   </div>
+  </div>
+
+  <nav class="ns-seo-nav" aria-label="Neighbouring wages">
+{% if p.prev %}   <a class="ns-seo-prev" href="/calculators/{{ p.prev.slug }}" rel="prev"><span>Lower</span> {{ p.prev.label }}</a>{% else %}   <span></span>{% endif %}
+{% if p.next %}   <a class="ns-seo-next" href="/calculators/{{ p.next.slug }}" rel="next"><span>Higher</span> {{ p.next.label }}</a>{% endif %}
+  </nav>
+
+  <div class="card faq-card">
+   <h2>Frequently Asked Questions</h2>
+{% for q, a in p.faqs %}   <details class="faq-item"><summary>{{ q }}</summary><p>{{ a }}</p></details>
+{% endfor %}  </div>
+
+{% include "partials/net-salary-links.html" %}
+
+  {% set field_id = "calc-salary-email" %}{% set form_kind = "calc-salary" %}{% set variant = "cta-form-card--compact" %}{% set indent = "  " %}{% include "partials/cta-form-card.html" %}
+
+  <div class="card seobox">
+   <h2>More Spain calculators</h2>
+   <ul class="related-calcs">
+    <li><a href="/calculators/net-salary">Net Salary Calculator</a> — your own region, family, flexible pay and the Beckham law.</li>
+    <li><a href="/calculators/autonomo-tax">Autónomo Tax Calculator</a> — compare your salary with working as self-employed: quota and IRPF.</li>
+    <li><a href="/calculators/property-buying-cost">Property Buying Cost Calculator</a> — ITP, IVA, AJD, notary and registry fees by region.</li>
+    <li><a href="/calculators/rental-yield">Rental Yield Calculator</a> — net yield, cash flow and IRR of a rental flat after tax.</li>
+    <li><a href="/calculators/electricity-bill">Electricity Bill Calculator</a> — estimate your monthly bill and compare tariffs.</li>
+   </ul>
+   <p class="src">Estimate based on the {{ p.calc_year }} Social Security rates and AEAT IRPF scales; regional deductions are not included. Not tax advice.</p>
+  </div>
+ </div>
+<script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
+{% endblock %}

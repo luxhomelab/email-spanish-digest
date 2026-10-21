@@ -601,7 +601,7 @@ def load_quiz_cards(homepage=False):
     return cards
 
 
-def render_llms_txt(digests, articles=()):
+def render_llms_txt(digests, articles=(), salary_pages=()):
     latest = digests[0]["date"] if digests else "n/a"
     lines = [
         "# Spanified — Spain Daily",
@@ -620,6 +620,7 @@ def render_llms_txt(digests, articles=()):
         "",
         "## Calculators (2026 tax data)",
         f"- Net salary (gross to net, payslip, IRPF withholding vs Renta, all regions): {SITE_URL}/calculators/net-salary",
+        *([f"- Net salary for common gross wages ({len(salary_pages)} pages, e.g. {SITE_URL}{salary_pages[0]}); index on {SITE_URL}/calculators/net-salary"] if salary_pages else []),
         f"- Autónomo tax (self-employed quota and IRPF): {SITE_URL}/calculators/autonomo-tax",
         f"- Property buying cost (ITP, IVA/IGIC, AJD by region): {SITE_URL}/calculators/property-buying-cost",
         f"- Rental yield (net yield, cash flow, IRR after tax): {SITE_URL}/calculators/rental-yield",
@@ -719,12 +720,218 @@ def render_calculators(env):
         # Fiscal year of the calculator data (SS quotas, IRPF scales). Bump ONLY
         # together with the engine data (quotas/brackets/deductions), never alone.
         calc_year = 2026
-        output = template.render(crumbs=crumbs, js_version=js_version(), share=share, calc_year=calc_year)
+        output = template.render(crumbs=crumbs, js_version=js_version(), share=share, calc_year=calc_year,
+                                 ns_links=net_salary_links(), current_slug="")
         dest = os.path.join(OUT_DIR, rel_dest)
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         with open(dest, "w", encoding="utf-8") as fh:
             fh.write(output)
         print(f"  wrote {rel_dest}")
+
+
+NET_SALARY_PAGES_JSON = os.path.join(SCRIPT_DIR, "data", "net-salary-pages.json")
+NET_SALARY_GRID_SCRIPT = os.path.join(SCRIPT_DIR, "scripts", "net-salary-grid.mjs")
+NET_SALARY_TEMPLATE = os.path.join(TEMPLATES_DIR, "calculator-net-salary.html")
+
+
+def net_salary_slug(kind, amount):
+    """URL slug (flat sibling of /calculators/net-salary) for an annual or monthly page."""
+    return f"net-salary-{amount}-euros" if kind == "annual" else f"net-salary-{amount}-euros-per-month"
+
+
+def eur(x):
+    """English-style whole-euro amount: 30000 -> '€30,000'."""
+    return f"€{int(round(x)):,}"
+
+
+def pct(x, digits=1):
+    return f"{x * 100:.{digits}f}%"
+
+
+def load_net_salary_pages():
+    """Amount lists for the programmatic net-salary pages (data/net-salary-pages.json)."""
+    with open(NET_SALARY_PAGES_JSON, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def net_salary_links(pages=None):
+    """Link-grid items for partials/net-salary-links.html (annual and monthly chips)."""
+    pages = pages or load_net_salary_pages()
+    return {
+        "annual": [
+            {"amount": a, "slug": net_salary_slug("annual", a), "label": eur(a),
+             "title": f"{eur(a)} gross to net in Spain"}
+            for a in pages["annual"]
+        ],
+        "monthly": [
+            {"amount": m, "slug": net_salary_slug("monthly", m), "label": f"{eur(m)}/mo",
+             "title": f"{eur(m)} gross per month to net in Spain"}
+            for m in pages["monthly"]
+        ],
+    }
+
+
+def net_salary_region_names():
+    """Region id -> display name, parsed from the hub's <select id="f-region"> (single mapping)."""
+    with open(NET_SALARY_TEMPLATE, encoding="utf-8") as fh:
+        text = fh.read()
+    select = re.search(r'<select id="f-region">(.*?)</select>', text, re.S).group(1)
+    return dict(re.findall(r'<option value="([^"]+)"[^>]*>([^<]+)</option>', select))
+
+
+def compute_net_salary_grid():
+    """Run scripts/net-salary-grid.mjs with node; fails loudly when node or the script is missing."""
+    import subprocess
+
+    if shutil.which("node") is None:
+        raise RuntimeError("node is required to build the net salary pages but was not found on PATH")
+    res = subprocess.run(
+        ["node", NET_SALARY_GRID_SCRIPT, NET_SALARY_PAGES_JSON],
+        check=True, stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding="utf-8", cwd=SCRIPT_DIR,
+    )
+    return json.loads(res.stdout)
+
+
+def _net_salary_regions(entry, names, calc_year):
+    regions = entry["regions"]
+    ref = next(r for r in regions if r["region"] == "madrid")
+    rows = []
+    for r in regions:
+        rows.append({
+            "id": r["region"], "name": names.get(r["region"], r["region"]),
+            "net_year": eur(r["annualTaxNet"]), "net_month": eur(r["monthlyNet"]),
+            "irpf": eur(r["irpf"]),
+            "diff": (("+" if r["annualTaxNet"] >= ref["annualTaxNet"] else "−")
+                     + eur(abs(r["annualTaxNet"] - ref["annualTaxNet"]))) if r["region"] != "madrid" else "reference",
+            "is_ref": r["region"] == "madrid",
+        })
+    common = [r for r in regions if r["region"] not in ("ceuta", "melilla")]
+    return rows, names.get(common[0]["region"]), names.get(common[-1]["region"]), common[0], common[-1], ref
+
+
+def net_salary_page_context(kind, item, neighbours, names, calc_year):
+    """Everything the amount template shows, computed once and formatted here."""
+    amount = item["amount"]
+    monthly = kind == "monthly"
+    e = item["x12"] if monthly else item
+    p12, p14 = e["p12"], e["p14"]
+    gross = e["gross"]
+    rows, best_name, worst_name, best, worst, ref = _net_salary_regions(e, names, calc_year)
+    m_net = p12["annualTaxNet"] / 12
+    ctx = {
+        "kind": kind, "amount": amount, "slug": net_salary_slug(kind, amount),
+        "amount_label": eur(amount) + ("/mo" if monthly else ""),
+        "crumb_label": eur(amount) + (" per month" if monthly else ""),
+        "gross": eur(gross), "gross_month": eur(gross / 12),
+        "net_month": eur(m_net), "net_year": eur(p12["annualTaxNet"]),
+        "payslip12": eur(p12["payslipRegular"]), "payslip14": eur(p14["payslipRegular"]),
+        "extra14": eur(p14["payslipExtra"]),
+        "ss": eur(p12["ssTotal"]), "irpf": eur(p12["irpfTotal"]), "withheld": eur(gross - p12["ssTotal"] - p12["netAnnual"]),
+        "effective": pct(p12["effectiveRate"]), "marginal": pct(p12["marginalRate"]) if p12["marginalRate"] is not None else None,
+        "withholding": f"{p12['withholdingRate']:.2f}%".rstrip("0").rstrip("."),
+        "employer": eur(p12["employerCost"]),
+        "refund_value": p12["refund"], "refund": eur(abs(p12["refund"])),
+        "regions": rows, "best": best_name, "worst": worst_name,
+        "best_net": eur(best["annualTaxNet"]), "worst_net": eur(worst["annualTaxNet"]),
+        "spread": eur(best["annualTaxNet"] - worst["annualTaxNet"]),
+        "ceuta_net": eur(next(r for r in e["regions"] if r["region"] == "ceuta")["annualTaxNet"]),
+        "query": item["query"], "calc_year": calc_year,
+        "prev": neighbours[0], "next": neighbours[1],
+    }
+    if monthly:
+        a14 = item["x14"]["p14"]
+        ctx["alt"] = {
+            "gross": eur(a14["gross"]), "payslip": eur(a14["payslipRegular"]), "extra": eur(a14["payslipExtra"]),
+            "net_year": eur(a14["annualTaxNet"]), "net_month": eur(a14["annualTaxNet"] / 12),
+        }
+        title_core = f"{eur(amount)} Gross per Month to Net in Spain ({calc_year}): {eur(m_net)}"
+        desc = (f"{eur(amount)} gross a month ({eur(gross)} a year) leaves {eur(m_net)} net a month in Spain "
+                f"after Social Security and IRPF. Madrid, no dependants. Compare 14 payments and every region.")
+        ctx["answer"] = (f"{eur(amount)} gross a month, paid in 12 payments, is {eur(gross)} a year and leaves about "
+                         f"{eur(m_net)} net a month in {calc_year}.")
+    else:
+        title_core = f"{eur(amount)} Gross to Net in Spain ({calc_year}): {eur(m_net)}/month"
+        desc = (f"{eur(amount)} gross a year leaves {eur(m_net)} net a month on 12 payments, or {eur(p14['payslipRegular'])} plus "
+                f"two of {eur(p14['payslipExtra'])} on 14. Madrid, no dependants. Check your region.")
+        ctx["answer"] = (f"{eur(amount)} gross a year leaves about {eur(m_net)} net a month on 12 payments in {calc_year}, "
+                         f"or {eur(p12['annualTaxNet'])} a year.")
+    ctx["title"] = title_core + " | Spanified"
+    ctx["h1"] = title_core
+    ctx["description"] = desc
+    ctx["faqs"] = net_salary_faqs(ctx, p12, p14)
+    return ctx
+
+
+def net_salary_faqs(c, p12, p14):
+    a = c["amount_label"] if c["kind"] == "annual" else eur(c["amount"]) + " a month"
+    g = c["gross"]
+    refund = (f"Probably. On a {g} salary the payslip withholding is slightly higher than the tax you owe, so the Renta returns about "
+              f"{c['refund']} a year in Madrid." if c["refund_value"] > 0 else
+              f"Probably not. On a {g} salary the payslip withholding is slightly lower than the tax you owe, so expect to pay about "
+              f"{c['refund']} with the Renta in Madrid.")
+    if abs(c["refund_value"]) < 1:
+        refund = f"Roughly break-even. On a {g} salary the payslip withholding is almost exactly the tax you owe in Madrid."
+    return [
+        (f"How much is {a} gross after tax in Spain?",
+         f"{g} gross a year leaves {c['net_year']} net a year, about {c['net_month']} a month on 12 payments, after "
+         f"{c['ss']} of employee Social Security and {c['irpf']} of IRPF ({c['calc_year']} rules, Madrid, no dependants, permanent contract)."),
+        (f"Is it better to get 12 or 14 payments on {g}?",
+         f"The yearly total is the same. On 12 payments you get {c['payslip12']} a month on your payslip. On 14 payments you get "
+         f"{c['payslip14']} for 12 months plus two extra payslips of {c['extra14']}, usually in June and December."),
+        (f"Which region pays the least tax on {g}?",
+         f"Ceuta and Melilla pay least because they only owe 40% of the IRPF ({c['ceuta_net']} net a year). Among the other regions "
+         f"{c['best']} leaves the most ({c['best_net']}) and {c['worst']} the least ({c['worst_net']}), a gap of {c['spread']} a year."),
+        (f"Will I get a Renta refund on {g}?", refund + " The result depends on your region and family situation, so use the calculator for your own case."),
+    ]
+
+
+def render_net_salary_pages(env, grid=None):
+    """Render calculators/net-salary-{N}-euros[-per-month].html for every amount.
+
+    Figures come from scripts/net-salary-grid.mjs (the browser calculator modules run in
+    node), so the tax engine stays a single source of truth. Raises when node is missing:
+    the build must never silently drop these pages from the sitemap.
+    Returns the list of URL paths (e.g. "/calculators/net-salary-30000-euros").
+    """
+    import glob
+
+    calc_dir = os.path.join(OUT_DIR, "calculators")
+    os.makedirs(calc_dir, exist_ok=True)
+    # Clear stale pages so removed amounts don't linger.
+    for path in glob.glob(os.path.join(calc_dir, "net-salary-*-euros*.html")):
+        os.remove(path)
+
+    grid = grid or compute_net_salary_grid()
+    names = net_salary_region_names()
+    links = net_salary_links()
+    calc_year = 2026
+    template = env.get_template("calculator-net-salary-amount.html")
+    urls = []
+    for kind in ("annual", "monthly"):
+        items = grid[kind]
+        for i, item in enumerate(items):
+            def nb(j):
+                if 0 <= j < len(items):
+                    return {"label": eur(items[j]["amount"]) + ("/mo" if kind == "monthly" else ""),
+                            "slug": net_salary_slug(kind, items[j]["amount"])}
+                return None
+            ctx = net_salary_page_context(kind, item, (nb(i - 1), nb(i + 1)), names, calc_year)
+            crumbs = [
+                {"name": "Home", "url": "/"},
+                {"name": "Net Salary Calculator", "url": "/calculators/net-salary"},
+                {"name": ctx["crumb_label"], "url": f"/calculators/{ctx['slug']}", "current": True},
+            ]
+            calc_url = f"{SITE_URL}/calculators/{ctx['slug']}"
+            output = template.render(
+                p=ctx, crumbs=crumbs, js_version=js_version(), calc_year=calc_year,
+                share=share_links(calc_url, ctx["title"]), ns_links=links, current_slug=ctx["slug"],
+                build_date=datetime.now().strftime("%Y-%m-%d"),
+            )
+            with open(os.path.join(calc_dir, ctx["slug"] + ".html"), "w", encoding="utf-8") as fh:
+                fh.write(output)
+            urls.append(f"/calculators/{ctx['slug']}")
+    print(f"  wrote {len(urls)} net salary amount pages")
+    return urls
 
 
 def render_quizzes(env, proof=None):
@@ -1048,7 +1255,7 @@ def render_categories(env, digests):
     return sorted(cats.keys())
 
 
-def render_sitemap(digests, categories=(), articles=()):
+def render_sitemap(digests, categories=(), articles=(), salary_pages=()):
     urls = [(SITE_URL + "/", None)] + [
         (SITE_URL + "/" + name[:-len(".html")], None)
         for name in STATIC_PAGES
@@ -1073,6 +1280,8 @@ def render_sitemap(digests, categories=(), articles=()):
     for slug in categories:
         urls.append((SITE_URL + f"/category/{slug}", None))
     urls.append((SITE_URL + "/calculators/net-salary", None))
+    for path in salary_pages:
+        urls.append((SITE_URL + path, None))
     urls.append((SITE_URL + "/calculators/autonomo-tax", None))
     urls.append((SITE_URL + "/calculators/property-buying-cost", None))
     urls.append((SITE_URL + "/calculators/rental-yield", None))
@@ -1490,11 +1699,14 @@ def main():
     print("Building category pages...")
     categories = render_categories(env, digests)
 
+    print("Building net salary amount pages...")
+    salary_pages = render_net_salary_pages(env)
+
     print("Building sitemap...")
-    render_sitemap(digests, categories, articles)
+    render_sitemap(digests, categories, articles, salary_pages)
 
     print("Writing llms.txt...")
-    render_llms_txt(digests, articles)
+    render_llms_txt(digests, articles, salary_pages)
 
     print("Building podcast feed...")
     render_podcast_feed(episodes, {d["date"] for d in digests})
