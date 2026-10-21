@@ -1,0 +1,271 @@
+{
+  "items": [
+    {
+      "title": "Storm Adam kills six as Valencia approves aid",
+      "body": "Storm Adam has killed six people across Spain since October 17. Valencia's government approved €23.5 million in aid, including €6,000 for damaged main homes and €3,000 for second homes. Families who lost their main home can receive €800 a month for 12 months for rehousing.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/10/20/6ad7b3dffdddff6a428b45b5.html"
+        },
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/local/valencia/20261020/11663993/consell-aprueba-primer-paquete-ayudas-23-5-millones-euros-afectados-dana-adam.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "Proposed lease compensation faces likely parliamentary defeat",
+      "body": "Royal Decree-law 28/2026 is published, but entry into force awaits a parliamentary vote unlikely to pass. It would require landlords declining renewal to pay at least 12 months' rent for a similar home. After minimum terms, leases would renew for five years, or seven if the landlord is a legal entity, unless valid notice is given.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/20/confirmado-nuevo-decreto-incluye-indemnizaciones-inquilinos-casero-no-renueva-alquiler-2057837.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Supreme Court grants amnesty to four Catalan leaders",
+      "body": "The Supreme Court granted amnesty to former Catalan vice-president and ERC leader Oriol Junqueras and former Catalan ministers Raül Romeva, Jordi Turull, and Dolors Bassa. The ruling follows the Constitutional Court's endorsement of amnesty for embezzlement, the crime for which all four were convicted.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-supremo-amnistia-junqueras-romeva-turull-bassa-dirigentes-proces-condenados-malversacion-20261020125615.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Supreme Court requires interior visits for property valuations",
+      "body": "The Supreme Court ruled that Tax Agency experts must inspect a property's interior and exterior when valuing it. Cadastral records, Google Maps, and aerial photos alone are not enough. The ruling annuls a July 2024 judgment of the Extremadura High Court of Justice.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-10-20/supremo-exige-visita-inmueble-hacienda-1tps_4448701/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Government doubles housing funding for rent-cap regions",
+      "body": "The government approved €180 million for five regions applying the Ley de Vivienda (housing law), double the amount announced in September. The funds can support affordable housing and cover unpaid rent in 317 municipalities with about nine million residents.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/vivienda-duplica-subvencion-comunidades-aplican-ley-vivienda-180-millones_1_13599587.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Price rises outpace wages as bargaining stalls",
+      "body": "Inflation is outpacing average wage adjustments as collective bargaining stalls. Six in 10 sectoral or company pay agreements lack a clause that automatically adjusts wages when prices rise.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-10-21/la-brecha-entre-salarios-y-precios-se-ensancha-por-el-pico-de-la-inflacion-y-la-paralisis-en-los-convenios.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Court backs homebuyer tax relief during pregnancy",
+      "body": "The Supreme Court backed Madrid's 4% home transfer tax rate, rather than 6%, for families whose third child was conceived at the time of signing, provided the child is born alive. A large-family certificate need not exist at signing. Families who paid 6% in similar cases may seek refunds.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/fiscal/2026/10/21/rebaja-fiscal-compra-vivienda-tercer-hijo-camino.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Cabinet approves pension route for unmarried surviving partners",
+      "body": "The cabinet approved a Royal Decree-law that would give unmarried partners who had already claimed one year to access a widow's pension. It covers past deaths where the couple had children, lived together for over two years, and were not married or registered partners. Parliament must validate it within one month.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/epsocial/igualdad/noticia-parejas-hijos-fallecimientos-pasados-tendran-ano-acceder-pension-viudedad-si-reclamado-20261020140203.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Government guarantees 4.5% public-sector pay rise for January",
+      "body": "The government guaranteed a 4.5% pay rise from January 1, 2027, under its existing agreement covering more than three million public employees. Unions want formal approval before the November 29 election. An extra 0.5% for 2026 depends on year-end inflation reaching at least 1.5%.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/laboral-00346/noticia-gobierno-garantiza-sindicatos-sueldo-funcionarios-subira-45-enero-20261020194527.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Shared-custody parents win child maintenance tax ruling",
+      "body": "The Supreme Court ruled that parents with shared custody can deduct child maintenance payments in IRPF (personal income tax). The ruling corrects the Tax Agency's position. The Court rejected the idea that caring for children and paying their maintenance should mean a tax penalty.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/mis-derechos/2026-10-20/el-supremo-corrige-a-hacienda-los-padres-con-custodia-compartida-si-pueden-deducirse-el-irpf-de-la-pension-de-alimentos.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Arquia offers 3% on 12-month welcome deposits",
+      "body": "Arquia Banca's 12-month welcome deposit pays 3% annually on €10,000–€200,000 transferred from other banks, with applications open until October 30. Interest is paid at maturity; early closure forfeits all interest, and partial withdrawals are not allowed. Spain's deposit guarantee covers up to €100,000 per holder.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/ahorro/2026/10/21/6ad7fc6ee5fdea43348b456f.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Senate alliances become an election campaign battleground",
+      "body": "The PP and Vox are reportedly exploring a Senate alliance after PSOE and Frente Amplio registered a coalition seeking to end the PP's absolute majority. The Senate helps choose members of the Constitutional Court and other key bodies, which need reinforced majorities.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/senado-se-convierte-nuevo-campo-batalla-electoral-para-frenar-contrario-hacer-nombramientos-estrategicos_7051173_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Consulates verify voting rights under Ley de Nietos",
+      "body": "A total of 48 consular offices have wholly or partly verified voting eligibility for citizens naturalised under the Ley de Nietos (grandchildren's law). Under a Supreme Court ruling, only those verified as descendants of exiles can vote in the November 29, 2026, elections.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-casi-medio-centenar-consulados-remitido-ya-informacion-nacionalizaciones-ley-nietos-20261020130255.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Street protests divide parties during election campaign",
+      "body": "Street protests and a possible general strike have become campaign issues ahead of the November 29 election. The government sees left-wing mobilisation as helpful, while opponents criticise the protests and draw comparisons with France.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-10-21/la-calle-juega-en-campana-ayuso-se-lanza-contra-las-protestas-mientras-el-gobierno-abraza-incluso-la-huelga-general.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Does your pay rise automatically with inflation? A) Yes B) No C) Unsure",
+  "variant": "What happened in Spain while you were busy",
+  "headline": "What happened in Spain while you were busy",
+  "date": "2026-10-21",
+  "engagement_source": "generated",
+  "generated_at": "2026-10-21T06:02:41.724907+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 789,
+    "items_selected_pass1": 15,
+    "fact_sheets_extracted": 15,
+    "items_after_importance_filter": 15,
+    "items_in_digest": 14
+  },
+  "selection_reasons": {
+    "31": "Royal decree-law expands widow's pension to unregistered couples with children, plus new sick-leave rules; affects many residents and needs parliamentary validation",
+    "134": "Senate becomes the battleground of the 29 November general election, with PP-Vox list deals that decide key appointments (Constitutional Court, CGPJ)",
+    "26": "Supreme Court applies the amnesty to Junqueras and other procés leaders, a major legal ruling in a clash with the Constitutional Court",
+    "25": "Government guarantees a 4.5% civil servant pay rise from 1 January 2027, though without a date for approval",
+    "97": "Government approves €180M subsidy for the five regions that cap rents under the Housing Law",
+    "608": "Supreme Court bars the tax agency from valuing property using only cadastre and Google Maps, a precedent for property taxes",
+    "755": "Supreme Court allows the 4% reduced transfer tax on a home purchase when the third child is conceived but not yet born",
+    "680": "Supreme Court lets parents with shared custody deduct child maintenance in IRPF, a ruling that affects tax filers",
+    "314": "New housing decrees include compensation for tenants when the landlord does not renew the lease; affects the rental market",
+    "9": "Dana Adam kills six and floods Valencia, Alicante and other provinces, a natural disaster of national scale",
+    "447": "Valencian government approves a first €23.5M aid package for dana victims",
+    "772": "Banks raise deposit rates ahead of the 29 October ECB meeting, where a rate hike to 2.75% is expected; affects savers and mortgage holders",
+    "381": "Gap between wages and prices widens as inflation peaks and collective agreements stall",
+    "29": "Grandchildren-law naturalisations: 163,000 people in the voter census, with a Supreme Court order and a pending Constitutional Court decision",
+    "330": "Education strike in Madrid and the housing protests plus the 11 November general strike become a campaign issue, with national political impact",
+    "156": "Pope Leo XIV's visit to Spain generated almost €140M in economic impact, a positive and nationally significant story"
+  },
+  "selection_sources": [
+    {
+      "url": "https://www.europapress.es/epsocial/igualdad/noticia-parejas-hijos-fallecimientos-pasados-tendran-ano-acceder-pension-viudedad-si-reclamado-20261020140203.html",
+      "reason": "Royal decree-law expands widow's pension to unregistered couples with children, plus new sick-leave rules; affects many residents and needs parliamentary validation"
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/senado-se-convierte-nuevo-campo-batalla-electoral-para-frenar-contrario-hacer-nombramientos-estrategicos_7051173_0.html",
+      "reason": "Senate becomes the battleground of the 29 November general election, with PP-Vox list deals that decide key appointments (Constitutional Court, CGPJ)"
+    },
+    {
+      "url": "https://www.europapress.es/nacional/noticia-supremo-amnistia-junqueras-romeva-turull-bassa-dirigentes-proces-condenados-malversacion-20261020125615.html",
+      "reason": "Supreme Court applies the amnesty to Junqueras and other procés leaders, a major legal ruling in a clash with the Constitutional Court"
+    },
+    {
+      "url": "https://www.europapress.es/economia/laboral-00346/noticia-gobierno-garantiza-sindicatos-sueldo-funcionarios-subira-45-enero-20261020194527.html",
+      "reason": "Government guarantees a 4.5% civil servant pay rise from 1 January 2027, though without a date for approval"
+    },
+    {
+      "url": "https://www.eldiario.es/economia/vivienda-duplica-subvencion-comunidades-aplican-ley-vivienda-180-millones_1_13599587.html",
+      "reason": "Government approves €180M subsidy for the five regions that cap rents under the Housing Law"
+    },
+    {
+      "url": "https://www.elconfidencial.com/economia/2026-10-20/supremo-exige-visita-inmueble-hacienda-1tps_4448701/",
+      "reason": "Supreme Court bars the tax agency from valuing property using only cadastre and Google Maps, a precedent for property taxes"
+    },
+    {
+      "url": "https://www.expansion.com/fiscal/2026/10/21/rebaja-fiscal-compra-vivienda-tercer-hijo-camino.html",
+      "reason": "Supreme Court allows the 4% reduced transfer tax on a home purchase when the third child is conceived but not yet born"
+    },
+    {
+      "url": "https://elpais.com/economia/mis-derechos/2026-10-20/el-supremo-corrige-a-hacienda-los-padres-con-custodia-compartida-si-pueden-deducirse-el-irpf-de-la-pension-de-alimentos.html",
+      "reason": "Supreme Court lets parents with shared custody deduct child maintenance in IRPF, a ruling that affects tax filers"
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/10/20/confirmado-nuevo-decreto-incluye-indemnizaciones-inquilinos-casero-no-renueva-alquiler-2057837.html",
+      "reason": "New housing decrees include compensation for tenants when the landlord does not renew the lease; affects the rental market"
+    },
+    {
+      "url": "https://www.elmundo.es/espana/2026/10/20/6ad7b3dffdddff6a428b45b5.html",
+      "reason": "Dana Adam kills six and floods Valencia, Alicante and other provinces, a natural disaster of national scale"
+    },
+    {
+      "url": "https://www.lavanguardia.com/local/valencia/20261020/11663993/consell-aprueba-primer-paquete-ayudas-23-5-millones-euros-afectados-dana-adam.html",
+      "reason": "Valencian government approves a first €23.5M aid package for dana victims"
+    },
+    {
+      "url": "https://www.expansion.com/ahorro/2026/10/21/6ad7fc6ee5fdea43348b456f.html",
+      "reason": "Banks raise deposit rates ahead of the 29 October ECB meeting, where a rate hike to 2.75% is expected; affects savers and mortgage holders"
+    },
+    {
+      "url": "https://elpais.com/economia/2026-10-21/la-brecha-entre-salarios-y-precios-se-ensancha-por-el-pico-de-la-inflacion-y-la-paralisis-en-los-convenios.html",
+      "reason": "Gap between wages and prices widens as inflation peaks and collective agreements stall"
+    },
+    {
+      "url": "https://www.europapress.es/nacional/noticia-casi-medio-centenar-consulados-remitido-ya-informacion-nacionalizaciones-ley-nietos-20261020130255.html",
+      "reason": "Grandchildren-law naturalisations: 163,000 people in the voter census, with a Supreme Court order and a pending Constitutional Court decision"
+    },
+    {
+      "url": "https://elpais.com/espana/2026-10-21/la-calle-juega-en-campana-ayuso-se-lanza-contra-las-protestas-mientras-el-gobierno-abraza-incluso-la-huelga-general.html",
+      "reason": "Education strike in Madrid and the housing protests plus the 11 November general strike become a campaign issue, with national political impact"
+    }
+  ]
+}
