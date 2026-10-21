@@ -472,7 +472,7 @@ function renderScale(region) {
     const w = r => `${(r / Math.max(top, 0.5)) * 100}%`
     return `<tr><td>${range}</td><td class="num">${foral ? '—' : pct(sl.state)}</td><td class="num">${pct(sl.regional)}</td>`
       + `<td class="num b">${pct(sl.rate * share)}</td>`
-      + `<td aria-hidden="true"><div class="ns-sc-bar"><span style="width:${w(sl.state * share)}"></span><span style="width:${w(sl.regional * share)}"></span></div></td></tr>`
+      + `<td class="ns-sc-barcol" aria-hidden="true"><div class="ns-sc-bar"><span style="width:${w(sl.state * share)}"></span><span style="width:${w(sl.regional * share)}"></span></div></td></tr>`
   }).join('')
   document.querySelectorAll('#r-scale-all tr').forEach(tr => tr.classList.toggle('ns-cur', tr.dataset.region === region))
 }

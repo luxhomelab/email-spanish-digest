@@ -2846,9 +2846,10 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 
 /* Net salary: tax brackets by region tab */
 .ns-tabs { display: flex; gap: 4px; margin: 0 0 16px; border-bottom: 2px solid #E5E7EB; }
-.ns-tabs [role="tab"] { flex: none; padding: 10px 16px; border: 0; background: none; font: inherit; font-weight: 700; color: #6B7280; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; }
+.ns-tabs [role="tab"] { flex: 0 1 auto; min-width: 0; padding: 10px 16px; border: 0; background: none; font: inherit; font-weight: 700; color: #6B7280; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; }
 .ns-tabs [role="tab"][aria-selected="true"] { color: #AA151B; border-bottom-color: #AA151B; }
 .ns-tabs [role="tab"]:focus-visible { outline: 2px solid #AA151B; outline-offset: -2px; }
+@media (max-width: 400px) { .ns-tabs [role="tab"] { padding: 10px 8px; font-size: 14px; } }
 .ns-scales { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
 .ns-scales[hidden] { display: none; }
 .ns-scales-pick { max-width: 320px; }
@@ -2862,3 +2863,10 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 .ns-sc-all tbody tr { cursor: pointer; }
 .ns-sc-all tbody tr:hover td { background: #F9FAFB; }
 .ns-sc-all tr.ns-cur td { background: #FDF0F0; font-weight: 800; }
+@media (max-width: 480px) {
+  .ns-sc-table .ns-sc-barcol { display: none; }
+  .ns-calc .ns-sc-table th, .ns-calc .ns-sc-table td, .ns-calc .ns-sc-all th, .ns-calc .ns-sc-all td { padding-left: 6px; padding-right: 6px; font-size: 13px; }
+  .ns-calc .ns-sc-table th, .ns-calc .ns-sc-all th { letter-spacing: 0.3px; font-size: 11px; white-space: normal; }
+  .ns-calc .ns-sc-table td:first-child { white-space: normal; }
+  .ns-calc .ns-scales > .card { padding-left: 12px; padding-right: 12px; }
+}
