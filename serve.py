@@ -33,6 +33,12 @@ class CleanUrlsHandler(http.server.SimpleHTTPRequestHandler):
                 return full + ".html"
         return full
 
+    def end_headers(self):
+        # Revalidate on every load (304 when unchanged) so a rebuild is never
+        # hidden behind the browser's heuristic cache of HTML and JS modules.
+        self.send_header("Cache-Control", "no-cache")
+        super().end_headers()
+
 
 if __name__ == "__main__":
     srv = http.server.ThreadingHTTPServer(("127.0.0.1", PORT), CleanUrlsHandler)

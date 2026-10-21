@@ -5,6 +5,8 @@
    (STATIC_COPY) and never Jinja-rendered, so they read this global instead
    of guessing from location.hostname. Always rendered — before every other
    script — so the JS gate works on any page. #}
+{# Versions nested ES-module imports (build.js_importmap); must precede every module script. #}
+<script type="importmap">{{ js_importmap|safe }}</script>
 <script>window.SPANIFIED_ANALYTICS = {% if analytics_enabled %}true{% else %}false{% endif %};</script>
 {% if analytics_enabled %}
 <!-- Google tag (gtag.js) -->

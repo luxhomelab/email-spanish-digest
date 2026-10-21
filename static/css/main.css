@@ -1629,6 +1629,170 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
  .calc .ry-form .field-row { grid-template-columns: 1fr; }
 }
 
+/* ---------- Net salary calculator (calculator-net-salary.html) ---------- */
+/* Reuses the rental-yield form shell (.ry-*). The one bold element is the payslip:
+   a paper nómina with a perforated tear line above the take-home amount. */
+.ns-calc .ry-group > summary { gap: 8px; }
+.ns-calc .ns-sum { margin-left: auto; font-size: 12px; font-weight: 600; letter-spacing: normal; text-transform: none; color: #AA151B; text-align: right; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.ns-calc .ry-group > summary::after { flex: none; }
+.ns-calc .ns-seg button { padding: 6px 8px; }
+.ns-calc .ns-seg-sm button { min-height: 40px; font-size: 12px; }
+.ns-calc .ns-amount-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: stretch; }
+.ns-calc #f-amount { font-size: 22px; font-weight: 700; min-height: 52px; font-variant-numeric: tabular-nums; }
+.ns-calc .ns-period { flex-direction: column; gap: 2px; padding: 3px; }
+.ns-calc .ns-period button { min-height: 22px; padding: 2px 10px; font-size: 12px; white-space: nowrap; }
+.ns-slider { width: 100%; margin: 14px 0 0 0; accent-color: #AA151B; height: 28px; cursor: pointer; }
+.ns-slider:focus-visible { outline: 2px solid #AA151B; outline-offset: 2px; border-radius: 4px; }
+.ns-calc .ns-group-note { margin: 0 0 14px 0; }
+.ns-flex { padding: 0 0 14px 0; margin-bottom: 14px; border-bottom: 1px dashed #EFE7D8; }
+.ns-flex:last-child { border-bottom: none; margin-bottom: 0; }
+.ns-flex-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.ns-flex-row:has(> :nth-child(2)) { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+.ns-flex .field { margin-bottom: 8px; }
+.ns-dislist-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.ns-dislist-head .flabel { margin-bottom: 0; }
+.ns-calc .ns-add { flex: none; min-height: 40px; padding: 0 14px; border: 1px dashed #D9C9A8; border-radius: 8px; background: #FFFDF8; color: #AA151B; font-size: 13px; font-weight: 700; cursor: pointer; }
+.ns-calc .ns-add:hover { border-color: #AA151B; }
+.ns-calc .ns-add:focus-visible, .ns-calc .ns-remove:focus-visible { outline: 2px solid #AA151B; outline-offset: 2px; }
+.ns-dislist-items { list-style: none; margin: 8px 0 0 0; padding: 0; display: grid; gap: 8px; }
+.ns-dislist-items:empty { display: none; }
+.ns-dis-item { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 8px; align-items: center; background: #FAF7F0; border: 1px solid #EFE7D8; border-radius: 10px; padding: 8px 10px; }
+.ns-dis-name { font-size: 13px; font-weight: 700; color: #3C4858; white-space: nowrap; }
+.ns-calc .ns-dis-item select { min-height: 40px; font-size: 14px; padding: 6px 8px; }
+.ns-calc .ns-remove { min-height: 40px; padding: 0 6px; background: none; border: none; color: #6C7A89; font-size: 13px; text-decoration: underline; cursor: pointer; }
+.ns-calc .ns-remove:hover { color: #AA151B; }
+.ns-muted .ry-group-body { opacity: 0.55; }
+
+/* Payslip */
+.ns-payslip {
+ position: relative; background: #FFFFFF; border: 1px solid #E3D9C6; border-radius: 6px;
+ box-shadow: 0 1px 0 #E3D9C6, 0 10px 30px -18px rgba(60,40,20,0.35);
+ padding: 22px 24px 0 24px; font-variant-numeric: tabular-nums;
+}
+.ns-ps-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding-bottom: 14px; border-bottom: 2px solid #3C4858; }
+.ns-ps-title { font-size: 19px; font-weight: 800; color: #3C4858; margin: 0; letter-spacing: -0.2px; }
+.ns-ps-meta { font-size: 13px; color: #6C7A89; margin: 3px 0 0 0; }
+.ns-ps-stamp {
+ flex: none; transform: rotate(-6deg); margin-top: 2px;
+ border: 2px solid #AA151B; border-radius: 6px; padding: 3px 10px;
+ color: #AA151B; font-size: 14px; font-weight: 800; letter-spacing: 0.5px; opacity: 0.85;
+}
+.ns-ps-table { width: 100%; border-collapse: collapse; margin: 4px 0 0 0; }
+.ns-ps-table th { text-align: left; font-size: 13px; font-weight: 800; color: #3C4858; padding: 14px 0 6px 0; border-bottom: 1px solid #EFE7D8; }
+.ns-ps-table th span, .ns-es { font-weight: 400; font-style: italic; color: #8A94A0; margin-left: 4px; }
+.ns-ps-table td { padding: 9px 0; font-size: 15px; color: #3C4858; border-bottom: 1px dotted #E8DFCD; vertical-align: top; }
+.ns-ps-table td.num { text-align: right; white-space: nowrap; padding-left: 16px; font-weight: 600; }
+.ns-formula { display: block; font-size: 12px; line-height: 17px; color: #8A94A0; margin-top: 1px; }
+.ns-ps-table tr.ns-ps-ss td.num { color: #B06A1A; }
+.ns-ps-table tr.ns-ps-irpf td.num { color: #B03A3A; }
+.ns-ps-table tr.ns-ps-kind td { color: #6C7A89; }
+.ns-ps-table tbody:last-child tr:last-child td { border-bottom: none; }
+/* Tear line: dashed rule with half-circle notches cut into both edges. */
+.ns-ps-net {
+ position: relative; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 4px 16px;
+ margin: 14px -24px 0 -24px; padding: 20px 24px 22px 24px;
+ border-top: 2px dashed #D9C9A8; background: #F2FAF4; border-radius: 0 0 6px 6px;
+}
+.ns-ps-net::before, .ns-ps-net::after {
+ content: ""; position: absolute; top: -11px; width: 20px; height: 20px; border-radius: 50%;
+ background: #FCF3E2; border: 1px solid #E3D9C6;
+}
+.ns-ps-net::before { left: -11px; clip-path: inset(0 0 0 50%); }
+.ns-ps-net::after { right: -11px; clip-path: inset(0 50% 0 0); }
+.ns-ps-net-label { font-size: 15px; font-weight: 800; color: #0A5C2E; margin: 0; }
+.ns-ps-net-label .ns-es { display: block; margin: 2px 0 0 0; font-size: 13px; color: #5E9475; }
+.ns-ps-net-extra { flex-basis: 100%; font-size: 13px; line-height: 18px; color: #2F7A4D; margin: 6px 0 0 0; }
+.ns-ps-net-extra:empty { display: none; }
+.ns-ps-net-val { font-size: 40px; line-height: 1; font-weight: 800; letter-spacing: -1px; color: #0A5C2E; margin: 0; white-space: nowrap; }
+
+/* KPI strip */
+.ns-results { container-type: inline-size; }
+.ns-kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+@container (max-width: 560px) { .ns-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ns-kpis > :last-child { grid-column: 1 / -1; } }
+.ns-kpi { background: #FFFDF8; border: 1px solid #EFE7D8; border-radius: 12px; padding: 14px 16px; min-width: 0; }
+.ns-kpi p { margin: 0; }
+.ns-kpi .kicker { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6C7A89; }
+.ns-kpi .val { font-size: 24px; font-weight: 800; letter-spacing: -0.5px; color: #3C4858; margin: 4px 0 2px 0; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.ns-kpi .sub2 { font-size: 12px; line-height: 17px; color: #8A94A0; }
+.ns-kpi.ns-pos { background: #EEF8F1; border-color: #CFE8D8; } .ns-kpi.ns-pos .val { color: #0A5C2E; }
+.ns-kpi.ns-neg { background: #FDF0F0; border-color: #F3C2C2; } .ns-kpi.ns-neg .val { color: #8A1A1A; }
+
+/* Withholding vs annual tax */
+.ns-renta-bars { display: grid; gap: 10px; }
+.ns-rb { display: grid; grid-template-columns: minmax(0, 13em) minmax(0, 1fr) auto; gap: 12px; align-items: center; }
+.ns-rb-l { font-size: 13px; line-height: 18px; color: #3C4858; }
+.ns-rb-track { height: 12px; background: #F5F1E8; border-radius: 6px; overflow: hidden; }
+.ns-rb-fill { display: block; height: 100%; border-radius: 6px; }
+.ns-rb-wh { background: #B0B9C4; } .ns-rb-tax { background: #D95D5D; }
+.ns-rb-v { font-size: 14px; font-weight: 800; color: #3C4858; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.calc .ns-renta-text { margin: 14px 0 0 0; font-size: 14px; line-height: 22px; color: #3C4858; }
+
+/* Employer cost bar */
+.calc .ns-bar { height: 32px; }
+.calc .ns-bar > div { min-width: 0; overflow: hidden; }
+.ns-bar-net, .ns-dot-net { background: #2FA35F; }
+.ns-bar-pension, .ns-dot-pension { background: #7CC79A; }
+.ns-bar-irpf, .ns-dot-irpf { background: #D95D5D; }
+.ns-bar-ss, .ns-dot-ss { background: #E8933C; }
+.ns-bar-employer, .ns-dot-employer { background: #B0B9C4; }
+.calc .ns-bar > .ns-bar-employer { color: #3C4858; }
+.calc .ns-legend { gap: 8px 18px; padding: 0; margin: 0; }
+.calc .ns-legend li { list-style: none; }
+.calc .ns-legend .ns-legend-total { flex-basis: 100%; padding-top: 6px; border-top: 1px solid #EFE7D8; color: #3C4858; }
+
+/* Details */
+.calc details.ns-details { padding: 0 24px; }
+.ns-details > summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; cursor: pointer; list-style: none; font-weight: 700; color: #3C4858; }
+.ns-details > summary::-webkit-details-marker { display: none; }
+.ns-details > summary::after { content: "+"; color: #AA151B; font-size: 22px; line-height: 1; font-weight: 400; }
+.ns-details[open] > summary::after { content: "–"; }
+.ns-details > summary:focus-visible { outline: 2px solid #AA151B; outline-offset: 2px; border-radius: 4px; }
+.ns-details-body { padding-bottom: 20px; }
+.ns-details h3 { font-size: 15px; font-weight: 800; color: #3C4858; margin: 18px 0 8px 0; }
+.ns-details h3:first-child { margin-top: 0; }
+.calc .ns-details .card.sheet { padding: 0; margin: 0; }
+.ns-details .sheet td { font-variant-numeric: tabular-nums; }
+.ns-calc .ns-br-table td:first-child, .ns-calc .ns-reg-table td:first-child { background: #FFFFFF; }
+.ns-details .sheet td.num { white-space: nowrap; }
+.ns-details .sheet tr.b td { font-weight: 700; }
+.ns-brackets-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin: 18px 0 8px 0; }
+.ns-brackets-head h3 { margin: 0; }
+.ns-calc .ns-combine { min-height: 40px; margin: 0; }
+.ns-calc .ns-br-table, .ns-calc .ns-reg-table { min-width: 0; }
+.ns-calc .ns-br-table td, .ns-calc .ns-reg-table td { font-variant-numeric: tabular-nums; }
+
+/* Region comparison */
+.calc .ns-regions .field-note { margin: -8px 0 12px 0; }
+.ns-calc .ns-regions .ry-table-wrap { margin-bottom: 0; }
+.ns-reg-table tr.ns-cur td { background: #FDF0F0; font-weight: 800; }
+.ns-reg-table tr.ns-cur td:first-child { box-shadow: inset 3px 0 0 #AA151B; }
+.ns-reg-table td.ns-up { color: #0A5C2E; font-weight: 700; }
+.ns-reg-table td.ns-down { color: #8A1A1A; }
+
+@media (max-width: 520px) {
+ .ns-payslip { padding: 18px 16px 0 16px; }
+ .ns-ps-net { margin: 14px -16px 0 -16px; padding: 18px 16px 20px 16px; flex-direction: column; align-items: flex-start; gap: 6px; }
+ .ns-ps-net-val { font-size: 34px; }
+ .ns-ps-table td { font-size: 14px; }
+ .ns-rb { grid-template-columns: minmax(0, 1fr) auto; }
+ .ns-rb-track { grid-column: 1 / -1; grid-row: 2; }
+ .calc details.ns-details { padding: 0 16px; }
+ .ns-kpi .val { font-size: 21px; }
+ .calc .ns-details .sheet td { padding: 9px 10px; }
+ .calc .ns-details .sheet td.num { padding-left: 4px; }
+}
+@media (max-width: 360px) {
+ .ns-calc .ns-amount-row { grid-template-columns: minmax(0, 1fr); }
+ .ns-calc .ns-period { flex-direction: row; }
+ .ns-calc .ns-period button { min-height: 36px; }
+ .ns-ps-head { flex-direction: column-reverse; gap: 8px; }
+ .ns-dis-item { grid-template-columns: minmax(0, 1fr) auto; }
+ .ns-dis-name { grid-column: 1 / -1; }
+}
+@media (prefers-reduced-motion: no-preference) {
+ .ns-rb-fill { transition: width 0.25s ease-out; }
+}
+
 /* ---------- FAQ (body.page-home) ---------- */
 .faq-card details.faq-item { border-top: 1px solid #F0EDE6; padding: 12px 0; }
 .faq-card details.faq-item:first-of-type { border-top: none; }
@@ -1946,6 +2110,7 @@ body.page-home .quiz-teaser-row p{margin-bottom:0}
 .calc-mini:hover{border-color:#AA151B;box-shadow:0 4px 18px rgba(170,21,27,.12)}
 .calc-mini:focus-visible{outline:3px solid rgba(170,21,27,.4);outline-offset:2px}
 .calc-mini-title{display:block;font-family:Roboto,Helvetica,sans-serif;font-size:18px;font-weight:700;color:#3C4858;line-height:1.35;margin-bottom:8px}
+.calc-mini--wide{grid-column:1/-1}
 .calc-mini-badge{display:inline-block;vertical-align:middle;margin-left:6px;padding:2px 9px;border-radius:999px;background:#AA151B;color:#fff;font-size:12px;font-weight:700;line-height:1.5}
 .calc-mini-hook{display:block;font-size:14px;line-height:1.55;color:#6C7A89;margin-bottom:14px}
 .calc-mini-cta{display:block;margin-top:auto;font-size:15px;font-weight:700;color:#AA151B}
