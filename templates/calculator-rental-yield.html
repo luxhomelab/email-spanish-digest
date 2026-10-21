@@ -239,13 +239,15 @@
      </div>
 
      <div class="card ry-chart-card">
-      <p class="calc-kicker">Equity and cash flow by year</p>
-      <div class="legend">
-       <span><span class="dot dot-equity"></span>Equity (value − mortgage)</span>
-       <span><span class="dot dot-cash"></span>Cumulative cash flow</span>
-      </div>
+      <p class="calc-kicker">Your position year by year</p>
       <div class="ry-chart" id="r-chart"></div>
       <p class="ry-chart-read" id="r-chart-read" aria-live="polite"></p>
+      <ul class="ry-legend">
+       <li><span class="ry-lg-mark ry-lg-net"></span><span class="ry-lg-t">Total net position (cash + property)</span><b class="ry-lg-v" id="r-lg-net">—</b><span class="ry-lg-d">Cumulative net cash flow + net equity (value − mortgage).</span></li>
+       <li><span class="ry-lg-mark ry-lg-equity"></span><span class="ry-lg-t">Total equity / asset value</span><b class="ry-lg-v" id="r-lg-equity">—</b><span class="ry-lg-d">Property value with yearly appreciation, minus the mortgage still owed.</span></li>
+       <li><span class="ry-lg-mark ry-lg-cash"></span><span class="ry-lg-t">Cumulative net cash flow</span><b class="ry-lg-v" id="r-lg-cash">—</b><span class="ry-lg-d">Rent after costs, mortgage and tax, minus the cash you put in up front.</span></li>
+       <li><span class="ry-lg-mark ry-lg-invested"></span><span class="ry-lg-t">Invested capital</span><b class="ry-lg-v" id="r-lg-invested">—</b><span class="ry-lg-d">Initial cash outlay + mortgage principal repaid to date.</span></li>
+      </ul>
       <p class="field-note">Years since purchase. Tap or hover the chart to read a year.</p>
      </div>
 

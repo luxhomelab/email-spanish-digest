@@ -1574,11 +1574,19 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 .calc .mini-profit .kicker { color: #2F7A4D; } .calc .mini-profit .val { color: #0A5C2E; } .calc .mini-profit .sub2 { color: #5E9475; }
 .calc .mini-profit .val.neg { color: #8A1A1A; }
 .calc .mini .val { overflow-wrap: anywhere; }
-.calc .dot-equity { background: #0E7A3D; } .calc .dot-cash { background: #E8933C; }
-.calc .ry-chart-card .legend { margin-bottom: 8px; column-gap: 16px; row-gap: 6px; }
+/* Chart legend doubles as the readout: title, value for the selected year, description. */
+.ry-legend { list-style: none; margin: 4px 0 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 24px; }
+@container (max-width: 600px) { .ry-legend { grid-template-columns: minmax(0, 1fr); gap: 12px; } }
+.ry-legend li { display: grid; grid-template-columns: 18px minmax(0, 1fr) auto; column-gap: 8px; align-items: baseline; }
+.ry-lg-mark { display: inline-block; width: 16px; height: 0; border-top: 3px solid; border-radius: 2px; transform: translateY(-4px); }
+.ry-lg-net { border-color: #AA151B; } .ry-lg-equity { border-color: #0E7A3D; } .ry-lg-cash { border-color: #E8933C; }
+.ry-lg-invested { border-top-style: dashed; border-color: #6C7A89; }
+.ry-lg-t { font-size: 13px; line-height: 18px; font-weight: 700; color: #3C4858; }
+.ry-lg-v { font-size: 14px; line-height: 18px; font-weight: 800; color: #3C4858; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.ry-lg-d { grid-column: 2 / -1; font-size: 12px; line-height: 17px; color: #8A94A0; margin-top: 2px; }
 .ry-chart { width: 100%; min-width: 0; }
 .ry-chart svg { display: block; width: 100%; max-width: 100%; touch-action: pan-y; cursor: crosshair; }
-.calc .ry-chart-read { min-height: 40px; margin: 8px 0 0 0; font-size: 13px; line-height: 20px; font-weight: 600; color: #3C4858; }
+.calc .ry-chart-read { margin: 8px 0 12px 0; font-size: 13px; line-height: 20px; font-weight: 600; color: #3C4858; }
 .calc .ry-summary .sheet td.row-l { text-align: left; }
 .calc .ry-summary .sheet td.num { white-space: nowrap; }
 .calc details.ry-years { padding: 0 24px; }

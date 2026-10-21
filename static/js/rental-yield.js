@@ -11,6 +11,8 @@ const $ = id => document.getElementById(id)
 
 const COLOR_EQUITY = '#0E7A3D'
 const COLOR_CASH = '#E8933C'
+const COLOR_NET = '#AA151B'
+const COLOR_INVESTED = '#6C7A89'
 const COLOR_AXIS = '#9AA5B1'
 const COLOR_GRID = '#EFE7D8'
 const COLOR_TEXT = '#6C7A89'
@@ -246,15 +248,26 @@ function niceStep(range, ticks) {
   return nice * mag
 }
 
+// Same four series as the original dsinvestments chart (CalculatorPage.jsx chartData).
 function chartSeries(r) {
   const n = r.holdYears
+  const outlay = r.initialCashOutlay
+  const principalByYear = r.schedule.principalByYear
   const equity = []
   const cash = []
+  const invested = []
+  const net = []
+  let principalRepaid = 0
   for (let y = 0; y <= n; y += 1) {
+    if (y > 0) principalRepaid += principalByYear[y - 1] || 0
+    const c = (y === 0 ? 0 : r.cumulativeCashFlows[y - 1]) - outlay
     equity.push(r.equityByYear[y])
-    cash.push(y === 0 ? 0 : r.cumulativeCashFlows[y - 1])
+    cash.push(c)
+    invested.push(outlay + principalRepaid)
+    net.push(c + r.equityByYear[y])
   }
-  return { n, equity, cash }
+  const breakEven = net.findIndex(v => v >= 0)
+  return { n, equity, cash, invested, net, breakEven }
 }
 
 function renderChart(r) {
@@ -262,9 +275,9 @@ function renderChart(r) {
   const W = Math.max(280, Math.floor(host.clientWidth || 320))
   const H = Math.round(Math.max(230, Math.min(340, W * 0.62)))
   const m = { l: 46, r: 12, t: 12, b: 28 }
-  const { n, equity, cash } = chartSeries(r)
+  const { n, equity, cash, invested, net, breakEven } = chartSeries(r)
 
-  const all = equity.concat(cash, [0])
+  const all = equity.concat(cash, invested, net, [0])
   let lo = Math.min(...all)
   let hi = Math.max(...all)
   if (hi === lo) hi = lo + 1
@@ -295,20 +308,34 @@ function renderChart(r) {
 
   const sel = Math.min(chartYear ?? n, n)
   const sx = x(sel).toFixed(1)
+  const dot = (arr, color) => `<circle cx="${sx}" cy="${yv(arr[sel]).toFixed(1)}" r="4" fill="${color}" stroke="#fff" stroke-width="1.5"/>`
   const marker = `<line x1="${sx}" x2="${sx}" y1="${m.t}" y2="${m.t + ph}" stroke="${COLOR_AXIS}" stroke-width="1" stroke-dasharray="3 3"/>`
-    + `<circle cx="${sx}" cy="${yv(equity[sel]).toFixed(1)}" r="4" fill="${COLOR_EQUITY}"/>`
-    + `<circle cx="${sx}" cy="${yv(cash[sel]).toFixed(1)}" r="4" fill="${COLOR_CASH}"/>`
+    + dot(invested, COLOR_INVESTED) + dot(cash, COLOR_CASH) + dot(equity, COLOR_EQUITY) + dot(net, COLOR_NET)
+  // Break-even: first year the total net position turns non-negative (marked on the zero line).
+  const breakMark = breakEven > 0
+    ? `<circle cx="${x(breakEven).toFixed(1)}" cy="${yv(0).toFixed(1)}" r="5" fill="#fff" stroke="${COLOR_NET}" stroke-width="2"/>`
+    : ''
+  const line = (arr, color, extra = '') => `<path d="${path(arr)}" fill="none" stroke="${color}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"${extra}/>`
 
-  host.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" role="img" aria-label="Chart: equity and cumulative cash flow by year" preserveAspectRatio="xMidYMid meet">`
+  host.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" role="img" aria-label="Chart: total net position, equity, cumulative net cash flow and invested capital by year" preserveAspectRatio="xMidYMid meet">`
     + grid
     + `<line x1="${m.l}" x2="${W - m.r}" y1="${yv(0).toFixed(1)}" y2="${yv(0).toFixed(1)}" stroke="${COLOR_AXIS}" stroke-width="1" stroke-dasharray="4 3"/>`
-    + `<path d="${path(equity)}" fill="none" stroke="${COLOR_EQUITY}" stroke-width="2.5" stroke-linejoin="round"/>`
-    + `<path d="${path(cash)}" fill="none" stroke="${COLOR_CASH}" stroke-width="2.5" stroke-linejoin="round"/>`
-    + marker + xlabels
+    + line(invested, COLOR_INVESTED, ' stroke-dasharray="6 4"')
+    + line(cash, COLOR_CASH)
+    + line(equity, COLOR_EQUITY)
+    + line(net, COLOR_NET)
+    + breakMark + marker + xlabels
     + `<rect class="ry-hit" x="${m.l}" y="${m.t}" width="${pw}" height="${ph}" fill="transparent"/>`
     + `</svg>`
 
-  $('r-chart-read').textContent = `Year ${sel}: equity ${fmtEur(equity[sel])} · cumulative cash flow ${fmtEur(cash[sel])}`
+  const breakText = breakEven === 0 ? 'net position positive from day one'
+    : breakEven > 0 ? `break-even in year ${breakEven}`
+    : `no break-even within ${n} years`
+  $('r-chart-read').textContent = `Year ${sel} · ${breakText}`
+  $('r-lg-net').textContent = fmtEur(net[sel])
+  $('r-lg-equity').textContent = fmtEur(equity[sel])
+  $('r-lg-cash').textContent = fmtEur(cash[sel])
+  $('r-lg-invested').textContent = fmtEur(invested[sel])
 
   const svg = host.querySelector('svg')
   const pick = ev => {
