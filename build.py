@@ -1200,20 +1200,20 @@ def autonomo_page_context(kind, item, neighbours, names, calc_year):
             "tp_saving": eur(item["needed"] - item["neededTarifaPlana"]),
             "example_costs": 500, "example_invoice": eur(revenue / 12 + 500),
         })
-        title_core = f"Take Home {target} a Month as an Autónomo (Spain {calc_year}): Earn {rev_label} a Year"
-        ctx["answer"] = (f"To take home {target} a month as an established autónomo in Madrid in {calc_year}, you need about "
+        title_core = f"Take Home {target} a Month as a Freelance Autónomo (Spain {calc_year}): Earn {rev_label} a Year"
+        ctx["answer"] = (f"To take home {target} a month as an established self-employed autónomo (freelancer) in Madrid in {calc_year}, you need about "
                          f"{rev_label} of annual net revenue ({rev_month} a month), before {ctx['quota']} a month of Social Security and {ctx['irpf']} a year of IRPF.")
-        ctx["description"] = (f"An autónomo needs about {rev_label} a year in net revenue ({rev_month} a month) to keep {target} a month after "
-                              f"Social Security and IRPF in Spain ({calc_year}). Tarifa plana first year: {eur(item['neededTarifaPlana'])}.")
+        ctx["description"] = (f"A self-employed autónomo (freelancer) in Spain needs about {rev_label} a year in net revenue ({rev_month} a month) to keep {target} a month after "
+                              f"Social Security and IRPF ({calc_year}). Tarifa plana first year: {eur(item['neededTarifaPlana'])}.")
     else:
         ctx.update({
             "amount_label": rev_label, "crumb_label": rev_label,
             "query": f"aut_r={revenue}",
         })
-        title_core = f"Autónomo on {rev_label} a Year in Spain ({calc_year}): {ctx['net_month']}/month Net"
-        ctx["answer"] = (f"An established autónomo in Madrid with {rev_label} of annual net revenue keeps about {ctx['net_month']} a month "
+        title_core = f"Freelance Autónomo on {rev_label} a Year in Spain ({calc_year}): {ctx['net_month']}/month Net"
+        ctx["answer"] = (f"An established self-employed autónomo (freelancer) in Madrid with {rev_label} of annual net revenue keeps about {ctx['net_month']} a month "
                          f"({ctx['net_year']} a year) in {calc_year}, after {ctx['quota_year']} of Social Security and {ctx['irpf']} of IRPF.")
-        ctx["description"] = (f"{rev_label} of annual net revenue leaves an autónomo {ctx['net_month']} a month in Spain ({calc_year}) after "
+        ctx["description"] = (f"{rev_label} of annual net revenue leaves a self-employed autónomo (freelancer) {ctx['net_month']} a month in Spain ({calc_year}) after "
                               f"{ctx['quota']}/month Social Security and {ctx['irpf']} IRPF. First year on tarifa plana: {ctx['tp_net_month']} a month.")
     ctx["title"] = title_core + " | Spanified"
     ctx["h1"] = title_core
