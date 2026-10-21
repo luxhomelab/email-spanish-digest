@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block body_class %} class="page-calculator"{% endblock %}
 {% block title %}Autónomo Tax Calculator Spain {{ calc_year }} — Spanified{% endblock %}
-{% block description %}<meta name="description" content="Free autónomo tax calculator for Spain: estimate Social Security quotas and IRPF for self-employed workers by region, income and family situation. In English.">
+{% block description %}<meta name="description" content="Free Spain freelance tax calculator and self-employed Spain tax calculator: estimate taxes for autónomo in Spain (Social Security quota + IRPF) by region, income and family situation. In English.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Autónomo Tax Calculator Spain {{ calc_year }} — Spanified">
-<meta property="og:description" content="Free autónomo tax calculator for Spain: Social Security quotas and IRPF by region, income and family situation. In English.">
+<meta property="og:description" content="Spain freelance tax calculator and self-employed Spain tax calculator: taxes for autónomo Spain (SS quota + IRPF) by region and income. In English.">
 <meta property="og:url" content="{{ site_url }}/calculators/autonomo-tax">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Autónomo Tax Calculator Spain {{ calc_year }} — Spanified">
-<meta name="twitter:description" content="Free autónomo tax calculator for Spain: Social Security quotas and IRPF by region, income and family situation. In English.">
+<meta name="twitter:description" content="Spain freelance tax calculator and self-employed Spain tax calculator: taxes for autónomo Spain (SS quota + IRPF) by region and income. In English.">
 <meta name="robots" content="max-image-preview:large">{% endblock %}
 
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/calculators/autonomo-tax">{% endblock %}
@@ -19,7 +19,7 @@
  {"@type": "WebPage",
   "name": "Autónomo Tax Calculator Spain {{ calc_year }} — Spanified",
   "url": "{{ site_url }}/calculators/autonomo-tax",
-  "description": "Free autónomo tax calculator for Spain: estimate Social Security quotas and IRPF for self-employed workers by region, income and family situation. In English.",
+  "description": "Free Spain freelance tax calculator and self-employed Spain tax calculator: estimate taxes for autónomo in Spain (Social Security quota + IRPF) by region, income and family situation. In English.",
   "inLanguage": "en",
   "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}},
  {"@type": "FAQPage", "mainEntity": [
@@ -33,7 +33,7 @@
 </script>
  <div class="calc">
   <h1>Autónomo Tax Calculator <span class="calc-year">{{ calc_year }}</span></h1>
-  <p class="subtitle">Self-employed taxes in Spain: Social Security quotas + IRPF, by region, income and family situation.</p>
+  <p class="subtitle">Spain freelance tax calculator: self-employed taxes in Spain (Social Security quotas + IRPF) for autónomos, by region, income and family situation.</p>
 
   <div class="calc-grid">
    <div class="card calc-form">
