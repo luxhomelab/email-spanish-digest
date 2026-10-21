@@ -18,12 +18,13 @@ import {
   BECKHAM, FLEX_LIMITS, getMinimumTable, WITHHOLDING_SCALE, EXCLUSION_LIMITS, WITHHOLDING_CAP,
   WITHHOLDING_LARGE_FAMILY, WITHHOLDING_MIN_TEMPORARY,
 } from './net-salary-data.js'
+import { isForal, calcForalIrpf, calcForalWithholding } from './net-salary-foral.js'
 
-/** Common-regime regions plus Ceuta and Melilla, in selector order. */
+/** Common-regime regions, Ceuta and Melilla, and the foral Navarra and Basque Country. */
 export const REGION_IDS = [
   'andalucia', 'aragon', 'asturias', 'baleares', 'canarias', 'cantabria', 'castilla_la_mancha',
   'castilla_leon', 'catalunya', 'ceuta', 'comunidad_valenciana', 'extremadura', 'galicia',
-  'la_rioja', 'madrid', 'melilla', 'murcia',
+  'la_rioja', 'madrid', 'melilla', 'murcia', 'navarra', 'pais_vasco',
 ]
 
 const r2 = x => Math.round(x * 100) / 100
@@ -308,6 +309,9 @@ export function calcWithholding(p) {
  *   flexible pay taken as salary sacrifice).
  */
 export function calculateNetSalary(s) {
+  // The Beckham regime is state law; foral regions have their own impatriate rules (not modelled).
+  const foral = isForal(s.region)
+  if (foral && s.regime === 'beckham') s = { ...s, regime: 'standard' }
   const gross = Math.max(0, s.gross || 0)
   const flex = calcFlex(s)
   const cashGross = Math.max(0, gross - flex.sacrifice)
@@ -321,13 +325,13 @@ export function calculateNetSalary(s) {
   // Rendimiento íntegro del trabajo: cash + taxable in-kind (+ employer pension contributions).
   const rit = r2(cashGross + flex.taxable + pensionEmployer)
   const p = { ...s, rit, ss: s.regime === 'beckham' ? 0 : ss.total, pensionEmployer }
-  const withholding = calcWithholding({ ...p, ss: ss.total })
+  const withholding = (foral ? calcForalWithholding : calcWithholding)({ ...p, ss: ss.total })
 
   // Cash actually paid: in-kind withholding is charged to the cash payslips; employee
   // pension contributions are taken from the payslip too, so they can't exceed what's left.
   const pensionAsked = Math.max(0, s.pensionEmployee || 0)
   const pensionEmployee = Math.min(pensionAsked, Math.max(0, r2(cashGross - ss.total - withholding.annual)))
-  const irpf = calcAnnualIrpf({ ...p, pensionEmployee })
+  const irpf = (foral ? calcForalIrpf : calcAnnualIrpf)({ ...p, pensionEmployee })
   const warnings = []
   if (pensionAsked > PENSION_LIMITS.employee + Math.min(pensionEmployer, PENSION_LIMITS.employer)) warnings.push('pensionAboveLimit')
   if (pensionAsked > pensionEmployee) warnings.push('pensionAboveCash')
@@ -365,9 +369,10 @@ function marginalKeep(s, base) {
   return Math.round((up.annualTaxNet - base) / 100 * 1000) / 1000
 }
 
-/** Same profile in every region, best net after the Renta first. */
+/** Same profile in every region, best net after the Renta first (foral regions have no Beckham law). */
 export function compareRegions(s) {
   return REGION_IDS
+    .filter(region => s.regime !== 'beckham' || !isForal(region))
     .map(region => {
       const r = calculateNetSalary({ ...s, region, _noMarginal: true })
       return { region, annualTaxNet: r.annualTaxNet, netAnnual: r.netAnnual, irpf: r.irpf.total, refund: r.refund }

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block body_class %} class="page-calculator"{% endblock %}
 {% set page_title = "Spain Net Salary Calculator " ~ calc_year ~ ": Gross to Net Pay | Spanified" %}
-{% set page_desc = "Free Spain net salary calculator for " ~ calc_year ~ ": your payslip after Social Security and IRPF, the refund at the Renta, every common-regime region compared, 12 or 14 payslips, family, flexible pay and the Beckham law." %}
+{% set page_desc = "Free Spain net salary calculator for " ~ calc_year ~ ": your payslip after Social Security and IRPF, the refund at the Renta, every region compared, Navarre and the Basque Country included, 12 or 14 payslips, family, flexible pay and the Beckham law." %}
 {% set faqs = [
  ("How is net salary calculated in Spain?", "Net pay = gross salary − employee Social Security − IRPF withholding. Social Security is 6.50% of your gross on a permanent contract in " ~ calc_year ~ " (4.70% common contingencies, 1.55% unemployment, 0.10% training and 0.15% MEI), on a base capped at €5,101.20 a month. IRPF is progressive: the state scale plus your region's scale, applied after a €2,000 expense allowance, the work-income reduction and your personal and family minimum. Example: €30,000 gross in Madrid leaves about €23,450 a year once the Renta is filed."),
  ("Why is the tax on my payslip different from what I pay at the Renta?", "Your employer withholds IRPF with the national AEAT algorithm, which ignores your region and some deductions. The annual Renta applies your region's scale and minimums, the deduction for low earners and joint taxation. The difference comes back as a refund or is paid with the return. The calculator shows both numbers and the difference."),
@@ -9,7 +9,7 @@
  ("Which region pays the least income tax on a salary?", "Madrid leaves the most take-home pay at every salary, thanks to the lowest regional scale and higher personal minimums. Catalonia leaves the least up to about €40,000; above that Extremadura and Valencia join it at the bottom. Residents of Ceuta and Melilla pay only 40% of the IRPF. The comparison table under the results ranks all regions for your exact profile."),
  ("How does the Beckham law change my net salary?", "Under the special regime for workers moving to Spain (art. 93 LIRPF) employment income is taxed at a flat 24% up to €600,000 and 47% above, with no deductions or family minimums. Social Security is unchanged. For a single person it starts to pay off at roughly €60,000 gross, sooner in high-tax regions; compare both regimes with the switch above. You must apply within six months of registering with Social Security."),
  ("Does flexible pay save tax?", "Meal cards (up to €11 a working day), public transport (up to €1,500 a year), health insurance (up to €500 a person) and nursery fees are exempt from IRPF when paid instead of salary. They still count for Social Security, so the saving is your marginal IRPF rate on the exempt amount. The calculator shows it either taken from your salary or paid on top."),
- ("How accurate is this calculator?", "It follows the " ~ calc_year ~ " Social Security rates, the AEAT withholding algorithm and the AEAT regional tables, and reproduces published examples to the cent. It does not cover regional deductions (rent, birth, etc.), other income, or the foral regimes of the Basque Country and Navarre. It is an estimate, not tax advice. Last verified: October " ~ calc_year ~ "."),
+ ("How accurate is this calculator?", "It follows the " ~ calc_year ~ " Social Security rates, the AEAT withholding algorithm and the AEAT regional tables, and reproduces published examples to the cent. It does not cover regional deductions (rent, birth, etc.), other income, For Navarre and the Basque Country it applies their own 2026 foral scales, deductions and withholding tables (Bizkaia rules for the Basque Country; Álava's family deductions are slightly higher), without joint returns. It is an estimate, not tax advice. Last verified: October " ~ calc_year ~ "."),
 ] %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block description %}<meta name="description" content="{{ page_desc }}">
@@ -80,7 +80,7 @@
 </script>
  <div class="calc ry-calc ns-calc">
   <h1>Spain Net Salary Calculator <span class="calc-year">{{ calc_year }}</span></h1>
-  <p class="subtitle">Your payslip after Social Security and IRPF, what the Renta will refund or charge, and how your take-home pay compares across the 15 common-regime regions plus Ceuta and Melilla.</p>
+  <p class="subtitle">Your payslip after Social Security and IRPF, what the Renta will refund or charge, and how your take-home pay compares across every region, including the foral Navarre and Basque Country.</p>
 
   <div class="calc-grid ry-grid">
    <div class="card calc-form ry-form">
@@ -122,11 +122,13 @@
         <option value="madrid" selected>Madrid</option>
         <option value="melilla">Melilla</option>
         <option value="murcia">Murcia</option>
+        <option value="navarra">Navarre</option>
+        <option value="pais_vasco">Basque Country</option>
         <option value="comunidad_valenciana">Valencian Community</option>
        </select>
-       <p class="field-note">Payslip withholding uses one national table, so it is the same in every region; the regional difference shows up at the Renta. The Basque Country and Navarre have their own (foral) tax systems and are not covered.</p>
+       <p class="field-note">Payslip withholding uses one national table, so it is the same in every region; the regional difference shows up at the Renta. The Basque Country and Navarre are different: they run their own (foral) IRPF and withholding tables, and the Beckham law does not apply there.</p>
       </div>
-      {{ seg('regime', 'Tax regime', [('standard', 'Standard'), ('beckham', 'Beckham law')], 'Beckham law: special regime for people who moved to Spain for work (art. 93 LIRPF). 24% flat up to €600,000, 47% above, no deductions. Region and family do not change the tax.') }}
+      {{ seg('regime', 'Tax regime', [('standard', 'Standard'), ('beckham', 'Beckham law')], 'Beckham law: special regime for people who moved to Spain for work (art. 93 LIRPF). 24% flat up to €600,000, 47% above, no deductions. Region and family do not change the tax. Not available in Navarre or the Basque Country.') }}
      </div>
     </details>
 

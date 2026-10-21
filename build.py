@@ -1409,6 +1409,7 @@ def js_version():
                    "property-buying-cost-form.js",
                    "rental-yield.js", "rental-yield-calc.js", "rental-yield-form.js",
                    "net-salary.js", "net-salary-calc.js", "net-salary-form.js", "net-salary-data.js",
+                   "net-salary-foral.js",
                    "quiz.js",
                    "quiz-logic.js", "subscribe-form.js", "subscription-store.js",
                    "electricity.js", "electricity-calc.js", "electricity-form.js"):

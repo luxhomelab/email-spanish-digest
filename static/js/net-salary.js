@@ -1,4 +1,5 @@
 import { calculateNetSalary, compareRegions, resolveGross } from './net-salary-calc.js'
+import { isForal } from './net-salary-foral.js'
 import {
   sanitizeState, parseStateFromParams, stateToParams, clampField, inputValue,
   DEFAULTS, FIELD_LIMITS, QUERY_KEYS, MAX_DESC_DISAB, MAX_ASC_DISAB,
@@ -115,7 +116,7 @@ function applyVisibility(state) {
   const show = { kids: state.kids + state.kidsU3 > 0 }
   document.querySelectorAll('.calc [data-show]').forEach(el => { el.hidden = !show[el.dataset.show] })
   // Region and family do not change the Beckham tax; say so instead of hiding them.
-  $('g-family').classList.toggle('ns-muted', state.regime === 'beckham')
+  $('g-family').classList.toggle('ns-muted', state.regime === 'beckham' && !isForal(state.region))
 }
 
 function bindInputs(state, onChange) {
@@ -292,10 +293,15 @@ function renderRenta(r, s) {
     if (r.irpf.minimums.regional !== r.irpf.minimums.state) why.push(`${regionName(s.region)}'s higher personal minimums`)
     if (r.irpf.jointReduction > 0) why.push('the joint return')
     if (r.irpf.pensionReduction > 0) why.push('your pension contributions')
-    const base = r.refund > 0
+    const foral = r.irpf.regime === 'foral'
+    const base = foral
+      ? (r.refund > 0
+        ? `Your employer withholds with the ${regionName(s.region)} percentage table, so you get about ${fmtEur(r.refund)} back when you file the Renta.`
+        : `The ${regionName(s.region)} withholding table falls short of your tax for the year, so expect to pay about ${fmtEur(-r.refund)} with the Renta.`)
+      : r.refund > 0
       ? `Your employer withholds with the national algorithm, so you get about ${fmtEur(r.refund)} back when you file the Renta in spring.`
       : `The national withholding falls short of what ${regionName(s.region)} charges, so expect to pay about ${fmtEur(-r.refund)} with the Renta in spring.`
-    text = base + (why.length ? ` It comes from ${why.join(', ')} and your region's own tax scale.` : ` It comes from ${regionName(s.region)}'s own tax scale.`)
+    text = foral ? base : base + (why.length ? ` It comes from ${why.join(', ')} and your region's own tax scale.` : ` It comes from ${regionName(s.region)}'s own tax scale.`)
   }
   $('r-renta-text').textContent = text
 }
@@ -340,6 +346,15 @@ function renderDetails(r, s) {
       i.rit > 600000 ? row('47% above 600,000 €', fmtEur2((i.rit - 600000) * 0.47), 'ind') : '',
       row('IRPF for the year', fmtEur2(i.total), 'total b'),
     ].join('')
+  } else if (i.regime === 'foral') {
+    $('r-d-irpf').innerHTML = [
+      row('Taxable pay', fmtEur2(i.rit), '', 'Rendimiento íntegro del trabajo'),
+      row('− Social Security', fmtEur2(-ss.total), 'ind'),
+      ...i.lines.map(([label, v, note, cls]) => row(label, fmtEur2(v), cls || 'ind', note || '')),
+      row('IRPF for the year', fmtEur2(i.total), 'total b', `${regionName(s.region)} foral IRPF, no state share`),
+      row('Effective rate', fmtPct(i.total / (r.totalComp || 1), 2), 'ind'),
+      row('Marginal rate', fmtPct(i.marginalRate, 1), 'ind', 'On your next euro of taxable base'),
+    ].join('')
   } else {
     $('r-d-irpf').innerHTML = [
       row('Taxable pay', fmtEur2(i.rit), '', r.flex.exempt > 0 ? `Excludes ${fmtEur(r.flex.exempt)} of tax-free benefits` : 'Rendimiento íntegro del trabajo'),
@@ -366,6 +381,13 @@ function renderDetails(r, s) {
   const w = r.withholding
   $('r-d-wh').innerHTML = w.regime === 'beckham'
     ? [row('Flat withholding', `${w.rate.toFixed(2)}%`, 'b'), row('Withheld a year', fmtEur2(w.annual), 'total b')].join('')
+    : w.regime === 'foral' ? [
+      row('Pay for withholding', fmtEur2(w.retrib)),
+      w.exempt
+        ? row('No withholding', `Up to ${fmtEur(w.limit)}`, 'b', `${regionName(s.region)} 2026 table`)
+        : row('Withholding rate', `${w.rate.toFixed(2)}%`, 'b', `${regionName(s.region)} 2026 table, by pay and number of children`),
+      row('Withheld a year', fmtEur2(w.annual), 'total b'),
+    ].join('')
     : [
       row('Pay for withholding', fmtEur2(w.retrib)),
       row('Base after deductions', fmtEur2(w.base), 'ind', w.largeFamilyReduction ? 'Includes −600 € for 3+ children' : 'Same deductions, national rules'),
@@ -400,7 +422,7 @@ function renderBrackets(r) {
     return
   }
   const rangeLabel = b => `${fmtEur(b.from)} – ${b.to == null ? '…' : fmtEur(b.to)}`
-  if (combineBrackets) {
+  if (combineBrackets && i.stateBrackets.length) {
     // Merge both scales into one: every boundary of either scale starts a new slice.
     const edges = [...new Set([0, ...i.stateBrackets.map(b => b.to), ...i.regionalBrackets.map(b => b.to)]
       .filter(v => v != null && v < i.baseLiquidable))].sort((a, b) => a - b)
@@ -469,12 +491,14 @@ function render(state) {
   }
   applyVisibility(state)
   renderSummaries(state)
-  renderPayslip(r, state)
-  renderKpis(r, state)
-  renderRenta(r, state)
+  // Foral regions have no Beckham law: render as the standard regime the calculation used.
+  const s = isForal(state.region) && state.regime === 'beckham' ? { ...state, regime: 'standard' } : state
+  renderPayslip(r, s)
+  renderKpis(r, s)
+  renderRenta(r, s)
   renderCost(r)
-  renderDetails(r, state)
-  renderRegions(state, r)
+  renderDetails(r, s)
+  renderRegions(s, r)
 }
 
 function syncShareLinks() {
