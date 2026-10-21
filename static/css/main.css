@@ -1520,6 +1520,87 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 .calc .sheet td .rate { font-size: 12px; color: #8A94A0; }
 .calc .burden .sheet { margin-top: 12px; }
 
+/* ---------- Rental yield calculator (calculator-rental-yield.html) ---------- */
+.calc [hidden] { display: none !important; }
+.ry-grid { grid-template-columns: 400px minmax(0, 1fr); }
+.ry-grid > * { min-width: 0; }
+.calc .ry-form { padding: 6px 20px 20px 20px; }
+.calc .ry-jump { display: none; align-items: center; min-height: 44px; font-size: 14px; font-weight: 700; color: #AA151B; text-decoration: none; }
+.ry-group { border-bottom: 1px solid #EFE7D8; }
+.ry-group > summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; cursor: pointer; list-style: none; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6C7A89; }
+.ry-group > summary::-webkit-details-marker { display: none; }
+.ry-group > summary::after { content: "+"; color: #AA151B; font-size: 22px; line-height: 1; font-weight: 400; }
+.ry-group[open] > summary::after { content: "–"; }
+.ry-group > summary:hover { color: #AA151B; }
+.ry-group > summary:focus-visible { outline: 2px solid #AA151B; outline-offset: 2px; border-radius: 4px; }
+.ry-group-body { padding: 2px 0 8px 0; }
+.ry-calc .ry-sub { background: #FAF7F0; border: 1px solid #EFE7D8; border-radius: 10px; padding: 14px 14px 0 14px; margin-bottom: 16px; }
+.ry-calc input[type="number"], .ry-calc select { min-height: 44px; font-size: 16px; }
+.ry-calc .ry-check { min-height: 44px; margin-bottom: 8px; align-items: center; font-size: 14px; line-height: 20px; }
+.ry-calc .ry-check input[type="checkbox"] { flex: none; width: 22px; height: 22px; }
+.ry-calc .seg { flex-wrap: nowrap; }
+.ry-calc .seg button { flex: 1 1 0; min-height: 44px; font-size: 13px; line-height: 1.25; }
+.calc .ry-reset { display: inline-flex; align-items: center; min-height: 44px; margin-top: 12px; padding: 0; background: none; border: none; color: #6C7A89; font-size: 14px; font-weight: 600; text-decoration: underline; cursor: pointer; }
+.calc .ry-reset:hover { color: #AA151B; }
+.ry-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.ry-kpi { background: #FFFDF8; border: 1px solid #EFE7D8; border-radius: 14px; padding: 16px 18px; min-width: 0; }
+.ry-kpi p { margin: 0; }
+.ry-kpi .kicker { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6C7A89; }
+.ry-kpi .val { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; color: #0A5C2E; margin: 4px 0 2px 0; overflow-wrap: anywhere; }
+.ry-kpi .val.neg { color: #8A1A1A; }
+.ry-kpi .sub2 { font-size: 12px; line-height: 17px; color: #8A94A0; }
+.ry-kpi-main { grid-column: 1 / -1; background: linear-gradient(135deg, #0E7A3D 0%, #0A5C2E 100%); border: none; padding: 24px 26px; }
+.ry-kpi-main .kicker { color: #BDE5C8; }
+.ry-kpi-main .val { font-size: 44px; letter-spacing: -1px; color: #fff; }
+.ry-kpi-main .val.neg { color: #FFD6D6; }
+.ry-kpi-main .sub2 { font-size: 15px; font-weight: 600; color: #D6F0DC; }
+.calc .mini-profit { background: #EEF8F1; border: 1px solid #CFE8D8; }
+.calc .mini-profit .kicker { color: #2F7A4D; } .calc .mini-profit .val { color: #0A5C2E; } .calc .mini-profit .sub2 { color: #5E9475; }
+.calc .mini-profit .val.neg { color: #8A1A1A; }
+.calc .mini .val { overflow-wrap: anywhere; }
+.calc .dot-equity { background: #0E7A3D; } .calc .dot-cash { background: #E8933C; }
+.ry-chart-card .legend { margin-bottom: 8px; }
+.ry-chart { width: 100%; min-width: 0; }
+.ry-chart svg { display: block; width: 100%; max-width: 100%; touch-action: pan-y; cursor: crosshair; }
+.calc .ry-chart-read { min-height: 40px; margin: 8px 0 0 0; font-size: 13px; line-height: 20px; font-weight: 600; color: #3C4858; }
+.calc .ry-summary .sheet td.row-l { text-align: left; }
+.calc .ry-summary .sheet td.num { white-space: nowrap; }
+.calc details.ry-years { padding: 0 24px; }
+.ry-years > summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; cursor: pointer; list-style: none; font-weight: 700; color: #3C4858; }
+.ry-years > summary::-webkit-details-marker { display: none; }
+.ry-years > summary::after { content: "+"; color: #AA151B; font-size: 22px; line-height: 1; font-weight: 400; }
+.ry-years[open] > summary::after { content: "–"; }
+.ry-years > summary:focus-visible { outline: 2px solid #AA151B; outline-offset: 2px; border-radius: 4px; }
+.ry-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 0 20px 0; border: 1px solid #EFE7D8; border-radius: 10px; }
+.ry-table { width: 100%; min-width: 640px; border-collapse: collapse; }
+.ry-table th { font-size: 10px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #9AA5B1; padding: 10px 12px; text-align: left; background: #FAF7F0; border-bottom: 1px solid #EFE7D8; white-space: nowrap; }
+.ry-table td { padding: 9px 12px; font-size: 13px; color: #3C4858; border-bottom: 1px solid #F3EEE3; white-space: nowrap; }
+.ry-table th.num, .ry-table td.num { text-align: right; }
+.ry-table td.b { font-weight: 700; }
+.ry-table tr:last-child td { border-bottom: none; }
+.ry-table th:first-child, .ry-table td:first-child { position: sticky; left: 0; background: #FFFDF8; }
+.ry-table th:first-child { background: #FAF7F0; }
+@media (max-width: 900px) {
+ .ry-grid { grid-template-columns: minmax(0, 1fr); }
+ .calc .ry-jump { display: inline-flex; }
+}
+@media (max-width: 640px) {
+ .ry-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+ .ry-kpi { padding: 14px 14px; }
+ .ry-kpi .val { font-size: 22px; }
+ .ry-kpi-main { padding: 20px; }
+ .ry-kpi-main .val { font-size: 36px; }
+ .calc details.ry-years { padding: 0 16px; }
+}
+@media (max-width: 520px) {
+ .calc .ry-form { padding: 4px 16px 16px 16px; }
+ .calc .ry-form .field-row { grid-template-columns: 1fr 1fr; gap: 10px; }
+ .calc .ry-chart-card { padding: 16px 12px; }
+}
+@media (max-width: 340px) {
+ .calc .ry-form .field-row { grid-template-columns: 1fr; }
+}
+
 /* ---------- FAQ (body.page-home) ---------- */
 .faq-card details.faq-item { border-top: 1px solid #F0EDE6; padding: 12px 0; }
 .faq-card details.faq-item:first-of-type { border-top: none; }
@@ -1829,6 +1910,20 @@ body.page-home .quiz-teaser-row p{margin-bottom:0}
 .quiz-mini-cta{display:block;font-size:15px;font-weight:700;color:#AA151B}
 @media (max-width:560px){
  .quizzes-grid{grid-template-columns:1fr}
+}
+
+/* ── Calculators discovery block on the homepage ── */
+.calcs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
+.calc-mini{display:flex;flex-direction:column;text-decoration:none;border:1px solid #EFE7D8;border-radius:12px;background:#FFFDF8;padding:18px 20px 20px;transition:border-color .15s,box-shadow .15s}
+.calc-mini:hover{border-color:#AA151B;box-shadow:0 4px 18px rgba(170,21,27,.12)}
+.calc-mini:focus-visible{outline:3px solid rgba(170,21,27,.4);outline-offset:2px}
+.calc-mini-title{display:block;font-family:Roboto,Helvetica,sans-serif;font-size:18px;font-weight:700;color:#3C4858;line-height:1.35;margin-bottom:8px}
+.calc-mini-badge{display:inline-block;vertical-align:middle;margin-left:6px;padding:2px 9px;border-radius:999px;background:#AA151B;color:#fff;font-size:12px;font-weight:700;line-height:1.5}
+.calc-mini-hook{display:block;font-size:14px;line-height:1.55;color:#6C7A89;margin-bottom:14px}
+.calc-mini-cta{display:block;margin-top:auto;font-size:15px;font-weight:700;color:#AA151B}
+@media (max-width:560px){
+ .calcs-grid{grid-template-columns:1fr}
+ .calc-mini{padding:16px 18px 18px;min-height:44px}
 }
 
 /* ── Latest articles block on the homepage (1–3 items, no placeholder cards) ── */

@@ -1,0 +1,297 @@
+{% extends "base.html" %}
+{% block body_class %} class="page-calculator"{% endblock %}
+{% set page_title = "Spain Rental Yield Calculator " ~ calc_year ~ " — Net Yield, Cash-on-Cash & Taxes — Spanified" %}
+{% set page_desc = "Free Spain rental yield calculator: gross and net yield, cash-on-cash, IRR and monthly cash flow with ITP/IVA, IRPF or non-resident tax (IRNR) and capital gains. In English." %}
+{% set faqs = [
+ ("How is rental yield calculated?", "Gross yield = annual rent ÷ purchase price. Net yield = (annual rent after vacancy − operating expenses − rental income tax) ÷ (purchase price + purchase taxes + closing costs + renovation). Cash-on-cash = first-year cash flow after mortgage ÷ cash you put in. IRR uses yearly cash flows plus the net sale proceeds at the end of the holding period. Example: €250,000 in Madrid at €1,200/month gives a 5.76% gross yield."),
+ ("Which purchase taxes does the calculator use?", "Resale: ITP at the regional rate (progressive in eight regions, e.g. Madrid 6%, so €15,000 on €250,000). New build: 10% IVA (7% IGIC in the Canary Islands) plus AJD stamp duty at the regional rate (e.g. 0.75% in Madrid). The rates are the same table as our Property Buying Cost Calculator."),
+ ("How are rental profits taxed for residents?", "Residents pay IRPF on net rental income: rent minus deductible expenses (IBI, community fees, insurance, repairs, management), mortgage interest and building amortization. Under art. 23.2 LIRPF a reduction applies to long-term residential lets: 50% in general, 60% for a property renovated in the last two years or leases signed before 26 May 2023, 70% or 90% in designated stressed housing zones when conditions are met. The calculator lets you pick the reduction (default 50%) and applies your marginal rate. Royal Decree-law 29/2026 (BOE-A-2026-20823, in force since 8 October 2026 for leases from 1 December 2026) introduces a 15–100% scale; it still needs to be validated by Congress (expected around 12 November 2026), so check the position before relying on it."),
+ ("How are non-residents taxed on rental income?", "Non-residents pay IRNR. If you live in the EU/EEA the rate is 19% on rent minus expenses, mortgage interest and amortization (art. 24.6 TRLIRNR), with no 50% reduction. If you live outside the EU/EEA the rate is 24% on gross rent with no deductions. The Audiencia Nacional (28 July 2025, rec. 636/2021) allowed deductions for non-EU owners, but the Supreme Court has admitted an appeal, so it is not final. Tick the checkbox to model the ruling as a best case."),
+ ("How is the capital gain on sale taxed?", "Residents pay on the 2026 savings scale: 19% up to €6,000, 21% to €50,000, 23% to €200,000, 27% to €300,000 and 30% above. Non-residents pay a flat 19% (art. 25.1.f TRLIRNR). The buyer also withholds 3% of the price for the tax office (modelo 211) as an advance payment; it is not an extra cost and you reclaim any excess in your return, so the calculator does not model it. Municipal plusvalía is not calculated: enter your own estimate in the Exit section."),
+ ("How does amortization work?", "The tax rules (art. 14 RIRPF) let you depreciate the building at 3% a year of the larger of the acquisition cost (price + taxes + costs) and the cadastral value, excluding land. The calculator uses (price + purchase taxes + closing costs) × the construction share, plus any renovation cost, and caps total amortization at that base. The construction share is the building part of the cadastral value on your IBI bill (default 70%). Amortization you used also reduces the cost basis when you sell, which raises the taxable gain."),
+ ("How accurate are these results?", "This is an educational model, not tax advice. It ignores regional deductions, local rules, treaty provisions and the detail of your personal tax return. Last tax data verification: October 2026."),
+] %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block description %}<meta name="description" content="{{ page_desc }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="Gross and net yield, cash-on-cash, IRR and cash flow for a Spanish rental property, with resident and non-resident taxes. In English.">
+<meta property="og:url" content="{{ site_url }}/calculators/rental-yield">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page_title }}">
+<meta name="twitter:description" content="Gross and net yield, cash-on-cash, IRR and cash flow for a Spanish rental property, with resident and non-resident taxes. In English.">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/calculators/rental-yield">{% endblock %}
+{% macro num(key, label, tip='', unit='', step='any', data_show='') %}
+    <div class="field"{% if data_show %} data-show="{{ data_show }}"{% endif %}>
+     <label for="f-{{ key }}">{{ label }}{% if tip %} <span class="tip" title="{{ tip }}">?</span>{% endif %}{% if unit %} <span class="sub">{{ unit }}</span>{% endif %}</label>
+     <input id="f-{{ key }}" type="number" inputmode="decimal" step="{{ step }}" min="0" autocomplete="off">
+    </div>
+{% endmacro %}
+{% macro check(key, label, tip='') %}
+    <label class="check ry-check" for="f-{{ key }}"><input id="f-{{ key }}" type="checkbox"> <span>{{ label }}{% if tip %} <span class="tip" title="{{ tip }}">?</span>{% endif %}</span></label>
+{% endmacro %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [
+ {"@type": "WebPage",
+  "name": {{ page_title|tojson }},
+  "url": "{{ site_url }}/calculators/rental-yield",
+  "description": {{ page_desc|tojson }},
+  "inLanguage": "en",
+  "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}},
+ {"@type": "FAQPage", "mainEntity": [
+{% for q, a in faqs %}  {"@type": "Question", "name": {{ q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ a|tojson }}}}{% if not loop.last %},{% endif %}
+{% endfor %} ]}
+]}
+</script>
+ <div class="calc ry-calc">
+  <h1>Spain Rental Yield Calculator <span class="calc-year">{{ calc_year }}</span></h1>
+  <p class="subtitle">Net yield, cash-on-cash, IRR and cash flow — with Spanish purchase, rental and sale taxes.</p>
+
+  <div class="calc-grid ry-grid">
+   <div class="card calc-form ry-form">
+    <a class="ry-jump" href="#r-kpis">Jump to results ↓</a>
+
+    <details class="ry-group" open>
+     <summary>Purchase</summary>
+     <div class="ry-group-body">
+      {{ num('purchasePrice', 'Purchase price', 'The agreed price of the property. Purchase taxes are calculated on it. Minimum €10,000.', '€', '1000') }}
+      <div class="field">
+       <label for="f-regionId">Region <span class="tip" title="Your autonomous community sets the ITP transfer-tax rate (3–13%) and the AJD stamp-duty rate (0–1.5%) used for the purchase.">?</span></label>
+       <select id="f-regionId">
+        <option value="andalucia">Andalusia</option>
+        <option value="aragon">Aragon</option>
+        <option value="asturias">Asturias</option>
+        <option value="baleares">Balearic Islands</option>
+        <option value="pais_vasco">Basque Country</option>
+        <option value="canarias">Canary Islands</option>
+        <option value="cantabria">Cantabria</option>
+        <option value="castilla_leon">Castilla and Leon</option>
+        <option value="castilla_la_mancha">Castilla-La Mancha</option>
+        <option value="catalunya">Catalonia</option>
+        <option value="ceuta">Ceuta</option>
+        <option value="extremadura">Extremadura</option>
+        <option value="galicia">Galicia</option>
+        <option value="la_rioja">La Rioja</option>
+        <option value="madrid" selected>Madrid</option>
+        <option value="melilla">Melilla</option>
+        <option value="murcia">Murcia</option>
+        <option value="navarra">Navarre</option>
+        <option value="comunidad_valenciana">Valencian Community</option>
+       </select>
+      </div>
+      <div class="field">
+       <span class="flabel">Property type <span class="tip" title="Resale homes pay ITP transfer tax. New builds pay 10% IVA (7% IGIC in the Canary Islands) plus AJD stamp duty. You never pay both.">?</span></span>
+       <div class="seg" id="f-propertyType" role="group" aria-label="Property type">
+        <button type="button" data-v="resale" class="on" aria-pressed="true">Resale (ITP)</button>
+        <button type="button" data-v="new" aria-pressed="false">New build (IVA + AJD)</button>
+       </div>
+      </div>
+      {{ num('closingCostsPct', 'Closing costs', 'Notary, land registry, gestoría and valuation, as a percentage of the price. Purchase tax is added separately. 1.5–2.5% is typical.', '% of price', '0.1') }}
+      {{ check('useRenovation', 'Include renovation', 'Add an initial renovation. It is added to your cash outlay and amortized separately, and the flat is not rented during the works.') }}
+      <div class="ry-sub" data-show="renovation" hidden>
+       {{ num('renovationCost', 'Renovation cost', '', '€', '1000') }}
+       {{ num('renovationDurationMonths', 'Works duration', 'Months of the first year without rent.', 'months', '1') }}
+       {{ num('valueAfterRepairs', 'Value after repairs', 'Estimated market value once the works are done. The sale price grows from this value.', '€', '1000') }}
+      </div>
+     </div>
+    </details>
+
+    <details class="ry-group" open>
+     <summary>Rent &amp; costs</summary>
+     <div class="ry-group-body">
+      {{ num('monthlyRent', 'Monthly rent', 'Rent you charge per month in year 1, before vacancy.', '€', '10') }}
+      <div class="field-row">
+       {{ num('vacancyRatePct', 'Vacancy', 'Share of the year the flat stands empty or unpaid.', '%', '0.5') }}
+       {{ num('rentGrowthPct', 'Rent growth', 'Yearly rent increase. Regulated residential leases are limited by the rent-update index.', '% / yr', '0.1') }}
+      </div>
+      <div class="field-row">
+       {{ num('annualIBI', 'IBI', 'Annual municipal property tax (Impuesto sobre Bienes Inmuebles).', '€ / yr', '10') }}
+       {{ num('monthlyCommunity', 'Community fee', 'Monthly homeowners association fee.', '€ / mo', '5') }}
+      </div>
+      <div class="field-row">
+       {{ num('annualHomeInsurance', 'Home insurance', '', '€ / yr', '10') }}
+       {{ num('annualRentalInsurance', 'Rent insurance', 'Optional non-payment insurance.', '€ / yr', '10') }}
+      </div>
+      <div class="field-row">
+       {{ num('maintenanceRatePct', 'Maintenance', 'Repairs and upkeep as a percentage of rent.', '% of rent', '0.5') }}
+       {{ num('managementFeePct', 'Management', 'Property manager fee as a percentage of rent. 0 if you self-manage.', '% of rent', '0.5') }}
+      </div>
+      {{ num('expenseGrowthRatePct', 'Expense growth', 'Yearly increase of IBI, community fee and insurance.', '% / yr', '0.1') }}
+     </div>
+    </details>
+
+    <details class="ry-group">
+     <summary>Financing</summary>
+     <div class="ry-group-body">
+      {{ check('useLoan', 'Use a mortgage') }}
+      <div class="ry-sub" data-show="loan" hidden>
+       <div class="field-row">
+        {{ num('downPaymentPct', 'Down payment', 'Share of the price paid in cash. Taxes and costs are paid in cash on top.', '%', '1') }}
+        {{ num('interestRateAnnual', 'Interest rate', 'Fixed annual rate.', '% / yr', '0.05') }}
+       </div>
+       <div class="field-row">
+        {{ num('loanTermYears', 'Term', '', 'years', '1') }}
+        {{ num('loanOpeningFee', 'Opening fee', 'One-off bank fee, paid in cash.', '€', '100') }}
+       </div>
+      </div>
+     </div>
+    </details>
+
+    <details class="ry-group" open>
+     <summary>Taxes</summary>
+     <div class="ry-group-body">
+      <div class="field">
+       <label for="f-taxStatus">Tax residency <span class="tip" title="Residents pay IRPF at their marginal rate. Non-residents pay IRNR: 19% (EU/EEA, on net income) or 24% (outside the EU/EEA, on gross rent).">?</span></label>
+       <select id="f-taxStatus">
+        <option value="resident" selected>Spanish resident</option>
+        <option value="non_resident_eu">Non-resident (EU/EEA)</option>
+        <option value="non_resident_non_eu">Non-resident (outside EU/EEA)</option>
+       </select>
+      </div>
+      <div class="field-row" data-show="resident">
+       {{ num('personalTaxRatePct', 'Marginal IRPF rate', 'The rate on your next euro of income (state + regional), typically 19–47%. Rental income is added on top of your other income.', '%', '0.5') }}
+       <div class="field">
+        <label for="f-rentalReductionPct">Rental reduction <span class="tip" title="Art. 23.2 LIRPF (Ley 12/2023): 50% general for a long-term home let; 60% if the property was renovated in the last two years or the lease was signed before 26 May 2023; 70% or 90% in a stressed housing zone when conditions are met. Royal Decree-law 29/2026 (BOE-A-2026-20823), in force since 8 Oct 2026 for leases from 1 Dec 2026, introduces a 15–100% scale; it awaits validation by Congress (about 12 Nov 2026).">?</span></label>
+        <select id="f-rentalReductionPct">
+         <option value="0">0% (none)</option>
+         <option value="50" selected>50% (general)</option>
+         <option value="60">60%</option>
+         <option value="70">70%</option>
+         <option value="90">90%</option>
+         <option value="100">100%</option>
+        </select>
+       </div>
+      </div>
+      <div class="field" data-show="noneu" hidden>
+       {{ check('useNonEuDeductions', 'Apply the Audiencia Nacional 2025 ruling (net base, under appeal)', 'Judgment of 28 July 2025 (rec. 636/2021) lets non-EU owners deduct expenses. The Supreme Court has admitted an appeal, so the current rule is 24% on gross rent. Tick to see the best case: 24% on net income.') }}
+      </div>
+      {{ num('constructionSharePct', 'Building share of value', 'Amortization applies to the building only, not the land. Use the construction value ÷ total cadastral value from your IBI bill (valor catastral). 70% is a common default.', '%', '1') }}
+     </div>
+    </details>
+
+    <details class="ry-group">
+     <summary>Exit</summary>
+     <div class="ry-group-body">
+      <div class="field-row">
+       {{ num('holdYears', 'Holding period', 'Years until you sell (1–50).', 'years', '1') }}
+       {{ num('appreciationRatePct', 'Price growth', 'Average yearly increase of the property value.', '% / yr', '0.1') }}
+      </div>
+      <div class="field-row">
+       {{ num('costToSellPct', 'Selling costs', 'Agent fee and other costs of selling, as a percentage of the sale price.', '% of price', '0.1') }}
+       {{ num('plusvalia', 'Municipal plusvalía', 'Local land-value gain tax (plusvalía municipal), paid by the seller. Depends on your town and cadastral data; enter your own estimate.', '€', '100') }}
+      </div>
+     </div>
+    </details>
+
+    <button type="button" id="r-reset" class="ry-reset">Reset to defaults</button>
+   </div>
+
+   <div class="calc-results ry-results">
+    <div class="notice notice-red" id="r-error" hidden><strong>⚠️ Calculation error:</strong> <span id="r-error-text"></span>.</div>
+
+    <div id="r-results">
+     <div class="ry-kpis" id="r-kpis">
+      <div class="ry-kpi ry-kpi-main">
+       <p class="kicker">Net yield</p>
+       <p class="val" id="r-net">—</p>
+       <p class="sub2">after expenses &amp; tax, year 1</p>
+      </div>
+      <div class="ry-kpi">
+       <p class="kicker">Gross yield</p>
+       <p class="val" id="r-gross">—</p>
+       <p class="sub2">rent ÷ price</p>
+      </div>
+      <div class="ry-kpi">
+       <p class="kicker">Cash-on-cash</p>
+       <p class="val" id="r-coc">—</p>
+       <p class="sub2">year 1, on cash invested</p>
+      </div>
+      <div class="ry-kpi">
+       <p class="kicker">Cash flow / month</p>
+       <p class="val" id="r-monthly">—</p>
+       <p class="sub2">year 1, after tax</p>
+      </div>
+      <div class="ry-kpi">
+       <p class="kicker">IRR</p>
+       <p class="val" id="r-irr">—</p>
+       <p class="sub2" id="r-irr-sub">incl. sale</p>
+      </div>
+     </div>
+
+     <div class="duo">
+      <div class="mini mini-ss">
+       <p class="kicker">Cash needed up front</p>
+       <p class="val" id="r-outlay">—</p>
+       <p class="sub2" id="r-outlay-sub">—</p>
+      </div>
+      <div class="mini mini-profit">
+       <p class="kicker">Profit when sold</p>
+       <p class="val" id="r-profit">—</p>
+       <p class="sub2" id="r-roi">—</p>
+      </div>
+     </div>
+
+     <div class="card ry-chart-card">
+      <p class="calc-kicker">Equity and cash flow by year</p>
+      <div class="legend">
+       <span><span class="dot dot-equity"></span>Equity (value − mortgage)</span>
+       <span><span class="dot dot-cash"></span>Cumulative cash flow</span>
+      </div>
+      <div class="ry-chart" id="r-chart"></div>
+      <p class="ry-chart-read" id="r-chart-read" aria-live="polite"></p>
+      <p class="field-note">Years since purchase. Tap or hover the chart to read a year.</p>
+     </div>
+
+     <div class="notice notice-blue">
+      <div class="notice-title" id="r-tax1">Year-1 rental tax</div>
+      <p id="r-taxnote"></p>
+     </div>
+
+     <div class="card burden ry-summary">
+      <p class="calc-kicker">Over <span id="r-hold-label">30</span> years</p>
+      <div class="card sheet">
+       <table>
+        <thead><tr><th>Item</th><th class="num">Amount</th></tr></thead>
+        <tbody id="r-summary"></tbody>
+       </table>
+      </div>
+     </div>
+
+     <details class="card ry-years">
+      <summary>Year-by-year table</summary>
+      <div class="ry-table-wrap" tabindex="0" role="region" aria-label="Year-by-year cash flow table, scrolls horizontally">
+       <table class="ry-table">
+        <thead><tr><th>Year</th><th class="num">Rent</th><th class="num">Expenses</th><th class="num">Mortgage</th><th class="num">Tax</th><th class="num">Cash flow</th><th class="num">Cumulative</th></tr></thead>
+        <tbody id="r-years"></tbody>
+       </table>
+      </div>
+     </details>
+    </div>
+   </div>
+  </div>
+
+  {% set field_id = "calc-rental-email" %}{% set form_kind = "calc-rental" %}{% set variant = "cta-form-card--compact" %}{% set indent = "  " %}{% include "partials/cta-form-card.html" %}
+
+  <div class="card seobox">
+   <h2>How this calculator models Spanish rental taxes</h2>
+   <p>Purchase: ITP on resales and IVA/IGIC plus AJD on new builds, using the regional rates from our <a href="/calculators/property-buying-cost">Property Buying Cost Calculator</a>. Rental income: residents pay IRPF on net income after a reduction you choose, non-residents pay IRNR at 19% (EU/EEA, net) or 24% (elsewhere, gross). Sale: residents pay the 2026 savings scale, non-residents a flat 19%. <a href="/subscribe">Get Spain property news in English every morning</a> / Compare self-employed taxes with our <a href="/calculators/autonomo-tax">Autónomo Tax Calculator</a>.</p>
+   <p class="src">Sources: BOE-A-2026-20823 (RDL 29/2026); art. 23.2 LIRPF; arts. 24.6 and 25 TRLIRNR; art. 14 RIRPF; Audiencia Nacional 28.07.2025 (rec. 636/2021); savings scale 2026 (guiafiscal.es). Last tax data verification: October 2026. This calculator is an educational simulation and not tax or legal advice.</p>
+  </div>
+
+  <div class="card faq-card">
+   <h2>Frequently Asked Questions</h2>
+{% for q, a in faqs %}   <details class="faq-item"><summary>{{ q }}</summary><p>{{ a }}</p></details>
+{% endfor %}   <div class="calc-share">
+    <div class="share-cta">Renting out a flat in Spain? Share this calculator.</div>
+    {% with share=share %}{% include "partials/share.html" %}{% endwith %}
+   </div>
+  </div>
+ </div>
+<script type="module" src="/static/js/rental-yield.js?v={{ js_version }}"></script>
+<script src="/static/js/tooltips.js?v={{ js_version }}" defer></script>
+<script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
+{% endblock %}
