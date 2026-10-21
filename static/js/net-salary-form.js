@@ -95,7 +95,7 @@ export const FIELD_LIMITS = {
   nursery: { type: 'money', min: 0, max: 100000 },
   pensionEmployee: { type: 'money', min: 0, max: 100000 },
   pensionEmployer: { type: 'money', min: 0, max: 100000 },
-  hoursPerWeek: { type: 'number', min: 1, max: 80 },
+  hoursPerWeek: { type: 'number', min: 0, max: 80 },
   atRate: { type: 'percent', min: 0, max: 10 },
 }
 
@@ -119,6 +119,13 @@ export function clampField(key, raw) {
   if (!Number.isFinite(n)) return DEFAULTS[key]
   if (lim.type === 'int') n = Math.trunc(n)
   return Math.min(lim.max, Math.max(lim.min, n))
+}
+
+/** Value of a number field as typed: empty counts as the minimum, unparsable text is ignored (null). */
+export function inputValue(key, raw) {
+  if (raw === '') return FIELD_LIMITS[key].min
+  const n = Number(raw)
+  return Number.isFinite(n) ? clampField(key, n) : null
 }
 
 function sanitizeList(raw, max) {
@@ -156,12 +163,12 @@ export function parseStateFromParams(search, regions = null) {
 
 const encode = v => (typeof v === 'boolean' ? (v ? '1' : '0') : Array.isArray(v) ? v.join(',') : String(v))
 
-/** URL params for a state: always the amount, plus every value that differs from DEFAULTS. */
+/** URL params for a state: only the values that differ from DEFAULTS. */
 export function stateToParams(state) {
   const out = []
   for (const [field, key] of Object.entries(QUERY_KEYS)) {
     const v = encode(state[field])
-    if (field === 'amount' || v !== encode(DEFAULTS[field])) out.push([key, v])
+    if (v !== encode(DEFAULTS[field])) out.push([key, v])
   }
   return out
 }

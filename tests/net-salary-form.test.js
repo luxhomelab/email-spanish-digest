@@ -1,7 +1,7 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
 import {
-  DEFAULTS, QUERY_KEYS, FIELD_LIMITS, sanitizeState, parseStateFromParams, stateToParams,
+  DEFAULTS, QUERY_KEYS, FIELD_LIMITS, sanitizeState, parseStateFromParams, stateToParams, inputValue,
 } from '../static/js/net-salary-form.js'
 
 const REGIONS = ['madrid', 'catalunya', 'ceuta', 'andalucia']
@@ -64,9 +64,14 @@ describe('net salary form state', () => {
     assert.deepEqual(parseStateFromParams('?' + qs, REGIONS), state)
   })
 
-  it('writes the amount plus only non-default values', () => {
+  it('writes only non-default values', () => {
     const params = new Map(stateToParams({ ...DEFAULTS, region: 'catalunya' }))
-    assert.deepEqual([...params.keys()].sort(), [QUERY_KEYS.amount, QUERY_KEYS.region].sort())
+    assert.deepEqual([...params.keys()], [QUERY_KEYS.region])
+    assert.deepEqual(new Map(stateToParams({ ...DEFAULTS, amount: 45000 })), new Map([[QUERY_KEYS.amount, '45000']]))
+  })
+
+  it('defaults (after Reset) leave no params in the URL', () => {
+    assert.deepEqual(stateToParams({ ...DEFAULTS }), [])
   })
 
   it('no ns_ params → null (falls back to storage)', () => {
@@ -76,5 +81,20 @@ describe('net salary form state', () => {
   it('missing params take defaults', () => {
     const s = parseStateFromParams(`?${QUERY_KEYS.amount}=45000`, REGIONS)
     assert.deepEqual(s, { ...DEFAULTS, amount: 45000 })
+  })
+})
+
+describe('inputValue (typing in a number field)', () => {
+  it('an emptied field counts as the minimum, not the previous value', () => {
+    assert.equal(inputValue('amount', ''), 0)
+    assert.equal(inputValue('pensionEmployee', ''), 0)
+  })
+
+  it('0 hours a week is kept as 0, not silently raised to 1', () => {
+    assert.equal(inputValue('hoursPerWeek', '0'), 0)
+  })
+
+  it('half-typed garbage is ignored (null)', () => {
+    assert.equal(inputValue('amount', 'abc'), null)
   })
 })

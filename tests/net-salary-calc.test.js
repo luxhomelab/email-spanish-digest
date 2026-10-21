@@ -376,3 +376,30 @@ describe('resolveGross (form amount → annual gross)', () => {
     near(calculateNetSalary({ ...base, gross: g2, payments: '14' }).payslip.regular, 1800, 1)
   })
 })
+
+describe('reported edge cases', () => {
+  it('0 hours a week → no hourly figure instead of dividing by 1 h', () => {
+    assert.equal(calc({ gross: 30000, hoursPerWeek: 0 }).hourly, null)
+  })
+
+  it('employee pension above the deductible limit is flagged', () => {
+    assert.ok(calc({ gross: 30000, pensionEmployee: 20000 }).warnings.includes('pensionAboveLimit'))
+    assert.deepEqual(calc({ gross: 30000, pensionEmployee: 1500 }).warnings, [])
+  })
+
+  it('employee pension cannot push the net below zero', () => {
+    const r = calc({ gross: 12000, pensionEmployee: 50000 })
+    assert.ok(r.netAnnual >= 0, String(r.netAnnual))
+    assert.ok(r.warnings.includes('pensionAboveCash'))
+  })
+
+  it('17,094 €: withholding starts above the 15,876 € exclusion limit but the SMI deduction zeroes the Renta (real AEAT behaviour)', () => {
+    const low = calc({ gross: 15876 })
+    assert.equal(low.withholding.annual, 0)
+    assert.equal(low.irpf.total, 0)
+    const r = calc({ gross: 17094 })
+    assert.equal(r.irpf.total, 0)
+    assert.ok(r.withholding.annual > 0)
+    near(r.refund, r.withholding.annual)
+  })
+})

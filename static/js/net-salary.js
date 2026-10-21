@@ -1,6 +1,6 @@
 import { calculateNetSalary, compareRegions, resolveGross } from './net-salary-calc.js'
 import {
-  sanitizeState, parseStateFromParams, stateToParams, clampField,
+  sanitizeState, parseStateFromParams, stateToParams, clampField, inputValue,
   DEFAULTS, FIELD_LIMITS, QUERY_KEYS, MAX_DESC_DISAB, MAX_ASC_DISAB,
 } from './net-salary-form.js'
 
@@ -122,10 +122,9 @@ function bindInputs(state, onChange) {
   for (const key of Object.keys(FIELD_LIMITS)) {
     const el = $(`f-${key}`)
     el.addEventListener('input', () => {
-      if (el.value === '') return
-      const num = Number(el.value)
-      if (!Number.isFinite(num)) return
-      state[key] = clampField(key, num)
+      const v = inputValue(key, el.value)
+      if (v === null) return
+      state[key] = v
       if (key === 'amount') $('f-slider').value = String(state.amount)
       onChange()
     })
@@ -225,10 +224,10 @@ function renderPayslip(r, s) {
   const ded = [
     `<tr class="ns-ps-sec"><th colspan="2" scope="rowgroup">Deductions <span lang="es">deducciones</span></th></tr>`,
     row('Social Security', `−${fmtEur2(r.ss.total / n)}`, 'ns-ps-ss', `${fmtPct((r.ss.total - ssLines.solidarity) / (r.ss.monthlyBase * 12 || 1), 2)} of ${fmtEur2(r.ss.monthlyBase)} base`),
-    row(`IRPF withholding ${r.withholding.rate.toFixed(2)}%`, `−${fmtEur2(p.grossRegular - r.ss.total / n - (s.pensionEmployee || 0) / n - p.regular)}`, 'ns-ps-irpf', 'Retención IRPF'),
+    row(`IRPF withholding ${r.withholding.rate.toFixed(2)}%`, `−${fmtEur2(p.grossRegular - r.ss.total / n - r.pensionEmployee / n - p.regular)}`, 'ns-ps-irpf', 'Retención IRPF'),
   ]
   if (r.flex.total > 0) ded.push(row('Benefits already received', `−${fmtEur2(flexMonthly)}`, 'ns-ps-kind', 'Paid as the benefit, not in cash'))
-  if (s.pensionEmployee > 0) ded.push(row('Your pension plan', `−${fmtEur2(s.pensionEmployee / n)}`, '', 'Aportación a plan de pensiones'))
+  if (r.pensionEmployee > 0) ded.push(row('Your pension plan', `−${fmtEur2(r.pensionEmployee / n)}`, '', 'Aportación a plan de pensiones'))
   $('r-ps-earn').innerHTML = `<tr class="ns-ps-sec"><th colspan="2" scope="rowgroup">Earnings <span lang="es">devengos</span></th></tr>` + earn.join('')
   $('r-ps-ded').innerHTML = ded.join('')
   $('r-ps-net').textContent = fmtEur2(p.regular)
@@ -239,7 +238,14 @@ function renderPayslip(r, s) {
 
 function renderKpis(r, s) {
   $('r-net-year').textContent = fmtEur(r.netAnnual)
-  $('r-net-year-sub').textContent = `${fmtEur2(r.hourly)} an hour at ${s.hoursPerWeek} h a week`
+  $('r-net-year-sub').textContent = r.hourly != null
+    ? `${fmtEur2(r.hourly)} an hour at ${s.hoursPerWeek} h a week`
+    : 'Enter your hours a week to see hourly pay'
+  const warn = []
+  if (r.warnings.includes('pensionAboveCash')) warn.push(`Your pension plan is more than the salary left after tax; counted as ${fmtEur(r.pensionEmployee)}.`)
+  if (r.warnings.includes('pensionAboveLimit')) warn.push('Only €1,500 a year of your own pension contributions (more with employer contributions to a company plan) reduces your tax.')
+  $('r-pension-warn').textContent = warn.join(' ')
+  $('r-pension-warn').hidden = warn.length === 0
   const gross = r.totalComp || 1
   $('r-keep').textContent = fmtPct(r.annualTaxNet / gross, 1)
   $('r-keep-sub').textContent = r.marginalKeep != null

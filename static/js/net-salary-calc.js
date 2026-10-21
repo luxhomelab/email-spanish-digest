@@ -321,12 +321,16 @@ export function calculateNetSalary(s) {
   // Rendimiento íntegro del trabajo: cash + taxable in-kind (+ employer pension contributions).
   const rit = r2(cashGross + flex.taxable + pensionEmployer)
   const p = { ...s, rit, ss: s.regime === 'beckham' ? 0 : ss.total, pensionEmployer }
-  const irpf = calcAnnualIrpf(p)
   const withholding = calcWithholding({ ...p, ss: ss.total })
 
   // Cash actually paid: in-kind withholding is charged to the cash payslips; employee
-  // pension contributions are taken from the payslip too.
-  const pensionEmployee = Math.max(0, s.pensionEmployee || 0)
+  // pension contributions are taken from the payslip too, so they can't exceed what's left.
+  const pensionAsked = Math.max(0, s.pensionEmployee || 0)
+  const pensionEmployee = Math.min(pensionAsked, Math.max(0, r2(cashGross - ss.total - withholding.annual)))
+  const irpf = calcAnnualIrpf({ ...p, pensionEmployee })
+  const warnings = []
+  if (pensionAsked > PENSION_LIMITS.employee + Math.min(pensionEmployer, PENSION_LIMITS.employer)) warnings.push('pensionAboveLimit')
+  if (pensionAsked > pensionEmployee) warnings.push('pensionAboveCash')
   const netAnnual = r2(cashGross - ss.total - withholding.annual - pensionEmployee)
   const annualTaxNet = r2(cashGross - ss.total - irpf.total - pensionEmployee)
   const refund = r2(withholding.annual - irpf.total)
@@ -341,13 +345,14 @@ export function calculateNetSalary(s) {
     payslip = { count: 12, regular: r2(netAnnual / 12), extra: null, grossRegular: r2(cashGross / 12), grossExtra: null }
   }
 
-  const hours = Math.max(1, s.hoursPerWeek || 40) * 52
+  const hours = (s.hoursPerWeek ?? 40) * 52
   return {
     gross, cashGross: r2(cashGross), totalComp: r2(totalComp), flex, ss, irpf, withholding,
     netAnnual, annualTaxNet, refund, payslip,
     totalValue: r2(netAnnual + flex.total),
     employer: { ...employerSS, totalCost: r2(totalComp + pensionEmployer + employerSS.total) },
-    hourly: r2(netAnnual / hours),
+    hourly: hours > 0 ? r2(netAnnual / hours) : null,
+    warnings, pensionEmployee,
     effectiveRate: gross > 0 ? (ss.total + irpf.total) / gross : 0,
     marginalKeep: marginalKeep(s, annualTaxNet),
   }

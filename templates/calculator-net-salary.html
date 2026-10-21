@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block body_class %} class="page-calculator"{% endblock %}
 {% set page_title = "Spain Net Salary Calculator " ~ calc_year ~ ": Gross to Net Pay | Spanified" %}
-{% set page_desc = "Free Spain net salary calculator for " ~ calc_year ~ ": your payslip after Social Security and IRPF, the refund at the Renta, all 17 regions compared, 12 or 14 payslips, family, flexible pay and the Beckham law." %}
+{% set page_desc = "Free Spain net salary calculator for " ~ calc_year ~ ": your payslip after Social Security and IRPF, the refund at the Renta, every common-regime region compared, 12 or 14 payslips, family, flexible pay and the Beckham law." %}
 {% set faqs = [
  ("How is net salary calculated in Spain?", "Net pay = gross salary − employee Social Security − IRPF withholding. Social Security is 6.50% of your gross on a permanent contract in " ~ calc_year ~ " (4.70% common contingencies, 1.55% unemployment, 0.10% training and 0.15% MEI), on a base capped at €5,101.20 a month. IRPF is progressive: the state scale plus your region's scale, applied after a €2,000 expense allowance, the work-income reduction and your personal and family minimum. Example: €30,000 gross in Madrid leaves about €23,450 a year once the Renta is filed."),
  ("Why is the tax on my payslip different from what I pay at the Renta?", "Your employer withholds IRPF with the national AEAT algorithm, which ignores your region and some deductions. The annual Renta applies your region's scale and minimums, the deduction for low earners and joint taxation. The difference comes back as a refund or is paid with the return. The calculator shows both numbers and the difference."),
@@ -80,7 +80,7 @@
 </script>
  <div class="calc ry-calc ns-calc">
   <h1>Spain Net Salary Calculator <span class="calc-year">{{ calc_year }}</span></h1>
-  <p class="subtitle">Your payslip after Social Security and IRPF, what the Renta will refund or charge, and how your take-home pay compares across all 17 regions.</p>
+  <p class="subtitle">Your payslip after Social Security and IRPF, what the Renta will refund or charge, and how your take-home pay compares across the 15 common-regime regions plus Ceuta and Melilla.</p>
 
   <div class="calc-grid ry-grid">
    <div class="card calc-form ry-form">
@@ -124,6 +124,7 @@
         <option value="murcia">Murcia</option>
         <option value="comunidad_valenciana">Valencian Community</option>
        </select>
+       <p class="field-note">Payslip withholding uses one national table, so it is the same in every region; the regional difference shows up at the Renta. The Basque Country and Navarre have their own (foral) tax systems and are not covered.</p>
       </div>
       {{ seg('regime', 'Tax regime', [('standard', 'Standard'), ('beckham', 'Beckham law')], 'Beckham law: special regime for people who moved to Spain for work (art. 93 LIRPF). 24% flat up to €600,000, 47% above, no deductions. Region and family do not change the tax.') }}
      </div>
@@ -144,7 +145,7 @@
        </select>
       </div>
       <div class="field">
-       <label for="f-joint">{{ lbl('Joint tax return', 'Joint return (tributación conjunta): €3,400 off the base for a married couple, assumed here with a spouse without income; €2,150 for a single parent living with their children.') }}</label>
+       <label for="f-joint">{{ lbl('Joint tax return', 'Joint return (tributación conjunta): €3,400 off the base for a married couple, assumed here with a spouse without income; €2,150 for a single parent living with their children. On the payslip this only changes the income below which nothing is withheld, so above about €17,000 the withholding stays the same and the saving comes at the Renta.') }}</label>
        <select id="f-joint">
         <option value="none">No, individual return</option>
         <option value="married">Married, spouse without income</option>
@@ -190,6 +191,7 @@
        {{ num('pensionEmployee', 'Your pension plan', 'What you pay into a pension plan. It reduces your taxable base by up to €1,500, or more through a company plan.', '€/yr', '100') }}
        {{ num('pensionEmployer', 'Employer pension', 'What your employer pays into your company pension plan. It is taxable pay, but you deduct it again, up to €8,500.', '€/yr', '100') }}
       </div>
+      <p class="field-note" id="r-pension-warn" role="status" hidden></p>
       <div class="field-row">
        {{ num('hoursPerWeek', 'Hours a week', 'Used for your net hourly pay (hours × 52 weeks).', 'h', '0.5') }}
        {{ num('atRate', 'Accident insurance', 'Workplace accident premium (AT/EP) your employer pays. It depends on the activity: about 1.5% for offices, up to 7% for construction.', '%', '0.05') }}
