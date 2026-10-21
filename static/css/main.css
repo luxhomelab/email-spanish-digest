@@ -2865,7 +2865,7 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 .ns-sc-all tr.ns-cur td { background: #FDF0F0; font-weight: 800; }
 @media (max-width: 480px) {
   .ns-sc-table .ns-sc-barcol { display: none; }
-  .ns-calc .ns-sc-table th, .ns-calc .ns-sc-table td, .ns-calc .ns-sc-all th, .ns-calc .ns-sc-all td { padding-left: 6px; padding-right: 6px; font-size: 13px; }
+  .ns-calc .ns-sc-table th, .ns-calc .ns-sc-table td, .ns-calc .ns-sc-all th, .ns-calc .ns-sc-all td { padding-left: 5px; padding-right: 5px; font-size: 13px; }
   .ns-calc .ns-sc-table th, .ns-calc .ns-sc-all th { letter-spacing: 0.3px; font-size: 11px; white-space: normal; }
   .ns-calc .ns-sc-table td:first-child { white-space: normal; }
   .ns-calc .ns-scales > .card { padding-left: 12px; padding-right: 12px; }

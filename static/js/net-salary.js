@@ -468,7 +468,8 @@ function renderScale(region) {
       : `The state scale is the same everywhere; the regional half is set by ${name}. Applied to the taxable base after your personal minimum.`
   const top = slices.at(-1).rate
   $('r-scale').innerHTML = slices.map(sl => {
-    const range = sl.to == null ? `From ${fmtEur(sl.from)}` : `${fmtEur(sl.from)} – ${fmtEur(sl.to)}`
+    const nb = n => fmtEur(n).replace(/ /g, ' ')
+    const range = sl.to == null ? `From ${nb(sl.from)}` : `${nb(sl.from)} – ${nb(sl.to)}`
     const w = r => `${(r / Math.max(top, 0.5)) * 100}%`
     return `<tr><td>${range}</td><td class="num">${foral ? '—' : pct(sl.state)}</td><td class="num">${pct(sl.regional)}</td>`
       + `<td class="num b">${pct(sl.rate * share)}</td>`
