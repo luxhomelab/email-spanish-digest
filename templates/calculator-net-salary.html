@@ -82,7 +82,12 @@
   <h1>Spain Net Salary Calculator <span class="calc-year">{{ calc_year }}</span></h1>
   <p class="subtitle">Your payslip after Social Security and IRPF, what the Renta will refund or charge, and how your take-home pay compares across every region, including the foral Navarre and Basque Country.</p>
 
-  <div class="calc-grid ry-grid">
+  <div class="ns-tabs" role="tablist" aria-label="Calculator views">
+   <button type="button" role="tab" id="t-calc" aria-controls="p-calc" aria-selected="true">Calculator</button>
+   <button type="button" role="tab" id="t-scales" aria-controls="p-scales" aria-selected="false" tabindex="-1">Tax brackets by region</button>
+  </div>
+
+  <div class="calc-grid ry-grid" id="p-calc" role="tabpanel" aria-labelledby="t-calc">
    <div class="card calc-form ry-form">
     <a class="ry-jump" href="#r-payslip">Jump to your payslip ↓</a>
 
@@ -291,6 +296,32 @@
        </table>
       </div>
      </div>
+    </div>
+   </div>
+  </div>
+
+  <div class="ns-scales" id="p-scales" role="tabpanel" aria-labelledby="t-scales" hidden>
+   <div class="card">
+    <div class="field ns-scales-pick">
+     <label for="f-scale-region">Region</label>
+     <select id="f-scale-region"></select>
+    </div>
+    <p class="field-note" id="r-scale-note"></p>
+    <div class="ry-table-wrap" tabindex="0" role="region" aria-label="IRPF brackets, scrolls horizontally">
+     <table class="ry-table ns-sc-table">
+      <thead><tr><th>Taxable base</th><th class="num">State</th><th class="num">Regional</th><th class="num">Total</th><th class="ns-sc-barcol" aria-hidden="true"></th></tr></thead>
+      <tbody id="r-scale"></tbody>
+     </table>
+    </div>
+   </div>
+   <div class="card">
+    <p class="calc-kicker">Every region at a glance</p>
+    <p class="field-note">Combined state and regional rate on the first euro, at 30,000 €, at 60,000 € and at the top. Click a region to see its full scale.</p>
+    <div class="ry-table-wrap" tabindex="0" role="region" aria-label="Rates by region, scrolls horizontally">
+     <table class="ry-table ns-sc-all">
+      <thead><tr><th>Region</th><th class="num">First €</th><th class="num">30,000 €</th><th class="num">60,000 €</th><th class="num">Top</th><th class="num">Top from</th></tr></thead>
+      <tbody id="r-scale-all"></tbody>
+     </table>
     </div>
    </div>
   </div>
