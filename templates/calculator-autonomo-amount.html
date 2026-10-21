@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% block body_class %} class="page-calculator"{% endblock %}
+{% set page_url = site_url ~ "/calculators/" ~ p.slug %}
+{% block title %}{{ p.title }}{% endblock %}
+{% block description %}<meta name="description" content="{{ p.description }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ p.title }}">
+<meta property="og:description" content="{{ p.description }}">
+<meta property="og:url" content="{{ site_url }}/calculators/{{ p.slug }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ p.title }}">
+<meta name="twitter:description" content="{{ p.description }}">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/calculators/{{ p.slug }}">{% endblock %}
+
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [
+ {"@type": "WebPage",
+  "name": {{ p.title|tojson }},
+  "url": "{{ site_url }}/calculators/{{ p.slug }}",
+  "description": {{ p.description|tojson }},
+  "inLanguage": "en",
+  "dateModified": "{{ build_date }}",
+  "isPartOf": {"@type": "WebPage", "name": "Autónomo Tax Calculator Spain", "url": "{{ site_url }}/calculators/autonomo-tax"},
+  "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}},
+ {"@type": "FAQPage", "mainEntity": [
+{% for q, a in p.faqs %}  {"@type": "Question", "name": {{ q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ a|tojson }}}}{% if not loop.last %},{% endif %}
+{% endfor %} ]}
+]}
+</script>
+ <div class="calc ry-calc ns-calc ns-seo">
+  <h1>{{ p.h1 }}</h1>
+  <p class="subtitle">{{ p.answer }}</p>
+  <p class="field-note ns-seo-assume">Assumes {{ p.calc_year }} rules, an established autónomo (2+ years), individual, living in Madrid, age 35, no dependants. Net revenue means income after business expenses, before Social Security and IRPF.</p>
+
+  <div class="ns-kpis ns-seo-kpis">
+{% if p.kind == "monthly" %}   <div class="ns-kpi">
+    <p class="kicker">Net revenue needed a year</p>
+    <p class="val">{{ p.revenue }}</p>
+    <p class="sub2">{{ p.revenue_month }} a month</p>
+   </div>
+   <div class="ns-kpi">
+    <p class="kicker">First year, tarifa plana</p>
+    <p class="val">{{ p.tp_needed }}</p>
+    <p class="sub2">{{ p.tp_needed_month }} a month</p>
+   </div>
+   <div class="ns-kpi">
+    <p class="kicker">You take home</p>
+    <p class="val">{{ p.target }}</p>
+    <p class="sub2">a month after quota and IRPF</p>
+   </div>
+{% else %}   <div class="ns-kpi">
+    <p class="kicker">Net a month, established</p>
+    <p class="val">{{ p.net_month }}</p>
+    <p class="sub2">{{ p.quota }} quota a month</p>
+   </div>
+   <div class="ns-kpi">
+    <p class="kicker">Net a month, tarifa plana</p>
+    <p class="val">{{ p.tp_net_month }}</p>
+    <p class="sub2">first 12 months, €80 quota</p>
+   </div>
+   <div class="ns-kpi">
+    <p class="kicker">Net a year</p>
+    <p class="val">{{ p.net_year }}</p>
+    <p class="sub2">from {{ p.revenue }} net revenue</p>
+   </div>
+{% endif %}  </div>
+
+  <p class="ns-seo-cta"><a class="calc-btn" href="/calculators/autonomo-tax?{{ p.query }}">Personalise this calculation</a></p>
+
+  <div class="card sheet ns-seo-sheet">
+   <table>
+    <caption class="ns-seo-cap">From {{ p.revenue }} net revenue to take-home pay</caption>
+    <thead><tr><th>Item</th><th class="num">Per year</th></tr></thead>
+    <tbody>
+     <tr class="row-h"><td>Net revenue</td><td class="num">{{ p.revenue }}</td></tr>
+     <tr><td class="ind">Social Security quota ({{ p.quota }} a month, bracket {{ p.bracket }})</td><td class="num">−{{ p.quota_year }}</td></tr>
+     <tr><td class="ind">IRPF income tax ({{ p.irpf_rate }} of revenue)</td><td class="num">−{{ p.irpf }}</td></tr>
+     <tr class="row-h"><td>Take-home pay</td><td class="num">{{ p.net_year }}</td></tr>
+     <tr><td class="ind">Total burden (Social Security + IRPF)</td><td class="num">{{ p.burden_rate }}</td></tr>
+     <tr><td class="ind">IRPF taxable base (after quota and {{ p.irpf_deduction }} allowance)</td><td class="num">{{ p.irpf_base }}</td></tr>
+     <tr><td class="ind">Personal minimum</td><td class="num">{{ p.personal_minimum }}</td></tr>
+    </tbody>
+   </table>
+  </div>
+
+  <div class="card seobox ns-seo-alt">
+   <h2>Your first year on tarifa plana</h2>
+   <p>New autónomos pay a flat €80 a month for the first 12 months ({{ p.tp_ss_year }} a year). At {{ p.revenue }} of net revenue that leaves {{ p.tp_net_month }} a month after IRPF of {{ p.tp_irpf }}, which is {{ p.tp_gain_month }} more each month than the regular quota.{% if p.kind == "monthly" %} To take home {{ p.target }} a month you would need only {{ p.tp_needed }} of net revenue a year during that first year.{% endif %}</p>
+  </div>
+
+  <div class="card ns-regions ns-seo-regions">
+   <p class="calc-kicker">{{ p.revenue }} net revenue in every region</p>
+   <p class="field-note">Take-home pay after Social Security and IRPF, best first. Madrid is highlighted.</p>
+   <div class="ry-table-wrap" tabindex="0" role="region" aria-label="Take-home pay by region, scrolls horizontally">
+    <table class="ry-table ns-reg-table">
+     <thead><tr><th>Region</th><th class="num">Net a year</th><th class="num">Net a month</th><th class="num">IRPF</th><th class="num">Versus Madrid</th></tr></thead>
+     <tbody>
+{% for r in p.regions %}      <tr{% if r.is_ref %} class="ns-cur"{% endif %}><td>{{ r.name }}</td><td class="num">{{ r.net_year }}</td><td class="num">{{ r.net_month }}</td><td class="num">{{ r.irpf }}</td><td class="num{% if r.diff.startswith('+') %} ns-up{% elif r.diff.startswith('−') %} ns-down{% endif %}">{{ r.diff }}</td></tr>
+{% endfor %}     </tbody>
+    </table>
+   </div>
+  </div>
+
+  <nav class="ns-seo-nav" aria-label="Neighbouring amounts">
+{% if p.prev %}   <a class="ns-seo-prev" href="/calculators/{{ p.prev.slug }}" rel="prev"><span>Lower</span> {{ p.prev.label }}</a>{% else %}   <span></span>{% endif %}
+{% if p.next %}   <a class="ns-seo-next" href="/calculators/{{ p.next.slug }}" rel="next"><span>Higher</span> {{ p.next.label }}</a>{% endif %}
+  </nav>
+
+  <div class="card faq-card">
+   <h2>Frequently Asked Questions</h2>
+{% for q, a in p.faqs %}   <details class="faq-item"><summary>{{ q }}</summary><p>{{ a }}</p></details>
+{% endfor %}  </div>
+
+{% include "partials/autonomo-links.html" %}
+
+  {% set field_id = "calc-autonomo-email" %}{% set form_kind = "calc-autonomo" %}{% set variant = "cta-form-card--compact" %}{% set indent = "  " %}{% include "partials/cta-form-card.html" %}
+
+  <div class="card seobox">
+   <h2>More Spain calculators</h2>
+   <ul class="related-calcs">
+    <li><a href="/calculators/autonomo-tax">Autónomo Tax Calculator</a> — your own region, age, family and months as autónomo.</li>
+    <li><a href="/calculators/net-salary">Net Salary Calculator</a> — compare with a payslip: IRPF, Social Security and the Renta refund.</li>
+    <li><a href="/calculators/property-buying-cost">Property Buying Cost Calculator</a> — ITP, IVA, AJD, notary and registry fees by region.</li>
+    <li><a href="/calculators/rental-yield">Rental Yield Calculator</a> — net yield, cash flow and IRR of a rental flat after tax.</li>
+    <li><a href="/calculators/electricity-bill">Electricity Bill Calculator</a> — estimate your monthly bill and compare tariffs.</li>
+   </ul>
+   <p class="src">Estimate based on the {{ p.calc_year }} autónomo quota table (<a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296" target="_blank" rel="noopener">Orden PJC/297/2026</a>) and AEAT IRPF scales; regional deductions are not included. Not tax advice.</p>
+  </div>
+ </div>
+<script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
+{% endblock %}

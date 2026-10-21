@@ -1,0 +1,17 @@
+{# Link grids to the programmatic autónomo pages. Expects `au_links` {revenue, monthly} and optional `current_slug` (skipped). #}
+{% if au_links %}
+<div class="card seobox ns-links">
+ <section aria-labelledby="au-links-revenue">
+  <h2 id="au-links-revenue">Autónomo net pay by annual net revenue</h2>
+  <ul class="ns-chips">
+{% for l in au_links.revenue if l.slug != current_slug %}   <li><a href="/calculators/{{ l.slug }}" title="{{ l.title }}">{{ l.label }}</a></li>
+{% endfor %}  </ul>
+ </section>
+ <section aria-labelledby="au-links-monthly">
+  <h2 id="au-links-monthly">What an autónomo must earn to take home...</h2>
+  <ul class="ns-chips">
+{% for l in au_links.monthly if l.slug != current_slug %}   <li><a href="/calculators/{{ l.slug }}" title="{{ l.title }}">{{ l.label }}</a></li>
+{% endfor %}  </ul>
+ </section>
+</div>
+{% endif %}

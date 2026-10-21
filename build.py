@@ -601,7 +601,7 @@ def load_quiz_cards(homepage=False):
     return cards
 
 
-def render_llms_txt(digests, articles=(), salary_pages=()):
+def render_llms_txt(digests, articles=(), salary_pages=(), autonomo_pages=()):
     latest = digests[0]["date"] if digests else "n/a"
     lines = [
         "# Spanified — Spain Daily",
@@ -622,6 +622,7 @@ def render_llms_txt(digests, articles=(), salary_pages=()):
         f"- Net salary (gross to net, payslip, IRPF withholding vs Renta, all regions): {SITE_URL}/calculators/net-salary",
         *([f"- Net salary for common gross wages ({len(salary_pages)} pages, e.g. {SITE_URL}{salary_pages[0]}); index on {SITE_URL}/calculators/net-salary"] if salary_pages else []),
         f"- Autónomo tax (self-employed quota and IRPF): {SITE_URL}/calculators/autonomo-tax",
+        *([f"- Autónomo net pay by revenue and what to earn for a target take-home ({len(autonomo_pages)} pages, e.g. {SITE_URL}{autonomo_pages[0]}); index on {SITE_URL}/calculators/autonomo-tax"] if autonomo_pages else []),
         f"- Property buying cost (ITP, IVA/IGIC, AJD by region): {SITE_URL}/calculators/property-buying-cost",
         f"- Rental yield (net yield, cash flow, IRR after tax): {SITE_URL}/calculators/rental-yield",
         f"- Electricity bill (PVPC and tariffs): {SITE_URL}/calculators/electricity-bill",
@@ -721,7 +722,7 @@ def render_calculators(env):
         # together with the engine data (quotas/brackets/deductions), never alone.
         calc_year = 2026
         output = template.render(crumbs=crumbs, js_version=js_version(), share=share, calc_year=calc_year,
-                                 ns_links=net_salary_links(), current_slug="")
+                                 ns_links=net_salary_links(), au_links=autonomo_links(), current_slug="")
         dest = os.path.join(OUT_DIR, rel_dest)
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         with open(dest, "w", encoding="utf-8") as fh:
@@ -931,6 +932,207 @@ def render_net_salary_pages(env, grid=None):
                 fh.write(output)
             urls.append(f"/calculators/{ctx['slug']}")
     print(f"  wrote {len(urls)} net salary amount pages")
+    return urls
+
+
+AUTONOMO_PAGES_JSON = os.path.join(SCRIPT_DIR, "data", "autonomo-pages.json")
+AUTONOMO_GRID_SCRIPT = os.path.join(SCRIPT_DIR, "scripts", "autonomo-grid.mjs")
+AUTONOMO_TEMPLATE = os.path.join(TEMPLATES_DIR, "calculator-autonomo.html")
+
+
+def autonomo_slug(kind, amount):
+    """URL slug (flat sibling of /calculators/autonomo-tax) for a revenue or a take-home-per-month page."""
+    return f"autonomo-tax-{amount}-euros" if kind == "revenue" else f"autonomo-take-home-{amount}-euros-per-month"
+
+
+def load_autonomo_pages():
+    """Amount lists for the programmatic autónomo pages (data/autonomo-pages.json)."""
+    with open(AUTONOMO_PAGES_JSON, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def autonomo_links(pages=None):
+    """Link-grid items for partials/autonomo-links.html (revenue and take-home chips)."""
+    pages = pages or load_autonomo_pages()
+    return {
+        "revenue": [
+            {"amount": a, "slug": autonomo_slug("revenue", a), "label": eur(a),
+             "title": f"Autónomo net pay on {eur(a)} a year in Spain"}
+            for a in pages["revenue"]
+        ],
+        "monthly": [
+            {"amount": m, "slug": autonomo_slug("monthly", m), "label": f"{eur(m)}/mo",
+             "title": f"What an autónomo must earn to take home {eur(m)} a month"}
+            for m in pages["monthly"]
+        ],
+    }
+
+
+def autonomo_region_names():
+    """Region id -> display name, parsed from the hub's <select id="f-region"> (single mapping)."""
+    with open(AUTONOMO_TEMPLATE, encoding="utf-8") as fh:
+        text = fh.read()
+    select = re.search(r'<select id="f-region">(.*?)</select>', text, re.S).group(1)
+    return dict(re.findall(r'<option value="([^"]+)"[^>]*>([^<]+)</option>', select))
+
+
+def compute_autonomo_grid():
+    """Run scripts/autonomo-grid.mjs with node; fails loudly when node or the script is missing."""
+    import subprocess
+
+    if shutil.which("node") is None:
+        raise RuntimeError("node is required to build the autónomo pages but was not found on PATH")
+    res = subprocess.run(
+        ["node", AUTONOMO_GRID_SCRIPT, AUTONOMO_PAGES_JSON],
+        check=True, stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding="utf-8", cwd=SCRIPT_DIR,
+    )
+    return json.loads(res.stdout)
+
+
+def autonomo_page_context(kind, item, neighbours, names, calc_year):
+    """Everything the autónomo amount template shows, computed once and formatted here."""
+    monthly = kind == "monthly"
+    amount = item["amount"]
+    e, t = item["established"], item["tarifaPlana"]
+    revenue = e["revenue"]
+    regions = item["regions"]
+    ref = next(r for r in regions if r["region"] == "madrid")
+    rows = [{
+        "name": names.get(r["region"], r["region"]),
+        "net_year": eur(r["netYear"]), "net_month": eur(r["netMonth"]), "irpf": eur(r["irpf"]),
+        "diff": "reference" if r["region"] == "madrid"
+        else ("+" if r["netYear"] >= ref["netYear"] else "−") + eur(abs(r["netYear"] - ref["netYear"])),
+        "is_ref": r["region"] == "madrid",
+    } for r in regions]
+    common = [r for r in regions if r["region"] not in ("ceuta", "melilla")]
+    best, worst = common[0], common[-1]
+    ceuta = next(r for r in regions if r["region"] == "ceuta")
+    rev_label, rev_month = eur(revenue), eur(revenue / 12)
+    ctx = {
+        "kind": kind, "amount": amount, "slug": autonomo_slug(kind, amount), "calc_year": calc_year,
+        "revenue": rev_label, "revenue_month": rev_month,
+        "quota": eur(e["monthlyQuota"]), "quota_year": eur(e["annualSS"]), "bracket": e["bracketId"],
+        "irpf": eur(e["irpfTotal"]), "irpf_month": eur(e["irpfTotal"] / 12),
+        "irpf_deduction": eur(e["irpfDeduction"]), "personal_minimum": eur(e["personalMinimum"]),
+        "irpf_base": eur(e["irpfBase"]),
+        "burden": eur(e["totalBurden"]), "burden_rate": pct(e["effectiveTotalRate"]), "irpf_rate": pct(e["effectiveIrpfRate"]),
+        "net_year": eur(e["netYear"]), "net_month": eur(e["netMonth"]),
+        "tp_net_year": eur(t["netYear"]), "tp_net_month": eur(t["netMonth"]), "tp_irpf": eur(t["irpfTotal"]),
+        "tp_gain_month": eur(t["netMonth"] - e["netMonth"]), "tp_ss_year": eur(t["annualSS"]),
+        "regions": rows, "best": names.get(best["region"]), "worst": names.get(worst["region"]),
+        "best_net": eur(best["netYear"]), "worst_net": eur(worst["netYear"]),
+        "spread": eur(best["netYear"] - worst["netYear"]), "ceuta_net": eur(ceuta["netYear"]),
+        "prev": neighbours[0], "next": neighbours[1],
+    }
+    if monthly:
+        target = eur(amount)
+        ctx.update({
+            "amount_label": f"{target}/mo", "crumb_label": f"Take home {target} a month",
+            "query": f"aut_r={revenue}", "target": target,
+            "tp_needed": eur(item["neededTarifaPlana"]), "tp_needed_month": eur(item["neededTarifaPlana"] / 12),
+            "tp_saving": eur(item["needed"] - item["neededTarifaPlana"]),
+            "example_costs": 500, "example_invoice": eur(revenue / 12 + 500),
+        })
+        title_core = f"Take Home {target} a Month as an Autónomo (Spain {calc_year}): Earn {rev_label} a Year"
+        ctx["answer"] = (f"To take home {target} a month as an established autónomo in Madrid in {calc_year}, you need about "
+                         f"{rev_label} of annual net revenue ({rev_month} a month), before {ctx['quota']} a month of Social Security and {ctx['irpf']} a year of IRPF.")
+        ctx["description"] = (f"An autónomo needs about {rev_label} a year in net revenue ({rev_month} a month) to keep {target} a month after "
+                              f"Social Security and IRPF in Spain ({calc_year}). Tarifa plana first year: {eur(item['neededTarifaPlana'])}.")
+    else:
+        ctx.update({
+            "amount_label": rev_label, "crumb_label": rev_label,
+            "query": f"aut_r={revenue}",
+        })
+        title_core = f"Autónomo on {rev_label} a Year in Spain ({calc_year}): {ctx['net_month']}/month Net"
+        ctx["answer"] = (f"An established autónomo in Madrid with {rev_label} of annual net revenue keeps about {ctx['net_month']} a month "
+                         f"({ctx['net_year']} a year) in {calc_year}, after {ctx['quota_year']} of Social Security and {ctx['irpf']} of IRPF.")
+        ctx["description"] = (f"{rev_label} of annual net revenue leaves an autónomo {ctx['net_month']} a month in Spain ({calc_year}) after "
+                              f"{ctx['quota']}/month Social Security and {ctx['irpf']} IRPF. First year on tarifa plana: {ctx['tp_net_month']} a month.")
+    ctx["title"] = title_core + " | Spanified"
+    ctx["h1"] = title_core
+    ctx["faqs"] = autonomo_faqs(ctx)
+    return ctx
+
+
+def autonomo_faqs(c):
+    r, y = c["revenue"], c["calc_year"]
+    region_q = f"Which region is cheapest for an autónomo with {r}?"
+    region_a = (f"Ceuta and Melilla pay least because they only owe 40% of the IRPF ({c['ceuta_net']} net a year at {r}). Among the other regions "
+                f"{c['best']} leaves the most ({c['best_net']}) and {c['worst']} the least ({c['worst_net']}), a gap of {c['spread']} a year. Social Security is the same everywhere.")
+    tp_a = (f"In the first 12 months a new autónomo pays the €80 tarifa plana, so Social Security is {c['tp_ss_year']} a year instead of {c['quota_year']}. "
+            f"At {r} that is about {c['tp_net_month']} a month net instead of {c['net_month']}, {c['tp_gain_month']} more each month. After the first year the quota follows your income bracket.")
+    if c["kind"] == "monthly":
+        return [
+            (f"How much must an autónomo earn to take home {c['target']} a month in Spain?",
+             f"About {r} a year ({c['revenue_month']} a month) of net revenue, meaning income after your business expenses and before Social Security and IRPF. "
+             f"From that you pay {c['quota']} a month of quota (bracket {c['bracket']}) and {c['irpf']} a year of IRPF ({y} rules, established autónomo, Madrid, no dependants)."),
+            (f"How much should I invoice to take home {c['target']} a month?",
+             f"Add your business expenses to the {c['revenue_month']} a month of net revenue, then add IVA if you charge it. For example, with {eur(c['example_costs'])} a month of costs "
+             f"you would invoice about {c['example_invoice']} a month before IVA. The calculator takes net revenue, so deduct expenses before you enter your own figure."),
+            (f"Is it easier to reach {c['target']} a month on tarifa plana?",
+             f"Yes. During the first 12 months you need only {c['tp_needed']} a year ({c['tp_needed_month']} a month), {c['tp_saving']} less than the {r} an established autónomo needs, because the quota is €80 a month. "
+             f"From month 13 the regular quota applies."),
+            (f"Does the region change what I take home from {r} of net revenue?",
+             region_a),
+        ]
+    return [
+        (f"How much tax does an autónomo pay on {r} in Spain?",
+         f"At {r} of annual net revenue an established autónomo in Madrid pays {c['quota_year']} of Social Security ({c['quota']} a month, bracket {c['bracket']}) and {c['irpf']} of IRPF, "
+         f"{c['burden']} in total or {c['burden_rate']} of revenue ({y} rules, no dependants, age 35)."),
+        (f"How much does an autónomo keep from {r} a year?",
+         f"About {c['net_year']} a year, or {c['net_month']} a month, after Social Security and IRPF. Net revenue here means income after business expenses, before Social Security and IRPF. "
+         f"IRPF is calculated on {c['irpf_base']} after Social Security and a {c['irpf_deduction']} allowance, less the {c['personal_minimum']} personal minimum."),
+        (f"Does tarifa plana change the numbers at {r}?", tp_a),
+        (region_q, region_a),
+    ]
+
+
+def render_autonomo_pages(env, grid=None):
+    """Render calculators/autonomo-tax-{N}-euros.html and autonomo-take-home-{N}-euros-per-month.html.
+
+    Figures come from scripts/autonomo-grid.mjs (the browser calculator modules run in node),
+    so the tax engine stays a single source of truth. Raises when node is missing: the build
+    must never silently drop these pages from the sitemap.
+    Returns the list of URL paths (e.g. "/calculators/autonomo-tax-30000-euros").
+    """
+    import glob
+
+    calc_dir = os.path.join(OUT_DIR, "calculators")
+    os.makedirs(calc_dir, exist_ok=True)
+    # Clear stale pages so removed amounts don't linger.
+    for path in glob.glob(os.path.join(calc_dir, "autonomo-*-euros*.html")):
+        os.remove(path)
+
+    grid = grid or compute_autonomo_grid()
+    names = autonomo_region_names()
+    links = autonomo_links()
+    calc_year = 2026
+    template = env.get_template("calculator-autonomo-amount.html")
+    urls = []
+    for kind in ("revenue", "monthly"):
+        items = grid[kind]
+        for i, item in enumerate(items):
+            def nb(j):
+                if 0 <= j < len(items):
+                    return {"label": eur(items[j]["amount"]) + ("/mo" if kind == "monthly" else ""),
+                            "slug": autonomo_slug(kind, items[j]["amount"])}
+                return None
+            ctx = autonomo_page_context(kind, item, (nb(i - 1), nb(i + 1)), names, calc_year)
+            crumbs = [
+                {"name": "Home", "url": "/"},
+                {"name": "Autónomo Tax Calculator", "url": "/calculators/autonomo-tax"},
+                {"name": ctx["crumb_label"], "url": f"/calculators/{ctx['slug']}", "current": True},
+            ]
+            calc_url = f"{SITE_URL}/calculators/{ctx['slug']}"
+            output = template.render(
+                p=ctx, crumbs=crumbs, js_version=js_version(), calc_year=calc_year,
+                share=share_links(calc_url, ctx["title"]), au_links=links, current_slug=ctx["slug"],
+                build_date=datetime.now().strftime("%Y-%m-%d"),
+            )
+            with open(os.path.join(calc_dir, ctx["slug"] + ".html"), "w", encoding="utf-8") as fh:
+                fh.write(output)
+            urls.append(f"/calculators/{ctx['slug']}")
+    print(f"  wrote {len(urls)} autónomo amount pages")
     return urls
 
 
@@ -1255,7 +1457,7 @@ def render_categories(env, digests):
     return sorted(cats.keys())
 
 
-def render_sitemap(digests, categories=(), articles=(), salary_pages=()):
+def render_sitemap(digests, categories=(), articles=(), salary_pages=(), autonomo_pages=()):
     urls = [(SITE_URL + "/", None)] + [
         (SITE_URL + "/" + name[:-len(".html")], None)
         for name in STATIC_PAGES
@@ -1283,6 +1485,8 @@ def render_sitemap(digests, categories=(), articles=(), salary_pages=()):
     for path in salary_pages:
         urls.append((SITE_URL + path, None))
     urls.append((SITE_URL + "/calculators/autonomo-tax", None))
+    for path in autonomo_pages:
+        urls.append((SITE_URL + path, None))
     urls.append((SITE_URL + "/calculators/property-buying-cost", None))
     urls.append((SITE_URL + "/calculators/rental-yield", None))
     urls.append((SITE_URL + "/calculators/electricity-bill", None))
@@ -1702,11 +1906,14 @@ def main():
     print("Building net salary amount pages...")
     salary_pages = render_net_salary_pages(env)
 
+    print("Building autónomo amount pages...")
+    autonomo_pages = render_autonomo_pages(env)
+
     print("Building sitemap...")
-    render_sitemap(digests, categories, articles, salary_pages)
+    render_sitemap(digests, categories, articles, salary_pages, autonomo_pages)
 
     print("Writing llms.txt...")
-    render_llms_txt(digests, articles, salary_pages)
+    render_llms_txt(digests, articles, salary_pages, autonomo_pages)
 
     print("Building podcast feed...")
     render_podcast_feed(episodes, {d["date"] for d in digests})
