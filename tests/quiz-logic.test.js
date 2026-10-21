@@ -132,15 +132,15 @@ describe('resultBySlug', () => {
 
 describe('personalShareText', () => {
   it('replaces score range with exact score', () => {
-    const r = { shareText: 'I got 3-4/10 on AI or Real? — Tourist! Beat me?' }
+    const r = { shareText: 'I got 3-4/10 on Real or AI? — Tourist! Beat me?' }
     assert.equal(
       personalShareText(r, 4, 10),
-      'I scored 4/10 on AI or Real? — Tourist! Beat me?',
+      'I scored 4/10 on Real or AI? — Tourist! Beat me?',
     )
   })
   it('falls back when result has no shareText', () => {
-    assert.ok(personalShareText(null, 7, 10).includes('AI or Real?'))
-    assert.ok(personalShareText({}, 7, 10).includes('AI or Real?'))
+    assert.ok(personalShareText(null, 7, 10).includes('Real or AI?'))
+    assert.ok(personalShareText({}, 7, 10).includes('Real or AI?'))
   })
 })
 
