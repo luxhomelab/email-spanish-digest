@@ -1646,7 +1646,7 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 .ns-calc .ns-group-note { margin: 0 0 14px 0; }
 .ns-flex { padding: 0 0 14px 0; margin-bottom: 14px; border-bottom: 1px dashed #EFE7D8; }
 .ns-flex:last-child { border-bottom: none; margin-bottom: 0; }
-.ns-flex-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.ns-flex-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; align-items: end; }
 .ns-flex-row:has(> :nth-child(2)) { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
 .ns-flex .field { margin-bottom: 8px; }
 .ns-dislist-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
