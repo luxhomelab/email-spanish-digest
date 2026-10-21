@@ -1,4 +1,4 @@
-import { calculateNetSalary, compareRegions, resolveGross } from './net-salary-calc.js'
+import { calculateNetSalary, compareRegions, resolveGross, combinedScale } from './net-salary-calc.js'
 import { isForal } from './net-salary-foral.js'
 import {
   sanitizeState, parseStateFromParams, stateToParams, clampField, inputValue,
@@ -454,6 +454,72 @@ function renderRegions(s, r) {
   }).join('')
 }
 
+// ── tax brackets by region tab ──────────────────────────────────────────────
+const pct = r => `${(r * 100).toFixed(2).replace(/\.?0+$/, '')}%`
+const rateAtBase = (slices, x) => slices.find(sl => sl.to == null || x < sl.to).rate
+
+function renderScale(region) {
+  const { slices, foral, share } = combinedScale(region)
+  const name = regionName(region)
+  $('r-scale-note').textContent = foral
+    ? `${name} runs its own (foral) IRPF: one scale, no state half.`
+    : share < 1
+      ? `${name} applies the state scale to both halves, then a 60% deduction: you pay ${share * 100}% of the combined rate shown.`
+      : `The state scale is the same everywhere; the regional half is set by ${name}. Applied to the taxable base after your personal minimum.`
+  const top = slices.at(-1).rate
+  $('r-scale').innerHTML = slices.map(sl => {
+    const range = sl.to == null ? `From ${fmtEur(sl.from)}` : `${fmtEur(sl.from)} – ${fmtEur(sl.to)}`
+    const w = r => `${(r / Math.max(top, 0.5)) * 100}%`
+    return `<tr><td>${range}</td><td class="num">${foral ? '—' : pct(sl.state)}</td><td class="num">${pct(sl.regional)}</td>`
+      + `<td class="num b">${pct(sl.rate * share)}</td>`
+      + `<td aria-hidden="true"><div class="ns-sc-bar"><span style="width:${w(sl.state * share)}"></span><span style="width:${w(sl.regional * share)}"></span></div></td></tr>`
+  }).join('')
+  document.querySelectorAll('#r-scale-all tr').forEach(tr => tr.classList.toggle('ns-cur', tr.dataset.region === region))
+}
+
+function initScales() {
+  const pick = $('f-scale-region')
+  pick.innerHTML = $('f-region').innerHTML
+  $('r-scale-all').innerHTML = regionIds().map(id => {
+    const { slices, share } = combinedScale(id)
+    const at = x => pct(rateAtBase(slices, x) * share)
+    const last = slices.at(-1)
+    return `<tr data-region="${id}"><td>${esc(regionName(id))}</td><td class="num">${at(0)}</td><td class="num">${at(30000)}</td>`
+      + `<td class="num">${at(60000)}</td><td class="num">${pct(last.rate * share)}</td><td class="num">${fmtEur(last.from)}</td></tr>`
+  }).join('')
+  $('r-scale-all').addEventListener('click', e => {
+    const tr = e.target.closest('tr[data-region]')
+    if (!tr) return
+    pick.value = tr.dataset.region
+    renderScale(pick.value)
+    pick.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  })
+  pick.addEventListener('change', () => renderScale(pick.value))
+
+  const tabs = [$('t-calc'), $('t-scales')]
+  const select = (tab, focus) => {
+    tabs.forEach(t => {
+      const on = t === tab
+      t.setAttribute('aria-selected', String(on))
+      t.tabIndex = on ? 0 : -1
+      $(t.getAttribute('aria-controls')).hidden = !on
+    })
+    if (tab.id === 't-scales') {
+      pick.value = $('f-region').value
+      renderScale(pick.value)
+    }
+    if (focus) tab.focus()
+  }
+  tabs.forEach((t, k) => {
+    t.addEventListener('click', () => select(t))
+    t.addEventListener('keydown', e => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return
+      e.preventDefault()
+      select(tabs[(k + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length], true)
+    })
+  })
+}
+
 function renderSummaries(s) {
   const you = []
   if (s.age !== 'u65') you.push(s.age === '75plus' ? '75+' : '65–74')
@@ -555,6 +621,7 @@ function init() {
     update()
   })
   wireShareCopy()
+  initScales()
   render(state)
   syncShareLinks()
 }

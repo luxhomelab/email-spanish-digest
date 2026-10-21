@@ -2843,3 +2843,22 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
  .pp-seek { order: -1; flex-basis: 100%; }
  .pp-time { margin-left: auto; }
 }
+
+/* Net salary: tax brackets by region tab */
+.ns-tabs { display: flex; gap: 4px; margin: 0 0 16px; border-bottom: 2px solid #E5E7EB; }
+.ns-tabs [role="tab"] { flex: none; padding: 10px 16px; border: 0; background: none; font: inherit; font-weight: 700; color: #6B7280; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; }
+.ns-tabs [role="tab"][aria-selected="true"] { color: #AA151B; border-bottom-color: #AA151B; }
+.ns-tabs [role="tab"]:focus-visible { outline: 2px solid #AA151B; outline-offset: -2px; }
+.ns-scales { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.ns-scales[hidden] { display: none; }
+.ns-scales-pick { max-width: 320px; }
+.ns-sc-table, .ns-sc-all { min-width: 0; }
+.ns-sc-table td, .ns-sc-all td { font-variant-numeric: tabular-nums; }
+.ns-sc-table td.b { font-weight: 800; }
+.ns-sc-barcol { width: 30%; }
+.ns-sc-bar { display: flex; height: 12px; border-radius: 3px; background: #F3F4F6; overflow: hidden; min-width: 80px; }
+.ns-sc-bar span:first-child { background: #F1BF00; }
+.ns-sc-bar span:last-child { background: #AA151B; }
+.ns-sc-all tbody tr { cursor: pointer; }
+.ns-sc-all tbody tr:hover td { background: #F9FAFB; }
+.ns-sc-all tr.ns-cur td { background: #FDF0F0; font-weight: 800; }

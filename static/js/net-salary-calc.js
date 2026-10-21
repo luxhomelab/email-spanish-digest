@@ -18,7 +18,7 @@ import {
   BECKHAM, FLEX_LIMITS, getMinimumTable, WITHHOLDING_SCALE, EXCLUSION_LIMITS, WITHHOLDING_CAP,
   WITHHOLDING_LARGE_FAMILY, WITHHOLDING_MIN_TEMPORARY,
 } from './net-salary-data.js'
-import { isForal, calcForalIrpf, calcForalWithholding } from './net-salary-foral.js'
+import { isForal, calcForalIrpf, calcForalWithholding, BASQUE_BRACKETS, NAVARRA_BRACKETS } from './net-salary-foral.js'
 
 /** Common-regime regions, Ceuta and Melilla, and the foral Navarra and Basque Country. */
 export const REGION_IDS = [
@@ -412,4 +412,33 @@ export function resolveGross(s) {
   if (s.mode === 'net') return grossFromNet(amount, s, s.period === 'm' ? 'payslip' : 'annual')
   if (s.period === 'm') return amount * (s.payments === '14' ? 14 : 12)
   return amount
+}
+
+/**
+ * The IRPF scale a resident of `region` faces, state and regional halves merged:
+ * every boundary of either scale starts a new slice. Foral regions have one scale
+ * of their own (no state half). Ceuta and Melilla rates are the full scale; the 60%
+ * deduction applies on top (`share` is 0.4 there, else 1).
+ */
+export function combinedScale(region) {
+  if (isForal(region)) {
+    const own = region === 'navarra' ? NAVARRA_BRACKETS : BASQUE_BRACKETS
+    let from = 0
+    return {
+      foral: true, share: 1,
+      slices: own.map(b => { const s = { from, to: b.upTo === Infinity ? null : b.upTo, state: 0, regional: b.rate, rate: b.rate }; from = b.upTo; return s }),
+    }
+  }
+  const rb = regionalBrackets(region)
+  const edges = [...new Set([0, ...IRPF_STATE_BRACKETS.map(b => b.upTo), ...rb.map(b => b.upTo)])]
+    .filter(v => v !== Infinity).sort((a, b) => a - b)
+  const rateAt = (brackets, x) => brackets.find(b => x < b.upTo).rate
+  return {
+    foral: false, share: isCeutaMelilla(region) ? CEUTA_MELILLA_SHARE : 1,
+    slices: edges.map((from, k) => {
+      const state = rateAt(IRPF_STATE_BRACKETS, from)
+      const regional = rateAt(rb, from)
+      return { from, to: k + 1 < edges.length ? edges[k + 1] : null, state, regional, rate: r2((state + regional) * 1e4) / 1e4 }
+    }),
+  }
 }
