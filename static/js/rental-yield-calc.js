@@ -144,6 +144,34 @@ export function calculateIrrFromCashflows(cashflows) {
 }
 
 /**
+ * Verdict under the KPIs: IRR against an alternative return, and how much of the
+ * profit comes from price growth. `flat` is the same scenario simulated with 0%
+ * price growth, so growth's share is net of the extra selling costs and gains tax.
+ * kind: 'loss' (no profit), 'rent_only', 'growth_only' (rent alone loses money), 'mixed'.
+ */
+export function buildVerdict(result, flat, benchmarkPct) {
+  const profit = result.totalNetProfit
+  const rentProfit = flat.totalNetProfit
+  const growthProfit = profit - rentProfit
+  let kind = 'mixed'
+  if (!(profit > 0)) kind = 'loss'
+  else if (!(growthProfit > 0)) kind = 'rent_only'
+  else if (!(rentProfit > 0)) kind = 'growth_only'
+  const growthSharePct = kind === 'mixed' ? (growthProfit / profit) * 100
+    : kind === 'growth_only' ? 100 : 0
+  return {
+    kind,
+    benchmarkPct,
+    irrGap: result.irr - benchmarkPct,
+    beatsBenchmark: result.irr >= benchmarkPct,
+    profit,
+    rentProfit,
+    growthProfit,
+    growthSharePct,
+  }
+}
+
+/**
  * Purchase tax for the region: resale ITP, or new build IVA/IGIC + AJD.
  * Returns { purchaseTax, ivaRate, ajdRate, taxType }.
  */

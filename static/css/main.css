@@ -1568,11 +1568,18 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 .ry-kpi .val { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; color: #0A5C2E; margin: 4px 0 2px 0; overflow-wrap: anywhere; }
 .ry-kpi .val.neg { color: #8A1A1A; }
 .ry-kpi .sub2 { font-size: 12px; line-height: 17px; color: #8A94A0; }
-.ry-kpi-main { grid-column: 1 / -1; background: linear-gradient(135deg, #0E7A3D 0%, #0A5C2E 100%); border: none; padding: 24px 26px; }
-.ry-kpi-main .kicker { color: #BDE5C8; }
-.ry-kpi-main .val { font-size: 44px; letter-spacing: -1px; color: #fff; }
-.ry-kpi-main .val.neg { color: #FFD6D6; }
-.ry-kpi-main .sub2 { font-size: 15px; font-weight: 600; color: #D6F0DC; }
+.ry-kpi[hidden] { display: none; }
+/* With a mortgage cash-on-cash adds a 5th card: 2+2+1 (last one full width), or 3+2 when wide. */
+.ry-kpis.ry-kpis-5 > .ry-kpi:last-child { grid-column: 1 / -1; }
+@container (min-width: 620px) {
+ .ry-kpis.ry-kpis-5 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+ .ry-kpis.ry-kpis-5 > .ry-kpi { grid-column: span 2; }
+ .ry-kpis.ry-kpis-5 > .ry-kpi:nth-child(n+4) { grid-column: span 3; }
+}
+/* Verdict line, the headline of the results: IRR vs the alternative return and the share of profit from price growth. */
+.calc .ry-verdict { margin: 0 0 12px 0; padding: 18px 20px; background: #FFFDF8; border: 1px solid #EFE7D8; border-left: 5px solid #0E7A3D; border-radius: 14px; font-size: 17px; line-height: 26px; color: #3C4858; }
+.calc .ry-verdict.neg { border-left-color: #AA151B; }
+.calc .ry-verdict b { font-weight: 800; }
 .calc .mini-profit { background: #EEF8F1; border: 1px solid #CFE8D8; }
 .calc .mini-profit .kicker { color: #2F7A4D; } .calc .mini-profit .val { color: #0A5C2E; } .calc .mini-profit .sub2 { color: #5E9475; }
 .calc .mini-profit .val.neg { color: #8A1A1A; }
@@ -1615,8 +1622,7 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
  .ry-kpis { gap: 10px; }
  .ry-kpi { padding: 14px 14px; }
  .ry-kpi .val { font-size: 22px; }
- .ry-kpi-main { padding: 20px; }
- .ry-kpi-main .val { font-size: 36px; }
+ .calc .ry-verdict { padding: 14px 16px; font-size: 16px; line-height: 24px; }
  .calc details.ry-years { padding: 0 16px; }
 }
 @media (max-width: 520px) {

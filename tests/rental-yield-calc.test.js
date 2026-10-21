@@ -2,6 +2,7 @@ import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
 import {
   buildMortgageSchedule,
+  buildVerdict,
   calculateExitTax,
   calculateIrrFromCashflows,
   calculatePurchaseTax,
@@ -220,4 +221,35 @@ describe('growth and outputs', () => {
   assert.ok(Math.abs(r.amortizationUsed - sum) < 1e-9)
   assert.ok(Math.abs(r.totalCashReceivedAfterTax - r.initialCashOutlay - r.totalNetProfit) < 1e-6)
 })
+})
+
+describe('buildVerdict', () => {
+  const verdict = (over, bench = 3) => {
+    const r = sim(over)
+    return buildVerdict(r, sim({ ...over, appreciationRatePct: 0 }), bench)
+  }
+  it('default scenario splits the profit between growth and rent', () => {
+    const r = sim({})
+    const v = verdict({})
+    assert.equal(v.kind, 'mixed')
+    near(v.growthProfit + v.rentProfit, r.totalNetProfit, 1e-6)
+    assert.ok(v.growthSharePct > 0 && v.growthSharePct < 100)
+    near(v.irrGap, r.irr - 3, 1e-9)
+  })
+  it('no price growth -> all from rent', () => {
+    const v = verdict({ appreciationRatePct: 0 })
+    assert.equal(v.kind, 'rent_only')
+    assert.equal(v.growthSharePct, 0)
+  })
+  it('rent that loses money -> all from growth', () => {
+    const v = verdict({ monthlyRent: 200, rentGrowthPct: 0, appreciationRatePct: 6 })
+    assert.equal(v.kind, 'growth_only')
+    assert.ok(v.rentProfit <= 0)
+    assert.equal(v.growthSharePct, 100)
+  })
+  it('loss and benchmark comparison', () => {
+    const v = verdict({ monthlyRent: 150, rentGrowthPct: 0, appreciationRatePct: 0 }, 50)
+    assert.equal(v.kind, 'loss')
+    assert.equal(v.beatsBenchmark, false)
+  })
 })
