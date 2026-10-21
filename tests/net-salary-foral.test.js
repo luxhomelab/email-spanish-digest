@@ -85,3 +85,46 @@ describe('region comparison includes foral regions', () => {
     assert.ok(ids.includes('navarra') && ids.includes('pais_vasco'))
   })
 })
+
+describe('foral joint returns and family cases', () => {
+  const pv = over => calcForalIrpf({ ...base, region: 'pais_vasco', rit: 30000, ss: 1950, ...over })
+  const na = over => calcForalIrpf({ ...base, region: 'navarra', rit: 30000, ss: 1950, ...over })
+
+  it('Basque joint return (married or single parent) takes 4,896 € off the base', () => {
+    for (const joint of ['married', 'single']) {
+      const r = pv({ joint, kids: joint === 'single' ? 1 : 0 })
+      near(r.jointReduction, 4896)
+      near(r.baseLiquidable, 25050 - 4896)
+    }
+  })
+
+  it('Navarra joint with a spouse without income adds the spouse’s own personal minimum (1,084 + 1,280)', () => {
+    near(na({ joint: 'married' }).total, 4406.35 - 2364, 0.05)
+  })
+
+  it('Navarra single-parent joint return raises the personal minimum by 668 €', () => {
+    near(na({ joint: 'none', kids: 1 }).total - na({ joint: 'single', kids: 1 }).total, 668)
+  })
+
+  it('Navarra disabled descendants and ascendants: 674 € (33–64%), 2,360 € (65%+)', () => {
+    near(na({}).total - na({ descDisab: ['33'] }).total, 674)
+    near(na({}).total - na({ ascDisab: ['65'] }).total, 2360)
+  })
+
+  it('Navarra pension: 50% of net income limit at 65+ (30% otherwise)', () => {
+    const young = na({ rit: 4000, ss: 0, pensionEmployee: 1500 })
+    const old = na({ rit: 4000, ss: 0, pensionEmployee: 1500, age: '65to74' })
+    near(young.pensionReduction, 1200)
+    near(old.pensionReduction, 1500)
+  })
+
+  it('Navarra descendant minimum is 40% higher on rentas up to 20,000 €', () => {
+    const low = { rit: 19000, ss: 1235 }
+    near(na({ ...low }).total - na({ ...low, kids: 1 }).total, Math.min(483 * 1.4, na({ ...low }).total))
+  })
+
+  it('full calculation in the user’s scenario: married joint return is no longer ignored in the Basque Country', () => {
+    const s = { gross: 37628.88, region: 'pais_vasco', age: '75plus', contract: 'temporary', disability: '65', meals: 11 }
+    assert.ok(calc({ ...s, joint: 'married' }).irpf.total < calc({ ...s, joint: 'none' }).irpf.total)
+  })
+})

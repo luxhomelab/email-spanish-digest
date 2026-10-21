@@ -11,8 +11,11 @@
  *   slightly higher and are not modelled.
  * - Navarra: DFL 4/2008 scale, LF 17/2025 (work deduction and low-income personal
  *   minimum, art. 62), withholding table DF 148/2025 as corrected in BON 14/2026.
- * Not modelled: joint returns, regional deductions (housing, rent), the Navarra art. 17.2
- * reduction for other income.
+ * Joint returns: Basque base reduction (art. 71 NF 13/2013); Navarra sums the members'
+ * individual cuotas (art. 73.3 DFL 4/2008), so a spouse without income only adds their
+ * own personal minimum, plus 668 € for single parents (art. 75.4).
+ * Not modelled: regional deductions (housing, rent), the Navarra art. 17.2 reduction
+ * for other income, the Basque extra for children aged 3 to 5 (the form asks for under 3).
  */
 import { calcProgressiveTaxWithBreakdown } from './autonomo-calc.js'
 
@@ -43,6 +46,8 @@ const BASQUE = {
   age: { age65: 393, age75: 714, fullUpTo: 20000, zeroFrom: 30000 },
   disability: { '33': 906, '33h': 1294, '65': 1294 },
   pension: { employee: 5000, total: 10000 },
+  // 4,800 € since 2025 for every family unit, deflated 2% for 2026.
+  joint: 4896,
 }
 
 /** Bonificación de rendimientos del trabajo (art. 23 NF 13/2013), on pay minus SS. */
@@ -62,7 +67,9 @@ function basqueIrpf(p) {
   const baseImponible = r2(net - workBonus)
   const ownPension = Math.min(p.pensionEmployee || 0, BASQUE.pension.employee)
   const pensionReduction = r2(Math.min(ownPension + (p.pensionEmployer || 0), BASQUE.pension.total, baseImponible))
-  const baseLiquidable = r2(Math.max(0, baseImponible - pensionReduction))
+  const jointReduction = p.joint === 'married' || p.joint === 'single'
+    ? Math.min(BASQUE.joint, Math.max(0, baseImponible - pensionReduction)) : 0
+  const baseLiquidable = r2(Math.max(0, baseImponible - pensionReduction - jointReduction))
   const scale = scaleTax(baseLiquidable, BASQUE_BRACKETS)
 
   const share = p.sharedCustody ? 0.5 : 1
@@ -82,12 +89,13 @@ function basqueIrpf(p) {
   const deductions = r2(BASQUE.generalDeduction + family)
   const total = r2(Math.max(0, scale.total - deductions))
   return {
-    netBeforeExpenses: r2(net), baseImponible, pensionReduction, baseLiquidable, cuotaIntegra: scale.total, total,
+    netBeforeExpenses: r2(net), baseImponible, pensionReduction, jointReduction, baseLiquidable, cuotaIntegra: scale.total, total,
     brackets: scale.brackets, marginal: BASQUE_BRACKETS,
     lines: [
       ['− Work income bonus', -workBonus, 'Bonificación: 8,000 € on low pay, 3,000 € from 23,000 €'],
       ['Taxable base', baseImponible, '', 'b'],
       pensionReduction > 0 ? ['− Pension contributions', -pensionReduction, 'Own contributions up to 5,000 €'] : null,
+      jointReduction > 0 ? ['− Joint return', -jointReduction, '4,896 € for any family unit, single parents included'] : null,
       ['Base for the tax scale', baseLiquidable, 'Base liquidable general', 'b'],
       ['Tax on the base', scale.total, 'Basque scale 23–49%'],
       ['− General deduction', -BASQUE.generalDeduction, 'Minoración de cuota, every taxpayer'],
@@ -117,9 +125,13 @@ const NAVARRA = {
   age65: 264,
   age75: 585,
   disability: { '33': 766, '33h': 2757, '65': 2757 },
+  familyDisability: { '33': 674, '33h': 2360, '65': 2360 },
   kids: [483, 512, 732, 981, 1111, 1286],
   under3: 644,
-  pension: { employee: 1500, employer: 8500, incomeShare: 0.30 },
+  // Descendant amounts +40% on rentas up to 20,000 €, tapering to nothing at 30,000 €.
+  kidsBoost: { share: 0.4, fullUpTo: 20000, zeroFrom: 30000 },
+  singleParent: 668,
+  pension: { employee: 1500, employer: 8500, incomeShare: 0.30, incomeShareOver50: 0.50 },
 }
 
 /** Deducción por trabajo (art. 62.5 DFL 4/2008, as amended by LF 17/2025), on pay minus SS. */
@@ -148,7 +160,9 @@ function navarraPersonalMinimum(rentas, age) {
 function navarraIrpf(p) {
   const net = Math.max(0, p.rit - p.ss)
   const P = NAVARRA.pension
-  const pensionCap = Math.min(P.employee + Math.min(p.pensionEmployer || 0, P.employer), P.incomeShare * net)
+  // The form's age bands can't tell 50+ apart; 65+ gets the over-50 share.
+  const incomeShare = p.age === 'u65' || !p.age ? P.incomeShare : P.incomeShareOver50
+  const pensionCap = Math.min(P.employee + Math.min(p.pensionEmployer || 0, P.employer), incomeShare * net)
   const pensionReduction = r2(Math.min((p.pensionEmployee || 0) + (p.pensionEmployer || 0), pensionCap))
   const baseLiquidable = r2(Math.max(0, net - pensionReduction))
   const scale = scaleTax(baseLiquidable, NAVARRA_BRACKETS)
@@ -157,10 +171,15 @@ function navarraIrpf(p) {
   let minimum = navarraPersonalMinimum(net, p.age) + (NAVARRA.disability[p.disability] || 0)
   const share = p.sharedCustody ? 0.5 : 1
   const numKids = (p.kidsU3 || 0) + (p.kids || 0)
-  for (let i = 0; i < numKids; i++) minimum += NAVARRA.kids[Math.min(i, NAVARRA.kids.length - 1)] * share
+  const B = NAVARRA.kidsBoost
+  const boost = 1 + (net <= B.fullUpTo ? B.share : net >= B.zeroFrom ? 0 : B.share * (B.zeroFrom - net) / (B.zeroFrom - B.fullUpTo))
+  for (let i = 0; i < numKids; i++) minimum += NAVARRA.kids[Math.min(i, NAVARRA.kids.length - 1)] * share * boost
   minimum += (p.kidsU3 || 0) * NAVARRA.under3 * share
   minimum += ((p.asc65 || 0) + (p.asc75 || 0)) * NAVARRA.age65 + (p.asc75 || 0) * NAVARRA.age75
-  for (const level of [...(p.descDisab || []), ...(p.ascDisab || [])]) minimum += NAVARRA.disability[level] || 0
+  for (const level of [...(p.descDisab || []), ...(p.ascDisab || [])]) minimum += NAVARRA.familyDisability[level] || 0
+  // Joint return: the spouse without income adds their own personal minimum (art. 73.3-73.4).
+  if (p.joint === 'married') minimum += navarraPersonalMinimum(0, 'u65')
+  if (p.joint === 'single') minimum += NAVARRA.singleParent
   minimum = r2(minimum)
 
   const total = r2(Math.max(0, scale.total - workDeduction - minimum))
@@ -173,7 +192,9 @@ function navarraIrpf(p) {
       ['Base for the tax scale', baseLiquidable, 'Base liquidable general', 'b'],
       ['Tax on the base', scale.total, 'Navarra scale 13–52%'],
       ['− Work income deduction', -workDeduction, 'Art. 62.5: 1,400 € on low pay, 700 € on middle incomes'],
-      ['− Personal and family minimum', -minimum, 'Deducted from the tax in Navarra; higher on low incomes'],
+      ['− Personal and family minimum', -minimum, p.joint === 'married'
+        ? 'Yours plus your spouse’s, deducted from the tax'
+        : p.joint === 'single' ? 'Includes 668 € for single parents' : 'Deducted from the tax in Navarra; higher on low incomes'],
     ],
   }
 }
@@ -184,8 +205,9 @@ export function calcForalIrpf(p) {
   const marginalRate = f.total > 0
     ? (f.marginal.find(b => f.baseLiquidable < b.upTo) || f.marginal[f.marginal.length - 1]).rate : 0
   return {
-    regime: 'foral', rit: p.rit, ...f, lines: f.lines.filter(Boolean),
-    otherExpenses: 0, workReduction: 0, jointReduction: 0, smiDeduction: 0, ceutaDeduction: 0,
+    regime: 'foral', rit: p.rit,
+    jointReduction: 0, ...f, lines: f.lines.filter(Boolean),
+    otherExpenses: 0, workReduction: 0, smiDeduction: 0, ceutaDeduction: 0,
     minimums: { state: 0, regional: 0 }, state: 0, regional: f.total, marginalRate,
     stateBrackets: [], regionalBrackets: f.brackets,
   }
