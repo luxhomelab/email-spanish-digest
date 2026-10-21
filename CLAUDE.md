@@ -16,7 +16,7 @@ python3 build.py --listmonk local   # subscribe forms use dev Listmonk URL + lis
 python3 serve.py [port]         # local server with clean URLs (/quiz/ai-or-real); don't use http.server
 npm test                        # node --test tests/*.test.js (JS logic for calculators, quizzes, forms)
 node --test tests/quiz-logic.test.js   # single JS test file
-python3 -m pytest test_refresh_social_stats.py   # Python test (social stats script)
+python3 -m pytest               # Python tests (test_*.py); CI runs both suites before the build
 ```
 
 ## Architecture

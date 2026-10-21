@@ -210,6 +210,7 @@ export function simulateProjection(params, region = null) {
   const effectiveGrossIncomes = []
   const operatingExpensesByYear = []
   const amortizationByYear = []
+  const netBaseByYear = []
   const taxBaseByYear = []
 
   let cumulative = 0
@@ -261,6 +262,7 @@ export function simulateProjection(params, region = null) {
       taxBase = params.useNonEuDeductions ? netBase : effectiveGrossIncome
       annualRentalTax = taxBase * NON_EU_RATE
     }
+    netBaseByYear.push(netBase)
     taxBaseByYear.push(taxBase)
 
     const annualMortgagePayment = schedule.totalPaidByYear[index] || 0
@@ -374,6 +376,8 @@ export function simulateProjection(params, region = null) {
     operatingExpensesByYear,
     amortizationByYear,
     amortizationBase,
+    amortizationUsed,
+    netBaseByYear,
     taxBaseByYear,
     valueAfterRepairs,
     priceAfterHold,

@@ -123,7 +123,8 @@
        {{ num('maintenanceRatePct', 'Maintenance', 'Repairs and upkeep as a percentage of rent.', '% of rent', '0.5') }}
        {{ num('managementFeePct', 'Management', 'Property manager fee as a percentage of rent. 0 if you self-manage.', '% of rent', '0.5') }}
       </div>
-      {{ num('expenseGrowthRatePct', 'Expense growth', 'Yearly increase of IBI, community fee and insurance.', '%/yr', '0.1') }}
+      {{ num('expenseGrowthRatePct', 'Expense growth', 'Yearly increase of IBI, community fee and insurance. Maintenance and management follow the rent.', '%/yr', '0.1') }}
+      <p class="field-note">Rent and expense growth start in year 2, so the year-1 yields and monthly cash flow stay the same. They move the IRR, profit when sold, the chart and the year-by-year table.</p>
      </div>
     </details>
 
@@ -181,13 +182,12 @@
      <div class="ry-group-body">
       <div class="field-row">
        {{ num('holdYears', 'Holding period', 'Years until you sell (1–50).', 'years', '1') }}
-       {{ num('appreciationRatePct', 'Price growth', 'Average yearly increase of the property value.', '%/yr', '0.1') }}
+       {{ num('appreciationRatePct', 'Property value growth', 'Average yearly increase of the property value.', '%/yr', '0.1') }}
       </div>
       <div class="field-row">
        {{ num('costToSellPct', 'Selling costs', 'Agent fee and other costs of selling, as a percentage of the sale price.', '% of price', '0.1') }}
        {{ num('plusvalia', 'Municipal plusvalía', 'Local land-value gain tax (plusvalía municipal), paid by the seller. Depends on your town and cadastral data; enter your own estimate.', '€', '100') }}
-      </div>
-     </div>
+      </div>     </div>
     </details>
 
     <button type="button" id="r-reset" class="ry-reset">Reset to defaults</button>
@@ -198,7 +198,7 @@
 
     <div id="r-results">
      <div class="ry-kpis" id="r-kpis">
-      <div class="ry-kpi ry-kpi-main">
+      <div class="ry-kpi">
        <p class="kicker">Net yield</p>
        <p class="val" id="r-net">—</p>
        <p class="sub2">after expenses &amp; tax, year 1</p>
@@ -208,7 +208,7 @@
        <p class="val" id="r-gross">—</p>
        <p class="sub2">rent ÷ price</p>
       </div>
-      <div class="ry-kpi">
+      <div class="ry-kpi" data-show="loan" hidden>
        <p class="kicker">Cash-on-cash</p>
        <p class="val" id="r-coc">—</p>
        <p class="sub2">year 1, on cash invested</p>
@@ -251,9 +251,15 @@
       <p class="field-note">Years since purchase. Tap or hover the chart to read a year.</p>
      </div>
 
-     <div class="notice notice-blue">
-      <div class="notice-title" id="r-tax1">Year-1 rental tax</div>
-      <p id="r-taxnote"></p>
+     <div class="card burden ry-summary">
+      <p class="calc-kicker">Year-1 rental tax</p>
+      <div class="card sheet">
+       <table>
+        <thead><tr><th>Item</th><th class="num">Amount</th></tr></thead>
+        <tbody id="r-taxrows"></tbody>
+       </table>
+      </div>
+      <p class="field-note" id="r-taxnote"></p>
      </div>
 
      <div class="card burden ry-summary">
@@ -270,7 +276,7 @@
       <summary>Year-by-year table</summary>
       <div class="ry-table-wrap" tabindex="0" role="region" aria-label="Year-by-year cash flow table, scrolls horizontally">
        <table class="ry-table">
-        <thead><tr><th>Year</th><th class="num">Rent</th><th class="num">Expenses</th><th class="num">Mortgage</th><th class="num">Tax</th><th class="num">Cash flow</th><th class="num">Cumulative</th></tr></thead>
+        <thead><tr><th>Year</th><th class="num">Rent</th><th class="num">Expenses</th><th class="num">NOI</th><th class="num">Mortgage</th><th class="num">Interest</th><th class="num">Tax</th><th class="num">Cash flow</th><th class="num">Cumulative</th></tr></thead>
         <tbody id="r-years"></tbody>
        </table>
       </div>
@@ -283,9 +289,9 @@
 
   <div class="card seobox">
    <h2>Which yield number should you use?</h2>
-   <p><strong>Gross yield</strong> (rent ÷ price) is what listings quote, so use it to compare ads. It ignores taxes, costs and vacancy, so it overstates what you keep. <strong>Net yield</strong> divides your rent after vacancy, running costs and income tax by everything you paid (price, purchase tax, closing costs, renovation), which makes it the fair number for comparing a flat in Madrid with one in Valencia. <strong>Cash-on-cash</strong> and <strong>IRR</strong> matter once you use a mortgage or plan to sell: they measure the return on the cash you actually put in, and IRR adds price growth and the tax on the sale.</p>
+   <p><strong>Gross yield</strong> (rent ÷ price) is what listings quote, so use it to compare ads. It ignores taxes, costs and vacancy, so it overstates what you keep. <strong>Net yield</strong> divides your rent after vacancy, running costs and income tax by everything you paid (price, purchase tax, closing costs, renovation), which makes it the fair number for comparing a flat in Madrid with one in Valencia. <strong>Cash-on-cash</strong> and <strong>IRR</strong> matter once you use a mortgage or plan to sell: they measure the return on the cash you actually put in, and IRR adds property value growth and the tax on the sale.</p>
    <p>Two things move the result most in Spain: the purchase tax (ITP is 6% in Madrid but up to 10–11% in some regions) and your tax status. Residents pay IRPF after a reduction on long-term home lets; non-residents pay a flat 19% (EU/EEA, on net income) or 24% (elsewhere, on gross rent), so the same flat can net very different amounts to different owners.</p>
-   <p class="src">Sources: BOE-A-2026-20823 (RDL 29/2026); art. 23.2 LIRPF; arts. 24.6 and 25 TRLIRNR; art. 14 RIRPF; Audiencia Nacional 28.07.2025 (rec. 636/2021); savings scale 2026 (guiafiscal.es). Last tax data verification: October 2026. This calculator is an educational simulation and not tax or legal advice.</p>
+   <p class="src">Sources: BOE-A-2026-20823 (RDL 29/2026); art. 23.2 LIRPF; arts. 24.6 and 25 TRLIRNR; art. 14 RIRPF (<a href="https://www.boe.es/buscar/act.php?id=BOE-A-2007-6820" target="_blank" rel="noopener">RD 439/2007</a>); AEAT guidance on <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/irpf-2025/c04-rendimientos-capital-inmobiliario/gastos-deducibles/cantidades-destinadas-amortizacion.html" target="_blank" rel="noopener">rental amortization</a> and on the <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/irpf-2025/c11-ganancias-perdidas-patrimoniales/determinacion-importe-ganancias-perdidas-patrimon-generales/derivadas-transmisiones-onerosas-lucrativas/reglas-generales-calculo.html" target="_blank" rel="noopener">capital gain on a sale</a>; Audiencia Nacional 28.07.2025 (rec. 636/2021); savings scale 2026 (guiafiscal.es). Last tax data verification: October 2026. This calculator is an educational simulation and not tax or legal advice.</p>
   </div>
 
   <div class="card seobox">

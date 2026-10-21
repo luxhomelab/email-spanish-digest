@@ -22,7 +22,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install jinja2 pillow
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: pip install jinja2 pillow pytest
+      - name: JS tests
+        run: npm test
+      - name: Python tests
+        run: python3 -m pytest -q
       - run: python3 build.py --out dist
       - run: npx --yes pagefind --site dist
       - uses: actions/upload-pages-artifact@v3
