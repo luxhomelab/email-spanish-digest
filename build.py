@@ -98,6 +98,7 @@ STATIC_COPY = [
     "logo-60.webp",
     "logo-90.webp",
     "favicon.ico",
+    "favicon.svg",
     "favicon.png",
     "apple-touch-icon.png",
     "static",
