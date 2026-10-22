@@ -3073,7 +3073,6 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 /* ---------- Home: "morning edition" layout (templates/index.html) ----------
    Scoped to .hm so the shared .page/.card/.hero rules above don't apply.
    One accent (Spanish red), hairline sand borders, serif for news type. */
-body.page-home { background: #FFFDF8; }
 @font-face { font-family: "Source Serif Fallback"; src: local("Georgia"); size-adjust: 96%; ascent-override: 98%; }
 .hm {
   --hm-ink: #1F2A37; --hm-body: #3C4858; --hm-muted: #5F6B7A;
