@@ -1343,6 +1343,14 @@ body.page-contact .contact .card {
  font-size: 26px; font-weight: 700; color: #3C4858; letter-spacing: -0.3px;
  margin-bottom: 24px;
 }
+.subscribe-who { max-width: 680px; margin: 0 auto; padding: 0 24px 40px 24px; text-align: center; }
+.subscribe-who h2 {
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 26px; font-weight: 700; color: #3C4858; letter-spacing: -0.3px;
+ margin-bottom: 16px;
+}
+.subscribe-who p { color: #6C7A89; font-size: 16px; line-height: 1.65; }
+.subscribe-who .subscribe-sample { margin-top: 16px; }
 .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: left; }
 .trust-card {
  background-color: #ffffff; border: 1px solid #EFE7D8; border-radius: 14px;
