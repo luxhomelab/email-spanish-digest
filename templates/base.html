@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"{% block html_class %}{% endblock %}>
 <head>
+<meta charset="UTF-8">
 {# Build-time analytics flag. static/js/*.js are copied verbatim by build.py
    (STATIC_COPY) and never Jinja-rendered, so they read this global instead
    of guessing from location.hostname. Always rendered — before every other
@@ -42,7 +43,6 @@ src="https://www.facebook.com/tr?id=2597044717425425&ev=PageView&noscript=1"
  {% block og_image %}<meta property="og:image" content="https://spanified.com/og/og-default.png">
  <meta property="og:image:width" content="1200">
  <meta property="og:image:height" content="630">{% endblock %}
- <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>{% block title %}Spanified — Spain Daily{% endblock %}</title>
  {% block description %}{% endblock %}
