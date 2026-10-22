@@ -3098,7 +3098,7 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 .hm > .hm-hero { background: none; border: 0; border-radius: 0; padding: 8px 0 36px; margin-bottom: 0; }
 
 /* Hero: pitch left, today's edition right */
-.hm-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+.hm-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px 56px; align-items: start; }
 .hm-lead { font-size: 20px; line-height: 1.5; }
 .hm-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; margin: 26px 0 16px; }
 .hm-btn {
@@ -3124,6 +3124,23 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 }
 .hm-edition-list li::before { content: counter(story); position: absolute; left: 0; top: 9px; font-size: 22px; font-weight: 700; color: var(--hm-red); }
 .hm .hm-edition-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; border-top: 1px solid var(--hm-line); padding-top: 14px; margin: 0; font-size: 15px; font-weight: 700; }
+
+/* Hero infographic: sources -> email -> 5 minutes, spans both hero columns */
+.hm-flow {
+  grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px;
+  background: #FFFDF8; border: 1px solid var(--hm-line); border-radius: 12px; padding: 22px 28px;
+}
+.hm-flow li { position: relative; display: flex; align-items: center; gap: 14px; }
+.hm-flow li:not(:last-child)::after {
+  content: ""; position: absolute; right: -30px; top: 50%; width: 12px; height: 12px;
+  border-top: 2px solid var(--hm-red); border-right: 2px solid var(--hm-red); transform: translateY(-50%) rotate(45deg);
+}
+.hm-flow-icon {
+  flex: none; width: 48px; height: 48px; padding: 9px; box-sizing: border-box; border-radius: 50%;
+  background: var(--hm-tint); fill: none; stroke: var(--hm-red); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+.hm-flow-big { display: block; font-family: var(--hm-serif); font-weight: 700; font-size: 19px; line-height: 1.25; color: var(--hm-ink); }
+.hm-flow-small { display: block; font-size: 14px; line-height: 1.4; color: var(--hm-muted); margin-top: 2px; }
 
 /* About + process: two columns */
 .hm-about, .hm-process { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; }
@@ -3197,6 +3214,8 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 @media (max-width: 860px) {
   .hm-hero, .hm-about, .hm-process { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .hm h1 { max-width: none; }
+  .hm-flow { grid-template-columns: minmax(0, 1fr); gap: 38px; padding: 20px; }
+  .hm-flow li:not(:last-child)::after { right: auto; top: auto; left: 18px; bottom: -26px; transform: rotate(135deg); }
 }
 @media (max-width: 520px) {
   .hm { font-size: 16px; }
