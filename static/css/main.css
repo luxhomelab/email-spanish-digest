@@ -1351,7 +1351,7 @@ img.reader-avatar { object-fit: cover; background: #EFE7D8; }
 body.page-subscribe .sub-hero {
  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 430px);
  gap: 56px; align-items: center;
- max-width: 1100px; margin: 0 auto; padding: 40px 24px 56px;
+ max-width: 1200px; margin: 0 auto; padding: 24px 0 56px;
 }
 body.page-subscribe .sub-hero h1 {
  font-family: Roboto, Helvetica, sans-serif;
@@ -1412,6 +1412,8 @@ body.page-subscribe .sub-preview-stories li:nth-child(3) { animation-delay: 0.3s
 body.page-subscribe .sub-preview-emoji { font-size: 20px; line-height: 1.3; flex-shrink: 0; }
 body.page-subscribe .sub-preview-story strong { display: block; font-size: 16px; line-height: 1.35; color: #1A1A2E; }
 body.page-subscribe .sub-preview-src { display: block; font-size: 13px; color: #6C7A89; margin-top: 4px; }
+/* Shared testimonials partial: align to the page column here. */
+body.page-subscribe .testimonials { max-width: 1200px; padding-left: 0; padding-right: 0; }
 body.page-subscribe .sub-preview-more { font-size: 14px; color: #3C4858; margin: 14px 0 0; }
 @keyframes sub-story-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) {
@@ -1419,7 +1421,7 @@ body.page-subscribe .sub-preview-more { font-size: 14px; color: #3C4858; margin:
 }
 
 /* How each edition is made: a real sequence, so it is numbered. */
-body.page-subscribe .sub-steps { max-width: 1100px; margin: 0 auto; padding: 48px 24px 40px; border-top: 1px solid #EFE7D8; }
+body.page-subscribe .sub-steps { max-width: 1200px; margin: 0 auto; padding: 48px 0 40px; border-top: 1px solid #EFE7D8; }
 body.page-subscribe .sub-steps h2,
 body.page-subscribe .sub-who h2,
 body.page-subscribe .sub-faq h2 {
@@ -1442,7 +1444,7 @@ body.page-subscribe .sub-outlets { font-size: 14px; line-height: 1.6; color: #6C
 /* Who it is for + the editor */
 body.page-subscribe .sub-people {
  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 400px); gap: 48px; align-items: start;
- max-width: 1100px; margin: 0 auto; padding: 16px 24px 24px;
+ max-width: 1200px; margin: 0 auto; padding: 16px 0 24px;
 }
 body.page-subscribe .sub-who p { font-size: 16px; line-height: 1.65; color: #3C4858; margin: 0; max-width: 38em; }
 body.page-subscribe .sub-who .subscribe-sample { margin-top: 16px; }
@@ -1463,7 +1465,8 @@ body.page-subscribe .sub-editor p { font-size: 15px; line-height: 1.6; color: #3
 body.page-subscribe .sub-editor-links { display: flex; gap: 18px; margin: 12px 0 0; }
 
 /* Objections, right before the closing CTA */
-body.page-subscribe .sub-faq { max-width: 760px; margin: 0 auto; padding: 32px 24px 8px; }
+body.page-subscribe .sub-faq { max-width: 1200px; margin: 0 auto; padding: 32px 0 56px; }
+body.page-subscribe .sub-faq details { max-width: 760px; }
 body.page-subscribe .sub-faq details { border-bottom: 1px solid #EFE7D8; }
 body.page-subscribe .sub-faq summary {
  cursor: pointer; padding: 16px 0; font-size: 17px; font-weight: 700; color: #1A1A2E;
@@ -1472,42 +1475,52 @@ body.page-subscribe .sub-faq summary {
 body.page-subscribe .sub-faq summary::marker { color: #AA151B; }
 body.page-subscribe .sub-faq details p { font-size: 16px; line-height: 1.6; color: #3C4858; margin: 0 0 16px; }
 
-body.page-subscribe .sub-close {
- max-width: 760px; margin: 32px auto 48px; padding: 28px 24px;
- background: #FFF8EE; border: 1px solid #EADFC9; border-top: 6px solid #AA151B; border-radius: 14px;
- display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+/* Social following: proof that people read the content, right under the hero. */
+body.page-subscribe .sub-social { max-width: 1200px; margin: 0 auto; padding: 48px 0; border-top: 1px solid #EFE7D8; }
+body.page-subscribe .sub-social h2 {
+ font-family: Roboto, Helvetica, sans-serif;
+ font-size: 26px; line-height: 1.25; font-weight: 700; color: #3C4858; letter-spacing: -0.3px; margin: 0; text-wrap: balance;
 }
-body.page-subscribe .sub-close p { margin: 0; font-size: 18px; font-weight: 700; color: #3C4858; }
-body.page-subscribe .sub-close-btn {
- background: #AA151B; color: #ffffff; font-weight: 800; font-size: 1.05rem;
- padding: 14px 26px; border-radius: 12px; text-decoration: none; white-space: nowrap;
+body.page-subscribe .sub-social-lede { font-size: 16px; line-height: 1.6; color: #3C4858; margin: 8px 0 24px; max-width: 38em; }
+body.page-subscribe .sub-social-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; max-width: 760px; }
+body.page-subscribe .sub-social-card {
+ display: grid; grid-template-columns: auto 1fr; column-gap: 16px; align-items: baseline;
+ background: #ffffff; border: 1px solid #EFE7D8; border-radius: 14px; padding: 22px 24px;
+ box-shadow: 0 2px 14px rgba(60,40,20,0.07); text-decoration: none; color: inherit;
+ transition: border-color 0.15s, box-shadow 0.15s;
 }
-body.page-subscribe .sub-close-btn:hover { background: #8A1019; }
+body.page-subscribe .sub-social-card:hover { border-color: #AA151B; box-shadow: 0 6px 22px rgba(120,60,10,0.12); }
+body.page-subscribe .sub-social-icon { grid-row: span 3; align-self: start; width: 36px; height: 36px; fill: #AA151B; }
+body.page-subscribe .sub-social-num { font-size: 40px; font-weight: 800; line-height: 1; color: #1A1A2E; letter-spacing: -1px; }
+body.page-subscribe .sub-social-label { font-size: 15px; color: #3C4858; margin-top: 6px; }
+body.page-subscribe .sub-social-link { font-size: 14px; font-weight: 600; color: #AA151B; margin-top: 12px; }
+body.page-subscribe .sub-social-card:hover .sub-social-link { text-decoration: underline; }
 
 body.page-subscribe .sub-hero a:focus-visible,
 body.page-subscribe .sub-people a:focus-visible,
 body.page-subscribe .sub-faq summary:focus-visible,
-body.page-subscribe .sub-close-btn:focus-visible { outline: 3px solid rgba(170,21,27,0.45); outline-offset: 3px; border-radius: 4px; }
+body.page-subscribe .sub-social-card:focus-visible { outline: 3px solid rgba(170,21,27,0.45); outline-offset: 3px; border-radius: 4px; }
 
 @media (max-width: 900px) {
- body.page-subscribe .sub-hero { grid-template-columns: minmax(0, 1fr); gap: 40px; padding-top: 28px; }
+ body.page-subscribe .sub-hero { grid-template-columns: minmax(0, 1fr); gap: 40px; padding-top: 16px; }
  body.page-subscribe .sub-preview { max-width: 520px; }
  body.page-subscribe .sub-steps ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
  body.page-subscribe .sub-people { grid-template-columns: minmax(0, 1fr); gap: 28px; }
 }
 @media (max-width: 560px) {
- body.page-subscribe .sub-hero { padding: 20px 16px 40px; gap: 36px; }
+ body.page-subscribe .sub-hero { padding: 8px 0 40px; gap: 36px; }
  body.page-subscribe .sub-hero h1 { font-size: 30px; }
  body.page-subscribe .sub-hero h1::after { margin-top: 14px; }
  body.page-subscribe .sub-lede { font-size: 16px; margin-top: 12px; }
  body.page-subscribe .sub-hero .subscribe-form { margin-top: 18px; }
  body.page-subscribe .sub-hero .reader-proof { margin-left: 0; margin-right: 0; width: auto; }
  body.page-subscribe .sub-preview::before { inset: 10px -4px -8px 10px; }
- body.page-subscribe .sub-steps { padding: 36px 16px 28px; }
+ body.page-subscribe .sub-steps { padding: 36px 0 28px; }
  body.page-subscribe .sub-steps ol { grid-template-columns: minmax(0, 1fr); gap: 20px; }
- body.page-subscribe .sub-people, body.page-subscribe .sub-faq { padding-left: 16px; padding-right: 16px; }
- body.page-subscribe .sub-close { margin: 24px 16px 36px; flex-direction: column; align-items: stretch; text-align: center; }
- body.page-subscribe .sub-close-btn { text-align: center; }
+ body.page-subscribe .sub-social { padding: 36px 0; }
+ body.page-subscribe .sub-social-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+ body.page-subscribe .sub-social-num { font-size: 34px; }
+ body.page-subscribe .sub-faq { padding-bottom: 40px; }
 }
 
 /* Confirm page: make the required action unmissable */
