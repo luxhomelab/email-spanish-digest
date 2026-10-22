@@ -819,8 +819,11 @@ details.elec-bd[open] .elec-bd-sum::before { transform: rotate(90deg); }
 .crumb-sep { margin: 0 8px; color: #b0b9c4; }
 /* Quiz pages: the trail starts where the card starts, not at the 1200px
    page edge. Width and side padding mirror .quiz-wrap / .centered-page. */
-body.page-quiz .breadcrumbs { max-width: 680px; padding: 0 clamp(8px, 2vw, 16px); }
-body.page-quiz-flow .breadcrumbs { max-width: 608px; padding: 0 24px; }
+body.page-quiz .breadcrumbs { max-width: 680px; }
+body.page-quiz-flow .breadcrumbs { max-width: 560px; }
+/* Quiz flow pages sit on the same 16px page gutter as /articles/ instead of
+   adding .centered-page's own 24px on top of it. */
+body.page-quiz-flow .centered-page { padding-left: 0; padding-right: 0; }
 .crumb-current { color: #3C4858; font-weight: 600; }
 
 /* ---------- Confirm / success (background photo pages) ---------- */
@@ -950,15 +953,14 @@ body.page-quiz-flow .breadcrumbs { max-width: 608px; padding: 0 24px; }
 .subscribe-form-btn:active { transform: translateY(0); box-shadow: 0 2px 8px rgba(170,21,27,0.3); }
 .subscribe-form-btn:focus-visible { outline: 3px solid rgba(170,21,27,0.4); outline-offset: 2px; }
 .subscribe-form-btn:disabled { opacity: 0.7; cursor: default; }
-/* Icon variant (/subscribe): envelope in a soft disc, same language as the
-   home page's .hm-btn arrow disc. */
-.subscribe-form-btn--icon { display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 13px 14px 13px 26px; }
+/* Icon variant (/subscribe): a plain line paper plane after the label,
+   no disc, so the button reads as one solid red bar. */
+.subscribe-form-btn--icon { display: inline-flex; align-items: center; justify-content: center; gap: 10px; }
 .subscribe-form-btn-icon {
-  flex: none; width: 32px; height: 32px; padding: 7px; box-sizing: border-box; border-radius: 50%;
-  background: rgba(255,255,255,.2); fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
-  transition: transform .15s;
+  flex: none; width: 20px; height: 20px; fill: none; stroke: currentColor;
+  stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform .15s;
 }
-.subscribe-form-btn--icon:hover .subscribe-form-btn-icon { transform: rotate(-8deg) scale(1.06); }
+.subscribe-form-btn--icon:hover .subscribe-form-btn-icon { transform: translate(2px, -2px); }
 @media (prefers-reduced-motion: reduce) { .subscribe-form-btn-icon { transition: none; } }
 .subscribe-form-error {
  color: #b3261e; font-size: 14px; font-weight: 600; margin: 12px 0 0;
@@ -1002,6 +1004,7 @@ body.page-quiz-flow .breadcrumbs { max-width: 608px; padding: 0 24px; }
    narrower than Turnstile's fixed 300px iframe. Scale the widget subtree
    to fit and trim the leftover layout height so the gap stays even. */
 @media (max-width: 370px) {
+  .subscribe-form-btn { font-size: 1rem; padding: 15px 18px; }
   .subscribe-form .cf-turnstile > div { transform: scale(0.8); transform-origin: top left; }
   .subscribe-form .cf-turnstile { margin-bottom: 2px; }
 }
@@ -2134,7 +2137,7 @@ body.page-search #search { --pagefind-ui-primary: #AA151B; --pagefind-ui-text: #
 }
 
 /* ── Quiz (shared by quiz app + per-persona result pages) ── */
-.quiz-wrap{max-width:680px;margin:0 auto;padding:clamp(12px,3vw,24px) clamp(8px,2vw,16px);background:none;border-radius:20px}
+.quiz-wrap{max-width:680px;margin:0 auto;padding:clamp(12px,3vw,24px) 0;background:none;border-radius:20px}
 .quiz-progress-track{height:8px;background:rgba(0,0,0,.08);border-radius:99px;overflow:hidden;margin:14px 0 4px}
 #quiz-progress{height:100%;width:0;background:#AA151B;transition:width .3s}
 .quiz-card{background:#fff;border:1px solid #e5e0d8;border-radius:16px;padding:clamp(18px,4vw,28px);margin:16px 0;box-shadow:0 1px 4px rgba(0,0,0,.05)}
