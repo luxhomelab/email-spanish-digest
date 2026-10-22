@@ -975,7 +975,10 @@ body.page-quiz-flow .centered-page { padding-left: 0; padding-right: 0; }
 /* Cloudflare Turnstile widget: breathing room above the consent line.
    The widget renders a fixed 300px iframe — contain it so it can never
    push the page wider on narrow phones (see the ≤370px rule below). */
-.subscribe-form .cf-turnstile { margin: 14px 0 2px; min-height: 65px; max-width: 100%; overflow: hidden; }
+.subscribe-form .cf-turnstile { margin: 0; max-width: 100%; overflow: hidden; }
+/* Interaction-only: no reserved box; it takes space only once Cloudflare asks
+   the visitor to click (subscribeTurnstileShown adds .is-interactive). */
+.subscribe-form .cf-turnstile.is-interactive { margin: 14px 0 2px; min-height: 65px; }
 .subscribe-form-hp {
  position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
 }
@@ -990,7 +993,8 @@ body.page-quiz-flow .centered-page { padding-left: 0; padding-right: 0; }
   .subscribe-form-consent { order: 4; margin: 2px 0 14px; line-height: 1.7; padding: 6px 0; }
   .subscribe-form-consent input { width: 22px; height: 22px; margin-top: 2px; }
   .subscribe-form-consent a { padding: 4px 0; }
-  .subscribe-form .cf-turnstile { order: 5; margin: 0 0 14px; min-height: 65px; }
+  .subscribe-form .cf-turnstile { order: 5; }
+  .subscribe-form .cf-turnstile.is-interactive { margin: 0 0 14px; }
   .subscribe-form-btn { order: 6; width: 100%; }
   .subscribe-form-hp { order: 7; }
 }
@@ -1002,7 +1006,7 @@ body.page-quiz-flow .centered-page { padding-left: 0; padding-right: 0; }
   .subscribe-form-btn--icon { gap: 10px; padding: 12px 12px 12px 18px; }
   .subscribe-form-btn-icon { width: 28px; height: 28px; padding: 6px; }
   .subscribe-form .cf-turnstile > div { transform: scale(0.8); transform-origin: top left; }
-  .subscribe-form .cf-turnstile { margin-bottom: 2px; }
+  .subscribe-form .cf-turnstile.is-interactive { margin-bottom: 2px; }
 }
 
 /* ---------- Homepage redesign (body.page-home only) ---------- */
@@ -1399,9 +1403,6 @@ body.page-subscribe .sub-promises a:hover,
 body.page-subscribe .sub-preview-more a:hover,
 body.page-subscribe .sub-editor a:hover,
 body.page-subscribe .subscribe-sample a:hover { text-decoration: underline; }
-/* Interaction-only Turnstile: no reserved box; it takes space only if shown. */
-body.page-subscribe .sub-hero .subscribe-form .cf-turnstile { min-height: 0; margin: 0; }
-body.page-subscribe .sub-hero .subscribe-form .cf-turnstile.is-interactive { margin: 14px 0 2px; }
 body.page-subscribe .sub-hero .reader-proof { margin: 16px 0 0; justify-content: flex-start; max-width: none; width: fit-content; }
 
 /* The preview sheet sits on a second, offset sheet: the edition before it. */
@@ -1537,7 +1538,6 @@ body.page-subscribe .sub-social-card:focus-visible { outline: 3px solid rgba(170
  body.page-subscribe .sub-hero h1::after { margin-top: 14px; }
  body.page-subscribe .sub-lede { font-size: 16px; margin-top: 12px; }
  body.page-subscribe .sub-hero .subscribe-form { margin-top: 18px; }
- body.page-subscribe .sub-hero .subscribe-form .cf-turnstile.is-interactive { margin: 0 0 14px; }
  body.page-subscribe .sub-hero .reader-proof { margin-left: 0; margin-right: 0; width: auto; }
  body.page-subscribe .sub-preview::before { inset: 10px -4px -8px 10px; }
  body.page-subscribe .sub-steps { padding: 36px 0 28px; }
@@ -2529,12 +2529,10 @@ body.page-home .intro-audience {
 /* Turnstile: full-width band so its right edge meets the input row's edge.
    The iframe itself is fixed 300px and can't stretch — the band carries the
    width (subtle fill + centered widget) so there's no stray gap on the right. */
-.cta-form-card .subscribe-form .cf-turnstile {
-  align-self: stretch;
-  width: 100%; max-width: none;
+.cta-form-card .subscribe-form .cf-turnstile { align-self: stretch; width: 100%; max-width: none; }
+.cta-form-card .subscribe-form .cf-turnstile.is-interactive {
   margin: 14px 0 2px 0;
-  padding: 10px 12px 10px 0;
-  min-height: 87px;
+  min-height: 65px;
 }
 /* Consent: full form-column width, white text, links underlined white. */
 .cta-form-card .subscribe-form-consent {
@@ -2578,9 +2576,9 @@ body.page-home .intro-audience {
   .calc .cta-form-card h2 { font-size: 20px; }
   /* Stack without horizontal scroll: input → error → consent → turnstile → button. */
   .cta-form-card .subscribe-form { max-width: 100%; }
-  .cta-form-card .subscribe-form .cf-turnstile {
-    order: 5; margin: 0 0 14px 0; min-height: 0; padding: 8px 8px 8px 0;
-    align-self: stretch; width: 100%; max-width: none;
+  .cta-form-card .subscribe-form .cf-turnstile { order: 5; }
+  .cta-form-card .subscribe-form .cf-turnstile.is-interactive {
+    margin: 0 0 14px 0; min-height: 0;
   }
   .cta-form-card .subscribe-form-btn { width: 100%; }
 }

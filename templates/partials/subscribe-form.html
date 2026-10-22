@@ -24,16 +24,17 @@
    static/js/subscribe-form.js (digest → digest_subscribe, each calculator →
    its own calc_*_lead). Leave it unset for generic/quiz forms — they keep
    the 'subscribe' / 'quiz_subscribe' events.
-   turnstile_appearance (optional): Turnstile data-appearance, e.g.
-   'interaction-only' keeps the widget hidden unless Cloudflare needs the
-   visitor to click (used on /subscribe to keep the button above the fold). #}
+   turnstile_appearance (optional): Turnstile data-appearance. Defaults to
+   'interaction-only' on every form: the widget stays hidden (no reserved
+   space) unless Cloudflare needs the visitor to click. Pass '' to always
+   show it. #}
 {% set success_url = success_url | default('/confirm') %}
 {% set btn_label = btn_label | default('Subscribe free') %}
 {% set btn_icon = btn_icon | default(false) %}
 {% set field_id = field_id | default('subscribe-email') %}
 {% set form_kind = form_kind | default('') %}
 {% set turnstile_on = turnstile_enabled | default(true) %}
-{% set turnstile_appearance = turnstile_appearance | default('') %}
+{% set turnstile_appearance = turnstile_appearance | default('interaction-only') %}
 {% if turnstile_on %}
 {% if turnstile_appearance %}
 {# Defined before api.js loads: Turnstile may call it right away. Marks the
