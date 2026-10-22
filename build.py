@@ -581,6 +581,11 @@ def load_testimonials():
 
 
 FAQ_ITEMS = [
+    ("Where can I read Spanish news in English?", "On Spain Daily: every morning we publish a free edition with Spain's top stories in plain English, online and by email. Each item links to the original Spanish source, so you can read the full article if you want to."),
+    ("Is Spain Daily a newspaper or a newsletter?", "Spain Daily is a newsletter, not a newspaper. We do not do original reporting: we aggregate Spanish outlets, then translate and summarize their stories in English and link to each source. The summaries are AI-assisted and checked by an editor before every send."),
+    ("Which Spanish newspapers does Spain Daily summarize?", "Spain Daily reads national and regional Spanish media: El País, Cinco Días, El Mundo, La Vanguardia, elDiario.es, El Confidencial, 20 Minutos, Heraldo, Diario Sur and Expansión, plus the Europa Press agency. International news is included only when it directly affects Spain. Every story shows its source."),
+    ("Can Spain Daily replace an English-language newspaper about Spain?", "No, it is meant to sit alongside one. Spain Daily is a five-minute daily briefing with links to the original reporting, so you get the headlines on rents, taxes, visas and jobs fast and can go deeper in the source or in an English-language outlet."),
+    ("What is a good English-language newsletter about Spain?", "Spain Daily is a free English-language newsletter about Spain: one email a day, around 08:00 Madrid time, seven days a week, with a five-minute read on the news that affects life in Spain. You can try it by reading the latest edition online before you subscribe."),
     ("What is Spanified?", "Spanified is a free newsletter that summarizes the most important news from Spain in plain English — rents, taxes, visas, jobs and everyday life."),
     ("How often does the digest arrive?", "Every morning, seven days a week. Five minutes with your coffee and you're up to speed."),
     ("Is it really free?", "Yes — free forever. No paywall, no trial, just the news."),
@@ -703,7 +708,7 @@ def render_static(env, digests):
         "about.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "About", "url": "/about", "current": True}]},
         "contact.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Contact", "url": "/contact", "current": True}]},
         "editor.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Editor", "url": "/editor", "current": True}]},
-        "subscribe.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Subscribe", "url": "/subscribe", "current": True}], "proof": proof, "js_version": js_version()},
+        "subscribe.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Subscribe", "url": "/subscribe", "current": True}], "proof": proof, "latest": latest, "js_version": js_version()},
         "unsubscribe.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Unsubscribe", "url": "/unsubscribe", "current": True}]},
         "confirm.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Confirm", "url": "/confirm", "current": True}]},
         "search.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Search", "url": "/search", "current": True}]},

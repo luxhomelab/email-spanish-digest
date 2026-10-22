@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block body_class %} class="page-archive"{% endblock %}
-{% block title %}Archive — Spain Daily{% if pagination.current > 1 %} — Page {{ pagination.current }}{% endif %}{% endblock %}
-{% block description %}<meta name="description" content="Browse the archive of Spain Daily digests — every edition, summarized in English.{% if pagination.current > 1 %} Page {{ pagination.current }}.{% endif %}">{% endblock %}
+{% block title %}Spanish News in English: Daily Archive — Spain Daily{% if pagination.current > 1 %} — Page {{ pagination.current }}{% endif %}{% endblock %}
+{% block description %}<meta name="description" content="Browse every Spain Daily edition: Spanish news in English, summarized each day from the Spanish press.{% if pagination.current > 1 %} Page {{ pagination.current }}.{% endif %}">{% endblock %}
 
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/archive/{% if pagination.current > 1 %}{{ pagination.current }}{% endif %}">{% endblock %}
 {% block content %}
