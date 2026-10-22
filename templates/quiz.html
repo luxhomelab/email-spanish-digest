@@ -29,76 +29,80 @@
 {% include "partials/breadcrumbs.html" %}
 <div class="quiz-wrap">
  <div id="quiz-hook" class="quiz-card quiz-hook">
-  <p class="confirm-kicker">Spanified quiz</p>
-    <h1 class="quiz-hook-headline">{{ quiz.title }}</h1>
-    <img class="quiz-hook-img" src="/static/img/quiz/{{ quiz.slug }}/quiz-hook.jpg" alt="{{ quiz.title }}" width="1200" height="805" loading="lazy">
-    <p class="quiz-hook-sub">{{ quiz.hook_sub | default("Some of these really happened in Spain. The rest we made up. Can you guess which is which?", true) }}</p>
-   <p class="quiz-hook-time">2 minutes &middot; 10 questions</p>
-   <p id="quiz-last" class="quiz-hook-last" hidden></p>
-   <button id="quiz-start" class="quiz-cta-btn quiz-start-btn" type="button">Start the quiz</button>
+  <p class="quiz-kicker">Spanified quiz</p>
+  <h1 class="quiz-hook-headline">{{ quiz.title }}</h1>
+  <img class="quiz-hook-img" src="/static/img/quiz/{{ quiz.slug }}/quiz-hook.jpg" alt="" width="1200" height="805" fetchpriority="high">
+  <p class="quiz-hook-sub">{{ quiz.hook_sub | default("Some of these really happened in Spain. The rest we made up. Can you guess which is which?", true) }}</p>
+  <div id="quiz-teaser" class="quiz-teaser">
+   <p class="quiz-teaser-label">Try the first one. Real or fake?</p>
+   <p id="quiz-teaser-q" class="quiz-teaser-q"></p>
+   <div class="quiz-choices">
+    <button type="button" id="quiz-teaser-real" class="quiz-choice"></button>
+    <button type="button" id="quiz-teaser-fake" class="quiz-choice"></button>
+   </div>
+  </div>
+  <p id="quiz-last" class="quiz-hook-last" hidden></p>
+  <button id="quiz-start" class="quiz-start-btn" type="button" hidden>Start the quiz</button>
+  <p class="quiz-hook-time">2 minutes &middot; 10 questions &middot; no email needed to play</p>
  </div>
 
-  <div class="quiz-progress-track" aria-hidden="true" hidden><div id="quiz-progress"></div></div>
+ <div id="quiz-play" class="quiz-card quiz-play" hidden>
+  <div class="quiz-meter">
+   <p id="quiz-step" class="quiz-step"></p>
+   <ol id="quiz-segs" class="quiz-segs" aria-hidden="true"></ol>
+  </div>
+  <div id="quiz-stage" class="quiz-stage"></div>
+ </div>
 
- <div id="quiz-play" class="quiz-card" hidden>
-  <p id="quiz-step" class="confirm-kicker"></p>
-  <h2 id="quiz-headline" class="quiz-headline"></h2>
-  <p id="quiz-summary"></p>
-  <div id="quiz-choices" class="quiz-choices">
-   <button id="quiz-real" type="button">{{ quiz.real_label | default("Real — this happened", true) }}</button>
-   <button id="quiz-fake" type="button">{{ quiz.fake_label | default("Fake — AI slop", true) }}</button>
-  </div>
-  <div id="quiz-feedback" hidden>
-   <p class="quiz-verdict"></p>
-   <p class="quiz-explain"></p>
-   <p class="quiz-source"></p>
-  </div>
-   <div id="quiz-next-wrap" hidden><button id="quiz-next" class="cta-button" type="button">Next question</button></div>
-  </div>
-
- <div id="quiz-gate" class="quiz-card" hidden>
+ <div id="quiz-gate" class="quiz-card quiz-gate" hidden>
   <div class="quiz-score-hero">
    <div class="quiz-score-badge" aria-hidden="true"><span class="quiz-score-num" id="quiz-score-num">–</span><span class="quiz-score-of">/10</span></div>
-   <div>
+   <div class="quiz-score-text">
     <p id="quiz-score-line" class="quiz-score-title"></p>
-    <p class="quiz-score-sub">Your persona is ready.</p>
+    <ol id="quiz-gate-segs" class="quiz-segs quiz-segs--small" aria-label="Your answers"></ol>
    </div>
   </div>
   <div id="quiz-blur" class="quiz-locked">
-   <div class="quiz-locked-fake" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-   <p class="quiz-locked-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2" /><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" /></svg>Locked until you confirm your email</p>
+   <img id="quiz-locked-img" class="quiz-locked-img" alt="" width="1200" height="630">
+   <p class="quiz-locked-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2" /><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" /></svg>Your persona is sealed</p>
   </div>
   <div id="quiz-gate-form">
-   <h2 class="quiz-gate-title">Where should we send your persona?</h2>
-   <p class="quiz-gate-lede">Confirm the link we email you to unlock your persona, score breakdown and shareable badge. Spain's top news in English arrives every morning.</p>
-   {% set success_url = "/quiz/" ~ quiz.slug ~ "-subscribed" %}{% set btn_label = "Reveal my result" %}{% set btn_icon = true %}{% set field_id = "quiz-subscribe-email" %}
+   <h2 class="quiz-gate-title">Open it with your email</h2>
+   <p class="quiz-gate-lede">Confirm the link we send you and your persona opens right away. You also get Spain's top news in English every morning, free.</p>
+   {% set success_url = "/quiz/" ~ quiz.slug ~ "-subscribed" %}{% set btn_label = "Reveal my persona" %}{% set btn_icon = true %}{% set field_id = "quiz-subscribe-email" %}
    {% include "partials/subscribe-form.html" %}
-   <p class="quiz-gate-proof">{% if proof and proof.total_issues %}{{ proof.total_issues }}{% else %}142{% endif %} daily editions · free · unsubscribe anytime</p>
-   <button id="quiz-skip" class="quiz-skip" type="button">Skip — just show my result</button>
+   <p class="quiz-gate-proof">{% if proof and proof.total_issues %}{{ proof.total_issues }}{% else %}142{% endif %} daily editions &middot; free &middot; unsubscribe anytime</p>
+   <button id="quiz-skip" class="quiz-skip" type="button">No thanks, just show my result</button>
   </div>
-     <div id="quiz-result-full" hidden>
-      <div class="quiz-persona">
-     <p class="confirm-kicker">Your persona</p>
-     <h2 id="quiz-result-title"></h2>
-     <img id="quiz-result-img" class="quiz-result-img" src="/static/img/quiz/{{ quiz.slug }}/quiz-cover.jpg" alt="{{ quiz.title }}" width="1200" height="630" loading="lazy" hidden>
-     <div id="quiz-result-text" class="quiz-result-text"></div>
+  <div id="quiz-result-full" hidden>
+   <div class="quiz-persona">
+    <img id="quiz-result-img" class="quiz-result-img" src="/static/img/quiz/{{ quiz.slug }}/quiz-cover.jpg" alt="{{ quiz.title }}" width="1200" height="630" hidden>
+    <p class="quiz-kicker">Your persona</p>
+    <h2 id="quiz-result-title"></h2>
+    <div id="quiz-result-text" class="quiz-result-text"></div>
+   </div>
+   <div class="quiz-share-block">
+    <p class="quiz-share-title">Think a friend would score higher? Send it.</p>
+    <div class="quiz-share">{% include "partials/share.html" %}</div>
+   </div>
+   <div id="quiz-sub-cta" class="quiz-sub-cta">
+    <div class="quiz-sub-copy">
+     <p class="quiz-sub-title">Spain's news, in plain English</p>
+     <p class="quiz-sub-text">One sharp email every morning. Free, unsubscribe anytime.</p>
     </div>
-    <div class="quiz-cta-row">
-     <div class="quiz-share">{% include "partials/share.html" %}</div>
-     <a class="quiz-cta-btn" href="/subscribe">Subscribe free — Spain news every morning</a>
-    </div>
-    <p class="quiz-cta-note">One sharp email every morning. Share your persona — challenge a friend.</p>
-    <p class="quiz-retake-wrap"><button id="quiz-retake" class="quiz-retake-btn" type="button">↺ Retake the quiz</button></p>
-    {% for other in other_quizzes %}
-    <a class="quiz-other" href="{{ other.url }}" aria-label="Try the other quiz: {{ other.title }}">
-     <img class="quiz-other-cover" src="{{ other.cover }}" alt="{{ other.title }}" width="1200" height="630" loading="lazy">
-     <span class="quiz-other-body">
-      <span class="quiz-other-kicker">Try the other quiz</span>
-      <span class="quiz-other-title">{{ other.title }}</span>
-      <span class="quiz-other-go">Play now →</span>
-     </span>
-    </a>
-    {% endfor %}
+    <a class="quiz-sub-btn" href="/subscribe">Subscribe free<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6.5L20.5 7"/></svg></a>
+   </div>
+   <p class="quiz-retake-wrap"><button id="quiz-retake" class="quiz-retake-btn" type="button">↺ Retake the quiz</button></p>
+   {% for other in other_quizzes %}
+   <a class="quiz-other" href="{{ other.url }}" aria-label="Try the other quiz: {{ other.title }}">
+    <img class="quiz-other-cover" src="{{ other.cover }}" alt="{{ other.title }}" width="1200" height="630" loading="lazy">
+    <span class="quiz-other-body">
+     <span class="quiz-other-kicker">Try the other quiz</span>
+     <span class="quiz-other-title">{{ other.title }}</span>
+     <span class="quiz-other-go">Play now →</span>
+    </span>
+   </a>
+   {% endfor %}
   </div>
  </div>
 </div>
