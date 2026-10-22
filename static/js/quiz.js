@@ -147,7 +147,7 @@ function init() {
   const retakeBtn = $('quiz-retake')
   if (retakeBtn) retakeBtn.addEventListener('click', () => {
     track('quiz_retake', { quiz: slug })
-    resetQuiz(true)
+    resetQuiz(false)
   })
 
   // Subscription record (spanified_subscribed, site-wide — set by any
