@@ -111,11 +111,11 @@
     <h3>Calculators for life in Spain</h3>
     <p>Taxes, property and bills worked out in plain English.</p>
     <ul class="hm-calcs">
-     <li><a href="/calculators/net-salary"><span class="hm-card-title">Net Salary Calculator</span> <span>Your payslip after IRPF and Social Security, and the Renta refund.</span></a></li>
-     <li><a href="/calculators/autonomo-tax"><span class="hm-card-title">Autónomo Tax Calculator</span> <span>Social security quota and IRPF for the self-employed.</span></a></li>
-     <li><a href="/calculators/property-buying-cost"><span class="hm-card-title">Property Buying Cost Calculator</span> <span>ITP, IVA/IGIC, AJD, notary and registry fees by region.</span></a></li>
-     <li><a href="/calculators/rental-yield"><span class="hm-card-title">Rental Yield Calculator</span> <span>Net yield, cash flow and IRR with resident and non-resident taxes.</span></a></li>
-     <li><a href="/calculators/electricity-bill"><span class="hm-card-title">Electricity Bill Calculator</span> <span>PVPC and tariff comparison for your monthly bill.</span></a></li>
+     <li><a href="/calculators/net-salary"><span class="hm-card-title">Net Salary Calculator</span> <span>Your payslip after IRPF and Social Security, and the Renta refund.</span> <span class="hm-go">Open calculator</span></a></li>
+     <li><a href="/calculators/autonomo-tax"><span class="hm-card-title">Autónomo Tax Calculator</span> <span>Social security quota and IRPF for the self-employed.</span> <span class="hm-go">Open calculator</span></a></li>
+     <li><a href="/calculators/property-buying-cost"><span class="hm-card-title">Property Buying Cost Calculator</span> <span>ITP, IVA/IGIC, AJD, notary and registry fees by region.</span> <span class="hm-go">Open calculator</span></a></li>
+     <li><a href="/calculators/rental-yield"><span class="hm-card-title">Rental Yield Calculator</span> <span>Net yield, cash flow and IRR with resident and non-resident taxes.</span> <span class="hm-go">Open calculator</span></a></li>
+     <li><a href="/calculators/electricity-bill"><span class="hm-card-title">Electricity Bill Calculator</span> <span>PVPC and tariff comparison for your monthly bill.</span> <span class="hm-go">Open calculator</span></a></li>
     </ul>
    </div>
 
@@ -128,6 +128,7 @@
       <img src="{{ q.cover }}" alt="{{ q.title }} quiz cover" width="1200" height="630" loading="lazy">
       <span class="hm-card-title">{{ q.title }}</span>
       <span>{{ q.hook }}</span>
+      <span class="hm-go">Take the quiz</span>
      </a></li>
      {% endfor %}
     </ul>
@@ -142,6 +143,7 @@
       <span class="hm-meta">{{ a.date_display }}, {{ a.reading_time }} min read</span>
       <span class="hm-card-title">{{ a.title }}</span>
       {% if a.excerpt %}<span>{{ a.excerpt[:150] }}{% if a.excerpt|length > 150 %}…{% endif %}</span>{% endif %}
+      <span class="hm-go">Read the article</span>
      </a></li>
      {% endfor %}
     </ul>

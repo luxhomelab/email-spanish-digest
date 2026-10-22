@@ -3156,17 +3156,23 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 /* More from Spanified */
 .hm-sub { color: var(--hm-muted); }
 .hm-block { margin-top: 36px; }
-.hm-calcs, .hm-quizzes, .hm-articles { display: grid; gap: 0 32px; margin-top: 12px; }
+.hm-calcs, .hm-quizzes, .hm-articles { display: grid; gap: 16px; margin-top: 16px; }
 .hm-calcs, .hm-articles { grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); }
-.hm-calcs a, .hm-articles a {
-  display: block; padding: 14px 0; border-top: 1px solid var(--hm-line);
+.hm-quizzes { grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); }
+/* Each tool, quiz and article is a whole-card link with a red action line. */
+.hm-calcs a, .hm-quizzes a, .hm-articles a {
+  display: flex; flex-direction: column; height: 100%; box-sizing: border-box;
+  background: #fff; border: 1px solid var(--hm-line); border-radius: 10px; padding: 18px 20px;
   color: var(--hm-body); text-decoration: none; font-size: 15px; line-height: 1.5;
+  transition: border-color .15s, box-shadow .15s;
 }
-.hm-card-title { display: block; font-family: var(--hm-serif); font-weight: 700; font-size: 19px; color: var(--hm-ink); line-height: 1.3; margin-bottom: 4px; }
-.hm-calcs a:hover .hm-card-title, .hm-articles a:hover .hm-card-title, .hm-quizzes a:hover .hm-card-title { color: var(--hm-red); }
-.hm-quizzes { grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 24px; }
-.hm-quizzes a { display: block; color: var(--hm-body); text-decoration: none; font-size: 15px; line-height: 1.5; }
-.hm-quizzes img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 6px; margin-bottom: 10px; }
+.hm-calcs a:hover, .hm-quizzes a:hover, .hm-articles a:hover { border-color: var(--hm-red); box-shadow: 0 0 0 1px var(--hm-red); }
+.hm-card-title { display: block; font-family: var(--hm-serif); font-weight: 700; font-size: 19px; color: var(--hm-ink); line-height: 1.3; margin-bottom: 6px; }
+.hm-go { margin-top: auto; padding-top: 12px; color: var(--hm-red); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.hm-quizzes a { padding: 0 0 18px; overflow: hidden; }
+.hm-quizzes a > span { padding: 0 20px; }
+.hm-quizzes a > .hm-card-title { padding-top: 14px; }
+.hm-quizzes img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; }
 .hm-articles { margin-bottom: 14px; }
 .hm-meta { display: block; font-size: 14px; color: var(--hm-muted); margin-bottom: 4px; }
 
@@ -3203,4 +3209,4 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
   .hm-edition { padding: 20px 18px; }
   .hm-editor { padding: 22px 18px; }
 }
-@media (prefers-reduced-motion: reduce) { .hm-btn { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .hm-btn, .hm-calcs a, .hm-quizzes a, .hm-articles a { transition: none; } }
