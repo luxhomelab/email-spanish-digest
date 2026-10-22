@@ -25,7 +25,7 @@
    <h1>{{ result.title }}</h1>
    <img class="quiz-result-img" src="/static/img/quiz/{{ quiz.slug }}/og-quiz-{{ result.slug }}.jpg" alt="{{ result.title }}" width="1200" height="630" loading="eager" fetchpriority="high">
    <p class="quiz-result-score" id="quiz-friend-score" hidden></p>
-  <a class="quiz-result-cta" href="/quiz/{{ quiz.slug }}">Challenge a friend</a>
+  <a class="quiz-result-cta" id="quiz-result-cta" href="/quiz/{{ quiz.slug }}">Take the quiz</a>
  </div>
   <div class="quiz-result-body">
    {% for para in result.text.split('\n\n') %}
@@ -35,7 +35,7 @@
     <p class="share-label">Share your result</p>
     <div class="quiz-share">{% include "partials/share.html" %}</div>
    </div>
-   <p class="quiz-retake-wrap"><a class="quiz-cta-btn" href="/quiz/{{ quiz.slug }}">Retake the quiz</a></p>
+   <p class="quiz-retake-wrap"><a class="quiz-cta-btn" href="/quiz/{{ quiz.slug }}">Take the quiz yourself</a></p>
    {% for other in other_quizzes %}
    <a class="quiz-other" href="{{ other.url }}" aria-label="Try the other quiz: {{ other.title }}">
     <img class="quiz-other-cover" src="{{ other.cover }}" alt="{{ other.title }}" width="1200" height="630" loading="lazy">
@@ -58,6 +58,8 @@
   if (el) {
     el.hidden = false;
     el.innerHTML = 'Your friend scored <strong>' + score + '/10</strong> — {{ result.title }}';
+  var cta = document.getElementById('quiz-result-cta');
+  if (cta) cta.textContent = 'Can you beat ' + score + '/10? Take the quiz';
   }
   // The shared page carries the exact score: append ?score=<n> to every
   // share target (u/url param, or the text tail for wa.me) + copy button.
