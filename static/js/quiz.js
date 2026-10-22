@@ -174,6 +174,8 @@ function init() {
           <button type="button" class="quiz-choice" data-real="1"></button>
           <button type="button" class="quiz-choice" data-real="0"></button>
         </div>
+        <div class="quiz-reveal">
+        <p class="quiz-hint">Make your call. The verdict and the source land here.</p>
         <div class="quiz-feedback" role="status">
           <div class="quiz-fb-head">
             <span class="quiz-stamp" aria-hidden="true"></span>
@@ -182,6 +184,7 @@ function init() {
           <p class="quiz-explain"></p>
           <p class="quiz-source"></p>
           <button type="button" class="quiz-next"></button>
+        </div>
         </div>`
       slide.querySelector('.quiz-headline').textContent = q.headline
       slide.querySelector('.quiz-summary').textContent = q.summary
