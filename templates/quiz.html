@@ -21,6 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ quiz.title }} — Spanified">
 <meta name="twitter:description" content="{{ quiz.title }} — 10 questions, 2 minutes. Half of it really happened in Spain. Can you tell which half?">{% endblock %}
+{% block body_class %} class="page-quiz"{% endblock %}
 {% block extra_head %}
 <script id="quiz-data" type="application/json">{{ quiz_json | safe }}</script>
 {% endblock %}

@@ -3,7 +3,7 @@
    via /quiz/<slug>-subscribed; the result is revealed here (score comes
    from localStorage) and the opt-in record is written so the quiz page
    unlocks on revisit. #}
-{% block body_class %} class="page-success"{% endblock %}
+{% block body_class %} class="page-success page-quiz-flow"{% endblock %}
 {% block title %}Subscribed — your quiz result — Spanified{% endblock %}
 {% block description %}<meta name="description" content="You're subscribed — see your {{ quiz.title }} quiz result.">
 <meta name="robots" content="noindex, nofollow">{% endblock %}

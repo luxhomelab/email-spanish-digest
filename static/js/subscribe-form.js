@@ -131,6 +131,9 @@ export function initSubscribeForm(form) {
 
   const errorEl = form.querySelector('[data-subscribe-error]')
   const button = form.querySelector('[type="submit"]')
+  // A button with an icon keeps its text in [data-btn-label] so the busy
+  // state swaps the words without dropping the icon.
+  const label = button && (button.querySelector('[data-btn-label]') || button)
 
   const showError = msg => {
     if (!errorEl) return
@@ -157,8 +160,8 @@ export function initSubscribeForm(form) {
       return showError('Please complete the captcha to subscribe.')
     }
 
-    const originalLabel = button ? button.textContent : ''
-    if (button) { button.disabled = true; button.textContent = 'Subscribing…' }
+    const originalLabel = label ? label.textContent : ''
+    if (button) { button.disabled = true; label.textContent = 'Subscribing…' }
     try {
       const res = await postForm(form.action, fields)
       if (res.ok) {
@@ -171,7 +174,7 @@ export function initSubscribeForm(form) {
     } catch {
       showError('Network error — check your connection and try again.')
     } finally {
-      if (button) { button.disabled = false; button.textContent = originalLabel }
+      if (button) { button.disabled = false; label.textContent = originalLabel }
       // Turnstile tokens are single-use: reset the widget after every
       // attempt so a retry gets a fresh token.
       try {
