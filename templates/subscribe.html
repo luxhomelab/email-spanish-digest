@@ -22,6 +22,11 @@
  "publisher": {"@id": "{{ site_url }}/#org"}, "isAccessibleForFree": true,
  "reviewedBy": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor", "jobTitle": "Founder and Editor", "sameAs": ["https://www.linkedin.com/in/dshvechikov"]}}
 </script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "@id": "{{ site_url }}/subscribe#faq", "mainEntity": [{% for q, a in faq %}
+  {"@type": "Question", "name": {{ q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ a|tojson }}}}{% if not loop.last %},{% endif %}{% endfor %}
+ ]}
+</script>
 {% endblock %}
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/subscribe">{% endblock %}
 {% block body_class %} class="page-subscribe"{% endblock %}
@@ -32,14 +37,10 @@
 <section class="sub-hero">
  <div class="sub-hero-main">
   <h1>Subscribe to the Spain Daily newsletter</h1>
-  <p class="sub-lede">Spain's top news in plain English, in your inbox around 08:00 Madrid time. One email a day, a five-minute read, free.</p>
+  <p class="sub-lede">Spain's top news in plain English. One free email a day, around 08:00 Madrid time.</p>
   {% set btn_label = "Get Spain Daily free" %}
+  {% set turnstile_appearance = "interaction-only" %}
   {% include "partials/subscribe-form.html" %}
-  <ul class="sub-promises">
-   <li>Free, no paywall</li>
-   <li>Unsubscribe in one click from any email</li>
-   <li>Your email is used only to send Spain Daily (<a href="/privacy">privacy</a>)</li>
-  </ul>
   <div class="reader-proof">
    <div class="reader-avatars" aria-hidden="true">
     {% for t in proof.testimonials[:3] %}<img class="reader-avatar" src="{{ t.avatar_url }}?v={{ asset_version }}" alt="" width="32" height="32" loading="lazy" decoding="async">{% endfor %}
@@ -49,6 +50,11 @@
     <span>Sent every day since {{ proof.first_issue }}, {{ proof.total_issues }} editions so far</span>
    </div>
   </div>
+  <ul class="sub-promises">
+   <li>Free, no paywall</li>
+   <li>Unsubscribe in one click from any email</li>
+   <li>Your email is used only to send Spain Daily (<a href="/privacy">privacy</a>)</li>
+  </ul>
  </div>
  {% if latest %}
  <aside class="sub-preview" aria-labelledby="sub-preview-title">
@@ -133,22 +139,12 @@
 
 <section class="sub-faq" aria-labelledby="sub-faq-title">
  <h2 id="sub-faq-title">Before you subscribe</h2>
+ {% for q, a in faq %}
  <details>
-  <summary>How often will I get an email?</summary>
-  <p>Once a day, around 08:00 Madrid time, weekends included.</p>
+  <summary>{{ q }}</summary>
+  <p>{{ a }}</p>
  </details>
- <details>
-  <summary>Is it really free?</summary>
-  <p>Yes. There is no paywall, and your email is used only to send Spain Daily. It is never sold.</p>
- </details>
- <details>
-  <summary>What happens after I sign up?</summary>
-  <p>We send you a confirmation email right away. Click the link in it to start getting Spain Daily. If it does not arrive within a few minutes, check your spam or promotions folder.</p>
- </details>
- <details>
-  <summary>Is it written by AI?</summary>
-  <p>AI helps translate and summarize the Spanish stories. An editor reviews every edition before it is sent, and each story links to its original source so you can check it.</p>
- </details>
+ {% endfor %}
 </section>
 
 <script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
