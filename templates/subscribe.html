@@ -22,68 +22,130 @@
  "publisher": {"@id": "{{ site_url }}/#org"}, "isAccessibleForFree": true,
  "reviewedBy": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor", "jobTitle": "Founder and Editor", "sameAs": ["https://www.linkedin.com/in/dshvechikov"]}}
 </script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "@id": "{{ site_url }}/subscribe#faq", "mainEntity": [{% for q, a in faq %}
+  {"@type": "Question", "name": {{ q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ a|tojson }}}}{% if not loop.last %},{% endif %}{% endfor %}
+ ]}
+</script>
 {% endblock %}
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/subscribe">{% endblock %}
+{% block body_class %} class="page-subscribe"{% endblock %}
 {% block content %}
 {% include "partials/breadcrumbs.html" %}
-<div class="subscribe-intro">
-  <p class="subscribe-kicker">Free daily newsletter</p>
+{# Feed labels → display names (see seo/tasks/2026-10-22-home-subscribe-copy.md). #}
+{% set brand = {"elDiario": "El Diario", "Sur": "Diario Sur"} %}
+<section class="sub-hero">
+ <div class="sub-hero-main">
   <h1>Subscribe to the Spain Daily newsletter</h1>
-  <p>Free, one email a day: Spain's top news in plain English. Prefer to read online? <a href="/">Read today's Spanish news in English</a>.</p>
-</div>
-<div class="reader-proof">
-  <div class="reader-avatars" aria-hidden="true">
+  <p class="sub-lede">Spain's top news in plain English. One free email a day, around 08:00 Madrid time.</p>
+  {% set btn_label = "Get Spain Daily free" %}
+  {% set turnstile_appearance = "interaction-only" %}
+  {% include "partials/subscribe-form.html" %}
+  <div class="reader-proof">
+   <div class="reader-avatars" aria-hidden="true">
     {% for t in proof.testimonials[:3] %}<img class="reader-avatar" src="{{ t.avatar_url }}?v={{ asset_version }}" alt="" width="32" height="32" loading="lazy" decoding="async">{% endfor %}
-  </div>
-  <div class="reader-proof-text">
+   </div>
+   <div class="reader-proof-text">
     <strong>Join 1,000+ readers of Spain Daily</strong>
-    <span>Free every morning · No spam, unsubscribe anytime</span>
+    <span>Sent every day since {{ proof.first_issue }}, {{ proof.total_issues }} editions so far</span>
+   </div>
   </div>
-</div>
-<div class="proof-strip">
-  <span class="proof-text">Daily since {{ proof.first_issue }} · {{ proof.total_issues }} digests published</span>
-  <a class="proof-badge" href="https://www.threads.com/@spaindaily" target="_blank" rel="noopener"><svg class="proof-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"/></svg><span class="nowrap"><strong class="proof-num">{{ proof.threads_display }}</strong>&nbsp;<span class="proof-label">followers</span></span></a>
-  <a class="proof-badge" href="https://www.reddit.com/r/SpainDaily/" target="_blank" rel="noopener"><svg class="proof-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-2.286 2.286C.775 23.225 1.097 24 1.738 24H12c6.627 0 12-5.373 12-12S18.627 0 12 0Zm4.388 3.199c1.104 0 1.999.895 1.999 1.999 0 1.105-.895 2-1.999 2-.946 0-1.739-.657-1.947-1.539v.002c-1.147.162-2.032 1.15-2.032 2.341v.007c1.776.067 3.4.567 4.686 1.363.473-.363 1.064-.58 1.707-.58 1.547 0 2.802 1.254 2.802 2.802 0 1.117-.655 2.081-1.601 2.531-.088 3.256-3.637 5.876-7.997 5.876-4.361 0-7.905-2.617-7.998-5.87-.954-.447-1.614-1.415-1.614-2.538 0-1.548 1.255-2.802 2.803-2.802.645 0 1.239.218 1.712.585 1.275-.79 2.881-1.291 4.64-1.365v-.01c0-1.663 1.263-3.034 2.88-3.207.188-.911.993-1.595 1.959-1.595Zm-8.085 8.376c-.784 0-1.459.78-1.506 1.797-.047 1.016.64 1.429 1.426 1.429.786 0 1.371-.369 1.418-1.385.047-1.017-.553-1.841-1.338-1.841Zm7.406 0c-.786 0-1.385.824-1.338 1.841.047 1.017.634 1.385 1.418 1.385.785 0 1.473-.413 1.426-1.429-.046-1.017-.721-1.797-1.506-1.797Zm-3.703 4.013c-.974 0-1.907.048-2.77.135-.147.015-.241.168-.183.305.483 1.154 1.622 1.964 2.953 1.964 1.33 0 2.47-.81 2.953-1.964.057-.137-.037-.29-.184-.305-.863-.087-1.795-.135-2.769-.135Z"/></svg><span class="nowrap"><strong class="proof-num">{{ proof.reddit_display }}</strong>&nbsp;<span class="proof-label">members</span></span></a>
-</div>
-<div class="subscribe-trust">
-  <h2>What you'll get</h2>
-  <div class="trust-grid">
-    <div class="trust-card">
-      <h3>Seven days a week</h3>
-      <p>A new edition in your inbox around 08:00 Madrid time, weekends included.</p>
-    </div>
-    <div class="trust-card">
-      <h3>Life in Spain first</h3>
-      <p>Rents, taxes, visas and jobs come first. International news only when it directly affects Spain.</p>
-    </div>
-    <div class="trust-card">
-      <h3>5-minute read</h3>
-      <p>Politics, economy, culture and life in Spain — no noise, no clickbait, just the essentials.</p>
-    </div>
-    <div class="trust-card">
-      <h3>Free forever</h3>
-      <p>No paywall, no spam, no selling your data. Unsubscribe anytime with one click.</p>
-    </div>
-    <div class="trust-card">
-      <h3>Every story sourced</h3>
-      <p>Each item links to the original reporting — verify it yourself in one click.</p>
-    </div>
-    <div class="trust-card">
-      <h3>Human-checked</h3>
-      <p>Openly AI-assisted, edited by <a href="/editor">Dmytro Shvechikov</a> in Spain and reviewed before every send.</p>
-    </div>
+  <ul class="sub-promises">
+   <li>Free, no paywall</li>
+   <li>Unsubscribe in one click from any email</li>
+   <li>Your email is used only to send Spain Daily (<a href="/privacy">privacy</a>)</li>
+  </ul>
+ </div>
+ {% if latest %}
+ <aside class="sub-preview" aria-labelledby="sub-preview-title">
+  <div class="sub-preview-sheet">
+   <div class="sub-preview-band">
+    <span class="sub-preview-from">Spain Daily</span>
+    <time datetime="{{ latest.date }}">{{ latest.date_display }}</time>
+   </div>
+   <div class="email-gold-band"></div>
+   <div class="sub-preview-body">
+    <p class="sub-preview-title" id="sub-preview-title">The latest edition, as it arrived in readers' inboxes</p>
+    <ul class="sub-preview-stories">
+     {% for s in latest.stories[:3] %}
+     <li>
+      <span class="sub-preview-emoji" aria-hidden="true">{{ emoji.get((s.category or '') | lower, default_emoji) }}</span>
+      <span class="sub-preview-story">
+       <strong>{{ s.title }}</strong>
+       {% if s.sources %}<span class="sub-preview-src">{% for src in s.sources[:2] %}{{ brand.get(src.name, src.name) }}{% if not loop.last %}, {% endif %}{% endfor %}</span>{% endif %}
+      </span>
+     </li>
+     {% endfor %}
+    </ul>
+    <p class="sub-preview-more">{% if latest.story_count > 3 %}And {{ latest.story_count - 3 }} more stories. {% endif %}<a href="{{ latest.url }}">Read this edition in full</a></p>
+   </div>
   </div>
-</div>
-<div class="subscribe-who">
+ </aside>
+ {% endif %}
+</section>
+
+<section class="sub-social" aria-labelledby="sub-social-title">
+ <h2 id="sub-social-title">{{ "{:,}".format(proof.threads + proof.reddit) }} people follow Spain Daily on social</h2>
+ <p class="sub-social-lede">Spain Daily stories are also posted on Threads and discussed on r/SpainDaily.</p>
+ <div class="sub-social-grid">
+  <a class="sub-social-card" href="https://www.threads.com/@spaindaily" target="_blank" rel="noopener">
+   <svg class="sub-social-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"/></svg>
+   <span class="sub-social-num">{{ proof.threads_display }}</span>
+   <span class="sub-social-label">followers on Threads</span>
+   <span class="sub-social-link">See the posts on Threads</span>
+  </a>
+  <a class="sub-social-card" href="https://www.reddit.com/r/SpainDaily/" target="_blank" rel="noopener">
+   <svg class="sub-social-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-2.286 2.286C.775 23.225 1.097 24 1.738 24H12c6.627 0 12-5.373 12-12S18.627 0 12 0Zm4.388 3.199c1.104 0 1.999.895 1.999 1.999 0 1.105-.895 2-1.999 2-.946 0-1.739-.657-1.947-1.539v.002c-1.147.162-2.032 1.15-2.032 2.341v.007c1.776.067 3.4.567 4.686 1.363.473-.363 1.064-.58 1.707-.58 1.547 0 2.802 1.254 2.802 2.802 0 1.117-.655 2.081-1.601 2.531-.088 3.256-3.637 5.876-7.997 5.876-4.361 0-7.905-2.617-7.998-5.87-.954-.447-1.614-1.415-1.614-2.538 0-1.548 1.255-2.802 2.803-2.802.645 0 1.239.218 1.712.585 1.275-.79 2.881-1.291 4.64-1.365v-.01c0-1.663 1.263-3.034 2.88-3.207.188-.911.993-1.595 1.959-1.595Zm-8.085 8.376c-.784 0-1.459.78-1.506 1.797-.047 1.016.64 1.429 1.426 1.429.786 0 1.371-.369 1.418-1.385.047-1.017-.553-1.841-1.338-1.841Zm7.406 0c-.786 0-1.385.824-1.338 1.841.047 1.017.634 1.385 1.418 1.385.785 0 1.473-.413 1.426-1.429-.046-1.017-.721-1.797-1.506-1.797Zm-3.703 4.013c-.974 0-1.907.048-2.77.135-.147.015-.241.168-.183.305.483 1.154 1.622 1.964 2.953 1.964 1.33 0 2.47-.81 2.953-1.964.057-.137-.037-.29-.184-.305-.863-.087-1.795-.135-2.769-.135Z"/></svg>
+   <span class="sub-social-num">{{ proof.reddit_display }}</span>
+   <span class="sub-social-label">members of r/SpainDaily</span>
+   <span class="sub-social-link">Read the discussions on Reddit</span>
+  </a>
+ </div>
+</section>
+
+<section class="sub-steps" aria-labelledby="sub-steps-title">
+ <h2 id="sub-steps-title">How each edition is made</h2>
+ <ol>
+  <li><strong>We read the Spanish press</strong><span>National and regional papers plus the Europa Press agency, every morning.</span></li>
+  <li><strong>We pick what matters in Spain</strong><span>Rents, taxes, visas, jobs and politics first. World news only when it affects Spain.</span></li>
+  <li><strong>We translate and summarize</strong><span>AI-assisted, in plain English, with a link to every original story.</span></li>
+  <li><strong>An editor checks it</strong><span>A person reviews every edition before it goes out around 08:00.</span></li>
+ </ol>
+ <p class="sub-outlets">Sources include El País, Cinco Días, El Mundo, La Vanguardia, El Diario, El Confidencial, 20 Minutos, Heraldo, Diario Sur, Expansión and Europa Press.</p>
+</section>
+
+<section class="sub-people">
+ <div class="sub-who">
   <h2>Who is Spain Daily for?</h2>
   <p>Anyone who wants to follow what is happening in Spain without reading a dozen sites: expats and locals, people planning a move, and Spain watchers abroad. Politics, the economy, society, culture and everyday life, in plain English, in five minutes, with a link to every source.</p>
   {% if latest %}<p class="subscribe-sample">Not sure yet? <a href="{{ latest.url }}">Read the latest edition ({{ latest.date_display }})</a> first, no sign-up needed.</p>
   {% else %}<p class="subscribe-sample">Not sure yet? <a href="/archive/">Browse past editions</a> first, no sign-up needed.</p>{% endif %}
-</div>
-{% set btn_label = "Get Spain Daily — free" %}
-{% include "partials/subscribe-form.html" %}
-<p class="subscribe-assurance">Your email is used only to send Spain Daily. Unsubscribe in one click from any email. Questions? <a href="mailto:support@spanified.com">support@spanified.com</a> · <a href="/privacy">Privacy</a></p>
-<script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
+ </div>
+ <div class="sub-editor">
+  <div class="sub-editor-top">
+   <span class="sub-editor-avatar" aria-hidden="true">DS</span>
+   <div>
+    <p class="sub-editor-name"><a href="/editor">Dmytro Shvechikov</a></p>
+    <p class="sub-editor-role">Founder and editor, based in Spain</p>
+   </div>
+  </div>
+  <p>Dmytro reviews every edition before it is sent. Spotted a mistake or have a question? <span class="sub-nowrap">Write to <a href="mailto:support@spanified.com">support@spanified.com</a>.</span></p>
+  <p class="sub-editor-links"><a href="/editor">About the editor</a><a href="https://www.linkedin.com/in/dshvechikov" target="_blank" rel="noopener">LinkedIn</a></p>
+ </div>
+</section>
+
 {% set testimonials_title = "What readers say" %}
 {% include "partials/testimonials.html" %}
+
+<section class="sub-faq" aria-labelledby="sub-faq-title">
+ <h2 id="sub-faq-title">Before you subscribe</h2>
+ {% for q, a in faq %}
+ <details>
+  <summary>{{ q }}</summary>
+  <p>{{ a }}</p>
+ </details>
+ {% endfor %}
+</section>
+
+<script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
 {% endblock %}

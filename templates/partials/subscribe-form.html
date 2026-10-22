@@ -22,13 +22,22 @@
    turned into a distinct GA4 event + Meta 'Lead' content_name by
    static/js/subscribe-form.js (digest → digest_subscribe, each calculator →
    its own calc_*_lead). Leave it unset for generic/quiz forms — they keep
-   the 'subscribe' / 'quiz_subscribe' events. #}
+   the 'subscribe' / 'quiz_subscribe' events.
+   turnstile_appearance (optional): Turnstile data-appearance, e.g.
+   'interaction-only' keeps the widget hidden unless Cloudflare needs the
+   visitor to click (used on /subscribe to keep the button above the fold). #}
 {% set success_url = success_url | default('/confirm') %}
 {% set btn_label = btn_label | default('Subscribe free') %}
 {% set field_id = field_id | default('subscribe-email') %}
 {% set form_kind = form_kind | default('') %}
 {% set turnstile_on = turnstile_enabled | default(true) %}
+{% set turnstile_appearance = turnstile_appearance | default('') %}
 {% if turnstile_on %}
+{% if turnstile_appearance %}
+{# Defined before api.js loads: Turnstile may call it right away. Marks the
+   widget so CSS can space it once Cloudflare asks the visitor to click. #}
+<script>window.subscribeTurnstileShown = function () { document.querySelectorAll('.cf-turnstile[data-appearance]').forEach(function (el) { el.classList.add('is-interactive') }) }</script>
+{% endif %}
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 {% endif %}
 <form class="subscribe-form" method="post" action="{{ listmonk_form_action }}" data-subscribe-ajax data-captcha="{{ '1' if turnstile_on else '0' }}"{% if form_kind %} data-form-kind="{{ form_kind }}"{% endif %}>
@@ -44,7 +53,7 @@
   <input type="hidden" name="l" value="{{ listmonk_list_uuid }}">
   <input type="hidden" name="next" value="{{ site_url }}{{ success_url }}">
   {% if turnstile_on %}
-  <div class="cf-turnstile" data-sitekey="0x4AAAAAAFCU4-TKzjR6JxAK" data-action="subscribe"></div>
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAAFCU4-TKzjR6JxAK" data-action="subscribe"{% if turnstile_appearance %} data-appearance="{{ turnstile_appearance }}" data-before-interactive-callback="subscribeTurnstileShown"{% endif %}></div>
   {% endif %}
   <label class="subscribe-form-consent">
     <input type="checkbox" name="consent" required>

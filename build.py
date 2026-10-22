@@ -580,6 +580,15 @@ def load_testimonials():
     return testimonials
 
 
+# /subscribe "Before you subscribe" FAQ: rendered as <details> and as FAQPage
+# JSON-LD, so answers stay plain text.
+SUBSCRIBE_FAQ_ITEMS = [
+    ("How often will I get an email?", "Once a day, around 08:00 Madrid time, weekends included."),
+    ("Is it really free?", "Yes. There is no paywall, and your email is used only to send Spain Daily. It is never sold."),
+    ("What happens after I sign up?", "We send you a confirmation email right away. Click the link in it to start getting Spain Daily. If it does not arrive within a few minutes, check your spam or promotions folder."),
+    ("Is it written by AI?", "AI helps translate and summarize the Spanish stories. An editor reviews every edition before it is sent, and each story links to its original source so you can check it."),
+]
+
 FAQ_ITEMS = [
     ("Where can I read Spanish news in English?", "On Spain Daily: every morning we publish a free edition with Spain's top stories in plain English, online and by email. Each item links to the original Spanish source, so you can read the full article if you want to."),
     ("Is Spain Daily a newspaper or a newsletter?", "Spain Daily is a newsletter, not a newspaper. We do not do original reporting: we aggregate Spanish outlets, then translate and summarize their stories in English and link to each source. The summaries are AI-assisted and checked by an editor before every send."),
@@ -708,7 +717,7 @@ def render_static(env, digests):
         "about.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "About", "url": "/about", "current": True}]},
         "contact.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Contact", "url": "/contact", "current": True}]},
         "editor.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Editor", "url": "/editor", "current": True}]},
-        "subscribe.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Subscribe", "url": "/subscribe", "current": True}], "proof": proof, "latest": latest, "js_version": js_version()},
+        "subscribe.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Subscribe", "url": "/subscribe", "current": True}], "proof": proof, "latest": latest, "emoji": CATEGORY_EMOJI, "default_emoji": DEFAULT_EMOJI, "faq": SUBSCRIBE_FAQ_ITEMS, "js_version": js_version()},
         "unsubscribe.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Unsubscribe", "url": "/unsubscribe", "current": True}]},
         "confirm.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Confirm", "url": "/confirm", "current": True}]},
         "search.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Search", "url": "/search", "current": True}]},
