@@ -368,6 +368,9 @@ function init() {
       track('quiz_subscribe', { quiz: slug, score })
     }
     // Gate resolved (subscribed or skipped) — the teaser box is pointless now.
+    // Already-subscribed players don't need the subscribe card.
+    const subCta = $('quiz-sub-cta')
+    if (subCta) subCta.hidden = hasSubscribed()
     body.classList.remove('quiz-playing')
     $('quiz-blur').hidden = true
     $('quiz-gate-form').hidden = true

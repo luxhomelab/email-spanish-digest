@@ -68,16 +68,22 @@
   </div>
   <div id="quiz-result-full" hidden>
    <div class="quiz-persona">
+    <img id="quiz-result-img" class="quiz-result-img" src="/static/img/quiz/{{ quiz.slug }}/quiz-cover.jpg" alt="{{ quiz.title }}" width="1200" height="630" hidden>
     <p class="quiz-kicker">Your persona</p>
     <h2 id="quiz-result-title"></h2>
-    <img id="quiz-result-img" class="quiz-result-img" src="/static/img/quiz/{{ quiz.slug }}/quiz-cover.jpg" alt="{{ quiz.title }}" width="1200" height="630" loading="lazy" hidden>
     <div id="quiz-result-text" class="quiz-result-text"></div>
    </div>
-   <div class="quiz-cta-row">
+   <div class="quiz-share-block">
+    <p class="quiz-share-title">Think a friend would score higher? Send it.</p>
     <div class="quiz-share">{% include "partials/share.html" %}</div>
-    <a class="quiz-cta-btn" href="/subscribe">Subscribe free: Spain news every morning</a>
    </div>
-   <p class="quiz-cta-note">One sharp email every morning. Share your persona and challenge a friend.</p>
+   <div id="quiz-sub-cta" class="quiz-sub-cta">
+    <div class="quiz-sub-copy">
+     <p class="quiz-sub-title">Spain's news, in plain English</p>
+     <p class="quiz-sub-text">One sharp email every morning. Free, unsubscribe anytime.</p>
+    </div>
+    <a class="quiz-sub-btn" href="/subscribe">Subscribe free<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+   </div>
    <p class="quiz-retake-wrap"><button id="quiz-retake" class="quiz-retake-btn" type="button">↺ Retake the quiz</button></p>
    {% for other in other_quizzes %}
    <a class="quiz-other" href="{{ other.url }}" aria-label="Try the other quiz: {{ other.title }}">
