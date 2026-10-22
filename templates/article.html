@@ -94,6 +94,7 @@
     <div class="ai-disclaimer">Written from first-hand experience in Spain and reviewed by a human.</div>
    </div>
   </div>
+  {% set page_url = site_url + article.url %}{% include "partials/remark42.html" %}
   {% set field_id = "article-subscribe-email" %}{% set form_kind = "article" %}{% set base_class = "cta-form-card" %}{% set indent = "   " %}{% include "partials/cta-form-card.html" %}
  </div>
 <script>
