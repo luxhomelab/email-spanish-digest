@@ -109,11 +109,12 @@
      <p><span class="hm-editor-name">Dmytro Shvechikov</span> <span class="hm-editor-role">Founder and editor, based in Spain</span></p>
     </div>
     <p>Dmytro shapes each edition himself: he checks every AI-written summary against the original reporting and cuts anything that falls short. <a class="hm-link-inline" href="/editor">Meet the editor</a></p>
-    <ul class="hm-editor-trust">
-     <li>Follows the agenda daily</li>
-     <li>Human review of every edition</li>
-     <li>Every story links its sources</li>
+    {% if proof and proof.total_issues %}
+    <ul class="hm-editor-stats">
+     <li><strong>{{ proof.total_issues }}</strong> editions{% if proof.first_issue %} since {{ proof.first_issue }}{% endif %}</li>
+     <li><strong>{{ "{:,}".format(proof.threads + proof.reddit) }}</strong> followers on Threads and Reddit</li>
     </ul>
+    {% endif %}
    </div>
   </section>
 
