@@ -1010,17 +1010,17 @@ body.page-home .teaser-story::before {
  font-weight: 700; color: #AA151B; font-size: 13px; min-width: 24px;
 }
 /* How it works — numbered connected chain (no emoji icons).
-   Desktop: 5 steps in one row joined by a single horizontal line.
+   Desktop: 3 steps in one row joined by a single horizontal line.
    Mobile: vertical chain joined by a single vertical line. */
 body.page-home .how-card .how-sub { color: #6C7A89; font-size: 15px; margin: 2px 0 0 0; }
 body.page-home .how-card .how-chain {
   list-style: none; margin: 24px 0 0 0; padding: 0;
-  display: grid; grid-template-columns: repeat(5, 1fr); gap: 0;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
   position: relative;
 }
 body.page-home .how-card .how-chain::before {
   content: ""; position: absolute;
-  top: 19px; left: calc(10% + 8px); right: calc(10% + 8px); height: 2px;
+  top: 19px; left: calc(100% / 6 + 8px); right: calc(100% / 6 + 8px); height: 2px;
   background: #E3D9C4;
 }
 body.page-home .how-card .how-chain li {
