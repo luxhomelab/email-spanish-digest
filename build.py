@@ -238,19 +238,20 @@ def short_date(date_str):
 
 
 def digest_meta_title(date, items):
-    """Keyword-first title: 'Spain News Oct 22, 2026: <top story>'.
+    """Story-first title: '<top story> | Spain News Oct 22'.
 
-    The top story is cut at a word boundary so the visible part stays near
-    60 characters; the full text still counts for ranking.
+    Leads with the day's top story (what people actually search for) and
+    keeps a short keyword suffix. The story is cut at a word boundary so the
+    whole title stays under ~75 characters; the year is in the H1 and description.
     """
-    base = f"Spain News {short_date(date)}"
+    suffix = f"Spain News {short_date(date).rsplit(',', 1)[0]}"
     top = next((i.get("title", "").strip() for i in items if i.get("title")), "")
     if not top:
-        return f"{base} | Spain Daily Digest"
-    room = 66 - len(base) - 2
+        return f"{suffix}, {date[:4]} | Spain Daily Digest"
+    room = 75 - len(suffix) - 3
     if len(top) > room:
         top = top[:room - 1].rsplit(" ", 1)[0].rstrip(",;:") + "…"
-    return f"{base}: {top}"
+    return f"{top} | {suffix}"
 
 
 def digest_meta_description(date, headline, items):
