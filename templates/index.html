@@ -40,7 +40,7 @@
     <h1>Spanish news in English: Spain Daily, every morning</h1>
     <p class="hm-lead">Spain Daily by <a href="/about">Spanified</a> is a daily digest of Spanish newspapers in English: your 5-minute catch-up on what's happening in Spain.</p>
     <div class="hm-actions">
-     <a href="/subscribe" class="hm-btn">Get Spain Daily by email</a>
+     <a href="/subscribe" class="hm-btn"><span>Get Spain Daily by email</span><svg class="hm-btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg></a>
      {% if latest %}<a href="{{ latest.url }}" class="hm-link">Read today's edition</a>{% endif %}
     </div>
     <p class="hm-trust">Free. One email around 08:00 Madrid time, seven days a week. Join 1,000+ readers, cancel anytime.</p>
@@ -60,7 +60,7 @@
    <ol class="hm-flow" aria-label="How Spain Daily works">
     <li>
      <svg class="hm-flow-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 7h17v18H8a2 2 0 0 1-2-2zM23 12h3v11a2 2 0 0 1-2 2h-1" /><path d="M10 11h9M10 15h9M10 19h6" /></svg>
-     <span><span class="hm-flow-big"><span class="hm-flow-num">11</span> Spanish news sources</span><span class="hm-flow-small">El País, El Mundo, La Vanguardia and 8 more</span></span>
+     <span><span class="hm-flow-big"><span class="hm-flow-num">11</span> Spanish news sources</span><span class="hm-flow-small">El País, El Mundo and 9 more</span></span>
     </li>
     <li>
      <svg class="hm-flow-icon" viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="8" width="22" height="16" rx="2" /><path d="M5 10l11 8 11-8" /></svg>
@@ -176,19 +176,24 @@
 
   <!-- Zone C: answers -->
   <section class="hm-faq" aria-label="Questions">
-   <h2>Questions, answered</h2>
-   {% for q, a in faq %}
-   <details>
-    <summary>{{ q }}</summary>
-    <p>{{ a }}</p>
-   </details>
-   {% endfor %}
+   <div class="hm-faq-head">
+    <h2>Questions, answered</h2>
+    <p>The short version of what readers ask us most. Anything else? <a href="/contact">Write to us</a>.</p>
+   </div>
+   <div class="hm-faq-list">
+    {% for q, a in faq %}
+    <details>
+     <summary>{{ q }}</summary>
+     <p>{{ a }}</p>
+    </details>
+    {% endfor %}
+   </div>
   </section>
 
   <section class="hm-close" aria-label="Subscribe">
    <h2>Start tomorrow morning with Spain Daily</h2>
    <p>Join 1,000+ readers. Free, one email a day, cancel anytime.</p>
-   <a href="/subscribe" class="hm-btn">Get Spain Daily by email</a>
+   <a href="/subscribe" class="hm-btn"><span>Get Spain Daily by email</span><svg class="hm-btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg></a>
    <p class="hm-note">This digest is based on real news, created with the help of AI and reviewed by a human.</p>
   </section>
  </div>

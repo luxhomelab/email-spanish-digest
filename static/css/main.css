@@ -3103,11 +3103,20 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 .hm-lead { font-size: 20px; line-height: 1.5; }
 .hm-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; margin: 26px 0 16px; }
 .hm-btn {
-  display: inline-block; background: var(--hm-red); color: #fff !important; text-decoration: none;
-  font-weight: 700; font-size: 17px; line-height: 1.2; padding: 15px 26px; border-radius: 8px;
-  transition: background .15s;
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  background: linear-gradient(180deg, #BC1A21 0%, var(--hm-red) 100%); color: #fff !important; text-decoration: none;
+  font-weight: 700; font-size: 17px; line-height: 1.2; padding: 14px 16px 14px 26px; border-radius: 10px;
+  box-shadow: 0 1px 0 rgba(255,255,255,.18) inset, 0 6px 16px -6px rgba(170,21,27,.55);
+  transition: background .15s, box-shadow .15s, transform .15s;
 }
-.hm-btn:hover { background: var(--hm-red-dark); }
+.hm-btn:hover { background: var(--hm-red-dark); box-shadow: 0 8px 20px -6px rgba(170,21,27,.6); }
+.hm-btn:active { transform: translateY(1px); }
+.hm-btn-icon {
+  flex: none; width: 30px; height: 30px; padding: 6px; box-sizing: border-box; border-radius: 50%;
+  background: rgba(255,255,255,.2); fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round;
+  transition: transform .15s;
+}
+.hm-btn:hover .hm-btn-icon { transform: translateX(3px); }
 .hm-link { font-weight: 700; display: inline-block; padding: 10px 0; }
 .hm .hm-edition-foot a { display: inline-block; padding: 8px 0; }
 .hm .hm-trust { font-size: 15px; color: var(--hm-muted); margin-bottom: 0; }
@@ -3134,7 +3143,7 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
   grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 64px;
   margin: 0; padding: 24px 32px; border-radius: 14px; background: #fff; border: 1px solid var(--hm-line);
 }
-.hm-flow li { position: relative; display: flex; align-items: center; gap: 16px; }
+.hm-flow li { position: relative; display: flex; align-items: flex-start; gap: 16px; }
 .hm-flow li:not(:last-child)::after {
   content: ""; position: absolute; right: -38px; top: 50%; width: 12px; height: 12px;
   border-top: 2px solid #C9B98F; border-right: 2px solid #C9B98F;
@@ -3212,17 +3221,30 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 .hm-meta { display: block; font-size: 14px; color: var(--hm-muted); margin-bottom: 4px; }
 
 /* FAQ */
-.hm-faq details { border-top: 1px solid var(--hm-line); max-width: 780px; }
-.hm-faq details:last-of-type { border-bottom: 1px solid var(--hm-line); }
-.hm-faq summary { cursor: pointer; padding: 16px 32px 16px 0; font-weight: 700; color: var(--hm-ink); list-style: none; position: relative; }
+.hm-faq { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 20px 56px; align-items: start; }
+.hm-faq-head { position: sticky; top: 24px; }
+.hm-faq-head p { color: var(--hm-muted); font-size: 16px; }
+.hm-faq-list { display: grid; gap: 10px; }
+.hm-faq details { background: #fff; border: 1px solid var(--hm-line); border-radius: 10px; transition: border-color .15s; }
+.hm-faq details:hover, .hm-faq details[open] { border-color: #D9C9A6; }
+.hm-faq summary {
+  cursor: pointer; padding: 16px 60px 16px 20px; font-weight: 700; color: var(--hm-ink);
+  list-style: none; position: relative; line-height: 1.4; border-radius: 10px;
+}
 .hm-faq summary::-webkit-details-marker { display: none; }
-.hm-faq summary::after { content: "+"; position: absolute; right: 4px; top: 12px; font-size: 22px; color: var(--hm-red); }
-.hm-faq details[open] summary::after { content: "\2212"; }
+.hm-faq summary::after {
+  content: "+"; position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+  width: 28px; height: 28px; border-radius: 50%; background: var(--hm-tint); color: var(--hm-red);
+  display: grid; place-items: center; font-size: 20px; font-weight: 400; line-height: 1;
+}
+.hm-faq details[open] summary::after { content: "\2212"; background: var(--hm-red); color: #fff; }
+.hm .hm-faq details p { padding: 0 20px 18px; margin: 0; color: var(--hm-body); font-size: 16px; }
 
 /* Closing band */
 .hm > .hm-close { text-align: center; background: var(--hm-red); border-color: var(--hm-red); color: #fff; }
 .hm .hm-close h2, .hm .hm-close .hm-note { color: #fff; }
-.hm .hm-close .hm-btn { background: #fff; color: var(--hm-red) !important; }
+.hm .hm-close .hm-btn { background: #fff; color: var(--hm-red) !important; box-shadow: 0 6px 16px -6px rgba(0,0,0,.35); }
+.hm .hm-close .hm-btn-icon { background: rgba(170,21,27,.1); }
 .hm .hm-close .hm-btn:hover { background: #F7F1E4; }
 .hm .hm-close .hm-btn:focus-visible { outline-color: #fff; }
 .hm .hm-close h2, .hm .hm-close p { margin-left: auto; margin-right: auto; text-align: center; }
@@ -3237,7 +3259,12 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
   .hm-flow-big { font-size: 17px; }
 }
 @media (max-width: 860px) {
-  .hm-hero, .hm-about, .hm-process { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .hm-hero, .hm-about, .hm-process, .hm-faq { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .hm-faq { gap: 8px; }
+  .hm-faq-head { position: static; }
+  .hm-faq summary { padding: 14px 52px 14px 16px; }
+  .hm-faq summary::after { right: 12px; }
+  .hm .hm-faq details p { padding: 0 16px 16px; }
   .hm-hero { gap: 20px; }
   .hm h1 { max-width: none; }
   .hm .hm-flow { grid-template-columns: minmax(0, 1fr); gap: 40px; padding: 24px 20px; }
@@ -3250,8 +3277,8 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
   .hm-lead { font-size: 18px; }
   .hm > section { padding: 28px 18px; }
   .hm-actions { flex-direction: column; align-items: stretch; }
-  .hm-btn { display: block; text-align: center; }
+  .hm-btn { display: flex; }
   .hm-edition { padding: 20px 18px; }
   .hm-editor { padding: 22px 18px; }
 }
-@media (prefers-reduced-motion: reduce) { .hm-btn, .hm-calcs a, .hm-quizzes a, .hm-articles a { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .hm-btn, .hm-btn-icon, .hm-faq details, .hm-calcs a, .hm-quizzes a, .hm-articles a { transition: none; } }
