@@ -3,48 +3,53 @@
    via /quiz/<slug>-subscribed; the result is revealed here (score comes
    from localStorage) and the opt-in record is written so the quiz page
    unlocks on revisit. #}
-{% block body_class %} class="page-success page-quiz-flow"{% endblock %}
+{% block body_class %} class="page-quiz page-success"{% endblock %}
 {% block title %}Subscribed — your quiz result — Spanified{% endblock %}
 {% block description %}<meta name="description" content="You're subscribed — see your {{ quiz.title }} quiz result.">
 <meta name="robots" content="noindex, nofollow">{% endblock %}
 {% block content %}
 {% include "partials/breadcrumbs.html" %}
-<div class="centered-page"><div class="card confirm-card">
-  <p class="confirm-kicker">You're in</p>
-  <h1>Subscription confirmed!</h1>
-  <p class="confirm-note">You're now getting <strong>Spain Daily</strong> — one free email every morning, unsubscribe anytime.</p>
+<div class="quiz-wrap">
+ <div class="quiz-card quiz-gate">
+  <p class="quiz-confirmed" role="status"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Email confirmed. Spain Daily arrives tomorrow morning.</p>
   <div id="quiz-success-result" hidden>
-    <div class="quiz-score-hero">
-      <div class="quiz-score-badge" aria-hidden="true"><span class="quiz-score-num" id="quiz-success-num">–</span><span class="quiz-score-of">/10</span></div>
-      <div><p id="quiz-success-line" class="quiz-score-title"></p></div>
-    </div>
-    <div class="quiz-persona">
-      <p class="confirm-kicker">Your persona</p>
-      <h2 id="quiz-success-title"></h2>
-      <img id="quiz-success-img" class="quiz-result-img" src="/static/img/quiz/{{ quiz.slug }}/quiz-cover.jpg" alt="{{ quiz.title }} quiz result" width="1200" height="630" loading="lazy" hidden>
-      <div id="quiz-success-text" class="quiz-result-text"></div>
-    </div>
-    <div class="quiz-cta-row">
-      <div class="quiz-share">{% include "partials/share.html" %}</div>
-      <a class="quiz-cta-btn" href="/quiz/{{ quiz.slug }}">Retake the quiz</a>
-    </div>
-    <p class="quiz-cta-note"><a href="/">Read today's digest</a> while you wait for tomorrow's.</p>
-    {% for other in other_quizzes %}
-    <a class="quiz-other" href="{{ other.url }}" aria-label="Try the other quiz: {{ other.title }}">
-     <img class="quiz-other-cover" src="{{ other.cover }}" alt="{{ other.title }}" width="1200" height="630" loading="lazy">
-     <span class="quiz-other-body">
-      <span class="quiz-other-kicker">Try the other quiz</span>
-      <span class="quiz-other-title">{{ other.title }}</span>
-      <span class="quiz-other-go">Play now →</span>
-     </span>
-    </a>
-    {% endfor %}
+   <div class="quiz-score-hero">
+    <div class="quiz-score-badge" aria-hidden="true"><span class="quiz-score-num" id="quiz-success-num">–</span><span class="quiz-score-of">/10</span></div>
+    <div class="quiz-score-text"><p id="quiz-success-line" class="quiz-score-title"></p></div>
+   </div>
+   <div class="quiz-persona">
+    <img id="quiz-success-img" class="quiz-result-img" src="/static/img/quiz/{{ quiz.slug }}/quiz-cover.jpg" alt="{{ quiz.title }} quiz result" width="1200" height="630" hidden>
+    <p class="quiz-kicker">Your persona</p>
+    <h2 id="quiz-success-title"></h2>
+    <div id="quiz-success-text" class="quiz-result-text"></div>
+   </div>
+   <div class="quiz-share-block">
+    <p class="quiz-share-title">Think a friend would score higher? Send it.</p>
+    <div class="quiz-share">{% include "partials/share.html" %}</div>
+   </div>
+   <div class="quiz-next-row">
+    <p class="quiz-next-text">Can't wait until tomorrow?</p>
+    <a class="quiz-next-link" href="{{ latest_digest_url | default('/archive/') }}">Read the latest digest</a>
+   </div>
+   <p class="quiz-retake-wrap"><a class="quiz-retake-btn" href="/quiz/{{ quiz.slug }}">↺ Retake the quiz</a></p>
+   {% for other in other_quizzes %}
+   <a class="quiz-other" href="{{ other.url }}" aria-label="Try the other quiz: {{ other.title }}">
+    <img class="quiz-other-cover" src="{{ other.cover }}" alt="{{ other.title }}" width="1200" height="630" loading="lazy">
+    <span class="quiz-other-body">
+     <span class="quiz-other-kicker">Try the other quiz</span>
+     <span class="quiz-other-title">{{ other.title }}</span>
+     <span class="quiz-other-go">Play now →</span>
+    </span>
+   </a>
+   {% endfor %}
   </div>
   <div id="quiz-success-fallback" hidden>
-    <p class="confirm-lead">Your result lives on the device and browser where you took the quiz.</p>
-    <p class="confirm-note">Please open this page <strong>from the same device and browser</strong> — or <a href="/quiz/{{ quiz.slug }}">retake the quiz</a> here (2 minutes, no email needed to play).</p>
+   <h1 class="quiz-gate-title">Your result is on another device</h1>
+   <p class="quiz-gate-lede">Your result lives on the device and browser where you took the quiz. Open this page from there, or retake the quiz here. It takes 2 minutes and needs no email.</p>
+   <a class="quiz-cta-btn" href="/quiz/{{ quiz.slug }}">Retake the quiz</a>
   </div>
-</div></div>
+ </div>
+</div>
 <script id="quiz-success-data" type="application/json">{{ quiz_json | safe }}</script>
 <script type="module">
 import { resultForScore, personalShareText, personalLongShareText, quizResultUrl, markQuizSubscribed } from '/static/js/quiz-logic.js?v={{ js_version }}';
@@ -64,7 +69,7 @@ try {
   } else {
     const result = resultForScore(data.results, saved.score);
     document.getElementById('quiz-success-num').textContent = saved.score;
-    document.getElementById('quiz-success-line').textContent = `You scored ${saved.score}/${TOTAL} — ${result.title}`;
+    document.getElementById('quiz-success-line').textContent = `You scored ${saved.score} out of ${TOTAL}`;
     document.getElementById('quiz-success-title').textContent = result.title;
     // Persona card art — same file the static result pages use for OG.
     const simg = document.getElementById('quiz-success-img');
