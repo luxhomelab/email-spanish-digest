@@ -1444,7 +1444,7 @@ body.page-subscribe .sub-steps li::before {
 }
 body.page-subscribe .sub-steps li strong { display: block; font-size: 17px; color: #1A1A2E; margin-bottom: 6px; }
 body.page-subscribe .sub-steps li span { display: block; font-size: 15px; line-height: 1.55; color: #3C4858; }
-body.page-subscribe .sub-outlets { font-size: 14px; line-height: 1.6; color: #6C7A89; margin: 24px 0 0; max-width: 60em; }
+body.page-subscribe .sub-outlets { font-size: 14px; line-height: 1.6; color: #6C7A89; margin: 24px 0 0; }
 
 /* Who it is for + the editor */
 body.page-subscribe .sub-people {
