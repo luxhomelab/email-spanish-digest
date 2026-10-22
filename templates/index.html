@@ -1,30 +1,33 @@
 {% extends "base.html" %}
 {% block body_class %} class="page-home"{% endblock %}
-{% block title %}Spain News in English: Spain Daily Newsletter | Spanified{% endblock %}
-{% block description %}<meta name="description" content="Spain Daily is Spanified's free morning newsletter: Spain's top news in plain English, a 5-minute read. Plus calculators, quizzes and guides for life in Spain.">
+{% block title %}Spain Daily: Spanish News in English | Spanified{% endblock %}
+{% block description %}<meta name="description" content="Spanish news in English, every morning: Spain Daily sums up Spain's top stories on rents, taxes, visas and jobs. Read online or by email. Free.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Spain News in English: Spain Daily Newsletter | Spanified">
-<meta property="og:description" content="Spain Daily is Spanified's free morning newsletter: Spain's top news in plain English, a 5-minute read. Plus calculators, quizzes and guides for life in Spain.">
+<meta property="og:title" content="Spain Daily: Spanish News in English | Spanified">
+<meta property="og:description" content="Spanish news in English, every morning: Spain Daily sums up Spain's top stories on rents, taxes, visas and jobs. Read online or by email. Free.">
 <meta property="og:url" content="{{ site_url }}/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Spain News in English: Spain Daily Newsletter | Spanified">
-<meta name="twitter:description" content="Spain Daily is Spanified's free morning newsletter: Spain's top news in plain English, a 5-minute read. Plus calculators, quizzes and guides for life in Spain.">
+<meta name="twitter:title" content="Spain Daily: Spanish News in English | Spanified">
+<meta name="twitter:description" content="Spanish news in English, every morning: Spain Daily sums up Spain's top stories on rents, taxes, visas and jobs. Read online or by email. Free.">
 <meta name="robots" content="max-image-preview:large">{% endblock %}
 
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/">{% endblock %}
 {% block content %}
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@graph": [
- {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/",
+ {"@type": "Organization", "@id": "{{ site_url }}/#org", "name": "Spanified", "url": "{{ site_url }}/",
   "logo": {"@type": "ImageObject", "url": "{{ site_url }}/logo.jpg"},
   "contactPoint": {"@type": "ContactPoint", "email": "support@spanified.com",
    "contactType": "customer support", "availableLanguage": "English"},
   "sameAs": {{ site_socials|tojson }}},
- {"@type": "WebSite", "name": "Spanified", "url": "{{ site_url }}/",
+ {"@type": "WebSite", "@id": "{{ site_url }}/#website", "name": "Spanified", "alternateName": ["Spain Daily", "Spanified Spain Daily"],
+  "url": "{{ site_url }}/", "inLanguage": "en", "publisher": {"@id": "{{ site_url }}/#org"},
   "description": "Spanified: Spain Daily, a free morning newsletter with Spain's top news in plain English, plus calculators, quizzes and guides for life in Spain."},
- {"@type": "Periodical", "name": "Spain Daily", "url": "{{ site_url }}/about",
+ {"@type": "Periodical", "@id": "{{ site_url }}/#spain-daily", "name": "Spain Daily", "alternateName": "Spain Daily newsletter",
+  "url": "{{ site_url }}/",
   "description": "Free daily newsletter with Spain's top news in plain English, a 5-minute read.",
-  "inLanguage": "en", "publisher": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}},
+  "inLanguage": "en", "isAccessibleForFree": true, "isPartOf": {"@id": "{{ site_url }}/#website"},
+  "publisher": {"@id": "{{ site_url }}/#org"}, "sameAs": {{ site_socials|tojson }}},
  {"@type": "FAQPage", "mainEntity": [{% for q, a in faq %}
   {"@type": "Question", "name": {{ q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ a|tojson }}}}{% if not loop.last %},{% endif %}{% endfor %}
  ]}
@@ -35,7 +38,7 @@
   <section class="home-zone-digest" aria-label="Spain Daily digest">
    <div class="hero">
     <span class="brand-kicker">Free daily newsletter • 5-minute read</span>
-    <h1>Spain's top news, <span class="accent">in English</span>, every morning.</h1>
+    <h1>Spanish news <span class="accent">in English</span>: Spain Daily, every morning</h1>
     <p class="tagline">Spain Daily by <a href="/about">Spanified</a> — your 5-minute catch-up on what's happening in Spain.</p>
     <div class="badges">
      <span class="badge"><span class="dot">●</span>Free forever</span>
@@ -64,12 +67,7 @@
    </div>
 
    <div class="card">
-    <h2>What's in each Spain Daily digest?</h2>
-    <ul class="features">
-     <li>Top Spanish news, curated and summarized</li>
-     <li>Short and to the point — a 5-minute read</li>
-     <li>Delivered to your inbox every morning, seven days a week</li>
-    </ul>
+    <h2>Latest news by topic</h2>
     <div class="topics">
      {% for t in topics %}<a class="topic" href="/category/{{ t.slug }}">{{ t.emoji }} {{ t.name }}</a>{% endfor %}
     </div>
@@ -79,11 +77,9 @@
     <h2>How it works</h2>
     <p class="how-sub">From the Spanish press to your inbox — every morning.</p>
     <ol class="how-chain">
-     <li><span class="how-num" aria-hidden="true">1</span><div class="how-text"><strong>We read the Spanish press</strong><span>National dailies, wires and regional titles — every morning.</span></div></li>
-     <li><span class="how-num" aria-hidden="true">2</span><div class="how-text"><strong>We pick what affects your life</strong><span>Rents, taxes, visas, jobs — not clickbait.</span></div></li>
-     <li><span class="how-num" aria-hidden="true">3</span><div class="how-text"><strong>We summarize in plain English</strong><span>Short factual briefs with links to the sources, created with the help of AI.</span></div></li>
-     <li><span class="how-num" aria-hidden="true">4</span><div class="how-text"><strong>A human checks every edition</strong><span><a href="/editor">The editor</a> reviews stories and sources before anything goes out.</span></div></li>
-     <li><span class="how-num how-num-last" aria-hidden="true">5</span><div class="how-text"><strong>You read it in 5 minutes</strong><span>In your inbox around 08:00 Madrid time, seven days a week.</span></div></li>
+     <li><span class="how-num" aria-hidden="true">1</span><div class="how-text"><strong>We read the Spanish press</strong><span>National dailies, wires and regional titles. We pick what affects your life: rents, taxes, visas, jobs.</span></div></li>
+     <li><span class="how-num" aria-hidden="true">2</span><div class="how-text"><strong>We summarize in plain English</strong><span>Short factual briefs with links to the sources, AI-assisted and checked by <a href="/editor">the editor</a> before every send.</span></div></li>
+     <li><span class="how-num how-num-last" aria-hidden="true">3</span><div class="how-text"><strong>You read it in 5 minutes</strong><span>In your inbox around 08:00 Madrid time, seven days a week.</span></div></li>
     </ol>
    </div>
 
@@ -110,17 +106,9 @@
     <p class="cta-kicker">Free · Every morning · 5-minute read</p>
     <h2>Ready to stay in the loop?</h2>
     <p class="cta-sub">Join 500+ readers who start their day with Spain Daily.</p>
-    <a href="/subscribe" class="cta-button">Subscribe — It's Free</a>
+    <a href="/subscribe" class="cta-button">Get Spain Daily by email</a>
     <p class="cta-microcopy">No spam · one email a day · cancel anytime</p>
-    <ul class="cta-proof">
-     <li>Daily since {{ proof.first_issue }}</li>
-     <li>{{ proof.total_issues }} issues</li>
-     <li><strong>{{ proof.reddit_display }}</strong> on Reddit</li>
-     <li><strong>{{ proof.threads_display }}</strong> on Threads</li>
-    </ul>
    </div>
-
-   {% include "partials/testimonials.html" %}
   </section>
 
   <!-- Zone B: interactive tools and quizzes -->
@@ -204,14 +192,6 @@
 
   <!-- Zone C: socials and answers -->
   <section class="home-zone-trust" aria-label="Socials and questions">
-   <div class="card">
-    <h2>Follow along</h2>
-    <p>Prefer your feed over your inbox? We post every edition on socials too.</p>
-    <div class="follow-row">
-     {% include "partials/social.html" %}
-    </div>
-   </div>
-
    <div class="card faq-card">
     <h2>Questions, answered</h2>
     {% for q, a in faq %}
@@ -223,7 +203,6 @@
    </div>
 
    <p class="page-note">
-    No spam, ever. Unsubscribe anytime in one click.<br>
     This digest is based on real news, created with the help of AI and reviewed by a human.
    </p>
   </section>

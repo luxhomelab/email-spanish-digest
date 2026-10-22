@@ -1,28 +1,33 @@
 {% extends "base.html" %}
-{% block title %}Spain News in English — Free Daily Digest | Spanified{% endblock %}
-{% block description %}<meta name="description" content="Get Spain's top news in English every morning — a free 5-minute Spain Daily digest on rents, taxes, visas and jobs. Free forever, unsubscribe anytime.">
+{% block title %}Spain Newsletter: Subscribe Free to Spain Daily{% endblock %}
+{% block description %}<meta name="description" content="Subscribe to Spain Daily, a free newsletter about Spain: top news in English, one email a day, 5-minute read. No spam, unsubscribe anytime.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Spain News in English — Free Daily Digest | Spanified">
-<meta property="og:description" content="Get Spain's top news in English every morning — a free 5-minute Spain Daily digest on rents, taxes, visas and jobs. Free forever, unsubscribe anytime.">
+<meta property="og:title" content="Spain Newsletter: Subscribe Free to Spain Daily">
+<meta property="og:description" content="Subscribe to Spain Daily, a free newsletter about Spain: top news in English, one email a day, 5-minute read. No spam, unsubscribe anytime.">
 <meta property="og:url" content="{{ site_url }}/subscribe">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Spain News in English — Free Daily Digest | Spanified">
-<meta name="twitter:description" content="Get Spain's top news in English every morning — a free 5-minute Spain Daily digest on rents, taxes, visas and jobs. Free forever, unsubscribe anytime.">
+<meta name="twitter:title" content="Spain Newsletter: Subscribe Free to Spain Daily">
+<meta name="twitter:description" content="Subscribe to Spain Daily, a free newsletter about Spain: top news in English, one email a day, 5-minute read. No spam, unsubscribe anytime.">
 <meta name="twitter:image" content="https://spanified.com/og/og-subscribe.png">
 <meta name="robots" content="max-image-preview:large">{% endblock %}
 {% block og_image %}<meta property="og:image" content="https://spanified.com/og/og-subscribe.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Spain Daily — Spain news in English, every morning. Subscribe free.">{% endblock %}
+<meta property="og:image:alt" content="Spain Daily newsletter: subscribe free.">{% endblock %}
 {% block extra_head %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebPage", "@id": "{{ site_url }}/subscribe#webpage", "name": "Subscribe to the Spain Daily newsletter",
+ "url": "{{ site_url }}/subscribe", "inLanguage": "en",
+ "isPartOf": {"@id": "{{ site_url }}/#website"}, "about": {"@id": "{{ site_url }}/#spain-daily"}}
+</script>
 {% endblock %}
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/subscribe">{% endblock %}
 {% block content %}
 {% include "partials/breadcrumbs.html" %}
 <div class="subscribe-intro">
   <p class="subscribe-kicker">Free daily newsletter</p>
-  <h1>Spain's top news, in English, every morning</h1>
-  <p>Spain's press, read for you and summarized in plain English. One email a day, a five-minute read, free forever — unsubscribe in one click.</p>
+  <h1>Subscribe to the Spain Daily newsletter</h1>
+  <p>Free, one email a day: Spain's top news in plain English. Prefer to read online? <a href="/">Read today's Spanish news in English</a>.</p>
 </div>
 <div class="reader-proof">
   <div class="reader-avatars" aria-hidden="true">
@@ -41,10 +46,6 @@
 <div class="subscribe-trust">
   <h2>What you'll get</h2>
   <div class="trust-grid">
-    <div class="trust-card">
-      <h3>Spain, daily</h3>
-      <p>Spain's most important news, summarized in English and delivered every morning.</p>
-    </div>
     <div class="trust-card">
       <h3>5-minute read</h3>
       <p>Politics, economy, culture and life in Spain — no noise, no clickbait, just the essentials.</p>
