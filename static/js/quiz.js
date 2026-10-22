@@ -69,7 +69,7 @@ function wireShareCopy() {
 function init() {
   const dataEl = $('quiz-data')
   if (!dataEl) return
-  const { slug, title, questions: pool, results } = JSON.parse(dataEl.textContent)
+  const { slug, title, questions: pool, results, real_label, fake_label } = JSON.parse(dataEl.textContent)
   let questions = pickQuestions(pool, TOTAL)
   const answers = []
   let step = 0
@@ -78,39 +78,49 @@ function init() {
   // Hook screen: show questions only after Start.
   const startBtn = $('quiz-start')
   const hook = $('quiz-hook')
-  const progressTrack = document.querySelector('.quiz-progress-track')
-  if (startBtn && hook) {
-    // Returning player? Show their last score and offer a rematch.
+  const play = $('quiz-play')
+  const stage = $('quiz-stage')
+  const body = document.body
+  const personaImg = result => `/static/img/quiz/${slug}/og-quiz-${result.slug}.jpg`
+  // Per-question correctness, in order; drives the progress segments.
+  const verdicts = []
+
+  function showLast() {
     try {
       const prev = loadQuizResult(window.localStorage, slug)
       const persona = prev && prev.resultSlug ? resultBySlug(results, prev.resultSlug) : null
-      if (prev && Number.isInteger(prev.score) && persona) {
-        const last = $('quiz-last')
-        if (last) {
-          last.innerHTML = `Last time: <strong>${prev.score}/${TOTAL}</strong> — ${persona.title}`
-          last.hidden = false
-        }
-        startBtn.textContent = 'Play again'
+      const last = $('quiz-last')
+      if (prev && Number.isInteger(prev.score) && persona && last) {
+        last.innerHTML = `Last time: <strong>${prev.score}/${TOTAL}</strong> — ${persona.title}`
+        last.hidden = false
       }
+      if (prev && Number.isInteger(prev.score) && persona && startBtn) startBtn.textContent = 'Play again'
     } catch { /* first visit: keep default hook copy */ }
-    startBtn.addEventListener('click', () => {
-      hook.hidden = true
-      $('quiz-play').hidden = false
-      if (progressTrack) progressTrack.hidden = false
-      track('quiz_start', { quiz: slug })
-      renderStep()
-    })
-  } else {
-    // No hook (fallback): start immediately.
-    $('quiz-play').hidden = false
-    if (progressTrack) progressTrack.hidden = false
-    track('quiz_start', { quiz: slug })
-    renderStep()
   }
 
-  $('quiz-real').addEventListener('click', () => answer(true))
-  $('quiz-fake').addEventListener('click', () => answer(false))
-  $('quiz-next').addEventListener('click', next)
+  // The playing screen is one fixed stage: keep the card at the top of the
+  // viewport once, instantly, so answering never needs a scroll.
+  function bringIntoView(el) {
+    if (el && el.getBoundingClientRect().top < 0) el.scrollIntoView({ block: 'start' })
+  }
+
+  function startPlay() {
+    if (hook) hook.hidden = true
+    play.hidden = false
+    body.classList.add('quiz-playing')
+    track('quiz_start', { quiz: slug })
+    buildSlides()
+    showStep(0)
+    window.scrollTo(0, 0)
+  }
+
+  if (startBtn && hook) {
+    showLast()
+    startBtn.addEventListener('click', startPlay)
+  } else {
+    // No hook (fallback): start immediately.
+    startPlay()
+  }
 
   const skip = $('quiz-skip')
   if (skip) skip.addEventListener('click', () => {
@@ -136,71 +146,65 @@ function init() {
     }
   }
 
-  // Deep link #result (e.g. "Back to my result" from the subscribed page):
-  // WITHOUT a submit on record this shows the LOCKED gate (score + form),
-  // never the result.
-  try {
-    if (window.location.hash === '#result') {
-      const saved = loadQuizResult(window.localStorage, slug)
-      if (saved && Number.isInteger(saved.score) && saved.score >= 0 && saved.score <= TOTAL
-          && resultForScore(results, saved.score)) {
-        if (hook) hook.hidden = true
-        $('quiz-play').hidden = true
-        if (progressTrack) progressTrack.hidden = false
-        $('quiz-gate').hidden = false
-        $('quiz-score-num').textContent = saved.score
-        $('quiz-score-line').textContent = `You scored ${saved.score}/${TOTAL}`
-        // The quiz is completed at this point (fresh load, finish() never ran),
-        // so the bar must read 100% in both branches.
-        $('quiz-progress').style.width = '100%'
-        if (hasSubscribed()) {
-          unlock(true)
-        } else {
-          // Locked gate: score teaser + blur + form, result stays hidden.
-          $('quiz-blur').hidden = false
-          $('quiz-gate-form').hidden = false
-          $('quiz-result-full').hidden = true
-        }
-      }
-    }
-  } catch { /* corrupted storage — fall through to the normal hook flow */ }
-
-  function renderStep() {
-    const q = questions[step]
-    $('quiz-step').textContent = `Story ${step + 1} of ${TOTAL}`
-    $('quiz-progress').style.width = `${(step / TOTAL) * 100}%`
-    $('quiz-headline').textContent = q.headline
-    $('quiz-summary').textContent = q.summary
-    const fb = $('quiz-feedback')
-    fb.hidden = true
-    fb.classList.remove('quiz-fb-bad')
-    for (const id of ['quiz-real', 'quiz-fake']) {
-      const btn = $(id)
-      btn.disabled = false
-      btn.classList.remove('quiz-correct', 'quiz-wrong')
-    }
-    $('quiz-next').classList.remove('quiz-next-final')
-    $('quiz-choices').hidden = false
-    $('quiz-next-wrap').hidden = true
+  function buildSegs(el) {
+    el.innerHTML = ''
+    for (let i = 0; i < TOTAL; i++) el.appendChild(document.createElement('li'))
   }
 
-  function answer(guessIsReal) {
-    const q = questions[step]
-    const correct = guessIsReal === q.isReal
-    answers[step] = guessIsReal
-    track('quiz_step', { quiz: slug, step: step + 1, correct })
-    const fb = $('quiz-feedback')
-    fb.hidden = false
-    fb.classList.toggle('quiz-fb-bad', !correct)
-    const verdict = fb.querySelector('.quiz-verdict')
-    verdict.textContent = correct
-      ? 'Correct!'
-      : (q.isReal ? 'Wrong — that one is REAL.' : 'Wrong — that one is FAKE.')
-    verdict.classList.toggle('quiz-bad', !correct)
+  function paintSegs(el, current) {
+    Array.from(el.children).forEach((li, i) => {
+      li.className = verdicts[i] === undefined ? '' : (verdicts[i] ? 'is-right' : 'is-wrong')
+      if (i === current) li.classList.add('is-now')
+    })
+  }
+
+  // Every question lives in the same grid cell, so the card is always as tall
+  // as the tallest question + verdict: answering or moving on never resizes it.
+  function buildSlides() {
+    stage.innerHTML = ''
+    verdicts.length = 0
+    buildSegs($('quiz-segs'))
+    questions.forEach((q, i) => {
+      const slide = document.createElement('section')
+      slide.className = 'quiz-slide'
+      slide.innerHTML = `
+        <h2 class="quiz-headline" tabindex="-1"></h2>
+        <p class="quiz-summary"></p>
+        <div class="quiz-choices">
+          <button type="button" class="quiz-choice" data-real="1"></button>
+          <button type="button" class="quiz-choice" data-real="0"></button>
+        </div>
+        <div class="quiz-feedback" role="status">
+          <div class="quiz-fb-head">
+            <span class="quiz-stamp" aria-hidden="true"></span>
+            <p class="quiz-verdict"></p>
+          </div>
+          <p class="quiz-explain"></p>
+          <p class="quiz-source"></p>
+          <button type="button" class="quiz-next"></button>
+        </div>`
+      slide.querySelector('.quiz-headline').textContent = q.headline
+      slide.querySelector('.quiz-summary').textContent = q.summary
+      const [realBtn, fakeBtn] = slide.querySelectorAll('.quiz-choice')
+      realBtn.textContent = real_label || 'Real — this happened'
+      fakeBtn.textContent = fake_label || 'Fake — AI slop'
+      realBtn.addEventListener('click', () => answer(i, true))
+      fakeBtn.addEventListener('click', () => answer(i, false))
+      fillFeedback(slide, q, i)
+      slide.querySelector('.quiz-next').addEventListener('click', next)
+      stage.appendChild(slide)
+    })
+  }
+
+  // Feedback is filled in up front (verdict text aside) so its height counts
+  // towards the stage size before anyone answers.
+  function fillFeedback(slide, q, i) {
+    const fb = slide.querySelector('.quiz-feedback')
+    fb.querySelector('.quiz-stamp').textContent = q.isReal ? 'Real' : 'Fake'
+    fb.querySelector('.quiz-verdict').textContent = 'Not quite. This one is real.'
     fb.querySelector('.quiz-explain').textContent = q.explanation
     const src = fb.querySelector('.quiz-source')
     if (q.isReal && q.source) {
-      src.hidden = false
       src.textContent = 'Source: '
       if (q.source_url) {
         const a = document.createElement('a')
@@ -213,39 +217,99 @@ function init() {
         src.appendChild(document.createTextNode(q.source))
       }
     } else if (!q.isReal) {
-      src.hidden = false
-      src.textContent = 'Invented by Spanified — no source, just vibes.'
+      src.textContent = 'Invented by Spanified. No source, just vibes.'
     } else {
       src.hidden = true
     }
-    // Highlight only the user's pick — one button, always.
-    // (The verdict line above already names the right answer.)
-    const realBtn = $('quiz-real')
-    const fakeBtn = $('quiz-fake')
+    fb.querySelector('.quiz-next').textContent = i === TOTAL - 1 ? 'See my result' : 'Next question'
+  }
+
+  function showStep(i) {
+    step = i
+    Array.from(stage.children).forEach((s, j) => {
+      s.classList.toggle('is-current', j === i)
+      s.classList.remove('is-entering')
+    })
+    const slide = stage.children[i]
+    $('quiz-step').textContent = `Story ${i + 1} of ${TOTAL}`
+    paintSegs($('quiz-segs'), i)
+    if (i > 0) {
+      slide.classList.add('is-entering')
+      const h = slide.querySelector('.quiz-headline')
+      if (h) h.focus({ preventScroll: true })
+    }
+  }
+
+  function answer(i, guessIsReal) {
+    if (i !== step) return
+    const slide = stage.children[i]
+    if (slide.classList.contains('is-answered')) return
+    const q = questions[i]
+    const correct = guessIsReal === q.isReal
+    answers[i] = guessIsReal
+    verdicts[i] = correct
+    track('quiz_step', { quiz: slug, step: i + 1, correct })
+    const [realBtn, fakeBtn] = slide.querySelectorAll('.quiz-choice')
     realBtn.disabled = true
     fakeBtn.disabled = true
+    // The pick is coloured; the other button gets an outline when it was the truth.
     const picked = guessIsReal ? realBtn : fakeBtn
     picked.classList.add(correct ? 'quiz-correct' : 'quiz-wrong')
-    $('quiz-choices').hidden = false
-    $('quiz-next-wrap').hidden = false
-    const nx = $('quiz-next')
-    const isLast = step === TOTAL - 1
-    nx.textContent = isLast ? 'See my result' : 'Next question'
-    nx.classList.toggle('quiz-next-final', isLast)
+    if (!correct) (q.isReal ? realBtn : fakeBtn).classList.add('quiz-truth')
+    const fb = slide.querySelector('.quiz-feedback')
+    slide.classList.add('is-answered', correct ? 'is-right' : 'is-wrong')
+    fb.querySelector('.quiz-verdict').textContent = correct
+      ? 'You got it.'
+      : (q.isReal ? 'Not quite. This one is real.' : 'Not quite. This one is fake.')
+    const nx = fb.querySelector('.quiz-next')
+    paintSegs($('quiz-segs'), i)
+    nx.focus({ preventScroll: true })
   }
 
   function next() {
-    if (step < TOTAL - 1) {
-      step++
-      renderStep()
-      // Next question renders at the top of the card — bring it into view
-      // so the user doesn't have to scroll up manually.
-      const play = $('quiz-play')
-      if (play) play.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    } else {
-      finish()
-    }
+    if (step < TOTAL - 1) showStep(step + 1)
+    else finish()
   }
+
+  function showGate(score, result, showBreakdown) {
+    play.hidden = true
+    if (hook) hook.hidden = true
+    // Still in focus mode: the gate is one phone screen with no page chrome.
+    body.classList.add('quiz-playing')
+    $('quiz-gate').hidden = false
+    // Persona title stays sealed; only the score and the blurred art show yet.
+    $('quiz-score-num').textContent = score
+    $('quiz-score-line').textContent = `You scored ${score} out of ${TOTAL}`
+    const segs = $('quiz-gate-segs')
+    segs.hidden = !showBreakdown
+    if (showBreakdown) {
+      buildSegs(segs)
+      paintSegs(segs, -1)
+    }
+    $('quiz-locked-img').src = personaImg(result)
+    bringIntoView($('quiz-gate'))
+  }
+
+  // Deep link #result (e.g. "Back to my result" from the subscribed page):
+  // WITHOUT a submit on record this shows the LOCKED gate (score + form),
+  // never the result.
+  try {
+    if (window.location.hash === '#result') {
+      const saved = loadQuizResult(window.localStorage, slug)
+      const persona = saved && Number.isInteger(saved.score) && saved.score >= 0 && saved.score <= TOTAL
+        ? resultForScore(results, saved.score) : null
+      if (persona) {
+        showGate(saved.score, persona, false)
+        if (hasSubscribed()) {
+          unlock(true)
+        } else {
+          $('quiz-blur').hidden = false
+          $('quiz-gate-form').hidden = false
+          $('quiz-result-full').hidden = true
+        }
+      }
+    }
+  } catch { /* corrupted storage — fall through to the normal hook flow */ }
 
   function finish() {
     const score = scoreAnswers(questions, answers)
@@ -257,20 +321,11 @@ function init() {
     try {
       saveQuizResult(window.localStorage, slug, { score, slug, resultSlug: result.slug })
     } catch { /* private mode — result page will show same-device hint */ }
-    $('quiz-play').hidden = true
-    $('quiz-gate').hidden = false
-    $('quiz-progress').style.width = '100%'
-    // "See my result" lands at the top of the gate ("Your persona is ready"),
-    // not stranded at the form at the bottom.
-    const gate = $('quiz-gate')
-    if (gate) gate.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    // Persona title stays hidden behind the blur — only the score shows yet.
-    $('quiz-score-num').textContent = score
-    $('quiz-score-line').textContent = `You scored ${score}/${TOTAL}`
+    showGate(score, result, true)
+    window.scrollTo(0, 0)
     if (subscribed) {
       // No gate, no skip, no subscribe event — straight to the full result.
       unlock(true)
-      return
     }
   }
 
@@ -284,34 +339,17 @@ function init() {
     $('quiz-gate-form').hidden = false
     $('quiz-result-full').hidden = true
     $('quiz-gate').hidden = true
-    $('quiz-play').hidden = true
+    play.hidden = true
+    body.classList.remove('quiz-playing')
     const rimg = $('quiz-result-img')
     if (rimg) rimg.hidden = true
-    // Refresh the hook's returning-player card from the saved score.
-    try {
-      const prev = loadQuizResult(window.localStorage, slug)
-      const persona = prev && prev.resultSlug ? resultBySlug(results, prev.resultSlug) : null
-      const last = $('quiz-last')
-      if (prev && Number.isInteger(prev.score) && persona && last) {
-        last.innerHTML = `Last time: <strong>${prev.score}/${TOTAL}</strong> — ${persona.title}`
-        last.hidden = false
-      }
-      if (prev && startBtn) startBtn.textContent = 'Play again'
-    } catch { /* keep default hook copy */ }
-    if (progressTrack) {
-      progressTrack.hidden = true
-      $('quiz-progress').style.width = '0%'
-    }
+    showLast()
     if (autostart && hook) {
-      hook.hidden = true
-      $('quiz-play').hidden = false
-      if (progressTrack) progressTrack.hidden = false
-      track('quiz_start', { quiz: slug })
-      renderStep()
+      startPlay()
     } else if (hook) {
       hook.hidden = false
+      window.scrollTo(0, 0)
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   function unlock(skipped) {
@@ -327,12 +365,13 @@ function init() {
       track('quiz_subscribe', { quiz: slug, score })
     }
     // Gate resolved (subscribed or skipped) — the teaser box is pointless now.
+    body.classList.remove('quiz-playing')
     $('quiz-blur').hidden = true
     $('quiz-gate-form').hidden = true
     $('quiz-result-full').hidden = false
     $('quiz-result-title').textContent = result.title
     // Persona card art — same file the static result pages use for OG.
-    const imgPath = `/static/img/quiz/${slug}/og-quiz-${result.slug}.jpg`
+    const imgPath = personaImg(result)
     const rimg = $('quiz-result-img')
     if (rimg) {
       rimg.src = imgPath
@@ -349,7 +388,6 @@ function init() {
       pe.textContent = p
       rt.appendChild(pe)
     })
-    $('quiz-progress').style.width = '100%'
     // Personal share: exact score in text + result encoded in the URL.
     // X gets the short line; FB/TG/WA get the longer roast text.
     const base = `${window.location.origin}${window.location.pathname}`
