@@ -1,0 +1,241 @@
+{
+  "items": [
+    {
+      "title": "Social Security benefits expanded from October 21",
+      "body": "A Royal Decree-law expanding Social Security benefits took effect on October 21, though some provisions start later. It covers menopause-related leave and widows' pensions. Unmarried couples with children who are not registered partners qualify for a widow's pension after at least two years of uninterrupted cohabitation before the death.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/letra-pequena-nuevas-prestaciones-sociales-bajas-menopausia-viudedad-proteccion-victimas-violencia-genero_1_13602065.html"
+        }
+      ],
+      "category": "work",
+      "important": true
+    },
+    {
+      "title": "Supreme Court reviews voting restrictions on October 22",
+      "body": "The Supreme Court meets on October 22 to review voting rules affecting 160,000 citizens naturalised under the Ley de Nietos. Affected parties must file submissions by October 23. Restrictions remain in force after the Constitutional Court rejected an appeal as premature on October 21; the Supreme Court must still rule on the merits.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-tc-rechaza-recurso-defensor-pueblo-contra-suspension-voto-ley-nietos-20261021130730.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/supremo-pone-lupa-ahora-documentacion-ordeno-enviar-junta-electoral-votantes-exterior_1_13604780.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Larger landlords charge higher rents, study finds",
+      "body": "Landlords with five or more rental properties charge 7% higher rents, an EsadecPol study finds. But it attributes most accumulated rent rises to wider market pressure, rather than large landlords alone. The study uses about 790,000 housing observations from 2019 to 2023.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/10/22/6ad8d32ce85ece21158b45b9.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "PP promises rental deductions and faster squatter evictions",
+      "body": "Partido Popular leader Alberto Núñez Feijóo promised on October 21 that, if elected, his government would approve three housing laws in its first 100 days. One would allow squatter evictions within 48 hours. He also promised tax deductions for tenants and owners, and one million homes. These are campaign promises.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-feijoo-promete-ley-antiokupas-ley-suelo-primeros-100-dias-deducciones-fiscales-alquileres-20261021114500.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Banks must refund unauthorised payments within 24 hours",
+      "body": "An EU Court of Justice ruling requires banks to refund unauthorised transactions within 24 hours, even if the customer was grossly negligent. Banks must refund first and claim the money back from the customer afterwards. Sector sources say claims going back up to five years could cost Spanish banks close to €1 billion.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://cincodias.elpais.com/mercados-financieros/2026-10-22/la-banca-afronta-una-factura-milmillonaria-al-tener-que-devolver-el-dinero-a-sus-clientes-victimas-de-fraude.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Child-support advances rise to €300 from November",
+      "body": "In force since October 21, Royal Decree-law 31/2026 raises advances for unpaid court-ordered child support from €100 to €300 per child monthly from November 1. Income ceilings are €29,914.50 for one child and €34,188 for two. Current recipients need not apply again.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/22/boe-confirma-subida-anticipo-impago-pension-alimentos-300-euros-mes-hijo-desde-1noviembre-2026-2061477.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Regulated gas cap defers part of household bills",
+      "body": "The government's approved cap limits the regulated gas tariff rise to about 15%, rather than more than 45%, for about 3.1 million consumers. The unpaid difference is deferred for later repayment. The cap responds to higher energy costs after the US-Israeli offensive against Iran closed the Strait of Hormuz.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/21/ya-oficial-hogares-tarifa-regulada-gas-deberan-devolver-intereses-parte-ayuda-recibido-marzo-2058156.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Catalan Socialists propose softer home-buying restrictions",
+      "body": "The Catalan Socialist Party (PSC) has offered Comuns a revised housing bill that would remove purchase limits and focus on permanent residential use in high-pressure areas. The text is not yet agreed. The changes follow a legal watchdog's warning that the earlier text violated property and inheritance rights.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/catalunya/2026-10-21/el-psc-rebaja-la-ley-contra-la-compra-especulativa-de-vivienda-para-evitar-el-freno-del-constitucional.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "EU cash ceiling starts in July 2027",
+      "body": "Approved EU regulation 2024/1624 takes effect on July 10, 2027, setting a €10,000 ceiling on business cash payments, including linked transactions. Countries can keep lower limits, so Spain's stricter rules can remain. Private transactions between individuals acting outside a professional activity are exempt.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/ue-cambia-las-normas-para-pagar-efectivo-2027-nuevo-limite-maximo-que-deberan-respetar-los-paises_7051433_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Basque deal would preserve 510 protected homes",
+      "body": "The Basque Government has agreed in principle to buy surface rights over 510 protected homes in San Sebastián from Blackstone subsidiary Testa for €100 million. The deal would preserve their protected status beyond November 2028, shielding tenants from market rents. Signing is expected at the end of 2026.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/sociedad/2026-10-21/el-gobierno-vasco-compra-510-viviendas-a-blackstone-para-mantenerlos-como-pisos-protegidos.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Approved university decree provides second exam sitting",
+      "body": "A Royal Decree approved on October 20 and published on October 22 provides for at least two exam sittings per subject each year. Resits should allow students to earn the full final grade where possible. The text also requires flexibility for learning difficulties, work, and personal circumstances.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/vida/20261022/11664652/universitarios-tendran-derecho-segundo-examen-recuperar-materia.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Aemet studies possible tropical cyclone off Catalonia",
+      "body": "A preliminary Aemet study suggests record Mediterranean temperatures may have driven an attempt at tropical cyclone formation off Catalonia on October 3 and 4. Researchers have not established whether a cyclone formed. Torrential rain occurred without the usual atmospheric trigger, such as an isolated upper-level low.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/clima-y-medio-ambiente/2026-10-21/sufrio-cataluna-el-primer-ciclon-tropical-europeo-el-mediterraneo-empieza-a-comportarse-como-el-caribe.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "How often do you check your bank transactions? A) Daily B) Weekly C) Monthly",
+  "variant": "Spain today. Briefly.",
+  "headline": "Spain today. Briefly.",
+  "date": "2026-10-22",
+  "engagement_source": "generated",
+  "generated_at": "2026-10-22T06:02:36.558986+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 755,
+    "items_selected_pass1": 14,
+    "fact_sheets_extracted": 14,
+    "items_after_importance_filter": 13,
+    "items_in_digest": 12
+  },
+  "selection_reasons": {
+    "24": "Constitutional Court rejects the Ombudsman's appeal on the 'ley de nietos'. About 160,000 naturalised Spaniards abroad stay barred from voting on 29 November, and the Supreme Court is now the last route. This is a new development on yesterday's story.",
+    "37": "The Supreme Court examines the Electoral Board's instructions on ballots sent to voters abroad. This is a new stage that affects which votes count in the 29N election.",
+    "10": "EsadeEcPol study: the more flats a landlord owns, the more they raise rents (about 7% more from the fifth flat). The study adds to the debate on the housing decrees and rental market policy.",
+    "29": "Feijóo's housing pledges for his first 100 days: a land law, an anti-squatting law and tax deductions for rent renewals. These are concrete policy proposals affecting tenants and owners.",
+    "79": "BOE publishes a Social Security decree-law: menopause leave, widow's pension changes, protection for gender-violence victims and the CUME benefit. This is a systemic change to benefits for residents.",
+    "326": "Banks must refund customers' unauthorised fraudulent transactions within 24 hours. This is a rule change that affects every bank account holder.",
+    "290": "The BOE confirms a higher advance for unpaid child maintenance: the Fondo de Garantía cap triples, the 18-month limit is removed and the income requirement is tied to the minimum wage. This directly affects families.",
+    "602": "An EU cash payment limit of €10,000 applies from July 2027, though member states may set lower limits. It is a rule change for residents and investors.",
+    "355": "Catalonia's PSC softens its law against speculative home purchases, dropping the cap on number of purchases in exchange for a requirement that flats be used as a main residence. This is a regional measure that could set a precedent for the whole country.",
+    "389": "The Basque Government buys 510 protected flats from Blackstone for €100m, the largest operation of its kind in Spain, to keep them as public rental housing.",
+    "307": "Households on the regulated gas tariff (TUR) must repay part of the aid received since March, with interest. This is a direct household cost.",
+    "429": "BOE publishes the new student statute, with a single evaluation option and rescheduled exams. It is a systemic change for university students.",
+    "408": "Ebola outbreak spreads to West Africa with a first case in Nigeria. About 9,600 cases and 4,646 deaths are recorded, a health threat with possible international implications.",
+    "391": "Aemet studies whether Catalonia saw Europe's first tropical-like cyclone, a sign of the Mediterranean's changing climate. It is a notable climate event, and it also serves as the positive-or-notable science story."
+  },
+  "selection_sources": [
+    {
+      "url": "https://www.europapress.es/nacional/noticia-tc-rechaza-recurso-defensor-pueblo-contra-suspension-voto-ley-nietos-20261021130730.html",
+      "reason": "Constitutional Court rejects the Ombudsman's appeal on the 'ley de nietos'. About 160,000 naturalised Spaniards abroad stay barred from voting on 29 November, and the Supreme Court is now the last route. This is a new development on yesterday's story."
+    },
+    {
+      "url": "https://www.eldiario.es/politica/supremo-pone-lupa-ahora-documentacion-ordeno-enviar-junta-electoral-votantes-exterior_1_13604780.html",
+      "reason": "The Supreme Court examines the Electoral Board's instructions on ballots sent to voters abroad. This is a new stage that affects which votes count in the 29N election."
+    },
+    {
+      "url": "https://www.elmundo.es/economia/vivienda/2026/10/22/6ad8d32ce85ece21158b45b9.html",
+      "reason": "EsadeEcPol study: the more flats a landlord owns, the more they raise rents (about 7% more from the fifth flat). The study adds to the debate on the housing decrees and rental market policy."
+    },
+    {
+      "url": "https://www.europapress.es/nacional/noticia-feijoo-promete-ley-antiokupas-ley-suelo-primeros-100-dias-deducciones-fiscales-alquileres-20261021114500.html",
+      "reason": "Feijóo's housing pledges for his first 100 days: a land law, an anti-squatting law and tax deductions for rent renewals. These are concrete policy proposals affecting tenants and owners."
+    },
+    {
+      "url": "https://www.eldiario.es/economia/letra-pequena-nuevas-prestaciones-sociales-bajas-menopausia-viudedad-proteccion-victimas-violencia-genero_1_13602065.html",
+      "reason": "BOE publishes a Social Security decree-law: menopause leave, widow's pension changes, protection for gender-violence victims and the CUME benefit. This is a systemic change to benefits for residents."
+    },
+    {
+      "url": "https://cincodias.elpais.com/mercados-financieros/2026-10-22/la-banca-afronta-una-factura-milmillonaria-al-tener-que-devolver-el-dinero-a-sus-clientes-victimas-de-fraude.html",
+      "reason": "Banks must refund customers' unauthorised fraudulent transactions within 24 hours. This is a rule change that affects every bank account holder."
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/10/22/boe-confirma-subida-anticipo-impago-pension-alimentos-300-euros-mes-hijo-desde-1noviembre-2026-2061477.html",
+      "reason": "The BOE confirms a higher advance for unpaid child maintenance: the Fondo de Garantía cap triples, the 18-month limit is removed and the income requirement is tied to the minimum wage. This directly affects families."
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/ue-cambia-las-normas-para-pagar-efectivo-2027-nuevo-limite-maximo-que-deberan-respetar-los-paises_7051433_0.html",
+      "reason": "An EU cash payment limit of €10,000 applies from July 2027, though member states may set lower limits. It is a rule change for residents and investors."
+    },
+    {
+      "url": "https://elpais.com/espana/catalunya/2026-10-21/el-psc-rebaja-la-ley-contra-la-compra-especulativa-de-vivienda-para-evitar-el-freno-del-constitucional.html",
+      "reason": "Catalonia's PSC softens its law against speculative home purchases, dropping the cap on number of purchases in exchange for a requirement that flats be used as a main residence. This is a regional measure that could set a precedent for the whole country."
+    },
+    {
+      "url": "https://elpais.com/sociedad/2026-10-21/el-gobierno-vasco-compra-510-viviendas-a-blackstone-para-mantenerlos-como-pisos-protegidos.html",
+      "reason": "The Basque Government buys 510 protected flats from Blackstone for €100m, the largest operation of its kind in Spain, to keep them as public rental housing."
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/10/21/ya-oficial-hogares-tarifa-regulada-gas-deberan-devolver-intereses-parte-ayuda-recibido-marzo-2058156.html",
+      "reason": "Households on the regulated gas tariff (TUR) must repay part of the aid received since March, with interest. This is a direct household cost."
+    },
+    {
+      "url": "https://www.lavanguardia.com/vida/20261022/11664652/universitarios-tendran-derecho-segundo-examen-recuperar-materia.html",
+      "reason": "BOE publishes the new student statute, with a single evaluation option and rescheduled exams. It is a systemic change for university students."
+    },
+    {
+      "url": "https://elpais.com/planeta-futuro/2026-10-21/el-brote-de-ebola-se-expande-a-africa-occidental-tras-la-confirmacion-del-primer-caso-en-nigeria.html",
+      "reason": "Ebola outbreak spreads to West Africa with a first case in Nigeria. About 9,600 cases and 4,646 deaths are recorded, a health threat with possible international implications."
+    },
+    {
+      "url": "https://elpais.com/clima-y-medio-ambiente/2026-10-21/sufrio-cataluna-el-primer-ciclon-tropical-europeo-el-mediterraneo-empieza-a-comportarse-como-el-caribe.html",
+      "reason": "Aemet studies whether Catalonia saw Europe's first tropical-like cyclone, a sign of the Mediterranean's changing climate. It is a notable climate event, and it also serves as the positive-or-notable science story."
+    }
+  ]
+}
