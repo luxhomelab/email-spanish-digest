@@ -18,7 +18,9 @@
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "WebPage", "@id": "{{ site_url }}/subscribe#webpage", "name": "Subscribe to the Spain Daily newsletter",
  "url": "{{ site_url }}/subscribe", "inLanguage": "en",
- "isPartOf": {"@id": "{{ site_url }}/#website"}, "about": {"@id": "{{ site_url }}/#spain-daily"}}
+ "isPartOf": {"@id": "{{ site_url }}/#website"}, "about": {"@id": "{{ site_url }}/#spain-daily"},
+ "publisher": {"@id": "{{ site_url }}/#org"}, "isAccessibleForFree": true,
+ "reviewedBy": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor", "jobTitle": "Founder and Editor", "sameAs": ["https://www.linkedin.com/in/dshvechikov"]}}
 </script>
 {% endblock %}
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/subscribe">{% endblock %}
@@ -31,10 +33,10 @@
 </div>
 <div class="reader-proof">
   <div class="reader-avatars" aria-hidden="true">
-    <span class="reader-avatar" style="background:#AA151B">M</span><span class="reader-avatar" style="background:#C2553A">J</span><span class="reader-avatar" style="background:#1A1A2E">S</span><span class="reader-avatar" style="background:#F1BF00;color:#1A1A2E">A</span>
+    {% for t in proof.testimonials[:3] %}<img class="reader-avatar" src="{{ t.avatar_url }}?v={{ asset_version }}" alt="" width="32" height="32" loading="lazy" decoding="async">{% endfor %}
   </div>
   <div class="reader-proof-text">
-    <strong>Join 500+ readers of Spain Daily</strong>
+    <strong>Join 1,000+ readers of Spain Daily</strong>
     <span>Free every morning · No spam, unsubscribe anytime</span>
   </div>
 </div>
@@ -68,18 +70,19 @@
     </div>
     <div class="trust-card">
       <h3>Human-checked</h3>
-      <p>Openly AI-assisted, reviewed by an editor in Spain before every send.</p>
+      <p>Openly AI-assisted, edited by <a href="/editor">Dmytro Shvechikov</a> in Spain and reviewed before every send.</p>
     </div>
   </div>
 </div>
 <div class="subscribe-who">
   <h2>Who is Spain Daily for?</h2>
-  <p>Expats who live in Spain and need to follow rents, taxes and visas. People planning a move who want to see what daily life here really looks like. And Spain watchers abroad who want the headlines without reading the Spanish press in Spanish. Five minutes, in plain English, with a link to every source.</p>
+  <p>Anyone who wants to follow what is happening in Spain without reading a dozen sites: expats and locals, people planning a move, and Spain watchers abroad. Politics, the economy, society, culture and everyday life, in plain English, in five minutes, with a link to every source.</p>
   {% if latest %}<p class="subscribe-sample">Not sure yet? <a href="{{ latest.url }}">Read the latest edition ({{ latest.date_display }})</a> first, no sign-up needed.</p>
   {% else %}<p class="subscribe-sample">Not sure yet? <a href="/archive/">Browse past editions</a> first, no sign-up needed.</p>{% endif %}
 </div>
 {% set btn_label = "Get Spain Daily — free" %}
 {% include "partials/subscribe-form.html" %}
+<p class="subscribe-assurance">Your email is used only to send Spain Daily. Unsubscribe in one click from any email. Questions? <a href="mailto:support@spanified.com">support@spanified.com</a> · <a href="/privacy">Privacy</a></p>
 <script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
 {% set testimonials_title = "What readers say" %}
 {% include "partials/testimonials.html" %}
