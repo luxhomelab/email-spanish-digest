@@ -29,7 +29,7 @@
    </div>
    <div class="quiz-next-row">
     <p class="quiz-next-text">Can't wait until tomorrow?</p>
-    <a class="quiz-next-link" href="/">Read today's digest</a>
+    <a class="quiz-next-link" href="{{ latest_digest_url | default('/archive/') }}">Read the latest digest</a>
    </div>
    <p class="quiz-retake-wrap"><a class="quiz-retake-btn" href="/quiz/{{ quiz.slug }}">↺ Retake the quiz</a></p>
    {% for other in other_quizzes %}

@@ -733,7 +733,8 @@ def render_static(env, digests):
             fh.write(output)
         print(f"  wrote {name}")
     render_calculators(env)
-    render_quizzes(env, proof=proof)
+    render_quizzes(env, proof=proof,
+                   latest_url=f"/archive/{latest['date']}" if latest else None)
 
 
 def render_calculators(env):
@@ -1348,7 +1349,7 @@ def render_autonomo_pages(env, grid=None):
     return urls
 
 
-def render_quizzes(env, proof=None):
+def render_quizzes(env, proof=None, latest_url=None):
     """Render quiz pages from data/quizzes/*.json (multi-quiz ready).
 
     ``proof`` is the social-proof dict from render_static (total_issues /
@@ -1391,7 +1392,7 @@ def render_quizzes(env, proof=None):
         ctx = dict(
             quiz=quiz, quiz_json=quiz_json, crumbs=crumbs,
             js_version=js_version(), share=share, proof=proof,
-            other_quizzes=others,
+            other_quizzes=others, latest_digest_url=latest_url,
         )
         pages = [
             ("quiz.html", f"quiz/{slug}.html"),
