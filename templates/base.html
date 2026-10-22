@@ -36,9 +36,10 @@ src="https://www.facebook.com/tr?id=2597044717425425&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 {% endif %}
- <link rel="icon" href="/favicon.ico" sizes="any">
- <link rel="icon" type="image/png" href="/favicon.png">
- <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+ <link rel="icon" href="/favicon.ico?v={{ asset_version }}" sizes="any">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg?v={{ asset_version }}">
+ <link rel="icon" type="image/png" href="/favicon.png?v={{ asset_version }}">
+ <link rel="apple-touch-icon" href="/apple-touch-icon.png?v={{ asset_version }}">
  <link rel="alternate" type="application/rss+xml" title="Spain Daily podcast" href="/podcast.xml">
  {% block og_image %}<meta property="og:image" content="https://spanified.com/og/og-default.png">
  <meta property="og:image:width" content="1200">
