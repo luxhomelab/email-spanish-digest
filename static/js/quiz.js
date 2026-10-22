@@ -85,7 +85,16 @@ function init() {
   // Per-question correctness, in order; drives the progress segments.
   const verdicts = []
 
+  // First-time visitors answer question 1 right on the landing card (no
+  // "Start" wall); returning players get their last score + "Play again".
+  function renderTeaser() {
+    $('quiz-teaser-q').textContent = questions[0].headline
+    $('quiz-teaser-real').textContent = real_label || 'Real — this happened'
+    $('quiz-teaser-fake').textContent = fake_label || 'Fake — AI slop'
+  }
+
   function showLast() {
+    let returning = false
     try {
       const prev = loadQuizResult(window.localStorage, slug)
       const persona = prev && prev.resultSlug ? resultBySlug(results, prev.resultSlug) : null
@@ -94,8 +103,12 @@ function init() {
         last.innerHTML = `Last time: <strong>${prev.score}/${TOTAL}</strong> — ${persona.title}`
         last.hidden = false
       }
-      if (prev && Number.isInteger(prev.score) && persona && startBtn) startBtn.textContent = 'Play again'
+      returning = !!(prev && Number.isInteger(prev.score) && persona)
+      if (returning && startBtn) startBtn.textContent = 'Play again'
     } catch { /* first visit: keep default hook copy */ }
+    renderTeaser()
+    $('quiz-teaser').hidden = returning
+    if (startBtn) startBtn.hidden = !returning
   }
 
   // The playing screen is one fixed stage: keep the card at the top of the
@@ -117,6 +130,8 @@ function init() {
   if (startBtn && hook) {
     showLast()
     startBtn.addEventListener('click', startPlay)
+    $('quiz-teaser-real').addEventListener('click', () => { startPlay(); answer(0, true) })
+    $('quiz-teaser-fake').addEventListener('click', () => { startPlay(); answer(0, false) })
   } else {
     // No hook (fallback): start immediately.
     startPlay()
