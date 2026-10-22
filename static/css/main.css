@@ -2290,6 +2290,15 @@ body.quiz-playing .site-footer{display:none}
 .quiz-share-block .quiz-share .share-wrap .share-btn,.quiz-share-block .quiz-share .share-wrap .share-copy{width:44px;height:44px}
 .quiz-share-block .quiz-share .share-wrap .share-btn svg,.quiz-share-block .quiz-share .share-wrap .share-copy svg{width:19px;height:19px}
 /* Closing band: same red panel + white button as the home page's closing block. */
+.quiz-confirmed{display:flex;align-items:center;gap:10px;margin:0 0 18px;padding:10px 14px;background:#EAF5EC;color:#14602b;border-radius:12px;font-weight:700;font-size:.95rem;line-height:1.35}
+.quiz-confirmed svg{flex:none;width:22px;height:22px;padding:3px;border-radius:50%;background:#1a7f37;fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.quiz-next-row{display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;margin-top:26px;padding-top:20px;border-top:1px solid #EADFC9}
+.quiz-next-text{margin:0;font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--heading-color)}
+.quiz-next-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 20px;border-radius:10px;background:#AA151B;color:#fff;font-weight:700;text-decoration:none;transition:background-color .15s}
+.quiz-next-link:hover{background:#8A1019}
+.quiz-next-link:focus-visible{outline:3px solid rgba(170,21,27,.45);outline-offset:3px}
+a.quiz-retake-btn{display:inline-block;text-decoration:none}
+@media (max-width:560px){.quiz-next-link{width:100%}}
 .quiz-sub-cta{margin-top:26px;padding:22px 22px;background:#AA151B;color:#fff;border-radius:14px;display:flex;align-items:center;justify-content:space-between;gap:16px 24px}
 .quiz-sub-cta[hidden]{display:none}
 .quiz-sub-copy{min-width:0}
