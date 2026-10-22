@@ -111,7 +111,7 @@ describe('initSubscribeForm', () => {
       querySelectorAll: () => fakeInputs({ token, nonce, next }),
       querySelector: sel => {
         if (sel === '[data-subscribe-error]') return errorEl
-        if (sel === '[type="submit"]') return { disabled: false, textContent: 'Subscribe' }
+        if (sel === '[type="submit"]') return { disabled: false, textContent: 'Subscribe', querySelector: () => null }
         return null
       },
       addEventListener: (name, fn) => { handlers[name] = fn },
