@@ -30,5 +30,5 @@ python3 -m pytest               # Python tests (test_*.py); CI runs both suites 
 ## Gotchas
 
 - Generated output is gitignored (root `index.html` etc., `archive/`, `articles/`, `category/`, `quiz/`, `calculators/`, `sitemap.xml`, `llms.txt`, `dist/`, `og/`). Only edit sources: `templates/`, `data/`, `static/`, `build.py`. Parts of the README still describe generated files as committed; trust `.gitignore`.
-- `CNAME`, `x.html`, and `ru/` are maintained by hand; leave them alone.
+- `CNAME` and `ru/` are maintained by hand; leave them alone.
 - Publishing a digest: copy the pipeline's `digest.json` to `data/digests/<edition-date>.json`, run the build, and commit through a branch + PR (never directly to `main`). The build reads `date`, `headline` (falls back to `variant`), `items`, and `category`/`important`/`sources`; the weekend Mercadona line derives from the edition date.
