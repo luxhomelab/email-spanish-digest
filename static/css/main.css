@@ -1413,7 +1413,9 @@ body.page-subscribe .sub-preview-emoji { font-size: 20px; line-height: 1.3; flex
 body.page-subscribe .sub-preview-story strong { display: block; font-size: 16px; line-height: 1.35; color: #1A1A2E; }
 body.page-subscribe .sub-preview-src { display: block; font-size: 13px; color: #6C7A89; margin-top: 4px; }
 /* Shared testimonials partial: align to the page column here. */
-body.page-subscribe .testimonials { max-width: 1200px; padding-left: 0; padding-right: 0; }
+body.page-subscribe .testimonials { max-width: 1200px; padding-left: 0; padding-right: 0; text-align: left; }
+body.page-subscribe .testimonials h2 { line-height: 1.25; text-wrap: balance; }
+body.page-subscribe .sub-nowrap { white-space: nowrap; }
 body.page-subscribe .sub-preview-more { font-size: 14px; color: #3C4858; margin: 14px 0 0; }
 @keyframes sub-story-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) {
@@ -1426,7 +1428,7 @@ body.page-subscribe .sub-steps h2,
 body.page-subscribe .sub-who h2,
 body.page-subscribe .sub-faq h2 {
  font-family: Roboto, Helvetica, sans-serif;
- font-size: 26px; font-weight: 700; color: #3C4858; letter-spacing: -0.3px; margin: 0 0 20px;
+ font-size: 26px; font-weight: 700; color: #3C4858; letter-spacing: -0.3px; line-height: 1.25; margin: 0 0 20px; text-wrap: balance;
 }
 body.page-subscribe .sub-steps ol {
  list-style: none; counter-reset: step; margin: 0; padding: 0;
