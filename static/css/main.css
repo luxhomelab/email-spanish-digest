@@ -2348,8 +2348,9 @@ a.quiz-retake-btn{display:inline-block;text-decoration:none}
 .quiz-restart-wrap{margin:10px 0 0;text-align:center}
 .quiz-restart{background:none;border:none;color:#8a8478;font-size:.85rem;cursor:pointer;text-decoration:underline;padding:6px}
 .quiz-restart:hover{color:#3C4858}
-.quiz-retake-wrap{margin:16px 0 0;text-align:center}
-.quiz-retake-btn{background:#fff;border:2px solid #d4cfc7;color:#3C4858;border-radius:12px;padding:12px 24px;font-size:.95rem;font-weight:700;cursor:pointer}
+.quiz-retake-wrap{margin:24px 0 0;text-align:center}
+.quiz-retake-wrap + .quiz-other{margin-top:24px}
+.quiz-retake-btn{background:#fff;border:2px solid #d4cfc7;color:#3C4858;border-radius:12px;padding:10px 22px;font-size:.95rem;font-weight:700;cursor:pointer}
 .quiz-retake-btn:hover{border-color:#AA151B;color:#AA151B}
 
 /* ── Per-persona result landing pages ── */
