@@ -1475,15 +1475,15 @@ body.page-subscribe .sub-editor p { font-size: 15px; line-height: 1.6; color: #3
 body.page-subscribe .sub-editor-links { display: flex; gap: 18px; margin: 12px 0 0; }
 
 /* Objections, right before the closing CTA */
-body.page-subscribe .sub-faq { max-width: 1200px; margin: 0 auto; padding: 32px 0 56px; }
-body.page-subscribe .sub-faq details { max-width: 760px; }
-body.page-subscribe .sub-faq details { border-bottom: 1px solid #EFE7D8; }
-body.page-subscribe .sub-faq summary {
- cursor: pointer; padding: 16px 0; font-size: 17px; font-weight: 700; color: #1A1A2E;
- list-style-position: inside;
+/* Same accordion as the home FAQ (.hm-faq); its tokens live on .hm, so repeat them here. */
+body.page-subscribe .sub-faq {
+ --hm-ink: var(--heading-color); --hm-body: #3C4858; --hm-muted: #5F6B7A;
+ --hm-red: #AA151B; --hm-line: #E3D9C4; --hm-tint: #F7F1E4;
+ max-width: 1200px; margin: 0 auto; padding: 48px 0 56px; border-top: 1px solid #EFE7D8;
 }
-body.page-subscribe .sub-faq summary::marker { color: #AA151B; }
-body.page-subscribe .sub-faq details p { font-size: 16px; line-height: 1.6; color: #3C4858; margin: 0 0 16px; }
+body.page-subscribe .sub-faq .hm-faq-head p { margin: 0; line-height: 1.6; }
+body.page-subscribe .sub-faq .hm-faq-head a { color: #AA151B; }
+body.page-subscribe .sub-faq details p { padding: 0 20px 18px; margin: 0; font-size: 16px; line-height: 1.6; color: var(--hm-body); }
 
 /* Social following: proof that people read the content, right under the hero. */
 body.page-subscribe .sub-social { max-width: 1200px; margin: 0 auto; padding: 48px 0; border-top: 1px solid #EFE7D8; }
@@ -1531,7 +1531,8 @@ body.page-subscribe .sub-social-card:focus-visible { outline: 3px solid rgba(170
  body.page-subscribe .sub-social { padding: 36px 0; }
  body.page-subscribe .sub-social-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
  body.page-subscribe .sub-social-num { font-size: 34px; }
- body.page-subscribe .sub-faq { padding-bottom: 40px; }
+ body.page-subscribe .sub-faq { padding: 36px 0 40px; }
+ body.page-subscribe .sub-faq details p { padding: 0 16px 16px; }
 }
 
 /* Confirm page: make the required action unmissable */
