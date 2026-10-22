@@ -57,26 +57,25 @@
   </div>
 
  <div id="quiz-gate" class="quiz-card" hidden>
-  <p class="confirm-kicker">Your persona is ready</p>
   <div class="quiz-score-hero">
    <div class="quiz-score-badge" aria-hidden="true"><span class="quiz-score-num" id="quiz-score-num">–</span><span class="quiz-score-of">/10</span></div>
    <div>
     <p id="quiz-score-line" class="quiz-score-title"></p>
+    <p class="quiz-score-sub">Your persona is ready.</p>
    </div>
   </div>
-  <div id="quiz-blur">
-     <div class="quiz-blurbox">
-       <h2>🔒 Your persona is locked — subscribe to reveal it</h2>
-       <p>Spain's top news in English — one free email every morning. No spam, unsubscribe anytime. Subscribe and confirm via the link we email you: your result, score breakdown and shareable badge unlock.</p>
-     </div>
+  <div id="quiz-blur" class="quiz-locked">
+   <div class="quiz-locked-fake" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+   <p class="quiz-locked-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2" /><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" /></svg>Locked until you confirm your email</p>
   </div>
-    <div id="quiz-gate-form">
-     {% set success_url = "/quiz/" ~ quiz.slug ~ "-subscribed" %}{% set btn_label = "Subscribe & reveal my result" %}{% set field_id = "quiz-subscribe-email" %}
-    {% include "partials/subscribe-form.html" %}
-    <p class="quiz-gate-pitch">One free email every morning with Spain's top news in English. No spam, unsubscribe anytime.</p>
-    <p class="quiz-gate-pitch quiz-gate-proof">{% if proof and proof.total_issues %}{{ proof.total_issues }}{% else %}142{% endif %} daily editions · free forever · no spam</p>
-    <button id="quiz-skip" class="quiz-skip" type="button">Skip — just show my result</button>
-   </div>
+  <div id="quiz-gate-form">
+   <h2 class="quiz-gate-title">Where should we send your persona?</h2>
+   <p class="quiz-gate-lede">Confirm the link we email you to unlock your persona, score breakdown and shareable badge. Spain's top news in English arrives every morning.</p>
+   {% set success_url = "/quiz/" ~ quiz.slug ~ "-subscribed" %}{% set btn_label = "Reveal my result" %}{% set btn_icon = true %}{% set field_id = "quiz-subscribe-email" %}
+   {% include "partials/subscribe-form.html" %}
+   <p class="quiz-gate-proof">{% if proof and proof.total_issues %}{{ proof.total_issues }}{% else %}142{% endif %} daily editions · free · unsubscribe anytime</p>
+   <button id="quiz-skip" class="quiz-skip" type="button">Skip — just show my result</button>
+  </div>
      <div id="quiz-result-full" hidden>
       <div class="quiz-persona">
      <p class="confirm-kicker">Your persona</p>
