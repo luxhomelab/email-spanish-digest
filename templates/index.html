@@ -11,6 +11,9 @@
 <meta name="twitter:description" content="Spanish news in English, every morning: Spain Daily sums up Spain's top stories on rents, taxes, visas and jobs. Read online or by email. Free.">
 <meta name="robots" content="max-image-preview:large">{% endblock %}
 
+{% block extra_head %}<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&display=swap">{% endblock %}
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/">{% endblock %}
 {% block content %}
 <script type="application/ld+json">
@@ -33,183 +36,138 @@
  ]}
 ]}
 </script>
- <div class="page">
-  <!-- Zone A: the digest, start to finish -->
-  <section class="home-zone-digest" aria-label="Spain Daily digest">
-   <div class="hero">
-    <span class="brand-kicker">Free daily newsletter • 5-minute read</span>
-    <h1>Spanish news <span class="accent">in English</span>: Spain Daily, every morning</h1>
-    <p class="tagline">Spain Daily by <a href="/about">Spanified</a> — a daily digest of Spanish newspapers in English: your 5-minute catch-up on what's happening in Spain.</p>
-    <div class="badges">
-     <span class="badge"><span class="dot">●</span>Free forever</span>
-     <span class="badge"><span class="dot">●</span>Every morning</span>
-     <span class="badge"><span class="dot">●</span>5-minute read</span>
+ <div class="page hm">
+  <!-- Zone A: Spain Daily -->
+  <section class="hm-hero" aria-label="Spain Daily digest">
+   <div class="hm-hero-text">
+    <h1>Spanish news in English: Spain Daily, every morning</h1>
+    <p class="hm-lead">Spain Daily by <a href="/about">Spanified</a> is a daily digest of Spanish newspapers in English: your 5-minute catch-up on what's happening in Spain.</p>
+    <div class="hm-actions">
+     <a href="/subscribe" class="hm-btn">Get Spain Daily by email</a>
+     {% if latest %}<a href="{{ latest.url }}" class="hm-link">Read today's edition</a>{% endif %}
     </div>
-    <p class="hero-proof">Seven days a week, around 08:00 Madrid time</p>
+    <p class="hm-trust">Free. One email around 08:00 Madrid time, seven days a week. Join 1,000+ readers, cancel anytime.</p>
    </div>
 
    {% if latest %}
-   <a class="card teaser" href="{{ latest.url }}">
-    <div class="teaser-kicker">Fresh from this morning</div>
-    <div class="teaser-date">{{ latest.date_display }} · {{ latest.story_count }} news</div>
-    <h2>{{ latest.headline }}</h2>
-    {% for item in latest.stories[:3] %}
-    <div class="teaser-story"><span>{{ emoji.get(item.category, '📰') }}</span><span>{{ item.title }}</span></div>
-    {% endfor %}
-    <div class="teaser-more">Read the full edition →</div>
-   </a>
+   <article class="hm-edition" aria-labelledby="hm-edition-title">
+    <p class="hm-edition-date">{{ latest.date_display }}, {{ latest.story_count }} stories</p>
+    <p class="hm-edition-title" id="hm-edition-title"><a href="{{ latest.url }}">{{ latest.headline }}</a></p>
+    <ol class="hm-edition-list">
+     {% for item in latest.stories[:4] %}<li>{{ item.title }}</li>{% endfor %}
+    </ol>
+    <p class="hm-edition-foot"><a href="{{ latest.url }}">Read the full edition: {{ latest.date_display }}</a> <a href="/archive/">Browse past editions</a></p>
+   </article>
    {% endif %}
+  </section>
 
-   <div class="card intro-panel">
+  <section class="hm-about" aria-label="About Spain Daily">
+   <div>
     <h2>What is Spain Daily?</h2>
-    <p class="intro-lead">Spain moves fast — <strong>rents, taxes, visas, jobs.</strong> Every morning we read the Spanish press cover to cover and hand you only the news that affects your life: a daily Spain news digest with short summaries in plain English, zero clickbait.</p>
-    <p class="intro-audience">☕ Live in Spain, planning the move, or just watching from afar — five minutes with coffee and you're up to speed.</p>
+    <p>Spain moves fast — <strong>rents, taxes, visas, jobs.</strong> Every morning we read the Spanish press cover to cover and hand you only the news that affects your life: a daily Spain news digest with short summaries in plain English, zero clickbait.</p>
+    <p>Whether you live in Spain, are planning the move or are watching from afar, five minutes with coffee and you're up to speed.</p>
    </div>
-
-   <div class="card sources-card">
+   <div>
     <h2>Which Spanish newspapers do we read?</h2>
     <p>Spain Daily is a newsletter, not a newspaper. We do not report the news ourselves: every day we aggregate the Spanish press, then translate and summarize the stories in English, and link each one to its source. We read El País, Cinco Días, El Mundo, La Vanguardia, elDiario.es, El Confidencial, 20 Minutos, Heraldo, Diario Sur, Expansión and the Europa Press agency. International news makes the cut only when it directly affects Spain. It is <strong>Spanish news in English</strong>, built for the English-language reader who wants the Spanish press without reading it in Spanish.</p>
    </div>
+  </section>
 
-   <div class="card">
-    <h2>Latest news by topic</h2>
-    <div class="topics">
-     {% for t in topics %}<a class="topic" href="/category/{{ t.slug }}">{{ t.emoji }} {{ t.name }}</a>{% endfor %}
-    </div>
-   </div>
-
-   <div class="card how-card">
+  <section class="hm-process" aria-label="How Spain Daily is made">
+   <div>
     <h2>How it works</h2>
-    <p class="how-sub">From the Spanish press to your inbox — every morning.</p>
-    <ol class="how-chain">
-     <li><span class="how-num" aria-hidden="true">1</span><div class="how-text"><strong>We aggregate the Spanish press</strong><span>National dailies, wires and regional titles. We pick what affects your life: rents, taxes, visas, jobs.</span></div></li>
-     <li><span class="how-num" aria-hidden="true">2</span><div class="how-text"><strong>We summarize in plain English</strong><span>Short factual briefs with links to the sources, AI-assisted and checked by <a href="/editor">the editor</a> before every send.</span></div></li>
-     <li><span class="how-num how-num-last" aria-hidden="true">3</span><div class="how-text"><strong>You read it in 5 minutes</strong><span>In your inbox around 08:00 Madrid time, seven days a week.</span></div></li>
+    <ol class="hm-steps">
+     <li><strong>We aggregate the Spanish press</strong> National dailies, wires and regional titles. We pick what affects your life: rents, taxes, visas, jobs.</li>
+     <li><strong>We summarize in plain English</strong> Short factual briefs with links to the sources, AI-assisted and checked by <a href="/editor">the editor</a> before every send.</li>
+     <li><strong>You read it in 5 minutes</strong> In your inbox around 08:00 Madrid time, seven days a week.</li>
     </ol>
    </div>
-
-    <div class="card editor-card">
-     <h2>Who makes the digest</h2>
-     <div class="editor-top">
-      <span class="editor-avatar" aria-hidden="true">DS</span>
-      <div class="editor-id">
-       <p class="editor-eyebrow">Founder &amp; Editor</p>
-       <p class="editor-name">Dmytro Shvechikov</p>
-       <p class="editor-role">Spain-based engineer · 10+ years of experience</p>
-      </div>
-     </div>
-     <p class="editor-text">Dmytro reads the Spanish press every morning and shapes each edition himself: he reviews the selected stories, checks the AI-written summaries against the original reporting, and cuts anything that falls short.</p>
-     <ul class="editor-trust">
-      <li>Based in Spain, follows the agenda daily</li>
-      <li>Human review before every edition</li>
-      <li>Every story links its sources</li>
-     </ul>
-     <a class="editor-link" href="/editor">Meet the editor →</a>
+   <div class="hm-editor">
+    <h2>Who makes the digest</h2>
+    <div class="hm-editor-id">
+     <span class="hm-avatar" aria-hidden="true">DS</span>
+     <p><span class="hm-editor-name">Dmytro Shvechikov</span> <span class="hm-editor-role">Founder and editor. Spain-based engineer, 10+ years of experience.</span></p>
     </div>
-
-    <div class="cta-card">
-    <p class="cta-kicker">Free · Every morning · 5-minute read</p>
-    <h2>Ready to stay in the loop?</h2>
-    <p class="cta-sub">Join 1,000+ readers who start their day with Spain Daily.</p>
-    <a href="/subscribe" class="cta-button">Get Spain Daily by email</a>
-    <p class="cta-microcopy">No spam · one email a day · cancel anytime</p>
+    <p>Dmytro reads the Spanish press every morning and shapes each edition himself: he reviews the selected stories, checks the AI-written summaries against the original reporting, and cuts anything that falls short.</p>
+    <ul class="hm-editor-trust">
+     <li>Based in Spain, follows the agenda daily</li>
+     <li>Human review before every edition</li>
+     <li>Every story links its sources</li>
+    </ul>
+    <a class="hm-link" href="/editor">Meet the editor</a>
    </div>
+  </section>
+
+  <section class="hm-topics" aria-label="News by topic">
+   <h2>Latest news by topic</h2>
+   <ul class="hm-topic-list">
+    {% for t in topics %}<li><a href="/category/{{ t.slug }}">{{ t.name }}</a></li>{% endfor %}
+   </ul>
   </section>
 
   <!-- Zone B: interactive tools and quizzes -->
-  <section class="home-zone-tools" aria-label="Interactive tools and quizzes">
-   <div class="zone-head">
-    <p class="zone-eyebrow">More from Spanified</p>
-    <h2>Try the interactive tools</h2>
-    <p class="zone-sub">Practical calculators and quick quizzes for life in Spain — free, no sign-up.</p>
+  <section class="hm-more" aria-label="Interactive tools and quizzes">
+   <h2>More from Spanified</h2>
+   <p class="hm-sub">Practical calculators, quick quizzes and guides for life in Spain. Free, no sign-up.</p>
+
+   <div class="hm-block">
+    <h3>Calculators for life in Spain</h3>
+    <p>Taxes, property and bills worked out in plain English.</p>
+    <ul class="hm-calcs">
+     <li><a href="/calculators/net-salary"><span class="hm-card-title">Net Salary Calculator</span> <span>Your payslip after IRPF and Social Security, and the Renta refund.</span></a></li>
+     <li><a href="/calculators/autonomo-tax"><span class="hm-card-title">Autónomo Tax Calculator</span> <span>Social security quota and IRPF for the self-employed.</span></a></li>
+     <li><a href="/calculators/property-buying-cost"><span class="hm-card-title">Property Buying Cost Calculator</span> <span>ITP, IVA/IGIC, AJD, notary and registry fees by region.</span></a></li>
+     <li><a href="/calculators/rental-yield"><span class="hm-card-title">Rental Yield Calculator</span> <span>Net yield, cash flow and IRR with resident and non-resident taxes.</span></a></li>
+     <li><a href="/calculators/electricity-bill"><span class="hm-card-title">Electricity Bill Calculator</span> <span>PVPC and tariff comparison for your monthly bill.</span></a></li>
+    </ul>
    </div>
-   <div class="tools-stack">
-    <div class="card calculators-block">
-     <h2>Calculators for life in Spain</h2>
-     <p>Taxes, property and bills worked out in plain English — free, no sign-up.</p>
-     <div class="calcs-grid">
-      <a class="calc-mini calc-mini--wide" href="/calculators/net-salary" aria-label="Open the Net Salary Calculator (new)">
-       <span class="calc-mini-title">Net Salary <span class="calc-mini-badge">New</span></span>
-       <span class="calc-mini-hook">Your payslip after IRPF and Social Security, and the Renta refund.</span>
-       <span class="calc-mini-cta">Open calculator →</span>
-      </a>
-      <a class="calc-mini" href="/calculators/autonomo-tax" aria-label="Open the Autónomo Tax Calculator">
-       <span class="calc-mini-title">Autónomo Tax</span>
-       <span class="calc-mini-hook">Social security quota and IRPF for the self-employed.</span>
-       <span class="calc-mini-cta">Open calculator →</span>
-      </a>
-      <a class="calc-mini" href="/calculators/property-buying-cost" aria-label="Open the Property Buying Cost Calculator">
-       <span class="calc-mini-title">Property Buying Cost</span>
-       <span class="calc-mini-hook">ITP, IVA/IGIC, AJD, notary and registry fees by region.</span>
-       <span class="calc-mini-cta">Open calculator →</span>
-      </a>
-      <a class="calc-mini" href="/calculators/rental-yield" aria-label="Open the Rental Yield Calculator">
-       <span class="calc-mini-title">Rental Yield</span>
-       <span class="calc-mini-hook">Net yield, cash flow and IRR with resident and non-resident taxes.</span>
-       <span class="calc-mini-cta">Open calculator →</span>
-      </a>
-      <a class="calc-mini" href="/calculators/electricity-bill" aria-label="Open the Electricity Bill Calculator">
-       <span class="calc-mini-title">Electricity Bill</span>
-       <span class="calc-mini-hook">PVPC and tariff comparison for your monthly bill.</span>
-       <span class="calc-mini-cta">Open calculator →</span>
-      </a>
-     </div>
-    </div>
 
-    <div class="card quizzes-block">
-     <h2>Quizzes — two minutes each</h2>
-     <p>Real stories from Spain, mixed with inventions. Can you tell which is which?</p>
-     <div class="quizzes-grid">
-      {% for q in quizzes %}
-      <a class="quiz-mini" href="{{ q.url }}" aria-label="Take the quiz: {{ q.title }}">
-       <img class="quiz-mini-cover" src="{{ q.cover }}" alt="{{ q.title }} quiz cover" width="1200" height="630" loading="lazy">
-       <span class="quiz-mini-body">
-        <span class="quiz-mini-kicker">{{ q.kicker }}</span>
-        <span class="quiz-mini-title">{{ q.title }}</span>
-        <span class="quiz-mini-hook">{{ q.hook }}</span>
-        <span class="quiz-mini-cta">Take the quiz →</span>
-       </span>
-      </a>
-      {% endfor %}
-     </div>
-    </div>
+   <div class="hm-block">
+    <h3>Quizzes, two minutes each</h3>
+    <p>Real stories from Spain, mixed with inventions. Can you tell which is which?</p>
+    <ul class="hm-quizzes">
+     {% for q in quizzes %}
+     <li><a href="{{ q.url }}" aria-label="Take the quiz: {{ q.title }}">
+      <img src="{{ q.cover }}" alt="{{ q.title }} quiz cover" width="1200" height="630" loading="lazy">
+      <span class="hm-card-title">{{ q.title }}</span>
+      <span>{{ q.hook }}</span>
+     </a></li>
+     {% endfor %}
+    </ul>
+   </div>
 
-    <div class="card articles-block">
-     <h2>Latest articles</h2>
-     <p>Practical guides to living in Spain — learned by doing, written in plain English.</p>
-     <div class="articles-grid">
-      {% for a in articles %}
-      <a class="article-mini" href="{{ a.url }}" aria-label="Read the article: {{ a.title }}">
-       <span class="article-mini-meta">{{ a.date_display }} · {{ a.reading_time }} min read</span>
-       <span class="article-mini-title">{{ a.title }}</span>
-       {% if a.excerpt %}
-       <span class="article-mini-excerpt">{{ a.excerpt[:150] }}{% if a.excerpt|length > 150 %}…{% endif %}</span>
-       {% endif %}
-       <span class="article-mini-cta">Read the article →</span>
-      </a>
-      {% endfor %}
-     </div>
-     <a class="articles-all" href="/articles/">All articles →</a>
-    </div>
-
+   <div class="hm-block">
+    <h3>Latest articles</h3>
+    <p>Practical guides to living in Spain — learned by doing, written in plain English.</p>
+    <ul class="hm-articles">
+     {% for a in articles %}
+     <li><a href="{{ a.url }}">
+      <span class="hm-meta">{{ a.date_display }}, {{ a.reading_time }} min read</span>
+      <span class="hm-card-title">{{ a.title }}</span>
+      {% if a.excerpt %}<span>{{ a.excerpt[:150] }}{% if a.excerpt|length > 150 %}…{% endif %}</span>{% endif %}
+     </a></li>
+     {% endfor %}
+    </ul>
+    <a class="hm-link" href="/articles/">All articles</a>
    </div>
   </section>
 
-  <!-- Zone C: socials and answers -->
-  <section class="home-zone-trust" aria-label="Socials and questions">
-   <div class="card faq-card">
-    <h2>Questions, answered</h2>
-    {% for q, a in faq %}
-    <details class="faq-item">
-     <summary>{{ q }}</summary>
-     <p>{{ a }}</p>
-    </details>
-    {% endfor %}
-   </div>
+  <!-- Zone C: answers -->
+  <section class="hm-faq" aria-label="Questions">
+   <h2>Questions, answered</h2>
+   {% for q, a in faq %}
+   <details>
+    <summary>{{ q }}</summary>
+    <p>{{ a }}</p>
+   </details>
+   {% endfor %}
+  </section>
 
-   <p class="page-note">
-    This digest is based on real news, created with the help of AI and reviewed by a human.
-   </p>
+  <section class="hm-close" aria-label="Subscribe">
+   <h2>Start tomorrow morning with Spain Daily</h2>
+   <p>Join 1,000+ readers. Free, one email a day, cancel anytime.</p>
+   <a href="/subscribe" class="hm-btn">Get Spain Daily by email</a>
+   <p class="hm-note">This digest is based on real news, created with the help of AI and reviewed by a human.</p>
   </section>
  </div>
 {% endblock %}
