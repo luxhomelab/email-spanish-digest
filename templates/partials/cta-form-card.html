@@ -37,6 +37,7 @@
 {{ indent }} {% set field_id = field_id | default('subscribe-email') %}
 {{ indent }} {% set form_kind = form_kind | default('') %}
 {{ indent }} {% set btn_label = btn_label | default('Subscribe free') %}
+{{ indent }} {% set btn_icon = true %}
 {{ indent }} {% include "partials/subscribe-form.html" %}
 {{ indent }} <p class="cta-microcopy">{{ microcopy | safe }}</p>
 {{ indent }} </div>
