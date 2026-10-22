@@ -812,11 +812,16 @@ details.elec-bd[open] .elec-bd-sum::before { transform: rotate(90deg); }
 .crumb-sep { margin: 0 8px; color: #b0b9c4; }
 /* Quiz pages: the trail starts where the card starts, not at the 1200px
    page edge. Width and side padding mirror .quiz-wrap / .centered-page. */
-body.page-quiz .breadcrumbs { max-width: 680px; }
+body.page-quiz .breadcrumbs { max-width: 680px; margin-bottom: 12px; }
+/* The gap under the trail is the breadcrumb margin alone: no extra wrap
+   padding or card margin stacked on top of it. */
+body.page-quiz .quiz-wrap { padding-top: 0; }
+body.page-quiz .quiz-wrap > .quiz-card:first-child { margin-top: 0; }
 body.page-quiz-flow .breadcrumbs { max-width: 560px; }
 /* Quiz flow pages sit on the same 16px page gutter as /articles/ instead of
    adding .centered-page's own 24px on top of it. */
-body.page-quiz-flow .centered-page { padding-left: 0; padding-right: 0; }
+body.page-quiz-flow .centered-page { padding-left: 0; padding-right: 0; padding-top: 0; }
+body.page-quiz-flow .breadcrumbs { margin-bottom: 12px; }
 .crumb-current { color: #3C4858; font-weight: 600; }
 
 /* ---------- Confirm / success (background photo pages) ---------- */
