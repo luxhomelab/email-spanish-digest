@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 {% block body_class %} class="page-digest"{% endblock %}
-{% block title %}Spain Daily Digest — {{ digest.date }}{% endblock %}
+{% block title %}{{ digest.meta_title }}{% endblock %}
 {% block description %}<meta name="description" content="{{ digest.meta_description }}">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spain Daily Digest — {{ digest.date }}: {{ digest.headline }}">
+<meta property="og:title" content="{{ digest.meta_title }}">
 <meta property="og:description" content="{{ digest.meta_description }}">
 <meta property="og:url" content="{{ site_url }}{{ digest.url }}">
 
 <meta property="article:published_time" content="{{ pub_date(digest.date) }}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Spain Daily Digest — {{ digest.date }}: {{ digest.headline }}">
+<meta name="twitter:title" content="{{ digest.meta_title }}">
 <meta name="twitter:description" content="{{ digest.meta_description }}">
 <meta name="twitter:image" content="{{ site_url }}/og/{{ digest.date }}.png">
 <meta name="robots" content="max-image-preview:large">
@@ -27,7 +27,7 @@
 {% include "partials/breadcrumbs.html" %}
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "NewsArticle",
- "headline": {{ digest.headline|tojson }},
+ "headline": {{ digest.meta_title|tojson }},
  "description": "Spain Daily Digest for {{ digest.date }} — the day's top stories from Spain, summarized in English.",
  "datePublished": "{{ pub_date(digest.date) }}",
  "dateModified": "{{ pub_date(digest.date) }}",
@@ -39,7 +39,7 @@
  "mainEntityOfPage": "{{ site_url }}{{ digest.url }}",{% if podcast %}
  "audio": {"@type": "AudioObject", "name": {{ podcast.title|tojson }}, "contentUrl": "{{ podcast.audio_url }}", "encodingFormat": "audio/mpeg", "duration": "{{ podcast.iso_duration }}"},{% endif %}
  "hasPart": [{% for item in digest.stories %}
-  {"@type": "NewsArticle", "headline": {{ item.title|tojson }}, "articleSection": {{ (item.category or "news")|tojson }}, "url": "{{ site_url + digest.url }}", "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor"}{% if item.sources %}, "isBasedOn": {"@type": "CreativeWork", "name": {{ item.sources[0].name|tojson }}, "url": {{ item.sources[0].url|tojson }}}{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}
+  {"@type": "NewsArticle", "headline": {{ item.title|tojson }}, "articleSection": {{ (item.category or "news")|tojson }}, "url": "{{ site_url + digest.url }}#news-{{ loop.index }}", "datePublished": "{{ pub_date(digest.date) }}", "image": "{{ site_url }}/og/{{ digest.date }}.png", "inLanguage": "en", "publisher": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}, "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor"}{% if item.sources %}, "isBasedOn": {"@type": "CreativeWork", "name": {{ item.sources[0].name|tojson }}, "url": {{ item.sources[0].url|tojson }}}{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}
  ]}
 </script>
  <div class="digest" data-pagefind-sort="date:{{ digest.date }}">

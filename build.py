@@ -222,24 +222,54 @@ def digest_context(data):
         "story_count": len(items),
         "top_categories": top_categories(items),
         "url": f"/archive/{date}",
+        "meta_title": digest_meta_title(date, items),
         "meta_description": digest_meta_description(date, headline, items),
         "word_count": words,
         "tag_categories": tag_cats,
     }
 
 
-def digest_meta_description(date, headline, items):
-    """Unique per-day description: headline plus the top two story titles.
+def short_date(date_str):
+    """'2026-09-10' -> 'Sep 10, 2026'."""
+    try:
+        dt = datetime.strptime(date_str, "%Y-%m-%d")
+        return f"{dt.strftime('%b')} {dt.day}, {dt.year}"
+    except (ValueError, TypeError):
+        return date_str
 
-    Falls back to the generic blurb when a digest has no items. Capped at
-    ~155 chars so Google shows it whole in the snippet.
+
+def digest_meta_title(date, items):
+    """Keyword-first title: 'Spain News Oct 22, 2026: <top story>'.
+
+    The top story is cut at a word boundary so the visible part stays near
+    60 characters; the full text still counts for ranking.
     """
-    topics = [i.get("title", "").strip() for i in items[:2]]
-    topics = [t for t in topics if t]
-    if topics:
-        desc = f"{headline}: " + " — ".join(topics)
-    else:
-        desc = f"Spain Daily Digest for {date} — the day's top news from Spain, summarized in English."
+    base = f"Spain News {short_date(date)}"
+    top = next((i.get("title", "").strip() for i in items if i.get("title")), "")
+    if not top:
+        return f"{base} | Spain Daily Digest"
+    room = 66 - len(base) - 2
+    if len(top) > room:
+        top = top[:room - 1].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+    return f"{base}: {top}"
+
+
+def digest_meta_description(date, headline, items):
+    """Unique per-day description built from the day's story titles.
+
+    The headline is a rotating tagline ('Spain today. Briefly.'), so it is
+    not used. Stories are added while they fit in ~155 chars, which Google
+    shows whole in the snippet.
+    """
+    titles = [i.get("title", "").strip().rstrip(".") for i in items]
+    titles = [t for t in titles if t]
+    if not titles:
+        return f"Spain Daily Digest for {date} — the day's top news from Spain, summarized in English."
+    desc = f"Spain news, {format_date(date)}: {titles[0]}"
+    for t in titles[1:]:
+        if len(desc) + len(t) + 3 > 157:
+            break
+        desc += f"; {t}"
     return desc if len(desc) <= 157 else desc[:154].rsplit(" ", 1)[0] + "…"
 
 
@@ -1624,8 +1654,13 @@ def render_categories(env, digests):
     return sorted(cats.keys())
 
 
-def render_sitemap(digests, categories=(), articles=(), salary_pages=(), autonomo_pages=(), rental_yield_pages=()):
-    urls = [(SITE_URL + "/", None)] + [
+def render_sitemap(digests, categories=(), articles=(), salary_pages=(), autonomo_pages=(), rental_yield_pages=(), category_lastmod=None):
+    # lastmod only where it is real: the newest digest drives the home page,
+    # archive and category pages. Calculators and static pages get none
+    # rather than a misleading build date.
+    latest = digests[0]["date"] if digests else None
+    category_lastmod = category_lastmod or {}
+    urls = [(SITE_URL + "/", latest)] + [
         (SITE_URL + "/" + name[:-len(".html")], None)
         for name in STATIC_PAGES
         if name.endswith(".html") and name != "index.html" and name not in NOINDEX_PAGES
@@ -1633,21 +1668,22 @@ def render_sitemap(digests, categories=(), articles=(), salary_pages=(), autonom
     # Archive listing (page 1) plus extra pages.
     total = len(digests)
     total_pages = (total + PAGE_SIZE - 1) // PAGE_SIZE if total else 1
-    urls.append((SITE_URL + "/archive/", None))
+    urls.append((SITE_URL + "/archive/", latest))
     for page in range(2, total_pages + 1):
-        urls.append((SITE_URL + f"/archive/{page}", None))
+        page_digests = digests[(page - 1) * PAGE_SIZE:page * PAGE_SIZE]
+        urls.append((SITE_URL + f"/archive/{page}", page_digests[0]["date"] if page_digests else None))
     for digest in digests:
         urls.append((SITE_URL + f"/archive/{digest['date']}", digest["date"]))
     # Articles listing (page 1) plus extra pages + every article.
     articles_total = len(articles)
     articles_pages = (articles_total + ARTICLES_PAGE_SIZE - 1) // ARTICLES_PAGE_SIZE if articles_total else 1
-    urls.append((SITE_URL + "/articles/", None))
+    urls.append((SITE_URL + "/articles/", articles[0]["date"] if articles else None))
     for page in range(2, articles_pages + 1):
         urls.append((SITE_URL + f"/articles/{page}", None))
     for article in articles:
         urls.append((SITE_URL + article["url"], article["date"]))
     for slug in categories:
-        urls.append((SITE_URL + f"/category/{slug}", None))
+        urls.append((SITE_URL + f"/category/{slug}", category_lastmod.get(slug)))
     urls.append((SITE_URL + "/calculators/net-salary", None))
     for path in salary_pages:
         urls.append((SITE_URL + path, None))
@@ -2082,7 +2118,8 @@ def main():
     rental_yield_pages = render_rental_yield_pages(env)
 
     print("Building sitemap...")
-    render_sitemap(digests, categories, articles, salary_pages, autonomo_pages, rental_yield_pages)
+    category_lastmod = {slug: stories[0]["date"] for slug, stories in collect_categories(digests).items()}
+    render_sitemap(digests, categories, articles, salary_pages, autonomo_pages, rental_yield_pages, category_lastmod)
 
     print("Writing llms.txt...")
     render_llms_txt(digests, articles, salary_pages, autonomo_pages, rental_yield_pages)
