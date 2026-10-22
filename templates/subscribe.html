@@ -137,14 +137,19 @@
 {% set testimonials_title = "What readers say" %}
 {% include "partials/testimonials.html" %}
 
-<section class="sub-faq" aria-labelledby="sub-faq-title">
- <h2 id="sub-faq-title">Before you subscribe</h2>
- {% for q, a in faq %}
- <details>
-  <summary>{{ q }}</summary>
-  <p>{{ a }}</p>
- </details>
- {% endfor %}
+<section class="sub-faq hm-faq" aria-labelledby="sub-faq-title">
+ <div class="hm-faq-head">
+  <h2 id="sub-faq-title">Before you subscribe</h2>
+  <p>What readers usually ask before signing up. Anything else? <a href="/contact">Write to us</a>.</p>
+ </div>
+ <div class="hm-faq-list">
+  {% for q, a in faq %}
+  <details>
+   <summary>{{ q }}</summary>
+   <p>{{ a }}</p>
+  </details>
+  {% endfor %}
+ </div>
 </section>
 
 <script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
