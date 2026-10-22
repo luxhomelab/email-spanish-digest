@@ -1066,7 +1066,6 @@ body.page-home .cta-card p { color: #F6D9DA; }
  body.page-home .hero h1 { font-size: 32px; }
 }
 /* Homepage air: breathing room between sections */
-body.page-home .page { padding-bottom: 16px; }
 body.page-home .page .card, body.page-home .cta-card { margin-bottom: 28px; padding: 40px; }
 body.page-home .hero { padding: 56px 20px 28px 20px; margin-bottom: 36px; }
 body.page-home .hero .tagline { margin-bottom: 22px; }
@@ -3096,10 +3095,11 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 /* Sections after the hero sit on their own paper panels so they read as
    separate blocks on the site's beige gradient. */
 .hm > section { background: #FFFDF8; border: 1px solid var(--hm-line); border-radius: 12px; padding: 40px; margin-bottom: 20px; }
-.hm > .hm-hero { background: none; border: 0; border-radius: 0; padding: 8px 0 36px; margin-bottom: 0; }
+.hm > .hm-hero { background: none; border: 0; border-radius: 0; padding: 0; margin-bottom: 20px; }
+.hm > section:last-child { margin-bottom: 0; }
 
 /* Hero: pitch left, today's edition right */
-.hm-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px 56px; align-items: start; }
+.hm-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 56px; align-items: start; }
 .hm-lead { font-size: 20px; line-height: 1.5; }
 .hm-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; margin: 26px 0 16px; }
 .hm-btn {
@@ -3110,41 +3110,55 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 .hm-btn:hover { background: var(--hm-red-dark); }
 .hm-link { font-weight: 700; display: inline-block; padding: 10px 0; }
 .hm .hm-edition-foot a { display: inline-block; padding: 8px 0; }
-.hm-trust { font-size: 15px; color: var(--hm-muted); }
+.hm .hm-trust { font-size: 15px; color: var(--hm-muted); margin-bottom: 0; }
 
-.hm-edition { background: #fff; border: 1px solid var(--hm-line); border-top: 4px solid var(--hm-red); padding: 24px 28px 22px; }
+.hm-edition { align-self: stretch; display: flex; flex-direction: column; background: #fff; border: 1px solid var(--hm-line); border-top: 4px solid var(--hm-red); padding: 24px 28px 22px; }
 .hm-edition-date { font-size: 15px; color: var(--hm-muted); margin-bottom: 6px; }
 .hm .hm-edition-title { font-family: var(--hm-serif); font-weight: 700; font-size: 25px; line-height: 1.25; margin-bottom: 18px; }
 .hm-edition-title a { color: var(--hm-ink); text-decoration: none; }
 .hm-edition-title a:hover { text-decoration: underline; }
-.hm-edition-list { counter-reset: story; }
+.hm .hm-edition-list { counter-reset: story; margin-bottom: 16px; }
 .hm-edition-list li {
   counter-increment: story; position: relative; padding: 12px 0 12px 36px;
   border-top: 1px solid var(--hm-line); font-family: var(--hm-serif); font-weight: 600;
   font-size: 17px; line-height: 1.4; color: var(--hm-ink);
 }
 .hm-edition-list li::before { content: counter(story); position: absolute; left: 0; top: 9px; font-size: 22px; font-weight: 700; color: var(--hm-red); }
-.hm .hm-edition-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; border-top: 1px solid var(--hm-line); padding-top: 14px; margin: 0; font-size: 15px; font-weight: 700; }
+.hm .hm-edition-foot { margin-top: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; border-top: 1px solid var(--hm-line); padding-top: 14px; margin: 0; font-size: 15px; font-weight: 700; }
 
 /* Hero infographic: sources -> email -> 5 minutes, spans both hero columns.
-   A red band with white icon discs and flag-yellow arrows; ".hm .hm-flow"
-   so the generic ".hm ol" list reset doesn't strip its padding. */
+   Quiet white panel so the red subscribe button stays the loudest thing;
+   colour comes from big red numerals and flag-yellow icon discs.
+   ".hm .hm-flow" so the generic ".hm ol" reset doesn't strip its padding. */
 .hm .hm-flow {
   grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 64px;
-  margin: 0; padding: 26px 36px; border-radius: 14px;
-  background: linear-gradient(135deg, #AA151B 0%, #8A1116 100%); color: #fff;
+  margin: 0; padding: 24px 32px; border-radius: 14px; background: #fff; border: 1px solid var(--hm-line);
 }
 .hm-flow li { position: relative; display: flex; align-items: center; gap: 16px; }
 .hm-flow li:not(:last-child)::after {
-  content: ""; position: absolute; right: -39px; top: 50%; width: 14px; height: 14px;
-  border-top: 3px solid #F1BF00; border-right: 3px solid #F1BF00; transform: translateY(-50%) rotate(45deg);
+  content: ""; position: absolute; right: -38px; top: 50%; width: 12px; height: 12px;
+  border-top: 2px solid #C9B98F; border-right: 2px solid #C9B98F;
+  transform: translateY(-50%) rotate(45deg);
 }
 .hm-flow-icon {
-  flex: none; width: 56px; height: 56px; padding: 13px; box-sizing: border-box; border-radius: 50%;
-  background: #fff; fill: none; stroke: #AA151B; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round;
+  flex: none; width: 56px; height: 56px; padding: 14px; box-sizing: border-box; border-radius: 50%;
+  background: #FCE7A2; fill: none; stroke: var(--hm-ink); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
 }
-.hm-flow-big { display: block; font-family: var(--hm-serif); font-weight: 700; font-size: 20px; line-height: 1.25; color: #fff; }
-.hm-flow-small { display: block; font-size: 14.5px; line-height: 1.4; color: rgba(255,255,255,.85); margin-top: 3px; }
+.hm-flow-big { display: block; font-family: var(--hm-serif); font-weight: 700; font-size: 18px; line-height: 1.2; color: var(--hm-ink); }
+.hm-flow-num { font-size: 30px; color: var(--hm-red); margin-right: 2px; vertical-align: -3px; }
+.hm-flow-small { display: block; font-size: 14px; line-height: 1.4; color: var(--hm-muted); margin-top: 4px; }
+
+/* About: short lead, then scannable facts and a sources list */
+.hm .hm-about-lead { font-size: 18px; line-height: 1.55; color: var(--hm-ink); }
+.hm-facts li { padding: 12px 0; border-top: 1px solid var(--hm-line); font-size: 16px; }
+.hm-facts li:last-child { border-bottom: 1px solid var(--hm-line); }
+.hm-facts strong { display: block; font-size: 14px; color: var(--hm-red); margin-bottom: 2px; }
+.hm .hm-papers { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 18px; }
+.hm-papers li {
+  font-family: var(--hm-serif); font-weight: 600; font-size: 16px; color: var(--hm-ink);
+  background: #fff; border: 1px solid var(--hm-line); border-radius: 6px; padding: 6px 12px; line-height: 1.3;
+}
+.hm-papers li span { font-family: Roboto, Helvetica, Arial, sans-serif; font-weight: 400; font-size: 13px; color: var(--hm-muted); }
 
 /* About + process: two columns */
 .hm-about, .hm-process { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; }
@@ -3218,15 +3232,16 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 @media (max-width: 1100px) {
   .hm .hm-flow { gap: 48px; padding: 22px 24px; }
   .hm-flow li { gap: 12px; }
-  .hm-flow li:not(:last-child)::after { right: -31px; }
-  .hm-flow-icon { width: 48px; height: 48px; padding: 11px; }
-  .hm-flow-big { font-size: 18px; }
+  .hm-flow li:not(:last-child)::after { right: -30px; }
+  .hm-flow-icon { width: 48px; height: 48px; padding: 12px; }
+  .hm-flow-big { font-size: 17px; }
 }
 @media (max-width: 860px) {
   .hm-hero, .hm-about, .hm-process { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .hm-hero { gap: 20px; }
   .hm h1 { max-width: none; }
   .hm .hm-flow { grid-template-columns: minmax(0, 1fr); gap: 40px; padding: 24px 20px; }
-  .hm-flow li:not(:last-child)::after { right: auto; top: auto; left: 20px; bottom: -29px; transform: rotate(135deg); }
+  .hm-flow li:not(:last-child)::after { right: auto; top: auto; left: 18px; bottom: -28px; transform: rotate(135deg); }
 }
 @media (max-width: 520px) {
   .hm { font-size: 16px; }
