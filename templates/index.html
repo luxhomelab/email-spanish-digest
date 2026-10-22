@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block body_class %} class="page-home"{% endblock %}
-{% block title %}Spanified — Spain's Top News in English, Every Morning{% endblock %}
-{% block description %}<meta name="description" content="Spanified's Spain Daily — a free newsletter with the most important news from Spain, summarized in clear English. Every morning.">
+{% block title %}Spain News in English: Spain Daily Newsletter | Spanified{% endblock %}
+{% block description %}<meta name="description" content="Spain Daily is Spanified's free morning newsletter: Spain's top news in plain English, a 5-minute read. Plus calculators, quizzes and guides for life in Spain.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Spanified — Spain's Top News in English, Every Morning">
-<meta property="og:description" content="Spanified's Spain Daily — a free newsletter with the most important news from Spain, summarized in clear English. Every morning.">
+<meta property="og:title" content="Spain News in English: Spain Daily Newsletter | Spanified">
+<meta property="og:description" content="Spain Daily is Spanified's free morning newsletter: Spain's top news in plain English, a 5-minute read. Plus calculators, quizzes and guides for life in Spain.">
 <meta property="og:url" content="{{ site_url }}/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Spanified — Spain's Top News in English, Every Morning">
-<meta name="twitter:description" content="Spanified's Spain Daily — a free newsletter with the most important news from Spain, summarized in clear English. Every morning.">
+<meta name="twitter:title" content="Spain News in English: Spain Daily Newsletter | Spanified">
+<meta name="twitter:description" content="Spain Daily is Spanified's free morning newsletter: Spain's top news in plain English, a 5-minute read. Plus calculators, quizzes and guides for life in Spain.">
 <meta name="robots" content="max-image-preview:large">{% endblock %}
 
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/">{% endblock %}
@@ -21,7 +21,10 @@
    "contactType": "customer support", "availableLanguage": "English"},
   "sameAs": {{ site_socials|tojson }}},
  {"@type": "WebSite", "name": "Spanified", "url": "{{ site_url }}/",
-  "description": "Spanified's Spain Daily — a free newsletter with the most important news from Spain, summarized in clear English. Every morning."},
+  "description": "Spanified: Spain Daily, a free morning newsletter with Spain's top news in plain English, plus calculators, quizzes and guides for life in Spain."},
+ {"@type": "Periodical", "name": "Spain Daily", "url": "{{ site_url }}/about",
+  "description": "Free daily newsletter with Spain's top news in plain English, a 5-minute read.",
+  "inLanguage": "en", "publisher": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}},
  {"@type": "FAQPage", "mainEntity": [{% for q, a in faq %}
   {"@type": "Question", "name": {{ q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ a|tojson }}}}{% if not loop.last %},{% endif %}{% endfor %}
  ]}
@@ -55,13 +58,13 @@
    {% endif %}
 
    <div class="card intro-panel">
-    <h2>What is this?</h2>
+    <h2>What is Spain Daily?</h2>
     <p class="intro-lead">Spain moves fast — <strong>rents, taxes, visas, jobs.</strong> Every morning we read the Spanish press cover to cover and hand you only the news that affects your life: short summaries in plain English, zero clickbait.</p>
     <p class="intro-audience">☕ Live in Spain, planning the move, or just watching from afar — five minutes with coffee and you're up to speed.</p>
    </div>
 
    <div class="card">
-    <h2>What's inside?</h2>
+    <h2>What's in each Spain Daily digest?</h2>
     <ul class="features">
      <li>Top Spanish news, curated and summarized</li>
      <li>Short and to the point — a 5-minute read</li>
@@ -123,7 +126,7 @@
   <!-- Zone B: interactive tools and quizzes -->
   <section class="home-zone-tools" aria-label="Interactive tools and quizzes">
    <div class="zone-head">
-    <p class="zone-eyebrow">Spanified tools &amp; quizzes</p>
+    <p class="zone-eyebrow">More from Spanified</p>
     <h2>Try the interactive tools</h2>
     <p class="zone-sub">Practical calculators and quick quizzes for life in Spain — free, no sign-up.</p>
    </div>
