@@ -3173,20 +3173,23 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 .hm-about, .hm-process { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; }
 .hm-steps { counter-reset: step; }
 .hm-steps li { counter-increment: step; position: relative; padding: 0 0 18px 48px; }
+.hm-steps li:last-child { padding-bottom: 0; }
 .hm-steps li::before {
   content: counter(step); position: absolute; left: 0; top: 0;
   width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--hm-red); box-sizing: border-box;
   color: var(--hm-red); font-weight: 700; display: grid; place-items: center; font-size: 15px; line-height: 1;
 }
 .hm-steps strong { display: block; color: var(--hm-ink); }
-.hm-editor { background: var(--hm-tint); padding: 28px; border-radius: 8px; }
-.hm-editor-id { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.hm-editor { background: var(--hm-tint); padding: 24px 26px; border-radius: 8px; }
+.hm .hm-editor p { font-size: 16px; line-height: 1.55; }
+.hm-link-inline { font-weight: 700; white-space: nowrap; }
+.hm-editor-id { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
 .hm .hm-editor-id p { margin: 0; }
-.hm-avatar { flex: none; width: 52px; height: 52px; border-radius: 50%; background: var(--hm-ink); color: #fff; display: grid; place-items: center; font-weight: 700; }
+.hm-avatar { flex: none; width: 46px; height: 46px; border-radius: 50%; background: var(--hm-ink); color: #fff; display: grid; place-items: center; font-weight: 700; }
 .hm-editor-name { display: block; font-weight: 700; color: var(--hm-ink); font-size: 18px; }
 .hm-editor-role { display: block; font-size: 15px; color: var(--hm-muted); line-height: 1.4; }
-.hm-editor-trust { margin-bottom: 14px; }
-.hm-editor-trust li { padding-left: 18px; position: relative; font-size: 15px; margin-bottom: 4px; }
+.hm .hm-editor-trust { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0; }
+.hm-editor-trust li { padding-left: 16px; position: relative; font-size: 14px; color: var(--hm-muted); }
 .hm-editor-trust li::before { content: ""; position: absolute; left: 0; top: .65em; width: 7px; height: 7px; border-radius: 50%; background: var(--hm-red); }
 
 /* Topics */
