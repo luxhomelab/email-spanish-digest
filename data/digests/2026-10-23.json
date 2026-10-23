@@ -1,0 +1,278 @@
+{
+  "items": [
+    {
+      "title": "Disability and care reforms take effect October 23",
+      "body": "Spain's disability and dependency law reform takes effect on October 23. It cuts the maximum recognition wait from six to three months, allows benefits and services to be combined, and makes telecare a right. The state must fund 50% of the dependency system, with €6.2 billion extra for regions in 2026–2027.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/epsocial/igualdad/noticia-reforma-leyes-discapacidad-dependencia-entrara-manana-vigor-reducir-burocracia-ampliar-derechos-20261022184537.html"
+        }
+      ],
+      "category": "politics",
+      "important": true
+    },
+    {
+      "title": "Spain's supply of homes for sale falls 9%",
+      "body": "Homes listed for sale fell 9% nationwide in the third quarter compared with a year earlier, Idealista reports. Valencia and Madrid bucked the trend, with stock rising 15% and 14%. Idealista says high prices are pushing buyers out of big-city markets, easing pressure on available homes.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/inmobiliario/mercado-inmobiliario/2026/10/22/oferta-vivienda-venta-cae-9-baja-sube.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Renewables keep Spanish electricity below EU average",
+      "body": "Spanish households paid €0,2509/kWh in the first half of 2026, against an EU average of €0,2832/kWh, helped by renewables. For a household using 3,750 kWh, that is €121 a year less. Iberdrola chairman Ignacio Galán predicted on October 21 that rises will continue and reach free-market customers as they renew annual contracts.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/economia/20261023/11665866/renovables-dejan-precio-luz-espana-debajo-media-ue.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Ley de Nietos citizens challenge voting suspension",
+      "body": "Three citizens naturalized under the Ley de Nietos have appealed a Supreme Court order suspending their vote on November 29. The main case concerns presumed exile status for people who fled Spain in 1936–1955. Those with a consular certificate proving the qualifying family exile are exempt from the suspension.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/tres-nacionalizados-por-ley-nietos-recurren-supremo-suspension-voto-inseguridad-juridica-es-abrumadora_7052012_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Employers drop pre-strike challenge to November 11 walkout",
+      "body": "Employers' group CEOE will not challenge the November 11 general strike before it takes place, sources told EFE on October 22. Its president, Antonio Garamendi, had said days earlier that he would. Unions called the strike over housing and wages. They say mass afternoon demonstrations will be key.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/22/ceoe-renuncia-recurrir-convocatoria-huelga-general-11noviembrehuelga-general-2062040.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Deferred inheritances still trigger immediate income tax",
+      "body": "The Supreme Court has ruled that heirs must declare estate income in IRPF (personal income tax) from the date of death. This applies even when a will delays acceptance or use of the assets for years. The court ruled out double taxation with Inheritance Tax.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/economia/2026/10/22/golpe-supremo-herencias-aplazadas-rendimientos-tributan-inmediato.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Spain sets December deadline for fuel reserve release",
+      "body": "Spanish operators and distributors must release 4.4 million barrels of diesel and kerosene reserves by December 15. The requirement implements Spain's announced reserve-release plan following a March agreement among International Energy Agency members. It aims to ease shortages linked to the Middle East crisis.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/las-operadoras-espanolas-deberan-liberar-4-4-millones-barriles-gasoleo-queroseno-debido-escasez-por-crisis-proximo_7051945_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Election rivals agree debate, dispute four-way broadcaster",
+      "body": "The PSOE has accepted a November 16 private-channel debate between Socialist prime ministerial candidate Pedro Sánchez and opposition leader Alberto Núñez Feijóo. A separate four-way debate remains disputed: the PSOE wants TVE, while the PP rejects it and proposes Atresmedia.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-sanchez-acepta-cara-cara-feijoo-quiere-debate-cuatro-26-noviembre-sea-tve-20261022175207.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Study links Spain's summer heat to over 5,000 deaths",
+      "body": "A study published in Nature attributes more than 5,000 deaths in Spain this summer to extreme heat caused by climate change. Across 854 European cities, it estimates 50,000 heat-related deaths. Barcelona had the second-highest death toll in Europe, while Madrid had the highest share of deaths linked to high temperatures.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/verano-mortifero-calor-extremo-deja-5-000-muertes-espana_1_13607100.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Draft farm tax cuts precede October 28 protest",
+      "body": "A draft 2027 farm tax order, open for public consultation, would cut the net yield by 10% under IRPF (personal income tax) modules and offer diesel and fertiliser incentives. Farmers still plan a Madrid tractor protest on October 28 over high costs and low prices. Farm groups call the 20-cent-per-litre diesel discount wholly insufficient.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/economia/2026/10/23/guinos-fiscales-campo-mantiene-gran-tractorada-madrid-28-octubre.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Multinational minimum tax raises €46 million through August",
+      "body": "Spain's 15% minimum tax on multinationals collected €46 million through August, far below initial forecasts. The tax is in force for groups with revenue above €750 million; 2026 payments use 2024 results. Its weak yield follows a scaling back of the international tax project.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-10-23/el-nuevo-impuesto-complementario-a-las-multinacionales-solo-recauda-46-millones-en-su-primer-ejercicio.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Madrid approves tax response deadlines and complaints office",
+      "body": "Madrid's Assembly approved its Taxpayer Defence Law on October 22 with PP and Vox support; the left-wing bloc opposed it. It would take effect the day after regional gazette publication. For state-ceded taxes, it would set a three-month reply deadline and give a new complaints office 15 working days to respond.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/economia/2026/10/22/luz-verde-ley-ayuso-agiliza-gestiones-tributarias-garantiza-seguridad-juridica.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "EU legal adviser backs Spanish debt relief limits",
+      "body": "An EU court advocate general's opinion supports Spain's limits on debt cancellation; it is not a final ruling. Spanish law excludes people declared liable for tax debts by a final decision in the previous 10 years unless they paid in full. The case concerns a man liable for over €40,000 in company taxes.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/economia/2026/10/23/ue-avala-espana-endurecer-perdon-deudas-hacienda.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Court suspends Repsol energy levy payments worth over €272.7 million",
+      "body": "Spain's Audiencia Nacional has temporarily suspended Repsol's energy levy payments while its appeal continues. The Tax Agency assessments total over €272.7 million: €152.4 million for 2023 and €120.3 million for 2024. The levy remains in litigation.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://cincodias.elpais.com/companias/2026-10-23/repsol-frena-en-los-tribunales-el-pago-de-mas-de-270-millones-del-gravamen-que-impuso-sanchez-a-las-energeticas.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain monitors shamonda virus after death in France",
+      "body": "Spain's Agriculture Ministry is monitoring shamonda virus after France reported the death of a severely immunocompromised infected person. French authorities have identified no health risk to the general population and are investigating. Spain has confirmed cattle outbreaks in six provinces since September.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/agricultura-asegura-que-espana-esta-alerta-por-virus-shamonda-pero-pide-calma_7052212_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "Which electricity tariff do you use? A) Fixed B) Variable C) Unsure",
+  "variant": "Quiet day in Spain. Then this.",
+  "headline": "Quiet day in Spain. Then this.",
+  "date": "2026-10-23",
+  "engagement_source": "generated",
+  "generated_at": "2026-10-23T06:02:10.617558+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 766,
+    "items_selected_pass1": 15,
+    "fact_sheets_extracted": 15,
+    "items_after_importance_filter": 15,
+    "items_in_digest": 15
+  },
+  "selection_reasons": {
+    "283": "General strike on 11 November over housing: CEOE drops its plan to challenge it beforehand. It affects workers and transport nationwide, and this is a development from yesterday",
+    "743": "Supreme Court ruling on deferred inheritances: their income must be declared immediately in the IRPF return, a tax precedent for heirs",
+    "724": "Government announces exceptional IRPF cuts for farmers in 2027 (10% reduction in net income) plus fuel and fertiliser aids",
+    "134": "Spain releases 4.4 million barrels of diesel and kerosene reserves amid the Middle East shortage, which affects fuel prices",
+    "35": "Reform of the dependency and disability laws takes effect on 23 October, expanding rights and cutting red tape",
+    "153": "Government declares a 'state of alert' over the shamonda virus after the first human death in France, with outbreaks in livestock in six Spanish provinces",
+    "45": "Extreme heat caused more than 5,200 avoidable deaths in Spain in the deadliest summer on record in Europe, with Madrid and Barcelona hit hardest",
+    "131": "Challenges at the Supreme Court over the suspension of the vote of people naturalised under the Ley de Nietos, affecting about 160,000 people",
+    "356": "The new minimum tax on multinationals raised only €46m in its first year, a tax-policy outcome",
+    "723": "The EU Advocate General backs Spain's tougher second-chance debt relief rules for tax debts",
+    "359": "Repsol wins a suspension of over €270m in payments under the windfall levy on energy companies, an ongoing tax dispute",
+    "488": "Renewables push Spanish electricity prices below the EU average; households move from fourth most expensive to twelfth",
+    "27": "Sánchez accepts a head-to-head with Feijóo on 16 November but the parties clash over the venue for the four-way debate ahead of the 29 November election",
+    "739": "Madrid's Assembly gives final approval to the Taxpayer Defence Law, which affects the region's taxpayers",
+    "763": "The supply of homes for sale falls 9% in Q3 2026, a property-market indicator"
+  },
+  "selection_sources": [
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/10/22/ceoe-renuncia-recurrir-convocatoria-huelga-general-11noviembrehuelga-general-2062040.html",
+      "reason": "General strike on 11 November over housing: CEOE drops its plan to challenge it beforehand. It affects workers and transport nationwide, and this is a development from yesterday"
+    },
+    {
+      "url": "https://www.expansion.com/economia/2026/10/22/golpe-supremo-herencias-aplazadas-rendimientos-tributan-inmediato.html",
+      "reason": "Supreme Court ruling on deferred inheritances: their income must be declared immediately in the IRPF return, a tax precedent for heirs"
+    },
+    {
+      "url": "https://www.expansion.com/economia/2026/10/23/guinos-fiscales-campo-mantiene-gran-tractorada-madrid-28-octubre.html",
+      "reason": "Government announces exceptional IRPF cuts for farmers in 2027 (10% reduction in net income) plus fuel and fertiliser aids"
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/las-operadoras-espanolas-deberan-liberar-4-4-millones-barriles-gasoleo-queroseno-debido-escasez-por-crisis-proximo_7051945_0.html",
+      "reason": "Spain releases 4.4 million barrels of diesel and kerosene reserves amid the Middle East shortage, which affects fuel prices"
+    },
+    {
+      "url": "https://www.europapress.es/epsocial/igualdad/noticia-reforma-leyes-discapacidad-dependencia-entrara-manana-vigor-reducir-burocracia-ampliar-derechos-20261022184537.html",
+      "reason": "Reform of the dependency and disability laws takes effect on 23 October, expanding rights and cutting red tape"
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/agricultura-asegura-que-espana-esta-alerta-por-virus-shamonda-pero-pide-calma_7052212_0.html",
+      "reason": "Government declares a 'state of alert' over the shamonda virus after the first human death in France, with outbreaks in livestock in six Spanish provinces"
+    },
+    {
+      "url": "https://www.eldiario.es/sociedad/verano-mortifero-calor-extremo-deja-5-000-muertes-espana_1_13607100.html",
+      "reason": "Extreme heat caused more than 5,200 avoidable deaths in Spain in the deadliest summer on record in Europe, with Madrid and Barcelona hit hardest"
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/tres-nacionalizados-por-ley-nietos-recurren-supremo-suspension-voto-inseguridad-juridica-es-abrumadora_7052012_0.html",
+      "reason": "Challenges at the Supreme Court over the suspension of the vote of people naturalised under the Ley de Nietos, affecting about 160,000 people"
+    },
+    {
+      "url": "https://elpais.com/economia/2026-10-23/el-nuevo-impuesto-complementario-a-las-multinacionales-solo-recauda-46-millones-en-su-primer-ejercicio.html",
+      "reason": "The new minimum tax on multinationals raised only €46m in its first year, a tax-policy outcome"
+    },
+    {
+      "url": "https://www.expansion.com/economia/2026/10/23/ue-avala-espana-endurecer-perdon-deudas-hacienda.html",
+      "reason": "The EU Advocate General backs Spain's tougher second-chance debt relief rules for tax debts"
+    },
+    {
+      "url": "https://cincodias.elpais.com/companias/2026-10-23/repsol-frena-en-los-tribunales-el-pago-de-mas-de-270-millones-del-gravamen-que-impuso-sanchez-a-las-energeticas.html",
+      "reason": "Repsol wins a suspension of over €270m in payments under the windfall levy on energy companies, an ongoing tax dispute"
+    },
+    {
+      "url": "https://www.lavanguardia.com/economia/20261023/11665866/renovables-dejan-precio-luz-espana-debajo-media-ue.html",
+      "reason": "Renewables push Spanish electricity prices below the EU average; households move from fourth most expensive to twelfth"
+    },
+    {
+      "url": "https://www.europapress.es/nacional/noticia-sanchez-acepta-cara-cara-feijoo-quiere-debate-cuatro-26-noviembre-sea-tve-20261022175207.html",
+      "reason": "Sánchez accepts a head-to-head with Feijóo on 16 November but the parties clash over the venue for the four-way debate ahead of the 29 November election"
+    },
+    {
+      "url": "https://www.expansion.com/economia/2026/10/22/luz-verde-ley-ayuso-agiliza-gestiones-tributarias-garantiza-seguridad-juridica.html",
+      "reason": "Madrid's Assembly gives final approval to the Taxpayer Defence Law, which affects the region's taxpayers"
+    },
+    {
+      "url": "https://www.expansion.com/inmobiliario/mercado-inmobiliario/2026/10/22/oferta-vivienda-venta-cae-9-baja-sube.html",
+      "reason": "The supply of homes for sale falls 9% in Q3 2026, a property-market indicator"
+    }
+  ]
+}
