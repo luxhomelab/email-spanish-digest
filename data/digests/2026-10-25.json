@@ -1,0 +1,227 @@
+{
+  "items": [
+    {
+      "title": "Housing tax overhaul awaits parliamentary backing",
+      "body": "Royal Decree-law 29/2026 has been in force since October 8, but Congress's standing committee must still ratify it. It changes IRPF (personal income tax), VAT, property tax (IBI), and municipal capital gains tax (plusvalía municipal).",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/inmobiliario/mercado-inmobiliario/2026/10/24/fiscalidad-vivienda-propio-alquiler.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Madrid home price growth slows as affordability worsens",
+      "body": "Madrid home prices rose 12.9% annually to €4,765 per square metre in Q3, down from 15.5% growth in Q2. Higher interest rates and affordability pressures are cooling demand. Buying now absorbs 66% of average household disposable income, against the 35% considered reasonable.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/inmobiliario/mercado-inmobiliario/2026/10/24/madrid-escalada-desacelera-precio-sigue-maximos.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Pensioners march for inflation-linked rises before election",
+      "body": "Thousands marched in Madrid on October 24, demanding pension rises that match actual inflation and rejecting privatisation. The Government Delegation counted 25,000 people; organisers said 50,000. With inflation at 4.9%, pensions have entered the debate ahead of the November 29 election.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-10-24/manifestacion-pensiones-elecciones-noviembre_4452322/"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Housing general strike called for November 11",
+      "body": "A general strike over housing is planned for November 11. The employers' association will not challenge the call. The action draws on the feminist strikes of 2018 and 2019, which went beyond traditional workplace demands.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ultima-huelga-general-no-2012-8m-reivindica-raiz-feminista-inspira-paro-vivienda_129_13607141.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "EU cash payment ceiling starts in July 2027",
+      "body": "Adopted EU rules set a €10,000 cash cap for goods and services from July 10, 2027. Spain can keep lower limits; private non-business transactions and bank deposits are exempt. Businesses covered by anti-money-laundering rules must identify customers paying €3,000 or more in cash.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/24/union-europea-cambia-normativa-nuevo-limite-pagos-efectivo-entrara-vigor-2027-2061605.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Barcelona rents edge down as supply shrinks",
+      "body": "Rents fell 0.7% annually in Barcelona and Catalonia in September, Fotocasa data show. Rent caps have applied in 302 municipalities since 2024 and have also cut supply and new contracts. Barcelona City Council has asked to extend the caps to commercial premises.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/inmobiliario/mercado-inmobiliario/2026/10/24/barcelona-incertidumbre-alquiler.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Personalised cancer vaccine lowers melanoma relapse risk",
+      "body": "A phase III trial found that a personalised mRNA vaccine plus pembrolizumab cut relapse or death risk by 42% in high-risk melanoma patients after surgery. At two years, 82.2% were recurrence-free, versus 70% with pembrolizumab alone. ESMO's president said it is premature to say how far the technology will reach.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/salud/2026/10/24/6adba5a5e4d4d882258b45a2.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Barcelona home prices reach record as sales fall",
+      "body": "Barcelona home prices reached a record €4,616 per square metre in Q3, up 10.8% annually, Tinsa by Accumin reports. First-half sales fell 2.3% to 8,010. Buyers are taking longer to complete purchases and securing larger discounts, signs of a slowing market.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/inmobiliario/mercado-inmobiliario/2026/10/24/barcelona-dispara-11-pesar-freno-compraventa.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Jet fuel shortages prompt Spain flight cuts",
+      "body": "Airlines have removed 3,111 flights to Spain from November and December schedules amid a jet fuel crisis. Cirium data show the cuts remove 563,254 seats, about 51 flights a day. Travellers face fewer flights in both months.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/25/crisis-queroseno-obliga-las-aerolineas-meter-tijeretazo-sus-vuelos-espana-2062529.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "PP leader pledges tax cuts and more homes",
+      "body": "PP leader Alberto Núñez Feijóo's campaign proposals would cut taxes from 2027, with 0% VAT on basic foods and electricity while inflation persists. Autónomos (self-employed) billing under €85,000 annually would be exempt from VAT. He also pledged one million homes in four years; these are not enacted measures.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/feijoo-promete-rebaja-fiscal-jovenes-familias-autonomos-critica-quien-agita-calle-queremos-francia_7052963_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "IMF figures highlight Spain's public spending growth",
+      "body": "IMF figures for 2018-2027 put Spain's rise in public consumption at 2.7%, against 2.1% for advanced economies. A promised public-sector pay rise of 4.5%, possibly 5%, would add about €10 billion at the higher rate. BBVA Research says meeting fiscal rules is getting harder.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/macroeconomia/2026/10/25/6ada3edbe9cf4a4d178b4595.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Strategist says French debt could delay ECB rate rise",
+      "body": "Natixis IM chief global markets strategist Mabrouk Chetouane says French debt tensions could prompt the ECB to delay a rate rise. He sees no major contagion risk for Spain. His view comes ahead of the ECB meeting on Thursday, October 29, and is one strategist's opinion.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://cincodias.elpais.com/mercados-financieros/2026-10-25/mabrouk-chetouane-natixis-im-el-bce-podria-paralizar-la-reduccion-de-balance-y-retrasar-el-alza-de-tipos-por-la-situacion-en-francia.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "How do you usually pay for everyday shopping? A) Card B) Cash C) Phone",
+  "variant": "Nothing much happened in Spain. Almost nothing.",
+  "headline": "Nothing much happened in Spain. Almost nothing.",
+  "date": "2026-10-25",
+  "engagement_source": "generated",
+  "generated_at": "2026-10-25T06:02:01.831441+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 490,
+    "items_selected_pass1": 12,
+    "fact_sheets_extracted": 12,
+    "items_after_importance_filter": 12,
+    "items_in_digest": 12
+  },
+  "selection_reasons": {
+    "478": "Royal decree-law of 6 October changes IRPF, IVA, IBI and municipal capital gains tax on owner-occupied homes and rentals, directly affecting residents' housing costs and taxes.",
+    "50": "The 11N general strike over housing has been confirmed, and the employers' federation will not challenge it. A national mass mobilisation that affects workers across Spain.",
+    "237": "EU anti-money-laundering rules set a €10,000 cash payment cap from 2027, and member states may impose lower limits. Affects everyday payments and cash-based transactions.",
+    "475": "Madrid home prices rose 12.9% in Q3 to €4,765 per m², with concrete data on the slowdown and price levels. Key market trend for buyers and renters.",
+    "476": "Rent price caps in 302 Catalan municipalities are at the centre of debate, which sets a precedent for rent regulation across Spain.",
+    "87": "Thousands of pensioners marched in Madrid demanding pensions indexed to real CPI, placing pension policy at the centre of the 29-N campaign.",
+    "473": "Barcelona home prices jumped 11% despite slower sales, with concrete district-level data relevant to buyers and investors.",
+    "210": "Airlines are cutting half a million seats in Spain over the kerosene crisis, affecting travel costs and availability for residents and visitors.",
+    "100": "PP leader promises tax cuts for young people, families and autónomos, a concrete platform proposal that could affect residents' income tax if implemented.",
+    "8": "IMF data show Spain leads advanced economies in public spending growth since 2018, relevant to future taxes and fiscal policy.",
+    "10": "Positive news: mRNA cancer vaccines cut skin cancer relapse by 42%, a notable medical advance with concrete data.",
+    "304": "The ECB may delay balance sheet reduction and rate hikes amid French debt tensions, with direct implications for Euribor and variable-rate mortgages in Spain."
+  },
+  "selection_sources": [
+    {
+      "url": "https://www.expansion.com/inmobiliario/mercado-inmobiliario/2026/10/24/fiscalidad-vivienda-propio-alquiler.html",
+      "reason": "Royal decree-law of 6 October changes IRPF, IVA, IBI and municipal capital gains tax on owner-occupied homes and rentals, directly affecting residents' housing costs and taxes."
+    },
+    {
+      "url": "https://www.eldiario.es/economia/ultima-huelga-general-no-2012-8m-reivindica-raiz-feminista-inspira-paro-vivienda_129_13607141.html",
+      "reason": "The 11N general strike over housing has been confirmed, and the employers' federation will not challenge it. A national mass mobilisation that affects workers across Spain."
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/10/24/union-europea-cambia-normativa-nuevo-limite-pagos-efectivo-entrara-vigor-2027-2061605.html",
+      "reason": "EU anti-money-laundering rules set a €10,000 cash payment cap from 2027, and member states may impose lower limits. Affects everyday payments and cash-based transactions."
+    },
+    {
+      "url": "https://www.expansion.com/inmobiliario/mercado-inmobiliario/2026/10/24/madrid-escalada-desacelera-precio-sigue-maximos.html",
+      "reason": "Madrid home prices rose 12.9% in Q3 to €4,765 per m², with concrete data on the slowdown and price levels. Key market trend for buyers and renters."
+    },
+    {
+      "url": "https://www.expansion.com/inmobiliario/mercado-inmobiliario/2026/10/24/barcelona-incertidumbre-alquiler.html",
+      "reason": "Rent price caps in 302 Catalan municipalities are at the centre of debate, which sets a precedent for rent regulation across Spain."
+    },
+    {
+      "url": "https://www.elconfidencial.com/espana/2026-10-24/manifestacion-pensiones-elecciones-noviembre_4452322/",
+      "reason": "Thousands of pensioners marched in Madrid demanding pensions indexed to real CPI, placing pension policy at the centre of the 29-N campaign."
+    },
+    {
+      "url": "https://www.expansion.com/inmobiliario/mercado-inmobiliario/2026/10/24/barcelona-dispara-11-pesar-freno-compraventa.html",
+      "reason": "Barcelona home prices jumped 11% despite slower sales, with concrete district-level data relevant to buyers and investors."
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/10/25/crisis-queroseno-obliga-las-aerolineas-meter-tijeretazo-sus-vuelos-espana-2062529.html",
+      "reason": "Airlines are cutting half a million seats in Spain over the kerosene crisis, affecting travel costs and availability for residents and visitors."
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/feijoo-promete-rebaja-fiscal-jovenes-familias-autonomos-critica-quien-agita-calle-queremos-francia_7052963_0.html",
+      "reason": "PP leader promises tax cuts for young people, families and autónomos, a concrete platform proposal that could affect residents' income tax if implemented."
+    },
+    {
+      "url": "https://www.elmundo.es/economia/macroeconomia/2026/10/25/6ada3edbe9cf4a4d178b4595.html",
+      "reason": "IMF data show Spain leads advanced economies in public spending growth since 2018, relevant to future taxes and fiscal policy."
+    },
+    {
+      "url": "https://www.elmundo.es/salud/2026/10/24/6adba5a5e4d4d882258b45a2.html",
+      "reason": "Positive news: mRNA cancer vaccines cut skin cancer relapse by 42%, a notable medical advance with concrete data."
+    },
+    {
+      "url": "https://cincodias.elpais.com/mercados-financieros/2026-10-25/mabrouk-chetouane-natixis-im-el-bce-podria-paralizar-la-reduccion-de-balance-y-retrasar-el-alza-de-tipos-por-la-situacion-en-francia.html",
+      "reason": "The ECB may delay balance sheet reduction and rate hikes amid French debt tensions, with direct implications for Euribor and variable-rate mortgages in Spain."
+    }
+  ]
+}
