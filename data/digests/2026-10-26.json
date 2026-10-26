@@ -1,0 +1,279 @@
+{
+  "items": [
+    {
+      "title": "Barcelona riots fuel tensions before November election",
+      "body": "Barcelona's October 24 riots led to 128 arrests and 23 looted shops. The unrest has fuelled unfounded accusations between parties ahead of the November 29 general election. Social media groups are calling for further gatherings on October 31.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-10-26/disturbios-barcelona-envena-campana-electoral_4452600/"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "ECB expected to hold rates amid French turmoil",
+      "body": "Economists expect the European Central Bank to keep its benchmark rate at 2.5% at its meeting in the week of October 26. French debt turmoil has tightened financial conditions and is cooling demand. The French 10-year bond has climbed to 5%, a level not seen since the euro began in 2002.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/fed-bce-pausa-tipos-diciembre_7052629_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Food price rises outstrip wage growth in Spain",
+      "body": "Food prices have risen 31.8% since December 2021, compared with 20.7% growth in gross pay per employee. That gap explains why groceries still strain household budgets even as food inflation slows. September's annual food price rise was 2.7%, below overall inflation of 4.9%.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/los-precios-super-suben-un-54-mas-que-los-salarios-desde-2021-por-que-se-siente-que-hacer-compra-es-tan-caro_7052575_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Inflation-linked pay clauses cover 3.64 million workers",
+      "body": "Wage guarantee clauses cover 3.64 million employees, or 19% of workers registered with Social Security. These clauses provide extra pay as prices rise; 1.3 million workers have retroactive protection. Higher energy and fuel prices are also pushing up employers' costs.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/economia/politica/2026/10/25/3-6-millones-trabajadores-blindado-sueldo-escalada-ipc.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Brookfield seeks buyers for 1,550 Madrid rental homes",
+      "body": "Brookfield is seeking to sell about 1,550 Madrid rental homes bought from Blackstone in April. Experts doubt a deal will close amid uncertainty over post-election rules. The government will take the so-called \"decreto Maricarmen\" to Congress's standing committee.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://cincodias.elpais.com/companias/2026-10-26/el-fondo-brookfield-busca-vender-1550-casas-de-alquiler-con-la-duda-del-impacto-del-29-n.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Doctors' strikes spread from October 28",
+      "body": "Unions cancelled the national doctors' strike planned for October 30 after the election call caused the disputed health-worker statute to lapse. Regional strikes continue: the Canary Islands began first, Madrid, Catalonia, and the Valencia region join on October 28, and Andalusia in November. The five regions hold 64% of Spain's population.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/sociedad/2026-10-26/los-sindicatos-medicos-mantienen-paros-en-cinco-comunidades-autonomas-tras-desconvocar-la-huelga-general-en-toda-espana.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Valencia race delivers two Spanish half-marathon records",
+      "body": "Burundi-born Spanish runner Rodrigue Kwizera set a national half-marathon record of 58m 3s in Valencia. It cannot count as a European record because he has not yet received the World Athletics document he needs to compete as a Spaniard. Runner Laura Luengo also set a Spanish record.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/deportes/2026-10-25/valencia-pone-en-orbita-a-rodrigue-kwizera-que-pulveriza-el-record-de-espana-de-medio-maraton.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Montseny bus crash leaves seven seriously injured",
+      "body": "Seven people suffered serious injuries when a bus fell down a 20-metre embankment in Fogars de Montclús on October 25. Firefighters searched overnight for anyone still missing. The BV-5114 is closed between kilometre points 3 and 25, from Fogars de Montclús to Arbúcies.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/catalunya/noticia-pane-eleva-heridos-graves-accidente-autobus-fogars-montclus-barcelona-20261025211734.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Madrid courts reject neighbours' bid to ban coliving",
+      "body": "Two final Madrid court rulings found that a building's ban on tourist flats did not cover coliving room rentals. Neighbours failed to prove noise or nuisance. The judges said banning this type of rental would require a unanimous change to the building's community rules.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/comunidad-vecinos-fracasa-cerrar-coliving-tribunales_1_13587223.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Pension industry pushes for automatic workplace enrolment",
+      "body": "Pension managers and insurers are calling for automatic enrolment in workplace pension plans ahead of the November 29 election. This remains an industry proposal, not a new requirement for workers. Political and social agreement remains distant.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/mercados/2026/10/25/6ade81c0468aeb067f8b4583.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Prosecutors seek embezzlement charge over Zapatero's jewels",
+      "body": "Prosecutors want to charge former prime minister José Luis Rodríguez Zapatero with embezzlement over undeclared jewels initially valued at €1.3 million. His official list of nearly 500 gifts included no jewellery. The investigating judge requested a certified record on October 23.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/zapatero-no-incluyo-ninguna-joya-entre-los-cerca-500-regalos-que-declaro-dejar-moncloa_7053092_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Older workers account for over 1.1 million terminations",
+      "body": "Older workers accounted for more than 1.1 million job terminations in five years, with 56% affecting people aged 45 to 54. The article says companies cut costs by shedding older, better-paid staff and use layoffs to make their workforces younger.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/26/los-despidos-golpean-los-trabajadores-senior-superan-millon-un-lustro-2062743.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Film director José Luis García Sánchez dies aged 85",
+      "body": "Film director José Luis García Sánchez died in Madrid on October 25, aged 85, the Spanish Film Academy confirmed. His nearly 60-year career included two screenwriting Goyas and the Berlin Golden Bear for Las truchas.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/cultura/muere-director-cine-jose-luis-garcia-sanchez-ganador-premios-goya-oso-oro-berlin_1_13613161.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Hospitality tips count as taxable employment income",
+      "body": "Under the IRPF (personal income tax) law, hospitality workers must declare tips as income. Employers distributing shared tips must withhold tax; if they control distribution, tips also count for Social Security contributions. Tips do not affect VAT.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/26/hacienda-obliga-tributar-propinas-hosteleria-como-afectan-irpf-cuando-cotizan-seguridad-social-2062122.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Free app alerts users to immigration appointment slots",
+      "body": "Extranjería App sends free Android and iPhone alerts when immigration appointment slots open across Spanish provinces. It can help with NIE (foreigner identification number) or TIE (foreigner identity card) renewals and other procedures. Users must still book through the official service after receiving an alert.",
+      "sources": [
+        {
+          "name": "Cinco Días",
+          "url": "https://cincodias.elpais.com/smartlife/smartphones/2026-10-25/si-necesitas-renovar-el-nie-o-la-tie-esta-app-te-puede-ahorrar-horas-buscando-cita-en-extranjeria.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    }
+  ],
+  "engagement": "How do you save on groceries? A) Offers B) Own-brand C) Markets",
+  "variant": "Spain had an ordinary day. Mostly.",
+  "headline": "Spain had an ordinary day. Mostly.",
+  "date": "2026-10-26",
+  "engagement_source": "generated",
+  "generated_at": "2026-10-26T07:02:09.613896+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 539,
+    "items_selected_pass1": 15,
+    "fact_sheets_extracted": 15,
+    "items_after_importance_filter": 15,
+    "items_in_digest": 15
+  },
+  "selection_reasons": {
+    "512": "Practical tool for NIE/TIE renewals and appointment searches, directly relevant to residents and foreigners",
+    "226": "Tax change: tips in hostelería are taxable as employment income under IRPF, affecting many workers",
+    "517": "Salary guarantee clauses force an extra 1-point raise for 3.6M workers as inflation hits about 4%",
+    "459": "ECB holding rates matters for Euribor and mortgage costs, with no rate cut expected until December",
+    "458": "Supermarket prices up 54% more than wages since 2021, a major cost-of-living signal with data",
+    "258": "Doctors' strikes continue in five regions and expand to Valencia, Madrid and Catalonia, disrupting healthcare",
+    "207": "Layoffs of workers over 45 exceed one million in five years, a systemic labour-market trend",
+    "91": "Barcelona riots with 128 arrests and looting are a national public-order story shaping the election campaign",
+    "311": "Positive news: Kwizera sets a new Spanish half-marathon record in Valencia",
+    "77": "Death of Goya-winning director José Luis García Sánchez, a nationally known Spanish cultural figure",
+    "41": "Two final Madrid appeal rulings allow a coliving to stay, a legal precedent on rental housing rules",
+    "519": "Push for mandatory private pension plans affects how residents will fund retirement",
+    "120": "Anticorruption prosecutors seek to charge Zapatero with embezzlement over jewels, a major national political story",
+    "32": "Fogars bus crash left 80 injured and 7 seriously, a major accident with national coverage",
+    "488": "Brookfield seeks to sell 1,550 rental homes amid election uncertainty, a notable rental-market development",
+    "473": "Sánchez says the minimum wage (SMI) will rise soon, a labour-policy signal affecting workers"
+  },
+  "selection_sources": [
+    {
+      "url": "https://cincodias.elpais.com/smartlife/smartphones/2026-10-25/si-necesitas-renovar-el-nie-o-la-tie-esta-app-te-puede-ahorrar-horas-buscando-cita-en-extranjeria.html",
+      "reason": "Practical tool for NIE/TIE renewals and appointment searches, directly relevant to residents and foreigners"
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/10/26/hacienda-obliga-tributar-propinas-hosteleria-como-afectan-irpf-cuando-cotizan-seguridad-social-2062122.html",
+      "reason": "Tax change: tips in hostelería are taxable as employment income under IRPF, affecting many workers"
+    },
+    {
+      "url": "https://www.expansion.com/economia/politica/2026/10/25/3-6-millones-trabajadores-blindado-sueldo-escalada-ipc.html",
+      "reason": "Salary guarantee clauses force an extra 1-point raise for 3.6M workers as inflation hits about 4%"
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/fed-bce-pausa-tipos-diciembre_7052629_0.html",
+      "reason": "ECB holding rates matters for Euribor and mortgage costs, with no rate cut expected until December"
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/los-precios-super-suben-un-54-mas-que-los-salarios-desde-2021-por-que-se-siente-que-hacer-compra-es-tan-caro_7052575_0.html",
+      "reason": "Supermarket prices up 54% more than wages since 2021, a major cost-of-living signal with data"
+    },
+    {
+      "url": "https://elpais.com/sociedad/2026-10-26/los-sindicatos-medicos-mantienen-paros-en-cinco-comunidades-autonomas-tras-desconvocar-la-huelga-general-en-toda-espana.html",
+      "reason": "Doctors' strikes continue in five regions and expand to Valencia, Madrid and Catalonia, disrupting healthcare"
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/10/26/los-despidos-golpean-los-trabajadores-senior-superan-millon-un-lustro-2062743.html",
+      "reason": "Layoffs of workers over 45 exceed one million in five years, a systemic labour-market trend"
+    },
+    {
+      "url": "https://www.elconfidencial.com/espana/2026-10-26/disturbios-barcelona-envena-campana-electoral_4452600/",
+      "reason": "Barcelona riots with 128 arrests and looting are a national public-order story shaping the election campaign"
+    },
+    {
+      "url": "https://elpais.com/deportes/2026-10-25/valencia-pone-en-orbita-a-rodrigue-kwizera-que-pulveriza-el-record-de-espana-de-medio-maraton.html",
+      "reason": "Positive news: Kwizera sets a new Spanish half-marathon record in Valencia"
+    },
+    {
+      "url": "https://www.eldiario.es/cultura/muere-director-cine-jose-luis-garcia-sanchez-ganador-premios-goya-oso-oro-berlin_1_13613161.html",
+      "reason": "Death of Goya-winning director José Luis García Sánchez, a nationally known Spanish cultural figure"
+    },
+    {
+      "url": "https://www.eldiario.es/politica/comunidad-vecinos-fracasa-cerrar-coliving-tribunales_1_13587223.html",
+      "reason": "Two final Madrid appeal rulings allow a coliving to stay, a legal precedent on rental housing rules"
+    },
+    {
+      "url": "https://www.expansion.com/mercados/2026/10/25/6ade81c0468aeb067f8b4583.html",
+      "reason": "Push for mandatory private pension plans affects how residents will fund retirement"
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/zapatero-no-incluyo-ninguna-joya-entre-los-cerca-500-regalos-que-declaro-dejar-moncloa_7053092_0.html",
+      "reason": "Anticorruption prosecutors seek to charge Zapatero with embezzlement over jewels, a major national political story"
+    },
+    {
+      "url": "https://www.europapress.es/catalunya/noticia-pane-eleva-heridos-graves-accidente-autobus-fogars-montclus-barcelona-20261025211734.html",
+      "reason": "Fogars bus crash left 80 injured and 7 seriously, a major accident with national coverage"
+    },
+    {
+      "url": "https://cincodias.elpais.com/companias/2026-10-26/el-fondo-brookfield-busca-vender-1550-casas-de-alquiler-con-la-duda-del-impacto-del-29-n.html",
+      "reason": "Brookfield seeks to sell 1,550 rental homes amid election uncertainty, a notable rental-market development"
+    }
+  ]
+}
