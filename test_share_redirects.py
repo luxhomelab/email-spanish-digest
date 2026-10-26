@@ -14,6 +14,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 TARGET = ("https://spanified.com/subscribe?utm_source=newsletter"
           "&utm_medium=email&utm_campaign=share&utm_content={}")
 PAGES = {"wa.html": "whatsapp", "mail.html": "email"}
+NOINDEX_PAGES = ["t.html", *PAGES]
 
 
 class ShareRedirectTests(unittest.TestCase):
@@ -34,7 +35,7 @@ class ShareRedirectTests(unittest.TestCase):
             self.assertIn(f'<a href="{target}"', html, name)
 
     def test_not_indexed(self):
-        for name in PAGES:
+        for name in NOINDEX_PAGES:
             self.assertIn('name="robots" content="noindex, nofollow"', self.read(name))
 
     def test_link_preview_tags(self):
