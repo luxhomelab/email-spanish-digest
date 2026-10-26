@@ -92,6 +92,8 @@ STATIC_COPY = [
     "CNAME",
     "robots.txt",
     "t.html",
+    "wa.html",
+    "mail.html",
     "success.jpg",
     "confirm.jpg",
     "logo.jpg",
