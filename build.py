@@ -91,6 +91,7 @@ STATIC_PAGES = [
 STATIC_COPY = [
     "CNAME",
     "robots.txt",
+    "t.html",
     "success.jpg",
     "confirm.jpg",
     "logo.jpg",
