@@ -1,0 +1,418 @@
+{
+  "date": "2026-10-26",
+  "title": "Barcelona unrest, mortgage rates and Spain's grocery squeeze",
+  "duration": 589,
+  "length": 9430746,
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "Cold open"
+    },
+    {
+      "startTime": 14.992,
+      "title": "Intro"
+    },
+    {
+      "startTime": 39.588,
+      "title": "Barcelona unrest and the election"
+    },
+    {
+      "startTime": 100.921,
+      "title": "Montseny bus crash"
+    },
+    {
+      "startTime": 133.93,
+      "title": "Rates and mortgages"
+    },
+    {
+      "startTime": 173.138,
+      "title": "Why groceries still hurt"
+    },
+    {
+      "startTime": 205.456,
+      "title": "Pay linked to prices"
+    },
+    {
+      "startTime": 241.642,
+      "title": "Madrid rentals and building rules"
+    },
+    {
+      "startTime": 301.613,
+      "title": "Regional doctors' strikes"
+    },
+    {
+      "startTime": 334.849,
+      "title": "Valencia's record-breaking runners"
+    },
+    {
+      "startTime": 379.972,
+      "title": "Older workers losing jobs"
+    },
+    {
+      "startTime": 414.663,
+      "title": "Tips and tax"
+    },
+    {
+      "startTime": 446.123,
+      "title": "In brief"
+    },
+    {
+      "startTime": 543.849,
+      "title": "Outro"
+    }
+  ],
+  "summary": "Barcelona's riots feed election tensions, while regional doctors' strikes continue despite the national cancellation. We look at what the expected ECB hold means for mortgages, grocery budgets, Madrid rental rulings, and a Spanish running record with a paperwork twist.\n\nEnjoying Spain Daily? Support us: https://buymeacoffee.com/spanified",
+  "transcript": {
+    "version": "1.0.0",
+    "segments": [
+      {
+        "speaker": "Dima",
+        "startTime": 1.2,
+        "endTime": 4.502,
+        "body": "A runner beat the European record by three seconds."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 4.502,
+        "endTime": 8.646,
+        "body": "In Valencia, yes. But it won't count as a European record. what?"
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 8.646,
+        "endTime": 11.69,
+        "body": "Why not? He was faster than everyone in Europe."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 11.69,
+        "endTime": 14.992,
+        "body": "One missing document. We'll explain after the news."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 18.992,
+        "endTime": 25.801,
+        "body": "Good morning! It's Monday, the twenty-sixth of October, and this is Spain Daily, from Spanified dot com!"
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 25.801,
+        "endTime": 33.134,
+        "body": "I'm Inna, here with Dima. Today: doctors' strikes, and why slower food inflation hasn't rescued the weekly shop."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 33.134,
+        "endTime": 39.288,
+        "body": "First, Barcelona's riots, and the accusations spreading through the general election campaign."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 42.988,
+        "endTime": 61.042,
+        "body": "Barcelona's riots on October twenty-fourth led to about a hundred and thirty arrests and twenty-three looted shops, El Confidencial reports. Street furniture was damaged too. The unrest has fuelled unfounded accusations between parties before the November twenty-ninth general election."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 61.042,
+        "endTime": 76.318,
+        "body": "The young people involved had no political affiliation, according to El Confidencial. They were summoned through TikTok and WhatsApp groups to raid shops. Further gatherings are being called on social media for Saturday, October thirty-first."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 76.318,
+        "endTime": 81.684,
+        "body": "Dima, who was behind this? Do the politicians' accusations identify who organised it?"
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 81.684,
+        "endTime": 92.036,
+        "body": "Not really. The article says the accusations between parties are unfounded. Feijóo, the PP leader, blamed Sánchez. Colau, the Sumar candidate, blamed the far right."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 92.036,
+        "endTime": 96.202,
+        "body": "Five days of messages to organise it. And a new call for Saturday."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 96.202,
+        "endTime": 100.621,
+        "body": "So the next test is Saturday, with the election about four weeks away."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 103.221,
+        "endTime": 121.834,
+        "body": "Elsewhere in Barcelona province, seven people suffered serious injuries in yesterday's bus crash, Europa Press reports. The bus fell down an embankment at Fogars de Montclús, in the Montseny area. Firefighters searched overnight for anyone still missing. The road between Fogars de Montclús and Arbúcies is closed."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 121.834,
+        "endTime": 123.671,
+        "body": "Could someone still be missing?"
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 123.671,
+        "endTime": 133.63,
+        "body": "Authorities couldn't rule it out, though Catalonia's health minister, Olga Pané, said they believe there is no fatality. The fire service hopes to confirm this morning."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 135.63,
+        "endTime": 139.63,
+        "body": "Inna, why would French debt trouble matter for a mortgage here?"
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 139.63,
+        "endTime": 158.488,
+        "body": "Economists expect the European Central Bank to hold its benchmark rate at two point five percent this week, reports Twenty Minutos. French debt turmoil has tightened financial conditions and cooled demand. European Central Bank decisions influence Euribor, which drives mortgage payments in Spain."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 158.488,
+        "endTime": 166.362,
+        "body": "So no rise expected for borrowers. But French bonds at five percent, a level not seen since the euro began. That's not calm."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 166.362,
+        "endTime": 172.838,
+        "body": "We have a mortgage, Dima, so a hold is good news for us. mhm Though no cut is expected until December."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 174.838,
+        "endTime": 194.244,
+        "body": "Food prices have risen almost thirty-two percent since December twenty twenty-one, reports Twenty Minutos. Gross pay per employee rose about twenty-one percent. Food inflation has slowed, but that accumulated gap still squeezes household budgets. Slower increases haven't undone the earlier rises."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 194.244,
+        "endTime": 198.753,
+        "body": "Oof. That's a big gap. Does slower inflation help at the till at all?"
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 198.753,
+        "endTime": 205.156,
+        "body": "Not much. The gap is already built in. Juices are up the most, then sugar and sweets, then coffee."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 207.156,
+        "endTime": 220.041,
+        "body": "Some employees have protection against rising prices. Expansión reports that wage guarantee clauses cover roughly three point six million workers. These clauses provide extra pay when prices rise."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 220.041,
+        "endTime": 225.301,
+        "body": "Employers also face rising energy and fuel costs, alongside higher labour costs."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 225.301,
+        "endTime": 228.982,
+        "body": "That's nineteen percent of workers. What about the rest?"
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 228.982,
+        "endTime": 241.342,
+        "body": "Those without a clause rely on collective agreements, and new ones are giving above-average raises, the article says. oh really? The minimum wage is also set to rise above inflation again."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 243.342,
+        "endTime": 262.724,
+        "body": "El País reports the Canadian fund Brookfield wants to sell about fifteen hundred and fifty Madrid rental homes bought from Blackstone in April. Experts doubt a deal will close because of uncertainty over rental regulation after the election. The government will take its so-called Maricarmen decree to Congress's standing committee."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 262.724,
+        "endTime": 281.639,
+        "body": "Meanwhile, El Diario reports that final Madrid court rulings let a coliving operation continue renting rooms with shared spaces. A building's tourist-flat ban didn't cover those rentals. Neighbours hadn't proved noise or nuisance. Banning this rental model would require a unanimous change to the building's community rules."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 281.639,
+        "endTime": 287.711,
+        "body": "Hold on. Investors face uncertain rules, but these room rentals can stay. Is that an opening for buyers?"
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 287.711,
+        "endTime": 294.483,
+        "body": "I'd hesitate to call it that while a sale is in doubt. right Neighbours also face a demanding unanimity requirement."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 294.483,
+        "endTime": 301.313,
+        "body": "For people renting rooms, like digital nomads, it's reassuring. But neither ruling has gone to the Supreme Court yet."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 303.913,
+        "endTime": 322.732,
+        "body": "El País reports that regional doctors' strikes continue despite cancellation of the national action planned for October thirtieth. Madrid and Catalonia join on October twenty-eighth, alongside the Valencia region. Action has already begun in the Canary Islands, with Andalusia joining in November. Public healthcare services could be disrupted."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 322.732,
+        "endTime": 326.179,
+        "body": "Why cancel the national strike while keeping the regional ones?"
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 326.179,
+        "endTime": 334.549,
+        "body": "The election call caused the disputed health-worker statute to lapse. Demands over on-call shifts, workload and staffing now target regional departments."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 336.549,
+        "endTime": 341.467,
+        "body": "Back to our runner: why wouldn't a time faster than the European record count?"
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 341.467,
+        "endTime": 362.271,
+        "body": "Burundi-born Spanish runner Rodrigue Kwizera ran Valencia's half-marathon in fifty-eight minutes and three seconds, El País reports. That would beat the European record, but he hasn't yet received the World Athletics document to compete as a Spaniard. So it counts only as a Spanish record. Laura Luengo also set a Spanish record."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 362.271,
+        "endTime": 368.702,
+        "body": "Three seconds faster than the European record. And the paperwork is late? Is this just a technicality?"
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 368.702,
+        "endTime": 379.672,
+        "body": "Mostly bureaucracy, the article says. Slowness at World Athletics, though he has held Spanish nationality for months. And his marathon debut is planned for Boston next April."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 381.672,
+        "endTime": 399.515,
+        "body": "Heraldo reports more than a million job terminations involving older workers over the past five years. Most affected workers aged forty-five to fifty-four. The newspaper attributes the trend to companies cutting higher-paid staff to reduce costs and make their workforces younger."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 399.515,
+        "endTime": 404.868,
+        "body": "That reaches people far from retirement. mhm Why are employers targeting experience?"
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 404.868,
+        "endTime": 414.363,
+        "body": "Cost is one reason. The other, the article says, is that companies link youth with performance. It calls age-based dismissals an emerging phenomenon."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 416.363,
+        "endTime": 433.538,
+        "body": "Heraldo explains that hospitality tips count as employment income for personal income tax, like a salary. When tips are shared among staff, the employer must withhold tax and pay it to the Tax Agency. In the article's example, the withholding is ten percent. Tips don't affect VAT."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 433.538,
+        "endTime": 438.855,
+        "body": "Hmm. A customer's thank-you taxed like a salary. Does it count for Social Security too?"
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 438.855,
+        "endTime": 445.823,
+        "body": "Only if the employer takes part in sharing the tips and controls it. Then they go on the payslip like regular pay."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 447.323,
+        "endTime": 462.551,
+        "body": "Expansión reports pension managers and insurers are calling for automatic enrolment in workplace pension plans, ahead of the November twenty-ninth election. It's an industry proposal for now, and political and social agreement remains distant."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 462.551,
+        "endTime": 465.559,
+        "body": "So would every worker be enrolled automatically?"
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 465.559,
+        "endTime": 473.643,
+        "body": "That's the industry's demand: all workers, as in the UK and Ireland. Any agreement still needs politicians, unions and employers."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 474.643,
+        "endTime": 491.624,
+        "body": "On a judicial matter, prosecutors seek an embezzlement charge against former prime minister José Luis Rodríguez Zapatero, reports Twenty Minutos. The case concerns undeclared jewels. The judge requested a certified gift record on October twenty-third because prosecutors had submitted an unauthenticated duplicate."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 492.624,
+        "endTime": 509.072,
+        "body": "And a farewell from Spanish cinema. Director José Luis García Sánchez died yesterday in Madrid, aged eighty-five, El Diario reports. His work included screenwriting Goyas for Belle Époque and Tirano Banderas, and the Berlin Golden Bear for Las truchas."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 510.072,
+        "endTime": 517.062,
+        "body": "On a lighter note, something practical: does the Extranjería App actually book an immigration appointment for you?"
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 517.062,
+        "endTime": 534.843,
+        "body": "No. Cinco Días reports the free Android and iPhone app alerts users when immigration appointment slots open across provinces. Users must then book through the official service. It covers procedures involving the NIE, the foreigner identification number, or TIE, the foreigner identity card."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 534.843,
+        "endTime": 543.549,
+        "body": "More than a hundred thousand downloads, so a lot of people are clearly struggling to get slots. And you still have to book as fast as you can."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 545.949,
+        "endTime": 554.453,
+        "body": "Your diary: the ECB this week, regional strikes October twenty-eighth, Barcelona gatherings Saturday, and the election November twenty-ninth."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 554.453,
+        "endTime": 562.173,
+        "body": "Get every story by email each morning, free, at spanified dot com. Direct source links let you read more and check for yourself."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 562.173,
+        "endTime": 569.289,
+        "body": "Enjoying our morning conversations? You can support us on Buy Me a Coffee through the link in the episode description."
+      },
+      {
+        "speaker": "Dima",
+        "startTime": 569.289,
+        "endTime": 573.089,
+        "body": "Thanks for listening and spending part of your morning with us."
+      },
+      {
+        "speaker": "Inna",
+        "startTime": 573.089,
+        "endTime": 575.079,
+        "body": "That's Spain Daily. Hasta mañana!"
+      }
+    ]
+  }
+}
