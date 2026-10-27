@@ -21,8 +21,8 @@ Spain holds four kinds of elections: **general** (*generales*), **regional** (*a
 
 At a general election you vote for both chambers of parliament at once, with two different ballot papers:
 
-- **The white ballot** is for the Congress of Deputies (*Congreso de los Diputados*). You choose a whole party list.
-- **The salmon-coloured ballot** is for the Senate (*Senado*). You tick the names of individual people.
+- **The white ballot** is for the [Congress of Deputies](https://www.congreso.es) (*Congreso de los Diputados*). You choose a whole party list.
+- **The salmon-coloured ballot** is for the [Senate](https://www.senado.es) (*Senado*). You tick the names of individual people.
 
 Congress matters most, because Congress is what later picks the prime minister. So that's where we start.
 
@@ -124,7 +124,7 @@ Put all of that together, and you can see who comes out ahead:
 
 Supporters say this delivers stable governments and gives rural Spain a voice. Critics reply that the result is less proportional to the national vote.
 
-The details can be changed through the electoral law, the *Ley Orgánica del Régimen Electoral General* (LOREG). But the province as the electoral district is written into the Constitution itself, in Article 68, so changing that would mean a constitutional reform.
+The details can be changed through the electoral law, the *Ley Orgánica del Régimen Electoral General* ([LOREG](https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672)). But the province as the electoral district is written into the [Constitution](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229) itself, in Article 68, so changing that would mean a constitutional reform.
 
 ## The Senate: a vote for people
 
@@ -149,7 +149,7 @@ The Senate can propose amendments and veto bills, but on laws, Congress almost a
 
 Polling stations are run by a *mesa electoral*: ordinary voters picked by lottery from the electoral roll. If your name comes up, it's very hard to say no; skipping it without a valid reason is an offence.
 
-Votes are counted right there, in public (*escrutinio*), as soon as the polls close, and results come in the same night. If you'll be away on the day, you can vote by post (*voto por correo*) by applying at a post office in advance.
+Votes are counted right there, in public (*escrutinio*), as soon as the polls close, and results come in the same night. If you'll be away on the day, you can vote by post (*voto por correo*) by applying at a post office in advance. The whole process is supervised by the [Central Electoral Board](https://www.juntaelectoralcentral.es/) (*Junta Electoral Central*), which rules on complaints about the campaign and the count.
 
 ::: graphic election-day
 
@@ -170,7 +170,7 @@ So it's not necessarily the party that came first that governs. It's whoever can
 If you live in Spain but aren't Spanish, the answer depends on your passport and the type of election.
 
 - **Spanish citizens aged 18 and over** can vote in every election.
-- **EU citizens** can vote in municipal and European elections, if they've signed up to the electoral roll (*censo electoral*).
+- **EU citizens** can vote in municipal and European elections, if they've signed up to the electoral roll (*censo electoral*), which is kept by the [INE's electoral census office](https://www.ine.es/oficina_censo/).
 - **Citizens of countries with a reciprocity agreement**, such as the UK, Norway, Colombia or Ecuador, can vote in municipal elections after a few years of legal residence, once registered.
 
 General and regional elections, including the 29 November vote, are for Spanish citizens only.
