@@ -360,9 +360,29 @@ def article_inline_md(s):
     return s
 
 
-def article_markdown_to_html(md):
+ARTICLE_FIGURE_RE = re.compile(r'^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)$')
+# "::: graphic <name>" on its own line -> the hand-written HTML partial
+# templates/partials/article-graphics/<article-slug>/<name>.html, inlined as is.
+ARTICLE_GRAPHIC_RE = re.compile(r"^:::\s*graphic\s+([a-z0-9][a-z0-9-]*)$")
+ARTICLE_GRAPHICS_DIR = os.path.join(TEMPLATES_DIR, "partials", "article-graphics")
+
+
+def article_graphic_html(slug, name):
+    """Read an article's HTML graphic partial; warn and return "" if missing."""
+    path = os.path.join(ARTICLE_GRAPHICS_DIR, slug or "", f"{name}.html")
+    try:
+        with open(path, encoding="utf-8") as f:
+            return f.read().strip()
+    except OSError:
+        print(f"WARN: article graphic not found: {path}", file=sys.stderr)
+        return ""
+
+
+def article_markdown_to_html(md, slug=None):
     """Minimal markdown -> HTML (stdlib only): headings, bold, italic,
-    links, unordered lists, paragraphs, hr. Input is escaped first."""
+    links, unordered lists, figures (16:9 images), HTML graphic partials
+    ("::: graphic <name>", looked up under the article's slug), paragraphs,
+    hr. Input is escaped first."""
     lines = md.splitlines()
     out = []
     in_list = False
@@ -417,12 +437,46 @@ def article_markdown_to_html(md):
                 in_list = False
             out.append(f"<blockquote>{article_inline_md(stripped[2:].strip())}</blockquote>")
             continue
+        m = ARTICLE_GRAPHIC_RE.match(stripped)
+        if m:
+            flush_para()
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            graphic = article_graphic_html(slug, m.group(1))
+            if graphic:
+                out.append(graphic)
+            continue
+        m = ARTICLE_FIGURE_RE.match(stripped)
+        if m:
+            # ![alt](src "caption") on its own line -> figure; the image links
+            # to its full-size file so dense infographics can be zoomed on phones.
+            flush_para()
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            alt, src, caption = m.group(1), m.group(2), m.group(3)
+            src_attr = html.escape(src)
+            fig = (
+                f'<figure class="art-figure"><a href="{src_attr}" target="_blank" rel="noopener">'
+                f'<img src="{src_attr}" alt="{html.escape(alt)}" width="1600" height="900" loading="lazy" decoding="async"></a>'
+            )
+            if caption:
+                fig += f"<figcaption>{article_inline_md(caption)}</figcaption>"
+            out.append(fig + "</figure>")
+            continue
         if stripped.startswith("- "):
             flush_para()
             if not in_list:
                 out.append("<ul>")
                 in_list = True
-            out.append(f"<li>{article_inline_md(stripped[2:].strip())}</li>")
+            item = article_inline_md(stripped[2:].strip())
+            # "**term** rest" items render as a two-column grid (main.css);
+            # wrap the rest in one span so inner <em>/<strong> stay inline.
+            m_term = re.match(r"(<strong>.*?</strong>)\s*(.+)$", item)
+            if m_term:
+                item = f"{m_term.group(1)}<span>{m_term.group(2)}</span>"
+            out.append(f"<li>{item}</li>")
             continue
         if stripped.startswith("*") and stripped.endswith("*") and len(stripped) > 2 and stripped[1] != "*":
             # Single-line italic emphasis used as author byline -> keep as paragraph.
@@ -507,7 +561,7 @@ def load_articles():
         slug = meta.get("slug") or filename[:-3]
         title = meta.get("title") or slug.replace("-", " ").capitalize()
         date = meta.get("date") or "2026-10-02"
-        body_html = article_markdown_to_html(body_md)
+        body_html = article_markdown_to_html(body_md, slug)
         words = len(_article_words(body_md))
         reading_time = max(1, round(words / 200))
         url = f"/articles/{slug}"
