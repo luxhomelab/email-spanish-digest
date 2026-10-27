@@ -2836,6 +2836,20 @@ body.page-article .article-body > p:first-child { animation: art-in 0.5s ease-ou
  font-size: 15.5px; line-height: 1.5;
 }
 
+/* Figure: "![alt](src "caption")" on its own line. 16:9 infographic in a
+   hairline cream frame; the image links to the full-size file. */
+.article-body figure.art-figure { margin: 1.8em 0 2em 0; }
+.article-body figure.art-figure a,
+.article-body figure.art-figure a:hover { display: block; background: none; text-decoration: none; }
+.article-body figure.art-figure a::after { display: none; }
+.article-body figure.art-figure img {
+ display: block; width: 100%; height: auto; aspect-ratio: 16 / 9;
+ border: 1px solid #EFE7D8; border-radius: 12px; background-color: #FFFDF8;
+}
+.article-body figure.art-figure figcaption {
+ margin-top: 10px; font-size: 14px; line-height: 1.55; color: #6C7A89;
+}
+
 /* Plain gold-dot list (unchanged signature style) */
 .article-body ul {
  list-style: none; margin: 0 0 1.5em 0; padding: 0;

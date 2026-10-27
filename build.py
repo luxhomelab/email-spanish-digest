@@ -360,9 +360,13 @@ def article_inline_md(s):
     return s
 
 
+ARTICLE_FIGURE_RE = re.compile(r'^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)$')
+
+
 def article_markdown_to_html(md):
     """Minimal markdown -> HTML (stdlib only): headings, bold, italic,
-    links, unordered lists, paragraphs, hr. Input is escaped first."""
+    links, unordered lists, figures (16:9 images), paragraphs, hr.
+    Input is escaped first."""
     lines = md.splitlines()
     out = []
     in_list = False
@@ -416,6 +420,24 @@ def article_markdown_to_html(md):
                 out.append("</ul>")
                 in_list = False
             out.append(f"<blockquote>{article_inline_md(stripped[2:].strip())}</blockquote>")
+            continue
+        m = ARTICLE_FIGURE_RE.match(stripped)
+        if m:
+            # ![alt](src "caption") on its own line -> figure; the image links
+            # to its full-size file so dense infographics can be zoomed on phones.
+            flush_para()
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            alt, src, caption = m.group(1), m.group(2), m.group(3)
+            src_attr = html.escape(src)
+            fig = (
+                f'<figure class="art-figure"><a href="{src_attr}" target="_blank" rel="noopener">'
+                f'<img src="{src_attr}" alt="{html.escape(alt)}" width="1600" height="900" loading="lazy" decoding="async"></a>'
+            )
+            if caption:
+                fig += f"<figcaption>{article_inline_md(caption)}</figcaption>"
+            out.append(fig + "</figure>")
             continue
         if stripped.startswith("- "):
             flush_para()
