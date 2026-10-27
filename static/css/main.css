@@ -3272,6 +3272,353 @@ body.page-article .article-body > p:first-child { animation: art-in 0.5s ease-ou
  .ag-censure-vote { padding: 0 8%; }
 }
 
+/* How Spain Votes graphics. Same .ag- system and institution colours
+   (Congress red, Senate plum); the worked examples add five neutral
+   party colours, letters only, matching the explainer video. */
+.ag-p-a { --c: #2A6F97; --t: #E6F0F6; }
+.ag-p-b { --c: #2F6B57; --t: #E8F2EE; }
+.ag-p-c { --c: #B8870A; --t: #FBF3DC; }
+.ag-p-d { --c: #6B5B95; --t: #EFECF6; }
+.ag-p-e { --c: #7A7268; --t: #F1EFEC; }
+.ag-sr {
+ position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+ overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.article-body .ag-list-names, .article-body .ag-list-rules, .article-body .ag-dh-chips { list-style: none; margin: 0; padding: 0; }
+.article-body .ag-list-rules li::before { content: none; }
+
+/* Two ballots: white Congress paper, salmon Senate paper. */
+.ag-ballots-panel { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.ag-ballot { display: flex; flex-direction: column; gap: 2px; }
+.ag-ballot-paper {
+ display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; padding: 16px 18px 18px 18px;
+ border-radius: 4px; transform: rotate(-1deg);
+ box-shadow: 0 1px 0 rgba(60, 40, 10, 0.06), 0 10px 24px -12px rgba(60, 40, 10, 0.3);
+}
+.ag-ballot-senate .ag-ballot-paper { transform: rotate(1deg); background-color: #F6C9B4; }
+.ag-ballot-congress .ag-ballot-paper { background-color: #FFFFFF; border: 1px solid #EDE6D8; }
+.ag-ballot-head { font-size: 12px; font-weight: 700; letter-spacing: 0.02em; color: #8A7D68; }
+.ag-ballot-senate .ag-ballot-head { color: #8E4A33; }
+.ag-ballot-party { font-family: var(--font-display); font-size: 19px; font-weight: 700; color: #1A1A16; padding-bottom: 6px; border-bottom: 2px solid #1A1A16; }
+.ag-ballot-names { display: flex; flex-direction: column; gap: 3px; font-size: 13.5px; color: #5B6775; }
+.ag-ballot-ticks { display: flex; flex-direction: column; gap: 7px; font-size: 13.5px; color: #5A2E20; }
+.ag-ballot-ticks > span { display: flex; align-items: center; gap: 8px; }
+.ag-ballot-ticks em { width: 10px; height: 10px; border-radius: 3px; background-color: var(--c); flex: none; }
+.ag-tick {
+ position: relative; flex: none; width: 18px; height: 18px; border: 2px solid #8E4A33; border-radius: 3px;
+ background-color: rgba(255, 255, 255, 0.5);
+}
+.ag-tick-on::after {
+ content: ""; position: absolute; left: 4px; top: 0; width: 6px; height: 11px;
+ border-right: 3px solid #7B2D52; border-bottom: 3px solid #7B2D52; transform: rotate(40deg);
+}
+.ag-ballot-colour { font-size: 13.5px; font-weight: 700; color: #8A7D68; }
+.ag-ballot-senate .ag-ballot-colour { color: #C8664A; }
+.ag-ballot-chamber { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: #AA151B; }
+.ag-ballot-senate .ag-ballot-chamber { color: #7B2D52; }
+.ag-ballot-how { font-size: 14.5px; line-height: 1.45; }
+
+/* Districts: 102 + 248 bar, 52-cell grid, seats per district. */
+.ag-seats-bar { display: flex; height: 26px; border-radius: 6px; overflow: hidden; }
+.ag-seats-fixed { width: 29.14%; background-color: #AA151B; }
+.ag-seats-pop { flex: 1; background-color: #E9B200; }
+.ag-seats-legend { display: grid; grid-template-columns: 29.14% minmax(0, 1fr); gap: 16px; margin-top: 8px; font-size: 13.5px; line-height: 1.4; }
+.ag-seats-key b { display: block; font-family: var(--font-display); font-size: 28px; line-height: 1.1; }
+.ag-seats-key-fixed b { color: #AA151B; }
+.ag-seats-key-pop b { color: #8F6A06; }
+.ag-seats-grid-wrap, .ag-seats-cmp { margin-top: 24px; padding-top: 20px; border-top: 1px solid #EFE7D8; }
+.ag-seats-sub { display: block; margin-bottom: 10px; font-family: var(--font-display); font-size: 17px; font-weight: 700; color: #1A1A16; }
+.ag-seats-grid { display: grid; grid-template-columns: repeat(13, minmax(0, 1fr)); gap: 5px; max-width: 460px; }
+.ag-seats-grid i, .ag-seats-grid b { aspect-ratio: 1.3; border-radius: 4px; background-color: #FFFFFF; border: 1.5px solid #D9CFBC; }
+.ag-seats-grid b { background-color: #1F3A5F; border-color: #1F3A5F; }
+.ag-seats-gridnote { display: block; margin-top: 8px; font-size: 14px; }
+.ag-seats-gridnote span { font-weight: 700; color: #1F3A5F; }
+.ag-seats-row { display: grid; grid-template-columns: 120px minmax(0, 1fr) 30px; gap: 12px; align-items: center; margin-bottom: 7px; font-size: 14.5px; }
+.ag-seats-name { font-weight: 600; color: #1A1A16; }
+.ag-seats-track { height: 12px; }
+.ag-seats-track span {
+ display: block; height: 100%; min-width: 6px; width: calc(var(--n) / 37 * 100%); border-radius: 99px;
+ /* one dot per seat: the pitch is track/37 on every row, so dots line up */
+ background-image: radial-gradient(circle closest-side, #AA151B 78%, transparent 84%);
+ background-size: calc(100% / var(--n)) 100%; background-repeat: repeat-x;
+}
+.ag-seats-row b { font-family: var(--font-display); font-size: 18px; color: #AA151B; text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Vote weight: residents per deputy. */
+.ag-weight-row { display: grid; grid-template-columns: 150px minmax(0, 1fr) 92px; gap: 14px; align-items: center; margin-bottom: 14px; }
+.ag-weight-name { display: flex; flex-direction: column; font-family: var(--font-display); font-size: 19px; font-weight: 700; color: #1A1A16; line-height: 1.2; }
+.ag-weight-name i { font-family: inherit; font-size: 13px; font-weight: 400; font-style: normal; color: #6C7A89; }
+.ag-weight-track { height: 22px; background-color: #F3EEE3; border-radius: 6px; }
+.ag-weight-fill { display: block; width: var(--w); height: 100%; border-radius: 6px; background-color: #AA151B; }
+.ag-weight-num { font-size: 16px; font-weight: 700; color: #1A1A16; font-variant-numeric: tabular-nums; text-align: right; }
+.ag-weight-axis { display: block; padding-left: 164px; font-size: 13px; color: #6C7A89; }
+.ag-weight-verdict {
+ display: flex; align-items: center; gap: 18px; margin-top: 18px; padding: 14px 18px;
+ background-color: #FBEDEC; border-radius: 10px; font-size: 15px; line-height: 1.45;
+}
+.ag-weight-x { flex: none; font-family: var(--font-display); font-size: 44px; font-weight: 700; line-height: 1; color: #AA151B; }
+
+/* Closed list: the ballot and the three rules. */
+.ag-list-panel { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: center; }
+.ag-list-paper {
+ display: flex; flex-direction: column; gap: 10px; padding: 18px 20px; background-color: #FFFFFF;
+ border: 1px solid #EDE6D8; border-radius: 4px; box-shadow: 0 10px 24px -14px rgba(60, 40, 10, 0.3);
+}
+.ag-list-party { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 17px; font-weight: 700; color: #1A1A16; }
+.ag-list-party em {
+ display: flex; align-items: center; justify-content: center; flex: none; width: 30px; height: 30px; border-radius: 7px;
+ background-color: var(--c); color: #FFFFFF; font-family: var(--font-body, inherit); font-style: normal; font-size: 16px;
+}
+.article-body .ag-list-names { counter-reset: lst; display: flex; flex-direction: column; gap: 2px; }
+.article-body .ag-list-names li {
+ counter-increment: lst; display: flex; gap: 10px; padding: 5px 10px; border-radius: 6px;
+ font-size: 15px; color: #8A93A0;
+}
+.article-body .ag-list-names li::before { content: counter(lst) "."; width: 18px; color: inherit; font-variant-numeric: tabular-nums; }
+.article-body .ag-list-names li.ag-list-in { background-color: #E6F0F6; color: #1A1A16; font-weight: 600; }
+.article-body .ag-list-names li.ag-list-in::after {
+ content: ""; margin-left: auto; align-self: center; width: 12px; height: 12px; border-radius: 50%; background-color: #2A6F97;
+}
+.ag-list-won { font-size: 14px; line-height: 1.4; color: #2A6F97; }
+.ag-list-won b { color: #2A6F97; }
+.article-body .ag-list-rules { display: flex; flex-direction: column; gap: 16px; }
+.article-body .ag-list-rules li { margin: 0; display: flex; flex-direction: column; gap: 2px; padding-left: 14px; border-left: 3px solid #AA151B; font-size: 14.5px; line-height: 1.45; }
+.ag-list-rule { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: #1A1A16; }
+
+/* d'Hondt: the division table is the centrepiece of the article. */
+.ag-dh-head { display: flex; flex-direction: column; gap: 2px; margin-bottom: 16px; }
+.ag-dh-title { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: #1A1A16; }
+.ag-dh-sub { font-size: 14px; color: #6C7A89; }
+.ag-dh-sub b { color: #AA151B; }
+.ag-dh-scroll { overflow-x: auto; }
+.ag-dh-table { width: 100%; border-collapse: separate; border-spacing: 5px; margin: 0 -5px; font-variant-numeric: tabular-nums; }
+.ag-dh-table thead th {
+ padding: 0 4px 2px 4px; font-family: var(--font-display); font-size: 16px; font-weight: 700;
+ color: #6C7A89; text-align: center; background: none; border: 0;
+}
+.ag-dh-table thead th:first-child, .ag-dh-table thead th.ag-dh-votes { text-align: left; font-family: inherit; font-size: 12.5px; }
+.ag-dh-table thead th:last-child { font-family: inherit; font-size: 12.5px; text-align: left; }
+.ag-dh-table tbody th { width: 34px; padding: 0; border: 0; background: none; }
+.ag-dh-table tbody th em {
+ display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 8px;
+ background-color: var(--c); color: #FFFFFF; font-style: normal; font-weight: 700; font-size: 16px;
+}
+.ag-dh-table td {
+ position: relative; padding: 9px 6px; border: 0; border-radius: 8px; background-color: #FFFFFF;
+ box-shadow: inset 0 0 0 1px #EFE7D8; text-align: center; font-size: 15px; font-weight: 600; color: #3C4858; white-space: nowrap;
+}
+.ag-dh-table td.ag-dh-votes {
+ text-align: left; background: none; box-shadow: none; padding-left: 2px; font-size: 15.5px; font-weight: 700; color: #1A1A16;
+}
+.ag-dh-votes i { display: block; font-size: 12.5px; font-weight: 500; font-style: normal; color: #6C7A89; }
+.ag-dh-table td.ag-dh-win { background-color: var(--c); color: #FFFFFF; box-shadow: none; font-weight: 700; }
+.ag-dh-win sup {
+ position: absolute; top: -7px; right: -5px; display: flex; align-items: center; justify-content: center;
+ width: 20px; height: 20px; border-radius: 50%; background-color: #1A1A16; color: #FFFFFF;
+ font-size: 11.5px; font-weight: 700; line-height: 1;
+}
+.ag-dh-table td.ag-dh-last, .ag-dh-table td.ag-dh-near { outline: 2.5px solid #AA151B; outline-offset: 2px; }
+.ag-dh-table td.ag-dh-best { box-shadow: inset 0 0 0 2px var(--c); color: var(--c); font-weight: 700; }
+.ag-dh-table td.ag-dh-seats {
+ background: none; box-shadow: none; text-align: left; padding-left: 4px;
+ font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--c);
+}
+.ag-dh-seats span { display: inline-flex; gap: 3px; margin-right: 6px; vertical-align: 2px; }
+.ag-dh-seats span i { width: 11px; height: 11px; border-radius: 50%; background-color: var(--c); }
+.ag-dh-table td.ag-dh-zero { color: #AA151B; }
+.ag-dh-out td.ag-dh-votes { color: #8A93A0; }
+.ag-dh-out s { text-decoration-color: #AA151B; text-decoration-thickness: 2px; }
+.ag-dh-table td.ag-dh-outnote {
+ background: repeating-linear-gradient(-45deg, #F6F2EA 0 6px, #FFFDF8 6px 12px); box-shadow: inset 0 0 0 1px #EFE7D8;
+ font-size: 13.5px; font-weight: 600; color: #6C7A89; white-space: normal;
+}
+/* the E note has a 3-column twin for phones, where ÷ 4 and ÷ 5 are hidden */
+.ag-dh-table td.ag-dh-mob { display: none; }
+/* phones show quotients in thousands (42, 15.5) so every cell fits at 320px */
+.ag-dh-k, .ag-dh-unit { display: none; }
+.ag-dh-order { margin-top: 18px; padding-top: 16px; border-top: 1px solid #EFE7D8; }
+.ag-dh-order-label { display: block; margin-bottom: 8px; font-size: 13.5px; font-weight: 700; color: #6C7A89; }
+.article-body .ag-dh-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.article-body .ag-dh-chips li {
+ display: flex; align-items: center; gap: 7px; padding: 4px 11px 4px 4px; border-radius: 99px;
+ background-color: var(--t); color: var(--c); font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums;
+}
+.ag-dh-chips b {
+ display: flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%;
+ background-color: var(--c); color: #FFFFFF; font-size: 12px;
+}
+.ag-dh-cut { display: block; margin-top: 12px; font-size: 14.5px; line-height: 1.5; }
+.ag-dh-cut b { color: #AA151B; }
+
+/* Effective threshold by district size. */
+.ag-thr-plot {
+ position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px;
+ height: 220px; align-items: end; border-bottom: 2px solid #1A1A16;
+}
+.ag-thr-col { display: flex; flex-direction: column; justify-content: flex-end; height: 100%; }
+.ag-thr-bar {
+ position: relative; display: block; height: calc(var(--v) / 28 * 100%);
+ background-color: #AA151B; border-radius: 6px 6px 0 0;
+}
+.ag-thr-big .ag-thr-bar { background-color: #1A1A16; }
+.ag-thr-bar b {
+ position: absolute; left: 0; right: 0; bottom: 100%; padding-bottom: 4px; text-align: center;
+ font-family: var(--font-display); font-size: 22px; font-weight: 700; color: #AA151B; white-space: nowrap;
+}
+.ag-thr-big .ag-thr-bar b { color: #1A1A16; }
+.ag-thr-legal {
+ position: absolute; left: 0; right: 0; bottom: calc(3 / 28 * 100%); z-index: 1; border-top: 2px dashed #6C7A89;
+}
+.ag-thr-key { display: flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 13px; color: #6C7A89; }
+.ag-thr-key i { width: 26px; border-top: 2px dashed #6C7A89; }
+.ag-thr-labels { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 8px; text-align: center; font-size: 13px; line-height: 1.35; color: #6C7A89; }
+.ag-thr-labels b { display: block; font-size: 14.5px; color: #1A1A16; }
+
+/* Blank votes: the same party in and out, and the three ways not to back a party. */
+.ag-blank-cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.ag-blank-case { display: flex; flex-direction: column; gap: 4px; }
+.ag-blank-when { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: #1A1A16; }
+.ag-blank-sum { font-size: 14px; }
+.ag-blank-meter { position: relative; height: 26px; margin-top: 10px; background-color: #F3EEE3; border-radius: 6px; }
+.ag-blank-fill { position: absolute; left: 0; top: 0; bottom: 0; width: var(--w); border-radius: 6px 0 0 6px; background-color: #7A7268; }
+.ag-blank-bar { position: absolute; top: -6px; bottom: -6px; left: var(--x); width: 3px; margin-left: -1.5px; border-radius: 2px; background-color: #1A1A16; }
+.ag-blank-axis { display: flex; justify-content: space-between; font-size: 12px; color: #8A93A0; font-variant-numeric: tabular-nums; }
+.ag-blank-res { margin-top: 4px; font-size: 14.5px; font-weight: 600; }
+.ag-blank-in b { color: #2F6B57; }
+.ag-blank-outr b { color: #AA151B; }
+.ag-blank-kinds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 22px; padding-top: 18px; border-top: 1px solid #EFE7D8; }
+.ag-blank-kind {
+ display: flex; flex-direction: column; gap: 1px; padding: 12px 14px; border-radius: 10px;
+ background-color: #F6F2EA; font-size: 13.5px; line-height: 1.4;
+}
+.ag-blank-valid { background-color: #FFFFFF; box-shadow: inset 0 0 0 2px #1A1A16; }
+.ag-blank-name { font-size: 15px; font-weight: 700; color: #1A1A16; }
+.ag-blank-kind i { font-size: 13.5px; color: #6C7A89; }
+.ag-blank-what { margin-top: 6px; }
+
+/* Senate: four per province, the 3-1 split, and the totals. */
+.ag-sen-panel { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 24px 28px; }
+.ag-sen-h { display: block; margin-bottom: 12px; font-family: var(--font-display); font-size: 17px; font-weight: 700; color: #1A1A16; }
+.ag-sen-prov { display: grid; grid-template-columns: 70px minmax(0, 1fr) auto; gap: 12px; align-items: center; margin-bottom: 10px; }
+.ag-sen-name { font-weight: 700; color: #1A1A16; }
+.ag-sen-pop { height: 8px; border-radius: 99px; background-color: #F3EEE3; }
+.ag-sen-pop span { display: block; width: var(--w); min-width: 5px; height: 100%; border-radius: 99px; background-color: #8A93A0; }
+.ag-sen-four { display: flex; gap: 4px; }
+.ag-sen-four i, .ag-sen-result i { width: 16px; height: 16px; border-radius: 50%; background-color: #7B2D52; }
+.ag-sen-poplabel { display: block; font-size: 12.5px; color: #8A93A0; }
+.ag-sen-special { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.ag-sen-special span { padding: 4px 11px; border-radius: 99px; background-color: #F6ECF1; font-size: 13px; line-height: 1.4; }
+.ag-sen-special b { color: #7B2D52; white-space: nowrap; }
+.ag-sen-split { display: flex; flex-direction: column; }
+.ag-sen-result { display: flex; gap: 8px; }
+.ag-sen-result i { width: 30px; height: 30px; background-color: var(--c); }
+.ag-sen-resnote { margin-top: 8px; font-size: 15px; }
+.ag-sen-totals { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 12px; padding-top: 18px; border-top: 1px solid #EFE7D8; }
+.ag-sen-total { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-radius: 10px; background-color: #F6ECF1; font-size: 14px; line-height: 1.4; }
+.ag-sen-total b { font-family: var(--font-display); font-size: 36px; line-height: 1; color: #7B2D52; white-space: nowrap; }
+.ag-sen-reg { background-color: #FBF3DC; }
+.ag-sen-reg b { color: #8F6A06; }
+
+/* Election day: a 17-day track from campaign start to polling day. */
+.ag-day-track { display: grid; grid-template-columns: repeat(17, minmax(0, 1fr)); grid-template-rows: 30px 30px; gap: 4px 2px; }
+.ag-day-camp, .ag-day-polls {
+ display: flex; align-items: center; min-width: 0; padding: 0 10px; border-radius: 6px;
+ font-size: 13px; font-weight: 700; white-space: nowrap; overflow: hidden;
+}
+.ag-day-camp { grid-column: 1 / 16; grid-row: 1; background-color: #FBEDEC; color: #AA151B; box-shadow: inset 3px 0 0 #AA151B; }
+.ag-day-polls { grid-column: 12 / 17; grid-row: 2; background-color: #EEF0F2; color: #5B6775; }
+.ag-day-refl { grid-column: 16; grid-row: 1; border-radius: 6px; background: repeating-linear-gradient(-45deg, #E9DFC9 0 4px, #F6F1E6 4px 8px); }
+.ag-day-vote { grid-column: 17; grid-row: 1 / 3; border-radius: 6px; background-color: #1A1A16; }
+.ag-day-ticks { position: relative; height: 38px; margin-top: 8px; font-size: 13px; line-height: 1.3; }
+.ag-day-ticks > span { position: absolute; top: 0; display: flex; flex-direction: column; }
+.ag-day-ticks i { font-size: 12.5px; color: #6C7A89; }
+.ag-day-t0 { left: 0; color: #6C7A89; }
+.ag-day-t1 { right: calc(100% / 17); text-align: right; font-weight: 700; color: #1A1A16; }
+.ag-day-t2 { right: 0; text-align: right; font-weight: 700; color: #1A1A16; }
+.ag-day-t1 { padding-right: 10px; }
+.ag-day-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 20px; }
+.ag-day-card { display: flex; flex-direction: column; gap: 1px; padding: 12px 14px; border-radius: 10px; background-color: #F6F2EA; font-size: 13.5px; line-height: 1.4; }
+.ag-day-card:first-child { background-color: #1A1A16; color: #E9E4D8; }
+.ag-day-big { font-family: var(--font-display); font-size: 23px; font-weight: 700; line-height: 1.15; color: #FFFFFF; }
+.ag-day-name { font-size: 15px; font-weight: 700; color: #1A1A16; }
+.ag-day-card i { color: #6C7A89; }
+.ag-day-what { margin-top: 5px; }
+
+/* Who can vote: a yes/no matrix; on phones each row becomes a 4-chip card. */
+.ag-who-table small { display: none; }
+.ag-who-table { width: 100%; border-collapse: separate; border-spacing: 4px; margin: 0 -4px; }
+.ag-who-table th, .ag-who-table td { border: 0; background: none; }
+.ag-who-table thead th { padding: 0 2px 4px 2px; font-size: 13.5px; font-weight: 700; color: #6C7A89; text-align: center; }
+.ag-who-table tbody th { padding: 8px 10px 8px 0; text-align: left; font-size: 15px; font-weight: 700; color: #1A1A16; line-height: 1.3; }
+.ag-who-table tbody th i { display: block; font-size: 12.5px; font-weight: 400; font-style: normal; color: #6C7A89; }
+.ag-who-table td { width: 15%; padding: 0; border-radius: 8px; text-align: center; font-size: 13.5px; font-weight: 700; }
+.ag-who-table td span { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; }
+.ag-who-yes { background-color: #E8F2EE; color: #2F6B57; }
+.ag-who-yes span::before { content: ""; width: 6px; height: 11px; margin-top: -3px; border-right: 2.5px solid currentColor; border-bottom: 2.5px solid currentColor; transform: rotate(40deg); }
+.ag-who-no { background-color: #F6F2EA; color: #A49A88; }
+
+@media (max-width: 640px) {
+ .ag-ballots-panel { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+ .ag-ballot-paper { max-width: 340px; }
+ .ag-list-panel { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+ .ag-weight-row { grid-template-columns: minmax(0, 1fr) 84px; gap: 4px 12px; }
+ .ag-weight-name { grid-column: 1 / -1; flex-direction: row; align-items: baseline; gap: 8px; }
+ .ag-weight-axis { padding-left: 0; }
+ .ag-thr-bar b { font-size: 18px; }
+ .ag-blank-cases { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+ .ag-sen-panel { grid-template-columns: minmax(0, 1fr); }
+ .ag-day-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .ag-dh-table td { padding: 8px 4px; font-size: 14px; }
+}
+@media (max-width: 520px) {
+ .ag-seats-row { grid-template-columns: 96px minmax(0, 1fr) 26px; gap: 8px; font-size: 13.5px; }
+ .ag-seats-legend { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+ .ag-blank-kinds { grid-template-columns: minmax(0, 1fr); }
+ .ag-sen-totals { grid-template-columns: minmax(0, 1fr); }
+ .ag-thr-plot, .ag-thr-labels { gap: 8px; }
+ .ag-thr-labels { font-size: 12px; }
+ .ag-thr-labels b { font-size: 13px; }
+ .ag-thr-bar b { font-size: 16px; }
+ /* ÷ 1 already shows each party's votes, so phones drop the votes column and ÷ 4, ÷ 5 */
+ .ag-dh-wide, .ag-dh-table .ag-dh-votes, .ag-dh-table td.ag-dh-desk { display: none; }
+ .ag-dh-table td.ag-dh-mob { display: table-cell; }
+ .ag-dh-table { table-layout: fixed; border-spacing: 6px; margin: 0 -6px; }
+ .ag-dh-table thead th:first-child { width: 34px; }
+ .ag-dh-table thead th:last-child { width: 44px; }
+ .ag-dh-table td { padding: 10px 2px; font-size: 17px; }
+ .ag-dh-n { display: none; }
+ .ag-dh-k { display: inline; }
+ .ag-dh-unit { display: block; margin: -4px 0 6px 0; font-size: 13px; font-weight: 700; color: #6C7A89; }
+ .ag-dh-table td.ag-dh-outnote { padding: 8px 6px; font-size: 12.5px; line-height: 1.3; }
+ .ag-dh-table td.ag-dh-seats { padding-left: 2px; font-size: 19px; }
+ /* rings and rank badges stay inside the cell so they never touch a neighbour */
+ .ag-dh-table td.ag-dh-last, .ag-dh-table td.ag-dh-near { outline: 0; box-shadow: inset 0 0 0 3px #AA151B; }
+ .ag-dh-win sup { top: 3px; right: 3px; width: 15px; height: 15px; font-size: 10px; background-color: rgba(26, 26, 22, 0.55); }
+ .ag-dh-table td.ag-dh-win { padding-top: 14px; padding-bottom: 6px; }
+ .ag-who-table, .ag-who-table tbody { display: block; margin: 0; }
+ .ag-who-table thead { display: none; }
+ .ag-who-table tr { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; margin-bottom: 14px; }
+ .ag-who-table tr:last-child { margin-bottom: 0; }
+ .ag-who-table tbody th { grid-column: 1 / -1; padding: 0 0 2px 0; }
+ .ag-who-table td { width: auto; }
+ .ag-who-table small { display: block; padding-top: 7px; font-size: 11.5px; font-weight: 600; }
+ .ag-who-table td span { min-height: 26px; font-size: 0; }
+ .ag-who-no span::before { content: "\2014"; font-size: 13px; }
+ .ag-day-camp, .ag-day-polls { font-size: 12px; padding: 0 6px; }
+ /* the polls bar is too short for its label: hang the label to its left */
+ .ag-day-polls { position: relative; overflow: visible; }
+ .ag-day-polls span { position: absolute; right: calc(100% + 8px); }
+ .ag-day-ticks { height: 64px; }
+ .ag-day-ticks > .ag-day-t1 { top: 22px; right: 0; padding-right: 0; flex-direction: row; gap: 6px; }
+ .ag-day-ticks > .ag-day-t2 { flex-direction: row; gap: 6px; }
+}
+@media (max-width: 400px) {
+ .ag-day-cards { grid-template-columns: minmax(0, 1fr); }
+ .ag-dh-table tbody th em { width: 30px; height: 30px; font-size: 14px; }
+ .ag-dh-table thead th:first-child { width: 30px; }
+ .ag-dh-seats span { display: none; }
+}
+
 /* Plain gold-dot list (unchanged signature style) */
 .article-body ul {
  list-style: none; margin: 0 0 1.5em 0; padding: 0;

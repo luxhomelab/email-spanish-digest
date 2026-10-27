@@ -55,11 +55,11 @@ Spain's parliament, the **Cortes Generales**, has two chambers: the Congress of 
 
 > KEY: Absolute majority **176** the number to remember
 
-> KEY: Senate seats **≈265** 208 elected + ≈57 regional
+> KEY: Senate seats **≈266** 209 elected + ≈57 regional
 
 The **Congress of Deputies** (*Congreso de los Diputados*) has 350 seats, elected every four years by proportional representation, province by province. The number to remember is **176**: an absolute majority. It comes up again and again — to elect a prime minister in the first vote, and to remove one.
 
-The **Senate** is a mix: **208 senators are elected directly** (generally four per province), and **around 57 more are appointed by the regional parliaments**, so the exact size shifts slightly with population.
+The **Senate** is a mix: **209 senators are elected directly** (generally four per province, and from the 2026 election one for Formentera), and **around 57 more are appointed by the regional parliaments**, so the exact size shifts slightly with population.
 
 Both chambers pass laws, but Congress always has the final word.
 
@@ -92,6 +92,8 @@ The process runs in five steps:
 - **5. Prime minister:** the King formally appoints the winner, who then picks the ministers.
 
 If no candidate wins within **two months** of the first investiture vote, parliament is automatically dissolved and a new election is called. That's what happened in 2016 and again in 2019.
+
+How steps 1 and 2 actually work, from the 52 electoral districts to the d'Hondt formula and why a blank vote can knock a small party out, is explained step by step in our guide to [how Spain votes](/articles/how-spain-votes).
 
 ::: graphic investiture
 
@@ -171,7 +173,7 @@ That is why your doctor's appointment depends on your region's health service, w
 
 ## How often Spaniards vote
 
-- **General elections:** at least every four years, and sometimes early — like the snap election called for 29 November 2026.
+- **General elections:** at least every four years, and sometimes early — like the snap election called for 29 November 2026. See [how Spain votes](/articles/how-spain-votes) for how those votes become seats.
 - **Regional elections:** every four years; dates vary by region.
 - **Municipal elections:** every four years, in May, on the same day across Spain.
 - **European elections:** every five years, for 61 MEPs.
@@ -198,7 +200,7 @@ The King is head of state: he signs laws, calls elections, nominates the candida
 
 ### What is the difference between the Congress and the Senate?
 
-Congress (350 seats) chooses the prime minister, can remove the Government with a motion of censure and has the final word on laws. The Senate (208 elected plus about 57 appointed by regions) can amend or veto bills, but Congress can override it. The Senate's key own power is approving Article 155 interventions in a region.
+Congress (350 seats) chooses the prime minister, can remove the Government with a motion of censure and has the final word on laws. The Senate (209 elected plus about 57 appointed by regions) can amend or veto bills, but Congress can override it. The Senate's key own power is approving Article 155 interventions in a region.
 
 ### How can a Spanish government be removed?
 
