@@ -2,11 +2,11 @@
 slug: how-spain-is-governed
 title: How Spain Is Governed: King, Parliament and Prime Minister Explained
 meta_title: How Spain Is Governed: King, Cortes and PM Explained (2026)
-meta_description: A visual guide to Spain's political system: the 1978 Constitution, the King, Congress vs Senate, how the prime minister is chosen, the courts and the regions.
+meta_description: A visual guide to Spain's political system: the King, Congress vs Senate, how laws and decree-laws are made, how the PM is chosen, the courts and the regions.
 date: 2026-10-27
 author: Dmytro Shvechikov
 excerpt: Who actually runs Spain — the King, the prime minister or parliament? A visual guide to who gets elected, who picks whom, and how they keep each other in check.
-story_keywords: investiture, motion of censure, censure motion, confidence vote, Constitutional Court, Article 155, CGPJ, General Council of the Judiciary, government formation
+story_keywords: decree-law, real decreto-ley, Diputación Permanente, BOE, dissolution, bill, investiture, motion of censure, censure motion, confidence vote, Constitutional Court, Article 155, CGPJ, General Council of the Judiciary, government formation
 story_categories: politics, visa
 image_alt: Diagram of Spain's checks and balances between citizens, the Cortes, the Government, the CGPJ and the Constitutional Court
 ---
@@ -79,6 +79,24 @@ Why have two chambers at all? Because they do very different jobs.
 
 Both chambers are elected on the same day, for the same four years — but only Congress decides who governs.
 
+## How a law is made, from bill to BOE
+
+Under [Article 87](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a87) of the Constitution, five kinds of actor can put a bill before parliament:
+
+- **The Government:** a *proyecto de ley*, approved by the Council of Ministers. Most laws start here.
+- **Congress:** a *proposición de ley*, signed by a parliamentary group or by 15 deputies.
+- **The Senate:** also a *proposición*, from a group or 25 senators. It still goes to Congress first.
+- **Regional parliaments:** they can send a bill to Congress, or ask the Government to draft one.
+- **Citizens:** 500,000 verified signatures, the *iniciativa legislativa popular*. It can't be used for organic laws, taxes, international affairs or pardons.
+
+**Does a law have to pass both chambers?** Yes. Every law goes through both, and always in the same order: Congress first, then the Senate. Under [Article 90](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a90), the Senate has **two months** (20 days for a bill declared urgent) to pass it, amend it by simple majority, or veto it by absolute majority. Then it goes back to Congress, which votes on each of the Senate's amendments separately. An amendment stays in the text if it wins a simple majority ([Congress Rules, Article 123](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196#a123)). A veto on an ordinary law can be overturned straight away with 176 votes, or by a simple majority once two months have passed. A veto on an organic law always needs 176. So the Senate can slow a law down, but it can't kill it.
+
+Some laws need more votes. **Organic laws** (*leyes orgánicas*), which cover fundamental rights, the regions' statutes of autonomy and the electoral system, need **176 votes** in Congress in a final vote on the whole text ([Article 81](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a81)). If the Senate has amended one, the final text goes to that 176-vote test again ([Congress Rules, Article 132](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196#a132)).
+
+**When does it become law?** Once the Cortes have passed it, the King has **15 days** to sign it (*sancionar*) and must order it published straight away ([Article 91](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a91)). Publication is in the [Boletín Oficial del Estado](https://www.boe.es) (BOE), the state's official gazette. Unless the law sets its own date, it enters into force **20 days after publication** ([Civil Code, Article 2](https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#a2)). In practice, many laws set their own date, often the day after publication.
+
+> TIP: A law's name tells you its history. *Ley 12/2023, de 24 de mayo, por el derecho a la vivienda* is the 12th law of 2023, signed on 24 May. On boe.es every law has a "consolidated" version with all later amendments already worked in, like the [housing law](https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203).
+
 ::: graphic bill-path
 
 ## How the prime minister is chosen
@@ -103,7 +121,7 @@ How steps 1 and 2 actually work, from the 52 electoral districts to the d'Hondt 
 
 ## The Government, kept in check
 
-The Government is the **Council of Ministers** ([*Consejo de Ministros*](https://www.lamoncloa.gob.es)): the prime minister, any deputy prime ministers and the ministers. The PM appoints and dismisses ministers freely. The Government directs domestic and foreign policy, defence and public administration, drafts the budget, and can pass emergency **decree-laws** — which Congress must approve within **30 days** or they lapse.
+The Government is the **Council of Ministers** ([*Consejo de Ministros*](https://www.lamoncloa.gob.es)): the prime minister, any deputy prime ministers and the ministers. The PM appoints and dismisses ministers freely. The Government directs domestic and foreign policy, defence and public administration, drafts the budget, and can pass emergency **decree-laws** — which Congress must approve within **30 days** or they lapse (more on those below).
 
 Congress holds it to account in three ways:
 
@@ -114,6 +132,38 @@ Congress holds it to account in three ways:
 And it works both ways: the prime minister can ask the King to **dissolve parliament early** and call a snap election.
 
 ::: graphic motion-of-censure
+
+## Decree-laws: the Government's shortcut
+
+Going through both chambers takes months. For emergencies, [Article 86](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a86) lets the Government skip the queue. "In case of extraordinary and urgent need", the Council of Ministers can approve a **royal decree-law** (*real decreto-ley*). It has the force of law as soon as it takes effect, usually the day after it appears in the BOE.
+
+There are two limits:
+
+- **What it can touch:** not the basic institutions of the state, the rights and duties in Title I of the Constitution, the regions' powers or electoral law.
+- **How long it lasts on its own:** Congress must vote on it within **30 days** of its promulgation. It is a single yes-or-no vote on the whole text, with no amendments. Yes is a *convalidación*. No is a *derogación*, and the decree stops applying from that day. The Senate takes no part.
+
+A validated decree stays in force. Congress can also vote to process it as an ordinary bill afterwards, which opens it up to amendments.
+
+**And if parliament has been dissolved?** Decree-laws don't stop. Once the chambers are dissolved, every bill still in progress lapses ([Congress Rules, Article 207](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196#a207)). Decree-laws are the exception. They go to the **Diputación Permanente** ([Article 78](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a78)), a standing committee that keeps parliament's emergency powers alive until the new Cortes meet. Its seats are shared out among the groups in proportion to their size: at least 21 members, and its exact size is set by each legislature (Congress's committee had [69 members](https://www.congreso.es/es/diputacion-permanente) in 2026). The Government, meanwhile, keeps its full powers until election day: it only becomes a caretaker government (*en funciones*) once the election has been held ([Article 101](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a101)).
+
+::: graphic decree-law
+
+## A real example: dissolve, then decree again
+
+These rules can be combined in ways that aren't obvious when you read them one by one. In autumn 2026 a government used them to bring back measures that Congress had just voted down. The dates and numbers below come from that case, but the mechanism works the same way whenever parliament is dissolved.
+
+On 29 September 2026, after an 87-year-old woman was evicted in Madrid and protests spread, the Government approved two housing decree-laws ([Royal Decree-law 26/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20266) and [27/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20385)). They suspended evictions of vulnerable tenants, extended expiring rental contracts and limited investment funds' purchases of homes. On 2 October Congress [threw both out](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20526), by [178 votes to 172](https://www.europapress.es/economia/construccion-y-vivienda-00342/noticia-congreso-rechaza-decreto-medidas-vivienda-votos-pp-vox-junts-upn-20261002153000.html), with PP, Vox, Junts and UPN voting no. What followed was legal, and every step was published in the BOE:
+
+- **Dissolution:** on 5 October, at an extraordinary Council of Ministers, Pedro Sánchez proposed dissolving the Cortes. Under [Article 115](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a115) that is the prime minister's call alone, once the cabinet has deliberated. The King signed [Royal Decree 806/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742), which set the election for 29 November.
+- **New decrees:** the next day, the Council of Ministers approved two new housing decree-laws covering largely the same ground, with some changes ([28/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20822) and [29/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20823)).
+- **A different room:** with Congress dissolved, the new decrees no longer went to the full chamber of 350 but to the Diputación Permanente, which then had 69 members. Seats are rounded group by group, and that shifted the balance. The groups that had voted no held 34 seats (PP 27, Vox 6, Junts 1). The groups that had voted yes held 35. UPN had no seat at all.
+- **Staggered start dates:** 29/2026 took effect at once, on 8 October. 28/2026, which made landlords who won't renew a lease pay compensation, was set to start only on 15 November. According to [Heraldo](https://www.heraldo.es/noticias/economia/2026/10/15/oficial-nuevo-decreto-contempla-indemnizaciones-inquilinos-casero-no-renueva-alquiler-2057837.html), the delay was meant to let the committee vote before it applied to anyone.
+
+Is it allowed to bring back a decree that Congress has just rejected? Nothing in the Constitution forbids it. The preamble of the new decree lists earlier cases where a government did the same, going back to 2006. Critics see it as a way around a parliamentary defeat. In this case, Andalusia's regional government announced it would [challenge the decrees](https://www.eldiario.es/andalucia/gobierno-moreno-recurrira-constitucional-decreto-maricarmen-suspende-desahucios-personas-vulnerables_1_13588021.html) at the Constitutional Court.
+
+> TAKE: Dissolving parliament ends every bill in progress, but not the Government's power to issue decree-laws. With the chambers dissolved, those decrees are voted on by a smaller committee, where the numbers can come out differently.
+
+::: graphic housing-decrees-2026
 
 ## The courts: judges answer only to the law
 
@@ -215,3 +265,19 @@ It checks that laws respect the 1978 Constitution and can strike them down, prot
 ### How many regions does Spain have?
 
 Spain has 17 autonomous communities and 2 autonomous cities (Ceuta and Melilla), plus 50 provinces and around 8,100 municipalities. Each autonomous community has its own statute, parliament and government.
+
+### Who can propose a law in Spain?
+
+The Government (a *proyecto de ley*, approved by the Council of Ministers), Congress (a group or 15 deputies), the Senate (a group or 25 senators), the regional parliaments, and citizens with 500,000 verified signatures. Popular initiatives can't cover organic laws, taxes, international affairs or pardons.
+
+### Does a law have to pass both the Congress and the Senate?
+
+Yes. Every law goes through Congress first and then the Senate, which has two months to approve, amend or veto it. But Congress has the last word: it votes on each Senate amendment by simple majority, and can overturn a Senate veto with 176 votes straight away. For an ordinary law, a simple majority is also enough once two months have passed.
+
+### When does a new Spanish law come into force?
+
+After both chambers pass it, the King signs it within 15 days and it is published in the BOE (Boletín Oficial del Estado). Unless the law sets its own date, it enters into force 20 days after publication. Royal decree-laws usually take effect the day after publication.
+
+### Can the Spanish government pass laws after parliament is dissolved?
+
+It can't pass ordinary laws, because all pending bills lapse when the Cortes are dissolved. It can still approve royal decree-laws in an emergency. These must be validated within 30 days by the Diputación Permanente, the standing committee that stands in for Congress until the new chambers meet. This is how the October 2026 housing decrees were reissued after the snap election was called.
