@@ -55,11 +55,11 @@ Spain's parliament, the **Cortes Generales**, has two chambers: the Congress of 
 
 > KEY: Absolute majority **176** the number to remember
 
-> KEY: Senate seats **≈265** 208 elected + ≈57 regional
+> KEY: Senate seats **≈266** 209 elected + ≈57 regional
 
 The **Congress of Deputies** (*Congreso de los Diputados*) has 350 seats, elected every four years by proportional representation, province by province. The number to remember is **176**: an absolute majority. It comes up again and again — to elect a prime minister in the first vote, and to remove one.
 
-The **Senate** is a mix: **208 senators are elected directly** (generally four per province), and **around 57 more are appointed by the regional parliaments**, so the exact size shifts slightly with population.
+The **Senate** is a mix: **209 senators are elected directly** (generally four per province, and from the 2026 election one for Formentera), and **around 57 more are appointed by the regional parliaments**, so the exact size shifts slightly with population.
 
 Both chambers pass laws, but Congress always has the final word.
 
@@ -198,7 +198,7 @@ The King is head of state: he signs laws, calls elections, nominates the candida
 
 ### What is the difference between the Congress and the Senate?
 
-Congress (350 seats) chooses the prime minister, can remove the Government with a motion of censure and has the final word on laws. The Senate (208 elected plus about 57 appointed by regions) can amend or veto bills, but Congress can override it. The Senate's key own power is approving Article 155 interventions in a region.
+Congress (350 seats) chooses the prime minister, can remove the Government with a motion of censure and has the final word on laws. The Senate (209 elected plus about 57 appointed by regions) can amend or veto bills, but Congress can override it. The Senate's key own power is approving Article 155 interventions in a region.
 
 ### How can a Spanish government be removed?
 
