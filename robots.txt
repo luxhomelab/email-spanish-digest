@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /search
+Disallow: /static/
 
 Sitemap: https://spanified.com/sitemap.xml
