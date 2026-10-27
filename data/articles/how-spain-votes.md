@@ -6,6 +6,8 @@ meta_description: A visual guide to Spanish general elections: two ballots, 52 d
 date: 2026-10-27
 author: Dmytro Shvechikov
 excerpt: You drop a ballot in the box, but you don't choose the prime minister, and a party with fewer votes can win more seats. A visual guide to how Spanish elections really work.
+story_keywords: general election, snap election, early election, early elections, election lists, electoral list, electoral lists, Electoral Board, d'Hondt, blank vote, polling station, postal vote
+story_categories: politics, visa
 image_alt: The d'Hondt method worked through for a five-seat district: each party's votes divided by 1 to 5, with the five largest numbers winning the seats
 ---
 

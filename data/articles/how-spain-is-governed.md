@@ -6,6 +6,8 @@ meta_description: A visual guide to Spain's political system: the 1978 Constitut
 date: 2026-10-27
 author: Dmytro Shvechikov
 excerpt: Who actually runs Spain — the King, the prime minister or parliament? A visual guide to who gets elected, who picks whom, and how they keep each other in check.
+story_keywords: investiture, motion of censure, censure motion, confidence vote, Constitutional Court, Article 155, CGPJ, General Council of the Judiciary, government formation
+story_categories: politics, visa
 image_alt: Diagram of Spain's checks and balances between citizens, the Cortes, the Government, the CGPJ and the Constitutional Court
 ---
 
@@ -15,7 +17,7 @@ This guide untangles it: who does what, who gets elected and how often, and how 
 
 ## It all starts with the 1978 Constitution
 
-Spain's current system rests on one document: the Constitution approved by referendum on **6 December 1978**, three years after Franco's death and after almost four decades of dictatorship. Article 1 sets out three ideas that everything else follows from:
+Spain's current system rests on one document: the [Constitution](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229) approved by referendum on **6 December 1978**, three years after Franco's death and after almost four decades of dictatorship. Article 1 sets out three ideas that everything else follows from:
 
 - **Rule of law:** Spain is a social and democratic state under the rule of law (*Estado social y democrático de Derecho*).
 - **Popular sovereignty:** sovereignty belongs to the Spanish people, so power comes from voters, not from the crown.
@@ -49,7 +51,7 @@ The catch is a mechanism called *el refrendo* (countersignature). Almost every a
 
 ## Parliament: the Cortes Generales
 
-Spain's parliament, the **Cortes Generales**, has two chambers: the Congress of Deputies and the Senate.
+Spain's parliament, the **Cortes Generales**, has two chambers: the [Congress of Deputies](https://www.congreso.es) and the [Senate](https://www.senado.es).
 
 > KEY: Congress seats **350** elected every 4 years
 
@@ -101,7 +103,7 @@ How steps 1 and 2 actually work, from the 52 electoral districts to the d'Hondt 
 
 ## The Government, kept in check
 
-The Government is the **Council of Ministers** (*Consejo de Ministros*): the prime minister, any deputy prime ministers and the ministers. The PM appoints and dismisses ministers freely. The Government directs domestic and foreign policy, defence and public administration, drafts the budget, and can pass emergency **decree-laws** — which Congress must approve within **30 days** or they lapse.
+The Government is the **Council of Ministers** ([*Consejo de Ministros*](https://www.lamoncloa.gob.es)): the prime minister, any deputy prime ministers and the ministers. The PM appoints and dismisses ministers freely. The Government directs domestic and foreign policy, defence and public administration, drafts the budget, and can pass emergency **decree-laws** — which Congress must approve within **30 days** or they lapse.
 
 Congress holds it to account in three ways:
 
@@ -117,7 +119,7 @@ And it works both ways: the prime minister can ask the King to **dissolve parlia
 
 The core principle of the judiciary is simple: judges are bound only by the law — not by the Government and not by parliament.
 
-Ordinary courts form a pyramid. Most cases start in the **courts of first instance** at the bottom, go up through the **Provincial Courts** (*Audiencias Provinciales*) and the **National High Court** and **Regional High Courts** (*Audiencia Nacional*, *TSJ*), with the **Supreme Court** (*Tribunal Supremo*) at the top.
+Ordinary courts form a pyramid. Most cases start in the **courts of first instance** at the bottom, go up through the **Provincial Courts** (*Audiencias Provinciales*) and the **National High Court** and **Regional High Courts** (*Audiencia Nacional*, *TSJ*), with the **Supreme Court** ([*Tribunal Supremo*](https://www.poderjudicial.es)) at the top.
 
 The judiciary is run by the **General Council of the Judiciary** (CGPJ): 20 members on five-year terms, 10 elected by Congress and 10 by the Senate, each by a three-fifths majority. It appoints and promotes judges and oversees discipline. The **Attorney General** (*Fiscal General del Estado*) is proposed by the Government and appointed by the King after hearing the CGPJ.
 
@@ -125,7 +127,7 @@ The judiciary is run by the **General Council of the Judiciary** (CGPJ): 20 memb
 
 ## The Constitutional Court
 
-Separate from the ordinary courts stands the **Constitutional Court** (*Tribunal Constitucional*), the guardian of the Constitution.
+Separate from the ordinary courts stands the **Constitutional Court** ([*Tribunal Constitucional*](https://www.tribunalconstitucional.es)), the guardian of the Constitution.
 
 It has **12 judges**: four chosen by Congress, four by the Senate, two by the Government and two by the CGPJ. They serve **nine-year terms**, and a third of the court is renewed every three years, so it never flips all at once with a change of political majority. The King formally appoints them.
 
