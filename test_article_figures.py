@@ -20,3 +20,8 @@ def test_figure_without_caption_closes_list():
 def test_inline_image_syntax_mid_paragraph_is_not_a_figure():
     out = article_markdown_to_html('See ![x](/a.webp) here')
     assert '<figure' not in out
+
+
+def test_term_list_item_wraps_description():
+    out = article_markdown_to_html('- **Term:** text (*Spanish*) more')
+    assert '<li><strong>Term:</strong><span>text (<em>Spanish</em>) more</span></li>' in out

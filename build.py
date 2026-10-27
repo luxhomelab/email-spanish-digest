@@ -444,7 +444,13 @@ def article_markdown_to_html(md):
             if not in_list:
                 out.append("<ul>")
                 in_list = True
-            out.append(f"<li>{article_inline_md(stripped[2:].strip())}</li>")
+            item = article_inline_md(stripped[2:].strip())
+            # "**term** rest" items render as a two-column grid (main.css);
+            # wrap the rest in one span so inner <em>/<strong> stay inline.
+            m_term = re.match(r"(<strong>.*?</strong>)\s*(.+)$", item)
+            if m_term:
+                item = f"{m_term.group(1)}<span>{m_term.group(2)}</span>"
+            out.append(f"<li>{item}</li>")
             continue
         if stripped.startswith("*") and stripped.endswith("*") and len(stripped) > 2 and stripped[1] != "*":
             # Single-line italic emphasis used as author byline -> keep as paragraph.

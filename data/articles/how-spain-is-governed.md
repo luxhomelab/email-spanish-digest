@@ -17,9 +17,9 @@ This guide untangles it: who does what, who gets elected and how often, and how 
 
 Spain's current system rests on one document: the Constitution approved by referendum on **6 December 1978**, three years after Franco's death and after almost four decades of dictatorship. Article 1 sets out three ideas that everything else follows from:
 
-- **A social and democratic state under the rule of law** (*Estado social y democrático de Derecho*).
-- **Sovereignty belongs to the Spanish people** — power comes from voters, not from the crown.
-- **The form of government is a parliamentary monarchy** (*Monarquía parlamentaria*).
+- **Rule of law:** Spain is a social and democratic state under the rule of law (*Estado social y democrático de Derecho*).
+- **Popular sovereignty:** sovereignty belongs to the Spanish people, so power comes from voters, not from the crown.
+- **Parliamentary monarchy:** the form of government (*Monarquía parlamentaria*): a king as head of state, a government chosen through parliament.
 
 That last word, *parliamentary*, is the key to the rest of this article. Spain has a king, but the people who govern are chosen through parliament.
 
@@ -105,9 +105,9 @@ The Government is the **Council of Ministers** (*Consejo de Ministros*): the pri
 
 Congress holds it to account in three ways:
 
-- **Motion of censure** (*moción de censura*): it must be *constructive* — 176 votes and a named replacement PM. That is exactly how the government changed in 2018.
-- **Confidence vote** (*cuestión de confianza*): the PM asks Congress to reaffirm its support.
-- **Control sessions** (*sesiones de control*): every week, ministers answer MPs' questions in the chamber.
+- **Motion of censure:** the *moción de censura* must be constructive — 176 votes and a named replacement PM. That is exactly how the government changed in 2018.
+- **Confidence vote:** in a *cuestión de confianza*, the PM asks Congress to reaffirm its support.
+- **Control sessions:** every week, in the *sesiones de control*, ministers answer MPs' questions in the chamber.
 
 And it works both ways: the prime minister can ask the King to **dissolve parliament early** and call a snap election.
 
