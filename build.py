@@ -361,12 +361,28 @@ def article_inline_md(s):
 
 
 ARTICLE_FIGURE_RE = re.compile(r'^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)$')
+# "::: graphic <name>" on its own line -> the hand-written HTML partial
+# templates/partials/article-graphics/<article-slug>/<name>.html, inlined as is.
+ARTICLE_GRAPHIC_RE = re.compile(r"^:::\s*graphic\s+([a-z0-9][a-z0-9-]*)$")
+ARTICLE_GRAPHICS_DIR = os.path.join(TEMPLATES_DIR, "partials", "article-graphics")
 
 
-def article_markdown_to_html(md):
+def article_graphic_html(slug, name):
+    """Read an article's HTML graphic partial; warn and return "" if missing."""
+    path = os.path.join(ARTICLE_GRAPHICS_DIR, slug or "", f"{name}.html")
+    try:
+        with open(path, encoding="utf-8") as f:
+            return f.read().strip()
+    except OSError:
+        print(f"WARN: article graphic not found: {path}", file=sys.stderr)
+        return ""
+
+
+def article_markdown_to_html(md, slug=None):
     """Minimal markdown -> HTML (stdlib only): headings, bold, italic,
-    links, unordered lists, figures (16:9 images), paragraphs, hr.
-    Input is escaped first."""
+    links, unordered lists, figures (16:9 images), HTML graphic partials
+    ("::: graphic <name>", looked up under the article's slug), paragraphs,
+    hr. Input is escaped first."""
     lines = md.splitlines()
     out = []
     in_list = False
@@ -420,6 +436,16 @@ def article_markdown_to_html(md):
                 out.append("</ul>")
                 in_list = False
             out.append(f"<blockquote>{article_inline_md(stripped[2:].strip())}</blockquote>")
+            continue
+        m = ARTICLE_GRAPHIC_RE.match(stripped)
+        if m:
+            flush_para()
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            graphic = article_graphic_html(slug, m.group(1))
+            if graphic:
+                out.append(graphic)
             continue
         m = ARTICLE_FIGURE_RE.match(stripped)
         if m:
@@ -535,7 +561,7 @@ def load_articles():
         slug = meta.get("slug") or filename[:-3]
         title = meta.get("title") or slug.replace("-", " ").capitalize()
         date = meta.get("date") or "2026-10-02"
-        body_html = article_markdown_to_html(body_md)
+        body_html = article_markdown_to_html(body_md, slug)
         words = len(_article_words(body_md))
         reading_time = max(1, round(words / 200))
         url = f"/articles/{slug}"

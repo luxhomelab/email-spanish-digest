@@ -11,7 +11,7 @@ image_alt: Diagram of Spain's checks and balances between citizens, the Cortes, 
 
 Who actually runs Spain? The King? The prime minister? Parliament? If you read Spanish news for long enough, you'll see all three described as making decisions, plus a Constitutional Court that can overturn laws and seventeen regional governments with their own parliaments.
 
-This guide untangles it: who does what, who gets elected and how often, and how the pieces keep each other in check. Every diagram below comes from our video explainer on the same topic.
+This guide untangles it: who does what, who gets elected and how often, and how the pieces keep each other in check.
 
 ## It all starts with the 1978 Constitution
 
@@ -23,8 +23,6 @@ Spain's current system rests on one document: the Constitution approved by refer
 
 That last word, *parliamentary*, is the key to the rest of this article. Spain has a king, but the people who govern are chosen through parliament.
 
-![The 1978 Constitution and its three founding principles](/static/img/articles/how-spain-is-governed/constitution-1978.webp "The Constitution was approved by referendum on 6 December 1978. Every institution below is created by it.")
-
 ## Three branches of power, and a King above them
 
 Like most democracies, Spain splits power three ways:
@@ -35,7 +33,7 @@ Like most democracies, Spain splits power three ways:
 
 The King sits above all three as head of state and arbiter — but he is not a branch of power himself.
 
-![The three branches of power in Spain: legislative, executive and judicial, with the King above them](/static/img/articles/how-spain-is-governed/three-branches.webp "Separation of powers: Cortes, Government and courts, all built on the 1978 Constitution.")
+::: graphic separation-of-powers
 
 ## The King reigns, but does not rule
 
@@ -47,7 +45,7 @@ The catch is a mechanism called *el refrendo* (countersignature). Almost every a
 
 > TAKE: The King is the symbol of the state and its formal arbiter. Real political decisions are made by the Government and parliament, which answer to voters.
 
-![The King's formal duties and the countersignature rule](/static/img/articles/how-spain-is-governed/the-king.webp "Signing laws, calling elections, nominating the PM: almost everything the King does is countersigned by the Government.")
+::: graphic the-king-countersignature
 
 ## Parliament: the Cortes Generales
 
@@ -65,7 +63,7 @@ The **Senate** is a mix: **208 senators are elected directly** (generally four p
 
 Both chambers pass laws, but Congress always has the final word.
 
-![The Congress of Deputies with 350 seats and the Senate with 208 elected and about 57 appointed senators](/static/img/articles/how-spain-is-governed/cortes-generales.webp "The Cortes Generales: 350 deputies in Congress (176 is an absolute majority) and the Senate.")
+::: graphic cortes-generales
 
 ## Congress vs Senate: two chambers, unequal power
 
@@ -79,7 +77,7 @@ Why have two chambers at all? Because they do very different jobs.
 
 Both chambers are elected on the same day, for the same four years — but only Congress decides who governs.
 
-![Comparison table of the Congress of Deputies and the Senate](/static/img/articles/how-spain-is-governed/congress-vs-senate.webp "Congress is the political chamber; the Senate is the territorial one.")
+::: graphic bill-path
 
 ## How the prime minister is chosen
 
@@ -95,7 +93,7 @@ The process runs in five steps:
 
 If no candidate wins within **two months** of the first investiture vote, parliament is automatically dissolved and a new election is called. That's what happened in 2016 and again in 2019.
 
-![Five steps from the general election to the appointment of the prime minister](/static/img/articles/how-spain-is-governed/how-pm-is-chosen.webp "From ballot box to La Moncloa: Congress, not voters, picks the PM.")
+::: graphic investiture
 
 > TIP: When Spanish news talks about "pactos" or "negociaciones" after an election, this is why: with no party holding 176 seats on its own, the candidate has to collect enough yes votes (or abstentions) from other parties to pass the investiture.
 
@@ -111,7 +109,7 @@ Congress holds it to account in three ways:
 
 And it works both ways: the prime minister can ask the King to **dissolve parliament early** and call a snap election.
 
-![The Council of Ministers and the three ways Congress controls the Government](/static/img/articles/how-spain-is-governed/government-checks.webp "A motion of censure in Spain must name a new prime minister — you can't just bring the Government down.")
+::: graphic motion-of-censure
 
 ## The courts: judges answer only to the law
 
@@ -121,7 +119,7 @@ Ordinary courts form a pyramid. Most cases start in the **courts of first instan
 
 The judiciary is run by the **General Council of the Judiciary** (CGPJ): 20 members on five-year terms, 10 elected by Congress and 10 by the Senate, each by a three-fifths majority. It appoints and promotes judges and oversees discipline. The **Attorney General** (*Fiscal General del Estado*) is proposed by the Government and appointed by the King after hearing the CGPJ.
 
-![The pyramid of Spanish courts, the General Council of the Judiciary and the Attorney General](/static/img/articles/how-spain-is-governed/courts.webp "From local courts of first instance up to the Supreme Court.")
+::: graphic courts
 
 ## The Constitutional Court
 
@@ -135,7 +133,7 @@ Its three jobs:
 - Protecting citizens' fundamental rights on appeal (*recurso de amparo*).
 - Settling disputes between the central state and the regions.
 
-![Composition and role of Spain's Constitutional Court](/static/img/articles/how-spain-is-governed/constitutional-court.webp "12 judges, 9-year terms, renewed by thirds.")
+::: graphic constitutional-court
 
 ## Who elects and controls whom
 
@@ -149,7 +147,7 @@ Put it all together and you get a web where every institution is chosen or check
 
 > Nobody has the last word on everything. That is the whole point of the design.
 
-![Diagram of checks and balances between citizens, the Cortes, the Government, the CGPJ and the Constitutional Court](/static/img/articles/how-spain-is-governed/checks-and-balances.webp "Who elects and controls whom in the Spanish system.")
+::: graphic checks-and-balances
 
 ## Power is split vertically too
 
@@ -169,7 +167,7 @@ And the same pattern repeats at every level:
 
 That is why your doctor's appointment depends on your region's health service, while your *empadronamiento* is done at the town hall.
 
-![Spain's territorial structure: 17 autonomous communities, 2 cities, 50 provinces and about 8,100 municipalities](/static/img/articles/how-spain-is-governed/regions-and-towns.webp "The same pattern at every level: voters elect an assembly, the assembly picks the leader.")
+::: graphic three-levels
 
 ## How often Spaniards vote
 
@@ -180,7 +178,7 @@ That is why your doctor's appointment depends on your region's health service, w
 
 Some key posts are not chosen by voters at all: the King (for life, hereditary), the CGPJ (five years, elected by the Cortes), the Constitutional Court (nine years, a third every three years) and the Ombudsman (*Defensor del Pueblo*, five years, elected by the Cortes).
 
-![Election calendar for general, regional, municipal and European elections in Spain](/static/img/articles/how-spain-is-governed/election-calendar.webp "Who is elected, and how often — and which posts are not elected directly.")
+::: graphic election-calendar
 
 ## The big picture
 

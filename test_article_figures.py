@@ -25,3 +25,23 @@ def test_inline_image_syntax_mid_paragraph_is_not_a_figure():
 def test_term_list_item_wraps_description():
     out = article_markdown_to_html('- **Term:** text (*Spanish*) more')
     assert '<li><strong>Term:</strong><span>text (<em>Spanish</em>) more</span></li>' in out
+
+
+def test_graphic_directive_inlines_partial(tmp_path, monkeypatch):
+    import build
+    (tmp_path / "my-article").mkdir()
+    (tmp_path / "my-article" / "seats.html").write_text('<figure class="ag">X</figure>\n', encoding="utf-8")
+    monkeypatch.setattr(build, "ARTICLE_GRAPHICS_DIR", str(tmp_path))
+    out = article_markdown_to_html("- item\n::: graphic seats\nAfter", slug="my-article")
+    assert out.splitlines() == ['<ul>', '<li>item</li>', '</ul>', '<figure class="ag">X</figure>', '<p>After</p>']
+
+
+def test_graphic_directive_missing_partial_renders_nothing(tmp_path, monkeypatch):
+    import build
+    monkeypatch.setattr(build, "ARTICLE_GRAPHICS_DIR", str(tmp_path))
+    assert article_markdown_to_html("::: graphic nope", slug="my-article") == ""
+
+
+def test_graphic_directive_mid_paragraph_is_text():
+    out = article_markdown_to_html("See ::: graphic seats here", slug="x")
+    assert out == "<p>See ::: graphic seats here</p>"

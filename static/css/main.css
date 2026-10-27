@@ -2850,6 +2850,428 @@ body.page-article .article-body > p:first-child { animation: art-in 0.5s ease-ou
  margin-top: 10px; font-size: 14px; line-height: 1.55; color: #6C7A89;
 }
 
+/* Article graphics: "::: graphic <name>" in the markdown inlines
+   templates/partials/article-graphics/<slug>/<name>.html (build.py).
+   Hand-built HTML/CSS (inline SVG for the hemicycles and the checks web),
+   all classes prefixed .ag-. One colour per institution across every
+   graphic, so readers learn the code once:
+     Cortes/Congress red, Senate plum, Government navy, courts green,
+     Crown ochre, citizens violet. */
+.article-body figure.ag { margin: 2em 0 2.2em 0; }
+.ag-c-cortes { --c: #AA151B; --t: #FBEDEC; }
+.ag-c-senate { --c: #7B2D52; --t: #F6ECF1; }
+.ag-c-gov { --c: #1F3A5F; --t: #EBF0F6; }
+.ag-c-courts { --c: #2F6B57; --t: #E8F2EE; }
+.ag-c-crown { --c: #8F6A06; --t: #FBF3DC; }
+.ag-c-people { --c: #6B4C8A; --t: #F1ECF6; }
+.ag-c-ink { --c: #1A1A16; --t: #F3F1EC; }
+.ag-panel {
+ background-color: #FFFDF8; border: 1px solid #EFE7D8; border-radius: 14px;
+ padding: 24px 26px; color: #3C4858; line-height: 1.45;
+}
+.article-body figure.ag figcaption { margin-top: 10px; font-size: 14px; line-height: 1.55; color: #6C7A89; }
+.ag i[lang="es"] { font-family: var(--font-display); font-style: italic; }
+.ag b { color: #1A1A16; }
+
+/* Separation of powers: Crown pediment, three pillars, Constitution base. */
+.ag-state-roof {
+ display: flex; flex-direction: column; align-items: center; gap: 2px;
+ text-align: center; padding: 40px 17% 14px 17%;
+ background-color: #FBF3DC;
+ clip-path: polygon(50% 0, 100% 58%, 100% 100%, 0 100%, 0 58%);
+}
+.ag-state-crown { width: 34px; height: 27px; fill: #B8870A; margin-bottom: 4px; }
+.ag-state-king { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: #1A1A16; }
+.ag-state-note { font-size: 14px; color: #6C5410; text-wrap: balance; }
+.ag-state-pillars {
+ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px;
+ margin: 10px 5%;
+}
+.ag-state-pillar {
+ display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 3px;
+ min-height: 136px; padding: 16px 10px; text-align: center;
+ background-color: var(--t);
+ background-image: repeating-linear-gradient(90deg, transparent 0 16px, rgba(255, 255, 255, 0.6) 16px 18px);
+ border-top: 4px solid var(--c); border-radius: 3px 3px 0 0;
+}
+.ag-state-kind { font-size: 13.5px; font-weight: 700; color: var(--c); }
+.ag-state-who { font-family: var(--font-display); font-size: 19px; font-weight: 700; line-height: 1.25; color: #1A1A16; }
+.ag-state-pillar i { font-size: 14px; color: #5B6775; }
+.ag-state-base {
+ display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center;
+ padding: 14px 16px; border-radius: 4px;
+ background-color: #2A2A24; color: #F4EEDF;
+ box-shadow: 0 -6px 0 -2px #E5DCC8;
+}
+.ag-state-base-title { font-family: var(--font-display); font-size: 19px; font-weight: 700; }
+.ag-state-base-note { font-size: 13.5px; color: #CFC6B3; }
+
+/* The King: a royal act with two signatures, and who answers for it. */
+.ag-refrendo-panel { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 28px; align-items: center; }
+.ag-refrendo-doc {
+ display: flex; flex-direction: column; padding: 22px 22px 18px 22px;
+ background-color: #FFFFFF; border: 1px solid #E5DCC8; border-radius: 4px;
+ box-shadow: 0 10px 24px rgba(60, 40, 10, 0.07);
+}
+.ag-refrendo-doctitle { font-family: var(--font-display); font-size: 19px; font-weight: 700; color: #1A1A16; }
+.ag-refrendo-docsub { font-size: 13.5px; color: #6C7A89; }
+.ag-refrendo-lines { display: flex; flex-direction: column; gap: 8px; margin: 14px 0 16px 0; }
+.ag-refrendo-lines span { display: block; height: 6px; border-radius: 3px; background-color: #F0EBE0; }
+.ag-refrendo-lines span:nth-child(2) { width: 92%; }
+.ag-refrendo-lines span:nth-child(3) { width: 64%; }
+.ag-refrendo-sigs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.ag-refrendo-sig { display: flex; flex-direction: column; }
+.ag-refrendo-sig svg {
+ display: block; width: 100%; max-width: 120px; height: 30px;
+ fill: none; stroke: var(--c); stroke-width: 2.2; stroke-linecap: round;
+ border-bottom: 1.5px solid #CFC6B3; padding-bottom: 2px; box-sizing: content-box;
+}
+.ag-refrendo-who { margin-top: 6px; font-size: 14px; font-weight: 700; color: var(--c); }
+.ag-refrendo-act { font-size: 13px; line-height: 1.4; color: #5B6775; }
+.ag-refrendo-resp { display: flex; flex-direction: column; gap: 10px; }
+.ag-refrendo-q { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: #1A1A16; }
+.ag-refrendo-a { padding: 11px 14px; border-radius: 10px; font-size: 15px; line-height: 1.45; }
+.ag-refrendo-no { background-color: #F7F2E4; border-left: 4px solid #B8870A; }
+.ag-refrendo-yes { background-color: #EBF0F6; border-left: 4px solid #1F3A5F; }
+
+/* Cortes: two hemicycles. */
+.ag-cortes-panel { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 32px; }
+.ag-chamber { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.ag-chamber-plot { position: relative; width: 100%; max-width: 330px; }
+.ag-chamber-plot svg { display: block; width: 100%; height: auto; }
+.ag-chamber-num {
+ position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
+ font-family: var(--font-display); font-weight: 700; line-height: 1;
+ font-size: clamp(22px, 3.4vw, 31px); color: #1A1A16; white-space: nowrap;
+}
+.ag-s-maj { fill: #AA151B; }
+.ag-s-rest { fill: #EBC6C3; }
+.ag-s-sen { fill: #7B2D52; }
+.ag-s-reg { fill: #E9B200; }
+.ag-chamber-name { margin-top: 12px; font-family: var(--font-display); font-size: 20px; font-weight: 700; color: #1A1A16; }
+.ag-chamber > i { font-size: 14.5px; color: #6C7A89; }
+.ag-chamber-keys { display: flex; flex-direction: column; gap: 5px; margin-top: 12px; text-align: left; font-size: 14px; }
+.ag-key { display: flex; gap: 9px; align-items: baseline; }
+.ag-dot { flex: none; width: 10px; height: 10px; border-radius: 50%; transform: translateY(1px); }
+.ag-dot.ag-s-maj { background-color: #AA151B; }
+.ag-dot.ag-s-rest { background-color: #EBC6C3; }
+.ag-dot.ag-s-sen { background-color: #7B2D52; }
+.ag-dot.ag-s-reg { background-color: #E9B200; }
+
+/* Numbered steps (the road of a bill): horizontal, vertical on phones. */
+.article-body .ag-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.article-body .ag-step { position: relative; display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0 16px 0 0; }
+.ag-step:not(:last-child)::after {
+ content: ""; position: absolute; top: 16px; left: 44px; right: 8px; height: 2px;
+ background-color: #E2D7C2;
+}
+.ag-step-n {
+ position: relative; z-index: 1; flex: none;
+ display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
+ background-color: var(--c); color: #FFFFFF; font-size: 15px; font-weight: 700;
+}
+.ag-step-body { display: flex; flex-direction: column; gap: 2px; }
+.ag-step-who { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--c); }
+.ag-step-what { font-size: 14.5px; line-height: 1.45; }
+
+/* Investiture: a decision flow with "yes" exits. */
+.article-body .ag-inv-flow { list-style: none; margin: 0; padding: 0; }
+.article-body .ag-inv-row {
+ position: relative; margin: 0; padding: 0 0 30px 0;
+ display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 8px 16px; align-items: center;
+}
+.article-body .ag-inv-row:last-child { padding-bottom: 0; }
+.ag-inv-row:not(:last-child)::before {
+ content: ""; position: absolute; left: 26px; bottom: 0; width: 2px; height: 30px;
+ background-color: #CFC6B3;
+}
+.ag-inv-row:nth-child(2)::after,
+.ag-inv-row:nth-child(3)::after {
+ content: "No"; position: absolute; left: 36px; bottom: 6px;
+ font-size: 12.5px; font-weight: 700; color: #6C7A89;
+}
+.ag-inv-node {
+ display: flex; flex-direction: column; gap: 2px; padding: 12px 16px;
+ background-color: var(--t); border-left: 4px solid var(--c); border-radius: 10px;
+}
+.ag-inv-title { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: #1A1A16; }
+.ag-inv-sub { font-size: 14px; line-height: 1.45; }
+.ag-inv-end { background-color: #FFFFFF; border: 1.5px dashed #AA151B; border-left: 4px solid #AA151B; }
+.ag-inv-yes { position: relative; display: flex; align-items: center; gap: 10px; padding-left: 34px; }
+.ag-inv-yes::before {
+ content: ""; position: absolute; left: 0; top: 50%; width: 26px; height: 2px;
+ background-color: #2F6B57;
+}
+.ag-inv-yes-label {
+ flex: none; padding: 2px 9px; border-radius: 99px;
+ background-color: #E8F2EE; color: #2F6B57; font-size: 12.5px; font-weight: 700;
+}
+.ag-inv-yes-text { font-size: 14.5px; font-weight: 600; line-height: 1.35; color: #1F3A5F; }
+
+/* Motion of censure: out, one vote, in. */
+.ag-censure-swap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) minmax(0, 1fr); gap: 14px; align-items: center; }
+.ag-censure-pm { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; }
+.ag-censure-badge {
+ display: grid; place-items: center; width: 54px; height: 54px; border-radius: 50%;
+ background-color: #1F3A5F; color: #FFFFFF;
+ font-family: var(--font-display); font-size: 18px; font-weight: 700;
+}
+.ag-censure-out .ag-censure-badge { background-color: #FFFFFF; color: #8A97A6; border: 2px dashed #8A97A6; }
+.ag-censure-role { font-size: 14px; font-weight: 600; line-height: 1.3; color: #1A1A16; }
+.ag-censure-fate { padding: 1px 10px; border-radius: 99px; font-size: 12.5px; font-weight: 700; }
+.ag-censure-out .ag-censure-fate { background-color: #EFEBE2; color: #5B6775; }
+.ag-censure-in .ag-censure-fate { background-color: #1F3A5F; color: #FFFFFF; }
+.ag-censure-vote { display: flex; flex-direction: column; gap: 7px; text-align: center; }
+.ag-censure-votelabel { font-size: 13px; color: #6C7A89; }
+.ag-censure-bar { position: relative; display: block; height: 12px; border-radius: 6px; background-color: #F1DFDD; }
+.ag-censure-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 50.29%; border-radius: 6px 0 0 6px; background-color: #AA151B; }
+.ag-censure-mark { position: absolute; left: 50.29%; top: -5px; bottom: -5px; width: 2px; background-color: #1A1A16; }
+.ag-censure-votenum { font-size: 14px; }
+.ag-censure-votenum b { font-family: var(--font-display); font-size: 20px; color: #AA151B; }
+.ag-censure-rule {
+ display: flex; gap: 12px; align-items: flex-start;
+ margin-top: 20px; padding-top: 16px; border-top: 1px dashed #E5DCC8;
+ font-size: 15px; line-height: 1.5;
+}
+.ag-censure-x {
+ flex: none; position: relative; width: 24px; height: 24px; border-radius: 50%;
+ background-color: #FBEDEC; margin-top: 1px;
+}
+.ag-censure-x::before, .ag-censure-x::after {
+ content: ""; position: absolute; left: 6px; right: 6px; top: 11px; height: 2px;
+ background-color: #AA151B; transform: rotate(45deg);
+}
+.ag-censure-x::after { transform: rotate(-45deg); }
+
+/* Courts: a stepped pyramid with an "appeals go up" rail. */
+.ag-courts-wrap { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; }
+.article-body .ag-courts-pyramid { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.article-body .ag-courts-tier {
+ display: flex; flex-direction: column; align-items: center; justify-content: center;
+ margin: 0; padding: 10px 14px; border-radius: 6px; text-align: center; line-height: 1.3;
+}
+.ag-courts-name { font-size: 15.5px; font-weight: 700; }
+.ag-courts-tier i { font-size: 13.5px; }
+.ag-courts-t1 { width: 46%; background-color: #2F6B57; color: #FFFFFF; }
+.ag-courts-t2 { width: 64%; background-color: #4D8571; color: #FFFFFF; }
+.ag-courts-t3 { width: 82%; background-color: #CFE3DA; color: #1A1A16; }
+.ag-courts-t4 { width: 100%; background-color: #E8F2EE; color: #1A1A16; }
+.ag-courts-t1 .ag-courts-name, .ag-courts-t2 .ag-courts-name { color: #FFFFFF; }
+.ag-courts-arrow { position: relative; display: flex; align-items: center; width: 26px; border-left: 2px solid #2F6B57; }
+.ag-courts-arrow::before {
+ content: ""; position: absolute; left: -7px; top: -2px;
+ border: 6px solid transparent; border-bottom: 9px solid #2F6B57; border-top: 0;
+}
+.ag-courts-arrow span {
+ writing-mode: vertical-rl; transform: rotate(180deg);
+ padding-left: 6px; font-size: 13px; font-weight: 600; color: #2F6B57; white-space: nowrap;
+}
+.article-body p.ag-courts-start { margin: 10px 0 0 0; font-size: 13.5px; color: #6C7A89; text-align: center; }
+
+/* Constitutional Court: who picks the 12, and staggered nine-year terms. */
+.ag-tc-bench { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px 30px; }
+.ag-tc-group { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.ag-tc-seats { display: flex; gap: 6px; }
+.ag-tc-seats i { display: block; width: 26px; height: 32px; border-radius: 13px 13px 4px 4px; background-color: var(--c); }
+.ag-tc-who { font-size: 14px; }
+.ag-tc-who b { font-family: var(--font-display); font-size: 18px; color: var(--c); }
+.ag-tc-terms { display: block; margin-top: 22px; padding-top: 18px; border-top: 1px dashed #E5DCC8; }
+.ag-tc-termhead { display: block; margin-bottom: 12px; font-size: 14px; color: #3C4858; }
+.ag-tc-row { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 4px 14px; align-items: center; margin-bottom: 9px; }
+.ag-tc-rowlabel { font-size: 13.5px; font-weight: 600; line-height: 1.3; color: #1A1A16; text-align: right; }
+.ag-tc-track { position: relative; display: block; height: 16px; overflow: hidden; border-radius: 8px; background-color: #F3EEE3; }
+.ag-tc-bar {
+ position: absolute; top: 0; bottom: 0;
+ left: calc(var(--s) / 18 * 100%); width: calc(50% - 3px);
+ border-radius: 8px; background-color: var(--c);
+}
+.ag-tc-mix { background: repeating-linear-gradient(135deg, #1F3A5F 0 7px, #2F6B57 7px 14px); }
+.ag-tc-axis { margin-bottom: 0; }
+.ag-tc-axis .ag-tc-track { height: 18px; overflow: visible; background: none; }
+.ag-tc-axis .ag-tc-track span {
+ position: absolute; top: 0; left: calc(var(--s) / 18 * 100%);
+ font-size: 12px; color: #6C7A89; white-space: nowrap;
+ border-left: 1px solid #CFC6B3; padding-left: 4px; line-height: 18px;
+}
+
+/* Checks and balances web: landscape SVG, portrait SVG on narrow screens. */
+.ag-web-panel { padding: 18px 16px; container-type: inline-size; }
+.ag-web svg { display: block; width: 100%; height: auto; }
+.ag-web svg.ag-web-wide { max-width: 820px; margin: 0 auto; }
+.ag-web svg.ag-web-narrow { display: none; }
+.ag-web .ag-e-people { --e: #6B4C8A; }
+.ag-web .ag-e-cortes { --e: #AA151B; }
+.ag-web .ag-e-gov { --e: #1F3A5F; }
+.ag-web .ag-e-courts { --e: #2F6B57; }
+.ag-web .ag-e-ink { --e: #1A1A16; }
+.ag-web .ag-e-muted { --e: #8A97A6; }
+.ag-web-edge { fill: none; stroke: var(--e); stroke-width: 2.2; stroke-linecap: round; }
+.ag-web-dashed { stroke-dasharray: 5 6; }
+.ag-web-head { fill: var(--e); }
+.ag-web-label {
+ fill: var(--e); font-size: 15px; font-weight: 600;
+ paint-order: stroke; stroke: #FFFDF8; stroke-width: 5px; stroke-linejoin: round;
+}
+.ag-web-node rect { fill: var(--t); stroke: var(--c); stroke-width: 1.5; }
+.ag-web-name { fill: var(--c); font-family: var(--font-display); font-size: 19px; font-weight: 700; text-anchor: middle; }
+.ag-web-sub { fill: #5B6775; font-size: 13px; text-anchor: middle; }
+.ag-web-narrow .ag-web-label { font-size: 14px; }
+.ag-web-narrow .ag-web-name { font-size: 17px; }
+.ag-web-narrow .ag-web-sub { font-size: 13.5px; }
+
+/* Three levels, one pattern: citizens -> assembly -> leader. */
+.ag-levels-panel { display: grid; grid-template-columns: 46px minmax(0, 1fr); column-gap: 18px; }
+.ag-levels-voters {
+ grid-row: 1 / span 3; display: flex; align-items: center; justify-content: center;
+ border-radius: 10px; background-color: var(--t); border: 1px solid #DDD2EA;
+}
+.ag-levels-voters span {
+ writing-mode: vertical-rl; transform: rotate(180deg);
+ font-size: 14px; font-weight: 700; color: var(--c); white-space: nowrap;
+}
+.ag-levels-row {
+ position: relative; display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 6px 12px; align-items: center;
+ padding: 12px 0;
+}
+.ag-levels-row + .ag-levels-row { border-top: 1px dashed #E5DCC8; }
+.ag-levels-row::before {
+ content: ""; position: absolute; left: -18px; top: 50%; width: 12px; height: 2px;
+ background-color: #6B4C8A;
+}
+.ag-levels-level { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: #1A1A16; }
+.ag-levels-chain { display: grid; grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr); gap: 10px; align-items: center; }
+.ag-levels-chip {
+ display: flex; flex-direction: column; padding: 8px 12px; border-radius: 8px;
+ background-color: var(--t); border-left: 3px solid var(--c);
+}
+.ag-levels-chip > span { font-size: 15px; font-weight: 700; line-height: 1.3; color: #1A1A16; }
+.ag-levels-chip i { font-size: 13px; line-height: 1.35; color: #5B6775; }
+.ag-levels-picks { display: flex; flex-direction: column; align-items: center; font-size: 12.5px; color: #6C7A89; }
+.ag-levels-picks::after { content: "\2192"; font-size: 16px; line-height: 1; color: #8A97A6; }
+
+/* Election calendar: one track per election type, no horizontal scroll. */
+.ag-cal-row { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 4px 18px; align-items: center; padding: 11px 0; }
+.ag-cal-row + .ag-cal-row:not(.ag-cal-years) { border-top: 1px dashed #EFE7D8; }
+.ag-cal-years { padding: 0 0 4px 0; }
+.ag-cal-label { display: flex; flex-direction: column; }
+.ag-cal-name { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--c); }
+.ag-cal-rule { font-size: 13px; line-height: 1.4; color: #6C7A89; }
+.ag-cal-track {
+ position: relative; display: block; height: 26px;
+ background-image: linear-gradient(90deg, #EFE7D8 0 1px, transparent 1px);
+ background-size: calc(100% / 9) 100%; border-right: 1px solid #EFE7D8;
+ margin-right: 16px;
+}
+.ag-cal-track::before {
+ content: ""; position: absolute; left: 0; right: 0; top: 12px; height: 2px;
+ background-color: var(--c); opacity: 0.28;
+}
+.ag-cal-years .ag-cal-track { height: 18px; background: none; border-right: 0; }
+.ag-cal-years .ag-cal-track::before { display: none; }
+.ag-cal-years .ag-cal-track span {
+ position: absolute; top: 0; left: calc(var(--x) / 9 * 100%); transform: translateX(-50%);
+ font-size: 12.5px; font-weight: 700; color: #6C7A89; line-height: 18px;
+}
+.ag-cal-track i, .ag-cal-legend i {
+ display: block; width: 14px; height: 14px; border-radius: 50%;
+ background-color: var(--c, #3C4858); border: 2px solid var(--c, #3C4858); box-sizing: border-box;
+}
+.ag-cal-track i { position: absolute; top: 13px; left: calc(var(--x) / 9 * 100%); margin: -7px 0 0 -7px; }
+.ag-cal-track i.ag-cal-due, .ag-cal-legend i.ag-cal-due { background-color: #FFFDF8; }
+.ag-cal-track i.ag-cal-snap { width: 18px; height: 18px; margin: -9px 0 0 -9px; border-width: 3px; box-shadow: 0 0 0 5px rgba(170, 21, 27, 0.16); }
+.ag-cal-pill {
+ position: absolute; top: 13px; left: calc(var(--x) / 9 * 100%); transform: translate(18px, -50%);
+ padding: 2px 10px; border-radius: 99px; white-space: nowrap;
+ background-color: #AA151B; color: #FFFFFF; font-size: 12.5px; font-weight: 700; line-height: 1.5;
+}
+/* Narrow panels: labels above full-width tracks, every other year shown,
+   the snap-election pill drops under its dot. */
+.ag-cal .ag-panel { container-type: inline-size; }
+@container (max-width: 620px) {
+ .ag-cal-row { grid-template-columns: minmax(0, 1fr); }
+ .ag-cal-years .ag-cal-label { display: none; }
+ .ag-cal-track { margin: 0 12px; }
+ .ag-cal-row:has(.ag-cal-pill) .ag-cal-track { height: 52px; }
+ .ag-cal-pill { top: 36px; transform: translateX(-50%); }
+}
+@container (max-width: 440px) {
+ .ag-cal-years .ag-cal-track span:nth-child(2n) { display: none; }
+}
+.ag-cal-legend { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 12px; font-size: 13px; color: #6C7A89; }
+.ag-cal-legend span { display: flex; align-items: center; gap: 7px; }
+.ag-cal-legend i { width: 12px; height: 12px; }
+
+/* The landscape web needs ~700px to keep its labels at 12px or more. */
+@container (max-width: 699px) {
+ .ag-web svg.ag-web-wide { display: none; }
+ .ag-web svg.ag-web-narrow { display: block; max-width: 380px; margin: 0 auto; }
+}
+@media (max-width: 640px) {
+ .ag-panel { padding: 20px 16px; }
+ .ag-refrendo-panel { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+ .ag-cortes-panel { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+ .article-body .ag-steps { grid-template-columns: minmax(0, 1fr); }
+ .article-body .ag-step { flex-direction: row; gap: 14px; padding: 0 0 18px 0; }
+ .article-body .ag-step:last-child { padding-bottom: 0; }
+ .ag-step:not(:last-child)::after { top: 38px; bottom: 4px; left: 16px; right: auto; width: 2px; height: auto; }
+ .ag-step-body { padding-top: 5px; }
+ .article-body .ag-inv-row { grid-template-columns: minmax(0, 1fr); }
+ .ag-inv-yes { padding-left: 30px; }
+ .ag-inv-yes::before { left: 12px; top: -8px; width: 12px; height: 19px; background: none; border-left: 2px solid #2F6B57; border-bottom: 2px solid #2F6B57; }
+ .ag-levels-panel { grid-template-columns: minmax(0, 1fr); }
+ .ag-levels-voters { grid-row: auto; padding: 8px 12px; margin-bottom: 4px; }
+ .ag-levels-voters span { writing-mode: horizontal-tb; transform: none; }
+ .ag-levels-row { grid-template-columns: minmax(0, 1fr); }
+ .ag-levels-chain { grid-template-columns: minmax(0, 1fr) 36px minmax(0, 1fr); gap: 8px; }
+ .ag-levels-row::before { display: none; }
+ .ag-tc-row { grid-template-columns: minmax(0, 1fr); margin-bottom: 12px; }
+ .ag-tc-rowlabel { text-align: left; }
+ .ag-tc-axis .ag-tc-rowlabel { display: none; }
+}
+@media (max-width: 520px) {
+ .ag-panel { padding: 18px 14px; }
+ .ag-web-panel { padding: 12px 4px; }
+ .article-body figure.ag figcaption { font-size: 13.5px; }
+ .ag-state-roof { padding: 34px 12% 12px 12%; }
+ .ag-state-pillars { grid-template-columns: minmax(0, 1fr); gap: 8px; margin: 10px 3%; }
+ .ag-state-pillar {
+  min-height: 0; align-items: flex-start;
+  gap: 1px; padding: 10px 14px; text-align: left;
+  border-top: 0; border-left: 4px solid var(--c); border-radius: 0 3px 3px 0;
+ }
+ .ag-state-kind { font-size: 12.5px; }
+ .ag-state-who { font-size: 17px; }
+ .ag-censure-swap { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1fr); gap: 8px; }
+ .ag-censure-badge { width: 44px; height: 44px; font-size: 16px; }
+ .ag-censure-role { font-size: 13px; }
+ .ag-courts-wrap { gap: 10px; }
+ .article-body .ag-courts-tier { padding: 8px 8px; }
+ .ag-courts-name { font-size: 14px; }
+ .ag-courts-tier i { font-size: 12.5px; }
+ .ag-courts-t1 { width: 62%; }
+ .ag-courts-t2 { width: 76%; }
+ .ag-courts-t3 { width: 88%; }
+ .ag-tc-bench { gap: 16px 22px; }
+ .ag-tc-seats i { width: 21px; height: 27px; }
+ .ag-cal-pill { font-size: 12px; }
+}
+@media (max-width: 400px) {
+ /* Phones: panels bleed into the article gutter to win back width. */
+ .ag-panel { margin: 0 -14px; padding: 16px 12px; border-radius: 10px; }
+ .ag-web-panel { padding: 8px 4px; }
+ .article-body figure.ag figcaption { margin-top: 9px; }
+ .ag-refrendo-sigs { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+ .ag-courts-wrap { grid-template-columns: minmax(0, 1fr); }
+ .ag-courts-arrow { display: none; }
+ .ag-levels-chain { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+ .ag-levels-picks { flex-direction: row-reverse; justify-content: flex-end; gap: 6px; padding-left: 12px; }
+ .ag-levels-picks::after { content: "\2193"; }
+}
+@media (max-width: 380px) {
+ .ag-censure-swap { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+ .ag-censure-vote { padding: 0 8%; }
+}
+
 /* Plain gold-dot list (unchanged signature style) */
 .article-body ul {
  list-style: none; margin: 0 0 1.5em 0; padding: 0;
