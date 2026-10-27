@@ -93,6 +93,8 @@ The process runs in five steps:
 
 If no candidate wins within **two months** of the first investiture vote, parliament is automatically dissolved and a new election is called. That's what happened in 2016 and again in 2019.
 
+How steps 1 and 2 actually work, from the 52 electoral districts to the d'Hondt formula and why a blank vote can knock a small party out, is explained step by step in our guide to [how Spain votes](/articles/how-spain-votes).
+
 ::: graphic investiture
 
 > TIP: When Spanish news talks about "pactos" or "negociaciones" after an election, this is why: with no party holding 176 seats on its own, the candidate has to collect enough yes votes (or abstentions) from other parties to pass the investiture.
@@ -171,7 +173,7 @@ That is why your doctor's appointment depends on your region's health service, w
 
 ## How often Spaniards vote
 
-- **General elections:** at least every four years, and sometimes early — like the snap election called for 29 November 2026.
+- **General elections:** at least every four years, and sometimes early — like the snap election called for 29 November 2026. See [how Spain votes](/articles/how-spain-votes) for how those votes become seats.
 - **Regional elections:** every four years; dates vary by region.
 - **Municipal elections:** every four years, in May, on the same day across Spain.
 - **European elections:** every five years, for 61 MEPs.

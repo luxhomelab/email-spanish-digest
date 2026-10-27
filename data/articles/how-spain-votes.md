@@ -11,7 +11,7 @@ image_alt: The d'Hondt method worked through for a five-seat district: each part
 
 You drop a ballot in the box, but you don't actually choose the prime minister. And a party with fewer votes can end up with more seats than a bigger one.
 
-With a snap general election called for **29 November 2026**, this guide walks through the rules that turn Spanish votes into seats: the districts, the lists, the d'Hondt maths, what happens to a blank vote, and how the Senate works. No politics, just the mechanics.
+With a snap general election called for **29 November 2026**, this guide walks through the rules that turn Spanish votes into seats: the districts, the lists, the d'Hondt maths, what happens to a blank vote, and how the Senate works. No politics, just the mechanics. (For what happens once the seats are filled, who does what between the King, parliament and the Government, see our companion guide to [how Spain is governed](/articles/how-spain-is-governed).)
 
 ## Four kinds of elections, two ballots
 
@@ -159,7 +159,7 @@ Once the new Congress meets, it votes on a candidate for prime minister, nominat
 - **Second vote, 48 hours later:** more yes votes than no votes is enough.
 - **Two months with no prime minister:** parliament is dissolved and Spain votes again.
 
-So it's not necessarily the party that came first that governs. It's whoever can put a majority together.
+So it's not necessarily the party that came first that governs. It's whoever can put a majority together. What the new prime minister can do then, and how Congress can remove them with a motion of censure, is covered in [how Spain is governed](/articles/how-spain-is-governed).
 
 ::: graphic after-the-vote
 
