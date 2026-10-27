@@ -67,6 +67,9 @@
       {% endfor %}
      </div>
      {% endif %}
+     {% if item.guide %}
+     <div class="story-guide" data-pagefind-ignore>Explainer: <a href="{{ item.guide.url }}">{{ item.guide.title }}</a></div>
+     {% endif %}
      {% if item.related %}
      <div class="story-related" data-pagefind-ignore>
       <div class="story-related-label">More news on this topic:</div>

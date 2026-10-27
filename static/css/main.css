@@ -1173,6 +1173,11 @@ body.page-digest .story-category a:hover { text-decoration: none; border-color: 
 body.page-digest .story-important { background-color: #AA151B; color: #ffffff; border-radius: 4px; padding: 2px 8px; }
 body.page-digest .story-title { font-size: 20px; line-height: 27px; }
 body.page-digest .story-body { font-size: 15.5px; line-height: 24px; }
+body.page-digest .story-guide {
+ margin-top: 14px; font-size: 13.5px; line-height: 22px; color: #6C7A89;
+}
+body.page-digest .story-guide a { color: #AA151B; font-weight: 600; text-decoration: none; }
+body.page-digest .story-guide a:hover { text-decoration: underline; }
 body.page-digest .story-related {
  margin-top: 16px; padding-left: 14px;
  border-left: 2px solid #F0EDE6;

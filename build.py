@@ -576,6 +576,8 @@ def load_articles():
             "date_display": format_date(date),
             "author": meta.get("author") or "Dmytro Shvechikov",
             "image_alt": meta.get("image_alt") or "",
+            "story_keywords": [k.strip() for k in (meta.get("story_keywords") or "").split(",") if k.strip()],
+            "story_categories": [c.strip().lower() for c in (meta.get("story_categories") or "").split(",") if c.strip()],
             "body_html": body_html,
             "word_count": words,
             "reading_time": reading_time,
@@ -1527,6 +1529,31 @@ def attach_related(digests, limit=3):
             used.update(r["url"] for r in item["related"])
 
 
+def attach_guides(digests, articles):
+    """Attach an 'Explainer' link to stories that mention a guide's topic.
+
+    Each article can list comma-separated `story_keywords` in its front
+    matter; a story whose title or body contains one of them (whole
+    words, case-insensitive) links to that article. Optional
+    `story_categories` limits matching to stories in those categories.
+    First matching article wins, in `articles` order. Stories with no
+    match get None.
+    """
+    patterns = [
+        (re.compile(r"\b(?:" + "|".join(re.escape(k) for k in a["story_keywords"]) + r")\b", re.I), a)
+        for a in articles if a.get("story_keywords")
+    ]
+    for digest in digests:
+        for item in digest.get("stories", []):
+            text = f"{item.get('title', '')} {item.get('body', '')}"
+            cat = (item.get("category") or "").lower()
+            item["guide"] = next(
+                ({"title": a["title"], "url": a["url"]} for rx, a in patterns
+                 if (not a.get("story_categories") or cat in a["story_categories"]) and rx.search(text)),
+                None,
+            )
+
+
 def share_links(abs_url, text, long_text=None):
     """Build static share URLs (no JS SDKs) for X/TG/WA/FB/Threads + copy link.
 
@@ -2154,6 +2181,7 @@ def main():
 
     digests = [digest_context(d) for d in load_digests()]
     articles = load_articles()
+    attach_guides(digests, articles)
     episodes = load_podcast_episodes()
 
     print("Copying static assets...")
