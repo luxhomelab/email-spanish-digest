@@ -378,15 +378,53 @@ def article_graphic_html(slug, name):
         return ""
 
 
-def article_markdown_to_html(md, slug=None):
+# "::: toc" on its own line -> table of contents of every h2 in the article.
+ARTICLE_TOC_MARKER = "::: toc"
+_TOC_PLACEHOLDER = "\x00toc\x00"
+
+
+def article_heading_id(text_html, used):
+    """Anchor id for a heading: lowercase words joined by '-', unique in `used`."""
+    plain = html.unescape(re.sub(r"<[^>]+>", "", text_html))
+    base = re.sub(r"[^a-z0-9]+", "-", plain.lower()).strip("-") or "section"
+    hid, n = base, 2
+    while hid in used:
+        hid, n = f"{base}-{n}", n + 1
+    used.add(hid)
+    return hid
+
+
+def article_toc_html(entries):
+    """<nav> table of contents from (id, title_html) pairs; two columns on
+    wide screens, filled top to bottom (--rows sets the split)."""
+    items = "\n".join(f'<li><a href="#{hid}">{title}</a></li>' for hid, title in entries)
+    rows = (len(entries) + 1) // 2
+    return (
+        '<nav class="art-toc" aria-labelledby="art-toc-title">\n'
+        '<p class="art-toc-title" id="art-toc-title">In this guide</p>\n'
+        f'<ol class="art-toc-list" style="--rows: {rows}">\n{items}\n</ol>\n'
+        "</nav>"
+    )
+
+
+def article_markdown_to_html(md, slug=None, toc_extra=()):
     """Minimal markdown -> HTML (stdlib only): headings, bold, italic,
     links, unordered lists, figures (16:9 images), HTML graphic partials
-    ("::: graphic <name>", looked up under the article's slug), paragraphs,
-    hr. Input is escaped first."""
+    ("::: graphic <name>", looked up under the article's slug), a table of
+    contents ("::: toc", listing every h2 plus `toc_extra` (id, title)
+    pairs), paragraphs, hr. Input is escaped first. Every h2 gets an id."""
     lines = md.splitlines()
     out = []
     in_list = False
     in_para = []
+    headings = []
+    used_ids = {hid for hid, _ in toc_extra}
+
+    def h2(text):
+        title = article_inline_md(text)
+        hid = article_heading_id(title, used_ids)
+        headings.append((hid, title))
+        return f'<h2 id="{hid}">{title}</h2>'
 
     def flush_para():
         if in_para:
@@ -414,7 +452,7 @@ def article_markdown_to_html(md, slug=None):
             if in_list:
                 out.append("</ul>")
                 in_list = False
-            out.append(f"<h2>{article_inline_md(stripped[3:].strip())}</h2>")
+            out.append(h2(stripped[3:].strip()))
             continue
         if stripped.startswith("### "):
             flush_para()
@@ -428,7 +466,7 @@ def article_markdown_to_html(md, slug=None):
             if in_list:
                 out.append("</ul>")
                 in_list = False
-            out.append(f"<h2>{article_inline_md(stripped[2:].strip())}</h2>")
+            out.append(h2(stripped[2:].strip()))
             continue
         if stripped.startswith("> "):
             flush_para()
@@ -436,6 +474,13 @@ def article_markdown_to_html(md, slug=None):
                 out.append("</ul>")
                 in_list = False
             out.append(f"<blockquote>{article_inline_md(stripped[2:].strip())}</blockquote>")
+            continue
+        if stripped == ARTICLE_TOC_MARKER:
+            flush_para()
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            out.append(_TOC_PLACEHOLDER)
             continue
         m = ARTICLE_GRAPHIC_RE.match(stripped)
         if m:
@@ -486,7 +531,8 @@ def article_markdown_to_html(md, slug=None):
     flush_para()
     if in_list:
         out.append("</ul>")
-    return "\n".join(out)
+    toc = article_toc_html(headings + list(toc_extra))
+    return "\n".join(toc if part == _TOC_PLACEHOLDER else part for part in out)
 
 
 def split_article_faq(body_md):
@@ -561,7 +607,8 @@ def load_articles():
         slug = meta.get("slug") or filename[:-3]
         title = meta.get("title") or slug.replace("-", " ").capitalize()
         date = meta.get("date") or "2026-10-02"
-        body_html = article_markdown_to_html(body_md, slug)
+        toc_extra = [("faq", "Frequently asked questions")] if faq else []
+        body_html = article_markdown_to_html(body_md, slug, toc_extra)
         words = len(_article_words(body_md))
         reading_time = max(1, round(words / 200))
         url = f"/articles/{slug}"

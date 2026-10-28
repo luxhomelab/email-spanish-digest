@@ -76,7 +76,7 @@
       (parsed by build.py into article.faq); the same data drives this
       visible block and the FAQPage JSON-LD above. #}
    {% if article.faq %}
-   <section class="article-faq">
+   <section class="article-faq" id="faq">
     <h2 class="article-faq-title">Frequently asked questions</h2>
     <div class="article-faq-list">
      {% for faq in article.faq %}
