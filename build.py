@@ -92,6 +92,7 @@ STATIC_COPY = [
     "CNAME",
     "robots.txt",
     "t.html",
+    "yt.html",
     "wa.html",
     "mail.html",
     "success.jpg",

@@ -14,7 +14,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 TARGET = ("https://spanified.com/subscribe?utm_source=newsletter"
           "&utm_medium=email&utm_campaign=share&utm_content={}")
 PAGES = {"wa.html": "whatsapp", "mail.html": "email"}
-NOINDEX_PAGES = ["t.html", *PAGES]
+NOINDEX_PAGES = ["t.html", "yt.html", *PAGES]
 
 
 class ShareRedirectTests(unittest.TestCase):
