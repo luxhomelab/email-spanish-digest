@@ -42,6 +42,26 @@ def test_graphic_directive_missing_partial_renders_nothing(tmp_path, monkeypatch
     assert article_markdown_to_html("::: graphic nope", slug="my-article") == ""
 
 
+def test_h2_gets_unique_ids():
+    out = article_markdown_to_html("## How *it* works\n## How it works")
+    assert '<h2 id="how-it-works">How <em>it</em> works</h2>' in out
+    assert '<h2 id="how-it-works-2">How it works</h2>' in out
+
+
+def test_toc_directive_lists_all_h2_and_extras():
+    out = article_markdown_to_html(
+        "Intro\n::: toc\n## One\n## Two\n## Three", toc_extra=[("faq", "FAQ")]
+    )
+    assert out.startswith('<p>Intro</p>\n<nav class="art-toc"')
+    assert 'style="--rows: 2"' in out
+    assert '<li><a href="#one">One</a></li>\n<li><a href="#two">Two</a></li>' in out
+    assert '<li><a href="#faq">FAQ</a></li>' in out
+
+
+def test_no_toc_without_directive():
+    assert "art-toc" not in article_markdown_to_html("## One")
+
+
 def test_graphic_directive_mid_paragraph_is_text():
     out = article_markdown_to_html("See ::: graphic seats here", slug="x")
     assert out == "<p>See ::: graphic seats here</p>"

@@ -15,6 +15,8 @@ Who actually runs Spain? The King? The prime minister? Parliament? If you read S
 
 This guide untangles it: who does what, who gets elected and how often, and how the pieces keep each other in check.
 
+::: toc
+
 ## It all starts with the 1978 Constitution
 
 Spain's current system rests on one document: the [Constitution](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229) approved by referendum on **6 December 1978**, three years after Franco's death and after almost four decades of dictatorship. Article 1 sets out three ideas that everything else follows from:
@@ -63,13 +65,9 @@ The **Congress of Deputies** (*Congreso de los Diputados*) has 350 seats, electe
 
 The **Senate** is a mix: **209 senators are elected directly** (generally four per province, and from the 2026 election one for Formentera), and **around 57 more are appointed by the regional parliaments**, so the exact size shifts slightly with population.
 
-Both chambers pass laws, but Congress always has the final word.
-
 ::: graphic cortes-generales
 
-## Congress vs Senate: two chambers, unequal power
-
-Why have two chambers at all? Because they do very different jobs.
+Why have two chambers at all? Because they do very different jobs, and Congress has far more power.
 
 - **How you vote:** Congress — closed party lists. Senate — you tick named candidates (up to three per province).
 - **Choosing the PM:** Congress only, through the investiture vote.
@@ -78,26 +76,6 @@ Why have two chambers at all? Because they do very different jobs.
 - **The Senate's one big power:** approving Article 155, which lets the central state step in when a region breaks the law (used once, in Catalonia in 2017).
 
 Both chambers are elected on the same day, for the same four years — but only Congress decides who governs.
-
-## How a law is made, from bill to BOE
-
-Under [Article 87](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a87) of the Constitution, five kinds of actor can put a bill before parliament:
-
-- **The Government:** a *proyecto de ley*, approved by the Council of Ministers. Most laws start here.
-- **Congress:** a *proposición de ley*, signed by a parliamentary group or by 15 deputies.
-- **The Senate:** also a *proposición*, from a group or 25 senators. It still goes to Congress first.
-- **Regional parliaments:** they can send a bill to Congress, or ask the Government to draft one.
-- **Citizens:** 500,000 verified signatures, the *iniciativa legislativa popular*. It can't be used for organic laws, taxes, international affairs or pardons.
-
-**Does a law have to pass both chambers?** Yes. Every law goes through both, and always in the same order: Congress first, then the Senate. Under [Article 90](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a90), the Senate has **two months** (20 days for a bill declared urgent) to pass it, amend it by simple majority, or veto it by absolute majority. Then it goes back to Congress, which votes on each of the Senate's amendments separately. An amendment stays in the text if it wins a simple majority ([Congress Rules, Article 123](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196#a123)). A veto on an ordinary law can be overturned straight away with 176 votes, or by a simple majority once two months have passed. A veto on an organic law always needs 176. So the Senate can slow a law down, but it can't kill it.
-
-Some laws need more votes. **Organic laws** (*leyes orgánicas*), which cover fundamental rights, the regions' statutes of autonomy and the electoral system, need **176 votes** in Congress in a final vote on the whole text ([Article 81](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a81)). If the Senate has amended one, the final text goes to that 176-vote test again ([Congress Rules, Article 132](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196#a132)).
-
-**When does it become law?** Once the Cortes have passed it, the King has **15 days** to sign it (*sancionar*) and must order it published straight away ([Article 91](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a91)). Publication is in the [Boletín Oficial del Estado](https://www.boe.es) (BOE), the state's official gazette. Unless the law sets its own date, it enters into force **20 days after publication** ([Civil Code, Article 2](https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#a2)). In practice, many laws set their own date, often the day after publication.
-
-> TIP: A law's name tells you its history. *Ley 12/2023, de 24 de mayo, por el derecho a la vivienda* is the 12th law of 2023, signed on 24 May. On boe.es every law has a "consolidated" version with all later amendments already worked in, like the [housing law](https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203).
-
-::: graphic bill-path
 
 ## How the prime minister is chosen
 
@@ -132,6 +110,34 @@ Congress holds it to account in three ways:
 And it works both ways: the prime minister can ask the King to **dissolve parliament early** and call a snap election.
 
 ::: graphic motion-of-censure
+
+## How a law is made, from bill to BOE
+
+The Government drafts most laws, but only parliament can pass them. Under [Article 87](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a87) of the Constitution, five kinds of actor can put a bill before parliament:
+
+- **The Government:** a *proyecto de ley*, approved by the Council of Ministers. Most laws start here.
+- **Congress:** a *proposición de ley*, signed by a parliamentary group or by 15 deputies.
+- **The Senate:** also a *proposición*, from a group or 25 senators. It still goes to Congress first.
+- **Regional parliaments:** they can send a bill to Congress, or ask the Government to draft one.
+- **Citizens:** 500,000 verified signatures, the *iniciativa legislativa popular*. It can't be used for organic laws, taxes, international affairs or pardons.
+
+**Does a law have to pass both chambers?** Yes, and always in the same order: Congress first, then the Senate ([Article 90](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a90)). Whether the bill then comes back to Congress depends on what the Senate does with it:
+
+- **1. Congress passes the bill:** an ordinary law needs a simple majority, more yes votes than no. Organic laws need more (see below). The text then goes to the Senate.
+- **2. The Senate decides:** it has **two months**, or 20 days for a bill declared urgent. It can pass the text as it is, amend it by simple majority, or veto the whole bill by an absolute majority of its members.
+- **If the Senate passes it unchanged:** the bill does not go back to Congress. It goes straight to the King to be signed.
+- **If the Senate amends it:** the amended text is only a proposal, so the bill goes back to Congress, which votes on each amendment separately. An amendment stays if it wins a simple majority. If it loses, Congress's original wording stands ([Congress Rules, Article 123](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196#a123)).
+- **If the Senate vetoes it:** the bill goes back to Congress, which can lift the veto straight away with 176 votes, or by a simple majority once two months have passed. A veto on an organic law always needs 176. If Congress doesn't lift it, the bill fails.
+
+So the Senate can improve a law or slow it down, but it can't force its changes on Congress, or stop a law that Congress keeps voting for.
+
+Some laws need more votes. **Organic laws** (*leyes orgánicas*), which cover fundamental rights, the regions' statutes of autonomy and the electoral system, need **176 votes** in Congress in a final vote on the whole text ([Article 81](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a81)). If the Senate has amended one, the final text goes to that 176-vote test again ([Congress Rules, Article 132](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196#a132)).
+
+**When does it become law?** Once the Cortes have passed it, the King has **15 days** to sign it (*sancionar*) and must order it published straight away ([Article 91](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a91)). Publication is in the [Boletín Oficial del Estado](https://www.boe.es) (BOE), the state's official gazette. Unless the law sets its own date, it enters into force **20 days after publication** ([Civil Code, Article 2](https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#a2)). In practice, many laws set their own date, often the day after publication.
+
+> TIP: A law's name tells you its history. *Ley 12/2023, de 24 de mayo, por el derecho a la vivienda* is the 12th law of 2023, signed on 24 May. On boe.es every law has a "consolidated" version with all later amendments already worked in, like the [housing law](https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203).
+
+::: graphic bill-path
 
 ## Decree-laws: the Government's shortcut
 
@@ -272,7 +278,7 @@ The Government (a *proyecto de ley*, approved by the Council of Ministers), Cong
 
 ### Does a law have to pass both the Congress and the Senate?
 
-Yes. Every law goes through Congress first and then the Senate, which has two months to approve, amend or veto it. But Congress has the last word: it votes on each Senate amendment by simple majority, and can overturn a Senate veto with 176 votes straight away. For an ordinary law, a simple majority is also enough once two months have passed.
+Yes. Every law goes through Congress first and then the Senate, which has two months to approve, amend or veto it. If the Senate approves it unchanged, it goes straight to the King. If not, it returns to Congress, which has the last word: it votes on each Senate amendment by simple majority, and can overturn a Senate veto with 176 votes straight away. For an ordinary law, a simple majority is also enough once two months have passed.
 
 ### When does a new Spanish law come into force?
 
