@@ -614,6 +614,7 @@ def load_articles():
         url = f"/articles/{slug}"
         page_url = f"{SITE_URL}{url}"
         articles.append({
+            "src_path": f"data/articles/{filename}",
             "slug": slug,
             "title": title,
             "meta_title": meta.get("meta_title") or f"{title} — Spanified",
@@ -1801,10 +1802,62 @@ def render_categories(env, digests):
     return sorted(cats.keys())
 
 
+# Source files (git pathspecs, repo-relative) behind each calculator page.
+# Their newest commit date becomes the page's sitemap lastmod.
+CALC_SOURCES = {
+    "net-salary": ["templates/calculator-net-salary.html", "static/js/net-salary*.js"],
+    "autonomo-tax": ["templates/calculator-autonomo.html", "static/js/autonomo*.js"],
+    "property-buying-cost": ["templates/calculator-property-buying-cost.html", "static/js/property-buying-cost*.js"],
+    "rental-yield": ["templates/calculator-rental-yield.html", "static/js/rental-yield*.js"],
+    "electricity-bill": ["templates/calculator-electricity.html", "static/js/electricity*.js"],
+}
+# Amount pages also depend on their own template, page list and grid script.
+CALC_AMOUNT_SOURCES = {
+    "net-salary": ["templates/calculator-net-salary-amount.html", "data/net-salary-pages.json",
+                   "scripts/net-salary-grid.mjs"],
+    "autonomo-tax": ["templates/calculator-autonomo-amount.html", "data/autonomo-pages.json",
+                     "scripts/autonomo-grid.mjs"],
+    "rental-yield": ["templates/calculator-rental-yield-amount.html", "data/rental-yield-pages.json",
+                     "scripts/rental-yield-grid.mjs"],
+}
+
+_git_lastmod_cache = {}
+
+
+def git_lastmod(*pathspecs):
+    """Date (YYYY-MM-DD) of the newest commit touching any of the pathspecs, or None
+    when git or history is unavailable. CI must check out full history (fetch-depth: 0)."""
+    import subprocess
+
+    key = tuple(pathspecs)
+    if key not in _git_lastmod_cache:
+        try:
+            res = subprocess.run(
+                ["git", "log", "-1", "--format=%cs", "--", *pathspecs],
+                check=True, stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding="utf-8", cwd=SCRIPT_DIR,
+            )
+            _git_lastmod_cache[key] = res.stdout.strip() or None
+        except (OSError, subprocess.CalledProcessError):
+            _git_lastmod_cache[key] = None
+    return _git_lastmod_cache[key]
+
+
+def article_lastmod(article):
+    """Newest of the article's publication date and its source file's last commit."""
+    dates = [d for d in (article.get("date"), article.get("src_path") and git_lastmod(article["src_path"])) if d]
+    return max(dates) if dates else None
+
+
+def calc_lastmod(calc, amount_page=False):
+    paths = CALC_SOURCES[calc] + (CALC_AMOUNT_SOURCES[calc] if amount_page else [])
+    return git_lastmod(*paths)
+
+
 def render_sitemap(digests, categories=(), articles=(), salary_pages=(), autonomo_pages=(), rental_yield_pages=(), category_lastmod=None):
     # lastmod only where it is real: the newest digest drives the home page,
-    # archive and category pages. Calculators and static pages get none
-    # rather than a misleading build date.
+    # archive and category pages; articles and calculators use the last git
+    # commit of their sources. Static pages get none rather than a misleading
+    # build date.
     latest = digests[0]["date"] if digests else None
     category_lastmod = category_lastmod or {}
     urls = [(SITE_URL + "/", latest)] + [
@@ -1828,20 +1881,20 @@ def render_sitemap(digests, categories=(), articles=(), salary_pages=(), autonom
     for page in range(2, articles_pages + 1):
         urls.append((SITE_URL + f"/articles/{page}", None))
     for article in articles:
-        urls.append((SITE_URL + article["url"], article["date"]))
+        urls.append((SITE_URL + article["url"], article_lastmod(article)))
     for slug in categories:
         urls.append((SITE_URL + f"/category/{slug}", category_lastmod.get(slug)))
-    urls.append((SITE_URL + "/calculators/net-salary", None))
+    urls.append((SITE_URL + "/calculators/net-salary", calc_lastmod("net-salary")))
     for path in salary_pages:
-        urls.append((SITE_URL + path, None))
-    urls.append((SITE_URL + "/calculators/autonomo-tax", None))
+        urls.append((SITE_URL + path, calc_lastmod("net-salary", amount_page=True)))
+    urls.append((SITE_URL + "/calculators/autonomo-tax", calc_lastmod("autonomo-tax")))
     for path in autonomo_pages:
-        urls.append((SITE_URL + path, None))
-    urls.append((SITE_URL + "/calculators/property-buying-cost", None))
-    urls.append((SITE_URL + "/calculators/rental-yield", None))
+        urls.append((SITE_URL + path, calc_lastmod("autonomo-tax", amount_page=True)))
+    urls.append((SITE_URL + "/calculators/property-buying-cost", calc_lastmod("property-buying-cost")))
+    urls.append((SITE_URL + "/calculators/rental-yield", calc_lastmod("rental-yield")))
     for path in rental_yield_pages:
-        urls.append((SITE_URL + path, None))
-    urls.append((SITE_URL + "/calculators/electricity-bill", None))
+        urls.append((SITE_URL + path, calc_lastmod("rental-yield", amount_page=True)))
+    urls.append((SITE_URL + "/calculators/electricity-bill", calc_lastmod("electricity-bill")))
     # Only the canonical quiz landing page is indexable (quiz.html ships
     # index,follow). The -success / -subscribed / -result-* variants stay
     # noindex,nofollow and must never enter the sitemap.
