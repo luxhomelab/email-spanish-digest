@@ -241,7 +241,9 @@ function render(state) {
   }
 
   $('b-gross').textContent = fmtEur(revenue)
-  $('b-exp-p').textContent = revenue > 0 ? fmtPct(result.irpfDeduction / revenue) : ''
+  // The 5% applies to revenue after SS, so show it as a share of that, not of gross revenue
+  const afterSS = revenue - result.annualSSTotal
+  $('b-exp-p').textContent = afterSS > 0 ? fmtPct(result.irpfDeduction / afterSS) : ''
   $('b-exp').textContent = fmtEur(result.irpfDeduction)
   $('b-ss-p').textContent = revenue > 0 ? fmtPct(ssRate) : ''
   $('b-ss').textContent = fmtEur(result.annualSSTotal)
