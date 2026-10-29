@@ -1,0 +1,205 @@
+{
+  "items": [
+    {
+      "title": "Urda crash audio reveals orders before deadly collision",
+      "body": "Audio shows an Adif control-centre official told an AVE to proceed at normal speed before it hit a stopped Iryo near Urda, Toledo, on October 28. At least 68 people died and 58 were injured. The Government blames human error after a safety-system failure. Most parties suspended election events.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/10/28/6ae2476ee85ece54498b456d.html"
+        },
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-10-29/un-error-humano-a-las-836-la-cadena-de-fallos-y-decisiones-con-las-que-el-gobierno-explica-la-nueva-tragedia-en-la-linea-madrid-sevilla.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/accidente-toledo-da-un-vuelco-campana-un-mes-las-elecciones-generales-29-n_7054665_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": true
+    },
+    {
+      "title": "Euribor heads towards 3.2% as ECB meets",
+      "body": "The 12-month Euribor, the main benchmark for variable-rate mortgages, is heading towards 3.2% for October, down from 3.3% in September. The ECB meets on October 29, with markets expecting its deposit rate to stay at 2.5%. Investment manager Pimco forecasts a rise to 2.75% in December.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/euribor-estabiliza-prevision-bce-aplazara-subida-tipos_7054637_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Housing investors report delays over decree uncertainty",
+      "body": "One of two housing decrees approved on October 6 is in force, extending certain rental contracts by two years and restricting purchases by companies and large holders. Parliamentary validation is still pending. Investment firms say uncertainty over the decrees has stalled funding, developments, and new rental contracts.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/inmobiliario/2026/10/29/fondos-congelan-inversiones-espana-decretos-vivienda.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Government approves wider eligibility for widow's pensions",
+      "body": "The government approved a reform that would extend widow's pensions to unmarried couples with children. The number of widow's pensions fell 0.2% in a year as more women earn retirement pensions and marriages decline. The average widow's pension is €977 a month, against €1,578 for retirement.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-10-29/cada-vez-mas-pensiones-pero-no-de-viudedad-por-que-estas-prestaciones-no-avanzan-al-ritmo-de-las-jubilaciones.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Voluntary exits can count towards collective dismissal",
+      "body": "The Supreme Court ruled that restructuring-linked voluntary exits count towards collective dismissal thresholds. It voided 31 terminations at Avanade Spain, including 16 voluntary exits, and ordered reinstatement and back pay. Firms with over 300 staff must follow the collective dismissal process for at least 30 terminations in 90 days.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/mis-derechos/2026-10-28/el-supremo-impide-a-las-empresas-esquivar-un-despido-colectivo-mediante-bajas-voluntarias.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Supreme Court raises car cartel compensation to 5%",
+      "body": "The Supreme Court raised compensation from 2% to 5% of the purchase price for a group of Citroën buyers affected by the car price-fixing cartel. Its October 22 ruling against Stellantis España strengthens other buyers' compensation claims.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/motor/sector_y_mercado/supremo-eleva-indemnizacion-afectados-cartel-marcas-coches_1_13622907.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Six Spanish banks face higher capital requirements",
+      "body": "The ECB will require Spain's six largest banks to hold about €4 billion more in top-quality capital from January 1, 2027. Much of the rise follows the Banco de España's increase in a buffer against economic risks, from 0.5% to up to 1%. The banks already hold large surpluses above minimum requirements.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://cincodias.elpais.com/companias/2026-10-29/el-bce-eleva-en-4000-millones-los-requerimientos-de-capital-a-la-gran-banca-espanola-para-2027.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "EU cash cap leaves Spain's stricter limit unchanged",
+      "body": "An adopted EU rule would cap business cash payments at €10,000 from July 10, 2027. Spain already has a €1,000 limit when a business is involved, or €10,000 for non-resident individuals acting privately. Private-to-private payments fall outside the EU cap.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/28/union-europea-modifica-normativa-nuevo-limite-pagos-efectivo-entra-vigor-2027-2061605.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Telefónica rivals challenge proposed fibre duct pricing",
+      "body": "Telefónica proposes replacing regulated access to its fibre ducts with voluntary commitments. Rivals say fibre costs would rise by €1.50 per customer a month; Telefónica says the rise would be up to 8 cents per line. Rivals ask the CNMC regulator to reject the plan. Its final decision is pending.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://cincodias.elpais.com/companias/2026-10-29/los-rivales-de-telefonica-alertan-de-que-desregular-los-conductos-encarecera-internet-hasta-3-euros-al-mes.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "When looking for a home, what matters most? A) Price B) Location C) Size",
+  "subject": "Mortgage benchmark heads towards 3.2% in October",
+  "variant": "Nothing happened in Spain today. Except this.",
+  "headline": "Nothing happened in Spain today. Except this.",
+  "date": "2026-10-29",
+  "engagement_source": "generated",
+  "generated_at": "2026-10-29T07:02:28.023446+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 712,
+    "items_selected_pass1": 13,
+    "fact_sheets_extracted": 13,
+    "items_after_importance_filter": 11,
+    "items_in_digest": 9
+  },
+  "selection_reasons": {
+    "2": "Urda train collision with at least 68 dead is a national-scale tragedy that dominates Spain's news and the election campaign",
+    "264": "Official explanation of the Urda accident chain of errors, based on controller audios, a key development in the same developing story",
+    "318": "Government extends widow's pension (pensión de viudedad) to unmarried couples with common children, a systemic pension rule change",
+    "670": "Funds freeze investments in Spain over housing decrees, warning of halted financing and rental contracts, a major property-market development",
+    "601": "ECB raises capital requirements for big Spanish banks by €4bn for 2027 via a 0.5% countercyclical buffer, a banking regulation with lending implications",
+    "544": "Euribor stabilises as the ECB is expected to delay its rate hike to December, directly affecting variable-rate mortgage holders",
+    "254": "Hacienda requires tips in hospitality to be taxed, with Social Security and IRPF effects for a large group of workers",
+    "606": "Supreme Court ruling bars firms from avoiding a collective dismissal procedure through voluntary exits, a labour precedent",
+    "250": "EU cash payment limit of €10,000 from 2027, a rule affecting all residents' everyday transactions and possibly lower national caps",
+    "319": "Telefónica's rivals warn that deregulating ducts could raise internet bills by about €1.5 a month, a cost-of-living impact",
+    "126": "Accident forces suspension of campaign events for the 29-N general election, reshaping national politics a month before voting",
+    "163": "Positive story: Zaragoza's Aday Mara ranked among the NBA's top seven rookies, a Spanish sporting achievement",
+    "109": "Supreme Court raises compensation for car cartel victims from 2% to 5% of purchase price, a precedent for buyers"
+  },
+  "selection_sources": [
+    {
+      "url": "https://www.elmundo.es/economia/2026/10/28/6ae2476ee85ece54498b456d.html",
+      "reason": "Urda train collision with at least 68 dead is a national-scale tragedy that dominates Spain's news and the election campaign"
+    },
+    {
+      "url": "https://elpais.com/espana/2026-10-29/un-error-humano-a-las-836-la-cadena-de-fallos-y-decisiones-con-las-que-el-gobierno-explica-la-nueva-tragedia-en-la-linea-madrid-sevilla.html",
+      "reason": "Official explanation of the Urda accident chain of errors, based on controller audios, a key development in the same developing story"
+    },
+    {
+      "url": "https://elpais.com/economia/2026-10-29/cada-vez-mas-pensiones-pero-no-de-viudedad-por-que-estas-prestaciones-no-avanzan-al-ritmo-de-las-jubilaciones.html",
+      "reason": "Government extends widow's pension (pensión de viudedad) to unmarried couples with common children, a systemic pension rule change"
+    },
+    {
+      "url": "https://www.expansion.com/inmobiliario/2026/10/29/fondos-congelan-inversiones-espana-decretos-vivienda.html",
+      "reason": "Funds freeze investments in Spain over housing decrees, warning of halted financing and rental contracts, a major property-market development"
+    },
+    {
+      "url": "https://cincodias.elpais.com/companias/2026-10-29/el-bce-eleva-en-4000-millones-los-requerimientos-de-capital-a-la-gran-banca-espanola-para-2027.html",
+      "reason": "ECB raises capital requirements for big Spanish banks by €4bn for 2027 via a 0.5% countercyclical buffer, a banking regulation with lending implications"
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/euribor-estabiliza-prevision-bce-aplazara-subida-tipos_7054637_0.html",
+      "reason": "Euribor stabilises as the ECB is expected to delay its rate hike to December, directly affecting variable-rate mortgage holders"
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/10/28/hacienda-obliga-tributar-propinas-hosteleria-cuando-cotizan-seguridad-social-como-afectan-irpf-2062122.html",
+      "reason": "Hacienda requires tips in hospitality to be taxed, with Social Security and IRPF effects for a large group of workers"
+    },
+    {
+      "url": "https://elpais.com/economia/mis-derechos/2026-10-28/el-supremo-impide-a-las-empresas-esquivar-un-despido-colectivo-mediante-bajas-voluntarias.html",
+      "reason": "Supreme Court ruling bars firms from avoiding a collective dismissal procedure through voluntary exits, a labour precedent"
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/10/28/union-europea-modifica-normativa-nuevo-limite-pagos-efectivo-entra-vigor-2027-2061605.html",
+      "reason": "EU cash payment limit of €10,000 from 2027, a rule affecting all residents' everyday transactions and possibly lower national caps"
+    },
+    {
+      "url": "https://cincodias.elpais.com/companias/2026-10-29/los-rivales-de-telefonica-alertan-de-que-desregular-los-conductos-encarecera-internet-hasta-3-euros-al-mes.html",
+      "reason": "Telefónica's rivals warn that deregulating ducts could raise internet bills by about €1.5 a month, a cost-of-living impact"
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/accidente-toledo-da-un-vuelco-campana-un-mes-las-elecciones-generales-29-n_7054665_0.html",
+      "reason": "Accident forces suspension of campaign events for the 29-N general election, reshaping national politics a month before voting"
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/deportes/baloncesto/2026/10/29/nba-situa-aday-mara-entre-los-siete-mejores-novatos-temporada-2063916.html",
+      "reason": "Positive story: Zaragoza's Aday Mara ranked among the NBA's top seven rookies, a Spanish sporting achievement"
+    },
+    {
+      "url": "https://www.eldiario.es/motor/sector_y_mercado/supremo-eleva-indemnizacion-afectados-cartel-marcas-coches_1_13622907.html",
+      "reason": "Supreme Court raises compensation for car cartel victims from 2% to 5% of purchase price, a precedent for buyers"
+    }
+  ]
+}
