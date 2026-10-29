@@ -50,14 +50,14 @@ describe('findSSBracket', () => {
 
 // ── findSSQuota ───────────────────────────────────────────────────────────────
 describe('findSSQuota', () => {
-  it('returns tarifa plana (€80) for new autonomo', () => {
+  it('returns tarifa plana (€80 + MEI = €88.65) for new autonomo', () => {
     const result = findSSQuota(2000, 2026, 'new')
     assert.equal(result.isTarifaPlana, true)
-    assert.equal(result.monthlyQuota, 80)
+    assert.equal(result.monthlyQuota, 88.65) // €80 + MEI 8.65
   })
 
   it('returns tarifa plana for new autonomo regardless of year', () => {
-    assert.equal(findSSQuota(2000, 2028, 'new').monthlyQuota, 80)
+    assert.equal(findSSQuota(2000, 2028, 'new').monthlyQuota, 88.65)
   })
 
   it('returns 2026 quota for bracket 1 (established)', () => {
@@ -191,21 +191,21 @@ describe('catalunya 2026 brackets', () => {
     assert.equal(calcIrpfRegional(33000, 'catalunya'), 4135)
   })
 
-  it('30k scenario regional component ≈ €2109', () => {
+  it('30k scenario regional component ≈ €2155', () => {
     const r = calculateAutonomo({ annualNetRevenue: 30000, region: 'catalunya' })
-    assert.ok(Math.abs(r.irpfRegional - 2108.52) < 1, `got ${r.irpfRegional}`)
+    assert.ok(Math.abs(r.irpfRegional - 2155.47) < 1, `got ${r.irpfRegional}`)
   })
 })
 
 // ── M4: Ceuta/Melilla 60% reduction (art. 68.4 LIRPF) ────────────────────────
 describe('ceuta/melilla reduction', () => {
-  it('pays 40% of full IRPF in Ceuta (30k → ≈€1680)', () => {
+  it('pays 40% of full IRPF in Ceuta (30k → ≈€1715)', () => {
     const mad = calculateAutonomo({ annualNetRevenue: 30000, region: 'madrid' })
     const ceu = calculateAutonomo({ annualNetRevenue: 30000, region: 'ceuta' })
     assert.ok(ceu.irpfTotal < mad.irpfTotal)
     // components stay consistent: total == state + regional
     assert.equal(ceu.irpfTotal, Math.round((ceu.irpfState + ceu.irpfRegional) * 100) / 100)
-    assert.ok(Math.abs(ceu.irpfTotal - 1679.98) < 0.01, `got ${ceu.irpfTotal}`)
+    assert.ok(Math.abs(ceu.irpfTotal - 1715.2) < 0.01, `got ${ceu.irpfTotal}`)
   })
 
   it('Melilla matches Ceuta', () => {
@@ -226,17 +226,16 @@ describe('calcGeneralExpenses', () => {
     assert.equal(calcGeneralExpenses(20000, 'individual'), 1400)
   })
 
-  it('caps at €2,000 for individual autonomo with high revenue', () => {
-    assert.equal(calcGeneralExpenses(40000, 'individual'), 2000)
+  it('has no €2,000 cap for individual autonomo (art. 308.1.c regla 2ª LGSS)', () => {
+    assert.equal(calcGeneralExpenses(40000, 'individual'), 2800)
   })
 
   it('returns 3% for company director', () => {
     assert.equal(calcGeneralExpenses(20000, 'director'), 600)
   })
 
-  it('caps at €2,000 for director with high revenue', () => {
-    // 3% of 70000 = 2100 → capped at 2000
-    assert.equal(calcGeneralExpenses(70000, 'director'), 2000)
+  it('has no €2,000 cap for director', () => {
+    assert.equal(calcGeneralExpenses(70000, 'director'), 2100)
   })
 
   it('returns 0 for zero revenue', () => {
@@ -408,12 +407,12 @@ describe('calculateAutonomo', () => {
     assert.ok(Math.abs(result.netTakeHome + result.totalBurden - 40000) < 0.02)
   })
 
-  it('tarifa plana (€80/mo) reduces SS for new autonomo vs established', () => {
+  it('tarifa plana (€80 + MEI) reduces SS for new autonomo vs established', () => {
     const newResult = calculateAutonomo({ ...base, timeAsAutonomo: 'new' })
     const estResult = calculateAutonomo(base)
     assert.ok(newResult.annualSSTotal < estResult.annualSSTotal)
     assert.equal(newResult.isTarifaPlana, true)
-    assert.equal(newResult.monthlySSQuota, 80)
+    assert.equal(newResult.monthlySSQuota, 88.65)
   })
 
   it('director has lower general expenses deduction than individual', () => {
@@ -514,14 +513,14 @@ describe('calculateAutonomo', () => {
     assert.ok(result.effectiveTotalRate >= 0) // Never negative
   })
 
-  it('timeAsAutonomo "new" uses tarifa plana (€80/mo), while "mid" and "established" use bracket-based quotas', () => {
+  it('timeAsAutonomo "new" uses tarifa plana (€80 + MEI), while "mid" and "established" use bracket-based quotas', () => {
     // €12000/yr = €1000/mo after general expenses (7% deduction): (12000-840)/12 = €930/mo
     // €930/mo → bracket 3 → quota 266.80/mo (applies to both 'mid' and 'established')
     // €1000/mo is the gross input, but SS bracket lookup uses net monthly income after deductions
     const newAutonomo = calculateAutonomo({ ...base, annualNetRevenue: 12000, timeAsAutonomo: 'new' })
     const midAutonomo = calculateAutonomo({ ...base, annualNetRevenue: 12000, timeAsAutonomo: 'mid' })
     const establishedAutonomo = calculateAutonomo({ ...base, annualNetRevenue: 12000, timeAsAutonomo: 'established' })
-    assert.equal(newAutonomo.monthlySSQuota, 80) // Tarifa plana (€80/mo flat for first 12 months)
+    assert.equal(newAutonomo.monthlySSQuota, 88.65) // Tarifa plana (€80 + €8.65 MEI for first 12 months)
     assert.equal(midAutonomo.monthlySSQuota, 267.65) // Bracket 3 (after 12 months, months 13–24)
     assert.equal(establishedAutonomo.monthlySSQuota, 267.65) // Same bracket as 'mid' for this income
   })
@@ -545,8 +544,8 @@ describe('C2 split deductions', () => {
 
   it('exposes ssDeduction (7% of revenue) and irpfDeduction (5% of revenue after SS) separately', () => {
     const result = calculateAutonomo(base)
-    assert.equal(result.ssDeduction, 2000) // 7% of 30k = 2100 → cap
-    assert.equal(result.irpfDeduction, 1243.67) // 5% of (30000 − 5126.52)
+    assert.equal(result.ssDeduction, 2100) // 7% of 30k, no cap
+    assert.equal(result.irpfDeduction, 1259.12) // 5% of (30000 − 4817.64)
     assert.equal(result.generalExpensesDeduction, result.ssDeduction) // legacy alias
   })
 
@@ -560,10 +559,10 @@ describe('C2 split deductions', () => {
   })
 
   it('IRPF base uses the 5% deduction, not 7%', () => {
-    // 30k Madrid individual: SS = 427.21×12 = 5126.52, previo = 24873.48, IRPF ded = 1243.67
-    // reducedNet = 24873.48 − 1243.67 = 23629.81
+    // 30k Madrid individual: bracket 9, SS = 401.47×12 = 4817.64, previo = 25182.36, IRPF ded = 1259.12
+    // reducedNet = 25182.36 − 1259.12 = 23923.24
     const result = calculateAutonomo(base)
-    assert.equal(result.reducedNetIncome, 23629.81)
+    assert.equal(result.reducedNetIncome, 23923.24)
   })
 
   it('computes the 5% after the SS quota, not on gross revenue (art. 30.2.4ª RIRPF)', () => {
@@ -575,9 +574,10 @@ describe('C2 split deductions', () => {
     assert.equal(r.irpfDeduction, 1343.67)
     assert.equal(r.irpfBase, 25529.81)
     assert.equal(r.irpfState, 2384.97)
-    assert.equal(r.irpfRegional, 2103)
-    assert.equal(r.irpfTotal, 4487.97)
-    assert.equal(r.netTakeHome, 22385.51)
+    assert.equal(r.irpfRegional, 2068.43) // Madrid's own mínimo 5956.65
+    assert.equal(r.irpfTotal, 4453.4)
+    assert.equal(r.netTakeHome, 22420.08)
+    assert.equal(r.netTakeHomeMonthly, 1868.34)
   })
 
   it('caps the 5% at €2,000 once revenue after SS exceeds €40,000', () => {
@@ -606,11 +606,11 @@ describe('QA scenarios S1-S8', () => {
     assert.ok(Math.abs(r.netTakeHome + r.totalBurden - 15000) < 0.02)
   })
 
-  it('S2: €30k Madrid individual → bracket 10, quota 427.21', () => {
+  it('S2: €30k Madrid individual → bracket 9, quota 401.47 (30000 × 0.93 / 12 = 2325)', () => {
     const r = calculateAutonomo({ ...base, annualNetRevenue: 30000 })
-    assert.equal(r.ssBracketId, 10)
-    assert.equal(r.monthlySSQuota, 427.21)
-    assert.equal(r.reducedNetIncome, 23629.81)
+    assert.equal(r.ssBracketId, 9)
+    assert.equal(r.monthlySSQuota, 401.47)
+    assert.equal(r.reducedNetIncome, 23923.24)
   })
 
   it('S3: €80k Madrid individual → bracket 15, irpfState 10833.66', () => {
@@ -620,12 +620,12 @@ describe('QA scenarios S1-S8', () => {
     assert.equal(r.irpfState, 10833.66)
   })
 
-  it('S4: €15k tarifa plana (new) → €80/mo, higher take-home than established', () => {
+  it('S4: €15k tarifa plana (new) → €88.65/mo, higher take-home than established', () => {
     const fresh = calculateAutonomo({ ...base, annualNetRevenue: 15000, timeAsAutonomo: 'new' })
     const est = calculateAutonomo({ ...base, annualNetRevenue: 15000 })
     assert.equal(fresh.isTarifaPlana, true)
-    assert.equal(fresh.monthlySSQuota, 80)
-    assert.equal(fresh.annualSSTotal, 960)
+    assert.equal(fresh.monthlySSQuota, 88.65)
+    assert.equal(fresh.annualSSTotal, 1063.8)
     assert.ok(fresh.netTakeHome > est.netTakeHome)
   })
 
@@ -692,10 +692,10 @@ describe('C4 director floor', () => {
     assert.equal(result.monthlyQuota, 607.35)
   })
 
-  it('director + new keeps tarifa plana (€80), floor does not override it', () => {
+  it('director + new keeps tarifa plana (€88.65), floor does not override it', () => {
     const result = findSSQuota(1212.50, 2026, 'new', 'director')
     assert.equal(result.isTarifaPlana, true)
-    assert.equal(result.monthlyQuota, 80)
+    assert.equal(result.monthlyQuota, 88.65)
   })
 
   it('15k director (established, Madrid) → SS floor 448.69/mo = 5384.28/yr', () => {
@@ -823,5 +823,63 @@ describe('calcProgressiveTaxWithBreakdown', () => {
     const { brackets: breakdown } = calcProgressiveTaxWithBreakdown(100000, brackets)
     const last = breakdown[breakdown.length - 1]
     assert.equal(last.to, null)
+  })
+})
+
+// ── Regional mínimos (art. 56.3 LIRPF; AEAT cuadro de mínimos, Renta 2025) ────
+describe('regional personal minimum', () => {
+  const p = { age: 41, numChildren: 2, childrenUnder3: 1, disabilityLevel: 0 }
+
+  it('uses the state amounts without a region', () => {
+    assert.equal(calcPersonalMinimum(p), 5550 + 2400 + 2700 + 2800)
+  })
+
+  it('Valencia: 6105 + 2640 + 2970 + 3080', () => {
+    assert.equal(calcPersonalMinimum(p, 'comunidad_valenciana'), 14795)
+  })
+
+  it('Madrid: 5956.65 + 2575.85 + 2897.83 + 3005.16', () => {
+    assert.equal(calcPersonalMinimum(p, 'madrid'), 14435.49)
+  })
+
+  it('Catalonia, Ceuta and unlisted regions use the state mínimos', () => {
+    for (const region of ['catalunya', 'ceuta', 'aragon', 'murcia']) {
+      assert.equal(calcPersonalMinimum(p, region), calcPersonalMinimum(p), region)
+    }
+  })
+
+  it('the state half keeps the state mínimo, the regional half uses the region', () => {
+    const r = calculateAutonomo({ annualNetRevenue: 32000, region: 'madrid' })
+    assert.equal(r.personalMinimum, 5550)
+    assert.equal(r.regionalPersonalMinimum, 5956.65)
+  })
+})
+
+// ── Video demo cases (spanified YouTube explainer, 2026 rules) ────────────────
+describe('demo cases', () => {
+  const base = { autonomoType: 'individual', timeAsAutonomo: 'established', year: 2026, numChildren: 0, childrenUnder3: 0, disabilityLevel: 0 }
+
+  it('Valencia family: €55k, age 41, 2 children (1 under 3)', () => {
+    const r = calculateAutonomo({ ...base, annualNetRevenue: 55000, region: 'comunidad_valenciana', age: 41, numChildren: 2, childrenUnder3: 1 })
+    assert.equal(r.ssDeduction, 3850) // 7% of 55k, no cap
+    assert.equal(r.ssBracketId, 14) // 51150 / 12 = 4262.50
+    assert.equal(r.monthlySSQuota, 545.59)
+    assert.equal(r.irpfDeduction, 2000)
+    assert.equal(r.irpfBase, 46452.92)
+    assert.equal(r.personalMinimum, 13450)
+    assert.equal(r.regionalPersonalMinimum, 14795)
+    assert.equal(r.irpfState, 5141.79)
+    assert.equal(r.irpfRegional, 4866.85)
+    assert.equal(r.irpfTotal, 10008.64)
+    assert.equal(r.netTakeHome, 38444.28)
+  })
+
+  it('Catalonia translator: €18k, first year on tarifa plana (€80 + MEI)', () => {
+    const r = calculateAutonomo({ ...base, annualNetRevenue: 18000, region: 'catalunya', age: 35, timeAsAutonomo: 'new' })
+    assert.equal(r.isTarifaPlana, true)
+    assert.equal(r.monthlySSQuota, 88.65)
+    assert.equal(r.annualSSTotal, 1063.8)
+    assert.equal(r.irpfTotal, 2201.15)
+    assert.equal(r.netTakeHome, 14735.05)
   })
 })

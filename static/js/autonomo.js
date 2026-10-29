@@ -260,7 +260,10 @@ function render(state) {
   if (result.personalMinimum > 0) {
     const lo = Math.round(result.personalMinimum * 0.19).toLocaleString('en-US')
     const hi = Math.round(result.personalMinimum * 0.37).toLocaleString('en-US')
-    saving.textContent = `Your personal minimum: ${result.personalMinimum.toLocaleString('en-US')} € (saving you roughly ${lo}–${hi} € in taxes depending on your bracket).`
+    const regional = result.regionalPersonalMinimum !== result.personalMinimum
+      ? `; your region's own mínimo for the regional half: ${result.regionalPersonalMinimum.toLocaleString('en-US')} €`
+      : ''
+    saving.textContent = `Your personal minimum: ${result.personalMinimum.toLocaleString('en-US')} € (saving you roughly ${lo}–${hi} € in taxes depending on your bracket)${regional}.`
     saving.hidden = false
   } else {
     saving.hidden = true

@@ -24,8 +24,8 @@
   "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}},
  {"@type": "FAQPage", "mainEntity": [
   {"@type": "Question", "name": "How are autónomo SS quotas calculated?", "acceptedAnswer": {"@type": "Answer", "text": "Since 2023, Spain introduced a 15-bracket social security system for autónomos based on actual net income. Your monthly quota depends on which bracket your estimated annual net income falls into. Official quotas for 2026 are set by Orden PJC/297/2026."}},
-  {"@type": "Question", "name": "What is tarifa plana?", "acceptedAnswer": {"@type": "Answer", "text": "Tarifa plana is a reduced flat rate of €80/month for newly registered autónomos during their first 12 months. It reduces the initial burden for new self-employed workers. After the first year, you pay the regular quota based on your income bracket."}},
-  {"@type": "Question", "name": "What deductions can autónomos claim?", "acceptedAnswer": {"@type": "Answer", "text": "For Social Security, individual autónomos deduct 7% of net revenues (capped at €2,000/year) when determining their SS bracket; company directors apply a 3% rate (same cap). For IRPF, all autónomos first deduct their annual SS contributions, then a flat 5% allowance for hard-to-justify expenses, calculated on that net profit after Social Security (capped at €2,000/year)."}},
+  {"@type": "Question", "name": "What is tarifa plana?", "acceptedAnswer": {"@type": "Answer", "text": "Tarifa plana is a reduced flat rate of €80/month for newly registered autónomos during their first 12 months, plus the MEI levy (about €8.65), so about €88.65/month is charged in 2026. It reduces the initial burden for new self-employed workers. After the first year, you pay the regular quota based on your income bracket."}},
+  {"@type": "Question", "name": "What deductions can autónomos claim?", "acceptedAnswer": {"@type": "Answer", "text": "For Social Security, individual autónomos deduct 7% of net revenues (no cap) when determining their SS bracket; company directors apply a 3% rate. For IRPF, all autónomos first deduct their annual SS contributions, then a flat 5% allowance for hard-to-justify expenses, calculated on that net profit after Social Security (capped at €2,000/year)."}},
   {"@type": "Question", "name": "How is IRPF calculated for autónomos?", "acceptedAnswer": {"@type": "Answer", "text": "IRPF is Spain's income tax. For autónomos, the taxable base is net revenue minus SS contributions, minus a 5% general expenses allowance on what remains (max €2,000), reduced further by the personal minimum allowance. The resulting base is taxed using progressive brackets split between a state component and a regional component set by each community."}},
   {"@type": "Question", "name": "Do dependent parents and disability reduce IRPF?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Each cohabiting parent over 65 (or disabled) adds €1,150 to your personal minimum, plus €1,400 more if over 75. Disability adds €3,000 at 33%+ (€6,000 with reduced mobility) and €12,000 at 65%+. Ceuta and Melilla residents pay only 40% of the full IRPF (60% reduction, art. 68.4 LIRPF)."}}
  ]}
@@ -69,7 +69,7 @@
     </div>
 
     <div class="field">
-     <span class="flabel">Autónomo type <span class="tip" title="Affects the SS bracket deduction: Individual = 7% of revenue (max €2,000). Director of your own SL = 3% (max €2,000). IRPF always uses a flat 5% deduction for everyone, on net profit after Social Security (max €2,000).">?</span></span>
+     <span class="flabel">Autónomo type <span class="tip" title="Affects the SS bracket deduction: Individual = 7% of revenue (no cap). Director of your own SL = 3% (no cap). IRPF always uses a flat 5% deduction for everyone, on net profit after Social Security (max €2,000).">?</span></span>
      <div class="seg" id="f-type" role="group" aria-label="Autónomo type">
       <button type="button" data-v="individual" class="on">Individual freelancer</button>
       <button type="button" data-v="director">Company director / shareholder</button>
@@ -77,9 +77,9 @@
     </div>
 
     <div class="field">
-     <span class="flabel">Time as autónomo <span class="tip" title="New autonomos (first 12 months) pay a flat Tarifa Plana of €80/month. After month 12, the standard bracket-based quota applies.">?</span></span>
+     <span class="flabel">Time as autónomo <span class="tip" title="New autonomos (first 12 months) pay a flat Tarifa Plana of €80/month plus the MEI levy, about €88.65/month in 2026. After month 12, the standard bracket-based quota applies.">?</span></span>
      <div class="seg seg-3" id="f-time" role="group" aria-label="Time as autónomo">
-      <button type="button" data-v="new">&lt; 1 year (tarifa plana €80/mo)</button>
+      <button type="button" data-v="new">&lt; 1 year (tarifa plana ≈ €89/mo)</button>
       <button type="button" data-v="mid">1–2 years</button>
       <button type="button" data-v="established" class="on">&gt; 2 years</button>
      </div>
@@ -91,18 +91,18 @@
      </button>
      <div id="personal-body" hidden>
       <div class="field">
-       <label for="f-age">Age <span class="tip" title="Age affects your personal minimum allowance, which reduces IRPF. Under 65: base €5,550. Age 65–74: +€1,150. Age 75+: +€1,400 additional.">?</span> <span class="sub">years</span></label>
+       <label for="f-age">Age <span class="tip" title="Age affects your personal minimum allowance, which reduces IRPF. Under 65: base €5,550. Age 65–74: +€1,150. Age 75+: +€1,400 additional. These are the state amounts; Madrid, Valencia, Andalucía and some other regions use higher ones for the regional half.">?</span> <span class="sub">years</span></label>
        <input id="f-age" type="number" min="18" max="100" step="1" value="35">
       </div>
       <div class="field-row">
        <div class="field">
-        <label for="f-children">Dependent children <span class="tip" title="Dependent children (under 25, living with you, income under €8,000/yr) increase your personal minimum: 1st child +€2,400 · 2nd +€2,700 · 3rd +€4,000 · 4th+ +€4,500 each.">?</span></label>
+        <label for="f-children">Dependent children <span class="tip" title="Dependent children (under 25, living with you, income under €8,000/yr) increase your personal minimum: 1st child +€2,400 · 2nd +€2,700 · 3rd +€4,000 · 4th+ +€4,500 each (state amounts; several regions use higher ones for the regional half).">?</span></label>
         <select id="f-children">
          <option value="0" selected>0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
         </select>
        </div>
        <div class="field">
-        <label for="f-chu3">Of which under 3 years old <span class="tip" title="Each child under 3 adds an extra €2,800 to your personal minimum on top of the base child allowance. Must not exceed the total number of dependent children.">?</span></label>
+        <label for="f-chu3">Of which under 3 years old <span class="tip" title="Each child under 3 adds an extra €2,800 (state amount; higher in some regions) to your personal minimum on top of the base child allowance. Must not exceed the total number of dependent children.">?</span></label>
         <select id="f-chu3"><option value="0" selected>0</option></select>
        </div>
       </div>
@@ -136,8 +136,8 @@
    </div>
 
    <div class="calc-results">
-    <div class="notice notice-amber" id="r-tarifa" hidden>Tarifa plana — flat €80/month for first 12 months.</div>
-    <div class="notice notice-amber" id="r-ceuta" hidden>60% Ceuta/Melilla reduction applied (art. 68.4 LIRPF).</div>
+    <div class="notice notice-amber" id="r-tarifa" hidden>Tarifa plana — flat €80/month for first 12 months, plus the MEI levy (≈ €88.65/month charged). €80 was set for 2023–2025; no 2026 rule has fixed a new amount yet, so this is an estimate.</div>
+    <div class="notice notice-amber" id="r-ceuta" hidden>60% Ceuta/Melilla reduction applied (art. 68.4 LIRPF). It covers income earned in Ceuta or Melilla, so this assumes your activity is carried on there.</div>
     <div class="notice notice-red" id="r-error" hidden><strong>⚠️ Calculation Error:</strong> <span id="r-error-text"></span>. Please check your inputs or contact support if the problem persists.</div>
 
     <div class="hero-net">
@@ -191,12 +191,12 @@
       <h4>Progressive brackets</h4>
       <p>IRPF is progressive — only the income within each bracket is taxed at that bracket's rate. Earning €1 more never makes your entire income jump to a higher rate. State rates range from 9.5% on the first €12,450 up to 24.5% above €300,000. Regional rates vary by community.</p>
       <h4>Personal minimum (mínimo personal y familiar)</h4>
-      <p>Spain grants every taxpayer a personal minimum allowance — an amount of income that is effectively tax-free. It works by computing the tax on the allowance and subtracting that from your bill (not by reducing your taxable base). The base allowance is €5,550; it increases with age (65+, 75+), dependent children, cohabiting parents 65+/75+, and disability (including reduced mobility).</p>
+      <p>Spain grants every taxpayer a personal minimum allowance — an amount of income that is effectively tax-free. It works by computing the tax on the allowance and subtracting that from your bill (not by reducing your taxable base). The state allowance is €5,550; it increases with age (65+, 75+), dependent children, cohabiting parents 65+/75+, and disability (including reduced mobility). The regional half of IRPF uses your region's own mínimos: Madrid (€5,956.65), Valencia and Asturias (€6,105), Andalucía, Galicia, Canarias and Baleares set higher amounts than the state; Catalonia and the other regions use the state ones.</p>
       <p class="save" id="irpf-saving" hidden></p>
       <h4>Autonomo-specific deductions</h4>
       <p>Before IRPF is calculated, your taxable base is reduced by:</p>
       <ul>
-       <li>General expenses: 7% of revenue (max €2,000) for individual autonomos and 3% for directors — this sets the income bracket for Social Security. For IRPF, a separate flat 5% deduction applies to everyone, calculated on net profit after Social Security (max €2,000).</li>
+       <li>General expenses: 7% of revenue (no cap) for individual autonomos and 3% for directors — this sets the income bracket for Social Security. For IRPF, a separate flat 5% deduction applies to everyone, calculated on net profit after Social Security (max €2,000).</li>
        <li>Social Security contributions: your full annual SS quota is 100% deductible from the IRPF base.</li>
       </ul>
       <p class="curbase" id="irpf-base" hidden></p>
@@ -233,8 +233,8 @@
   <div class="card faq-card">
    <h2>Frequently Asked Questions</h2>
    <details class="faq-item"><summary>How are autónomo SS quotas calculated?</summary><p>Since 2023, Spain introduced a 15-bracket social security system for autónomos based on actual net income. Your monthly quota depends on which bracket your estimated annual net income falls into. Official quotas for 2026 are set by Orden PJC/297/2026.</p></details>
-   <details class="faq-item"><summary>What is tarifa plana?</summary><p>Tarifa plana is a reduced flat rate of €80/month for newly registered autónomos during their first 12 months. It reduces the initial burden for new self-employed workers. After the first year, you pay the regular quota based on your income bracket.</p></details>
-   <details class="faq-item"><summary>What deductions can autónomos claim?</summary><p>For Social Security, individual autónomos deduct 7% of net revenues (capped at €2,000/year) when determining their SS bracket; company directors apply a 3% rate (same cap). For IRPF, all autónomos first deduct their annual SS contributions, then a flat 5% allowance for hard-to-justify expenses, calculated on that net profit after Social Security (capped at €2,000/year).</p></details>
+   <details class="faq-item"><summary>What is tarifa plana?</summary><p>Tarifa plana is a reduced flat rate of €80/month for newly registered autónomos during their first 12 months, plus the MEI levy (about €8.65), so about €88.65/month is charged in 2026. It reduces the initial burden for new self-employed workers. After the first year, you pay the regular quota based on your income bracket.</p></details>
+   <details class="faq-item"><summary>What deductions can autónomos claim?</summary><p>For Social Security, individual autónomos deduct 7% of net revenues (no cap) when determining their SS bracket; company directors apply a 3% rate. For IRPF, all autónomos first deduct their annual SS contributions, then a flat 5% allowance for hard-to-justify expenses, calculated on that net profit after Social Security (capped at €2,000/year).</p></details>
    <details class="faq-item"><summary>How is IRPF calculated for autónomos?</summary><p>IRPF is Spain's income tax. For autónomos, the taxable base is net revenue minus SS contributions, minus a 5% general expenses allowance on what remains (max €2,000), reduced further by the personal minimum allowance. The resulting base is taxed using progressive brackets split between a state component and a regional component set by each community.</p></details>
    <details class="faq-item"><summary>Do dependent parents and disability reduce IRPF?</summary><p>Yes. Each cohabiting parent over 65 (or disabled, any age) adds €1,150 to your personal minimum, plus €1,400 more if over 75 (they must live with you and earn under €8,000/year). Disability adds €3,000 at 33%+ (€6,000 with reduced mobility) and €12,000 at 65%+. Ceuta and Melilla residents pay only 40% of the full IRPF (60% reduction, art. 68.4 LIRPF).</p></details>
    <div class="calc-share">
