@@ -95,3 +95,21 @@ export function parseStateFromParams(search, regions = null) {
     reducedMobility: get('reducedMobility'),
   }, regions)
 }
+
+/**
+ * Text of the "Your personal minimum" line under the IRPF explainer. Mentions the region's
+ * own mínimo when it differs from the state one (art. 56.3 LIRPF). Empty string when there
+ * is no minimum to show.
+ *
+ * @param {{ personalMinimum:number, regionalPersonalMinimum?:number }} result
+ * @returns {string}
+ */
+export function personalMinimumText({ personalMinimum, regionalPersonalMinimum }) {
+  if (!(personalMinimum > 0)) return ''
+  const lo = Math.round(personalMinimum * 0.19).toLocaleString('en-US')
+  const hi = Math.round(personalMinimum * 0.37).toLocaleString('en-US')
+  const regional = regionalPersonalMinimum !== undefined && regionalPersonalMinimum !== personalMinimum
+    ? `; your region's own mínimo for the regional half: ${regionalPersonalMinimum.toLocaleString('en-US')} €`
+    : ''
+  return `Your personal minimum: ${personalMinimum.toLocaleString('en-US')} € (saving you roughly ${lo}–${hi} € in taxes depending on your bracket)${regional}.`
+}

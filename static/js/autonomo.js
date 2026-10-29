@@ -1,5 +1,5 @@
 import { calculateAutonomo } from './autonomo-calc.js'
-import { sanitizeState, parseStateFromParams, DEFAULTS, QUERY_KEYS } from './autonomo-form.js'
+import { sanitizeState, parseStateFromParams, personalMinimumText, DEFAULTS, QUERY_KEYS } from './autonomo-form.js'
 
 const STORAGE_KEY = 'aut-calculator-state'
 const $ = id => document.getElementById(id)
@@ -257,17 +257,8 @@ function render(state) {
   $('b-net').textContent = fmtEur(result.netTakeHome)
 
   const saving = $('irpf-saving')
-  if (result.personalMinimum > 0) {
-    const lo = Math.round(result.personalMinimum * 0.19).toLocaleString('en-US')
-    const hi = Math.round(result.personalMinimum * 0.37).toLocaleString('en-US')
-    const regional = result.regionalPersonalMinimum !== result.personalMinimum
-      ? `; your region's own mínimo for the regional half: ${result.regionalPersonalMinimum.toLocaleString('en-US')} €`
-      : ''
-    saving.textContent = `Your personal minimum: ${result.personalMinimum.toLocaleString('en-US')} € (saving you roughly ${lo}–${hi} € in taxes depending on your bracket)${regional}.`
-    saving.hidden = false
-  } else {
-    saving.hidden = true
-  }
+  saving.textContent = personalMinimumText(result)
+  saving.hidden = !saving.textContent
   const base = $('irpf-base')
   if (result.irpfBase > 0) {
     base.textContent = `Your current taxable base: ${result.irpfBase.toLocaleString('en-US', { maximumFractionDigits: 0 })} €`

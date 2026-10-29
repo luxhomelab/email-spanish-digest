@@ -11,6 +11,7 @@ import {
   calcGeneralExpenses,
   calcIrpfDeduction,
   calcPersonalMinimum,
+  IRPF_REGIONAL_BRACKETS,
   calculateAutonomo,
 } from '../static/js/autonomo-calc.js'
 
@@ -881,5 +882,62 @@ describe('demo cases', () => {
     assert.equal(r.annualSSTotal, 1063.8)
     assert.equal(r.irpfTotal, 2201.15)
     assert.equal(r.netTakeHome, 14735.05)
+  })
+})
+
+// ── Regional mínimos: every field of every region, against the AEAT cuadro ───
+// Expected values copied from AEAT Manual Renta 2025 "Cuadro de mínimos personales y
+// familiares estatal y autonómicos" (updated 17/03/2026), independent of the code's table.
+describe('regional mínimos per field', () => {
+  // [base, +65, +75 extra, child1, child2, child3, child4, under-3, parent65, parent75 extra, dis33, dis65, mobility]
+  const AEAT = {
+    state:                [5550, 1150, 1400, 2400, 2700, 4000, 4500, 2800, 1150, 1400, 3000, 9000, 3000],
+    andalucia:            [5790, 1200, 1460, 2510, 2820, 4170, 4700, 2920, 1200, 1460, 3130, 9390, 3130],
+    asturias:             [6105, 1265, 1540, 2640, 2970, 4400, 4950, 3080, 1265, 1540, 3300, 9900, 3300],
+    baleares:             [5550, 1265, 1540, 2400, 2970, 4400, 4950, 2800, 1265, 1540, 3300, 9900, 3300],
+    canarias:             [5606, 1162, 1414, 2424, 2727, 4040, 4545, 2828, 1162, 1414, 3030, 9090, 3030],
+    galicia:              [5789, 1199, 1460, 2503, 2816, 4172, 4694, 2920, 1199, 1460, 3129, 9387, 3129],
+    madrid:               [5956.65, 1234.26, 1502.58, 2575.85, 2897.83, 4400, 4950, 3005.16, 1234.26, 1502.58, 3219.81, 9659.44, 3219.81],
+    comunidad_valenciana: [6105, 1265, 1540, 2640, 2970, 4400, 4950, 3080, 1265, 1540, 3300, 9900, 3300],
+  }
+  const STATE_REGIONS = ['aragon', 'cantabria', 'castilla_la_mancha', 'castilla_leon', 'catalunya', 'extremadura', 'murcia', 'la_rioja', 'ceuta', 'melilla']
+  const round2 = n => Math.round(n * 100) / 100
+  const base = { age: 35, numChildren: 0, childrenUnder3: 0, disabilityLevel: 0 }
+
+  for (const [region, [b, a65, a75, c1, c2, c3, c4, u3, p65, p75, d33, d65, mob]] of Object.entries(AEAT)) {
+    const r = region === 'state' ? undefined : region
+    const min = p => calcPersonalMinimum({ ...base, ...p }, r)
+    it(`${region}: every mínimo matches the AEAT table`, () => {
+      assert.equal(min({}), b, 'base')
+      assert.equal(min({ age: 70 }), round2(b + a65), 'age 65-74')
+      assert.equal(min({ age: 80 }), round2(b + a65 + a75), 'age 75+')
+      assert.equal(min({ numChildren: 5 }), round2(b + c1 + c2 + c3 + c4 + c4), '5 children')
+      assert.equal(min({ numChildren: 2, childrenUnder3: 2 }), round2(b + c1 + c2 + 2 * u3), '2 under 3')
+      assert.equal(min({ numParents65: 2, numParents75: 1 }), round2(b + 2 * p65 + p75), 'ascendants')
+      assert.equal(min({ disabilityLevel: 33 }), round2(b + d33), 'disability 33')
+      assert.equal(min({ disabilityLevel: 33, reducedMobility: true }), round2(b + d33 + mob), 'disability 33 + mobility')
+      assert.equal(min({ disabilityLevel: 65 }), round2(b + d65 + mob), 'disability 65')
+    })
+  }
+
+  it('regions without their own mínimos match the state for every field', () => {
+    const profile = { age: 80, numChildren: 3, childrenUnder3: 1, disabilityLevel: 33, reducedMobility: true, numParents65: 1, numParents75: 1 }
+    for (const region of STATE_REGIONS) {
+      assert.equal(calcPersonalMinimum(profile, region), calcPersonalMinimum(profile), region)
+    }
+  })
+
+  it('every calculator region is either in the AEAT table or uses the state mínimos', () => {
+    const covered = new Set([...Object.keys(AEAT), ...STATE_REGIONS, 'navarra', 'pais_vasco'])
+    for (const region of Object.keys(IRPF_REGIONAL_BRACKETS)) assert.ok(covered.has(region), region)
+  })
+
+  it('the regional mínimo lowers only the regional half of IRPF', () => {
+    const profile = { annualNetRevenue: 40000, age: 70, numChildren: 1, numParents65: 1 }
+    const val = calculateAutonomo({ ...profile, region: 'comunidad_valenciana' })
+    const regionalAtStateMin = Math.max(0, round2(calcIrpfRegional(val.irpfBase, 'comunidad_valenciana') - calcIrpfRegional(val.personalMinimum, 'comunidad_valenciana')))
+    assert.ok(val.regionalPersonalMinimum > val.personalMinimum)
+    assert.ok(val.irpfRegional < regionalAtStateMin)
+    assert.equal(val.irpfState, Math.max(0, round2(calcIrpfState(val.irpfBase) - calcIrpfState(val.personalMinimum))))
   })
 })
