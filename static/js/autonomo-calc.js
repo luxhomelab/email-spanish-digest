@@ -3,10 +3,10 @@
  *
  * Covers:
  * - Social Security quotas under the 2023 income-based reform (15 brackets)
- * - Tarifa plana for new autonomos (first 12 months)
+ * - Tarifa plana for new autonomos (first 12 months, €80 + MEI)
  * - IRPF: state + regional components
- * - Personal minimum allowances (age, children, disability)
- * - General expenses deduction (7% individual, 3% director) — for SS bracket only
+ * - Personal minimum allowances (age, children, disability), state and regional
+ * - General expenses deduction (7% individual, 3% director, no cap) — for SS bracket only
  * - IRPF deduction (5% flat on revenue after SS, estimación directa simplificada)
  *
  * Data sources:
@@ -57,8 +57,13 @@ const SS_MIN_QUOTAS_2026 = [
 // is set by each year's Ley de Presupuestos, and neither RDL 3/2026 nor Orden
 // PJC/297/2026 establishes a 2026 amount (see radarfiscal.es/en/guias/tarifa-plana-autonomos/).
 // The calculator keeps €80 as the working estimate and shows an on-page disclaimer
-// (r-tarifa-2026) whenever tarifa plana applies. Revisit when the BOE publishes the 2026 rate.
-const TARIFA_PLANA = 80
+// (r-tarifa) whenever tarifa plana applies. Revisit when the BOE publishes the 2026 rate.
+// The MEI (mecanismo de equidad intergeneracional, 0.90 points in 2026 per Orden PJC/297/2026)
+// is charged on top of the €80, on the minimum base of the general table (€960.60):
+// 960.60 × 0.90% = €8.65, so €88.65/month is what TGSS actually collects.
+const TARIFA_PLANA_BASE = 80
+const TARIFA_PLANA_MEI = Math.round(960.60 * 0.009 * 100) / 100 // = 8.65
+const TARIFA_PLANA = Math.round((TARIFA_PLANA_BASE + TARIFA_PLANA_MEI) * 100) / 100 // = 88.65
 
 // ── C4: societario (director) minimum quota floor ─────────────────────────────
 // Directors/shareholders (autónomo societario) have a higher minimum contribution base.
@@ -458,10 +463,9 @@ export function calcIrpfRegionalWithBreakdown(base, region) {
 
 // ── Deductions ────────────────────────────────────────────────────────────────
 
-/** General expenses deduction for SS bracket — 7% for individuals (max €2,000), 3% for directors (max €2,000).
- *  Art. 308 LGSS: rendimiento neto for RETA includes this deduction. */
+/** General expenses deduction for SS bracket — 7% for individuals, 3% for directors.
+ *  Art. 308.1.c regla 2ª LGSS: no cap (the €2,000 cap belongs only to the IRPF 5%). */
 const GENERAL_EXPENSES_RATE = { individual: 0.07, director: 0.03 }
-const GENERAL_EXPENSES_MAX = 2000
 
 /**
  * @param {number} annualNetRevenue
@@ -473,7 +477,7 @@ export function calcGeneralExpenses(annualNetRevenue, autonomoType) {
   if (rate === undefined) {
     console.warn(`[autonomo] calcGeneralExpenses: unrecognized autonomoType "${autonomoType}", using default 7% rate`)
   }
-  return Math.round(Math.min(Math.max(0, annualNetRevenue) * (rate ?? 0.07), GENERAL_EXPENSES_MAX) * 100) / 100
+  return Math.round(Math.max(0, annualNetRevenue) * (rate ?? 0.07) * 100) / 100
 }
 
 /** IRPF deduction under estimación directa simplificada — 5% flat for everyone (max €2,000).
@@ -493,49 +497,96 @@ export function calcIrpfDeduction(rendimientoPrevio) {
 
 // ── Personal minimum ──────────────────────────────────────────────────────────
 
-const PERSONAL_MIN_BASE = 5550
-const AGE_65_EXTRA      = 1150
-const AGE_75_EXTRA      = 1400  // additional on top of AGE_65_EXTRA
-const CHILD_ALLOWANCES  = [2400, 2700, 4000, 4500]  // 1st, 2nd, 3rd, 4th+
-const CHILD_U3_EXTRA    = 2800                       // per child under 3
-const DISABILITY_ALLOWANCE = { 33: 3000, 65: 9000 } // 33%+ and 65%+ disability
-// Art. 59-60 LIRPF (BOE-A-2006-20764): ascendientes convivientes >65 o discapacitados
+// Art. 57-60 LIRPF (BOE-A-2006-20764): ascendientes convivientes >65 o discapacitados
 // (cualquier edad) +1150 c/u; +1400 adicional si >75. Movilidad reducida (o ayuda de
 // terceras personas) con 33-65% anade +3000 (total 6000); con >=65% los +3000 aplican
 // siempre (9000 + 3000 = 12000). Requisitos de convivencia/renta (<=8000 EUR) se
 // advierten en el tooltip del UI; no hay checkboxes de renta separados.
-const ASCENDANT_65_EXTRA = 1150
-const ASCENDANT_75_EXTRA = 1400  // additional on top of ASCENDANT_65_EXTRA
-const MOBILITY_EXTRA = 3000
+/** @typedef {{ base:number, age65:number, age75:number, children:number[], childU3:number, parent65:number, parent75:number, disability33:number, disability65:number, mobility:number }} MinimosTable */
+
+/** State mínimos (art. 57-60 LIRPF). age75/parent75 are on top of age65/parent65. @type {MinimosTable} */
+const STATE_MINIMOS = {
+  base: 5550, age65: 1150, age75: 1400,
+  children: [2400, 2700, 4000, 4500], // 1st, 2nd, 3rd, 4th+
+  childU3: 2800,                      // per child under 3
+  parent65: 1150, parent75: 1400,
+  disability33: 3000, disability65: 9000, mobility: 3000,
+}
+
+/**
+ * Regional mínimos used for the regional half of IRPF (art. 56.3 LIRPF lets each region
+ * raise them up to 10%). Source: AEAT Manual Renta 2025 "Cuadro de mínimos personales y
+ * familiares estatal y autonómicos" (updated 17/03/2026); Hacienda "Tributación autonómica.
+ * Medidas 2026" cap. I §1.2 confirms they still apply in 2026. Regions not listed here
+ * (Aragón, Cantabria, Castilla-La Mancha, Castilla y León, Cataluña, Extremadura, Murcia,
+ * Ceuta, Melilla) use the state amounts. La Rioja only raises the disability mínimo for
+ * descendants, which the calculator does not model. Navarra/País Vasco are foral (estimates).
+ * Baleares: AEAT prints "5.550 en general" and "+1.265 mayor de 65", applied as such.
+ * @type {Record<string, MinimosTable>}
+ */
+export const REGIONAL_MINIMOS = {
+  andalucia: {
+    base: 5790, age65: 1200, age75: 1460, children: [2510, 2820, 4170, 4700], childU3: 2920,
+    parent65: 1200, parent75: 1460, disability33: 3130, disability65: 9390, mobility: 3130,
+  },
+  asturias: {
+    base: 6105, age65: 1265, age75: 1540, children: [2640, 2970, 4400, 4950], childU3: 3080,
+    parent65: 1265, parent75: 1540, disability33: 3300, disability65: 9900, mobility: 3300,
+  },
+  baleares: {
+    base: 5550, age65: 1265, age75: 1540, children: [2400, 2970, 4400, 4950], childU3: 2800,
+    parent65: 1265, parent75: 1540, disability33: 3300, disability65: 9900, mobility: 3300,
+  },
+  canarias: {
+    base: 5606, age65: 1162, age75: 1414, children: [2424, 2727, 4040, 4545], childU3: 2828,
+    parent65: 1162, parent75: 1414, disability33: 3030, disability65: 9090, mobility: 3030,
+  },
+  galicia: {
+    base: 5789, age65: 1199, age75: 1460, children: [2503, 2816, 4172, 4694], childU3: 2920,
+    parent65: 1199, parent75: 1460, disability33: 3129, disability65: 9387, mobility: 3129,
+  },
+  madrid: {
+    base: 5956.65, age65: 1234.26, age75: 1502.58, children: [2575.85, 2897.83, 4400, 4950], childU3: 3005.16,
+    parent65: 1234.26, parent75: 1502.58, disability33: 3219.81, disability65: 9659.44, mobility: 3219.81,
+  },
+  comunidad_valenciana: {
+    base: 6105, age65: 1265, age75: 1540, children: [2640, 2970, 4400, 4950], childU3: 3080,
+    parent65: 1265, parent75: 1540, disability33: 3300, disability65: 9900, mobility: 3300,
+  },
+}
 
 /**
  * Compute the total personal minimum allowance (mínimo personal y familiar).
+ * Without a region it returns the state mínimo; with one, that region's mínimo
+ * (the state amounts where the region has none of its own).
  *
  * @param {{ age:number, numChildren:number, childrenUnder3:number, disabilityLevel:0|33|65, numParents65?:number, numParents75?:number, reducedMobility?:boolean }} params
+ * @param {string} [region]
  * @returns {number}
  */
-export function calcPersonalMinimum({ age = 35, numChildren = 0, childrenUnder3 = 0, disabilityLevel = 0, numParents65 = 0, numParents75 = 0, reducedMobility = false }) {
-  let min = PERSONAL_MIN_BASE
+export function calcPersonalMinimum({ age = 35, numChildren = 0, childrenUnder3 = 0, disabilityLevel = 0, numParents65 = 0, numParents75 = 0, reducedMobility = false }, region) {
+  const t = (region && REGIONAL_MINIMOS[region]) || STATE_MINIMOS
+  let min = t.base
 
-  if (age >= 75) min += AGE_65_EXTRA + AGE_75_EXTRA
-  else if (age >= 65) min += AGE_65_EXTRA
+  if (age >= 75) min += t.age65 + t.age75
+  else if (age >= 65) min += t.age65
 
   const safeChildren = Math.max(0, Math.round(numChildren))
   for (let i = 0; i < safeChildren; i++) {
-    min += CHILD_ALLOWANCES[Math.min(i, CHILD_ALLOWANCES.length - 1)]
+    min += t.children[Math.min(i, t.children.length - 1)]
   }
 
   const safeU3 = Math.min(Math.max(0, Math.round(childrenUnder3)), safeChildren)
-  min += safeU3 * CHILD_U3_EXTRA
+  min += safeU3 * t.childU3
 
-  if (disabilityLevel >= 65) min += DISABILITY_ALLOWANCE[65] + MOBILITY_EXTRA
-  else if (disabilityLevel >= 33) min += DISABILITY_ALLOWANCE[33] + (reducedMobility ? MOBILITY_EXTRA : 0)
+  if (disabilityLevel >= 65) min += t.disability65 + t.mobility
+  else if (disabilityLevel >= 33) min += t.disability33 + (reducedMobility ? t.mobility : 0)
 
   const safeParents65 = Math.min(Math.max(0, Math.round(numParents65)), 4)
   const safeParents75 = Math.min(Math.max(0, Math.round(numParents75)), safeParents65)
-  min += safeParents65 * ASCENDANT_65_EXTRA + safeParents75 * ASCENDANT_75_EXTRA
+  min += safeParents65 * t.parent65 + safeParents75 * t.parent75
 
-  return min
+  return Math.round(min * 100) / 100
 }
 
 // ── Main calculation ──────────────────────────────────────────────────────────
@@ -568,6 +619,7 @@ export function calcPersonalMinimum({ age = 35, numChildren = 0, childrenUnder3 
  *   irpfDeduction: number,
  *   reducedNetIncome: number,
  *   personalMinimum: number,
+ *   regionalPersonalMinimum: number,
  *   irpfBase: number,
  *   irpfState: number,
  *   irpfRegional: number,
@@ -596,7 +648,7 @@ export function calculateAutonomo({
   const revenue = Math.max(0, annualNetRevenue)
   const monthlyNetIncome = revenue / 12
 
-  // SS deduction (7% individual / 3% director, cap €2,000) — determines the SS bracket only.
+  // SS deduction (7% individual / 3% director, no cap) — determines the SS bracket only.
   const ssDeduction = calcGeneralExpenses(revenue, autonomoType)
   const generalExpensesDeduction = ssDeduction // legacy alias, kept for compatibility
 
@@ -613,8 +665,11 @@ export function calculateAutonomo({
   const irpfDeduction = calcIrpfDeduction(rendimientoPrevio)
   const reducedNetIncome = Math.max(0, rendimientoPrevio - irpfDeduction)
 
-  // Personal minimum allowances
-  const personalMinimum = calcPersonalMinimum({ age, numChildren, childrenUnder3, disabilityLevel, numParents65, numParents75, reducedMobility })
+  // Personal minimum allowances: the state half uses the state mínimos, the regional
+  // half the region's own (art. 56.3 LIRPF)
+  const minimoParams = { age, numChildren, childrenUnder3, disabilityLevel, numParents65, numParents75, reducedMobility }
+  const personalMinimum = calcPersonalMinimum(minimoParams)
+  const regionalPersonalMinimum = calcPersonalMinimum(minimoParams, region)
 
   // IRPF: Spanish law computes Tax(base) - Tax(personalMin), NOT Tax(base - personalMin).
   // The personal minimum reduces the tax owed, not the taxable base.
@@ -623,10 +678,11 @@ export function calculateAutonomo({
     (calcIrpfState(reducedNetIncome) - calcIrpfState(personalMinimum)) * 100
   ) / 100)
   const irpfRegionalFull = Math.max(0, Math.round(
-    (calcIrpfRegional(reducedNetIncome, region) - calcIrpfRegional(personalMinimum, region)) * 100
+    (calcIrpfRegional(reducedNetIncome, region) - calcIrpfRegional(regionalPersonalMinimum, region)) * 100
   ) / 100)
-  // Art. 68.4 LIRPF: Ceuta/Melilla residents deduct 60% of the cuotas integras
-  // (state + regional), i.e. pay 40% of the full IRPF.
+  // Art. 68.4.1º.a LIRPF: Ceuta/Melilla residents deduct 60% of the cuotas integras
+  // (state + regional) on income obtained there, i.e. pay 40% of the full IRPF. The
+  // calculator assumes the whole activity is carried on there; the UI says so.
   const ceutaReduction = (region === 'ceuta' || region === 'melilla')
   const irpfState = ceutaReduction ? Math.round(irpfStateFull * 0.4 * 100) / 100 : irpfStateFull
   const irpfRegional = ceutaReduction ? Math.round(irpfRegionalFull * 0.4 * 100) / 100 : irpfRegionalFull
@@ -649,6 +705,7 @@ export function calculateAutonomo({
     irpfDeduction: Math.round(irpfDeduction * 100) / 100,
     reducedNetIncome: Math.round(reducedNetIncome * 100) / 100,
     personalMinimum,
+    regionalPersonalMinimum,
     irpfBase: Math.round(reducedNetIncome * 100) / 100, // alias for reducedNetIncome, used by UI
     irpfState,
     irpfRegional,
