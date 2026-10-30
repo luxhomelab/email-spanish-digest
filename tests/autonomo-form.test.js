@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { sanitizeState, parseStateFromParams, DEFAULTS, YEARS, VALID_TYPES, VALID_TIMES } from '../static/js/autonomo-form.js'
+import { sanitizeState, parseStateFromParams, personalMinimumText, DEFAULTS, YEARS, VALID_TYPES, VALID_TIMES } from '../static/js/autonomo-form.js'
 
 // ── sanitizeState: numeric clamping ──────────────────────────────────────────
 describe('sanitizeState numbers', () => {
@@ -121,5 +121,23 @@ describe('constants', () => {
   it('types and times match the original', () => {
     assert.deepEqual(VALID_TYPES, ['individual', 'director'])
     assert.deepEqual(VALID_TIMES, ['new', 'mid', 'established'])
+  })
+})
+
+// ── personalMinimumText: line under the IRPF explainer ──────────────────────
+describe('personalMinimumText', () => {
+  it('shows only the state minimum when the region uses the state one', () => {
+    const t = personalMinimumText({ personalMinimum: 5550, regionalPersonalMinimum: 5550 })
+    assert.equal(t, 'Your personal minimum: 5,550 € (saving you roughly 1,055–2,054 € in taxes depending on your bracket).')
+  })
+  it("adds the region's own mínimo when it differs", () => {
+    const t = personalMinimumText({ personalMinimum: 5550, regionalPersonalMinimum: 5956.65 })
+    assert.ok(t.endsWith("; your region's own mínimo for the regional half: 5,956.65 €."), t)
+  })
+  it('works without a regional figure', () => {
+    assert.ok(!personalMinimumText({ personalMinimum: 13450 }).includes('region'))
+  })
+  it('is empty when there is no minimum', () => {
+    assert.equal(personalMinimumText({ personalMinimum: 0, regionalPersonalMinimum: 0 }), '')
   })
 })

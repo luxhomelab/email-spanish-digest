@@ -23,9 +23,9 @@ describe('autonomo page grid', () => {
     assert.equal(e.irpfTotal, calc.irpfTotal)
   })
 
-  it('tarifa plana pays 80 a month and keeps more', () => {
+  it('tarifa plana pays 88.65 a month (€80 + MEI) and keeps more', () => {
     const e = grid.revenue.find(a => a.amount === 30000)
-    assert.equal(e.tarifaPlana.monthlyQuota, 80)
+    assert.equal(e.tarifaPlana.monthlyQuota, 88.65)
     assert.equal(e.tarifaPlana.isTarifaPlana, true)
     assert.ok(e.tarifaPlana.netYear > e.established.netYear)
   })

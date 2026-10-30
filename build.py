@@ -1378,9 +1378,9 @@ def autonomo_page_context(kind, item, neighbours, names, calc_year):
 def autonomo_faqs(c):
     r, y = c["revenue"], c["calc_year"]
     region_q = f"Which region is cheapest for an autónomo with {r}?"
-    region_a = (f"Ceuta and Melilla pay least because they only owe 40% of the IRPF ({c['ceuta_net']} net a year at {r}). Among the other regions "
+    region_a = (f"Ceuta and Melilla pay least because residents owe only 40% of the IRPF on income earned there ({c['ceuta_net']} net a year at {r}). Among the other regions "
                 f"{c['best']} leaves the most ({c['best_net']}) and {c['worst']} the least ({c['worst_net']}), a gap of {c['spread']} a year. Social Security is the same everywhere.")
-    tp_a = (f"In the first 12 months a new autónomo pays the €80 tarifa plana, so Social Security is {c['tp_ss_year']} a year instead of {c['quota_year']}. "
+    tp_a = (f"In the first 12 months a new autónomo pays the €80 tarifa plana plus the MEI levy (about €88.65 a month), so Social Security is {c['tp_ss_year']} a year instead of {c['quota_year']}. "
             f"At {r} that is about {c['tp_net_month']} a month net instead of {c['net_month']}, {c['tp_gain_month']} more each month. After the first year the quota follows your income bracket.")
     if c["kind"] == "monthly":
         return [
@@ -1391,7 +1391,7 @@ def autonomo_faqs(c):
              f"Add your business expenses to the {c['revenue_month']} a month of net revenue, then add IVA if you charge it. For example, with {eur(c['example_costs'])} a month of costs "
              f"you would invoice about {c['example_invoice']} a month before IVA. The calculator takes net revenue, so deduct expenses before you enter your own figure."),
             (f"Is it easier to reach {c['target']} a month on tarifa plana?",
-             f"Yes. During the first 12 months you need only {c['tp_needed']} a year ({c['tp_needed_month']} a month), {c['tp_saving']} less than the {r} an established autónomo needs, because the quota is €80 a month. "
+             f"Yes. During the first 12 months you need only {c['tp_needed']} a year ({c['tp_needed_month']} a month), {c['tp_saving']} less than the {r} an established autónomo needs, because the quota is about €88.65 a month (€80 plus the MEI levy). "
              f"From month 13 the regular quota applies."),
             (f"Does the region change what I take home from {r} of net revenue?",
              region_a),

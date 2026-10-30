@@ -60,7 +60,7 @@
    <div class="ns-kpi">
     <p class="kicker">Net a month, tarifa plana</p>
     <p class="val">{{ p.tp_net_month }}</p>
-    <p class="sub2">first 12 months, €80 quota</p>
+    <p class="sub2">first 12 months, €80 + MEI quota</p>
    </div>
    <div class="ns-kpi">
     <p class="kicker">Net a year</p>
@@ -89,7 +89,7 @@
 
   <div class="card seobox ns-seo-alt">
    <h2>Your first year on tarifa plana</h2>
-   <p>New autónomos pay a flat €80 a month for the first 12 months ({{ p.tp_ss_year }} a year). At {{ p.revenue }} of net revenue that leaves {{ p.tp_net_month }} a month after IRPF of {{ p.tp_irpf }}, which is {{ p.tp_gain_month }} more each month than the regular quota.{% if p.kind == "monthly" %} To take home {{ p.target }} a month you would need only {{ p.tp_needed }} of net revenue a year during that first year.{% endif %}</p>
+   <p>New autónomos pay a flat €80 a month plus the MEI levy (about €88.65 in total) for the first 12 months ({{ p.tp_ss_year }} a year). At {{ p.revenue }} of net revenue that leaves {{ p.tp_net_month }} a month after IRPF of {{ p.tp_irpf }}, which is {{ p.tp_gain_month }} more each month than the regular quota.{% if p.kind == "monthly" %} To take home {{ p.target }} a month you would need only {{ p.tp_needed }} of net revenue a year during that first year.{% endif %}</p>
   </div>
 
   <div class="card ns-regions ns-seo-regions">
