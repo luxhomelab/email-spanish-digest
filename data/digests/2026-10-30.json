@@ -1,0 +1,204 @@
+{
+  "items": [
+    {
+      "title": "Urda crash: compensation, findings, and minister under pressure",
+      "body": "Mandatory insurance covers €72,121 per death and €2,400–€84,000 for injuries after the Urda crash, which has killed 69 so far. Payments are due in under three months. Investigators estimate impact at 160–200 km/h after a signalling failure. Transport Minister Óscar Puente faces dismissal calls and will address Congress on November 3.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/vida/20261029/11671580/primer-informe-senala-ave-choco-iryo-velocidad-160-200-km-h.html"
+        },
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/10/30/pedro-sanchez-elude-cese-oscar-puente-pese-presion-creciente-sus-propios-aliados-2064234.html"
+        },
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-10-30/hasta-84000-euros-para-victimas-con-graves-secuelas-asi-seran-las-indemnizaciones-por-la-tragedia-ferroviaria.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/transportes-00343/noticia-congreso-pone-fecha-comparecencia-puente-accidente-urda-noviembre-20261029180346.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "ECB holds rates but signals December rise",
+      "body": "The European Central Bank held rates at 2.5% on October 29 because rising bond yields had already tightened borrowing conditions. ECB president Christine Lagarde signalled a likely December rise, but said the bank has no fixed path. Inflation was 3.8% in September, above the 2% target.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/mercados/2026/10/29/bce-deja-tipos-2-5-presion-mercado-deuda.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Renfe faces strikes on November 10–12",
+      "body": "Drivers' union Semaf has called a full-day Renfe strike on November 10 and partial stoppages on November 12, around the November 11 general strike. Travellers face three days of disruption. Semaf says safety talks have stalled; Renfe says it has met its commitments.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/10/29/los-maquinistas-convocan-dos-nuevas-jornadas-huelga-renfe-para-10-12-noviembre-2064199.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Extended 2023 budget limits infrastructure investment",
+      "body": "Spain still uses its 2023 state budget after three extensions. Former Court of Auditors president María José de la Fuente says this limits infrastructure upgrades and maintenance because funding does not absorb rising costs. She says uncertainty over state investment also prevents regional and local authorities from planning.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/economia/2026/10/30/ausencia-presupuestos-generales-castiga-inversion-infraestructuras.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Fifteen contribution years qualify for retirement pension",
+      "body": "Under current rules, 15 contribution years qualify workers for a pension at 50% of their regulatory base, with retirement at 66 years and 10 months. In 2026, income-tested top-ups can bring monthly payments to €1,256.60 with a dependent spouse, €936.20 for a single-person household, or €888.70 with no dependent spouse.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/30/seguridad-social-confirma-aquellos-hayan-cotizado-15-anos-podran-cobrar-pension-minima-888-euros-cambia-edad-jubilacion-2027-2062737.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Lagarde exit opens race for ECB leadership",
+      "body": "ECB president Christine Lagarde will leave on February 7, almost nine months before her term ends. Former Spanish central bank governor Pablo Hernández de Cos and former Dutch central bank governor Klaas Knot lead the succession race. Experts say the two are running almost neck and neck.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-10-29/christine-lagarde-dejara-la-presidencia-del-bce-el-7-de-febrero-y-abre-la-carrera-por-su-sucesion.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Zaragoza wins European Green Capital 2028 title",
+      "body": "The European Commission named Zaragoza European Green Capital 2028. Mayor Natalia Chueca says the award recognises decades of local climate policy. Electric buses make up 60% of the urban fleet, and 250,000 trees have been planted toward a 700,000-tree goal. The 2028 programme will focus on fighting climate change and adapting to it.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/clima-y-medio-ambiente/2026-10-30/natalia-chueca-alcaldesa-de-zaragoza-todos-vivimos-las-consecuencias-del-cambio-climatico-y-negar-la-obviedad-tiene-poco-recorrido.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Catalan home-purchase restrictions remain under negotiation",
+      "body": "A Catalan bill remains at the amendment stage, with a plenary vote expected in December. Comuns' planned changes would exempt individuals owning fewer than five homes in stressed housing zones from purchase restrictions. The regional government has not agreed and wants to regulate residential use instead of sales.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/catalunya/2026-10-30/comuns-suaviza-su-ley-contra-la-compra-especulativa-para-los-pequenos-propietarios-pero-rechaza-el-plan-del-govern.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Milei plans Madrid summit visit from November 4",
+      "body": "Argentine president Javier Milei plans to attend the November 4–5 Ibero-American Summit in Madrid, Argentine government sources say, pending official confirmation. The gathering brings together leaders from 22 countries. His return follows insults aimed at Prime Minister Pedro Sánchez during a recent Madrid visit.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/argentina/2026-10-30/milei-vuelve-a-espana-despues-de-sacudir-la-campana-con-sus-insultos-a-pedro-sanchez.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "For trips within Spain, which do you prefer? A) Train B) Bus C) Car",
+  "subject": "ECB holds at 2.5%, but December rise looks likely",
+  "variant": "Nothing Happened in Spain Today. Except This.",
+  "headline": "Nothing Happened in Spain Today. Except This.",
+  "date": "2026-10-30",
+  "engagement_source": "generated",
+  "generated_at": "2026-10-30T07:02:21.287808+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 718,
+    "items_selected_pass1": 12,
+    "fact_sheets_extracted": 12,
+    "items_after_importance_filter": 12,
+    "items_in_digest": 9
+  },
+  "selection_reasons": {
+    "392": "Official first investigation report on the Urda crash (AVE hit Iryo at 160-200 km/h). A national-scale rail disaster with 69 dead, and the findings shape the safety debate.",
+    "164": "Sánchez refuses to dismiss minister Puente despite pressure from allies and unions. This is a national government-crisis development.",
+    "595": "Compensation scheme for Urda victims, up to €84,000 for severe injuries. Concrete numbers affecting many people, including foreign residents.",
+    "590": "Puente's appearance in Congress on 3 November, the next formal step in the parliamentary response to the crash. Second stage of the same ministerial-responsibility story.",
+    "160": "Train drivers' union calls new Renfe strikes for 10 and 12 November. Direct impact on commuters and long-distance travellers across Spain.",
+    "259": "Social Security confirms the minimum pension of €888 for 15 years of contributions and changes to retirement age from 2027. Systemic pension change.",
+    "698": "ECB holds rates at 2.5% but markets now expect a hike in December. Directly affects variable-rate mortgages and Euribor.",
+    "373": "Lagarde leaves the ECB presidency on 7 February 2027 and Spain's Pablo Hernández de Cos is the leading successor candidate. Monetary policy with eurozone-wide impact.",
+    "301": "Milei visits Madrid for the Ibero-American Summit next week, an international summit held in Spain that dominates the national agenda.",
+    "688": "Spain has no national budget (three extensions in a row), which the Tribunal de Cuentas says limits infrastructure investment. Relevant national-budget issue.",
+    "325": "Catalonia's law against speculative purchases, now softened for small owners. Regional property-buying rule in a major foreign-resident region, with a precedent-setting effect.",
+    "323": "Zaragoza named European Green Capital, a positive national-level recognition for a Spanish city."
+  },
+  "selection_sources": [
+    {
+      "url": "https://www.lavanguardia.com/vida/20261029/11671580/primer-informe-senala-ave-choco-iryo-velocidad-160-200-km-h.html",
+      "reason": "Official first investigation report on the Urda crash (AVE hit Iryo at 160-200 km/h). A national-scale rail disaster with 69 dead, and the findings shape the safety debate."
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/nacional/2026/10/30/pedro-sanchez-elude-cese-oscar-puente-pese-presion-creciente-sus-propios-aliados-2064234.html",
+      "reason": "Sánchez refuses to dismiss minister Puente despite pressure from allies and unions. This is a national government-crisis development."
+    },
+    {
+      "url": "https://elpais.com/economia/2026-10-30/hasta-84000-euros-para-victimas-con-graves-secuelas-asi-seran-las-indemnizaciones-por-la-tragedia-ferroviaria.html",
+      "reason": "Compensation scheme for Urda victims, up to €84,000 for severe injuries. Concrete numbers affecting many people, including foreign residents."
+    },
+    {
+      "url": "https://www.europapress.es/economia/transportes-00343/noticia-congreso-pone-fecha-comparecencia-puente-accidente-urda-noviembre-20261029180346.html",
+      "reason": "Puente's appearance in Congress on 3 November, the next formal step in the parliamentary response to the crash. Second stage of the same ministerial-responsibility story."
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/nacional/2026/10/29/los-maquinistas-convocan-dos-nuevas-jornadas-huelga-renfe-para-10-12-noviembre-2064199.html",
+      "reason": "Train drivers' union calls new Renfe strikes for 10 and 12 November. Direct impact on commuters and long-distance travellers across Spain."
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/10/30/seguridad-social-confirma-aquellos-hayan-cotizado-15-anos-podran-cobrar-pension-minima-888-euros-cambia-edad-jubilacion-2027-2062737.html",
+      "reason": "Social Security confirms the minimum pension of €888 for 15 years of contributions and changes to retirement age from 2027. Systemic pension change."
+    },
+    {
+      "url": "https://www.expansion.com/mercados/2026/10/29/bce-deja-tipos-2-5-presion-mercado-deuda.html",
+      "reason": "ECB holds rates at 2.5% but markets now expect a hike in December. Directly affects variable-rate mortgages and Euribor."
+    },
+    {
+      "url": "https://elpais.com/economia/2026-10-29/christine-lagarde-dejara-la-presidencia-del-bce-el-7-de-febrero-y-abre-la-carrera-por-su-sucesion.html",
+      "reason": "Lagarde leaves the ECB presidency on 7 February 2027 and Spain's Pablo Hernández de Cos is the leading successor candidate. Monetary policy with eurozone-wide impact."
+    },
+    {
+      "url": "https://elpais.com/argentina/2026-10-30/milei-vuelve-a-espana-despues-de-sacudir-la-campana-con-sus-insultos-a-pedro-sanchez.html",
+      "reason": "Milei visits Madrid for the Ibero-American Summit next week, an international summit held in Spain that dominates the national agenda."
+    },
+    {
+      "url": "https://www.expansion.com/economia/2026/10/30/ausencia-presupuestos-generales-castiga-inversion-infraestructuras.html",
+      "reason": "Spain has no national budget (three extensions in a row), which the Tribunal de Cuentas says limits infrastructure investment. Relevant national-budget issue."
+    },
+    {
+      "url": "https://elpais.com/espana/catalunya/2026-10-30/comuns-suaviza-su-ley-contra-la-compra-especulativa-para-los-pequenos-propietarios-pero-rechaza-el-plan-del-govern.html",
+      "reason": "Catalonia's law against speculative purchases, now softened for small owners. Regional property-buying rule in a major foreign-resident region, with a precedent-setting effect."
+    },
+    {
+      "url": "https://elpais.com/clima-y-medio-ambiente/2026-10-30/natalia-chueca-alcaldesa-de-zaragoza-todos-vivimos-las-consecuencias-del-cambio-climatico-y-negar-la-obviedad-tiene-poco-recorrido.html",
+      "reason": "Zaragoza named European Green Capital, a positive national-level recognition for a Spanish city."
+    }
+  ]
+}
