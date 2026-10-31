@@ -269,8 +269,8 @@ export const IRPF_REGIONAL_BRACKETS = {
     { upTo: Infinity, rate: 0.2935 },
   ],
   extremadura: [
-    { upTo: 12450,    rate: 0.08   },
-    { upTo: 20200,    rate: 0.10   },
+    { upTo: 12450,    rate: 0.0775 },
+    { upTo: 20200,    rate: 0.0975 },
     { upTo: 24200,    rate: 0.16   },
     { upTo: 35200,    rate: 0.175  },
     { upTo: 60000,    rate: 0.21   },
