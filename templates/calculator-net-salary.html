@@ -109,7 +109,7 @@
       </div>
       {{ seg('payments', 'Payslips a year', [('12', '12'), ('14', '14'), ('14p', '14 prorated')], '14: two extra payslips, usually in June and December. Prorated: the two extras are spread over 12 equal payslips. Your yearly total is the same.') }}
       <div class="field">
-       <label for="f-region">{{ lbl('Where you live', 'Your region of tax residence on 31 December sets the regional half of IRPF. Ceuta and Melilla residents pay 40% of the IRPF.') }}</label>
+       <label for="f-region">{{ lbl('Where you live', 'Your tax residence is the region where you spent the most days of the year; it sets the regional half of IRPF. Ceuta and Melilla residents pay 40% of the IRPF.') }}</label>
        <select id="f-region">
         <option value="andalucia">Andalusia</option>
         <option value="aragon">Aragon</option>
@@ -141,7 +141,7 @@
      <summary>About you <span class="ns-sum" id="s-you"></span></summary>
      <div class="ry-group-body">
       {{ seg('age', 'Age', [('u65', 'Under 65'), ('65to74', '65–74'), ('75plus', '75+')], 'From 65 your personal minimum rises by €1,150, and by €1,400 more from 75.') }}
-      {{ seg('contract', 'Contract', [('permanent', 'Permanent'), ('temporary', 'Temporary')], 'Temporary contracts pay 1.60% unemployment contribution instead of 1.55%, and contracts under a year have a 2% minimum withholding.') }}
+      {{ seg('contract', 'Contract', [('permanent', 'Permanent'), ('temporary', 'Temporary (under 1 year)')], 'Temporary contracts pay 1.60% unemployment contribution instead of 1.55%, and contracts under a year have a 2% minimum withholding.') }}
       <div class="field">
        <label for="f-disability">{{ lbl('Your disability', 'Officially recognised degree. It raises your minimum and your deductible expenses. "With help" means you need assistance from others or have reduced mobility.') }}</label>
        <select id="f-disability">
