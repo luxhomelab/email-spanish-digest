@@ -1,0 +1,169 @@
+{
+  "items": [
+    {
+      "title": "Rail safety plan due November 3 after crash",
+      "body": "Transport Minister Óscar Puente will submit a rail safety plan to cabinet on November 3; several parties demand his resignation. The Urda crash killed 69 people. Experts point to system failures beyond human error. Renfe has ordered a 40 km/h limit when the LZB automatic braking system fails.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-11-01/inasumible-no-es-lo-mismo-que-inexplicable-las-debilidades-del-sistema-que-evidencian-los-accidentes-de-urda-y-adamuz.html"
+        },
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-11-01/puente-intenta-bajar-la-presion-con-un-gran-plan-de-refuerzo-de-la-seguridad-del-ave.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Landlords cannot require tenants to buy rent insurance",
+      "body": "A housing decree in force since October 8 bars landlords from requiring tenants to buy rent non-payment insurance or similar cover. Clauses in contracts signed before that date are not automatically void. Landlords can still buy and pay for the insurance themselves.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/11/01/decreto-vivienda-prohibe-los-caseros-exigir-este-seguro-los-inquilinos-2064146.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "October regulated electricity bill exceeds 80 euros",
+      "body": "A typical household's October bill on the regulated PVPC electricity tariff exceeded 80 euros, up 8% from September and 29% from October 2025. Rising wholesale and gas prices drove the rise, with gas costs linked to war in the Middle East and the situation in the Strait of Hormuz.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/encarecimiento-energia-eleva-factura-electrica-octubre-maximos-2022_7055760_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "PP resets election campaign after Urda crash",
+      "body": "The PP is shifting its campaign toward management and experience before the November 29 general election. After suspending events following the Urda crash, it will meet on November 2 without flags or anthems. The party fears the public reaction could boost Vox, which stood at 19% in pre-crash polls.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-11-01/feijoo-gira-la-campana-hacia-el-perfil-gestor-del-pp.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Banks charge up to 276 euros yearly for accounts",
+      "body": "CaixaBank and Cajamar charge up to 276 euros a year for an account and debit card when customers meet none of their fee-waiver conditions. Banks increasingly reserve free offers for online customers. Basic payment accounts cost at most 36 euros yearly and are free for the most vulnerable customers.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-01/la-banca-cobra-hasta-276-euros-al-ano-al-cliente-poco-vinculado-y-despistado.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Barcelona Halloween police operation sees no incidents by midnight",
+      "body": "Police reported no incidents by midnight during Barcelona's October 31 operation against planned Blocus rallies. Officers identified 1,440 people and made three arrests. The measures included street and metro access closures and the removal of about 200 rubbish containers in central Barcelona.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/10/31/6ae5d7d5e85eced00f8b4573.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Most Madrid housing campers leave Puerta del Sol",
+      "body": "Most groups in Madrid's Puerta del Sol housing camp have left after two warnings from the Government Delegation. The movement will shift to neighbourhoods and support the November 11 general strike. Some campers remain. Congress did not approve the housing decrees the camp forced to a vote.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/madrid/2026-10-31/la-mayoria-de-las-comisiones-de-los-acampados-en-sol-se-retira-de-la-plaza-para-impulsar-un-movimiento-social-en-los-barrios.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Canary Islands researchers study unusually bright cosmic afterglow",
+      "body": "A gamma-ray burst detected on March 10 produced one of the brightest afterglows in 20 years despite a modest initial signal. Research involving the Instituto de Astrofísica de Canarias suggests Earth's position hid the most intense part of the explosion, linked to a massive star's death.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/spin/explosion-cosmica-sorprende-cientificos-parecia-pequena-produjo-mayores-resplandores-20-anos-pm_1_13627205.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Do you wait for cheaper electricity hours to use appliances? A) Always B) Sometimes C) Never",
+  "subject": "October power bill tops 80 euros on regulated tariff",
+  "variant": "Nothing happened in Spain today. Except this.",
+  "headline": "Nothing happened in Spain today. Except this.",
+  "date": "2026-11-01",
+  "engagement_source": "generated",
+  "generated_at": "2026-11-01T07:01:31.465175+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 505,
+    "items_selected_pass1": 9,
+    "fact_sheets_extracted": 9,
+    "items_after_importance_filter": 9,
+    "items_in_digest": 8
+  },
+  "selection_reasons": {
+    "227": "National crisis: El País analyses the systemic failures behind the Urda crash (69 dead), the most serious rail tragedy in years, with national policy consequences.",
+    "9": "Blocus riot threat met with an unprecedented police operation across Spain: about 1,500 identified and national coverage of public-order unrest.",
+    "232": "Government safety package for high-speed rail goes to the Consejo de Ministros on Tuesday, a concrete national policy development after Urda.",
+    "278": "Sol encampment disbands to prepare the 11-N general strike over housing, a national mobilisation that affects workers and residents nationwide.",
+    "192": "Housing decree bans landlords from requiring tenants to pay the owner's unpaid-rent insurance, a direct change to renters' costs and rights.",
+    "445": "Regulated electricity bill reached its highest October level since 2022 (over €80, +29% year on year), a significant cost-of-living rise.",
+    "249": "Banks charge up to €276 a year to customers with few linked products, a fee issue affecting many residents' accounts.",
+    "233": "PP campaign pivots to a government-ready profile ahead of the 29-N general election, shaping national politics in the final weeks.",
+    "85": "Positive science story: IAC astronomers explain a cosmic explosion with one of the brightest flashes in 20 years, discovered with Spanish involvement."
+  },
+  "selection_sources": [
+    {
+      "url": "https://elpais.com/espana/2026-11-01/inasumible-no-es-lo-mismo-que-inexplicable-las-debilidades-del-sistema-que-evidencian-los-accidentes-de-urda-y-adamuz.html",
+      "reason": "National crisis: El País analyses the systemic failures behind the Urda crash (69 dead), the most serious rail tragedy in years, with national policy consequences."
+    },
+    {
+      "url": "https://www.elmundo.es/espana/2026/10/31/6ae5d7d5e85eced00f8b4573.html",
+      "reason": "Blocus riot threat met with an unprecedented police operation across Spain: about 1,500 identified and national coverage of public-order unrest."
+    },
+    {
+      "url": "https://elpais.com/espana/2026-11-01/puente-intenta-bajar-la-presion-con-un-gran-plan-de-refuerzo-de-la-seguridad-del-ave.html",
+      "reason": "Government safety package for high-speed rail goes to the Consejo de Ministros on Tuesday, a concrete national policy development after Urda."
+    },
+    {
+      "url": "https://elpais.com/espana/madrid/2026-10-31/la-mayoria-de-las-comisiones-de-los-acampados-en-sol-se-retira-de-la-plaza-para-impulsar-un-movimiento-social-en-los-barrios.html",
+      "reason": "Sol encampment disbands to prepare the 11-N general strike over housing, a national mobilisation that affects workers and residents nationwide."
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/nacional/2026/11/01/decreto-vivienda-prohibe-los-caseros-exigir-este-seguro-los-inquilinos-2064146.html",
+      "reason": "Housing decree bans landlords from requiring tenants to pay the owner's unpaid-rent insurance, a direct change to renters' costs and rights."
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/encarecimiento-energia-eleva-factura-electrica-octubre-maximos-2022_7055760_0.html",
+      "reason": "Regulated electricity bill reached its highest October level since 2022 (over €80, +29% year on year), a significant cost-of-living rise."
+    },
+    {
+      "url": "https://elpais.com/economia/2026-11-01/la-banca-cobra-hasta-276-euros-al-ano-al-cliente-poco-vinculado-y-despistado.html",
+      "reason": "Banks charge up to €276 a year to customers with few linked products, a fee issue affecting many residents' accounts."
+    },
+    {
+      "url": "https://elpais.com/espana/2026-11-01/feijoo-gira-la-campana-hacia-el-perfil-gestor-del-pp.html",
+      "reason": "PP campaign pivots to a government-ready profile ahead of the 29-N general election, shaping national politics in the final weeks."
+    },
+    {
+      "url": "https://www.eldiario.es/spin/explosion-cosmica-sorprende-cientificos-parecia-pequena-produjo-mayores-resplandores-20-anos-pm_1_13627205.html",
+      "reason": "Positive science story: IAC astronomers explain a cosmic explosion with one of the brightest flashes in 20 years, discovered with Spanish involvement."
+    }
+  ]
+}
