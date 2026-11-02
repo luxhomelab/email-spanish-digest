@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"{% block html_class %}{% endblock %}>
+<html lang="{% block html_lang %}en{% endblock %}"{% block html_class %}{% endblock %}>
 <head>
 <meta charset="UTF-8">
 {# Build-time analytics flag. static/js/*.js are copied verbatim by build.py

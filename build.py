@@ -387,7 +387,8 @@ _TOC_PLACEHOLDER = "\x00toc\x00"
 def article_heading_id(text_html, used):
     """Anchor id for a heading: lowercase words joined by '-', unique in `used`."""
     plain = html.unescape(re.sub(r"<[^>]+>", "", text_html))
-    base = re.sub(r"[^a-z0-9]+", "-", plain.lower()).strip("-") or "section"
+    # [\W_] keeps non-Latin letters (Cyrillic headings in "lang: ru" articles).
+    base = re.sub(r"[\W_]+", "-", plain.lower()).strip("-") or "section"
     hid, n = base, 2
     while hid in used:
         hid, n = f"{base}-{n}", n + 1
@@ -395,20 +396,25 @@ def article_heading_id(text_html, used):
     return hid
 
 
-def article_toc_html(entries):
+# Table of contents title per article language (frontmatter "lang").
+ARTICLE_TOC_TITLES = {"en": "In this guide", "ru": "Содержание"}
+
+
+def article_toc_html(entries, lang="en"):
     """<nav> table of contents from (id, title_html) pairs; two columns on
     wide screens, filled top to bottom (--rows sets the split)."""
     items = "\n".join(f'<li><a href="#{hid}">{title}</a></li>' for hid, title in entries)
     rows = (len(entries) + 1) // 2
+    toc_title = ARTICLE_TOC_TITLES.get(lang, ARTICLE_TOC_TITLES["en"])
     return (
         '<nav class="art-toc" aria-labelledby="art-toc-title">\n'
-        '<p class="art-toc-title" id="art-toc-title">In this guide</p>\n'
+        f'<p class="art-toc-title" id="art-toc-title">{toc_title}</p>\n'
         f'<ol class="art-toc-list" style="--rows: {rows}">\n{items}\n</ol>\n'
         "</nav>"
     )
 
 
-def article_markdown_to_html(md, slug=None, toc_extra=()):
+def article_markdown_to_html(md, slug=None, toc_extra=(), lang="en"):
     """Minimal markdown -> HTML (stdlib only): headings, bold, italic,
     links, unordered lists, figures (16:9 images), HTML graphic partials
     ("::: graphic <name>", looked up under the article's slug), a table of
@@ -532,7 +538,7 @@ def article_markdown_to_html(md, slug=None, toc_extra=()):
     flush_para()
     if in_list:
         out.append("</ul>")
-    toc = article_toc_html(headings + list(toc_extra))
+    toc = article_toc_html(headings + list(toc_extra), lang)
     return "\n".join(toc if part == _TOC_PLACEHOLDER else part for part in out)
 
 
@@ -609,7 +615,8 @@ def load_articles():
         title = meta.get("title") or slug.replace("-", " ").capitalize()
         date = meta.get("date") or "2026-10-02"
         toc_extra = [("faq", "Frequently asked questions")] if faq else []
-        body_html = article_markdown_to_html(body_md, slug, toc_extra)
+        lang = meta.get("lang") or "en"
+        body_html = article_markdown_to_html(body_md, slug, toc_extra, lang)
         words = len(_article_words(body_md))
         reading_time = max(1, round(words / 200))
         url = f"/articles/{slug}"
@@ -617,6 +624,7 @@ def load_articles():
         articles.append({
             "src_path": f"data/articles/{filename}",
             "slug": slug,
+            "lang": lang,
             "title": title,
             "meta_title": meta.get("meta_title") or f"{title} — Spanified",
             "meta_description": meta.get("meta_description") or meta.get("excerpt") or "",
