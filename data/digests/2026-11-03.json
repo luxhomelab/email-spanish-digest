@@ -1,0 +1,220 @@
+{
+  "items": [
+    {
+      "title": "Congress committee majority seeks transport minister's resignation",
+      "body": "Over 61% of Congress's standing committee back Transport Minister Óscar Puente's resignation or dismissal after the Urda rail crash killed 69 people. He appears before it on November 3. A victim-aid decree awaiting cabinet approval would double compulsory insurance payouts, raising the maximum automatic payout per death to €216,364.68.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/puente-comparece-este-martes-congreso-por-urda-tras-aprobar-ayudas-para-las-victimas_7056267_0.html"
+        },
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/11/03/6ae8cec2e4d4d892638b457d.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Unions prepare November 11 general strike across Spain",
+      "body": "CCOO and UGT are organising a general strike on November 11 over wages, housing, and prices. UGT general secretary Pepe Álvarez says it also targets employers' group CEOE for blocking a collective-bargaining agreement. CCOO reports 3,400 pledges of support across Spain, and the unions promise a peaceful strike.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/huelga-general-ccoo-ugt-auguran-exito-masivo-garantizan-sera-pacifica_1_13631793.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Draft decree would require low-emission zone fines",
+      "body": "A Royal Decree expected to go before cabinet on November 3 would require 151 cities to enforce low-emission zones without transitional delays to fines. It targets zones with weak restrictions or years without penalties. Cities would risk losing state transport aid if their zones do not comply.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/clima-y-medio-ambiente/2026-11-03/el-gobierno-obliga-a-los-ayuntamientos-a-multar-ya-a-los-coches-contaminantes-en-las-zonas-de-bajas-emisiones.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Catalonia records fewer new leases and higher rents",
+      "body": "New rental contracts in Catalonia fell 9.8% between Q2 2024 and Q2 2026, while average rents rose 6.7% to €877.81. Barcelona's average reached a record €1,140. The Catalan government says rent caps reduced turnover rather than supply, citing 2,512 more contracts in force during Q2.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/catalunya/2026/11/02/contratos-alquiler-caen-10-cataluna-dos-anos.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Two minors arrested over Barcelona looting coordination",
+      "body": "Catalan police arrested two girls, aged 14 and 17, suspected of running messaging groups used to coordinate Barcelona's October 24 looting. Police arrested ten alleged Blocus coordinators nationwide between October 30 and November 1. Increased policing helped the weekend pass without incidents.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/detenidas-menores-14-17-anos-barcelona-planificar-difundir-saqueos-blocus_1_13632377.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Unmarried surviving partners may seek pension reviews",
+      "body": "Royal Decree-law 31/2026 of October 20 relaxes survivor's pension rules for unregistered couples with shared children, a Social Security civil servant says. Previously rejected applicants may seek a review. Eligibility depends on proving a period of living together.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-11-02/alfonso-munoz-funcionario_4453818/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Car sales reach best October since 2007",
+      "body": "Spain registered 98,487 new cars in October, up 1.8%, driven by plug-in vehicles and Chinese brands. Electric cars and plug-in hybrids accounted for 31.5% of registrations. Manufacturers warn the €400 million Plan Auto+ purchase-aid budget will run out in November, before its December 31 end date.",
+      "sources": [
+        {
+          "name": "Cinco Días",
+          "url": "https://cincodias.elpais.com/companias/2026-11-02/las-ventas-de-coches-en-espana-firman-el-mejor-octubre-desde-2007-gracias-al-electrico-y-las-marcas-chinas.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Catalan property purchase restrictions stall over legal concerns",
+      "body": "Catalonia's proposed restrictions on speculative home purchases have stalled after the PSC and Comuns failed to agree on revisions. A legal advisory body found the original bill breached property rights. The parties filed separate amendments, but neither is likely to back the other's text.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/falta-acuerdo-psc-comuns-caer-ley-evitar-compra-especulativa-vivienda_1_13632295.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Data-centre energy draft awaits review amid price debate",
+      "body": "A draft Royal Decree awaiting Council of State review would require data centres to match at least 80% of hourly use with clean power. A PyPSA Labs model estimates unchecked expansion would add €1,850–€1.95 billion a year to costs for households and businesses. Industry groups oppose the draft and warn investment could leave.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-03/la-factura-de-la-luz-se-encarecera-en-2000-millones-al-ano-si-descarrila-el-decreto-de-centros-de-datos.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Government plans to close temporary Ceuta migrant shelters",
+      "body": "The government plans to dismantle temporary migrant reception places in Ceuta after around 13,000 people returned to Morocco. Inclusion, Social Security and Migration Minister Elma Saiz says the move would mark a return towards normality. Emergency capacity had risen from 500 to more than 7,500 places.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/gobierno-trabaja-desmontar-plazas-inmigrantes-ceuta-anuncia-13-000-han-vuelto-marruecos_1_13631938.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Doctor Susana Rodríguez claims eighth paratriathlon world title",
+      "body": "Doctor and Paralympic champion Susana Rodríguez Gacio won her eighth paratriathlon world title in Pontevedra in 1:06:37 on September 25. She also took part in the Líderes para la Inclusión Global programme. Its next intake accepts applications until November 16 from graduates with disabilities and five to ten years' work experience.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/vida/20261103/11671301/estudiar-medicina-ganar-ocho-mundiales-camino-exito-susana-rodriguez-brl.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Will you join the November 11 general strike? A) Yes B) No C) Undecided",
+  "subject": "November 11 general strike targets wages and housing",
+  "variant": "What everyone in Spain is talking about today",
+  "headline": "What everyone in Spain is talking about today",
+  "date": "2026-11-03",
+  "engagement_source": "generated",
+  "generated_at": "2026-11-03T07:02:15.585915+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 642,
+    "items_selected_pass1": 12,
+    "fact_sheets_extracted": 12,
+    "items_after_importance_filter": 12,
+    "items_in_digest": 11
+  },
+  "selection_reasons": {
+    "128": "Government aid decree for Urda crash victims, with compensation up to €216,364, is a national-scale response to the deadliest rail accident in recent years.",
+    "3": "Congress's standing committee backs demands for Transport Minister Óscar Puente's resignation, a major national political development ahead of the 29-N election.",
+    "524": "CCOO and UGT general strike on wages, housing and prices, set for November 11, affects workers and residents nationwide.",
+    "43": "Blocus looting wave in Barcelona, with arrests and pretrial detention of organisers across Spain, is serious public-order unrest covered nationally.",
+    "268": "Government decree forcing councils to fine polluting cars in low-emission zones changes driving rules and costs for residents in major cities.",
+    "509": "Royal Decree-law 31/2026 loosens requirements for widow's pensions for unmarried couples with shared children, a systemic change affecting many people.",
+    "55": "Catalan law against speculative housing purchases collapses over PSC-Comuns disagreement, changing the outlook for property buyers in Catalonia.",
+    "636": "Rental contracts in Catalonia fell 10% in two years after rent caps, a concrete market data point for renters and landlords.",
+    "539": "Data-centre decree could raise electricity bills by about €2,000 million a year, a cost-of-living issue for all households.",
+    "82": "Government dismantling temporary migrant shelters in Ceuta, with 13,000 returned to Morocco, marks a significant migration policy development.",
+    "582": "Electric-car purchase aid is set to run out in November, affecting buyers and the car market nationally.",
+    "368": "Positive story: Susana Rodríguez wins her eighth world paratriathlon title, a Spanish sporting record."
+  },
+  "selection_sources": [
+    {
+      "url": "https://www.20minutos.es/nacional/puente-comparece-este-martes-congreso-por-urda-tras-aprobar-ayudas-para-las-victimas_7056267_0.html",
+      "reason": "Government aid decree for Urda crash victims, with compensation up to €216,364, is a national-scale response to the deadliest rail accident in recent years."
+    },
+    {
+      "url": "https://www.elmundo.es/espana/2026/11/03/6ae8cec2e4d4d892638b457d.html",
+      "reason": "Congress's standing committee backs demands for Transport Minister Óscar Puente's resignation, a major national political development ahead of the 29-N election."
+    },
+    {
+      "url": "https://www.eldiario.es/economia/huelga-general-ccoo-ugt-auguran-exito-masivo-garantizan-sera-pacifica_1_13631793.html",
+      "reason": "CCOO and UGT general strike on wages, housing and prices, set for November 11, affects workers and residents nationwide."
+    },
+    {
+      "url": "https://www.eldiario.es/catalunya/detenidas-menores-14-17-anos-barcelona-planificar-difundir-saqueos-blocus_1_13632377.html",
+      "reason": "Blocus looting wave in Barcelona, with arrests and pretrial detention of organisers across Spain, is serious public-order unrest covered nationally."
+    },
+    {
+      "url": "https://elpais.com/clima-y-medio-ambiente/2026-11-03/el-gobierno-obliga-a-los-ayuntamientos-a-multar-ya-a-los-coches-contaminantes-en-las-zonas-de-bajas-emisiones.html",
+      "reason": "Government decree forcing councils to fine polluting cars in low-emission zones changes driving rules and costs for residents in major cities."
+    },
+    {
+      "url": "https://www.elconfidencial.com/economia/2026-11-02/alfonso-munoz-funcionario_4453818/",
+      "reason": "Royal Decree-law 31/2026 loosens requirements for widow's pensions for unmarried couples with shared children, a systemic change affecting many people."
+    },
+    {
+      "url": "https://www.eldiario.es/catalunya/falta-acuerdo-psc-comuns-caer-ley-evitar-compra-especulativa-vivienda_1_13632295.html",
+      "reason": "Catalan law against speculative housing purchases collapses over PSC-Comuns disagreement, changing the outlook for property buyers in Catalonia."
+    },
+    {
+      "url": "https://www.expansion.com/catalunya/2026/11/02/contratos-alquiler-caen-10-cataluna-dos-anos.html",
+      "reason": "Rental contracts in Catalonia fell 10% in two years after rent caps, a concrete market data point for renters and landlords."
+    },
+    {
+      "url": "https://elpais.com/economia/2026-11-03/la-factura-de-la-luz-se-encarecera-en-2000-millones-al-ano-si-descarrila-el-decreto-de-centros-de-datos.html",
+      "reason": "Data-centre decree could raise electricity bills by about €2,000 million a year, a cost-of-living issue for all households."
+    },
+    {
+      "url": "https://www.eldiario.es/desalambre/gobierno-trabaja-desmontar-plazas-inmigrantes-ceuta-anuncia-13-000-han-vuelto-marruecos_1_13631938.html",
+      "reason": "Government dismantling temporary migrant shelters in Ceuta, with 13,000 returned to Morocco, marks a significant migration policy development."
+    },
+    {
+      "url": "https://cincodias.elpais.com/companias/2026-11-02/las-ventas-de-coches-en-espana-firman-el-mejor-octubre-desde-2007-gracias-al-electrico-y-las-marcas-chinas.html",
+      "reason": "Electric-car purchase aid is set to run out in November, affecting buyers and the car market nationally."
+    },
+    {
+      "url": "https://www.lavanguardia.com/vida/20261103/11671301/estudiar-medicina-ganar-ocho-mundiales-camino-exito-susana-rodriguez-brl.html",
+      "reason": "Positive story: Susana Rodríguez wins her eighth world paratriathlon title, a Spanish sporting record."
+    }
+  ]
+}
