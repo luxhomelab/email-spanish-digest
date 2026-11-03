@@ -595,10 +595,10 @@ Impuesto sobre Transmisiones Patrimoniales — региональный нало
 
 Если продаёте дешевле, чем купили, налога нет — но это нужно задекларировать и доказать купчими.
 
-Для квартиры в многоэтажном доме plusvalía обычно составляет от нескольких сотен до нескольких тысяч евро. Многие ayuntamientos публикуют калькулятор на своих сайтах, и он сразу считает налог обоими методами:
-- **Мадрид** [Calculadora estimativa de la plusvalía](https://www.madrid.es/go/calculadoraplusvalia), без регистрации.
-- **Барселона** [Estimació de la plusvàlua](https://seuelectronica.ajuntament.barcelona.cat/APPS/ptbplusvalua/tramit.do?eventName=init) (на каталанском, вариант «Estimació»).
-- **Аликанте** [Autoliquidación online](https://www.alicante.es/es/tramites/plusvalia-municipal-autoliquidacion-line): нужна идентификация (Cl@ve или цифровой сертификат), черновик показывает сумму по обоим методам.
+Для квартиры в многоэтажном доме plusvalía обычно составляет от нескольких сотен до нескольких тысяч евро. Многие ayuntamientos публикуют калькулятор на своих сайтах:
+- **Мадрид** [Calculadora estimativa de la plusvalía](https://www.madrid.es/go/calculadoraplusvalia), без регистрации, считает обоими методами.
+- **Барселона** [Estimació de la plusvàlua](https://seuelectronica.ajuntament.barcelona.cat/APPS/ptbplusvalua/tramit.do?eventName=init) (на каталанском, вариант «Estimació»), считает обоими методами.
+- **Аликанте** [Cálculo del Impuesto de Plusvalía](https://w3.alicante.es/hacienda/plusvalia/), без регистрации: нужны кадастровый номер, даты и суммы покупки и продажи.
 
 В других городах ищите на сайте ayuntamiento «simulador plusvalía» или раздел autoliquidación.
 
