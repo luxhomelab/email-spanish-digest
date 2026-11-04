@@ -35,6 +35,7 @@ from urllib.parse import quote
 from zoneinfo import ZoneInfo
 
 from jinja2 import Environment, FileSystemLoader
+from markupsafe import Markup
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 TEMPLATES_DIR = os.path.join(SCRIPT_DIR, "templates")
@@ -394,6 +395,68 @@ def article_graphic_html(slug, name):
         return ""
 
 
+# YouTube videos from data/videos.json, keyed by video id. Rendered as a
+# click-to-load facade (thumbnail + play button; static/js/video-embed.js
+# swaps in a youtube-nocookie iframe) with VideoObject JSON-LD. Used by
+# "::: video <id>" in article markdown and video_embed(id) in templates.
+VIDEOS_PATH = os.path.join(SCRIPT_DIR, "data", "videos.json")
+ARTICLE_VIDEO_RE = re.compile(r"^:::\s*video\s+([A-Za-z0-9_-]{11})$")
+_videos_cache = None
+
+
+def load_videos():
+    global _videos_cache
+    if _videos_cache is None:
+        try:
+            with open(VIDEOS_PATH, encoding="utf-8") as fh:
+                _videos_cache = json.load(fh)
+        except (OSError, json.JSONDecodeError) as exc:
+            print(f"WARN: cannot read {VIDEOS_PATH}: {exc}", file=sys.stderr)
+            _videos_cache = {}
+    return _videos_cache
+
+
+def video_embed_html(video_id):
+    """Facade + VideoObject JSON-LD for one video; warn and return "" if unknown."""
+    v = load_videos().get(video_id)
+    if not v:
+        print(f"WARN: video not in data/videos.json: {video_id}", file=sys.stderr)
+        return ""
+    secs = int(v["duration"])
+    mins, s = divmod(secs, 60)
+    clock = f"{mins}:{s:02d}"
+    watch = f"https://www.youtube.com/watch?v={video_id}"
+    thumb = f"https://i.ytimg.com/vi/{video_id}/maxresdefault.jpg"
+    caption = html.escape(v.get("caption") or v["title"])
+    ld = {
+        "@context": "https://schema.org", "@type": "VideoObject",
+        "name": v["title"], "description": v["description"],
+        "thumbnailUrl": [thumb, f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg"],
+        "uploadDate": v["upload_date"], "duration": f"PT{mins}M{s}S",
+        "embedUrl": f"https://www.youtube.com/embed/{video_id}", "url": watch,
+        "publisher": {"@type": "Organization", "name": "Spanified", "url": f"{SITE_URL}/"},
+    }
+    ld_json = json.dumps(ld, ensure_ascii=False).replace("</", "<\\/")
+    return (
+        f'<figure class="video-embed" data-pagefind-ignore>\n'
+        f'<a class="ve-frame" href="{watch}" target="_blank" rel="noopener" data-video-id="{video_id}"'
+        f' data-video-title="{caption}" aria-label="Play video: {caption} ({mins} min)">'
+        f'<img src="{thumb}" alt="" width="1280" height="720" loading="lazy" decoding="async">'
+        f'<span class="ve-play"><span class="ve-play-icon"><svg viewBox="0 0 24 24" aria-hidden="true">'
+        f'<path d="M8 5.5v13l10.5-6.5z"/></svg></span>'
+        f'<span class="ve-play-label">Play video</span><span class="ve-time">{clock}</span></span></a>\n'
+        f'<figcaption class="ve-caption">{caption}. <a href="{watch}" target="_blank" rel="noopener">Watch on YouTube</a></figcaption>\n'
+        f'<script type="application/ld+json">{ld_json}</script>\n'
+        f'<script src="/static/js/video-embed.js?v={js_version()}" defer></script>\n'
+        f"</figure>"
+    )
+
+
+
+def video_embed(video_id):
+    """Jinja global: {{ video_embed("<id>") }} in templates."""
+    return Markup(video_embed_html(video_id))
+
 # "::: toc" on its own line -> table of contents of every h2 in the article.
 ARTICLE_TOC_MARKER = "::: toc"
 _TOC_PLACEHOLDER = "\x00toc\x00"
@@ -507,6 +570,16 @@ def article_markdown_to_html(md, slug=None, toc_extra=()):
             graphic = article_graphic_html(slug, m.group(1))
             if graphic:
                 out.append(graphic)
+            continue
+        m = ARTICLE_VIDEO_RE.match(stripped)
+        if m:
+            flush_para()
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            video = video_embed_html(m.group(1))
+            if video:
+                out.append(video)
             continue
         m = ARTICLE_FIGURE_RE.match(stripped)
         if m:
@@ -1841,7 +1914,7 @@ def render_categories(env, digests):
 # Their newest commit date becomes the page's sitemap lastmod.
 CALC_SOURCES = {
     "net-salary": ["templates/calculator-net-salary.html", "static/js/net-salary*.js"],
-    "autonomo-tax": ["templates/calculator-autonomo.html", "static/js/autonomo*.js"],
+    "autonomo-tax": ["templates/calculator-autonomo.html", "static/js/autonomo*.js", "data/videos.json"],
     "property-buying-cost": ["templates/calculator-property-buying-cost.html", "static/js/property-buying-cost*.js"],
     "rental-yield": ["templates/calculator-rental-yield.html", "static/js/rental-yield*.js"],
     "electricity-bill": ["templates/calculator-electricity.html", "static/js/electricity*.js"],
@@ -1851,7 +1924,7 @@ CALC_AMOUNT_SOURCES = {
     "net-salary": ["templates/calculator-net-salary-amount.html", "data/net-salary-pages.json",
                    "scripts/net-salary-grid.mjs"],
     "autonomo-tax": ["templates/calculator-autonomo-amount.html", "data/autonomo-pages.json",
-                     "scripts/autonomo-grid.mjs"],
+                     "scripts/autonomo-grid.mjs", "data/videos.json"],
     "rental-yield": ["templates/calculator-rental-yield-amount.html", "data/rental-yield-pages.json",
                      "scripts/rental-yield-grid.mjs"],
 }
@@ -2265,7 +2338,8 @@ def js_version():
                    "net-salary-foral.js",
                    "quiz.js",
                    "quiz-logic.js", "subscribe-form.js", "subscription-store.js",
-                   "electricity.js", "electricity-calc.js", "electricity-form.js"):
+                   "electricity.js", "electricity-calc.js", "electricity-form.js",
+                   "video-embed.js"):
         path = os.path.join(SCRIPT_DIR, "static", "js", name)
         try:
             with open(path, "rb") as fh:
@@ -2308,6 +2382,7 @@ def main():
     # static/js/*.js are copied verbatim (STATIC_COPY) and never rendered.
     env.globals["analytics_enabled"] = analytics_enabled(args)
     env.globals["pub_date"] = pub_date
+    env.globals["video_embed"] = video_embed
     env.globals["site_socials"] = [
         "https://www.threads.com/@spaindaily",
         "https://www.reddit.com/r/SpainDaily/",

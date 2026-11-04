@@ -20,7 +20,7 @@ def test_podcast_context():
 def _render(tmp_path, monkeypatch, episodes):
     monkeypatch.setattr(build, "ARCHIVE_DIR", str(tmp_path))
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.join(build.SCRIPT_DIR, "templates")))
-    env.globals.update(site_url="https://spanified.com", pub_date=build.pub_date, asset_version="1",
+    env.globals.update(site_url="https://spanified.com", pub_date=build.pub_date, video_embed=build.video_embed, asset_version="1",
                        turnstile_enabled=False, analytics_enabled=False, site_socials=[])
     digest = build.digest_context({"date": "2026-10-17", "headline": "H", "items": []})
     digest["share"] = {}

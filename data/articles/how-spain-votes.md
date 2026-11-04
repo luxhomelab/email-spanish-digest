@@ -15,6 +15,8 @@ You drop a ballot in the box, but you don't actually choose the prime minister. 
 
 With a snap general election called for **29 November 2026**, this guide walks through the rules that turn Spanish votes into seats: the districts, the lists, the d'Hondt maths, what happens to a blank vote, and how the Senate works. No politics, just the mechanics. (For what happens once the seats are filled, who does what between the King, parliament and the Government, see our companion guide to [how Spain is governed](/articles/how-spain-is-governed).)
 
+::: video 891GhtG_AkU
+
 ## Four kinds of elections, two ballots
 
 Spain holds four kinds of elections: **general** (*generales*), **regional** (*autonómicas*), **municipal** (*municipales*) and **European** (*europeas*). This guide is about the big one, the general election, which decides who governs the country.

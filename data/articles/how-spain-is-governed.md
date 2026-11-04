@@ -15,6 +15,8 @@ Who actually runs Spain? The King? The prime minister? Parliament? If you read S
 
 This guide untangles it: who does what, who gets elected and how often, and how the pieces keep each other in check.
 
+::: video 5polGAQydNo
+
 ::: toc
 
 ## It all starts with the 1978 Constitution
