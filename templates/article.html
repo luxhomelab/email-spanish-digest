@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% block html_lang %}{{ article.lang }}{% endblock %}
 {% block body_class %} class="page-digest page-article"{% endblock %}
 {% block title %}{{ article.meta_title }}{% endblock %}
 {% block description %}<meta name="description" content="{{ article.meta_description }}">
@@ -32,7 +31,7 @@
  "dateModified": "{{ pub_date(article.updated) }}",
  "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor", "jobTitle": "Founder and Editor", "sameAs": ["https://www.linkedin.com/in/dshvechikov"]},
  "publisher": {"@type": "Organization", "name": "Spanified", "logo": {"@type": "ImageObject", "url": "{{ site_url }}/logo.jpg", "width": 640, "height": 640}},
- "inLanguage": "{{ article.lang }}",
+ "inLanguage": "en",
  "wordCount": {{ article.word_count }},
  "isAccessibleForFree": true,
  "mainEntityOfPage": "{{ site_url }}{{ article.url }}"

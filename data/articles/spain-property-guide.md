@@ -1,6 +1,5 @@
 ---
 slug: spain-property-guide
-lang: en
 title: How to Buy, Own and Sell a Home in Spain: The Complete Guide
 meta_title: Buying Property in Spain in 2026: Costs, Taxes, Mortgage
 meta_description: Buying property in Spain, step by step: the real costs (10-15% on top), NIE, nota simple, arras, mortgages, ITP vs IVA, and what owning and selling cost.
