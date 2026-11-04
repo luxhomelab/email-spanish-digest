@@ -15,7 +15,7 @@ def site(tmp_path_factory):
     mp = pytest.MonkeyPatch()
     mp.setattr(build, "OUT_DIR", str(out))
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(build.TEMPLATES_DIR), autoescape=True)
-    env.globals.update(site_url=build.SITE_URL, pub_date=build.pub_date, asset_version="1", js_importmap="{}",
+    env.globals.update(site_url=build.SITE_URL, pub_date=build.pub_date, video_embed=build.video_embed, asset_version="1", js_importmap="{}",
                        turnstile_enabled=False, analytics_enabled=False, site_socials=[],
                        listmonk_form_action="/x", listmonk_list_uuid="u", current_year=2026)
     urls = build.render_net_salary_pages(env)

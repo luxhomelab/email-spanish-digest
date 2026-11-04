@@ -4721,3 +4721,55 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
   .hm-editor { padding: 22px 18px; }
 }
 @media (prefers-reduced-motion: reduce) { .hm-btn, .hm-btn-icon, .hm-faq details, .hm-calcs a, .hm-quizzes a, .hm-articles a { transition: none; } }
+
+/* ---------- Video embed ----------
+   build.py video_embed_html(): "::: video <id>" in articles, video_embed(id)
+   in templates. A thumbnail link with a flag-red play pill and a gold play
+   disc; static/js/video-embed.js swaps in the YouTube iframe on click. */
+.video-embed { margin: 1.8em 0 2em 0; }
+.video-embed .ve-frame,
+.video-embed .ve-iframe {
+ position: relative; display: block; width: 100%; aspect-ratio: 16 / 9;
+ border: 0; border-radius: 12px; overflow: hidden; background-color: #1F2A37;
+ box-shadow: 0 0 0 1px #E5DCC8;
+}
+.video-embed .ve-frame { text-decoration: none; color: #ffffff; }
+.article-body .video-embed .ve-frame,
+.article-body .video-embed .ve-frame:hover { background-color: #1F2A37; color: #ffffff; text-decoration: none; }
+.article-body .video-embed .ve-frame::after { display: none; }
+.video-embed .ve-frame img {
+ display: block; width: 100%; height: 100%; object-fit: cover;
+}
+.video-embed .ve-play {
+ position: absolute; left: 16px; bottom: 16px;
+ display: inline-flex; align-items: center; gap: 10px;
+ padding: 6px 16px 6px 6px; border-radius: 999px;
+ background-color: #AA151B; color: #ffffff;
+ font: 700 15px/1 Helvetica, Arial, sans-serif;
+ box-shadow: 0 2px 10px rgba(31, 42, 55, 0.35);
+}
+.video-embed .ve-play-icon {
+ display: grid; place-items: center; width: 36px; height: 36px;
+ border-radius: 50%; background-color: #F1BF00;
+}
+.video-embed .ve-play-icon svg { width: 18px; height: 18px; margin-left: 2px; fill: #1F2A37; }
+.video-embed .ve-time {
+ padding-left: 10px; border-left: 1px solid rgba(255, 255, 255, 0.45);
+ font-weight: 400; font-variant-numeric: tabular-nums;
+}
+.video-embed .ve-frame:hover .ve-play { background-color: #8A1019; }
+.video-embed .ve-frame:focus-visible { outline: 3px solid #F1BF00; outline-offset: 3px; }
+@media (prefers-reduced-motion: no-preference) {
+ .video-embed .ve-play { transition: background-color 0.15s ease, transform 0.15s ease; }
+ .video-embed .ve-frame:hover .ve-play { transform: translateY(-1px); }
+}
+.video-embed .ve-caption {
+ margin-top: 10px; font-size: 14px; line-height: 1.55; color: #6C7A89;
+}
+.video-embed .ve-caption a { color: #AA151B; }
+.calc .video-embed { margin: 16px 0 0 0; }
+@media (max-width: 480px) {
+ .video-embed .ve-frame, .video-embed .ve-iframe { border-radius: 8px; }
+ .video-embed .ve-play { left: 10px; bottom: 10px; padding-right: 12px; font-size: 14px; }
+ .video-embed .ve-play-icon { width: 30px; height: 30px; }
+}
