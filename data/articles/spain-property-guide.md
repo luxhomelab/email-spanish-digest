@@ -1,680 +1,680 @@
 ---
 slug: spain-property-guide
-lang: ru
-title: Как купить, содержать и продать квартиру в Испании: полное руководство
-meta_title: Как купить квартиру в Испании в 2026: налоги, ипотека, документы
-meta_description: Покупка жилья в Испании шаг за шагом: поиск и реальные цены, кто платит риелтору, документы, arras, ипотека, ITP и IVA, расходы на содержание и продажу.
+lang: en
+title: How to Buy, Own and Sell a Home in Spain: The Complete Guide
+meta_title: Buying a Home in Spain in 2026: Taxes, Mortgage, Documents
+meta_description: Buying property in Spain step by step: where to search and real prices, who pays the agent, documents, arras, mortgages, ITP and IVA, running costs and selling costs.
 date: 2026-11-02
 author: Dmytro Shvechikov
-excerpt: Всё о недвижимости в Испании в одном месте: как найти квартиру и проверить цену, какие документы смотреть, как устроены договоры и ипотека, сколько стоит покупка, владение и продажа.
-image_alt: Обложка руководства по покупке квартиры в Испании
+excerpt: Everything about property in Spain in one place: how to find a flat and check the price, which documents to look at, how contracts and mortgages work, and what buying, owning and selling cost.
+image_alt: Cover of the guide to buying a flat in Spain
 ---
 
-Я покупал квартиру в Испании сам: искал, торговался, брал ипотеку как автономо, а через полгода после сделки скидывался с соседями на ремонт лифтов. В этом руководстве собран весь путь: сколько денег нужно на самом деле, как найти квартиру и не переплатить, что проверить в документах, как устроены задаток, ипотека и налоги, а потом во что обходится владение и продажа.
+I bought a flat in Spain myself. I searched, haggled, got a mortgage as an autónomo, and six months after the purchase I was chipping in with the neighbours to repair the lifts. This guide covers the whole path: how much money you really need, how to find a flat without overpaying, what to check in the documents, how the deposit, mortgage and taxes work, and then what owning and selling cost.
 
-*Актуально на ноябрь 2026 года. Цифры и ставки проверяйте по ссылкам: налоги в Испании меняются каждый год, а часть из них зависит от региона и муниципалитета.*
+*Up to date as of November 2026. Check the numbers and rates at the links: Spanish taxes change every year, and some of them depend on the region and the town.*
 
 ::: toc
 
-## Коротко: сколько денег нужно на самом деле
+## In short: how much money you really need
 
-Главное правило испанского рынка: к цене квартиры нужно добавить ещё 10–15% на налоги и расходы. Банки никогда не включают эти расходы в ипотеку, а резиденту обычно дают не больше 80% от цены или оценки (берётся меньшая из сумм). Получается, что на покупку в ипотеку нужно иметь собственные деньги в размере примерно 30–35% стоимости квартиры.
+The main rule of the Spanish market: add another 10-15% to the price of the flat for taxes and fees. Banks never include these costs in the mortgage, and a resident usually gets no more than 80% of the price or the valuation, whichever is lower. So to buy with a mortgage you need your own money worth about 30-35% of the price.
 
 ::: graphic budget
 
-Пример: квартира на вторичном рынке в Мадриде за 300 000 €.
+Example: a resale flat in Madrid for €300,000.
 
-- Налог на передачу имущества (ITP) 6%: 18 000 €
-- Нотариус: около 1 000 €
-- Регистрация в Registro de la Propiedad: около 700 €
-- Gestoría (если пользуетесь): 300–500 €
-- Оценка (tasación) для ипотеки: 300–600 €
-- Итого расходов: около 20 500 €, то есть примерно 6,8% сверху
+- Property transfer tax (ITP) at 6%: €18,000
+- Notary: about €1,000
+- Land Registry (Registro de la Propiedad): about €700
+- Gestoría (if you use one): €300-500
+- Valuation (tasación) for the mortgage: €300-600
+- Total costs: about €20,500, or roughly 6.8% on top
 
-Но Мадрид — один из самых дешёвых регионов по ITP. Там, где налог 10%, выходит около 12% сверху: когда я покупал квартиру в Аликанте, ITP там был 10%, и вместе с остальными расходами (около 2%) набежало почти 12%. В Каталонии с её 10% (30 000 € только налога для квартиры за 300 000 €) получится примерно столько же. Посчитать для своего региона и цены можно в нашем калькуляторе: [калькулятор расходов на покупку жилья](/calculators/property-buying-cost).
+But Madrid has one of the lowest ITP rates. Where the tax is 10%, you end up paying about 12% on top. When I bought my flat in Alicante, ITP there was 10%, and with the other costs (about 2%) it came to almost 12%. Catalonia also charges 10% (€30,000 in tax alone on a €300,000 flat), so the total is about the same. You can work it out for your region and price with our [property buying cost calculator](/calculators/property-buying-cost).
 
-## Как проходит покупка: 8 шагов
+## How buying works: 8 steps
 
-Весь путь от решения купить до ключей выглядит так. Дальше разделы статьи идут в том же порядке.
+This is the whole path from deciding to buy to getting the keys. The sections of this guide follow the same order.
 
 ::: graphic buyer-path
 
-## Подготовка: NIE, банковский счёт, бюджет
+## Getting ready: NIE, bank account, budget
 
-**NIE (Número de Identidad de Extranjero).** Без него нельзя подписать купчую у нотариуса, открыть ипотеку и заплатить налоги. Резиденты получают NIE вместе с ВНЖ (TIE). Нерезиденты могут получить NIE «по экономическим причинам» в полиции в Испании (по записи через [Cita previa de Extranjería](https://icp.administracionelectronica.gob.es/icpplus/index.html)) или через консульство Испании в своей стране. Информация: [Policía Nacional — NIE](https://www.policia.es).
+**NIE (Número de Identidad de Extranjero).** You need it to sign the deed at the notary, take out a mortgage and pay taxes. Residents get their NIE together with their residence card (TIE). Non-residents can get an NIE "for economic reasons" at a police station in Spain (book through [Cita previa de Extranjería](https://icp.administracionelectronica.gob.es/icpplus/index.html)) or at a Spanish consulate in their own country. More information: [Policía Nacional, NIE](https://www.policia.es).
 
-**Испанский банковский счёт.** Нужен для оплаты налогов, коммунальных платежей и взносов в comunidad. Если берёте ипотеку, счёт откроете в том же банке.
+**Spanish bank account.** You need it to pay taxes, utility bills and comunidad fees. If you take a mortgage, you will open the account at the same bank.
 
-**Происхождение денег.** Нотариус и банк обязаны проверять источник средств по закону о противодействии отмыванию ([Ley 10/2010](https://www.boe.es/buscar/act.php?id=BOE-A-2010-6737)). Готовьте выписки, подтверждение продажи другого имущества, дарения и т.п. Если деньги приходят из-за рубежа, сохраняйте подтверждения переводов. Наличными можно заплатить не больше 1 000 €, если вы покупаете у застройщика или у компании либо платите комиссию агентству ([Ley 7/2012](https://www.boe.es/buscar/act.php?id=BOE-A-2012-13416), в редакции Ley 11/2021). Для покупателя, который не является налоговым резидентом Испании, лимит выше: 10 000 €. Если продавец — обычный человек, который продаёт свою квартиру, этот лимит не действует. На практике всё платится банковскими переводами или cheque bancario, а нотариус фиксирует в купчей все способы оплаты.
+**Where the money comes from.** Under the anti-money-laundering law ([Ley 10/2010](https://www.boe.es/buscar/act.php?id=BOE-A-2010-6737)), the notary and the bank must check the source of your funds. Have your bank statements ready, plus proof of the sale of other property, gifts and so on. If the money comes from abroad, keep the transfer records. You can pay no more than €1,000 in cash if you buy from a developer or a company, or when you pay an agency fee ([Ley 7/2012](https://www.boe.es/buscar/act.php?id=BOE-A-2012-13416), as amended by Ley 11/2021). For a buyer who is not a Spanish tax resident, the limit is higher: €10,000. If the seller is a private person selling their own flat, this limit does not apply. In practice everything is paid by bank transfer or cheque bancario, and the notary records every payment method in the deed.
 
-**Бюджет.** Испанский банк, как правило, не одобрит ипотеку, если ежемесячный платёж по всем кредитам выше 30–35% чистого дохода. Сначала посчитайте, сколько вы реально можете платить, потом ищите квартиру. Предварительное одобрение (preaprobación) в банке или у ипотечного брокера ускорит дело, но юридически банк им не связан. Сколько и на каких условиях дают банки, разобрано ниже, в разделе про ипотеку.
+**Budget.** A Spanish bank usually won't approve a mortgage if your monthly payments on all loans would be more than 30-35% of your net income. First work out how much you can really pay, then look for a flat. A pre-approval (preaprobación) from a bank or a mortgage broker speeds things up, but it does not legally bind the bank. How much banks lend and on what terms is covered below, in the mortgage section.
 
-## Где искать жильё
+## Where to look for a home
 
-**Порталы объявлений:**
-- [idealista.com](https://www.idealista.com) — крупнейший портал, самая большая база по всей стране.
-- [fotocasa.es](https://www.fotocasa.es) — второй по величине, много объявлений, которых нет на idealista.
-- [habitaclia.com](https://www.habitaclia.com) — сильная база по Каталонии.
-- [pisos.com](https://www.pisos.com) — тоже стоит проверять.
+**Property portals:**
+- [idealista.com](https://www.idealista.com) is the largest portal, with the most listings across the country.
+- [fotocasa.es](https://www.fotocasa.es) is the second largest, with many listings you won't find on idealista.
+- [habitaclia.com](https://www.habitaclia.com) is strong in Catalonia.
+- [pisos.com](https://www.pisos.com) is also worth checking.
 
-**Риелторы, с которыми вы уже смотрели квартиры.** Хорошие варианты часто уходят ещё до публикации. Нашу квартиру нам предложили риелторы, через которых мы смотрели другие квартиры. Договора с ними у нас не было, просто они знали, что мы ищем. Мы посмотрели квартиру ещё до того, как она появилась на idealista. Поэтому после каждого просмотра оставляйте агенту свои контакты и критерии: бюджет, район, площадь.
+**Agents you have already viewed flats with.** Good flats often sell before they are even listed. Our flat was offered to us by agents we had used to view other flats. We had no contract with them; they just knew what we were looking for. We saw the flat before it appeared on idealista. So after every viewing, leave the agent your contact details and what you want: budget, area, size.
 
-Одна и та же квартира часто висит у нескольких агентств с разными ценами. Если видите разброс, сравните объявления: иногда собственник просто не обновил цену у одного из агентов.
+The same flat is often listed with several agencies at different prices. If you see a gap, compare the listings: sometimes the owner simply hasn't updated the price with one of the agents.
 
-**Банковские и «проблемные» объекты.** Квартиры, которые банки забрали за долги, продают сервисеры (Solvia, Altamira, Aliseda, Servihabitat, Haya и др.). Они бывают дешевле рынка, но чаще в плохом состоянии, иногда с жильцами без договора (ocupados). Цена такой квартиры отражает риск.
+**Bank-owned and "problem" properties.** Flats that banks repossessed for unpaid debt are sold by servicers (Solvia, Altamira, Aliseda, Servihabitat, Haya and others). They can be cheaper than the market, but they are often in poor condition, and sometimes people live there without a contract (ocupados). The price reflects the risk.
 
-**Аукционы.** Все судебные и административные аукционы проходят на [Portal de Subastas BOE](https://subastas.boe.es). Это вариант для опытных покупателей: осмотреть объект обычно нельзя, а освобождение от жильцов — забота покупателя.
+**Auctions.** All court and government auctions take place on the [Portal de Subastas BOE](https://subastas.boe.es). This is for experienced buyers: you usually can't view the property, and getting any occupants out is the buyer's problem.
 
-**Personal shopper / buyer's agent.** Агент, который работает на покупателя, а не на продавца: ищет, торгуется, проверяет документы. Его оплачивает покупатель, обычно 2–3% от цены или фиксированная сумма.
+**Personal shopper / buyer's agent.** An agent who works for the buyer instead of the seller. They search, negotiate and check the documents. The buyer pays them, usually 2-3% of the price or a fixed fee.
 
-### Кто платит риелтору
+### Who pays the estate agent
 
-**При покупке-продаже закон не определяет, кто платит агенту.** Это вопрос договора. Обычно комиссию платит продавец: он подписывает с агентством договор (nota de encargo), где указан процент. Обычный размер — 3–6% от цены плюс IVA 21%, в дорогих районах и на побережье бывает до 5–7%. Часто комиссию просто закладывают в цену. Но агентства, которые хотят комиссию и с покупателя, попадаются часто, особенно на побережье. Мы в итоге купили без комиссии.
+**For a sale, the law does not say who pays the agent.** It is a matter of contract. Usually the seller pays: they sign an agreement with the agency (nota de encargo) that sets the percentage. The usual fee is 3-6% of the price plus 21% IVA, and in expensive areas and on the coast it can reach 5-7%. The fee is often simply built into the price. Still, agencies that also want a fee from the buyer are common, especially on the coast. In the end we bought without paying a fee.
 
-Что важно знать покупателю:
-- Если агентство просит подписать с вами какой-то документ (hoja de visita, договор посредничества), прочитайте его: там может быть пункт о вашей комиссии или о штрафе, если вы купите квартиру напрямую у собственника в обход агентства.
-- Если агентство хочет комиссию и с вас, выясните это до просмотров. Размер комиссии тоже можно и нужно обсуждать: торговаться можно не только о цене квартиры.
-- Если вы сами наняли buyer's agent, его оплачиваете вы.
+What the buyer should know:
+- If the agency asks you to sign anything (hoja de visita, an intermediary agreement), read it. It may have a clause about your fee, or a penalty if you buy the flat directly from the owner without the agency.
+- If the agency wants a fee from you too, find out before the viewings. You can and should negotiate the fee as well. The price of the flat is not the only thing you can haggle over.
+- If you hired a buyer's agent yourself, you pay them.
 
-## Какое жильё лучше не покупать
+## What not to buy
 
-Не все эти варианты плохи сами по себе, но у каждого есть подвох, который всплывает при жизни в квартире или при перепродаже.
+Not all of these are bad in themselves, but each has a catch that shows up when you live there or try to sell.
 
-### Юридические ловушки
+### Legal traps
 
-- **Квартира с жильцами** С арендатором по действующему договору (он остаётся при смене собственника) или с ocupas без договора. Выселение занимает месяцы и годы.
-- **Бывший коммерческий local** Переделан в жильё без официальной смены назначения (cambio de uso). Не будет cédula, а банк откажет в ипотеке.
-- **Дом на suelo rústico или с незаконными пристройками** Легализовать бывает невозможно, а штрафы и снос — риск нового владельца.
-- **VPO** Если вы не подходите под требования или хотите свободно сдавать и перепродавать (подробнее ниже, в разделе про документы).
-- **Доля в квартире или nuda propiedad** Доля (proindiviso) — часть квартиры, остальное принадлежит другим людям. Nuda propiedad — собственность без права проживания, пока жив пожизненный пользователь. Дёшево, но жить там вы не сможете, а ипотеку на это не дают.
+- **A flat with people living in it** Either a tenant with a valid contract (it stays in force when the owner changes) or squatters (ocupas) with no contract. Getting them out takes months or years.
+- **A former commercial unit (local)** Converted into a home without an official change of use (cambio de uso). It won't have a cédula, and the bank will refuse a mortgage.
+- **A house on rural land (suelo rústico) or with illegal extensions** It may be impossible to legalise, and fines or demolition become the new owner's risk.
+- **VPO** If you don't meet the requirements, or you want to rent out and resell freely (more on this below, in the documents section).
+- **A share of a flat or nuda propiedad** A share (proindiviso) is part of a flat; the rest belongs to other people. Nuda propiedad is ownership without the right to live there while the person with the life interest is alive. It is cheap, but you can't live there, and banks won't lend on it.
 
-### Неудачная квартира
+### A bad flat
 
-- **Bajo — первый этаж с окнами на улицу** Шум, сырость, меньше безопасности, и такие квартиры дольше продаются. Исключение — bajo с собственным патио в тихом доме.
-- **Interior** Квартира, все окна которой выходят во внутренний колодец двора (patio de luces): мало света и воздуха, соседи слышны.
-- **Последний этаж в старом доме (60–70-х годов)** Света много, но крыша в таких домах почти не утеплена. Летом квартира раскаляется от солнца, а зимой с крыши всё равно лезет плесень, причём не только в комнатах с окнами на колодец. Я жил в такой квартире. Если всё же рассматриваете, спросите в comunidad, когда ремонтировали крышу, и посмотрите потолки в углах.
-- **Высокий этаж в доме без лифта** Хуже всего, если поставить лифт технически невозможно. Такую квартиру сложно продать семьям с детьми и пожилым людям.
+- **Bajo: a ground-floor flat with windows onto the street** Noise, damp, less security, and these flats take longer to sell. The exception is a bajo with its own patio in a quiet building.
+- **Interior** A flat where all windows face the inner light well (patio de luces). Little light and air, and you hear the neighbours.
+- **Top floor in an old building (1960s-70s)** Lots of light, but the roofs in these buildings have almost no insulation. In summer the sun heats the flat up, and in winter mould still creeps in from the roof, and not only in the rooms facing the light well. I lived in a flat like that. If you still consider one, ask the comunidad when the roof was last repaired, and look at the ceiling corners.
+- **High floor in a building without a lift** Worst of all if a lift can't be installed for technical reasons. Such flats are hard to sell to families with children and to older people.
 
-### Проблемный дом или место
+### A problem building or location
 
-- **Дом с проблемной ITE** Трещины в конструкциях, aluminosis, старые трубы и фасад. Значит, скоро будут крупные derramas.
-- **Квартира над баром, ночным клубом или на шумной улице** Проверьте место вечером в пятницу.
-- **Зона затопления** Особенно на побережье Валенсии, Мурсии и Андалусии. Проверьте участок на карте зон затопления [SNCZI](https://www.miteco.gob.es/es/agua/temas/gestion-de-los-riesgos-de-inundacion/snczi.html) Министерства экологии.
-- **Квартира у моря без проверки окон и фасада** У побережья высокая влажность и сильные ветра: плохие окна дают сырость, плесень и холод зимой, а солёный воздух быстро разрушает фасад, балконы и металл. Смотрите, какие стоят окна (лучше с двойным стеклопакетом и разрывом мостика холода), есть ли следы плесени в углах и на потолке, в каком состоянии фасад и балконы. Ремонт фасада — это будущая derrama.
+- **A building with a bad ITE** Cracks in the structure, aluminosis, old pipes and facade. This means large derramas soon.
+- **A flat above a bar or nightclub, or on a noisy street** Visit on a Friday evening.
+- **Flood zone** Especially on the coasts of Valencia, Murcia and Andalusia. Check the plot on the [SNCZI](https://www.miteco.gob.es/es/agua/temas/gestion-de-los-riesgos-de-inundacion/snczi.html) flood map from the Ministry for Ecological Transition.
+- **A flat by the sea without checking the windows and facade** The coast has high humidity and strong winds. Poor windows mean damp, mould and cold in winter, and salt air wears down the facade, balconies and metal fast. Look at what windows are fitted (double glazing with thermal-break frames is better), check the corners and ceilings for mould, and check the state of the facade and balconies. A facade repair means a future derrama.
 
-## Как понять, что цена адекватная
+## How to tell if the price is fair
 
-Цены в объявлениях — это ожидания продавцов. Реальные сделки часто проходят на 5–10% ниже, а в спокойных районах и больше.
+Listing prices are what sellers hope to get. Actual sales often close 5-10% lower, and more in quiet areas.
 
-### Portal Estadístico del Notariado — цены реальных сделок
+### Portal Estadístico del Notariado: real sale prices
 
-[penotariado.com](https://www.penotariado.com) — бесплатный портал Генерального совета нотариусов. Данные берутся из купчих, которые подписаны у нотариусов, то есть это фактические цены, а не цены в объявлениях. На карте можно выбрать регион, провинцию, муниципалитет или почтовый индекс и посмотреть:
-- среднюю цену за м²;
-- среднюю площадь;
-- среднюю сумму сделки;
-- количество сделок за период.
+[penotariado.com](https://www.penotariado.com) is a free portal run by the General Council of Notaries. Its data comes from deeds signed at notaries, so these are actual sale prices, not listing prices. On the map you can pick a region, province, town or postcode and see:
+- the average price per m²;
+- the average size;
+- the average sale amount;
+- the number of sales in a period.
 
-Есть фильтры по типу жилья (квартира / дом) и по новостройкам и вторичке. Основная единица детализации — почтовый индекс, до конкретного дома портал не опускается.
+You can filter by type (flat or house) and by new build or resale. The smallest unit is the postcode; the portal does not go down to individual buildings.
 
-### idealista/maps — данные по конкретному дому
+### idealista/maps: data for a specific building
 
-[idealista.com/maps](https://www.idealista.com/maps/) — бесплатный сервис idealista. Заходите на него залогиненным в аккаунт idealista: без входа часть информации скрыта. Вводите улицу и номер дома или кадастровый номер и видите:
-- кадастровые данные по каждой квартире в доме (площадь, год постройки, назначение);
-- оценочную рыночную стоимость продажи и аренды (алгоритм idealista на основе характеристик квартиры и данных района);
-- историю объявлений, если квартира раньше продавалась или сдавалась через idealista;
-- энергетический сертификат, если он есть в открытых данных;
-- карту района: год постройки большинства зданий, качество строительства, сервисы, состояние рынка. По ней часто сразу понятно, что это за район.
+[idealista.com/maps](https://www.idealista.com/maps/) is a free idealista tool. Log in to your idealista account first, because some information is hidden otherwise. Enter the street and building number or the cadastral reference, and you will see:
+- cadastral data for each flat in the building (size, year built, use);
+- an estimated market value for sale and rent (idealista's algorithm, based on the flat's features and data for the area);
+- listing history, if the flat was sold or rented through idealista before;
+- the energy certificate, if it is in open data;
+- an area map: the year most buildings were built, build quality, services, the state of the market. It often tells you at once what kind of area it is.
 
-Оценка idealista строится в основном на ценах объявлений, поэтому её стоит сверять с нотариальной статистикой. Описание сервиса: [Что такое idealista/maps](https://www.idealista.com/ayuda/articulos/que-es-idealista-maps/).
+The idealista estimate is based mostly on listing prices, so compare it with the notary statistics. How the tool works: [Qué es idealista/maps](https://www.idealista.com/ayuda/articulos/que-es-idealista-maps/).
 
 ### Catastro: valor de referencia
 
-С 2022 года Кадастр рассчитывает для каждого объекта valor de referencia — оценку на основе реальных сделок в районе ([Ley 11/2021](https://www.boe.es/buscar/act.php?id=BOE-A-2021-11473)). Это важно по двум причинам:
+Since 2022 the Cadastre has calculated a valor de referencia for every property, an estimate based on actual sales in the area ([Ley 11/2021](https://www.boe.es/buscar/act.php?id=BOE-A-2021-11473)). It matters for two reasons:
 
-- Valor de referencia — минимальная база для налога ITP. Если вы купили дешевле, налог всё равно посчитают от valor de referencia.
-- Он даёт ещё одну независимую оценку рыночной цены.
+- Valor de referencia is the minimum base for ITP. If you paid less, the tax is still calculated on the valor de referencia.
+- It gives you another independent estimate of the market price.
 
-Посмотреть его можно на [Sede Electrónica del Catastro](https://www.sedecatastro.gob.es) в разделе «Valor de referencia». Для конкретной квартиры нужна идентификация (Cl@ve, цифровой сертификат или DNIe) или помощь нотариуса/агента. Обжаловать valor de referencia можно только после того, как он повлиял на налог: подаёте заявление на исправление самоначисления (rectificación de autoliquidación) в налоговую своего региона.
+You can look it up on the [Sede Electrónica del Catastro](https://www.sedecatastro.gob.es) under "Valor de referencia". For a specific flat you need to identify yourself (Cl@ve, a digital certificate or DNIe) or ask a notary or agent for help. You can only challenge the valor de referencia after it has affected your tax: you file a request to correct your self-assessment (rectificación de autoliquidación) with your region's tax office.
 
-### Другие официальные источники
+### Other official sources
 
-- [Registradores de España — Estadística Registral Inmobiliaria](https://www.registradores.org) — квартальная и годовая статистика по сделкам и ценам по данным реестра.
-- [Ministerio de Vivienda y Agenda Urbana — estadísticas](https://www.mivau.gob.es) — «Valor tasado de la vivienda» (средняя оценочная цена м² по муниципалитетам с населением свыше 25 000) и «Transacciones inmobiliarias».
-- [INE — Índice de Precios de Vivienda](https://www.ine.es) — индекс цен, полезен, чтобы понять динамику, а не конкретную цену.
+- [Registradores de España, Estadística Registral Inmobiliaria](https://www.registradores.org): quarterly and annual statistics on sales and prices from the registry.
+- [Ministerio de Vivienda y Agenda Urbana, estadísticas](https://www.mivau.gob.es): "Valor tasado de la vivienda" (average valuation per m² for towns with more than 25,000 people) and "Transacciones inmobiliarias".
+- [INE, Índice de Precios de Vivienda](https://www.ine.es): a price index, useful for trends rather than a specific price.
 
-### Как сложить всё вместе
+### Putting it all together
 
-Возьмите почтовый индекс квартиры на penotariado.com, посмотрите среднюю цену м² по вторичке, умножьте на площадь, затем сравните с оценкой idealista/maps и ценой в объявлении. Если продавец просит на 20–30% выше, у вас есть аргументы для торга.
+Take the flat's postcode on penotariado.com, look at the average resale price per m², multiply by the size, then compare with the idealista/maps estimate and the listing price. If the seller asks 20-30% more, you have arguments for haggling.
 
-Учтите, что все эти сервисы смотрят в прошлое. Нотариальная статистика считается по сделкам за последние месяцы, valor de referencia — по данным прошлых лет. На быстро растущем рынке реальные цены могут уже заметно обгонять то, что показывают сайты, так что «цена выше статистики» не всегда значит «переплата».
+Keep in mind that all these tools look backwards. Notary statistics cover sales from recent months, and valor de referencia uses data from past years. In a fast-rising market, real prices may already be well ahead of what the sites show, so "above the statistics" doesn't always mean "overpaying".
 
-Последнее слово скажет tasación банка: если оценка окажется ниже цены, банк даст кредит от оценки, и разницу придётся доплачивать своими деньгами.
+The bank's tasación has the final word. If the valuation comes in below the price, the bank lends based on the valuation, and you pay the gap from your own money.
 
-### Торговаться нужно всегда
+### Always haggle
 
-Когда я покупал свою квартиру, продавец просил 309 000 €, а купил я её за 295 000 €. Аргументы для торга — это не только цены реальных сделок в районе, но и всё, что вы нашли при осмотре и в документах: нужный ремонт, сырость, старые окна, одобренные или ожидаемые derramas, расхождения в площади, долгий срок продажи. Где искать такие аргументы в документах, рассказано в следующем разделе.
+When I bought my flat, the seller asked €309,000, and I paid €295,000. Your arguments are not only the actual sale prices in the area but also everything you found at the viewing and in the documents: repairs needed, damp, old windows, approved or expected derramas, differences in floor area, a long time on the market. The next section explains where to find these arguments in the documents.
 
-## Какие документы проверить перед покупкой
+## Documents to check before you buy
 
-Проверку стоит делать до того, как вы отдаёте деньги по договору arras. Её может сделать ваш собственный юрист (обычно 1% от цены или фиксированная сумма), но многое можно проверить самостоятельно.
+Do these checks before you pay the deposit under the arras contract. Your own lawyer can do them (usually 1% of the price or a fixed fee), but you can check a lot yourself.
 
-Идём по порядку: сначала сам объект (выписка из реестра, площадь, паркинг, Кадастр), потом продавец и жильцы, затем долги, которые переходят к новому владельцу, состояние дома и, наконец, особые случаи: незаконные пристройки, жильё у моря и VPO.
+We go in order: first the property itself (registry extract, floor area, parking, Cadastre), then the seller and occupants, then debts that pass to the new owner, the state of the building, and finally special cases: illegal extensions, homes by the sea and VPO.
 
-### Nota simple из Registro de la Propiedad
+### Nota simple from the Registro de la Propiedad
 
-Это главный документ. Выписка из Реестра собственности показывает:
-- кто собственник (должен совпадать с продавцом);
-- описание и площадь объекта;
-- обременения (cargas): ипотеки, аресты (embargos), сервитуты, налоговые обременения (afecciones fiscales);
-- ограничения: например, что это жильё VPO с ограничениями на цену перепродажи;
-- что входит в объект: паркинг и кладовка (trastero), если они оформлены вместе с квартирой.
+This is the main document. The Land Registry extract shows:
+- who the owner is (it must match the seller);
+- a description and the floor area of the property;
+- charges (cargas): mortgages, embargoes (embargos), easements, tax liens (afecciones fiscales);
+- restrictions, for example that it is a VPO home with a capped resale price;
+- what the property includes: a parking space and storage room (trastero), if they are registered together with the flat.
 
-Nota simple стоит дёшево, и проще всего попросить риелтора её заказать и прислать вам: это его работа. Если хотите сами, её может заказать любой онлайн на [registradores.org](https://www.registradores.org), приходит на почту обычно в течение нескольких часов. Смотрите на дату выписки: она должна быть свежей перед arras и ещё раз перед подписанием купчей (нотариус также запросит её сам).
+A nota simple is cheap, and the easiest way is to ask the agent to order it and send it to you: that is part of their job. If you want to do it yourself, anyone can order it online at [registradores.org](https://www.registradores.org), and it usually arrives by email within a few hours. Check the date of the extract: it should be recent before the arras and again before signing the deed (the notary will also request one).
 
-В nota simple обычно указана только построенная площадь. Полезной площади там чаще всего нет, её ищите в энергетическом сертификате и в оценке банка (о разнице между площадями — ниже).
+The nota simple usually shows only the built area. The usable area is often missing; look for it in the energy certificate and the bank's valuation (more on the difference between areas below).
 
-### Площадь: построенная, полезная и с общими зонами
+### Floor area: built, usable and with common areas
 
-В Испании у квартиры может быть сразу несколько «площадей», и в объявлениях их часто путают — иногда случайно, иногда нет.
+A flat in Spain can have several different "areas", and listings often mix them up, sometimes by accident and sometimes not.
 
-- **Superficie útil (полезная)** То, по чему вы ходите: пол внутри квартиры без стен, перегородок, колонн и шахт.
-- **Superficie construida (построенная)** Полезная плюс внутренние перегородки и внешние стены. Внешние стены считают на всю толщину: площадь меряют по наружной стороне стены, со стороны улицы, а не по стене внутри квартиры. Стены, общие с соседями, идут в расчёт наполовину. Обычно на 10–20% больше полезной.
-- **Superficie construida con zonas comunes (построенная с долей общих зон)** Плюс ваша доля подъезда, лестниц, лифтовых холлов. Именно её обычно показывает Кадастр, и она ещё на 10–20% больше.
+- **Superficie útil (usable)** The floor you walk on: the space inside the flat without walls, partitions, columns and shafts.
+- **Superficie construida (built)** Usable area plus internal partitions and external walls. External walls count at full thickness: the area is measured to the outside face of the wall, on the street side, not to the wall inside the flat. Walls shared with neighbours count by half. Usually 10-20% more than the usable area.
+- **Superficie construida con zonas comunes (built, with a share of common areas)** Plus your share of the entrance hall, stairs and lift landings. This is the figure the Cadastre usually shows, and it is another 10-20% larger.
 
 ::: graphic areas
 
-**Всегда проверяйте площадь по документам.** У меня был случай: риелтор назвал полезную площадь «от фонаря», а по документам она оказалась сильно меньше. В объявлениях обычно указывают одну из построенных площадей, часто кадастровую, с долей общих зон: она самая большая, и цена за м² выглядит ниже. Какую именно, из объявления понять обычно нельзя. Когда сравниваете объявления между собой, убедитесь, что сравниваете одинаковые площади. Разница между полезной и площадью с общими зонами может достигать 25–30%.
+**Always check the area against the documents.** It happened to me: an agent gave a usable area that was a pure guess, and the documents showed much less. Listings usually give one of the built areas, often the cadastral one with common areas. It is the largest, so the price per m² looks lower. You usually can't tell from the listing which area it is. When you compare listings, make sure you are comparing the same kind of area. The gap between the usable area and the area with common parts can reach 25-30%.
 
-### Паркинг и кладовка
+### Parking and storage room
 
-Если квартира продаётся «с паркоместом», проверьте, что оно есть в nota simple: либо отдельным объектом (своя finca registral), либо как приложение к квартире (anejo). Бывает, что место в гараже не принадлежит квартире, а просто распределено между жильцами решением собрания собственников. Тогда это же собрание может в любой момент перераспределить места, и «вашего» паркинга не станет. За такое место доплачивать не стоит.
+If the flat is sold "with a parking space", check that the space is in the nota simple: either as a separate property (its own finca registral) or attached to the flat (anejo). Sometimes a garage space doesn't belong to the flat at all; the owners' meeting simply assigned spaces to residents. Then the same meeting can reassign spaces at any time, and "your" parking is gone. Don't pay extra for a space like that.
 
-### Кадастр
+### Cadastre
 
-На [sedecatastro.gob.es](https://www.sedecatastro.gob.es) бесплатно и без регистрации можно найти кадастровый номер (referencia catastral), площадь, назначение, год постройки. Сравните данные Кадастра с nota simple и фактической квартирой. Небольшие расхождения в площади встречаются часто, но если в Кадастре квартира 70 м², а в объявлении 90 м², выясняйте, откуда разница: незаконная пристройка или закрытая терраса могут стать проблемой.
+On [sedecatastro.gob.es](https://www.sedecatastro.gob.es) you can find the cadastral reference (referencia catastral), floor area, use and year built, for free and without registering. Compare the Cadastre data with the nota simple and the actual flat. Small differences in area are common, but if the Cadastre says 70 m² and the listing says 90 m², find out why: an illegal extension or an enclosed terrace can become a problem.
 
-### Продавец и его права
+### The seller and their rights
 
-- Если собственников несколько (например, наследники или супруги), подписать должны все.
-- Если продавец в браке, а квартира — семейное жильё, нужно согласие супруга даже если квартира записана только на продавца ([ст. 1320 Гражданского кодекса](https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763)).
-- Если квартира досталась по наследству, проверьте, что наследство оформлено и зарегистрировано.
-- Если продавец — нерезидент, вы обязаны удержать 3% цены (подробнее в разделе для нерезидентов).
+- If there are several owners (for example heirs or a married couple), all of them must sign.
+- If the seller is married and the flat is the family home, the spouse must consent even if only the seller is on the title ([art. 1320 of the Civil Code](https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763)).
+- If the flat was inherited, check that the inheritance has been formally accepted and registered.
+- If the seller is a non-resident, you must withhold 3% of the price (more in the section for non-residents).
 
-### Жильцы и состояние «свободно»
+### Occupants and "vacant" status
 
-- Если квартира сдана, арендатор по [LAU](https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003) в большинстве случаев сохраняет договор при смене собственника. Попросите копию договора аренды и проверьте сроки.
-- Если квартира занята без договора (ocupación), выселение — долгий судебный процесс.
-- В договоре arras и в купчей пропишите, что квартира передаётся свободной от жильцов и имущества (libre de inquilinos, ocupantes y enseres).
+- If the flat is rented out, under the [LAU](https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003) the tenant keeps their contract in most cases when the owner changes. Ask for a copy of the rental contract and check the dates.
+- If people live there without a contract (ocupación), eviction is a long court process.
+- Write in the arras contract and the deed that the flat is handed over free of tenants, occupants and belongings (libre de inquilinos, ocupantes y enseres).
 
-### Последний оплаченный счёт IBI
+### The last paid IBI bill
 
-Неоплаченный налог на недвижимость (IBI) «привязан» к объекту: по [ст. 64 TRLRHL](https://www.boe.es/buscar/act.php?id=BOE-A-2004-4214) новый владелец отвечает за долги по IBI. Попросите продавца показать квитанцию за текущий год и проверьте, нет ли долгов за прошлые годы (это можно проверить в муниципалитете или региональном налоговом органе, который собирает IBI). В квитанции также указан valor catastral, от которого зависят будущие налоги.
+Unpaid property tax (IBI) is tied to the property: under [art. 64 TRLRHL](https://www.boe.es/buscar/act.php?id=BOE-A-2004-4214) the new owner is liable for IBI debts. Ask the seller for the receipt for the current year and check that there are no debts from past years (you can check with the town hall or the regional tax body that collects IBI). The receipt also shows the valor catastral, which future taxes depend on.
 
-### Справка от comunidad de propietarios об отсутствии долгов
+### Certificate of no debts from the comunidad de propietarios
 
-По [ст. 9 Закона о горизонтальной собственности (LPH)](https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906) продавец должен предъявить нотариусу справку от администратора дома о том, что долгов по взносам нет. За долги текущего года и трёх предыдущих лет отвечает сама квартира, то есть новый собственник. От справки покупатель может отказаться в купчей, но делать этого не стоит.
+Under [art. 9 of the Horizontal Property Law (LPH)](https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906), the seller must show the notary a certificate from the building administrator saying there are no unpaid fees. The flat itself, and so the new owner, is liable for debts from the current year and the three previous years. The buyer can waive the certificate in the deed, but you shouldn't.
 
-Кроме справки попросите:
-- **Протоколы собраний (actas)** Возьмите за последние 1–2 года. Ищите одобренные и обсуждаемые дополнительные взносы (derramas) на ремонт фасада, лифта, крыши. Договоритесь в arras, кто платит уже одобренные derramas.
-- **Устав (estatutos)** В нём могут быть запреты, например, на туристическую аренду.
-- **Ежемесячный взнос** Сколько платить и что в него входит (бассейн, консьерж, отопление).
+Besides the certificate, ask for:
+- **Meeting minutes (actas)** Get them for the last 1-2 years. Look for extra levies (derramas) that were approved or discussed for repairs to the facade, lift or roof. Agree in the arras who pays derramas that are already approved.
+- **Building rules (estatutos)** They may contain bans, for example on holiday lets.
+- **Monthly fee** How much it is and what it covers (pool, concierge, heating).
 
-Derramas — не теоретический риск. У нас буквально через полгода после покупки собрание решило чинить лифты, и каждая квартира скинулась по 1 600 €. Спросите у администратора, какие крупные ремонты обсуждаются, даже если они ещё не утверждены.
+Derramas are a real risk. Just six months after we bought, the owners' meeting decided to repair the lifts, and each flat paid €1,600. Ask the administrator what major repairs are being discussed, even if they are not approved yet.
 
-### Техническое состояние дома: ITE / IEE
+### Building condition: ITE / IEE
 
-В старых домах (как правило, старше 45–50 лет, правила задаёт регион или муниципалитет) периодически проводится техническая инспекция здания (Inspección Técnica de Edificios, в ряде регионов Informe de Evaluación del Edificio). Попросите у администратора последний отчёт: если инспекция выявила дефекты, скорее всего будут derramas.
+Old buildings (usually over 45-50 years old; the region or town sets the rules) have a regular technical inspection (Inspección Técnica de Edificios, called Informe de Evaluación del Edificio in some regions). Ask the administrator for the latest report. If the inspection found defects, derramas are likely.
 
-### Энергетический сертификат (Certificado de Eficiencia Energética)
+### Energy certificate (Certificado de Eficiencia Energética)
 
-Обязателен с момента выставления квартиры на продажу ([Real Decreto 390/2021](https://www.boe.es/buscar/act.php?id=BOE-A-2021-9176)), энергетический класс должен указываться в объявлении. Сертификат действует 10 лет (для класса G — 5 лет) и регистрируется в региональном реестре. Класс от A до G влияет на будущие счета за коммуналку, а для класса F–G ещё и на расходы на будущий ремонт: ЕС требует постепенной модернизации жилого фонда. В сертификате также указана полезная площадь.
+It is required from the moment the flat goes on sale ([Real Decreto 390/2021](https://www.boe.es/buscar/act.php?id=BOE-A-2021-9176)), and the energy rating must appear in the listing. The certificate is valid for 10 years (5 years for a G rating) and is registered in a regional register. The rating, from A to G, affects your future utility bills. For an F or G rating it also affects future renovation costs, because the EU requires housing to be upgraded step by step. The certificate also shows the usable area.
 
 ### Cédula de habitabilidad / licencia de primera ocupación
 
-Подтверждение, что жильё пригодно для проживания. В ряде регионов (Каталония, Comunitat Valenciana, Балеары, Астурия, Наварра, Кантабрия, Ла-Риоха и др.) без действующей cédula проблематично подключить коммунальные услуги и сдать жильё в аренду. Требования различаются по регионам, уточняйте в ayuntamiento или у региональных властей.
+This confirms the home is fit to live in. In several regions (Catalonia, Comunitat Valenciana, the Balearics, Asturias, Navarre, Cantabria, La Rioja and others), without a valid cédula it is hard to connect utilities or rent the home out. The rules vary by region; ask the ayuntamiento or the regional government.
 
-### Градостроительный статус
+### Planning status
 
-- Нет ли открытых дел о нарушении градостроительных норм (expedientes de disciplina urbanística). Например, если пристройка, терраса или мансарда сделаны без лицензии. Запрос можно сделать в urbanismo вашего ayuntamiento (certificado urbanístico / informe urbanístico).
-- Для загородных домов: не стоит ли дом на сельскохозяйственной земле (suelo rústico / no urbanizable). Легализовать такие постройки бывает невозможно.
+- Check for open planning violation cases (expedientes de disciplina urbanística), for example if an extension, terrace or attic was built without a licence. You can ask the urbanismo department of your ayuntamiento (certificado urbanístico / informe urbanístico).
+- For country houses: check that the house is not on agricultural land (suelo rústico / no urbanizable). Buildings there may be impossible to legalise.
 
-### Жильё у моря: Закон о побережье
+### Homes by the sea: the Coastal Law
 
-[Ley de Costas](https://www.boe.es/buscar/act.php?id=BOE-A-1988-18762) защищает береговую полосу, и он касается вас, если дом стоит в первой линии или в нескольких сотнях метров от моря:
+The [Ley de Costas](https://www.boe.es/buscar/act.php?id=BOE-A-1988-18762) protects the coastline, and it affects you if the home is on the seafront or within a few hundred metres of the sea:
 
 ::: graphic coast
 
-Перед покупкой у моря спросите в ayuntamiento или в Demarcación de Costas вашей провинции, проходит ли рядом граница deslinde и попадает ли участок в servidumbre de protección. Информация о таких ограничениях иногда отражается и в nota simple.
+Before you buy near the sea, ask the ayuntamiento or your province's Demarcación de Costas whether the deslinde boundary runs nearby and whether the plot falls within the servidumbre de protección. These restrictions sometimes also appear in the nota simple.
 
-### Жильё VPO (vivienda de protección oficial)
+### VPO homes (vivienda de protección oficial)
 
-VPO — жильё, построенное с господдержкой. Оно дешевле рынка, но у него есть ограничения на весь срок защиты (зависит от региона и года постройки; у новых проектов по [Ley 12/2023](https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203) — не меньше 30 лет, во многих регионах бессрочно):
-- **Максимальная цена** Устанавливается регионом, продать дороже нельзя.
-- **Требования к покупателю** Доход в пределах лимита, обычно нет другого жилья в собственности, регистрация в региональном реестре соискателей.
-- **Жить нужно самому** Это должно быть основное жильё. Сдавать можно только по разрешению и по регулируемой цене.
-- **Право преимущественной покупки** При перепродаже у региона может быть право выкупить жильё первым (tanteo y retracto).
+VPO is housing built with state support. It is cheaper than the market, but it has restrictions for the whole protection period (this depends on the region and the year it was built; for new projects under [Ley 12/2023](https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203) it is at least 30 years, and in many regions it never ends):
+- **Maximum price** Set by the region; you can't sell for more.
+- **Buyer requirements** Income under a limit, usually no other home in your name, and registration in the regional list of applicants.
+- **You must live there** It has to be your main home. You can rent it out only with permission and at a regulated rent.
+- **Right of first refusal** When you resell, the region may have the right to buy the home first (tanteo y retracto).
 
-Статус VPO указан в nota simple. Проверьте его обязательно, даже если в объявлении об этом ничего нет: неправильно оформленная сделка с VPO может быть оспорена.
+VPO status is shown in the nota simple. Always check it, even if the listing says nothing about it: a VPO sale done the wrong way can be challenged.
 
-**Доплата наличными сверх максимальной цены.** Продавцы VPO часто предлагают записать в купчей максимальную разрешённую цену, а разницу до рыночной получить наличными. Риски для покупателя:
-- наличные вы теряете: в купчей их нет, и вернуть их через суд почти невозможно;
-- банк не даст ипотеку на эту часть, её придётся собрать самому;
-- это нарушение правил VPO: регион может наложить штраф, лишить жильё статуса VPO или воспользоваться правом преимущественной покупки по официальной цене;
-- это налоговое нарушение для обеих сторон: Hacienda может доначислить налог и штраф;
-- при перепродаже вы снова упрётесь в максимальную цену, а заплаченные наличные в стоимость покупки не войдут.
+**Paying cash on top of the maximum price.** VPO sellers often suggest putting the maximum allowed price in the deed and taking the difference up to the market price in cash. The risks for the buyer:
+- you can lose the cash: it isn't in the deed, and getting it back through the courts is almost impossible;
+- the bank won't lend on that part, so you have to find it yourself;
+- it breaks the VPO rules: the region can fine you, remove the VPO status or use its right to buy the home at the official price;
+- it is a tax offence for both sides: Hacienda can charge the extra tax plus a penalty;
+- when you resell, you hit the maximum price again, and the cash you paid won't count as part of your purchase price.
 
-### Коммунальные услуги
+### Utilities
 
-Попросите последние счета за электричество, воду и газ. Это даёт и представление о расходах, и номера договоров (CUPS у электричества и газа), которые понадобятся для перевода на себя.
+Ask for the latest electricity, water and gas bills. They show you the running costs and give you the contract numbers (CUPS for electricity and gas) that you'll need to move the contracts into your name.
 
-## Бронь и задаток: reserva и arras
+## Reservation and deposit: reserva and arras
 
-Типичная последовательность: reserva → contrato de arras → escritura pública у нотариуса → регистрация. Между arras и купчей обычно и оформляется ипотека, поэтому срок подписания купчей в arras закладывайте с запасом.
+The usual order is: reserva → contrato de arras → escritura pública at the notary → registration. The mortgage is usually arranged between the arras and the deed, so leave plenty of time before the signing date in the arras.
 
 ::: graphic deal-timeline
 
-### Contrato de reserva (необязательно)
+### Contrato de reserva (optional)
 
-Небольшая сумма (обычно 1 000–6 000 €), чтобы агентство сняло квартиру с продажи на несколько дней, пока вы договариваетесь и проверяете документы. Часто подписывается только с агентством, а не с собственником. Обязательно уточните в документе:
-- кому идут деньги (агентству на хранение или собственнику);
-- на какой срок квартира снимается с продажи;
-- при каких условиях деньги возвращаются (например, если nota simple показывает обременения или банк не одобрил ипотеку);
-- что сумма засчитывается в оплату.
+A small amount (usually €1,000-6,000) so the agency takes the flat off the market for a few days while you negotiate and check the documents. It is often signed only with the agency, not with the owner. Make sure the document says:
+- who gets the money (the agency holds it, or it goes to the owner);
+- how long the flat is off the market;
+- when the money is returned (for example, if the nota simple shows charges or the bank doesn't approve the mortgage);
+- that the amount counts towards the price.
 
 ### Contrato de arras
 
-Основной предварительный договор. Покупатель платит задаток, обычно 10% от цены, и стороны фиксируют все условия сделки: цену, срок подписания купчей (обычно 1–3 месяца), что включено в продажу (мебель, паркинг, кладовка), кто платит derramas и прочие расходы.
+The main preliminary contract. The buyer pays a deposit, usually 10% of the price, and both sides fix all the terms of the sale: the price, the date for signing the deed (usually in 1-3 months), what is included (furniture, parking, storage room), who pays derramas and other costs.
 
-Гражданский кодекс различает три вида arras, и это принципиально:
+The Civil Code has three types of arras, and the difference matters:
 
 ::: graphic arras-types
 
-Чтобы договор считался penitenciales, это должно быть прямо указано с отсылкой к [ст. 1454 Гражданского кодекса](https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763); если не указано, суды обычно считают задаток подтверждающим (confirmatorias).
+For the contract to count as penitenciales, it must say so directly and refer to [art. 1454 of the Civil Code](https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763). If it doesn't, courts usually treat the deposit as confirmatory (confirmatorias).
 
-Что важно включить в arras:
-- **Условие об ипотеке (condición suspensiva de financiación)** Если банк откажет в кредите, задаток возвращается. Продавцы такие условия не любят, но торговаться стоит, особенно если у вас нет предварительного одобрения. Альтернатива — назначить срок подписания так, чтобы успеть получить одобрение.
-- **Свободная квартира** Продавец обязан передать её без обременений, жильцов и долгов.
-- **Расходы** Кто что платит.
-- **Derramas** Кто платит уже одобренные взносы.
-- **Что остаётся в квартире** Кухня, техника, мебель.
+What to include in the arras:
+- **Mortgage condition (condición suspensiva de financiación)** If the bank refuses the loan, you get the deposit back. Sellers don't like this clause, but it's worth negotiating, especially if you have no pre-approval. The alternative is to set a signing date that leaves you time to get approval.
+- **Vacant flat** The seller must hand it over without charges, occupants or debts.
+- **Costs** Who pays what.
+- **Derramas** Who pays the levies that are already approved.
+- **What stays in the flat** Kitchen, appliances, furniture.
 
-## Ипотека: условия, документы, нюансы
+## Getting a mortgage
 
-Если вы покупаете в ипотеку, именно она задаёт темп сделки: банку нужно оценить квартиру, одобрить кредит и выдать документы минимум за 10 дней до подписания.
+If you buy with a mortgage, the mortgage sets the pace of the deal: the bank has to value the flat, approve the loan and give you the documents at least 10 days before signing.
 
-Главный закон — [Ley 5/2019 о договорах ипотечного кредитования (LCCI)](https://www.boe.es/buscar/act.php?id=BOE-A-2019-3814). Подробные и понятные объяснения для потребителей — на [Portal del Cliente Bancario Банка Испании](https://clientebancario.bde.es).
+The main law is [Ley 5/2019 on mortgage credit contracts (LCCI)](https://www.boe.es/buscar/act.php?id=BOE-A-2019-3814). The Bank of Spain's [Portal del Cliente Bancario](https://clientebancario.bde.es) explains it in detail and in plain language.
 
-### Сколько дадут
+### How much you can borrow
 
-- **Резидентам на основное жильё** Обычно до 80% от цены или оценки (берётся меньшее значение). До 90–100% бывает для молодых покупателей с господдержкой или при покупке квартир, которые продаёт сам банк.
-- **Резидентам на второе жильё** Обычно до 70%.
-- **Нерезидентам** Обычно 60–70%, с более строгими требованиями к доходу и документам.
-- **Налоги и расходы на покупку банк не финансирует никогда** Их вы платите из своих денег.
-- **Срок** До 30 лет (иногда до 35–40). Большинство банков требуют, чтобы кредит был погашен до 70–75 лет заёмщика.
-- **Нагрузка** Как правило, не больше 30–35% чистого дохода.
+- **Residents buying a main home** Usually up to 80% of the price or the valuation, whichever is lower. 90-100% is possible for young buyers with state support, or when you buy a flat that the bank itself is selling.
+- **Residents buying a second home** Usually up to 70%.
+- **Non-residents** Usually 60-70%, with stricter rules on income and documents.
+- **The bank never finances the taxes and buying costs** You pay them from your own money.
+- **Term** Up to 30 years (sometimes 35-40). Most banks want the loan paid off by the time you are 70-75.
+- **Repayments** Usually no more than 30-35% of your net income.
 
 ::: graphic ltv
 
-### Господдержка для молодых: гарантия ICO
+### State support for young buyers: the ICO guarantee
 
-Государственная программа поручительств [ICO](https://www.ico.es) для покупки первого жилья: государство гарантирует до 20% ипотеки (до 25% для жилья с энергетическим классом D и выше), что позволяет получить кредит почти на 100% цены (но не налогов). Условия:
-- покупатели младше 36 лет на момент подписания или семьи с несовершеннолетними детьми (без ограничения возраста);
-- легальное проживание в Испании непрерывно последние 2 года;
-- первое и основное жильё;
-- ограничения по доходу (до 4,5 IPREM на человека, с повышением для семей), по личному имуществу заявителя и по цене жилья (зависит от региона);
-- оформляется через банки-участники программы.
+The state [ICO](https://www.ico.es) guarantee scheme helps people buy their first home. The state guarantees up to 20% of the mortgage (up to 25% for homes with an energy rating of D or better), so you can borrow almost 100% of the price (but not the taxes). The conditions:
+- buyers under 36 at signing, or families with children under 18 (no age limit);
+- living legally in Spain without a break for the last 2 years;
+- a first home and main home;
+- limits on income (up to 4.5 times IPREM per person, higher for families), on the applicant's personal wealth and on the price of the home (depends on the region);
+- arranged through banks that take part in the scheme.
 
-В июле 2026 года программу продлили до 31 декабря 2027 года. Кроме того, во многих регионах есть свои программы (например, в Мадриде — «Mi Primera Vivienda»), плюс льготные ставки ITP для молодых.
+In July 2026 the scheme was extended to 31 December 2027. Many regions also have their own schemes (for example "Mi Primera Vivienda" in Madrid), plus lower ITP rates for young buyers.
 
-### Что банк хочет видеть
+### What the bank wants to see
 
-Главное — стабильный доход за последние 2 года. Банк смотрит декларации по подоходному налогу (la renta) за два последних года, поэтому для только что переехавших или недавно сменивших работу ипотека сложнее. Для автономо это особенно важно: банк будет смотреть именно на доход в декларациях, а не на обороты.
+Above all, stable income over the last 2 years. The bank looks at your income tax returns (la renta) for the last two years, so a mortgage is harder if you've just moved or recently changed jobs. For autónomos this matters even more: the bank looks at the income in your tax returns, not your turnover.
 
-Но это не жёсткое правило. Мне как автономо CaixaBank дал ипотеку всего с тремя квартальными декларациями, без годовой renta. Если один банк отказывает, пробуйте другие или ипотечного брокера.
+But this is not a strict rule. As an autónomo I got a mortgage from CaixaBank with only three quarterly returns and no annual renta. If one bank says no, try others or a mortgage broker.
 
-Полный список документов:
-- паспорт, NIE / TIE;
-- декларации IRPF (renta) за 2 последних года;
-- трудовой договор и 3–6 последних расчётных листов (nóminas); для автономо — квартальные отчёты (модели 130/303);
-- vida laboral (выписка о стаже из Seguridad Social);
-- выписки по счетам за 3–6 месяцев;
-- сведения о других кредитах;
-- нерезидентам — справки о доходах из своей страны с переводом, отчёт кредитного бюро своей страны, налоговые декларации.
+The full list of documents:
+- passport, NIE / TIE;
+- IRPF (renta) returns for the last 2 years;
+- employment contract and the last 3-6 payslips (nóminas); for autónomos, quarterly returns (forms 130/303);
+- vida laboral (your work history from Social Security);
+- bank statements for 3-6 months;
+- details of any other loans;
+- for non-residents: proof of income from your own country with a translation, a credit report from your country, tax returns.
 
-### Фиксированная, переменная, смешанная
+### Fixed, variable, mixed
 
-- **Fijo** Ставка не меняется весь срок. Предсказуемо, обычно дороже на старте.
-- **Variable** Euríbor + спред, пересчитывается раз в 6 или 12 месяцев. Средний 12-месячный Euríbor в октябре 2026 года — 3,239% (год назад было 2,187%). Официальные значения публикует [Банк Испании](https://www.bde.es).
-- **Mixto** Фиксированная ставка первые 5–15 лет, потом переменная.
+- **Fijo** The rate stays the same for the whole term. Predictable, usually more expensive at the start.
+- **Variable** Euríbor plus a spread, reset every 6 or 12 months. The average 12-month Euríbor in October 2026 was 3.239% (a year earlier it was 2.187%). The [Bank of Spain](https://www.bde.es) publishes the official figures.
+- **Mixto** A fixed rate for the first 5-15 years, then variable.
 
-### Бонификации (bonificaciones)
+### Rate discounts (bonificaciones)
 
-Банк даёт скидку на ставку (bonificación), если вы берёте у него дополнительные продукты: переводите зарплату, оформляете страховку жизни и дома, пенсионный план, карту. Каждый продукт снижает ставку на какую-то долю процента. Обязательно посчитайте, сколько эти продукты стоят за год: часто «дешёвая» ставка с тремя страховками обходится дороже. По Ley 5/2019 банк обязан показать вам предложение и без бонификаций, а страховку можно оформить в другой компании (банк обязан принять полис с аналогичным покрытием, но может пересчитать ставку, если это предусмотрено договором). Обязательным по закону остаётся только страхование здания от повреждений (seguro de daños), а не страхование жизни.
+The bank cuts your rate (a bonificación) if you take extra products from it: paying your salary into the account, life and home insurance, a pension plan, a card. Each product lowers the rate by a fraction of a percent. Work out what these products cost per year: a "cheap" rate with three insurance policies often costs more overall. Under Ley 5/2019 the bank must also show you an offer without discounts, and you can buy the insurance from another company (the bank must accept a policy with the same cover, but it may recalculate the rate if the contract allows it). The only insurance the law requires is building damage insurance (seguro de daños), not life insurance.
 
-Мой пример: банк предлагал снизить ставку с 3,2% до 2,2% за четыре продукта: страховку жилья, страховку жизни, перевод зарплаты (nómina) к ним и охранную сигнализацию. Я взял только первые три и плачу 2,4% годовых.
+My example: the bank offered to cut my rate from 3.2% to 2.2% for four products: home insurance, life insurance, moving my salary (nómina) to them and a security alarm. I took only the first three and pay 2.4% a year.
 
-### Оценка (tasación)
+### Valuation (tasación)
 
-Оценку делает компания-оценщик (sociedad de tasación), зарегистрированная в Банке Испании. Государственной системы, которая распределяет заказы, нет. На практике оценщика выбирает банк из своего списка одобренных компаний, часто автоматически, и сотрудник отделения на выбор не влияет. По закону вы можете принести свою оценку от любой зарегистрированной компании, если она не старше 6 месяцев, и банк обязан её принять. Но принять оценку не значит одобрить ипотеку, поэтому обычно проще работать с оценщиком банка. Оценку оплачивает покупатель (300–600 €).
+The valuation is done by a valuation company (sociedad de tasación) registered with the Bank of Spain. There is no state system that hands out the jobs. In practice the bank picks the valuer from its own list of approved companies, often automatically, and branch staff have no say. By law you can bring your own valuation from any registered company if it is less than 6 months old, and the bank must accept it. But accepting a valuation doesn't mean approving the mortgage, so it is usually easier to use the bank's valuer. The buyer pays for the valuation (€300-600).
 
-**Как оценщик считает стоимость.** Порядок задан [Orden ECO/805/2003](https://www.boe.es/buscar/act.php?id=BOE-A-2003-7253). Для квартиры почти всегда используют метод сравнения:
-- оценщик приезжает в квартиру, меряет площадь, смотрит состояние, этаж, ориентацию, лифт и сверяет всё с документами;
-- подбирает не меньше шести похожих квартир (testigos) в том же районе: проданные недавно и выставленные на продажу сейчас;
-- приводит их к вашей квартире (homogeneización): делает поправки на площадь, этаж, состояние, год постройки, наличие лифта, террасы, паркинга;
-- считает взвешенную среднюю цену за м² и умножает её на площадь квартиры.
+**How the valuer works out the value.** The method is set by [Orden ECO/805/2003](https://www.boe.es/buscar/act.php?id=BOE-A-2003-7253). For a flat they almost always use the comparison method:
+- the valuer visits the flat, measures it, looks at its condition, floor, orientation and lift, and checks everything against the documents;
+- they pick at least six similar flats (testigos) in the same area: recently sold ones and ones for sale now;
+- they adjust them to match your flat (homogeneización), correcting for size, floor, condition, year built, lift, terrace and parking;
+- they work out a weighted average price per m² and multiply it by the flat's area.
 
-Из этого следуют два вывода. Во-первых, оценка почти никогда не бывает заметно выше средней по району, даже если вы влюбились в квартиру. Во-вторых, на растущем рынке testigos отстают от текущих цен, поэтому tasación нередко выходит ниже цены покупки. Закладывайте это в бюджет.
+Two things follow from this. First, the valuation is almost never much higher than the area average, even if you love the flat. Second, in a rising market the testigos lag behind current prices, so the tasación often comes in below the purchase price. Plan your budget for that.
 
-**Если оценка вышла сильно ниже цены.** Можно заказать и оплатить оценку в другой зарегистрированной компании и принести её в банк. Бывает, что независимая оценка выходит заметно ближе к цене, и банк считает кредит уже от неё. Гарантий нет: вторая оценка тоже может оказаться низкой, а решение по ипотеке всё равно принимает банк. Но если разница большая, попробовать стоит.
+**If the valuation is much lower than the price.** You can order and pay for a valuation from another registered company and bring it to the bank. Sometimes an independent valuation comes much closer to the price, and the bank then bases the loan on it. There are no guarantees: the second valuation can also be low, and the bank still decides on the mortgage. But if the gap is large, it's worth a try.
 
-### Защита заёмщика по Ley 5/2019
+### Borrower protection under Ley 5/2019
 
-- **FEIN (Ficha Europea de Información Normalizada)** Стандартная европейская форма с условиями кредита. **FiAE (Ficha de Advertencias Estandarizadas)** — предупреждения о рисковых пунктах (плавающая ставка, ограничения ставок, расходы, досрочное погашение). Банк обязан предоставить их **не позднее чем за 10 календарных дней** до подписания вместе с проектом договора.
-- **Acta de transparencia** В эти 10 дней вы бесплатно идёте к нотариусу, который проверяет, получили ли вы документы, и отвечает на вопросы. Без этого акта ипотеку не подпишут.
-- **Расходы** С июня 2019 года банк платит нотариуса за ипотечный договор, регистрацию ипотеки, gestoría и налог AJD на ипотеку ([ст. 14 Ley 5/2019](https://www.boe.es/buscar/act.php?id=BOE-A-2019-3814); налог AJD по ипотеке перешёл на банк ещё в ноябре 2018 года по RDL 17/2018). Заёмщик платит оценку и копии, которые сам запросил. Подробно: [Банк Испании — какие расходы по ипотеке платите вы](https://clientebancario.bde.es/pcb/es/blog/que-gastos-te-toca-pagar-cuando-contratas-una-hipoteca-.html).
-- **Досрочное погашение, переменная ставка** Комиссия не больше 0,25% от погашаемой суммы в первые 3 года или 0,15% в первые 5 лет (банк выбирает один из вариантов), потом без комиссии.
-- **Досрочное погашение, фиксированная ставка** Комиссия не больше 2% в первые 10 лет и 1,5% после. В обоих случаях она не может превышать реальные финансовые потери банка.
-- **Комиссия за открытие** Допустима, но должна включать все услуги по выдаче кредита.
+- **FEIN (Ficha Europea de Información Normalizada)** The standard European form with the loan terms. **FiAE (Ficha de Advertencias Estandarizadas)** lists warnings about risky terms (variable rate, rate limits, costs, early repayment). The bank must give you both **at least 10 calendar days** before signing, together with the draft contract.
+- **Acta de transparencia** During those 10 days you go to a notary for free. The notary checks that you got the documents and answers your questions. Without this record, the mortgage can't be signed.
+- **Costs** Since June 2019 the bank pays the notary for the mortgage deed, the mortgage registration, the gestoría and the AJD tax on the mortgage ([art. 14 Ley 5/2019](https://www.boe.es/buscar/act.php?id=BOE-A-2019-3814); AJD on mortgages moved to the bank back in November 2018 under RDL 17/2018). The borrower pays for the valuation and any copies they ask for. In detail: [Bank of Spain, which mortgage costs you pay](https://clientebancario.bde.es/pcb/es/blog/que-gastos-te-toca-pagar-cuando-contratas-una-hipoteca-.html).
+- **Early repayment, variable rate** The fee is at most 0.25% of the amount repaid in the first 3 years, or 0.15% in the first 5 years (the bank picks one), and nothing after that.
+- **Early repayment, fixed rate** The fee is at most 2% in the first 10 years and 1.5% after. In both cases it can't be more than the bank's actual financial loss.
+- **Opening fee** Allowed, but it must cover all the services for setting up the loan.
 
-### Нюансы для иностранцев
+### Tips for foreigners
 
-- Не все банки работают с нерезидентами. С иностранцами чаще работают Sabadell, BBVA, Santander, CaixaBank, Bankinter, но условия могут меняться.
-- Кредит в валюте, отличной от валюты дохода (ипотека в евро при зарплате в долларах или фунтах), по Ley 5/2019 даёт вам право конвертации. Но риск курса остаётся на вас.
-- Ипотечные брокеры (intermediarios de crédito inmobiliario) должны быть зарегистрированы в Банке Испании или региональном реестре. Их услуги обычно стоят 1–2% или фиксированную сумму.
-- Испанские банки почти никогда не финансируют покупку на компанию нерезидента; если покупаете на юрлицо, кредит сложнее.
+- Not all banks work with non-residents. Sabadell, BBVA, Santander, CaixaBank and Bankinter work with foreigners more often, but terms can change.
+- If the loan is in a different currency from your income (a euro mortgage with a salary in dollars or pounds), Ley 5/2019 gives you the right to convert it. But the exchange rate risk stays with you.
+- Mortgage brokers (intermediarios de crédito inmobiliario) must be registered with the Bank of Spain or a regional register. They usually charge 1-2% or a fixed fee.
+- Spanish banks almost never finance a purchase by a non-resident company. If you buy through a company, a loan is harder to get.
 
-## Налоги и расходы при покупке
+## Taxes and costs when you buy
 
-Посчитать налоги и расходы для вашей цены и региона: [калькулятор расходов на покупку жилья в Испании](/calculators/property-buying-cost).
+Work out the taxes and costs for your price and region: [property buying cost calculator for Spain](/calculators/property-buying-cost).
 
-### Вторичное жильё: ITP
+### Resale homes: ITP
 
-Impuesto sobre Transmisiones Patrimoniales — региональный налог на передачу имущества. Базовые ставки для обычной покупки, без льгот:
+Impuesto sobre Transmisiones Patrimoniales is a regional property transfer tax. The standard rates for a normal purchase, without any reductions:
 
 ::: graphic itp
 
-Почти все регионы дают льготные ставки ITP для определённых групп: молодых (обычно до 35 лет), многодетных семей, людей с инвалидностью, покупателей первого основного жилья в пределах определённой цены. Эти льготы могут снизить налог вдвое и больше, проверяйте сайт налоговой своего региона.
+Almost every region has lower ITP rates for certain groups: young people (usually under 35), large families, people with disabilities, and first-time buyers of a main home under a set price. These reductions can cut the tax by half or more; check your region's tax office website.
 
-**База налога** — заявленная цена, но не ниже valor de referencia Кадастра.
+**Tax base**: the declared price, but not less than the Cadastre's valor de referencia.
 
-**Срок уплаты** — обычно 30 рабочих дней или 1 месяц после подписания купчей (зависит от региона). Платится через региональную налоговую (модель 600 или её региональный аналог). Без оплаты налога собственность не зарегистрируют.
+**Deadline**: usually 30 working days or 1 month after signing the deed (depends on the region). You pay it through the regional tax office (form 600 or the regional version). The property won't be registered until the tax is paid.
 
-Закон о налоге: [Real Decreto Legislativo 1/1993 (ITPAJD)](https://www.boe.es/buscar/act.php?id=BOE-A-1993-25359).
+The law: [Real Decreto Legislativo 1/1993 (ITPAJD)](https://www.boe.es/buscar/act.php?id=BOE-A-1993-25359).
 
-### Новостройка от застройщика: IVA + AJD
+### New builds from a developer: IVA + AJD
 
-- **IVA 10%** От цены (4% для жилья VPO régimen especial). Платится застройщику вместе с ценой. Паркинг и кладовка, проданные вместе с квартирой (до двух мест паркинга), тоже по 10%.
-- **AJD (Actos Jurídicos Documentados)** Налог на оформление купчей, обычно от 0,5% до 1,5% в зависимости от региона (в Мадриде 0,75%, в Comunitat Valenciana 1,4%, в Каталонии 1,5%; в Стране Басков на покупку жилья не взимается).
-- **Канарские острова** Вместо IVA действует IGIC.
+- **IVA 10%** On the price (4% for VPO régimen especial). You pay it to the developer with the price. A parking space and storage room sold with the flat (up to two parking spaces) are also at 10%.
+- **AJD (Actos Jurídicos Documentados)** A tax on the deed, usually 0.5% to 1.5% depending on the region (0.75% in Madrid, 1.4% in Comunitat Valenciana, 1.5% in Catalonia; the Basque Country doesn't charge it on home purchases).
+- **Canary Islands** IGIC applies instead of IVA.
 
-Если вы покупаете квартиру в новом доме не у застройщика, а у первого покупателя, это уже вторичка, и платится ITP.
+If you buy a flat in a new building from the first buyer rather than the developer, it counts as resale, and you pay ITP.
 
-### Прочие расходы покупателя
+### Other buyer costs
 
-- **Нотариус (купчая)** 600–1 500 € — тарифы регулируются государством, зависят от цены и количества страниц
-- **Registro de la Propiedad** 400–1 000 € — тоже по госрегулируемому тарифу
-- **Gestoría** 300–600 € — необязательно, если оформляете сами; при ипотеке — платит банк за ипотечную часть
-- **Tasación** 300–600 € — при ипотеке
-- **Nota simple** Несколько евро, обычно её предоставляет риелтор
-- **Юрист покупателя** 0,5–1% или фиксированно — необязательно, но рекомендуется иностранцам
-- **Перевод/присяжный переводчик** От 100 € — если вы не владеете испанским, нотариус может потребовать переводчика
+- **Notary (deed)** €600-1,500. Fees are set by the state and depend on the price and the number of pages
+- **Registro de la Propiedad** €400-1,000. Also a state-regulated fee
+- **Gestoría** €300-600. Optional if you handle it yourself; with a mortgage, the bank pays for the mortgage part
+- **Tasación** €300-600, with a mortgage
+- **Nota simple** A few euros; the agent usually provides it
+- **Buyer's lawyer** 0.5-1% or a fixed fee. Optional, but recommended for foreigners
+- **Translation / sworn translator** From €100. If you don't speak Spanish, the notary may require an interpreter
 
-## Купчая у нотариуса и что делать после
+## Signing at the notary and what comes next
 
-Финальный шаг — escritura pública de compraventa, купчая, которую подписывают у нотариуса. С этого момента квартира ваша.
+The last step is the escritura pública de compraventa, the deed of sale you sign at the notary. From that moment the flat is yours.
 
-### Кто выбирает нотариуса и кто платит
+### Who chooses the notary and who pays
 
-**Нотариуса выбирает покупатель.** Это право закреплено в Reglamento Notarial (ст. 126). Агентство или застройщик могут предлагать «своего» нотариуса, но вы можете выбрать любого. Если берёте ипотеку, купчая и ипотека обычно подписываются у одного нотариуса в один день.
+**The buyer chooses the notary.** This right is set out in the Reglamento Notarial (art. 126). The agency or developer may suggest "their" notary, but you can choose any. If you take a mortgage, the deed and the mortgage are usually signed at the same notary on the same day.
 
-**Кто платит нотариуса и регистрацию.** По [ст. 1455 Гражданского кодекса](https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763), если стороны не договорились иначе, продавец платит за оформление оригинала купчей (escritura matriz), покупатель — за первую копию и последующие. На практике в большинстве сделок почти все нотариальные и регистрационные расходы несёт покупатель, но это можно оговорить в arras. Муниципальную plusvalía по закону платит продавец.
+**Who pays the notary and the registry.** Under [art. 1455 of the Civil Code](https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763), unless the parties agree otherwise, the seller pays for the original deed (escritura matriz) and the buyer pays for the first and later copies. In practice, in most sales the buyer pays almost all notary and registry costs, but you can agree on this in the arras. By law, the seller pays the municipal plusvalía.
 
-### В день подписания
+### On signing day
 
-- Нотариус зачитывает или резюмирует купчую и ипотечный договор, проверяет личности, полномочия и согласия.
-- Если вы не понимаете испанский, нотариус вправе потребовать переводчика. Лучше заранее попросить черновик (borrador) купчей и прочитать его с переводом.
-- Если вы берёте ипотеку, на подписании присутствует представитель вашего банка. Он сам делает все переводы: продавцу и, если у продавца была ипотека, его банку для её погашения. Вам ничего переводить вручную не нужно, достаточно заранее иметь на счёте свою часть денег.
-- Продавец передаёт ключи.
-- Если не можете приехать — можно выдать доверенность (poder notarial) у испанского нотариуса или в консульстве; иностранная доверенность нуждается в апостиле и переводе.
+- The notary reads out or summarises the deed and the mortgage contract and checks identities, powers and consents.
+- If you don't understand Spanish, the notary can require an interpreter. It's better to ask for a draft (borrador) of the deed in advance and read it with a translation.
+- If you take a mortgage, a representative of your bank is at the signing. They make all the transfers themselves: to the seller and, if the seller had a mortgage, to the seller's bank to pay it off. You don't have to transfer anything by hand; just have your share of the money in the account beforehand.
+- The seller hands over the keys.
+- If you can't come, you can give a power of attorney (poder notarial) at a Spanish notary or a consulate. A foreign power of attorney needs an apostille and a translation.
 
-### После подписания
+### After signing
 
-Если сделка с ипотекой, налог и регистрацию обычно берёт на себя банк: его gestoría платит ITP или AJD с вашего счёта и подаёт купчую в Registro de la Propiedad. Банк заранее скажет, какую сумму на это держать на счёте. Если сделка без ипотеки, эти два шага делаете вы сами или ваша gestoría:
+With a mortgage, the bank usually handles the tax and registration: its gestoría pays the ITP or AJD from your account and files the deed with the Registro de la Propiedad. The bank will tell you in advance how much to keep in the account for this. Without a mortgage, you or your gestoría do these two steps:
 
-- **ITP или AJD** Оплатить в срок (обычно 30 рабочих дней или месяц).
-- **Регистрация** Подать купчую в Registro de la Propiedad.
+- **ITP or AJD** Pay it on time (usually 30 working days or a month).
+- **Registration** File the deed with the Registro de la Propiedad.
 
-В день подписания нотариус обычно сразу отправляет в реестр электронное уведомление о сделке, и это защищает вас с момента подачи. Сама регистрация занимает от пары недель до пары месяцев.
+On signing day the notary usually sends the registry an electronic notice of the sale right away, and this protects you from the moment it is filed. The registration itself takes from a couple of weeks to a couple of months.
 
-Дальше в любом случае:
+Then, in every case:
 
-- **Кадастр** Нотариус обычно сам сообщает в Кадастр о смене владельца. Если нет — подайте заявление (declaración catastral) на [sedecatastro.gob.es](https://www.sedecatastro.gob.es).
-- **IBI** Платит тот, кто владеет квартирой на 1 января. Если продавец заплатил за весь год, а вы купили в середине года, обычно стороны пропорционально компенсируют IBI в купчей — это стоит обговорить.
-- **Коммунальные услуги** Переоформить электричество, газ, воду на себя (cambio de titular). Энергетический сертификат и cédula могут понадобиться.
-- **Comunidad de propietarios** Сообщить администратору о новом собственнике и дать банковские реквизиты.
-- **Empadronamiento** Если это ваше основное жильё — прописаться в ayuntamiento.
-- **Страховка жилья** При ипотеке обязательна: если не оформили её через банк, оформите сами. Без ипотеки не обязательна, но желательна (подробнее в разделе про страхование ниже).
+- **Cadastre** The notary usually tells the Cadastre about the change of owner. If not, file a declaration (declaración catastral) at [sedecatastro.gob.es](https://www.sedecatastro.gob.es).
+- **IBI** Whoever owns the flat on 1 January pays. If the seller paid for the whole year and you bought mid-year, the two sides usually split the IBI pro rata in the deed. It's worth agreeing on this.
+- **Utilities** Move electricity, gas and water into your name (cambio de titular). You may need the energy certificate and the cédula.
+- **Comunidad de propietarios** Tell the administrator about the new owner and give your bank details.
+- **Empadronamiento** If it's your main home, register at the ayuntamiento.
+- **Home insurance** Required with a mortgage: if you didn't take it through the bank, arrange it yourself. Without a mortgage it's optional but a good idea (more in the insurance section below).
 
-## Покупка новостройки: отдельные риски
+## Buying a new build: extra risks
 
-Если покупаете у застройщика, меняется налог (IVA и AJD вместо ITP, см. раздел про налоги) и появляются риски, которых на вторичке нет.
+If you buy from a developer, the tax changes (IVA and AJD instead of ITP; see the tax section), and there are risks that resale homes don't have.
 
-- **Покупка на этапе котлована (sobre plano)** Застройщик берёт предоплату частями до сдачи дома. По [Ley 38/1999 (LOE), дополнительное положение 1](https://www.boe.es/buscar/act.php?id=BOE-A-1999-21567) все предоплаты должны быть застрахованы или гарантированы банковской гарантией и поступать на специальный счёт. Требуйте индивидуальный сертификат гарантии (aval individual / certificado de seguro) на каждый платёж. Если застройщик обанкротится, деньги вернёт гарант.
-- **Лицензия на строительство** Проверьте licencia de obra в ayuntamiento и регистрацию нового здания (declaración de obra nueva) в реестре.
-- **Memoria de calidades** Описание материалов. Отклонения от неё — основание для претензии.
-- **Seguro decenal** Обязательная 10-летняя страховка застройщика на конструктивные дефекты. Гарантии по LOE: 1 год на отделку, 3 года на дефекты систем и эксплуатационных характеристик, 10 лет на несущие конструкции.
-- **Licencia de primera ocupación / cédula** Без неё не подключат коммуналку.
-- **Сроки сдачи** Пропишите в договоре компенсацию за задержку и право расторгнуть договор.
+- **Buying off-plan (sobre plano)** The developer takes payments in stages before the building is finished. Under [Ley 38/1999 (LOE), first additional provision](https://www.boe.es/buscar/act.php?id=BOE-A-1999-21567), all advance payments must be insured or covered by a bank guarantee and paid into a special account. Ask for an individual guarantee certificate (aval individual / certificado de seguro) for each payment. If the developer goes bust, the guarantor returns the money.
+- **Building licence** Check the licencia de obra at the ayuntamiento and the registration of the new building (declaración de obra nueva) in the registry.
+- **Memoria de calidades** The description of materials. Any departure from it is grounds for a claim.
+- **Seguro decenal** The developer's required 10-year insurance against structural defects. LOE guarantees: 1 year for finishes, 3 years for defects in systems and performance, 10 years for the load-bearing structure.
+- **Licencia de primera ocupación / cédula** Without it, utilities won't be connected.
+- **Handover date** Write compensation for delays and the right to cancel into the contract.
 
-## Сколько стоит содержать квартиру
+## What it costs to own a home
 
-Ипотека — не единственный ежемесячный расход. Сначала пример итоговой суммы, потом каждая статья по отдельности.
+The mortgage is not your only monthly cost. First an example of the total, then each item one by one.
 
-### Пример годовых расходов
+### Example of yearly costs
 
 ::: graphic running-costs
 
 ### IBI (Impuesto sobre Bienes Inmuebles)
 
-Ежегодный муниципальный налог на недвижимость. Считается от valor catastral (обычно заметно ниже рыночной стоимости, по методике Кадастра не больше 50% от неё, на практике часто 30–50%). Ставку устанавливает ayuntamiento: для городской недвижимости базовая ставка от 0,4% до 1,1% valor catastral, с возможными надбавками ([ст. 72 TRLRHL](https://www.boe.es/buscar/act.php?id=BOE-A-2004-4214)). На практике для квартиры средней стоимости это 300–1 000 € в год, в крупных городах больше. Многие муниципалитеты дают скидки многодетным, за солнечные панели, за оплату с прямым дебетом.
+The yearly municipal property tax. It is based on the valor catastral (usually well below the market value; under the Cadastre's method it is at most 50% of it, and in practice often 30-50%). The ayuntamiento sets the rate: for urban property the base rate is 0.4% to 1.1% of the valor catastral, with possible surcharges ([art. 72 TRLRHL](https://www.boe.es/buscar/act.php?id=BOE-A-2004-4214)). In practice, for an average flat this is €300-1,000 a year, more in big cities. Many towns give discounts to large families, for solar panels, or for paying by direct debit.
 
-Платит тот, кто владеет объектом на 1 января.
+Whoever owns the property on 1 January pays.
 
-### Вывоз мусора (tasa de basuras)
+### Rubbish collection (tasa de basuras)
 
-С 2025 года все муниципалитеты обязаны взимать отдельный сбор, покрывающий полную стоимость обращения с отходами ([Ley 7/2022](https://www.boe.es/buscar/act.php?id=BOE-A-2022-5809)). В зависимости от города это от 50 до 300 € в год, иногда включено в квитанцию IBI или воды.
+Since 2025 every town must charge a separate fee that covers the full cost of waste management ([Ley 7/2022](https://www.boe.es/buscar/act.php?id=BOE-A-2022-5809)). Depending on the town, it is €50 to €300 a year, and it is sometimes included in the IBI or water bill.
 
 ### Comunidad de propietarios
 
-Ежемесячный взнос на содержание дома: уборка, лифт, освещение, страховка здания, администратор, бассейн, консьерж. Обычно от 30 до 150 € в месяц за квартиру, в комплексах с бассейном и охраной — 150–300 € и выше. Плюс:
-- **Fondo de reserva** Резервный фонд, не менее 10% бюджета дома по [ст. 9 LPH](https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906)
-- **Derramas** Дополнительные взносы на крупные ремонты, которые решает собрание собственников.
+A monthly fee for running the building: cleaning, lift, lighting, building insurance, the administrator, pool, concierge. Usually €30 to €150 a month per flat; in complexes with a pool and security, €150-300 or more. On top of that:
+- **Fondo de reserva** A reserve fund of at least 10% of the building's budget under [art. 9 LPH](https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906)
+- **Derramas** Extra levies for major repairs, decided by the owners' meeting.
 
-### Страхование
+### Insurance
 
-- **Seguro de hogar** Страхование квартиры и ответственности. Не обязательно, если нет ипотеки, но очень желательно (протечки к соседям — частая история). 150–400 € в год.
-- **Seguro de daños** При ипотеке обязательно страхование от повреждений, минимум от пожара.
-- **Страхование жизни** При ипотеке не обязательно по закону, но банки его активно продают через бонификации.
+- **Seguro de hogar** Home and liability insurance. Not required without a mortgage, but strongly advised (leaks into the neighbours' flat are common). €150-400 a year.
+- **Seguro de daños** With a mortgage, damage insurance is required, at least against fire.
+- **Life insurance** Not required by law with a mortgage, but banks push it hard through discounts.
 
-### Коммунальные услуги
+### Utilities
 
-Электричество, газ, вода, интернет. Для квартиры 70–90 м² в среднем 100–250 € в месяц в зависимости от региона, отопления и кондиционера. Как сэкономить на электричестве: [наша статья про смену поставщика электроэнергии](/articles/switching-electricity-provider-spain).
+Electricity, gas, water, internet. For a 70-90 m² flat, on average €100-250 a month depending on the region, heating and air conditioning. How to save on electricity: [our article on switching electricity provider](/articles/switching-electricity-provider-spain).
 
-### Налог на доходы: imputación de rentas (для резидентов)
+### Income tax: imputación de rentas (for residents)
 
-Если у вас, как у налогового резидента, есть вторая квартира (не основное жильё) и она не сдаётся, вы платите IRPF с условного дохода: 2% от valor catastral, или 1,1%, если кадастровая стоимость была пересмотрена в течение последних 10 лет ([ст. 85 Ley 35/2006 IRPF](https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764)). Этот условный доход добавляется к общей базе и облагается по вашей шкале. Основное жильё и гараж при нём (до двух мест) от этого освобождены, а сданная квартира облагается по фактическому доходу от аренды, а не по imputación.
+If you are a tax resident and own a second home (not your main home) that isn't rented out, you pay IRPF on a notional income: 2% of the valor catastral, or 1.1% if the cadastral value was revised in the last 10 years ([art. 85 Ley 35/2006 IRPF](https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764)). This notional income is added to your general tax base and taxed at your rate. Your main home and its garage (up to two spaces) are exempt, and a rented flat is taxed on the actual rental income instead of imputación.
 
-### Налог на богатство (Impuesto sobre el Patrimonio)
+### Wealth tax (Impuesto sobre el Patrimonio)
 
-Именно так его обычно и называют: это налог на состояние, а не на конкретную квартиру. Применяется к чистым активам свыше 700 000 € на человека (это государственный порог; Каталония и Эстремадура установили его ниже, 500 000 €, а Comunitat Valenciana — выше), плюс основное жильё освобождается в пределах 300 000 € ([Ley 19/1991](https://www.boe.es/buscar/act.php?id=BOE-A-1991-14392)). Ставки и льготы зависят от региона: в Мадриде действует 100% скидка, в Андалусии тоже. Сверх 3 млн € — государственный налог на крупные состояния (Impuesto Temporal de Solidaridad de las Grandes Fortunas), который «доначисляет» до общих ставок, если регион дал скидку. Нерезиденты платят этот налог только с активов в Испании.
+This is a tax on your total wealth, not on a specific flat. It applies to net assets above €700,000 per person (the national threshold; Catalonia and Extremadura set it lower at €500,000, and Comunitat Valenciana higher), and your main home is exempt up to €300,000 ([Ley 19/1991](https://www.boe.es/buscar/act.php?id=BOE-A-1991-14392)). Rates and reductions depend on the region: Madrid gives a 100% discount, and so does Andalusia. Above €3 million there is the national tax on large fortunes (Impuesto Temporal de Solidaridad de las Grandes Fortunas), which tops the tax up to the general rates if the region gave a discount. Non-residents pay this tax only on their assets in Spain.
 
-## Если планируете сдавать
+## If you plan to rent it out
 
-- **Ищите без урбанизации** Если покупаете под долгосрочную аренду, квартира в обычном доме без бассейна, садов и охраны часто выгоднее. Аренда в урбанизации ненамного дороже, а comunidad в обычном доме заметно дешевле — и её платит арендодатель, то есть вы.
-- **Долгосрочная аренда** Регулируется [LAU](https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003). Минимальный срок для арендатора — 5 лет (7, если арендодатель — юрлицо). В зонах с напряжённым рынком (zonas tensionadas, например, в Каталонии и ряде городов) действуют ограничения арендной платы по [Ley 12/2023](https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203).
-- **Резиденты** Платят IRPF с чистого арендного дохода (за вычетом IBI, comunidad, процентов по ипотеке, амортизации 3% от стоимости строения и пр.). Для жилья, сданного как основное жильё арендатора, действует скидка 50–90% в зависимости от условий (ст. 23 LIRPF в редакции Ley 12/2023). Для договоров, подписанных с 1 декабря 2026 года, [Real Decreto-ley 29/2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823) меняет шкалу: до 100%, если вы снижаете арендную плату, и всего 15–50%, если повышаете. На ноябрь 2026 года декрет ещё должен утвердить Конгресс, проверяйте его статус.
-- **Туристическая аренда** С апреля 2025 года для новой туристической квартиры нужно согласие 3/5 собственников дома (изменение ст. 17 LPH по Ley Orgánica 1/2025), с июля 2025 года — регистрация в едином государственном реестре аренды. Плюс региональные и муниципальные лицензии; во многих городах (Барселона, Мадрид, Валенсия, Пальма и др.) новые лицензии практически не выдают. Перед покупкой «под Airbnb» проверьте устав дома, решения собрания и местные правила.
-- **Сезонная аренда** Alquiler de temporada с 2025–2026 годов тоже регулируется жёстче, правила зависят от региона.
-- **Комиссия агентству** С 2023 года [Ley 12/2023 по жилью](https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203) изменила ст. 20 LAU: расходы на агентство и оформление договора аренды платит арендодатель. Брать комиссию с арендатора нельзя.
+- **Look outside urbanizaciones** If you buy for long-term renting, a flat in an ordinary building without a pool, gardens or security often pays better. Rent in an urbanización isn't much higher, but the comunidad fee in an ordinary building is much lower, and the landlord (you) pays it.
+- **Long-term renting** Governed by the [LAU](https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003). The minimum term for the tenant is 5 years (7 if the landlord is a company). In stressed market areas (zonas tensionadas, for example in Catalonia and some cities) rents are capped under [Ley 12/2023](https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203).
+- **Residents** Pay IRPF on net rental income (after deducting IBI, comunidad, mortgage interest, 3% depreciation of the building value and so on). For a home rented as the tenant's main home there is a 50-90% reduction depending on the conditions (art. 23 LIRPF as amended by Ley 12/2023). For contracts signed from 1 December 2026, [Real Decreto-ley 29/2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823) changes the scale: up to 100% if you lower the rent, and only 15-50% if you raise it. As of November 2026 the Congress still has to approve the decree, so check its status.
+- **Holiday lets** Since April 2025 a new holiday flat needs the consent of 3/5 of the building's owners (art. 17 LPH, changed by Ley Orgánica 1/2025), and since July 2025 it must be registered in the single national rental register. On top of that come regional and town licences; many cities (Barcelona, Madrid, Valencia, Palma and others) issue almost no new licences. Before buying "for Airbnb", check the building rules, the owners' meeting decisions and local regulations.
+- **Seasonal lets** Alquiler de temporada has also been regulated more strictly since 2025-2026; the rules depend on the region.
+- **Agency fee** Since 2023, [Ley 12/2023 on housing](https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203) has changed art. 20 LAU: the landlord pays the agency and contract costs for a rental. You can't charge the tenant a fee.
 
-## Если вы не резидент Испании
+## If you are not a Spanish resident
 
-### Ежегодный налог: модель 210
+### Yearly tax: form 210
 
-Нерезидент, который владеет жильём в Испании и не сдаёт его, ежегодно платит Impuesto sobre la Renta de No Residentes (IRNR) с условного дохода:
-- база: 1,1% или 2% от valor catastral (по тем же правилам, что у резидентов);
-- ставка: 19% для резидентов ЕС, Исландии, Норвегии и Лихтенштейна; 24% для остальных.
+A non-resident who owns a home in Spain and doesn't rent it out pays non-resident income tax (Impuesto sobre la Renta de No Residentes, IRNR) every year on a notional income:
+- base: 1.1% or 2% of the valor catastral (same rules as for residents);
+- rate: 19% for residents of the EU, Iceland, Norway and Liechtenstein; 24% for everyone else.
 
-Декларация — [модель 210](https://sede.agenciatributaria.gob.es) на сайте Agencia Tributaria, обычно до 31 декабря следующего года. Пример: valor catastral 100 000 €, ставка 1,1% → база 1 100 €, налог при 24% — 264 € в год.
+You file [form 210](https://sede.agenciatributaria.gob.es) on the Agencia Tributaria website, usually by 31 December of the following year. Example: valor catastral €100,000, rate 1.1% → base €1,100, tax at 24% is €264 a year.
 
-Если квартира сдаётся, нерезидент платит налог с арендного дохода (тоже по модели 210). Резиденты ЕС/ЕЭЗ могут вычитать расходы, остальные платят налог с полной суммы аренды.
+If the flat is rented out, the non-resident pays tax on the rental income (also on form 210). EU/EEA residents can deduct expenses; everyone else pays tax on the full rent.
 
-Закон: [Real Decreto Legislativo 5/2004 (TRLIRNR)](https://www.boe.es/buscar/act.php?id=BOE-A-2004-4527).
+The law: [Real Decreto Legislativo 5/2004 (TRLIRNR)](https://www.boe.es/buscar/act.php?id=BOE-A-2004-4527).
 
-### Налоговый представитель
+### Tax representative
 
-Нерезидентам из стран вне ЕС, с которыми нет соглашения об обмене налоговой информацией, нужен налоговый представитель в Испании. На практике большинство нерезидентов пользуются услугами gestoría для подачи модели 210, что стоит 50–150 € в год.
+Non-residents from countries outside the EU that have no tax information exchange agreement with Spain need a tax representative in Spain. In practice most non-residents use a gestoría to file form 210, which costs €50-150 a year.
 
-### Если продавец — нерезидент
+### If the seller is a non-resident
 
-Покупатель обязан удержать **3% от цены** и перечислить в Hacienda по [модели 211](https://sede.agenciatributaria.gob.es) в течение месяца после сделки. Это аванс по налогу продавца на прирост капитала. Если покупатель не удержит, Hacienda может взыскать эти 3% с самой квартиры. Нотариус контролирует удержание при сделке.
+The buyer must withhold **3% of the price** and pay it to Hacienda on [form 211](https://sede.agenciatributaria.gob.es) within a month of the sale. It is an advance on the seller's capital gains tax. If the buyer doesn't withhold it, Hacienda can collect the 3% from the flat itself. The notary checks the withholding at the sale.
 
-## Сколько стоит продать квартиру
+## What it costs to sell
 
-Продажа тоже стоит денег, и немалых. Ориентир: продажа за 300 000 € с ипотекой и прибылью 70 000 € может стоить 11 000–22 000 € агенту, 1 000–3 000 € plusvalía, ~1 000 € на сертификаты и снятие ипотеки и 13 000–16 000 € налога на прирост. Итого 26 000–42 000 €, то есть 9–14% от цены. Если налог на прирост освобождается (реинвестиция или возраст 65+), получается 4–9%. Ниже — из чего складывается эта сумма.
+Selling also costs money, and a fair amount of it. A rough guide: selling for €300,000 with a mortgage and a €70,000 gain can cost €11,000-22,000 for the agent, €1,000-3,000 in plusvalía, about €1,000 for certificates and cancelling the mortgage, and €13,000-16,000 in capital gains tax. That's €26,000-42,000 in total, or 9-14% of the price. If you are exempt from capital gains tax (reinvestment or age 65+), it's 4-9%. Here is what makes up that amount.
 
 ::: graphic sale-costs
 
-### Расходы продавца
+### Seller costs
 
-- **Комиссия агентству** 3–6% + IVA 21% (иногда фиксированная сумма)
-- **Энергетический сертификат** 60–250 €
-- **Cédula de habitabilidad (где нужна)** 100–250 €
-- **Справка comunidad об отсутствии долгов** Бесплатно или символическая плата
-- **Нотариус за escritura matriz** По договорённости, по умолчанию на продавце (ст. 1455 Гражданского кодекса)
-- **Погашение ипотеки** Комиссия за досрочное погашение (ограничена Ley 5/2019, см. раздел про ипотеку)
-- **Снятие ипотеки из реестра (cancelación registral)** 500–1 000 € (нотариус, реестр, gestoría)
-- **Plusvalía municipal** См. ниже
-- **IRPF / IRNR с прироста капитала** См. ниже
+- **Agency fee** 3-6% + 21% IVA (sometimes a fixed fee)
+- **Energy certificate** €60-250
+- **Cédula de habitabilidad (where required)** €100-250
+- **Comunidad certificate of no debts** Free or a small fee
+- **Notary for the escritura matriz** By agreement; by default the seller pays (art. 1455 of the Civil Code)
+- **Paying off the mortgage** Early repayment fee (capped by Ley 5/2019; see the mortgage section)
+- **Removing the mortgage from the registry (cancelación registral)** €500-1,000 (notary, registry, gestoría)
+- **Plusvalía municipal** See below
+- **IRPF / IRNR on the capital gain** See below
 
 ### Plusvalía municipal (IIVTNU)
 
-Муниципальный налог на рост стоимости земли под объектом. Платит продавец в течение 30 рабочих дней после продажи (при продаже нерезидентом обязанность может переходить на покупателя как «заместителя налогоплательщика»). Регулируется [TRLRHL](https://www.boe.es/buscar/act.php?id=BOE-A-2004-4214), после решения Конституционного суда 182/2021 правила пересмотрены [Real Decreto-ley 26/2021](https://www.boe.es/buscar/doc.php?id=BOE-A-2021-18276).
+A municipal tax on the rise in value of the land under the property. The seller pays it within 30 working days of the sale (when a non-resident sells, the buyer may have to pay it as a "substitute taxpayer"). It is governed by the [TRLRHL](https://www.boe.es/buscar/act.php?id=BOE-A-2004-4214); after Constitutional Court ruling 182/2021, the rules were rewritten by [Real Decreto-ley 26/2021](https://www.boe.es/buscar/doc.php?id=BOE-A-2021-18276).
 
-Налогоплательщик выбирает более выгодный из двух методов:
-- **Объективный** Кадастровая стоимость земли × коэффициент по сроку владения × ставка муниципалитета (максимум 30%). Коэффициенты устанавливаются законом: до 30 ноября 2026 года действуют коэффициенты из Real Decreto-ley 8/2023, а с 1 декабря 2026 года — новые из [Real Decreto-ley 29/2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823) (для коротких сроков владения выше, для 20 лет и больше ниже). На ноябрь 2026 года этот декрет ещё должен утвердить Конгресс, а ayuntamientos — адаптировать свои ordenanzas, поэтому перед продажей проверяйте актуальные коэффициенты в своём ayuntamiento.
-- **Реальный** Разница между ценой продажи и ценой покупки (по нотариальным купчим), пропорционально доле земли в кадастровой стоимости.
+The taxpayer picks whichever of two methods gives the lower tax:
+- **Objective** Cadastral value of the land × a coefficient for how long you owned it × the town's rate (at most 30%). The coefficients are set by law: until 30 November 2026 the ones from Real Decreto-ley 8/2023 apply, and from 1 December 2026 the new ones from [Real Decreto-ley 29/2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823) (higher for short ownership, lower for 20 years or more). As of November 2026 the Congress still has to approve this decree, and ayuntamientos have to update their ordenanzas, so check the current coefficients with your ayuntamiento before selling.
+- **Real** The difference between the sale price and the purchase price (from the notary deeds), multiplied by the land's share of the cadastral value.
 
-Если продаёте дешевле, чем купили, налога нет — но это нужно задекларировать и доказать купчими.
+If you sell for less than you paid, there is no tax, but you have to declare it and prove it with the deeds.
 
-Для квартиры в многоэтажном доме plusvalía обычно составляет от нескольких сотен до нескольких тысяч евро. Многие ayuntamientos публикуют калькулятор на своих сайтах:
-- **Мадрид** [Calculadora estimativa de la plusvalía](https://www.madrid.es/go/calculadoraplusvalia), без регистрации, считает обоими методами.
-- **Барселона** [Estimació de la plusvàlua](https://seuelectronica.ajuntament.barcelona.cat/APPS/ptbplusvalua/tramit.do?eventName=init) (на каталанском, вариант «Estimació»), считает обоими методами.
-- **Аликанте** [Cálculo del Impuesto de Plusvalía](https://w3.alicante.es/hacienda/plusvalia/), без регистрации: нужны кадастровый номер, даты и суммы покупки и продажи.
+For a flat in an apartment block, plusvalía is usually anywhere from a few hundred to a few thousand euros. Many ayuntamientos have a calculator on their website:
+- **Madrid** [Calculadora estimativa de la plusvalía](https://www.madrid.es/go/calculadoraplusvalia), no registration, calculates both methods.
+- **Barcelona** [Estimació de la plusvàlua](https://seuelectronica.ajuntament.barcelona.cat/APPS/ptbplusvalua/tramit.do?eventName=init) (in Catalan, choose "Estimació"), calculates both methods.
+- **Alicante** [Cálculo del Impuesto de Plusvalía](https://w3.alicante.es/hacienda/plusvalia/), no registration: you need the cadastral reference and the dates and amounts of the purchase and sale.
 
-В других городах ищите на сайте ayuntamiento «simulador plusvalía» или раздел autoliquidación.
+In other towns, search the ayuntamiento's website for "simulador plusvalía" or the autoliquidación section.
 
-### Налог на прирост капитала: резиденты
+### Capital gains tax: residents
 
-Прибыль (ganancia patrimonial) = цена продажи − расходы на продажу − (цена покупки + налоги и расходы при покупке + стоимость улучшений). Если квартира сдавалась, из стоимости покупки вычитается накопленная амортизация.
+Gain (ganancia patrimonial) = sale price − selling costs − (purchase price + taxes and costs of buying + cost of improvements). If the flat was rented out, the depreciation you claimed is subtracted from the purchase cost.
 
-Облагается по шкале базы сбережений ([ст. 66 и 76 LIRPF](https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764)), действующей с 2025 года:
+The gain is taxed on the savings income scale ([art. 66 and 76 LIRPF](https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764)) in force since 2025:
 
-- **до 6 000 €** 19%
-- **6 000–50 000 €** 21%
-- **50 000–200 000 €** 23%
-- **200 000–300 000 €** 27%
-- **свыше 300 000 €** 30%
+- **up to €6,000** 19%
+- **€6,000-50,000** 21%
+- **€50,000-200,000** 23%
+- **€200,000-300,000** 27%
+- **over €300,000** 30%
 
-Декларируется в годовой декларации IRPF за год продажи.
+You declare it in your annual IRPF return for the year of the sale.
 
-**Освобождения от налога:**
-- **Реинвестирование в основное жильё** Если вы продаёте своё основное жильё (vivienda habitual, прожили в нём не менее 3 лет) и в течение 2 лет до или после продажи покупаете новое основное жильё, прибыль освобождается от налога в той части, которую вы реинвестировали ([ст. 38 LIRPF](https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764)). Если продаваемая квартира была куплена в ипотеку, из суммы продажи вычитается остаток долга, погашенный при сделке: для полного освобождения достаточно реинвестировать только эту чистую сумму (ст. 41.3 Reglamento IRPF).
-- **Старше 65 лет** Продажа основного жилья людьми старше 65 лет полностью освобождена от налога на прибыль (ст. 33.4 LIRPF). Если продаёте не основное жильё, можно освободить прибыль до 240 000 €, вложив деньги в течение 6 месяцев в пожизненную ренту (renta vitalicia asegurada). Это договор со страховой компанией: вы один раз отдаёте ей сумму, а она до конца жизни выплачивает вам ежемесячный доход.
-- **Тяжёлая зависимость или инвалидность** Аналогичное освобождение для основного жилья (dependencia severa / gran dependencia).
+**Exemptions:**
+- **Reinvesting in a main home** If you sell your main home (vivienda habitual, where you lived for at least 3 years) and buy a new main home within 2 years before or after the sale, the gain is tax-free for the part you reinvest ([art. 38 LIRPF](https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764)). If the flat you sell was bought with a mortgage, the remaining debt paid off at the sale is subtracted from the sale amount: for a full exemption you only need to reinvest this net amount (art. 41.3 Reglamento IRPF).
+- **Over 65** If you are over 65, selling your main home is fully exempt from capital gains tax (art. 33.4 LIRPF). If you sell a home that is not your main home, you can exempt a gain of up to €240,000 by putting the money into a life annuity (renta vitalicia asegurada) within 6 months. This is a contract with an insurance company: you pay it a lump sum once, and it pays you a monthly income for the rest of your life.
+- **Severe dependency or disability** The same exemption for a main home (dependencia severa / gran dependencia).
 
-Подробно в [руководстве Agencia Tributaria по IRPF](https://sede.agenciatributaria.gob.es) (разделы «Ganancias y pérdidas patrimoniales» и «Exención por reinversión en vivienda habitual»).
+More detail in the [Agencia Tributaria IRPF manual](https://sede.agenciatributaria.gob.es) (sections "Ganancias y pérdidas patrimoniales" and "Exención por reinversión en vivienda habitual").
 
-Пример: купили в 2018 году за 200 000 € + 15 000 € расходов, продали в 2026-м за 300 000 €, заплатив 12 000 € агенту и 2 000 € plusvalía и прочих расходов. Прибыль: 300 000 − 14 000 − 215 000 = 71 000 €. Налог: 6 000 × 19% + 44 000 × 21% + 21 000 × 23% = 1 140 + 9 240 + 4 830 = 15 210 €. Plusvalía municipal вычитается как расход при продаже (здесь уже учтена в 14 000 €). Если это основное жильё и вы купили другое основное жильё за 300 000 €, налог не платится.
+Example: you bought in 2018 for €200,000 + €15,000 in costs and sold in 2026 for €300,000, paying €12,000 to the agent and €2,000 in plusvalía and other costs. Gain: 300,000 − 14,000 − 215,000 = €71,000. Tax: 6,000 × 19% + 44,000 × 21% + 21,000 × 23% = 1,140 + 9,240 + 4,830 = €15,210. The municipal plusvalía is deducted as a selling cost (here it is already in the €14,000). If this was your main home and you bought another main home for €300,000, you pay no tax.
 
 ::: graphic gains-tax
 
-### Налог на прирост капитала: нерезиденты
+### Capital gains tax: non-residents
 
-- Ставка — 19% от прибыли независимо от страны.
-- Покупатель удерживает 3% цены (модель 211) — это аванс.
-- Продавец в течение 3 месяцев после окончания месячного срока на перечисление удержания (то есть примерно через 4 месяца после продажи) подаёт модель 210: доплачивает разницу или возвращает излишек (если прибыль маленькая или её нет, возврат 3% — частая история, но ожидание может занять месяцы).
-- Освобождение за реинвестирование в основное жильё доступно резидентам ЕС/ЕЭЗ, если они реинвестируют в своё основное жильё в любой стране ЕС/ЕЭЗ.
+- The rate is 19% of the gain, whatever your country.
+- The buyer withholds 3% of the price (form 211) as an advance.
+- Within 3 months after the one-month deadline for paying the withholding (so about 4 months after the sale), the seller files form 210 and either pays the difference or claims back the excess. If the gain is small or there is none, getting the 3% back is common, but it can take months.
+- The exemption for reinvesting in a main home is available to EU/EEA residents if they reinvest in their main home in any EU/EEA country.
 
-## Чек-лист покупателя
+## Buyer's checklist
 
-### До поиска
+### Before you search
 
-- Получить NIE и открыть испанский счёт.
-- Посчитать бюджет: цена + 10–15% на налоги и расходы ([калькулятор](/calculators/property-buying-cost)).
-- Получить предварительное одобрение ипотеки (если она нужна).
+- Get an NIE and open a Spanish bank account.
+- Work out your budget: price + 10-15% for taxes and costs ([calculator](/calculators/property-buying-cost)).
+- Get a mortgage pre-approval (if you need a mortgage).
 
-### Выбор квартиры и торг
+### Choosing a flat and haggling
 
-- Уточнить у агентства до просмотров, хочет ли оно комиссию с покупателя, и если да, обсудить её размер.
-- Отсеять квартиры из списка «лучше не покупать».
-- Проверить цены в районе: [penotariado.com](https://www.penotariado.com), [idealista/maps](https://www.idealista.com/maps/) (залогиненным), valor de referencia в [Catastro](https://www.sedecatastro.gob.es).
-- Попросить у риелтора свежую nota simple; проверить собственника, обременения и что паркинг и кладовка в ней есть.
-- Сверить площадь по Кадастру, nota simple и энергосертификату.
-- Проверить IBI, долги comunidad, протоколы собраний и derramas.
-- Проверить энергетический сертификат, cédula, ITE, градостроительный статус, Закон о побережье для жилья у моря.
-- Торговаться, опираясь на цены сделок и всё, что нашли при осмотре и в документах.
+- Before viewings, ask the agency if it wants a fee from the buyer, and if so, negotiate the amount.
+- Rule out flats from the "what not to buy" list.
+- Check prices in the area: [penotariado.com](https://www.penotariado.com), [idealista/maps](https://www.idealista.com/maps/) (logged in), valor de referencia in the [Catastro](https://www.sedecatastro.gob.es).
+- Ask the agent for a recent nota simple; check the owner, the charges, and that the parking and storage room are in it.
+- Compare the floor area in the Cadastre, the nota simple and the energy certificate.
+- Check IBI, comunidad debts, meeting minutes and derramas.
+- Check the energy certificate, cédula, ITE, planning status, and the Coastal Law for homes by the sea.
+- Haggle using sale prices and everything you found at the viewing and in the documents.
 
-### Задаток и ипотека
+### Deposit and mortgage
 
-- Подписать arras с условием об ипотеке, сроками и распределением расходов.
-- Получить FEIN/FiAE, посетить нотариуса для acta de transparencia (минимум за 10 дней до подписания).
+- Sign the arras with a mortgage condition, dates and who pays which costs.
+- Get the FEIN/FiAE and visit a notary for the acta de transparencia (at least 10 days before signing).
 
-### Сделка и после неё
+### The sale and after
 
-- Подписать купчую у выбранного вами нотариуса.
-- Если продавец нерезидент — удержать 3% и подать модель 211.
-- Оплатить ITP/AJD в срок и зарегистрировать собственность (при ипотеке это обычно делает банк).
-- Переоформить коммуналку, сообщить в comunidad, сделать empadronamiento.
-- Для нерезидентов — ежегодно подавать модель 210.
+- Sign the deed at the notary you chose.
+- If the seller is a non-resident, withhold 3% and file form 211.
+- Pay ITP/AJD on time and register the property (with a mortgage the bank usually does this).
+- Move utilities into your name, tell the comunidad, register on the padrón (empadronamiento).
+- Non-residents: file form 210 every year.
 
-## Полезные ссылки
+## Useful links
 
-**Законы (BOE):**
-- [Гражданский кодекс (Código Civil)](https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763) — ст. 1320, 1454, 1455
-- [Ley 49/1960 о горизонтальной собственности (LPH)](https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906)
-- [Ley 5/2019 об ипотечном кредитовании](https://www.boe.es/buscar/act.php?id=BOE-A-2019-3814)
-- [RDLeg 1/1993 — ITP и AJD](https://www.boe.es/buscar/act.php?id=BOE-A-1993-25359)
-- [Ley 11/2021 — valor de referencia](https://www.boe.es/buscar/act.php?id=BOE-A-2021-11473)
-- [RDLeg 2/2004 — местные налоги (IBI, plusvalía)](https://www.boe.es/buscar/act.php?id=BOE-A-2004-4214)
-- [RDL 26/2021 — новая plusvalía](https://www.boe.es/buscar/doc.php?id=BOE-A-2021-18276)
-- [RDL 29/2026 — коэффициенты plusvalía и скидка на аренду с декабря 2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823)
-- [Ley 35/2006 — IRPF](https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764)
-- [RDLeg 5/2004 — налог для нерезидентов](https://www.boe.es/buscar/act.php?id=BOE-A-2004-4527)
-- [Ley 19/1991 — налог на богатство (Patrimonio)](https://www.boe.es/buscar/act.php?id=BOE-A-1991-14392)
-- [Ley 22/1988 — Закон о побережье (Costas)](https://www.boe.es/buscar/act.php?id=BOE-A-1988-18762)
-- [Ley 38/1999 — строительство (LOE)](https://www.boe.es/buscar/act.php?id=BOE-A-1999-21567)
-- [Ley 29/1994 — аренда (LAU)](https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003)
-- [Ley 12/2023 — закон о жилье](https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203)
-- [RD 390/2021 — энергетический сертификат](https://www.boe.es/buscar/act.php?id=BOE-A-2021-9176)
-- [Ley Orgánica 1/2025 — правила туристической аренды в LPH](https://www.boe.es/buscar/act.php?id=BOE-A-2025-76)
+**Laws (BOE):**
+- [Civil Code (Código Civil)](https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763): art. 1320, 1454, 1455
+- [Ley 49/1960 on horizontal property (LPH)](https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906)
+- [Ley 5/2019 on mortgage credit](https://www.boe.es/buscar/act.php?id=BOE-A-2019-3814)
+- [RDLeg 1/1993: ITP and AJD](https://www.boe.es/buscar/act.php?id=BOE-A-1993-25359)
+- [Ley 11/2021: valor de referencia](https://www.boe.es/buscar/act.php?id=BOE-A-2021-11473)
+- [RDLeg 2/2004: local taxes (IBI, plusvalía)](https://www.boe.es/buscar/act.php?id=BOE-A-2004-4214)
+- [RDL 26/2021: the new plusvalía](https://www.boe.es/buscar/doc.php?id=BOE-A-2021-18276)
+- [RDL 29/2026: plusvalía coefficients and the rental reduction from December 2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823)
+- [Ley 35/2006: IRPF](https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764)
+- [RDLeg 5/2004: non-resident income tax](https://www.boe.es/buscar/act.php?id=BOE-A-2004-4527)
+- [Ley 19/1991: wealth tax (Patrimonio)](https://www.boe.es/buscar/act.php?id=BOE-A-1991-14392)
+- [Ley 22/1988: Coastal Law (Costas)](https://www.boe.es/buscar/act.php?id=BOE-A-1988-18762)
+- [Ley 38/1999: building (LOE)](https://www.boe.es/buscar/act.php?id=BOE-A-1999-21567)
+- [Ley 29/1994: urban leases (LAU)](https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003)
+- [Ley 12/2023: housing law](https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203)
+- [RD 390/2021: energy certificate](https://www.boe.es/buscar/act.php?id=BOE-A-2021-9176)
+- [Ley Orgánica 1/2025: holiday let rules in the LPH](https://www.boe.es/buscar/act.php?id=BOE-A-2025-76)
 
-**Государственные сервисы:**
-- [Sede Electrónica del Catastro](https://www.sedecatastro.gob.es) — кадастровые данные и valor de referencia
-- [Registradores de España](https://www.registradores.org) — nota simple, статистика
-- [Portal Estadístico del Notariado](https://www.penotariado.com) — цены реальных сделок
-- [Consejo General del Notariado](https://www.notariado.org) — гиды для покупателей
-- [Agencia Tributaria](https://sede.agenciatributaria.gob.es) — IRPF, модели 210 и 211
-- [Portal del Cliente Bancario (Banco de España)](https://clientebancario.bde.es) — ипотека, права заёмщика
-- [Banco de España — официальные индексы](https://www.bde.es) — Euríbor
-- [ICO](https://www.ico.es) — гарантии для ипотеки молодых и семей
-- [Ministerio de Vivienda y Agenda Urbana](https://www.mivau.gob.es) — статистика цен и сделок
-- [INE](https://www.ine.es) — индекс цен на жильё
-- [Portal de Subastas BOE](https://subastas.boe.es) — аукционы недвижимости
+**Government services:**
+- [Sede Electrónica del Catastro](https://www.sedecatastro.gob.es): cadastral data and valor de referencia
+- [Registradores de España](https://www.registradores.org): nota simple, statistics
+- [Portal Estadístico del Notariado](https://www.penotariado.com): real sale prices
+- [Consejo General del Notariado](https://www.notariado.org): guides for buyers
+- [Agencia Tributaria](https://sede.agenciatributaria.gob.es): IRPF, forms 210 and 211
+- [Portal del Cliente Bancario (Banco de España)](https://clientebancario.bde.es): mortgages, borrower rights
+- [Banco de España, official indices](https://www.bde.es): Euríbor
+- [ICO](https://www.ico.es): mortgage guarantees for young people and families
+- [Ministerio de Vivienda y Agenda Urbana](https://www.mivau.gob.es): price and sales statistics
+- [INE](https://www.ine.es): house price index
+- [Portal de Subastas BOE](https://subastas.boe.es): property auctions
 
-**Порталы и инструменты:**
+**Portals and tools:**
 - [idealista/maps](https://www.idealista.com/maps/)
 - [idealista](https://www.idealista.com), [fotocasa](https://www.fotocasa.es), [habitaclia](https://www.habitaclia.com), [pisos.com](https://www.pisos.com)
-- [Калькулятор расходов на покупку жилья — Spanified](/calculators/property-buying-cost)
+- [Property buying cost calculator, Spanified](/calculators/property-buying-cost)
 
-*Статья носит информационный характер и не заменяет консультацию юриста или налогового консультанта. Ставки налогов и льготы актуальны на ноябрь 2026 года и могут меняться: перед сделкой проверяйте их на сайтах государственных органов.*
+*This article is for information only and is not a substitute for advice from a lawyer or tax adviser. Tax rates and reductions are current as of November 2026 and may change: check them on official government websites before you buy or sell.*
