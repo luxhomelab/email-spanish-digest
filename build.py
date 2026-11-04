@@ -633,7 +633,7 @@ def load_articles():
         lang = meta.get("lang") or "en"
         body_html = article_markdown_to_html(body_md, slug, toc_extra, lang)
         words = len(_article_words(body_md))
-        reading_time = max(1, round(words / 200))
+        reading_time = max(1, round(words / READING_WPM))
         url = f"/articles/{slug}"
         page_url = f"{SITE_URL}{url}"
         articles.append({
@@ -664,8 +664,24 @@ def load_articles():
     return articles
 
 
+# Average adult silent reading speed for non-fiction (Brysbaert, 2019).
+READING_WPM = 238
+
+_MD_LINK_RE = re.compile(r"!?\[([^\]]*)\]\([^)]*\)")
+_MD_DIRECTIVE_RE = re.compile(r"^\s*:::.*$", re.M)
+_URL_RE = re.compile(r"https?://\S+")
+_MD_SYNTAX_RE = re.compile(r"[*_`#>|]+")
+_HAS_WORD_RE = re.compile(r"\w")
+
+
 def _article_words(md):
-    return md.split()
+    """Words a reader actually sees: link text but not URLs, no ::: directives,
+    and no markdown syntax tokens (list dashes, table pipes, **, #)."""
+    text = _MD_DIRECTIVE_RE.sub("", md)
+    text = _MD_LINK_RE.sub(r"\1", text)
+    text = _URL_RE.sub("", text)
+    text = _MD_SYNTAX_RE.sub(" ", text)
+    return [w for w in text.split() if _HAS_WORD_RE.search(w)]
 
 
 def load_social_stats():
