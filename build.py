@@ -361,6 +361,21 @@ def article_inline_md(s):
     return s
 
 
+# "300 000 €", "1 000–6 000 €", "80 м²": glue digit groups and units with
+# no-break spaces so a narrow column never strands "000 €" on its own line.
+_NBSP_THOUSANDS_RE = re.compile(r"(?<=\d) (?=\d{3}(?!\d))")
+_NBSP_UNIT_RE = re.compile(r"(?<=\d) (?=(?:€|%|м²|м2|m²|км|km|млн|тыс)(?!\w))")
+_HTML_TAG_SPLIT_RE = re.compile(r"(<[^>]*>)")
+
+
+def nbsp_numbers(html_text):
+    """Apply the number no-break rules to text only, never inside tags."""
+    parts = _HTML_TAG_SPLIT_RE.split(html_text)
+    for i in range(0, len(parts), 2):
+        parts[i] = _NBSP_UNIT_RE.sub(" ", _NBSP_THOUSANDS_RE.sub(" ", parts[i]))
+    return "".join(parts)
+
+
 ARTICLE_FIGURE_RE = re.compile(r'^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)$')
 # "::: graphic <name>" on its own line -> the hand-written HTML partial
 # templates/partials/article-graphics/<article-slug>/<name>.html, inlined as is.
@@ -539,7 +554,7 @@ def article_markdown_to_html(md, slug=None, toc_extra=(), lang="en"):
     if in_list:
         out.append("</ul>")
     toc = article_toc_html(headings + list(toc_extra), lang)
-    return "\n".join(toc if part == _TOC_PLACEHOLDER else part for part in out)
+    return nbsp_numbers("\n".join(toc if part == _TOC_PLACEHOLDER else part for part in out))
 
 
 def split_article_faq(body_md):
@@ -578,7 +593,7 @@ def parse_faq_section(section_md):
                 current = []
             if question is not None:
                 answer = " ".join(paragraphs)
-                faq.append({"q": question, "a": answer, "a_html": article_inline_md(answer)})
+                faq.append({"q": question, "a": answer, "a_html": nbsp_numbers(article_inline_md(answer))})
                 paragraphs = []
             question = stripped[4:].strip()
         elif not stripped:
@@ -591,7 +606,7 @@ def parse_faq_section(section_md):
         paragraphs.append(" ".join(current))
     if question is not None:
         answer = " ".join(paragraphs)
-        faq.append({"q": question, "a": answer, "a_html": article_inline_md(answer)})
+        faq.append({"q": question, "a": answer, "a_html": nbsp_numbers(article_inline_md(answer))})
     return faq
 
 
