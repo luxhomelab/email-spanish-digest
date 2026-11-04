@@ -4008,7 +4008,7 @@ body.page-article .article-body > p:first-child { animation: art-in 0.5s ease-ou
 .article-body .ag-run-table th, .article-body .ag-run-table td { padding: 9px 0 9px 12px; border: 0; border-bottom: 1px solid #EFE7D8; background: none; text-align: right; vertical-align: top; white-space: nowrap; }
 .article-body .ag-run-table th:first-child { padding-left: 0; text-align: left; white-space: normal; }
 .article-body .ag-run-table thead th { padding-top: 0; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #9AA5B1; }
-.article-body .ag-run-table tbody th { position: relative; padding-left: 20px; font-weight: 400; }
+.article-body .ag-run-table tbody th:first-child { position: relative; padding-left: 20px; font-weight: 400; }
 .ag-run-table tbody i { position: absolute; left: 0; top: 13px; width: 12px; height: 12px; border-radius: 3px; background-color: var(--c); }
 .ag-run-table tbody th b { display: block; font-size: 15px; color: #1A1A16; }
 .ag-run-table tbody th span { display: block; font-size: 12.5px; line-height: 1.4; color: #6C7A89; }
@@ -4089,6 +4089,10 @@ body.page-article .article-body > p:first-child { animation: art-in 0.5s ease-ou
  .ag-area-box { padding: 10px 10px 12px 10px; }
  .ag-area-label b { font-size: 16px; }
  .ag-area-m { font-size: 18px; }
+ .article-body .ag-run-table th, .article-body .ag-run-table td { padding-left: 8px; }
+ .article-body .ag-run-table td, .ag-run-table tbody th b { font-size: 14px; }
+ .article-body .ag-run-table tfoot th, .article-body .ag-run-table tfoot td { font-size: 15px; }
+ .article-body .ag-run-table thead th { letter-spacing: 0.5px; white-space: normal; vertical-align: bottom; }
 }
 
 /* Plain gold-dot list (unchanged signature style) */
