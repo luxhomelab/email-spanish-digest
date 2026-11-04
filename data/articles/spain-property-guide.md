@@ -2,9 +2,10 @@
 slug: spain-property-guide
 lang: en
 title: How to Buy, Own and Sell a Home in Spain: The Complete Guide
-meta_title: Buying a Home in Spain in 2026: Taxes, Mortgage, Documents
-meta_description: Buying property in Spain step by step: where to search and real prices, who pays the agent, documents, arras, mortgages, ITP and IVA, running costs and selling costs.
+meta_title: Buying Property in Spain in 2026: Costs, Taxes, Mortgage
+meta_description: Buying property in Spain, step by step: the real costs (10-15% on top), NIE, nota simple, arras, mortgages, ITP vs IVA, and what owning and selling cost.
 date: 2026-11-02
+updated: 2026-11-04
 author: Dmytro Shvechikov
 excerpt: Everything about property in Spain in one place: how to find a flat and check the price, which documents to look at, how contracts and mortgages work, and what buying, owning and selling cost.
 image_alt: Cover of the guide to buying a flat in Spain
@@ -33,7 +34,7 @@ Example: a resale flat in Madrid for €300,000.
 
 But Madrid has one of the lowest ITP rates. Where the tax is 10%, you end up paying about 12% on top. When I bought my flat in Alicante, ITP there was 10%, and with the other costs (about 2%) it came to almost 12%. Catalonia also charges 10% (€30,000 in tax alone on a €300,000 flat), so the total is about the same. You can work it out for your region and price with our [property buying cost calculator](/calculators/property-buying-cost).
 
-## How buying works: 8 steps
+## How to buy property in Spain: 8 steps
 
 This is the whole path from deciding to buy to getting the keys. The sections of this guide follow the same order.
 
@@ -311,7 +312,7 @@ The main law is [Ley 5/2019 on mortgage credit contracts (LCCI)](https://www.boe
 - **Non-residents** Usually 60-70%, with stricter rules on income and documents.
 - **The bank never finances the taxes and buying costs** You pay them from your own money.
 - **Term** Up to 30 years (sometimes 35-40). Most banks want the loan paid off by the time you are 70-75.
-- **Repayments** Usually no more than 30-35% of your net income.
+- **Repayments** Usually no more than 30-35% of your net income. To see what that means for your payslip, start from your take-home pay in the [net salary calculator for Spain](/calculators/net-salary).
 
 ::: graphic ltv
 
@@ -328,7 +329,7 @@ In July 2026 the scheme was extended to 31 December 2027. Many regions also have
 
 ### What the bank wants to see
 
-Above all, stable income over the last 2 years. The bank looks at your income tax returns (la renta) for the last two years, so a mortgage is harder if you've just moved or recently changed jobs. For autónomos this matters even more: the bank looks at the income in your tax returns, not your turnover.
+Above all, stable income over the last 2 years. The bank looks at your income tax returns (la renta) for the last two years, so a mortgage is harder if you've just moved or recently changed jobs. For autónomos this matters even more: the bank looks at the income in your tax returns, not your turnover. The [autónomo tax calculator](/calculators/autonomo-tax) shows what is left of your turnover after IRPF and the social security quota.
 
 But this is not a strict rule. As an autónomo I got a mortgage from CaixaBank with only three quarterly returns and no annual renta. If one bank says no, try others or a mortgage broker.
 
@@ -510,6 +511,8 @@ This is a tax on your total wealth, not on a specific flat. It applies to net as
 
 ## If you plan to rent it out
 
+Before you buy to let, check the numbers for a specific flat with the [rental yield calculator for Spain](/calculators/rental-yield): net yield after costs, vacancy and tax, for residents and non-residents.
+
 - **Look outside urbanizaciones** If you buy for long-term renting, a flat in an ordinary building without a pool, gardens or security often pays better. Rent in an urbanización isn't much higher, but the comunidad fee in an ordinary building is much lower, and the landlord (you) pays it.
 - **Long-term renting** Governed by the [LAU](https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003). The minimum term for the tenant is 5 years (7 if the landlord is a company). In stressed market areas (zonas tensionadas, for example in Catalonia and some cities) rents are capped under [Ley 12/2023](https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203).
 - **Residents** Pay IRPF on net rental income (after deducting IBI, comunidad, mortgage interest, 3% depreciation of the building value and so on). For a home rented as the tenant's main home there is a 50-90% reduction depending on the conditions (art. 23 LIRPF as amended by Ley 12/2023). For contracts signed from 1 December 2026, [Real Decreto-ley 29/2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823) changes the scale: up to 100% if you lower the rent, and only 15-50% if you raise it. As of November 2026 the Congress still has to approve the decree, so check its status.
@@ -638,7 +641,7 @@ Example: you bought in 2018 for €200,000 + €15,000 in costs and sold in 2026
 - Move utilities into your name, tell the comunidad, register on the padrón (empadronamiento).
 - Non-residents: file form 210 every year.
 
-## Useful links
+## Official sources and useful links
 
 **Laws (BOE):**
 - [Civil Code (Código Civil)](https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763): art. 1320, 1454, 1455
@@ -678,3 +681,29 @@ Example: you bought in 2018 for €200,000 + €15,000 in costs and sold in 2026
 - [Property buying cost calculator, Spanified](/calculators/property-buying-cost)
 
 *This article is for information only and is not a substitute for advice from a lawyer or tax adviser. Tax rates and reductions are current as of November 2026 and may change: check them on official government websites before you buy or sell.*
+
+## FAQ
+
+### Can foreigners buy property in Spain?
+
+Yes. Spain does not limit property purchases by foreigners, residents or not. You need a NIE to sign the deed, pay the taxes and take out a mortgage, and in practice a Spanish bank account. Non-residents also pay non-resident income tax on the property every year (form 210).
+
+### How much does it cost to buy a home in Spain on top of the price?
+
+Plan for 10-15% of the price. Most of it is tax: ITP of 6-10% or more on a resale home depending on the region, or 10% IVA plus AJD on a new build. Notary, Land Registry, gestoría and the mortgage valuation add roughly €2,000-3,000. A €300,000 resale flat in Madrid costs about €20,500 on top. Work out your own figure with the [property buying cost calculator](/calculators/property-buying-cost).
+
+### How much of my own money do I need to buy with a mortgage?
+
+About 30-35% of the price. Banks usually lend residents up to 80% of the price or the valuation, whichever is lower, and never finance the taxes and buying costs. Non-residents usually get 60-70%, so they need more. Young buyers can borrow almost 100% of the price with the state ICO guarantee.
+
+### Who pays the estate agent when buying a home in Spain?
+
+The law does not say; it depends on the contract. Usually the seller pays the agency 3-6% of the price plus 21% IVA, and the fee is built into the price. Some agencies, especially on the coast, also ask the buyer for a fee, so ask before the viewings and negotiate it.
+
+### What taxes do you pay every year as a property owner in Spain?
+
+Everyone pays IBI, the municipal property tax, and usually a separate rubbish collection fee. A resident with a second home that is not rented out pays income tax on a notional income of 1.1-2% of the valor catastral. A non-resident pays non-resident income tax on the same notional income at 19% (EU/EEA) or 24% (everyone else) on form 210. Large fortunes may also pay wealth tax.
+
+### How much does it cost to sell a property in Spain?
+
+Usually 9-14% of the price: the agency fee, the municipal plusvalía, certificates, cancelling the mortgage and capital gains tax at 19-30% for residents or 19% for non-residents. If you are exempt from capital gains tax (you reinvest in a new main home, or you are over 65 and sell your main home), it is 4-9%. When the seller is a non-resident, the buyer withholds 3% of the price on form 211.

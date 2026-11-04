@@ -645,6 +645,9 @@ def load_articles():
             "meta_description": meta.get("meta_description") or meta.get("excerpt") or "",
             "excerpt": meta.get("excerpt") or "",
             "date": date,
+            # Optional `updated:` frontmatter (YYYY-MM-DD) for substantive
+            # revisions; feeds dateModified / article:modified_time.
+            "updated": max(meta.get("updated") or date, date),
             "date_display": format_date(date),
             "author": meta.get("author") or "Dmytro Shvechikov",
             "image_alt": meta.get("image_alt") or "",
@@ -1868,7 +1871,7 @@ def git_lastmod(*pathspecs):
 
 def article_lastmod(article):
     """Newest of the article's publication date and its source file's last commit."""
-    dates = [d for d in (article.get("date"), article.get("src_path") and git_lastmod(article["src_path"])) if d]
+    dates = [d for d in (article.get("date"), article.get("updated"), article.get("src_path") and git_lastmod(article["src_path"])) if d]
     return max(dates) if dates else None
 
 
