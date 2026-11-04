@@ -6,7 +6,7 @@ Serves the repo root (built static site):
   /quiz/ai-or-real/       -> quiz/ai-or-real.html (or dir index if it exists)
   /                       -> index.html (default handler behavior)
 
-Usage: py serve.py [port]   (default 8000)
+Usage: py serve.py [port] [host]   (default 8000 127.0.0.1; host 0.0.0.0 = LAN)
 Dev-only helper, not part of the build.
 """
 
@@ -16,6 +16,7 @@ import sys
 import urllib.parse
 
 PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8000
+HOST = sys.argv[2] if len(sys.argv) > 2 else "127.0.0.1"  # 0.0.0.0 = reachable on LAN
 
 
 class CleanUrlsHandler(http.server.SimpleHTTPRequestHandler):
@@ -41,8 +42,8 @@ class CleanUrlsHandler(http.server.SimpleHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    srv = http.server.ThreadingHTTPServer(("127.0.0.1", PORT), CleanUrlsHandler)
-    print(f"Serving {os.getcwd()} at http://localhost:{PORT} (clean URLs, no .html needed)")
+    srv = http.server.ThreadingHTTPServer((HOST, PORT), CleanUrlsHandler)
+    print(f"Serving {os.getcwd()} at http://{HOST}:{PORT} (clean URLs, no .html needed)")
     try:
         srv.serve_forever()
     except KeyboardInterrupt:

@@ -7,7 +7,8 @@
 <meta property="og:description" content="{{ article.meta_description }}">
 <meta property="og:url" content="{{ site_url }}{{ article.url }}">
 <meta property="article:published_time" content="{{ pub_date(article.date) }}">
-<meta name="twitter:card" content="summary_large_image">
+{% if article.updated != article.date %}<meta property="article:modified_time" content="{{ pub_date(article.updated) }}">
+{% endif %}<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ article.meta_title }}">
 <meta name="twitter:description" content="{{ article.meta_description }}">
 <meta name="twitter:image" content="{{ site_url }}/og/article-{{ article.slug }}.png">
@@ -27,7 +28,7 @@
  "description": {{ article.meta_description|tojson }},
  "image": {"@type": "ImageObject", "url": "{{ site_url }}/og/article-{{ article.slug }}.png", "width": 1200, "height": 630},
  "datePublished": "{{ pub_date(article.date) }}",
- "dateModified": "{{ pub_date(article.date) }}",
+ "dateModified": "{{ pub_date(article.updated) }}",
  "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor", "jobTitle": "Founder and Editor", "sameAs": ["https://www.linkedin.com/in/dshvechikov"]},
  "publisher": {"@type": "Organization", "name": "Spanified", "logo": {"@type": "ImageObject", "url": "{{ site_url }}/logo.jpg", "width": 640, "height": 640}},
  "inLanguage": "en",
