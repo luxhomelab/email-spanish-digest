@@ -834,6 +834,13 @@ body.page-quiz-flow .breadcrumbs { margin-bottom: 12px; }
 .byline { font-size: 13px; color: #A0998E; text-align: center; padding: 8px 24px 0 24px; }
 .byline a { color: #B91C1C; text-decoration: none; }
 .byline a:hover { text-decoration: underline; }
+/* Editor photo inside article/digest bylines. */
+.byline-avatar {
+ display: inline-block; width: 24px; height: 24px; border-radius: 50%;
+ object-fit: cover; vertical-align: middle; margin: -3px 8px 0 0; background: #E9E6E1;
+}
+body.page-article .byline-author { display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+body.page-article .byline-avatar { width: 28px; height: 28px; margin: 0; }
 .about { max-width: 1200px; width: 100%; margin: 0 auto; }
 .about h1 {
  font-family: var(--font-display);
@@ -1475,9 +1482,7 @@ body.page-subscribe .sub-editor {
 body.page-subscribe .sub-editor-top { display: flex; gap: 14px; align-items: center; margin-bottom: 12px; }
 body.page-subscribe .sub-editor-avatar {
  flex: 0 0 auto; width: 52px; height: 52px; border-radius: 50%;
- display: inline-flex; align-items: center; justify-content: center;
- background: linear-gradient(135deg, #AA151B 0%, #7E1015 100%);
- color: #ffffff; font-weight: 800; font-size: 18px; letter-spacing: 0.5px;
+ display: block; object-fit: cover; background: #E9E6E1;
 }
 body.page-subscribe .sub-editor-name { font-size: 18px; font-weight: 700; margin: 0; }
 body.page-subscribe .sub-editor .sub-editor-name a { color: #1A1A2E; }
@@ -1681,6 +1686,11 @@ body.page-calculator .calc-share { margin-top: 20px; text-align: left; }
 body.page-calculator .calc-share .share-cta { font-size: 14px; font-weight: 600; color: #3C4858; margin-bottom: 10px; }
 body.page-calculator .share-wrap { margin-top: 12px; }
 body.page-editor .editor { max-width: 1200px; width: 100%; margin: 0 auto; }
+body.page-editor .editor-photo {
+ display: block; width: 160px; height: 160px; margin: 8px auto 20px auto;
+ border-radius: 50%; object-fit: cover; background: #E9E6E1;
+ box-shadow: 0 0 0 4px #FFFDF8, 0 0 0 6px #F1BF00;
+}
 body.page-editor .editor h1 { text-align: center; }
 body.page-editor .editor .subtitle { color: #6C7A89; font-size: 16px; margin-bottom: 28px; text-align: center; }
 body.page-editor .editor .card { padding: 32px; text-align: left; margin-bottom: 20px; }
@@ -4617,7 +4627,7 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 .hm-link-inline { font-weight: 700; white-space: nowrap; }
 .hm-editor-id { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
 .hm .hm-editor-id p { margin: 0; }
-.hm-avatar { flex: none; width: 46px; height: 46px; border-radius: 50%; background: var(--hm-ink); color: #fff; display: grid; place-items: center; font-weight: 700; }
+.hm-avatar { flex: none; width: 46px; height: 46px; border-radius: 50%; background: #E9E6E1; object-fit: cover; display: block; }
 .hm-editor-name { display: block; font-weight: 700; color: var(--hm-ink); font-size: 18px; }
 .hm-editor-role { display: block; font-size: 15px; color: var(--hm-muted); line-height: 1.4; }
 .hm .hm-editor-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0; padding-top: 12px; border-top: 1px solid #E3D6B8; }
@@ -4768,6 +4778,70 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 }
 .video-embed .ve-caption a { color: #AA151B; }
 .calc .video-embed { margin: 16px 0 0 0; }
+
+/* Chapters (data/videos.json "chapters"): each one starts the player at its
+   timestamp. Default is a swipeable strip of chapter cards under the player;
+   on wide calculator cards it becomes a rail beside the player. */
+.video-embed .ve-chapters { margin-top: 14px; min-width: 0; }
+.video-embed .ve-chapters-head {
+ margin: 0 0 8px 0; font: 700 14px/1.3 Helvetica, Arial, sans-serif; color: #1F2A37;
+}
+.video-embed .ve-chapters ol {
+ display: flex; gap: 8px; margin: 0; padding: 0 0 8px 0; list-style: none;
+ overflow-x: auto; scroll-snap-type: x proximity; overscroll-behavior-x: contain;
+}
+.video-embed .ve-chapters li { flex: none; margin: 0; padding: 0; scroll-snap-align: start; }
+.video-embed .ve-chapters li::before { display: none; }
+.video-embed a.ve-chap {
+ display: grid; gap: 4px; width: 172px; height: 100%; box-sizing: border-box;
+ padding: 9px 12px 10px 12px; border: 1px solid #E5DCC8; border-radius: 10px;
+ background-color: #FFFDF8; color: #3C4858; text-decoration: none;
+}
+.video-embed .ve-chap-time {
+ font: 700 13px/1 Helvetica, Arial, sans-serif; color: #AA151B; font-variant-numeric: tabular-nums;
+}
+.video-embed .ve-chap-title {
+ font-size: 13.5px; line-height: 1.35;
+ display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.video-embed .ve-chap-key a.ve-chap { border-color: #F1BF00; background-color: #FFF7DA; }
+.video-embed a.ve-chap:hover { border-color: #AA151B; }
+.video-embed a.ve-chap:focus-visible { outline: 3px solid #F1BF00; outline-offset: 2px; }
+.video-embed a.ve-chap[aria-current] { background-color: #AA151B; border-color: #AA151B; color: #ffffff; }
+.video-embed a.ve-chap[aria-current] .ve-chap-time { color: #F1BF00; }
+
+/* Calculator cards run up to 1200px wide: a full-width player there dwarfed
+   the numbers. From 900px the player takes ~60% and the chapters fill a rail
+   of the same height beside it (contain: size keeps the list from stretching
+   the row; it scrolls instead). */
+@media (min-width: 900px) {
+ body.page-calculator .video-embed.has-chapters {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  grid-template-areas: "player chapters" "caption chapters";
+  column-gap: 20px;
+ }
+ body.page-calculator .video-embed.has-chapters .ve-player { grid-area: player; }
+ body.page-calculator .video-embed.has-chapters .ve-caption { grid-area: caption; }
+ body.page-calculator .video-embed.has-chapters .ve-chapters {
+  grid-area: chapters; contain: size; margin: 0;
+  display: flex; flex-direction: column;
+  border: 1px solid #E5DCC8; border-radius: 12px; background-color: #FFFDF8;
+  padding: 14px 6px 6px 14px;
+ }
+ body.page-calculator .video-embed.has-chapters .ve-chapters ol {
+  flex: 1 1 auto; min-height: 0; flex-direction: column; gap: 2px;
+  overflow-x: hidden; overflow-y: auto; padding: 0 8px 0 0; scroll-snap-type: none;
+ }
+ body.page-calculator .video-embed.has-chapters a.ve-chap {
+  width: auto; grid-template-columns: 44px minmax(0, 1fr); align-items: baseline; gap: 8px;
+  padding: 7px 10px; border: 0; border-radius: 8px; background-color: transparent;
+ }
+ body.page-calculator .video-embed.has-chapters .ve-chap-title { -webkit-line-clamp: 1; font-size: 14px; }
+ body.page-calculator .video-embed.has-chapters a.ve-chap:hover { background-color: #F5F1E8; }
+ body.page-calculator .video-embed.has-chapters .ve-chap-key a.ve-chap { background-color: #FFF1BF; }
+ body.page-calculator .video-embed.has-chapters a.ve-chap[aria-current] { background-color: #AA151B; }
+}
 @media (max-width: 480px) {
  .video-embed .ve-frame, .video-embed .ve-iframe { border-radius: 8px; }
  .video-embed .ve-play { left: 10px; bottom: 10px; padding-right: 12px; font-size: 14px; }

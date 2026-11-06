@@ -24,3 +24,20 @@ def test_every_video_has_schema_fields():
         assert len(vid) == 11
         for key in ("title", "description", "upload_date", "duration"):
             assert v.get(key), (vid, key)
+
+
+def test_chapters_render_rail_and_clip_schema():
+    html = build.video_embed_html("_ZzFIR-Zl5A")
+    assert 'class="video-embed has-chapters"' in html
+    assert html.count('class="ve-chap"') == 15
+    assert 'data-start="399"' in html and "&amp;t=399s" in html
+    assert '<li class="ve-chap-key">' in html
+    ld = json.loads(html.split('<script type="application/ld+json">')[1].split("</script>")[0])
+    clips = ld["hasPart"]
+    assert clips[0]["startOffset"] == 0 and clips[0]["endOffset"] == clips[1]["startOffset"]
+    assert clips[-1]["endOffset"] == 673
+
+
+def test_video_without_chapters_has_no_rail():
+    html = build.video_embed_html("891GhtG_AkU")
+    assert "ve-chapters" not in html and "hasPart" not in html

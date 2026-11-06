@@ -9,8 +9,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dmytro Shvechikov — Founder & Editor, Spanified">
 <meta name="twitter:description" content="Spain-based engineer curating and editing the daily English digest of Spanish news.">
-<meta name="twitter:image" content="https://spanified.com/logo.jpg">
+<meta name="twitter:image" content="{{ site_url }}/static/img/editor/dmytro-shvechikov-480.jpg">
+<meta name="twitter:image:alt" content="Portrait of Dmytro Shvechikov">
 <meta name="robots" content="max-image-preview:large">{% endblock %}
+
+{% block og_image %}<meta property="og:image" content="{{ site_url }}/static/img/editor/dmytro-shvechikov-480.jpg">
+ <meta property="og:image:width" content="480">
+ <meta property="og:image:height" content="480">
+ <meta property="og:image:alt" content="Portrait of Dmytro Shvechikov">{% endblock %}
 
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/editor">{% endblock %}
 {% block content %}
@@ -22,12 +28,14 @@
  "inLanguage": "en",
  "mainEntity": {"@type": "Person", "name": "Dmytro Shvechikov",
   "jobTitle": "Founder and Editor",
+  "image": "{{ site_url }}/static/img/editor/dmytro-shvechikov-480.jpg",
   "description": "Senior Software Engineer with 10+ years of production software development experience. Based in Spain and actively researching Spanish real estate investments. Edits the Spanified Spain Daily Digest.",
   "url": "{{ site_url }}/editor",
   "sameAs": ["https://www.linkedin.com/in/dshvechikov"],
   "worksFor": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}}}
 </script>
  <div class="editor">
+  <img class="editor-photo" src="/static/img/editor/dmytro-shvechikov-320.webp?v={{ asset_version }}" srcset="/static/img/editor/dmytro-shvechikov-160.webp?v={{ asset_version }} 160w, /static/img/editor/dmytro-shvechikov-320.webp?v={{ asset_version }} 320w, /static/img/editor/dmytro-shvechikov-480.webp?v={{ asset_version }} 480w" sizes="160px" alt="Portrait of Dmytro Shvechikov" width="160" height="160" fetchpriority="high" decoding="async">
   <h1>Dmytro Shvechikov</h1>
   <p class="subtitle">Founder & Editor, Spanified Spain Daily Digest</p>
 

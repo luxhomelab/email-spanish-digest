@@ -29,7 +29,7 @@
  "image": {"@type": "ImageObject", "url": "{{ site_url }}/og/article-{{ article.slug }}.png", "width": 1200, "height": 630},
  "datePublished": "{{ pub_date(article.date) }}",
  "dateModified": "{{ pub_date(article.updated) }}",
- "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor", "jobTitle": "Founder and Editor", "sameAs": ["https://www.linkedin.com/in/dshvechikov"]},
+ "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor", "jobTitle": "Founder and Editor", "image": "{{ site_url }}/static/img/editor/dmytro-shvechikov-480.jpg", "sameAs": ["https://www.linkedin.com/in/dshvechikov"]},
  "publisher": {"@type": "Organization", "name": "Spanified", "logo": {"@type": "ImageObject", "url": "{{ site_url }}/logo.jpg", "width": 640, "height": 640}},
  "inLanguage": "en",
  "wordCount": {{ article.word_count }},
@@ -49,7 +49,7 @@
   <div class="digest-card">
    <h1 class="email-red-band">{{ article.title }}</h1>
    <div class="byline">
-    <span class="byline-part">By <a href="/editor">Dmytro Shvechikov</a></span>
+    <span class="byline-part byline-author"><img class="byline-avatar" src="/static/img/editor/dmytro-shvechikov-96.webp?v={{ asset_version }}" srcset="/static/img/editor/dmytro-shvechikov-48.webp?v={{ asset_version }} 48w, /static/img/editor/dmytro-shvechikov-96.webp?v={{ asset_version }} 96w, /static/img/editor/dmytro-shvechikov-160.webp?v={{ asset_version }} 160w" sizes="28px" alt="" width="28" height="28" decoding="async">By <a href="/editor">Dmytro Shvechikov</a></span>
     <span class="byline-dot" aria-hidden="true"></span>
     <span class="byline-part">{{ article.date_display }}</span>
     <span class="byline-dot" aria-hidden="true"></span>

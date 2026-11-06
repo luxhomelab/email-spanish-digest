@@ -436,15 +436,38 @@ def video_embed_html(video_id):
         "embedUrl": f"https://www.youtube.com/embed/{video_id}", "url": watch,
         "publisher": {"@type": "Organization", "name": "Spanified", "url": f"{SITE_URL}/"},
     }
+    chapters = v.get("chapters") or []
+    if chapters:
+        # Key moments: each chapter is a Clip that ends where the next starts.
+        ends = [c["t"] for c in chapters[1:]] + [secs]
+        ld["hasPart"] = [
+            {"@type": "Clip", "name": c["title"], "startOffset": c["t"],
+             "endOffset": end, "url": f"{watch}&t={c['t']}s"}
+            for c, end in zip(chapters, ends)
+        ]
     ld_json = json.dumps(ld, ensure_ascii=False).replace("</", "<\\/")
+    chapters_html = ""
+    if chapters:
+        items = "".join(
+            f'<li{" class=\"ve-chap-key\"" if c.get("highlight") else ""}>'
+            f'<a class="ve-chap" href="{watch}&amp;t={c["t"]}s" target="_blank" rel="noopener" data-start="{c["t"]}">'
+            f'<span class="ve-chap-time">{c["t"] // 60}:{c["t"] % 60:02d}</span>'
+            f'<span class="ve-chap-title">{html.escape(c["title"])}</span></a></li>'
+            for c in chapters
+        )
+        chapters_html = (
+            f'<nav class="ve-chapters" aria-label="Video chapters">'
+            f'<p class="ve-chapters-head">{len(chapters)} chapters</p><ol>{items}</ol></nav>\n'
+        )
     return (
-        f'<figure class="video-embed" data-pagefind-ignore>\n'
-        f'<a class="ve-frame" href="{watch}" target="_blank" rel="noopener" data-video-id="{video_id}"'
+        f'<figure class="video-embed{" has-chapters" if chapters else ""}" data-pagefind-ignore>\n'
+        f'<div class="ve-player"><a class="ve-frame" href="{watch}" target="_blank" rel="noopener" data-video-id="{video_id}"'
         f' data-video-title="{caption}" aria-label="Play video: {caption} ({mins} min)">'
         f'<img src="{thumb}" alt="" width="1280" height="720" loading="lazy" decoding="async">'
         f'<span class="ve-play"><span class="ve-play-icon"><svg viewBox="0 0 24 24" aria-hidden="true">'
         f'<path d="M8 5.5v13l10.5-6.5z"/></svg></span>'
-        f'<span class="ve-play-label">Play video</span><span class="ve-time">{clock}</span></span></a>\n'
+        f'<span class="ve-play-label">Play video</span><span class="ve-time">{clock}</span></span></a></div>\n'
+        f'{chapters_html}'
         f'<figcaption class="ve-caption">{caption}. <a href="{watch}" target="_blank" rel="noopener">Watch on YouTube</a></figcaption>\n'
         f'<script type="application/ld+json">{ld_json}</script>\n'
         f'<script src="/static/js/video-embed.js?v={js_version()}" defer></script>\n'
@@ -1913,7 +1936,7 @@ def render_categories(env, digests):
 # Source files (git pathspecs, repo-relative) behind each calculator page.
 # Their newest commit date becomes the page's sitemap lastmod.
 CALC_SOURCES = {
-    "net-salary": ["templates/calculator-net-salary.html", "static/js/net-salary*.js"],
+    "net-salary": ["templates/calculator-net-salary.html", "static/js/net-salary*.js", "data/videos.json"],
     "autonomo-tax": ["templates/calculator-autonomo.html", "static/js/autonomo*.js", "data/videos.json"],
     "property-buying-cost": ["templates/calculator-property-buying-cost.html", "static/js/property-buying-cost*.js"],
     "rental-yield": ["templates/calculator-rental-yield.html", "static/js/rental-yield*.js"],
@@ -1922,7 +1945,7 @@ CALC_SOURCES = {
 # Amount pages also depend on their own template, page list and grid script.
 CALC_AMOUNT_SOURCES = {
     "net-salary": ["templates/calculator-net-salary-amount.html", "data/net-salary-pages.json",
-                   "scripts/net-salary-grid.mjs"],
+                   "scripts/net-salary-grid.mjs", "data/videos.json"],
     "autonomo-tax": ["templates/calculator-autonomo-amount.html", "data/autonomo-pages.json",
                      "scripts/autonomo-grid.mjs", "data/videos.json"],
     "rental-yield": ["templates/calculator-rental-yield-amount.html", "data/rental-yield-pages.json",
