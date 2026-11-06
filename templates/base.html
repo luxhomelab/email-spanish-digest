@@ -9,32 +9,19 @@
 {# Versions nested ES-module imports (build.js_importmap); must precede every module script. #}
 <script type="importmap">{{ js_importmap|safe }}</script>
 <script>window.SPANIFIED_ANALYTICS = {% if analytics_enabled %}true{% else %}false{% endif %};</script>
+{# Consent-gated analytics. Nothing that sets a cookie loads here: gtag()
+   only queues into dataLayer with every consent signal denied, and
+   static/js/cookie-consent.js (partials/cookie-banner.html) injects gtag.js
+   after an "analytics" opt-in and the Meta Pixel after a "marketing" opt-in. #}
+<script>window.SPANIFIED_CONSENT_IDS = {ga: 'G-CBF70VDX1D', pixel: '2597044717425425'};</script>
 {% if analytics_enabled %}
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CBF70VDX1D"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
   gtag('js', new Date());
   gtag('config', 'G-CBF70VDX1D');
 </script>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2597044717425425');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2597044717425425&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 {% endif %}
  <link rel="icon" href="/favicon.ico?v={{ asset_version }}" sizes="any">
  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v={{ asset_version }}">
@@ -62,5 +49,6 @@ src="https://www.facebook.com/tr?id=2597044717425425&ev=PageView&noscript=1"
  </main>
 
 {% include "partials/footer.html" %}
+{% include "partials/cookie-banner.html" %}
 </body>
 </html>

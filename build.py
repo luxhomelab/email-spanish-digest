@@ -80,6 +80,7 @@ STATIC_PAGES = [
     "unsubscribe.html",
     "contact.html",
     "privacy.html",
+    "cookies.html",
     "terms.html",
     "editor.html",
     "about.html",
@@ -2362,7 +2363,7 @@ def js_version():
                    "quiz.js",
                    "quiz-logic.js", "subscribe-form.js", "subscription-store.js",
                    "electricity.js", "electricity-calc.js", "electricity-form.js",
-                   "video-embed.js"):
+                   "video-embed.js", "cookie-consent.js", "cookie-consent-logic.js"):
         path = os.path.join(SCRIPT_DIR, "static", "js", name)
         try:
             with open(path, "rb") as fh:
@@ -2390,6 +2391,9 @@ def main():
     )
     env.globals["current_year"] = datetime.now().year
     env.globals["asset_version"] = css_version()
+    # Default for templates not handed js_version explicitly (the cookie
+    # banner included by base.html is on every page).
+    env.globals["js_version"] = js_version()
     env.globals["js_importmap"] = js_importmap()
     env.globals["site_url"] = SITE_URL
     env.globals["listmonk_form_action"] = listmonk_form_action(args.listmonk)
@@ -2398,8 +2402,10 @@ def main():
     # prod API. Local builds post straight at the dev Listmonk — no Worker,
     # so no widget is rendered and the JS token check is skipped.
     env.globals["turnstile_enabled"] = args.listmonk != "local"
-    # Analytics (GA4 + Meta Pixel) snippets are baked at build time; local
-    # builds into the repo root stay tracking-free (see analytics_enabled()).
+    # Analytics (GA4 + Meta Pixel) are consent-gated: base.html only queues
+    # gtag() calls and static/js/cookie-consent.js loads the vendor scripts
+    # after opt-in. Local builds into the repo root stay tracking-free (see
+    # analytics_enabled()) and load nothing even after "Accept".
     # The same value is exposed to every template as a JS global —
     # window.SPANIFIED_ANALYTICS in templates/base.html — because
     # static/js/*.js are copied verbatim (STATIC_COPY) and never rendered.
