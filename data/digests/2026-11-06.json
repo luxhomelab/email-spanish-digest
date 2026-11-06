@@ -1,0 +1,170 @@
+{
+  "items": [
+    {
+      "title": "Minimum-wage tax deduction would rise under government plan",
+      "body": "The government proposes raising the SMI (minimum wage) to 18,004 euros a year in 2027, up 5.3%. A planned IRPF (personal income tax) deduction rise from around 590 to 1,030 euros would keep minimum-wage earners from paying income tax. Neither change is approved; the tax plan would need Congress's backing.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-06/hacienda-actualizara-la-deduccion-del-salario-minimo-hasta-los-1030-euros-para-que-sus-perceptores-no-paguen-irpf.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Rental listings fall 19% as decree vote approaches",
+      "body": "Idealista says rental listings fell 19% in a month and links the drop to landlords' uncertainty over rental decrees. Redrafted decrees are in force after Congress rejected earlier versions, but they face a validation vote on November 12. The loss of 26,531 listings leaves tenants with fewer options.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/11/05/6aec79fbe4d4d804488b4579.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Renfe strikes remain set for November 10 and 12",
+      "body": "Semaf drivers' union keeps its Renfe strikes on November 10 and 12 after talks made no progress. It says delayed railway safety working groups cause the dispute; Renfe says it met its commitments. Economy Minister Carlos Cuerpo, who handles Transport for now, called new talks for Friday, November 6.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/transportes-00343/noticia-maquinistas-mantienen-huelga-renfe-reunion-avances-cuerpo-cita-manana-20261105191500.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Self-employed module tax thresholds extended for 2027",
+      "body": "A ministerial order published on November 5 extends the module tax system's current thresholds into 2027. Eligible self-employed workers keep the 250,000-euro annual turnover limit and 5% net-income reduction for IRPF (personal income tax). Simplified VAT rules also continue.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/hacienda-mantiene-2027-umbrales-permiten-autonomos-tributar-modulos_1_13639654.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Closing Spain's housing gap would cost 11.2%–14% of GDP",
+      "body": "Building the 750,000 homes Spain lacks, a Banco de España estimate, would cost €189.68 billion to €236 billion, says consultancy Atlas Real Estate Analytics. That equals 11.2%–14% of 2025 GDP, excluding VAT and urbanisation costs. Madrid and Barcelona hold 30% of the shortage.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/vivienda/2026-11-06/acabar-con-el-deficit-de-750000-viviendas-que-calcula-el-banco-de-espana-exige-una-inversion-equivalente-al-11-del-pib.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Fiscal watchdog warns labour costs outpace productivity",
+      "body": "Fiscal watchdog AIReF projects labour costs rising 3.3% in both 2026 and 2027 while productivity per full-time worker stays flat. It warns that this could weaken competitiveness and add inflation pressure. Labour shortages already limit activity at 43.1% of firms, according to a Banco de España survey.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/11/06/6aeca2b9e85ece98598b458c.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Madrid exhibition opens a window into artists' studios",
+      "body": "Madrid painter Teresa Moro's exhibition \"Colección particular, sin título\" runs at CentroCentro until April 18, 2027. After visiting more than 20 artists' studios, she painted objects that caught her eye. The show includes a painted illusion of a shelf, a blue door, and drawings.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/madrid/2026-11-06/que-esconden-estudios-artistas-madrilenos_4459757/"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Rail accident agency left with three investigators",
+      "body": "Accident investigation agency AITAT has only three investigators after more than half its seven specialists left. It is investigating deadly train crashes at Gelida, Adamuz, and Urda. On November 4, the EU Transport Commissioner said the EU Railway Agency will give technical help for the Urda inquiry.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/11/05/6aecf99ae4d4d854408b458b.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Madrid summit secures agreement despite diplomatic divisions",
+      "body": "The Ibero-American Summit in Madrid ended with a joint declaration by 22 countries, keeping the diplomatic forum going. About 10 heads of state and government attended. Argentina, Colombia, Costa Rica, and Paraguay distanced themselves from parts of the text; Honduras will host the next summit.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-11-06/la-cumbre-iberoamericana-garantiza-su-continuidad-a-pesar-de-la-ausencia-de-la-mayoria-de-lideres-en-madrid.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Six released after arrests in rail corruption inquiry",
+      "body": "Six people detained on November 5 in a public-works corruption inquiry were later released. They include Cristian Corvillo, Prime Minister Pedro Sánchez's former driver, and Andrea de la Torre, former minister José Luis Ábalos's partner. Investigators sought Adif contract files in the case, which remains secret.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/11/05/6aecd37921efa0f6278b4575.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-uco-lanza-operacion-nueva-pieza-secreta-caso-koldo-audiencia-nacional-20261105095740.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Competition regulator proposes opening unprotected land to building",
+      "body": "Competition regulator CNMC recommends allowing development on all unprotected land and simplifying planning to speed up housing construction. These are recommendations, not law; land reform remains blocked by political disagreement. Developers say building licences usually take 12 to 18 months.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/vivienda/2026-11-05/competencia-propone-convertir-en-urbanizable-todo-el-suelo-no-protegido-para-acelerar-la-construccion-de-vivienda.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Spain reaffirms Ukraine support as aid package announced",
+      "body": "Prime Minister Pedro Sánchez reaffirmed Spain's support for Ukraine and its EU membership bid at a November 5 meeting with Ukrainian President Volodímir Zelenski. Zelenski announced a new €437 million military aid package. They also discussed €570 million mobilised for reconstruction in 2026.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/sanchez-recibe-zelenski-moncloa-reafirma-apoyo-ucrania-ante-guerra-su-adhesion-ue_7057929_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Would you move cities to find a home? A) Yes B) No C) Maybe",
+  "subject": "Rental listings fall 19% as November 12 vote nears",
+  "variant": "The Spain update you actually need",
+  "headline": "The Spain update you actually need",
+  "date": "2026-11-06",
+  "engagement_source": "generated",
+  "generated_at": "2026-11-06T07:02:29.194705+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 718,
+    "items_selected_pass1": 15,
+    "fact_sheets_extracted": 15,
+    "items_after_importance_filter": 13,
+    "items_in_digest": 12
+  },
+  "selection_reasons": {},
+  "selection_sources": []
+}
