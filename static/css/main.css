@@ -4847,3 +4847,72 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
  .video-embed .ve-play { left: 10px; bottom: 10px; padding-right: 12px; font-size: 14px; }
  .video-embed .ve-play-icon { width: 30px; height: 30px; }
 }
+
+/* ---------- Cookie consent banner (partials/cookie-banner.html) ----------
+   A compact outlined strip, not a sheet: one sentence + one button row, so
+   on phones it covers ~110px of the bottom edge. The red/yellow flag edge on
+   the left echoes the site's heading stripes. Reject and Accept share one
+   style so neither is nudged (AEPD guidance). */
+.cookie-banner {
+ position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 1000;
+ max-width: 860px; margin: 0 auto; max-height: calc(100vh - 24px); overflow-y: auto;
+ display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px 20px;
+ padding: 12px 14px 12px 22px;
+ background: #ffffff; color: #3C4858;
+ border: 1.5px solid #1F2A37; border-radius: 10px;
+ box-shadow: 0 6px 20px rgba(31, 42, 55, 0.14);
+ background-image: linear-gradient(#AA151B 50%, #F1BF00 50%);
+ background-size: 5px 100%; background-repeat: no-repeat; background-position: left top;
+}
+.cookie-banner[hidden] { display: none; }
+.cookie-banner .cc-title {
+ position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+.cookie-banner .cc-text { font-size: 14px; line-height: 20px; margin: 0; }
+.cookie-banner a { color: #AA151B; text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
+.cookie-banner .cc-details { grid-column: 1 / -1; display: grid; gap: 8px; margin: 2px 0 0; padding-top: 10px; border-top: 1px solid #E3E8EE; }
+.cookie-banner .cc-details[hidden] { display: none; }
+.cookie-banner .cc-cat { display: flex; gap: 9px; align-items: flex-start; font-size: 13.5px; line-height: 19px; cursor: pointer; }
+.cookie-banner .cc-cat input { margin-top: 2px; width: 16px; height: 16px; flex: none; accent-color: #AA151B; }
+.cookie-banner .cc-cat input:disabled { cursor: default; }
+.cookie-banner .cc-cat strong { color: #1F2A37; }
+.cookie-banner .cc-actions { display: flex; align-items: center; gap: 8px; }
+/* With the details open the buttons drop under them, full row. */
+.cookie-banner.is-open .cc-actions { grid-column: 1 / -1; justify-content: flex-end; }
+.cookie-banner .cc-btn {
+ font: inherit; font-size: 14px; font-weight: 600; height: 38px; padding: 0 18px;
+ border-radius: 7px; border: 1.5px solid #AA151B; background: #AA151B; color: #ffffff; cursor: pointer;
+}
+.cookie-banner .cc-btn:hover { background: #8E1116; border-color: #8E1116; }
+/* Reject is ink, Accept is red: different colours, same size, weight and
+   contrast, both filled. A pale or outlined Reject would nudge toward Accept,
+   which the AEPD and EDPB treat as a dark pattern. */
+.cookie-banner .cc-btn[data-cc="reject"] { background: #1F2A37; border-color: #1F2A37; }
+.cookie-banner .cc-btn[data-cc="reject"]:hover { background: #34404F; border-color: #34404F; }
+.cookie-banner .cc-link {
+ font: inherit; font-size: 14px; font-weight: 600; height: 38px; padding: 0 6px;
+ background: none; border: 0; color: #1F2A37; cursor: pointer;
+ text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #9AA5B1;
+}
+.cookie-banner .cc-link:hover { text-decoration-color: #1F2A37; }
+.cookie-banner .cc-link[hidden] { display: none; }
+.cookie-banner .cc-btn:focus-visible, .cookie-banner .cc-link:focus-visible, .cookie-banner a:focus-visible {
+ outline: 2px solid #1F2A37; outline-offset: 2px;
+}
+@media (max-width: 640px) {
+ .cookie-banner { left: 8px; right: 8px; bottom: 8px; grid-template-columns: 1fr; gap: 10px; padding: 11px 12px 11px 19px; }
+ .cookie-banner .cc-text { font-size: 13.5px; line-height: 19px; }
+ .cookie-banner .cc-actions { justify-content: flex-start; }
+ .cookie-banner .cc-btn { flex: 1 1 0; padding: 0 10px; }
+}
+/* Cookie policy tables (templates/cookies.html) */
+.cc-table code { font-size: 12px; background: #F3F5F8; padding: 1px 4px; border-radius: 4px; }
+.cc-table { width: 100%; border-collapse: collapse; margin: 4px 0 12px; font-size: 14px; line-height: 20px; color: #3C4858; }
+.cc-table th, .cc-table td { text-align: left; vertical-align: top; padding: 8px 10px 8px 0; border-bottom: 1px solid #E3E8EE; }
+.cc-table th { font-weight: 600; color: var(--heading-color); }
+@media (max-width: 600px) {
+ .cc-table thead { display: none; }
+ .cc-table tr { display: block; padding: 8px 0; border-bottom: 1px solid #E3E8EE; }
+ .cc-table td { display: block; border: 0; padding: 2px 0; }
+ .cc-table td:first-child { font-weight: 600; }
+}

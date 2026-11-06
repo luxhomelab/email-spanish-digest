@@ -1,0 +1,32 @@
+{# Cookie consent banner (EU ePrivacy / Spain LSSI art. 22.2). Hidden by
+   default; static/js/cookie-consent.js reveals it when no valid choice is
+   stored and loads GA4 / Meta Pixel only after opt-in. Without JS no
+   non-essential cookie is ever set, so the banner stays hidden. Reject and
+   Accept are equal-weight buttons on the first layer, as the AEPD requires.
+   Compact by design: one short sentence + one button row, so on phones it
+   covers a strip at the bottom, not the page. #}
+<section id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cc-title" aria-describedby="cc-text" hidden>
+ <h2 id="cc-title" class="cc-title">Cookie choice</h2>
+ <p id="cc-text" class="cc-text">We’d like to use cookies for analytics and ad measurement, ours and our partners’. <a href="/cookies">Cookie policy</a></p>
+ <div class="cc-details" hidden>
+  <label class="cc-cat">
+   <input type="checkbox" checked disabled>
+   <span><strong>Necessary</strong> — always on: calculator and quiz state, your cookie choice, bot check on forms.</span>
+  </label>
+  <label class="cc-cat">
+   <input type="checkbox" data-cc-category="analytics">
+   <span><strong>Analytics</strong> — Google Analytics counts visits and popular pages.</span>
+  </label>
+  <label class="cc-cat">
+   <input type="checkbox" data-cc-category="marketing">
+   <span><strong>Marketing</strong> — Meta Pixel measures sign-ups from our Facebook and Instagram ads.</span>
+  </label>
+ </div>
+ <div class="cc-actions">
+  <button type="button" class="cc-btn" data-cc="reject">Reject</button>
+  <button type="button" class="cc-btn" data-cc="accept">Accept</button>
+  <button type="button" class="cc-link" data-cc="customize">Settings</button>
+  <button type="button" class="cc-link" data-cc="save" hidden>Save choices</button>
+ </div>
+</section>
+<script type="module" src="/static/js/cookie-consent.js?v={{ js_version }}"></script>

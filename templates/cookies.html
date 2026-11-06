@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block body_class %} class="page-legal"{% endblock %}
+{% block title %}Cookie Policy — Spanified{% endblock %}
+{% block description %}<meta name="description" content="Cookie Policy of Spanified — which cookies and browser storage the site uses, which need your consent, and how to change your choice.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cookie Policy — Spanified">
+<meta property="og:description" content="Which cookies Spanified uses and how to change your choice.">
+<meta property="og:url" content="{{ site_url }}/cookies">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cookie Policy — Spanified">
+<meta name="twitter:description" content="Which cookies Spanified uses and how to change your choice.">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/cookies">{% endblock %}
+{% block content %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebPage",
+ "name": "Cookie Policy — Spanified",
+ "url": "{{ site_url }}/cookies",
+ "description": "Which cookies and browser storage Spanified uses, which need your consent, and how to change your choice.",
+ "inLanguage": "en",
+ "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}}
+</script>
+ <div class="legal">
+  <h1>Cookie Policy</h1>
+  <p class="subtitle">Effective: November 6, 2026. Analytics and ad cookies load only if you say yes.</p>
+
+  <div class="card">
+   <h2>What cookies are</h2>
+   <p>Cookies and similar technologies (such as your browser's local storage) are small pieces of data a website keeps on your device. EU law (the ePrivacy Directive, and in Spain article 22.2 of the LSSI) lets a site use the ones it strictly needs without asking. Everything else requires your consent first.</p>
+  </div>
+
+  <div class="card" id="settings">
+   <h2>Your choice</h2>
+   <p>The first time you visit, a banner asks whether we may use analytics and marketing cookies. “Reject all” is just as easy as “Accept all”, and nothing optional loads until you choose. We remember your answer for 12 months, then ask again.</p>
+   <p>You can change or withdraw your consent at any time: <a href="#settings" data-cookie-settings>open cookie settings</a> (the same link is in the footer of every page). If you withdraw, we delete the analytics and marketing cookies on our domain and reload the page.</p>
+  </div>
+
+  <div class="card">
+   <h2>Strictly necessary (always on)</h2>
+   <p>These keep features you asked for working. They never leave your browser except where noted, and they are not used for tracking.</p>
+   <table class="cc-table">
+    <thead><tr><th>Name</th><th>Type</th><th>Purpose</th><th>Kept</th></tr></thead>
+    <tbody>
+     <tr><td><code>spanified_cookie_consent</code></td><td>Local storage</td><td>Remembers your cookie choice, including a refusal</td><td>12 months</td></tr>
+     <tr><td><code>*-calculator-state</code></td><td>Local storage</td><td>Restores the inputs you typed into a calculator</td><td>Until you clear it</td></tr>
+     <tr><td><code>spanified_quiz_*</code></td><td>Local storage</td><td>Keeps your quiz score so the result page can show it</td><td>Until you clear it</td></tr>
+     <tr><td><code>spanified_subscribed</code></td><td>Local storage</td><td>Remembers that you subscribed (with the email you entered) so quiz results unlock</td><td>Until you clear it</td></tr>
+     <tr><td><code>spanified:podcast:*</code></td><td>Local storage</td><td>Resumes an episode where you stopped</td><td>Until the episode ends</td></tr>
+     <tr><td>Cloudflare Turnstile</td><td>Third party (Cloudflare)</td><td>Bot check on subscribe forms. Runs only when you subscribe and is not used for tracking.</td><td>Session</td></tr>
+    </tbody>
+   </table>
+  </div>
+
+  <div class="card">
+   <h2>Analytics (needs consent)</h2>
+   <table class="cc-table">
+    <thead><tr><th>Name</th><th>Provider</th><th>Purpose</th><th>Kept</th></tr></thead>
+    <tbody>
+     <tr><td><code>_ga</code></td><td>Google Analytics 4</td><td>Tells visits apart so we can count readers</td><td>2 years</td></tr>
+     <tr><td><code>_ga_*</code></td><td>Google Analytics 4</td><td>Keeps the state of the current visit</td><td>2 years</td></tr>
+    </tbody>
+   </table>
+   <p>Provider: Google Ireland Ltd. Data may be processed in the United States under the EU–US Data Privacy Framework. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>.</p>
+  </div>
+
+  <div class="card">
+   <h2>Marketing (needs consent)</h2>
+   <table class="cc-table">
+    <thead><tr><th>Name</th><th>Provider</th><th>Purpose</th><th>Kept</th></tr></thead>
+    <tbody>
+     <tr><td><code>_fbp</code></td><td>Meta Pixel</td><td>Measures how many sign-ups come from our Facebook and Instagram ads</td><td>3 months</td></tr>
+     <tr><td><code>_fbc</code></td><td>Meta Pixel</td><td>Stores the ad click that brought you here</td><td>3 months</td></tr>
+    </tbody>
+   </table>
+   <p>Provider: Meta Platforms Ireland Ltd. Data may be processed in the United States under the EU–US Data Privacy Framework. See <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta's privacy policy</a>.</p>
+  </div>
+
+  <div class="card">
+   <h2>Embedded videos</h2>
+   <p>Videos on calculator pages show only a preview image until you press play. Only then does the player load from YouTube's privacy-enhanced domain (youtube-nocookie.com), and YouTube may store data on your device under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>. Pressing play is your choice to load it.</p>
+  </div>
+
+  <div class="card">
+   <h2>Questions</h2>
+   <p>See our <a href="/privacy">Privacy Policy</a> for your rights under the GDPR, or write to <a href="mailto:support@spanified.com">support@spanified.com</a>. You can also delete cookies and local storage at any time in your browser settings.</p>
+  </div>
+ </div>
+{% endblock %}
