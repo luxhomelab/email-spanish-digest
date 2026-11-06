@@ -4778,6 +4778,16 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 }
 .video-embed .ve-caption a { color: #AA151B; }
 .calc .video-embed { margin: 16px 0 0 0; }
+/* Calculator cards run up to 1200px wide, where a full-width player dwarfs
+   the figures around it. From tablet up the player caps at 480px with the
+   caption beside it; phones keep the full-width stack. */
+@media (min-width: 768px) {
+ body.page-calculator .video-embed {
+  display: grid; grid-template-columns: minmax(0, 480px) minmax(0, 1fr);
+  align-items: center; column-gap: 24px;
+ }
+ body.page-calculator .video-embed .ve-caption { margin-top: 0; max-width: 36ch; font-size: 15px; }
+}
 @media (max-width: 480px) {
  .video-embed .ve-frame, .video-embed .ve-iframe { border-radius: 8px; }
  .video-embed .ve-play { left: 10px; bottom: 10px; padding-right: 12px; font-size: 14px; }
