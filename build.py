@@ -1913,7 +1913,7 @@ def render_categories(env, digests):
 # Source files (git pathspecs, repo-relative) behind each calculator page.
 # Their newest commit date becomes the page's sitemap lastmod.
 CALC_SOURCES = {
-    "net-salary": ["templates/calculator-net-salary.html", "static/js/net-salary*.js"],
+    "net-salary": ["templates/calculator-net-salary.html", "static/js/net-salary*.js", "data/videos.json"],
     "autonomo-tax": ["templates/calculator-autonomo.html", "static/js/autonomo*.js", "data/videos.json"],
     "property-buying-cost": ["templates/calculator-property-buying-cost.html", "static/js/property-buying-cost*.js"],
     "rental-yield": ["templates/calculator-rental-yield.html", "static/js/rental-yield*.js"],
@@ -1922,7 +1922,7 @@ CALC_SOURCES = {
 # Amount pages also depend on their own template, page list and grid script.
 CALC_AMOUNT_SOURCES = {
     "net-salary": ["templates/calculator-net-salary-amount.html", "data/net-salary-pages.json",
-                   "scripts/net-salary-grid.mjs"],
+                   "scripts/net-salary-grid.mjs", "data/videos.json"],
     "autonomo-tax": ["templates/calculator-autonomo-amount.html", "data/autonomo-pages.json",
                      "scripts/autonomo-grid.mjs", "data/videos.json"],
     "rental-yield": ["templates/calculator-rental-yield-amount.html", "data/rental-yield-pages.json",

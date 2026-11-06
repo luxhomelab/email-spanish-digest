@@ -57,7 +57,7 @@ def test_seo_basics(site):
         amount = re.search(r"net-salary-(\d+)-euros", slug).group(1)
         assert f"€{int(amount):,}" in h1
         blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S)
-        assert len(blocks) == 2
+        assert len(blocks) == 3  # page schema, FAQ, VideoObject
         for b in blocks:
             json.loads(b)
 

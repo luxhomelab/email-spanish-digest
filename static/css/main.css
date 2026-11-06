@@ -834,6 +834,13 @@ body.page-quiz-flow .breadcrumbs { margin-bottom: 12px; }
 .byline { font-size: 13px; color: #A0998E; text-align: center; padding: 8px 24px 0 24px; }
 .byline a { color: #B91C1C; text-decoration: none; }
 .byline a:hover { text-decoration: underline; }
+/* Editor photo inside article/digest bylines. */
+.byline-avatar {
+ display: inline-block; width: 24px; height: 24px; border-radius: 50%;
+ object-fit: cover; vertical-align: middle; margin: -3px 8px 0 0; background: #E9E6E1;
+}
+body.page-article .byline-author { display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+body.page-article .byline-avatar { width: 28px; height: 28px; margin: 0; }
 .about { max-width: 1200px; width: 100%; margin: 0 auto; }
 .about h1 {
  font-family: var(--font-display);
@@ -1475,9 +1482,7 @@ body.page-subscribe .sub-editor {
 body.page-subscribe .sub-editor-top { display: flex; gap: 14px; align-items: center; margin-bottom: 12px; }
 body.page-subscribe .sub-editor-avatar {
  flex: 0 0 auto; width: 52px; height: 52px; border-radius: 50%;
- display: inline-flex; align-items: center; justify-content: center;
- background: linear-gradient(135deg, #AA151B 0%, #7E1015 100%);
- color: #ffffff; font-weight: 800; font-size: 18px; letter-spacing: 0.5px;
+ display: block; object-fit: cover; background: #E9E6E1;
 }
 body.page-subscribe .sub-editor-name { font-size: 18px; font-weight: 700; margin: 0; }
 body.page-subscribe .sub-editor .sub-editor-name a { color: #1A1A2E; }
@@ -1681,6 +1686,11 @@ body.page-calculator .calc-share { margin-top: 20px; text-align: left; }
 body.page-calculator .calc-share .share-cta { font-size: 14px; font-weight: 600; color: #3C4858; margin-bottom: 10px; }
 body.page-calculator .share-wrap { margin-top: 12px; }
 body.page-editor .editor { max-width: 1200px; width: 100%; margin: 0 auto; }
+body.page-editor .editor-photo {
+ display: block; width: 160px; height: 160px; margin: 8px auto 20px auto;
+ border-radius: 50%; object-fit: cover; background: #E9E6E1;
+ box-shadow: 0 0 0 4px #FFFDF8, 0 0 0 6px #F1BF00;
+}
 body.page-editor .editor h1 { text-align: center; }
 body.page-editor .editor .subtitle { color: #6C7A89; font-size: 16px; margin-bottom: 28px; text-align: center; }
 body.page-editor .editor .card { padding: 32px; text-align: left; margin-bottom: 20px; }
@@ -4617,7 +4627,7 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 .hm-link-inline { font-weight: 700; white-space: nowrap; }
 .hm-editor-id { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
 .hm .hm-editor-id p { margin: 0; }
-.hm-avatar { flex: none; width: 46px; height: 46px; border-radius: 50%; background: var(--hm-ink); color: #fff; display: grid; place-items: center; font-weight: 700; }
+.hm-avatar { flex: none; width: 46px; height: 46px; border-radius: 50%; background: #E9E6E1; object-fit: cover; display: block; }
 .hm-editor-name { display: block; font-weight: 700; color: var(--hm-ink); font-size: 18px; }
 .hm-editor-role { display: block; font-size: 15px; color: var(--hm-muted); line-height: 1.4; }
 .hm .hm-editor-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0; padding-top: 12px; border-top: 1px solid #E3D6B8; }

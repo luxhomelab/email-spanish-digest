@@ -31,7 +31,7 @@
  "description": "Spain Daily Digest for {{ digest.date }} — the day's top stories from Spain, summarized in English.",
  "datePublished": "{{ pub_date(digest.date) }}",
  "dateModified": "{{ pub_date(digest.date) }}",
- "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor", "jobTitle": "Founder and Editor", "sameAs": ["https://www.linkedin.com/in/dshvechikov"]},
+ "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor", "jobTitle": "Founder and Editor", "image": "{{ site_url }}/static/img/editor/dmytro-shvechikov-480.jpg", "sameAs": ["https://www.linkedin.com/in/dshvechikov"]},
  "publisher": {"@type": "Organization", "name": "Spanified", "logo": {"@type": "ImageObject", "url": "{{ site_url }}/logo.jpg", "width": 640, "height": 640}},
  "inLanguage": "en",
  "wordCount": {{ digest.word_count }},
@@ -47,7 +47,7 @@
    <h1 class="email-red-band">Spain Daily Digest: <time datetime="{{ pub_date(digest.date) }}">{{ digest.date_display }}</time></h1>
    <div class="email-gold-band"></div>
    <div class="email-subheader">{{ digest.headline }}</div>
-   <div class="byline">Edited by <a href="/editor">Dmytro Shvechikov</a> · {{ digest.date_display }} · {{ digest.story_count }} {% if digest.story_count == 1 %}story{% else %}stories{% endif %}</div>
+   <div class="byline"><img class="byline-avatar" src="/static/img/editor/dmytro-shvechikov-96.webp?v={{ asset_version }}" srcset="/static/img/editor/dmytro-shvechikov-48.webp?v={{ asset_version }} 48w, /static/img/editor/dmytro-shvechikov-96.webp?v={{ asset_version }} 96w, /static/img/editor/dmytro-shvechikov-160.webp?v={{ asset_version }} 160w" sizes="24px" alt="" width="24" height="24" decoding="async">Edited by <a href="/editor">Dmytro Shvechikov</a> · {{ digest.date_display }} · {{ digest.story_count }} {% if digest.story_count == 1 %}story{% else %}stories{% endif %}</div>
    {% if podcast %}{% include "partials/podcast-player.html" %}{% endif %}
 
    <div class="email-body">
