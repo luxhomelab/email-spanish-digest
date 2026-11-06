@@ -1670,7 +1670,7 @@ def render_quizzes(env, proof=None, latest_url=None):
             with open(dest, "w", encoding="utf-8") as out:
                 out.write(output)
             print(f"  wrote {dest_path}")
-def attach_related(digests, limit=3):
+def attach_related(digests, limit=2):
     """Attach same-category 'More news' links to every story.
 
     Only stories from strictly older digests (newest first,
@@ -1793,13 +1793,18 @@ STORY_TOOLS = [
 ]
 
 
-def attach_tools(digests, tools=STORY_TOOLS, per_digest=3):
+def attach_tools(digests, tools=STORY_TOOLS, per_digest=3, amount_pages=None):
     """Attach a 'Calculator' link to stories whose topic a calculator covers.
 
     Matching works like attach_guides (whole-word keywords, optional
     category filter, most distinct hits wins). Within one edition each
     calculator is linked at most once and at most `per_digest` stories get
     a link, in story order. Others get None.
+
+    With `amount_pages` (see story_amount_pages), a story that quotes a
+    euro amount in the right context links to the closest programmatic
+    amount page (e.g. /calculators/net-salary-1200-euros-per-month)
+    instead of the generic calculator.
     """
     patterns = _keyword_patterns(tools, "keywords", "categories")
     for digest in digests:
@@ -1812,9 +1817,150 @@ def attach_tools(digests, tools=STORY_TOOLS, per_digest=3):
             if not tool:
                 continue
             used.add(tool["url"])
+            text = f"{item.get('title', '')} {item.get('body', '')}"
+            amount_link = _amount_page_link(text, (amount_pages or {}).get(tool["url"]))
+            if amount_link:
+                item["tool"] = {**amount_link, "base": tool["url"]}
+                continue
             anchors = tool["anchors"]
             n = int(hashlib.md5(f"{digest.get('date', '')}{tool['url']}".encode()).hexdigest(), 16)
             item["tool"] = {"url": tool["url"], "anchor": anchors[n % len(anchors)]}
+
+
+# Euro amounts as written in digests: "€1,184", "€ 30,000", "16,576 euros".
+# Millions/billions and "k" shorthands are skipped.
+_EURO_AMOUNT_RE = re.compile(
+    r"(?:€\s?(\d{1,3}(?:,\d{3})+|\d+)(?![\d,])(?:\.\d+)?(?![\d.])(?!\s?(?:bn|billion|million|mn|m\b|k\b))"
+    r"|\b(\d{1,3}(?:,\d{3})+|\d+)(?![\d,])(?:\.\d+)?\s?euros?\b)",
+    re.I,
+)
+_SALARY_CTX = r"\b(?:salary|salaries|wage|wages|SMI|earn|earns|earning|earnings|gross|paid|payslip|pay)\b"
+_AUTONOMO_CTX = r"\b(?:revenue|turnover|invoic\w*|bill(?:s|ing)?|earn|earns|earning|earnings|income|take[- ]home)\b"
+_PROPERTY_CTX = r"\b(?:flat|flats|home|homes|house|houses|property|properties|apartment|apartments|price|prices|costs?)\b"
+
+
+def story_amount_pages(ns=None, au=None, ry=None):
+    """Amount-page groups per calculator URL, for attach_tools.
+
+    Each group: amounts with programmatic pages, the range of quoted
+    amounts it accepts, a context regex that must appear near the amount,
+    and how to build the URL and anchor text.
+    """
+    ns = ns or load_net_salary_pages()
+    au = au or load_autonomo_pages()
+    ry = ry or load_rental_yield_pages()
+    calc = "/calculators/"
+    return {
+        "/calculators/net-salary": [
+            {"amounts": ns["monthly"], "range": (600, 8000), "context": _SALARY_CTX,
+             "url": lambda a: calc + net_salary_slug("monthly", a),
+             "anchor": lambda a: f"take-home pay on {eur(a)} gross a month"},
+            {"amounts": ns["annual"], "range": (9000, 150000), "context": _SALARY_CTX,
+             "url": lambda a: calc + net_salary_slug("annual", a),
+             "anchor": lambda a: f"net pay on a {eur(a)} gross salary in Spain"},
+        ],
+        "/calculators/autonomo-tax": [
+            {"amounts": au["monthly"], "range": (800, 6000), "context": _AUTONOMO_CTX,
+             "url": lambda a: calc + autonomo_slug("monthly", a),
+             "anchor": lambda a: f"what an autónomo must bill to take home {eur(a)} a month"},
+            {"amounts": au["revenue"], "range": (10000, 120000), "context": _AUTONOMO_CTX,
+             "url": lambda a: calc + autonomo_slug("revenue", a),
+             "anchor": lambda a: f"autónomo net pay on {eur(a)} a year"},
+        ],
+        "/calculators/rental-yield": [
+            {"amounts": ry["prices"], "range": (90000, 1100000), "context": _PROPERTY_CTX,
+             "url": lambda a: calc + rental_yield_slug(a),
+             "anchor": lambda a: f"rental yield on a {eur(a)} property in Spain"},
+        ],
+    }
+
+
+def _amount_page_link(text, groups, tolerance=0.1, window=70):
+    """Link to the amount page closest (within `tolerance`) to the first
+    euro amount in `text` that falls in a group's range and has that
+    group's context words within `window` characters. None otherwise."""
+    if not groups:
+        return None
+    for m in _EURO_AMOUNT_RE.finditer(text):
+        value = int((m.group(1) or m.group(2)).replace(",", ""))
+        near = text[max(0, m.start() - window):m.end() + window]
+        for g in groups:
+            lo, hi = g["range"]
+            if not lo <= value <= hi or not re.search(g["context"], near, re.I):
+                continue
+            best = min(g["amounts"], key=lambda a: abs(a - value))
+            if abs(best - value) <= tolerance * value:
+                return {"url": g["url"](best), "anchor": g["anchor"](best)}
+    return None
+
+
+# Calculator cards for the "Tools and guides" blocks on digests and
+# category pages (same copy as the homepage cards).
+CALCULATOR_CARDS = {
+    "/calculators/net-salary": ("Net Salary Calculator", "Your payslip after IRPF and Social Security, and the Renta refund."),
+    "/calculators/autonomo-tax": ("Autónomo Tax Calculator", "Social security quota and IRPF for the self-employed."),
+    "/calculators/property-buying-cost": ("Property Buying Cost Calculator", "ITP, IVA/IGIC, AJD, notary and registry fees by region."),
+    "/calculators/rental-yield": ("Rental Yield Calculator", "Net yield, cash flow and IRR with resident and non-resident taxes."),
+    "/calculators/electricity-bill": ("Electricity Bill Calculator", "PVPC and tariff comparison for your monthly bill."),
+}
+
+# Calculators and guides that fit each story category, best first.
+CATEGORY_HUBS = {
+    "property": ["/calculators/property-buying-cost", "/articles/spain-property-guide", "/calculators/rental-yield"],
+    "housing": ["/articles/spain-property-guide", "/calculators/rental-yield", "/calculators/property-buying-cost"],
+    "work": ["/calculators/net-salary", "/calculators/autonomo-tax"],
+    "taxes": ["/calculators/net-salary", "/calculators/autonomo-tax", "/calculators/property-buying-cost"],
+    "economy": ["/calculators/net-salary", "/calculators/electricity-bill", "/articles/switching-electricity-provider-spain"],
+    "politics": ["/articles/how-spain-is-governed", "/articles/how-spain-votes"],
+    "visa": ["/calculators/autonomo-tax", "/calculators/net-salary", "/articles/how-spain-is-governed"],
+    "migration": ["/calculators/net-salary", "/calculators/autonomo-tax"],
+}
+
+
+def hub_card(url, articles_by_url):
+    """Card dict for a calculator or article URL, or None if unknown."""
+    if url in CALCULATOR_CARDS:
+        title, desc = CALCULATOR_CARDS[url]
+        return {"url": url, "title": title, "desc": desc, "kind": "Calculator"}
+    a = articles_by_url.get(url)
+    if a:
+        return {"url": url, "title": a["title"], "desc": f"{a['reading_time']} min read", "kind": "Guide"}
+    return None
+
+
+def category_hub_cards(slug, articles_by_url):
+    return [c for c in (hub_card(u, articles_by_url) for u in CATEGORY_HUBS.get(slug, [])) if c]
+
+
+def attach_digest_hubs(digests, articles, limit=3):
+    """Pick up to `limit` calculator/guide cards for the end of each edition.
+
+    Candidates come from CATEGORY_HUBS for the edition's categories, most
+    frequent category first. Pages already linked from a story line
+    (guide or tool) are skipped so the block adds new link targets.
+    """
+    by_url = {a["url"]: a for a in articles}
+    for digest in digests:
+        stories = digest.get("stories", [])
+        linked = set()
+        for item in stories:
+            if item.get("guide"):
+                linked.add(item["guide"]["url"])
+            if item.get("tool"):
+                # Amount pages count as their base calculator.
+                linked.add(item["tool"].get("base") or item["tool"]["url"])
+        counts = Counter((s.get("category") or "").lower() for s in stories)
+        cards = []
+        for cat, _ in counts.most_common():
+            for url in CATEGORY_HUBS.get(cat, []):
+                if len(cards) >= limit:
+                    break
+                if url in linked or any(c["url"] == url for c in cards):
+                    continue
+                card = hub_card(url, by_url)
+                if card:
+                    cards.append(card)
+        digest["hub_cards"] = cards
 
 
 def share_links(abs_url, text, long_text=None):
@@ -1983,8 +2129,9 @@ def collect_categories(digests):
     return cats
 
 
-def render_categories(env, digests):
+def render_categories(env, digests, articles=()):
     cats = collect_categories(digests)
+    articles_by_url = {a["url"]: a for a in articles}
     cat_dir = os.path.join(OUT_DIR, "category")
     os.makedirs(cat_dir, exist_ok=True)
     # Clear previously generated pages so removed categories don't linger.
@@ -2008,6 +2155,7 @@ def render_categories(env, digests):
             meta_title=meta_title,
             meta_description=meta_desc,
             stories=stories,
+            hub_cards=category_hub_cards(slug, articles_by_url),
             crumbs=crumbs,
         )
         dest = os.path.join(cat_dir, f"{slug}.html")
@@ -2504,7 +2652,8 @@ def main():
     digests = [digest_context(d) for d in load_digests()]
     articles = load_articles()
     attach_guides(digests, articles)
-    attach_tools(digests)
+    attach_tools(digests, amount_pages=story_amount_pages())
+    attach_digest_hubs(digests, articles)
     episodes = load_podcast_episodes()
 
     print("Copying static assets...")
@@ -2530,7 +2679,7 @@ def main():
     render_article_pages(env, articles)
 
     print("Building category pages...")
-    categories = render_categories(env, digests)
+    categories = render_categories(env, digests, articles)
 
     print("Building net salary amount pages...")
     salary_pages = render_net_salary_pages(env)

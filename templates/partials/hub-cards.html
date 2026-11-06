@@ -1,0 +1,9 @@
+{# Calculator/guide cards. Expects `hub_cards` [{url, title, desc, kind}] and `hub_heading`. #}
+{% if hub_cards %}
+<section class="hub-cards" aria-labelledby="hub-cards-title" data-pagefind-ignore>
+ <h2 id="hub-cards-title" class="hub-cards-title">{{ hub_heading }}</h2>
+ <ul>
+{% for c in hub_cards %}  <li><a href="{{ c.url }}"><span class="hub-kind">{{ c.kind }}</span><span class="hub-title">{{ c.title }}</span><span class="hub-desc">{{ c.desc }}</span></a></li>
+{% endfor %} </ul>
+</section>
+{% endif %}
