@@ -70,6 +70,9 @@
      {% if item.guide %}
      <div class="story-guide" data-pagefind-ignore>Explainer: <a href="{{ item.guide.url }}">{{ item.guide.title }}</a></div>
      {% endif %}
+     {% if item.tool %}
+     <div class="story-guide story-tool" data-pagefind-ignore>Calculator: <a href="{{ item.tool.url }}">{{ item.tool.anchor }}</a></div>
+     {% endif %}
      {% if item.related %}
      <div class="story-related" data-pagefind-ignore>
       <div class="story-related-label">More news on this topic:</div>
@@ -89,6 +92,7 @@
    <div class="email-footer">
     <div class="share-cta">Enjoyed this digest? Share it with a friend.</div>
     {% with share=digest.share %}{% include "partials/share.html" %}{% endwith %}
+    {% with hub_cards=digest.hub_cards, hub_heading="Tools and guides for today's news" %}{% include "partials/hub-cards.html" %}{% endwith %}
     <div class="ai-disclaimer">This digest is based on real news, created with the help of AI and reviewed by a human.</div>
     {% if day_nav.older or day_nav.newer %}
     <nav class="day-nav" aria-label="More digests">

@@ -26,6 +26,7 @@
   <p class="cat-sub">{{ stories|length }} news · newest first · updated every morning</p>
   {% if category_description %}<p class="cat-desc">{{ category_description }}</p>{% endif %}
   <a class="cat-subscribe" href="/subscribe">Get {{ category_name|lower }} news in your inbox every morning →</a>
+  {% with hub_heading=category_name ~ " in Spain: calculators and guides" %}{% include "partials/hub-cards.html" %}{% endwith %}
   {% for s in stories %}
   <article class="cat-item">
    <div class="cat-meta">{{ s.date_display }}</div>

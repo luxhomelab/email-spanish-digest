@@ -7,6 +7,8 @@ date: 2026-10-02
 author: Dmytro Shvechikov
 excerpt: A year after signing with Naturgy, a 20% price hike pushed me to test switching providers on myself — here's what actually happened.
 image_alt: Spanish electricity bill showing the CNMC comparator QR code and link
+story_keywords: electricity bill, electricity bills, power bill, power bills, electricity price, electricity prices, price of electricity, electricity tariff, electricity tariffs, PVPC, regulated tariff, electricity provider, electricity providers, electricity company, electricity companies, energy bill, energy bills
+story_categories: economy, housing, property, events, health, taxes
 ---
 
 A year after I signed my electricity contract with Naturgy, the email arrived: a 10% price increase.

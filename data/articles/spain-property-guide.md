@@ -8,6 +8,8 @@ updated: 2026-11-04
 author: Dmytro Shvechikov
 excerpt: Everything about property in Spain in one place: how to find a flat and check the price, which documents to look at, how contracts and mortgages work, and what buying, owning and selling cost.
 image_alt: Cover of the guide to buying a flat in Spain
+story_keywords: house prices, home prices, housing prices, property prices, property market, housing market, mortgage, mortgages, homebuyers, home buyers, buying a home, buy a home, first home, nota simple, arras, ITP, property transfer tax, IBI, plusvalía, plusvalia, non-resident buyers, foreign buyers
+story_categories: property, housing, economy, taxes
 ---
 
 I bought a flat in Spain myself. I searched, haggled, got a mortgage as an autónomo, and six months after the purchase I was chipping in with the neighbours to repair the lifts. This guide covers the whole path: how much money you really need, how to find a flat without overpaying, what to check in the documents, how the deposit, mortgage and taxes work, and then what owning and selling cost.
