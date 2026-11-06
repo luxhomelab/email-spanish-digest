@@ -18,13 +18,171 @@
     "caption": "Autónomo taxes in 2026: what a freelancer in Spain really pays",
     "description": "What a self-employed worker in Spain pays in 2026: the income-based Social Security quota, tarifa plana, IRPF and worked examples at different revenues.",
     "upload_date": "2026-11-02T09:00:27-08:00",
-    "duration": 1045
+    "duration": 1045,
+    "chapters": [
+      {
+        "t": 0,
+        "title": "Autónomo taxes in Spain"
+      },
+      {
+        "t": 33,
+        "title": "The three bills: Social Security, IRPF, IVA"
+      },
+      {
+        "t": 71,
+        "title": "Everything starts from your profit"
+      },
+      {
+        "t": 91,
+        "title": "Social Security: 15 brackets"
+      },
+      {
+        "t": 136,
+        "title": "The yearly regularización"
+      },
+      {
+        "t": 166,
+        "title": "IRPF: from profit to taxable income"
+      },
+      {
+        "t": 218,
+        "title": "IRPF brackets and the personal allowance"
+      },
+      {
+        "t": 259,
+        "title": "Myth: a higher bracket taxes everything"
+      },
+      {
+        "t": 313,
+        "title": "Why your region matters"
+      },
+      {
+        "t": 344,
+        "title": "Example: €32,000 in Madrid, in the calculator",
+        "highlight": true
+      },
+      {
+        "t": 424,
+        "title": "Withholding and form 130"
+      },
+      {
+        "t": 478,
+        "title": "The Renta settles it"
+      },
+      {
+        "t": 522,
+        "title": "A private pension plan: up to €5,750 off"
+      },
+      {
+        "t": 584,
+        "title": "IVA: who really pays it"
+      },
+      {
+        "t": 633,
+        "title": "IVA exceptions: EU, abroad, Canaries"
+      },
+      {
+        "t": 704,
+        "title": "What you can deduct"
+      },
+      {
+        "t": 758,
+        "title": "Home office, meals and the car"
+      },
+      {
+        "t": 805,
+        "title": "Invoices and records"
+      },
+      {
+        "t": 853,
+        "title": "Tarifa plana and company directors"
+      },
+      {
+        "t": 889,
+        "title": "Second jobs, family, stopping"
+      },
+      {
+        "t": 931,
+        "title": "The autónomo colaborador, in detail"
+      },
+      {
+        "t": 995,
+        "title": "The tax calendar"
+      },
+      {
+        "t": 1034,
+        "title": "Summary"
+      }
+    ]
   },
   "_ZzFIR-Zl5A": {
     "title": "Salary Taxes in Spain 2026: IRPF, Social Security and Your Nómina",
     "caption": "Salary taxes in Spain in 2026: from gross pay to your nómina",
     "description": "How a Spanish salary goes from gross to net in 2026: Social Security, IRPF withholding, 12 or 14 payslips and the annual Renta, with one worked salary.",
     "upload_date": "2026-11-05T09:00:59-08:00",
-    "duration": 673
+    "duration": 673,
+    "chapters": [
+      {
+        "t": 0,
+        "title": "Salary taxes in Spain: gross to net"
+      },
+      {
+        "t": 31,
+        "title": "From gross to net: what comes off"
+      },
+      {
+        "t": 67,
+        "title": "12 or 14 payslips"
+      },
+      {
+        "t": 116,
+        "title": "Social Security: about 6.5% of your gross"
+      },
+      {
+        "t": 163,
+        "title": "The ceiling and the solidarity contribution"
+      },
+      {
+        "t": 196,
+        "title": "IRPF: from gross to taxable base"
+      },
+      {
+        "t": 233,
+        "title": "State brackets and the personal minimum"
+      },
+      {
+        "t": 291,
+        "title": "Myth: a higher bracket taxes everything"
+      },
+      {
+        "t": 328,
+        "title": "Why your region matters"
+      },
+      {
+        "t": 399,
+        "title": "Example: €30,000 in Madrid, in the calculator",
+        "highlight": true
+      },
+      {
+        "t": 455,
+        "title": "The retención on your payslip"
+      },
+      {
+        "t": 524,
+        "title": "The Renta settles it"
+      },
+      {
+        "t": 581,
+        "title": "Flexible pay and pension plans"
+      },
+      {
+        "t": 633,
+        "title": "What the company really pays"
+      },
+      {
+        "t": 661,
+        "title": "Summary"
+      }
+    ]
   }
 }
