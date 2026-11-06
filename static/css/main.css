@@ -1185,6 +1185,7 @@ body.page-digest .story-guide {
 }
 body.page-digest .story-guide a { color: #AA151B; font-weight: 600; text-decoration: none; }
 body.page-digest .story-guide a:hover { text-decoration: underline; }
+body.page-digest .story-guide + .story-tool { margin-top: 4px; }
 body.page-digest .story-related {
  margin-top: 16px; padding-left: 14px;
  border-left: 2px solid #F0EDE6;

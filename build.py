@@ -1716,22 +1716,105 @@ def attach_guides(digests, articles):
     matter; a story whose title or body contains one of them (whole
     words, case-insensitive) links to that article. Optional
     `story_categories` limits matching to stories in those categories.
-    First matching article wins, in `articles` order. Stories with no
-    match get None.
+    The article matching the most distinct keywords wins; ties go to the
+    earlier one in `articles` order. Stories with no match get None.
     """
-    patterns = [
-        (re.compile(r"\b(?:" + "|".join(re.escape(k) for k in a["story_keywords"]) + r")\b", re.I), a)
-        for a in articles if a.get("story_keywords")
-    ]
+    patterns = _keyword_patterns(articles, "story_keywords", "story_categories")
     for digest in digests:
         for item in digest.get("stories", []):
-            text = f"{item.get('title', '')} {item.get('body', '')}"
-            cat = (item.get("category") or "").lower()
-            item["guide"] = next(
-                ({"title": a["title"], "url": a["url"]} for rx, a in patterns
-                 if (not a.get("story_categories") or cat in a["story_categories"]) and rx.search(text)),
-                None,
-            )
+            best = _best_matches(item, patterns)
+            item["guide"] = {"title": best[0]["title"], "url": best[0]["url"]} if best else None
+
+
+def _keyword_patterns(entries, kw_key, cat_key):
+    """(regex, categories, entry) for entries that list keywords."""
+    return [
+        (re.compile(r"\b(?:" + "|".join(re.escape(k) for k in e[kw_key]) + r")\b", re.I),
+         [c.lower() for c in e.get(cat_key) or []], e)
+        for e in entries if e.get(kw_key)
+    ]
+
+
+def _best_matches(item, patterns):
+    """Entries whose keywords hit the story, most distinct hits first (stable)."""
+    text = f"{item.get('title', '')} {item.get('body', '')}"
+    cat = (item.get("category") or "").lower()
+    scored = []
+    for rx, cats, entry in patterns:
+        if cats and cat not in cats:
+            continue
+        hits = {m.lower() for m in rx.findall(text)}
+        if hits:
+            scored.append((len(hits), entry))
+    scored.sort(key=lambda s: -s[0])
+    return [e for _, e in scored]
+
+
+# Calculators linked from digest stories ("Calculator: …" line). Order breaks
+# ties, so more specific tools come first. `anchors` vary the link text
+# across editions; the choice is deterministic per (edition, tool).
+STORY_TOOLS = [
+    {"url": "/calculators/autonomo-tax",
+     "keywords": ["autónomo", "autónomos", "autonomo", "autonomos", "self-employed", "freelancer",
+                  "freelancers", "cuota de autónomos", "RETA", "tarifa plana"],
+     "anchors": ["Autónomo tax calculator: your quota and IRPF",
+                 "work out what you'd pay as an autónomo",
+                 "self-employed in Spain: estimate your net income"]},
+    {"url": "/calculators/electricity-bill",
+     "keywords": ["electricity bill", "electricity bills", "power bill", "power bills", "electricity price",
+                  "electricity prices", "price of electricity", "electricity tariff", "electricity tariffs",
+                  "PVPC", "regulated tariff", "energy bill", "energy bills"],
+     "anchors": ["Electricity bill calculator: PVPC vs fixed tariffs",
+                 "check what your electricity bill should be",
+                 "compare your power bill with the PVPC"]},
+    {"url": "/calculators/rental-yield",
+     "keywords": ["rental yield", "rental yields", "landlord", "landlords", "rental income", "buy-to-let",
+                  "tourist flat", "tourist flats", "tourist rental", "tourist rentals", "holiday let",
+                  "holiday lets", "rent prices", "rental prices", "rental market", "rent control"],
+     "categories": ["property", "housing", "economy", "taxes"],
+     "anchors": ["Rental yield calculator: net yield after tax",
+                 "does a rental flat in Spain pay off?",
+                 "work out net rental yield and cash flow"]},
+    {"url": "/calculators/property-buying-cost",
+     "keywords": ["house prices", "home prices", "housing prices", "property prices", "mortgage", "mortgages",
+                  "homebuyers", "home buyers", "buying a home", "buy a home", "first home", "home purchase",
+                  "home purchases", "ITP", "property transfer tax", "stamp duty", "notary fees"],
+     "categories": ["property", "housing", "economy", "taxes"],
+     "anchors": ["Property buying cost calculator: ITP, IVA and fees by region",
+                 "what buying a home in Spain really costs",
+                 "estimate taxes and fees on a home purchase"]},
+    {"url": "/calculators/net-salary",
+     "keywords": ["minimum wage", "SMI", "salary", "salaries", "wage", "wages", "net pay", "take-home pay",
+                  "payslip", "payslips", "IRPF", "income tax", "pay rise", "pay rises", "gross salary"],
+     "categories": ["work", "taxes", "economy"],
+     "anchors": ["Spain net salary calculator: take-home pay after IRPF",
+                 "work out your net salary in Spain",
+                 "what a gross salary means after tax"]},
+]
+
+
+def attach_tools(digests, tools=STORY_TOOLS, per_digest=3):
+    """Attach a 'Calculator' link to stories whose topic a calculator covers.
+
+    Matching works like attach_guides (whole-word keywords, optional
+    category filter, most distinct hits wins). Within one edition each
+    calculator is linked at most once and at most `per_digest` stories get
+    a link, in story order. Others get None.
+    """
+    patterns = _keyword_patterns(tools, "keywords", "categories")
+    for digest in digests:
+        used = set()
+        for item in digest.get("stories", []):
+            item["tool"] = None
+            if len(used) >= per_digest:
+                continue
+            tool = next((t for t in _best_matches(item, patterns) if t["url"] not in used), None)
+            if not tool:
+                continue
+            used.add(tool["url"])
+            anchors = tool["anchors"]
+            n = int(hashlib.md5(f"{digest.get('date', '')}{tool['url']}".encode()).hexdigest(), 16)
+            item["tool"] = {"url": tool["url"], "anchor": anchors[n % len(anchors)]}
 
 
 def share_links(abs_url, text, long_text=None):
@@ -2421,6 +2504,7 @@ def main():
     digests = [digest_context(d) for d in load_digests()]
     articles = load_articles()
     attach_guides(digests, articles)
+    attach_tools(digests)
     episodes = load_podcast_episodes()
 
     print("Copying static assets...")
