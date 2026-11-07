@@ -168,12 +168,18 @@ def mercadona_line(date_str):
     try:
         weekday = datetime.strptime(date_str, "%Y-%m-%d").weekday()
     except (ValueError, TypeError):
-        return ""
+        return None
     if weekday == 5:  # Saturday
-        return "🛒 Mercadona is closed tomorrow — stock up your fridge!"
+        return {
+            "title": "Mercadona is closed tomorrow",
+            "note": "Most supermarkets in Spain shut on Sundays. If the fridge is looking empty, shop today.",
+        }
     if weekday == 6:  # Sunday
-        return "🛒 Mercadona is closed today, but not everywhere!"
-    return ""
+        return {
+            "title": "Mercadona is closed today",
+            "note": "Corner shops, petrol-station stores and some city-centre supermarkets stay open.",
+        }
+    return None
 
 
 def top_categories(items, n=3):
