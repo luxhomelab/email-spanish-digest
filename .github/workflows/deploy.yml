@@ -18,13 +18,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0  # full history: sitemap lastmod comes from git log
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
       - run: pip install jinja2 pillow pytest
@@ -34,9 +34,10 @@ jobs:
         run: python3 -m pytest -q
       - run: python3 build.py --out dist
       - run: npx --yes pagefind --site dist
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: dist
+          include-hidden-files: true  # v4+ drops dotfiles by default; keep the v3 artifact
 
   deploy:
     needs: build
