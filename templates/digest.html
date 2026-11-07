@@ -85,7 +85,13 @@
     </article>
    {% endfor %}
     {% if digest.mercadona %}
-    <div class="mercadona">{{ digest.mercadona }}</div>
+    <aside class="mercadona" aria-label="Sunday shopping reminder">
+     <div class="mercadona-sign" aria-hidden="true"><span class="mercadona-sign-word">Cerrado</span><span class="mercadona-sign-day">domingo</span></div>
+     <div class="mercadona-text">
+      <p class="mercadona-title">{{ digest.mercadona.title }}</p>
+      <p class="mercadona-note">{{ digest.mercadona.note }}</p>
+     </div>
+    </aside>
     {% endif %}
    </div>
 

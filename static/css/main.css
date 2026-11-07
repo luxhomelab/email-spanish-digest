@@ -1217,9 +1217,48 @@ body.page-digest .story-related li { margin-bottom: 5px; }
 body.page-digest .story-related li::marker { color: #F1BF00; }
 body.page-digest .story-related a { color: #3C4858; text-decoration: none; font-weight: 500; }
 body.page-digest .story-related a:hover { color: #AA151B; text-decoration: underline; }
+/* Weekend reminder: a shop-door "Cerrado" sign hanging next to plain copy. */
 body.page-digest .mercadona {
- background-color: #FDF6E3; border: 1px solid #F0DFAE; border-radius: 12px;
- padding: 18px 22px; margin: 12px 32px 0 32px;
+ display: flex; align-items: center; gap: 22px;
+ max-width: 620px; margin: 30px 32px 8px 32px; padding: 0;
+ text-align: left; color: #4A453C;
+}
+body.page-digest .mercadona-sign {
+ position: relative; flex: none;
+ display: flex; flex-direction: column; align-items: center;
+ margin-top: 16px; padding: 8px 14px 7px 14px;
+ background-color: #FFFDF8; border: 2px solid #AA151B; border-radius: 6px;
+ box-shadow: inset 0 0 0 3px #FFFDF8, inset 0 0 0 4px #E7B9BB, 0 2px 0 #E3D9C6;
+ transform: rotate(-4deg); transform-origin: 50% -16px;
+}
+/* the cord and nail it hangs from */
+body.page-digest .mercadona-sign::before {
+ content: ""; position: absolute; left: 50%; top: -16px;
+ width: 30px; height: 16px; margin-left: -15px;
+ background: linear-gradient(to top right, transparent calc(50% - 1px), #8A8274 50%, transparent calc(50% + 1px)) left / 50% 100% no-repeat,
+             linear-gradient(to top left, transparent calc(50% - 1px), #8A8274 50%, transparent calc(50% + 1px)) right / 50% 100% no-repeat;
+}
+body.page-digest .mercadona-sign::after {
+ content: ""; position: absolute; left: 50%; top: -19px;
+ width: 6px; height: 6px; margin-left: -3px;
+ border-radius: 50%; background-color: #6B6458;
+}
+body.page-digest .mercadona-sign-word {
+ font-family: var(--font-display); font-weight: 700;
+ font-size: 19px; line-height: 22px; color: #AA151B;
+}
+body.page-digest .mercadona-sign-day {
+ font-size: 12px; line-height: 14px; color: #6B6458; font-style: italic;
+ margin-top: 2px; padding-top: 3px; border-top: 1px solid #F1BF00;
+}
+body.page-digest .mercadona-text p { margin: 0; }
+body.page-digest .mercadona-title {
+ font-size: 17px; line-height: 24px; font-weight: 700; color: var(--heading-color);
+}
+body.page-digest .mercadona-text .mercadona-note { font-size: 15px; line-height: 22px; color: #6B6458; margin-top: 2px; }
+@media (prefers-reduced-motion: no-preference) {
+ body.page-digest .mercadona-sign { transition: transform .5s ease; }
+ body.page-digest .mercadona:hover .mercadona-sign { transform: rotate(3deg); }
 }
 body.page-digest .email-footer { padding: 26px 32px 34px 32px; }
 body.page-digest .email-footer .cta-card {
@@ -1248,7 +1287,11 @@ body.page-digest .day-nav a:hover { text-decoration: none; border-color: #AA151B
  body.page-digest .digest > .cta-form-card { width: 100%; margin: 22px 0 6px 0; border-radius: 16px; }
  body.page-digest .email-footer .cta-card h2 { font-size: 20px; }
  body.page-digest .email-footer .cta-button { font-size: 16px; padding: 12px 28px; }
- body.page-digest .mercadona { margin: 12px 20px 0 20px; }
+ body.page-digest .mercadona { margin: 26px 0 6px 0; gap: 16px; }
+ body.page-digest .mercadona { align-items: flex-start; }
+ body.page-digest .mercadona-sign { padding: 6px 10px 5px 10px; margin-top: 20px; }
+ body.page-digest .mercadona-sign-word { font-size: 16px; line-height: 19px; }
+ body.page-digest .mercadona-sign-day { font-size: 11px; }
 }
 
 /* Digest header: light editorial instead of heavy red block */
