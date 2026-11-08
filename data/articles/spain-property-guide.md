@@ -2,9 +2,9 @@
 slug: spain-property-guide
 title: How to Buy, Own and Sell a Home in Spain: The Complete Guide
 meta_title: Buying Property in Spain in 2026: Costs, Taxes, Mortgage
-meta_description: Buying property in Spain, step by step: the real costs (10-15% on top), NIE, nota simple, arras, mortgages, ITP vs IVA, and what owning and selling cost.
+meta_description: Buying property in Spain, step by step: the real costs (8-12% on top), NIE, nota simple, arras, mortgages, ITP vs IVA, and what owning and selling cost.
 date: 2026-11-02
-updated: 2026-11-04
+updated: 2026-11-08
 author: Dmytro Shvechikov
 excerpt: Everything about property in Spain in one place: how to find a flat and check the price, which documents to look at, how contracts and mortgages work, and what buying, owning and selling cost.
 image_alt: Cover of the guide to buying a flat in Spain
@@ -12,7 +12,9 @@ story_keywords: house prices, home prices, housing prices, property prices, prop
 story_categories: property, housing, economy, taxes
 ---
 
-I bought a flat in Spain myself. I searched, haggled, got a mortgage as an autónomo, and six months after the purchase I was chipping in with the neighbours to repair the lifts. This guide covers the whole path: how much money you really need, how to find a flat without overpaying, what to check in the documents, how the deposit, mortgage and taxes work, and then what owning and selling cost.
+I bought a flat in Spain myself: Alicante, April 2025, €295,000. It has 105 m² to live in, four bedrooms and two bathrooms in a building from 2005 in a good area, plus a garage space and a storage room. I planned to put 20% down. In the end I put in €45,000 more than that, in cash. Along the way I got €14,000 off the asking price and a mortgage as an autónomo, and six months after moving in I was chipping in with the neighbours to repair the lifts.
+
+This guide covers the whole path: how much money you really need, how to find a flat without overpaying, what to check in the documents, how the deposit, mortgage and taxes work, and then what owning and selling cost. Wherever I have my own numbers, I give them: what I paid, what the bank lent, what the flat costs to run, and what I would get back if I sold it today.
 
 *Up to date as of November 2026. Check the numbers and rates at the links: Spanish taxes change every year, and some of them depend on the region and the town.*
 
@@ -20,7 +22,7 @@ I bought a flat in Spain myself. I searched, haggled, got a mortgage as an autó
 
 ## In short: how much money you really need
 
-The main rule of the Spanish market: add another 10-15% to the price of the flat for taxes and fees. Banks never include these costs in the mortgage, and a resident usually gets no more than 80% of the price or the valuation, whichever is lower. So to buy with a mortgage you need your own money worth about 30-35% of the price.
+The main rule of the Spanish market: add another 8-12% to the price of the flat for taxes and fees. Banks never include these costs in the mortgage, and a resident usually gets no more than 80% of the price or the valuation, whichever is lower. So to buy with a mortgage you need your own money worth about 30% of the price, and more if the bank values the flat below what you pay. That happened to me: I needed 35%.
 
 ::: graphic budget
 
@@ -33,7 +35,16 @@ Example: a resale flat in Madrid for €300,000.
 - Valuation (tasación) for the mortgage: €300-600
 - Total costs: about €20,500, or roughly 6.8% on top
 
-But Madrid has one of the lowest ITP rates. Where the tax is 10%, you end up paying about 12% on top. When I bought my flat in Alicante, ITP there was 10%, and with the other costs (about 2%) it came to almost 12%. Catalonia also charges 10% (€30,000 in tax alone on a €300,000 flat), so the total is about the same. You can work it out for your region and price with our [property buying cost calculator](/calculators/property-buying-cost).
+But Madrid has one of the lowest ITP rates. Where the tax is 10%, you pay about 11% on top. Catalonia charges 10% (€30,000 in tax alone on a €300,000 flat), and so did the Comunitat Valenciana when I bought (it is 9% now). My own purchase in Alicante:
+
+- Price: €295,000 (the seller asked €309,000)
+- ITP at 10%: €29,500
+- Notary, Land Registry, valuation and paperwork, all together: €2,420
+- Total costs: €31,920, about 11% on top, and 92% of it was tax
+
+The fees were smaller than I expected because the bank paid its own side of the paperwork (more on that in the mortgage section). The tax was the real cost.
+
+Then the bank. It valued the flat at €278,000, not €295,000, and lent 80% of the valuation: €222,400. Had the valuation matched the price, the loan would have been €236,000 and my down payment €59,000. Instead the down payment was €72,600, and with the taxes and fees I put in €104,520 of my own money, 35% of the price. You can work out the costs for your region and price with our [property buying cost calculator](/calculators/property-buying-cost).
 
 ## How to buy property in Spain: 8 steps
 
@@ -154,11 +165,11 @@ The bank's tasación has the final word. If the valuation comes in below the pri
 
 ### Always haggle
 
-When I bought my flat, the seller asked €309,000, and I paid €295,000. Your arguments are not only the actual sale prices in the area but also everything you found at the viewing and in the documents: repairs needed, damp, old windows, approved or expected derramas, differences in floor area, a long time on the market. The next section explains where to find these arguments in the documents.
+When I bought my flat, the seller asked €309,000, and I paid €295,000: €14,000, almost 5%, off the price. Your arguments are not only the actual sale prices in the area but also everything you found at the viewing and in the documents: repairs needed, damp, old windows, approved or expected derramas, differences in floor area, a long time on the market. The next section explains where to find these arguments in the documents.
 
 ## Documents to check before you buy
 
-Do these checks before you pay the deposit under the arras contract. Your own lawyer can do them (usually 1% of the price or a fixed fee), but you can check a lot yourself.
+Do these checks before you pay the deposit under the arras contract. Your own lawyer can do them (usually 1% of the price or a fixed fee), but you can check a lot yourself. We bought without a lawyer. With a mortgage, the bank checks the flat and its papers too, because it won't lend on a flat with legal problems. But the bank doesn't care about the comunidad debts or what the owners' meeting has voted for: those checks are on you.
 
 We go in order: first the property itself (registry extract, floor area, parking, Cadastre), then the seller and occupants, then debts that pass to the new owner, the state of the building, and finally special cases: illegal extensions, homes by the sea and VPO.
 
@@ -186,6 +197,8 @@ A flat in Spain can have several different "areas", and listings often mix them 
 ::: graphic areas
 
 **Always check the area against the documents.** It happened to me: an agent gave a usable area that was a pure guess, and the documents showed much less. Listings usually give one of the built areas, often the cadastral one with common areas. It is the largest, so the price per m² looks lower. You usually can't tell from the listing which area it is. When you compare listings, make sure you are comparing the same kind of area. The gap between the usable area and the area with common parts can reach 25-30%.
+
+The figure in the documents can also include things that aren't the flat at all. Mine has 105 m² to live in, but 155 m² on paper, because that figure includes the garage space and the storage room. If you see one big number, ask what is in it.
 
 ### Parking and storage room
 
@@ -283,6 +296,8 @@ A small amount (usually €1,000-6,000) so the agency takes the flat off the mar
 - when the money is returned (for example, if the nota simple shows charges or the bank doesn't approve the mortgage);
 - that the amount counts towards the price.
 
+Our reserva was never refunded or held separately: it was counted into the arras straight away.
+
 ### Contrato de arras
 
 The main preliminary contract. The buyer pays a deposit, usually 10% of the price, and both sides fix all the terms of the sale: the price, the date for signing the deed (usually in 1-3 months), what is included (furniture, parking, storage room), who pays derramas and other costs.
@@ -299,6 +314,8 @@ What to include in the arras:
 - **Costs** Who pays what.
 - **Derramas** Who pays the levies that are already approved.
 - **What stays in the flat** Kitchen, appliances, furniture.
+
+My arras gave us three months to sign the deed and had no mortgage clause: I simply didn't know you could ask for one. The bank said yes, so it worked out. Had it said no, I would have lost the deposit. Ask for the clause even if the seller frowns.
 
 ## Getting a mortgage
 
@@ -349,11 +366,13 @@ The full list of documents:
 - **Variable** Euríbor plus a spread, reset every 6 or 12 months. The average 12-month Euríbor in October 2026 was 3.239% (a year earlier it was 2.187%). The [Bank of Spain](https://www.bde.es) publishes the official figures.
 - **Mixto** A fixed rate for the first 5-15 years, then variable.
 
+My advice is to take fixed, and that is what I did. About 3% fixed for 30 years is a remarkably good deal with today's inflation: in most countries you won't find anything like it.
+
 ### Rate discounts (bonificaciones)
 
 The bank cuts your rate (a bonificación) if you take extra products from it: paying your salary into the account, life and home insurance, a pension plan, a card. Each product lowers the rate by a fraction of a percent. Work out what these products cost per year: a "cheap" rate with three insurance policies often costs more overall. Under Ley 5/2019 the bank must also show you an offer without discounts, and you can buy the insurance from another company (the bank must accept a policy with the same cover, but it may recalculate the rate if the contract allows it). The only insurance the law requires is building damage insurance (seguro de daños), not life insurance.
 
-My example: the bank offered to cut my rate from 3.2% to 2.2% for four products: home insurance, life insurance, moving my salary (nómina) to them and a security alarm. I took only the first three and pay 2.4% a year.
+My example: the bank offered to cut my rate from 3.2% to 2.2% for four products: home insurance, life insurance, moving my salary (nómina) to them and a security alarm. I took only the first three and pay 2.4% a year: €870 a month.
 
 ### Valuation (tasación)
 
@@ -367,13 +386,15 @@ The valuation is done by a valuation company (sociedad de tasación) registered 
 
 Two things follow from this. First, the valuation is almost never much higher than the area average, even if you love the flat. Second, in a rising market the testigos lag behind current prices, so the tasación often comes in below the purchase price. Plan your budget for that.
 
+This is the trap I fell into. I paid €295,000; the valuer said €278,000. The bank lent 80% of the valuation, €222,400 instead of the €236,000 I had counted on, so I had to find €13,600 more of my own money.
+
 **If the valuation is much lower than the price.** You can order and pay for a valuation from another registered company and bring it to the bank. Sometimes an independent valuation comes much closer to the price, and the bank then bases the loan on it. There are no guarantees: the second valuation can also be low, and the bank still decides on the mortgage. But if the gap is large, it's worth a try.
 
 ### Borrower protection under Ley 5/2019
 
 - **FEIN (Ficha Europea de Información Normalizada)** The standard European form with the loan terms. **FiAE (Ficha de Advertencias Estandarizadas)** lists warnings about risky terms (variable rate, rate limits, costs, early repayment). The bank must give you both **at least 10 calendar days** before signing, together with the draft contract.
 - **Acta de transparencia** During those 10 days you go to a notary for free. The notary checks that you got the documents and answers your questions. Without this record, the mortgage can't be signed.
-- **Costs** Since June 2019 the bank pays the notary for the mortgage deed, the mortgage registration, the gestoría and the AJD tax on the mortgage ([art. 14 Ley 5/2019](https://www.boe.es/buscar/act.php?id=BOE-A-2019-3814); AJD on mortgages moved to the bank back in November 2018 under RDL 17/2018). The borrower pays for the valuation and any copies they ask for. In detail: [Bank of Spain, which mortgage costs you pay](https://clientebancario.bde.es/pcb/es/blog/que-gastos-te-toca-pagar-cuando-contratas-una-hipoteca-.html).
+- **Costs** Since June 2019 the bank pays the notary for the mortgage deed, the mortgage registration, the gestoría and the AJD tax on the mortgage ([art. 14 Ley 5/2019](https://www.boe.es/buscar/act.php?id=BOE-A-2019-3814); AJD on mortgages moved to the bank back in November 2018 under RDL 17/2018). The borrower pays for the valuation and any copies they ask for. In detail: [Bank of Spain, which mortgage costs you pay](https://clientebancario.bde.es/pcb/es/blog/que-gastos-te-toca-pagar-cuando-contratas-una-hipoteca-.html). In my contract the bank paid the notary (including the copies it asked for), the registry, the gestoría and its own taxes, which is why my fees came to only €2,420.
 - **Early repayment, variable rate** The fee is at most 0.25% of the amount repaid in the first 3 years, or 0.15% in the first 5 years (the bank picks one), and nothing after that.
 - **Early repayment, fixed rate** The fee is at most 2% in the first 10 years and 1.5% after. In both cases it can't be more than the bank's actual financial loss.
 - **Opening fee** Allowed, but it must cover all the services for setting up the loan.
@@ -441,7 +462,7 @@ The last step is the escritura pública de compraventa, the deed of sale you sig
 
 ### After signing
 
-With a mortgage, the bank usually handles the tax and registration: its gestoría pays the ITP or AJD from your account and files the deed with the Registro de la Propiedad. The bank will tell you in advance how much to keep in the account for this. Without a mortgage, you or your gestoría do these two steps:
+With a mortgage, the bank usually handles the tax and registration: its gestoría pays the ITP or AJD from your account and files the deed with the Registro de la Propiedad. The bank will tell you in advance how much to keep in the account for this; mine took all the tax on signing day. Without a mortgage, you or your gestoría do these two steps:
 
 - **ITP or AJD** Pay it on time (usually 30 working days or a month).
 - **Registration** File the deed with the Registro de la Propiedad.
@@ -470,9 +491,11 @@ If you buy from a developer, the tax changes (IVA and AJD instead of ITP; see th
 
 ## What it costs to own a home
 
-The mortgage is not your only monthly cost. First an example of the total, then each item one by one.
+The mortgage is not your only monthly cost. First my own flat as an example, then each item one by one.
 
-### Example of yearly costs
+### My yearly costs
+
+My flat in Alicante: 105 m², a family of four living in it. On top of the €870 mortgage payment it costs about €300 a month.
 
 ::: graphic running-costs
 
@@ -610,12 +633,29 @@ Example: you bought in 2018 for €200,000 + €15,000 in costs and sold in 2026
 - Within 3 months after the one-month deadline for paying the withholding (so about 4 months after the sale), the seller files form 210 and either pays the difference or claims back the excess. If the gain is small or there is none, getting the 3% back is common, but it can take months.
 - The exemption for reinvesting in a main home is available to EU/EEA residents if they reinvest in their main home in any EU/EEA country.
 
+### My numbers: what if I sold now
+
+A year and a half after I bought, my agent told me that a flat just like mine, in the same state, had just sold for €340,000. Since buying I have also spent about €25,000 on the flat: both bathrooms redone (€16,000), new floors (€4,000) and new windows (€5,000). So I worked out what would happen if I sold now for €340,000-360,000.
+
+Selling costs:
+- **Agency** At 3% + IVA, €12,342-13,068. An agency is optional: you can sell on your own
+- **Plusvalía municipal** About €1,000-2,000; it depends on the land's cadastral value
+- **Energy certificate and cancelling the mortgage** About €1,000
+- **Early repayment fee** 0.25% in my fixed-rate contract: about €540
+- **Total** About €15,400-16,100, before any income tax
+
+For Hacienda, the flat cost me €295,000 + €31,920 in tax and fees + €25,000 of renovation = €351,920. Take away the selling costs, and even at €360,000 I would be about €7,500 short (at €340,000, almost €27,000). A loss, so no tax.
+
+The catch is the renovation. Only real improvements with invoices count. If Hacienda calls the work repairs or upkeep, the cost drops to €326,920, the same €360,000 sale turns into a gain of about €17,500, and I would pay about €3,560 in tax. So keep every invoice, and make sure the work really is a renovation.
+
+And in cash? After paying off the rest of the mortgage (about €214,600; the first €7,800 is already paid), I would get back €110,000-129,000. I put in €104,520 at the start and €25,000 for the renovation, €129,520 in all. So selling this soon roughly breaks even. But for those 18 months I paid no rent, and a flat like mine rents for about €1,500 a month: some €27,000. For me that is the real point: buy a flat to live in and to stay, not to flip in a year.
+
 ## Buyer's checklist
 
 ### Before you search
 
 - Get an NIE and open a Spanish bank account.
-- Work out your budget: price + 10-15% for taxes and costs ([calculator](/calculators/property-buying-cost)).
+- Work out your budget: price + 8-12% for taxes and costs, plus a margin in case the valuation comes in low ([calculator](/calculators/property-buying-cost)).
 - Get a mortgage pre-approval (if you need a mortgage).
 
 ### Choosing a flat and haggling
@@ -691,11 +731,11 @@ Yes. Spain does not limit property purchases by foreigners, residents or not. Yo
 
 ### How much does it cost to buy a home in Spain on top of the price?
 
-Plan for 10-15% of the price. Most of it is tax: ITP of 6-10% or more on a resale home depending on the region, or 10% IVA plus AJD on a new build. Notary, Land Registry, gestoría and the mortgage valuation add roughly €2,000-3,000. A €300,000 resale flat in Madrid costs about €20,500 on top. Work out your own figure with the [property buying cost calculator](/calculators/property-buying-cost).
+Plan for 8-12% of the price. Most of it is tax: ITP of 6-10% or more on a resale home depending on the region, or 10% IVA plus AJD on a new build. Notary, Land Registry, gestoría and the mortgage valuation add roughly €2,000-3,000. A €300,000 resale flat in Madrid costs about €20,500 on top; my €295,000 flat in Alicante cost €31,920 on top, €29,500 of it ITP. Work out your own figure with the [property buying cost calculator](/calculators/property-buying-cost).
 
 ### How much of my own money do I need to buy with a mortgage?
 
-About 30-35% of the price. Banks usually lend residents up to 80% of the price or the valuation, whichever is lower, and never finance the taxes and buying costs. Non-residents usually get 60-70%, so they need more. Young buyers can borrow almost 100% of the price with the state ICO guarantee.
+About 30% of the price, more if the bank values the flat below the price. Banks usually lend residents up to 80% of the price or the valuation, whichever is lower, and never finance the taxes and buying costs. Non-residents usually get 60-70%, so they need more. Young buyers can borrow almost 100% of the price with the state ICO guarantee.
 
 ### Who pays the estate agent when buying a home in Spain?
 
