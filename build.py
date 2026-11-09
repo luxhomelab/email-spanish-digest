@@ -1914,11 +1914,11 @@ CALCULATOR_CARDS = {
 CATEGORY_HUBS = {
     "property": ["/calculators/property-buying-cost", "/articles/spain-property-guide", "/calculators/rental-yield"],
     "housing": ["/articles/spain-property-guide", "/calculators/rental-yield", "/calculators/property-buying-cost"],
-    "work": ["/calculators/net-salary", "/calculators/autonomo-tax"],
-    "taxes": ["/calculators/net-salary", "/calculators/autonomo-tax", "/calculators/property-buying-cost"],
+    "work": ["/calculators/net-salary", "/calculators/autonomo-tax", "/articles/autonomo-taxes-spain"],
+    "taxes": ["/calculators/net-salary", "/calculators/autonomo-tax", "/articles/autonomo-taxes-spain"],
     "economy": ["/calculators/net-salary", "/calculators/electricity-bill", "/articles/switching-electricity-provider-spain"],
     "politics": ["/articles/how-spain-is-governed", "/articles/how-spain-votes"],
-    "visa": ["/calculators/autonomo-tax", "/calculators/net-salary", "/articles/how-spain-is-governed"],
+    "visa": ["/calculators/autonomo-tax", "/articles/autonomo-taxes-spain", "/calculators/net-salary"],
     "migration": ["/calculators/net-salary", "/calculators/autonomo-tax"],
 }
 
