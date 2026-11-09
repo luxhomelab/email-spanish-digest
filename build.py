@@ -235,7 +235,8 @@ def digest_context(data):
         "story_count": len(items),
         "top_categories": top_categories(items),
         "url": f"/archive/{date}",
-        "meta_title": digest_meta_title(date, items),
+        "subject": (data.get("subject") or "").strip(),
+        "meta_title": digest_meta_title(date, items, data.get("subject")),
         "meta_description": digest_meta_description(date, headline, items),
         "word_count": words,
         "tag_categories": tag_cats,
@@ -251,21 +252,44 @@ def short_date(date_str):
         return date_str
 
 
-def digest_meta_title(date, items):
-    """Story-first title: '<top story> | Spain News Oct 22'.
+def digest_meta_title(date, items, subject=None, dated=False):
+    """Story-first title: '<email subject> | Spain News in English'.
 
-    Leads with the day's top story (what people actually search for) and
-    keeps a short keyword suffix. The story is cut at a word boundary so the
-    whole title stays under ~75 characters; the year is in the H1 and description.
+    Leads with the edition's email subject (written to summarize the day's
+    main stories) and the evergreen query expats search for. The date is in
+    the URL, H1, description and datePublished, so it is left out unless
+    `dated` is set (see `dedupe_digest_titles`). Older digests without
+    a subject fall back to the top story title plus the date. The lead is cut
+    at a word boundary so the whole title stays under ~82 characters.
     """
-    suffix = f"Spain News {short_date(date).rsplit(',', 1)[0]}"
-    top = next((i.get("title", "").strip() for i in items if i.get("title")), "")
+    day = short_date(date).rsplit(",", 1)[0]
+    subject = (subject or "").strip()
+    if subject:
+        top = subject
+        suffix = f"Spain News in English, {day}" if dated else "Spain News in English"
+    else:
+        top = next((i.get("title", "").strip() for i in items if i.get("title")), "")
+        suffix = f"Spain News {day}"
     if not top:
-        return f"{suffix}, {date[:4]} | Spain Daily Digest"
-    room = 75 - len(suffix) - 3
+        return f"Spain News {day}, {date[:4]} | Spain Daily Digest"
+    room = 82 - len(suffix) - 3
     if len(top) > room:
         top = top[:room - 1].rsplit(" ", 1)[0].rstrip(",;:") + "…"
     return f"{top} | {suffix}"
+
+
+def dedupe_digest_titles(digests):
+    """Add the date to titles whose subject repeats another edition's.
+
+    Without the date the subject is all that tells digest titles apart, and
+    recurring stories can produce the same subject twice.
+    """
+    counts = Counter(d["subject"].lower() for d in digests if d.get("subject"))
+    for d in digests:
+        if d.get("subject") and counts[d["subject"].lower()] > 1:
+            d["meta_title"] = digest_meta_title(
+                d["date"], d["stories"], d["subject"], dated=True)
+    return digests
 
 
 def digest_meta_description(date, headline, items):
@@ -2683,7 +2707,7 @@ def main():
         "https://www.facebook.com/spanified",
     ]
 
-    digests = [digest_context(d) for d in load_digests()]
+    digests = dedupe_digest_titles([digest_context(d) for d in load_digests()])
     articles = load_articles()
     attach_guides(digests, articles)
     attach_tools(digests, amount_pages=story_amount_pages())
