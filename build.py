@@ -1936,7 +1936,7 @@ def hub_card(url, articles_by_url):
         return {"url": url, "title": title, "desc": desc, "kind": "Calculator"}
     a = articles_by_url.get(url)
     if a:
-        return {"url": url, "title": a["title"], "desc": f"{a['reading_time']} min read", "kind": "Guide"}
+        return {"url": url, "title": a["title"], "desc": f"A {a['reading_time']}-minute read", "kind": "Guide"}
     return None
 
 

@@ -831,19 +831,76 @@ body.page-quiz-flow .breadcrumbs { margin-bottom: 12px; }
 .day-nav a:hover { text-decoration: underline; }
 .day-nav-older { margin-right: auto; }
 .day-nav-newer { margin-left: auto; }
-.hub-cards { margin: 4px 0 22px; text-align: left; }
-.hub-cards-title { font-size: 17px; line-height: 24px; margin: 0 0 10px; color: #1F2933; text-align: left; }
-.hub-cards ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
-.hub-cards a {
- display: flex; flex-direction: column; gap: 4px; height: 100%; box-sizing: border-box;
- padding: 12px 14px; border: 1px solid #ECE9E2; border-left: 3px solid #F1BF00; border-radius: 8px;
- background-color: #FFFDF8; color: #3C4858; text-decoration: none;
+/* ---------- Calculator / guide links (digests, categories, articles) ----------
+   One cream panel like the article FAQ, not separate cards. Kind is coded
+   by the icon tile in the flag colours: gold keypad = calculator, red book =
+   guide. Columns side by side on wide screens, compact rows on phones. */
+.hub-cards { margin: 26px 0 24px; text-align: left; }
+.hub-cards-title {
+ font-family: var(--font-display);
+ font-size: 20px; line-height: 1.3; font-weight: 700; letter-spacing: -0.2px;
+ color: var(--heading-color); text-align: left; text-wrap: balance;
+ margin: 0 0 12px;
 }
-.hub-cards a:hover { border-color: #AA151B; border-left-color: #AA151B; }
-.hub-kind { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #AA151B; }
-.hub-title { font-size: 15px; line-height: 21px; font-weight: 700; color: #1F2933; }
-.hub-desc { font-size: 13px; line-height: 19px; color: #6C7A89; }
+.hub-cards ul {
+ list-style: none; margin: 0; padding: 0;
+ display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr);
+ background-color: #FFFDF8; border: 1px solid #EFE7D8; border-radius: 12px; overflow: hidden;
+}
+.hub-cards li { margin: 0; min-width: 0; }
+.hub-cards li + li { border-left: 1px dashed #E7DCC6; }
+.hub-cards a {
+ display: flex; align-items: flex-start; gap: 12px; height: 100%; box-sizing: border-box;
+ padding: 16px 16px 18px; color: #3C4858; text-decoration: none;
+ transition: background-color 0.15s;
+}
+.hub-cards a:hover { background-color: #FFF6E0; }
+.hub-cards a:focus-visible { outline: 2px solid #AA151B; outline-offset: -2px; border-radius: 12px; }
+.hub-icon {
+ flex: none; display: grid; place-items: center;
+ width: 38px; height: 38px; border-radius: 9px;
+}
+.hub-calculator .hub-icon { background-color: #F1BF00; color: #7E1015; }
+.hub-guide .hub-icon { background-color: #AA151B; color: #FFF8E6; }
+.hub-text { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.hub-title {
+ font-size: 15px; line-height: 1.35; font-weight: 700; color: #1F2933;
+ text-decoration: underline; text-decoration-color: transparent;
+ text-decoration-thickness: 1px; text-underline-offset: 3px;
+ transition: color 0.15s, text-decoration-color 0.15s;
+}
+.hub-cards a:hover .hub-title { color: #AA151B; text-decoration-color: currentColor; }
+.hub-desc { font-size: 13.5px; line-height: 1.45; color: #6C7A89; }
 .cat-list .hub-cards { max-width: 760px; margin: 18px auto 26px; }
+/* Articles: sits between the FAQ and the share footer, on the FAQ's grid. */
+body.page-article .hub-cards { padding: 0 32px; margin: 18px 0 30px; }
+body.page-article .hub-cards-title { font-size: 25px; letter-spacing: -0.3px; margin-bottom: 0.75em; }
+body.page-article .hub-cards-title::before {
+ content: ""; display: block;
+ width: 46px; height: 3px; border-radius: 2px;
+ background-color: #AA151B; margin-bottom: 12px;
+}
+/* Phones and narrow columns: rows with dashed dividers. */
+@media (max-width: 720px) {
+ .hub-cards ul { grid-auto-flow: row; grid-auto-columns: auto; }
+ .hub-cards li + li { border-left: none; border-top: 1px dashed #E7DCC6; }
+ .hub-cards a { align-items: center; padding: 14px 16px; }
+}
+@media (max-width: 640px) {
+ body.page-article .hub-cards-title { font-size: 21px; }
+}
+@media (max-width: 520px) {
+ body.page-article .hub-cards { padding: 0 20px; margin: 10px 0 26px; }
+ .hub-cards-title { font-size: 18px; }
+ .hub-cards a { gap: 12px; padding: 13px 14px; }
+ .hub-icon { width: 36px; height: 36px; border-radius: 8px; }
+}
+@media (max-width: 400px) {
+ body.page-article .hub-cards { padding: 0 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+ .hub-cards a, .hub-title { transition: none; }
+}
 .byline { font-size: 13px; color: #A0998E; text-align: center; padding: 8px 24px 0 24px; }
 .byline a { color: #B91C1C; text-decoration: none; }
 .byline a:hover { text-decoration: underline; }
