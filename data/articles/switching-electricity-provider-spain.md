@@ -88,6 +88,8 @@ That's why the homework has to come first. Get your real peak from Datadis, benc
 
 The real cost depends on your own consumption pattern, not the headline price. That's the gap that tripped me up — try the free [Electricity Bill Calculator](/calculators/electricity-bill) on Spanified: plug in your current tariff and the new offer, and see the actual difference.
 
+> TIP: Self-employed and working from home? Part of this bill is tax-deductible: 30% of the share of your home you use for work. Our [autónomo tax guide](/articles/autonomo-taxes-spain#home-office-meals-and-the-car) shows how to work it out.
+
 So next time someone calls you with a deal, you don't have to guess. Have your current figures ready, enter the new ones, and read the number.
 
 ## FAQ

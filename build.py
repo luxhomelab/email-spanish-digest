@@ -28,6 +28,7 @@ import os
 import re
 import shutil
 import sys
+import unicodedata
 from collections import Counter
 from datetime import datetime
 from email.utils import format_datetime
@@ -495,6 +496,8 @@ _TOC_PLACEHOLDER = "\x00toc\x00"
 def article_heading_id(text_html, used):
     """Anchor id for a heading: lowercase words joined by '-', unique in `used`."""
     plain = html.unescape(re.sub(r"<[^>]+>", "", text_html))
+    # Fold accents (autónomo -> autonomo) so ids stay readable, not "aut-nomo".
+    plain = unicodedata.normalize("NFKD", plain).encode("ascii", "ignore").decode()
     base = re.sub(r"[^a-z0-9]+", "-", plain.lower()).strip("-") or "section"
     hid, n = base, 2
     while hid in used:
@@ -1919,7 +1922,7 @@ CATEGORY_HUBS = {
     "economy": ["/calculators/net-salary", "/calculators/electricity-bill", "/articles/switching-electricity-provider-spain"],
     "politics": ["/articles/how-spain-is-governed", "/articles/how-spain-votes"],
     "visa": ["/calculators/autonomo-tax", "/articles/autonomo-taxes-spain", "/calculators/net-salary"],
-    "migration": ["/calculators/net-salary", "/calculators/autonomo-tax"],
+    "migration": ["/calculators/net-salary", "/calculators/autonomo-tax", "/articles/autonomo-taxes-spain"],
 }
 
 

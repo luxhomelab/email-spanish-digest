@@ -349,14 +349,14 @@ In July 2026 the scheme was extended to 31 December 2027. Many regions also have
 
 ### What the bank wants to see
 
-Above all, stable income over the last 2 years. The bank looks at your income tax returns (la renta) for the last two years, so a mortgage is harder if you've just moved or recently changed jobs. For autónomos this matters even more: the bank looks at the income in your tax returns, not your turnover. The [autónomo tax calculator](/calculators/autonomo-tax) shows what is left of your turnover after IRPF and the social security quota.
+Above all, stable income over the last 2 years. The bank looks at your income tax returns (la renta) for the last two years, so a mortgage is harder if you've just moved or recently changed jobs. For autónomos this matters even more: the bank looks at the income in your tax returns, not your turnover. The [autónomo tax calculator](/calculators/autonomo-tax) shows what is left of your turnover after IRPF and the social security quota, and our [guide to autónomo taxes](/articles/autonomo-taxes-spain) explains how that income is worked out.
 
 But this is not a strict rule. As an autónomo I got a mortgage from CaixaBank with only three quarterly returns and no annual renta. If one bank says no, try others or a mortgage broker.
 
 The full list of documents:
 - passport, NIE / TIE;
 - IRPF (renta) returns for the last 2 years;
-- employment contract and the last 3-6 payslips (nóminas); for autónomos, quarterly returns (forms 130/303);
+- employment contract and the last 3-6 payslips (nóminas); for autónomos, quarterly returns ([forms 130](/articles/autonomo-taxes-spain#paying-during-the-year-withholding-and-form-130) and [303](/articles/autonomo-taxes-spain#iva-who-really-pays-it));
 - vida laboral (your work history from Social Security);
 - bank statements for 3-6 months;
 - details of any other loans;

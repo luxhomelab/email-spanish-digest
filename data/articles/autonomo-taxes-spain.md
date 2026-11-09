@@ -2,12 +2,12 @@
 slug: autonomo-taxes-spain
 title: Autónomo Taxes in Spain 2026: The Complete Guide for Freelancers
 meta_title: Autónomo Taxes in Spain 2026: Cuota, IRPF and IVA Explained
-meta_description: What a freelancer in Spain really pays in 2026: the 15 Social Security brackets, IRPF step by step, IVA, forms 130 and 303, deductions, tarifa plana and a worked example.
+meta_description: Autónomo taxes in Spain for 2026: the 15 Social Security brackets, IRPF, IVA, forms 130 and 303, deductions and tarifa plana, with a worked example.
 date: 2026-11-09
 author: Dmytro Shvechikov
 excerpt: You invoice €40,000 as a freelancer in Spain. How much do you keep? Social Security, income tax and IVA explained step by step with 2026 figures, a worked example, deductions, the tax calendar and one legal move that can cut your IRPF by about €2,000.
 image_alt: Where 40,000 euros invoiced by a freelancer in Madrid go: expenses, Social Security, income tax and what is kept
-story_keywords: autónomo, autónomos, autonomo, autonomos, self-employed, freelancer, freelancers, cuota de autónomos, tarifa plana, RETA, modelo 130, modelo 303, form 130, form 303, digital nomad visa, cese de actividad
+story_keywords: autónomo, autónomos, autonomo, autonomos, self-employed, self-employment, freelancer, freelancers, cuota de autónomos, tarifa plana, RETA, modelo 130, modelo 303, form 130, form 303, digital nomad visa, digital nomad, digital nomads, cese de actividad, VeriFactu, Beckham law
 story_categories: taxes, work, economy, visa
 ---
 
@@ -167,7 +167,7 @@ Three places are different again:
 - **Ceuta and Melilla** Residents get 60% off the income tax on income they earn there.
 - **The Canary Islands** The normal IRPF, with their own regional half, but no IVA (more on that below).
 
-It's the region where you live most of the year that counts, not where your clients are. You can compare regions for your own profit in the [autónomo tax calculator](/calculators/autonomo-tax): change the region and watch the regional half move.
+It's the region where you live most of the year that counts, not where your clients are. You can compare regions for your own profit in the [autónomo tax calculator](/calculators/autonomo-tax): change the region and watch the regional half move. Or see every region side by side for [€40,000 of net revenue](/calculators/autonomo-tax-40000-euros).
 
 ## Worked example: €32,000 in Madrid, step by step
 
@@ -234,6 +234,8 @@ With no withholding, the quarterly form 130 payments do the same job, and the Re
 In the Renta you also claim things the quarterly forms don't see: the personal and family allowances, pension plan contributions, regional deductions (for rent, children, gym fees and many more, depending on the region), and the 20% start-up reduction.
 
 Don't simply accept the draft (*borrador*) the tax agency prepares. It doesn't know your business income and expenses; you, or your gestor, add them.
+
+Your Renta matters beyond tax, too. When you ask a Spanish bank for a mortgage, it judges you on the income in your returns, not your turnover: see [getting a mortgage as an autónomo](/articles/spain-property-guide#getting-a-mortgage) in our guide to buying property in Spain.
 
 ## A private pension plan: up to €5,750 off your taxable income
 
@@ -315,7 +317,7 @@ Three things cause the most confusion.
 
 If you work from home, you can deduct part of the rent or mortgage interest, the IBI (property tax), the community fees and home insurance, **in proportion to the space you use for work**. Declare that share to the tax agency (in form 036) first: if you use a 15 m² room in a 75 m² flat, that's 20%.
 
-Utilities are stricter: water, electricity, gas and internet at home count only **30% of that work share**. With a 20% office, it's 30% of 20%: **6%** of the bill. (The internet line may be argued at a higher share if it's clearly used for work; your gestor will know what holds up.)
+Utilities are stricter: water, electricity, gas and internet at home count only **30% of that work share**. With a 20% office, it's 30% of 20%: **6%** of the bill. (The internet line may be argued at a higher share if it's clearly used for work; your gestor will know what holds up.) Cutting the bill itself is worth it too: here's [how switching electricity provider works](/articles/switching-electricity-provider-spain).
 
 ::: graphic home-office
 
@@ -349,7 +351,7 @@ Remember that IRPF and IVA are separate checks. €1,000 of software plus €210
 
 Keep everything (invoices, receipts, bank statements) for **at least six years**, and longer for anything you're still depreciating. The tax agency can usually look back four years, Social Security four, and commercial law asks for six.
 
-Spain is also moving to invoicing software that meets new anti-fraud rules, **VeriFactu**: every invoice is registered with a tamper-proof record and, optionally, sent to the tax agency in real time. As of November 2026 it's due to become compulsory for companies from 1 January 2027 and for autónomos from 1 July 2027, after two delays. Check the dates when you choose your invoicing software; most paid tools for autónomos already support it.
+Spain is also moving to invoicing software that meets new anti-fraud rules, **VeriFactu**: every invoice is registered with a tamper-proof record and, optionally, sent to the tax agency in real time. It was due to become compulsory in 2027 (1 January for companies, 1 July for autónomos), but in October 2026 the government announced another delay, to October 2028, to line it up with compulsory electronic invoicing between businesses: from October 2027 for companies invoicing over €8 million, and from October 2028 for autónomos and smaller firms. Check the final dates when you choose your invoicing software; most paid tools for autónomos already support VeriFactu.
 
 ## The tarifa plana for new autónomos
 
@@ -363,7 +365,7 @@ The €80 was set in law for 2023-2025; for 2026 it has carried over while the n
 
 Some regions go further and pay that quota back to you, in full, for the first year or two: Madrid, Andalusia and Murcia have had such schemes. Check what your region offers; most require you to apply within a set time after registering.
 
-Even with the tarifa plana, the regularización still happens at the end, but only for the months after the flat rate ends.
+Even with the tarifa plana, the regularización still happens at the end, but only for the months after the flat rate ends. The [autónomo tax calculator](/calculators/autonomo-tax) has a first-year switch, so you can see what the tarifa plana is worth at your income.
 
 ## Company directors: the autónomo societario
 
@@ -379,7 +381,7 @@ A company can pay off at higher profits, when you can leave part of the money in
 
 A few situations change the picture.
 
-- **Employed and self-employed at the same time** That's *pluriactividad*. You still pay the full autónomo quota on your freelance profit, but if your common-contingency contributions as employee and autónomo together go over €17,323.68 in 2026, Social Security refunds half of the excess (up to half of your autónomo quotas for those contingencies) the following year. For IRPF the two incomes simply add up, and you'll usually owe tax in the Renta, because your employer withheld as if the salary were all you had.
+- **Employed and self-employed at the same time** That's *pluriactividad*. You still pay the full autónomo quota on your freelance profit, but if your common-contingency contributions as employee and autónomo together go over €17,323.68 in 2026, Social Security refunds half of the excess (up to half of your autónomo quotas for those contingencies) the following year. For IRPF the two incomes simply add up, and you'll usually owe tax in the Renta, because your employer withheld as if the salary were all you had. The [net salary calculator](/calculators/net-salary) shows what that salary nets on its own.
 - **A family member who works with you** A partner or child can join as an *autónomo colaborador* (details below).
 - **Stopping** You deregister with Social Security within three days of stopping and with Hacienda (form 036) within a month. You still file the last quarter and the Renta for that year.
 - **Unemployment benefit for the self-employed** Your quotas give you a right to the *cese de actividad* if you stop for economic, technical or other set reasons and meet the conditions, mainly 12 months of continuous contributions just before. It pays 70% of your average base for 4 to 24 months, depending on how long you've contributed.
