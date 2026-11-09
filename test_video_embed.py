@@ -6,7 +6,7 @@ import build
 
 def test_article_video_directive_renders_facade_and_schema():
     html = build.article_markdown_to_html("Intro.\n\n::: video 891GhtG_AkU\n\n## Next")
-    assert '<figure class="video-embed"' in html
+    assert '<figure class="video-embed' in html
     assert 'data-video-id="891GhtG_AkU"' in html
     assert "maxresdefault.jpg" in html
     ld = json.loads(html.split('<script type="application/ld+json">')[1].split("</script>")[0])
@@ -38,6 +38,9 @@ def test_chapters_render_rail_and_clip_schema():
     assert clips[-1]["endOffset"] == 673
 
 
-def test_video_without_chapters_has_no_rail():
+def test_video_without_chapters_has_no_rail(monkeypatch):
+    v = {k: val for k, val in build.load_videos()["891GhtG_AkU"].items() if k != "chapters"}
+    monkeypatch.setattr(build, "_videos_cache", {"891GhtG_AkU": v})
     html = build.video_embed_html("891GhtG_AkU")
+    assert 'class="video-embed"' in html
     assert "ve-chapters" not in html and "hasPart" not in html
