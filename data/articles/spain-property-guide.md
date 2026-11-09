@@ -14,6 +14,8 @@ story_categories: property, housing, economy, taxes
 
 I bought a flat in Spain myself: Alicante, April 2025, €295,000. It has 105 m² to live in, four bedrooms and two bathrooms in a building from 2005 in a good area, plus a garage space and a storage room. I planned to put 20% down. In the end I put in €45,000 more than that, in cash. Along the way I got €14,000 off the asking price and a mortgage as an autónomo, and six months after moving in I was chipping in with the neighbours to repair the lifts.
 
+::: graphic flat-photos
+
 This guide covers the whole path: how much money you really need, how to find a flat without overpaying, what to check in the documents, how the deposit, mortgage and taxes work, and then what owning and selling cost. Wherever I have my own numbers, I give them: what I paid, what the bank lent, what the flat costs to run, and what I would get back if I sold it today.
 
 *Up to date as of November 2026. Check the numbers and rates at the links: Spanish taxes change every year, and some of them depend on the region and the town.*

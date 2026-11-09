@@ -2942,6 +2942,17 @@ body.page-article .article-body > p:first-child { animation: art-in 0.5s ease-ou
  padding: 24px 26px; color: #3C4858; line-height: 1.45;
 }
 .article-body figure.ag figcaption { margin-top: 10px; font-size: 14px; line-height: 1.55; color: #6C7A89; }
+
+/* Photo grid ("::: graphic flat-photos"): 2x2, every photo cropped to 4:3
+   whatever its orientation; each one links to the full image. */
+.ag-photos-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.article-body .ag-photos-grid a,
+.article-body .ag-photos-grid a:hover { display: block; background: none; text-decoration: none; }
+.article-body .ag-photos-grid a::after { display: none; }
+.ag-photos-grid img {
+ display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover;
+ border-radius: 10px; background-color: #F3F1EC;
+}
 .ag i[lang="es"] { font-family: var(--font-display); font-style: italic; }
 .ag b { color: #1A1A16; }
 
