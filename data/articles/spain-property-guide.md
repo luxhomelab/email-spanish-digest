@@ -10,6 +10,7 @@ excerpt: Everything about property in Spain in one place: how to find a flat and
 image_alt: Cover of the guide to buying a flat in Spain
 story_keywords: house prices, home prices, housing prices, property prices, property market, housing market, mortgage, mortgages, homebuyers, home buyers, buying a home, buy a home, first home, nota simple, arras, ITP, property transfer tax, IBI, plusvalía, plusvalia, non-resident buyers, foreign buyers
 story_categories: property, housing, economy, taxes
+related: /calculators/property-buying-cost, /calculators/rental-yield, /articles/switching-electricity-provider-spain
 ---
 
 I bought a flat in Spain myself: Alicante, April 2025, €295,000. It has 105 m² to live in, four bedrooms and two bathrooms in a building from 2005 in a good area, plus a garage space and a storage room. I planned to put 20% down. In the end I put in €45,000 more than that, in cash. Along the way I got €14,000 off the asking price and a mortgage as an autónomo, and six months after moving in I was chipping in with the neighbours to repair the lifts.

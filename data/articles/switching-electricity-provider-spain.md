@@ -9,6 +9,7 @@ excerpt: A year after signing with Naturgy, a 20% price hike pushed me to test s
 image_alt: Spanish electricity bill showing the CNMC comparator QR code and link
 story_keywords: electricity bill, electricity bills, power bill, power bills, electricity price, electricity prices, price of electricity, electricity tariff, electricity tariffs, PVPC, regulated tariff, electricity provider, electricity providers, electricity company, electricity companies, energy bill, energy bills
 story_categories: economy, housing, property, events, health, taxes
+related: /calculators/electricity-bill, /articles/spain-property-guide, /articles/autonomo-taxes-spain
 ---
 
 A year after I signed my electricity contract with Naturgy, the email arrived: a 10% price increase.

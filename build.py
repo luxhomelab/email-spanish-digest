@@ -751,6 +751,9 @@ def load_articles():
             "image_alt": meta.get("image_alt") or "",
             "story_keywords": [k.strip() for k in (meta.get("story_keywords") or "").split(",") if k.strip()],
             "story_categories": [c.strip().lower() for c in (meta.get("story_categories") or "").split(",") if c.strip()],
+            # Optional `related:` (comma-separated calculator/article URLs) for
+            # the cards under the FAQ; falls back to CATEGORY_HUBS.
+            "related": [u.strip() for u in (meta.get("related") or "").split(",") if u.strip()],
             "body_html": body_html,
             "word_count": words,
             "reading_time": reading_time,
@@ -1941,6 +1944,26 @@ def category_hub_cards(slug, articles_by_url):
     return [c for c in (hub_card(u, articles_by_url) for u in CATEGORY_HUBS.get(slug, [])) if c]
 
 
+def article_hub_cards(article, articles_by_url, limit=3):
+    """Calculator/guide cards for the end of an article.
+
+    Uses the article's `related` URLs when set, else CATEGORY_HUBS for its
+    story_categories in order. The article itself and unknown URLs are skipped.
+    """
+    urls = article.get("related") or [u for cat in article.get("story_categories", [])
+                                      for u in CATEGORY_HUBS.get(cat, [])]
+    cards = []
+    for url in dict.fromkeys(urls):
+        if url == article["url"]:
+            continue
+        card = hub_card(url, articles_by_url)
+        if card:
+            cards.append(card)
+        if len(cards) >= limit:
+            break
+    return cards
+
+
 def attach_digest_hubs(digests, articles, limit=3):
     """Pick up to `limit` calculator/guide cards for the end of each edition.
 
@@ -2115,13 +2138,15 @@ def render_article_pages(env, articles):
         os.remove(dest)
 
     template = env.get_template("article.html")
+    articles_by_url = {a["url"]: a for a in articles}
     for article in articles:
         crumbs = [
             {"name": "Home", "url": "/"},
             {"name": "Articles", "url": "/articles/"},
             {"name": article["title"], "url": article["url"], "current": True},
         ]
-        output = template.render(article=article, crumbs=crumbs, js_version=js_version())
+        output = template.render(article=article, crumbs=crumbs, js_version=js_version(),
+                                 hub_cards=article_hub_cards(article, articles_by_url))
         dest = os.path.join(ARTICLES_DIR, f"{article['slug']}.html")
         with open(dest, "w", encoding="utf-8") as fh:
             fh.write(output)

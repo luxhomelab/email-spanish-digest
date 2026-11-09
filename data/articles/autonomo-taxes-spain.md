@@ -9,6 +9,7 @@ excerpt: You invoice €40,000 as a freelancer in Spain. How much do you keep? S
 image_alt: Where 40,000 euros invoiced by a freelancer in Madrid go: expenses, Social Security, income tax and what is kept
 story_keywords: autónomo, autónomos, autonomo, autonomos, self-employed, self-employment, freelancer, freelancers, cuota de autónomos, tarifa plana, RETA, modelo 130, modelo 303, form 130, form 303, digital nomad visa, digital nomad, digital nomads, cese de actividad, VeriFactu, Beckham law
 story_categories: taxes, work, economy, visa
+related: /calculators/autonomo-tax, /calculators/net-salary, /articles/spain-property-guide
 ---
 
 You've gone freelance in Spain, maybe on the digital nomad visa. You're an *autónomo* now. So how much of every euro do you actually keep?
