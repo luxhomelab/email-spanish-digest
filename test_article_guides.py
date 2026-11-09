@@ -108,4 +108,4 @@ def test_digest_hubs_skip_linked_pages_and_follow_categories():
     attach_digest_hubs([d], articles, limit=3)
     assert [c["url"] for c in d["hub_cards"]] == [
         "/articles/spain-property-guide", "/calculators/rental-yield", "/calculators/net-salary"]
-    assert d["hub_cards"][0]["desc"] == "20 min read"
+    assert d["hub_cards"][0]["desc"] == "A 20-minute read"

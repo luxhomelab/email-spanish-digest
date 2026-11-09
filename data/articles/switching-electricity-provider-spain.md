@@ -9,6 +9,7 @@ excerpt: A year after signing with Naturgy, a 20% price hike pushed me to test s
 image_alt: Spanish electricity bill showing the CNMC comparator QR code and link
 story_keywords: electricity bill, electricity bills, power bill, power bills, electricity price, electricity prices, price of electricity, electricity tariff, electricity tariffs, PVPC, regulated tariff, electricity provider, electricity providers, electricity company, electricity companies, energy bill, energy bills
 story_categories: economy, housing, property, events, health, taxes
+related: /calculators/electricity-bill, /articles/spain-property-guide, /articles/autonomo-taxes-spain
 ---
 
 A year after I signed my electricity contract with Naturgy, the email arrived: a 10% price increase.
@@ -87,6 +88,8 @@ That's why the homework has to come first. Get your real peak from Datadis, benc
 ## Make the decision in five minutes
 
 The real cost depends on your own consumption pattern, not the headline price. That's the gap that tripped me up — try the free [Electricity Bill Calculator](/calculators/electricity-bill) on Spanified: plug in your current tariff and the new offer, and see the actual difference.
+
+> TIP: Self-employed and working from home? Part of this bill is tax-deductible: 30% of the share of your home you use for work. Our [autónomo tax guide](/articles/autonomo-taxes-spain#home-office-meals-and-the-car) shows how to work it out.
 
 So next time someone calls you with a deal, you don't have to guess. Have your current figures ready, enter the new ones, and read the number.
 

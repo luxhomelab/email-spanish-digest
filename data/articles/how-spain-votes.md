@@ -173,7 +173,7 @@ If you live in Spain but aren't Spanish, the answer depends on your passport and
 
 - **Spanish citizens aged 18 and over** can vote in every election.
 - **EU citizens** can vote in municipal and European elections, if they've signed up to the electoral roll (*censo electoral*), which is kept by the [INE's electoral census office](https://www.ine.es/oficina_censo/).
-- **Citizens of countries with a reciprocity agreement**, such as the UK, Norway, Colombia or Ecuador, can vote in municipal elections after a few years of legal residence, once registered.
+- **Countries with a reciprocity agreement** Citizens of countries such as the UK, Norway, Colombia or Ecuador can vote in municipal elections after a few years of legal residence, once registered.
 
 General and regional elections, including the 29 November vote, are for Spanish citizens only.
 

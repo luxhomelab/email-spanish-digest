@@ -4,14 +4,142 @@
     "caption": "How Spanish general elections work: districts, closed lists and d'Hondt",
     "description": "A seven-minute guide to Spanish general elections: two ballots, 52 districts, closed party lists, the d'Hondt method, blank votes and the Senate.",
     "upload_date": "2026-10-28T10:00:07-07:00",
-    "duration": 435
+    "duration": 435,
+    "chapters": [
+      {
+        "t": 0,
+        "title": "How does Spain vote?"
+      },
+      {
+        "t": 15,
+        "title": "Two ballots: Congress and Senate"
+      },
+      {
+        "t": 43,
+        "title": "350 seats, 52 districts"
+      },
+      {
+        "t": 73,
+        "title": "Why votes weigh differently"
+      },
+      {
+        "t": 99,
+        "title": "Closed party lists"
+      },
+      {
+        "t": 121,
+        "title": "The d'Hondt method, step by step"
+      },
+      {
+        "t": 177,
+        "title": "The real threshold"
+      },
+      {
+        "t": 201,
+        "title": "Blank and spoiled votes"
+      },
+      {
+        "t": 254,
+        "title": "Who the system helps"
+      },
+      {
+        "t": 291,
+        "title": "How the Senate is elected"
+      },
+      {
+        "t": 329,
+        "title": "Election day"
+      },
+      {
+        "t": 363,
+        "title": "After the vote: investiture"
+      },
+      {
+        "t": 391,
+        "title": "Can you vote in Spain?"
+      },
+      {
+        "t": 419,
+        "title": "Summary"
+      }
+    ]
   },
   "5polGAQydNo": {
     "title": "Spain’s Political System Explained: King, PM, Parliament",
     "caption": "Spain's political system: the King, the prime minister and parliament",
     "description": "How Spain is governed: what the King does, how Congress and the Senate work, how the prime minister is chosen and how the courts keep them in check.",
     "upload_date": "2026-10-29T10:27:11-07:00",
-    "duration": 589
+    "duration": 589,
+    "chapters": [
+      {
+        "t": 0,
+        "title": "Who runs Spain?"
+      },
+      {
+        "t": 12,
+        "title": "The 1978 Constitution"
+      },
+      {
+        "t": 36,
+        "title": "Separation of powers"
+      },
+      {
+        "t": 53,
+        "title": "The King"
+      },
+      {
+        "t": 80,
+        "title": "Parliament: the Cortes Generales"
+      },
+      {
+        "t": 108,
+        "title": "Congress vs Senate"
+      },
+      {
+        "t": 140,
+        "title": "How the Prime Minister is chosen"
+      },
+      {
+        "t": 173,
+        "title": "The Government and its checks"
+      },
+      {
+        "t": 211,
+        "title": "How a law is made"
+      },
+      {
+        "t": 295,
+        "title": "Decree-laws: the Government's shortcut"
+      },
+      {
+        "t": 348,
+        "title": "A real example: dissolve, then decree again"
+      },
+      {
+        "t": 437,
+        "title": "The courts"
+      },
+      {
+        "t": 467,
+        "title": "The Constitutional Court"
+      },
+      {
+        "t": 500,
+        "title": "Who elects and controls whom"
+      },
+      {
+        "t": 523,
+        "title": "Regions and towns"
+      },
+      {
+        "t": 547,
+        "title": "Election calendar"
+      },
+      {
+        "t": 569,
+        "title": "Summary"
+      }
+    ]
   },
   "fvvdUkobE9I": {
     "title": "Autónomo Taxes in Spain 2026: How Much Does a Freelancer Really Pay?",
