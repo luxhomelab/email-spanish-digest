@@ -312,5 +312,94 @@
         "title": "Summary"
       }
     ]
+  },
+  "U1hZ2_gwank": {
+    "title": "I Bought a Flat in Spain: Real Costs, Mortgage and Taxes",
+    "caption": "Buying a flat in Spain: my real costs, mortgage and taxes",
+    "description": "Buying a flat in Spain with 2026 figures: the real budget, transfer tax by region, the nota simple, arras, the mortgage, the notary, and what owning and selling cost.",
+    "upload_date": "2026-11-09T09:00:15-08:00",
+    "duration": 850,
+    "chapters": [
+      {
+        "t": 0,
+        "title": "My flat in Alicante, and the whole path"
+      },
+      {
+        "t": 49,
+        "title": "How much cash you really need"
+      },
+      {
+        "t": 85,
+        "title": "Buying costs: my €295,000 flat in Alicante"
+      },
+      {
+        "t": 110,
+        "title": "Transfer tax by region (ITP, IVA, AJD)"
+      },
+      {
+        "t": 141,
+        "title": "8 steps from decision to keys"
+      },
+      {
+        "t": 163,
+        "title": "Where to find flats, and who pays the agent"
+      },
+      {
+        "t": 221,
+        "title": "Is the price fair? Three free tools"
+      },
+      {
+        "t": 267,
+        "title": "Always haggle: €309,000 to €295,000"
+      },
+      {
+        "t": 297,
+        "title": "One flat, three sizes"
+      },
+      {
+        "t": 339,
+        "title": "The nota simple"
+      },
+      {
+        "t": 375,
+        "title": "Debts, derramas and the €1,600 surprise"
+      },
+      {
+        "t": 439,
+        "title": "The deal on a calendar"
+      },
+      {
+        "t": 475,
+        "title": "The arras deposit: three kinds"
+      },
+      {
+        "t": 514,
+        "title": "Mortgage: how much the bank lends"
+      },
+      {
+        "t": 569,
+        "title": "Rates, extras and getting approved"
+      },
+      {
+        "t": 630,
+        "title": "Signing at the notary, and after"
+      },
+      {
+        "t": 667,
+        "title": "What it costs to own"
+      },
+      {
+        "t": 707,
+        "title": "Selling my flat 1.5 years later: what it would cost"
+      },
+      {
+        "t": 763,
+        "title": "Gains tax: a loss means no tax, a gain is taxed"
+      },
+      {
+        "t": 815,
+        "title": "Did I lose money? The rent I didn't pay"
+      }
+    ]
   }
 }
