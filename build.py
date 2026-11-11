@@ -17,7 +17,8 @@ Usage: python3 build.py [--out dist] [--listmonk local] [--analytics on|off|auto
   Local dev against the dev Listmonk instead of prod:
     python3 build.py --listmonk local
   (endpoint + dev list UUID are picked automatically; override with
-  --list-uuid or env LISTMONK_URL / LISTMONK_LIST_UUID)
+  --list-uuid / --es-list-uuid or env LISTMONK_URL / LISTMONK_LIST_UUID /
+  LISTMONK_ES_LIST_UUID)
 """
 
 import argparse
@@ -62,6 +63,9 @@ LISTMONK_PROD_URL = "https://newsletter.spanified.com"
 LISTMONK_LOCAL_URL = "https://listmonk.dslab.fyi"
 LISTMONK_PROD_LIST_UUID = "d4edf463-70a3-45e5-a964-a39b48c49b2d"
 LISTMONK_LOCAL_LIST_UUID = "5dcb6e29-0181-4c55-b68a-705133b53e10"
+# Spanish forms (lang=es, the /es/ pages) subscribe to their own list.
+LISTMONK_PROD_ES_LIST_UUID = "dc4801f8-3282-46e2-bbf9-488baff41312"
+LISTMONK_LOCAL_ES_LIST_UUID = "cc400145-5ebe-4a7c-98e1-b0a336250224"
 
 # Static pages rendered 1:1 from templates.
 # Pages listed here are rendered to dist root. NOINDEX_PAGES are still
@@ -88,6 +92,21 @@ STATIC_PAGES = [
     "search.html",
     "404.html",
 ]
+
+# Minimal Spanish subscribe flow (plus the privacy/terms/cookies pages it
+# links to), rendered from templates/es/<name> to
+# <out>/es/<name> (served as /es/subscribe etc.). ES_INDEXED_PAGES go into
+# sitemap.xml; the rest are noindex like their English twins.
+ES_PAGES = [
+    "subscribe.html",
+    "confirm.html",
+    "success.html",
+    "unsubscribe.html",
+    "privacy.html",
+    "terms.html",
+    "cookies.html",
+]
+ES_INDEXED_PAGES = {"subscribe.html", "privacy.html", "terms.html", "cookies.html"}
 
 # Static assets copied verbatim into the output dir (hand-written pages,
 # images, domain config, localized pages).
@@ -160,6 +179,19 @@ def format_date(date_str):
     try:
         dt = datetime.strptime(date_str, "%Y-%m-%d")
         return f"{dt.strftime('%B')} {dt.day}, {dt.year}"
+    except (ValueError, TypeError):
+        return date_str
+
+
+ES_MONTHS = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
+             "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+
+
+def format_date_es(date_str):
+    """'2026-09-10' -> '10 de septiembre de 2026'."""
+    try:
+        dt = datetime.strptime(date_str, "%Y-%m-%d")
+        return f"{dt.day} de {ES_MONTHS[dt.month - 1]} de {dt.year}"
     except (ValueError, TypeError):
         return date_str
 
@@ -865,6 +897,15 @@ SUBSCRIBE_FAQ_ITEMS = [
     ("Is it written by AI?", "AI helps translate and summarize the Spanish stories. An editor reviews every edition before it is sent, and each story links to its original source so you can check it."),
 ]
 
+# Spanish twin of SUBSCRIBE_FAQ_ITEMS for /es/subscribe.
+ES_SUBSCRIBE_FAQ_ITEMS = [
+    ("¿Cada cuánto llega el email?", "Una vez al día, sobre las 08:00 hora de Madrid, también los fines de semana."),
+    ("¿De verdad es gratis?", "Sí. No hay muro de pago y tu email solo se usa para enviarte Spain Daily. Nunca se vende."),
+    ("¿Qué pasa después de suscribirme?", "Te enviamos enseguida un email de confirmación. Haz clic en el enlace que contiene para empezar a recibir Spain Daily. Si no llega en unos minutos, revisa las carpetas de spam y promociones."),
+    ("¿Lo escribe una IA?", "La IA ayuda a resumir las noticias. Un editor revisa cada edición antes de enviarla, y cada noticia enlaza a su fuente original para que puedas comprobarla."),
+]
+
+
 FAQ_ITEMS = [
     ("Where can I read Spanish news in English?", "On Spain Daily: every morning we publish a free edition with Spain's top stories in plain English, online and by email. Each item links to the original Spanish source, so you can read the full article if you want to."),
     ("Is Spain Daily a newspaper or a newsletter?", "Spain Daily is a newsletter, not a newspaper. We do not do original reporting: we aggregate Spanish outlets, then translate and summarize their stories in English and link to each source. The summaries are AI-assisted and checked by an editor before every send."),
@@ -961,6 +1002,19 @@ def render_llms_txt(digests, articles=(), salary_pages=(), autonomo_pages=(), re
     print("  wrote llms.txt")
 
 
+def render_es_pages(env, proof):
+    es_dir = os.path.join(OUT_DIR, "es")
+    os.makedirs(es_dir, exist_ok=True)
+    contexts = {
+        "subscribe.html": {"proof": proof, "faq": ES_SUBSCRIBE_FAQ_ITEMS, "js_version": js_version()},
+    }
+    for name in ES_PAGES:
+        output = env.get_template(f"es/{name}").render(**contexts.get(name, {}))
+        with open(os.path.join(es_dir, name), "w", encoding="utf-8") as fh:
+            fh.write(output)
+        print(f"  wrote es/{name}")
+
+
 def render_static(env, digests):
     latest = digests[0] if digests else None
     topics = [
@@ -974,13 +1028,16 @@ def render_static(env, digests):
     total_issues = len(digests)
     if digests:
         first_issue = format_date(digests[-1]["date"])
+        first_issue_es = format_date_es(digests[-1]["date"])
     else:
-        first_issue = ""
+        first_issue = first_issue_es = ""
     threads_n = social.get("threads_followers", 4100)
     reddit_n = social.get("reddit_members", 1000)
     proof = {
         "total_issues": total_issues,
         "first_issue": first_issue,
+        "first_issue_es": first_issue_es,
+        "total_issues_es": f"{total_issues:,}".replace(",", "."),
         "threads": threads_n,
         "reddit": reddit_n,
         "threads_display": f"{threads_n:,}",
@@ -1007,6 +1064,7 @@ def render_static(env, digests):
         with open(dest, "w", encoding="utf-8") as fh:
             fh.write(output)
         print(f"  wrote {name}")
+    render_es_pages(env, proof)
     render_calculators(env)
     render_quizzes(env, proof=proof,
                    latest_url=f"/archive/{latest['date']}" if latest else None)
@@ -2274,6 +2332,20 @@ def calc_lastmod(calc, amount_page=False):
     return git_lastmod(*paths)
 
 
+def sitemap_hreflang(url):
+    """xhtml:link alternates for an English page and its /es/ twin.
+
+    Both URLs of a pair carry the same three links (en, es, x-default = en),
+    matching partials/hreflang-es.html in the pages' <head>.
+    """
+    path = url[len(SITE_URL):]
+    base = path[len("/es"):] if path.startswith("/es/") else path
+    if base.lstrip("/") + ".html" not in ES_INDEXED_PAGES:
+        return ""
+    links = (("en", SITE_URL + base), ("es", SITE_URL + "/es" + base), ("x-default", SITE_URL + base))
+    return "".join(f'<xhtml:link rel="alternate" hreflang="{lang}" href="{href}"/>' for lang, href in links)
+
+
 def render_sitemap(digests, categories=(), articles=(), salary_pages=(), autonomo_pages=(), rental_yield_pages=(), category_lastmod=None):
     # lastmod only where it is real: the newest digest drives the home page,
     # archive and category pages; articles and calculators use the last git
@@ -2321,14 +2393,18 @@ def render_sitemap(digests, categories=(), articles=(), salary_pages=(), autonom
     # noindex,nofollow and must never enter the sitemap.
     urls.append((SITE_URL + "/quiz/ai-or-real", None))
     urls.append((SITE_URL + "/quiz/spanish-law-or-myth", None))
+    # Spanish twins (/es/<page>) of indexable English pages.
+    urls.extend((SITE_URL + "/es/" + name[:-len(".html")], None) for name in ES_PAGES if name in ES_INDEXED_PAGES)
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
-    lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
+    lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+                 'xmlns:xhtml="http://www.w3.org/1999/xhtml">')
     for url, lastmod in urls:
+        tag = f"<loc>{url}</loc>"
         if lastmod:
-            lines.append(f"  <url><loc>{url}</loc><lastmod>{lastmod}</lastmod></url>")
-        else:
-            lines.append(f"  <url><loc>{url}</loc></url>")
+            tag += f"<lastmod>{lastmod}</lastmod>"
+        tag += sitemap_hreflang(url)
+        lines.append(f"  <url>{tag}</url>")
     lines.append("</urlset>")
 
     dest = os.path.join(OUT_DIR, "sitemap.xml")
@@ -2530,6 +2606,13 @@ def parse_args():
         "Env LISTMONK_LIST_UUID overrides.",
     )
     parser.add_argument(
+        "--es-list-uuid",
+        default=os.environ.get("LISTMONK_ES_LIST_UUID"),
+        help="Listmonk list UUID for Spanish (lang=es) subscribe forms "
+        "(default: prod Spanish list, or the dev Spanish list with "
+        "--listmonk local). Env LISTMONK_ES_LIST_UUID overrides.",
+    )
+    parser.add_argument(
         "--analytics",
         choices=("on", "off", "auto"),
         default=_env_analytics(),
@@ -2579,6 +2662,15 @@ def listmonk_list_uuid(args):
     if args.listmonk == "local":
         return LISTMONK_LOCAL_LIST_UUID
     return LISTMONK_PROD_LIST_UUID
+
+
+def listmonk_es_list_uuid(args):
+    """List UUID for Spanish forms: --es-list-uuid wins, otherwise per mode."""
+    if args.es_list_uuid:
+        return args.es_list_uuid
+    if args.listmonk == "local":
+        return LISTMONK_LOCAL_ES_LIST_UUID
+    return LISTMONK_PROD_ES_LIST_UUID
 
 
 def copy_static(out_dir):
@@ -2687,6 +2779,7 @@ def main():
     env.globals["site_url"] = SITE_URL
     env.globals["listmonk_form_action"] = listmonk_form_action(args.listmonk)
     env.globals["listmonk_list_uuid"] = listmonk_list_uuid(args)
+    env.globals["listmonk_es_list_uuid"] = listmonk_es_list_uuid(args)
     # Captcha (Cloudflare Turnstile via Worker) only exists in front of the
     # prod API. Local builds post straight at the dev Listmonk — no Worker,
     # so no widget is rendered and the JS token check is skipped.

@@ -11,7 +11,8 @@
 <meta name="twitter:description" content="What data Spanified collects, why, and your rights under GDPR.">
 <meta name="robots" content="max-image-preview:large">{% endblock %}
 
-{% block canonical %}<link rel="canonical" href="{{ site_url }}/privacy">{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/privacy">
+{% set alt_path = "/privacy" %}{% include "partials/hreflang-es.html" %}{% endblock %}
 {% block content %}
 {% include "partials/breadcrumbs.html" %}
 <script type="application/ld+json">

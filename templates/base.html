@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"{% block html_class %}{% endblock %}>
+<html lang="{{ page_lang | default('en') }}"{% block html_class %}{% endblock %}>
 <head>
 <meta charset="UTF-8">
 {# Build-time analytics flag. static/js/*.js are copied verbatim by build.py
@@ -42,13 +42,13 @@
  {% block extra_head %}{% endblock %}
 </head>
 <body{% block body_class %}{% endblock %}>
-{% include "partials/header.html" %}
+{% block site_header %}{% include "partials/header.html" %}{% endblock %}
 
  <main class="content">
 {% block content %}{% endblock %}
  </main>
 
-{% include "partials/footer.html" %}
+{% block site_footer %}{% include "partials/footer.html" %}{% endblock %}
 {% include "partials/cookie-banner.html" %}
 </body>
 </html>

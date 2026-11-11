@@ -11,7 +11,8 @@
 <meta name="twitter:description" content="Terms of Use of the free Spanified Spain Daily newsletter and website.">
 <meta name="robots" content="max-image-preview:large">{% endblock %}
 
-{% block canonical %}<link rel="canonical" href="{{ site_url }}/terms">{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/terms">
+{% set alt_path = "/terms" %}{% include "partials/hreflang-es.html" %}{% endblock %}
 {% block content %}
 {% include "partials/breadcrumbs.html" %}
 <script type="application/ld+json">

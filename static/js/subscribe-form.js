@@ -7,7 +7,30 @@
 // quiz-subscribed); error → inline message; Turnstile widget reset for retry.
 // Without JS the native navigation still works (Listmonk/Worker response page).
 
-const DEFAULT_ERROR = 'Something went wrong. Please try again.'
+// UI copy per form language (the hidden `lang` field, see
+// templates/partials/subscribe-form.html). Unknown languages fall back to en.
+export const MESSAGES = {
+  en: {
+    fallback: 'Something went wrong. Please try again.',
+    captchaFailed: 'Captcha verification failed. Please try again.',
+    captchaMissing: 'Please complete the captcha to subscribe.',
+    network: 'Network error — check your connection and try again.',
+    busy: 'Subscribing…',
+  },
+  es: {
+    fallback: 'Algo ha fallado. Inténtalo de nuevo.',
+    captchaFailed: 'No hemos podido verificar el captcha. Inténtalo de nuevo.',
+    captchaMissing: 'Completa el captcha para suscribirte.',
+    network: 'Error de conexión: revísala e inténtalo de nuevo.',
+    busy: 'Suscribiendo…',
+  },
+}
+
+export function messagesFor(lang) {
+  return MESSAGES[lang] || MESSAGES.en
+}
+
+const DEFAULT_ERROR = MESSAGES.en.fallback
 
 import { markSubscribed } from './subscription-store.js'
 // Shared gates (flag → hostname) live in analytics.js; isLocalHostname() is
@@ -32,8 +55,12 @@ function rememberSubscription(email) {
   } catch { /* private mode etc. — redirect still works */ }
 }
 
-export function errorMessage(bodyText, status = 0, fallback = DEFAULT_ERROR) {
-  if (status === 403) return 'Captcha verification failed. Please try again.'
+// Listmonk's own error text is English, so non-English forms show their
+// localized fallback instead of the server message.
+export function errorMessage(bodyText, status = 0, fallback = DEFAULT_ERROR, lang = 'en') {
+  const t = messagesFor(lang)
+  if (status === 403) return t.captchaFailed
+  if (t !== MESSAGES.en) return fallback === DEFAULT_ERROR ? t.fallback : fallback
   try {
     const data = JSON.parse(bodyText)
     if (data && typeof data.message === 'string' && data.message.trim()) {
@@ -114,7 +141,7 @@ export function trackSubscribe(fields, form) {
   } catch { /* analytics must never break the redirect */ }
 }
 
-export async function postForm(action, fields) {
+export async function postForm(action, fields, lang = 'en') {
   const res = await fetch(action, {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -122,7 +149,7 @@ export async function postForm(action, fields) {
   })
   if (res.ok) return { ok: true }
   const text = await res.text().catch(() => '')
-  return { ok: false, status: res.status, message: errorMessage(text, res.status) }
+  return { ok: false, status: res.status, message: errorMessage(text, res.status, DEFAULT_ERROR, lang) }
 }
 
 export function initSubscribeForm(form) {
@@ -146,6 +173,7 @@ export function initSubscribeForm(form) {
     if (errorEl) { errorEl.textContent = ''; errorEl.hidden = true }
 
     const fields = collectFields(form)
+    const t = messagesFor(fields.lang)
 
     // Honeypot: bots fill the invisible field; mimic success without sending.
     if (fields.nonce && fields.nonce.trim() !== '') {
@@ -157,13 +185,13 @@ export function initSubscribeForm(form) {
     // Worker would 403 anyway; stop early with an inline error.
     // Skipped on local builds (no captcha rendered, direct to Listmonk).
     if (captchaRequired(form) && (!fields['cf-turnstile-response'] || !fields['cf-turnstile-response'].trim())) {
-      return showError('Please complete the captcha to subscribe.')
+      return showError(t.captchaMissing)
     }
 
     const originalLabel = label ? label.textContent : ''
-    if (button) { button.disabled = true; label.textContent = 'Subscribing…' }
+    if (button) { button.disabled = true; label.textContent = t.busy }
     try {
-      const res = await postForm(form.action, fields)
+      const res = await postForm(form.action, fields, fields.lang)
       if (res.ok) {
         rememberSubscription(fields.email)
         trackSubscribe(fields, form)
@@ -172,7 +200,7 @@ export function initSubscribeForm(form) {
       }
       showError(res.message)
     } catch {
-      showError('Network error — check your connection and try again.')
+      showError(t.network)
     } finally {
       if (button) { button.disabled = false; label.textContent = originalLabel }
       // Turnstile tokens are single-use: reset the widget after every

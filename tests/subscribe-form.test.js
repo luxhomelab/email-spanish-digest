@@ -16,6 +16,15 @@ describe('errorMessage', () => {
   it('falls back for non-JSON bodies', () => {
     assert.equal(errorMessage('<html>oops</html>', 500), 'Something went wrong. Please try again.')
   })
+
+  it('uses Spanish copy for lang=es and skips the English server message', () => {
+    assert.equal(errorMessage('Forbidden', 403, undefined, 'es'), 'No hemos podido verificar el captcha. Inténtalo de nuevo.')
+    assert.equal(errorMessage('{"message":"Invalid email."}', 400, undefined, 'es'), 'Algo ha fallado. Inténtalo de nuevo.')
+  })
+
+  it('falls back to English for unknown languages', () => {
+    assert.equal(errorMessage('{"message":"Invalid email."}', 400, undefined, 'xx'), 'Invalid email.')
+  })
 })
 
 // ── collectFields ───────────────────────────────────────────────────────

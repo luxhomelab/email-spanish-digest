@@ -1557,6 +1557,17 @@ body.page-subscribe .testimonials { max-width: 1200px; padding-left: 0; padding-
 body.page-subscribe .testimonials h2 { line-height: 1.25; text-wrap: balance; }
 body.page-subscribe .sub-nowrap { white-space: nowrap; }
 body.page-subscribe .sub-preview-more { font-size: 14px; color: #3C4858; margin: 14px 0 0; }
+/* Spanish /es/subscribe: the sheet lists an edition's sections instead of
+   stories, so rows are tighter and the reveal runs down all six. */
+body.page-subscribe .sub-preview-time { font-size: 13px; color: #FBE3E4; font-variant-numeric: tabular-nums; }
+body.page-subscribe .sub-preview-topics li { padding: 11px 0; align-items: baseline; }
+body.page-subscribe .sub-preview-topics li:last-child { border-bottom: 0; }
+body.page-subscribe .sub-preview-topics .sub-preview-emoji { font-size: 18px; }
+body.page-subscribe .sub-preview-topics .sub-preview-story strong { font-size: 15px; }
+body.page-subscribe .sub-preview-topics .sub-preview-src { margin-top: 2px; }
+body.page-subscribe .sub-preview-topics li:nth-child(4) { animation-delay: 0.45s; }
+body.page-subscribe .sub-preview-topics li:nth-child(5) { animation-delay: 0.6s; }
+body.page-subscribe .sub-preview-topics li:nth-child(6) { animation-delay: 0.75s; }
 @keyframes sub-story-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) {
  body.page-subscribe .sub-preview-stories li { animation: none; }
@@ -1641,9 +1652,14 @@ body.page-subscribe .sub-people a:focus-visible,
 body.page-subscribe .sub-faq summary:focus-visible,
 body.page-subscribe .sub-social-card:focus-visible { outline: 3px solid rgba(170,21,27,0.45); outline-offset: 3px; border-radius: 4px; }
 
-@media (max-width: 900px) {
+/* Hero stacks earlier than the rest of the page: between 901 and 1100px the
+   430px preview left the email field 38-200px wide next to the button. */
+@media (max-width: 1100px) {
  body.page-subscribe .sub-hero { grid-template-columns: minmax(0, 1fr); gap: 40px; padding-top: 16px; }
+ body.page-subscribe .sub-hero-main { max-width: 640px; }
  body.page-subscribe .sub-preview { max-width: 520px; }
+}
+@media (max-width: 900px) {
  body.page-subscribe .sub-steps ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
  body.page-subscribe .sub-people { grid-template-columns: minmax(0, 1fr); gap: 28px; }
 }
