@@ -2336,7 +2336,7 @@ def sitemap_hreflang(url):
     """xhtml:link alternates for an English page and its /es/ twin.
 
     Both URLs of a pair carry the same three links (en, es, x-default = en),
-    matching partials/hreflang-es.html in the pages' <head>.
+    matching partials/hreflang.html in the pages' <head>.
     """
     path = url[len(SITE_URL):]
     base = path[len("/es"):] if path.startswith("/es/") else path
