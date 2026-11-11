@@ -1,0 +1,242 @@
+{
+  "items": [
+    {
+      "title": "Spain holds general strike on November 11",
+      "body": "CC OO and UGT hold their first general strike in 14 years on November 11 over housing costs, wages, and prices. The unions also call for afternoon demonstrations, 18 days before the November 29 election. A 40dB poll found 23% of working respondents will strike and 36.3% will not.}",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-10/los-sindicatos-llaman-a-espana-a-una-huelga-general-por-primera-vez-en-14-anos.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Rental decree would require payouts for non-renewal",
+      "body": "Published Royal Decree-law 28/2026 awaits a validation vote before taking effect. It would require landlords ending leases to pay at least 12 months' rent for a similar home and give six months' notice, up from four. The government lacks a majority for validation, and the vote is unlikely to pass.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/11/10/oficial-nuevo-decreto-incluye-indemnizaciones-inquilinos-casero-no-renueva-alquiler-2057837.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "PP proposes immigration quotas and young-worker tax breaks",
+      "body": "The PP's programme for the November 29 election proposes annual work-entry quotas based on jobs, housing, and services. Workers aged 18-35 would pay no IRPF (personal income tax) in their first year, with cuts of 75%, 50%, and 25% in the next three. Basic foods would have 0% VAT while the inflation crisis persists.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/10/6af36a00fc6c833b5f8b4575.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/pp-promete-que-los-jovenes-no-pagaran-irpf-su-primer-ano-cuota-cero-para-autonomos-primerizos-atajar-absentismo_7059395_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Minimum-wage tax exemption would need larger deduction",
+      "body": "The government is studying an IRPF (personal income tax) exemption for the proposed 2027 SMI (minimum wage) of €1,286 gross a month in 14 payments. Finance Ministry technicians' union Gestha says the deduction would need to rise from €591 to €1,033.66, costing about €1.1 billion.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gestha-cifra-1-034-euros-deduccion-necesaria-salario-minimo-no-pague-irpf_1_13652577.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Tax tribunal rules voluntary retirement payouts taxable",
+      "body": "The central tax tribunal has ruled that voluntary exit and early-retirement payouts face IRPF (personal income tax) unless a formal collective redundancy procedure is under way when signed. The exemption is capped at €180,000. The ruling binds the Tax Agency, but workers can still go to court.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-11/hacienda-obliga-a-tributar-las-prejubilaciones-voluntarias-si-no-se-enmarcan-en-un-despido-colectivo.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Inflation holds at 4.9% as energy costs rise",
+      "body": "Spain's annual CPI inflation held at 4.9% in October, according to the INE (national statistics institute) flash estimate. The Iran war has raised fuel, electricity, and gas costs, and high annual rates will last at least until March 2027. Markets expect the ECB to raise interest rates again in December.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/sabias-que-inflacion-va-seguir-alta-durante-varios-meses_7059483_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain defender Pau Cubarsí wins Golden Boy",
+      "body": "Barcelona and Spain centre-back Pau Cubarsí, 19, has won Golden Boy 2026 as Europe's best under-21 player. He received 475 of 500 possible points from 50 journalists, becoming the sixth Spanish winner. He will collect the award in Turin on December 14.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/deportes/futbol/2026-11-11/pau-cubarsi-de-la-frustracion-de-la-gala-del-balon-de-oro-a-la-alegria-por-el-reconocimiento-como-golden-boy.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Cabinet approves expanded benefits for single-parent families",
+      "body": "The cabinet approved a Royal Decree-law on November 10 that would give single-parent families with two children the same benefits as large families. Congress's standing committee must still validate it. The new family title would be available from January 1, 2027; the ministry estimates more than 760,000 families would benefit.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/sociedad/2026-11-10/el-gobierno-creara-un-titulo-de-familia-monoparental-las-que-tengan-dos-hijos-tendran-los-mismos-beneficios-de-las-numerosas.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Cabinet approves train drivers' emergency stopping powers",
+      "body": "The cabinet approved a Royal Decree-law on November 10 that would let train drivers stop or refuse to restart a train when they identify a serious and imminent risk. The measure aims to strengthen rail safety and social protection for rail workers.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/transportes-00343/noticia-gobierno-aprueba-decreto-faculta-maquinistas-parar-no-reiniciar-tren-riesgo-grave-20261110114044.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Three-month Treasury bill yield reaches two-year high",
+      "body": "Spain's three-month Treasury bills yielded 2,665% at the November 10 auction, a two-year high as markets anticipate an ECB rate rise in December. Nine-month bills yielded 2,946%, slightly below the previous auction. Both returns remain below October's 4.9% inflation rate.",
+      "sources": [
+        {
+          "name": "Cinco Días",
+          "url": "https://cincodias.elpais.com/mercados-financieros/2026-11-10/las-letras-del-tesoro-a-tres-meses-pagan-el-tipo-mas-alto-en-dos-anos.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Pandemic-loss protection for firms expires December 31",
+      "body": "A rule allowing firms to exclude 2020 and 2021 losses when assessing whether they must dissolve expires on December 31, 2026. Economists estimate it protects about 80,000 companies and 600,000 to 800,000 jobs. Without an extension, firms would have to count those losses again, though experts do not expect mass closures.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://cincodias.elpais.com/companias/2026-11-11/el-fin-del-escudo-antiquiebras-coloca-a-80000-empresas-al-borde-de-la-causa-de-disolucion.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Binance to close Spanish accounts on December 31",
+      "body": "Binance has told users in Spain to withdraw assets before it closes their accounts on December 31, 2026, because it lacks Europe's required MiCA licence. Accounts holding assets face monthly fees in November and December of 0,025% of balance or 10 USDC, whichever is higher. Remaining assets may later be converted or transferred.",
+      "sources": [
+        {
+          "name": "Cinco Días",
+          "url": "https://cincodias.elpais.com/criptoactivos/2026-11-10/binance-fija-para-el-31-de-diciembre-el-cierre-de-las-cuentas-de-sus-usuarios-en-espana.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "Which energy cost worries you most? A) Fuel B) Electricity C) Gas",
+  "subject": "General strike, rental decree and 4.9% inflation",
+  "variant": "Spain had an ordinary day. Mostly.",
+  "headline": "Spain had an ordinary day. Mostly.",
+  "date": "2026-11-11",
+  "engagement_source": "generated",
+  "generated_at": "2026-11-11T07:02:17.132047+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 654,
+    "items_selected_pass1": 14,
+    "fact_sheets_extracted": 14,
+    "items_after_importance_filter": 13,
+    "items_in_digest": 12
+  },
+  "selection_reasons": {
+    "269": "First national general strike in 14 years, centred on housing and wages, affects all workers and the whole country",
+    "570": "Gestha costs the IRPF exemption for the minimum wage at €1,100M, up €700M, a direct tax change for workers",
+    "587": "TEAC ruling: voluntary early-retirement payments are taxable IRPF unless part of a collective dismissal, a precedent affecting many workers",
+    "550": "PP platform proposes IRPF relief for young people, zero-quota for new autónomos and 0% VAT on basic food, relevant to residents' taxes ahead of the 29N vote",
+    "256": "New housing decree gives tenants compensation when landlords do not renew, a rental rule change affecting many renters",
+    "532": "New BOE rule opens widow's pension to people previously excluded, a systemic change to Social Security benefits",
+    "583": "Royal Decree-law lets train drivers stop trains for serious risk and adds protections for rail staff, affecting all rail commuters",
+    "544": "Inflation at 5% year-on-year and expected to stay high until at least March 2027, directly affecting household budgets",
+    "626": "Three-month Treasury bill yields hit a two-year high and ECB officials signal further rate rises in December, relevant to Euribor and mortgage costs",
+    "594": "End of the anti-bankruptcy shield leaves 80,000 companies at risk of dissolution, a significant economic measure with a deadline at year-end",
+    "352": "Government creates single-parent family title extending numerous-family benefits to over 760,000 households, a benefits change",
+    "337": "Positive story: Spanish defender Pau Cubarsí named Europe's best young player (Golden Boy), a national sporting milestone",
+    "8": "PP programme proposes an annual cap on immigrant entries, a major migration policy proposal ahead of the election",
+    "628": "Binance will close user accounts in Spain by 31 December, affecting crypto holders living in Spain"
+  },
+  "selection_sources": [
+    {
+      "url": "https://elpais.com/economia/2026-11-10/los-sindicatos-llaman-a-espana-a-una-huelga-general-por-primera-vez-en-14-anos.html",
+      "reason": "First national general strike in 14 years, centred on housing and wages, affects all workers and the whole country"
+    },
+    {
+      "url": "https://www.eldiario.es/economia/gestha-cifra-1-034-euros-deduccion-necesaria-salario-minimo-no-pague-irpf_1_13652577.html",
+      "reason": "Gestha costs the IRPF exemption for the minimum wage at €1,100M, up €700M, a direct tax change for workers"
+    },
+    {
+      "url": "https://elpais.com/economia/2026-11-11/hacienda-obliga-a-tributar-las-prejubilaciones-voluntarias-si-no-se-enmarcan-en-un-despido-colectivo.html",
+      "reason": "TEAC ruling: voluntary early-retirement payments are taxable IRPF unless part of a collective dismissal, a precedent affecting many workers"
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/pp-promete-que-los-jovenes-no-pagaran-irpf-su-primer-ano-cuota-cero-para-autonomos-primerizos-atajar-absentismo_7059395_0.html",
+      "reason": "PP platform proposes IRPF relief for young people, zero-quota for new autónomos and 0% VAT on basic food, relevant to residents' taxes ahead of the 29N vote"
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/11/10/oficial-nuevo-decreto-incluye-indemnizaciones-inquilinos-casero-no-renueva-alquiler-2057837.html",
+      "reason": "New housing decree gives tenants compensation when landlords do not renew, a rental rule change affecting many renters"
+    },
+    {
+      "url": "https://www.elconfidencial.com/economia/2026-11-11/alfonso-munoz-funcionario-seguridad-social-viudedad-boe_4461555/",
+      "reason": "New BOE rule opens widow's pension to people previously excluded, a systemic change to Social Security benefits"
+    },
+    {
+      "url": "https://www.europapress.es/economia/transportes-00343/noticia-gobierno-aprueba-decreto-faculta-maquinistas-parar-no-reiniciar-tren-riesgo-grave-20261110114044.html",
+      "reason": "Royal Decree-law lets train drivers stop trains for serious risk and adds protections for rail staff, affecting all rail commuters"
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/sabias-que-inflacion-va-seguir-alta-durante-varios-meses_7059483_0.html",
+      "reason": "Inflation at 5% year-on-year and expected to stay high until at least March 2027, directly affecting household budgets"
+    },
+    {
+      "url": "https://cincodias.elpais.com/mercados-financieros/2026-11-10/las-letras-del-tesoro-a-tres-meses-pagan-el-tipo-mas-alto-en-dos-anos.html",
+      "reason": "Three-month Treasury bill yields hit a two-year high and ECB officials signal further rate rises in December, relevant to Euribor and mortgage costs"
+    },
+    {
+      "url": "https://cincodias.elpais.com/companias/2026-11-11/el-fin-del-escudo-antiquiebras-coloca-a-80000-empresas-al-borde-de-la-causa-de-disolucion.html",
+      "reason": "End of the anti-bankruptcy shield leaves 80,000 companies at risk of dissolution, a significant economic measure with a deadline at year-end"
+    },
+    {
+      "url": "https://elpais.com/sociedad/2026-11-10/el-gobierno-creara-un-titulo-de-familia-monoparental-las-que-tengan-dos-hijos-tendran-los-mismos-beneficios-de-las-numerosas.html",
+      "reason": "Government creates single-parent family title extending numerous-family benefits to over 760,000 households, a benefits change"
+    },
+    {
+      "url": "https://elpais.com/deportes/futbol/2026-11-11/pau-cubarsi-de-la-frustracion-de-la-gala-del-balon-de-oro-a-la-alegria-por-el-reconocimiento-como-golden-boy.html",
+      "reason": "Positive story: Spanish defender Pau Cubarsí named Europe's best young player (Golden Boy), a national sporting milestone"
+    },
+    {
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/10/6af36a00fc6c833b5f8b4575.html",
+      "reason": "PP programme proposes an annual cap on immigrant entries, a major migration policy proposal ahead of the election"
+    },
+    {
+      "url": "https://cincodias.elpais.com/criptoactivos/2026-11-10/binance-fija-para-el-31-de-diciembre-el-cierre-de-las-cuentas-de-sus-usuarios-en-espana.html",
+      "reason": "Binance will close user accounts in Spain by 31 December, affecting crypto holders living in Spain"
+    }
+  ]
+}
