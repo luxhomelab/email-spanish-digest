@@ -25,6 +25,7 @@ describe('collectFields', () => {
       querySelectorAll: () => [
         { name: 'email', type: 'email', value: 'a@b.com', disabled: false },
         { name: 'l', type: 'hidden', value: 'list-1', disabled: false },
+        { name: 'lang', type: 'hidden', value: 'en', disabled: false },
         { name: 'next', type: 'hidden', value: '/confirm', disabled: false },
         { name: 'nonce', type: 'text', value: '', disabled: false },
         { name: 'consent', type: 'checkbox', value: 'on', checked: true, disabled: false },
@@ -35,6 +36,7 @@ describe('collectFields', () => {
     assert.deepEqual(collectFields(form), {
       email: 'a@b.com',
       l: 'list-1',
+      lang: 'en',
       next: '/confirm',
       nonce: '',
       consent: 'on',

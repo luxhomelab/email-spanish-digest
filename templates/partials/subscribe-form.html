@@ -3,7 +3,9 @@
    baked in at build time via build.py globals listmonk_form_action /
    listmonk_list_uuid).
    Local dev: `py build.py --listmonk local [--list-uuid <uuid>]`.
-   Fields: email, l (list UUID), nonce (honeypot — must stay empty; the Worker
+   Fields: email, l (list UUID), lang (subscriber language, default 'en';
+   Listmonk's public API ignores it — the Cloudflare Worker reads it and
+   PATCHes it into the subscriber's attribs.lang), nonce (honeypot — must stay empty; the Worker
    uses it to silently drop bots), next (post-success redirect target, honored
    by the Cloudflare Worker, NOT by Listmonk on this route),
     cf-turnstile-response (injected by the Turnstile widget, verified
@@ -17,7 +19,7 @@
    submit (see data-subscribe-ajax) and POSTs the same fields via fetch as
    urlencoded, staying on-site: on HTTP 200 it redirects to `next`, on error
    it shows the message inline in [data-subscribe-error].
-   Optional include params: success_url, btn_label, btn_icon, field_id, form_kind.
+   Optional include params: success_url, btn_label, btn_icon, field_id, form_kind, lang.
    btn_icon (optional): truthy adds an envelope icon after the label.
    form_kind is analytics-only: rendered as data-form-kind on the <form> and
    turned into a distinct GA4 event + Meta 'Lead' content_name by
@@ -33,6 +35,7 @@
 {% set btn_icon = btn_icon | default(false) %}
 {% set field_id = field_id | default('subscribe-email') %}
 {% set form_kind = form_kind | default('') %}
+{% set lang = lang | default('en') %}
 {% set turnstile_on = turnstile_enabled | default(true) %}
 {% set turnstile_appearance = turnstile_appearance | default('interaction-only') %}
 {% if turnstile_on %}
@@ -58,6 +61,7 @@
   </div>
   <p class="subscribe-form-error" data-subscribe-error role="alert" hidden></p>
   <input type="hidden" name="l" value="{{ listmonk_list_uuid }}">
+  <input type="hidden" name="lang" value="{{ lang }}">
   <input type="hidden" name="next" value="{{ site_url }}{{ success_url }}">
   {% if turnstile_on %}
   <div class="cf-turnstile" data-sitekey="0x4AAAAAAFCU4-TKzjR6JxAK" data-action="subscribe"{% if turnstile_appearance %} data-appearance="{{ turnstile_appearance }}" data-before-interactive-callback="subscribeTurnstileShown"{% endif %}></div>
