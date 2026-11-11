@@ -1,0 +1,28 @@
+{% extends "es/base.html" %}
+{% block body_class %} class="page-confirm"{% endblock %}
+{% block title %}Spain Daily: confirma tu suscripción{% endblock %}
+{% block description %}<meta name="description" content="Confirma tu suscripción a Spain Daily para empezar a recibir cada mañana las noticias más importantes de España.">
+<meta name="robots" content="noindex, follow">{% endblock %}
+{% block content %}
+ <div class="centered-page">
+  <div class="card confirm-card">
+  <p class="confirm-kicker">Ya casi está</p>
+  <h1>Confirma tu email</h1>
+  <p class="confirm-lead">Te acabamos de enviar un email. Haz clic en el enlace de confirmación que contiene y ya estarás suscrito.</p>
+  <ol class="confirm-steps">
+   <li><div><strong>Abre el email</strong> de Spain Daily (llega en un minuto)</div></li>
+   <li><div><strong>Haz clic en el enlace de confirmación</strong></div></li>
+   <li><div><strong>Listo</strong>: la edición de mañana ya va de camino</div></li>
+  </ol>
+  <p class="confirm-note">Hasta que hagas clic en ese enlace, <strong>todavía no</strong> estás suscrito.</p>
+  <div class="confirm-trouble" role="note">
+   <p class="confirm-trouble-title"><span aria-hidden="true">⚠️</span> ¿No encuentras el email?</p>
+   <ul>
+    <li>Revisa las carpetas de <strong>spam</strong> y <strong>promociones</strong>: a menudo acaba ahí.</li>
+    <li>Si lo encuentras, márcalo como <strong>no es spam</strong> o muévelo a la bandeja de entrada.</li>
+   </ul>
+   <p class="confirm-trouble-retry">¿Te has equivocado de dirección? <a href="/es/subscribe">Vuelve a intentarlo</a>.</p>
+  </div>
+ </div>
+ </div>
+{% endblock %}

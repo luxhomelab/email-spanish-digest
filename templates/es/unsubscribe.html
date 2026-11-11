@@ -1,0 +1,23 @@
+{% extends "es/base.html" %}
+{% block body_class %} class="page-unsubscribe"{% endblock %}
+{% block title %}Darse de baja de Spain Daily{% endblock %}
+{% block description %}<meta name="description" content="Cómo darse de baja de Spain Daily: usa el enlace que hay al final de cualquier email.">
+<meta name="robots" content="noindex, follow">{% endblock %}
+{% block content %}
+ <div class="subscribe-intro">
+  <p class="subscribe-kicker">Sentimos que te vayas</p>
+  <h1>Cómo <span class="accent">darse de baja</span></h1>
+  <p>Todos los emails de Spain Daily terminan con un enlace para darte de baja, sin iniciar sesión. Puedes volver cuando quieras.</p>
+ </div>
+ {# No form, same as the English page: Listmonk's public API is subscribe-only. #}
+ <div class="unsub-keep">
+  <p class="confirm-kicker">Cómo funciona</p>
+  <h2>Tres pasos</h2>
+  <ol class="confirm-steps">
+   <li><div><strong>Abre cualquier email de Spain Daily</strong>: el más reciente es el más fácil de encontrar.</div></li>
+   <li><div><strong>Haz clic en el enlace de baja</strong> al final del email.</div></li>
+   <li><div><strong>Confírmalo en la página que se abre</strong> y listo.</div></li>
+  </ol>
+  <p class="confirm-trouble">¿Has perdido el email o nunca te llegó? Escribe a <a href="mailto:support@spanified.com">support@spanified.com</a> y te daremos de baja a mano.</p>
+ </div>
+{% endblock %}
