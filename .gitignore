@@ -25,3 +25,7 @@ og/
 /articles/
 podcast.xml
 /podcast/
+/es/
+# Root-level page names above (subscribe.html, ...) are unanchored and would
+# also match source templates in subfolders such as templates/es/.
+!/templates/**

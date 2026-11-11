@@ -1,0 +1,136 @@
+{% extends "es/base.html" %}
+{# Minimal Spanish /subscribe: hero + form, how it is made, editor, FAQ.
+   Skips the English page's latest-edition preview, social counters and
+   Reddit testimonials, which would show English text. #}
+{% block title %}Newsletter gratis de noticias de España | Spain Daily{% endblock %}
+{% block description %}<meta name="description" content="Suscríbete gratis a Spain Daily: las noticias más importantes de España en un email al día, 5 minutos de lectura. Sin spam y te das de baja cuando quieras.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Newsletter gratis de noticias de España | Spain Daily">
+<meta property="og:description" content="Suscríbete gratis a Spain Daily: las noticias más importantes de España en un email al día, 5 minutos de lectura. Sin spam y te das de baja cuando quieras.">
+<meta property="og:url" content="{{ site_url }}/es/subscribe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Newsletter gratis de noticias de España | Spain Daily">
+<meta name="twitter:description" content="Suscríbete gratis a Spain Daily: las noticias más importantes de España en un email al día, 5 minutos de lectura. Sin spam y te das de baja cuando quieras.">
+<meta name="twitter:image" content="https://spanified.com/static/img/social/subscribe.jpg">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+{% block og_image %}<meta property="og:image" content="https://spanified.com/static/img/social/subscribe.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Spain Daily: las noticias de España cada mañana en 5 minutos. Suscríbete gratis.">{% endblock %}
+{% block extra_head %}
+{% set alt_path = "/subscribe" %}{% include "partials/hreflang.html" %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebPage", "@id": "{{ site_url }}/es/subscribe#webpage", "name": "Suscríbete a la newsletter Spain Daily",
+ "url": "{{ site_url }}/es/subscribe", "inLanguage": "es",
+ "isPartOf": {"@id": "{{ site_url }}/#website"}, "about": {"@id": "{{ site_url }}/#spain-daily"},
+ "publisher": {"@id": "{{ site_url }}/#org"}, "isAccessibleForFree": true}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "@id": "{{ site_url }}/es/subscribe#faq", "inLanguage": "es", "mainEntity": [{% for q, a in faq %}
+  {"@type": "Question", "name": {{ q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ a|tojson }}}}{% if not loop.last %},{% endif %}{% endfor %}
+ ]}
+</script>
+{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/es/subscribe">{% endblock %}
+{% block body_class %} class="page-subscribe"{% endblock %}
+{% block content %}
+<section class="sub-hero">
+ <div class="sub-hero-main">
+  <h1>Suscríbete a la newsletter Spain Daily</h1>
+  <p class="sub-lede">Las noticias más importantes de España, resumidas en un email gratis al día. Llega sobre las 08:00, hora de Madrid.</p>
+  {% set btn_label = "Suscribirme gratis" %}
+  {% set btn_icon = true %}
+  {% set success_url = "/es/confirm" %}
+  {% set turnstile_appearance = "interaction-only" %}
+  {% include "partials/subscribe-form.html" %}
+  <div class="reader-proof">
+   <div class="reader-proof-text">
+    <strong>Únete a los más de 1.000 suscriptores de Spain Daily</strong>
+    <span>Se envía cada día desde el {{ proof.first_issue_es }}: {{ proof.total_issues_es }} ediciones hasta hoy</span>
+   </div>
+  </div>
+  <ul class="sub-promises">
+   <li>Gratis, sin muro de pago</li>
+   <li>Te das de baja con un clic desde cualquier email</li>
+   <li>Tu email solo se usa para enviarte Spain Daily (<a href="/es/privacy">privacidad</a>)</li>
+  </ul>
+ </div>
+ {# Stands in for the English page's latest-edition preview (its stories
+    are in English): the same email sheet, listing what an edition covers.
+    Sections and the 11-14 story count reflect recent data/digests. #}
+ <aside class="sub-preview" aria-labelledby="sub-preview-title">
+  <div class="sub-preview-sheet">
+   <div class="sub-preview-band">
+    <span class="sub-preview-from">Spain Daily</span>
+    <span class="sub-preview-time">08:00</span>
+   </div>
+   <div class="email-gold-band"></div>
+   <div class="sub-preview-body">
+    <p class="sub-preview-title" id="sub-preview-title">Lo que trae cada edición</p>
+    <ul class="sub-preview-stories sub-preview-topics">
+     {% for emoji_char, topic, detail in [
+       ("🏠", "Vivienda", "Alquileres, compraventa e hipotecas"),
+       ("💰", "Economía", "Precios, salarios y empresas"),
+       ("📊", "Impuestos", "IRPF, autónomos y plazos de Hacienda"),
+       ("👥", "Trabajo", "Empleo, convenios y huelgas"),
+       ("🏛️", "Política", "Gobierno, Congreso y comunidades"),
+       ("📅", "Agenda", "Festivos, eventos y lo que cambia esta semana"),
+     ] %}
+     <li>
+      <span class="sub-preview-emoji" aria-hidden="true">{{ emoji_char }}</span>
+      <span class="sub-preview-story"><strong>{{ topic }}</strong><span class="sub-preview-src">{{ detail }}</span></span>
+     </li>
+     {% endfor %}
+    </ul>
+    <p class="sub-preview-more">Entre 11 y 14 noticias cada mañana, cada una con enlace a su fuente.</p>
+   </div>
+  </div>
+ </aside>
+</section>
+
+<section class="sub-steps" aria-labelledby="sub-steps-title">
+ <h2 id="sub-steps-title">Cómo se hace cada edición</h2>
+ <ol>
+  <li><strong>Leemos la prensa</strong><span>Periódicos nacionales y regionales y la agencia Europa Press, cada mañana.</span></li>
+  <li><strong>Elegimos lo que importa en España</strong><span>Primero alquileres, impuestos, visados, empleo y política. Lo internacional, solo si afecta a España.</span></li>
+  <li><strong>Lo resumimos</strong><span>Con ayuda de IA, en lenguaje claro y con enlace a cada noticia original.</span></li>
+  <li><strong>Un editor lo revisa</strong><span>Una persona revisa cada edición antes de enviarla, sobre las 08:00.</span></li>
+ </ol>
+ <p class="sub-outlets">Entre las fuentes: El País, Cinco Días, El Mundo, La Vanguardia, elDiario.es, El Confidencial, 20 Minutos, Heraldo, Diario Sur, Expansión y Europa Press.</p>
+</section>
+
+<section class="sub-people">
+ <div class="sub-who">
+  <h2>¿Para quién es Spain Daily?</h2>
+  <p>Para quien quiere estar al día de lo que pasa en España sin leer una docena de webs: residentes, quienes preparan una mudanza y quienes siguen España desde fuera. Política, economía, sociedad, cultura y vida diaria, en cinco minutos y con enlace a cada fuente.</p>
+ </div>
+ <div class="sub-editor">
+  <div class="sub-editor-top">
+   <img class="sub-editor-avatar" src="/static/img/editor/dmytro-shvechikov-96.webp?v={{ asset_version }}" srcset="/static/img/editor/dmytro-shvechikov-48.webp?v={{ asset_version }} 48w, /static/img/editor/dmytro-shvechikov-96.webp?v={{ asset_version }} 96w, /static/img/editor/dmytro-shvechikov-160.webp?v={{ asset_version }} 160w" sizes="52px" alt="" width="52" height="52" loading="lazy" decoding="async">
+   <div>
+    <p class="sub-editor-name">Dmytro Shvechikov</p>
+    <p class="sub-editor-role">Fundador y editor, vive en España</p>
+   </div>
+  </div>
+  <p>Dmytro revisa cada edición antes de enviarla. ¿Has visto un error o tienes una pregunta? <span class="sub-nowrap">Escribe a <a href="mailto:support@spanified.com">support@spanified.com</a>.</span></p>
+ </div>
+</section>
+
+<section class="sub-faq hm-faq" aria-labelledby="sub-faq-title">
+ <div class="hm-faq-head">
+  <h2 id="sub-faq-title">Antes de suscribirte</h2>
+  <p>Lo que suelen preguntar los lectores. ¿Algo más? Escribe a <a href="mailto:support@spanified.com">support@spanified.com</a>.</p>
+ </div>
+ <div class="hm-faq-list">
+  {% for q, a in faq %}
+  <details>
+   <summary>{{ q }}</summary>
+   <p>{{ a }}</p>
+  </details>
+  {% endfor %}
+ </div>
+</section>
+
+<script type="module" src="/static/js/subscribe-form.js?v={{ js_version }}"></script>
+{% endblock %}

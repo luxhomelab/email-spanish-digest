@@ -1,0 +1,94 @@
+{% extends "es/base.html" %}
+{# Spanish translation of templates/cookies.html. Keep the two in sync
+   (cookie names and retention periods must match). Button names quoted
+   below match the Spanish banner in partials/cookie-banner.html. #}
+{% block body_class %} class="page-legal"{% endblock %}
+{% block title %}Política de cookies | Spanified{% endblock %}
+{% block description %}<meta name="description" content="Política de cookies de Spanified: qué cookies y almacenamiento del navegador usa la web, cuáles necesitan tu consentimiento y cómo cambiar tu elección.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Política de cookies | Spanified">
+<meta property="og:description" content="Qué cookies usa Spanified y cómo cambiar tu elección.">
+<meta property="og:url" content="{{ site_url }}/es/cookies">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Política de cookies | Spanified">
+<meta name="twitter:description" content="Qué cookies usa Spanified y cómo cambiar tu elección.">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/es/cookies">
+{% set alt_path = "/cookies" %}{% include "partials/hreflang.html" %}{% endblock %}
+{% block content %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebPage",
+ "name": "Política de cookies | Spanified",
+ "url": "{{ site_url }}/es/cookies",
+ "description": "Qué cookies y almacenamiento del navegador usa Spanified, cuáles necesitan tu consentimiento y cómo cambiar tu elección.",
+ "inLanguage": "es",
+ "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}}
+</script>
+ <div class="legal">
+  <h1>Política de cookies</h1>
+  <p class="subtitle">En vigor desde el 6 de noviembre de 2026. Las cookies de analítica y de anuncios solo se cargan si dices que sí.</p>
+
+  <div class="card">
+   <h2>Qué son las cookies</h2>
+   <p>Las cookies y tecnologías similares (como el almacenamiento local del navegador) son pequeños datos que una web guarda en tu dispositivo. La normativa europea (la Directiva ePrivacy y, en España, el artículo 22.2 de la LSSI) permite usar sin preguntar las que son estrictamente necesarias. Para todas las demás hace falta antes tu consentimiento.</p>
+  </div>
+
+  <div class="card" id="settings">
+   <h2>Tu elección</h2>
+   <p>La primera vez que nos visitas, un aviso te pregunta si podemos usar cookies de analítica y de marketing. «Rechazar» es tan fácil como «Aceptar», y no se carga nada opcional hasta que eliges. Recordamos tu respuesta durante 12 meses y después volvemos a preguntar.</p>
+   <p>Puedes cambiar o retirar tu consentimiento en cualquier momento: <a href="#settings" data-cookie-settings>abre la configuración de cookies</a> (el mismo enlace está en el pie de cada página). Si lo retiras, borramos las cookies de analítica y de marketing de nuestro dominio y recargamos la página.</p>
+  </div>
+
+  <div class="card">
+   <h2>Estrictamente necesarias (siempre activas)</h2>
+   <p>Sirven para que funcione lo que has pedido. No salen de tu navegador salvo donde se indica y no se usan para hacer seguimiento.</p>
+   <table class="cc-table">
+    <thead><tr><th>Nombre</th><th>Tipo</th><th>Finalidad</th><th>Duración</th></tr></thead>
+    <tbody>
+     <tr><td><code>spanified_cookie_consent</code></td><td>Almacenamiento local</td><td>Recuerda tu elección sobre las cookies, también si las rechazas</td><td>12 meses</td></tr>
+     <tr><td><code>*-calculator-state</code></td><td>Almacenamiento local</td><td>Recupera los datos que introdujiste en una calculadora</td><td>Hasta que lo borres</td></tr>
+     <tr><td><code>spanified_quiz_*</code></td><td>Almacenamiento local</td><td>Guarda tu puntuación en el test para mostrarla en la página de resultados</td><td>Hasta que lo borres</td></tr>
+     <tr><td><code>spanified_subscribed</code></td><td>Almacenamiento local</td><td>Recuerda que te has suscrito (con el email que indicaste) para desbloquear los resultados de los tests</td><td>Hasta que lo borres</td></tr>
+     <tr><td><code>spanified:podcast:*</code></td><td>Almacenamiento local</td><td>Retoma un episodio donde lo dejaste</td><td>Hasta que termina el episodio</td></tr>
+     <tr><td>Cloudflare Turnstile</td><td>De terceros (Cloudflare)</td><td>Verificación antibots en los formularios de suscripción. Solo actúa cuando te suscribes y no se usa para hacer seguimiento.</td><td>Sesión</td></tr>
+    </tbody>
+   </table>
+  </div>
+
+  <div class="card">
+   <h2>Analítica (requiere consentimiento)</h2>
+   <table class="cc-table">
+    <thead><tr><th>Nombre</th><th>Proveedor</th><th>Finalidad</th><th>Duración</th></tr></thead>
+    <tbody>
+     <tr><td><code>_ga</code></td><td>Google Analytics 4</td><td>Distingue unas visitas de otras para contar lectores</td><td>2 años</td></tr>
+     <tr><td><code>_ga_*</code></td><td>Google Analytics 4</td><td>Mantiene el estado de la visita en curso</td><td>2 años</td></tr>
+    </tbody>
+   </table>
+   <p>Proveedor: Google Ireland Ltd. Los datos pueden tratarse en Estados Unidos al amparo del Marco de Privacidad de Datos UE-EE. UU. Consulta la <a href="https://policies.google.com/privacy?hl=es" target="_blank" rel="noopener">política de privacidad de Google</a>.</p>
+  </div>
+
+  <div class="card">
+   <h2>Marketing (requiere consentimiento)</h2>
+   <table class="cc-table">
+    <thead><tr><th>Nombre</th><th>Proveedor</th><th>Finalidad</th><th>Duración</th></tr></thead>
+    <tbody>
+     <tr><td><code>_fbp</code></td><td>Píxel de Meta</td><td>Mide cuántas suscripciones llegan desde nuestros anuncios en Facebook e Instagram</td><td>3 meses</td></tr>
+     <tr><td><code>_fbc</code></td><td>Píxel de Meta</td><td>Guarda el clic en el anuncio que te trajo hasta aquí</td><td>3 meses</td></tr>
+    </tbody>
+   </table>
+   <p>Proveedor: Meta Platforms Ireland Ltd. Los datos pueden tratarse en Estados Unidos al amparo del Marco de Privacidad de Datos UE-EE. UU. Consulta la <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">política de privacidad de Meta</a>.</p>
+  </div>
+
+  <div class="card">
+   <h2>Vídeos insertados</h2>
+   <p>Los vídeos de las páginas de calculadoras solo muestran una imagen de vista previa hasta que pulsas reproducir. Solo entonces se carga el reproductor desde el dominio de privacidad mejorada de YouTube (youtube-nocookie.com), y YouTube puede guardar datos en tu dispositivo según la <a href="https://policies.google.com/privacy?hl=es" target="_blank" rel="noopener">política de privacidad de Google</a>. Pulsar reproducir es tu forma de elegir cargarlo.</p>
+  </div>
+
+  <div class="card">
+   <h2>Preguntas</h2>
+   <p>Consulta nuestra <a href="/es/privacy">política de privacidad</a> para conocer tus derechos según el RGPD, o escribe a <a href="mailto:support@spanified.com">support@spanified.com</a>. También puedes borrar las cookies y el almacenamiento local cuando quieras desde la configuración de tu navegador.</p>
+  </div>
+ </div>
+{% endblock %}

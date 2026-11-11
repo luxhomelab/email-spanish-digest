@@ -5,6 +5,32 @@
    Accept are equal-weight buttons on the first layer, as the AEPD requires.
    Compact by design: one short sentence + one button row, so on phones it
    covers a strip at the bottom, not the page. #}
+{% if page_lang | default('en') == 'es' %}
+<section id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cc-title" aria-describedby="cc-text" hidden>
+ <h2 id="cc-title" class="cc-title">Cookies</h2>
+ <p id="cc-text" class="cc-text">Queremos usar cookies, propias y de terceros, para analítica y medición de anuncios. <a href="/es/cookies">Política de cookies</a></p>
+ <div class="cc-details" hidden>
+  <label class="cc-cat">
+   <input type="checkbox" checked disabled>
+   <span><strong>Necesarias</strong>: siempre activas. Guardan el estado de calculadoras y tests, tu elección de cookies y la verificación antibots de los formularios.</span>
+  </label>
+  <label class="cc-cat">
+   <input type="checkbox" data-cc-category="analytics">
+   <span><strong>Analítica</strong>: Google Analytics cuenta las visitas y las páginas más vistas.</span>
+  </label>
+  <label class="cc-cat">
+   <input type="checkbox" data-cc-category="marketing">
+   <span><strong>Marketing</strong>: el píxel de Meta mide las suscripciones que llegan desde nuestros anuncios en Facebook e Instagram.</span>
+  </label>
+ </div>
+ <div class="cc-actions">
+  <button type="button" class="cc-btn" data-cc="reject">Rechazar</button>
+  <button type="button" class="cc-btn" data-cc="accept">Aceptar</button>
+  <button type="button" class="cc-link" data-cc="customize">Configurar</button>
+  <button type="button" class="cc-link" data-cc="save" hidden>Guardar</button>
+ </div>
+</section>
+{% else %}
 <section id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cc-title" aria-describedby="cc-text" hidden>
  <h2 id="cc-title" class="cc-title">Cookie choice</h2>
  <p id="cc-text" class="cc-text">We’d like to use cookies for analytics and ad measurement, ours and our partners’. <a href="/cookies">Cookie policy</a></p>
@@ -29,4 +55,5 @@
   <button type="button" class="cc-link" data-cc="save" hidden>Save choices</button>
  </div>
 </section>
+{% endif %}
 <script type="module" src="/static/js/cookie-consent.js?v={{ js_version }}"></script>

@@ -1,0 +1,6 @@
+{# hreflang pair for a page that has a Spanish twin under /es/. Expects
+   `alt_path` (the English path, e.g. "/subscribe"); the Spanish URL is
+   /es<alt_path>. Include the same tags on both pages. #}
+<link rel="alternate" hreflang="en" href="{{ site_url }}{{ alt_path }}">
+<link rel="alternate" hreflang="es" href="{{ site_url }}/es{{ alt_path }}">
+<link rel="alternate" hreflang="x-default" href="{{ site_url }}{{ alt_path }}">

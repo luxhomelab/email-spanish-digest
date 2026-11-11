@@ -11,7 +11,8 @@
 <meta name="twitter:description" content="Which cookies Spanified uses and how to change your choice.">
 <meta name="robots" content="max-image-preview:large">{% endblock %}
 
-{% block canonical %}<link rel="canonical" href="{{ site_url }}/cookies">{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/cookies">
+{% set alt_path = "/cookies" %}{% include "partials/hreflang.html" %}{% endblock %}
 {% block content %}
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "WebPage",

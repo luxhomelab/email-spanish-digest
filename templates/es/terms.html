@@ -1,0 +1,66 @@
+{% extends "es/base.html" %}
+{# Spanish translation of templates/terms.html. Keep the two in sync. #}
+{% block body_class %} class="page-legal"{% endblock %}
+{% block title %}Condiciones de uso | Spanified{% endblock %}
+{% block description %}<meta name="description" content="Condiciones de uso de Spanified, la newsletter gratuita Spain Daily y su web: contenido elaborado con ayuda de IA, sin asesoramiento profesional y uso aceptable.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Condiciones de uso | Spanified">
+<meta property="og:description" content="Condiciones de uso de Spain Daily, la newsletter gratuita de Spanified, y de su web.">
+<meta property="og:url" content="{{ site_url }}/es/terms">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Condiciones de uso | Spanified">
+<meta name="twitter:description" content="Condiciones de uso de Spain Daily, la newsletter gratuita de Spanified, y de su web.">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/es/terms">
+{% set alt_path = "/terms" %}{% include "partials/hreflang.html" %}{% endblock %}
+{% block content %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebPage",
+ "name": "Condiciones de uso | Spanified",
+ "url": "{{ site_url }}/es/terms",
+ "description": "Condiciones de uso de Spain Daily, la newsletter gratuita de Spanified, y de su web.",
+ "inLanguage": "es",
+ "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}}
+</script>
+ <div class="legal">
+  <h1>Condiciones de uso</h1>
+  <p class="subtitle">En vigor desde el 14 de septiembre de 2026. Las reglas para usar Spanified, explicadas con claridad.</p>
+
+  <div class="card">
+   <h2>Qué es Spanified</h2>
+   <p>Spanified publica Spain Daily, un resumen matutino gratuito de la actualidad de España que se lee en esta web y llega por email. El servicio es gratis para siempre: no hay cuentas ni muro de pago.</p>
+  </div>
+
+  <div class="card">
+   <h2>Cómo se elabora el contenido</h2>
+   <p>Los resúmenes se basan en noticias publicadas por medios reales, se redactan con ayuda de IA y los revisa un editor. Cada noticia enlaza a sus fuentes originales, así que puedes comprobar cualquier dato con un clic. Si ves un error, <a href="mailto:support@spanified.com">avísanos</a>: corregimos los errores.</p>
+  </div>
+
+  <div class="card">
+   <h2>No es asesoramiento profesional</h2>
+   <p>Las noticias sobre visados, impuestos, vivienda o salud son información, no asesoramiento. Las normas cambian y los resúmenes son breves a propósito: consulta siempre las fuentes oficiales o a un profesional cualificado antes de tomar decisiones.</p>
+  </div>
+
+  <div class="card">
+   <h2>Uso aceptable</h2>
+   <p>Lee, comparte y cita nuestro contenido con un enlace: para eso estamos. No republiques ediciones completas como si fueran tuyas, no hagas scraping abusivo de la web, no hagas un mal uso del formulario de suscripción ni uses nuestro contenido para engañar. Podemos bloquear los usos indebidos para que el servicio siga funcionando para todos.</p>
+  </div>
+
+  <div class="card">
+   <h2>Propiedad intelectual</h2>
+   <p>El diseño, el logotipo y la selección de noticias son nuestros. Los hechos no son de nadie; los reportajes originales pertenecen a sus medios, y siempre los enlazamos desde cada noticia.</p>
+  </div>
+
+  <div class="card">
+   <h2>Sin garantías y responsabilidad limitada</h2>
+   <p>El servicio se ofrece «tal cual», sin garantías de ningún tipo. En la medida en que lo permita la ley, no respondemos de las decisiones que tomes a partir del resumen ni de las interrupciones temporales del servicio. Nada de lo aquí dispuesto limita los derechos que te reconoce la normativa de consumo aplicable.</p>
+  </div>
+
+  <div class="card">
+   <h2>Cambios y contacto</h2>
+   <p>Podemos actualizar estas condiciones a medida que Spanified crezca (los productos nuevos tendrán sus propias notas cuando haga falta). Indicaremos aquí cualquier cambio importante. Para dudas: <a href="mailto:support@spanified.com">support@spanified.com</a>. Estas condiciones se rigen por la legislación española.</p>
+  </div>
+ </div>
+{% endblock %}
