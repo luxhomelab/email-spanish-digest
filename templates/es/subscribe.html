@@ -2,26 +2,26 @@
 {# Minimal Spanish /subscribe: hero + form, how it is made, editor, FAQ.
    Skips the English page's latest-edition preview, social counters and
    Reddit testimonials, which would show English text. #}
-{% block title %}Newsletter gratis de noticias de España | Spain Daily{% endblock %}
-{% block description %}<meta name="description" content="Suscríbete gratis a Spain Daily: las noticias más importantes de España en un email al día, 5 minutos de lectura. Sin spam y te das de baja cuando quieras.">
+{% block title %}Newsletter gratis de noticias de España | España al Día{% endblock %}
+{% block description %}<meta name="description" content="Suscríbete gratis a España al Día: las noticias más importantes de España en un email al día, 5 minutos de lectura. Sin spam y te das de baja cuando quieras.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
-<meta property="og:title" content="Newsletter gratis de noticias de España | Spain Daily">
-<meta property="og:description" content="Suscríbete gratis a Spain Daily: las noticias más importantes de España en un email al día, 5 minutos de lectura. Sin spam y te das de baja cuando quieras.">
+<meta property="og:title" content="Newsletter gratis de noticias de España | España al Día">
+<meta property="og:description" content="Suscríbete gratis a España al Día: las noticias más importantes de España en un email al día, 5 minutos de lectura. Sin spam y te das de baja cuando quieras.">
 <meta property="og:url" content="{{ site_url }}/es/subscribe">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Newsletter gratis de noticias de España | Spain Daily">
-<meta name="twitter:description" content="Suscríbete gratis a Spain Daily: las noticias más importantes de España en un email al día, 5 minutos de lectura. Sin spam y te das de baja cuando quieras.">
+<meta name="twitter:title" content="Newsletter gratis de noticias de España | España al Día">
+<meta name="twitter:description" content="Suscríbete gratis a España al Día: las noticias más importantes de España en un email al día, 5 minutos de lectura. Sin spam y te das de baja cuando quieras.">
 <meta name="twitter:image" content="https://spanified.com/static/img/social/subscribe-es.jpg">
 <meta name="robots" content="max-image-preview:large">{% endblock %}
 {% block og_image %}<meta property="og:image" content="https://spanified.com/static/img/social/subscribe-es.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Spain Daily: noticias de España cada mañana, 5 minutos de lectura. Suscríbete gratis.">{% endblock %}
+<meta property="og:image:alt" content="España al Día: noticias de España cada mañana, 5 minutos de lectura. Suscríbete gratis.">{% endblock %}
 {% block extra_head %}
 {% set alt_path = "/subscribe" %}{% include "partials/hreflang.html" %}
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "WebPage", "@id": "{{ site_url }}/es/subscribe#webpage", "name": "Suscríbete a la newsletter Spain Daily",
+{"@context": "https://schema.org", "@type": "WebPage", "@id": "{{ site_url }}/es/subscribe#webpage", "name": "Suscríbete a la newsletter España al Día",
  "url": "{{ site_url }}/es/subscribe", "inLanguage": "es",
  "isPartOf": {"@id": "{{ site_url }}/#website"}, "about": {"@id": "{{ site_url }}/#spain-daily"},
  "publisher": {"@id": "{{ site_url }}/#org"}, "isAccessibleForFree": true}
@@ -37,7 +37,7 @@
 {% block content %}
 <section class="sub-hero">
  <div class="sub-hero-main">
-  <h1>Suscríbete a la newsletter Spain Daily</h1>
+  <h1>Suscríbete a la newsletter España al Día</h1>
   <p class="sub-lede">Las noticias más importantes de España, resumidas en un email gratis al día. Llega sobre las 08:00, hora de Madrid.</p>
   {% set btn_label = "Suscribirme gratis" %}
   {% set btn_icon = true %}
@@ -46,14 +46,14 @@
   {% include "partials/subscribe-form.html" %}
   <div class="reader-proof">
    <div class="reader-proof-text">
-    <strong>Únete a los más de 1.000 suscriptores de Spain Daily</strong>
+    <strong>Únete a los más de 1.000 suscriptores de España al Día</strong>
     <span>Se envía cada día desde el {{ proof.first_issue_es }}: {{ proof.total_issues_es }} ediciones hasta hoy</span>
    </div>
   </div>
   <ul class="sub-promises">
    <li>Gratis, sin muro de pago</li>
    <li>Te das de baja con un clic desde cualquier email</li>
-   <li>Tu email solo se usa para enviarte Spain Daily (<a href="/es/privacy">privacidad</a>)</li>
+   <li>Tu email solo se usa para enviarte España al Día (<a href="/es/privacy">privacidad</a>)</li>
   </ul>
  </div>
  {# Stands in for the English page's latest-edition preview (its stories
@@ -62,7 +62,7 @@
  <aside class="sub-preview" aria-labelledby="sub-preview-title">
   <div class="sub-preview-sheet">
    <div class="sub-preview-band">
-    <span class="sub-preview-from">Spain Daily</span>
+    <span class="sub-preview-from">España al Día</span>
     <span class="sub-preview-time">08:00</span>
    </div>
    <div class="email-gold-band"></div>
@@ -102,7 +102,7 @@
 
 <section class="sub-people">
  <div class="sub-who">
-  <h2>¿Para quién es Spain Daily?</h2>
+  <h2>¿Para quién es España al Día?</h2>
   <p>Para quien quiere estar al día de lo que pasa en España sin leer una docena de webs: residentes, quienes preparan una mudanza y quienes siguen España desde fuera. Política, economía, sociedad, cultura y vida diaria, en cinco minutos y con enlace a cada fuente.</p>
  </div>
  <div class="sub-editor">
