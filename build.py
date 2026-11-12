@@ -900,8 +900,8 @@ SUBSCRIBE_FAQ_ITEMS = [
 # Spanish twin of SUBSCRIBE_FAQ_ITEMS for /es/subscribe.
 ES_SUBSCRIBE_FAQ_ITEMS = [
     ("¿Cada cuánto llega el email?", "Una vez al día, sobre las 08:00 hora de Madrid, también los fines de semana."),
-    ("¿De verdad es gratis?", "Sí. No hay muro de pago y tu email solo se usa para enviarte Spain Daily. Nunca se vende."),
-    ("¿Qué pasa después de suscribirme?", "Te enviamos enseguida un email de confirmación. Haz clic en el enlace que contiene para empezar a recibir Spain Daily. Si no llega en unos minutos, revisa las carpetas de spam y promociones."),
+    ("¿De verdad es gratis?", "Sí. No hay muro de pago y tu email solo se usa para enviarte España al Día. Nunca se vende."),
+    ("¿Qué pasa después de suscribirme?", "Te enviamos enseguida un email de confirmación. Haz clic en el enlace que contiene para empezar a recibir España al Día. Si no llega en unos minutos, revisa las carpetas de spam y promociones."),
     ("¿Lo escribe una IA?", "La IA ayuda a resumir las noticias. Un editor revisa cada edición antes de enviarla, y cada noticia enlaza a su fuente original para que puedas comprobarla."),
 ]
 

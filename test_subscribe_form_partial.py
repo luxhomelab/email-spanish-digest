@@ -26,7 +26,7 @@ def test_lang_falls_back_to_page_lang():
 
 def test_spanish_form_copy():
     html = _render(lang="es")
-    assert "Acepto recibir Spain Daily" in html
+    assert "Acepto recibir España al Día" in html
     assert 'placeholder="tu@email.com"' in html
     assert "I agree" not in html and "Email address" not in html
 
