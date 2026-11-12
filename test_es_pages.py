@@ -79,3 +79,11 @@ def test_sitemap_hreflang_pairs():
         assert f'hreflang="x-default" href="{build.SITE_URL}{base}"' in links
     assert build.sitemap_hreflang(build.SITE_URL + "/about") == ""
     assert build.sitemap_hreflang(build.SITE_URL + "/es/confirm") == ""
+
+
+def test_es_subscribe_uses_spanish_og_image():
+    import os
+    html = _env().get_template("es/subscribe.html").render(proof=PROOF, faq=build.ES_SUBSCRIBE_FAQ_ITEMS)
+    assert 'content="https://spanified.com/static/img/social/subscribe-es.jpg"' in html
+    assert "social/subscribe.jpg" not in html
+    assert os.path.isfile(os.path.join(build.SCRIPT_DIR, "static", "img", "social", "subscribe-es.jpg"))
