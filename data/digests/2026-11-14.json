@@ -1,0 +1,203 @@
+{
+  "items": [
+    {
+      "title": "Cabinet fast-tracks annual pension increase",
+      "body": "The cabinet approved urgent processing for the annual pension rise on November 13. The rise is expected to be around 3.6% if the November flash inflation figure, due November 27, is in line with recent data. The Royal Decree-law setting the rise is not yet approved and will later need a vote in Congress.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-13/el-gobierno-aprueba-el-tramite-de-urgencia-para-la-revalorizacion-de-las-pensiones.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Inflation holds at 4.9% as fuel discounts continue",
+      "body": "October inflation held at 4.9%, driven by fuel and gas costs linked to the Middle East conflict and refined-fuel shortages. Diesel rose 36.2% year on year and petrol 20.7%, both above the 15% threshold. The 20-cent-per-litre discount on both fuels stays in force until December 31, 2026.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-11-13/la-inflacion-se-mantiene-en-octubre-en-el-4-9-por-los-combustibles-y-el-gas_4464135/"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/descuento-20-centimos-gasolina-diesel-mantendra-vigor-final-ano_1_13660815.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Tax tribunal rules voluntary early-retirement payouts taxable",
+      "body": "The central tax tribunal has ruled that payouts for voluntary early retirement by mutual agreement are subject to IRPF (personal income tax). It upheld the Tax Agency's refusal of an exemption for a bank employee. The exemption applies only within a collective dismissal process.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/hacienda-dictamina-indemnizacion-prejubilacion-voluntaria-tributa-irpf_1_13660666.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Parties offer competing housing plans before election",
+      "body": "For the November 29 election, PP proposes building 1,000,000 homes. PSOE and Frente Amplio back rental contract extensions and the tax measures in recent housing royal decrees. Vox lists \"remigration\" and reducing immigration-linked housing demand among its priorities.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/construccion-y-vivienda-00342/noticia-psoe-frente-amplio-defienden-prorrogas-alquiler-pp-apuesta-construir-vox-reinmigracion-20261113225830.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "France and Germany near ECB leadership deal",
+      "body": "French and German media report that Paris and Berlin are finalising a deal to back Spain's Pablo Hernández de Cos, a candidate for ECB president, over Dutch candidate Klaas Knot. Talks are not concluded. Governments have until November 18 to submit candidates. EU leaders plan to settle it on November 26-27.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/alemania-francia-reparto-poder-cupula-bce-favorito-espana_7060934_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain outpaces major peers as eurozone growth slows",
+      "body": "Spain's economy grew 0.6% in the third quarter, ahead of Germany's 0.2%, flat output in Italy, and a 0.1% fall in France. Eurozone growth slowed to 0.4% as higher energy and shopping costs, plus an ECB rate rise, weighed on activity. Employment across the eurozone stagnated.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/pib-eurozona-freno-tercer-trimestre-empleo-se-estanco-plena-escalada-los-precios_7060682_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "PP and Vox pledge election tax cuts",
+      "body": "PP and Vox promised tax cuts in an economic debate before the November 29 election. PSOE and Frente Amplio asked how they would avoid cutting public services. Vox said it would cut lower IRPF (personal income tax) brackets without reducing services; these remain campaign proposals.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/fiscal-00347/noticia-pp-vox-prometen-bajar-impuestos-psoe-frente-amplio-cuestionan-haran-recortar-servicios-20261113234025.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Sánchez and Feijóo debate set for November 19",
+      "body": "Prime ministerial candidates Pedro Sánchez of PSOE and Alberto Núñez Feijóo of PP will face each other in a debate on Thursday, November 19. Television Academy president María Casado will moderate. The general election follows on November 29.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/noticia-cara-cara-pedro-sanchez-alberto-nunez-feijoo-sera-proximo-jueves-moderado-maria-casado-20261113155313.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Frente Amplio proposes three-year tourist-flat phase-out",
+      "body": "Frente Amplio's election proposal would phase out tourist-flat licences over three years in residential blocks and stressed housing areas. Toni Valero, IU candidate in Frente Amplio, said the flats would then be eliminated for good. The plan also targets fraudulent temporary rentals.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/frente-amplio-quiere-extinguir-los-pisos-turisticos-bloques-residenciales-zonas-tensionadas_7060881_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Catalonia's Gran Recapte food drive ends November 14",
+      "body": "Catalonia's Gran Recapte food drive ends on November 14, with about 15,000 volunteers collecting donations at more than 2,000 food shops. It focuses on people with jobs who struggle to make ends meet, families squeezed by rent, and pensioners living alone. Residents can donate food or money, including by Bizum to 33596.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/local/barcelona/20261114/11683790/gran-recapte-lanza-15-000-voluntarios-pobreza-proximidad.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "How do you keep grocery spending down? A) Offers B) Own-brand C) Neither",
+  "subject": "4.9% inflation, pension plans and election tax pledges",
+  "variant": "A normal day in Spain. Define normal.",
+  "headline": "A normal day in Spain. Define normal.",
+  "date": "2026-11-14",
+  "engagement_source": "generated",
+  "generated_at": "2026-11-14T07:11:48.988239+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 625,
+    "items_selected_pass1": 11,
+    "fact_sheets_extracted": 11,
+    "items_after_importance_filter": 11,
+    "items_in_digest": 10
+  },
+  "selection_reasons": {
+    "350": "Pension revaluation: the government started urgent processing of the 2027 increase, with the rate expected around 3.6%. Pensions are a core concern for residents and retirees.",
+    "561": "Binding tax tribunal ruling: voluntary exit payouts outside collective redundancy count as IRPF income. It sets a precedent that affects many workers.",
+    "560": "Fuel tax cut of 20 cents per litre extended to 31 December, a direct cost-of-living measure for drivers.",
+    "536": "October CPI held at 4.9%, the highest since early 2023, with energy the main driver. Key figure for cost of living and ECB rate expectations.",
+    "568": "PP and Vox promise tax cuts, while PSOE and Frente Amplio question how they would fund them without cutting services. Directly relevant to resident taxes ahead of the 29N election.",
+    "567": "Party positions on rent extensions, housing construction and immigration-linked measures. Housing is a major issue for foreign and local residents in the campaign.",
+    "541": "ECB leadership deal: Germany and France are shaping the bloc's package, with Hernández de Cos as the favourite and a decision deadline of 18 November. ECB decisions drive Euribor and mortgage costs.",
+    "565": "Sánchez and Feijóo head-to-head debate on 19 November. The general election on 29 November is a national event affecting all residents.",
+    "139": "Frente Amplio proposes phasing out tourist flats in residential blocks and stressed areas within three years. Relevant to renters and to the tourist-rental rules that affect the housing market.",
+    "539": "Eurozone GDP slowed to 0.4% in Q3 while employment stalled. A macro signal for Spain's economic outlook and interest rates.",
+    "382": "Positive story: the Gran Recapte food drive mobilises 15,000 volunteers against food poverty across Spain."
+  },
+  "selection_sources": [
+    {
+      "url": "https://elpais.com/economia/2026-11-13/el-gobierno-aprueba-el-tramite-de-urgencia-para-la-revalorizacion-de-las-pensiones.html",
+      "reason": "Pension revaluation: the government started urgent processing of the 2027 increase, with the rate expected around 3.6%. Pensions are a core concern for residents and retirees."
+    },
+    {
+      "url": "https://www.eldiario.es/economia/hacienda-dictamina-indemnizacion-prejubilacion-voluntaria-tributa-irpf_1_13660666.html",
+      "reason": "Binding tax tribunal ruling: voluntary exit payouts outside collective redundancy count as IRPF income. It sets a precedent that affects many workers."
+    },
+    {
+      "url": "https://www.eldiario.es/economia/descuento-20-centimos-gasolina-diesel-mantendra-vigor-final-ano_1_13660815.html",
+      "reason": "Fuel tax cut of 20 cents per litre extended to 31 December, a direct cost-of-living measure for drivers."
+    },
+    {
+      "url": "https://www.elconfidencial.com/economia/2026-11-13/la-inflacion-se-mantiene-en-octubre-en-el-4-9-por-los-combustibles-y-el-gas_4464135/",
+      "reason": "October CPI held at 4.9%, the highest since early 2023, with energy the main driver. Key figure for cost of living and ECB rate expectations."
+    },
+    {
+      "url": "https://www.europapress.es/economia/fiscal-00347/noticia-pp-vox-prometen-bajar-impuestos-psoe-frente-amplio-cuestionan-haran-recortar-servicios-20261113234025.html",
+      "reason": "PP and Vox promise tax cuts, while PSOE and Frente Amplio question how they would fund them without cutting services. Directly relevant to resident taxes ahead of the 29N election."
+    },
+    {
+      "url": "https://www.europapress.es/economia/construccion-y-vivienda-00342/noticia-psoe-frente-amplio-defienden-prorrogas-alquiler-pp-apuesta-construir-vox-reinmigracion-20261113225830.html",
+      "reason": "Party positions on rent extensions, housing construction and immigration-linked measures. Housing is a major issue for foreign and local residents in the campaign."
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/alemania-francia-reparto-poder-cupula-bce-favorito-espana_7060934_0.html",
+      "reason": "ECB leadership deal: Germany and France are shaping the bloc's package, with Hernández de Cos as the favourite and a decision deadline of 18 November. ECB decisions drive Euribor and mortgage costs."
+    },
+    {
+      "url": "https://www.europapress.es/sociedad/noticia-cara-cara-pedro-sanchez-alberto-nunez-feijoo-sera-proximo-jueves-moderado-maria-casado-20261113155313.html",
+      "reason": "Sánchez and Feijóo head-to-head debate on 19 November. The general election on 29 November is a national event affecting all residents."
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/frente-amplio-quiere-extinguir-los-pisos-turisticos-bloques-residenciales-zonas-tensionadas_7060881_0.html",
+      "reason": "Frente Amplio proposes phasing out tourist flats in residential blocks and stressed areas within three years. Relevant to renters and to the tourist-rental rules that affect the housing market."
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/pib-eurozona-freno-tercer-trimestre-empleo-se-estanco-plena-escalada-los-precios_7060682_0.html",
+      "reason": "Eurozone GDP slowed to 0.4% in Q3 while employment stalled. A macro signal for Spain's economic outlook and interest rates."
+    },
+    {
+      "url": "https://www.lavanguardia.com/local/barcelona/20261114/11683790/gran-recapte-lanza-15-000-voluntarios-pobreza-proximidad.html",
+      "reason": "Positive story: the Gran Recapte food drive mobilises 15,000 volunteers against food poverty across Spain."
+    }
+  ]
+}
