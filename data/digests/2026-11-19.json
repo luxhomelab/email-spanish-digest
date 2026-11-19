@@ -1,0 +1,245 @@
+{
+  "items": [
+    {
+      "title": "Minimum-wage workers get tax relief from January",
+      "body": "The cabinet approved zero IRPF (personal income tax) withholding from January 1, 2027, for workers on the €18,004 SMI (minimum wage). Employers must recalculate payroll. The annual deduction is up to €1,033.58 and phases out below €23,171.89; other income can affect the final tax bill.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-18/hacienda-obliga-a-los-empleadores-a-recalcular-las-nominas-para-dejar-sin-retencion-de-irpf-al-salario-minimo.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Cabinet approves access to average colleague pay",
+      "body": "A Royal Decree-law approved by the cabinet on November 17 would let workers request average pay for equal work, broken down by sex. Employers would have two months to reply, and firms with 50 or more staff would publish their pay gap. Maximum fines would rise from €750 to €7,500.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/11/18/gobierno-elimina-secreto-salarial-espana-cuanto-cobra-companero-trabajo-2069685.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spain's inflation reaches 4.9% as energy rises",
+      "body": "Spain's annual inflation reached 4.9% in October, above the eurozone's 4%, according to Eurostat. Rising energy prices drove the eurozone acceleration, while fresh food rose 4.6%.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-11-18/inflacion-zona-euro-octubre-1hms_4467378/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Sánchez and Feijóo debate on November 19",
+      "body": "Prime Minister Pedro Sánchez and PP leader Alberto Núñez Feijóo meet in a televised debate on November 19, ten days before the general election. Housing, taxes, public services, corruption, and migration are on the agenda. Feijóo opens, and Sánchez delivers the closing statement.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-sanchez-feijoo-llegan-manana-cara-cara-clima-crispacion-enfrentamientos-falta-dialogo-20261118192926.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Congress backs wider pensions and menopause leave",
+      "body": "Congress's standing committee approved a Royal Decree-law on November 18 extending widow's pensions to unmarried couples with children who prove two years of cohabitation. It also creates special menopause leave and support for parents of seriously ill children. PP and Vox criticised the decree.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/congreso-amplia-viudedad-parejas-hecho-aprueba-baja-menopausia-prestaciones_1_13673123.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "PP proposes food VAT and self-employment cuts",
+      "body": "The PP's election manifesto proposes 0% VAT on basic foods during the inflation crisis. Autónomos (self-employed) billing under €85,000 would not charge or declare VAT. First-home VAT for under-40s would fall from 10% to 4%; these are campaign pledges, not law.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/menos-irpf-iva-0-alimentos-basicos-ventajas-para-autonomos-todas-las-medidas-economicas-pp_7062626_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "EU flags housing shortage as Spain's main risk",
+      "body": "The European Commission names the housing shortage as Spain's main economic risk, warning it could limit workers' ability to move for jobs. Bank of Spain research finds households spending over 30% of income on rent consume 15% less, on average, than comparable owner-occupiers with low housing costs.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-19/menos-consumo-trabas-laborales-y-mas-desigualdad-la-crisis-de-la-vivienda-amenaza-con-enfriar-el-auge-economico-espanol.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Electric car grants nearing exhaustion within weeks",
+      "body": "The €350 million Auto+ fund for private electric and plug-in hybrid car buyers is expected to run out in late November or early December. Grants reach up to €4,500, and the 15% income tax deduction for electric cars expires at year-end. The government's promised 2027 extension depends on the election result.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/economia/20261119/11687600/ayudas-compra-coches-electricos-agotaran-15-dias.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Hernández de Cos gathers support for ECB top job",
+      "body": "Former Bank of Spain governor Pablo Hernández de Cos is gathering support to lead the European Central Bank. He still needs a reinforced qualified majority of eurozone countries. The split of top posts that France and Germany are negotiating still needs confirmation.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/11/19/pablo-hernandez-cos-asegura-los-apoyos-para-convertirse-presidente-bce-2069878.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Congress backs single-parent status and care funding",
+      "body": "Congress's standing committee approved a Royal Decree-law on November 18 recognising single-parent families in law and providing €7.24 billion for dependency care reform. The recognition aims to prompt further rules on benefits, training, grants, and transport discounts.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/congreso-aprueba-nuevo-titulo-familias-monoparentales-7-240-millones-dependencia_1_13674419.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Canary arrivals top 6,000 as migration shapes workforce",
+      "body": "More than 6,000 people have reached the Canary Islands so far in November. Spain had over 10 million foreign-born residents in January, or 20.2% of its population, while foreign workers made up 14.1% of Social Security contributors. Most migrants arrive by air; boats account for barely 7% of arrivals.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-11-19/inmigracion-espana-aviones-empleo-problema-canarias_4459910/"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Feijóo considers full or partial euthanasia repeal",
+      "body": "PP leader and prime ministerial candidate Alberto Núñez Feijóo said in a podcast interview that the PP disagrees with the euthanasia law and would change it in government, possibly by total or partial repeal. He links any change to palliative care. This is a campaign statement; no proposal has been tabled.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/11/18/feijoo-plantea-derogacion-total-parcial-ley-eutanasia-2069730.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Vicente Luis Mora wins National Book Award",
+      "body": "Writer Vicente Luis Mora and translator Rahul Bery have won the US National Book Award for Translated Literature with \"Centroeuropa\". Mora is described as the first Spaniard to win the prize. His debut novel was published in Spain in 2020.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/cultura/literatura/2026/11/19/6afe9199e85ece407a8b45a5.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "With inflation at 4.9%, are you delaying big purchases? A) Yes B) No C) Sometimes",
+  "subject": "Spain's 4.9% inflation, tax relief and TV debate",
+  "variant": "Your neighbours in Spain already know this",
+  "headline": "Your neighbours in Spain already know this",
+  "date": "2026-11-19",
+  "engagement_source": "generated",
+  "generated_at": "2026-11-19T07:02:30.164403+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 713,
+    "items_selected_pass1": 13,
+    "fact_sheets_extracted": 13,
+    "items_after_importance_filter": 13,
+    "items_in_digest": 13
+  },
+  "selection_reasons": {
+    "24": "Sánchez–Feijóo televised debate on 19 November, days before the 29N general election; a national event everyone in Spain is following",
+    "656": "Hacienda changes IRPF withholding rules so employers recalculate payslips, affecting taxes on minimum-wage workers from January",
+    "619": "PP election programme proposes IRPF cuts for under-35s and 0% VAT on basic foods, with concrete figures on the table",
+    "396": "Housing crisis warning (European Commission and analysts) on property market imbalance affecting renters and buyers",
+    "604": "Eurozone inflation rises to 4% in October, the highest in three years, affecting the cost of living",
+    "112": "Congress validates decree extending widow's pension to unmarried couples with children and other Social Security benefits",
+    "113": "Congress approves a 7,240 million euro dependency reform and new protection for single-parent families",
+    "455": "Electric car purchase aid runs out within about 15 days, affecting buyers and dealers nationwide",
+    "250": "Government removes salary secrecy, giving workers the right to compare pay for similar roles, including by sex",
+    "139": "INE data show 20.2% of residents are foreign-born (over 10 million), alongside rising arrivals to the Canaries",
+    "184": "Feijóo's PP considers total or partial repeal of the euthanasia law, a healthcare policy shift tied to the election",
+    "233": "Spaniard Hernández de Cos gains support from France and Germany for ECB presidency, a major national economic appointment",
+    "14": "Positive news: Vicente Luis Mora becomes the first Spaniard to win the US National Book Award, a national cultural milestone"
+  },
+  "selection_sources": [
+    {
+      "url": "https://www.europapress.es/nacional/noticia-sanchez-feijoo-llegan-manana-cara-cara-clima-crispacion-enfrentamientos-falta-dialogo-20261118192926.html",
+      "reason": "Sánchez–Feijóo televised debate on 19 November, days before the 29N general election; a national event everyone in Spain is following"
+    },
+    {
+      "url": "https://elpais.com/economia/2026-11-18/hacienda-obliga-a-los-empleadores-a-recalcular-las-nominas-para-dejar-sin-retencion-de-irpf-al-salario-minimo.html",
+      "reason": "Hacienda changes IRPF withholding rules so employers recalculate payslips, affecting taxes on minimum-wage workers from January"
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/menos-irpf-iva-0-alimentos-basicos-ventajas-para-autonomos-todas-las-medidas-economicas-pp_7062626_0.html",
+      "reason": "PP election programme proposes IRPF cuts for under-35s and 0% VAT on basic foods, with concrete figures on the table"
+    },
+    {
+      "url": "https://elpais.com/economia/2026-11-19/menos-consumo-trabas-laborales-y-mas-desigualdad-la-crisis-de-la-vivienda-amenaza-con-enfriar-el-auge-economico-espanol.html",
+      "reason": "Housing crisis warning (European Commission and analysts) on property market imbalance affecting renters and buyers"
+    },
+    {
+      "url": "https://www.elconfidencial.com/economia/2026-11-18/inflacion-zona-euro-octubre-1hms_4467378/",
+      "reason": "Eurozone inflation rises to 4% in October, the highest in three years, affecting the cost of living"
+    },
+    {
+      "url": "https://www.eldiario.es/economia/congreso-amplia-viudedad-parejas-hecho-aprueba-baja-menopausia-prestaciones_1_13673123.html",
+      "reason": "Congress validates decree extending widow's pension to unmarried couples with children and other Social Security benefits"
+    },
+    {
+      "url": "https://www.eldiario.es/sociedad/congreso-aprueba-nuevo-titulo-familias-monoparentales-7-240-millones-dependencia_1_13674419.html",
+      "reason": "Congress approves a 7,240 million euro dependency reform and new protection for single-parent families"
+    },
+    {
+      "url": "https://www.lavanguardia.com/economia/20261119/11687600/ayudas-compra-coches-electricos-agotaran-15-dias.html",
+      "reason": "Electric car purchase aid runs out within about 15 days, affecting buyers and dealers nationwide"
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/nacional/2026/11/18/gobierno-elimina-secreto-salarial-espana-cuanto-cobra-companero-trabajo-2069685.html",
+      "reason": "Government removes salary secrecy, giving workers the right to compare pay for similar roles, including by sex"
+    },
+    {
+      "url": "https://www.elconfidencial.com/espana/2026-11-19/inmigracion-espana-aviones-empleo-problema-canarias_4459910/",
+      "reason": "INE data show 20.2% of residents are foreign-born (over 10 million), alongside rising arrivals to the Canaries"
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/nacional/2026/11/18/feijoo-plantea-derogacion-total-parcial-ley-eutanasia-2069730.html",
+      "reason": "Feijóo's PP considers total or partial repeal of the euthanasia law, a healthcare policy shift tied to the election"
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/11/19/pablo-hernandez-cos-asegura-los-apoyos-para-convertirse-presidente-bce-2069878.html",
+      "reason": "Spaniard Hernández de Cos gains support from France and Germany for ECB presidency, a major national economic appointment"
+    },
+    {
+      "url": "https://www.elmundo.es/cultura/literatura/2026/11/19/6afe9199e85ece407a8b45a5.html",
+      "reason": "Positive news: Vicente Luis Mora becomes the first Spaniard to win the US National Book Award, a national cultural milestone"
+    }
+  ]
+}
