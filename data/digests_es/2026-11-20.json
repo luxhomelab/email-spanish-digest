@@ -1,0 +1,179 @@
+{
+  "items": [
+    {
+      "title": "Madrid amplía los servicios mínimos de la huelga educativa",
+      "body": "La ampliación publicada en el BOCM entra en vigor el 20 de noviembre de 2026. El profesorado de asignaturas de la PAU cubrirá el 50% de sus horas lectivas hasta el 31 de enero de 2027. La Comunidad cifra en 413.076 las horas lectivas potencialmente no impartidas; CCOO anuncia una demanda para pedir medidas cautelarísimas.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/madrid/2026-11-19/la-comunidad-de-madrid-refuerza-los-servicios-minimos-de-la-huelga-indefinida-de-educacion-y-cifra-en-413076-las-horas-lectivas-no-impartidas.html"
+        }
+      ],
+      "category": "work",
+      "important": true
+    },
+    {
+      "title": "El SMI subirá a 1.286 euros en enero",
+      "body": "El real decreto publicado en el BOE elevará el SMI un 5,3% desde el 1 de enero de 2027, a 1.286 euros brutos en 14 pagas. CCOO estima 1,96 millones de beneficiarios, frente a los 2,7 millones del Gobierno. Los sindicatos valoran la subida, pero no firman porque sigue pendiente impedir su absorción con pluses.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/11/20/6afee304fc6c8331688b457f.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Jubilarse a los 65 exigirá más cotización",
+      "body": "El calendario vigente de la reforma de pensiones exigirá desde el 1 de enero de 2027 al menos 38 años y 6 meses cotizados para jubilarse a los 65. Quienes no alcancen ese periodo deberán esperar a los 67 años. Termina así la transición de 15 años iniciada en 2013 ante el envejecimiento de la población.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/11/19/adios-jubilacion-66anos-desde-1enero-cambia-edad-jubilarse-espana-2027-2063834.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Feijóo ataca y Sánchez evita el choque",
+      "body": "El candidato popular, Alberto Núñez Feijóo, hizo hincapié en la corrupción durante el único cara a cara previo a las elecciones del 29 de noviembre. El presidente del Gobierno, Pedro Sánchez, admitió errores y no haber resuelto el problema de la vivienda. Ambos defendieron construir más, pero discreparon sobre regular el mercado.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/elecciones-generales/2026-11-19/feijoo-enmienda-ocho-anos-de-gobierno-ante-un-sanchez-que-evita-la-confrontacion.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Las rentas altas concentran la ventaja fiscal del alquiler",
+      "body": "El 10% con más ingresos recibió el 73% del ahorro fiscal por alquilar vivienda habitual en 2023, según un estudio de la Universidad de Alcalá. Acumulan más ingresos inmobiliarios y sus tipos de IRPF hacen mayor el ahorro por cada euro de reducción. Los autores plantean reorientar parte de los recursos hacia los inquilinos.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-20/las-rentas-mas-altas-acaparan-tres-cuartas-partes-de-las-ventajas-fiscales-al-alquiler-de-vivienda.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Bruselas exige completar las normas fiscales sobre criptomonedas",
+      "body": "La Comisión Europea ha enviado un dictamen motivado a España por no incorporar plenamente las normas de transparencia fiscal sobre criptoactivos. Da dos meses para subsanarlo antes de una posible denuncia ante el TJUE y petición de sanciones. También abre otro expediente por las reglas sobre actividades financieras digitales.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/bruselas-da-dos-meses-espana-para-aplicar-las-normas-fiscales-sobre-criptomonedas-antes-escalar-tjue_7063221_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Robledo capta la Voyager 1 más allá del día luz",
+      "body": "La antena de Robledo de Chavela recibió el 19 de noviembre de 2026 la primera señal emitida por la Voyager 1 desde más de un día luz, unos 25.902 millones de kilómetros. La NASA confirmó el hito. Solo la estación española podía recibirla en ese momento: las de California y Australia tenían la sonda bajo el horizonte.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/ciencia/2026-11-19/mas-alla-de-un-dia-luz-espana-capta-el-primer-saludo-de-la-voyager-1-desde-el-otro-lado-de-la-frontera-interestelar.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Más de 1,5 millones esperan la devolución del IRPF",
+      "body": "TaxDown estima que más de 1,5 millones de contribuyentes siguen sin cobrar la devolución de la renta 2025. Para las declaraciones presentadas en plazo, Hacienda deberá abonar intereses del 4,0625% anual si paga después del 31 de diciembre. El estado de la devolución puede consultarse en la web de la AEAT.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/hacienda-tiene-pendiente-aun-devolver-renta-mas-1-5-millones-contribuyentes_7063063_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Los sindicatos de inquilinas convocan marchas en seis ciudades",
+      "body": "La Confederación de Sindicatos de Inquilinas convoca movilizaciones en Zaragoza, Madrid, Barcelona, Alicante, Valencia y Castellón para reclamar cambios en vivienda. Se suman a una convocatoria europea que, según la organización, reúne más de 600 protestas bajo el lema «La gente por encima del beneficio».",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/sindicatos-inquilinas-convocan-movilizaciones-semana-siguiendo-ola-europea_1_13677688.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "De Cos, favorito para presidir el BCE",
+      "body": "El presidente del Banco Internacional de Pagos, Pablo Hernández de Cos, figura como favorito para presidir el BCE. Sería el primer español en el cargo. Los líderes buscan acordar el reparto de los tres puestos que se renuevan el 26 de noviembre; la elección sigue pendiente.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/plazo-presentar-candidatos-cupula-bce-concluye-este-viernes_7062756_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Madrid aprueba la ley LIDER con PP y Vox",
+      "body": "La Asamblea de Madrid ha aprobado la ley LIDER con los votos del PP y Vox. La norma busca acortar trámites urbanísticos y flexibilizar los cambios de uso del suelo para construir vivienda. La oposición y asociaciones vecinales la rechazan porque consideran que reducirá controles y favorecerá la especulación.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/madrid/asamblea-madrid-aprueba-ley-suelo-ayuso-criticas-oposicion-asociaciones-favorecera-especulacion_1_13676646.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Mounjaro: recomiendan protección adicional con anticonceptivos orales",
+      "body": "La AEMPS recomienda añadir un método de barrera a quienes toman Mounjaro y anticonceptivos orales durante las 4 semanas posteriores al inicio y a cada aumento de dosis, o cambiar a un anticonceptivo no oral. La información sobre la posible interacción es «limitada», según la revisión europea.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/vida/20261119/11688487/sanidad-advierte-toma-mounjaro-perder-peso-use-preservativo-evitar-embarazos.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Semaf desconvoca la huelga del 23 de noviembre",
+      "body": "El Sindicato Español de Maquinistas Ferroviarios (Semaf) ha desconvocado los paros del 23 de noviembre tras alcanzar un acuerdo en seguridad ferroviaria. El protocolo ante fenómenos adversos fue determinante para desbloquear compromisos pendientes desde febrero. La CSIF mantiene sus movilizaciones en Adif y Adif Alta Velocidad.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/11/20/6affe386e85ece240e8b45a2.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Expediente por el trato fiscal a fondos extranjeros",
+      "body": "La Comisión Europea ha abierto un expediente a España y le da dos meses para responder por el trato fiscal a fondos de pensiones y aseguradoras de vida extranjeros. Cuestiona que tributen sin las exenciones y deducciones de las entidades nacionales, lo que frenaría la inversión transfronteriza. El caso podría llegar al TJUE.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/bruselas-da-un-ultimatum-espana-por-discriminar-los-fondos-pensiones-aseguradoras-extranjeras_7063149_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    }
+  ],
+  "engagement": "¿Sabes cuántos años llevas cotizados? A) Sí B) No",
+  "subject": "Servicios mínimos en Madrid, SMI y jubilación",
+  "lang": "es",
+  "date": "2026-11-20",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-11-20T07:05:32.009535+00:00"
+}
