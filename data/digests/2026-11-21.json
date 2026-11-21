@@ -1,0 +1,279 @@
+{
+  "items": [
+    {
+      "title": "Madrid–Andalucía rail repairs could take two weeks",
+      "body": "The Transport Ministry hopes to repair the high-speed line, closed after the October 28 Urda crash that killed 69 people, in about two weeks. It gives no reopening date. A signalling failure and erroneous control-centre orders caused the crash. Operators are selling tickets only from December 13.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-20/transportes-confia-en-que-la-linea-madrid-sevilla-en-urda-se-repare-en-unas-dos-semanas.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Court reinforces Ley de Nietos voting restrictions",
+      "body": "The Supreme Court ordered electoral authorities to exclude 163,355 people naturalised under the Ley de Nietos from the November 29 voting rolls unless they prove descent from exiles. The precautionary suspension covers residents in Spain and abroad. It exempts 901 already certified and anyone providing a certificate before polling day.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-supremo-exige-jec-garantizar-163355-nacionalizados-ley-nietos-no-voten-elecciones-20261120145732.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Home completions reach highest level in 14 years",
+      "body": "Spain completed over 60,000 homes through July, up 50% on 2025 and the highest for that period in 14 years. Supply still falls short: around 250,000 homes a year are needed to close the gap. A Bank of Spain study puts the accumulated housing deficit at 750,000 homes.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/construccion-vivienda-alcanza-punto-algido-2012-apunta-ano-100-000-viviendas_1_13679966.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Cabinet approves contested data centre power rules",
+      "body": "The cabinet approved a Royal Decree regulating data centres on November 20. Operators must meet power-supply conditions or accept priority disconnections. Industry group SpainDC announced a court challenge seeking suspension; the government says the rules would prevent €5 billion in extra electricity costs, a figure SpainDC disputes.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-20/el-gobierno-aprueba-este-viernes-el-decreto-de-centros-de-datos-y-la-planificacion-electrica.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Cabinet approves carbon market expansion awaiting validation",
+      "body": "The cabinet approved a Royal Decree-law extending the EU carbon market to road transport and buildings; parliamentary validation is still pending. Suppliers would pass carbon costs to consumers, with allowance payments planned no earlier than January 1, 2028. EU funding plus a 25% state contribution would provide €9 billion.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/gobierno-incorpora-transporte-por-carretera-edificacion-mercado-europeo-que-tendran-que-pagar-por-emitir-co2_7063725_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Bank of Spain sees contained housing risks",
+      "body": "Bank of Spain deputy governor Soledad Núñez says housing poses no systemic financial risk, as new mortgage lending remains well below historical highs. Prices rose 12.2% in the second quarter, worsening affordability. She warns that geopolitical tensions and lower AI expectations could hit financial markets.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/banco-espana-alerta-amenazas-crecientes-los-mercados-por-geopolitica-ia-pero-descarta-un-riesgo-sistemico-vivienda_7063811_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain plans Miura 5 launch within a year",
+      "body": "Spanish Space Agency director Juan Carlos Cortés says the Miura 5 rocket is planned to launch from French Guiana within a year. It would give Spain its own means of putting payloads into orbit, joining roughly 10 countries with that capability.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/11/20/aee-destaca-que-espana-ha-hecho-extremadamente-bien-espacio-lanzara-miura-5-un-ano-2070401.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Debate poll finds 7.5% reconsidering their vote",
+      "body": "A Sigma Dos poll for El Mundo finds 7.5% of debate viewers changed their vote or now doubt their choice before the November 29 election. Some 50.5% named Partido Popular candidate Alberto Núñez Feijóo the winner, against 29% for Socialist candidate Pedro Sánchez. Housing drew the most interest.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/20/6b0081aee9cf4af82d8b45b4.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Report finds deeper housing exclusion among non-EU residents",
+      "body": "A forthcoming Fundación Cepaim report puts housing exclusion at 49.2% among non-EU foreigners, against 23.6% among Spaniards. Overcrowding affects 27.6% and 10.1%, respectively. Researchers point to high prices, scarce public housing, discrimination, and documentation barriers.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/vivienda/2026-11-21/la-crisis-de-la-vivienda-golpea-mas-fuerte-a-los-inmigrantes-sonamos-con-lo-minimo.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Election model shows tactical voting varies by province",
+      "body": "El País has updated its model for the November 29 election using polls through November 20. It finds tactical voting could matter on the right in 34 provinces and favour the Socialists on the left in 35 of 52. It matters much less in large provinces such as Madrid and Barcelona.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/elecciones-generales/2026-11-21/se-ha-movido-el-voto-util-las-opciones-de-izquierda-y-derecha-en-cada-provincia-con-las-ultimas-encuestas.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Renfe urges password changes after wider data exposure",
+      "body": "Renfe urged affected customers on November 20 to change passwords after its September cyberattack. Exposed data may include passwords, DNI or NIE (foreigner identification number) details, and travel history. Renfe first said only limited personal data was affected.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/tecnologia/renfe-urge-clientes-cambiar-contrasenas-ciberataque-pudo-robar-dnis-e-historial-viajes_1_13680581.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Madrid teachers march against classroom neutrality instructions",
+      "body": "Thousands of teachers and supporters marched through Madrid on November 20, blocking Gran Vía. They opposed instructions from the Madrid regional government of Isabel Díaz Ayuso requiring classroom \"neutrality\" when discussing the education strike. The dispute between teachers and the regional Education Department continues.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/madrid/marea-verde-profesores-inunda-madrid-orden-ayuso-centros-mantener-neutralidad_1_13681667.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Supreme Court upholds Balearic school language model",
+      "body": "The Supreme Court rejected a father's request for at least 25% of classes in Spanish at a Mallorca public school, closing the judicial route. It found no proof that Spanish was marginalised. The Balearic model requires at least 50% of teaching hours in Catalan and lets schools design language plans.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/illes-balears/sociedad/supremo-rechaza-peticion-padre-hija-reciba-25-clases-castellano-mallorca_1_13680884.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Calatayud celebrates jota as Unesco recognition nears",
+      "body": "A November 20 gala in Calatayud brought traditional Aragonese jota music together with electronics. Aragón's culture director general Pedro Olloqui said Unesco intangible heritage recognition was expected within days or, at most, weeks.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/ocio-y-cultura/2026/11/21/las-raices-mestizaje-hacen-resplandecer-jota-desde-calatayud-2070537.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Pelayo cyberattack exposes customer and bank details",
+      "body": "Insurer Pelayo says unauthorised access exposed customer identification, contact details, policy information, and registered IBANs. It has notified affected customers and authorities, and says its services were unaffected. Customers should watch for suspicious calls or messages and avoid sharing details with unverified contacts.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/aseguradora-pelayo-sufre-un-ciberataque-que-afecta-los-datos-personales-sus-clientes-incluyendo-informacion-sobre-sus-polizas-iban-registrado_7063791_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "Which home would you choose? A) New-build B) Older C) Either",
+  "subject": "Madrid–Andalucía rail repairs and housing shortfall",
+  "variant": "Quiet news day in Spain. We checked.",
+  "headline": "Quiet news day in Spain. We checked.",
+  "date": "2026-11-21",
+  "engagement_source": "generated",
+  "generated_at": "2026-11-21T07:02:22.359957+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 654,
+    "items_selected_pass1": 15,
+    "fact_sheets_extracted": 15,
+    "items_after_importance_filter": 15,
+    "items_in_digest": 15
+  },
+  "selection_reasons": {
+    "3": "The only head-to-head debate moved up to 1.2 million votes, a key development in the 29-N election that shapes the next government's housing, tax and pension policies.",
+    "596": "Supreme Court ruling bars about 160,000 naturalised citizens under the 'grandchildren law' from voting, a legal precedent affecting a large group of residents and voters.",
+    "320": "Election model with 40 seats in play and a province-by-province breakdown, useful for readers tracking how the 29-N result could affect policy.",
+    "420": "Government approved the data-centre decree and grid planning, aimed at avoiding a €5bn cost increase in electricity bills, which directly affects consumers.",
+    "579": "Spain transposes the EU ETS2 carbon market to road transport and buildings, which will raise fuel and heating costs for households, with €6.8bn from the Social Climate Fund for public transport and housing renovation.",
+    "94": "Renfe urges all customers to change passwords after a cyberattack that may have exposed ID numbers, passwords and travel history, a concrete action for millions of rail users.",
+    "578": "Banco de España warns of rising geopolitical and AI-related market risks while ruling out a systemic housing risk, a relevant official economic assessment.",
+    "588": "Housing construction reaches its highest level since 2012 and heads toward about 100,000 homes a year, yet still falls short of the housing deficit, with concrete figures on supply.",
+    "604": "Transport ministry expects the Madrid–Seville high-speed line closed after the Urda accident to be repaired in about two weeks, affecting national rail travel and commuters.",
+    "45": "Thousands of teachers marched in Madrid against the regional government's 'neutrality' order during a multi-week indefinite strike, a large regional protest with systemic impact.",
+    "88": "Supreme Court upholds the Balearic language model, a precedent on school language rules that affects families across the Balearic Islands.",
+    "342": "Report finds foreign non-EU residents suffer greater housing exclusion and discrimination, a trend relevant to the immigrant and expat readership.",
+    "583": "Insurer Pelayo reports a cyberattack exposing customers' policy details and registered IBANs, a direct financial-security risk for its clients.",
+    "270": "Positive news: the Spanish Space Agency says Spain will launch its own Miura 5 rocket within a year, placing it among the few countries with independent launch capability.",
+    "194": "Positive culture news: the jota gets a world heritage recognition in days, a nationally relevant cultural milestone for Spain."
+  },
+  "selection_sources": [
+    {
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/20/6b0081aee9cf4af82d8b45b4.html",
+      "reason": "The only head-to-head debate moved up to 1.2 million votes, a key development in the 29-N election that shapes the next government's housing, tax and pension policies."
+    },
+    {
+      "url": "https://www.europapress.es/nacional/noticia-supremo-exige-jec-garantizar-163355-nacionalizados-ley-nietos-no-voten-elecciones-20261120145732.html",
+      "reason": "Supreme Court ruling bars about 160,000 naturalised citizens under the 'grandchildren law' from voting, a legal precedent affecting a large group of residents and voters."
+    },
+    {
+      "url": "https://elpais.com/espana/elecciones-generales/2026-11-21/se-ha-movido-el-voto-util-las-opciones-de-izquierda-y-derecha-en-cada-provincia-con-las-ultimas-encuestas.html",
+      "reason": "Election model with 40 seats in play and a province-by-province breakdown, useful for readers tracking how the 29-N result could affect policy."
+    },
+    {
+      "url": "https://elpais.com/economia/2026-11-20/el-gobierno-aprueba-este-viernes-el-decreto-de-centros-de-datos-y-la-planificacion-electrica.html",
+      "reason": "Government approved the data-centre decree and grid planning, aimed at avoiding a €5bn cost increase in electricity bills, which directly affects consumers."
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/gobierno-incorpora-transporte-por-carretera-edificacion-mercado-europeo-que-tendran-que-pagar-por-emitir-co2_7063725_0.html",
+      "reason": "Spain transposes the EU ETS2 carbon market to road transport and buildings, which will raise fuel and heating costs for households, with €6.8bn from the Social Climate Fund for public transport and housing renovation."
+    },
+    {
+      "url": "https://www.eldiario.es/tecnologia/renfe-urge-clientes-cambiar-contrasenas-ciberataque-pudo-robar-dnis-e-historial-viajes_1_13680581.html",
+      "reason": "Renfe urges all customers to change passwords after a cyberattack that may have exposed ID numbers, passwords and travel history, a concrete action for millions of rail users."
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/banco-espana-alerta-amenazas-crecientes-los-mercados-por-geopolitica-ia-pero-descarta-un-riesgo-sistemico-vivienda_7063811_0.html",
+      "reason": "Banco de España warns of rising geopolitical and AI-related market risks while ruling out a systemic housing risk, a relevant official economic assessment."
+    },
+    {
+      "url": "https://www.eldiario.es/economia/construccion-vivienda-alcanza-punto-algido-2012-apunta-ano-100-000-viviendas_1_13679966.html",
+      "reason": "Housing construction reaches its highest level since 2012 and heads toward about 100,000 homes a year, yet still falls short of the housing deficit, with concrete figures on supply."
+    },
+    {
+      "url": "https://elpais.com/economia/2026-11-20/transportes-confia-en-que-la-linea-madrid-sevilla-en-urda-se-repare-en-unas-dos-semanas.html",
+      "reason": "Transport ministry expects the Madrid–Seville high-speed line closed after the Urda accident to be repaired in about two weeks, affecting national rail travel and commuters."
+    },
+    {
+      "url": "https://www.eldiario.es/madrid/marea-verde-profesores-inunda-madrid-orden-ayuso-centros-mantener-neutralidad_1_13681667.html",
+      "reason": "Thousands of teachers marched in Madrid against the regional government's 'neutrality' order during a multi-week indefinite strike, a large regional protest with systemic impact."
+    },
+    {
+      "url": "https://www.eldiario.es/illes-balears/sociedad/supremo-rechaza-peticion-padre-hija-reciba-25-clases-castellano-mallorca_1_13680884.html",
+      "reason": "Supreme Court upholds the Balearic language model, a precedent on school language rules that affects families across the Balearic Islands."
+    },
+    {
+      "url": "https://elpais.com/economia/vivienda/2026-11-21/la-crisis-de-la-vivienda-golpea-mas-fuerte-a-los-inmigrantes-sonamos-con-lo-minimo.html",
+      "reason": "Report finds foreign non-EU residents suffer greater housing exclusion and discrimination, a trend relevant to the immigrant and expat readership."
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/aseguradora-pelayo-sufre-un-ciberataque-que-afecta-los-datos-personales-sus-clientes-incluyendo-informacion-sobre-sus-polizas-iban-registrado_7063791_0.html",
+      "reason": "Insurer Pelayo reports a cyberattack exposing customers' policy details and registered IBANs, a direct financial-security risk for its clients."
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/11/20/aee-destaca-que-espana-ha-hecho-extremadamente-bien-espacio-lanzara-miura-5-un-ano-2070401.html",
+      "reason": "Positive news: the Spanish Space Agency says Spain will launch its own Miura 5 rocket within a year, placing it among the few countries with independent launch capability."
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/ocio-y-cultura/2026/11/21/las-raices-mestizaje-hacen-resplandecer-jota-desde-calatayud-2070537.html",
+      "reason": "Positive culture news: the jota gets a world heritage recognition in days, a nationally relevant cultural milestone for Spain."
+    }
+  ]
+}
