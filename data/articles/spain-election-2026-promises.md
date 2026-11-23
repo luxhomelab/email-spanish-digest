@@ -21,7 +21,7 @@ This guide is for people who live in Spain, whether or not they can vote here. M
 ## Key takeaways
 
 - **Programmes of small steps score high, and programmes of big change score low.** PP, PSOE and Coalición Canaria have 81 to 86% of their promises rated realistic. Sumar, Vox and BNG are at 34 to 42%. This shows how hard the promises are to carry out. It does not show whether they are good.
-- **Seven parties promise to change the Constitution**: PSOE, Sumar, Podemos, ERC, EH Bildu, BNG and Vox. Each change needs a three-fifths or two-thirds majority, and that is only possible if PP and PSOE both support it.
+- **Seven parties promise to change the Constitution**: PSOE, Sumar, Podemos, ERC, EH Bildu, BNG and Vox. Each change needs a three-fifths or two-thirds majority. In practice this has always needed both PP and PSOE.
 - **176 votes decide a lot.** Changes to the immigration law, the judges' council and the "gag law" need an organic law. An organic law needs an absolute majority: 176 of the 350 deputies.
 - **The regions control housing and health.** Many national promises on rent, building and waiting lists really mean "more money, and the regions must agree".
 - **EU law sets firm limits.** This is true especially for rules that treat people differently by nationality, for VAT and for the free movement of money, which also protects buyers from outside the EU.
@@ -29,7 +29,7 @@ This guide is for people who live in Spain, whether or not they can vote here. M
 
 ## How to read the ratings
 
-Every promise has one of five ratings. It also has a chance of happening in the next four years and a list of what it needs. We give a **D** only when the law stops a promise: it goes against the Constitution, EU law or an international treaty, or it needs a change to the Constitution that PP or PSOE opposes. When only money or votes are missing, the promise gets a **C**, even if the chance is small.
+Every promise has one of five ratings. It also has a chance of happening in the next four years and a list of what it needs. We give a **D** only when the law stops a promise: it goes against the Constitution, EU law or an international treaty, or it needs a change to the Constitution that one of the two largest parties, PP or PSOE, opposes. When only money or votes are missing, the promise gets a **C**, even if the chance is small.
 
 ::: graphic scale
 
@@ -105,7 +105,7 @@ Whoever wins, five limits decide what a government can do:
 - **EU law** limits VAT rates, trade deals, climate goals, the EU Migration Pact and any different treatment by nationality.
 - **Money.** Spain is using an extended 2023 budget ([Finance Ministry](https://www.hacienda.gob.es/es-ES/Prensa/Noticias/Paginas/2025/20251223-NP-CM-PRORROGA-PGE.aspx)), and EU rules limit how much the state can spend. In almost every programme, the promises cost more than the planned income.
 
-The realistic promises often bring the same pros and cons. Help for buyers and renters works fastest. In our view, though, part of it turns into higher prices while there are too few homes. Tax cuts from the right give people more money now but make the deficit bigger. New taxes from the left ask more from rich people and large companies. In our view they bring in less than planned, because money can move to other countries. Stricter immigration rules show that entering without papers does not lead to legal status. But they leave more people working without contracts. A permanent regularisation does the opposite. It may attract more people to come, but experts disagree on how many. Giving more powers to one region brings government closer to the people there, and then other regions ask for the same.
+The realistic promises often bring the same pros and cons. Help for buyers and renters works fastest. In our view, though, part of it turns into higher prices while there are too few homes. Tax cuts from the right give people more money now but make the deficit bigger. New taxes from the left ask more from rich people and large companies. In our view they bring in less than planned, because money can move to other countries. Stricter immigration rules send a signal that entering without papers does not lead to legal status. But they leave more people working without contracts. A permanent regularisation does the opposite. It may attract more people to come, but experts disagree on how many. Giving more powers to one region brings government closer to the people there, and then other regions ask for the same.
 
 ## How we rated the promises
 
