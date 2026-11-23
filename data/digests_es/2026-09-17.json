@@ -1,0 +1,119 @@
+{
+  "items": [
+    {
+      "title": "El alquiler empuja a millones de personas a una pobreza oculta en España",
+      "body": "Dos millones de personas en España viven en una pobreza oculta ligada al alquiler, en la que los costes de la vivienda crean una nueva vulnerabilidad. Lucía, de 25 años, paga 650 € al mes, el 41,5 % de su salario neto en 14 pagas, mientras sus padres compraron una casa a su edad. Los extranjeros que alquilan afrontan la misma presión sobre la asequibilidad.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/09/16/6aaa718ae85ece9b3c8b45ad.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El repunte del Euríbor dispara un 21 % las ejecuciones hipotecarias",
+      "body": "Las ejecuciones hipotecarias en España subieron un 20,9 % interanual en el segundo trimestre de 2026, hasta 4.090, a medida que el Euríbor sube por la guerra de Irán. Las ejecuciones de vivienda habitual subieron un 27,5 %, hasta 3.703, el nivel más alto desde principios de 2017. Más de la mitad afectan a hipotecas firmadas antes de 2008.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/escalada-euribor-por-guerra-iran-dispara-un-21-los-embargos-viviendas-por-impago-hipotecas_7037611_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El Congreso aprueba la mayor reforma de dependencia en 20 años",
+      "body": "El Congreso dio la aprobación definitiva a una reforma de las leyes de dependencia y discapacidad, que añade 6.200 millones de euros para ampliar prestaciones y reducir la burocracia. El ministerio la describe como una refundación del modelo de cuidados en España. El PP se abstuvo y Vox votó en contra; los cambios se publicarán en el BOE en los próximos días.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/congreso-aprueba-mayor-reforma-dependencia-20-anos_1_13514245.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "La guerra de Irán añade 90.000 millones a la factura energética de Europa",
+      "body": "La presidenta de la Comisión Europea, Ursula von der Leyen, afirmó que la UE ha pagado 90.000 millones de euros extra por combustibles fósiles desde el inicio de la guerra de Irán. La industria española afronta 7.400 millones de euros de costes adicionales. Los costes energéticos más altos pueden elevar la inflación y el coste de la vida en toda España.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/09/17/guerra-iran-deja-una-factura-energetica-90-000-millones-extra-europa-7-400-industria-espanola-2052384.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El Gobierno busca una vía rápida sobre la votación de la «ley de nietos»",
+      "body": "El Gobierno recurrirá la suspensión por el Supremo de la inscripción en el CERA de los nuevos ciudadanos naturalizados por la «ley de nietos». El servicio jurídico del Estado estudia un recurso de reposición y un incidente de nulidad para llevar el caso rápidamente al Tribunal Constitucional. El objetivo es que los nuevos ciudadanos puedan votar en las próximas elecciones.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-09-17/ley-nietos-recurso-tribunal-constitucional-gobierno_4425197/"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La subida de pensiones en 2027 probablemente superará el 3 % con la inflación al alza",
+      "body": "Se espera que las pensiones contributivas suban más del 3 % en 2027, según la media del IPC de diciembre a noviembre. La inflación de agosto, del 4,3 %, eleva la subida provisional al 3,2 %. Los pensionistas verían subir sus prestaciones, lo que protegería su poder adquisitivo.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/subida-las-pensiones-2027-evolucion-ipc-apunta-un-aumento-superior-3_7037382_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Un responsable de la Seguridad Social avisa del cambio en la nómina de 2027: el MEI sube al 1 %",
+      "body": "La cotización del Mecanismo de Equidad Intergeneracional subirá del 0,90 % en 2026 al 1 % en 2027. Las empresas pagarán 0,83 puntos y los trabajadores 0,17 puntos, lo que supone un pequeño aumento de la deducción en nómina. El tipo llegará al 1,1 % en 2028 y al 1,2 % en 2029.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-09-16/alfonso-munoz-funcionario-seguridad-social-cambio-nominas-trabajadores-1qrt_4424625/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Un tribunal suspende el campamento de migrantes en el puerto de Ceuta tras un recurso del sindicato policial",
+      "body": "La Audiencia Nacional ha suspendido cautelarmente el campamento de migrantes del Gobierno en el puerto de Ceuta, habilitado para 800 migrantes. El sindicato policial SUP presentó un recurso urgente. El tribunal ha exigido al Ministerio de Transportes que entregue el expediente y ha citado como testigos a responsables locales.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/audiencia-nacional-paraliza-campamento-instalado-puerto-ceuta-atender-migrantes_1_13515676.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Una tormenta mediterránea causa una muerte y cierra el aeropuerto de Valencia",
+      "body": "Una fuerte tormenta mediterránea causó una muerte en Barcelona, cerró el aeropuerto de Valencia y desvió 11 vuelos a Alicante-Elche. Se cayó un falso techo en el hospital Vall d'Hebron y se inundó su sótano. Se emitieron alertas de emergencia en Valencia, Cataluña y Andalucía.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/cierre-aeropuerto-valencia-caida-un-techo-vall-d-hebron-calles-inundadas-temporal-azota-con-fuerza-mediterraneo_7037734_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Residentes extranjeros en España: ¿qué parte de tus ingresos va al alquiler o a la hipoteca? 💬",
+  "subject": "Lo que todo el mundo en España comenta hoy",
+  "lang": "es",
+  "date": "2026-09-17",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-09-17T06:04:48.676952+00:00"
+}

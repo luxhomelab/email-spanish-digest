@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "title": "Alquiler de habitaciones: una jungla legal con precios de hasta 1.900 €",
+      "body": "Los caseros aprovechan un resquicio legal al alquilar habitaciones por separado para eludir la Ley de Vivienda. Muchos inquilinos mayores de 40 años se ven obligados a compartir piso, y algunas habitaciones cuestan 1.900 €. Un trabajador de 60 años con dos empleos pregunta: «Con mi sueldo, ¿adónde voy a ir?»",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/alquiler-habitaciones-jungla-legal-precariedad-40-adonde-sueldo_1_13203249.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "El petróleo se mantiene cerca de 100 dólares aunque haya paz en Oriente Medio",
+      "body": "Pese a los avances diplomáticos, el Brent sigue en 100 dólares el barril, un 80 % más que a principios de año. La AIE prevé una demanda de 102,1 millones de barriles diarios, y la escasez de oferta persiste. Algunos analistas advierten de que los escenarios de estrés podrían llevar el crudo por encima de 200 dólares.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/paz-oriente-proximo-ya-no-garantizaria-un-petroleo-lejos-los-100-dolares_6968078_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Sánchez anuncia por sorpresa un impuesto eléctrico tras negarlo",
+      "body": "El PSOE confirma que su nuevo impuesto especial se aplicará a todas las energéticas, no solo a las petroleras y gasistas, como se dijo hace 20 días en WindEurope. El movimiento contradice la garantía previa del presidente Sánchez y busca financiar los costes relacionados con la guerra de Irán.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/05/09/69ff1979e4d4d8334d8b45bf.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "El nuevo registro digital de jornada «destruirá microempresas», advierte Cepyme",
+      "body": "La presidenta de Cepyme, Ángela de Miguel, dice que el estricto registro digital de horas de trabajo destruirá las microempresas, sobre todo en zonas rurales sin internet. El Gobierno planea aplicarlo por real decreto, sin pasar por el Parlamento.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-09/registro-jornada-microempresas-zonas-rurales-1svm_4352632/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Feijóo promete desclasificar los datos de migración y pide la dimisión del ministro",
+      "body": "El líder del PP, Feijóo, califica de «burla» que el Gobierno considere secreto de Estado la regularización masiva de un millón de migrantes irregulares. Promete publicar todos los documentos en una semana si gobierna y exige la dimisión del ministro del Interior, Marlaska.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/feijoo-promete-desclasificar-regularizacion-migrantes-si-gobierna-pide-dimision-marlaska-tras-muerte-agentes-huelva_6968382_0.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "La OMS confirma 6 casos de hantavirus en el crucero y dice que «no es otra covid»",
+      "body": "La OMS informa de tres fallecidos y cuatro hospitalizados por un brote de hantavirus en el MV Hondius. Se ha confirmado la cepa de los Andes, capaz de transmitirse de persona a persona. Hay expertos a bordo y el director de la OMS pide calma.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/salud/2026/05/09/oms-eleva-seis-los-casos-confirmados-hantavirus-positivo-un-contagio-sospechoso-2018887.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "España anuncia la inminente liberación del activista Saif Abukeshek",
+      "body": "El ministro de Exteriores, Albares, ha dicho que las autoridades israelíes liberarán al activista español en las próximas horas. Abukeshek fue detenido durante una flotilla de ayuda a Gaza. Israel lo deportará vía Egipto, y España trabaja para que regrese cuanto antes.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-albares-anuncia-israel-liberara-activista-espanol-saif-abukeshek-proximas-horas-20260509125833.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Termina el juicio a Ábalos, Koldo y Aldama; el exministro se enfrenta a prisión",
+      "body": "El juicio en el Tribunal Supremo contra el exministro Ábalos y otros dos acusados ha terminado tras 14 sesiones. Muchos testigos guardaron silencio por los cargos de corrupción relacionados. El veredicto está pendiente.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-juicio-abalos-koldo-aldama-visto-sentencia-exministro-preso-testigos-callados-mas-mascarillas-20260509091450.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Con habitaciones que cuestan hasta 1.900 € en algunas ciudades, ¿todavía es posible vivir en España con un salario normal? Comparte tu experiencia.",
+  "subject": "🇪🇸 España — 10.05.2026",
+  "lang": "es",
+  "date": "2026-05-10",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-10T05:34:01.640844+00:00"
+}

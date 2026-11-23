@@ -1,0 +1,135 @@
+{
+  "items": [
+    {
+      "title": "La votación del decreto de vivienda se juega por un voto",
+      "body": "La comisión permanente del Congreso votará el 12 de noviembre el Real Decreto-ley 29/2026, en vigor desde el 6 de octubre. Se espera que salga adelante por un voto. El Ministerio de Consumo calcula un ahorro mediano de 4.341 € por hogar si todos los inquilinos elegibles piden la prórroga de dos años para contratos que venzan antes del 31 de diciembre de 2028.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/diputacion-permanente-pone-colofon-huelga-aprobacion-decreto-ley-vivienda_1_13655575.html"
+        },
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/vivienda/2026-11-12/consumo-calcula-que-la-prorroga-de-los-alquileres-ahorraria-4341-euros-por-hogar-y-beneficiaria-a-casi-cinco-millones-de-personas.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Los pisos vacíos podrían pagar hasta un 150 % de recargo en el IBI",
+      "body": "El Real Decreto-ley 29/2026 permite a los ayuntamientos añadir hasta un 150 % al IBI desde 2027, según el tiempo que la vivienda esté vacía y quién sea el propietario. Cada ayuntamiento debe establecer sus normas y demostrar que la vivienda está vacía sin justificación. Las segundas residencias quedan exentas durante hasta cuatro años consecutivos. El decreto se somete a votación el 12 de noviembre.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/11/12/espana-modifica-normas-propietarios-mas-una-vivienda-sin-uso-habitual-podran-recibir-recargo-hasta-150-ibi-2067619.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "La huelga por la vivienda termina con enfrentamientos y detenciones",
+      "body": "Al menos 100 personas fueron detenidas en España durante la huelga por la vivienda del 11 de noviembre. En Barcelona hubo saqueos y barricadas en llamas, mientras la Policía cargó contra manifestantes en Madrid. El Ministerio del Interior registró 919 incidentes, y los piquetes cortaron grandes vías en ambas comunidades.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/11/11/6af4d97dfc6c83e1258b459e.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El cálculo de la baja por enfermedad cambia desde el 1 de diciembre",
+      "body": "El Real Decreto-ley 31/2026 modifica el cálculo de la prestación por baja que empiece a partir del 1 de diciembre de 2026. La Seguridad Social usará la base de cotización de dos meses antes, y no la del mes anterior. Los porcentajes se mantienen: 0 % en los días 1 a 3, 60 % en los días 4 a 20 y 75 % desde el día 21. El importe puede subir o bajar según las cotizaciones de cada trabajador.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/11/11/seguridad-social-cambia-calculo-bajas-laborales-partir-diciembre-retrocedera-dos-meses-2026-2063410.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "La Audiencia Nacional amplía seis meses la investigación de tráfico de influencias contra Zapatero",
+      "body": "La Audiencia Nacional amplía seis meses la investigación contra el expresidente del Gobierno José Luis Rodríguez Zapatero por presunto tráfico de influencias. Los investigadores examinan si sus pagos por consultoría ocultaban una comisión de 500.000 € por el rescate de Plus Ultra de 53 millones. Las declaraciones de testigos y el análisis policial están pendientes.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/politica/20261111/11681907/juez-prorroga-seis-meses-causa-rodriguez-zapatero.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Sabadell multado con 16,5 millones por los seguros de las hipotecas",
+      "body": "El Banco de España ha multado a Sabadell con 16,5 millones de euros por condicionar hipotecas a la contratación de seguros entre enero de 2022 y marzo de 2023. El banco ha recurrido ante los tribunales. La ley española prohíbe las ventas vinculadas obligatorias, pero permite paquetes que beneficien al cliente.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/economia/20261111/11681834/banco-espana-multa-sabadell-venta-vinculada-productos.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Un proyecto de conservación en los Pirineos gana una ayuda de 100.000 €",
+      "body": "La Fundación Kilian Jornet ha ganado una ayuda de impacto de 100.000 € de la ISPO Impact Foundation. Financiará tres años de restauración de senderos e investigación en la Cerdanya, en el Pirineo. El proyecto restaurará más de 15 kilómetros de senderos, construirá pasarelas elevadas sobre humedales y vigilará especies vulnerables.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/lugaresdeaventura/20261112/11681821/efecto-kilian-jornet-salvara-16-000-hectareas-pirineo-catalan.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "La Fiscalía abre una investigación sobre contenido de abuso infantil en TikTok",
+      "body": "La Fiscalía ha ordenado una investigación sobre contenido de abuso sexual infantil en TikTok tras una denuncia del medio de verificación Maldita. Maldita informó de más de 1.000 vídeos con más de 48 millones de visualizaciones. La agencia de protección de datos preguntará a TikTok por sus medidas de retirada antes de ordenar un bloqueo del acceso.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/sociedad/2026/11/11/fiscalia-abre-investigacion-presuntos-casos-abuso-sexual-infantil-tiktok-2067780.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El PP propone ayudas ligadas a la búsqueda de empleo",
+      "body": "El líder del PP y candidato a la presidencia del Gobierno, Alberto Núñez Feijóo, propone fusionar la renta mínima y los subsidios en una «renta de activación» compatible con el trabajo. Los beneficiarios firmarían acuerdos de formación y búsqueda de empleo. Rechazar sin justificación empleos adecuados reduciría la ayuda de forma progresiva. Es una propuesta electoral.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/11/11/feijoo-unificara-ingreso-minimo-vital-subsidios-renta-activacion-perdera-si-rechazan-empleos-sin-causa-justificada-2067773.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Las ayudas energéticas incluyen descuentos en la luz y pagos para la calefacción",
+      "body": "El bono social eléctrico sigue en vigor y ofrece a los hogares que cumplen los requisitos descuentos del 42,5 % o del 57,5 % dentro de los límites de consumo. Exige tener la tarifa regulada PVPC y una potencia contratada de 10 kW o menos. Los hogares que lo tengan el 31 de diciembre reciben automáticamente al año siguiente el pago de calefacción de entre 50 y 373 €.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/descuentos-hasta-57-5-luz-hasta-373-euros-calefaccion-asi-funcionan-bono-social-electrico-termico_7058075_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "¿Usarías una prórroga de dos años en tu alquiler? A) Sí B) No C) No alquilo 💬",
+  "subject": "No pasó gran cosa en España hoy. Solo esto.",
+  "lang": "es",
+  "date": "2026-11-12",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-11-12T07:08:42.388767+00:00"
+}

@@ -1,0 +1,119 @@
+{
+  "items": [
+    {
+      "title": "El Gobierno se apresura a sacar el decreto de vivienda en agosto",
+      "body": "El Gobierno debe negociar este mes un decreto de vivienda tras el rechazo de Junts y Podemos a un borrador anterior. La norma pretende controlar los alquileres de temporada y de habitaciones con medidas bloqueadas desde 2024. El acceso a la vivienda sigue siendo la principal preocupación de los españoles, según el barómetro del CIS de julio. Pedro Sánchez había prometido que la vivienda sería el eje de la legislatura, pero el retraso deja a los inquilinos en un limbo.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/decreto-vivienda-ultima-bala-gobierno-impulsar-medidas-llevan-bloqueadas-legislatura_1_13419025.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Las muertes por calor en España superan las 3.000 en tres meses",
+      "body": "España registró 3.096 muertes atribuibles al calor entre mayo y julio de 2026, el doble que en el mismo periodo de 2025 y algo menos que el récord de 3.102 de 2022. El investigador de salud pública José Chen advierte de que el calor mata ya tanto como la gripe de invierno y debería tratarse como emergencia de salud pública. Córdoba alcanzó 44 °C el viernes; el verano de 2025 registró 3.832 muertes por calor, un 88 % más que en 2024.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/salud/2026/08/03/6a6cb1fb21efa0fa538b459c.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Ceuta habilita una morgue tras la tragedia migratoria que deja más de 80 muertos",
+      "body": "Cuatro días después de que unos 50.000 migrantes entraran a nado en Ceuta, la cifra de muertos supera los 80, y las autoridades han montado una morgue temporal. La ciudad, de menos de 100.000 habitantes, se vio desbordada y hubo que desplegar al Ejército. Es la tragedia migratoria más grave en la frontera española, y las familias siguen buscando a sus desaparecidos. La crisis pone de relieve la presión sobre las comunidades fronterizas y los riesgos extremos de las entradas irregulares.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/08/03/ceuta-habilita-macromorgue-mayor-tragedia-migratoria-frontera-espana-2041874.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El sistema de acogida de Ceuta, saturado mientras los migrantes duermen al raso",
+      "body": "Cientos de migrantes subsaharianos siguen fuera del centro CETI de Ceuta, saturado, después de que la mayoría de los 50.000 que entraron el jueves regresaran. Los menores duermen en solares por falta de espacio, y los recursos de acogida están desbordados. Mariama, de 28 años y procedente de Senegal, llegó tras un año de viaje por Mauritania y Marruecos. Las autoridades afrontan una presión creciente para atender la emergencia humanitaria.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/sitio-ceti-ceuta-menores-descampados-exigimos-movilicen-recursos_1_13424085.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Europa da la espalda al modelo migratorio de Pedro Sánchez",
+      "body": "Una carta firmada por 22 gobiernos europeos que exige controles fronterizos más estrictos ha dejado a España aislada en Bruselas en política migratoria. Pedro Sánchez calificó de «egoístas» e «ilegales» las reacciones de otros países de la UE y pidió una reunión urgente de ministros del Interior. El Gobierno asegura que no tuvo aviso previo del cruce masivo de 60.000 personas hacia Ceuta. El giro hacia un control fronterizo más estricto en la UE podría remodelar las normas de migración y asilo en España.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/internacional/2026/08/02/6a6f82a2fc6c83246b8b4582.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El mercado hipotecario español se endurece mientras suben los precios",
+      "body": "Tras el salto de casi un 18 % de la concesión de hipotecas en 2025, hasta unos 500.000 préstamos, los bancos españoles restringen ahora el acceso al crédito o elevan los requisitos. La crisis de vivienda, con precios altos y oferta escasa, dificulta obtener financiación. El enfriamiento del mercado hipotecario supone una carga más para familias que ya tienen dificultades para pagar una vivienda. Quien quiera comprar debe prever entradas más altas y criterios más estrictos.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/08/03/mercado-hipotecario-se-enfria-subida-precios-falta-pisos-duros-requisitos-2041881.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los carburantes suben al reducirse la rebaja fiscal",
+      "body": "El precio medio de la gasolina llegó a 1,705 € por litro el 1 de agosto, el más alto desde marzo, y el diésel superó los 1,8 € por litro. El Gobierno redujo la rebaja fiscal de 15 a 10 céntimos por litro. Bajará a 5 céntimos en septiembre y expirará en octubre. Ambos combustibles llevan unas 20 sesiones de subidas, con alrededor de 3 céntimos en un solo día. El fin de la ayuda encarecerá de forma constante el transporte de todos los conductores.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/gasolina-se-encarece-niveles-marzo-tras-atenuacion-rebaja-fiscal-por-iran_7021781_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Retrasar la jubilación cuatro meses puede sumar 200 € al mes",
+      "body": "Retrasar la jubilación solo cuatro meses puede aumentar la pensión mensual en 200 €, según un alto funcionario de la Seguridad Social. Se aconseja agotar la prestación contributiva por desempleo antes de pedir la pensión, mientras se siguen cotizando. Quienes se jubilen en diciembre pueden aprovechar la revalorización del año siguiente, mientras que jubilarse exactamente dos años antes puede implicar los coeficientes reductores más altos. Estas reglas ofrecen una vía clara para maximizar la renta de jubilación.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-08-02/alfonso-munoz-funcionario-seguridad-social_4398783/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Los incendios queman 186.544 hectáreas en España en 2026",
+      "body": "Los incendios han arrasado 186.544 hectáreas en España desde enero, frente a solo 33.360 en el mismo periodo de 2025. Se han registrado 38 grandes incendios, muy por encima de los 12 del año pasado. Sara Aagesen pidió la máxima precaución porque las temperaturas siguen siendo excepcionalmente altas, pese al fin de la ola de calor oficial. Con la expansión de los incendios, los extranjeros que viven en zonas rurales o forestales deben seguir los avisos locales.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/medio-ambiente-00647/noticia-incendios-forestales-calcinado-ya-mas-186544-hectareas-2026-38-grandes-fuegos-registrados-20260802103627.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "¿Hará por fin más fácil encontrar piso en España la nueva normativa de alquiler, o llega demasiado tarde? 💬",
+  "subject": "Si vives en España, lee esto (3 de agosto)",
+  "lang": "es",
+  "date": "2026-08-03",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-08-03T06:04:48.780173+00:00"
+}

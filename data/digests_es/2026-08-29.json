@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "title": "Los carburantes empujan la inflación al 4,3 % en agosto",
+      "body": "El IPC de España subió al 4,3 % en agosto, 0,7 puntos más que en julio y el nivel más alto desde principios de 2023. La inflación subyacente se moderó hasta el 2,9 %. Las subidas de los carburantes, ligadas al conflicto con Irán y a los desplazamientos de vacaciones, impulsaron el alza, mientras los precios de los alimentos bajaron menos que hace un año. El conflicto prolongado también ha llevado el Euríbor a su nivel más alto desde septiembre de 2024, lo que agrava el golpe de septiembre.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/subida-precio-carburantes-acelera-inflacion-4-3-agosto-alta-2023_1_13471795.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/enquistamiento-conflicto-iran-inflama-precios-energeticos-propicia-peor-cuesta-septiembre-anos_1_13472069.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El Gobierno transfiere los primeros 800 millones del plan de vivienda",
+      "body": "El Gobierno ha transferido a las comunidades autónomas los primeros 800 millones de euros del Plan Estatal de Vivienda 2026-2030. El plan tiene una inversión total de 7.000 millones, el 60 % aportado por el Gobierno y el 40 % por las comunidades. La vivienda pública construida con estos fondos deberá mantenerse protegida de forma permanente. El ministerio ha abierto una consulta pública sobre los mecanismos de seguimiento.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gobierno-transfiere-primeros-800-millones-plan-vivienda-autonomias_1_13472188.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "⚠️ La jubilación flexible ya está abierta a los autónomos",
+      "body": "El nuevo régimen de jubilación flexible entró en vigor el 28 de agosto, tres meses después de su aprobación, y permite a los autónomos compatibilizar pensión y trabajo. Incluye nuevos complementos para quienes opten por él. UPTA afirma que la reforma excluye a los autónomos que cotizaron al RETA en los tres años anteriores a jubilarse, lo que crea un periodo de «cuarentena». La asociación sostiene que los antiguos asalariados que se hacen autónomos tras jubilarse tienen un acceso más fácil.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/entra-vigor-jubilacion-flexible-autonomos-volver-trabajar-cobrar-pension-viernes_1_13471856.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/upta-denuncia-que-nueva-jubilacion-flexible-impide-acceso-los-autonomos-que-se-retiran_7030312_0.html"
+        }
+      ],
+      "category": "work",
+      "important": true
+    },
+    {
+      "title": "Marlaska: quedan 5.000 migrantes en Ceuta y anuncia un plan fronterizo de 35 millones",
+      "body": "El ministro del Interior, Marlaska, afirma que quedan 5.000 migrantes en Ceuta, entre ellos 1.500 menores; entraron 72.000 los días 30 y 31 de julio y 70.000 regresaron. PP y Vox sostienen que la cifra real ronda los 20.000. El Gobierno anunció 35 millones para reforzar la frontera y pidió el apoyo de Frontex, Europol y la Agencia de Asilo de la UE. La ayuda humanitaria para Ceuta pasó de 6,4 a 44,51 millones, y la capacidad del CETI aumentó un 116 %, hasta 1.105 plazas.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/marlaska-rebaja-5-000-los-migrantes-que-siguen-ceuta-anuncia-35-millones-para-reforzar-permanentemente-frontera_7030326_0.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-espana-solicita-comision-europea-apoyo-frontex-europol-triaje-inmigrantes-irregulares-ceuta-20260828191953.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/directo-crisis-migratoria-ceuta-ultima-hora-comparecencias-marlaska-albares-elma-saiz_7029801_6.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Más de cien migrantes expulsados por delitos en Ceuta",
+      "body": "Más de cien migrantes han sido detenidos por delitos en Ceuta y se ha solicitado su expulsión. Las autoridades registraron 17 agresiones sexuales, entre ellas siete violaciones y 10 agresiones, con víctimas en su mayoría mujeres vulnerables. Las organizaciones humanitarias denuncian un aumento de la intimidación y la violencia, y algunos voluntarios han dejado de acudir. El jueves, decenas de personas bloquearon durante más de dos horas un camión de la Cruz Roja en la playa del Trampolín, gritando que «la Cruz Roja es una mafia».",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/mas-un-centenar-inmigrantes-han-sido-expulsados-por-delitos-ceuta-donde-se-han-registrado-menos-17-agresiones-sexuales_7030363_0.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/ataques-trabajadores-humanitarios-ceuta-obligan-retirarse-seguridad_1_13473262.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El Ibex 35 vuelve a los 20.000 puntos tras las señales de tipos",
+      "body": "El Ibex 35 subió un 0,81 % hasta cerrar en 20.041,9 puntos. La subida devolvió el índice a la cota de los 20.000 puntos. El discurso del presidente de la Reserva Federal, Kevin Warsh, en Jackson Hole avivó las expectativas de una posible subida de tipos.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/bolsa-00348/noticia-ibex-35-retoma-20000-puntos-subir-casi-warsh-adelantando-nuevas-subidas-tipos-20260828181750.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "¿Cómo ha cambiado tu presupuesto mensual en España el último repunte de la inflación? 🤔",
+  "subject": "Lo que todo el mundo en España comenta hoy",
+  "lang": "es",
+  "date": "2026-08-29",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-08-29T06:08:47.926397+00:00"
+}

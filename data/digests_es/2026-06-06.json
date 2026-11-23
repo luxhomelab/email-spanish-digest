@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "Los españoles destinan un récord del 50 % del salario bruto al alquiler",
+      "body": "En 2025, el alquiler medio consumió el 50 % del salario bruto, la proporción más alta desde 2019, según un estudio de InfoJobs y Fotocasa. Los alquileres subieron un 6,9 % mientras los salarios solo crecieron un 1 %. Solo Aragón registró un descenso en la relación entre salario y alquiler.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/05/infojobs-fotocasa-coinciden-aragon-descenso-sueldo-pagar-alquiler-vivienda-2025248.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "España incumple el plazo de la UE para la transparencia salarial y las empresas viven en la incertidumbre",
+      "body": "El Gobierno no traspuso la directiva europea de transparencia salarial antes del plazo del 7 de junio, lo que deja a las empresas en una situación de inseguridad jurídica. El Ministerio de Trabajo no ha enviado todavía una propuesta formal a los agentes sociales, lo que arriesga multas elevadas desde Bruselas.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/06/05/6a22f446e9cf4a65258b4595.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "8.000 pacientes abandonan un hospital privado gallego tras los escándalos",
+      "body": "Cerca de 8.000 pacientes de Vigo han pedido cambiarse del hospital privado Povisa al hospital público CHUVI, la mayor transferencia masiva de la región. La huida sigue a las polémicas por las listas de espera y la reutilización de material en los hospitales de Ribera Salud.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/galicia/huyen-gallegos-ribera-salud-8-000-pacientes-principal-hospital-concertado-piden-traslado-publica_1_13278229.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "El complemento por retrasar la jubilación supera de media los 20.000 €",
+      "body": "La indemnización a tanto alzado por retrasar la jubilación se ha quintuplicado desde su creación y ya supera los 20.000 €. Casi 30.000 trabajadores han optado por esta vía, aunque un aumento vitalicio de la pensión del 4 % podría resultar más rentable a largo plazo.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/06/pensiones-cheque-por-retrasar-jubilacion-se-multiplica-por-cinco-desde-su-creacion-sobrepasa-los-20-000-euros-2026646.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "La agenda de Leire Díez recoge cuatro menciones a las iniciales «PS»",
+      "body": "La agenda incautada por la UCO a la «fontanera» del PSOE recoge una reunión con «PS» y otras tres menciones a esas iniciales, lo que suscita preguntas sobre la implicación de Pedro Sánchez. El Gobierno niega que las iniciales se refieran al presidente del Gobierno.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/06/05/6a2300bae4d4d80e798b458d.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Sánchez niega conocer la trama y se apoya en los nacionalistas para salvar la legislatura",
+      "body": "Pedro Sánchez asegura que no «conocía ni aprobaba» las actuaciones de Leire Díez en el caso de corrupción, mientras su Gobierno depende del rechazo del PNV y de Junts a la moción de Feijóo. Ahora habla de los presupuestos de 2027 para proyectar continuidad.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/sanchez-aferra-portazo-pnv-junts-feijoo-salvar-legislatura_1_13277881.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El PIB de la eurozona cae un 0,2 % en el primer trimestre por el impacto de la guerra",
+      "body": "Eurostat ha revisado a la baja su estimación hasta una contracción del 0,2 %, la primera desde el cuarto trimestre de 2022, por el peso de la guerra en Oriente Medio sobre la economía. España sigue creciendo, mientras Irlanda se desploma un 12,1 %.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-05/pib-eurozona-primer-trimestre-golpe-guerra_4367896/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Hernández de Cos, considerado el principal candidato a presidir el BCE",
+      "body": "La presidenta de la AEB, Alejandra Kindelán, calificó al exgobernador del Banco de España de «candidato de primer nivel» para sustituir a Christine Lagarde. Una encuesta de OMFIF le da una ligera ventaja sobre otros candidatos, como el presidente del Bundesbank, Nagel.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-05/hernandez-cos-banco-central-europeo-1hms-1svm_4368062/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Las notificaciones de bajas por enfermedad serán digitales desde junio",
+      "body": "El BOE confirma que todas las comunicaciones sobre incapacidad temporal se enviarán por SMS o correo electrónico, con acceso mediante identidad digital. La atención presencial se mantiene en los centros CAISS para quienes no tengan competencias digitales.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/boe-aclara-como-se-comunicaran-las-notificaciones-los-trabajadores-baja-partir-ahora_6979715_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Abogado: el tribunal médico no decide la incapacidad, la decide el INSS",
+      "body": "El abogado Víctor Arpa aclara que el Equipo de Valoración de Incapacidades (EVI) solo evalúa y propone; la decisión final sobre la incapacidad permanente corresponde al director del INSS. Muchos solicitantes malinterpretan el proceso.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-05/victor-arpa-abogado-tribunal-medico_4367681/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "Con el alquiler consumiendo la mitad de tu sueldo, ¿cómo llegas a fin de mes en España? Cuenta tu historia.",
+  "subject": "🇪🇸 España: ¿qué pasa? 🤔 06.06.2026",
+  "lang": "es",
+  "date": "2026-06-06",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-06-06T05:31:56.795486+00:00"
+}

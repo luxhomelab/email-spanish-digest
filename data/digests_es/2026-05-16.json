@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "Las donaciones de padres a hijos alcanzan máximos históricos en plena crisis de vivienda",
+      "body": "En 2025 se registraron en España 225.662 donaciones de padres a hijos, un 13,1 % más que en 2024 y la cifra más alta de la serie. Los notarios destacan que se han triplicado desde 2013, a medida que las familias recurren cada vez más a la transmisión intergeneracional de patrimonio para afrontar el coste de la vivienda.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/las-donaciones-padres-hijos-alcanzan-maximos-historicos-espana-plena-crisis-vivienda_6970828_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "La banca española elimina 8.200 empleos y cierra 1.250 oficinas en plena irrupción de la IA",
+      "body": "Los seis mayores bancos españoles han reducido su plantilla en 8.193 empleados y han cerrado 1.247 oficinas en el último año, mientras apuestan por la inteligencia artificial. Santander, que cuenta ahora con 185.243 empleados frente a 196.503 hace un año, ha firmado un acuerdo con OpenAI para convertirse en un «banco nativo de IA».",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/empresas/gran-banca-espanola-prescinde-casi-8-200-empleados-1-250-oficinas-pleno-auge-ia_6971019_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El lío de los fondos europeos: 1.400 millones devueltos por burocracia y silencio",
+      "body": "Una investigación de EL MUNDO revela que al menos 1.400 millones de euros de los fondos Next Generation EU han sido renunciados por entidades públicas y empresas, lo que supone el 3,5 % de los fondos ejecutados. La mayoría de los ministerios se niegan a detallar los motivos, lo que suscita dudas sobre la transparencia.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/05/16/6a060de3fc6c83bf678b45ba.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los comunes catalanes impulsan un impuesto del 2 % sobre las grandes fortunas, inspirado en Zucman",
+      "body": "Los Comuns proponen un tipo efectivo mínimo del 2 % para las fortunas que superen los 100 millones de euros, siguiendo las ideas del economista Gabriel Zucman. Buscan endurecer el impuesto temporal sobre el patrimonio, mientras siguen las negociaciones para los presupuestos de Cataluña.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/comuns-negocian-illa-impulsar-impuesto-2-multimillonarios-congreso_1_13224183.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Vivienda: el Ministerio, Sumar y Junts chocan por la prórroga de los alquileres y las desgravaciones",
+      "body": "Tras el bloqueo de la prórroga de alquileres por parte del PP, Vox y Junts, las negociaciones sobre vivienda se reanudan con prioridades distintas. Sumar insiste en la prórroga de los contratos, Junts exige deducciones fiscales para inquilinos y personas con hipoteca, y el Gobierno pretende regular los alquileres de temporada.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/vivienda-junts-sumar-toman-posiciones-reimpulsar-negociacion-alquileres-prorroga-aire_1_13222314.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Presupuestos de la Eurocámara: que España no tenga presupuestos desde 2023 es «inaceptable»",
+      "body": "Johan Van Overtveldt, presidente de la comisión de Presupuestos del Parlamento Europeo, critica que España no apruebe unos presupuestos desde 2023, lo que genera recelos entre sus socios europeos. También pide investigar el presunto uso indebido de fondos europeos para pagar pensiones.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/05/15/6a07401821efa0e12c8b4582.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El Gobierno mantiene las ayudas a carburantes y transporte y deja caer la rebaja del IVA de la luz",
+      "body": "El Gobierno seguirá con las ayudas al combustible, la agricultura y el transporte por la guerra de Irán, pero dejará que la reducción del IVA de la electricidad y el gas expire el 1 de junio, al normalizarse los precios. El PP pide mantener la rebaja del IVA de la luz.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gobierno-mantendra-ayudas-combustibles-agricultura-transportistas-guerra_1_13224507.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los bancos centrales, cautos ante el temor a la estanflación por la guerra de Irán",
+      "body": "El BCE mantiene los tipos en el 2 % y otros bancos centrales también esperan, preocupados por la estanflación derivada del conflicto con Irán y de la interrupción en el estrecho de Ormuz. Evitan movimientos agresivos, recordando la cautela de los años setenta.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bancos-centrales-lamen-heridas-guerra-abordar-temida-estanflacion_1_13222156.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Jerome Powell deja la presidencia de la Fed: legado y tensiones con Trump",
+      "body": "Jerome Powell abandona el segundo mandato como presidente de la Reserva Federal el 15 de mayo, aunque seguirá en el consejo. Su mandato ha estado marcado por el conflicto con el presidente Trump por la independencia del banco central.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/finanzas-00340/noticia-powell-deja-presidencia-fed-cronologia-batalla-trump-claves-economia-20260515092948.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los pasajeros aislados por el hantavirus podrían recibir visitas de sus familias el lunes si su PCR es negativa",
+      "body": "La ministra de Sanidad, Mónica García, anunció que los 13 viajeros en cuarentena del MV Hondius podrán recibir visitas familiares y acceder a las zonas comunes el lunes si dan negativo en hantavirus. Uno de los pacientes positivos evoluciona bien.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/monica-garcia-permitira-los-confinados-gomez-ulla-tener-contactos-con-sus-familiares-este-lunes-si-pcr-es-negativa_6970832_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "Padres donando cantidades récord a sus hijos: ¿es la única forma de que los jóvenes puedan permitirse una vivienda en España hoy?",
+  "subject": "🇪🇸 16.05.2026 — Se disparan las donaciones de padres, la banca recorta empleo y vuelven miles de millones de la UE",
+  "lang": "es",
+  "date": "2026-05-16",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-16T05:32:40.813803+00:00"
+}

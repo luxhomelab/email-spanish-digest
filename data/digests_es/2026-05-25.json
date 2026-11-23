@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "title": "Nuevos tramos del IRPF del ahorro: por qué tus depósitos tributan más",
+      "body": "El IRPF sobre el ahorro tiene ahora tramos progresivos, desde el 19 % en las ganancias de hasta 6.000 € hasta el 30 % por encima de 300.000 €. Se aplica a los intereses de depósitos, cuentas y letras del Tesoro, que tributan por separado de los salarios. Muchos inversores solo ahora se están dando cuenta de los tipos más altos.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/nuevo-irpf-ahorro-por-que-depositos-tributan-mas_6972789_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Andalucía calcula un impacto de 500 millones por el registro estatal de alquileres anulado",
+      "body": "Según el Gobierno regional, el registro estatal de alquileres de corta duración anulado ha costado a Andalucía más de 500 millones de euros entre costes administrativos y beneficios perdidos. El Tribunal Supremo consideró que el Estado carecía de competencia, dando la razón a Andalucía, Valencia, Canarias y Murcia.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/andalucia/2026-05-25/andalucia-cifra-en-500-m-el-impacto-del-registro-estatal-tumbado-por-el-supremo_4359958/"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "España reduce los copagos de medicamentos para pacientes de rentas medias y bajas",
+      "body": "Un nuevo real decreto-ley, en vigor desde el 14 de mayo, reduce la aportación farmacéutica de los trabajadores con rentas medias y bajas, y beneficia especialmente a los pacientes crónicos y polimedicados. El cambio modifica el porcentaje que se paga según la renta y la situación laboral.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/salud/2026/05/25/gobierno-cambia-precio-algunos-medicamentos-estas-son-las-personas-menos-afectadas-2022296.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "El Gobierno negocia evitar la subida del impuesto del diésel en plena guerra de Irán",
+      "body": "El Gobierno intenta convencer a la Comisión Europea para desbloquear 475 millones de euros de fondos Next Generation EU congelados, renunciando a la subida obligatoria del impuesto sobre el diésel, ahora políticamente imposible por el disparo del precio del petróleo a causa del conflicto con Irán. La reforma fiscal prometía inicialmente esa subida.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gobierno-negocia-bruselas-no-subir-impuesto-diesel-plena-guerra-iran-descongelar-fondos-europeos_1_13218944.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "El boom solar desestabiliza la red eléctrica y Red Eléctrica pide 600 millones para corregirlo",
+      "body": "Seis años de expansión descontrolada de la energía solar han desestabilizado la red eléctrica de España, lo que obliga a Red Eléctrica a pedir una inversión urgente de 600 millones de euros para compensar las fuertes oscilaciones, sobre todo en Andalucía, Extremadura y Castilla-La Mancha.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/05/25/6a101913fdddff867e8b45ee.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Zapatero, en el centro de la red de corrupción de Plus Ultra, según la policía",
+      "body": "El expresidente Zapatero ha sido imputado como supervisor estratégico del rescate de 53 millones de euros a la aerolínea Plus Ultra durante la pandemia. Los informes policiales describen una red de tráfico de influencias, sociedades pantalla y facturas falsas orquestada para obtener la ayuda pública.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/asi-operaba-trama-plus-ultra-zapatero-centro-una-red-testaferros-facturas-millonarias-falsas-trafico-influencias_6974380_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Israel convoca a la encargada de negocios española por la actuación policial contra activistas de la flotilla",
+      "body": "Israel pidió explicaciones a España después de que la Ertzaintza cargara contra activistas que regresaban de una flotilla a Gaza en Bilbao. Israel acusó a España de hipocresía por condenar a Israel mientras guarda silencio sobre el incidente.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/internacional/noticia-israel-convoca-encargada-negocios-espana-actuacion-ertzaintza-contra-activistas-20260524162006.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La UE y Reino Unido piden a Irán y EE. UU. que formalicen el acuerdo de alto el fuego",
+      "body": "La presidenta de la Comisión Europea, Ursula von der Leyen, y responsables británicos han pedido a Irán y a Estados Unidos que firmen un acuerdo de principios que siente las bases de un alto el fuego indefinido. Llega después de que Trump y Rubio anunciaran que el acuerdo estaba próximo.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/internacional/noticia-ue-runido-piden-iran-eeuu-certifiquen-acercamiento-firma-esperado-acuerdo-20260524134053.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "¿Cuánto más pagas este año en impuestos por tus ahorros en España? ¡Los nuevos tramos llegan hasta el 30 %! 💬",
+  "subject": "🇪🇸 España: resumen de 5 minutos ☕ 25.05.2026",
+  "lang": "es",
+  "date": "2026-05-25",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-25T05:32:12.199921+00:00"
+}

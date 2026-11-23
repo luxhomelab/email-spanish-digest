@@ -1,0 +1,87 @@
+{
+  "items": [
+    {
+      "title": "Los precios de la vivienda baten récords mientras crece el coliving",
+      "body": "Los precios de la vivienda en nueve comunidades autónomas superaron en el primer trimestre de 2026 los máximos de la época de la burbuja. Madrid encabeza la subida con 4.075 € por metro cuadrado, un 16,4 % más en un año, seguida de Baleares y el País Vasco. Mientras, los fondos de inversión planean duplicar el coliving y el flex-living en alquiler, hasta 38.000 unidades, para eludir los límites de la Ley de Vivienda. Estos alquileres de temporada no regulados se dirigen a personas de altos ingresos y nómadas digitales, con habitaciones de hasta 900 €, y reducen aún más las opciones de vivienda asequible en los centros urbanos.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/vivienda-sigue-subiendo-bate-record-burbuja-inmobiliaria-varias-provincias_6982910_0.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/boom-coliving-flex-living-anglicismos-fondos-esquivar-ley-vivienda-habitaciones-900-euros_1_13297214.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El Pacto Europeo de Migración endurece los controles fronterizos",
+      "body": "El Pacto de Migración y Asilo de la UE entró en vigor el 12 de junio, con controles fronterizos más estrictos y expulsiones más rápidas en todo el bloque. El acuerdo incluye planes para crear centros de retorno inspirados en el modelo italiano para agilizar la expulsión de migrantes en situación irregular. El comisario europeo Brunner criticó la reciente regularización masiva de migrantes en España. Este endurecimiento de la UE anuncia un entorno migratorio más restrictivo que podría afectar en el futuro a las políticas de visados y a los requisitos de residencia.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/internacional/2026/06/13/6a2c166ae85ece04078b456f.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El despido disciplinario por bajo rendimiento puede acabar en indemnización",
+      "body": "Las empresas españolas afrontan importantes obstáculos legales cuando intentan despedir a empleados por un supuesto bajo rendimiento. El abogado laboralista Juanma Lorente señala que los despidos disciplinarios basados en baja productividad son difíciles de probar en los tribunales y suelen acabar declarados improcedentes. Cuando un juez declara improcedente el despido, el trabajador tiene derecho a una indemnización considerable, sobre todo si tiene mucha antigüedad. Los trabajadores deberían consultar a un abogado en lugar de aceptar automáticamente la notificación de despido.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/juanma-lorente-abogado-laboralista-revela-despido-favorece-trabajadores-normal-consigas-indemnizacion_6981766_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El Gobierno objeta la ley de vivienda protegida valenciana que da prioridad a los vecinos",
+      "body": "El Ministerio de Vivienda ha presentado alegaciones formales contra un anteproyecto de ley de la Comunitat Valenciana que da prioridad a los residentes locales para acceder a la vivienda asequible. La propuesta autonómica introduce un criterio de «vinculación territorial continuada» para los proyectos de vivienda público-privada, que el Ministerio considera posiblemente inconstitucional. Cambios que siguen a un escándalo en Alicante por la adjudicación de vivienda protegida, y que necesitan el apoyo de Vox para salir adelante. Si se aprueba, la ley podría restringir el acceso de los residentes extranjeros a las viviendas con ayudas públicas en la región.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/comunitat-valenciana/politica/gobierno-alega-ley-vivienda-protegida-perez-llorca-alentar-prioridad-nacional-encubierta_1_13298420.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Un abogado recuerda a los pasajeros sus derechos a compensación por retrasos de vuelos",
+      "body": "Los pasajeros aéreos suelen desconocer su derecho a una compensación económica por las interrupciones de vuelos, regulado por el Reglamento europeo 261/2004. El abogado Xavi Abat destaca que los viajeros pueden reclamar por retrasos de más de tres horas, cancelaciones o denegación de embarque por sobreventa. Pese a estas protecciones legales claras, muchos pasajeros siguen sin conocer el procedimiento para reclamar. Los residentes extranjeros que viajan con frecuencia deberían comprobar si tienen derecho a compensación tras cualquier incidencia importante.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-14/xavi-abat-abogado-vuelo-retrasado-cancelado-derecho-indemnizacion-1qrt_4372242/"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "El dueño de La Gilda del Norte recurre su condena por vulnerar los derechos laborales de trabajadores extranjeros",
+      "body": "El propietario del restaurante bilbaíno La Gilda del Norte ha recurrido su condena penal por vulnerar los derechos laborales de trabajadores extranjeros. Fue condenado en abril por la Audiencia Provincial de Bizkaia, pero su abogado pide la absolución por el principio de non bis in idem. La defensa sostiene que, como ya aceptó las sanciones administrativas y pagó las multas de la Inspección de Trabajo, no cabe una condena penal. El caso pone de relieve la aplicación judicial de las garantías laborales para trabajadores vulnerables.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/euskadi/dueno-gilda-norte-recurre-sentencia-le-condeno-vulnerar-derechos-laborales-extranjeros_1_13298274.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "Con los precios de Madrid en 4.075 € por metro cuadrado, ¿comprar una casa en España está ya completamente fuera de tu alcance? 🏠",
+  "subject": "Las noticias de hoy en España",
+  "lang": "es",
+  "date": "2026-06-14",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-06-14T05:35:25.948295+00:00"
+}

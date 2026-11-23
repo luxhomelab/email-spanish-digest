@@ -1,0 +1,167 @@
+{
+  "items": [
+    {
+      "title": "España devuelve a Marruecos a 23 sudaneses pese a la guerra en su país",
+      "body": "Interior devolvió a Marruecos desde Ceuta a 23 ciudadanos sudaneses, pese a que Sudán atraviesa una guerra. El ministerio afirma que los 23 rechazaron la protección internacional; abogados y ONG cuestionan esa afirmación y dicen que el procedimiento careció de garantías. Alrededor del 90 % de los solicitantes de asilo sudaneses en España obtienen protección.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/interior-devuelve-23-sudaneses-marruecos-ceuta-pese-venir-pais-guerra-han-sido-enganados_1_13539619.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Cuándo puede España retirar la nacionalidad",
+      "body": "La nacionalidad española no puede retirarse de forma arbitraria; el Código Civil fija causas concretas. Entre ellas, la adquisición voluntaria de otra nacionalidad, el uso exclusivo de una nacionalidad extranjera y, para los españoles naturalizados, una condena penal firme. Quienes viven en el extranjero pueden evitar la pérdida declarando su voluntad de conservar la nacionalidad española en un plazo de tres años.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/desde-fraude-hasta-asuntos-politicos-los-motivos-por-los-que-te-pueden-retirar-nacionalidad-espanola_7041480_0.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "España estudia prohibir los desahucios y las compras de vivienda por fondos buitre",
+      "body": "El Ministerio de Vivienda negocia con Junts incluir la prohibición de desahuciar a inquilinos vulnerables en viviendas propiedad de fondos de inversión, y un veto a la compra de vivienda residencial por esos fondos. Se prevé que el Consejo de Ministros apruebe el decreto el martes. La medida sigue a una propuesta de Sumar a la que el PSOE se abstuvo hace dos semanas.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/vivienda-negocia-junts-prohibir-desahucios-pisos-fondos-buitre-e-impedir-compren-inmuebles_1_13537593.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Las compraventas de vivienda caen un 5,1 % en julio",
+      "body": "Las compraventas de vivienda cayeron un 5,1 % interanual en julio, hasta 61.417 operaciones, la sexta caída del año. La vivienda de segunda mano, el 78 % del mercado, bajó un 6,1 %, hasta 48.128 unidades, mientras la vivienda nueva bajó un 1,4 %, hasta 13.289. Las operaciones caen un 3 % en lo que va de año, tras crecer un 11,5 % en 2025.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/compraventa-viviendas-retoma-caidas-julio-ajuste-5-1-sexto-ano_1_13537133.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Vencen las ayudas a los carburantes mientras gasolina y diésel tocan máximos",
+      "body": "Las bonificaciones fiscales a los carburantes vencen el jueves 1 de octubre, mientras la gasolina consolida sus máximos anuales y el diésel se acerca a ellos. El diésel cuesta ahora de media 1,942 € por litro, el mismo precio que antes de las bonificaciones. La OCU advierte de que retirar el apoyo por completo añadiría al menos 20 céntimos por litro para los conductores de diésel.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/gasolina-consolida-sus-maximos-anuales-diesel-los-roza-fin-semana-previo-que-expiren-las-ayudas-gobierno_7041557_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La DGT impone nuevas normas para motos desde octubre, con multas",
+      "body": "La reforma del Reglamento General de Circulación de la DGT entra en vigor el 1 de octubre de 2026. Los conductores de motos y ciclomotores deberán llevar guantes en carreteras interurbanas y calzado cerrado en todas las vías, con nuevas normas para usar el arcén en retenciones. Las infracciones son graves y se sancionan con 200 euros de multa.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/motor/dgt-cambia-normas-motoristas-octubre-nuevas-obligaciones-circular-pm_1_13530713.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La organista centenaria Montserrat Torrent: «Tocaré hasta morir»",
+      "body": "Montserrat Torrent, organista de 100 años de Barcelona, sigue dando conciertos por España y Europa en una de las carreras artísticas más largas del continente. Dice que la música es como respirar y que tocará hasta morir. También defiende los derechos de las personas mayores y afirma que la sociedad es injusta con los mayores.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/montserrat-torrent-organista-100-anos-giras-espana-tocare-muera_1_13530754.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "El INE confirma que el PIB español creció un 0,7 % en el segundo trimestre",
+      "body": "La economía española creció un 0,7 % en el segundo trimestre, confirmando la cifra provisional, con un crecimiento interanual del 2,6 %. El consumo privado subió un 1,2 % y la inversión productiva avanzó un 1,7 %, compensando la aportación negativa del sector exterior. La demanda externa restó 0,9 puntos al crecimiento del PIB.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-09-25/ine-confirma-crecimiento-pib-segundo-trimestre-0-7_4431226/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El gasto en pensiones alcanza un récord de 14.498 millones en septiembre",
+      "body": "La Seguridad Social gastó un récord de 14.498 millones de euros en pensiones contributivas en septiembre, un 6,3 % más que un año antes. La pensión media de jubilación subió un 4,5 %, hasta 1.576,1 € al mes, y la pensión media, hasta 1.374,6 €. La subida general de las pensiones en 2026 es del 2,7 %, en línea con el IPC medio.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/09/25/economia-gasto-pensiones-sube-6-3-septiembre-hasta-nuevo-maximo-casi-14-500-millones-euros-2054750.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Comparar precios en el supermercado puede ahorrar hasta 1.310 € al año",
+      "body": "La OCU afirma que los compradores en España pueden ahorrar hasta 1.310 € al año comparando precios en los supermercados. La cesta de la compra ha subido un 1,8 %, y la organización de consumidores advierte de que muchas familias no han recuperado el poder adquisitivo perdido. Pide al Gobierno que adopte medidas y ayudas.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/noticia-espanoles-pueden-ahorrar-1310-euros-cesta-compra-si-comparan-precios-20260925131527.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Volkswagen, Audi y Seat retiran 2,8 millones de vehículos",
+      "body": "Volkswagen, Audi y Seat retiran unos 2,8 millones de vehículos en todo el mundo por un posible defecto de dirección causado por corrosión en un tornillo de fijación. Entre los modelos afectados figuran el VW Tiguan, Touran, Golf Variant, Golf Sportsvan y Caddy, el Audi Q3, y los Seat Ateca y Tarraco. Los propietarios deben comprobar si su vehículo forma parte de la retirada.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/motor/sector-00644/noticia-volkswagen-audi-seat-llaman-revision-28-millones-coches-posible-fallo-direccion-20260925171734.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Barcelona sube la tasa turística de los cruceristas hasta 24 euros",
+      "body": "El Ayuntamiento de Barcelona aprobó una subida progresiva de la tasa turística para los pasajeros de cruceros en tránsito, de 5 a 24 euros en 2030, y congela en 4 euros la tasa para los usuarios de albergues juveniles. El gobierno municipal del PSC, en minoría, sacó la medida con el apoyo de Junts y ERC. Se rechazaron los cambios propuestos en el IBI, el IAE y el ICIO.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/09/25/barcelona-subira-recargo-turistico-los-cruceristas-escala-5-24-euros-hasta-2030-2054638.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Renfe investiga un ciberataque a los sistemas de Adif que expone datos de clientes",
+      "body": "Renfe investiga un incidente de ciberseguridad originado en servidores de Adif comprometidos, que expuso un volumen limitado de datos de clientes, sobre todo nombres y direcciones de correo electrónico. La compañía dice que no se han robado números de DNI, medios de pago ni información financiera. No hay indicios de que el material se haya publicado.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/transportes-00343/noticia-renfe-investiga-ciberataque-sistemas-adif-afecta-datos-privados-no-dnis-metodos-pago-20260925210432.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "Los descuentos del carburante vencen el 1 de octubre. ¿Cómo lo afrontarás? A) Conducir menos B) Pagar más C) Transporte público 💬",
+  "subject": "Día normal en España. Más o menos.",
+  "lang": "es",
+  "date": "2026-09-26",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-09-26T06:05:53.394933+00:00"
+}

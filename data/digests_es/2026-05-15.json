@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "España cierra el «camino exprés» para la residencia de venezolanos el 12 de junio",
+      "body": "El Gobierno pondrá fin el 12 de junio al mecanismo de residencia por razones humanitarias vinculado a las solicitudes de asilo de venezolanos. Este procedimiento había permitido a unas 240.000 personas obtener la residencia mediante la conversión automática de solicitudes de asilo denegadas. A partir de junio, los afectados deberán cumplir requisitos más estrictos, como una estancia mínima de dos años en España y un contrato de trabajo, para acceder a la residencia ordinaria por arraigo (social, laboral o familiar).",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/gobierno-cerrara-12-junio-camino-expres-que-ayudo-regularizar-residencia-240-000-venezolanos-por-razon-humanitaria_6970655_0.html"
+        }
+      ],
+      "category": "migration",
+      "important": true
+    },
+    {
+      "title": "Repsol advierte de la «complejidad» del suministro de petróleo en Europa tras la crisis de Ormuz",
+      "body": "El consejero delegado de Repsol, Josu Jon Imaz, advierte de «periodos de complejidad de suministro» de productos petrolíferos en Europa en las próximas semanas y meses, por el cierre del estrecho de Ormuz, que ha recortado entre 11 y 12 millones de barriles diarios, alrededor del 11 % del suministro mundial. Destaca que España está relativamente bien preparada gracias a sus refinerías y a la inversión de 1.500 millones de euros de Repsol para asegurar el suministro de queroseno desde marzo.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/repsol-preve-complejidad-suministro-productos-petroliferos-europa-proximas-semanas-ormuz_1_13221187.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los precios disparados llevan más vivienda al mercado en las grandes ciudades españolas",
+      "body": "La oferta de vivienda en las principales ciudades españolas aumentó en el primer trimestre de 2026, con Madrid un 17 % más y Valencia un 13 % más según Idealista, mientras los precios inalcanzables expulsan a muchos compradores. Esto contrasta con la caída nacional del stock, lo que sugiere un mercado que se enfría por los límites de asequibilidad.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/los-precios-inalcanzables-aumentan-oferta-viviendas-venta-las-grandes-ciudades-por-retirada-compradores_6970458_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "El IVA de la luz y el gas volverá al 21 % en junio al moderarse la inflación",
+      "body": "La inflación anual de España se moderó hasta el 3,2 % en abril, lo que activa el fin previsto de los tipos reducidos de IVA sobre la electricidad y el gas natural, que volverán al 21 % el 1 de junio. El Gobierno había vinculado la rebaja fiscal a que la inflación se mantuviera por debajo de cierto umbral, por lo que las facturas domésticas de energía se encarecerán.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/ine-confirma-que-inflacion-se-modero-3-2-abril-adelanta-un-mes-fin-rebaja-fiscal-luz_6970307_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "España admite el riesgo de la «flota fantasma» rusa, con 50 petroleros semanales cerca de Canarias",
+      "body": "El Informe de Seguridad Nacional reconoce la amenaza de la flota en la sombra de Rusia: cada semana se detectan unos 50 petroleros cerca de las Islas Canarias, lo que aumenta el riesgo de accidentes, contaminación o daños a las infraestructuras submarinas. El Gobierno refuerza la vigilancia naval y los controles en los puertos.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/gobierno-admite-riesgo-flota-fantasma-rusa-con-50-barcos-detectados-junto-canarias-cada-semana_6970530_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "UGT convoca una huelga indefinida de camioneros y conductores de autobús desde el 8 de junio por la jubilación anticipada",
+      "body": "UGT ha convocado una huelga indefinida de conductores de camiones y autobuses a partir del 8 de junio, salvo que el Ministerio de Seguridad Social ofrezca información clara sobre los coeficientes de jubilación anticipada. El sindicato dice que lleva 20 años esperando esta medida y acusa al Gobierno de silencio administrativo.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/ugt-llama-huelga-indefinida-camioneros-conductores-bus-desde-8-junio-si-no-hay-avances-jubilacion-anticipada_6970475_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Experto fiscal: reinvertir el importe de la venta en una nueva vivienda puede eximir de la plusvalía",
+      "body": "El economista José María Páez destaca que los propietarios que venden su vivienda habitual y reinvierten todo el importe en una nueva vivienda habitual pueden evitar pagar el impuesto sobre las ganancias patrimoniales. Esta exención exige un cumplimiento estricto, por lo que los vendedores deben planificarlo con cuidado.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-05-15/economista-vendes-casa-reinviertes-obtienes-vivienda_4354637/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "El crucero con brote de norovirus podría atracar en España tras cancelar Ferrol",
+      "body": "El crucero Ambition, afectado por un brote de norovirus frente a Burdeos, donde murió un pasajero británico de 90 años, ha cancelado su escala en Ferrol, pero podría seguir atracando en Gijón y Bilbao. Las autoridades sanitarias españolas siguen en alerta.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/crucero-con-brote-norovirus-puede-llegar-espana-cancelan-escala-ferrol-pero-hay-dos-mas-aire_6970542_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "El examen teórico del carné de conducir incluirá preguntas con vídeos sobre percepción de riesgos",
+      "body": "La Dirección General de Tráfico (DGT) reforma el examen teórico del carné de conducir e incorpora preguntas con vídeos sobre percepción de riesgos, junto al formato tradicional de tipo test. El cambio busca pasar de la memorización a la evaluación de riesgos reales.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/motor/dgt-cambia-carnet-conducir-sera-nuevo-examen-teorico-videos-pm_1_13219852.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El Rey Felipe VI y el vicepresidente Cuerpo viajan a Canadá para impulsar el comercio",
+      "body": "El Rey Felipe VI y el vicepresidente para Economía, Carlos Cuerpo, viajarán a Canadá la próxima semana para estrechar las relaciones comerciales y atraer inversiones estratégicas. La misión busca reducir la dependencia de Estados Unidos en un contexto de cambio de alianzas geopolíticas, con un comercio bilateral que ya suma 7.000 millones de euros.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gobierno-aprovecha-acercamiento-ue-canada-envia-cuerpo-rey-reforzar-relaciones-comerciales_1_13219031.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "La oferta de vivienda en las grandes ciudades crece, pero los precios siguen siendo «imposibles». ¿Crees que estamos cerca de un punto de inflexión? 💬",
+  "subject": "🇪🇸 España — 15.05.2026",
+  "lang": "es",
+  "date": "2026-05-15",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-15T05:33:05.094705+00:00"
+}

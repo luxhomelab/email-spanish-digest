@@ -1,0 +1,159 @@
+{
+  "items": [
+    {
+      "title": "España vive una huelga general el 11 de noviembre",
+      "body": "CCOO y UGT celebran su primera huelga general en 14 años el 11 de noviembre por el coste de la vivienda, los salarios y los precios. Los sindicatos también convocan manifestaciones por la tarde, 18 días antes de las elecciones del 29 de noviembre. Una encuesta de 40dB revela que el 23 % de los trabajadores encuestados hará huelga y el 36,3 % no.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-10/los-sindicatos-llaman-a-espana-a-una-huelga-general-por-primera-vez-en-14-anos.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El decreto de alquiler exigiría indemnizar si el casero no renueva",
+      "body": "El Real Decreto-ley 28/2026, ya publicado, espera una votación de convalidación para entrar en vigor. Exigiría a los propietarios que no renueven el contrato pagar al menos 12 meses de renta por una vivienda similar, y avisar con seis meses de antelación, frente a cuatro. El Gobierno carece de mayoría para la convalidación, y es poco probable que la votación salga adelante.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/11/10/oficial-nuevo-decreto-incluye-indemnizaciones-inquilinos-casero-no-renueva-alquiler-2057837.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El PP propone cuotas de inmigración y desgravaciones fiscales para jóvenes trabajadores",
+      "body": "El programa del PP para las elecciones del 29 de noviembre propone cuotas anuales de entrada de trabajadores basadas en empleo, vivienda y servicios. Los trabajadores de 18 a 35 años no pagarían IRPF en su primer año, con rebajas del 75 %, 50 % y 25 % en los tres siguientes. Los alimentos básicos tendrían un IVA del 0 % mientras persista la crisis de inflación.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/10/6af36a00fc6c833b5f8b4575.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/pp-promete-que-los-jovenes-no-pagaran-irpf-su-primer-ano-cuota-cero-para-autonomos-primerizos-atajar-absentismo_7059395_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La exención del salario mínimo exigiría una deducción mayor",
+      "body": "El Gobierno estudia una exención del IRPF para el SMI propuesto de 2027, de 1.286 € brutos al mes en 14 pagas. El sindicato de técnicos de Hacienda Gestha dice que la deducción tendría que subir de 591 € a 1.033,66 €, con un coste de unos 1.100 millones de euros.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gestha-cifra-1-034-euros-deduccion-necesaria-salario-minimo-no-pague-irpf_1_13652577.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "El Tribunal Económico-Administrativo Central considera tributables las indemnizaciones por salidas voluntarias",
+      "body": "El Tribunal Económico-Administrativo Central ha dictaminado que las indemnizaciones por salidas voluntarias y jubilaciones anticipadas tributan en el IRPF, salvo que al firmarse estuviera en marcha un procedimiento formal de despido colectivo. La exención tiene un límite de 180.000 €. La resolución vincula a la Agencia Tributaria, aunque los trabajadores pueden acudir a los tribunales.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-11/hacienda-obliga-a-tributar-las-prejubilaciones-voluntarias-si-no-se-enmarcan-en-un-despido-colectivo.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "La inflación se mantiene en el 4,9 % mientras suben los costes energéticos",
+      "body": "La inflación interanual de España se mantuvo en el 4,9 % en octubre, según la estimación preliminar del INE. La guerra en Irán ha encarecido los costes de carburantes, electricidad y gas, y las tasas interanuales elevadas durarán al menos hasta marzo de 2027. Los mercados esperan que el BCE vuelva a subir los tipos en diciembre.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/sabias-que-inflacion-va-seguir-alta-durante-varios-meses_7059483_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Pau Cubarsí gana el Golden Boy 2026",
+      "body": "Pau Cubarsí, del Barcelona y de la selección española, de 19 años, ha ganado el Golden Boy 2026 como mejor jugador sub-21 de Europa. Recibió 475 de los 500 puntos posibles de 50 periodistas, y se convierte en el sexto español premiado. Recogerá el galardón en Turín el 14 de diciembre.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/deportes/futbol/2026-11-11/pau-cubarsi-de-la-frustracion-de-la-gala-del-balon-de-oro-a-la-alegria-por-el-reconocimiento-como-golden-boy.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "El Gobierno aprueba ampliar las ayudas a familias monoparentales",
+      "body": "El Consejo de Ministros aprobó el 10 de noviembre un real decreto-ley que concedería a las familias monoparentales con dos hijos las mismas ayudas que a las familias numerosas. Aún debe validarlo la Diputación Permanente del Congreso. El nuevo título de familia se aplicaría desde el 1 de enero de 2027; el Ministerio calcula que más de 760.000 familias se beneficiarían.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/sociedad/2026-11-10/el-gobierno-creara-un-titulo-de-familia-monoparental-las-que-tengan-dos-hijos-tendran-los-mismos-beneficios-de-las-numerosas.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El Consejo de Ministros aprueba que los maquinistas puedan detener el tren ante un riesgo",
+      "body": "El Consejo de Ministros aprobó el 10 de noviembre un real decreto-ley que permitirá a los maquinistas detener un tren o negarse a reanudar la marcha cuando detecten un riesgo grave e inminente. La medida busca reforzar la seguridad ferroviaria y la protección social de los trabajadores del ferrocarril.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/transportes-00343/noticia-gobierno-aprueba-decreto-faculta-maquinistas-parar-no-reiniciar-tren-riesgo-grave-20261110114044.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La rentabilidad de las letras a tres meses alcanza un máximo de dos años",
+      "body": "Las letras del Tesoro a tres meses rindieron un 2,665 % en la subasta del 10 de noviembre, un máximo de dos años, mientras los mercados anticipan una subida del BCE en diciembre. Las letras a nueve meses rindieron un 2,946 %, algo menos que en la subasta anterior. Ambas rentabilidades siguen por debajo de la inflación de octubre, del 4,9 %.",
+      "sources": [
+        {
+          "name": "Cinco Días",
+          "url": "https://cincodias.elpais.com/mercados-financieros/2026-11-10/las-letras-del-tesoro-a-tres-meses-pagan-el-tipo-mas-alto-en-dos-anos.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Caduca el 31 de diciembre la protección de las empresas frente a las pérdidas de la pandemia",
+      "body": "Una norma que permite a las empresas excluir las pérdidas de 2020 y 2021 al evaluar si deben disolverse caduca el 31 de diciembre de 2026. Los economistas calculan que protege a unas 80.000 empresas y entre 600.000 y 800.000 empleos. Sin prórroga, las empresas tendrían que volver a contar esas pérdidas, aunque los expertos no prevén cierres masivos.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://cincodias.elpais.com/companias/2026-11-11/el-fin-del-escudo-antiquiebras-coloca-a-80000-empresas-al-borde-de-la-causa-de-disolucion.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Binance cerrará las cuentas españolas el 31 de diciembre",
+      "body": "Binance ha comunicado a sus usuarios en España que retiren sus activos antes de que cierre sus cuentas el 31 de diciembre de 2026, porque no tiene la licencia MiCA exigida en Europa. Las cuentas con activos pagarán en noviembre y diciembre una comisión mensual del 0,025 % del saldo o 10 USDC, la que sea mayor. Los activos restantes podrían convertirse o transferirse más adelante.",
+      "sources": [
+        {
+          "name": "Cinco Días",
+          "url": "https://cincodias.elpais.com/criptoactivos/2026-11-10/binance-fija-para-el-31-de-diciembre-el-cierre-de-las-cuentas-de-sus-usuarios-en-espana.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "¿Qué costes energéticos te preocupan más? A) Carburante B) Electricidad C) Gas 💬",
+  "subject": "España tuvo un día normal. Más o menos.",
+  "lang": "es",
+  "date": "2026-11-11",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-11-11T07:02:17.132047+00:00"
+}

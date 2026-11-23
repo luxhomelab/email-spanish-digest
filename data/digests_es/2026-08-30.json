@@ -1,0 +1,151 @@
+{
+  "items": [
+    {
+      "title": "⚠️ La crisis de Ceuta se agrava mientras la UE prepara el apoyo de Frontex",
+      "body": "Un mes después de que 72.000 personas cruzaran desde Marruecos a Ceuta, entre 5.000 y 8.000 siguen en las calles. Pedro Sánchez impuso un mando único solo tres semanas después de la llegada. La UE prepara el apoyo de Frontex, Europol y la Agencia de Asilo tras la petición de Fernando Grande-Marlaska. La devolución prometida de menores no acompañados a Marruecos está bloqueada por la condena de 2021 a dos cargos de Ceuta por devolver ilegalmente a 55 menores.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/08/29/6a9300df21efa0b7328b4588.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/internacional/noticia-ue-trabaja-ya-ofrecer-espana-refuerzo-frontex-europol-todavia-compleja-situacion-ceuta-20260829132822.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/retorno-los-menores-marruecos-se-topa-con-fantasma-prevaricacion-que-ya-condeno-ceuta-dos-cargos-pp-psoe_7030224_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": true
+    },
+    {
+      "title": "Un economista prevé una oleada de desahucios, en parte parecida a la de 2008",
+      "body": "El economista Santiago Niño Becerra afirma que España no tiene burbuja inmobiliaria, sino precios desbocados porque la demanda residencial supera a la oferta. Prevé una oleada de desahucios que en parte recordará a la crisis de 2008. Atribuye la alta demanda a la falta de alternativas de inversión y al exceso de dinero en algunos sectores.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-08-29/economista-vivienda-espana-oleada-desahucios-parte_4410045/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La Seguridad Social confirma las pensiones de autónomos que cotizaron por la base mínima",
+      "body": "Los autónomos que siempre cotizaron por la base mínima reciben una pensión más baja. El complemento a mínimos puede elevarla si se cumplen las condiciones. En 2026, un autónomo jubilado con cónyuge a cargo puede cobrar 1.256 € al mes en 14 pagas.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-08-29/confirmado-seguridad-social-pension-autonomo-cotizar-base-minima_4414186/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Las pequeñas tiendas se enfrentan a la extinción: la mitad podría desaparecer en 10 años",
+      "body": "El pequeño comercio pierde autónomos por la falta de relevo generacional. El sector tiene 9.201 autónomos menos que hace un año, mientras el trabajo por cuenta propia en conjunto ganó 60.000 cotizantes. La inflación, del 4,3 %, la más alta en tres años, añade presión.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/crisis-pequeno-comercio-10-anos-habran-desaparecido-mitad-las-tiendas-por-falta-relevo-generacional_7030353_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Murcia se convierte en otra puerta de entrada de inmigrantes en la costa mediterránea",
+      "body": "Una embarcación con cuatro motores fuera borda llegó a Cala del Barco, en Cartagena, el 19 de agosto con 62 personas: 45 hombres, dos mujeres y 15 menores varones. Los patrones volvieron a alta mar sin desembarcar a todos los pasajeros. La Guardia Civil gestiona el sistema SIVE, pero los sindicatos policiales protestan por la falta de recursos. El presidente regional, López Miras, pide desplegar al Ejército para proteger las costas de Murcia.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/murcia/sociedad/murcia-puerta-entrada-inmigracion-pasando-realmente-costas_1_13473246.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El Gobierno impide a los bancos emitir tarjetas de crédito sin consentimiento del cliente",
+      "body": "Los bancos no podrán emitir tarjetas de crédito ni aumentar los límites sin autorización previa del cliente, según el anteproyecto de Ley de Crédito al Consumo. Hasta ahora podían emitir tarjetas y subir límites sin aprobación. El objetivo es prevenir el riesgo de endeudamiento y dar a los consumidores más control sobre los productos financieros.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-08-29/gobierno-restringe-expedicion-tarjetas-credito-banco_4414194/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Un inmigrante sin papeles que dormía en la playa ayuda a apagar un incendio en Ibiza",
+      "body": "Modou Ndiaye, un senegalés de 40 años sin papeles, apagó un incendio en un bloque de viviendas de Cala de Bou, en Ibiza. Llegó a España en 2015 en un pesquero con 160 personas y ahora trabaja como vendedor ambulante. Los vecinos piden a las autoridades que aceleren su regularización.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/illes-balears/sociedad/modou-migrante-papeles-duerme-playa-apago-incendio-pisos-ibiza_1_13470731.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Experto inmobiliario: el inquilino no responde por el desgaste de décadas",
+      "body": "Sergio Gutiérrez afirma que un inquilino nunca responde por el desgaste acumulado durante décadas si solo ha vivido en la vivienda un par de años. Aconseja no alquilar una propiedad si el propietario está ajustado económicamente, porque siempre habrá gastos imprevistos. El consejo va dirigido tanto a inquilinos como a propietarios.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-08-29/experto-inmobiliario-inquilino-responsable-desgaste-decadas_4410054/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Los «sisi» estudian y trabajan pero nunca descansan, según un informe",
+      "body": "La proporción de jóvenes de 16 a 29 años que estudian y trabajan a la vez ha subido al 33 % en 2026. Mientras, los «ni-ni», que ni estudian ni trabajan, bajaron al 11,5 % en 2025, desde el 19,4 % de 2015. Los altos costes de la vivienda y la presión económica obligan a los jóvenes a rutinas agotadoras, y sus salarios tampoco les permiten irse de casa.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/sisi-jovenes-estudian-no-descansan-llevo-cuatro-anos-dias-libres_1_13444653.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El profesorado arranca el curso con huelgas y protestas a la vista",
+      "body": "Los docentes vuelven el 1 de septiembre y los alumnos regresan entre el 7 y el 15 de septiembre, según la comunidad y la etapa. Cataluña ha convocado una huelga para el 8 de septiembre, el mismo día que empieza el curso allí, y los docentes madrileños irán a la huelga el 14 de octubre. La OCDE publicará los resultados de PISA 2026 el 8 de septiembre.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/08/30/malestar-los-profesores-marca-un-inicio-curso-escolar-con-huelgas-horizonte-2048110.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Nuevos radares de la DGT detectan a conductores solos en carriles VAO",
+      "body": "La DGT instala nuevos radares en los carriles de alta ocupación (VAO) para detectar vehículos con menos ocupantes de los permitidos. Las multas pueden llegar a 200 €. Los radares ya están instalados en la A-2 en Madrid.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-08-29/nuevos-radares-dgt-controlar-conductores-carril-vao_4414215/"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Autónomos: ¿cotizas por la base mínima y crees que la pensión de 1.256 € será suficiente? 🤔",
+  "subject": "Nada pasó hoy en España. Excepto esto.",
+  "lang": "es",
+  "date": "2026-08-30",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-08-30T06:05:13.378874+00:00"
+}

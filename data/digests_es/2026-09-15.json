@@ -1,0 +1,167 @@
+{
+  "items": [
+    {
+      "title": "Feijóo prevé retirar la nacionalidad a los naturalizados condenados por delitos",
+      "body": "El líder del PP, Alberto Núñez Feijóo, prepara una ley para endurecer el acceso a la nacionalidad española. Los futuros solicitantes tendrían que superar un examen de idioma más difícil y una prueba sobre valores constitucionales. Los españoles naturalizados condenados por asesinato, agresión sexual, terrorismo, delincuencia organizada o reincidencia podrían perder la nacionalidad. La medida se aplicaría si Feijóo llega a La Moncloa en 2027.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/09/14/6aa8288121efa01a628b4587.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "La Junta Electoral revisa los expedientes de nacionalidad por la «ley de nietos»",
+      "body": "La JEC ha aceptado la medida cautelar del Supremo sobre la vía de la «ley de nietos» de la Ley de Memoria Democrática. Ha pedido informes al Censo Electoral y a los registros consulares para verificar el vínculo de exilio de quienes obtuvieron o solicitan la nacionalidad por esta vía. Los nacionalizados y los solicitantes podrían ver revisados sus expedientes y cuestionados.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-jec-atiende-supremo-pide-informes-nacionalizaciones-derivadas-ley-nietos-20260914144048.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "El Euríbor sube al 3,3 %, máximo de dos años",
+      "body": "El Euríbor a 12 meses subió al 3,3 % en su cotización diaria tras la subida del tipo de referencia del BCE al 2,5 %. La media mensual provisional se sitúa en el 3,109 %, un nivel no visto en dos años. Los titulares de hipotecas variables en España pagarán más, con subidas típicas de unos 84 € al mes en un préstamo de 150.000 € a 25 años.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/euribor-dispara-maximos-dos-anos_7036461_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El empleo extranjero alcanza un récord y explica la mayor parte del crecimiento del empleo en España",
+      "body": "España alcanzó 3.551.759 trabajadores extranjeros afiliados a la Seguridad Social, el 15,9 % de la población ocupada. El empleo extranjero creció un 15,7 % en 12 meses, con casi 500.000 empleos más, mientras el empleo de nacionales creció solo un 1,1 %. Alrededor del 71 % de todos los nuevos cotizantes del último año son extranjeros.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/regularizacion-lleva-empleo-extranjero-un-nuevo-record-agosto-crece-ya-quince-veces-mas-rapido-que-afiliacion-espanoles_7036444_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Un economista advierte de que los precios de la vivienda seguirán subiendo",
+      "body": "El economista Gonzalo Bernardos vincula la subida de los precios de la vivienda a una desaceleración estructural de la construcción residencial. La construcción representaba solo el 5,35 % del PIB en 2025, frente al 10,5 % de 2007. España sumó unos 241.000 nuevos hogares entre comienzos de 2025 y comienzos de 2026, pero solo se registraron 91.000 nuevas viviendas. Precios y alquileres siguen bajo presión al alza.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-09-14/gonzalo-bernardos-le-doy-pesame-desean-comprar-vivienda-alquilar-piso-1qrt_4423388/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El petróleo sube a 107 dólares por las tensiones con Irán",
+      "body": "El Brent subió un 2,6 % hasta 107,30 dólares, y el gas europeo alcanzó los 83 € por MWh, su nivel más alto desde finales de 2022, por las tensiones con Irán y en el estrecho de Ormuz. La subida alimenta los costes de carburantes, electricidad y transporte en toda España.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/petroleo-sigue-escalada-alcanza-107-dolares-medio-tensiones-iran_1_13507163.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Sánchez: 200 migrantes regresan cada día de Ceuta a Marruecos",
+      "body": "El presidente Pedro Sánchez afirma que unos 200 migrantes que entraron en Ceuta el 30 de julio regresan cada día a Marruecos de forma voluntaria. El Gobierno aspira a acercarse a 10.000 plazas de acogida activas y ha pedido a los vecinos de Ceuta paciencia y empatía mientras se tramitan los casos. Sánchez calificó la situación de crisis humanitaria y admitió que la capacidad no es suficiente para el futuro.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/epsocial/migracion/noticia-sanchez-afirma-200-migrantes-dia-regresan-ceuta-marruecos-espera-llegar-10000-plazas-acogida-activas-20260914224520.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "España pone en marcha el Registro de Alias para frenar las estafas de SMS de bancos",
+      "body": "La autoridad de competencia ha puesto en marcha un Registro de Alias que verifica a los remitentes de SMS, MMS y RCS a números españoles. Las entidades deben acreditar su vinculación con la marca, el nombre comercial, la empresa o el dominio para usar un identificador. El sistema busca reducir el smishing haciendo más difícil enviar mensajes falsos de bancos y empresas.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/se-acabaron-los-sms-que-se-hacen-pasar-por-tu-banco-que-cambia-desde-este-martes-para-frenar-las-estafas_7036353_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El precio de la bombona de butano alcanza un máximo de cuatro años: 18,84 €",
+      "body": "La bombona de butano de 12,5 kilos subirá un 4,96 % el martes hasta 18,84 €, su precio más alto en cuatro años. La subida refleja los costes de materias primas y de transporte, parcialmente compensados por una rebaja del impuesto de hidrocarburos. Los hogares fuera de la red de gas pagarán más por cocinar y calentarse.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/precio-bombona-butano-sube-nuevo-su-nuevo-coste-desde-este-martes_7036266_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Guía de las ocho semanas de permiso parental en España",
+      "body": "Los trabajadores en España tienen un derecho individual e intransferible a ocho semanas de permiso parental por hijo hasta que el hijo cumple 8 años. Puede disfrutarse de forma continua o discontinua, a jornada completa o a tiempo parcial cuando se permita, con al menos 10 días de preaviso. En la práctica funciona como una suspensión del contrato con reserva del puesto de trabajo, aunque los detalles sobre el salario siguen incompletos.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/guia-permiso-parental-ocho-semanas-como-cuando-solicitarlo-cuidar-hijos_7024523_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Bares y restaurantes cobrarán un depósito reembolsable por los envases de bebidas",
+      "body": "Con el reglamento europeo de envases, España implantará un sistema de depósito y devolución. Supermercados, bares y restaurantes cobrarán unos 10 céntimos por botella o lata, reembolsables al devolver el envase. La UE exige recoger al menos el 70 % de estos envases; España solo recogió el 41,3 % de las botellas de plástico de un solo uso en 2023.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/gastronomia/2026/09/14/ya-oficial-bares-restaurantes-cobraran-suplemento-extra-botellas-virtud-nueva-normativa-gobierno-espana-2021183.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La OCDE advierte de que la próxima pandemia podría costar a España 275.000 millones de euros",
+      "body": "La OCDE estima una probabilidad del 50 % de otra pandemia en los próximos 25 años. El PIB de España podría caer entre un 2,1 % y un 16,3 %, equivalente a entre 35.000 y 275.000 millones de euros a precios de 2025. El análisis recoge cinco escenarios de pandemia.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/proxima-pandemia-podria-costarle-espana-un-agujero-economico-hasta-275-000-millones-euros_7036681_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Dos hermanas unen medicina e investigación contra el cáncer tras superar una leucemia",
+      "body": "Isabel superó una leucemia linfoblástica aguda a los 15 años y hoy es médica de urgencias en el Hospital Álvaro Cunqueiro de Vigo. Su hermana Victoria, que tenía 11 años entonces, trabaja en investigación oncológica para contribuir al campo que salvó la vida de Isabel. La historia destaca el sistema sanitario y de investigación público de España.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/salud/2026/09/14/6aa70eebfc6c83146b8b458b.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "¿Te harían cambiar tus planes de pedir la nacionalidad española unas pruebas de idioma y valores más estrictas? 💬",
+  "subject": "No pasó nada en España hoy. Excepto esto.",
+  "lang": "es",
+  "date": "2026-09-15",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-09-15T06:02:57.382758+00:00"
+}

@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "La oferta de habitaciones en alquiler se dispara mientras Barcelona llega a 600 €",
+      "body": "La oferta de habitaciones en alquiler en España subió un 12 % en el segundo trimestre, y el precio medio subió un 1 %, hasta 425 €. Barcelona sigue siendo la más cara, con 600 € al mes, seguida de Palma y Madrid, con 550 €. La oferta creció en 35 capitales de provincia, encabezada por Lugo (+89 %) y Valencia (+52 %), mientras se desplomó en Ceuta y Bilbao. Las habitaciones más baratas rondan los 250 € en Jaén.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/oferta-habitaciones-alquiler-se-dispara-los-250-euros-jaen-los-600-barcelona_7028624_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Los precios de la luz para los hogares suben un 8 %, más que la media de la UE",
+      "body": "Los precios de la electricidad para los hogares españoles subieron un 8,3 % interanual en julio, frente a una media de la UE del 1,6 % y de la eurozona del 2,1 %. Entre las grandes economías, solo Italia registró una subida mayor, del 13 %, mientras las facturas bajaron un 5,3 % en Alemania y un 1 % en Francia. Eurostat vincula la subida a la volatilidad de los precios energéticos por la guerra con Irán.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/08/25/electricidad-que-pagan-los-hogares-se-encarece-un-8-espana-cinco-puntos-mas-que-ue-2046930.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Estudio: uno de cada tres niños españoles está en riesgo de pobreza",
+      "body": "Un estudio de Fedea concluye que el 33,8 % de los menores de España está en riesgo de exclusión social, sobre todo por el alto coste de criar a los hijos más que por el paro de los padres. La tasa de pobreza monetaria infantil fue del 28,3 % en 2025, muy por encima de la media de la UE, del 19,3 %. Unas 9,48 millones de personas, el 19,5 % de la población, estaban en riesgo de pobreza monetaria.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/ahorro-y-consumo/2026/08/25/6a8c51e6e4d4d8347d8b457f.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los trabajadores de Airbus confirman una huelga indefinida desde este martes",
+      "body": "Los trabajadores de Airbus España votaron por amplia mayoría iniciar una huelga indefinida el 25 de agosto, tras rechazar la última oferta de la empresa. Los sindicatos CGT, UGT y ÚTIL convocaron el paro; la asamblea de Cádiz se sumará el 1 de septiembre. La empresa había ofrecido una subida salarial ligada al IPC, la recuperación de las condiciones de teletrabajo y la retirada de su recurso ante el Supremo sobre los complementos de baja.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/08/24/plantilla-airbus-confirma-huelga-indefinida-martes-2046978.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "⚠️ España acepta un mando único para Ceuta y pide fondos de emergencia a la UE",
+      "body": "España ha aceptado la petición de Ceuta de un mando único y nombrará coordinador a Ángel Víctor Torres, casi un mes después de que 80.000 personas cruzaran desde Marruecos. Madrid también ha pedido a Bruselas fondos de emergencia para la protección de la frontera y la acogida, incluidos los de los menores no acompañados. La Policía advierte de que casi 10.000 migrantes viven en la calle y se han disparado las llamadas al 091. España enviará 45.000 dosis de vacunas; los expertos rechazaron la propuesta de Feijóo de confinar a los migrantes.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/sanchez-acepta-mando-unico-ceuta-mes-despues-crisis-acelera-medidas-choque_1_13464207.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/espana-solicita-bruselas-financiacion-emergencia-ante-crisis-migratoria-ceuta_7028902_0.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.infosalus.com/actualidad/noticia-sanidad-ccaa-acuerdan-enviar-25000-dosis-vacunas-ceuta-medida-preventiva-crisis-migratoria-20260824150741.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/expertos-responden-feijoo-no-existen-razones-salud-publica-justifiquen-confinamiento-ceuta_1_13463790.html"
+        }
+      ],
+      "category": "politics",
+      "important": true
+    },
+    {
+      "title": "La gasolina y el diésel suben un 21 % antes de la vuelta de vacaciones",
+      "body": "El diésel alcanzó 1,875 € por litro el 23 de agosto, un 21 % más desde el 1 de julio, y la gasolina 95 llegó a 1,735 €, un 13 % más y el máximo en cuatro años. Llenar un depósito diésel de 55 litros cuesta ahora unos 103,10 €, unos 18 € más que a principios de julio. Los precios siguen a los mercados internacionales del petróleo, con el Brent en torno a 72 dólares.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/operacion-retorno-llega-con-las-gasolinas-un-21-mas-caras-que-cuando-arrancaron-las-vacaciones_7028899_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los precios de los alimentos siguen subiendo en agosto, con la patata a la cabeza",
+      "body": "La patata registró la mayor subida de precio de alimentos en agosto, un 14 %: una malla de 5 kg en Hipercor pasó de 5,99 € a 7,75 €. La pera conferencia en Carrefour subió un 20,3 % hasta 2,55 €, y los macarrones De Cecco un 10 %, hasta 2,85 €. El aceite de oliva virgen extra bajó un 6 %, y la uva blanca sin pepitas un 18 %.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/precio-alimentos-tampoco-tregua-agosto-patatas-peras-conferencia-macarrones-mayores-subidas_7028783_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los tribunales avalan 1.800 € de indemnización por el complemento de maternidad denegado",
+      "body": "El Tribunal Supremo ha dictaminado que los pensionistas a los que se denegó el antiguo complemento de maternidad y tuvieron que demandar tienen derecho a una indemnización de 1.800 € sin reducciones. A un jubilado de Madrid solo se le había concedido 600 €. La sentencia del Tribunal de Justicia de la UE de 2019 estableció que excluir a los hombres del complemento era discriminatorio.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-08-24/tribunales-seguridad-social-indemnizar_4410229/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Ryanair niega las afirmaciones del ministro sobre la falta de aviones en España",
+      "body": "Ryanair ha rechazado como falsas las declaraciones del ministro de Transportes, Óscar Puente, y afirma que sus decisiones de capacidad en España responden al modelo tarifario de Aena, no a una falta de aviones. La aerolínea dice haber recibido los 210 aviones Boeing MAX-8200 encargados y haber asignado nuevos aparatos a Marruecos, Italia, Albania, Polonia, Eslovaquia y Suecia. Culpa al modelo de precios de Aena de la reducción de servicios en los aeropuertos regionales españoles.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ryanair-choque-oscar-puente-dice-declaraciones-falta-aviones-son-falsas_1_13464154.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "Una habitación en Barcelona cuesta ya 600 €/mes. ¿Cuánto pagas tú donde vives? 🤔",
+  "subject": "España en 30 segundos",
+  "lang": "es",
+  "date": "2026-08-25",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-08-25T06:05:41.738491+00:00"
+}

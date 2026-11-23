@@ -1,0 +1,119 @@
+{
+  "items": [
+    {
+      "title": "⚠️ Crisis fronteriza de Ceuta: 75 muertos y triaje de asilo para 2.500 personas",
+      "body": "Al menos 75 migrantes han muerto y unos 2.500 permanecen en Ceuta, mientras la Policía Nacional inicia el triaje individual de solicitudes de asilo, tras la entrada masiva de la semana pasada en la que 72.000 personas cruzaron a territorio español. Los ciudadanos marroquíes cuya petición de asilo sea rechazada afrontan procedimientos de devolución. Los ministros de Interior de la UE elogiaron el «trabajo extraordinario» de España al devolver a 70.000 personas. Giorgia Meloni, al frente del Gobierno italiano, aprovechó la crisis para relanzar su agenda antimigratoria, con planes de deportación a terceros países. Los resultados del triaje y las reacciones políticas en la UE pueden reescribir las normas para quien busque protección en España.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-policia-nacional-comienza-triaje-valorar-asilo-migrantes-ceuta-entrada-masiva-20260804211759.html"
+        },
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-08-04/cadaveres-migrantes-ceuta-guardia-civil-1tps_4400821/"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/marlaska-dice-que-ue-reconoce-trabajo-extraordinario-espana-ceuta-sube-72-000-los-migrantes-que-cruzaron-frontera_7022485_0.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/internacional/hay-detras-embestida-meloni-espana-crisis-ceuta_1_13428253.html"
+        }
+      ],
+      "category": "visa",
+      "important": true
+    },
+    {
+      "title": "España alcanza 22,5 millones de trabajadores tras la gran regularización de migrantes",
+      "body": "Las afiliaciones a la Seguridad Social promediaron un récord de 22.508.065 en julio, impulsadas por la regularización extraordinaria de casi 262.500 trabajadores migrantes que antes estaban indocumentados. El paro subió en 19.500 personas, lo que el Gobierno atribuyó en parte al mismo proceso de regularización. La formalización concede por primera vez a estos trabajadores plenos derechos de Seguridad Social y laborales.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/espana-supera-record-22-5-millones-trabajadores-gracias-regularizacion-paro-sube-19-500-personas_1_13426483.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Una nueva ley de propiedad horizontal da a los propietarios herramientas contra las cuotas impagadas",
+      "body": "Una Ley de Propiedad Horizontal reformada permite ahora a los propietarios reclamar gastos comunes impagados de menos de 2.000 € y privar de voto en las juntas a los vecinos morosos. Las normas, publicadas en el BOE el 24 de julio, exigen además la aprobación de tres quintas partes de los propietarios para alquilar pisos turísticos. Las deudas deben reclamarse y notificarse antes mediante acta notarial o burofax, y es posible el embargo de bienes. Estas medidas de ejecución se aplican directamente a los propietarios en España.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/08/04/ley-propiedad-horizontal-cambia-normas-si-vecino-no-paga-propietarios-pueden-acudir-articulo-21-1869333.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El Ibex 35 supera los 20.000 puntos y cierra en máximos",
+      "body": "El Ibex 35 cerró en un máximo histórico de 20.023 puntos, con una subida del 0,21 %, mientras las bolsas europea y estadounidense también avanzaban. El Brent subió un 1,6 %, hasta 86 € el barril, y ArcelorMittal ganó en bolsa por señales de recuperación del sector siderúrgico. El hito afecta a inversiones, pensiones y ahorros de todo el país.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ibex-35-bate-registros-superar-20-000-puntos_1_13428045.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La rentabilidad de la letra a un año sube al 2,679 %, la más alta desde 2024",
+      "body": "El Tesoro colocó 6.215 millones de euros en letras a seis y doce meses, y el tipo marginal a doce meses subió de 2,523 % a 2,679 %. La letra a seis meses subió al 2,512 %, lo más alto desde enero de 2025, con una demanda total de 11.079 millones. El aumento de las rentabilidades puede encarecer las hipotecas y mejorar la remuneración del ahorro de los hogares.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/mercados/2026-08-04/espana-vende-letras-a-un-ano-con-un-interes-del-2-679-maximos-desde-septiembre-de-2024_4400675/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El Plan Auto+ abre con ayudas de hasta 4.500 € para coches eléctricos",
+      "body": "El programa Auto+, dotado con 400 millones de euros, empezó a admitir solicitudes el 4 de agosto para compras realizadas desde el 1 de enero de 2026. Las ayudas llegan a 4.500 € para turismos y a 5.000 € para vehículos comerciales ligeros, y los concesionarios deben aplicar un descuento de al menos 1.000 €. Quien compre un coche eléctrico en España puede solicitar la ayuda en línea.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/motor/ecomovilidad/solicitar-ayuda-coches-electricos-plan-auto-documentos-necesarios-enviarlos_1_13414017.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Huelga del personal de tierra en El Prat: se cancelan vuelos y se altera el viaje",
+      "body": "El personal de handling del aeropuerto de El Prat, en Barcelona, empezó el 4 de agosto una huelga indefinida que ha provocado al menos 16 cancelaciones y afecta a unos 20 vuelos. La CGT afirma que la participación es «muy alta» entre los 1.175 trabajadores, que denuncian el deterioro de la prevención de riesgos y cargas de trabajo insostenibles. Groundforce atiende a aerolíneas como Air Europa, Lufthansa, Air France, KLM, Qatar Airways y Etihad.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/huelga-personal-tierra-facturacion-embarque-aeropuerto-prat-afecta-20-vuelos_1_13426799.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "España confirma el verano más cálido y seco de su historia",
+      "body": "La AEMET informa de que junio y julio de 2026 registraron una media de 24,5 °C, 2,9 °C por encima de la norma 1991-2020, con solo 17 litros por metro cuadrado de lluvia, el periodo más seco desde 1961. Cinco de los periodos más cálidos se han dado desde 2015. El calor extremo y la sequía afectan a la salud, a los costes energéticos y al suministro de agua de todos los residentes en España.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/aemet-confirma-que-este-verano-es-mas-calido-seco-espana-desde-1961_7022418_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "¿Crees que la crisis de Ceuta dificultará que los migrantes regularicen su situación en España? 👇",
+  "subject": "Lo que se comenta hoy en España, 5 de agosto",
+  "lang": "es",
+  "date": "2026-08-05",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-08-05T06:04:12.466757+00:00"
+}

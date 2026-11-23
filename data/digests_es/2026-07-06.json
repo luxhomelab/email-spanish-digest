@@ -1,0 +1,139 @@
+{
+  "items": [
+    {
+      "title": "España se enfrenta a Portugal en octavos del Mundial esta noche",
+      "body": "La selección española de fútbol se enfrenta a Portugal en Dallas el lunes a las 21:00, en La 1, con la mirada puesta en los cuartos de final. El partido es la primera gran prueba del torneo para España y una ocasión de revancha frente a una selección portuguesa dirigida por el español Roberto Martínez.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/deportes/futbol/mundial-00639/noticia-espana-busca-revancha-cuartos-20260705202929.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Los alquileres se duplican en una década y los precios de salida superan en un 34 % a los de mercado",
+      "body": "El importe anual de los alquileres en España se ha duplicado hasta 28.000 millones de euros, cerca del 1,6 % del PIB, y afecta a unos 10 millones de inquilinos. Mientras, los vendedores anuncian sus viviendas de media un 34,3 % por encima del precio final de transacción, una diferencia que se reduce al 8,2 % en Barcelona y al 10,7 % en Madrid. El precio medio de venta en abril fue de 2.046 €/m², frente a una media de 2.748 €/m² en los anuncios.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gran-transferencia-paga-recibe-28-000-millones-euros-alquileres-ano-espana_1_13336879.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/fiebre-vivienda-infla-las-expectativas-los-vendedores-con-anuncios-precios-mas-un-30-por-encima-que-se-paga_7010238_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La pobreza de la población inmigrante prevista en 2030: un 41,9 % en riesgo",
+      "body": "El Plan de Integración 2026-2030 del Gobierno prevé que el 41,9 % de los inmigrantes seguirá en riesgo de pobreza a final de la década, una mejora modesta de 1,7 puntos porcentuales frente a 2024. El plan fija diez objetivos en empleo, educación y vivienda. El reciente proceso extraordinario de regularización recibió 1,17 millones de solicitudes, el doble de lo previsto.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/07/06/6a4a8862fc6c83f9268b458d.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "La Ley de Nietos podría duplicar los votantes en el extranjero hasta 5 millones",
+      "body": "El censo electoral de residentes ausentes (CERA) ha crecido un 20 % desde octubre de 2022, hasta 2,7 millones. Con 2,4 millones de solicitudes de nacionalidad pendientes y una tasa de denegación inferior al 2 %, el total podría acercarse a los 5 millones, equivalentes al electorado de la provincia de Madrid. La participación histórica ronda el 10 %, pero la ampliación podría cambiar los resultados electorales y la representación política.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/07/06/6a481109e4d4d8d8628b459c.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Los autónomos ganan hasta cinco años de cotización por permisos parentales para la pensión",
+      "body": "Los trabajadores autónomos pueden reclamar hasta 1.825 días (cinco años) de crédito de cotización por periodos de permiso parental, sin pagar cotizaciones adicionales. Las madres reciben 112 días por hijo tras el parto si dejaron de trabajar; los progenitores pueden obtener hasta 270 días por hijo por interrupciones entre nueve meses antes del nacimiento y seis años después. Estos créditos aumentan el importe de la pensión, pero no cuentan para el periodo mínimo de cotización de 15 años.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/como-conseguir-anos-extra-pension-si-eres-autonomo-tienes-hijos_7010465_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "153 muertes por calor en los primeros días de julio mientras los incendios arrasan",
+      "body": "El sistema de monitorización MoMo atribuye 153 muertes a las altas temperaturas en los primeros días de julio, tras las 937 registradas en junio. La ola de calor también ha avivado varios incendios activos, por lo que el presidente Pedro Sánchez ha desplegado unidades de la UME y equipos del MITECO. Sánchez pide a la población precaución mientras persista el calor.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/los-primeros-dias-julio-ya-suman-153-muertes-atribuibles-las-altas-temperaturas_7010724_0.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/medio-ambiente-00647/noticia-sanchez-informa-despliegue-efectivos-ume-miteco-colaborar-incendios-pide-precaucion-20260705203216.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "La OPEP+ eleva la oferta de petróleo en 188.000 barriles diarios por quinto mes consecutivo",
+      "body": "Los ministros de la OPEP+ han acordado aumentar la producción de petróleo en 188.000 barriles diarios a partir del 1 de agosto, el quinto aumento mensual consecutivo. La medida, respaldada por Arabia Saudí, Rusia y otros, busca estabilizar los mercados mundiales y podría aliviar los precios de los carburantes en España, reduciendo los costes de transporte.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/opep-aumentara-oferta-petroleo-188-000-barriles-diarios-partir-agosto-estabilizar-mercados_1_13357581.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Objetivos de déficit fijados con las comunidades, sin la reforma de financiación en la agenda",
+      "body": "El Consejo de Política Fiscal y Financiera (CPFF) se reunió el lunes por primera vez con el nuevo ministro, Arcadi España, para acordar los límites de déficit y deuda del próximo presupuesto. Los gobiernos autonómicos del PP quieren plantear la polémica reforma de la financiación, pero no figura en el orden del día oficial. Aprobar la senda fiscal es un requisito previo para el presupuesto nacional, lo que afecta al gasto público en servicios.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/hacienda-reune-las-comunidades-este-lunes-para-negociar-deficit-pero-sin-hablar-financiacion_7010461_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El número de muertos españoles por el terremoto de Venezuela sube a 35",
+      "body": "El Ministerio de Asuntos Exteriores confirma que 35 españoles han muerto, 140 siguen desaparecidos y 11 continúan atrapados bajo los escombros tras el doble terremoto de Venezuela. La tragedia afecta a familias con vínculos con Venezuela, pero tiene un impacto directo limitado en España.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/noticia-exteriores-eleva-35-espanoles-fallecidos-doble-terremoto-venezuela-20260705112805.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Moreno inicia su tercer mandato en Andalucía con una coalición con Vox",
+      "body": "Juanma Moreno ha tomado posesión de su tercer mandato consecutivo como presidente de Andalucía tras pactar un gobierno con Vox. Se ha comprometido a seguir «la vía andaluza» del diálogo y ha expresado su deseo de una legislatura fructífera. La dirección política podría influir en las políticas autonómicas que afectan a los extranjeros.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/esandalucia/sevilla/noticia-moreno-promete-ser-fiel-via-andaluza-dialogo-pactar-vox-espero-legislatura-fructifera-no-sera-20260705101137.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Los alquileres se han duplicado en una década y los precios de salida superan en más de un 30 % a los de venta. ¿Cómo te ha afectado la crisis de vivienda en España? 👇",
+  "subject": "Lo que te perdiste en España hoy",
+  "lang": "es",
+  "date": "2026-07-06",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-07-06T06:07:25.494653+00:00"
+}

@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "title": "Obligados a jubilarse anticipadamente, los trabajadores con más de 40 años cotizados cobran pensiones reducidas",
+      "body": "Tres personas que empezaron a trabajar a los 14 años y han cotizado más de 40 años cobran ahora pensiones reducidas entre un 24 % y un 26 % por haberse visto obligadas a jubilarse anticipadamente. Reclaman la eliminación de los coeficientes reductores para quienes tienen 40 o más años de cotización.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/cotizar-mas-40-anos-para-cobrar-una-pension-reducida-nos-obligaron-jubilarnos-anticipadamente-sin-pedirlo_6978013_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Las empresas vendieron 45.000 viviendas más de las que compraron en 2025",
+      "body": "Una de cada diez viviendas vendidas en España en 2025 fue comprada por una empresa, pero las compañías son ahora vendedoras netas: vendieron 123.777 inmuebles y compraron 78.669, una diferencia de 45.108. Los expertos atribuyen esta tendencia a la salida de los fondos de inversión y a la incertidumbre regulatoria, con un papel menor de la subida de precios.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/salida-fondos-regulacion-alza-precios-animan-las-empresas-soltar-pisos-2025-vendieron-45-000-mas-que-compraron_6979742_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Un abogado laboralista alerta de que las empresas desgastan a los trabajadores para forzar su baja voluntaria sin indemnización",
+      "body": "Juanma Lorente describe cómo algunos empresarios españoles hacen gradualmente hostil el entorno laboral, aumentando la presión y asignando tareas desagradables, hasta que el empleado acaba marchándose voluntariamente. Esta táctica de «despido silencioso» deja a los trabajadores sin indemnización ni prestación por desempleo.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-07/lorente-abogado-laborista-empresas-desgastan_4365664/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El consumo por habitante crece solo un 0,8 % anual desde la pandemia, frente al 2,3 % previo",
+      "body": "Según CaixaBank Research, el consumo real por persona se ha estancado desde la pandemia: creció solo un 0,8 % anual de media entre 2019 y 2025, frente al 2,3 % entre 2013 y 2019. Esto indica que el bienestar ha dejado de mejorar pese al mayor crecimiento del PIB.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/macroeconomia/2026/06/08/6a22ae6721efa036628b45a0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los nuevos médicos de familia desafían la crisis de atención primaria: «Me dijeron que no desperdiciara mi plaza MIR»",
+      "body": "María Ochoa, de 24 años, eligió Medicina de Familia pese a que otros le aconsejaron una especialidad más competitiva. Mientras dermatología y cirugía plástica se llenan rápidamente en la adjudicación MIR, las plazas de Medicina de Familia quedan disponibles hasta el final, y estos nuevos médicos rechazan la idea de que nadie quiera la atención primaria.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/nuevos-medicos-familia-desafian-crisis-atencion-primaria-mir-decian-no-desaprovechara-plaza_1_13277682.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Israel ignora la petición de Trump y ataca Irán mientras la tregua se tambalea",
+      "body": "Pese a la petición de EE. UU. de evitar la escalada, Israel atacó objetivos militares iraníes después de que Irán lanzara misiles contra el norte de Israel. La tregua renovada atraviesa su peor momento, con la tensión en aumento tras la muerte de dos personas en el sur de Beirut.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/internacional/israel-activa-alertas-zonas-pais-lanzamiento-misiles-iran_1_13282902.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El retraso del juez paraliza la investigación sobre la pareja de Ayuso por presunto cohecho",
+      "body": "La UCO lleva seis meses esperando a que el juez Antonio Viejo autorice el acceso a las cuentas bancarias y a los datos de empresas de Alberto González Amador, pareja de Isabel Díaz Ayuso. Pese a una reunión en abril en la que el juez prometió dictar las órdenes en una semana, no lo ha hecho, y la investigación de la «Operación Cirbelia» sigue bloqueada.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/operacion-cirbelia-investigacion-uco-pareja-ayuso-no-arranca-falta-autorizacion-juez_1_13278471.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La OPEP+ aprueba su cuarto aumento consecutivo de producción, de 188.000 barriles diarios, para julio",
+      "body": "Pese al cierre del estrecho de Ormuz por la guerra de EE. UU. e Israel contra Irán, que dificulta las exportaciones, siete miembros de la OPEP+ han acordado subir la producción en julio. El aumento forma parte del plan para revertir gradualmente los recortes voluntarios de 2023.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/opep-aprueba-un-nuevo-incremento-188-000-barriles-diarios-su-cuota-produccion_6980323_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "¿Es justo que los trabajadores con más de 40 años cotizados sigan penalizados en la jubilación anticipada? Cuenta tu experiencia.",
+  "subject": "🇪🇸 España: lo que te has perdido 👀 08.06.2026",
+  "lang": "es",
+  "date": "2026-06-08",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-06-08T05:31:36.761295+00:00"
+}

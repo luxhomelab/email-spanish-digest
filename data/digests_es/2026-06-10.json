@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "title": "La crisis del alquiler obliga a más de la mitad de los españoles a mudarse o compartir piso",
+      "body": "El precio del alquiler alcanzó un récord de 15,1 €/m² en mayo y obligó al 53,7 % de los ciudadanos a tomar medidas, como mudarse a viviendas más baratas, compartir piso o irse a la periferia. Además, el 66 % de los hogares dedica ya más del 30 % de sus ingresos al alquiler.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/precio-alquiler-condiciona-cada-vez-mas-vida-los-espanoles-mas-mitad-se-ve-obligado-mudarse-compartir-piso_6981032_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "El BCE subirá los tipos por primera vez en tres años; los grandes gestores prevén dos subidas más este año",
+      "body": "Se espera que el BCE eleve esta semana su tipo de referencia hasta el 2,25 %, la primera subida desde 2023. Pimco y Vanguard prevén otras dos subidas antes de final de año y otra a principios de 2027, ya que la inflación alcanzó el 3,2 % en mayo.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/cuenta-atras-para-bce-las-grandes-gestoras-preven-dos-subidas-tipos-hasta-final-ano-otra-principios-2027_6981249_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "CCOO exige un salario neto mínimo de 1.500 € para todos los empleados públicos",
+      "body": "CCOO reclama que ningún empleado público cobre menos de 1.500 € netos al mes, ya que el 15 % de la plantilla cobra cerca del SMI, de 1.221 € en 14 pagas. El sindicato dice que el aumento del coste de la vida provoca que se rechacen ofertas de empleo en las ciudades caras.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-09/comisiones-obreras-1500-euros-administracion-1qrt_4369759/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El exjefe de Sepi y un dirigente del PSOE, en el centro de un escándalo de empresas públicas",
+      "body": "Entre 2019 y 2022, Vicente Martínez y Leire Díez presuntamente presionaron a directivos de empresas públicas para conseguir negocios, bajo el paraguas político de la exvicepresidenta María Jesús Montero, según El Mundo. Algunos contratos se cerraron y otros se abortaron.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/06/09/6a26e6a721efa023568b45ad.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "EE. UU. bombardea Irán en represalia por el derribo de un helicóptero Apache",
+      "body": "EE. UU. ha lanzado ataques aéreos contra Irán en represalia por el derribo de un helicóptero Apache. Irán ha respondido atacando bases estadounidenses en Kuwait y Jordania, y las instalaciones de radar en Baréin.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/internacional/2026/06/09/6a2886e7e9cf4a07318b458a.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Los empleados de la Agencia Tributaria se van a la huelga en plena campaña de la Renta",
+      "body": "Los empleados de la Agencia Tributaria (AEAT) han hecho una huelga de 24 horas durante la campaña de la Renta, alegando incumplimientos de los convenios laborales. La agencia asegura que los servicios a los ciudadanos no se han visto afectados, según Heraldo.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/09/huelga-funcionarios-agencia-tributaria-zaragoza-renta-2027642.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "España eliminará los cupones precinto de papel en las farmacias",
+      "body": "El Ministerio de Sanidad ha aprobado un real decreto para sustituir el cupón precinto de papel por un sistema de verificación digital. Mónica García afirma que así se acaban «el cúter, las pegatinas y la burocracia» en las farmacias.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/adios-cuter-las-farmacias-sanidad-avanza-hacia-un-modelo-digital-para-eliminar-cupon-precinto-los-medicamentos_6981144_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "¿La crisis del alquiler te ha obligado a cambiar tu forma de vivir en España? Cuenta tu historia.",
+  "subject": "España en 30 segundos",
+  "lang": "es",
+  "date": "2026-06-10",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-06-10T05:32:54.346594+00:00"
+}

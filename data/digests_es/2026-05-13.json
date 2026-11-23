@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "El «paraíso de las herencias» de Mallorca: cómo los extranjeros ricos usan una ley medieval para evitar impuestos",
+      "body": "Mientras los residentes locales luchan con el disparado precio de la vivienda, las asesorías comercializan Mallorca entre extranjeros adinerados, sobre todo alemanes, como un refugio para minimizar los impuestos de sucesiones y donaciones. Promocionan la «definición sucesoria», una antigua norma del derecho civil balear que permite a los herederos recibir bienes por anticipado y eludir por completo el régimen general del impuesto de sucesiones de la comunidad.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/illes-balears/economia/paraiso-herencias-asesorias-venden-mallorca-extranjeros-pagar-impuestos_1_13201484.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "España limita los copagos de medicamentos: el gasto mensual en recetas ya tiene tope para rentas bajas y medias",
+      "body": "El Gobierno ha aprobado una reforma sanitaria que fija por primera vez topes mensuales de gasto en recetas. Quienes ganan menos de 9.000 euros al año pagarán como máximo 8,23 €, mientras que las rentas medias (hasta 35.000 €) tendrán topes mensuales de entre 18,52 € y 61,75 €. La medida busca evitar que los pacientes abandonen tratamientos de larga duración por su coste.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/gobierno-reforma-los-copagos-fija-maximos-mensuales-las-rentas-mas-bajas-no-gastaran-mas-8-euros-mes-farmacos_6969356_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Alerta alimentaria urgente: detectada listeria en un queso fresco de la marca Goya",
+      "body": "La Agencia Española de Seguridad Alimentaria y Nutrición (Aesan) advierte de que no se consuma el queso fresco de vaca «Queso Latino», de la marca Goya, por contaminación con Listeria monocytogenes. Los lotes afectados llevan los números 011056 y 021046, con fecha de caducidad del 30 y 31 de mayo de 2026; las autoridades recomiendan devolverlo a la tienda o desecharlo de inmediato.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/alerta-alimentaria-detectan-presencia-listeria-un-queso-fresco-vaca_6969601_0.html"
+        }
+      ],
+      "category": "health",
+      "important": true
+    },
+    {
+      "title": "600 € al mes para los propietarios que destinen sus viviendas vacías al alquiler social",
+      "body": "Una nueva medida del Plan Estatal de Vivienda 2026-2030 ofrece a los propietarios una ayuda mensual de 600 € por alquilar sus viviendas vacías mediante un programa de alquiler social o asequible durante siete años. La iniciativa busca aumentar la oferta de vivienda y proteger los inmuebles vacíos de la okupación o el deterioro.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/05/12/adios-vivienda-vacia-ayuda-600-euros-propietarios-como-solicitar-requisitos-2019169.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Desgravaciones clave para mayores de 65 años que presentan la declaración de la Renta",
+      "body": "Mientras la campaña de la Renta se extiende hasta el 30 de junio, los residentes mayores de 65 años deben revisar exenciones específicas del IRPF. Las ganancias por la venta de la vivienda habitual están totalmente exentas de tributación para este grupo de edad, y quienes tengan una única fuente de ingresos inferior a 22.000 € no están obligados a presentar declaración, aunque puede interesarles si les corresponde devolución.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/12/declaracion-renta-mayores-65anos-exenciones-rebajar-irpf-2016883.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "El Tesoro ofrece la mayor rentabilidad en deuda a corto plazo en más de un año",
+      "body": "El Tesoro Público colocó el martes 2.500 millones de euros en letras a 3 y 9 meses, y las rentabilidades alcanzaron sus niveles más altos en más de un año: el 2,163 % a 3 meses y el 2,521 % a 9 meses, lo que atrajo una fuerte demanda de inversores.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-12/el-tesoro-eleva-la-rentabilidad_4353730/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "España amplía la cuarentena por hantavirus y permitirá visitas a los pasajeros con resultado negativo",
+      "body": "La Comisión de Salud Pública ha actualizado el protocolo del brote de hantavirus: el «día cero» pasa al 10 de mayo, cuando desembarcaron los pasajeros, y la cuarentena de 42 días se extiende hasta el 21 de junio. El nuevo protocolo permite visitas a los pasajeros con prueba negativa, mientras que solo quienes fueron evacuados directamente del barco siguen aislados en el hospital Gómez Ulla.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/sanidad-amplia-cuarentena-hantavirus-permitira-visitas-negativo-partir-proxima-semana_1_13216139.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "El Supremo impide las plazas fijas automáticas para empleados públicos sin oposición",
+      "body": "El Tribunal Supremo ha dictaminado que los empleados del sector público en puestos temporales abusivos no pueden obtener automáticamente un contrato fijo si no han superado una oposición. El tribunal considera que hacerlo vulneraría los principios constitucionales de igualdad, mérito y acceso al empleo público.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/legal-00345/noticia-supremo-falla-abuso-temporalidad-solo-debe-convertirse-empleo-fijo-si-supera-oposicion-20260512112816.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El juez que criticó a la «España sindicalizada» en la sentencia de Glovo se libra de sanción",
+      "body": "El Consejo General del Poder Judicial (CGPJ) ha archivado las denuncias contra el juez Álvaro Lobato, que criticó a los inspectores de Trabajo en una sentencia sobre la plataforma de reparto Glovo. En su sentencia de julio de 2025, describió los testimonios de los inspectores como un eco de «la nostálgica España sindicalizada de ayer» con «anclajes biológicos y psicológicos», lo que provocó acusaciones de sesgo antisindical.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/judicial-descarta-sancionar-juez-critico-espana-sindicalizada-sentencia-caso-glovo_1_13212183.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El Supremo aplaza hasta el 22 de mayo la vista sobre la suspensión de la regularización de migrantes",
+      "body": "El Tribunal Supremo ha retrasado hasta el 22 de mayo la vista sobre si suspender temporalmente el decreto de regularización extraordinaria de migrantes indocumentados. El recurso para paralizar el proceso lo han presentado grupos de derecha y el Gobierno regional de Madrid, mientras que la defensa del Estado sostiene que una pausa perjudicaría a los migrantes afectados y al interés público.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/supremo-retrasa-22-mayo-vista-sobre-medidas-cautelares-contra-regularizacion-extraordinaria-migrantes_6969511_0.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    }
+  ],
+  "engagement": "Los extranjeros adinerados usan una ley medieval para eludir el impuesto de sucesiones en Mallorca mientras a los locales los expulsan del mercado. ¿Juego limpio o un abuso? 🏠💶",
+  "subject": "🇪🇸 España — 13.05.2026",
+  "lang": "es",
+  "date": "2026-05-13",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-13T05:33:06.209847+00:00"
+}

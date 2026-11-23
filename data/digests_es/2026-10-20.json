@@ -1,0 +1,171 @@
+{
+  "items": [
+    {
+      "title": "La tormenta Adam deja inundaciones mortales y confinamientos masivos",
+      "body": "La tormenta Adam ha dejado cuatro muertos y cientos de rescates. El 19 de octubre, las autoridades ordenaron a los vecinos de 145 municipios de las provincias de Valencia y Alicante que permanecieran en sus casas. Equipos militares de emergencia se sumaron a los rescates cuando las inundaciones desbordaron los servicios locales; también se vieron afectadas las carreteras y el suministro eléctrico en Baleares.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/noticia-adam-ceba-valenciana-muertos-deja-cortes-luz-carreteras-cortadas-baleares-20261019153410.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "El plan de pensiones de viudedad incluiría a más parejas de hecho",
+      "body": "El Gobierno prevé llevar el 20 de octubre al Consejo de Ministros un real decreto-ley sobre la pensión de viudedad. Incluiría a las parejas de hecho con hijos tras dos años de convivencia acreditada. Después, la Diputación Permanente tendría que validarlo.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-10-19/las-parejas-con-hijos-tendran-derecho-a-la-pension-de-viudedad-si-acreditan-dos-anos-de-convivencia.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La factura electrónica de Verifactu se aplaza a octubre de 2028",
+      "body": "Se ha anunciado un segundo aplazamiento de Verifactu, cuyo inicio pasa de enero de 2027 a octubre de 2028. El sistema obligaría a las empresas a enviar las facturas de inmediato a la Agencia Tributaria. El retraso da más tiempo a las empresas para comprar equipos y software, pero ha molestado a quienes ya invirtieron.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/20/entre-alivio-enfado-segunda-prorroga-facturas-verifactu-se-esta-premiando-defraudador-2060760.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Feijóo ofrece viviendas, pensiones y rebajas fiscales",
+      "body": "El líder del PP y candidato a la presidencia del Gobierno, Alberto Núñez Feijóo, ha firmado un compromiso electoral de 12 puntos de cara al 29 de noviembre. Sus promesas incluyen un millón de nuevas viviendas, subidas de pensiones, rebajas de impuestos y cambios en la política de inmigración. Son compromisos de campaña, no medidas en vigor.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-feijoo-da-palabra-cumplir-docena-promesas-vivienda-pensiones-inmigracion-no-voy-fallar-20261019125258.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Sánchez promete subidas anuales del salario mínimo si revalida el mandato",
+      "body": "El presidente del Gobierno, Pedro Sánchez, se ha comprometido a subir el SMI cada año que gobierne tras las elecciones del 29 de noviembre. También prometió cuatro años más de subidas de pensiones. Argumentó que los salarios más altos ayudarían a que el sistema público de pensiones siga siendo sostenible.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/sanchez-se-compromete-subir-salario-minimo-cada-ano-si-gobierna-pide-una-mayoria-mas-amplia-que-2023_7050735_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El juez confirma el levantamiento de las órdenes de detención de los líderes catalanes",
+      "body": "El magistrado del Supremo Pablo Llarena ha confirmado el levantamiento de las órdenes de detención contra el expresidente catalán Carles Puigdemont y dos antiguos consejeros autonómicos. Dijo que la doctrina del Tribunal Constitucional debe aplicarse, pese a su desacuerdo. La sala de lo penal del Supremo debe decidir sobre la amnistía de Puigdemont. La resolución todavía puede recurrirse.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/politica/20261020/11663030/llarena-comparte-criterio-tc-asume-definitivamente-amnistia.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La lista de espera de la ayuda a la dependencia llega a su mínimo histórico",
+      "body": "El Gobierno afirma que la lista de espera de las prestaciones de dependencia bajó un 22,7 % en un año, hasta 134.734 personas el 30 de septiembre. El recuento solo incluye a quienes llevan esperando más de seis meses. El tiempo medio de tramitación es 48 días menor que hace un año.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/lista-espera-dependencia-se-ha-reducido-casi-un-23-ultimo-ano-segun-gobierno_7050634_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "La patronal planea recurrir la huelga por la vivienda",
+      "body": "La patronal CEOE planea recurrir ante los tribunales la huelga general del 11 de noviembre, alegando que carece de motivación laboral. Su junta debatirá la medida el 21 de octubre. Los sindicatos registraron la huelga por la vivienda el 19 de octubre.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-10-19/los-sindicatos-registran-el-paro-por-la-vivienda-del-11-n-esta-huelga-general-es-de-la-calle.html"
+        },
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-10-19/ceoe-impugnara-la-huelga-general-del-11n_4448113/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Los costes de la vivienda empujan a 770.000 trabajadores a la pobreza",
+      "body": "Los costes de la vivienda empujan a 770.000 trabajadores a la pobreza, según Oxfam Intermón. Tras descontar el alquiler o la hipoteca de los ingresos, la tasa de pobreza de los trabajadores llega al 15,49 %, unos tres millones de trabajadores.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/vivienda/2026-10-20/el-coste-de-la-vivienda-empuja-a-770000-trabajadores-a-la-pobreza-segun-oxfam-intermon.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Una encuesta da al PP, Vox y UPN mayoría en el Senado, pero lejos de los 161 necesarios",
+      "body": "Una encuesta de Sigma Dos para El Mundo proyecta una mayoría en el Senado para PP, Vox y UPN tras el 29 de noviembre, pero al menos seis escaños por debajo de los 161 necesarios para nombrar magistrados del Constitucional. Si concurren por separado, el PP obtendría entre 125 y 130 escaños, y Vox entre 15 y 22. La mayoría absoluta requiere 134 escaños.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/encuestas/2026/10/19/6ad65700fc6c837b168b4590.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Un hombre nacionalizado por la ley de nietos pide votar el 29 de noviembre",
+      "body": "Un hombre nacionalizado por la ley de nietos ha pedido al Tribunal Constitucional que le permita votar el 29 de noviembre. Pretende sumarse al recurso del Defensor del Pueblo y revocar la suspensión del Supremo. El caso está pendiente y la suspensión sigue en vigor.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/elecciones-generales/2026-10-20/un-nacionalizado-por-la-ley-de-nietos-acude-al-constitucional-para-poder-votar-el-29-n.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Las marcas de coches alertan de un vacío en las ayudas al vehículo eléctrico",
+      "body": "Las marcas de coches advierten de que las elecciones podrían retrasar las ayudas a la compra de vehículos eléctricos a principios de 2027. El programa Auto+ vence el 31 de diciembre de 2026 y ha agotado el 71 % de sus fondos. El sector teme un vacío de incentivos durante el primer semestre de 2027.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://cincodias.elpais.com/companias/2026-10-20/las-marcas-de-coches-temen-un-nuevo-paron-en-las-ayudas-al-electrico-por-las-elecciones-ya-se-consumio-el-71-de-los-fondos.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Las ofertas de nómina de los bancos llevan compromisos largos",
+      "body": "Los bancos ofrecen hasta 750 € a los clientes que trasladen su nómina. Los periodos de permanencia van de 12 a 48 meses, y si se da de baja antes hay que devolver una parte proporcional de la bonificación. Muchas ofertas exigen además usar Bizum, domiciliar recibos o usar la tarjeta.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/empresas/banca/2026/10/20/6ad5f04b468aebea578b4595.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "¿Qué debería construir más España? A) Alquileres B) Viviendas de primera compra C) Ambas 💬",
+  "subject": "La actualización de España que de verdad necesitas",
+  "lang": "es",
+  "date": "2026-10-20",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-10-20T06:03:09.513881+00:00"
+}

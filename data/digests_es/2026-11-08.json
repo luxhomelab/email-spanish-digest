@@ -1,0 +1,159 @@
+{
+  "items": [
+    {
+      "title": "CCOO y UGT convocan una huelga general de 24 horas el 11 de noviembre",
+      "body": "CCOO y UGT han convocado una huelga general de 24 horas para el miércoles 11 de noviembre, tras la reclamación de un movimiento de inquilinos para actuar contra la crisis de vivienda. Las grandes fábricas y las cadenas de suministro podrían verse afectadas. Otros cuatro sindicatos representativos se niegan a sumarse y la consideran una huelga política.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/economia/20261108/11678819/espana-11-n-incognitas-huelga-general-inedita.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El cierre del tren Madrid-Andalucía encarece los viajes",
+      "body": "La alta velocidad entre Madrid y Andalucía sigue cerrada tras el accidente de Urda, que causó 69 muertos. Cada día se pierden unos 28.500 viajes ferroviarios. Las alternativas cuestan más: un billete de autobús Madrid-Sevilla cuesta 85 €, y un vuelo de Air Europa cuesta de media 125 €.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/11/08/transportes-viajar-por-espana-se-paga-caro-mapa-movilidad-se-reconfigura-tras-accidente-2066632.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La inflación y las hipotecas, un reto para el próximo Gobierno",
+      "body": "El próximo Gobierno heredará una inflación del IPC del 4,9 % y un Euríbor de octubre del 3,2 %, lo que mantiene la presión sobre los presupuestos familiares y las hipotecas. El conflicto y las amenazas a la navegación mantienen altos los precios energéticos. El empleo ha alcanzado un récord de 22,8 millones, pero los expertos prevén que el crecimiento se frene.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/negocios/2026-11-07/los-deberes-economicos-tras-el-29-n-vivienda-infraestructuras-presupuestos-y-pensiones-entre-los-mas-urgentes.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Feijóo se compromete a derogar los decretos de vivienda antes de las elecciones",
+      "body": "El candidato del PP, Alberto Núñez Feijóo, se comprometió a derogar los decretos de vivienda y dijo que una coalición con Vox «no depende de mí». Los decretos siguen en vigor a la espera de la convalidación parlamentaria. La vivienda, la seguridad ferroviaria y la corrupción dominan los mensajes de los partidos ante las elecciones del 29 de noviembre.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-11-08/alberto-nunez-feijoo-hacer-una-coalicion-de-gobierno-con-vox-no-depende-de-mi.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/sanchez-feijoo-muestran-sus-cartas_7058537_3.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El Hierro declara la emergencia social por las llegadas de migrantes",
+      "body": "El cabildo de El Hierro ha declarado la emergencia social porque las llegadas de migrantes saturan los servicios de acogida. Unas 4.000 personas han llegado a Canarias por mar hasta ahora en noviembre. El cabildo pide más personal y traslados más rápidos; el Gobierno central ha convocado una reunión para el 10 de noviembre.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-11-07/el-hierro-pide-mas-ayuda-al-estado-ante-la-llegada-de-mas-cayucos-a-canarias.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La Policía catalana detiene a 50 personas por contratos de trabajo falsos",
+      "body": "La Policía catalana ha detenido a 50 personas, entre ellas 43 empresarios, por una presunta red de contratos de trabajo falsos. Según los investigadores, cobraba a migrantes hasta 30.000 € a cambio de facilitarles la entrada o la residencia legal en España. El caso pone de manifiesto los riesgos de fraude en las solicitudes de residencia vinculadas al trabajo.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/50-detenidos-barcelona-43-empresarios-lucrarse-entrada-migrantes_1_13646835.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Una resolución del 7 de noviembre impulsa los incentivos para las bombas de calor",
+      "body": "Una resolución publicada el 7 de noviembre aumenta los incentivos por certificados de ahorro energético para cambiar calderas por bombas de calor. Los multiplicadores son x2 para viviendas unifamiliares, x2,5 para sistemas individuales en pisos, x3 para sistemas centrales y x4 para pasar de sistemas individuales a calefacción central. Los hogares vulnerables pueden obtener un 50 % adicional.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/gobierno-incentiva-cambio-calderas-por-bombas-calor-las-comunidades-propietarios_7058474_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Inquilinos de Barcelona ganan sentencias contra las licencias turísticas",
+      "body": "Dos sentencias de tribunales catalanes avalan la retirada de licencias turísticas de Barcelona en un edificio de 120 viviendas de alquiler. El tribunal consideró que las viviendas con contratos de alquiler vigentes no estaban disponibles de inmediato para turistas, como exige la ley. Las sentencias podrían proteger a otros inquilinos, aunque cabe todavía un recurso ante el Supremo.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/catalunya/2026-11-08/la-victoria-judicial-de-los-inquilinos-de-la-calle-tarragona-mi-casa-no-sera-un-piso-turistico.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La satisfacción con la sanidad pública baja pese a las esperas",
+      "body": "La satisfacción con el sistema sanitario público ha bajado a 6,19 sobre 10, medio punto menos que en 2018. En diciembre, 4.072.139 personas esperaban una cita con el especialista, con esperas medias de más de 102 días. La atención primaria recibe solo el 13-14 % del gasto sanitario público, frente al 25 % que reclaman sus profesionales.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/macroeconomia/2026/11/07/6aef0a5ae9cf4a4e038b45ab.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Un estudiante de Formación Profesional de Murcia gana el bronce en World Skills",
+      "body": "Juan García Ortiz, de 20 años y estudiante de Formación Profesional, ganó el bronce en moda en World Skills, en Shanghái, con 729 puntos; es la única medalla de España en esta edición. Su antiguo centro en Lorca tiene ahora lista de espera. Murcia ha ampliado un 45 % las plazas de FP y lidera España en inserción laboral en FP de grado medio.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/11/08/6ac77cf2fdddfff5068b45bc.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Los compradores de pisos responden de las deudas pasadas de comunidad",
+      "body": "Según la ley vigente, una vivienda adquirida responde de las cuotas de comunidad impagadas del año en curso y de los tres años naturales anteriores. Los compradores deben obtener el certificado de deuda de la comunidad antes de firmar. Las derramas extraordinarias corresponden a quien sea propietario cuando se pague, por lo que también conviene revisar las actas de las juntas.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/11/08/si-compras-piso-respondes-deudas-comunidad-ultimos-anos-ley-propiedad-horizontal-2059698.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Consumo abre un expediente a una empresa de autobuses por cobrar gastos de gestión ocultos",
+      "body": "El Ministerio de Consumo ha abierto un procedimiento sancionador contra una empresa de autobuses por presuntos gastos de reserva ocultos y condiciones abusivas de devolución. Según Consumo, los gastos de gestión solo aparecen en la última fase de la reserva. La multa podría llegar a 1 millón de euros o entre seis y ocho veces el beneficio ilícito.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/consumo-abre-expediente-empresa-autobuses-practicas-enganosas-precio-clausulas-abusivas_1_13646041.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "¿Puedes teletrabajar si los desplazamientos se complican? A) Sí B) No 💬",
+  "subject": "España hoy. Brevemente.",
+  "lang": "es",
+  "date": "2026-11-08",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-11-08T07:02:22.427310+00:00"
+}

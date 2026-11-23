@@ -1,0 +1,115 @@
+{
+  "items": [
+    {
+      "title": "No se paga IRPF por heredar una vivienda, según un experto",
+      "body": "Heredar un inmueble en España no genera IRPF, porque supondría una doble tributación, explica el abogado fiscalista David Jiménez. Solo se aplica el impuesto de sucesiones, cuyo importe varía según la comunidad autónoma.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-26/david-jimenez-bienes-adquiridos-herencia-no-tributan-irpf-doble-tributacion_4361351/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Un informe policial acusa a las hijas de Zapatero de participar en la red de tráfico de influencias",
+      "body": "Un informe de la UDEF señala que la empresa de las hijas del expresidente Zapatero, Whathefav, no aportaba «ningún valor técnico» y servía para canalizar pagos de dos empresas vinculadas a Venezuela por más de 800.000 €. Según el informe, la empresa solo daba formato a los informes y los enviaba a los clientes que le proporcionaba Zapatero.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/sumario-caso-zapatero-atribuye-hijas-presidente-puesto-clave-red-trafico-influencias_1_13249498.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El petróleo cae un 6 % por las esperanzas de paz mientras la guerra añade 6.200 millones al gasto en pensiones",
+      "body": "El Brent bajó casi un 6 %, hasta 97 dólares, ante señales de un posible acuerdo de paz entre EE. UU. e Irán, lo que alivia los precios de los carburantes. Mientras, el Gobierno estudia prorrogar su escudo económico contra la guerra, ya que el conflicto eleva la inflación al 3,1 % y, según las previsiones, aumentará el gasto anual en pensiones en 6.200 millones de euros, hasta una pensión media de jubilación de 1.630 €.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/petroleo-cae-6-97-dolares-posible-acuerdo-paz-eeuu-e-iran_1_13247104.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/gobierno-se-reunira-con-los-agentes-sociales-para-decidir-si-amplia-modifica-las-medidas-contra-guerra_6974845_0.html"
+        },
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/05/26/6a144097e85ece14148b4593.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La reducción de ratios escolares beneficiará más a los colegios ricos que a los pobres",
+      "body": "Un proyecto del Gobierno para reducir el número de alumnos por aula y las horas de los docentes tiene un coste estimado de 2.800 millones de euros anuales, pero destinará más fondos a los colegios de zonas ricas, según un informe de EsadeEcPol. La ley, pendiente de la aprobación del Congreso, podría ampliar la desigualdad educativa.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/proyecto-bajar-ratios-tramita-gobierno-destinara-fondos-colegios-ricos-pobres_1_13248594.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Crece la presión para que Sánchez convoque elecciones anticipadas en plena ola de escándalos de corrupción",
+      "body": "El PP, el PNV, CC y el expresidente Felipe González se suman a quienes piden a Pedro Sánchez que adelante las elecciones generales, alegando varias investigaciones por corrupción que afectan a su Gobierno, entre ellas el «caso Zapatero» y el «caso de las mascarillas».",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-aumentan-voces-pidiendo-sanchez-adelante-elecciones-pp-pnv-cc-felipe-gonzalez-garcia-page-20260525183104.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Sánchez presenta un plan social para el clima de 9.000 millones, con 4.700 millones para vivienda",
+      "body": "El Plan Social para el Clima, ahora en consulta pública, destina 4.700 millones de euros a ayudar a los hogares vulnerables con la rehabilitación de viviendas eficientes energéticamente, y 4.300 millones a descarbonizar la movilidad. El objetivo es reducir las facturas energéticas y las emisiones.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/sanchez-lanza-plan-social-clima-9-000-millones-4-700-rehabilitar-vivienda_1_13248052.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El «puente RETA» para los mutualistas se atasca en el Congreso por el riesgo para otros autónomos",
+      "body": "La reforma que permite a algunos profesionales pasar de las mutualidades privadas al RETA (Régimen Especial de Trabajadores Autónomos) se ha vuelto a aplazar. ATA advierte de que debe ser neutral económicamente para no perjudicar a los autónomos actuales.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-25/pasarela-reta-mutualistas-autonomos-pensiones-1hms-1svm_4361146/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Nuevo caso positivo de hantavirus entre los aislados, sin síntomas",
+      "body": "Otro contacto en cuarentena en el hospital Gómez Ulla ha dado positivo en hantavirus tras el brote del crucero Hondius. El paciente no tiene síntomas y ha sido trasladado a una unidad de aislamiento de alto nivel.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.infosalus.com/asistencia/noticia-nuevo-positivo-hantavirus-personas-aisladas-hospital-gomez-ulla-mantiene-asintomatico-20260525195530.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "¿Sabías que heredar una vivienda en España no tributa por el IRPF? Cuenta tu experiencia con el impuesto de sucesiones aquí 💬",
+  "subject": "🇪🇸 España: ¿qué pasa? 🤔 26.05.2026",
+  "lang": "es",
+  "date": "2026-05-26",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-26T05:31:52.482368+00:00"
+}

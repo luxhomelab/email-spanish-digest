@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "title": "La factura de la luz se dispara un 28 % al terminar la rebaja del IVA; Díaz exige un decreto urgente",
+      "body": "Las familias sufren un doble golpe: el precio de la luz subió un 27,8 % en mayo y la rebaja del IVA ha expirado, lo que restablece el 21 %. La vicepresidenta Yolanda Díaz exige un decreto urgente para recuperar las rebajas fiscales de la energía y congelar los alquileres, aunque el Gobierno carecía antes de apoyo parlamentario para medidas similares. El Gobierno empezó a retirar las ayudas tras el IPC de abril, que llegó al 3,2 %.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/02/energia-las-familias-afrontan-un-doble-golpe-factura-luz-dispararse-su-precio-un-28-decaer-rebaja-iva-2025366.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/yolanda-diaz-exige-un-decreto-urgente-para-recuperar-rebaja-fiscal-luz-gas-congelacion-los-alquileres_6977566_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El petróleo se dispara cuando Irán suspende las negociaciones con EE. UU.",
+      "body": "El Brent subió más de un 4,5 %, hasta casi 95 dólares el barril, después de que Irán interrumpiera las conversaciones con Estados Unidos tras los ataques israelíes en el Líbano. Aunque Trump anunció un alto el fuego en el Líbano, la volatilidad sigue siendo alta y persisten los riesgos para el transporte de energía por el estrecho de Ormuz.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/mercados-y-bolsa/petroleo-dispara-suspension-negociaciones-iran-eeuu_6977749_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La UE impulsa centros de deportación al estilo de Meloni y España queda aislada",
+      "body": "La UE ha dado un paso importante para crear centros de retorno de migrantes en terceros países, inspirados en el modelo de la primera ministra italiana, Giorgia Meloni. España es el único Estado miembro que se opone a la medida, lo que la deja aislada en la política migratoria europea.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/internacional/2026/06/01/6a1de38221efa004378b45b3.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "La huelga de docentes se intensifica al comenzar la PAU en Valencia",
+      "body": "La huelga indefinida de docentes de la Comunitat Valenciana entra en su cuarta semana, y el presidente autonómico acusa a los sindicatos de alentar «actos vandálicos». El conflicto llega justo cuando los estudiantes se preparan para la PAU (pruebas de acceso a la universidad), que la Consejería de Educación ha garantizado que se celebrarán.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/comunidad-valenciana/2026/06/02/6a1dd205e4d4d84e558b45b0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Los médicos amenazan con una quinta huelga del año por las negociaciones estancadas",
+      "body": "Los sindicatos médicos denuncian la «nula capacidad» del Ministerio de Sanidad para resolver el conflicto por la reforma del Estatuto Marco. Se ha convocado una quinta huelga de médicos del 15 al 19 de junio, tras una última reunión sin propuestas concretas.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/los-sindicatos-medicos-denuncian-nula-capacidad-sanidad-para-desbloquear-conflicto-evitar-quinta-huelga-ano_6977768_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Feijóo pide a la élite empresarial catalana que apoye una moción de censura",
+      "body": "El líder del PP, Alberto Núñez Feijóo, dirá al influyente Cercle d'Economia que Cataluña «no puede aceptar esta situación de bloqueo» y pedirá una moción de censura instrumental para echar a Sánchez y provocar elecciones anticipadas. El PP quiere presionar a Junts y al PNV a través de los líderes empresariales.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/06/01/6a1dbda4fc6c8390668b4586.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "SAIC (MG) elige España para su primera fábrica de coches en Europa",
+      "body": "SAIC (MG) ha elegido España para su primera fábrica de coches en Europa, sumándose a Chery, Leapmotor y CATL en la oleada de inversiones chinas en vehículos eléctricos y baterías. Sin embargo, el Gobierno casi ha perdido la pugna por una tercera planta de BYD en Europa.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/motor/2026/06/02/6a1daaf521efa084728b4598.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La Agencia Tributaria devuelve 5.710 millones a 8,3 millones de contribuyentes",
+      "body": "En los dos primeros meses de la campaña del IRPF de 2025, la Agencia Tributaria ha devuelto 5.710 millones de euros a 8,28 millones de contribuyentes, lo que representa el 61 % de los importes reclamados. El servicio de cita presencial para presentar la declaración comenzó el lunes.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/agencia-tributaria-devuelve-5-710-millones-que-va-campana-renta-8-3-millones-contribuyentes_6977750_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Boris Vujčić sustituye a De Guindos como vicepresidente del BCE",
+      "body": "El economista croata Boris Vujčić ha tomado posesión como vicepresidente del BCE por un mandato no renovable de ocho años, en sustitución del español Luis de Guindos. Su nombramiento llega en medio del debate sobre subir los tipos de interés desde el 2 % para combatir la inflación derivada de la guerra de Irán.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/nuevo-vicepresidente-bce_6977549_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "La luz ha subido un 28 % y se acabó la rebaja del IVA. ¿Cómo está afectando esto al presupuesto de tu hogar?",
+  "subject": "🇪🇸 España: resumen diario 📋 02.06.2026",
+  "lang": "es",
+  "date": "2026-06-02",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-06-02T05:32:13.544527+00:00"
+}

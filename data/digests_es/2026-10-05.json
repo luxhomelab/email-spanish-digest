@@ -1,0 +1,167 @@
+{
+  "items": [
+    {
+      "title": "Elecciones anticipadas y rescate del decreto de vivienda en marcha",
+      "body": "El Gobierno prepara la convocatoria de elecciones generales anticipadas y la reactivación de los decretos de vivienda que la derecha tumbó en el Congreso el viernes. El anuncio podría llegar en las próximas horas, posiblemente el lunes por la mañana. El giro político sigue al desahucio de una mujer de 87 años y a las movilizaciones impulsadas por el Sindicato de Inquilinas.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/moncloa-prepara-adelanto-electoral-rescate-decretos-vivienda-tumbo-derecha_1_13561276.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Los precios de la vivienda tocan récord mientras el alquiler social se queda atrás",
+      "body": "El precio de la vivienda equivale ya a 8,4 años de ingresos familiares completos, el nivel más alto desde 2011 y cerca de los niveles de la burbuja de 2005. Las familias destinan el 38 % de sus ingresos a la hipoteca, por encima del umbral recomendado. Los precios han subido un 52,6 % desde 2021 y un 12,2 % el último año, mientras la construcción va por detrás de la formación de nuevos hogares.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/como-hemos-llegado-hasta-aqui-vivienda-precios-record-construccion-estancada-cola-europa-alquiler-social_7044234_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Los bancos prevén menos hipotecas y más caras con la subida del Euríbor",
+      "body": "Los grandes bancos españoles prevén una desaceleración de la demanda de hipotecas y un crédito más caro a medida que sube el Euríbor y el BCE podría subir aún más los tipos. Gonzalo Gortázar, de CaixaBank, afirmó que el mercado se acerca a un problema de accesibilidad, ya que muchos compradores no pueden pagar los precios actuales. Los datos de hipotecas ya apuntan a un crecimiento más lento.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/10/04/6abf5d7ce85ece7d488b459f.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Dos tercios de la riqueza de los hogares españoles son inmobiliarios",
+      "body": "El inmobiliario supone el 67 % de la riqueza de los hogares españoles, por encima del 63 % de media de la eurozona. De los 8,4 billones de riqueza neta de los hogares, 5,6 billones están en vivienda, suelo, oficinas, locales comerciales y fincas agrícolas, con 288.420 € por hogar. Cerca del 92 % de los propietarios son personas físicas.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/elefante-habitacion-vivienda-dos-tercios-riqueza-espana-es-inmobiliaria-92-los-caseros-son-particulares_7044313_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La Tarjeta Monedero ofrece hasta 220 € al mes para alimentación",
+      "body": "Las familias vulnerables con menores pueden recibir entre 100 y 220 € al mes en una tarjeta monedero prepago para alimentos frescos y productos de higiene. Un hogar con un adulto y un menor recibe 100 €; las familias de cinco o más miembros reciben 220 €. Para solicitarla hay que tener ingresos inferiores al 200 % del IPREM y al menos un menor en el hogar.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/hasta-220-euros-mes-alimentos-solicita-tarjeta-monedero-familias-hijos_7039206_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los despidos sin indemnización se disparan a 3,2 millones tras la reforma laboral",
+      "body": "Desde que entró en vigor la reforma laboral, 3,2 millones de trabajadores han sido despedidos sin indemnización y sin que la empresa esté obligada a justificar el despido. Es una de las lagunas que deja la norma que reformó la contratación limitando la temporalidad. El Gobierno dice que pretende frenar esta práctica.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/05/despidos-sin-indemnizar-ni-justificar-se-disparan-tras-reforma-laboral-suman-casi-3-millones-2057010.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "La Policía completa el desalojo del campamento de Ceuta con 1.100 traslados",
+      "body": "La Policía Nacional completó el desalojo del campamento de la playa del Trampolín, en Ceuta, con el traslado de más de 1.100 migrantes sin incidentes graves. Muchos optaron por el retorno voluntario a Marruecos, mientras otros fueron registrados en el centro temporal CATE. Las autoridades calculan que más de 3.500 personas vivían en el asentamiento.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/noticia-policia-nacional-culmina-operativo-trampolin-ceuta-1100-migrantes-desalojados-20261004232450.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Blackstone gana un contrato de gestión de vivienda pública por 52,45 millones",
+      "body": "Blackstone, el fondo inmobiliario que cargos del Gobierno han criticado como fondo buitre, ha obtenido un contrato de gestión de vivienda pública por 52,45 millones de euros. Su filial Aliseda gestionará las viviendas sociales y de alquiler de la Sareb desde el mes pasado hasta diciembre de 2028, prorrogable hasta 2030. El fondo gestiona más de 30.000 pisos en España.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/10/05/6ac2307be85ecee2298b457d.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La CNMC se acerca a las primeras multas por el apagón, con una ley que favorece a Red Eléctrica",
+      "body": "La CNMC ultima sus primeras sanciones por el apagón ibérico del 28 de abril de 2025, con el objetivo de cerrar unos 50 expedientes antes de marzo. El caso contra Red Eléctrica se ha dejado para el final, y una interpretación flexible podría dejarla como la menos castigada. Las multas por infracciones muy graves van de 6 a 60 millones de euros.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/10/05/6ac22c2b21efa0d9188b45a0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Casi 100.000 jubilados anticipados reciben un complemento de pensión",
+      "body": "Unos 95.499 jubilados anticipados con más de 40 años cotizados reciben un complemento de la Seguridad Social para corregir las penalizaciones pasadas en sus pensiones. Se aplica a las jubilaciones anticipadas entre 2002 y 2021, con al menos 44 años y seis meses cotizados. El complemento es la diferencia y se paga en 14 pagas al año.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/jubilacion-anticipada-cerca-100-000-beneficiarios-con-mas-40-anos-cotizados-reciben-un-plus-su-pension_7044594_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los partidos de Sumar lanzarán la candidatura del Frente Amplio el 17 de octubre",
+      "body": "Los partidos de Sumar lanzarán oficialmente su candidatura a las elecciones generales y su marca de coalición, Frente Amplio, el 17 de octubre. El acto se celebrará aunque se convoquen elecciones anticipadas. El paso fija la identidad electoral de la coalición de izquierdas para la próxima campaña.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-partidos-sumar-lanzaran-17-octubre-candidatura-generales-cabeza-lista-20261004152810.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Una tormenta de características tropicales deja dos muertos y un desaparecido en Cataluña",
+      "body": "Una tormenta con características tropicales azotó Cataluña el sábado por la noche, dejando dos muertos y un desaparecido, con lluvias récord e inundaciones. Los bomberos atendieron 2.055 incidencias y rescataron a 205 personas atrapadas en casas, vehículos y ascensores. Las restricciones de movilidad siguieron vigentes en el Alt Empordà y el Baix Empordà hasta el domingo por la noche.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/sociedad/2026/10/04/insolito-temporal-tropical-cataluna-causa-dos-muertos-deja-records-lluvia-2056977.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Un dibujo a tiza identificado como obra perdida de Édouard Manet",
+      "body": "Un pequeño boceto a la sanguina de un niño agachado, hallado en una colección privada italiana, ha sido atribuido a Édouard Manet y relacionado con su obra El viejo músico. Los investigadores señalan transiciones bruscas de luz y sombra y unos dedos característicos. El dibujo podría haberse realizado en la década de 1860.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/spin/identifican-dibujo-tiza-nino-obra-perdida-pintor-frances-edouard-manet-pm_1_13554181.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "España podría convocar elecciones generales anticipadas. ¿Cambiaría eso tus planes como residente extranjero? A) Sí B) No C) No estoy seguro 👇",
+  "subject": "Aquí tienes España hoy, en menos de un minuto",
+  "lang": "es",
+  "date": "2026-10-05",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-10-05T06:03:25.551315+00:00"
+}

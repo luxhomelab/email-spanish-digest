@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "Italia empieza los controles aleatorios a los viajeros procedentes de España",
+      "body": "Italia ha iniciado controles aleatorios de documentos en aeropuertos y puertos a los pasajeros que llegan desde España, tras suspender temporalmente el acuerdo de Schengen. La medida, motivada por la crisis migratoria de Ceuta, afecta a viajeros de la UE y de fuera de ella. La policía verifica documentos de identidad o pasaportes, y solo se hacen comprobaciones adicionales en caso de anomalías. Quien viaje de España a Italia debe llevar identificación válida.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/08/01/italia-comienza-los-controles-viajeros-espana-tras-suspender-acuerdo-schengen-que-se-necesita-para-entrar-pais-2041766.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "La crisis migratoria de Ceuta: 49.000 personas cruzan la frontera y 67 muertos",
+      "body": "Casi 49.000 personas entraron en la ciudad autónoma de Ceuta los días 30 y 31 de julio, desbordando a las fuerzas de seguridad y el centro de acogida. La Guardia Civil ha recuperado 67 cadáveres en la costa, y 99 migrantes han muerto este año intentando el cruce. Los ministros de Interior de la UE se reunirán por videoconferencia el martes, tras la petición urgente de Pedro Sánchez y de representantes de otros 22 Estados miembros. El Rey Felipe VI expresó su «gran preocupación e indignación» y pidió garantías de seguridad y medidas para evitar episodios similares.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-08-01/ceuta-claves-de-una-crisis-sin-precedentes_4399102/"
+        },
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/08/01/ascienden-cadaveres-migrantes-recuperados-costa-ceuta-2041674.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/internacional/noticia-ministros-interior-ue-reuniran-martes-abordar-crisis-migratoria-ceuta-20260801181240.html"
+        },
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-08-01/crisis-migratoria-ceuta-melilla-1tps_4399558/"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Las letras del Tesoro suben de rentabilidad y reavivan el interés de los inversores",
+      "body": "Las letras del Tesoro a corto plazo han subido de rentabilidad, y la de nueve meses llegó al 2,63 % en julio, la más alta desde noviembre de 2024. La subida de tipos del BCE de 25 puntos básicos en junio y las expectativas de nuevas subidas tras el verano impulsan la demanda de letras del Tesoro. Los ahorradores tenían 20.331 millones de euros en letras del Tesoro en mayo, señal de un renovado apetito. Quien tenga dinero en letras puede beneficiarse de las mejores rentabilidades.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/mercados-y-bolsa/interes-renovado-letras-tesoro-impulso-rentabilidad_7020965_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Retrasar la jubilación cuatro meses podría añadir 200 € al mes a la pensión",
+      "body": "Según un alto funcionario de la Seguridad Social, Alfonso Muñoz, los trabajadores que planean jubilarse anticipadamente pueden reducir mucho las penalizaciones con solo cuatro meses más de trabajo. El coeficiente de penalización puede bajar casi a la mitad, lo que supone unos 200 € más al mes para quien tiene una pensión base de 2.000 €. Las penalizaciones por jubilación anticipada van desde el 21 % por adelantar 24 meses con pocas cotizaciones hasta el 2,81 % por adelantar un mes con muchas. El consejo puede suponer miles de euros más de pensión a lo largo de la vida.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/alfonso-munoz-funcionario-seguridad-social-esperar-meses-pedir-jubilacion-anticipada-aumenta-pension-euros_7021572_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Un edificio de Lavapiés con 19 alquileres pasará a pisos turísticos con el Plan Reside",
+      "body": "El fondo de inversión Urbanitae planea comprar un edificio residencial del barrio madrileño de Lavapiés y convertir sus 19 viviendas en alojamientos turísticos a través del Plan Reside del Ayuntamiento. Los críticos dicen que el plan alimenta la especulación y desplaza a los vecinos de larga duración, y Más Madrid pide al alcalde Almeida que derogue la medida. Solo queda un inquilino con contrato antiguo en el edificio. La conversión pone de relieve la preocupación por la reducción de la oferta de alquiler en el centro de Madrid.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/madrid/somos/lavapies/lavapies-50-caso-explica-plan-reside-almeida-transforma-pisos-turisticos-19-viviendas-alquiler_1_13410404.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Economista: el subempleo, no los contratos cortos, es la nueva precariedad de España",
+      "body": "España tiene 1.668.800 subempleados, trabajadores que quieren más horas y no las consiguen, según el economista Marc Vidal. Señala que la precariedad se ha trasladado de los contratos temporales a las jornadas reducidas de los indefinidos, y que casi el 78 % del crecimiento del PIB procede de trabajar más horas y no de una mayor productividad. La tendencia apunta a una caída de la productividad por trabajador, aunque la productividad por hora suba. Los trabajadores en España deben tener en cuenta que el subempleo puede afectar a la estabilidad de sus ingresos.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/marc-vidal-inversor-antes-trabajo-precario-porque-contrato-duraba-meses-ahora-empleado-tiene-menos-horas-indefinido_7021532_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "La ley de inteligencia artificial de la UE entra en vigor con multas de hasta 35 millones",
+      "body": "La Ley de Inteligencia Artificial de la UE, la primera ley integral del mundo sobre inteligencia artificial, entró en vigor el domingo. Prohíbe prácticas como la manipulación subliminal y la puntuación social, e impone reglas escalonadas hasta 2028. Las infracciones más graves pueden acarrear multas de hasta 35 millones de euros, incluida la categorización biométrica basada en raza o religión. La norma también aborda los deepfakes sexuales y la pornografía infantil. Las personas en España tendrán más protección frente a usos perjudiciales de la IA en el empleo y en la vida diaria.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/tecnologia/deepfakes-sexuales-pornografia-infantil-filtrar-curriculos-cambia-no-ue-domingo-ia_1_13421612.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Expertos exigen un pacto de Estado contra los incendios y critican el gasto en prevención",
+      "body": "Científicos e ingenieros piden a los partidos políticos españoles un acuerdo de Estado contra los incendios, y sostienen que la financiación actual se inclina demasiado hacia la extinción frente a la gestión forestal. Dicen que el pacto no es una cuestión de izquierda o derecha y que es esencial para el futuro del país. Gobierno y oposición siguen enfrentados por el nombre del acuerdo. La presión llega cuando el riesgo de incendio sigue alto en muchas zonas rurales.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/08/02/6a6dad9ee4d4d882378b4595.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El eclipse dispara las prohibiciones de raves y de excursiones de montaña por riesgo de incendio",
+      "body": "Autoridades centrales y regionales prohíben fiestas rave, acampadas y excursiones por montaña en zonas de riesgo de incendio alrededor del eclipse, porque se esperan grandes concentraciones en zonas rurales y forestales. Es un periodo normalmente de alto riesgo de incendios, y las autoridades temen que se incumpla la norma por el «postureo» en redes sociales. Quien planee actividades al aire libre debe consultar las restricciones locales.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/prohibidas-raves-acampadas-andar-por-monte-preocupacion-por-eclipse-lleva-extremar-precauciones-contra-los-incendios_7021236_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "¿Seguirías alquilando en Madrid sabiendo que tu edificio podría convertirse en pisos turísticos? 🤔",
+  "subject": "Nada en España hoy. Salvo esto.",
+  "lang": "es",
+  "date": "2026-08-02",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-08-02T08:05:14.984625+00:00"
+}

@@ -1,0 +1,191 @@
+{
+  "items": [
+    {
+      "title": "Los disturbios de Barcelona alimentan las tensiones antes de las elecciones",
+      "body": "Los disturbios de Barcelona del 24 de octubre dejaron 128 detenidos y 23 comercios saqueados. Los altercados han alimentado acusaciones sin fundamento entre partidos ante las elecciones generales del 29 de noviembre. Grupos en redes sociales convocan nuevas concentraciones el 31 de octubre.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-10-26/disturbios-barcelona-envena-campana-electoral_4452600/"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El BCE mantendría los tipos en medio de la turbulencia francesa",
+      "body": "Los economistas esperan que el Banco Central Europeo mantenga su tipo de referencia en el 2,5 % en su reunión de la semana del 26 de octubre. La turbulencia de la deuda francesa ha endurecido las condiciones financieras y enfría la demanda. El bono francés a 10 años ha subido al 5 %, un nivel no visto desde que nació el euro en 2002.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/fed-bce-pausa-tipos-diciembre_7052629_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los precios de los alimentos suben más que los salarios en España",
+      "body": "Los precios de los alimentos han subido un 31,8 % desde diciembre de 2021, frente al 20,7 % de crecimiento del salario bruto por empleado. Esa brecha explica por qué la compra sigue tensando los presupuestos de los hogares, incluso cuando la inflación alimentaria se modera. La subida interanual de los alimentos en septiembre fue del 2,7 %, por debajo de la inflación general del 4,9 %.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/los-precios-super-suben-un-54-mas-que-los-salarios-desde-2021-por-que-se-siente-que-hacer-compra-es-tan-caro_7052575_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Las cláusulas de revisión salarial por inflación cubren a 3,64 millones de trabajadores",
+      "body": "Las cláusulas de garantía salarial cubren a 3,64 millones de empleados, el 19 % de los trabajadores afiliados a la Seguridad Social. Estas cláusulas dan pagos adicionales cuando suben los precios; 1,3 millones de trabajadores tienen protección retroactiva. El encarecimiento de la energía y los carburantes también eleva los costes de las empresas.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/economia/politica/2026/10/25/3-6-millones-trabajadores-blindado-sueldo-escalada-ipc.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Brookfield busca compradores para 1.550 viviendas de alquiler en Madrid",
+      "body": "Brookfield intenta vender unas 1.550 viviendas de alquiler en Madrid que compró a Blackstone en abril. Los expertos dudan de que la operación se cierre por la incertidumbre sobre las normas posteriores a las elecciones. El Gobierno llevará el llamado «decreto Maricarmen» a la Diputación Permanente del Congreso.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://cincodias.elpais.com/companias/2026-10-26/el-fondo-brookfield-busca-vender-1550-casas-de-alquiler-con-la-duda-del-impacto-del-29-n.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Las huelgas de médicos se extienden desde el 28 de octubre",
+      "body": "Los sindicatos anularon la huelga nacional de médicos prevista para el 30 de octubre tras la convocatoria electoral, que provocó la caída del controvertido estatuto de personal sanitario. Las huelgas autonómicas continúan: Canarias empezó primero; Madrid, Cataluña y la Comunitat Valenciana se suman el 28 de octubre, y Andalucía en noviembre. Las cinco comunidades suman el 64 % de la población de España.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/sociedad/2026-10-26/los-sindicatos-medicos-mantienen-paros-en-cinco-comunidades-autonomas-tras-desconvocar-la-huelga-general-en-toda-espana.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "La carrera de Valencia deja dos récords españoles de media maratón",
+      "body": "Rodrigue Kwizera, nacido en Burundi, estableció un récord nacional de media maratón con 58:03 en Valencia. No puede contar como récord europeo porque aún no ha recibido el documento de World Athletics que necesita para competir como español. Laura Luengo también logró un récord español.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/deportes/2026-10-25/valencia-pone-en-orbita-a-rodrigue-kwizera-que-pulveriza-el-record-de-espana-de-medio-maraton.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Un autobús cae en el Montseny y deja siete heridos graves",
+      "body": "Siete personas resultaron heridas de gravedad cuando un autobús cayó por un terraplén de 20 metros en Fogars de Montclús el 25 de octubre. Los bomberos buscaron durante la noche a posibles desaparecidos. La BV-5114 está cortada entre los puntos kilométricos 3 y 25, de Fogars de Montclús a Arbúcies.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/catalunya/noticia-pane-eleva-heridos-graves-accidente-autobus-fogars-montclus-barcelona-20261025211734.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Los tribunales de Madrid rechazan prohibir el coliving a los vecinos",
+      "body": "Dos sentencias firmes de tribunales madrileños concluyeron que la prohibición de pisos turísticos de un edificio no abarcaba el alquiler de habitaciones en coliving. Los vecinos no lograron probar ruidos ni molestias. Los jueces afirmaron que prohibir este tipo de alquiler exigiría un cambio unánime en los estatutos de la comunidad.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/comunidad-vecinos-fracasa-cerrar-coliving-tribunales_1_13587223.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Las gestoras de pensiones piden la afiliación automática en los planes de empleo",
+      "body": "Las gestoras de fondos de pensiones y las aseguradoras piden la inscripción automática en los planes de pensiones de empleo antes de las elecciones del 29 de noviembre. Sigue siendo una propuesta del sector, no una nueva obligación para los trabajadores. El acuerdo político y social sigue lejos.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/mercados/2026/10/25/6ade81c0468aeb067f8b4583.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La Fiscalía pide imputar a Zapatero por malversación con las joyas",
+      "body": "La Fiscalía quiere imputar al expresidente del Gobierno José Luis Rodríguez Zapatero por malversación, por unas joyas no declaradas valoradas inicialmente en 1,3 millones de euros. Su lista oficial de casi 500 regalos no incluía joyas. El juez instructor pidió el 23 de octubre un registro certificado.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/zapatero-no-incluyo-ninguna-joya-entre-los-cerca-500-regalos-que-declaro-dejar-moncloa_7053092_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Los mayores de 45 años suman más de 1,1 millones de despidos",
+      "body": "Los trabajadores mayores protagonizaron más de 1,1 millones de extinciones de contrato en cinco años, y el 56 % afectó a personas de 45 a 54 años. El artículo señala que las empresas recortan costes despidiendo a plantilla de más edad y mejor pagada, y usan los despidos para rejuvenecer sus plantillas.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/26/los-despidos-golpean-los-trabajadores-senior-superan-millon-un-lustro-2062743.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Muere José Luis García Sánchez, cineasta, a los 85 años",
+      "body": "El cineasta José Luis García Sánchez murió en Madrid el 25 de octubre, a los 85 años, según confirmó la Academia de Cine. Su carrera de casi 60 años incluye dos Goya al mejor guion y el Oso de Oro de Berlín por Las truchas.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/cultura/muere-director-cine-jose-luis-garcia-sanchez-ganador-premios-goya-oso-oro-berlin_1_13613161.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Las propinas de hostelería cuentan como rendimiento del trabajo",
+      "body": "Según la ley del IRPF, los trabajadores de hostelería deben declarar las propinas como ingresos. Los empresarios que reparten propinas compartidas deben practicar retención; si controlan el reparto, las propinas computan también para la cotización a la Seguridad Social. Las propinas no afectan al IVA.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/26/hacienda-obliga-tributar-propinas-hosteleria-como-afectan-irpf-cuando-cotizan-seguridad-social-2062122.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Una app gratuita avisa de huecos para citas de extranjería",
+      "body": "La aplicación Extranjería App envía alertas gratuitas en Android e iPhone cuando se abren citas de extranjería en las provincias españolas. Puede ayudar con la renovación del NIE o de la TIE y otros trámites. Los usuarios deben reservar la cita en el servicio oficial tras recibir la alerta.",
+      "sources": [
+        {
+          "name": "Cinco Días",
+          "url": "https://cincodias.elpais.com/smartlife/smartphones/2026-10-25/si-necesitas-renovar-el-nie-o-la-tie-esta-app-te-puede-ahorrar-horas-buscando-cita-en-extranjeria.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    }
+  ],
+  "engagement": "¿Cómo ahorras en la compra? A) Ofertas B) Marca blanca C) Mercados 💬",
+  "subject": "España tuvo un día normal. Más o menos.",
+  "lang": "es",
+  "date": "2026-10-26",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-10-26T07:02:09.613896+00:00"
+}

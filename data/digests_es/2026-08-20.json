@@ -1,0 +1,163 @@
+{
+  "items": [
+    {
+      "title": "Los precios de la vivienda en la costa suben un 13,5 % y expulsan a los locales",
+      "body": "Los precios de la vivienda en la costa alcanzaron 1.992 €/m² en el primer trimestre de 2026, un 13,5 % más interanual. Las viviendas de vacaciones promedian 3.150 €/m², un 11,6 % por encima de la media nacional. El esfuerzo de compra en la costa llega al 40 % de la renta disponible, por encima del 35 % recomendado: Baleares, 59 %; costa de Málaga, 57 %; Alicante, 46 %. La demanda de segundas residencias y alquileres vacacionales expulsa a los residentes locales.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/08/20/6a85b45ce4d4d83b6e8b457c.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La inflación de la eurozona sube al 2,9 % y acerca una nueva subida del BCE",
+      "body": "La inflación anual de la eurozona subió al 2,9 % en julio, desde el 2,8 % de junio, y la de la UE llegó al 3 %. Los precios de la energía subieron un 10,3 % interanual y la inflación subyacente subió al 2,5 %. España tuvo una inflación armonizada del 3,9 %, por encima de la media de la eurozona. Los datos alejan al BCE de su objetivo del 2 % y aumentan la probabilidad de otra subida de tipos, lo que encarecería hipotecas y préstamos.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/tasa-inflacion-repunto-julio-2-9-eurozona-3-ue-subida-precio-energia_1_13455341.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/inflacion-eurozona-sube-2-9-julio-por-energia-acerca-otro-alza-tipos-bce_7027210_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La Policía despeja la playa de Ceuta mientras el Gobierno planea trasladar a 500 niñas",
+      "body": "La Policía y la Guardia Civil desalojaron el 20 de agosto a más de 3.000 migrantes de la playa del Trampolín. Interior prevé trasladarlos a centros temporales, tramitar sus solicitudes de asilo o devolverlos a Marruecos. Por otro lado, el Ministerio de Juventud e Infancia prepara un plan para trasladar a unas 500 niñas migrantes no acompañadas desde Ceuta a la península sin transferir la tutela a las comunidades autónomas.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/08/20/6a8695e8e85ece98148b4594.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/epsocial/infancia/noticia-gobierno-trabaja-traslado-500-ninas-migrantes-ceuta-peninsula-20260819095852.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Las enfermeras de Ceuta piden el estado de alarma ante el colapso sanitario",
+      "body": "El Colegio de Enfermería de Ceuta ha pedido la declaración del estado de alarma ante lo que describe como un colapso sanitario sin precedentes. Las enfermeras atienden 200 asistencias diarias, con picos de más de 1.600 intervenciones, y cada enfermera atiende a 14-16 pacientes con turnos de más de cuatro horas. Rosa Fuentes, al frente del colegio, dice que el sistema no tiene medios para responder, y el Consejo General de Enfermería pide la intervención del Gobierno.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.infosalus.com/actualidad/noticia-colegio-enfermeria-ceuta-pide-declaracion-estado-alarma-colapso-sanitario-precedentes-20260819121919.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "La Seguridad Social pasará a notificar por vía electrónica las incapacidades desde el 1 de septiembre",
+      "body": "Desde el 1 de septiembre de 2026, la Seguridad Social ampliará las notificaciones electrónicas para determinados trámites, sobre todo los relacionados con la incapacidad. Los afectados deberán consultar la Sede Electrónica en lugar de esperar cartas. En algunos casos seguirá habiendo notificaciones en papel. El cambio está regulado por la Orden ISM/541/2026.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/tu-economia/partir-1-septiembre-son-trabajadores-dejaran-recibir-notificaciones-carta-seguridad-social_1_13455044.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Un autónomo muere cada cinco días en España",
+      "body": "En el primer semestre de 2026 murieron 36 autónomos en accidentes laborales, casi un 25 % más que en el mismo periodo de 2025. Los accidentes con baja entre autónomos bajaron un 2,4 %, hasta 13.358, pero las muertes subieron en siete. La construcción acumula casi la mitad de los fallecimientos. UATAE advierte de menos accidentes pero más muertes.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/autonomo-muere-cinco-dias-accidente-laboral-espana-bajan-accidentes-suben-fallecimientos_1_13455333.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El crédito al consumo crece cuatro veces más rápido que las hipotecas",
+      "body": "El crédito al consumo llegó a 24.500 millones de euros en el primer semestre de 2026, un 12 % más interanual, mientras el crédito hipotecario creció un 3,3 %, hasta 42.610 millones. Es el mayor volumen de crédito al consumo desde 2007. Una encuesta indica que el 36 % de los consumidores planea pedir crédito al consumo en el segundo semestre de 2026, el porcentaje más alto desde 2020.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/credito-consumo-crece-mas-hipotecas_7027380_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La muerte del casero no pone fin al contrato de alquiler",
+      "body": "Cuando muere el propietario, el contrato de alquiler continúa con los herederos, que reciben los mismos derechos y obligaciones. Los herederos no pueden subir la renta unilateralmente, cambiar las condiciones del contrato ni desahuciar al inquilino para volver a alquilar a un precio mayor. Normalmente el inquilino solo cambia la cuenta bancaria del pago. El abogado Alberto Sánchez confirma que el contrato debe respetarse durante toda su duración.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-08-20/alberto-sanchez-abogado-fallecimiento-arrendador_4393284/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Avis multada con un millón de euros por cobrar de más por gestionar multas",
+      "body": "El Ministerio de Derechos Sociales, Consumo y Agenda 2030 ha multado con un millón de euros a la compañía de alquiler de coches Avis. Cobraba entre 33,88 y 45 € por identificar a los conductores de las multas de tráfico, un trámite que la empresa está obligada legalmente a realizar. El ministerio considera la cláusula abusiva porque traslada al consumidor el coste de una obligación legal.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/consumo-sanciona-compania-coches-alquiler-avis-millon-euros-tasa-gestionar-multas_1_13453049.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los turistas internacionales gastan un 62 % más por operación que los residentes",
+      "body": "Los turistas internacionales en España gastaron de media 46,77 € por operación a inicios del verano de 2026, un 62 % más que los 28,88 € de los residentes. El gasto turístico internacional total llegó a 63.836 millones en el primer trimestre, un 7 % más interanual. España recibió 46,6 millones de turistas internacionales en el primer semestre, un 4,6 % más.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-08-19/turismo-gasto-hosteleria-consumo-ocio-1hms-1svm_4408319/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Óscar Puente acusa a la CNMC de dejar que Iryo y Ouigo «parasiten» a Renfe",
+      "body": "El ministro de Transportes, Óscar Puente, criticó a la CNMC por obligar a Renfe a abrir sus talleres a los competidores Iryo y Ouigo. Dijo que las empresas extranjeras «parasitan» la infraestructura industrial de Renfe. La disputa llega en plena liberalización ferroviaria y puede afectar a la competencia, a los precios y a la calidad del servicio en las rutas de alta velocidad.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/transportes-00343/noticia-oscar-puente-culpa-cnmc-permitir-iryo-ouigo-parasiten-infraestructura-industrial-renfe-20260819100800.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Los robos en viviendas y negocios bajan, y la percepción de seguridad se mantiene",
+      "body": "Los datos del Ministerio del Interior muestran que los robos e intrusiones en viviendas y negocios han disminuido en los últimos años. Casi tres de cada cuatro encuestados consideran España un país seguro, según el Observatorio de Verisure. La seguridad figura entre las tres principales preocupaciones del 6,4 % de la población, según el CIS. La criminalidad ha bajado ligeramente en los últimos tres años.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/sociedad/2026-08-20/seguridad-hogares-negocios-espana-bra_4407066/"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "¿Han cambiado los precios costeros al alza tus planes de comprar o alquilar en España? 👇",
+  "subject": "España hoy, en menos de un minuto",
+  "lang": "es",
+  "date": "2026-08-20",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-08-20T06:04:11.647370+00:00"
+}

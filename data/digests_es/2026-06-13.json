@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "title": "Los precios de la vivienda alcanzan máximos históricos mientras cae la accesibilidad",
+      "body": "Los precios de la vivienda alcanzaron máximos históricos en nueve comunidades autónomas durante el primer trimestre de 2026. Madrid lidera el mercado con 4.075 €/m², un 16,4 % más que un año antes, mientras Extremadura es la única región por debajo de 1.000 €/m². El economista Santiago Niño-Becerra advierte de que comprar una vivienda exige ahora más de ocho años de salario íntegro, además de una entrada del 20 % y gastos adicionales. Sin ayuda financiera, algunos compradores no podrían acceder a una vivienda hasta los 52 años.",
+      "sources": [
+        {
+          "name": "20minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/vivienda-sigue-subiendo-bate-record-burbuja-inmobiliaria-varias-provincias_6982910_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Una nueva herramienta web simplifica el proceso de regularización de migrantes",
+      "body": "Una cooperativa catalana ha lanzado Integra, una herramienta web gratuita y multilingüe para agilizar el proceso de regularización. La plataforma utiliza un cuestionario para determinar la elegibilidad, identificar los documentos necesarios y ayudar a rellenar los formularios. La iniciativa busca despejar la confusión burocrática y reducir los retrasos de los solicitantes.",
+      "sources": [
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/catalunya/cooperativa-crea-app-facilitar-regularizacion-migrantes-deberia-gobierno_1_13295245.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Vox asume el control de la inmigración en Castilla y León",
+      "body": "El presidente de Castilla y León, Alfonso Fernández Mañueco, ha nombrado a Carlos Pollán, líder de Vox, primer vicepresidente. Pollán dirigirá la nueva consejería de Desregulación, Familia y Asistencia Social, que incluye las competencias de inmigración. María Isabel Blanco Llamas ocupa la segunda vicepresidencia, con vivienda y otras carteras, en el nuevo gobierno de coalición PP-Vox.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/06/13/6a2d2debfdddffa87b8b45aa.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La espera para una cita en atención primaria en Madrid llega a los 11 días",
+      "body": "Los pacientes de Madrid esperan de media 11 días para ver a su médico de familia, mientras el sistema de atención primaria sigue desbordado. Los centros de salud de todo el país están absorbiendo 2.500 nuevos residentes, lo que agrava la burocracia existente y la sobrecarga de pacientes. Los retrasos prolongados evidencian la crisis estructural de la red sanitaria pública.",
+      "sources": [
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/sociedad/salud/10-dias-espera-ver-medico-crisis-perpetua-atencion-primaria_132_13295305.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "La sobrecarga de trabajo vulnera derechos fundamentales, según un experto",
+      "body": "El profesor de Derecho laboral Adrián Todolí sostiene que una carga de trabajo excesiva vulnera derechos fundamentales, incluso antes de llegar al burnout clínico. La mitad de los trabajadores españoles sufre actualmente presión de tiempo o sobrecarga de tareas, lo que contribuye a altos índices de estrés y depresión laborales. En todo el mundo, los riesgos laborales causan 840.000 muertes al año.",
+      "sources": [
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/economia/adrian-todoli-jurista-sobrecarga-trabajo-no-llegue-burnout-vulneracion-derechos_128_13296840.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Más de veinte organizaciones educativas de Madrid convocan huelgas indefinidas para el próximo curso",
+      "body": "Más de 20 organizaciones educativas de Madrid piden una huelga indefinida de docentes a partir del próximo curso. La acción se suma a las protestas que se extienden por España para exigir mejores condiciones laborales y recursos. Mientras, los docentes de Cataluña y de la Comunitat Valenciana ya han rechazado recientes acuerdos autonómicos, lo que anticipa un otoño caliente en las aulas.",
+      "sources": [
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/sociedad/madrid-dara-continuidad-huelgas-indefinidas-profesorado-anticipa-otono-caliente-aulas_1_13297377.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "Con los precios de la vivienda en máximos históricos, ¿comprar casa en España sigue siendo un objetivo realista para ti? 🤔",
+  "subject": "España hoy: lo esencial",
+  "lang": "es",
+  "date": "2026-06-13",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-06-13T18:00:52.677226+00:00"
+}

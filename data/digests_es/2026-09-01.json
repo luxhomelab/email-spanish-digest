@@ -1,0 +1,163 @@
+{
+  "items": [
+    {
+      "title": "El precio de la vivienda de segunda mano sube 34.250 € en un año",
+      "body": "Comprar una vivienda de segunda mano de 80 metros cuadrados en España cuesta de media 253.270 €, 34.250 € más que hace un año. Los precios subieron un 15,6 % interanual en agosto, con un precio medio de 3.166 € por metro cuadrado. El mercado acumula ya 70 meses consecutivos de subidas. Murcia encabeza los aumentos regionales, con un 28,8 %, y 13 comunidades registran subidas por encima del 10 %.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/09/01/6a9581b4e4d4d8753a8b456f.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El Euríbor cierra agosto en el 2,95 %, máximo de dos años",
+      "body": "El Euríbor cerró agosto en el 2,95 %, su nivel más alto desde agosto de 2024, con una subida de 11 puntos básicos desde julio y de 84 puntos básicos interanual. Una hipoteca variable de 150.000 € verá subir la cuota mensual en 70,25 €, es decir, 843 € al año. Los datos son provisionales, a la espera de la confirmación del Banco de España.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/euribor-cierra-agosto-2-95-nivel-alto-anos-adelanta-subidas-hipotecarias_1_13476629.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La factura de la luz y la vuelta al cole presionan a las familias",
+      "body": "La factura media regulada de la luz alcanzó 88,81 € en agosto, un 19 % más que hace un año y la más alta para un mes de agosto desde 2022. La vuelta al cole cuesta ya 2.484 € por niño, un 4 % más que el año pasado y 514 € más que en 2019. Carburantes y electricidad llevaron la inflación a un máximo de tres años. Madrid y Cataluña siguen siendo las comunidades más caras.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-08-31/factura-electrica-luz-dispara-precio-agosto-1tps_4415100/"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/las-familias-afrontan-cuesta-septiembre-con-luz-las-gasolinas-disparadas-inflacion-maximos-tres-anos_7031112_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Llenar el depósito de diésel cuesta 22,70 € más que el año pasado",
+      "body": "Llenar un depósito de diésel de 50 litros cuesta ahora 93,05 €, 22,70 € más que hace un año, mientras la gasolina cuesta 86,15 €, 12,30 € más. El diésel subió un 15,7 % en julio, lo que activa un descuento automático de 20 céntimos por litro desde septiembre; la gasolina tiene un descuento de 5 céntimos. Los precios llevan ya ocho semanas consecutivas al alza.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/09/01/6a95aeb3e4d4d851658b4581.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Se duplican las plazas de acogida de migrantes en Ceuta y se denuncian agresiones",
+      "body": "El Gobierno ha duplicado en una semana las plazas de alojamiento temporal para migrantes adultos en Ceuta, de 1.800 a más de 3.300, y busca llegar a 6.000. Pedro Sánchez descartó trasladar migrantes a la península. Las autoridades expulsaron a 200 migrantes tras detenciones por presuntos delitos. La Fiscalía registró 23 agresiones sexuales en Ceuta en el último mes, con ocho sospechosos identificados.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/gobierno-duplica-plazas-migrantes-ceuta-semana-descarta-traslado-peninsula_1_13477642.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/fiscalia-eleva-23-las-agresiones-sexuales-registradas-ceuta-desde-entrada-masiva-inmigrantes_7031065_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Las olas de calor dejan 5.232 muertes, un récord",
+      "body": "Las muertes atribuibles a las altas temperaturas este verano llegaron a 5.232, la cifra más alta desde que el sistema de seguimiento MoMo empezó en 2015. Los veranos más mortales anteriores fueron el de 2022, con 4.789 muertes, y el de 2025, con 3.832. Solo agosto registró 2.147 muertes, una cifra que probablemente superará las 2.184 de agosto de 2025.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/las-olas-calor-dejan-mas-5-200-muertos-este-verano-maximo-historico-espana-son-una-amenaza-creciente-para-salud_7030941_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "España pone en marcha la mayor restauración de humedales de la historia de la UE",
+      "body": "España restaurará 26.100 hectáreas de humedales en las 17 comunidades autónomas a lo largo de una década, movilizando hasta 271 millones de euros. Es el proyecto más ambicioso en la historia del programa europeo LIFE. Diez de los 107 espacios ya están confirmados. Los humedales españoles son los más diversos de Europa y los terceros más numerosos del mundo.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/singularidad-humedales-espanoles-activa-proyecto-europeo-life-ambicioso-historia_1_13465877.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Ceuta recibe 168 millones para ERTE y contratación",
+      "body": "El Gobierno aprobará un plan de emergencia de 168 millones de euros para Ceuta, equivalente al 8 % del PIB del territorio. El ERTE reforzado dará prestaciones por desempleo sin cotización previa, y las bonificaciones a la contratación pasarán del 50 % al 75 %. Las empresas podrán recibir bonificaciones del 100 %. Las medidas se aplicarán también en Melilla.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gobierno-reforzara-erte-ceuta-derecho-paro-cotizacion-previa-100-bonificados-empresas_1_13475989.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El INSS pasa a notificar electrónicamente las solicitudes de incapacidad",
+      "body": "A partir del 1 de septiembre, la Seguridad Social sustituirá las cartas en papel por notificaciones electrónicas en todas las solicitudes de incapacidad temporal o permanente. Los solicitantes podrán recibir avisos por SMS o correo, pero los documentos legales estarán disponibles en la oficina electrónica. Se mantienen garantías para las personas con acceso digital limitado.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/manana-entra-vigor-nuevo-sistema-notificaciones-inss-para-las-incapacidades-temporales-permanentes_7030895_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Madrid exige el empadronamiento para el abono de transporte juvenil",
+      "body": "Desde junio, la Comunidad de Madrid exige estar empadronado para obtener los abonos personales de transporte. El cambio afecta a miles de jóvenes, incluidos los estudiantes que llegan para el curso. Un estudiante sin empadronamiento verá subir su coste anual de transporte de 90 € a 500 €.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/madrid/somos/jovenes-pagan-mueven-gobierno-ayuso-exige-padron-abono-si-elijo-uni_1_13476052.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "España prorroga 15 días los controles fronterizos a Italia",
+      "body": "España ha prorrogado 15 días más los controles a los pasajeros que llegan por mar o aire desde Italia. La medida responde a la decisión de Italia de prolongar la suspensión del acuerdo de Schengen con España. Los viajeros entre ambos países pueden encontrar controles adicionales y retrasos.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-espana-prorroga-15-dias-controles-pasajeros-italia-respuesta-decision-gobierno-meloni-20260831125959.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Los trabajadores de Airbus en España votan mantener la huelga",
+      "body": "Los trabajadores de las plantas de Airbus en Getafe, San Pablo y Tablada votaron mantener su huelga indefinida. Los empleados de Illescas votaron el viernes pasado suspender la movilización. Las decisiones se tomaron en asambleas este lunes. El impacto se limita a plantas concretas.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/transportes-00343/noticia-trabajadores-airbus-espana-deciden-mantener-huelga-indefinida-votacion-lunes-20260831143901.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "Con la luz, los carburantes y el colegio subiendo, ¿qué ha pesado más en tu presupuesto familiar este septiembre en España? 💬",
+  "subject": "Nada pasó hoy en España. Excepto esto.",
+  "lang": "es",
+  "date": "2026-09-01",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-09-01T06:06:49.225009+00:00"
+}

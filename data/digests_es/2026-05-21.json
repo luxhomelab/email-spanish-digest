@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "Los precios de la vivienda en España seguirán subiendo hasta 2027, según Oxford Economics",
+      "body": "Los precios de la vivienda en España siguen subiendo más del 10 % anual y no se moderarán hasta 2027, según Oxford Economics. Pese a la menor demanda y a la menor actividad hipotecaria, un déficit de 800.000 viviendas desde 2021 mantiene los precios altos. Los analistas descartan un riesgo de burbuja, porque la deuda de los hogares no es excesiva.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/precios-vivienda-seguiran-subiendo-doble-digito-no-frenaran-2027-oxford_1_13236558.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Las falsedades de Ayuso para frenar la regularización de migrantes llegan al Supremo",
+      "body": "El Gobierno de Madrid pide al Tribunal Supremo que suspenda la regularización extraordinaria de migrantes, alegando que colapsará la sanidad y los servicios sociales. Los críticos responden que los migrantes ya tienen derecho a la atención sanitaria y que las afirmaciones de Madrid sobre el acceso inmediato a ayudas son falsas: la Renta Mínima de Inserción exige un año de residencia legal.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/bulos-ayuso-pide-supremo-frenar-regularizacion-colapso-sanitario-ayudas-inmediatas_1_13237545.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Médicos en huelga acusan a la ministra de Sanidad de ignorarlos por la campaña",
+      "body": "La huelga de médicos de Madrid entra en su cuarta semana, y el sindicato Amyts asegura que la ministra Mónica García les ha dado la espalda desde que anunció su candidatura a la presidencia regional. El sindicato pide su dimisión y afirma que antepone Más Madrid a sus funciones ministeriales.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/madrid/2026-05-21/medicos-huelga-monica-garcia-mas-madrid_4358554/"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "El Supremo avala que Madrid cobre a un migrante indocumentado la atención sanitaria",
+      "body": "El Tribunal Supremo ha dictaminado que la Comunidad de Madrid puede exigir el pago de la asistencia sanitaria prestada a un ciudadano mexicano que no era residente legal en 2021. El tribunal aplicó la ley de 2003 y no el reciente decreto que amplía la sanidad pública gratuita a los migrantes irregulares, por lo que la deuda se mantiene.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/supremo-avala-comunidad-madrid-exigiera-ciudadano-mexicano-gastos-asistencia-sanitaria_1_13237524.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "La inflación de la eurozona sube al 3 % y España llega al 3,5 %, la más alta entre las grandes economías del euro",
+      "body": "Eurostat confirmó que la inflación de la eurozona se aceleró hasta el 3 % en abril, la cifra más alta desde 2023, impulsada por los costes energéticos (+10,8 %) a causa del conflicto con Irán. La inflación armonizada de España subió hasta el 3,5 %, por encima de Alemania (2,9 %), Italia (2,8 %) y Francia (2,5 %).",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-20/inflacion-de-la-eurozona-escala-hasta-el-3_4358202/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Las lagunas del impuesto sobre el patrimonio hacen perder el 80 % de la recaudación potencial",
+      "body": "Un estudio de Oxfam Intermón revela que las exenciones para empresas familiares y el límite combinado con el IRPF hacen que el impuesto sobre el patrimonio recaude solo el 0,17 % de los activos declarados de media, y que el 0,1 % más rico pague solo el 0,1 %. El impuesto es poco habitual en la UE, donde solo Noruega y Suiza tienen esquemas similares, y podría recaudar cuatro veces más si se reformara.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/agujeros-impuesto-patrimonio-provocan-pierda-80-recaudar_1_13237048.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Las empresas deberán compensar los festivos que caigan en sábado, según un tribunal",
+      "body": "La Audiencia Nacional ha dictaminado que si un festivo coincide con el día de descanso semanal del trabajador cuando este es el sábado, el trabajador tiene derecho a un día libre adicional. La decisión afecta de lleno al sector de los centros de contacto, pero los sindicatos aseguran que sienta un precedente para todos los sectores.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/audiencia-nacional-fija-festivos-caigan-sabado-deben-recuperados_1_13237818.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "España amplía el cribado del cáncer de mama a mujeres de 45 a 74 años",
+      "body": "La Comisión de Salud Pública ha aprobado ampliar las mamografías de cribado del tramo actual de 50 a 69 años a 45-74 años. Las comunidades tienen hasta seis años para alcanzar una cobertura cercana al 100 %, siguiendo las recomendaciones europeas y clínicas para detectar los tumores antes y reducir la mortalidad.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/sanidad-amplia-cribados-cancer-mama-mujeres-45-74-anos_1_13235316.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "El Congreso aplaza al 26 de mayo el debate sobre la pasarela de los mutualistas",
+      "body": "La comisión del Congreso que estudia la «pasarela» para los mutualistas, profesionales como abogados o arquitectos que estaban fuera de la Seguridad Social, ha aplazado la sesión una semana. Sumar pedía la fecha más temprana posible, pero el debate ahora espera a los informes económicos del Gobierno.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/debate-pasarela-miles-mutualistas-seguridad-social-atrasa-26-mayo_1_13236952.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El sector del gas pide al Gobierno subir la tarifa regulada, alegando costes reales",
+      "body": "Sedigas (Asociación Española del Gas) pide al Ministerio para la Transición Ecológica que revise al alza la TUR (tarifa regulada del gas), argumentando que usa referencias desfasadas y no cubre los costes de suministro. La TUR actual es de 21 €/MWh frente a unos 50 €/MWh en el mercado libre, algo que, según el sector, «destruye el mercado».",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/sector-gasista-apremia-aagesen-revisar-alza-tarifa-regulada-no-refleja-los-costes-reales-gas_6972994_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "Los precios de la vivienda en España no bajarán hasta 2027: ¿cómo afecta esto a tus planes de comprar o alquilar? 👇",
+  "subject": "🇪🇸 España: ¿qué pasa? 🤔 21.05.2026",
+  "lang": "es",
+  "date": "2026-05-21",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-21T05:32:43.040791+00:00"
+}

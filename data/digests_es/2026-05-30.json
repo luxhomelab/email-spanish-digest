@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "title": "La subida de los alquileres empobrece a los inquilinos un 19 % en una década",
+      "body": "Un nuevo informe de CCOO revela que los nuevos contratos de alquiler han subido un 37 % desde 2015, muy por encima del 26 % de crecimiento de los salarios y del 21 % de los contratos ya existentes. En la Comunidad Valenciana, la región más golpeada, los alquileres nuevos se dispararon un 55 %, lo que supone una pérdida del 19 % del poder adquisitivo de los inquilinos.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/nuevos-contratos-alquiler-comen-19-adquisitivo-decada-empobrecimiento-provincia-provincia_1_13259751.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "La subida del euríbor añade hasta 133 € al mes a las cuotas hipotecarias",
+      "body": "El euríbor cerró mayo en un 2,80 % provisional, su nivel más alto desde septiembre de 2024. En una hipoteca variable típica de 350.000 €, a 30 años, la revisión anual eleva la cuota mensual en 133 €, de 1.416 € a 1.549,50 €.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/mercados/finanzas-personales/2026-05-30/euribor-hipotecas-cuota-tipos-de-interes-bce_4363587/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Las zonas de bajas emisiones prohíben los coches con etiqueta B y los diésel de más de 10 años",
+      "body": "Las zonas de bajas emisiones (ZBE) han ampliado las restricciones y ahora prohíben circular a los coches con etiqueta ambiental B (gasolina de 2001 y diésel de 2006) y a todos los diésel de más de 10 años. La medida afecta a más de 15 millones de vehículos en numerosas áreas urbanas.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/29/ya-ha-entra-vigor-las-nuevas-restricciones-para-los-coches-con-etiqueta-b-los-diesel-con-mas-10-anos-2024082.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los socios de Sánchez piden elecciones anticipadas tras nuevas revelaciones de corrupción",
+      "body": "Junts y el PNV, socios clave en el Parlamento, piden a Pedro Sánchez que convoque elecciones anticipadas en medio de una serie de escándalos de corrupción. Mientras, las investigaciones judiciales sitúan a Santos Cerdán, el «número dos» del PSOE, al frente de tres tramas delictivas, lo que agrava la crisis del Gobierno.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/05/29/6a19d320e85ecec4258b45bb.html"
+        },
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/05/30/justicia-situa-ya-cerdan-frente-tres-tramas-delictivas-mientras-era-numero-dos-sanchez-2024789.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Las rebajas del IVA energético expiran el 1 de junio y la inflación se mantiene en el 3,2 %",
+      "body": "El IPC de España se mantuvo en el 3,2 % en mayo, pero la inflación subyacente subió hasta el 2,9 %. Las rebajas temporales del IVA sobre la electricidad y el gas natural terminan el lunes 1 de junio, lo que encarecerá las facturas de los hogares, mientras el Gobierno debate si prorroga otras medidas fiscales más allá del 30 de junio.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ipc-mantiene-3-2-mayo-expiren-rebajas-iva-electricidad-gas-natural_1_13259168.html"
+        }
+      ],
+      "category": "economy",
+      "important": true
+    },
+    {
+      "title": "Bruselas aprueba una ayuda de 9.000 millones para el sistema antiapagones de España",
+      "body": "La Comisión Europea ha autorizado un paquete de ayudas de 9.000 millones de euros para crear un mercado de capacidad que dé flexibilidad al suministro eléctrico. El sistema premia a las centrales y a los almacenamientos que suministran energía bajo demanda, así como a los grandes consumidores industriales que reducen su consumo en las horas punta, y se desarrolla tras el apagón de abril de 2025.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bruselas-aprueba-ayuda-9-000-millones-sistema-antiapagones-espana_1_13259936.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Un dron ruso impacta en un bloque de viviendas en Rumanía; la OTAN asegura estar preparada para defender el territorio",
+      "body": "Un dron ruso Geran-2 ha impactado contra un edificio residencial en Galați, Rumanía, cerca de la frontera ucraniana, hiriendo a una mujer y a un niño y obligando a evacuar a 70 personas. La OTAN asegura que está lista para defender todo el territorio aliado, mientras Rumanía lo califica como el incidente más grave desde que empezó la guerra.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/internacional/heridos-impactar-dron-edificio-rumania_1_13259120.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "España reformará la ley de despido con los sindicatos, pese a la oposición de la patronal",
+      "body": "El Ministerio de Trabajo y los sindicatos CCOO y UGT redactarán de forma conjunta una reforma para adaptar las normas de despido a las decisiones de la Carta Social Europea, con indemnizaciones más altas por los despidos improcedentes y derechos de readmisión. La CEOE, la patronal, se opone con firmeza al plan.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/trabajo-disenara-con-los-sindicatos-reforma-legal-despido-contra-ceoe_6976897_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El sindicato CSIF inicia movilizaciones en medio de la incertidumbre política",
+      "body": "CSIF, el mayor sindicato del sector público, anuncia protestas por el estancamiento de las negociaciones del V Convenio Colectivo y del acceso a la jubilación parcial. El sindicato acusa a la debilidad política del Gobierno de bloquear avances en retribuciones, carrera profesional y condiciones de los empleados del Estado.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-29/funcionarios-aprovechan-debilidad-gobierno-movilizaciones_4363896/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "¿Cuánto ha subido tu alquiler en los últimos cinco años? Cuenta tu historia 👇",
+  "subject": "🇪🇸 España: resumen de 5 minutos ☕ 30.05.2026",
+  "lang": "es",
+  "date": "2026-05-30",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-30T05:32:15.618560+00:00"
+}

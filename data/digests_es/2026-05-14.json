@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "Hacen falta casi dos años de sueldo para pagar la entrada de una vivienda",
+      "body": "Un nuevo estudio revela que la entrada media y los gastos de compraventa de una vivienda en España ascienden a 48.000 €, lo que equivale a casi dos años de sueldo neto. En Madrid y Baleares, el coste de entrada supera los 80.000 €, lo que duplica el tiempo necesario.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/espanoles-necesitan-anos-sueldo-integro-doble-madrid-baleares-entrada-compra-vivienda_1_13218260.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Hacienda envía 130.000 «cartas del miedo» por errores en la declaración de la Renta",
+      "body": "La Agencia Tributaria está enviando 130.000 cartas a contribuyentes que modificaron los datos fiscales precargados de la Renta, y advierte de posibles sanciones de entre el 50 % y el 150 % de lo no pagado. Los destinatarios pueden corregir voluntariamente su declaración antes de las comprobaciones oficiales.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/13/miles-contribuyentes-reciben-cartas-preventivas-hacienda-hayan-hecho-esto-declaracion-renta-2018548.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "130.000 solicitudes de regularización de migrantes en la primera semana, en medio de la batalla judicial",
+      "body": "El procedimiento extraordinario de regularización de migrantes indocumentados ha recibido más de 130.000 solicitudes en su primera semana. Los solicitantes tienen dudas sobre la documentación, y el Tribunal Supremo debate ahora la legalidad del decreto.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/epsocial/migracion/noticia-mes-regularizacion-migrantes-130000-solicitudes-semana-dudas-documentales-batalla-ts-20260513181802.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "El buque de carga ruso hundido cerca de España pudo transportar reactores nucleares a Corea del Norte",
+      "body": "El Ursa Major, un buque de carga ruso vinculado al Estado, se hundió frente a la costa de Murcia en diciembre de 2024 tras tres explosiones misteriosas. Según nuevas informaciones, podría haber transportado reactores nucleares para submarinos con destino a Corea del Norte.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/internacional/theguardian/misterio-carguero-ruso-hundido-cerca-espana-llevaba-reactores-nucleares-corea-norte_1_13216965.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Aldi rebaja los precios de 150 productos y promete un ahorro de 2.000 € al año",
+      "body": "La cadena de supermercados ha reducido los precios de productos básicos como el pan, los lácteos y la carne, y asegura que los clientes pueden ahorrar hasta 2.000 € al año en la compra semanal. Aldi afirma que sus productos frescos ya son un 15 % más baratos que la media del mercado.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/aldi-se-suma-rebajas-precios-sector-plena-guerra-abarata-150-productos-pan-lacteos_6969900_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Nueva ayuda para jóvenes menores de 35 años en alquiler con opción de compra: hasta 60.480 € por vivienda",
+      "body": "El Plan Estatal de Vivienda 2026-2030 amplía las ayudas al alquiler con opción de compra para jóvenes, con un máximo de 60.480 € por vivienda protegida. El alquiler pagado durante el periodo de arrendamiento puede descontarse íntegramente del precio final de compra.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/14/nuevas-ayudas-vivienda-para-jovenes-menores-35-anos-opcion-compra-hasta-2030-2019955.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "El uso de fondos europeos de recuperación para pensiones provoca un escándalo en Berlín y dudas legales",
+      "body": "El Gobierno español desvió 10.000 millones de euros de fondos europeos destinados a la liquidez de las pensiones hacia otros gastos, según confirmó la Comisión Europea. El movimiento ha provocado un escándalo político en Alemania y ha planteado dudas jurídicas en España.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/05/13/6a04b64ee9cf4a06768b456e.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La UE recomienda una cuarentena estricta de seis semanas para los pasajeros del crucero con hantavirus",
+      "body": "El ECDC recomienda considerar de alto riesgo a todos los pasajeros del crucero HM Hondius y mantenerlos en cuarentena al menos seis semanas. Las autoridades señalan que el hantavirus no ha mutado para transmitirse con más facilidad entre personas.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/bruselas-recomienda-una-cuarentena-estricta-seis-semanas-para-todos-los-afectados-por-brote-hantavirus_6970003_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Glovo y los sindicatos acuerdan un ERE que afectará a 436 repartidores, menos de los previstos",
+      "body": "La plataforma de reparto eliminará 436 puestos, frente a los 750 propuestos inicialmente, tras negociar con los sindicatos. Nueve ciudades se salvaron del cierre total del servicio, y los repartidores podrán ser reubicados en ciudades cercanas con compensación.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/glovo-acuerda-con-los-sindicatos-un-ere-que-afectara-436-repartidores-300-menos-los-previstos_6970222_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "UGT convoca una huelga de camioneros y conductores de autobús en junio por el retraso de la jubilación anticipada",
+      "body": "UGT ha convocado una huelga nacional en junio para exigir al Gobierno que cumpla un compromiso de hace un año: permitir la jubilación anticipada a los conductores profesionales. La huelga podría alterar el suministro de mercancías y el transporte de viajeros si no se resuelve.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/ugt-llama-huelga-camioneros-junio-por-bloqueo-jubilacion-anticipada-los-transportistas_6969949_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "¿Quién más ha recibido una «carta del miedo» de Hacienda? ¿Cuál fue tu siguiente paso? 👇",
+  "subject": "🇪🇸 España — 14.05.2026",
+  "lang": "es",
+  "date": "2026-05-14",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-14T05:31:51.327529+00:00"
+}

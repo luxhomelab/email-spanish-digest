@@ -1,0 +1,163 @@
+{
+  "items": [
+    {
+      "title": "Emergencias por inundaciones en la Comunitat Valenciana y Baleares",
+      "body": "El Gobierno valenciano activó el 19 de octubre la emergencia de nivel 2 por las inundaciones en La Safor y la Marina Alta. La Aemet emitió un aviso rojo por lluvias en zonas de Mallorca. Se suspenden las clases en Mallorca, Eivissa y Formentera el 19 de octubre. Sigue los avisos oficiales, evita las zonas inundables y no entres en sótanos ni garajes.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/comunidad-valenciana/2026-10-19/maxima-alerta-en-gandia-y-denia-por-las-lluvias-torrenciales-y-las-inundaciones-que-activa-a-la-ume.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/illes-balears/govern-balear-suspende-clases-mallorca-eivissa-formentera-lunes-pide-ayuda-ume_1_13595662.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "El Gobierno planea la subida de las pensiones tras el dato de inflación de noviembre",
+      "body": "El Gobierno prevé aprobar la subida de las pensiones de 2027 tras los datos de inflación que se publican el 27 de noviembre. Carlos Cuerpo, primer vicepresidente y titular de Economía, afirma que la ley vigente garantiza la subida. Considera que un Gobierno en funciones podría aprobar el real decreto-ley antes de que acabe 2026.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/cuerpo-asegura-que-subida-las-pensiones-esta-asegurada-por-una-ley-que-pp-rechazo_7050174_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Cambian los umbrales de edad de jubilación desde enero de 2027",
+      "body": "Las nuevas reglas de jubilación entran en vigor el 1 de enero de 2027. Para jubilarse a los 65 con pensión completa se necesitarán al menos 38 años y seis meses cotizados; si no, la edad ordinaria será 67. La jubilación anticipada voluntaria sigue siendo posible hasta 24 meses antes, con recortes en la pensión.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/19/ya-es-oficial-jubilacion-cambiara-mayor-edad-retiro-nuevos-calculos-subida-mei-2027-2059757.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El Consejo de Ministros prepara un decreto de prestaciones para el 20 de octubre",
+      "body": "Un real decreto-ley de la Seguridad Social previsto para el Consejo de Ministros del 20 de octubre mejoraría varias prestaciones. Las víctimas de violencia de género en situación de baja recibirían el 60 % de la base reguladora hasta el día 20 y el 75 % a partir de entonces. La Diputación Permanente debería convalidarlo en un mes; el Gobierno necesita el apoyo de la izquierda y del PNV.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-10-19/el-gobierno-arranca-los-martes-sociales-con-un-decreto-para-mejorar-las-prestaciones-por-viudedad-incapacidad-para-victimas-del-terrorismo-y-de-violencia-de-genero.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El Constitucional estudia el recurso sobre la suspensión del voto de los descendientes",
+      "body": "El Tribunal Constitucional empieza a estudiar el 19 de octubre si admite el recurso del Defensor del Pueblo contra la suspensión del derecho de voto de más de 160.000 españoles en el extranjero por la ley de nietos. La medida cautelar del Supremo sigue en vigor. El Ministerio de Exteriores afirma que algunos consulados no pueden compilar todos los datos antes de las elecciones del 29 de noviembre.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-10-19/el-constitucional-discute-si-intervenir-ya-en-la-controversia-sobre-la-suspension-del-derecho-al-voto-de-160000-espanoles-por-la-ley-de-nietos.html"
+        },
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/19/6ad51e63e85eceb80e8b458c.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El decreto del IVA de los pisos turísticos espera la convalidación parlamentaria",
+      "body": "Un decreto publicado en el BOE, pendiente de convalidación parlamentaria, aplicaría un IVA del 10 % a todos los pisos turísticos desde el 1 de diciembre de 2026. Los propietarios también podrían deducirse el IVA de costes como la limpieza y las reparaciones. Esas deducciones podrían limitar el efecto de la medida sobre el paso de viviendas al alquiler de larga duración.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/10/19/6ad2072c21efa0481e8b457c.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "La construcción de viviendas se queda muy por detrás de la formación de nuevos hogares",
+      "body": "España terminó 81.109 viviendas entre julio de 2025 y junio de 2026, mientras se formaron 238.585 nuevos hogares: una diferencia de 157.476. Solo Cáceres y Soria se libraron del déficit. La escasez de oferta empuja al alza los precios de compra y alquiler, sobre todo en las zonas más pobladas.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/espana-crea-157-500-viviendas-menos-que-hogares-ultimo-ano-con-escasez-general-todas-las-provincias-salvo-dos_7047011_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Una encuesta sitúa en 201 escaños la suma de PP y Vox",
+      "body": "Una encuesta de Sigma Dos para El Mundo proyecta 201 escaños sumando PP y Vox en las elecciones del 29 de noviembre. El escenario más probable da 136 escaños al PP y 65 a Vox, frente a 117 para el PSOE, Frente Amplio y Podemos. La encuesta se realizó en la primera quincena de octubre.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/encuestas/2026/10/19/6ad4f168e9cf4a2c7a8b458b.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Un dato retrasado deja un vacío en el retrato del paro",
+      "body": "El Ministerio de Economía ha aplazado una estadística del INE con más de un año de retraso. Los expertos calculan que entre 800.000 y 900.000 trabajadores con contratos fijos discontinuos están inactivos pero quedan excluidos de las cifras de paro. El uso cada vez mayor de estos contratos desde 2021 hace más significativo el vacío estadístico.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/10/18/6ad24cb721efa0ea438b45ab.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "UGT denuncia que las empresas bloquean el teletrabajo a millones de personas",
+      "body": "Más de 3,4 millones de personas podrían teletrabajar, pero sus empresas no lo permiten, según un estudio de UGT. Representan el 16,1 % de los ocupados, según una encuesta de 2025. El sindicato culpa a la cultura de la presencialidad; más de tres millones ya teletrabajan.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/3-4-millones-personas-teletrabajar-no-permiten-empresas_1_13590326.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Feijóo busca el apoyo de Cataluña para un cambio de Gobierno",
+      "body": "El líder del PP y candidato a la presidencia del Gobierno, Alberto Núñez Feijóo, pidió a Cataluña el 18 de octubre una mayoría amplia para un cambio de Gobierno. Su llamamiento llega antes de las elecciones generales del 29 de noviembre.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/catalunya/noticia-feijoo-pide-catalunya-impulse-gran-mayoria-decencia-si-sanchez-no-20261018125450.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Rufián pide perdón por no haber logrado unir a la izquierda",
+      "body": "Gabriel Rufián, cabeza de lista de ERC y portavoz en el Congreso, pidió perdón por el fracaso de la izquierda en unirse antes de las elecciones del 29 de noviembre. En una entrevista emitida el 17 de octubre, pidió a los votantes desencantados que acudan a votar y dijo que habría querido que Podemos y Frente Amplio llegaran a un acuerdo.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/rufian-se-disculpa-por-ridiculo-izquierda-pide-voto-aunque-sea-desilusionado-cabreado-29n_7050101_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "¿Te mudarías a un pueblo más pequeño para tener una vivienda más barata? A) Sí B) No C) Quizá 💬",
+  "subject": "Aquí tienes España hoy, en menos de un minuto",
+  "lang": "es",
+  "date": "2026-10-19",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-10-19T06:02:31.593253+00:00"
+}

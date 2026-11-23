@@ -1,0 +1,155 @@
+{
+  "items": [
+    {
+      "title": "Hace falta un sueldo medio de 2.000 € para comprar una vivienda en España",
+      "body": "Según un estudio de Accumin Intelligence, hace falta un sueldo neto mensual de 1.999 € de media para comprar una vivienda en España sin sobreendeudarse. En San Sebastián se necesitan 5.074 €; en Barcelona y Madrid, más de 4.000 €. Zamora es la capital de provincia más barata, con 1.279 €.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/comprar-una-vivienda-exige-media-un-sueldo-neto-2-000-euros-pero-las-grandes-ciudades-requiere-mas-4-000_6984438_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El euríbor supera el 2,8 % y un economista recomienda cambiar de hipoteca",
+      "body": "El euríbor a 12 meses ha superado el 2,8 % en junio, con un tipo diario del 2,929 %. Esto podría elevar las cuotas de las hipotecas variables hasta 133 € al mes. El economista Gonzalo Bernardos recomienda pasar a una hipoteca a tipo fijo o con límite para asegurar cuotas más bajas.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-17/gonzalo-bernardos-ante-subida-euribor-cambien-de-hipoteca-1qrt_4374572/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La inflación de la eurozona sube al 3,2 % en mayo",
+      "body": "La inflación anual de la eurozona se aceleró hasta el 3,2 % en mayo, desde el 3 % de abril, impulsada por una subida del 10,8 % de los precios de la energía. La inflación subyacente, sin energía ni alimentos, se situó en el 2,6 %. El aumento encarece el coste de la vida de los hogares de toda la eurozona.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-17/inflacion-de-la-eurozona-sigue-al-alza_4374221/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Inditex pacta una subida salarial del 12,5 % para los empleados de tienda",
+      "body": "Inditex ha acordado con los sindicatos una subida salarial del 12,5 % hasta 2028 para casi 30.000 empleados de tienda en España. El pacto incluye subidas anuales del 4 % en 2026, 2027 y 2028. El pago de los domingos subirá a 11,25 € la hora y el de los festivos a 13,50 € en 2028. La ayuda por nacimiento pasa de 450 € a 506 €.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/inditex-pacta-subida-salarial-12-2028-30-000-empleados-tiendas-espana_1_13311293.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El Consejo de Europa insta a España a reformar el despido improcedente",
+      "body": "El Consejo de Europa ha reiterado que la indemnización por despido improcedente de 33 días por año vulnera la Carta Social Europea. Pide reformas para que la indemnización cubra los daños reales y tenga un efecto disuasorio. El Gobierno español está llamado a modificar la legislación, lo que podría reforzar la estabilidad laboral de todos los trabajadores.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/consejo-europa-reitera-espana-debe-reformar-despido-improcedente-hacerlo-restaurativo_1_13312399.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El Parlamento Europeo aprueba las normas de inmigración más duras de la historia de la UE",
+      "body": "El Parlamento Europeo ha aprobado lo que califica de la normativa migratoria más dura de la historia de la UE. El año pasado se identificaron más de 719.000 migrantes en situación irregular en la UE, pero solo se ejecutó poco más de una cuarta parte de las 491.000 órdenes de expulsión. En España, solo se ejecutaron 5.705 de las 53.700 órdenes.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/internacional/2026/06/18/parlamento-europeo-aprueba-normativa-inmigracion-mas-dura-historia-ue-2030021.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La Reserva Federal mantiene los tipos sin cambios, entre el 3,5 % y el 3,75 %",
+      "body": "Kevin Warsh, nuevo presidente de la Reserva Federal, mantuvo los tipos de interés de EE. UU. sin cambios, entre el 3,5 % y el 3,75 %, en su primera reunión, por la subida de la inflación. La decisión fue unánime. El precio del petróleo bajó tras el acuerdo inicial entre EE. UU. e Irán.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/nuevo-presidente-fed-nombrado-trump-mantiene-tipos-interes-inalterables_1_13312798.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Magnific (antes Freepik) recorta el 30 % de su plantilla en España con una reestructuración",
+      "body": "Magnific, antes Freepik, ha iniciado un ERE que afecta al 30 % de su plantilla en España, unos 100 empleados. La empresa, con 350 trabajadores en España y 196 millones de euros de ingresos recurrentes anuales, se reestructura para centrarse en la inteligencia artificial, según explica, por motivos no financieros.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/andalucia/malaga/magnific-freepik-web-europea-ia-usada-mundo-negocia-ere-30-plantilla-espana_1_13312360.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Los médicos catalanes hacen su duodécima huelga y amenazan con endurecer el conflicto",
+      "body": "Los médicos de Cataluña han hecho su duodécima jornada de huelga antes del verano para reclamar mejores condiciones. El sindicato Metges de Catalunya amenaza con intensificar el conflicto en septiembre si el Gobierno catalán no negocia. El Gobierno catalán cifra el seguimiento de la huelga en un 4,2 %; el sindicato, en un 29 %.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/medicos-movilizan-catalunya-ultima-huelga-verano_1_13312434.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Se espera una intensa ola de calor en España a partir del domingo",
+      "body": "La Agencia Estatal de Meteorología (AEMET) ha avisado de un episodio de calor intenso y persistente a partir del domingo 21 de junio. Las temperaturas podrían superar los 36-38 °C en el interior, llegar a 40 °C en zonas del este y alcanzar localmente los 42 °C. Se prevé que el lunes 22 de junio sea el día de máximo calor.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/noticia-aemet-avisa-episodio-calor-intenso-persistente-gran-parte-peninsula-partir-domingo-20260617145228.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "El fabricante chino Changan instala su sede europea en Madrid",
+      "body": "El fabricante chino Changan ha establecido su sede central para Europa en Alcobendas, Madrid. La compañía aspira a vender 300.000 vehículos en Europa en tres años y evalúa la construcción de una planta de fabricación en Aragón.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/motor/changan-quiere-conquistar-europa-espana-sede-madrid-posible-planta_1_13313237.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La superficie quemada por incendios en España se triplica en lo que va de 2026",
+      "body": "De enero a junio de 2026 se han quemado 39.296 hectáreas en España, tres veces más que en el mismo periodo de 2025 (12.625 hectáreas). Se han registrado 254 incendios, frente a 76, con ocho grandes incendios, el doble de la media.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/superficie-quemada-espana-supera-ya-las-39-000-hectareas-triple-que-hace-un-ano_6984392_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Con un sueldo de unos 2.000 € hace falta para comprar una vivienda, ¿la compra sigue pareciendo posible a los residentes extranjeros en España?",
+  "subject": "España hoy, sin ruido",
+  "lang": "es",
+  "date": "2026-06-18",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-06-18T06:21:37.716843+00:00"
+}

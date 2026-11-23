@@ -1,0 +1,183 @@
+{
+  "items": [
+    {
+      "title": "La vivienda de segunda mano sube un 74 % más rápido que la nueva",
+      "body": "Los precios de la vivienda de segunda mano en España subieron un 12,9 % en el último año, mientras los de obra nueva subieron un 7,4 %, según el INE. Entre 2021 y 2025 España acumuló un déficit de hasta 750.000 viviendas, mientras la población pasó de 47,4 a 49,8 millones de habitantes. La escasez de vivienda nueva mantiene la presión sobre los precios de reventa.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/escasez-pisos-nuevos-eleva-presion-sobre-vivienda-usada-precio-las-casas-segunda-mano-crece-un-74-mas-rapido_7041068_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El Euríbor cierra septiembre en el 3,22 % y las cuotas hipotecarias se disparan",
+      "body": "Los titulares de hipotecas variables pagarán más en su próxima revisión, ya que el Euríbor cerró septiembre en torno al 3,22 %. Una hipoteca media de 178.365 € a 25 años sube 69 € al mes, es decir, 828 € al año; un préstamo de 300.000 € sube 115 € al mes y unos 1.380 € al año. El BCE subió sus tipos de referencia el 10 de septiembre.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/euribor-cerrara-septiembre-3-22-las-hipotecas-se-encareceran-media-828-euros-ano_7041506_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El decreto de expulsiones en Ceuta vulneraría los límites del pacto europeo, según fuentes jurídicas",
+      "body": "Un borrador de real decreto-ley para acelerar las expulsiones de migrantes en Ceuta vulneraría garantías básicas del pacto migratorio europeo, según fuentes jurídicas. El texto suspendería las garantías del asilo, incumpliría el principio de no devolución y se aplicaría con efecto retroactivo a las solicitudes de protección pendientes desde el 30 de julio. Irá al Consejo de Ministros el martes.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/decreto-gobierno-acelerar-expulsiones-ceuta-dinamita-limites-legales-duro-pacto-migratorio-europeo_1_13542250.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El PP propone garantías del 100 % para la compra de vivienda de los jóvenes",
+      "body": "El PP quiere construir un millón de viviendas en cuatro años, eliminar las «zonas tensionadas» y ofrecer garantías públicas de hasta el 100 % para los jóvenes compradores. También propone reducciones fiscales de hasta el 60 %, que ahorrarían entre 21.000 y 26.000 €. El plan de Alberto Núñez Feijóo responde a la política de vivienda de Pedro Sánchez.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/macroeconomia-00338/noticia-pp-propone-acabar-zonas-tensionadas-avales-100-compra-vivienda-jovenes-20260927103759.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El Gobierno acelera el decreto de vivienda mientras los campamentos de inquilinos ocupan Madrid",
+      "body": "El Ministerio de Vivienda se apresura a cerrar un decreto para el Consejo de Ministros del martes, y necesita el apoyo de Junts y de Podemos. El campamento del Sindicato de Inquilinas en la Puerta del Sol continúa y exige contratos de alquiler indefinidos, algo que los negociadores dicen que no está sobre la mesa. El desahucio de una persona de 87 años que vivía en su casa desde hace 70 años ha intensificado la presión.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/gobierno-ultima-decreto-vivienda-aprobarlo-martes-presionado-calle-exigencias-socios_1_13538460.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/noticia-sindicato-inquilinas-exige-contratos-alquiler-indefinidos-no-descarta-acampadas-otras-ciudades-20260927121855.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La ONU: España vulneró sus obligaciones en el desahucio de Maricarmen",
+      "body": "El relator especial de la ONU Koldo Casla afirmó que España vulneró sus obligaciones internacionales de derechos humanos al desahuciar a Maricarmen, de 87 años y con un 50 % de discapacidad, el 23 de septiembre. Afirma que España ignoró una medida cautelar de junio que ordenaba suspender el desahucio. Los tratados ratificados forman parte del ordenamiento español, y Casla considera el daño irreversible.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/internacional/relator-onu-asegura-que-espana-incumplio-las-obligaciones-internacionales-desalojar-maricarmen_7041893_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "España gana el Mundial sub-20 femenino en la tanda de penaltis",
+      "body": "La selección femenina sub-20 de España se proclamó campeona del mundo por segunda vez, tras vencer a la defensora del título, Corea del Norte, en la tanda de penaltis después de 120 minutos sin goles. La portera Laia López, del Real Madrid, paró dos penaltis. El equipo, dirigido por David Aznar, no perdió ningún partido del torneo.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/deportes/futbol/futbol-femenino/mundial/2026/09/27/6ab964de21efa014318b457d.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "El Plan Auto+ 2026 ofrece hasta 7.500 € para coches eléctricos",
+      "body": "El BOE ha publicado la línea 2 del Plan Auto+ 2026, con ayudas de hasta 7.500 € para autónomos y empresas que compren vehículos eléctricos o electrificados. Los autónomos pueden pedir ayudas para hasta tres vehículos; las empresas, para hasta diez. Quedan excluidos los concesionarios y puntos de venta.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/09/28/oficial-plan-auto-2026-ayudas-autonomos-empresas-2054668.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Un ciberataque a Adif y Renfe sustrae 150 millones de registros de datos",
+      "body": "El ciberataque a las webs de Adif y Renfe sustrajo 150 millones de registros de datos, entre ellos nombres y direcciones de correo electrónico. Renfe afirma que no hay indicios de acceso a datos bancarios, financieros, de pago o del DNI. El Centro Criptológico Nacional participó en la respuesta después de que Adif recuperara su dominio el sábado.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/09/27/6ab9544a21efa0fd208b4576.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "El Congreso reactiva la prohibición de redes sociales para menores de 16 años",
+      "body": "Los grupos parlamentarios retoman esta semana las negociaciones de una ley que prohibiría las redes sociales a los menores de 16 años. El texto, en el Congreso desde abril de 2025, se debatirá el martes en la Comisión de Justicia. PSOE y Sumar quieren además nuevos delitos para las plataformas que amplifiquen la autolesión, los deepfakes sexuales o los contenidos de odio.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/congreso-reactiva-ley-que-prohibira-las-redes-sociales-los-menores-16-anos-con-objetivo-aprobarla-antes-fin-ano_7041062_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Cascos obligatorios para los patinetes eléctricos desde el 1 de octubre",
+      "body": "Desde el 1 de octubre, quienes conduzcan patinetes eléctricos deberán llevar casco y un elemento reflectante de noche o con poca visibilidad; la edad mínima se fija en 15 años. El incumplimiento es una infracción grave con una multa de 200 euros. Los conductores que adelanten a ciclistas deberán reducir la velocidad al menos 20 km/h por debajo del límite.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/09/27/casco-obligatorio-para-patinetes-nuevas-normas-para-ciclistas-desde-1-octubre-2055073.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Cambiar de supermercado ahorra hasta 4.381 € al año en Madrid",
+      "body": "Los hogares pueden ahorrar de media 1.310 € al año eligiendo el supermercado más barato, según la OCU. En Madrid, el ahorro llega a 4.381 €, y localidades cercanas como Alcobendas alcanzan 4.270 €. El estudio analizó más de 100.000 precios de 244 productos.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/consumo/ocu-revela-cuanto-puedes-ahorrar-cambiando-supermercado-4-381-euros-ano-madrid_7041811_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La Policía desaloja un asentamiento de migrantes junto a la desaladora de Ceuta",
+      "body": "Más de 300 agentes de la Policía Nacional desalojaron el domingo temprano a migrantes acampados alrededor de la desaladora de Ceuta, por riesgos de seguridad en esta infraestructura estratégica de agua. Los migrantes, que habían entrado el 30 y 31 de julio, fueron trasladados a las inmediaciones de la Fábrica del Guano.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/ceuta/policia-interviene-desalojar-asentamiento-migrantes-playa-cerca-desaladora-ceuta_7041790_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Un hotel cuesta casi un 70 % más que hace una década",
+      "body": "El precio medio de una pernoctación en hotel en España alcanzó casi 167 € en agosto, un récord y casi un 70 % más que hace una década. Los ingresos medios por habitación ocupada pasaron de 109,3 € en 2019 a 166,9 € en agosto. Los precios van de 64 € en Extremadura a 230 € en Baleares.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/agosto-agosto-por-que-dormir-un-hotel-es-casi-un-70-mas-caro-que-hace-una-decada_7041408_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "El PP propone garantías hipotecarias del 100 % para jóvenes. ¿Te animaría a comprar? A) Sí B) No C) Ya tengo vivienda 💬",
+  "subject": "España en 30 segundos",
+  "lang": "es",
+  "date": "2026-09-28",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-09-28T06:05:08.882138+00:00"
+}

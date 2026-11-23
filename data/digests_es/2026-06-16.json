@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "title": "España recibe un récord de 908.288 solicitudes de regularización de migrantes",
+      "body": "El Gobierno ha recibido 908.288 solicitudes del programa extraordinario de regularización de migrantes, por encima de las previsiones iniciales de 750.000. Hasta ahora se han admitido a trámite 359.255 solicitudes, con dos semanas por delante hasta el plazo. El volumen récord se debe a requisitos más flexibles, como los informes de vulnerabilidad y los criterios de unidad familiar, aunque cientos de solicitantes denuncian retrasos importantes en la tramitación.",
+      "sources": [
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/desalambre/gobierno-recibido-908-288-solicitudes-regularizacion-migrantes_1_13302332.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "La Comunidad de Madrid limita el abono de transporte público a los empadronados",
+      "body": "La Comunidad de Madrid limita ahora los abonos de transporte público exclusivamente a las personas empadronadas en la región. La medida afecta de forma desproporcionada a los residentes extranjeros y a los migrantes, ya que muchos caseros se niegan a empadronar a sus inquilinos. Las organizaciones sociales advierten de que la medida restringe gravemente el acceso asequible al transporte para personas indocumentadas, estudiantes y trabajadores de otras regiones.",
+      "sources": [
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/madrid/ayuso-apunta-migrantes-nueva-medida-transporte-pleno-debate-prioridad-nacional_1_13305753.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "EE. UU. e Irán ultiman un acuerdo de paz que reabre el estrecho de Ormuz",
+      "body": "EE. UU. e Irán han cerrado un acuerdo de paz provisional que levanta de inmediato el bloqueo del estrecho de Ormuz y reanuda el tráfico marítimo. Mientras el pacto ha hecho bajar el precio del petróleo y ha llevado el Ibex 35 por encima de los 19.000 puntos, los expertos advierten de que las bajadas de costes energéticos tardarán meses en llegar a los consumidores. Las infraestructuras dañadas y los cuellos de botella logísticos retrasarán la plena transmisión de la bajada del gas y del petróleo a los presupuestos de los hogares.",
+      "sources": [
+        {
+          "name": "Europapress",
+          "url": "https://www.europapress.es/internacional/noticia-acuerdo-iran-directo-ultima-hora-fin-guerra-estados-unidos-israel-contra-iran-20260615081708.html"
+        },
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/economia/reapertura-ormuz-tardara-llegar-bolsillo_1_13302331.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Los médicos amenazan con una huelga indefinida a partir de septiembre",
+      "body": "Los profesionales médicos de España anuncian una huelga indefinida a partir de septiembre si fracasan las negociaciones con el Ministerio de Sanidad. El comité de médicos rechazó el marco profesional, o Estatuto Marco, que el Gobierno aprobó con otros sindicatos a principios de este mes. Una tregua de verano pausará el conflicto actual, pero la escalada amenaza con interrumpir los servicios sanitarios en todo el país.",
+      "sources": [
+        {
+          "name": "20minutos",
+          "url": "https://www.20minutos.es/nacional/los-medicos-elevan-conflicto-contra-sanidad-amenazan-con-una-huelga-indefinida-partir-septiembre_6983383_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Las renovables ahorran 10 € al mes en la factura de la luz de los hogares",
+      "body": "Las fuentes renovables han ahorrado a los hogares españoles una media de 10 € al mes en la factura de la luz durante la reciente crisis energética. El gas fija el precio mayorista de la electricidad solo el 9 % del tiempo, lo que reduce mucho el impacto del aumento del 75 % del precio del gas durante el conflicto de Ormuz. Aunque el gas ha bajado un 10 % tras el acuerdo de paz, sigue un 46 % por encima de los niveles previos a la guerra, por lo que el colchón renovable es clave para los presupuestos de los hogares.",
+      "sources": [
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/economia/renovables-reducen-10-euros-mes-factura-electrica-espana-medio-crisis-energetica-ormuz_1_13305053.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los altos precios de la vivienda frenan el mercado en las grandes ciudades",
+      "body": "Los precios de la vivienda en España subieron un 12,9 % en el primer trimestre de 2026, pero la resistencia de los compradores enfría ahora el mercado. El economista Gonzalo Bernardos señala que la demanda de clase media alta en Madrid, Barcelona y Valencia rechaza los precios actuales, lo que provoca una desaceleración de las inversiones inmobiliarias. Esta resistencia apunta a un posible cambio en la asequibilidad para quienes quieren comprar en los grandes centros urbanos.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-06-16/economista-vivienda-espana-demanda-clase-media-madrid-barcelona-valencia_4373023/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La carga de los alquileres dispara los problemas de salud mental de los jóvenes",
+      "body": "Un nuevo informe de Oxfam y de organizaciones juveniles vincula la dificultad para pagar el alquiler con el deterioro de la salud mental de los jóvenes en España. El estudio revela que el 62,7 % de los jóvenes tiene dificultades de acceso a la vivienda, y que destinar más del 30 % o del 50 % de los ingresos al alquiler aumenta de forma notable el malestar psicológico. Los investigadores piden a los responsables políticos que atajen estos factores socioeconómicos para proteger el bienestar de la población.",
+      "sources": [
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/economia/sobreesfuerzo-pagar-alquiler-dispara-problemas-salud-mental-jovenes_1_13305510.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "La cotización de solidaridad sobre los salarios altos se dispara un 42 %",
+      "body": "La cuota de solidaridad aplicada a los salarios altos generará 567 millones de euros en cotizaciones a las pensiones este año, un 42 % más que en 2025. El Ministerio de Seguridad Social aplicó la medida el año pasado como parte de las reformas más amplias de las pensiones, para garantizar la viabilidad a largo plazo del sistema. Quienes tienen ingresos altos verán reflejada esta mayor deducción en su salario neto mensual.",
+      "sources": [
+        {
+          "name": "eldiario.es",
+          "url": "https://www.eldiario.es/economia/salarios-altos-disparan-aportacion-solidaridad-pensiones-publicas-567-millones_1_13306656.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Los precios de los vuelos nacionales en España suben un récord del 25,6 %",
+      "body": "El coste de los vuelos nacionales en España subió un 25,6 % en mayo, la mayor subida mensual de la serie. Las tarifas internacionales también subieron un 2,5 %, por lo que el precio medio del billete aumentó un 8,9 %. La subida se debe a un incremento del 6,44 % en las tasas de los aeropuertos de Aena y al encarecimiento de los costes operativos por el alza del petróleo durante el reciente conflicto geopolítico.",
+      "sources": [
+        {
+          "name": "20minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/precio-los-billetes-avion-para-viajar-por-espana-sufrio-su-mayor-subida-mayo-mas-un-25_6983245_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "La nueva norma de Madrid sobre el abono de transporte excluye a los residentes no empadronados. ¿Has tenido problemas para empadronarte por culpa de tu casero? 👇",
+  "subject": "Hoy no pasó nada en España. Salvo esto.",
+  "lang": "es",
+  "date": "2026-06-16",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-06-16T06:09:44.809112+00:00"
+}

@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "title": "La Guardia Civil descubre la «red de cloacas» del PSOE para proteger al Gobierno",
+      "body": "La UCO de la Guardia Civil ha concluido que una red clandestina dentro del PSOE, presuntamente liderada por el exnúmero tres del partido Santos Cerdán, se activó en 2024 para proteger al Gobierno y al presidente Sánchez de las investigaciones judiciales. Según la UCO, la red buscaba influir en causas judiciales que afectaban al partido y a sus dirigentes, o neutralizarlas.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/uco-concluye-que-trama-cloacas-psoe-se-activo-para-proteger-los-intereses-gobierno-presidente_6978673_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El Gobierno gasta 32.200 millones en modificaciones presupuestarias sin presupuesto aprobado",
+      "body": "El Gobierno ha utilizado un récord de 32.200 millones de euros en modificaciones de crédito en los cuatro primeros meses de 2026, un 64 % más que el año anterior, mientras sigue funcionando con el presupuesto de 2023. Es más del triple de las modificaciones habituales en tiempos normales y refleja el uso de resquicios legales para aprobar gasto sin el visto bueno del Congreso.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/macroeconomia/2026/06/04/6a2008c0fc6c83bf208b45c5.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Bruselas exige a España que ataje la crisis de vivienda reduciendo la burocracia",
+      "body": "La Comisión Europea pide a España que actúe con decisión frente a la crisis de vivienda, recomendando menos burocracia, convertir edificios comerciales en viviendas y ampliar el parque de vivienda social. La Comisión advierte de que la subida de precios afecta de forma desproporcionada a los grupos de renta baja y vulnerables.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/bruselas-pide-espana-actuar-contra-crisis-vivienda-menos-burocracia-reconvertir-edificios-aumentar-alquiler-social_6978690_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Bruselas advierte a España de que debe reequilibrar el gasto social entre generaciones por las pensiones",
+      "body": "La Comisión Europea recomienda a España «reequilibrar el gasto social entre generaciones» ante el aumento del coste de las pensiones y la creciente dependencia de los impuestos sobre el trabajo. También señala que España tiene la mayor brecha de IVA de la UE y sugiere subir el IVA de la hostelería, que hoy beneficia a las rentas altas.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bruselas-advierte-espana-debe-reequilibrar-gasto-publico-social-generaciones-frente-pensiones_1_13270980.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "EE. UU. propone aranceles del 10 % al 12,5 % a 60 socios comerciales, entre ellos la UE",
+      "body": "El representante comercial de EE. UU. ha propuesto aranceles del 10 % o el 12,5 % a 60 economías, entre ellas la Unión Europea, por no prohibir de forma efectiva las importaciones fabricadas con trabajo forzoso. La medida podría afectar a las exportaciones españolas y al comercio mundial.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-03/eeuu-plantea-aranceles-del-10-para-60-socios_4366485/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La OCDE sitúa a España como la economía avanzada que más crecerá en 2026, pero pide reducir antes el déficit",
+      "body": "La OCDE prevé que el PIB de España crezca un 2,2 % en 2026, por encima de Estados Unidos, Reino Unido y las principales economías europeas. Sin embargo, aconseja al Gobierno reducir el déficit con más rapidez y limitar el gasto en medidas de alivio vinculadas a Irán.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/ocde-situa-espana-como-economia-avanzada-que-mas-crecera-2026-pero-le-pide-reducir-deficit-mas-rapido_6978399_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "UGT aplaza la huelga del transporte al 22 de junio por la visita del Papa",
+      "body": "El sindicato UGT ha retrasado al 22 de junio la huelga indefinida de conductores de camiones y autobuses, prevista inicialmente para el 8 de junio, alegando la necesidad de garantizar la movilidad durante la visita del papa a España. La huelga reclama la jubilación anticipada de los conductores sin penalizaciones en la pensión.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ugt-retrasa-22-junio-huelga-indefinida-transporte-visita-leon-xiv_1_13272479.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "La crisis de vivienda de España llama la atención de la UE: ¿crees que reducir la burocracia solucionará realmente el problema? 💬",
+  "subject": "🇪🇸 España: resumen de hoy ⚡ 04.06.2026",
+  "lang": "es",
+  "date": "2026-06-04",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-06-04T05:32:01.197014+00:00"
+}

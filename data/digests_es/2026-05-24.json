@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "El expresidente Zapatero, acusado en una causa de corrupción con facturas falsas",
+      "body": "Una investigación policial (UDEF) sostiene que una red dirigida por el expresidente José Luis Rodríguez Zapatero utilizó facturas falsas, empleos simulados y consultorías fantasma para traficar con influencias. El informe señala a Zapatero y a sus hijas como «principales beneficiarios» del esquema.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/05/23/6a120531e9cf4ac3658b45b5.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Nuevas normas para las terrazas: multas de hasta 50.000 € por incumplir en calor extremo",
+      "body": "El nuevo convenio de hostelería (ALEH) obliga a bares y restaurantes a aplicar medidas contra el calor cuando las temperaturas superen los 40 °C, o a retirar el servicio en terraza. Las multas por incumplimiento pueden llegar a los 50.000 €, y serán de aplicación en el verano de 2026.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/05/24/terrazas-bares-restaurantes-nueva-normativa-sanciones-hasta-euros-calor-extremo-2022584.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Miles de personas protestan en España contra el convenio de Inditex, Mango y Primark",
+      "body": "Trabajadores de tiendas de textil y calzado han realizado huelgas y protestas contra un nuevo convenio colectivo firmado por la patronal ARTE, que incluye a grandes marcas. Los sindicatos aseguran que empeora las condiciones laborales y reclaman negociar los días 27 y 28 de mayo.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/miles-trabajadores-manifiestan-espana-convenio-patronal-inditex-mango-primark_1_13245436.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Feijóo promete una política migratoria más dura: expulsar a quien delinca",
+      "body": "El líder del PP, Alberto Núñez Feijóo, prometió sustituir la política migratoria actual por otra que proteja las fronteras y expulse a quienes incumplan la ley. También se comprometió a aplicar un desalojo en 24 horas para los okupas con una nueva ley antiokupación.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/feijoo-se-compromete-endurecer-politica-migratoria-si-llega-gobierno-quien-venga-delinquir-sera-expulsado_6974217_0.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Más de 11.000 uruguayos obtienen la nacionalidad española con la Ley de Memoria",
+      "body": "La Ley de Memoria Democrática ha concedido la nacionalidad a 11.670 uruguayos descendientes de exiliados, de un total de casi 50.000 solicitudes presentadas. El Gobierno la califica de «reparación moral» para quienes tuvieron que huir de la guerra civil y de la dictadura franquista.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/mas-11-000-uruguayos-reciben-nacionalidad-espanola-con-ley-memoria-democratica_6974231_0.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "El mercado inmobiliario se modera, pero no se esperan caídas generales de precios",
+      "body": "Tras el último boom inmobiliario, los precios se están moderando, pero los expertos consideran poco probable un desplome al estilo de 2008. La duda para los compradores sigue siendo: ¿comprar, vender o esperar?",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/05/23/6a0c6a31fc6c83eb6a8b45b4.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "España pierde su puesto en la comisión ejecutiva del BCE por segunda vez en 28 años",
+      "body": "Con la salida de Luis de Guindos como vicepresidente, el croata Boris Vujčić ocupa el cargo, y España se queda sin representación en el consejo hasta 2027 al menos. El Gobierno no logró colocar a un sustituto de su nacionalidad.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/macroeconomia/2026/05/24/6a0ef99721efa0aa418b45c3.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El sistema de depósito para latas y botellas se retrasa hasta 2029",
+      "body": "El previsto sistema de depósito, devolución y retorno (SDDR) para botellas de plástico y latas se aplazará probablemente hasta enero de 2029, por incompatibilidad con la normativa europea. El Gobierno ha publicado una nota aclaratoria, pero no hay una confirmación oficial.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/aagesen-apunta-retraso-hasta-2029-sistema-fianza-retorno-latas-botellas-asumir-que-ley-es-incompatible-con-ue_6973467_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Las empresas españolas afrontan los aranceles de Trump al aceite de oliva, el vino y el chocolate",
+      "body": "Los exportadores de productos como el aceite de oliva, el vino o el chocolate hacen frente a los aranceles estadounidenses de Trump, a un dólar débil y al encarecimiento de costes por el conflicto con Irán. Los expertos recomiendan diversificar mercados y gestionar los márgenes.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/asi-atraviesan-muro-aranceles-trump-empresas-espanolas-aceite-oliva-vino-chocolate_6973547_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Trump asegura que el acuerdo con Irán está casi cerrado y que el anuncio es inminente",
+      "body": "El presidente de EE. UU., Donald Trump, afirma que el memorándum de entendimiento con Irán está «en gran medida negociado» y solo quedan detalles finales. El acuerdo incluye la reapertura del estrecho de Ormuz y ha sido consultado con el primer ministro israelí, Benjamín Netanyahu.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/internacional/noticia-trump-asegura-estan-negociando-ultimos-detalles-acuerdo-iran-anunciara-pronto-20260523224650.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Las nuevas multas por terrazas de hasta 50.000 € por incumplir en calor extremo entrarán pronto en vigor. ¿Crees que perjudicará a la «cultura de terraza» de España o mejorará la seguridad de los trabajadores? 💬",
+  "subject": "🇪🇸 España: resumen de hoy ⚡ 24.05.2026",
+  "lang": "es",
+  "date": "2026-05-24",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-24T05:31:56.025243+00:00"
+}

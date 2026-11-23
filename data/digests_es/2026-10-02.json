@@ -1,0 +1,159 @@
+{
+  "items": [
+    {
+      "title": "Nueva deducción por alquiler en el decreto de vivienda: hasta 1.163 €",
+      "body": "El martes, el Gobierno aprobó dos reales decretos-leyes de vivienda. Uno incluye una nueva deducción estatal en el IRPF para inquilinos: hasta 1.163 € al año para bases imponibles de hasta 23.007,20 €, equivalente al 10 % de 11.630 € de alquiler anual. También suspende los desahucios de personas vulnerables hasta 2030 y permite prorrogar los contratos dos años.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/asi-cambia-deduccion-alquiler-decreto-vivienda-cuanto-podras-ahorrar-proxima-renta_7043730_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "El precio regulado del gas sube un 17,6 % para tres millones de hogares",
+      "body": "La tarifa regulada del gas (TUR) sube un 17,6 % respecto a julio y afecta a cerca de tres millones de hogares. La TUR vecinal para comunidades de propietarios sube entre un 22,6 % y un 33,1 %. La factura de calefacción y agua caliente subirá con fuerza para quienes tienen la tarifa regulada.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/02/precio-gas-regulado-dispara-millones-hogares-2056347.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los decretos de vivienda se enfrentan al rechazo del viernes mientras miles de personas protestan",
+      "body": "Junts, PP y Vox votarán en contra de los dos decretos de vivienda en el Congreso el viernes, por lo que ambos están llamados a ser rechazados. El Gobierno rechazó una oferta de Junts para retirarlos y negociar un texto nuevo. Miles de personas protestaron con cacerolas en Madrid y Barcelona para exigir que el Congreso los convalide.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-gobierno-rechaza-junts-mantiene-decretos-vivienda-llegado-hora-retraten-20261001234055.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/miles-personas-alzan-voz-con-cacerolas-mano-frente-los-ayuntamientos-exigen-convalidacion-los-decretos-vivienda_7043940_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La inflación llega al 4,9 % y un economista advierte sobre la clase media",
+      "body": "El IPC alcanzó el 4,9 % en septiembre, su nivel más alto desde febrero de 2023. El economista Pablo Gil advirtió de que la inflación «está destruyendo la clase media» y de que la crisis energética podría convertirse en una crisis alimentaria. Afirma que los ingresos de los hogares no siguen el ritmo de los gastos esenciales.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/02/pablo-gil-economista-inflacion-destruyendo-clase-media-crisis-energetica-actual-convertirse-alimentaria-retraso-2056158.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "España, el único país de la UE que votó en contra de las expulsiones de migrantes",
+      "body": "España fue el único país de la UE que votó en contra de un nuevo reglamento de retorno que facilita la expulsión de migrantes irregulares y apoya los centros de deportación en terceros países. Interior aseguró que ningún migrante llegado a Ceuta ha llegado a otro país de la UE. Solo Bélgica e Irlanda se abstuvieron.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/espana-unico-pais-ue-vota-facilitar-expulsiones-migrantes-crisis-ceuta_1_13553577.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Las infecciones respiratorias alcanzan niveles epidémicos en España",
+      "body": "Las infecciones respiratorias agudas alcanzaron 478,2 casos por cada 100.000 habitantes, por encima del umbral epidémico de España. Supone un 28,2 % más que la semana anterior, según el Instituto de Salud Carlos III. Los centros de salud afrontan más presión, sobre todo por la atención a mayores y enfermos crónicos.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.infosalus.com/salud-investigacion/noticia-infecciones-respiratorias-alcanzan-niveles-epidemicos-4782-casos-cada-100000-habitantes-20261001153102.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "⚠️ Entran en vigor las nuevas normas de tráfico de la DGT",
+      "body": "La reforma del Reglamento General de Circulación entró en vigor el 1 de octubre. Los conductores que adelanten a ciclistas deberán reducir la velocidad al menos 20 km/h por debajo del límite; también cambian las normas para motoristas y usuarios de patinetes, así como las de los semáforos. El incumplimiento se sanciona con multa.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/motor/conductores-ciclistas-motoristas-normas-dgt-entran-vigor-1-octubre_1_13552502.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "Bruselas abre un procedimiento de infracción por el plan de riesgos eléctricos",
+      "body": "La Comisión Europea abrió un procedimiento de infracción contra España por no haber notificado su plan actualizado de preparación frente a riesgos eléctricos. Bruselas ha enviado un requerimiento formal a España y a Francia. El plan debe cubrir fenómenos meteorológicos extremos, ciberataques y escasez de combustible.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-10-01/espana-plan-preparacion-riesgos-electricos-1tps_4436170/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Suspendidas las clases en la Comunitat Valenciana por las alertas de lluvia",
+      "body": "Se han suspendido las clases para 359.896 alumnos en 104 municipios de la Comunitat Valenciana por las alertas rojas y naranjas de lluvia. La mayoría de los municipios están en la provincia de Valencia. Algunas suspensiones durarán hasta el mediodía del viernes, según el nivel de alerta.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/comunitat-valenciana/noticia-clases-suspendidas-valencia-alerta-roja-lluvias-son-colegios-afectados-20261001114026.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Un matrimonio de mayores recupera 35.000 € de un banco",
+      "body": "La Audiencia Provincial de Madrid ordenó a ING devolver 35.000 € a una pareja de mayores estafada mediante una web bancaria falsa. El tribunal afirma que el banco no pudo demostrar que la pareja ni su hijo hubieran actuado con negligencia. Los bancos deben reembolsar a las víctimas de phishing cuando los clientes no han sido negligentes.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/ancianos-banco-les-devuelva-35-000-euros-estafados-hackers-sido-traumatico_1_13546648.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "España calcula una producción de 1,6 millones de toneladas de aceite de oliva",
+      "body": "España estima una producción de aceite de oliva de 1.602.596 toneladas para la campaña 2026/2027, un 23 % más que la anterior. La disponibilidad total, con existencias de campañas anteriores, podría rondar los dos millones de toneladas. Las organizaciones agrarias quieren activar el mecanismo de retirada del mercado, pero el titular de Agricultura, Luis Planas, pide prudencia.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-10-01/aceite-oliva-produccion-espana-1hms_4436185/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los Reyes visitarán Ceuta y Melilla",
+      "body": "Los Reyes, Felipe VI y Letizia, visitarán Ceuta el 13 de octubre y Melilla el 14. Será la primera visita de los Reyes desde la que hicieron Juan Carlos I y la reina Sofía en 2007. Pedro Sánchez no asistirá.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/los-reyes-visitaran-ceuta-melilla-los-dias-13-14-octubre_7043520_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Las infecciones respiratorias están en nivel epidémico en España. ¿Te pondrás la vacuna de la gripe? A) Sí B) No C) Ya me la puse 💬",
+  "subject": "Nada pasó hoy en España. Excepto esto.",
+  "lang": "es",
+  "date": "2026-10-02",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-10-02T06:02:55.437819+00:00"
+}

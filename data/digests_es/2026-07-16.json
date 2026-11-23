@@ -1,0 +1,135 @@
+{
+  "items": [
+    {
+      "title": "España llega a la final del Mundial contra Argentina tras una defensa histórica",
+      "body": "España ha alcanzado la final del Mundial con la defensa más sólida de su historia: solo ha encajado un gol en todo el torneo, mejor que los dos goles que recibió la campeona de 2010. El único gol llegó de Charles De Ketelaere, de Bélgica, en cuartos de final. España se enfrentará a Argentina en la final, que será el segundo partido oficial entre ambos países y saldará la Finalissima cancelada en marzo.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/deportes/futbol/mundial-de-futbol/2026/07/15/6a57da1be9cf4a65338b4586.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/deportes/futbol/mundial-00639/noticia-espana-argentina-tendran-gran-finalissima-20260715233216.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "El PP propone reformar la ley para permitir devoluciones en el mar de migrantes cerca de Ceuta y Melilla",
+      "body": "El PP propondrá una reforma de la ley de extranjería que permita a las fuerzas de seguridad devolver a los migrantes interceptados en el mar cuando intentan llegar a Ceuta y Melilla. Responde a la sentencia del Supremo que prohibió esas devoluciones. La portavoz del PP, Alma Ezcurra, señaló que las entradas irregulares en Baleares pasaron de 700 en 2018 a 7.500 el año pasado. La reforma se limitaría a esas dos ciudades autónomas.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/pp-propondra-una-reforma-legal-que-permita-las-devoluciones-frontera-migrantes-llegados-por-mar-ceuta-melilla_7015116_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Junts exige transparencia sobre la regularización de migrantes y la ley de nietos",
+      "body": "Junts ha exigido al Gobierno que publique datos sobre los efectos demográficos de sus recientes medidas de inmigración. Entre ellas, la regularización extraordinaria de cerca de un millón de inmigrantes indocumentados, que han recibido permisos de un año, y la ley de nietos, que ha generado 2,4 millones de solicitudes de nacionalidad desde 2022. El partido sostiene que las políticas se adoptaron sin una planificación rigurosa y podrían afectar a los procesos de residencia y ciudadanía.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/junts-acusa-gobierno-opacidad-con-regularizacion-inmigrantes-ley-nietos-le-exige-datos-sobre-su-impacto_7014942_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Nuevo decreto: los vendedores deberán informar si la vivienda está en zona inundable",
+      "body": "El Gobierno publicará pronto un decreto que obligará a inscribir en el Registro de la Propiedad la información sobre riesgo de inundación antes de vender una vivienda en una zona inundable. La norma, que se somete a consulta pública el jueves, también impone restricciones a la construcción y crea un catálogo de inundaciones históricas. Los compradores tendrán acceso a estos datos antes de completar la compra.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/comunitat-valenciana/noticia-nuevo-decreto-zonas-inundables-obligara-informar-cuando-vivienda-area-riesgo-antes-venta-20260715155147.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La inflación de junio se confirma en el 3,2 % mientras baja el combustible y sube la luz",
+      "body": "El índice de precios de consumo de España se mantuvo en el 3,2 % en junio, por tercer mes consecutivo, según datos definitivos del INE. Una caída mensual del 5,1 % en los carburantes y una inflación alimentaria más moderada compensaron una subida del 16,1 % en el coste de la electricidad. El plan de respuesta del Gobierno a Oriente Medio y un nuevo paquete fiscal ayudaron a contener los precios, aunque la rebaja del IVA de los carburantes se sustituyó por un impuesto de hidrocarburos más bajo.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ine-confirma-ipc-cerro-junio-3-2-moderarse-precios-carburantes-alimentos_1_13381113.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los costes de la vivienda frenan la contratación en el 63 % de las pymes catalanas",
+      "body": "Un nuevo estudio revela que el 98 % de las pymes catalanas consideran su zona un mercado «tensionado» y que el 63 % tiene dificultades para cubrir vacantes. Más de la mitad culpa al coste de los desplazamientos o al tiempo de viaje, mientras el 33 % apunta a la falta de vivienda asequible o al alto coste de vida cerca de los puestos de trabajo. El informe, encargado por la patronal Pimec, muestra cómo la crisis de vivienda golpea al mercado laboral.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/07/15/6a579b72e9cf4af5398b4579.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Desde 2027, jubilarse a los 65 años exigirá 38 años y medio de cotización",
+      "body": "A partir del 1 de enero de 2027, los trabajadores nacidos entre 1961 y 1965 deberán tener al menos 38 años y 6 meses de cotización para jubilarse a los 65 años con pensión completa. El requisito sube desde 38 años y 3 meses con la norma anterior. Quienes tengan carreras de cotización más cortas tendrán que esperar hasta los 67 años para cobrar la pensión completa. El cambio marca la fase final de la reforma de pensiones.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/07/16/jubilacion-los-65-anos-si-has-nacido-entre-1961-1965-requisito-cambia-2027-2037333.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El Ministerio de Economía exige al ICO detallar en 30 días los instrumentos del fondo España Crece",
+      "body": "El Ministerio de Economía ha dado al ICO un plazo de 30 días para presentar los instrumentos financieros del fondo soberano España Crece. El fondo, diseñado para sustituir los fondos europeos de recuperación después del 31 de agosto, pretende movilizar 120.000 millones de euros con foco en vivienda, energías renovables y financiación de pymes. Se nutrirá de 13.600 millones de fondos europeos.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/cuerpo-da-mes-ico-poner-marcha-instrumentos-estrategia-inversion-fondo-espana-crece_1_13381215.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La UE negocia con EE. UU. la eliminación del arancel del 15 % al aceite de oliva, el vino y la maquinaria",
+      "body": "La Comisión Europea negocia con Washington la eliminación de un arancel del 15 % sobre 115.000 millones de euros de exportaciones europeas, entre ellas el aceite de oliva, el vino, el queso y la maquinaria. La negociación sigue al tratado comercial ratificado en mayo; la UE eliminó sus aranceles a los productos estadounidenses el 1 de julio. Mientras, el presidente Trump había amenazado con aranceles del 25 % a los coches europeos.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ue-negocia-estados-unidos-eliminacion-aranceles-productos-aceite-oliva-vino-maquinaria_1_13382563.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La retirada de la verja de Gibraltar pone fin a «una herida de tres siglos», afirma Sánchez",
+      "body": "Pedro Sánchez ha declarado que la retirada de la verja fronteriza con Gibraltar cierra una «herida de tres siglos» y abre una nueva etapa de oportunidades para la comarca del Campo de Gibraltar. España mantendrá su reivindicación territorial sobre la colonia británica. Se espera que el fin de la barrera física facilite la circulación transfronteriza y estreche los lazos económicos.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-sanchez-fin-verja-cierra-herida-tres-siglos-abre-nueva-etapa-oportunidades-20260715125605.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "¿Te disuadiría un aviso de riesgo de inundación para comprar una casa en España? 👇",
+  "subject": "Nada en España hoy. Salvo esto.",
+  "lang": "es",
+  "date": "2026-07-16",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-07-16T06:05:11.430549+00:00"
+}

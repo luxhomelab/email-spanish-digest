@@ -1,0 +1,183 @@
+{
+  "items": [
+    {
+      "title": "El desahucio de Maricarmen, de 87 años, impulsa un decreto urgente de vivienda",
+      "body": "El desahucio de Maricarmen, de 87 años, de la casa en la que vivía desde hace más de 70 años, ha llevado al Gobierno a plantear un decreto urgente de vivienda ya el martes. España registró 4.000 desahucios en el primer trimestre de 2026 y 24.540 en 2025, el 74,6 % por impagos de alquiler. Cataluña, Andalucía, la Comunitat Valenciana y Madrid concentran la mayoría de los casos.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/09/24/6ab55f2221efa05c598b4577.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/mapa-los-desahucios-espana-casi-45-lanzamientos-dia-primer-trimestre-2026_7040941_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Los precios de la vivienda suben el doble que los ingresos desde los años ochenta",
+      "body": "Los datos del Banco de España muestran que el precio real de la vivienda se ha multiplicado por 3,5 desde 1980, mientras la renta familiar disponible real se ha multiplicado por 1,8. La subgobernadora Soledad Núñez advirtió de un déficit de 750.000 viviendas entre 2021 y 2025. Los precios se han acelerado hasta niveles comparables a los de 2005 por la falta de oferta.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/precio-vivienda-aumenta-doble-que-renta-disponible-los-hogares-espanoles-desde-los-anos-80_7041041_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Andalucía rebaja el impuesto de transmisiones para unas 150.000 familias",
+      "body": "Andalucía rebajará el Impuesto de Transmisiones Patrimoniales (ITP) general de la vivienda de segunda mano del 7 % al 6,75 % y elevará el precio máximo para el tipo reducido del 6 %, de 150.000 € a 200.000 €. La medida del pacto PP-Vox beneficiará a unas 146.500 familias.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/andalucia/andalucia-anuncia-una-nueva-bajada-impuestos-para-compra-vivienda-que-beneficiara-cerca-150-000-familias_7040879_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El precio de los carburantes se acerca a los 2 € por litro, máximo anual",
+      "body": "La gasolina cuesta de media 1,928 € por litro y el diésel 1,918 € tras once subidas semanales consecutivas. La gasolina sube un 30 % desde finales de junio; llenar un depósito de 55 litros cuesta unos 106 €, 25 € más que hace un año. Los precios siguen por debajo de los máximos de julio de 2022, de 2,141 € para la gasolina y 2,1 € para el diésel.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/las-gasolinas-sin-techo-sus-precios-tocan-un-nuevo-maximo-anual-se-asoman-los-2-euros-por-litro_7040806_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Última fase de la reforma de pensiones: 38,5 años de cotización para jubilarse a los 65",
+      "body": "Desde el 1 de enero de 2027, los trabajadores deberán tener 38 años y seis meses cotizados para jubilarse a los 65 años con pensión completa. Quienes tengan menos cotizaciones deberán esperar hasta los 67 años. El periodo transitorio de la reforma de pensiones de 2011 termina el 1 de enero de 2027.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/09/24/jubilacion-65-anos-nacidos-1961-1965-requisito-cambia-2027-2037333.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El Gobierno busca fórmulas legales para acortar los plazos de asilo",
+      "body": "El Gobierno ha encargado a juristas fórmulas legales para acortar la tramitación del asilo y acelerar las devoluciones tras la llegada masiva de migrantes a Ceuta el 30 de julio. Ángel Víctor Torres afirmó que se estudian mecanismos para reducir el plazo de tres meses del Pacto Europeo de Migración. Las reformas se aplicarían a futuras emergencias, no a la situación actual de Ceuta.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/gobierno-designa-un-grupo-tecnicos-para-buscar-formulas-legales-que-acorten-plazos-asilo-devoluciones-inmigrantes_7040028_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Renault invertirá 600 millones en España hasta 2030",
+      "body": "Renault invertirá 600 millones de euros en España entre 2026 y 2030 para producir cinco nuevos modelos en Valladolid y Palencia, incluidos sus primeros vehículos 100 % eléctricos fabricados en España. El proyecto, respaldado por el Gobierno de España y por Castilla y León, incluye una línea de montaje de baterías en Valladolid.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/motor/sector_y_mercado/renault-invertira-600-millones-espana-2030-incluyendo-ayudas-publicas_1_13534314.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Vídeos confirman que militares golpearon a migrantes en Ceuta",
+      "body": "elDiario.es verificó vídeos en los que militares uniformados golpean a migrantes en Ceuta durante la reciente entrada masiva. El Gobierno expresó su «total consternación y condena» y abrió una investigación. Dos docenas de migrantes habían denunciado previamente palizas y humillaciones.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/videos-confirman-palizas-militares-migrantes-ceuta_1_13536621.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Feijóo propone un IVA del 0 % para alimentos básicos y más desgravaciones por hijo",
+      "body": "El líder del PP, Alberto Núñez Feijóo, ha propuesto reducir el IVA de los alimentos básicos al 0 %, duplicar las deducciones por hijo hasta final de año y bajar el IVA de la energía del 21 % al 10 %. El PP buscará su aprobación en el Congreso y en el Senado, donde tiene mayoría absoluta.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/09/24/feijoo-iva-alimentos-basicos-cero-desgravaciones-hijos-2054318.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "El TJUE permite reclamar cláusulas abusivas más allá de los tres años",
+      "body": "El Tribunal de Justicia de la UE ha dictaminado que un plazo nacional de tres años no puede impedir la devolución de lo cobrado con cláusulas abusivas. El caso se refería a un contrato alemán de calefacción, pero la sentencia puede afectar a reclamaciones similares en España, incluidas las cláusulas hipotecarias. El Tribunal Supremo español anuló por separado las hipotecas multidivisa de CaixaBank por falta de transparencia.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-09-24/tjue-clausula-abusiva-devolucion-consumidor-1hms_4430728/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los casos de covid se duplican en una semana entre bebés y mayores",
+      "body": "La incidencia de covid se duplicó en una semana entre los menores de un año, de 123,6 a 225,5 por 100.000, y entre los mayores de 80, de 18,1 a 30,9. Las infecciones respiratorias en general subieron de 270 a 370 por 100.000. El VRS se duplicó entre los niños menores de cinco años.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/los-casos-covid-se-doblan-una-semana-entre-mayores-ninos-incidencia-sigue-disparada-entre-bebes-menores-un-ano_7040897_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Luis Martos denuncia a la consejería de Sanidad de Madrid por las listas de espera",
+      "body": "Luis Martos, de la unidad de cirugía del hospital Ramón y Cajal, ha presentado una denuncia tras informar de que el hospital rebajó la prioridad de 57 pacientes para mejorar las listas de espera. La consejería respondió acusando de manipular las listas para «trabajar menos». Decenas de personas se concentraron frente al hospital en apoyo.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/madrid/cirujano-denuncio-cambio-prioridad-pacientes-ramon-cajal-querella-consejera-sanidad_1_13534385.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "La Junta Electoral endurece el registro de votantes en el extranjero",
+      "body": "La Junta Electoral Central aprobó requisitos más estrictos para que los votantes en el extranjero justifiquen el municipio y la circunscripción en la que votan. La norma afecta a quienes obtuvieron la nacionalidad por la «ley de nietos». Si no se indica municipio, la Oficina Consular lo determinará.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/jec-endurece-los-requisitos-para-que-los-nacionalizados-cera-justifiquen-provincia-donde-votan_7040962_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Benjamín Noval gana la carrera en ruta júnior de los Mundiales de Montreal",
+      "body": "Benjamín Noval ganó la carrera en ruta júnior de los Mundiales de ciclismo de Montreal con una escapada a 45 kilómetros de la meta, en solitario. La victoria completa un doble tras su título en contrarreloj.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/deportes/ciclismo/2026/09/24/6ab56e5efdddff35028b45dd.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "En España se producen 45 desahucios al día. ¿Cuál es tu situación de vivienda? A) Alquiler B) Propiedad C) Buscando 👇",
+  "subject": "Casi nada ha pasado en España. Casi nada.",
+  "lang": "es",
+  "date": "2026-09-25",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-09-25T06:03:24.841176+00:00"
+}

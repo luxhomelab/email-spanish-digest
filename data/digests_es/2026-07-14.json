@@ -1,0 +1,167 @@
+{
+  "items": [
+    {
+      "title": "La policía calcula que la regularización podría beneficiar a 3 millones de inmigrantes con sus familias",
+      "body": "La policía calcula que el proceso extraordinario de regularización podría dar estatus legal a hasta 3 millones de inmigrantes, incluidos sus familiares. Cada solicitud aprobada podría traer al menos tres parientes más por reagrupación familiar. La Policía Nacional ha quedado excluida de la verificación de documentos, que ahora gestiona el Ministerio de Migraciones, lo que suscita dudas sobre errores en la comprobación de antecedentes penales.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/07/13/6a5529e321efa0765a8b4581.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "El Supremo: no se puede denegar automáticamente la residencia por tener antecedentes penales",
+      "body": "El Tribunal Supremo ha anulado los preceptos que permitían denegar de forma automática las autorizaciones de residencia solo por tener antecedentes penales. Las administraciones deben ahora hacer una valoración caso por caso, teniendo en cuenta factores como la gravedad del delito, el tiempo transcurrido, la situación familiar y los intereses de los hijos menores. La sentencia refuerza las garantías de los extranjeros con antecedentes.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/epsocial/migracion/noticia-supremo-establece-no-podran-denegarse-automaticamente-autorizaciones-extranjeros-tener-antecedentes-penales-20260713125316.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Francia-España, la semifinal del Mundial más esperada, arranca en Dallas",
+      "body": "España se enfrenta a Francia en la semifinal del Mundial el 14 de julio en Dallas, un partido que ambos entrenadores califican de «final antes de la final». Las dos potencias europeas son favoritas para ganar el torneo. El ganador se medirá en la final, lo que acerca a España a una segunda estrella mundialista.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/deportes/2026/07/14/francia-espana-partido-mas-esperado-mundial-2026-2036872.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "La CEOE alerta de que la presión fiscal en España supera un 17 % la media europea",
+      "body": "La patronal CEOE advierte de que la carga fiscal de España supera en un 17 % la media de la Unión Europea, según el índice de la Tax Foundation. España ocupa el puesto 34 de 38 economías de la OCDE en competitividad fiscal, con 57,9 puntos sobre 100. El informe destaca a Estonia, Letonia, Nueva Zelanda, Suiza y Luxemburgo como los mejor situados.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/ceoe-advierte-que-presion-fiscal-espana-es-un-17-superior-media-europea_7014115_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Los alquileres de temporada caen un 34 % en Cataluña tras la regulación de precios",
+      "body": "Los contratos de alquiler de temporada en las zonas tensionadas de Cataluña se desplomaron un 34 % en el primer trimestre de 2026, de 3.310 a 2.184, tras extender el gobierno regional los topes de precio a estos contratos. Barcelona registró una caída similar. El saldo neto de los alquileres de temporada ha sido negativo por segundo trimestre consecutivo, lo que pone en duda el efecto de la ley sobre la oferta.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/alquileres-temporada-retroceden-catalunya-aprobacion-regulacion-precios_1_13376292.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "S&P prevé que el precio de la vivienda suba un 7 % anual hasta 2029",
+      "body": "S&P Global calcula que los precios de la vivienda en España subirán de media un 7 % anual hasta 2029, impulsados por una demanda fuerte, una oferta escasa y la inmigración. El aumento de este año se estima en un 9,1 %, y se moderará hasta el 5,4 % en 2029. Se espera que España lidere el crecimiento de precios entre las grandes economías europeas.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/precio-vivienda-subira-media-otro-7-anual-aqui-2030-segun-s-p_7013912_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Solo el 21 % consigue cita con el médico de cabecera en 48 horas; la espera media es de 10 días",
+      "body": "Solo el 21,8 % de los pacientes en España consigue cita con el médico de familia en 24 o 48 horas, y la espera media es ya de 10,27 días, según el Barómetro Sanitario 2026. Más del 71 % espera más de un día, y el 21,3 % espera más de seis meses para ver a un especialista. El 38,3 % cree que las listas de espera han empeorado.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/datos-listas-espera-barometro-sanitario-cis-2026-sanidad-publica_7013892_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Colau impulsa un organismo de disciplina de vivienda contra la especulación",
+      "body": "El partido de Ada Colau avanza una ley para crear una Dirección General de Disciplina de la Vivienda que penalizaría las compras especulativas de grandes tenedores. La reforma, que se espera aprobar en octubre, prohibiría que las entidades con más de cinco viviendas compren vivienda residencial en Cataluña. El PP y Junts han pedido un informe jurídico sobre la propuesta.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/cataluna/2026/07/14/6a551520e4d4d8f5078b458f.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El petróleo sube un 4,5 % y el Ibex cae un 0,25 % por la tensión entre EE. UU. e Irán",
+      "body": "El petróleo subió un 4,5 %, hasta 79,7 dólares el barril, y el Ibex 35 bajó un 0,25 %, hasta 19.300 puntos, tras la reanudación de las hostilidades entre EE. UU. e Irán. Los mercados asiáticos también cayeron con fuerza: Shanghái perdió un 2,06 %, Shenzhen un 3,48 % y el Kospi un 8,95 %. Los mayores costes de combustible podrían llegar pronto a los hogares españoles.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ibex-abre-nuevas-caidas-petroleo-vuelve-dispararse-renovada-tension-estados-unidos-e-iran_1_13375303.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El fundador de Glovo admite que distorsionó la Ley Rider y pide el archivo de la causa",
+      "body": "El fundador de Glovo, Oscar Pierre, reconoció en el juzgado que intentó eludir la Ley Rider con falsos autónomos, pero pidió el archivo de la causa penal. El sindicato CGT pide que se juzgue por presuntos delitos contra los derechos de los trabajadores. Corresponde al juez decidir si la causa sigue adelante.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/fundador-glovo-admite-trato-desvirtuar-ley-rider-pide-archivar-causa-falsos-autonomos_1_13372773.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Los bancos compiten por los clientes adinerados mientras los activos superan el billón de euros",
+      "body": "Los bancos españoles intensifican la competencia por las personas de alto patrimonio: los activos de banca privada alcanzaron 1.025.000 millones de euros en 2025, un 17 % más. Los márgenes para clientes con más de 30 millones se han reducido del 0,80 % al 0,30 %. Santander, CaixaBank y BBVA controlan el 74,5 % del mercado.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/07/14/6a53995ffc6c83da448b458d.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Las declaraciones de Rajoy sobre la selección francesa tensionan las relaciones antes de la semifinal",
+      "body": "El expresidente del Gobierno Mariano Rajoy provocó una tensión diplomática con Francia tras hacer comentarios ampliamente criticados como racistas hacia la selección francesa de fútbol. El PP, su partido, calificó las declaraciones de broma de una columna sarcástica. El episodio llega justo antes de que ambos países se enfrenten en la semifinal del Mundial.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/mariano-rajoy-racismo-seleccion-francia_129_13376158.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Identificadas nueve de las víctimas del incendio de Almería, la mayoría extranjeras",
+      "body": "Las autoridades han identificado a nueve de las 13 víctimas del devastador incendio de Almería, entre ellas ocho extranjeras de Reino Unido, Bélgica, Francia y Estados Unidos. El grupo incluía a tres británicos, un matrimonio belga, un francés, un belga y una estadounidense casada con la única víctima española. El número total de fallecidos asciende a 13.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/andalucia/almeria/identificados-seis-fallecidos-incendio-almeria-espanol-cinco-extranjeros_1_13376670.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "¿Cuánto es lo más que has esperado para una cita con el médico en España? 👇",
+  "subject": "Hoy no pasó nada en España. Salvo esto.",
+  "lang": "es",
+  "date": "2026-07-14",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-07-14T06:04:12.165291+00:00"
+}

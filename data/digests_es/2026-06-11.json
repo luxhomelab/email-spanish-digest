@@ -1,0 +1,115 @@
+{
+  "items": [
+    {
+      "title": "La guerra de Irán dispara la inflación al 3,8 % y el BCE se prepara para subir los tipos",
+      "body": "La Guardia Revolucionaria de Irán lanzó ataques con drones contra bases estadounidenses en Baréin tras los ataques de EE. UU., lo que escala el conflicto en Oriente Medio. BBVA Research prevé ahora que la inflación de España llegue al 3,8 % en 2026 por el impacto «intenso y persistente» de la guerra. El BCE podría subir los tipos por primera vez en tres años, y el euríbor ya está en el 2,8 %, lo que encarece las hipotecas.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/internacional/noticia-guerra-estados-unidos-israel-contra-iran-directo-ultima-hora-estado-negociaciones-paz-20260610074451.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bbva-dispara-3-8-prevision-inflacion-2026-golpe-intenso-persistente-guerra-iran_1_13289856.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/mercados-y-bolsa/bce-prepara-primera-subida-tipos-interes_6981657_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "España pierde ante Portugal una inversión de 1.000 millones en hidrógeno verde",
+      "body": "La empresa sueca Stegra ha elegido Portugal para una planta de hidrógeno verde de 1.000 millones de euros, que creará 500 empleos, porque Red Eléctrica no pudo garantizar la conexión a la red en España. Esto pone de manifiesto la saturación de la red eléctrica española, que pierde grandes inversiones industriales.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/espana-pierde-ante-portugal-una-inversion-mil-millones-500-empleos-para-generar-hidrogeno-verde-por-falta-capacidad-red_6981578_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los inmigrantes regularizados suponen un tercio de las nuevas afiliaciones a la Seguridad Social",
+      "body": "En mayo, 25.000 de las más de 60.000 nuevas afiliaciones a la Seguridad Social en España correspondían a inmigrantes del proceso de regularización extraordinaria, según el ministro de Economía, Carlos Cuerpo. Esto muestra el efecto directo de la regularización en el mercado laboral.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/sociedad/2026/06/11/un-tercio-los-nuevos-afiliados-son-inmigrantes-acogidos-regularizacion-extraordinaria-2028025.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Huelga de médicos el lunes tras el fracaso de la negociación con el Gobierno",
+      "body": "El Ministerio de Sanidad y las comunidades autónomas no han logrado un acuerdo con los médicos, por lo que el lunes se celebra la quinta huelga del año. Mónica García culpa a las comunidades de bloquear las soluciones.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/sanidad-comunidades-fracasan-conflicto-medicos-antes-huelga-proximo-lunes_6981594_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "La DGT endurece los controles para los conductores nacidos entre 1956 y 1961",
+      "body": "A partir de los 65 años se reducen los periodos de validez del permiso de conducir, lo que obliga a someterse a revisiones médicas con más frecuencia. La DGT ha reforzado los controles para los conductores nacidos entre 1956 y 1961 con el objetivo de mejorar la seguridad vial.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/motor/2026/06/10/cambios-permiso-conducir-norma-afecta-conductores-nacieron-entre-1956-1961-2026-2019250.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Un abogado revela un resquicio legal para dejar el trabajo y conservar la prestación por desempleo",
+      "body": "El abogado laboralista Víctor Salazar explica que un acuerdo transaccional privado negociado entre trabajador y empresa puede permitir abandonar la empresa sin que se considere una baja voluntaria, y conservar así el derecho a la prestación por desempleo. Ambas partes deben hacer concesiones en las condiciones.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-11/victor-salazar-abogado-laborista-irte-empresa_4370270/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "La Fiscalía ocultó reuniones con investigados por corrupción del PSOE",
+      "body": "Diego Villafañe, exsegundo de la Fiscalía General del Estado, mantuvo al menos dos reuniones con Leire Díez y Jacobo Teijelo, investigados en el escándalo de las «cloacas de Ferraz». No quedó ningún registro documental de los encuentros.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/06/10/6a29ab2ae9cf4a4c1a8b4597.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El impuesto sobre el patrimonio cumple 15 años y sigue recaudando muy poco",
+      "body": "Quince años después de su restablecimiento, el impuesto sobre el patrimonio sigue recaudando solo alrededor del 0,15 % del PIB, lo que pone de manifiesto su escaso impacto económico pese a la polémica que genera.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/triste-aniversario-impuesto-patrimonio_129_13292017.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    }
+  ],
+  "engagement": "Con una inflación prevista del 3,8 % este año, ¿cómo estás ajustando tu presupuesto y tus gastos? 🤔",
+  "subject": "España, explicado",
+  "lang": "es",
+  "date": "2026-06-11",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-06-11T05:33:26.102845+00:00"
+}

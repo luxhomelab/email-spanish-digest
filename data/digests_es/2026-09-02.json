@@ -1,0 +1,183 @@
+{
+  "items": [
+    {
+      "title": "La Policía dice que Marruecos planeó la entrada masiva en Ceuta",
+      "body": "La Policía Nacional informó a un juez de que las fuerzas de seguridad marroquíes planearon y dirigieron la entrada de unas 80.000 personas en Ceuta los días 30 y 31 de julio, lo que contradice la versión de Pedro Sánchez. Según el informe, gendarmes marroquíes guiaron a los migrantes en Castillejo y agentes de paisano señalaron por dónde cruzar. El ministro del Interior, Fernando Grande-Marlaska, dijo desconocerlo y exigió explicaciones.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/09/01/6a973a14e9cf4a04528b457c.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Madrid amplía a los 50 años el programa de avales hipotecarios",
+      "body": "La Comunidad de Madrid aprobó 25 millones de euros para 2026 para ampliar el programa Mi Primera Vivienda: sube la edad máxima de los solicitantes de 35 a 50 años y el precio máximo de la vivienda elegible de 390.000 a 425.000 euros. Entran las familias con hijos menores; las familias numerosas y monoparentales no tienen límite de edad. Los avales públicos cubren hasta el 100 % de la financiación para compradores menores de 40 años que no tienen la entrada habitual del 20 % o 30 %.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/madrid/2026/09/01/6a96f440fc6c83303f8b457b.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La inflación de la eurozona llega al 3,3 % y el Euríbor se acerca al 3 %",
+      "body": "La inflación de la eurozona alcanzó el 3,3 % en agosto, el nivel más alto en casi tres años, impulsada por una subida del 14,3 % de la energía. El Euríbor a 12 meses cerró agosto en el 2,95 %, tras subir por segundo mes consecutivo, así que los titulares de hipotecas variables pagarán más. En una hipoteca de 150.000 euros a 25 años con un diferencial de 1 punto, la revisión anual suma unos 68 euros al mes, es decir, 810 euros al año. El BCE se reúne el 10 de septiembre para considerar una subida de tipos.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/inflacion-eurozona-sube-3-3-agosto-nivel-alto-tres-anos-empuja-subida-tipos_1_13478753.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/euribor-roza-3-esto-es-que-subira-una-hipoteca-150-000-200-000-300-000-euros_7031115_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La reforma de la vivienda bloqueada por la parálisis política",
+      "body": "El decreto de vivienda del Gobierno está bloqueado en el Congreso. Incluye una prórroga de dos años para los contratos de alquiler que vencen antes de mediados de 2028, normas más estrictas para los alquileres de temporada y por habitaciones, y un IVA del 21 % para los pisos turísticos. Una versión anterior fue rechazada en abril por PP, Vox, UPN y Junts, con la abstención del PNV. La votación se ha aplazado a septiembre sin mayoría asegurada.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/09/01/6a96ae9be85ece38618b4588.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El salario mínimo de España, de los más amenazados por la inflación en la UE",
+      "body": "Un informe de Eurofound sitúa a España tercera de la UE en la menor ganancia de poder adquisitivo del salario mínimo a comienzos de 2026, solo por detrás de Rumanía y Polonia. El salario mínimo español está entre los más amenazados mientras la inflación alcanza el 3,6 %. Eslovenia tuvo la mayor subida real, por encima del 13 %, seguida de Hungría, Lituania, Eslovaquia y Chipre. Los sindicatos piden una subida urgente del SMI.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/espana-situa-paises-europeos-salario-minimo-amenazado-auge-inflacion_1_13479922.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El Gobierno aprueba un paquete de 309 millones de euros para Ceuta y Melilla",
+      "body": "El Gobierno aprobó un paquete de 309 millones de euros para Ceuta tras la crisis migratoria, con bonificaciones permanentes del Impuesto sobre Sociedades y del IRPF, ampliadas a Melilla. La financiación cubre 21 millones para servicios esenciales, más de 90 millones para seguridad, 118 millones para menores y ayudas, y 80 millones para empresas y trabajadores. El primer vicepresidente, Carlos Cuerpo, dijo que la ayuda empresarial equivale al 4 % del PIB de Ceuta.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/gobierno-aprueba-bonificaciones-permanentes-sociedades-irpf-para-ceuta-melilla-un-paquete-309-millones_7031491_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El Gobierno habilita nuevos centros de acogida de migrantes en Ceuta",
+      "body": "El Gobierno aprobó tres nuevas ubicaciones de acogida en Ceuta para alojar a migrantes de la entrada masiva del 30 de julio, con el objetivo de superar las 6.000 plazas. Incluyen parcelas del puerto, terrenos del Ministerio de Vivienda y el cuartel militar K-8. El presidente de Ceuta, Juan Jesús Vivas, rechazó los polideportivos previstos. El ministro Ángel Víctor Torres dijo que los espacios buscan minimizar las molestias y agilizar los trámites.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/gobierno-habilita-parcelas-puerto-terrenos-vivienda-un-cuartel-para-acogida-inmigrantes-ceuta_7031505_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "España coloca letras a 12 meses al 2,846 %, el nivel más alto en dos años",
+      "body": "El Tesoro español colocó 6.495 millones de euros en letras a 6 y 12 meses el 1 de septiembre. Las letras a 12 meses rindieron el 2,846 %, el nivel más alto desde noviembre de 2024, y las de seis meses se adjudicaron al 2,641 %. La demanda total alcanzó 10.466 millones de euros. Las rentabilidades más altas mejoran el rendimiento del ahorro a corto plazo, pero también reflejan un coste de financiación más elevado.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-09-01/tesoro-letras-subasta-interes-euros-1tps_4415814/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El Gobierno envía al Congreso el estatuto del personal sanitario pese a la huelga",
+      "body": "El Consejo de Ministros aprobó en segunda vuelta el proyecto de ley marco del estatuto del personal de servicios sanitarios y lo remitió al Congreso. Los sindicatos médicos rechazaron el proyecto y anunciaron nuevas movilizaciones tras el verano. El estatuto define las condiciones laborales del personal sanitario y, con ello, la calidad de los servicios públicos de salud.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.infosalus.com/actualidad/noticia-gobierno-aprueba-segunda-vuelta-proyecto-estatuto-marco-envia-congreso-pese-huelga-medica-20260901130512.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Industria se prepara para mediar en la huelga de Airbus",
+      "body": "El Ministerio de Industria se prepara para mediar en la huelga indefinida de Airbus iniciada el 24 de agosto y advierte de que el conflicto pone en riesgo el futuro del sector aeroespacial. El secretario de Estado de Industria, Jordi García Brustenga, dijo: «No podemos jugar con el pan de los próximos 30 años». El Gobierno podría intervenir en los próximos días si no hay acuerdo.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/industria-prepara-mediar-conflicto-laboral-airbus-no-jugar-pan-proximos-30-anos_1_13479436.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El abono único de transporte se extiende a las redes autonómicas y locales",
+      "body": "El Ministerio de Transportes aprobó extender el Abono Único a los sistemas de transporte autonómicos y municipales que se adhieran de forma voluntaria. Se establecen dos abonos personalizados de 30 días: uno general y otro para menores y jóvenes de hasta 26 años con residencia legal. Inicialmente integra las concesiones estatales de carretera, Cercanías, Rodalies y varias líneas de Media Distancia. Su objetivo es reducir las emisiones.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gobierno-extiende-abono-unico-red-transporte-autonomico-local_1_13478896.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El turismo bate récords en julio: 11,5 millones de visitantes",
+      "body": "España recibió 11,5 millones de turistas extranjeros en julio, un 4,6 % más, que gastaron 18.217 millones de euros, un 10,9 % más; ambas cifras son récords. El gasto medio por visitante fue de 1.579 euros. En los primeros siete meses de 2026 llegaron 58,1 millones de turistas, y las proyecciones sugieren que España podría superar por primera vez los 100 millones de visitantes en diciembre. El turismo fuerte sostiene el empleo, pero presiona la vivienda y los precios.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/espana-registra-nuevos-records-turisticos-julio-las-visitas-suben-un-4-6-gasto-aumenta-un-10-9_7031309_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Las educadoras infantiles de Madrid siguen en huelga indefinida",
+      "body": "Las educadoras infantiles de Madrid empiezan el curso en huelga indefinida, iniciada el 7 de abril, para reclamar mejores salarios y condiciones. Los colegios funcionarán con servicios mínimos, lo que reduce la calidad educativa y la atención personalizada a los niños de 0 a 3 años. Las educadoras advierten de que el periodo de adaptación será «muy delicado» en los próximos meses. Las familias con niños pequeños en Madrid pueden notar el impacto.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/madrid/educadoras-infantiles-madrid-afrontan-nuevo-curso-huelga-indefinida-preocupacion_1_13459838.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "IKEA baja los precios de casi 400 productos en España",
+      "body": "Las matrices de IKEA invierten 53,4 millones de euros para bajar los precios de 397 productos en España, de media un 21 %, dentro de una iniciativa europea de 1.200 millones de euros. Las reducciones van del 15 % al 25 % en artículos populares como BESTÅ, KALLAX, HEMNES, KIVIK y POÄNG. Los recortes alivian la presión del coste de vida sobre los presupuestos familiares.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/ikea-bajara-los-precios-casi-400-productos-espana-con-un-descuento-medio-mas-20_7031374_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "¿Te cuesta más pagar la hipoteca con la subida del Euríbor? 💬",
+  "subject": "Nada pasó hoy en España. Excepto esto.",
+  "lang": "es",
+  "date": "2026-09-02",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-09-02T06:33:47.221801+00:00"
+}

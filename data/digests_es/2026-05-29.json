@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "Fraude de prótesis en Murcia: se usaron stents caducados en operaciones",
+      "body": "Un cirujano de Murcia está entre los 11 detenidos por un fraude de 7 millones de euros con implantes de stents caducados y prótesis no homologadas. Los pacientes y sus familias muestran su angustia por los posibles riesgos para la salud y exigen transparencia a las autoridades.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/murcia/sociedad/pacientes-familiares-cirujano-detenido-trama-murciana-protesis-denuncian-negligencias-sido-calvario_1_13252489.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "El euríbor alcanza un máximo de 20 meses, con el 2,8 %, y las hipotecas suben 670 € al año",
+      "body": "El euríbor a 12 meses ha subido por tercer mes consecutivo, hasta el 2,8 % en mayo, su nivel más alto desde septiembre de 2024. Esto incrementará en más de 670 € anuales las cuotas de quienes tienen hipotecas a interés variable. El repunte se debe al temor a la crisis energética y a posibles subidas de tipos del BCE.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/euribor-repunta-pone-bce-punto-mira_6976422_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La brecha salarial de género sube por primera vez en once años y se sitúa en el 16 %",
+      "body": "En 2024, el salario medio de los hombres subió un 5,5 %, hasta 32.058 €, mientras que el de las mujeres subió solo un 5,1 %, hasta 26.905 €, lo que amplía la brecha al 16 %. Es el primer aumento desde 2013, según el INE.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/brecha-salarial-genero-aumento-primera-vez-once-anos-situarse-16-2024_1_13257324.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los autónomos podrán trabajar sin perder la pensión con las nuevas reglas",
+      "body": "El Gobierno ha aprobado cambios en la jubilación flexible que permiten, por primera vez, que los autónomos combinen la pensión con un trabajo a tiempo parcial. El rango de trabajo permitido pasa del 25-75 % al 33-80 % de una jornada completa, y se elimina el periodo de espera de un año.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/los-autonomos-podran-volver-trabajar-sin-perder-pension-asi-cambia-normativa-jubilacion-flexible_6976332_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El Supremo rechaza el intento de Ayuso de frenar la regularización de migrantes",
+      "body": "El Tribunal Supremo ha desestimado la petición urgente de la Comunidad de Madrid para suspender la regularización extraordinaria de migrantes, al afirmar que no hay pruebas de que los servicios públicos vayan a colapsar. Dos magistrados discrepantes la calificaron de «amnistía administrativa encubierta».",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/supremo-rechaza-argumento-ayuso-regularizacion-no-hay-pruebas-madrid-colapsar_1_13257940.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "La Administración Trump pide al Supremo de EE. UU. que España pague los laudos de renovables",
+      "body": "El Departamento de Justicia de EE. UU. ha pedido al Tribunal Supremo que rechace el recurso de España contra los laudos arbitrales por los recortes retroactivos a las subvenciones de las renovables. España se enfrenta a pagar millones a inversores, mientras el Gobierno sostiene que las decisiones vulneran su soberanía.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-28/administracion-trump-insta-al-supremo_4363029/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El PNV afirma que la legislatura ha terminado y pide elecciones este año",
+      "body": "El presidente del PNV, Aitor Esteban, declara que la legislatura «ha llegado a su fin» y pide a Pedro Sánchez que convoque elecciones este año, advirtiendo de que vendrán más acontecimientos. Descarta una moción de censura.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/euskadi/noticia-esteban-afirma-legislatura-llegado-fin-interes-general-demanda-elecciones-ano-20260528102718.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "EE. UU. e Irán alcanzan un acuerdo para prorrogar la tregua y reabrir el estrecho de Ormuz",
+      "body": "EE. UU. confirma un acuerdo preliminar con Irán para prorrogar la tregua actual durante dos meses y garantizar el paso por el estratégico estrecho de Ormuz. El pacto también incluye iniciar conversaciones sobre el programa nuclear iraní, a la espera de la aprobación del presidente Trump.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/internacional/noticia-eeuu-confirma-principio-acuerdo-iran-extender-tregua-empezar-reabrir-ormuz-20260528210708.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El precio del diésel repunta tras dos semanas de caídas, aunque sigue por debajo de 1,70 €",
+      "body": "El precio medio del diésel subió un 0,04 %, hasta 1,685 € por litro, mientras que la gasolina subió un 1,35 %, hasta 1,568 €, su cuarta subida consecutiva. Pese al repunte, el diésel sigue muy por debajo del máximo de 1,883 € registrado antes de las medidas fiscales de marzo.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/precio-diesel-frena-su-tendencia-baja-vuelve-subir-pero-aun-sigue-por-debajo-los-1-7-euros_6976213_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Renta 2025: el plazo termina el 30 de junio, pero las citas se agotan pronto",
+      "body": "El plazo para presentar la declaración del IRPF sigue siendo el 30 de junio, pero las citas para la asistencia telefónica o presencial se cierran antes. El método en línea a través de Renta WEB está disponible hasta el último día.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/tu-economia/renta-2025-presentar-declaracion-2026_1_13256894.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    }
+  ],
+  "engagement": "¿Cuánto más pagas ya por tu hipoteca tras la subida del euríbor? ¡Cuéntanoslo en los comentarios! 👇",
+  "subject": "🇪🇸 España: resumen de hoy ⚡ 29.05.2026",
+  "lang": "es",
+  "date": "2026-05-29",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-29T05:31:59.759129+00:00"
+}

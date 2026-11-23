@@ -1,0 +1,159 @@
+{
+  "items": [
+    {
+      "title": "El PP impulsa una reforma para permitir las devoluciones en caliente por mar",
+      "body": "El PP forzará una votación en el Senado para reformar la Ley de Extranjería y permitir las «devoluciones en caliente» de migrantes que llegan por mar. La medida sigue a una sentencia del Supremo según la cual la ley vigente no autoriza devoluciones de personas que llegan a nado a Ceuta o Melilla. El cambio eliminaría el requisito de los «elementos de contención» y podría alterar el control fronterizo.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/09/24/6ab407a1e4d4d884218b461f.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El decreto de vivienda se acelera tras las protestas por el desahucio de Maricarmen",
+      "body": "El Gobierno se apresura a aprobar un decreto de vivienda paralizado tras el desahucio de Maricarmen, de 87 años, que ha indignado a la opinión pública. Pedro Sánchez pidió a los grupos parlamentarios que saquen adelante la medida, bloqueada desde principios de julio. Cerca de 10.000 personas se manifestaron en el barrio madrileño de Chamberí, pidiendo la dimisión de Isabel Díaz Ayuso y la devolución del ático a Maricarmen.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/gobierno-acelera-aprobar-decreto-vivienda-forzado-impacto-desahucio-maricarmen_1_13533032.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/madrid/noticia-centenares-personas-concentran-frente-atico-chamberi-grito-verguenza-fuera-fondos-buitre-20260923192754.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La OCDE eleva la previsión de crecimiento de España al 2,6 %",
+      "body": "La OCDE elevó 0,4 puntos su previsión de crecimiento del PIB español para 2026, hasta el 2,6 %, lo que convierte a España en la economía avanzada que más crece. Pero empeoró la previsión de inflación, hasta el 3,7 % en 2026 y el 3,4 % en 2027, por los precios de la energía y de los alimentos afectados por El Niño. El crecimiento superará al de Estados Unidos (2,2 %) y duplicará con creces el de la eurozona (1 %).",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ocde-preve-espana-crecera-2-6-costa-inflacion-enquistada-precio-petroleo-alimentos_1_13527945.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El precio del suelo urbano alcanza su nivel más alto en 15 años",
+      "body": "El precio del suelo urbano subió un 15,3 % interanual en el segundo trimestre, hasta 207,8 € por metro cuadrado, el nivel más alto desde 2011. La subida trimestral fue del 10,6 %, y todas las comunidades subieron salvo Castilla y León. Navarra (133,5 %) y País Vasco (59,7 %) registraron los saltos más fuertes, lo que anticipa encarecimientos futuros de la vivienda.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/precio-suelo-urbano-encarece-15-3-marca-record-15-anos_1_13531336.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El Congreso admite a trámite la jubilación sin penalización tras 40 años cotizados",
+      "body": "El Congreso aprobó debatir una proposición de ley de Podemos que elimina las penalizaciones en la pensión de la jubilación anticipada con 40 o más años cotizados. La votación fue de 178 votos a favor del PSOE, 136 abstenciones (PP) y 33 votos en contra (Vox). Los ya jubilados podrían solicitar el recálculo, pero la ley podría quedarse parada antes de que acabe la legislatura.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/congreso-aprueba-tramitar-jubilacion-anticipada-40-anos-cotizados-penalizaciones_1_13530745.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El Gobierno aprobará un nuevo paquete de ayudas por la guerra de Irán",
+      "body": "El ministro de Economía, Carlos Cuerpo, confirmó que el Gobierno aprobará el próximo martes un nuevo paquete de ayudas vinculado a la guerra en Irán. Las medidas vigentes vencen el 1 de octubre y ya han costado más de 10.000 millones desde marzo. El Estado ha absorbido la mitad de la subida de precios del diésel y la gasolina, lo que ha reducido la inflación hasta en un punto.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/cuerpo-confirma-que-aprobara-nuevas-medidas-apoyo-por-iran-martes-que-viene-apunta-que-ya-se-han-gastado-10-000-millones_7040552_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Ocho jugadores españoles completan el triplete de Mundial, Eurocopa y Nations League",
+      "body": "Ocho jugadores españoles han ganado ya el Mundial, la Eurocopa y la Nations League con De la Fuente como seleccionador. España se proclamó campeona del mundo de 2026 el 19 de julio con el gol de Ferran en Nueva Jersey, y reanuda su campaña en Wembley con el objetivo de llegar a una cuarta final de la Nations League. De la Fuente ha utilizado a 80 jugadores desde marzo de 2023.",
+      "sources": [
+        {
+          "name": "Marca",
+          "url": "https://www.marca.com/futbol/seleccion/2026/09/24/ocho-magnificos-espana.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Las cotizaciones por nómina subirán en 2027 cuando el MEI llegue al 1 %",
+      "body": "El BOE confirma que el mecanismo de equidad intergeneracional (MEI) subirá del 0,90 % al 1 % de la base de cotización el 1 de enero de 2027. Las empresas pagarán el 0,83 % y los trabajadores el 0,17 %, frente al 0,75 % y el 0,15 % de 2026. El salario neto bajará ligeramente.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-09-24/boe-confirma-cambio-nominas-nuevo-recorte-2027-1qrt_4429242/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "La Policía y Europol desarticulan una red de tráfico de migrantes en 17 países",
+      "body": "La Policía Nacional y Europol han desarticulado una red transnacional dedicada al tráfico de migrantes, la falsificación de documentos y el blanqueo de capitales. Seis personas fueron detenidas en España, Austria, Italia y Reino Unido. Las fuerzas de seguridad de 17 países coordinaron la operación.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-policia-nacional-desmantela-europol-red-trafico-migrantes-operacion-17-paises-20260923181132.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "España permitirá conducir a los 17 años según la directiva europea",
+      "body": "La DGT confirmó que los jóvenes de 17 años podrán hacer el examen de conducir y obtener el permiso B según la Directiva (UE) 2025/2205. Deberán ir acompañados por un supervisor en el asiento del acompañante hasta cumplir los 18 años. España prevé aplicar la medida antes del 26 de noviembre de 2028.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-09-24/pere-navarro-director-dgt-viene-directiva-europea-17-anos-conducir-1qrt_4429321/"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Médicos de Madrid informan de trasplantes sin rechazo",
+      "body": "El Hospital La Paz de Madrid informa de dos pacientes cuyos órganos trasplantados funcionan desde hace más de cinco años sin rechazo y con una inmunosupresión mínima. La técnica combina el trasplante de órgano con células hematopoyéticas de médula ósea del mismo donante, lo que induce un quimerismo mixto transitorio. La autoridad española de trasplantes afirma que el hallazgo podría tener implicaciones enormes para las listas de espera.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/organos-rechazo-prometedora-via-cambiar-radicalmente-vida-pacientes-trasplantados_129_13533317.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Renfe permitirá usar abonos y billetes en el iPhone el año que viene",
+      "body": "Renfe permitirá usar abonos de transporte y billetes en el iPhone a partir del año que viene, después de haber habilitado ya Android. El cambio permite usar abonos digitales sin tarjetas físicas y abre la puerta a que otros operadores y consorcios de transporte usen iOS.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/renfe-permitira-llevar-abono-billetes-transporte-iphone-partir-ano-viene_1_13529842.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "La vivienda está en el centro del debate tras las protestas por desahucios en Madrid. ¿Vives de alquiler? A) Sí B) No C) Estoy buscando 💬",
+  "subject": "Día lento en España. Casi.",
+  "lang": "es",
+  "date": "2026-09-24",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-09-24T06:04:52.143728+00:00"
+}

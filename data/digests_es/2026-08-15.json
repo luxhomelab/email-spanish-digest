@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "title": "⚠️ España y Marruecos refuerzan la frontera de Ceuta ante una posible entrada masiva",
+      "body": "España y Marruecos han desplegado 880 policías y 714 guardias civiles en Ceuta, mientras las redes sociales convocan un nuevo intento de entrada masiva el 15 de agosto. Más de 80.000 personas cruzaron desde Marruecos el 30 de julio, y cientos siguen durmiendo en la calle sin identificación ni atención. Ministros del PSOE han prometido expulsar a todos los que entraron irregularmente, incluidos los menores, aunque la ley española no permite devoluciones masivas. El ministro del Interior, Fernando Grande-Marlaska, calificó a Marruecos de socio cercano y fiable, y afirmó que la colaboración es total.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/gobierno-endurece-discurso-inmigracion-asediado-crisis-ceuta_1_13447409.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/espana-marruecos-blindan-frontera-ceuta-ante-temor-una-nueva-entrada-masiva-880-policias-714-guardias-civiles_7025750_0.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/internacional/ceuta-semanas-desbordada-cientos-personas-duermen-calle-sensacion_1_13447024.html"
+        }
+      ],
+      "category": "politics",
+      "important": true
+    },
+    {
+      "title": "Récord de 3,5 millones de trabajadores extranjeros en España",
+      "body": "España registró en julio un récord de 3.512.223 afiliados extranjeros medios a la Seguridad Social, 66.046 más que en junio y 420.875 más que un año antes. La afiliación extranjera crece un 13,6 %, frente al 2,9 % de todo el sistema, y ya supone el 15,6 % de los afiliados. La hostelería, la agricultura, el empleo doméstico y la construcción impulsan el aumento: el 33 % de los asalariados de la hostelería es extranjero, casi el 40 % en la agricultura y el 47 % en el empleo doméstico. La afiliación total llegó a 22,5 millones, mientras el paro registrado subió en 19.500 personas, en relación con la regularización extraordinaria.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/sectores-lideran-record-3-5-millones-trabajadores-extranjeros-hosteleria-campo-hogar-construccion_1_13447779.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Hacienda limita la exención del IRPF por la reinversión al vender una vivienda en pareja",
+      "body": "El Tribunal Económico-Administrativo Central (TEAC) ha unificado sus criterios sobre la exención por reinversión del IRPF en la venta de la vivienda habitual. Quien vende su casa y compra una nueva con otra persona solo puede eximir la parte del precio de venta reinvertida en la cuota de propiedad que realmente adquiere. La exención depende del importe efectivamente reinvertido, no de mantener el mismo porcentaje de propiedad. En bienes adquiridos en gananciales sin cuotas expresas, cada cónyuge tiene el 50 %.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/hacienda-limita-exencion-irpf-vender-piso-soltero-cuota-propiedad-nueva-casa-pareja_1_13447432.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "La central nuclear de Almaraz se prorroga hasta 2030",
+      "body": "El Gobierno ha prorrogado la vida útil de la central nuclear de Almaraz hasta el 8 de junio de 2030, alegando el conflicto de Oriente Medio. La orden se ha publicado en el BOE. El PP aprovechó la decisión para exigir una revisión del calendario de cierre nuclear pactado. La central es propiedad de Iberdrola, Endesa y Naturgy, y María Guardiola, al frente de la Junta de Extremadura, ha hecho de su continuidad una prioridad estratégica compartida por Vox.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/extremadura/politica/batalla-central-nuclear-almaraz-trinchera-politica-junta-gobierno-tregua-2030_1_13447341.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La fiebre hemorrágica de Crimea-Congo eleva la alerta en España",
+      "body": "España ha registrado cuatro casos de fiebre hemorrágica de Crimea-Congo en 2026, uno de ellos mortal en junio. Un hombre de 71 años que visitó la provincia de Salamanca dio positivo y permanece aislado en el hospital Gómez Ulla de Madrid. La Dirección General de Salud Pública de Castilla y León notificó el jueves el tercer caso de 2026 y activó los protocolos de brote. El portavoz de la SEIMC, José Miguel Cisneros, dijo que el virus es endémico y debe considerarse en el diagnóstico diferencial durante los meses cálidos; los pacientes deben ingresar en unidades de aislamiento de alto nivel porque sus fluidos son muy contagiosos.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/salud/2026/08/15/6a7f4f52e9cf4ac8658b45a4.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Terremoto de magnitud 5 en la zona de Granada",
+      "body": "Un terremoto de magnitud 5, con epicentro en Alhendín, sacudió la zona de Granada a la 1:04 del sábado, a una profundidad de dos kilómetros. Causó daños materiales en el área metropolitana, incluido Armilla, pero no se notificaron heridos. Durante la noche se registraron más de 40 réplicas, y el Gobierno andaluz activó la fase de emergencia 1 del Plan de Riesgo Sísmico. Los servicios de emergencia recibieron más de 200 llamadas.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/andalucia/terremoto-magnitud-5-epicentro-alhendin-sacude-granada_1_13448797.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Un gran incendio en Huesca quema más de 15.000 hectáreas",
+      "body": "Un incendio forestal que empezó el lunes cerca de Riglos (Huesca) ha quemado más de 15.000 hectáreas y ha obligado a evacuar a más de 1.000 personas. Más de 600 profesionales y entre 30 y 35 medios aéreos se han desplegado en la respuesta de máximo nivel. Las llamas llegaron a los alrededores de Santa María de la Peña, Triste y Yeste, pero se frenaron antes de afectar a núcleos urbanos. Los equipos protegieron los monasterios de San Juan de la Peña y defendieron Centenero.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-08-15/incendio-forestal-huesca-extincion-1tps_4406471/"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Los extranjeros residentes ya son el 15,6 % de los afiliados a la Seguridad Social. ¿En qué sector fue tu primer contrato en España? 💬",
+  "subject": "Si vives en España, lee esto (15 de agosto)",
+  "lang": "es",
+  "date": "2026-08-15",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-08-15T10:03:00.515700+00:00"
+}

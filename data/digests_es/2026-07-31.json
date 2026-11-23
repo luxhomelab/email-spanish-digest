@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "title": "Las compraventas caen un 11,8 % pero los precios suben un 8,8 %",
+      "body": "Las compras de vivienda bajaron un 11,8 % en mayo respecto al año anterior, y encadenan ocho meses de caídas. El precio medio llegó a 2.049 €/m², un 8,8 % más. Las ventas de pisos se desplomaron un 14,1 %, mientras las de viviendas unifamiliares bajaron un 4,7 %.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/fuerte-caida-compraventas-pisos-no-frenar-precios-suben-9_1_13417322.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La inflación sube al 3,5 % en julio por los carburantes y la luz",
+      "body": "El índice de precios de consumo de España subió al 3,5 % en julio, desde el 3,2 % de junio, y lleva ya cinco meses por encima del 3 %. La inflación subyacente, que excluye los alimentos no elaborados y la energía, subió hasta el 3 %. Los costes de los carburantes y de la electricidad, en parte por el conflicto con Irán, son los principales factores.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ipc-escala-julio-3-5-alza-precios-combustibles-electricidad_1_13416789.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Crisis migratoria en Ceuta: 20.000 personas cruzan y el Ejército se despliega",
+      "body": "Más de 20.000 personas cruzaron el jueves desde Marruecos a Ceuta, la mayor entrada irregular desde 2021. Se recuperaron nueve cadáveres en la costa. El Gobierno desplegó unidades del Ejército para reforzar a la Guardia Civil y cerró el paso fronterizo de Beni Enzar, en Melilla. El presidente Pedro Sánchez visitará Ceuta el viernes.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/miles-personas-cruzan-ceuta-mayor-entrada-crisis-2021-queremos-ayudar-padres-no-hay_1_13419247.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/gobierno-despliega-ejercito-ceuta-entrada-miles-personas-marruecos_1_13419220.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La economía española crece un 0,7 % en el segundo trimestre, impulsada por el consumo",
+      "body": "La economía española creció un 0,7 % en el segundo trimestre, acelerando desde el 0,6 % del primero. La tasa interanual se mantiene en el 2,7 %. El consumo de los hogares subió un 0,7 %, la inversión un 0,4 % y las exportaciones un 0,8 %. La economía lleva ya 21 trimestres consecutivos de crecimiento interanual.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/economia-crece-0-7-segundo-trimestre-decima-consumo-hogares-inversion_1_13416795.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La rebaja del carburante baja a 10 céntimos al inicio de la operación salida",
+      "body": "La rebaja del Gobierno en los carburantes bajó de 15 a 10 céntimos por litro el 1 de agosto, coincidiendo con el inicio de la operación salida de agosto. La gasolina cuesta ahora 1,64 € por litro y el gasóleo 1,74 €. Desde principios de julio, la gasolina ha subido un 7,8 % y el gasóleo un 14,3 %, lo que eleva el coste de llenar un depósito de 50 litros hasta unos 82-87 €.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/07/30/6a6b7b6ce85ece51188b45b6.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Meloni propone suspender el espacio Schengen con España por Ceuta",
+      "body": "El Gobierno italiano, con Giorgia Meloni al frente, ha pedido suspender con España el tratado de libre circulación de Schengen tras la llegada masiva de migrantes a Ceuta. El ministro de Exteriores, José Manuel Albares, calificó la propuesta de «impropia» y convocó al embajador italiano. Albares atribuyó los sucesos de Ceuta a una sentencia judicial, y rechazó que tengan relación con la regularización de más de 500.000 migrantes irregulares.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/meloni-plantea-cierre-espacio-schengen-albares-convoca-embajador-protesta_1_13419361.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Huelga de Renfe el viernes con servicios mínimos",
+      "body": "Una huelga nacional de Renfe convocada por el sindicato SF-I altera los viajes el 31 de julio, en plena operación salida de agosto. Los servicios mínimos se fijan en el 73 % para alta velocidad, el 65 % para media distancia y el 75 % para Cercanías en hora punta. El sindicato protesta por la venta de Renfe Mercancías y el cierre de bases de mantenimiento.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/huelga-renfe-plena-operacion-salida-agosto-servicios-minimos-73-alta-velocidad-31-julio_1_13416965.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Incendios en Zamora: 1.000 afectados tras quemarse unas 11.000 hectáreas",
+      "body": "Tras salir Madrid y Ávila de la emergencia nacional, un incendio en Fermoselle (Zamora) ha quemado unas 11.000 hectáreas en 24 horas. Catorce pueblos han sido evacuados, con unas 1.000 personas afectadas. Otro incendio en León ha obligado a evacuar cinco pueblos, y se han desplegado 17 militares.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/madrid-avila-salen-emergencia-nacional-las-llamas-cercan-ahora-zamora_7021119_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Con los precios de la vivienda aún subiendo un 8,8 % pese a la caída de ventas, ¿se hace más inalcanzable comprar en España? 👇",
+  "subject": "Lo que importó hoy en España (31 de julio)",
+  "lang": "es",
+  "date": "2026-07-31",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-07-31T06:04:01.622518+00:00"
+}

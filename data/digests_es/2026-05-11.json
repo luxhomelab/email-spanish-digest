@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "España lidera la UE en riesgo de pobreza para las familias",
+      "body": "España encabeza ahora la Unión Europea, con un 29,9 % de las personas que viven en hogares con hijos dependientes en riesgo de pobreza o exclusión social (indicador AROPE), por delante de Rumanía y Bulgaria. La cifra de Eurostat combina la pobreza de ingresos, la privación material severa y la baja intensidad de empleo, y afecta a uno de cada tres hogares de este tipo en España.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/espana-es-pais-ue-con-mas-riesgo-pobreza-familias-con-hijos-dependientes_6968590_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los delitos de okupación bajan un 10 %, pero Cataluña sigue a la cabeza",
+      "body": "Las denuncias por delitos de okupación bajaron hasta 14.875 en 2025, casi un 10 % menos que en 2024, aunque siguen siendo cinco veces más que los 2.702 casos de 2010. Solo Cataluña acumuló el 40 % de las denuncias (5.913), aunque también registró el descenso más pronunciado.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/asi-ha-evolucionado-okupacion-espana-los-ultimos-15-anos-cataluna-acumulo-cuatro-cada-diez-denuncias-2025_6968243_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "El Supremo estudiará suspender la regularización de migrantes",
+      "body": "El Tribunal Supremo verá este miércoles las peticiones de Vox, Hazte Oír y otros para suspender de forma urgente el decreto extraordinario de regularización de migrantes del Gobierno. El Ejecutivo defenderá la medida, mientras que los recurrentes sostienen que excede los límites legales y cambia de forma estructural la política migratoria.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-supremo-analiza-miercoles-varias-peticiones-suspender-regularizacion-extraordinaria-migrantes-20260510104459.html"
+        }
+      ],
+      "category": "migration",
+      "important": true
+    },
+    {
+      "title": "El Gobierno admite que podría no cumplir los planes de vivienda de la UE",
+      "body": "España ha comunicado a la Comisión Europea que no puede ejecutar por completo dos programas de vivienda social financiados con fondos de recuperación europeos, coincidiendo con una ingeniería presupuestaria que usó el mismo dinero para pagar pensiones. Los planes de vivienda social en alquiler y de rehabilitación residencial figuran ahora como «no plenamente alcanzables», lo que agrava la crisis de vivienda.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/05/10/6a00778921efa07d5e8b457e.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Cambios en la UE y en el regulador podrían subir la factura de la luz",
+      "body": "Bruselas presiona a España para reformar la tarifa regulada de la luz (PVPC), mientras la CNMC estudia dos modificaciones de cargos que podrían encarecerla: permitir varias potencias contratadas en un mismo día y repartir de forma más equitativa entre todos los consumidores los costes de operación del sistema.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/tarifa-regulada-operacion-reforzada-potencias-para-distintos-usos-los-factores-que-podrian-sacudir-alza-factura-luz_6968049_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Renfe: ceder los talleres a Iryo podría costar 60 millones y recortar trenes",
+      "body": "Renfe calcula que perdería 60 millones de euros al año si la CNMC le obliga a ceder sus talleres de mantenimiento pesado al operador privado Iryo, y que rutas clave como Madrid-Barcelona verían reducido el servicio. La compañía advierte de que podrían verse afectados tanto los trenes comerciales como las obligaciones de servicio público, como el Eje Atlántico o el Avant a Valladolid.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/renfe-calcula-ceder-talleres-iryo-costara-60-millones-exigira-quitar-trenes-rutas-clave-madrid-barcelona_1_13208342.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Andalucía: el PP se acerca a la mayoría absoluta según las encuestas",
+      "body": "Una encuesta de Sigma Dos para El Mundo da al Partido Popular un 44,7 % de los votos y entre 55 y 58 escaños de los 109 del Parlamento andaluz, lo que le permitiría mantener la mayoría absoluta conseguida en 2022. El PSOE y Vox se mantienen estancados o retroceden, mientras 2,7 millones de votantes siguen indecisos a una semana de las elecciones del 17 de mayo.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/elecciones/elecciones-andalucia/2026/05/10/6a0095f021efa0da448b4583.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La repatriación del crucero con hantavirus sale bien; españoles en cuarentena",
+      "body": "El Gobierno elogia la operación «sin precedentes» para desembarcar a los pasajeros del MV Hondius tras un brote de hantavirus que causó tres muertes. Los ciudadanos españoles están ahora en cuarentena en el hospital militar Gómez Ulla de Madrid. La OMS prevé que las repatriaciones desde Canarias concluyan el lunes y elogió la respuesta de España a la crisis.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/sanidad-encara-final-operacion-precedentes-frente-hantavirus-pasajeros-espanoles-cuarentena_1_13209696.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Un tribunal confirma por primera vez la «guerra sucia» policial contra Podemos",
+      "body": "La Audiencia Nacional ha condenado al exjefe policial José Manuel Villarejo a tres años y medio de prisión por filtrar a dos medios una tarjeta telefónica robada para desprestigiar a Podemos y a su líder, Pablo Iglesias. La sentencia es el primer reconocimiento judicial de una operación policial destinada a socavar a un partido político, parte de la llamada «guerra sucia» de la etapa del PP.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/sentencia-caso-dina-certifica-primera-vez-operacion-policial-desprestigio_1_13206211.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Irán amenaza a Francia y Reino Unido por el despliegue naval en Ormuz",
+      "body": "Irán advierte de que dará una «respuesta firme e inmediata» a los buques de guerra franceses y británicos cerca del estrecho de Ormuz, tras anunciar ambos países una misión naval conjunta para proteger la navegación. El viceministro de Exteriores iraní afirma que solo Irán puede garantizar la seguridad del estrecho y acusa a fuerzas externas de militarizar la vía marítima.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/internacional/2026/05/10/iran-francia-reino-unido-buques-militares-ormuz-2019053.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "España tiene la mayor tasa de pobreza infantil de la UE. ¿Cuál crees que es la causa principal?",
+  "subject": "🇪🇸 España — 11.05.2026",
+  "lang": "es",
+  "date": "2026-05-11",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-11T05:33:26.415292+00:00"
+}

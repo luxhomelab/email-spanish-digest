@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "title": "Un alto cargo de EE. UU. compara el desembarco de Normandía con una «invasión de inmigrantes»",
+      "body": "Pete Hegseth, secretario de Guerra de EE. UU., provocó indignación al comparar los desembarcos aliados de la Segunda Guerra Mundial en Normandía con una «invasión cultural» de inmigrantes en Europa. Hizo las declaraciones en el aniversario del Día D, en un cementerio estadounidense de Francia.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/internacional/2026/06/07/secretario-guerra-ee-uu-compara-desembarco-normandia-con-invasion-inmigrantes-europa-2026884.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "La Comunidad de Madrid exige diez años de empadronamiento para acceder a la vivienda pública",
+      "body": "La Comunidad de Madrid exige ahora un mínimo de diez años de empadronamiento para comprar vivienda protegida. Las críticas sostienen que esto discrimina indirectamente a los inmigrantes, y requisitos similares en Canarias (doce años) ya están siendo recurridos en los tribunales.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/madrid/asociaciones-critican-ayuso-exija-diez-anos-empadronamiento-optar-vivienda-publica-prioridad-nacional_1_13268171.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Hacienda advierte de que ingresar o retirar más de 1.000 € en efectivo puede acarrear multas",
+      "body": "La Agencia Tributaria intensifica el control de las operaciones en efectivo: los ingresos o retiradas de más de 1.000 € en cuentas bancarias pueden levantar sospechas de fraude y acarrear multas. Aunque no existe un límite legal, Hacienda considera estas operaciones señales de alarma.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/07/confirmado-por-hacienda-multas-para-quienes-ingresen-retiren-efectivo-cajero-esta-manera-2024109.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "La huelga de inspectores de Hacienda coincide con el pico de la campaña de la Renta",
+      "body": "El lunes 8 de junio, los trabajadores de la Agencia Tributaria (AEAT) irán a una huelga de 24 horas en plena campaña de la declaración de la Renta. El sindicato CSIF exige un plan de carrera profesional congelado desde 2019, el derecho al teletrabajo y un complemento por peligrosidad para la vigilancia aduanera.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/inspectores-agencia-tributaria-llamados-huelga-plena-campana-renta-claves-conflicto_1_13277796.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "El Gobierno admite retrasos en la regularización extraordinaria, pero asegura que habrá respuesta",
+      "body": "Elma Saiz reconoce algunos retrasos en el proceso de regularización extraordinaria de migrantes, pero asegura que se dará respuesta «en tiempo y forma». Elogia a los funcionarios que tramitan el procedimiento y condena los «discursos de odio» sobre supuestas ventajas.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/gobierno-asume-algunas-demoras-proceso-regularizacion-pero-aclara-se-va-dar-respuesta-tiempo-forma_6980087_0.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "El caso «Cocina» salpica ahora a Sánchez",
+      "body": "El juicio de la operación «Cocina», de la etapa del PP, por presunto espionaje ordenado desde el Estado ha dado un giro con nuevas pruebas que vinculan al PSOE y al círculo de Pedro Sánchez con prácticas similares. El escándalo amenaza con implicar a los dos grandes partidos en el uso indebido de la seguridad del Estado con fines políticos.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/06/06/6a243a4ce85ecece638b45b5.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Decenas de miles de médicos protestan contra la reforma del Estatuto Marco",
+      "body": "Decenas de miles de médicos protestan contra la reforma propuesta del Estatuto Marco, que, según ellos, ignora sus demandas de mejores condiciones laborales, pensiones y salarios. El Ministerio de Sanidad necesita la aprobación de Hacienda, Trabajo y Seguridad Social, lo que genera una fractura dentro del Gobierno.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/ciencia-y-salud/salud/2026/06/07/6a2301f6fc6c83cd568b45b9.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "¿Apoyarías un requisito de diez años de residencia para acceder a vivienda asequible en tu comunidad? 🤔",
+  "subject": "🇪🇸 España: resumen diario 📋 07.06.2026",
+  "lang": "es",
+  "date": "2026-06-07",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-06-07T05:31:38.679791+00:00"
+}

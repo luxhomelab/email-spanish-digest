@@ -1,0 +1,155 @@
+{
+  "items": [
+    {
+      "title": "La inflación en España llega al 4,3 % con la subida de los carburantes",
+      "body": "La inflación de agosto subió al 4,3 %, el nivel más alto desde principios de 2023, impulsada por un salto interanual del 16,9 % en la gasolina. La inflación subyacente, sin energía ni alimentos frescos, se moderó al 2,9 %, mientras los alimentos subieron un 2,3 %. Los hogares afrontan un coste más alto de carburantes y alimentos.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ine-confirma-inflacion-cerro-4-3-agosto-maximo-2023-rebaja-diesel_1_13510110.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Nuevas normas de transparencia laboral desde el 5 de octubre",
+      "body": "Desde el 5 de octubre, las empresas deberán dar a los trabajadores más información sobre salarios, horarios, periodos de prueba y cualquier uso de algoritmos o inteligencia artificial en decisiones como el sueldo, los ascensos o los despidos. Los trabajadores actuales podrán solicitar los datos; las empresas tendrán 30 días hábiles para responder. El decreto traspone una directiva europea de 2019.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/llega-nueva-transparencia-laboral-trabajadores-datos-salarios-horarios-e-ia-partir-5-octubre_1_13510302.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El Congreso rechaza por segunda vez la propuesta de Sumar que prohibía vender viviendas a fondos",
+      "body": "El Congreso ha rechazado por segunda vez una propuesta de Sumar para prohibir la venta de viviendas a personas jurídicas, con la que se pretendía frenar las compras masivas de empresas con fines de alquiler. PP, Vox y Junts votaron en contra; PSOE y PNV se abstuvieron. La decisión deja por ahora la política de vivienda sin cambios.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/vivienda-vuelve-dividir-gobierno-psoe-abstiene-ley-sumar-prohibir-compra-pisos-fondos_1_13512576.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La UE permite a los trabajadores reclamar la Seguridad Social en cualquier Estado miembro",
+      "body": "La Comisión Europea ha aprobado normas para una movilidad laboral justa, que incluyen un Pasaporte Europeo de Seguridad Social digital. Trabajadores y empresas de toda la UE podrán solicitar y recibir por vía digital documentos como la Tarjeta Sanitaria Europea y el formulario A1 antes de final de año.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ue-permitira-trabajadores-reclamar-seguridad-social-seguro-enfermedad-pais-ue_1_13510953.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Bolaños acusa al Supremo de alterar el censo electoral",
+      "body": "El ministro Félix Bolaños acusó al Supremo de alterar el censo electoral al suspender los derechos de voto de las personas inscritas en el CERA que obtuvieron la nacionalidad por la «ley de nietos». Exigió una resolución definitiva antes de 2027 y dijo que ahora hay españoles de primera y de segunda.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/bolanos-acusa-supremo-alterar-censo-electoral-con-su-decision-sobre-ley-nietos-le-exige-resolverla-antes-2027_7037221_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Feijóo propone retirar la nacionalidad por delitos graves",
+      "body": "El líder del PP, Alberto Núñez Feijóo, anunció una ley orgánica para retirar la nacionalidad española a extranjeros naturalizados condenados por delitos graves, como asesinato, terrorismo o violación reiterada. Calificó la nacionalidad de «acto de confianza» que debe mantenerse.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/sociedad/2026/09/15/feijoo-plantea-retirar-nacionalidad-extranjeros-delitos-graves-asesinos-terroristas-violadores-reincidentes-2052023.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Hallan en Teruel restos de un diplodocus, los primeros fuera de Norteamérica",
+      "body": "Investigadores de Teruel han identificado 14 vértebras caudales del Jurásico superior, de unos 150 millones de años, como pertenecientes al género Diplodocus. Si se confirma, sería la primera evidencia de este dinosaurio en Europa. Los fósiles se encontraron en La Tejería, en El Castellar.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/ciencia/diplodocus-cruzo-atlantico-hallan-teruel-los-primeros-restos-este-dinosaurio-fuera-norteamerica_7036871_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "La crisis de Ceuta llega a la UE mientras el PP apunta a Marruecos",
+      "body": "El PP instó al Partido Popular Europeo a elevar el papel de Marruecos en la crisis fronteriza de Ceuta en las instituciones de la UE. Unas 80.000 personas entraron en Ceuta los días 30 y 31 de julio, y Marruecos ofreció recuperar a 10.000 migrantes. El PP describe el comportamiento de Marruecos como una «guerra híbrida».",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-09-16/defensa-marruecos-psoe-resquebraja-equilibrios-ue-ceuta_4424028/"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Acusan a hospitales de Madrid de manipular las listas de espera",
+      "body": "Un hospital madrileño rebajó la prioridad de 57 pacientes en espera de cirugía para mejorar las cifras de la lista de espera. El sindicato médico Amyts afirma que la práctica está extendida, y la consejería de Sanidad dijo que «no es nueva ni está penalizada». Los pacientes podrían esperar más de lo que sugieren las cifras oficiales.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/madrid/incentivos-perversos-sanidad-madrid-maquillar-listas-espera-pone-pelos-punta_1_13512500.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Bankinter sube al 3 % TAE su cuenta digital",
+      "body": "Bankinter ha subido al 3 % TAE el interés de su cuenta digital para nuevos clientes, desde el 2,5 %, sobre saldos de hasta 100.000 €. La promoción va del 15 de septiembre al 28 de octubre, y los clientes con nómina domiciliada pueden recibir hasta 600 € brutos en el primer año. La cuenta no tiene comisiones y ofrece tarjeta de débito gratuita.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/mercados/2026-09-15/bankinter-rentabilidad-cuenta-digital-pago-nomina_4423999/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "España prorroga 15 días los controles fronterizos con Italia",
+      "body": "El Gobierno ha prorrogado 15 días los controles en las conexiones aéreas y marítimas con Italia, en respuesta a una medida similar de Italia tras la llegada masiva a Ceuta. Los controles temporales pueden afectar a los viajes entre España e Italia.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-gobierno-prorroga-15-dias-controles-fronterizos-italia-respuesta-medida-ejecutivo-meloni-20260915154357.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Aena invertirá 13.000 millones en aeropuertos hasta 2031",
+      "body": "El Consejo de Ministros aprobó el DORA III, el marco regulatorio de Aena, con cerca de 13.000 millones de inversión para 2027-2031 y una subida media anual de las tasas aeroportuarias del 0,33 %. Los cambios de tarifas pueden afectar a los precios de los vuelos.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/noticia-gobierno-aprueba-dora-iii-aena-invertira-13000-millones-2031-subida-tasas-033-20260915133342.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "¿Qué ha afectado más a tu presupuesto mensual últimamente: los carburantes o la comida? 💬",
+  "subject": "Nada pasó hoy en España. Excepto esto.",
+  "lang": "es",
+  "date": "2026-09-16",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-09-16T06:05:03.189191+00:00"
+}
