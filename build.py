@@ -449,14 +449,102 @@ ARTICLE_GRAPHICS_DIR = os.path.join(TEMPLATES_DIR, "partials", "article-graphics
 
 
 def article_graphic_html(slug, name):
-    """Read an article's HTML graphic partial; warn and return "" if missing."""
+    """Read an article's HTML graphic partial; warn and return "" if missing.
+
+    Partials of an article listed in ARTICLE_GRAPHIC_DATA are Jinja templates
+    rendered with that article's data as `d`; all others are inlined as is."""
     path = os.path.join(ARTICLE_GRAPHICS_DIR, slug or "", f"{name}.html")
     try:
         with open(path, encoding="utf-8") as f:
-            return f.read().strip()
+            source = f.read()
     except OSError:
         print(f"WARN: article graphic not found: {path}", file=sys.stderr)
         return ""
+    loader = ARTICLE_GRAPHIC_DATA.get(slug or "")
+    if loader is None:
+        return source.strip()
+    env = Environment(autoescape=True, trim_blocks=True, lstrip_blocks=True)
+    env.filters["md"] = lambda s: Markup(article_inline_md(s or ""))
+    env.globals["js_version"] = js_version()
+    return env.from_string(source).render(d=loader()).strip()
+
+
+# Spain general election, 29 Nov 2026: curated promises with feasibility
+# ratings, translated from the research. data/election-2026/meta.json holds
+# the scale, topics and parties; items/<party>.json the promises, each keyed
+# by its index `i` in the research files.
+ELECTION_2026_DIR = os.path.join(SCRIPT_DIR, "data", "election-2026")
+ELECTION_RATINGS = "ABCDV"
+_election_cache = None
+
+
+def load_election_2026():
+    """Load and validate the election data; the build fails on bad data."""
+    global _election_cache
+    if _election_cache is not None:
+        return _election_cache
+    with open(os.path.join(ELECTION_2026_DIR, "meta.json"), encoding="utf-8") as fh:
+        meta = json.load(fh)
+    topics = {t["key"]: t for t in meta["topics"]}
+    topic_order = {t["key"]: n for n, t in enumerate(meta["topics"])}
+    parties = []
+    items = []
+    for party in meta["parties"]:
+        key = party["key"]
+        with open(os.path.join(ELECTION_2026_DIR, "items", f"{key}.json"), encoding="utf-8") as fh:
+            raw = json.load(fh)
+        by_i = {}
+        for it in raw:
+            where = f"election item {key}#{it.get('i')}"
+            if it["f"] not in ELECTION_RATINGS or it["t"] not in meta["chances"]:
+                raise ValueError(f"{where}: bad rating or chance")
+            if it["topic"] not in topics:
+                raise ValueError(f"{where}: unknown topic {it['topic']}")
+            if any(n not in meta["needs"] for n in it["n"]):
+                raise ValueError(f"{where}: unknown need in {it['n']}")
+            # Pros and cons exist exactly for the feasible (A/B) promises.
+            if (it["f"] in "AB") != bool(it.get("pos") and it.get("neg")):
+                raise ValueError(f"{where}: pros/cons must be set for A/B items only")
+            if any(not s.get("t") or not s.get("u", "").startswith("https://") for s in it["s"]):
+                raise ValueError(f"{where}: every source needs a title and an https URL")
+            item = dict(it, party=key, id=f"{key}-{it['i']}")
+            by_i[it["i"]] = item
+            items.append(item)
+        totals = party["totals"]
+        n = sum(totals.values())
+        parties.append(dict(
+            party, count=n,
+            feasible_pct=round(100 * (totals["A"] + totals["B"]) / n),
+            shares=[(r, totals[r], 100 * totals[r] / n) for r in ELECTION_RATINGS],
+            headline_items=[by_i[i] for i in party["headline"]],
+            shown=len(raw),
+        ))
+    if sum(p["count"] for p in parties) != meta["total_items"]:
+        raise ValueError("election party totals do not add up to total_items")
+    party_order = {p["key"]: n for n, p in enumerate(parties)}
+    items.sort(key=lambda it: (topic_order[it["topic"]], ELECTION_RATINGS.index(it["f"]), party_order[it["party"]]))
+    for it in items:
+        party = parties[party_order[it["party"]]]
+        it["party_name"] = party["name"]
+        it["party_color"] = party["color"]
+        it["programme"] = party["programme"]
+        it["topic_label"] = topics[it["topic"]]["label"]
+    by_topic = [(t, [it for it in items if it["topic"] == t["key"]]) for t in meta["topics"]]
+    _election_cache = dict(
+        meta,
+        ratings_by_key={r["key"]: r for r in meta["ratings"]},
+        parties=parties,
+        parties_by_feasibility=sorted(parties, key=lambda p: -p["feasible_pct"]),
+        promises=items,
+        by_topic=by_topic,
+        as_of_display=format_date(meta["as_of"]),
+        election_display=format_date(meta["election"]),
+    )
+    return _election_cache
+
+
+# Article slug -> loader of the data its "::: graphic" partials render with.
+ARTICLE_GRAPHIC_DATA = {"spain-election-2026-promises": load_election_2026}
 
 
 # YouTube videos from data/videos.json, keyed by video id. Rendered as a
@@ -2744,7 +2832,8 @@ def js_version():
                    "quiz.js",
                    "quiz-logic.js", "subscribe-form.js", "subscription-store.js",
                    "electricity.js", "electricity-calc.js", "electricity-form.js",
-                   "video-embed.js", "cookie-consent.js", "cookie-consent-logic.js"):
+                   "video-embed.js", "cookie-consent.js", "cookie-consent-logic.js",
+                   "election-explorer.js", "election-filter.js"):
         path = os.path.join(SCRIPT_DIR, "static", "js", name)
         try:
             with open(path, "rb") as fh:

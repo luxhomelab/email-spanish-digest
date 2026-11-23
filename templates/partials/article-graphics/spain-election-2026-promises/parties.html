@@ -1,0 +1,29 @@
+{# One collapsible card per party, in the research's order (largest
+   state-wide parties first, then regional ones). Jinja template, `d` = data. #}
+<div class="el-parties" data-pagefind-ignore>
+{% for p in d.parties %}
+ <details class="el-party" id="party-{{ p.key }}" style="--pc: {{ p.color }}">
+  <summary>
+   <span class="el-party-head">
+    <span class="el-party-name"><i class="el-dot"></i>{{ p.name }}</span>
+    <span class="el-party-bloc">{{ p.bloc }}</span>
+   </span>
+   <span class="el-bar el-bar-sm" aria-hidden="true">{% for r, n, pct in p.shares %}{% if n %}<span class="el-seg el-r-{{ r }}" style="width: {{ '%.2f'|format(pct) }}%"></span>{% endif %}{% endfor %}</span>
+   <span class="el-party-pct">{{ p.feasible_pct }}%</span>
+  </summary>
+  <div class="el-party-body">
+   <p class="el-party-full">{{ p.full }}: {{ p.count }} programme items rated: {% for r, n, pct in p.shares %}{{ n }} {{ r }}{% if not loop.last %}, {% endif %}{% endfor %}.</p>
+   <p>{{ p.summary|md }}</p>
+   <p class="el-party-line"><b>What looks doable.</b> {{ p.doable|md }}</p>
+   <p class="el-party-line"><b>Where it hits limits.</b> {{ p.limits|md }}</p>
+   <p class="el-party-sub">Headline promises</p>
+   <ul class="el-heads">
+{% for it in p.headline_items %}
+    <li><a href="#p-{{ it.id }}" data-open="p-{{ it.id }}"><span class="el-badge el-badge-sm el-r-{{ it.f }}" aria-hidden="true">{{ it.f }}</span><span>{{ it.title|md }}<span class="el-vh">, rated {{ d.ratings_by_key[it.f].label|lower }}</span></span></a></li>
+{% endfor %}
+   </ul>
+   <p class="el-party-foot"><a href="?party={{ p.key }}#explorer-app" data-filter-party="{{ p.key }}">See all {{ p.shown }} {{ p.name }} promises in the explorer</a><a href="{{ p.programme }}" target="_blank" rel="noopener">Read the programme</a></p>
+  </div>
+ </details>
+{% endfor %}
+</div>
