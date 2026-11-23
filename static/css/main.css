@@ -5240,9 +5240,20 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
  display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 4px 0;
  color: #1A1A16; text-decoration: none; line-height: 1.4;
 }
-.article-body ul.el-heads a:hover { background: none; color: #AA151B; text-decoration: underline; text-underline-offset: 3px; }
-.article-body .el-party-foot { display: flex; flex-wrap: wrap; gap: 4px 22px; margin: 0; font-size: 14.5px; }
-.article-body .el-party-foot a { display: inline-flex; align-items: center; min-height: 44px; }
+.article-body ul.el-heads a:hover { background: none; color: #AA151B; }
+.article-body ul.el-heads a:hover > span:last-child { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.article-body .el-party-foot { display: flex; flex-wrap: wrap; gap: 0 22px; margin: 0; font-size: 14.5px; }
+.article-body .el-party-foot a { display: inline-block; padding: 11px 0; line-height: 22px; }
+/* Links inside the election graphics: hover darkens the colour and thickens
+   the underline. The article-wide tinted background is for links in running
+   text; on these padded 44px links it would show as an offset box. */
+.article-body .el-party-foot a:hover, .article-body .el-facts a:hover, .article-body .el-src a:hover {
+ background: none; color: #8A1019; text-decoration-thickness: 2px;
+}
+.article-body .el-party-foot a:focus-visible, .article-body .el-facts a:focus-visible,
+.article-body .el-src a:focus-visible, .article-body ul.el-heads a:focus-visible {
+ outline: 3px solid #F1BF00; outline-offset: 2px; border-radius: 2px;
+}
 @media (max-width: 520px) {
  .el-party > summary { grid-template-columns: minmax(0, 1fr) 64px 54px; gap: 10px; padding: 10px 14px; }
  .el-party-body { padding: 2px 14px 16px 14px; }
@@ -5337,7 +5348,7 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 }
 /* Touch screens: source and programme links become full 44px rows. */
 @media (pointer: coarse) {
- .article-body .el-facts a, .article-body .el-src li a { display: inline-flex; align-items: center; min-height: 44px; }
+ .article-body .el-facts a, .article-body .el-src li a { display: inline-block; padding: 12px 0; }
  .article-body .el-src li { margin: 0; }
  .article-body .el-src li::before { top: 1.25em; }
 }
