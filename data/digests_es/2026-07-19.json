@@ -1,0 +1,119 @@
+{
+  "items": [
+    {
+      "title": "El PP planea derogar unas 100 leyes progresistas si gana las elecciones",
+      "body": "El Partido Popular ha anunciado que, si gana, derogará unas 100 leyes del Gobierno progresista. Liderado por Alberto Núñez Feijóo, el partido pretende recortar las prestaciones por desempleo, limitar la representación sindical y revertir las protecciones de las personas trans y de los migrantes. El planteamiento recuerda al de Mariano Rajoy en 2011. Estas reformas remodelarían los derechos sociales y laborales en España.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/pp-feijoo-promete-ambiciosa-contrarreforma-legal-recortes-derechos-sociales-si-llega_1_13387130.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "España se enfrenta a la Argentina de Messi en la final del Mundial",
+      "body": "España juega la final del Mundial contra Argentina el 19 de julio en el MetLife Stadium de Nueva Jersey. La Roja busca su segundo título, 16 años después de su victoria de 2010. Argentina, campeona en vigor, está liderada por Lionel Messi, de 39 años. Es un gran acontecimiento nacional, con millones de espectadores en toda España.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/deportes/futbol/mundial-00639/noticia-espana-reta-messi-campeona-estrella-20260718201918.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Los precios de la vivienda en Aragón suben un 11,2 % en un año",
+      "body": "El precio medio por metro cuadrado de la vivienda en Aragón subió un 11,2 % en el segundo trimestre de 2026 respecto al mismo periodo del año anterior, según la tasadora Gesvalt. La fuerte subida dificulta que compradores e inquilinos encuentren vivienda asequible. La tendencia refleja un patrón nacional de encarecimiento de los inmuebles.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/aragon/2026/07/18/precio-vivienda-aragon-sube-gente-compra-por-valores-muy-elevados-2037315.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La relatora de la ONU pide a Madrid que limite los precios del alquiler",
+      "body": "Koldo Casla, nuevo relator especial de la ONU para la vivienda, ha pedido a Madrid que aplique topes a los precios del alquiler. Advierte de que desahuciar a una residente llamada Maricarmen vulneraría las obligaciones internacionales de España por tratado. Casla cita Navarra, donde los controles de alquiler redujeron los precios un 7 % en un año, como prueba de que la política funciona. La intervención presiona a Madrid para atender la asequibilidad de la vivienda.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/koldo-casla-relator-vivienda-onu-espero-madrid-cumpla-ley-tope-precios-alquiler_128_13354837.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La tercera ola de calor del verano podría superar los 45 °C",
+      "body": "La AEMET ha confirmado una tercera ola de calor a partir del 21 de julio. Las temperaturas podrían superar los 44-45 °C en partes del sureste, en los valles del Guadalquivir y del Ebro, y en el interior de Mallorca. La agencia advierte de un nivel de peligro alto para las personas mayores, los niños y quienes tienen problemas cardiovasculares. El calor se mantendrá al menos hasta el 23 de julio y elevará el riesgo de incendios a extremo en algunas zonas.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/aemet-confirma-tercera-ola-calor-verano-tempeaturas-extremas_7016211_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "⚠️ El incendio de Aragón quema 16.000 hectáreas y obliga a evacuar a 1.000 personas",
+      "body": "Un incendio en las Cinco Villas aragonesas ha quemado 16.000 hectáreas y ha obligado a evacuar a 1.000 personas de cinco localidades. Otros nueve pueblos permanecen en prealerta, y el perímetro del fuego alcanza los 80 kilómetros. Las autoridades se muestran cautelosamente optimistas, pero los residentes deben estar informados y seguir las instrucciones de emergencia. El incendio ha afectado de forma notable a la calidad del aire y a la vida diaria de la zona.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/aragon/zaragoza/2026/07/18/incendio-zaragoza-ores-cinco-villas-pueblos-evacuados-perimetro-2038322.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "El turismo generó 200.000 millones de euros en 2024",
+      "body": "El turismo generó en 2024 unos 200.000 millones de euros en España, el 12,6 % del PIB, y sostuvo 2,7 millones de empleos. El país fue el segundo más visitado del mundo, y los turistas internacionales gastaron 105.100 millones de euros. El dato llega en plena final del Mundial contra Argentina, cuya fortaleza económica reside en las exportaciones agroalimentarias.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/un-gigante-turismo-frente-una-potencia-agroalimentaria-las-dos-grandes-bazas-espana-argentina-mundial-economia_7015932_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Un alto cargo asegura que la inmigración mantiene abiertas las escuelas rurales y los bares",
+      "body": "Francesc Boya, secretario general para el Reto Demográfico, afirma que la inmigración es vital para las zonas rurales, pues ayuda a mantener abiertas las escuelas y los negocios. El Gobierno ha aprobado una nueva Estrategia de Equidad Territorial que aspira a que todos los residentes accedan a los servicios esenciales en 30 minutos. El plan podría animar a los residentes extranjeros a instalarse en zonas despobladas, gracias a la mejora de las infraestructuras.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/secretario-general-reto-demografico-inmigracion-salva-escuelas-abre-bares-agricultura-viable_1_13385518.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El presidente de la CEOE señala el absentismo como el principal problema de las empresas",
+      "body": "Antonio Garamendi, presidente de la patronal CEOE, identifica el absentismo laboral como el mayor problema de las empresas, por delante de los impuestos y la falta de trabajadores. Se presenta a un tercer mandato, con elecciones previstas para el 1 de octubre. Su postura puede influir en los futuros debates sobre política laboral.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/07/19/entrevista-antonio-garamendi-presidente-ceoe-absentismo-2038249.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    }
+  ],
+  "engagement": "¿A quién apoyas en la final del Mundial de hoy, a España o a Argentina? 🇪🇸🇦🇷⚽",
+  "subject": "Lo más relevante de España hoy",
+  "lang": "es",
+  "date": "2026-07-19",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-07-19T08:11:22.186775+00:00"
+}

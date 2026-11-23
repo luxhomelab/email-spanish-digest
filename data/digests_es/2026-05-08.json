@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "title": "La vivienda sube el doble que los salarios en diez años en España",
+      "body": "Según Pisos.com, el precio de la vivienda ha subido un 68,4 % desde 2016, mientras que los salarios solo han crecido un 34 %. El precio medio por metro cuadrado es ahora de 2.164 €, y en Madrid alcanza los 5.157 €/m². Los expertos advierten de que muchos compradores, sobre todo jóvenes, se están quedando fuera del mercado.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/precio-vivienda-ha-subido-doble-que-los-salarios-los-ultimos-diez-anos-duda-es-si-comprador-aguantara-estos-ritmos_6967559_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Las gasolineras españolas ganan 800 millones extra con la guerra en dos meses",
+      "body": "Desde el inicio del conflicto en Irán, los ingresos diarios de las gasolineras españolas han pasado de 52,2 millones de euros en febrero a 68 millones en marzo. Si abril mantiene niveles similares, el sector habrá obtenido más de 800 millones de euros adicionales gracias a la guerra.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/08/las-gasolineras-espanolas-hacen-caja-con-guerra-recaudan-800-millones-extra-dos-meses-2018445.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Hacienda enviará 130.000 «cartas del miedo» a contribuyentes con errores",
+      "body": "La Agencia Tributaria (AEAT) enviará unas 130.000 cartas de aviso durante la campaña del IRPF para que los contribuyentes corrijan voluntariamente sus errores antes de que se apliquen sanciones. Las sanciones pueden oscilar entre el 50 % y el 150 % de la cantidad no pagada.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/08/hacienda-enviara-unas-130-000-cartas-preventivas-los-contribuyentes-que-hayan-hecho-esto-declaracion-renta-2018548.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Más de 4.600 inmigrantes solicitan la regularización en solo 10 días en Zaragoza",
+      "body": "Tras la avalancha de personas que piden certificados de empadronamiento, la atención se ha centrado en conseguir cita en las 12 oficinas públicas. El proceso extraordinario de regularización ha desbordado el sistema, y los trámites en línea resultan difíciles.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/aragon/2026/05/08/mas-4-675-demandas-regularizacion-se-han-presentado-desde-zaragoza-10-dias-2018348.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "La UE relaja las normas de aviación para evitar cancelaciones por la crisis del queroseno",
+      "body": "La Comisión Europea ha adoptado directrices excepcionales para flexibilizar las obligaciones de repostaje y las normas de slots por la escasez de queroseno causada por el bloqueo del estrecho de Ormuz. Mientras tanto, IAG (Iberia, British Airways) registró un aumento del beneficio del 71 %, hasta 301 millones de euros en el primer trimestre, pero advirtió de que el mayor coste del combustible reducirá sus ganancias anuales.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-08/bruselas-flexibiliza-las-normas-del-sector-aereo-vuelos_4352137/"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/empresas/iag-gana-301-millones-hasta-marzo-pero-rebaja-previsiones-crisis-queroseno_6967869_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Operación internacional para contener el hantavirus de un crucero que llega a Canarias",
+      "body": "23 países, la UE y la OMS coordinan un plan para el crucero MV Hondius, donde han muerto 3 personas y 5 presentan síntomas de hantavirus. Los pasajeros serán evaluados y evacuados de inmediato a sus países de origen, sin contacto con la población local.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/23-paises-coordinados-ue-oms-dispositivo-precedentes-evitar-propagacion-hantavirus_1_13203608.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La OMS alerta de inyectables defectuosos potencialmente letales distribuidos en todo el mundo",
+      "body": "La OMS ha emitido una alerta mundial por tres productos de contraste yodado (Accupaque, Omnipaque y Visipaque) que podrían contener partículas metálicas. Al inyectarse, pueden provocar complicaciones como ictus, embolia o muerte. Solo afecta a los envases de plástico de 100 ml.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/salud/2026/05/08/oms-lanza-alerta-global-ts-inyectables-defectuosos-potencialmente-letales-2018589.html"
+        }
+      ],
+      "category": "politics",
+      "important": true
+    },
+    {
+      "title": "Stellantis fabricará un nuevo Opel eléctrico en Zaragoza y podría traspasar su planta de Madrid a Leapmotor",
+      "body": "Stellantis producirá a partir de 2028 un nuevo C-SUV eléctrico de Opel en su fábrica de Figueruelas y planea ceder a la marca china Leapmotor su factoría de Villaverde, en Madrid. Es parte de una expansión de la producción de vehículos eléctricos en España.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/stellantis-fabricara-nuevo-electrico-zaragoza-planea-traspasar-leapmotor-planta-madrid_1_13205390.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Renfe lleva al regulador a los tribunales por compartir talleres con rivales privados",
+      "body": "Renfe ha recurrido la exigencia de la CNMC de permitir que Ouigo e Iryo usen sus talleres de mantenimiento pesado. Renfe sostiene que esto amenaza el servicio público, mientras que el regulador insiste en un acceso no discriminatorio.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/renfe-choca-competencia-obligar-empresa-publica-ceder-talleres-ouigo-e-iryo_1_13203826.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "¿Debería intervenir más España en los precios de la vivienda o dejar que el mercado se ajuste? ¿Qué experiencia has tenido alquilando o comprando?",
+  "subject": "🇪🇸 España — 08.05.2026",
+  "lang": "es",
+  "date": "2026-05-08",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-08T13:53:13.787531+00:00"
+}

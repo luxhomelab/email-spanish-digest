@@ -1,0 +1,183 @@
+{
+  "items": [
+    {
+      "title": "La tormenta Adam mata a seis personas mientras Valencia aprueba ayudas",
+      "body": "La tormenta Adam ha causado seis muertes en España desde el 17 de octubre. El Gobierno valenciano aprobó 23,5 millones de euros en ayudas, con 6.000 € por vivienda habitual dañada y 3.000 € por segundas residencias. Las familias que perdieron su vivienda habitual pueden recibir 800 € al mes durante 12 meses para realojarse.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/10/20/6ad7b3dffdddff6a428b45b5.html"
+        },
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/local/valencia/20261020/11663993/consell-aprueba-primer-paquete-ayudas-23-5-millones-euros-afectados-dana-adam.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "El decreto de compensación por alquiler se enfrenta a una derrota parlamentaria probable",
+      "body": "El Real Decreto-ley 28/2026 se ha publicado, pero su entrada en vigor depende de una votación parlamentaria que probablemente no saldrá adelante. Obligaría a los propietarios que no renueven el contrato a pagar al menos 12 meses de renta por una vivienda similar. Tras los plazos mínimos, los contratos se renovarían por cinco años, o por siete si el propietario es una persona jurídica, salvo que se notifique un preaviso válido.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/20/confirmado-nuevo-decreto-incluye-indemnizaciones-inquilinos-casero-no-renueva-alquiler-2057837.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El Supremo concede la amnistía a cuatro líderes catalanes",
+      "body": "El Tribunal Supremo concedió la amnistía al exvicepresidente catalán y líder de ERC Oriol Junqueras y a los exmiembros del Govern catalán Raül Romeva, Jordi Turull y Dolors Bassa. La resolución sigue al respaldo del Tribunal Constitucional a la amnistía por malversación, el delito por el que los cuatro fueron condenados.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-supremo-amnistia-junqueras-romeva-turull-bassa-dirigentes-proces-condenados-malversacion-20261020125615.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El Supremo exige visitar el interior de los inmuebles para su valoración fiscal",
+      "body": "El Tribunal Supremo dictaminó que los peritos de la Agencia Tributaria deben inspeccionar el interior y el exterior de un inmueble al valorarlo. La información catastral, Google Maps o las fotos aéreas no bastan por sí solas. La sentencia anula una resolución de julio de 2024 del Tribunal Superior de Justicia de Extremadura.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-10-20/supremo-exige-visita-inmueble-hacienda-1tps_4448701/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "El Gobierno duplica la financiación para las regiones que aplican el control de alquileres",
+      "body": "El Gobierno aprobó 180 millones de euros para cinco comunidades que aplican la ley de vivienda, el doble de lo anunciado en septiembre. Los fondos pueden financiar vivienda asequible y cubrir rentas impagadas en 317 municipios con unos nueve millones de habitantes.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/vivienda-duplica-subvencion-comunidades-aplican-ley-vivienda-180-millones_1_13599587.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La inflación supera a los salarios mientras se estanca la negociación colectiva",
+      "body": "La inflación supera los ajustes medios de los salarios mientras se estanca la negociación colectiva. Seis de cada diez convenios sectoriales o de empresa no tienen una cláusula que ajuste automáticamente los salarios cuando suben los precios.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-10-21/la-brecha-entre-salarios-y-precios-se-ensancha-por-el-pico-de-la-inflacion-y-la-paralisis-en-los-convenios.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Un tribunal avala el tipo reducido en la compra de vivienda de familias con un hijo en camino",
+      "body": "El Supremo avaló el tipo del 4 % del impuesto de transmisiones de Madrid, en lugar del 6 %, para familias cuyo tercer hijo fue concebido en el momento de la firma, siempre que el bebé nazca vivo. No hace falta que exista el título de familia numerosa en el momento de la firma. Las familias que pagaron el 6 % en casos similares pueden solicitar la devolución.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/fiscal/2026/10/21/rebaja-fiscal-compra-vivienda-tercer-hijo-camino.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "El Consejo de Ministros aprueba una pensión para parejas de hecho supérstites",
+      "body": "El Consejo de Ministros aprobó un real decreto-ley que permitirá a las parejas de hecho que ya hayan reclamado un año acceder a la pensión de viudedad. Cubre los fallecimientos anteriores en los que la pareja tenía hijos, convivía desde hacía más de dos años y no estaba casada ni inscrita como pareja de hecho. El Parlamento debe convalidarlo en un mes.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/epsocial/igualdad/noticia-parejas-hijos-fallecimientos-pasados-tendran-ano-acceder-pension-viudedad-si-reclamado-20261020140203.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El Gobierno garantiza una subida salarial del 4,5 % para los empleados públicos en enero",
+      "body": "El Gobierno garantizó una subida salarial del 4,5 % desde el 1 de enero de 2027, en virtud del acuerdo vigente que cubre a más de tres millones de empleados públicos. Los sindicatos quieren su aprobación formal antes de las elecciones del 29 de noviembre. Un 0,5 % adicional para 2026 depende de que la inflación de fin de año alcance al menos el 1,5 %.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/laboral-00346/noticia-gobierno-garantiza-sindicatos-sueldo-funcionarios-subira-45-enero-20261020194527.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Los padres con custodia compartida ganan un pleito fiscal sobre la pensión de alimentos",
+      "body": "El Supremo dictaminó que los progenitores con custodia compartida pueden deducirse en el IRPF las pensiones de alimentos que pagan. La sentencia corrige la postura de la Agencia Tributaria. El tribunal rechazó que cuidar de los hijos y pagarles una pensión de alimentos deba suponer una penalización fiscal.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/mis-derechos/2026-10-20/el-supremo-corrige-a-hacienda-los-padres-con-custodia-compartida-si-pueden-deducirse-el-irpf-de-la-pension-de-alimentos.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Arquia ofrece un 3 % en depósitos de bienvenida a 12 meses",
+      "body": "El depósito de bienvenida a 12 meses de Arquia Banca paga un 3 % anual por ingresos de entre 10.000 € y 200.000 € procedentes de otros bancos; las solicitudes están abiertas hasta el 30 de octubre. Los intereses se pagan al vencimiento; la cancelación anticipada supone perder todos los intereses, y no se permiten retiradas parciales. El Fondo de Garantía de Depósitos cubre hasta 100.000 € por titular.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/ahorro/2026/10/21/6ad7fc6ee5fdea43348b456f.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Las alianzas en el Senado se convierten en campo de batalla electoral",
+      "body": "El PP y Vox estudian, según los informes, una alianza en el Senado después de que PSOE y Frente Amplio registraran una coalición para acabar con la mayoría absoluta del PP. El Senado ayuda a elegir a los miembros del Tribunal Constitucional y de otros órganos clave, que requieren mayorías reforzadas.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/senado-se-convierte-nuevo-campo-batalla-electoral-para-frenar-contrario-hacer-nombramientos-estrategicos_7051173_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "48 consulados verifican el derecho a voto por la ley de nietos",
+      "body": "Un total de 48 oficinas consulares han verificado total o parcialmente el derecho de voto de los ciudadanos nacionalizados por la ley de nietos. Según una resolución del Supremo, solo podrán votar en las elecciones del 29 de noviembre de 2026 quienes hayan sido verificados como descendientes de exiliados.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-casi-medio-centenar-consulados-remitido-ya-informacion-nacionalizaciones-ley-nietos-20261020130255.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Las protestas callejeras dividen a los partidos en plena campaña electoral",
+      "body": "Las protestas en la calle y una posible huelga general se han convertido en temas de campaña antes de las elecciones del 29 de noviembre. El Gobierno considera útil la movilización de la izquierda, mientras sus oponentes critican las protestas y establecen comparaciones con Francia.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-10-21/la-calle-juega-en-campana-ayuso-se-lanza-contra-las-protestas-mientras-el-gobierno-abraza-incluso-la-huelga-general.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "¿Tu sueldo sube automáticamente con la inflación? A) Sí B) No C) No lo sé 💬",
+  "subject": "Lo que pasó en España mientras estabas ocupado",
+  "lang": "es",
+  "date": "2026-10-21",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-10-21T06:02:41.724907+00:00"
+}

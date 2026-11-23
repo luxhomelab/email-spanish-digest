@@ -1,0 +1,171 @@
+{
+  "items": [
+    {
+      "title": "España construye la mitad de las viviendas que necesitan sus nuevos hogares",
+      "body": "España crea entre 220.000 y 230.000 nuevos hogares cada año, pero solo construye algo más de 100.000 viviendas, afirma el economista Jordi Llatzer. El desajuste mantiene escasa la oferta de vivienda y presiona los precios, impulsado por el crecimiento de la población, la emancipación tardía de los jóvenes y las separaciones familiares. La construcción también afronta la escasez de mano de obra cualificada, el encarecimiento de los materiales y requisitos técnicos más estrictos.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-09-18/jordi-experto-en-economia_4424960/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Marbella aprueba un nuevo plan urbanístico y amplía el suelo edificable",
+      "body": "Marbella aprobó su primer plan general de ordenación urbana al amparo de la ley territorial andaluza, que aumenta el suelo urbano en 13 millones de metros cuadrados. Votaron a favor el PP, Vox y Opción Sanpedreña; el PSOE se abstuvo. El plan permite el desarrollo hotelero en suelo rústico común y sustituye al PGOU de 1986, que fue recuperado tras una sentencia del Supremo hace 11 años.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/andalucia/malaga/marbella-promete-pasar-pagina-urbanismo-ochentero-ofreciendo-suelo-facilidades-construir_1_13521155.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El diésel agrícola se dispara y eleva los costes del campo español a máximos",
+      "body": "El diésel agrícola cuesta de media 1,405 € por litro; llenar un depósito de tractor de 300 litros cuesta 421,50 €. Los agricultores califican la subida de devastadora y exigen que se mantengan las ayudas que vencen el 30 de septiembre. El conflicto con Irán encarece la energía y probablemente elevará el precio de los alimentos.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/aragon/agro/400-euros-llenar-deposito-tractor-gasoleo-agricola-dispara-costes-campo-espanol_1_13519586.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El INE revisa el PIB: 2024 más fuerte y crecimiento de 2025 recortado al 2,6 %",
+      "body": "El INE revisó las cifras anuales del PIB: eleva el crecimiento de 2024 al 3,7 % y rebaja el de 2025 al 2,6 %. La estimación de 2023 se recorta al 2,4 %. La revisión abarca años marcados por la inflación, los fondos europeos, la inversión en defensa y el conflicto comercial con Estados Unidos.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ine-aflora-6-500-millones-pib-rebaja-crecimiento-2025-2-6_1_13519746.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Las pensiones subirán más del 3 % en 2027 con la inflación al alza",
+      "body": "Las pensiones contributivas camino de una revalorización superior al 3 % en 2027, frente al 2,7 % de 2026. El IPC de agosto llegó al 4,3 %, la primera lectura por encima del 4 % en tres años, y el economista jefe de BBVA Research prevé que la inflación de septiembre alcance el 4,8 %. Los precios energéticos más altos impulsan la subida.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/09/19/miguel-cardos-pensiones-septiembre-inflacion-acelere-2027-2052519.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La crisis migratoria de Ceuta se agrava mientras se abre una investigación por abusos",
+      "body": "El intento de desalojar las playas de Ceuta fracasó porque los migrantes permanecieron allí, y los expertos calculan ahora hasta 20.000 migrantes irregulares en el enclave. Por otra parte, la Fiscalía de Menores abrió una investigación por presuntos abusos físicos y psicológicos en un centro para niñas migrantes, con denuncias de violencia y acceso restringido a la atención sanitaria.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/09/18/6aad8b1721efa03b4f8b45b8.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/fiscalia-investiga-presuntos-casos-malos-tratos-centro-acogida-ninas-migrantes-ceuta_1_13522288.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "España lidera la esperanza de vida mundial tras ganar más de 40 años",
+      "body": "La esperanza de vida en España ha aumentado más de 40 años en el último siglo, lo que convierte a la Europa mediterránea en un referente mundial de longevidad. Los avances solo se interrumpieron por la gripe de 1918, la Guerra Civil y la posguerra, y por la COVID-19. Europa tiene la mayor esperanza de vida, mientras África y partes de Asia figuran en los puestos más bajos.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/radiografia-esperanza-vida-espana-asaltado-liderazgo-mundial-anadir-40-anos-ultimo-siglo_1_13402341.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Las marcas blancas ya superan la mitad de la cesta de la compra en España",
+      "body": "Los productos de marca blanca representan ya el 53,8 % del volumen de compra en España, el crecimiento más rápido de Europa. Los consumidores ahorran unos 2.400 € al año, ya que el 69,2 % llena la mitad o más de su cesta con marcas de distribuidor. Aldi bajó un 2 % los precios de sus marcas blancas, mientras la media del mercado subió un 1,9 %.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-09-19/cesta-compra-marca-propia-aldi-bra_4401861/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Una norma europea lleva los depósitos de envases a bares y restaurantes españoles",
+      "body": "Un nuevo reglamento europeo de envases lleva a los bares, restaurantes y supermercados españoles sistemas de depósito, devolución y reembolso. Los consumidores pagarán un depósito reembolsable de unos 10 céntimos por botella o lata. La UE exige recoger al menos el 70 % de estos envases; España solo recogió el 41,3 % de las botellas de plástico de un solo uso en 2023.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/gastronomia/2026/09/18/ya-oficial-bares-restaurantes-cobraran-suplemento-extra-botellas-debido-nueva-norma-gobierno-espana-2021183.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El acuerdo Mercosur-UE abaratará la carne para los europeos",
+      "body": "Tres meses después de la entrada en vigor del acuerdo comercial Mercosur-UE, se espera que la carne sea más barata para los consumidores europeos. El pacto eliminó el 91 % de los aranceles a las exportaciones europeas y el 92 % a las de Mercosur en algunos productos. Brasil, Argentina, Paraguay y Uruguay figuran entre los diez principales exportadores mundiales de carne.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/los-efectos-pacto-entre-mercosur-ue-ya-impactan-carne-toda-cadena-nota-sera-mas-barata-para-los-europeos_7038466_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El gasto de los turistas extranjeros en España sube un 9 % por la geopolítica y el eclipse",
+      "body": "El gasto con tarjeta de turistas extranjeros en España subió un 8,8 % entre mayo y agosto, impulsado por las tensiones geopolíticas y el eclipse de agosto, según BBVA Research. Los turistas internacionales supusieron el 85 % del gasto turístico total en esos meses, y el gasto turístico total creció un 5,7 % interanual en el segundo trimestre.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/las-tensiones-geopoliticas-eclipse-agosto-dispararon-un-9-gasto-los-turistas-extranjeros-espana-segun-bbva-research_7038377_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Sánchez anuncia nuevos requisitos universitarios: más clases presenciales y 50 % de doctores",
+      "body": "Pedro Sánchez anunció que el Gobierno prepara un real decreto que exigirá que cada título universitario tenga al menos un 50 % de profesorado con doctorado. La norma endurece el actual requisito del 50 % aplicado a la universidad en su conjunto y exigirá también clases presenciales cuando sea necesario.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/educacion-00468/noticia-sanchez-anuncia-nuevos-requisitos-universidades-exigira-mas-presencialidad-50-profesores-doctores-20260918122915.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Descubren en Bolivia una nueva especie de felino tras cien años",
+      "body": "Científicos han identificado una nueva especie de felino silvestre, Leopardus tilcayo, en los bosques nublados de las Yungas bolivianas. El análisis de ADN de ejemplares de museo y muestras vivas mostró que un grupo considerado una sola especie son en realidad al menos cinco. El gato tilcayo mide unos 46 cm y pesa unos 1,4 kg, menos que un gato doméstico medio.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/equipo-cientificos-encuentra-bolivia-tilcayo-primera-especie-felino-descubierta-100-anos_1_13519656.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "¿Qué te pesa más ahora en España: el alquiler o los precios de los alimentos? 👇",
+  "subject": "Aquí tienes España hoy, en menos de un minuto",
+  "lang": "es",
+  "date": "2026-09-19",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-09-19T06:03:29.483683+00:00"
+}

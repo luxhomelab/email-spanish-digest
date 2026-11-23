@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "title": "Los retrasos en la regularización dejan a cientos de migrantes en el limbo",
+      "body": "De las 549.596 solicitudes presentadas en el procedimiento extraordinario de regularización, solo 91.905 han recibido autorización provisional para trabajar, por lo que más de 50.000 personas esperan más allá del plazo de 15 días prometido. Muchos migrantes aseguran que llevan más de 40 días sin respuesta, lo que les genera ansiedad e incertidumbre.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/retrasos-regularizacion-inquietan-cientos-migrantes-15-dias-llevamos-40-respuesta_1_13261196.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Los precios de la vivienda no bajan pese a la desaceleración del mercado",
+      "body": "Los precios de la vivienda subieron un 12,5 % en 2025, lo que eleva el esfuerzo de compra a 8 años de ingresos, el nivel más alto desde 2011. Aunque las compraventas se han frenado, los expertos prevén un «enfriamiento» pero no una caída de precios, por la inflación y la subida de los tipos de interés.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/cambio-ciclo-vivienda-enfriamiento-no-caida-precios-compra_1_13261297.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Los autónomos pueden volver a trabajar y cobrar la pensión completa",
+      "body": "Una nueva norma permite a los autónomos volver a trabajar tras la jubilación sin perder la pensión, siempre que no hayan estado dados de alta como autónomos en los tres años anteriores. También se ha eliminado el periodo de espera de un año, lo que facilita el acceso a la jubilación flexible.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/31/cambios-normativa-jubilacion-flexible-autonomos-jubilados-podran-trabajar-sin-perder-pension-2024344.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "La gripe aviar dispara el precio del huevo en España",
+      "body": "España ha sacrificado 2,7 millones de gallinas ponedoras (el 5,6 % del censo) por la gripe aviar desde el otoño, lo que ha supuesto una caída de 32,5 millones de docenas de huevos en la producción. La escasez de oferta contribuye a la subida de precios en los supermercados.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/gripe-aviar-impulsa-alza-precio-huevo-espana-tras-sacrificar-2-7-millones-aves_6977063_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los precios del petróleo oscilan entre la guerra de Irán y la esperanza de un alto el fuego",
+      "body": "El conflicto en Irán y las amenazas al estrecho de Ormuz han llevado al petróleo a una montaña rusa de precios. Cada cambio en el mensaje diplomático de Trump provoca subidas o bajadas bruscas, con impacto en el coste de la vida en todo el mundo.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/petroleo-cotiza-riesgo-geopolitico-esperanza-alto-fuego-desatasque-colapso-ormuz_129_13259764.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Santos Cerdán, investigado por conspirar contra los investigadores de la corrupción del PSOE",
+      "body": "El exsecretario de organización del PSOE Santos Cerdán está investigado por presuntamente orquestar una trama para buscar información comprometida sobre la Guardia Civil y los fiscales que investigan la corrupción socialista. En la trama habrían participado un militante y un empresario, y, según las informaciones, habría estado financiada por el PSOE.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/santos-cerdan-impulso-trama-conspiranoica-investigadores-corrupcion-socialista_1_13261462.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "El Gobierno prometió 15 días para la regularización: ¿sigues esperando? Comparte tu experiencia abajo.",
+  "subject": "🇪🇸 España: ¿qué pasa? 🤔 31.05.2026",
+  "lang": "es",
+  "date": "2026-05-31",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-31T05:31:51.168516+00:00"
+}

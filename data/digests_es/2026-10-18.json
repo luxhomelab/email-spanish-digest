@@ -1,0 +1,183 @@
+{
+  "items": [
+    {
+      "title": "La tormenta Adam provoca inundaciones en el este de España",
+      "body": "La tormenta Adam dejó lluvias torrenciales e inundaciones en el este y el sureste de España el 17 de octubre. Los bomberos buscan a una mujer que cayó a un arroyo en Cabrera de Mar. Varias zonas catalanas recibieron alertas de lluvias torrenciales, mientras los equipos de rescate liberaron a dos personas mayores atrapadas en un coche en Sentmenat.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/temporal-lluvia-espana-hoy-directo-comunidad-valenciana-cataluna-murcia-almeria-alerta-las-proximas-horas_7050013_6.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "Las ofertas de alquiler se frenan mientras los decretos de vivienda esperan convalidación",
+      "body": "Los decretos de vivienda aprobados el 7 de octubre esperan la convalidación parlamentaria. Los portales inmobiliarios y las patronales informan de una retirada temporal del 2 % al 5 % de las ofertas de alquiler, no de una retirada masiva. Las prórrogas protegerían a los inquilinos cuyos contratos venzan antes de 2029 frente a desahucios o subidas de renta al vencer.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/han-retirado-caseros-ofertas-alquiler-decretos-vivienda_1_13591130.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Pensiones y vivienda dominan la campaña electoral en España",
+      "body": "Sánchez y Feijóo consideran que la campaña se mueve a su favor, pero los expertos ven un mapa que favorece una opción PP-Vox. Sánchez inició su precampaña el 17 de octubre para las elecciones del 29 de noviembre y advirtió de recortes de pensiones del PP. Feijóo considera que la dimisión de Mínguez debilita el mensaje del PSOE sobre vivienda.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-sanchez-lanza-precampana-apelando-movilizacion-alertando-contra-motosierra-pensiones-20261017133128.html"
+        },
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-10-18/los-dos-grandes-creen-que-la-campana-se-va-colocando-donde-querian.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El Supremo mantiene las restricciones de voto a los descendientes nacionalizados",
+      "body": "El Supremo mantuvo la suspensión temporal del voto que afecta a 163.020 personas nacionalizadas por la ley de nietos para las elecciones del 29 de noviembre. Se aplica a quienes obtuvieron la nacionalidad en virtud de una instrucción posterior que presume la condición de exiliado. Quienes están amparados directamente por la ley pueden votar; las impugnaciones siguen abiertas.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/politica/20261018/11661560/batalla-nietos-voto.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La compra de vivienda por extranjeros cae un 13 % en toda España",
+      "body": "Las compras de vivienda por extranjeros cayeron un 13 % en el primer semestre, la mayor caída desde 2020. La mayoría de las comunidades registraron descensos, incluidas las zonas turísticas, mientras los compradores afrontaron costes más altos. Los compradores neerlandeses encabezaron las compras entre los no residentes, y la Comunitat Valenciana fue el destino preferido de los extranjeros no residentes.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/frenazo-compra-extranjera-vivienda-donde-se-concentra-cual-es-su-nacionalidad_7050017_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "España supera los 1.000 días sin nuevo proyecto de presupuestos",
+      "body": "España lleva más de 1.000 días sin que el Gobierno presente un nuevo proyecto de presupuestos y sigue usando las cuentas prorrogadas de 2023. Los expertos advierten de que las prórrogas repetidas dificultan la inversión y la transparencia. El gasto público continúa, y las reglas españolas no prevén cierres de la Administración como en EE. UU.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/negocios/2026-10-17/mas-de-1000-dias-sin-nuevos-presupuestos-hasta-cuando-puede-vivir-espana-con-las-cuentas-de-2023.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Las nuevas pensiones de jubilación superan de media los 1.700 €",
+      "body": "Las nuevas pensiones contributivas de jubilación promedian 1.711,4 € al mes, superando los 1.700 € por primera vez. Esa cifra se refiere solo a las pensiones de jubilación recién concedidas. En el conjunto del sistema, la media de septiembre fue de 1.374,6 €, un 4,6 % más en un año.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/17/subida-pensiones-2027-espana-nuevos-jubilados-superaran-1700euros-media-mes-2055234.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El empleo crece, pero el paro baja solo lentamente",
+      "body": "La afiliación a la Seguridad Social subió en casi 750.000 personas en un año, pero el paro bajó solo en 42.000. Los cotizantes alcanzaron un récord de 22,43 millones. El paro registrado bajó un 1,74 % interanual en septiembre, frente al 5,97 % de un año antes, lo que muestra que el crecimiento del empleo no produce una caída igual de fuerte del paro.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/18/empleo-casi-750-000-nuevos-empleos-un-ano-pero-solo-42-000-parados-menos-por-que-2060504.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El Supremo rechaza un tope anual de cinco días de permiso retribuido por cuidado",
+      "body": "El Supremo dictaminó que las personas trabajadoras pueden reclamar cinco días de permiso retribuido por cuidado cada vez que surja una nueva situación que lo justifique, y rechazó un límite anual de cinco días. El permiso cubre enfermedades graves, accidentes, hospitalizaciones y cirugías que requieran reposo en casa para familiares elegibles y personas que comparten el hogar con la persona trabajadora.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/cambios-permiso-cuidar-familiar-enfermo-supremo-aclara-cuantas-veces-puedes-pedir-dias_7050024_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Los trenes Madrid-Barcelona sufren trayectos más largos y cancelaciones",
+      "body": "Las limitaciones de velocidad y las cancelaciones alargan los trayectos en la línea de alta velocidad Madrid-Barcelona. Algunos tramos tienen un límite de 160 km/h, y los operadores han revisado horarios y recortado servicios. Un incendio de un tren AVE en Ricla el 12 de octubre añadió problemas a una ruta que ya sufría restricciones desde enero.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/catalunya/2026-10-18/la-alta-velocidad-entre-barcelona-y-madrid-pierde-frecuencias-fiabilidad-y-rapidez.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los maquinistas de Renfe convocan huelga para el 29 de octubre",
+      "body": "Semaf ha convocado una huelga de 24 horas de maquinistas de Renfe para el 29 de octubre tras fracasar las negociaciones el 16 de octubre. El sindicato dice que los compromisos sobre seguridad y plantillas están estancados; Renfe afirma que los ha cumplido. Semaf también anunció huelgas en Ouigo los días 30 de octubre, 2, 6 y 9 de noviembre, y 4 y 8 de diciembre.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-10-17/el-sindicato-de-maquinistas-semaf-llama-a-una-huelga-de-24-horas-en-renfe-para-el-dia-29.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Los docentes de Madrid usan fondos de resistencia para sostener la huelga",
+      "body": "Los docentes de Madrid recurren a turnos rotatorios y fondos de resistencia para sostener una huelga indefinida, con un coste de unos 100 € de salario perdido por cada día de paro. Las educadoras infantiles de la plataforma PLEI llevan en huelga desde abril. La huelga aumenta la presión sobre el Gobierno de Ayuso.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/sostener-paro-indefinido-educacion-perdiendo-100-euros-dia-huelga-sufrimiento_1_13590517.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Las llamadas comerciales deben usar el prefijo 400 desde el 17 de octubre",
+      "body": "Desde el 17 de octubre, las llamadas comerciales deben hacerse desde números de nueve cifras que empiecen por 400, para que puedan distinguirse de las de atención al cliente. No se puede devolver la llamada a estos números. Quien reciba llamadas comerciales desde otros números puede reclamar ante la Oficina de Atención al Usuario de Telecomunicaciones (OAUT) o denunciarlas ante la CNMC.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/sociedad/2026/10/17/llamadas-comerciales-deberan-identificarse-hoy-codigo-400.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Banderas y Cage protagonizarán la quinta temporada de True Detective",
+      "body": "HBO Max anunció que Antonio Banderas y Nicolas Cage protagonizarán la quinta temporada de True Detective, con rodaje a partir de 2027. Banderas interpretará a Rai García y Cage a Henry Logan. Issa López vuelve como showrunner, y ambos actores también ejercerán de productores ejecutivos.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/television/series/2026-10-17/antonio-banderas-y-nicolas-cage-protagonizaran-de-la-quinta-temporada-de-true-detective.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Con lluvias fuertes, ¿aplazas tus viajes? A) Siempre B) A veces C) Nunca 💬",
+  "subject": "Lo que importó hoy en España",
+  "lang": "es",
+  "date": "2026-10-18",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-10-18T06:01:52.026263+00:00"
+}

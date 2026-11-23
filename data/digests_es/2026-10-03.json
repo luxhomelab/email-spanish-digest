@@ -1,0 +1,135 @@
+{
+  "items": [
+    {
+      "title": "El Congreso tumba el decreto de vivienda: se eliminan las protecciones frente a desahucios y las prórrogas",
+      "body": "El Congreso votó 178 a 172 para rechazar el decreto ley de vivienda del Gobierno, con el voto en contra del PP, Vox, Junts y UPN. La derogación elimina la protección frente a desahucios de inquilinos vulnerables, las prórrogas automáticas de los contratos de alquiler que vencen y los límites a los fondos de inversión que compren viviendas por debajo del 70 % de su valor de tasación. El decreto solo había estado en vigor 24 horas.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/construccion-y-vivienda-00342/noticia-congreso-rechaza-decreto-medidas-vivienda-votos-pp-vox-junts-upn-20261002153000.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/compensaciones-desahucio-alquiler-temporal-prorrogas-medidas-vivienda-decaen-no-junts_1_13555386.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Récord de 22,4 millones de afiliados a la Seguridad Social tras el repunte de septiembre",
+      "body": "España sumó 92.327 afiliados a la Seguridad Social en septiembre, un récord para ese mes, hasta 22.437.553. De unos 90.000 nuevos afiliados, 84.220 son extranjeros, impulsados por el proceso de regularización de migrantes. El paro registrado subió en 23.587 personas, hasta 2.379.505, la cifra más baja desde septiembre de 2007.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/espana-bate-un-nuevo-record-empleo-tras-sumar-92-300-afiliados-septiembre-mayoria-por-regularizacion-migrantes_7044005_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Sánchez valora un adelanto electoral tras la derrota de los decretos de vivienda",
+      "body": "Pedro Sánchez dedicará este fin de semana a analizar la derrota de los dos decretos de vivienda y la reacción pública antes de decidir si convoca elecciones generales anticipadas. Un adelanto electoral congelaría las medidas pendientes de vivienda, residencia y fiscalidad, y reconfiguraría el calendario legislativo para los residentes extranjeros.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-sanchez-decidira-fin-semana-si-adelanta-elecciones-viendo-reaccion-calle-caida-decretos-20261002170301.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Una encuesta: el 65 % respalda la suspensión de la ley de nietos",
+      "body": "Una encuesta de Sigma Dos para El Mundo revela que el 65,1 % está de acuerdo con la suspensión cautelar de la ley de nietos por el Supremo; el 45 % de los votantes del PSOE la valora de forma favorable. La ley suspendida habría permitido a los descendientes de españoles que salieron entre 1936 y 1955 solicitar la nacionalidad y el derecho de voto, lo que podría añadir más de 500.000 nuevos electores.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/10/03/6abff2f8e4d4d872598b45a8.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Se rechaza el plan fiscal sobre las segundas residencias vacías",
+      "body": "El real decreto-ley 26/2026 habría cambiado la tributación del IRPF de las segundas residencias vacías desde 2027, pero el Congreso lo rechazó el 2 de octubre, por lo que los cambios no entrarán en vigor. Los propietarios seguirán tributando por la renta imputada al 2 % del valor catastral (en algunos casos, el 1,1 %), sin nuevos recargos del IBI.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-10-02/impuesta-pisos-vacios-segunda-residencia-1qrt_4436886/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "El 73 % respaldaría una huelga general por la vivienda",
+      "body": "Una encuesta de Ateneo del Dato para elDiario.es revela que el 73 % de los españoles apoyaría una huelga general por la vivienda, incluidos más de un 60 % de los votantes del PP y de Vox. El Sindicato de Inquilinas convocó la huelga; CCOO y UGT estudian sumarse, y se preparan movilizaciones masivas este fin de semana.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/mayoria-ciudadanos-incluidos-votantes-derecha-apoyarian-huelga-general-vivienda_1_13557680.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La inflación de la eurozona sube al 3,8 % por el repunte de la energía",
+      "body": "La inflación anual de la eurozona subió al 3,8 % en septiembre, su nivel más alto desde septiembre de 2023, según la estimación preliminar de Eurostat. Los precios de la energía subieron un 18,8 % y la inflación subyacente llegó al 2,5 %. España registró la mayor subida entre las grandes economías de la UE, con un 4,6 %, lo que presiona sobre los tipos del BCE y el Euríbor.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-10-02/inflacion-eurozona-precios-energia-septiembre-1tps_4436870/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los nuevos jubilados cobran de media más de 1.700 € al mes",
+      "body": "Los nuevos jubilados de agosto empezaron a cobrar una pensión media de jubilación de 1.711,4 € al mes, mientras la media del sistema en septiembre alcanzó los 1.374,6 €, un 4,6 % más que un año antes. Los trabajadores del régimen general cobran de media 1.734,7 €, y los autónomos, 1.062,8 €.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/02/subida-pensiones-espana-nuevos-jubilados-superaran-1700euros-media-mes-2027-2055234.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Las lluvias torrenciales dejan sin clase a 400.000 alumnos y 20 rescates",
+      "body": "Las lluvias torrenciales en la región mediterránea superaron los 200 litros por metro cuadrado, lo que suspendió las clases a más de 400.000 alumnos en Valencia. Unas 20 personas fueron rescatadas de vehículos en Tarragona y Murcia; en las Terres de l'Ebre el agua subió hasta la altura de los retrovisores. Las alertas siguen activas al menos hasta el domingo.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/10/02/las-fuertes-lluvias-hasta-200-litros-dejan-una-veintena-rescatados-mas-400-000-alumnos-sin-clase-espana-2056693.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Los conductores deberán ceder el paso a los peatones aunque no haya paso de cebra",
+      "body": "Desde el 1 de octubre, los conductores deberán ceder el paso a los peatones en las calles de plataforma única, donde la acera y la calzada están al mismo nivel, aunque no haya paso de cebra. La norma forma parte del Real Decreto 518/2026, publicado en el BOE, e incluye nuevas reglas para patinetes y motoristas.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/10/02/oficial-vigor-gobierno-cambia-normas-conductores-deben-ceder-paso-peatones-aunque-no-haya-paso-cebra-2054062.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "¿Te sumarías a una huelga general por el coste de la vivienda? A) Sí B) No C) Quizá 💬",
+  "subject": "Lo que todo el mundo en España comenta hoy",
+  "lang": "es",
+  "date": "2026-10-03",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-10-03T06:03:30.010337+00:00"
+}

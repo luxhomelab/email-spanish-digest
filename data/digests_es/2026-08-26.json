@@ -1,0 +1,163 @@
+{
+  "items": [
+    {
+      "title": "España reforma la ley de extranjería y acelera las devoluciones en Ceuta",
+      "body": "España ha aprobado un anteproyecto para reformar las leyes de asilo y extranjería, que acelera las devoluciones y reduce el periodo de identificación de siete días a 72 horas. Actualiza las definiciones de refugiado, incluyendo expresamente el género, la identidad o expresión de género y la discapacidad. Un mando único en Ceuta priorizará las devoluciones y repatriaciones de migrantes. Los extranjeros residentes con expedientes pendientes podrían enfrentarse a procedimientos más rápidos.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/gobierno-aprueba-un-anteproyecto-para-reformar-las-leyes-extranjeria-asilo-plena-crisis-migratoria-ceuta_7029186_0.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-gobierno-aprueba-mando-unico-ceuta-coordinacion-devolucion-repatriacion-inmigrantes-20260825142039.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Hacienda y las donaciones: las transferencias de más de 10.000 € deben declararse",
+      "body": "Las transferencias bancarias que puedan considerarse donaciones están sujetas al Impuesto sobre Sucesiones y Donaciones, con un umbral de declaración de 10.000 € y un control adicional por encima de 6.000 €. Los bancos deben vigilar estas operaciones según la Ley 10/2010 contra el blanqueo de capitales. Las donaciones no declaradas pueden acarrear multas de entre 600 € y el 50 % del valor de la donación.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/08/25/cuanto-dinero-puedo-ingresar-familiar-impuestos-hacienda-limite-transferencias-banco-1796863.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Uber Eats retrasa hasta final de año el cumplimiento de la Ley Rider",
+      "body": "Uber Eats sigue usando repartidores autónomos más de siete meses después de comprometerse a cumplir la Ley Rider. Las negociaciones con los sindicatos están paradas desde junio, aunque más de 10.000 autónomos ya han pasado a trabajar como asalariados en flotas desde enero. La empresa tiene un acuerdo para saldar más de 110 millones de euros de deuda con la Seguridad Social y pretende completar la transición antes de fin de año.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/08/26/6a8dac7821efa0e3518b4596.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "España tiene 160.000 vacantes sin cubrir pese al alto paro",
+      "body": "España tiene casi 160.000 vacantes sin cubrir pese a tener 2,5 millones de parados. Los salarios bajos, el envejecimiento de la población, las diferencias territoriales y la crisis de vivienda explican el desajuste. Algunos puestos pagan 1.300 € brutos en ciudades donde los alquileres superan los 1.500 €; la construcción, el transporte y la hostelería reportan dificultades para contratar. Los residentes extranjeros pueden encontrar ofertas, pero los salarios bajos y los altos costes de vivienda persisten.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/hay-falta-mano-obra-sectores-vacantes-cubrir-espana-2-5-millones-parados_1_13454215.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Un autónomo sin empleados gasta casi 3.000 € al mes solo para trabajar",
+      "body": "Un autónomo sin empleados y con un local comercial alquilado gasta de media 2.980 € al mes, o 35.760 € al año, para mantener su negocio, según UPTA. La estimación se basa en 286 días de apertura al año. Esto muestra por qué el trabajo por cuenta propia puede ser económicamente difícil en España.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/08/26/empleo-autonomos-euros-mes-poder-trabajar-2047159.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Los bancos españoles cierran oficinas y recortan empleo mientras la morosidad toca mínimos en 17 años",
+      "body": "Los grandes bancos españoles cerraron 440 oficinas en el año hasta junio, reduciendo la red a 9.984 sucursales, y obtuvieron beneficios récord de 20.164 millones en el primer semestre. Santander cerró 266 oficinas, más que todos los demás bancos juntos. La ratio de morosidad bajó al 2,54 %, el nivel más bajo desde agosto de 2008, con 272 millones menos de créditos fallidos. Menos oficinas pueden dificultar la banca presencial en zonas rurales.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/08/26/6a8d3030e4d4d8716b8b456d.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/morosidad-banca-espanola-nuevo-minimo_7029068_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "España asume el control total del despliegue de centros de datos",
+      "body": "El Gobierno aprobará un real decreto para tomar el control total del despliegue de nuevos centros de datos. Las empresas deberán presentar declaraciones de cumplimiento, y los proyectos sin permisos de acceso a la red podrán paralizarse. El objetivo es evitar picos de precios de la electricidad y desequilibrios en la red como los vistos en Irlanda, Países Bajos y Estados Unidos.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/empresas/2026/08/25/6a8dc83521efa0ba2d8b458b.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El gasto en pensiones alcanza un récord de 14.470 millones en agosto",
+      "body": "El gasto mensual en pensiones alcanzó un récord de 14.470 millones de euros en agosto, un 6,2 % más que hace un año. La Seguridad Social pagó 10,5 millones de pensiones a más de 9,5 millones de personas, y la pensión media subió un 4,6 %, hasta 1.373,4 €. La pensión media de jubilación es de 1.575 €; los nuevos jubilados reciben de media 1.707,2 €. El aumento del gasto importa para la sostenibilidad del sistema a largo plazo.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/gasto-pensiones-alcanza-nuevo-maximo-agosto-superar-los-14-470-millones_7029087_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Un epidemiólogo advierte de riesgo epidémico por la crisis migratoria de Ceuta",
+      "body": "El epidemiólogo Joan Caylà advierte de que Ceuta afronta una crisis de salud pública, con miles de migrantes, entre ellos más de 2.000 menores, en riesgo de brotes de tuberculosis y sarampión. Calcula que hay entre 5.000 y 10.000 migrantes en Ceuta y prioriza el alojamiento, la alimentación y los controles sanitarios frente al confinamiento masivo. Pide aumentar la cobertura de vacunación para alcanzar la inmunidad de grupo. Un brote podría extenderse más allá de Ceuta.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/joan-cayla-epidemiologo-si-no-revisamos-diagnosticamos-los-casos-ceuta-se-pueden-generar-brotes-epidemicos_7029110_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "La crisis de la patata en Francia y el calor en España amenazan con subir los precios",
+      "body": "Una caída del 23 % en la cosecha de patata en Francia y una cosecha española castigada por el calor podrían encarecer la patata. Las importaciones francesas ya han subido un 33 % en una década, de 708.000 toneladas en 2016 a 941.000 en 2025. La producción española se estima en 1,96 millones de toneladas, pero COAG afirma que harían falta 20.000 hectáreas más para cubrir la demanda.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/crisis-patata-francesa-cosecha-espanola-castigada-calor-amenazan-alza-precios_7029191_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El ministro marroquí vuelve a reclamar Ceuta y Melilla",
+      "body": "El ministro marroquí de Asuntos Islámicos, Ahmed Toufiq, repitió la reivindicación de Marruecos sobre Ceuta y Melilla durante una celebración religiosa presidida por el rey Mohamed VI. La declaración se hizo ante el príncipe heredero Moulay Hassan y el primer ministro Aziz Ajanuch. Esta reivindicación recurrente pone de manifiesto las tensiones diplomáticas entre España y Marruecos.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-ministro-marroqui-habla-liberacion-ceuta-melilla-mohamed-vi-celebracion-religiosa-20260825120003.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Los padres de Ceuta temen enviar a sus hijos al colegio tras la llegada masiva",
+      "body": "En Ceuta, siete colegios han sufrido actos vandálicos y algunos padres dicen que no llevarán a sus hijos al colegio cuando empiece el curso, el 8 de septiembre. Unos 8.000 inmigrantes indocumentados siguen en la ciudad; más de 2.900 menores llegaron desde Marruecos, pero solo hay 1.635 plazas escolares libres. Sofía Carrión, madre peruana de 32 años, dice que mantendrá en casa a su hija de 9 años hasta que sea seguro.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/08/25/6a8dd7f9fc6c83a6318b45bc.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "¿Alguna vez has transferido más de 10.000 € a tu familia y te has preguntado si Hacienda iba a preguntar? 💬",
+  "subject": "Nada pasó hoy en España. Excepto esto.",
+  "lang": "es",
+  "date": "2026-08-26",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-08-26T06:13:04.927326+00:00"
+}

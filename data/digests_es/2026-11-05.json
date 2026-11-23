@@ -1,0 +1,179 @@
+{
+  "items": [
+    {
+      "title": "España propone una subida del salario mínimo del 5,3 % para 2027",
+      "body": "Un borrador del Ministerio de Trabajo en audiencia pública subiría el SMI un 5,3 %, hasta 1.286 € brutos al mes en 14 pagas, es decir, 18.004 € al año. El Gobierno no ha pactado la cifra con sindicatos ni patronal. Las alegaciones terminan el 16 de noviembre; la aprobación del Consejo de Ministros podría llegar el 17 o el 24 de noviembre.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-05/el-salario-minimo-subira-un-53-en-2027-hasta-1286-euros-al-mes.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Las desgravaciones fiscales de la vivienda se someten a votación el 12 de noviembre",
+      "body": "El decreto de vivienda espera la convalidación parlamentaria el 12 de noviembre. Incluye una deducción del 10 % en el IRPF por alquiler para inquilinos con ingresos inferiores a 33.007 €. La AIReF calcula que su coste anual para las arcas públicas es de unos 1.300 millones de euros. Una propuesta separada de prórroga de alquileres no se espera que salga adelante.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-05/el-decreto-de-vivienda-tendra-un-coste-de-unos-1300-millones-anuales-hasta-2031.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El segundo pago del IRPF vence el 5 de noviembre",
+      "body": "Quienes fraccionaron la cuota de la declaración de 2025 deben pagar el 40 % restante el 5 de noviembre. Comprueba que tu cuenta domiciliada tenga fondos suficientes; si no la tienes domiciliada, puedes pagar con el modelo 102 a través de la Agencia Tributaria o en un banco u oficina tributaria. El pago fuera de plazo conlleva recargos desde el 5 %.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/segundo-pago-renta-llega-este-5-noviembre-quien-debe-abonarlo-cuanto-dinero-supone_7057044_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "La energía eleva la inflación de la eurozona al 4 % en octubre",
+      "body": "La inflación de la eurozona llegó al 4 % en octubre, su nivel más alto desde septiembre de 2023, según la estimación preliminar de Eurostat. Los precios de la energía, con una subida interanual del 20,8 %, impulsaron el alza, mientras los alimentos frescos subieron un 4,6 %. La inflación subyacente se mantuvo en el 2,5 %.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-11-04/inflacion-de-la-eurozona-sube-al-4-en-octubre_4458651/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La AIReF alerta de que España no cumple los objetivos de gasto de la UE",
+      "body": "La AIReF prevé un crecimiento del gasto primario del 5,7 % hasta 2028, frente al compromiso de España con la UE del 3,2 %. Atribuye el desfase a los planes de respuesta a la inflación y a otras medidas de gasto recientes, y pide una estrategia fiscal para cumplir los objetivos. También elevó su previsión de crecimiento económico para 2026 al 2,6 %.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/economia/2026/11/04/airef-insta-reducir-gasto-estructural-incumplimiento-plan-fiscal-comprometido-bruselas.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La Comisión Europea revisa la prohibición de pisos turísticos de Barcelona",
+      "body": "La Comisión Europea ha abierto un análisis jurídico preliminar sobre la prohibición de pisos turísticos de Barcelona. El decreto catalán está en vigor, y las 10.627 licencias de Barcelona vencen el 9 de noviembre de 2028. El análisis comprobará si las restricciones cumplen el derecho de la UE.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/catalunya/2026/11/04/veto-catalan-pisos-turisticos-lupa-ue.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Etxebarri, elegido el mejor restaurante del mundo en 2026",
+      "body": "Etxebarri, en Axpe (Vizcaya), ocupó el primer puesto en la gala de The 50 Best Restaurants 2026 en Lima, tras dos años en segundo lugar. España tiene cuatro restaurantes en el top 50: Etxebarri, el DiverXO de Madrid en el noveno puesto, el Enigma de Barcelona en el 29 y el Elkano de Getaria en el 33.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/estilo-vida/rincones-gastronomicos/2026/11/05/etxebarri-mejor-restaurante-mundo-2026.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "El Gobierno aprueba endurecer la aplicación de las zonas de bajas emisiones",
+      "body": "El Gobierno aprobó el 3 de noviembre cambios en el Real Decreto 1052/2022. Obligarían a los ayuntamientos a aplicar las zonas de bajas emisiones con restricciones de vehículos según la contaminación y con multas. Abordan los largos retrasos en las sanciones y las zonas sin límites de acceso efectivos.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/motor/excusas-zbe-gobierno-obliga-ayuntamientos-multar-coches-contaminantes-pm_1_13637137.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Las familias reciben los cuerpos de 65 víctimas del accidente de Urda",
+      "body": "Las autoridades han devuelto a sus familias los cuerpos de 65 de las 69 personas fallecidas en el accidente ferroviario de Urda (Toledo) del 28 de octubre. Los trabajos de identificación terminaron el 2 de noviembre. Se ha notificado a todas las familias y a las oficinas consulares que representan a las 15 víctimas extranjeras.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/entregados-sus-familias-los-cuerpos-65-los-69-fallecidos-accidente-ferroviario-urda_7057363_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "El vicepresidente Cuerpo asumirá también Transportes",
+      "body": "Carlos Cuerpo, primer vicepresidente y ministro de Economía, asumirá también el Ministerio de Transportes tras la dimisión de Óscar Puente. Cuerpo se encargará de la cartera hasta que se forme un nuevo Gobierno tras las elecciones generales del 29 de noviembre.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/transportes-00343/noticia-cuerpo-asumira-cartera-transportes-nombramiento-nuevo-gobierno-29n-20261104095935.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "UGT y CCOO convocan la huelga general del 11 de noviembre",
+      "body": "UGT, CCOO y otros sindicatos han convocado una huelga general para el 11 de noviembre. Es la primera huelga general convocada conjuntamente por UGT y CCOO desde 2012. UGT responderá a las preguntas de los trabajadores sobre descuentos en nómina y otros efectos a través de 20 Minutos el 9 de noviembre.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/tienes-dudas-sobre-huelga-general-11n-envianos-tu-pregunta-te-resolvemos-consultorio-ugt_7057185_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "La reforma de la jubilación anticipada decae antes de las elecciones",
+      "body": "La proposición de ley para eliminar los recortes de la jubilación anticipada a trabajadores con más de 40 años cotizados decayó al disolverse el Parlamento. Deberá reiniciarse en la próxima legislatura. Alfonso Muñoz, de la Seguridad Social, calcula un retraso adicional de uno a dos años; los recortes actuales siguen aplicándose.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/alfonso-munoz-experto-pensiones-explica-por-que-adelanto-electoral-frenado-ley-despenalizacion-jubilacion-anticipada-norma-fallece_7057149_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El Banco de España inspecciona los préstamos rápidos al consumo",
+      "body": "El Banco de España revisa los préstamos rápidos para comprobar su transparencia y la concesión responsable. Un anteproyecto de ley paralizado limitaría el interés anual al tipo medio del crédito al consumo más 15 puntos para préstamos de hasta 1.500 €, más 10 puntos para los de 1.500 a 6.000 €, y más 6 puntos por encima de 6.000 €.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://cincodias.elpais.com/companias/2026-11-05/el-banco-de-espana-lanza-una-oleada-de-inspecciones-para-vigilar-el-crecimiento-de-los-creditos-rapidos.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "España bate récords de llegadas y gasto turístico",
+      "body": "España recibió un récord de 80,5 millones de turistas internacionales de enero a septiembre, un 5,2 % más. Su gasto también alcanzó un récord, de casi 114.380 millones de euros, un 8 % más, según el INE. Solo en septiembre llegaron 10,1 millones de turistas, un 4,3 % más.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/economia/2026/11/04/espana-alcanza-nuevo-record-turistas-internacionales-septiembre.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "¿Te bastaría una subida del salario mínimo del 5,3 % para cubrir el coste de vida? A) Sí B) No C) No lo sé 💬",
+  "subject": "Aquí tienes España hoy, en menos de un minuto",
+  "lang": "es",
+  "date": "2026-11-05",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-11-05T07:02:26.311921+00:00"
+}

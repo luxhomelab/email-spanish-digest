@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "Un temporero marroquí a punto de ser expulsado durante la regularización consigue los papeles: «Ya no tengo miedo»",
+      "body": "Mounir, un temporero marroquí, fue detenido por la policía cuando se dirigía a solicitar la regularización extraordinaria. Tras pasar dos semanas en un CIE (centro de internamiento de extranjeros) con la expulsión inminente, el Gobierno anuló su expulsión y le concedió una residencia provisional y permiso de trabajo. «Hace una semana estaba preparando la maleta para irme; ahora tengo papeles», dice.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/temporero-marroqui-expulsado-plena-regularizacion-papeles-no-miedo_1_13252320.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Los cambios en la factura de la luz entran en vigor en junio y el precio subirá 7-8 € al mes",
+      "body": "El escudo fiscal del Gobierno sobre la energía termina a medida que se modera la inflación: el IVA de la electricidad y del gas vuelve del 10 % al 21 %, y el Impuesto Especial sobre la Electricidad sube del 0,5 % al 5,11 %. Para una factura mensual media de 60 €, esto supone un aumento automático de 7-8 €. La energía no es más cara: simplemente se retira el descuento.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/entran-vigor-cambios-factura-luz-precio-disparara-junio_6974972_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Estafa de SMS falsos de la Agencia Tributaria para robar datos bancarios, alerta el Incibe",
+      "body": "El Instituto Nacional de Ciberseguridad (Incibe) ha detectado una campaña en la que los estafadores se hacen pasar por la Agencia Tributaria mediante SMS, con falsas devoluciones de impuestos para que las víctimas pinchen en enlaces maliciosos. La web oficial de Hacienda termina en .gob.es o .es, mientras que estos enlaces falsos usan dominios como .top o .click. La Agencia Tributaria nunca pide datos confidenciales por SMS ni por correo electrónico.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/alertan-mensajes-texto-falsos-que-suplantan-agencia-tributaria-para-robar-datos-bancarios_6975459_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Schnabel, del BCE, anticipa una probable subida de tipos en junio: «creo que será necesaria»",
+      "body": "Isabel Schnabel, miembro alemana de la comisión ejecutiva del BCE, dice que será necesaria una subida de tipos en la reunión del 11 de junio, ya que la inflación ha llegado al 3 % y se espera que alcance el 4 % a final de año. Advierte de que ignorar las presiones persistentes de precios ya no es una opción, aunque una subida pueda empeorar el impacto económico.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-26/bce-inflacion-subida-tipos-interes-1hms_4361546/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El Gobierno amplía la jubilación flexible a los autónomos, que podrán trabajar y cobrar la pensión a la vez",
+      "body": "El Consejo de Ministros ha aprobado un real decreto que reforma la «jubilación flexible» y permite ahora a los autónomos volver a trabajar a tiempo parcial mientras cobran la pensión, una ventaja que antes solo tenían los asalariados. La reforma también aumenta el porcentaje de pensión compatible con el salario y permite a los jubilados forzosos recalcular sus prestaciones futuras. Los cambios entrarán en vigor tres meses después de su publicación en el BOE.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gobierno-reforma-jubilacion-flexible-autonomos-podran-volver-trabajar-cobrar-pension_1_13249952.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El Banco de España pide a la banca que facilite el acceso a las cuentas de los inmigrantes indocumentados",
+      "body": "El Informe de Inclusión Financiera 2025 del Banco de España concluye que la cuenta de pago básica (CPB) no llega a los inmigrantes irregulares: se abren solo unas 25.000 cuentas al año, frente a una estimación de entre 614.000 y 838.000 migrantes indocumentados. Los bancos son reacios a abrir CPB por las normas contra el blanqueo de capitales. El regulador pide procedimientos más sencillos.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/banco-espana-predisposicion-banca_6975176_0.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Moncloa se prepara para una crisis «larga» mientras la imputación de Zapatero amenaza al Gobierno de Sánchez",
+      "body": "La imputación del expresidente Zapatero por presunta corrupción se considera la amenaza más grave para la coalición de Pedro Sánchez, que se suma al caso Ábalos, a la investigación sobre Begoña Gómez y a un apoyo parlamentario cada vez más frágil. Fuentes de Moncloa describen la situación como un «largo calvario» con «cinco balas en el estómago del Gobierno».",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/05/26/6a15ebbee85ece9d528b45b2.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El Constitucional avala la reforma laboral y rechaza el recurso de Vox por el voto «equivocado»",
+      "body": "El tribunal ha rechazado por unanimidad el recurso de Vox contra la reforma laboral de 2021, al confirmar que el Gobierno utilizó correctamente el procedimiento del decreto-ley y que el voto telefónico equivocado del diputado del PP Alberto Casero no puede rectificarse. La sentencia también descarta las alegaciones de vulneración constitucional.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/tribunal-constitucional-desestima-recurso-vox-reforma-laboral-yolanda-diaz_1_13251861.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Sanidad destina 172,4 millones de euros a reforzar la atención primaria en todo el país",
+      "body": "Los fondos, aprobados por el Consejo de Ministros, irán a todas las comunidades autónomas para impulsar la atención primaria mediante la adopción de la inteligencia artificial, la renovación de equipos clínicos, la capacidad de diagnóstico de las ITS y la detección de la violencia de género en los centros de salud. La inversión forma parte del Plan de Acción de Atención Primaria y Comunitaria 2025-2027.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/sanidad-aprueba-reparto-172-4-millones-euros-para-que-las-comunidades-refuercen-atencion-primaria_6975114_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Trump retira la mitad de los bombarderos de la OTAN y todos los submarinos, según una revista alemana",
+      "body": "Según Der Spiegel, el Departamento de Defensa de EE. UU. ha informado a sus aliados de que Washington aportará «significativamente menos capacidades militares clave» en el futuro, entre ellas cazas, bombarderos, buques de guerra, drones y aviones cisterna. Los recortes concretos incluyen la mitad de los bombarderos y todos los submarinos desplegados en Europa.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/internacional/2026/05/27/trump-retira-otan-mitad-bombarderos-tercio-cazas-todos-submarinos-2023748.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "La factura de la luz sube 7-8 € en junio. ¿Cuánto esperas que aumente tu próxima factura? ¡Comparte tus cifras abajo! 👇",
+  "subject": "🇪🇸 España: resumen del día 📋 27.05.2026",
+  "lang": "es",
+  "date": "2026-05-27",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-27T05:32:00.336303+00:00"
+}

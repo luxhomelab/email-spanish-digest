@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "title": "⚠️ La crisis de Ceuta se agrava mientras los militares piden autorización para usar la fuerza",
+      "body": "Entre 8.000 y 10.000 migrantes viven en las calles de Ceuta mientras los vecinos han quemado campamentos y bloqueado vehículos de la Cruz Roja. La Policía cargó contra manifestantes; cuatro militares resultaron heridos cuando unos 30 migrantes les lanzaron piedras en Benzú, y 12 ciudadanos marroquíes fueron detenidos. La asociación militar AUME pide al Gobierno que autorice el uso «proporcionado» de la fuerza, con más de 400 policías y guardias civiles desplegados.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/polvorin-ceuta-se-inflama-los-militares-piden-gobierno-poder-hacer-uso-fuerza-guardia-civil-exige-mano-dura_7029987_0.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-policia-carga-contra-manifestantes-ceuta-quemar-asentamientos-migrantes-playa-20260827200007.html"
+        }
+      ],
+      "category": "politics",
+      "important": true
+    },
+    {
+      "title": "La Seguridad Social deja de enviar cartas en papel en algunos casos desde el 1 de septiembre",
+      "body": "Desde el 1 de septiembre, la Seguridad Social deja de enviar papel para las incapacidades temporales y permanentes, las bajas médicas y las prestaciones familiares. Las notificaciones solo estarán disponibles en la Sede Electrónica, con avisos por SMS o correo electrónico. Los destinatarios tienen 10 días naturales para abrir los documentos con Cl@ve, certificado digital o DNI electrónico. El papel se mantiene solo en casos urgentes, en entregas presenciales o para quienes no tienen teléfono ni correo.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-08-27/cambio-seguridad-social-1-septiembre-personas-baja-laboral-incapacidad-1qrt_4413116/"
+        },
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/08/27/adios-correo-postal-seguridad-social-notificara-electronicamente-trabajadores-septiembre-2047537.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "La nueva jubilación flexible entra en vigor el viernes",
+      "body": "El nuevo régimen de jubilación flexible empieza el viernes y permite a los jubilados compatibilizar un trabajo a tiempo parcial con la pensión sin esperar. Ahora se incluye a los autónomos. Los contratos a tiempo parcial pueden ir del 33 % al 80 % de la jornada completa, frente al 25-75 % anterior. Quienes trabajen entre el 55 % y el 80 % y empiecen al menos seis meses después de jubilarse podrán obtener un aumento del 25 % de la pensión; si no, la pensión se reduce proporcionalmente.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/asi-es-nueva-jubilacion-flexible-que-entra-vigor-este-viernes-mas-incentivos-economicos-podran-pedirla-tambien-los-autonomos_7030124_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Comprar una vivienda a través de tu empresa es una trampa fiscal",
+      "body": "El abogado fiscalista Luis Miguel Larriba advierte de que comprar una vivienda a través de una sociedad española la convierte en un activo de la empresa, no en un bien personal. Traspasar después la propiedad al socio genera impuestos, normalmente por venta o reparto de dividendos. Vivir en el inmueble se considera uso privado de un activo de la empresa. Muchos emprendedores acuden a ayuda años después, cuando solucionarlo ya es caro.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-08-27/experto-abogado-fiscalista-luis-miguel-larriba-fiscalidad-vivienda-ley-vivienda-declaracion-de-la-renta_4403859/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El Gobierno y las comunidades chocan por el traslado de migrantes de Ceuta",
+      "body": "El Gobierno y 14 comunidades autónomas aprobaron 25 millones para la atención de menores migrantes en Ceuta, mientras Aragón, Extremadura y Castilla y León se negaron a asistir. El Gobierno propuso cuatro mecanismos legales para trasladar a unos 1.500 menores no acompañados a la península; las comunidades del PP rechazan cualquier reparto. El ministro de Política Territorial, Ángel Víctor Torres, dijo que los espacios ofrecidos por Ceuta tardarían meses en ser habitables.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/epsocial/migracion/noticia-gobierno-ccaa-aprueban-ayuda-25-millones-atencion-menores-migrantes-ceuta-20260827122652.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/que-hacer-con-los-1-500-menores-ceuta-estas-son-las-cuatro-opciones-que-propone-gobierno-para-trasladarlos-peninsula_7030058_0.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/torres-advierte-que-los-espacios-ofrecidos-por-ceuta-para-acoger-migrantes-tardarian-meses-ser-habitables_7030147_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Las vacunas para los migrantes de Ceuta empiezan la próxima semana",
+      "body": "La ministra de Sanidad, Mónica García, dijo que la vacunación de los migrantes en Ceuta empieza la próxima semana con 45.000 dosis, entre ellas 15.000 de triple vírica y 10.000 cada una de difteria-tétanos, varicela y polio. Afirmó que los migrantes no traen enfermedades y que el riesgo para los residentes es bajo, aunque hay un riesgo de transmisión moderado entre migrantes por el hacinamiento y la falta de higiene. Criticó la propuesta del líder del PP, Alberto Núñez Feijóo, de confinar a los migrantes.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/monica-garcia-anuncia-que-vacunacion-los-migrantes-ceuta-arrancara-proxima-semana_7029998_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Consumo abre su primer expediente por gastos de gestión ocultos",
+      "body": "Consumo ha abierto su primer expediente sancionador contra una vendedora de billetes de transporte por no incluir los gastos de gestión en el precio inicial, una práctica prohibida desde diciembre. La empresa podría enfrentarse a una multa de hasta 100.000 € o de seis a ocho veces el beneficio ilícito. El expediente está en fase inicial, con arreglo a la Ley de Servicios de Atención a la Clientela modificada.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-08-27/consumo-primer-expediente-ocultar-gastos-gestion_4413015/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La DGT desmiente que el examen teórico del carné cambie el 1 de octubre",
+      "body": "La DGT asegura que son falsos los bulos virales sobre un nuevo examen teórico de conducir el 1 de octubre. El examen sigue siendo de 30 preguntas tipo test, con un máximo de tres fallos en 30 minutos. El cambio normativo del 1 de octubre afecta a las normas de circulación, no al examen. Se estudian vídeos de percepción del riesgo, pero no se ha iniciado ningún proceso.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/08/27/6a9049e4fc6c83bb1e8b45c1.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "¿Quién ya tiene configurado Cl@ve en la Seguridad Social? El plazo de 10 días empieza el 1 de septiembre. 💬",
+  "subject": "Nada pasó hoy en España. Excepto esto.",
+  "lang": "es",
+  "date": "2026-08-28",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-08-28T06:05:29.882114+00:00"
+}

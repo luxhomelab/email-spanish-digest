@@ -1,0 +1,147 @@
+{
+  "items": [
+    {
+      "title": "El decreto de vivienda prohíbe los desahucios hasta 2028 y la oferta de alquiler cae un 20 %",
+      "body": "El borrador del decreto de vivienda del Gobierno prohíbe los desahucios de personas vulnerables hasta 2028, endurece las normas de alquiler temporal y concede desgravaciones fiscales a propietarios e inquilinos. Datos de Idealista muestran que la oferta de alquiler de larga duración ha caído un 20 % desde 2023, mientras los precios han subido un 5,8 %, hasta más de 1.200 € por 80 metros cuadrados.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/construccion-y-vivienda-00342/noticia-decreto-vivienda-prohibe-desahucios-2028-endurece-alquiler-temporal-concede-ayudas-fiscales-20260928185025.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/oferta-pisos-alquiler-cae-un-20-tres-anos-tras-aprobacion-ley-vivienda_7042233_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Las segundas residencias vacías tributan siempre por imputación de rentas",
+      "body": "Un responsable de Hacienda afirma que una segunda residencia vacía debe declararse por «imputación de rentas inmobiliarias», aunque no genere ingresos por alquiler. El impuesto se calcula sobre el valor catastral al 2 % o al 1,1 %, y una plaza de garaje o un trastero también computan como renta imputada. La vivienda habitual no se ve afectada.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-09-28/roberto-gomez-funcionario-de-hacienda_4433456/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "La carga de la hipoteca de los hogares se acerca al límite del 36 % del Banco de España",
+      "body": "Los hogares españoles destinaron algo más del 36 % de sus ingresos netos a pagar la hipoteca a comienzos de 2026, el nivel más alto desde septiembre de 2023. El Banco de España considera entre el 35 % y el 40 % el máximo para la deuda total. La hipoteca media de vivienda alcanzó un récord de 180.785 €.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/esfuerzo-financiero-hogares-limite-recomendado-bde_7042344_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Carburantes, electricidad y gas en máximos desde 2022 antes del nuevo decreto anticrisis",
+      "body": "Los precios de la gasolina, la electricidad y el gas están en su nivel más alto desde 2022. La gasolina de 95 llegó a 1,952 € por litro y el diésel a 1,942 € el lunes, y el 40 % de las estaciones vende la gasolina a 2 € o más. El Gobierno aprobará el martes un nuevo paquete anticrisis, antes de que el actual venza el miércoles.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/las-gasolinas-luz-gas-se-disparan-maximos-desde-2022-presionan-gobierno-para-que-apruebe-un-decreto-anticrisis-ambicioso-este-martes_7042290_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Santander y CaixaBank prevén tipos por encima del 3 % y del 4 % en 2027",
+      "body": "Los grandes bancos prevén que el BCE suba los tipos por encima del 3 % e incluso del 4 % en 2027. La dirección de Santander ve los tipos «quizá por encima del 3 %» antes de bajar, mientras que CaixaBank considera el 4 % «una banda alta pero razonable». Eso encarecería las hipotecas y mejoraría la rentabilidad del ahorro.",
+      "sources": [
+        {
+          "name": "elDiario",
+          "url": "https://www.eldiario.es/economia/banco-santander-ve-tipos-interes-3-2027-preve-comiencen-bajar_1_13542815.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Las pensiones de 2027 subirán más del 3 % y la media superará los 1.625 €",
+      "body": "Las previsiones apuntan a una revalorización de las pensiones de alrededor del 3,2 % en 2027, lo que llevaría la pensión media de jubilación por encima de 1.625 € al mes. La subida añadiría al menos 7.400 millones de euros a la factura de la Seguridad Social.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/09/29/6aba7322e4d4d855368b4583.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "«La bola negra» logra la segunda mejor taquilla de estreno de cine español en diez años",
+      "body": "La película de Javier Calvo y Javier Ambrossi recaudó cerca de 4,7 millones de euros en su primer fin de semana, la segunda mejor taquilla de estreno de cine español en diez años. Ha atraído a más de 610.000 espectadores desde el viernes, por delante de «La Odisea» de Christopher Nolan.",
+      "sources": [
+        {
+          "name": "elDiario",
+          "url": "https://www.eldiario.es/cultura/cine/bola-negra-logra-segundo-mejor-estreno-cine-espanol-diez-anos-supera-odisea_1_13542678.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "⚠️ Las nuevas normas de la DGT entran en vigor el 1 de octubre: lo que deben saber los conductores",
+      "body": "La reforma del Reglamento General de Circulación entra en vigor el 1 de octubre con nuevas normas de seguridad para conductores, motoristas, ciclistas y usuarios de patinetes. Los conductores deberán adelantar a los ciclistas al menos 20 km/h por debajo de la velocidad máxima; los cambios afectan también al equipamiento, a los semáforos y a los corredores de emergencia.",
+      "sources": [
+        {
+          "name": "elDiario",
+          "url": "https://www.eldiario.es/motor/conductores-ciclistas-motoristas-normas-dgt-entran-vigor-1-octubre_1_13537909.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "El delegado del Gobierno en Ceuta dimite tras la entrada masiva de julio",
+      "body": "Miguel Ángel Pérez Triano ha dimitido como delegado del Gobierno en Ceuta y abandona la vida política, denunciando una campaña de acoso tras la entrada masiva de migrantes del 30 y 31 de julio. Ya había dimitido el jefe de gabinete, que acusó al delegado de mentir sobre las advertencias previas.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/ceuta/delegado-gobierno-ceuta-dimite-dos-meses-despues-entrada-masiva-deja-politica-he-sufrido-una-campana-acoso_7042153_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Sanidad impulsará la píldora abortiva en los centros de atención primaria",
+      "body": "El Ministerio de Sanidad anunció que el aborto farmacológico se incorporará a los servicios de atención primaria, con cambios en la ficha técnica de la mifepristona. Las mujeres podrían acceder al método en su centro de salud en lugar de en un hospital.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/ministerio-sanidad-impulsara-que-aborto-farmacologico-pueda-realizarse-atencion-primaria_7042314_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "El CNIO identifica un objetivo que podría evitar las metástasis cerebrales",
+      "body": "Investigadores del CNIO han descubierto una fase vulnerable hasta ahora desconocida en el desarrollo de las metástasis cerebrales, denominada «pausa proliferativa». Probaron tres fármacos en modelos animales, lo que abre una posible vía para prevenir metástasis o recaídas. El trabajo se publica en Cancer Cell.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/sociedad/2026/09/28/cnio-identifica-diana-permitir-prevenir-metastasis-cerebral-evitar-recaidas-2055385.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "¿Sabías que cada factura de la luz tiene un enlace y un código QR a una web oficial para comparar con otra compañía? A) Lo sabía B) No lo sabía C) Llevo años pagando de más 💬",
+  "subject": "Nada pasó hoy en España. Excepto esto.",
+  "lang": "es",
+  "date": "2026-09-29",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-09-29T06:04:20.439037+00:00"
+}

@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "title": "El PNV apoyará el primer decreto de vivienda antes de la votación del 12 de noviembre",
+      "body": "Los dos decretos de vivienda aprobados por el Consejo de Ministros se someten a votación el 12 de noviembre. El PNV, cuyos votos son decisivos, apoyará el primero, que regula los alquileres de temporada y protege a inquilinos vulnerables y a pequeños propietarios. Rechazará el segundo, que incluye una compensación de 12 meses de renta de los propietarios a los inquilinos.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/11/07/6aedc605e9cf4aff5d8b4576.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Se convoca una huelga general por la vivienda para el 11 de noviembre",
+      "body": "Los principales sindicatos, entre ellos CCOO y UGT, respaldan la huelga general del miércoles 11 de noviembre por la crisis de vivienda. El Sindicato de Inquilinas la impulsó tras el desahucio de Maricarmen. Sería la primera gran huelga general en 14 años. Las asambleas explican el derecho a la huelga.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/organiza-huelga-11n-desahucio-maricarmen-parar-pais-vivienda_1_13639701.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Las rebajas fiscales autonómicas podrían llegar a 2.300 millones",
+      "body": "Las rebajas fiscales autonómicas aprobadas, en proyecto y anunciadas podrían sumar 2.300 millones de euros hasta 2031, según estima la AIReF. Cerca del 80 % de la recaudación perdida procedería del IRPF. Solo el proyecto de presupuestos de 2027 de Andalucía incluye recortes por encima de 280 millones. La AIReF desaconseja las rebajas permanentes sin financiación suficiente.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-07/las-comunidades-autonomas-proyectan-rebajas-fiscales-por-2300-millones-hasta-2031.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Siguen sin resolverse las solicitudes de jubilación anticipada por trabajos peligrosos",
+      "body": "La Seguridad Social no ha resuelto ninguna de las solicitudes de jubilación anticipada por trabajos peligrosos, que afectan a unos dos millones de trabajadores. Un real decreto aprobado en mayo de 2025 fija el procedimiento. Las solicitudes del transporte han superado el plazo de seis meses, y los sindicatos amenazan con huelgas en el transporte por carretera.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-07/el-gobierno-agota-la-legislatura-sin-anticipar-la-jubilacion-en-los-sectores-con-mas-muertes-y-bajas.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Dos exbanqueros centrales compiten por la presidencia del BCE",
+      "body": "El exgobernador del Banco de España Pablo Hernández de Cos y el exjefe del banco central neerlandés Klaas Knot son los únicos candidatos para suceder a Christine Lagarde en la presidencia del BCE, según confirmó el Eurogrupo el 6 de noviembre. El plazo de candidaturas ha cerrado.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/noticia-espanol-hernandez-cos-neerlandes-knot-unicos-candidatos-suceder-lagarde-frente-bce-20261106174921.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La Fiscalía Europea investiga los fondos ferroviarios tras el accidente de Urda",
+      "body": "La Fiscalía Europea ha abierto una investigación por presunto fraude de fondos de la UE destinados a obras de renovación y seguridad en la línea de alta velocidad Madrid-Sevilla. Cerca de Urda (Toledo), en esa línea, se produjo un accidente mortal. Los fiscales han ordenado registros en la sede del gestor ferroviario Adif.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-fiscalia-europea-abre-investigacion-posible-fraude-fondos-comunitarios-ave-accidente-urda-20261106102906.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "442 alquileres asequibles disponibles desde el 7 de noviembre",
+      "body": "La empresa pública de vivienda CASA 47 ha añadido 442 alquileres asequibles en seis comunidades, disponibles desde el 7 de noviembre. Las solicitudes están abiertas hasta el 26 de noviembre. Los ingresos de la unidad de convivencia deben estar entre 2 y 7,5 veces el IPREM, y al menos un miembro debe tener nacionalidad española o residencia legal.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/casa-47-incorpora-442-nuevas-viviendas-alquiler-asequible-estas-son-las-comunidades-donde-se-encuentran_7058292_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La subida del salario mínimo ampliaría el acceso a las ayudas por desempleo",
+      "body": "El Ministerio de Economía propone subir el SMI un 5,3 %, hasta 1.286 € brutos al mes en 14 pagas para 2027. Si se aprueba, el límite mensual de ingresos para la mayoría de los subsidios por desempleo subiría de 915,75 € a unos 964,50 €. Los solicitantes deberían seguir cumpliendo el resto de requisitos.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/sepe-elevara-limite-ingresos-para-cobrar-subsidio-por-desempleo-2027-quien-podra-solicitarlo_7058087_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Un informe eleva a más de 100.000 las entradas en Ceuta",
+      "body": "El Mundo calcula que más de 100.000 personas entraron en Ceuta los días 30 y 31 de julio, muy por encima de las cifras del Gobierno. Utiliza un informe de la Guardia Civil. La Guardia Civil contabilizó 88.146 devoluciones a Marruecos hasta el 27 de octubre. La Policía estima que quedan 8.000 adultos y que 3.688 menores están bajo la tutela de la ciudad.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/11/07/6aee1271e9cf4ae17b8b458e.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La escasez de tratamientos para la menopausia lleva a importar medicamentos para hospitales",
+      "body": "La Agencia Española de Medicamentos (Aemps) permite ahora importar para hospitales tratamientos hormonales por la escasez. Los pacientes no pagan más por las importaciones, pero quienes compran sustitutos pagan más: el Lenzetto financiado cuesta unos 0,85 € con la aportación máxima del paciente, mientras que el Oestraclin no financiado cuesta unos 17,38 €.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/salud/2026/11/07/6aee06b521efa0585e8b458d.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Un juez rechaza investigar a Zapatero por malversación con las joyas",
+      "body": "Un juez ha rechazado la petición de los fiscales de investigar al expresidente del Gobierno José Luis Rodríguez Zapatero por una presunta malversación por unas joyas recibidas en 2007. Consideró que recibirlas a través de un cargo público no las convierte por sí mismo en bienes públicos. Los delitos fiscales y de contrabando que se le imputan son causas separadas.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-juez-rechaza-investigar-zapatero-presunta-malversacion-no-entregar-joyas-patrimonio-estado-20261106123740.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "¿Solicitarías una vivienda de alquiler asequible con apoyo público? A) Sí B) No C) No lo sé 💬",
+  "subject": "Lo que pasó en España mientras estabas ocupado",
+  "lang": "es",
+  "date": "2026-11-07",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-11-07T07:02:01.806682+00:00"
+}

@@ -1,0 +1,139 @@
+{
+  "items": [
+    {
+      "title": "Un nuevo decreto propone compensar a los inquilinos si el casero no renueva el contrato",
+      "body": "El Real Decreto-ley 28/2026 propone que los propietarios que no renueven un contrato paguen a los inquilinos al menos 12 meses de renta. Tras cinco años (siete para las personas jurídicas), el contrato se prorrogaría por periodos sucesivos salvo que alguna de las partes lo rescinda. La minoría del Gobierno en la Diputación Permanente da pocas opciones de que la medida salga adelante, según Heraldo.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/13/es-oficial-nuevo-decreto-preve-indemnizaciones-inquilinos-si-casero-no-renueva-alquiler-2057837.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El Supremo suspende el voto de 163.020 nacionalizados",
+      "body": "El Supremo confirmó la suspensión del derecho de voto de más de 163.020 españoles que obtuvieron la nacionalidad por la ley de nietos de cara a las elecciones generales del 29 de noviembre, según elDiario. Solo podrán votar quienes presenten un certificado consular que acredite el exilio de sus antepasados; quienes se basaron en la presunción de 1936-1955 quedan excluidos. El Gobierno afirma que cumplir la orden es «materialmente imposible».",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/supremo-ordena-suspender-voto-163-020-espanoles-pese-gobierno-considera-materialmente-imposible_1_13580454.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El FMI eleva su previsión de crecimiento mundial por el auge de la IA",
+      "body": "El FMI prevé que la economía mundial crezca un 3,1 % en 2026 y un 3,4 % en 2027, impulsada por la inversión en inteligencia artificial, y advierte del coste de la deuda y de los ciberataques. La previsión para España mejora cuatro décimas, hasta el 2,5 %, y se mantiene como la economía avanzada europea que más crece. Alemania mejora seis décimas, hasta el 1,3 %; Francia baja dos décimas, hasta el 0,4 % en 2026 y el 0,7 % en 2027.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/macroeconomia/2026/10/13/6acdbe68fdddffad438b4574.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Las nuevas pensiones superan los 1.700 €; desde 2027, 38,5 años para jubilarse",
+      "body": "Las nuevas pensiones de jubilación superaron por primera vez los 1.700 € al mes en agosto, con una media de 1.711,4 €. Desde el 1 de enero de 2027, los trabajadores necesitan 38 años y 6 meses cotizados para jubilarse a los 65 sin penalización, y 37 años para el 100 % de la base reguladora. Quienes no alcancen ese umbral deberán esperar hasta los 67.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-10-12/ignacio-solsona-abogado-laboralista_4439406/"
+        },
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/12/subida-pensiones-espana-nuevas-jubilaciones-superaran-1700euros-media-mes-2027-2055234.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Tensiones entre España y Marruecos: fragatas de la Armada desplegadas; el rey Felipe VI visita Ceuta",
+      "body": "La Armada española desplegó hasta tres buques después de que buques de guerra marroquíes entraran sin autorización en aguas de Ceuta, según elDiario. Las incursiones coincidieron con la llegada masiva de migrantes por el Tarajal; Mohamed VI rechaza cooperar bajo «cualquier presión, amenaza o chantaje». El rey Felipe VI visita Ceuta y Melilla, primera visita de los Reyes desde 2007.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/armada-espanola-desplego-fragatas-julio-agosto-despues-buques-guerra-marruecos-entraran-aguas-ceuta-autorizacion_1_13579242.html"
+        },
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/10/13/6accd34621efa0ff648b4577.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El crédito al consumo se dispara por encima del 12 % entre subidas de precios y denuncias por usura",
+      "body": "El crédito al consumo lleva creciendo más de un 12 % todo el año, impulsado por las compras de electrodomésticos, teléfonos, coches y vacaciones, según las estadísticas del Banco de España. Los tipos de las tarjetas revolving superan el 18 %, y algunos casos llegan al Supremo por usura. Este crecimiento llega cuando suben los tipos de interés y Fráncfort anticipa nuevos movimientos.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/creditos-consumo-disparan-medio-subida-precios-acusaciones-usura_1_13576101.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El flex living pasa de nicho a alternativa de crecimiento en Madrid",
+      "body": "El parque de flex living en España ha crecido de unas 2.000 camas en 2020 a unas 16.500 en 2026, según el estudio de CBRE, y se prevé que supere las 40.500 camas en 2028. El modelo combina la privacidad del piso con servicios compartidos e incluye viviendas amuebladas, suministros, Wi-Fi, limpieza, recepción, coworking y gimnasio. Ofrece opciones de alquiler más flexibles en Madrid.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-10-13/modelo-nicho-alternativa-flex-living-madrid-bra_4434237/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Los mejores depósitos a un año se acercan al 3,5 % en octubre",
+      "body": "Tras la subida del BCE de la facilidad de depósito al 2,50 % en septiembre, los bancos ofrecen depósitos a un año con rentabilidades de hasta el 3,45 % TAE. BluOr Bank, banco letón, ofrece un 3,45 % TAE con una aportación mínima de 1 € y máxima de 100.000 €; no se permite la cancelación anticipada. Los depósitos están cubiertos por el Fondo de Garantía de Depósitos hasta 100.000 € por titular.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/los-mejores-depositos-fijos-un-ano-octubre-sin-invertir-un-pastizal-ya-se-acercan-3-5_7043222_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La UE prohibirá las redes sociales a menores de 13 años",
+      "body": "La UE prohibirá el acceso a las redes sociales a todos los menores de 13 años y exigirá supervisión parental en las cuentas de quienes tienen entre 13 y 15 años. Hasta la mayoría de edad, el acceso se restringirá en las plataformas que usen algoritmos diseñados para provocar adicción. Una comparación de psicología infantil, la del semáforo, sirve para que los padres expliquen los límites.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/nidos/guia-psicologo-explicar-hijos-restricciones-redes-sociales-xp_1_13573857.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Médicos, docentes y protestas por la vivienda marcan la campaña electoral",
+      "body": "Médicos y docentes llevan meses protestando y seguirán haciéndolo, con una huelga general por la vivienda prevista para el 11 de noviembre. Los médicos reclaman un marco legal propio, separado del de otros profesionales sanitarios, mientras los docentes piden más recursos. La vivienda se ha convertido en el tema central de la campaña electoral.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/movilizacion-calle-vivienda-protestas-medicos-docentes-marcan-campana_1_13574607.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "El crédito al consumo sube un 12 % en España. ¿Financias más compras? A) Sí B) No C) Todavía no 💬",
+  "subject": "No pasó gran cosa en España hoy. Solo esto.",
+  "lang": "es",
+  "date": "2026-10-13",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-10-13T06:05:58.406147+00:00"
+}

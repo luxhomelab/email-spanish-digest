@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "El alquiler de habitaciones se dispara con la crisis de vivienda",
+      "body": "Alquilar una habitación en un piso compartido se ha convertido en la única opción de vivienda para muchas personas en España. El 3,2 % de los españoles alquiló o buscó una habitación en el primer semestre de 2026, frente al 2,8 % de 2025. La provincia de Madrid concentra el 26,35 % de la oferta nacional de habitaciones, frente al 19,26 % anterior; solo la ciudad de Madrid suma el 22,59 %. Barcelona y Valencia representan el 16 % y el 10,9 %.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/09/22/6ab253f621efa0f8538b458a.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La factura del gas regulado podría subir más de un 50 % en octubre",
+      "body": "La OCU calcula que la tarifa regulada del gas (TUR) subirá cerca de un 69 % en octubre. Un hogar que consuma 9.000 kWh al año pagaría unos 910 €, frente a unos 600 € actuales, es decir, 310 € más al año. El precio del TUR.2 pasaría de 4,12 a 6,95 céntimos por kWh.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/factura-regulada-gas-podria-disparar-su-coste-mas-un-50-octubre_7039658_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "España estudia acortar los plazos para expulsar a migrantes",
+      "body": "El Gobierno trabaja para acortar los plazos administrativos y judiciales para expulsar a los migrantes que no tienen derecho al asilo; los límites actuales son de 12 semanas. Interior pedirá a la UE la próxima semana que flexibilice las normas en situaciones excepcionales, como la del Tarajal. El Gobierno negocia con el presidente de Ceuta, Juan Jesús Vivas, para alojar a 3.500 personas.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/gobierno-estudia-acortar-ley-plazos-expulsion-migrantes-busca-nuevas-plazas-acogida-ceuta_1_13529861.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El fundador de Glovo irá a juicio por mantener falsos autónomos",
+      "body": "Un juez de Barcelona ha enviado a juicio a Oscar Pierre, fundador de Glovo, por mantener a los repartidores como falsos autónomos. El juez rechazó la petición de archivar la causa y aceptó la de la Fiscalía y la del sindicato CGT. Se acusa a Pierre de atentar contra los derechos de los trabajadores y de reducir costes al no garantizar un salario profesional.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/juez-sienta-banquillo-fundador-glovo-mantener-falsos-autonomos-repartidores_1_13530140.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Pibank sube su depósito a 12 meses al 3,03 % TAE",
+      "body": "Pibank subirá su depósito a 12 meses al 3,03 % TAE desde el 29 de septiembre, sin importe mínimo ni máximo, con intereses trimestrales y cancelación parcial o total. La cuenta remunerada subirá al 2,02 % TAE desde el 1,76 %, y la cuenta nómina al 2,50 % TIN (2,52 % TAE) para saldos de más de 5.000 € desde el 1 de octubre.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/mercados/2026-09-22/pibank-ahorro-mejora-rentabilidad-depositos-1hms_4428672/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El Congreso debatirá la jubilación anticipada con 40 años cotizados",
+      "body": "PSOE y Sumar votaron a favor de tramitar la proposición de ley de Podemos que permite la jubilación anticipada sin penalizaciones en la pensión para quienes tienen al menos 40 años cotizados. Meses atrás, el PSOE había votado en contra de una reforma similar. La propuesta pasa ahora al pleno del Congreso.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/09/22/gobierno-tramitar-prejubilacion-40anos-cotizados-sin-penalizacion-pensiones-2053864.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "La selección española celebra su triunfo en el Mundial",
+      "body": "La selección española de fútbol celebró su primer entrenamiento abierto en Las Rozas como campeona de Europa y del mundo, con enorme afluencia de público. El seleccionador De la Fuente convocó a 26 jugadores, y la camiseta con el dorsal 19 de Lamine Yamal fue la más popular entre los aficionados.",
+      "sources": [
+        {
+          "name": "Marca",
+          "url": "https://www.marca.com/futbol/seleccion/2026/09/22/apoteosis-seleccion.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Médicos españoles logran trasplantes sin rechazo",
+      "body": "Médicos del Hospital Universitario La Paz han desarrollado una técnica que evita el rechazo en los trasplantes sin necesidad de inmunosupresores de por vida. Utiliza un «pasaporte inmunitario» procedente de la médula ósea del donante. La ONT afirma que, si supera la fase de seguridad, podría liberar entre el 20 % y el 50 % de las listas de espera de retrasplantes.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/medicos-han-logrado-trasplantes-rechazo-queremos-acabar-retransplantes-pastillas-vida_128_13508254.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Las exportaciones españolas alcanzan un récord, pero se amplía el déficit comercial",
+      "body": "Las exportaciones españolas alcanzaron un récord de 35.554 millones de euros en julio, un 3 % más que un año antes, pero las importaciones subieron un 6 %, hasta 40.678 millones. El déficit fue de 5.224 millones, y el acumulado hasta julio llegó a 38.005 millones, el nivel más alto desde 2022. Las exportaciones energéticas se dispararon un 61 %, hasta 3.319 millones.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/espana-bate-un-nuevo-record-exportaciones-julio-pero-eleva-su-deficit-comercial-maximos-desde-guerra-ucrania_7039837_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El Constitucional prepara una sentencia para amnistiar la malversación de Puigdemont",
+      "body": "La mayoría progresista del Tribunal Constitucional redactará una sentencia para amnistiar los delitos de malversación imputados a Carles Puigdemont y a otros líderes del procés, lo que podría permitir su regreso sin detención. El pleno rechazó el borrador contrario del magistrado conservador José María Macías. El próximo pleno será el 6 de octubre.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/mayoria-constitucional-avala-amnistiar-malversacion-puigdemont-resto-condenados-proces_1_13528976.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "La factura del gas podría subir más de un 50 % en octubre. ¿Cuál es tu plan? A) Cambiar de tarifa B) Consumir menos C) Pagar sin más 💬",
+  "subject": "Día tranquilo en España. Luego esto.",
+  "lang": "es",
+  "date": "2026-09-23",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-09-23T06:05:26.317967+00:00"
+}

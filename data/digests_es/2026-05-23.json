@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "title": "Los trabajadores ganan el derecho a un día compensatorio por festivos en sábado",
+      "body": "La Audiencia Nacional ha dictaminado que los empleados de centros de contacto deben recibir un día libre compensatorio cuando un festivo cae en sábado, día que ya tienen libre. Según los expertos laborales, si el Tribunal Supremo lo confirma, la decisión podría extenderse a todos los sectores y dar a millones de trabajadores de lunes a viernes un nuevo derecho a reclamar compensación por los festivos perdidos.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/dia-libre-festivo-perdido-sabado-expertos-creen-extender-empresas_1_13242557.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "¿Hacienda aún no te ha pagado la devolución de la Renta? Así puedes comprobarlo",
+      "body": "Muchos contribuyentes que presentaron la declaración del IRPF de 2025 aún no han recibido su devolución. Pueden consultar el estado en la web de la Agencia Tributaria con Cl@ve o certificado digital, buscando «estado de tramitación», para ver si la devolución está pendiente, en revisión o aprobada. Los expertos advierten además de que la nueva deducción de 340 € debe solicitarse por separado, ya que no se aplica de forma automática.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-22/hacienda-no-pagado-todavia-devolucion-renta-2025_4359780/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "El FMI advierte de que la inflación de España podría acercarse al 5 % si la guerra de Irán se prolonga",
+      "body": "En su escenario más pesimista para el conflicto con Irán, el FMI calcula que la inflación en España podría rozar el 5 % y que el crecimiento se frenaría con fuerza en 2026 y 2027, si el petróleo se mantiene por encima de 110 dólares el barril y el gas se triplica de precio. El organismo pide a España que retire las rebajas del IVA energético y que se prepare para el aumento del gasto en pensiones por el envejecimiento de la población.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/fmi-anticipa-frenazo-economico-inflacion-cercana-5-espana-si-guerra-iran-enquista_1_13241969.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El FMI pide a España liberar suelo y reducir la burocracia para resolver la crisis de vivienda",
+      "body": "El FMI pide a España que actúe con más determinación frente a la crisis de vivienda, liberando suelo para construir y agilizando los trámites de las licencias de obra. El organismo también alerta de los crecientes riesgos financieros por el rápido aumento de los precios de la vivienda y la relajación de los criterios de concesión de crédito.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/23/fmi-urge-espana-liberar-suelo-agilizar-licencias-para-atajar-crisis-vivienda-2022679.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Dos senadores estadounidenses piden frenar la compra de Webster por Santander por sus vínculos con España",
+      "body": "Los senadores republicanos Sheehy y Moreno han pedido a los reguladores que bloqueen la compra del Webster Bank por parte de Santander, al afirmar que España «no es un aliado fiable» y alegando riesgos de sanciones relacionadas con Irán. La medida refleja el deterioro de las relaciones entre EE. UU. y España por el conflicto con Irán.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/empresas/senadores-estados-unidos-piden-paralizar-compra-webster_6973863_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El Supremo rechaza suspender la regularización de migrantes",
+      "body": "El Tribunal Supremo ha denegado las peticiones urgentes de Vox y del Gobierno de Madrid para suspender la regularización extraordinaria de migrantes aprobada en abril. El tribunal también ha rechazado los recursos de grupos de extrema derecha por falta de legitimación, por lo que el proceso sigue adelante.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-supremo-rechaza-frenar-regularizacion-extraordinaria-migrantes-20260522175438.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "La huelga estatal de médicos termina con la amenaza de nuevos paros",
+      "body": "La huelga de médicos de una semana terminó el viernes, pero los sindicatos advierten de nuevos paros del 15 al 19 de junio si no se alcanza un acuerdo sobre el nuevo estatuto profesional. Los paros podrían producirse justo antes del verano y poner en riesgo los servicios hospitalarios.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/aragon/2026/05/22/huelga-estatal-medicos-finaliza-este-viernes-aragon-con-amenaza-otra-semana-las-puertas-verano-2022534.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Sánchez afronta una quincena judicial de máxima presión por varios escándalos",
+      "body": "El presidente Pedro Sánchez afronta dos semanas complicadas, con la declaración del expresidente Zapatero por presunto tráfico de influencias, el juicio a su hermano, la sentencia al exministro Ábalos y la investigación por corrupción sobre el dirigente del partido Cerdán. La cascada de problemas judiciales ha agravado la crisis dentro del PSOE.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/quince-dias-tregua-zapatero-abalos-cerdan-juicio-hermano-asfixian-sanchez-tribunales_1_13243420.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Muchos seguís esperando la devolución de la Renta de 2025, algunos desde hace semanas. ¿La Agencia Tributaria os ha tenido esperando demasiado? ¡Cuéntanoslo! 💬",
+  "subject": "🇪🇸 España: lo que te has perdido 👀 23.05.2026",
+  "lang": "es",
+  "date": "2026-05-23",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-23T05:32:10.079742+00:00"
+}

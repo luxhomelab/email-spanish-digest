@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "title": "El PP exige suspender la regularización de inmigrantes ante la aparición de un mercado negro",
+      "body": "El Partido Popular ha presentado en el Congreso una moción para exigir la suspensión del proceso de regularización de inmigrantes, alegando que ha generado un mercado negro en el que se venden citas por hasta 600 € y empadronamientos por 350 €. El PP sostiene que el proceso, que afecta a cientos de miles de personas, está mal gestionado y que «mafias» se aprovechan del sistema.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-06-01/cita-previa-por-regularizacion-mercado-negro-pp_4362341/"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "España atrae a más inmigrantes de la UE, pero no logra retenerlos",
+      "body": "España tiene la mayor proporción de residentes nacidos en el extranjero de la UE (casi 2 de cada 10), pero también la menor tasa de retención, por la falta de acceso a la vivienda y un mercado laboral inestable. El contraste pone de manifiesto los retos para los expatriados e inmigrantes que valoran instalarse a largo plazo.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/01/empleo-espana-pais-ue-mas-inmigrantes-atrae-menos-retiene-2025025.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "El IVA de la luz y el gas vuelve al 21 % mientras se desactiva el plan anticrisis",
+      "body": "Desde el 1 de junio, el Gobierno ha retirado el IVA reducido del 10 % sobre la electricidad y el gas, y vuelve el tipo general del 21 %, como parte de la retirada escalonada del plan anticrisis. Las ayudas al combustible se mantienen por la alta inflación, pero persiste la incertidumbre sobre qué medidas seguirán más allá del 30 de junio, lo que afecta a los presupuestos de los hogares.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/31/gobierno-empieza-desactivar-plan-anticrisis-lunes-continuidad-2024985.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El 1 % más rico acumula el 30 % de la riqueza y los partidos se unen para gravar más a los superricos",
+      "body": "Un nuevo informe del Instituto de Estudios Fiscales (IEF) revela que el 1 % más rico de España aumentó su peso en la riqueza nacional del 24 % al 30 % entre 2017 y 2023. Llama la atención que PP, PSOE y Sumar han alcanzado un consenso transversal para subir los impuestos a los superricos, lo que apunta a un posible cambio en la política fiscal.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/vuelven-agenda-impuestos-grandes-fortunas-1-rico-acumula-30-patrimonio-espana_1_13251554.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Europa contraataca: coches eléctricos baratos de menos de 25.000 € fabricados en España",
+      "body": "Como respuesta a la competencia china, los fabricantes europeos lanzarán en los próximos meses una docena de modelos eléctricos urbanos por 25.000 € o menos, varios de ellos fabricados en plantas cercanas a Barcelona y Pamplona. La ofensiva «Made in Europe» incluye modelos de Cupra, Volkswagen y Skoda, con el objetivo de democratizar la movilidad eléctrica.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ue-contraataca-china-llegan-coches-electricos-baratos-europeos_1_13260092.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los anestesistas encabezan una rebelión de médicos en todo el país y tensionan los hospitales",
+      "body": "Una ola de protestas de anestesistas, que se niegan a hacer horas extra, se ha extendido por toda España y afecta gravemente al funcionamiento de los hospitales de Madrid y Cataluña, donde más de 90 servicios de 26 hospitales se han sumado. La rebelión se debe al malestar con la indiferencia del Ministerio de Sanidad y sus planes de reforma, lo que podría provocar retrasos en la atención a los pacientes.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/ciencia-y-salud/salud/2026/06/01/6a198498e4d4d891198b45ae.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "El mercado negro de citas para la regularización es escandaloso: 600 € por una cita previa. ¿Qué debería hacer el Gobierno para frenar a las mafias? 💬",
+  "subject": "🇪🇸 España: ¿qué pasa? 🤔 01.06.2026",
+  "lang": "es",
+  "date": "2026-06-01",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-06-01T05:31:32.193647+00:00"
+}

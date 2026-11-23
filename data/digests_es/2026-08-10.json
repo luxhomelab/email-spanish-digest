@@ -1,0 +1,159 @@
+{
+  "items": [
+    {
+      "title": "Cantabria cambia su sistema de citas de la TIE tras destapar un mercado negro",
+      "body": "La Delegación del Gobierno en Cantabria ha pasado a un sistema automatizado que asigna directamente las citas para tomar huellas de la TIE. El cambio llega después de que las citas se vendieran ilegalmente por hasta 200 €, lo que las hacía casi imposibles de conseguir. El Colegio de Abogados de Cantabria había pedido la reforma y descubrió que algunas empresas de hostelería obtenían citas para sus empleados por vías irregulares.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/cantabria/delegacion-gobierno-cantabria-modifica-sistema-citas-extranjeria-venden-200-euros_1_13427112.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "⚠️ Ordenada la evacuación por el incendio de Tírig, que quema 684 hectáreas en Castellón",
+      "body": "Los servicios de emergencia enviaron el domingo a las 16:27 un ES-Alert que ordena la evacuación inmediata de Catí (Castellón). El incendio sigue activo en nivel 2 de emergencia, con dos frentes y un perímetro de unos 19 kilómetros. No hay heridos comunicados, pero se protegen granjas mientras las cuadrillas combaten el fuego.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/comunitat-valenciana/noticia-incendio-tirig-afecta-684-hectareas-perimetro-aproximado-19-kilometros-20260809214942.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "La crisis de Ceuta eleva a 83 los muertos y más de 15.000 vecinos se concentran para exigir respuestas",
+      "body": "El cadáver de un hombre hallado en las aguas de Ceuta eleva a 83 los fallecidos de la entrada masiva del 30 de julio: España ha recuperado 72 cuerpos y Marruecos 11. Ese mismo día, más de 15.000 vecinos de las cuatro comunidades religiosas de la ciudad se concentraron en la plaza de la Constitución para exigir respuestas urgentes a las autoridades españolas y europeas. La concentración, respaldada por el presidente de la Comunidad Hindú, Ramesh Chandiramani, contó con representantes del PP, del PSOE y de Ceuta Ya!, y Vox no acudió.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-08-09/suben-fallecidos-entrada-masiva-ceuta_4403443/"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-mas-15000-ceuties-concentran-pedir-respuestas-espana-europa-crisis-migratoria-20260809223909.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "España tiene 7,7 millones de viviendas que no son residencia habitual, casi diez veces el déficit",
+      "body": "Un informe del Ministerio de Vivienda revela que el 28,6 % de las viviendas españolas, unos 7,7 millones, no son residencia habitual. La vivienda habitual se define por la residencia efectiva y el empadronamiento, y cada persona solo puede tener una. El Banco de España estima el déficit de vivienda en 750.000 unidades. Las cifras evidencian la distancia entre el gran número de viviendas vacías o secundarias y la escasez de vivienda asequible.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/espana-8-millones-viviendas-no-principales-30-total_1_13371525.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Las hipotecas se acercan al 3 % mientras los bancos ponen fin a la guerra de precios",
+      "body": "El coste medio de financiación hipotecaria subió al 2,89 % en junio, desde el 2,67 % de principios de año, en su nivel más alto desde enero de 2025. La subida sigue a una subida de tipos del BCE antes de lo previsto, desencadenada por el conflicto de Oriente Medio y su efecto en el euríbor. Los seis grandes bancos españoles están además bajo investigación de la CNMC por posibles prácticas anticompetitivas, y los tramos fijos de las hipotecas mixtas se han revisado al alza.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/banca-espanola-encarece-hipotecas-investigacion-cnmc_7023567_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "España restablece controles temporales a los viajeros procedentes de Italia",
+      "body": "Los controles en puertos y aeropuertos para los pasajeros procedentes de Italia empezaron el sábado, tras su publicación en el BOE, como respuesta a la presión migratoria en la ruta del Mediterráneo central. Sara Aagesen, vicepresidencia tercera, subrayó que no se ha violado Schengen y que nadie ha llegado a la península desde Ceuta. Cualquier prórroga requeriría una nueva decisión motivada según el Código de Fronteras Schengen.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-gobierno-espera-italia-reaccione-tenga-claro-espacio-schengen-no-sido-violado-20260809130639.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Las compras de vivienda al contado caen a su nivel más bajo en cinco años",
+      "body": "Entre enero y mayo de 2026, el 25,8 % de las viviendas se compró sin hipoteca, frente al 32,5 % del año anterior, y lo mismo que el 25,5 % de 2021. Las compraventas totales bajaron un 3,4 %, hasta 288.176 unidades, mientras que las hipotecas firmadas subieron un 6,2 %, hasta 213.777. La tendencia refleja precios al alza y unas condiciones de financiación aún atractivas.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/subida-los-precios-las-hipotecas-atractivas-reducen-compra-viviendas-contado-minimos-cinco-anos_7018094_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El eclipse del 12 de agosto atraerá a 446.000 turistas y dispara un 522 % las búsquedas de alojamiento",
+      "body": "El eclipse del 12 de agosto atraerá a unos 446.700 visitantes adicionales y generará un impacto económico neto de 347,6 millones de euros. Las búsquedas internacionales de alojamiento para los días 12 y 13 de agosto se han disparado un 522 % en Soria, con fuertes subidas en León y Palencia. La DGT ha anunciado restricciones de tráfico para gestionar la afluencia.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-08-09/eclipse-solar-espana-turismo-1tps_4403328/"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Los nuevos aranceles de EE. UU. al cuarzo, de hasta el 50 %, golpean a Cosentino",
+      "body": "Los nuevos aranceles estadounidenses del 25 % al 50 % sobre las superficies de cuarzo artificial entrarán en vigor el 15 de agosto y golpean directamente a Cosentino, multinacional con sede en Almería que obtiene la mitad de sus ventas en Norteamérica. La medida fue pedida por su rival estadounidense Cambria, cuyo consejero delegado es donante de Trump. Canadá, México y otros países están exentos, pero la UE no.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/nuevo-arancel-cuarzo-trump-golpea-cosentino-avisa-empleados-planes-actuacion_1_13434820.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "De las concertinas a los centros de retorno: una década de endurecimiento migratorio en la UE",
+      "body": "Poco más de diez años después de que la Comisión Europea pidiera a España buscar alternativas a las concertinas en las vallas de Ceuta y Melilla, la UE debate ahora centros de retorno de migrantes en terceros países. La Comisión abre la puerta a reforzar las fronteras exteriores con más recursos físicos, tecnológicos y humanos, en un giro marcado frente a sus anteriores exigencias de proporcionalidad y derechos fundamentales.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/internacional/noticia-concertinas-centros-retorno-europa-endurecido-politica-migratoria-ultima-decada-20260809103139.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El incendio de Niebla (Huelva) quema 8.000 hectáreas y supera los 600 efectivos",
+      "body": "El incendio, activo desde el jueves, moviliza ya a 605 profesionales, según el director de Infoca, Antonio Sanz. La zona afectada abarca 8.000 hectáreas, y las autoridades advierten de que la situación sigue siendo impredecible.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/andalucia/huelva-00354/noticia-dispositivo-incendio-niebla-huelva-supera-600-efectivos-cualquier-escenario-imprevisible-20260809232601.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "El reglamento europeo de envases introduce nuevas etiquetas y prohibirá los neceseres de hotel en 2030",
+      "body": "Un reglamento europeo de envases entra en vigor el 12 de agosto y empezará a introducir hasta 24 combinaciones nuevas de etiquetado por envase. A partir de 2030, los supermercados deberán dejar de envolver en plástico frutas y verduras, y se prohibirán los envases monodosis, las bolsas ligeras y los neceseres de hotel. Los envases llevarán además etiquetas uniformes el año que viene para ayudar a separar materiales.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/ue-pone-marcha-esta-semana-revolucion-envase-que-vetara-bolsas-monodosis-cortesias-hotel_7022923_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "¿Alguien más se ha visto atrapado en el lío de las citas de la TIE? ¿Habrían ayudado las citas automáticas? 👇",
+  "subject": "Lo que pasó en España mientras no mirabas (10 de agosto)",
+  "lang": "es",
+  "date": "2026-08-10",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-08-10T06:04:38.142008+00:00"
+}

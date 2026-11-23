@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "title": "Un fondo al que España debe 77 millones embarga pagos a la federación de fútbol días antes del Mundial",
+      "body": "El fondo Blasket, al que España debe 77 millones de euros por un recorte de subvenciones a las energías renovables, ha registrado una sentencia de un tribunal estadounidense para embargar pagos a la Federación Española de Fútbol y a patrocinadores como Adidas, lo que eleva la presión judicial a pocos días del Mundial de 2026.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/fondo-que-espana-debe-77-millones-por-hachazo-renovable-sube-presion-judicial-eeuu-contra-roja-3-dias-mundial_6980621_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los precios de la vivienda suben un 12,9 % mientras la ley de alquiler reduce la oferta",
+      "body": "Los precios de la vivienda en España subieron un 12,9 % en el primer trimestre de 2026, once años consecutivos de subidas, pese a una caída del 2,2 % en las compraventas. Mientras tanto, un estudio de FEDEA concluye que la ley de alquiler moderó las subidas en las zonas tensionadas, pero redujo de forma notable la oferta y aumentó la competencia entre los inquilinos.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/precio-vivienda-compra-sigue-disparado-aumenta-12-44-trimestres-alza_1_13283217.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/ley-vivienda-modera-alza-alquiler-pero-reduce-oferta-eleva-competencia-no-mejora-las-condiciones-acceso_6980590_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "El BCE subirá los tipos al 2,25 % por la inflación de la guerra de Irán",
+      "body": "Se espera que el BCE suba los tipos 25 puntos básicos, hasta el 2,25 %, el 11 de junio, su primera subida desde el inicio de la guerra de Irán, con una inflación de la eurozona que alcanza el 3,2 %. La medida encarecerá las hipotecas y los préstamos, pese a un crecimiento económico débil.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bce-prepara-primera-subida-tipos-interes-guerra-iran-impacto-precios_1_13282935.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los viajeros de fuera de la UE se enfrentan a largas colas en los aeropuertos con el nuevo sistema EES",
+      "body": "Ryanair advierte de que, a partir del 10 de abril, los titulares de pasaporte no comunitario sufrirán esperas más largas en las fronteras Schengen por el Sistema de Entradas y Salidas (EES), que exige controles biométricos con huellas dactilares y fotografías. Las rutas desde Reino Unido, Irlanda y otros países extracomunitarios serán las más afectadas.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/viajes/2026/06/08/nueva-normativa-europea-ryanair-advierte-colas-prolongadas-nuevo-sistema-control-viajes-verano-2027147.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Sánchez comparecerá en el Congreso el 24 de junio por los casos de corrupción que afectan al PSOE",
+      "body": "El presidente Pedro Sánchez comparecerá ante el Congreso el 24 de junio para tratar los procedimientos judiciales que afectan a su partido, tras el registro de la sede del PSOE por la policía. El expresidente Zapatero también ha sido citado como investigado en el caso Plus Ultra por tráfico de influencias.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/sanchez-comparecera-24-junio-congreso-para-explicar-los-casos-presunta-corrupcion-que-salpican-psoe_6980655_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Irán e Israel acuerdan detener sus ataques cruzados",
+      "body": "Irán e Israel han acordado frenar sus ataques mutuos por la presión de la Administración Trump, a los cien días del conflicto, que empezó con la guerra de Israel contra Hamás y Hezbolá.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/internacional/2026/06/09/iran-israel-acuerdan-parar-sus-ataques-cruzados-por-presion-trump-2027417.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Muere un alto dirigente del Frente Polisario en un ataque marroquí",
+      "body": "Lahbib Mohamed Abdelaziz, hijo del fundador del Frente Polisario y miembro de su Secretariado, ha muerto junto a otros dos combatientes en un ataque de las fuerzas marroquíes en el Sáhara Occidental.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/internacional/2026/06/08/tres-miembros-frente-polisario-ellos-alto-dirigente-mueren-ataque-marroqui-2027324.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "UGT desconvoca la huelga indefinida del transporte tras un acuerdo sobre la jubilación anticipada",
+      "body": "El sindicato UGT ha cancelado la huelga indefinida de conductores de camiones prevista, después de que el secretario de Estado de la Seguridad Social se comprometiera a revisar las solicitudes de jubilación anticipada del sector. La huelga estaba fijada inicialmente para el 22 de junio.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ugt-desconvoca-huelga-indefinida-transporte-carretera-22-junio-jubilacion-anticipada_1_13284892.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Plazo de la Renta el 30 de junio: más contribuyentes deberán pagar",
+      "body": "Los contribuyentes tienen hasta el 30 de junio para presentar la declaración del IRPF. En Aragón se esperan 820.000 declaraciones, de las que 272.660 saldrán a pagar (un 10,4 % más) y 504.162 con devolución (un 2,3 % menos).",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/09/guia-rapida-declaracion-renta-para-quienes-todavia-no-han-presentado-2027144.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    }
+  ],
+  "engagement": "La ley de alquiler quería frenar los precios, pero también reduce la oferta. ¿Ha afectado a tu búsqueda de piso? Cuéntanos tu experiencia.",
+  "subject": "🇪🇸 España: resumen de hoy ⚡ 09.06.2026",
+  "lang": "es",
+  "date": "2026-06-09",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-06-09T05:31:55.057377+00:00"
+}

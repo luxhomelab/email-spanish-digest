@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "La subida de tipos también afectará a los inquilinos, advierte un experto",
+      "body": "El Banco Central Europeo ha subido los tipos de interés por primera vez en tres años, lo que encarece el euríbor y las cuotas hipotecarias. El experto inmobiliario Sergio Gutiérrez advierte de que los inquilinos también sentirán el impacto, ya que el encarecimiento de las hipotecas empujará a más personas hacia el alquiler, lo que aumentará la demanda y los precios.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-06-17/experto-inmobiliario-suben-tipos-interes-van-pagar-alquiler_4373478/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "España investiga a seis bancos por presunta colusión en los tipos hipotecarios",
+      "body": "La autoridad de competencia, la CNMC, ha abierto un expediente sancionador contra Bankinter, Santander, BBVA, Unicaja, CaixaBank y Sabadell por posibles prácticas anticompetitivas en los tipos fijos de las hipotecas. La investigación se centra en declaraciones públicas de directivos que podrían haber permitido a los competidores anticipar futuros precios. La investigación podría durar hasta 24 meses.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/competencia-investiga-bankinter-banco-santander-bbva-unicaja-caixabank-sabadell-politicas-comerciales_1_13307237.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "España digitaliza las notificaciones de bajas por enfermedad desde septiembre",
+      "body": "A partir de septiembre de 2026, todas las notificaciones de la Seguridad Social sobre incapacidad temporal se enviarán por vía electrónica, por SMS o correo electrónico. Los trabajadores deberán usar sistemas de identificación digital como Cl@ve para acceder a las notificaciones. La atención presencial en las oficinas CAISS seguirá disponible para quienes tengan pocas competencias digitales.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/16/oficial-boe-modifica-sistema-notificaciones-trabajadores-baja-laboral-2027140.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "España amplía la prestación por cuidado de hijos con enfermedad grave",
+      "body": "El Ministerio de Seguridad Social ha iniciado una reforma para ampliar la prestación CUME a los padres que cuidan a hijos con cáncer o enfermedades graves. Los cambios incluyen permisos iniciales y prórrogas más largos, y amplían la lista de enfermedades cubiertas. La consulta pública estará abierta hasta el 25 de junio de 2026.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/seguridad-social-da-primer-paso-ampliar-prestacion-cuidado-hijos-cancer-enfermedad-grave_1_13309149.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Sanidad lanza un plan común de vacunación para los migrantes recién llegados",
+      "body": "La Comisión de Salud Pública ha aprobado una estrategia para vacunar a los migrantes en situación irregular y a los refugiados en un plazo de tres semanas desde su llegada. Las vacunas prioritarias incluyen la triple vírica, la polio, el tétanos y la difteria. El plan busca mejorar la cobertura sanitaria y reducir la propagación de enfermedades entre el conjunto de la población.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/sanidad-lanza-un-plan-comun-vacunacion-todas-las-comunidades-para-migrantes-refugiados-recien-llegados-espana_6983866_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Una filtración expone los datos de un millón de socios de clubes de cannabis",
+      "body": "Un fallo de seguridad en un software utilizado por clubes de cannabis españoles ha expuesto los datos personales de cerca de un millón de socios, incluidas imágenes de pasaportes, direcciones y hábitos de consumo. Los datos del software Cannabis Club Systems estuvieron accesibles en internet durante mucho tiempo. Los descubrió un investigador independiente.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/millon-documentos-identidad-socios-clubs-cannabis-espanoles-quedan-expuestos-internet_1_13301903.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Barcelona podrá triplicar la tasa a los pasajeros de cruceros hasta los 30 €",
+      "body": "El Parlamento de Cataluña permitirá a Barcelona subir el recargo municipal a los pasajeros de cruceros de 8 a 24 €. Sumado a la tasa turística autonómica de 6 €, el total por pasajero será de 30 €. La medida llega tras un récord de 3,99 millones de pasajeros de cruceros en 2025.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/catalunya-permitira-subir-30-euros-tasa-pagan-cruceristas-escala-barcelona_1_13309142.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Un juzgado podría citar a más consejeros en la causa de la DANA por los mensajes de WhatsApp",
+      "body": "El juzgado que investiga la riada de la DANA de 2024 en Valencia estudia citar como testigos a más consejeros autonómicos, tras la publicación de mensajes de WhatsApp relacionados con la catástrofe. La riada del 29 de octubre de 2024 causó 230 muertos. El juzgado ha pedido documentación adicional al consejero de Infraestructuras, Vicente Martínez Mus.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/comunitat-valenciana/jueza-dana-abre-puerta-citar-consellers-mazon-comprometedor-chat-whatsapp_1_13308971.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Las llegadas irregulares de migrantes a España bajan un 36 % este año",
+      "body": "Entre el 1 de enero y el 15 de junio de 2026 entraron de forma irregular en España 10.701 migrantes, un 36 % menos que en el mismo periodo de 2025. Las llegadas por mar cayeron de forma notable, un 48,9 %, hasta 8.115. Sin embargo, las llegadas por mar a la península y Baleares aumentaron un 5,4 %, hasta 4.833.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/epsocial/migracion/noticia-casi-11000-migrantes-entrado-forma-irregular-ano-espana-36-menos-mismo-periodo-2025-20260616165535.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El Tribunal de Justicia de la UE avala que los países exijan verificar la edad en las webs porno",
+      "body": "El Tribunal de Justicia de la UE ha dictaminado que los Estados miembros pueden exigir la verificación de la edad en las webs pornográficas para proteger a los menores, aunque el sitio esté radicado fuera del país. Las medidas deben ser proporcionadas y estar justificadas. La sentencia surge de un caso francés, pero tiene implicaciones para toda la UE y podría dar lugar a nuevas normas en España.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/tecnologia/tribunal-justicia-ue-avala-gobiernos-obliguen-usuarios-verificar-edad-webs-porno_1_13308237.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Los tipos de interés suben y los expertos advierten de que los alquileres seguirán la misma tendencia. ¿Cómo te está afectando el aumento a tu economía familiar?",
+  "subject": "Lo que todo el mundo en España comenta hoy",
+  "lang": "es",
+  "date": "2026-06-17",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-06-17T06:21:50.587709+00:00"
+}

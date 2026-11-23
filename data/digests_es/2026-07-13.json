@@ -1,0 +1,135 @@
+{
+  "items": [
+    {
+      "title": "El Gobierno oculta los datos de paro de 1,2 millones de casos de regularización",
+      "body": "El Gobierno no está publicando datos del mercado laboral sobre los 1,2 millones de inmigrantes que solicitaron la regularización. Aunque 160.000 habían empezado a cotizar a la Seguridad Social a 30 de junio, se calcula que unos 20.000 podrían haberse inscrito como desempleados. La falta de información reduce la transparencia para quienes esperan su situación.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/07/12/6a4e094d21efa0b2438b45a1.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "Los nuevos contratos de alquiler son un 11 % más caros que la media, con diferencias de más del 20 %",
+      "body": "Los nuevos contratos de alquiler en España se firman de media por 766 € al mes, un 11 % por encima de la media general de 691 €. En Baleares, los nuevos alquileres llegan a 1.071 €, un 23,2 % más que la media, y la provincia de Valencia registra una diferencia del 22,1 %. La brecha es aún mayor en otras zonas de alta demanda como Madrid. Quien firma un contrato nuevo afronta costes muy superiores a los de los inquilinos actuales.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/los-nuevos-contratos-alquiler-se-firman-un-11-por-encima-media-brecha-supera-20-las-zonas-mas-tensionadas_7012854_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Los anuncios inmobiliarios deben mostrar el coste total desde el primer anuncio",
+      "body": "Según la Ley 10/2025, los anuncios de inmuebles deben indicar desde el primer anuncio todos los costes, advierte el economista José María Páez. Los gastos ocultos que a menudo sorprenden a compradores e inquilinos son ahora ilegales. La medida busca dar más transparencia al mercado de la vivienda, y ofrece protección a quienes se mueven en el sector inmobiliario español.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-07-12/economista-vivienda-espana-inmobiliaria-decirte-vas-pagar_4388437/"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Huelga de Renfe el 15 de julio: servicios mínimos del 73 % en alta velocidad y del 66 % en media distancia",
+      "body": "Una huelga de 24 horas del Sindicato Ferroviario el 15 de julio alterará los servicios de Renfe. Los servicios mínimos se fijan en el 73 % para alta velocidad y el 66 % para media distancia. Podrían cancelarse hasta 94 de los 343 trenes AVE y 234 de los 650 de media distancia. Una huelga anterior, el 29 de junio, tuvo una participación de solo el 1,83 %, pero aún son posibles cancelaciones. Los viajeros deben consultar los horarios y planificarse.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/huelga-renfe-este-miercoles-15-julio-cuantos-trenes-estan-afectados-servicios-minimos_7013599_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Los autónomos cogen cuatro veces menos bajas por enfermedad que los asalariados por sus peores derechos",
+      "body": "Los autónomos en España cogen aproximadamente cuatro veces menos bajas por enfermedad que los asalariados, sobre todo por las menores prestaciones y los desincentivos económicos. La brecha pone de manifiesto una protección laboral desigual que deja a los trabajadores por cuenta propia con menos seguridad económica cuando enferman. Dos casos prácticos ilustran la diferencia de derechos y de compensación.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/07/13/misma-baja-pero-distinta-factura-derechos-por-que-los-autonomos-enferman-cuatro-veces-menos-que-los-asalariados-2036617.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "13 muertos en el incendio de Almería; el 80 % de los municipios con riesgo no tiene planes de emergencia",
+      "body": "El incendio de Los Gallardos (Almería) ha causado 13 muertos, entre ellos una británica de 93 años, y ha quemado 7.000 hectáreas. Pese a ello, Los Gallardos y Bédar, donde ocurrió la tragedia, están entre el 80 % de los municipios con riesgo de incendio que carecen de los planes de emergencia exigidos por ley. La catástrofe pone de manifiesto graves carencias de prevención de incendios para los residentes rurales.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/andalucia/almeria-00350/noticia-ascienden-13-fallecidos-incendio-gallardos-almeria-morir-britanica-93-anos-20260712215135.html"
+        },
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/andalucia/2026/07/12/6a53ac8421efa07a138b4591.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Nuevos aranceles de la UE de 3 € por artículo en AliExpress, Shein y Temu",
+      "body": "Desde el 1 de julio, un nuevo arancel de la UE de al menos 3 € por tipo de artículo se aplica a los paquetes de menos de 150 € procedentes de países no comunitarios. Un paquete con varios tipos de artículo paga varios cargos. El economista Niño Becerra opina que la medida servirá sobre todo para aumentar la recaudación y no desplazará de forma significativa a los compradores hacia las tiendas locales, porque los precios de las plataformas chinas siguen siendo más bajos. El arancel afecta a más del 90 % de estos envíos desde China.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/aviso-nino-becerra-sobre-nueva-tasa-aliexpress-shein-temu-solo-servira-una-cosa_7013414_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los trabajadores al aire libre dicen que el calor extremo empeora y dura más",
+      "body": "Los trabajadores al aire libre de España señalan que las olas de calor son cada vez más intensas, empiezan antes en junio y se vuelven insoportables. Un trabajador temporal de 64 años murió recientemente por causas relacionadas con el calor en Seròs (Lleida). La tendencia genera alarma en la construcción, la agricultura y otros sectores al aire libre.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/calor-no-intemperie-insufrible-vez-dura_1_13368945.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "España lidera la UE en bajas laborales y registra el mayor aumento desde la pandemia",
+      "body": "En 2024, España tuvo la mayor proporción de trabajadores de baja de la UE, con un 4,5 %, un aumento de 1,9 puntos desde 2018. La media de la UE está en el 2,5 %. La tasa española supera a la de Eslovenia, Bélgica y Francia, y marca el mayor incremento desde la pandemia. El aumento puede afectar a la dinámica de los centros de trabajo y a la percepción de las prestaciones.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/espana-lidera-tasa-bajas-ue-es-pais-donde-mas-crece-desde-pandemia_7013380_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "España es el segundo país de la UE que más aire acondicionado consume",
+      "body": "España consumió 14.300 terajulios para refrigeración en 2024, solo por detrás de Italia en la UE, y ha más que duplicado su consumo desde 2010. El aire acondicionado supone el 2,5 % de la energía de los hogares, cifra muy inferior a la de Malta o Chipre. El mayor uso estival encarece las facturas de luz de los residentes.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/espana-es-segundo-pais-ue-que-mas-aire-acondicionado-consume_7013643_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "Los nuevos contratos de alquiler en España cuestan un 11 % más que la media, con diferencias de más del 20 % en algunas zonas. ¿Cuál es tu experiencia con las subidas de alquiler? 💬",
+  "subject": "Resumen de España en 30 segundos",
+  "lang": "es",
+  "date": "2026-07-13",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-07-13T06:04:59.372400+00:00"
+}

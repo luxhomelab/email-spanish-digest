@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "title": "Los caseros pueden subir el alquiler al instalar aire acondicionado",
+      "body": "La Ley de Arrendamientos Urbanos permite a los caseros subir el alquiler tras realizar mejoras como la instalación de aire acondicionado. El incremento tiene un límite del 20 % de la renta actual y se calcula sobre la inversión más tres puntos por encima del interés legal del dinero. Las obras solo pueden hacerse tras cinco años de contrato, y los inquilinos deben ser notificados correctamente.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-06-11/ley-arrendamientos-urbanos-casero_4370922/"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Los propietarios pueden deducirse hasta 1.356 € del seguro del hogar en la declaración de 2026",
+      "body": "La Agencia Tributaria confirma que los propietarios que compraron su vivienda antes de enero de 2013 y tienen un seguro de hogar vinculado a su hipoteca pueden deducirse hasta 1.356 € en su declaración del IRPF. La deducción está disponible en la campaña actual, que comenzó el 8 de abril. La hipoteca debe seguir vigente y el seguro debe estar vinculado al préstamo.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/11/ya-oficial-hacienda-confirma-quienes-seguro-hogar-deducir-1000euros-declaracion-renta-2026-1894682.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "El Congreso mejora las pensiones de los mutualistas, pero penaliza a los jubilados anticipados",
+      "body": "El Congreso ha aprobado una ley que mejora las pensiones de hasta 150.000 profesionales de mutualidades alternativas (como abogados, arquitectos y médicos) que pasen al RETA. Sin embargo, se rechazó una enmienda para eliminar la penalización a quienes se jubilaron anticipadamente tras cotizar más de 40 años, por un impacto presupuestario de 5.200 millones de euros.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/06/11/6a2aca8721efa0b40d8b45a5.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El BCE sube los tipos al 2,25 % y advierte de una inflación del 3 % mientras el petróleo llega a 97 dólares",
+      "body": "El Banco Central Europeo ha subido los tipos 0,25 puntos, hasta el 2,25 %, su primera subida en tres años, para combatir la inflación alimentada por el conflicto con Irán. Las nuevas proyecciones prevén que la inflación vuelva al 3 % a final de año y que el petróleo siga en 97 dólares el barril, lo que agrava la crisis del coste de la vida y reduce las previsiones de crecimiento de la eurozona.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/macroeconomia/2026/06/11/6a2ac2b4fc6c83d5378b45b9.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/bce-sube-los-tipos-interes-0-25-puntos-hasta-su-nivel-mas-alto-casi-tres-anos-por-guerra-iran_6982102_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El Pacto Europeo de Migración entra en vigor, pero España y otros países no están preparados",
+      "body": "El nuevo pacto migratorio de la UE, que endurece los procedimientos de asilo y acelera las expulsiones, entró en vigor el viernes, pero muchos Estados miembros, entre ellos España, no han aprobado la legislación necesaria. El Gobierno español no ha anunciado cómo aplicará los controles fronterizos, la detención y las devoluciones rápidas. La Comisión Europea reconoce que algunos elementos clave siguen sin activarse.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/pacto-europeo-endurece-politica-migratoria-entra-vigor-estados-tengan-listo-sistema-aplicarlo_1_13295439.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Las compraventas de vivienda caen un 11,2 % en el primer trimestre tras el récord de 2025",
+      "body": "Las transacciones de vivienda bajaron hasta 163.322 en el primer trimestre de 2026, un 11,2 % menos que un año antes, tras el máximo histórico de más de 750.000 ventas en 2025. Los expertos atribuyen el enfriamiento a los precios elevados y a los tipos hipotecarios, y prevén que esto frene el crecimiento de precios en 2027 más que provocar caídas.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/compraventa-viviendas-cae-11-2-primer-trimestre-tocar-techo-2025_1_13293939.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "El diésel baja a 1,61 €, su precio más bajo desde el inicio de la guerra de Irán",
+      "body": "El precio medio del diésel bajó un 2 % esta semana, hasta 1,615 € por litro, el más bajo desde principios de marzo, cuando empezó el conflicto con Irán. La gasolina también bajó un 1,74 %, hasta 1,52 €. La caída sigue a las subidas anteriores y se ve ayudada por las medidas fiscales del Gobierno.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/diesel-se-abarata-un-2-se-situa-los-1-61-euros-su-precio-mas-bajo-desde-inicio-guerra-iran_6982071_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "BBVA, Santander y CaixaBank intensifican sus ofertas para captar a los jóvenes frente a los neobancos",
+      "body": "Los grandes bancos españoles lanzan nuevos productos digitales dirigidos a clientes jóvenes para competir con neobancos como Revolut y N26, que ya tienen unos 12 millones de clientes en España. Los directivos reconocen que deben demostrar que ofrecen herramientas similares, como ETF y experiencias digitales fluidas.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bbva-santander-sabadell-caixabank-aceleran-oferta-jovenes-frenar-neobancos-revolut-n26_1_13285324.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El Supremo se opone al indulto del exfiscal general García Ortiz",
+      "body": "El Tribunal Supremo ha rechazado un posible indulto para el exfiscal general Álvaro García Ortiz, condenado por revelación de secretos, al considerar que no hay razones de justicia, equidad o utilidad pública que lo justifiquen. La decisión final corresponde al Gobierno, pero la oposición del Supremo supone un obstáculo jurídico importante.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-supremo-opone-indulte-garcia-ortiz-no-ve-razones-justicia-equidad-utilidad-publica-20260611140521.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "¿Dejarías que tu casero te subiera el alquiler por instalar aire acondicionado? ¡Comparte tu opinión! 🗣️",
+  "subject": "Lo que pasó hoy en España",
+  "lang": "es",
+  "date": "2026-06-12",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-06-12T05:32:12.205368+00:00"
+}

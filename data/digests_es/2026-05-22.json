@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "El alquiler se come el 98,7 % del sueldo de los jóvenes y la emancipación cae a mínimos",
+      "body": "En 2025, los jóvenes españoles destinaron el 98,7 % de su salario solo al alquiler, y el 33,6 % si compartían piso. La tasa de emancipación de los 16 a 34 años cayó al 14,5 %, la más baja desde 2006. La edad media para independizarse subió hasta los 30,2 años, muy por encima de la media europea de 26,2.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/05/22/6a0f2f81fc6c83b91e8b4587.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Zapatero facturó 490.000 € en viajes y un juez congela sus cuentas",
+      "body": "El expresidente José Luis Rodríguez Zapatero facturó 490.780 euros en 36 facturas a la consultora Análisis Relevante por viajes a China, Colombia y Marruecos, que describió como «captación de clientes». Un juez ha bloqueado sus cuentas bancarias, limitando el acceso a esa cantidad.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/05/21/6a0f663cfdddff6b308b45ad.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El Supremo estudia si paraliza la regularización de 500.000 migrantes",
+      "body": "El Tribunal Supremo examina cinco recursos para bloquear temporalmente el procedimiento extraordinario de regularización del Gobierno, que busca conceder residencia y permiso de trabajo a unos 500.000 migrantes indocumentados. El proceso se abrió el 16 de abril, ha recibido 200.000 solicitudes y el plazo termina el 30 de junio.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/supremo-estudia-hoy-si-paraliza-cautelarmente-regularizacion-extraordinaria-migrantes_6973636_0.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Las empresas deberán compensar los festivos que caigan en sábado",
+      "body": "La Audiencia Nacional ha dictaminado que las empresas deben conceder un día libre adicional por los festivos que caigan en sábado, cuando el trabajador ya libra ese día, para que disfrute de los 14 festivos legales. La decisión, tras las denuncias de los sindicatos, se aplica inicialmente a los centros de contacto y al sector del alquiler de coches.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-21/1qrt-confirmado-audiencia-nacional-empresas-devolver-dias-festivos-sabado_4358978/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Hacienda enviará 130.000 cartas preventivas por errores en la Renta",
+      "body": "La Agencia Tributaria enviará unas 130.000 cartas durante la campaña de la Renta para alertar a los contribuyentes de posibles discrepancias en sus declaraciones. No son multas, sino una invitación a corregir los errores antes de que se abra una investigación formal.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-21/hacienda-enviara-130000-cartas-preventivas_4358781/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "UGT convoca el sábado una huelga del textil contra Inditex, Mango y Primark",
+      "body": "UGT ha convocado una huelga en todo el país el sábado 23 de mayo en el sector textil y del calzado, en protesta por un preacuerdo firmado por la patronal ARTE (que incluye a Inditex, Mango y Primark) con CCOO y Fetico. Según UGT, el preacuerdo elimina derechos y crea desigualdades territoriales.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ugt-convoca-huelga-sabado-23-textil-calzado-convenio-patronal-inditex-mango-primark_1_13239279.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El Supremo anula el registro único de alquiler turístico del Gobierno",
+      "body": "El Tribunal Supremo ha anulado el registro centralizado de alquileres de temporada y de corta duración, al considerar que el Gobierno se extralimitó en sus competencias. Sin embargo, se mantienen la ventanilla digital y la obligación de transmitir datos; el Gobierno asegura que el sistema ya ha detectado 11.000 anuncios ilegales.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/supremo-anula-registro-unico-alquiler-turistico-temporada-gobierno-falta-competencias_1_13239352.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Los trabajos penosos realizados en otros países de la UE computarán para la jubilación en España",
+      "body": "En un caso planteado por un minero eslovaco que trabajó en la República Checa, el Tribunal de Justicia de la UE ha dictaminado que el tiempo trabajado en empleos penosos en otros Estados miembros debe reconocerse a efectos de jubilación anticipada en España.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/22/los-trabajos-penosos-realizados-otros-paises-ue-computaran-para-jubilacion-2022447.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "España, único país europeo que eleva su previsión de crecimiento para 2026, hasta el 2,4 %",
+      "body": "La Comisión Europea ha elevado la previsión de crecimiento del PIB de España para 2026 al 2,4 %, una décima más que en su previsión de otoño. Es el único Estado miembro que recibe una mejora pese a la crisis energética por el conflicto con Irán. Se espera que el paro baje del 10 % este año por primera vez desde 2008.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/espana-unico-pais-europeo-bruselas-eleva-previsiones-crecimiento-2-4-2026_1_13238176.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La guerra de Irán se acerca a su tercer mes y asoma el riesgo de estanflación en Europa",
+      "body": "Con el conflicto en Irán próximo a cumplir tres meses y el estrecho de Ormuz todavía bloqueado, el precio del petróleo se mantiene por encima de 100 dólares el barril. La Agencia Internacional de la Energía advierte de que las reservas comerciales se agotarán en semanas, lo que aumenta el temor a la estanflación en Europa.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/guerra-iran-se-acerca-su-tercer-mes-riesgo-una-estanflacion-asoma-horizonte_6972493_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "El alquiler se come el 98,7 % del sueldo de un joven: ¿te mudarías a una ciudad más pequeña o compartirías piso para sobrevivir?",
+  "subject": "🇪🇸 España: resumen del día 📋 22.05.2026",
+  "lang": "es",
+  "date": "2026-05-22",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-22T05:32:37.730350+00:00"
+}

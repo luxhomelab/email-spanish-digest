@@ -1,0 +1,135 @@
+{
+  "items": [
+    {
+      "title": "El Gobierno acelera la subida anual de las pensiones",
+      "body": "El Consejo de Ministros aprobó el 13 de noviembre la tramitación urgente de la subida anual de las pensiones. Se espera que ronde el 3,6 % si el dato de inflación adelantado de noviembre, que se publica el 27 de noviembre, está en línea con los recientes. El real decreto-ley que fija la subida aún no está aprobado y necesitará después una votación en el Congreso.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-13/el-gobierno-aprueba-el-tramite-de-urgencia-para-la-revalorizacion-de-las-pensiones.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La inflación se mantiene en el 4,9 % mientras continúan las rebajas de carburantes",
+      "body": "La inflación de octubre se mantuvo en el 4,9 %, impulsada por los costes de carburantes y gas ligados al conflicto de Oriente Medio y la escasez de combustibles refinados. El diésel subió un 36,2 % interanual y la gasolina un 20,7 %, ambos por encima del umbral del 15 %. La rebaja de 20 céntimos por litro en ambos carburantes sigue vigente hasta el 31 de diciembre de 2026.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-11-13/la-inflacion-se-mantiene-en-octubre-en-el-4-9-por-los-combustibles-y-el-gas_4464135/"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/descuento-20-centimos-gasolina-diesel-mantendra-vigor-final-ano_1_13660815.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El Tribunal Económico-Administrativo Central considera tributables las jubilaciones anticipadas voluntarias",
+      "body": "El Tribunal Económico-Administrativo Central ha dictaminado que las indemnizaciones por jubilación anticipada voluntaria pactada tributan en el IRPF. Confirmó la negativa de la Agencia Tributaria a aplicar la exención a un empleado de un banco. La exención solo se aplica dentro de un procedimiento de despido colectivo.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/hacienda-dictamina-indemnizacion-prejubilacion-voluntaria-tributa-irpf_1_13660666.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Los partidos presentan planes de vivienda rivales antes de las elecciones",
+      "body": "De cara a las elecciones del 29 de noviembre, el PP propone construir 1.000.000 de viviendas. El PSOE y Frente Amplio respaldan la prórroga de los contratos de alquiler y las medidas fiscales de los recientes reales decretos de vivienda. Vox sitúa entre sus prioridades la «remigración» y la reducción de la demanda de vivienda vinculada a la inmigración.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/construccion-y-vivienda-00342/noticia-psoe-frente-amplio-defienden-prorrogas-alquiler-pp-apuesta-construir-vox-reinmigracion-20261113225830.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Francia y Alemania se acercan a un acuerdo sobre la presidencia del BCE",
+      "body": "Medios franceses y alemanes informan de que París y Berlín ultiman un acuerdo para apoyar a Pablo Hernández de Cos, candidato a la presidencia del BCE, frente al candidato neerlandés Klaas Knot. Las conversaciones no están cerradas. Los gobiernos tienen hasta el 18 de noviembre para presentar candidatos. Los líderes de la UE prevén decidirlo el 26 y 27 de noviembre.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/alemania-francia-reparto-poder-cupula-bce-favorito-espana_7060934_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "España supera a sus principales socios mientras se frena el crecimiento de la eurozona",
+      "body": "La economía española creció un 0,6 % en el tercer trimestre, por delante del 0,2 % de Alemania, la producción plana de Italia y una caída del 0,1 % en Francia. El crecimiento de la eurozona se frenó hasta el 0,4 % por el encarecimiento de la energía y de la compra, y por la subida de tipos del BCE. El empleo en la eurozona se estancó.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/pib-eurozona-freno-tercer-trimestre-empleo-se-estanco-plena-escalada-los-precios_7060682_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "PP y Vox prometen rebajas fiscales en plena campaña",
+      "body": "PP y Vox prometieron rebajas de impuestos en un debate económico antes de las elecciones del 29 de noviembre. PSOE y Frente Amplio preguntaron cómo evitarían recortar los servicios públicos. Vox dijo que rebajaría los tramos bajos del IRPF sin reducir servicios. Son propuestas de campaña.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/fiscal-00347/noticia-pp-vox-prometen-bajar-impuestos-psoe-frente-amplio-cuestionan-haran-recortar-servicios-20261113234025.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El debate entre Sánchez y Feijóo se fija para el 19 de noviembre",
+      "body": "Los candidatos a la presidencia del Gobierno, Pedro Sánchez, del PSOE, y Alberto Núñez Feijóo, del PP, se enfrentarán en un debate el jueves 19 de noviembre. La moderación correrá a cargo de María Casado, de la Academia de la Televisión. Las elecciones generales se celebran el 29 de noviembre.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/sociedad/noticia-cara-cara-pedro-sanchez-alberto-nunez-feijoo-sera-proximo-jueves-moderado-maria-casado-20261113155313.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Frente Amplio propone eliminar en tres años los pisos turísticos",
+      "body": "La propuesta electoral de Frente Amplio eliminaría en tres años las licencias de pisos turísticos en bloques residenciales y zonas con vivienda tensionada. Toni Valero, de IU, dice que después esos pisos quedarían eliminados para siempre. El plan también apunta a los alquileres temporales fraudulentos.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/frente-amplio-quiere-extinguir-los-pisos-turisticos-bloques-residenciales-zonas-tensionadas_7060881_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Termina el Gran Recapte catalán de recogida de alimentos",
+      "body": "La campaña catalana Gran Recapte de recogida de alimentos termina el 14 de noviembre, con unos 15.000 voluntarios recogiendo donaciones en más de 2.000 tiendas de alimentación. Se centra en personas con empleo que llegan con dificultades a fin de mes, familias agobiadas por el alquiler y pensionistas que viven solos. Se puede donar alimentos o dinero, incluido por Bizum al 33596.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/local/barcelona/20261114/11683790/gran-recapte-lanza-15-000-voluntarios-pobreza-proximidad.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "¿Cómo reduces el gasto en la compra? A) Ofertas B) Marca blanca C) Ninguna 💬",
+  "subject": "Un día normal en España. Define normal.",
+  "lang": "es",
+  "date": "2026-11-14",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-11-14T07:11:48.988239+00:00"
+}

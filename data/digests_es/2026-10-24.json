@@ -1,0 +1,175 @@
+{
+  "items": [
+    {
+      "title": "Un tribunal fija el 28 de octubre como plazo para la lista de votantes con nacionalidad",
+      "body": "Solo 91 de 31.390 expedientes revisados habían dado lugar a certificados de voto a 21 de octubre. El Supremo ordena al Gobierno que identifique a las 163.020 personas afectadas por la suspensión del voto de la ley de nietos antes de las 15:00 del 28 de octubre. Los envíos electorales al extranjero empiezan el 24 de octubre; los afectados necesitan acreditar su descendencia de exiliados para votar el 29 de noviembre.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-ts-da-dias-gobierno-darle-lista-afectados-voto-suspender-ley-nietos-avisa-multa-20261023124830.html"
+        },
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/23/6adba990fc6c8325318b4587.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/este-sabado-comienza-envio-voto-los-espanoles-extranjero-con-163-000-electores-pendientes-poder-votar_7052858_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Los bancos suben los tipos hipotecarios mientras se ralentiza el crédito",
+      "body": "Los bancos están subiendo los precios de las hipotecas y endureciendo la concesión a medida que los precios más altos de la vivienda frenan las ventas. El tipo medio de las nuevas hipotecas llegó al 3,01 % en julio, frente al 2,96 % de junio. El Euríbor a 12 meses está en su nivel más alto desde agosto de 2024, lo que presiona a los prestatarios.",
+      "sources": [
+        {
+          "name": "Expansión",
+          "url": "https://www.expansion.com/empresas/banca/2026/10/24/6adbb92ce5fdead5478b4591.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Consumo pide retirar anuncios de pisos turísticos engañosos",
+      "body": "Consumo ha pedido a dos portales que retiren hasta 8.300 anuncios de pisos turísticos presentados como alquileres de temporada. Las normas que ya se aplican con el decreto de vivienda del 6 de octubre fijan un máximo de 30 días para los alquileres turísticos y un mínimo de 31 días para los de temporada. La mayoría de los 8.318 anuncios ilegales detectados están en la Comunidad de Madrid.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/consumo-exige-retirada-8-000-anuncios-pisos-turisticos-ofertan-alquileres-temporada_1_13607460.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El Consejo de Ministros aprueba una nueva escala de reducción del IRPF en alquiler",
+      "body": "Los reales decretos-leyes 28/2026 y 29/2026 aprobados por el Consejo de Ministros fijan reducciones del IRPF sobre los rendimientos netos del alquiler de entre el 15 % y el 100 % para contratos firmados desde el 1 de diciembre de 2026. La reducción dependería de la renta pedida, del inquilino y de la zona. Las decisiones de los propietarios al firmar determinarán su tratamiento fiscal.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/vivienda/2026-10-24/alquiler-rebaja-fiscal-irpf-declaracion-de-la-renta_4449091/"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Los autónomos siguen a la espera de los tipos de cotización de 2027",
+      "body": "La Seguridad Social aún no ha aprobado las tablas de cotización de 2027 ni ha convocado reuniones con las asociaciones de autónomos. La convocatoria electoral amenaza con dejar en el aire la revisión exigida por el acuerdo de 2022. Los asesores esperan que se mantengan los tramos actuales, pero advierten de que los trabajadores deberían prever una posible subida retroactiva.",
+      "sources": [
+        {
+          "name": "Cinco Días",
+          "url": "https://cincodias.elpais.com/legal/2026-10-23/autonomos-a-ciegas-aun-no-saben-cuanto-tendran-que-pagar-de-cuota-en-2027.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Los precios de la vivienda se disparan frente a los salarios en 13 años",
+      "body": "Los precios de la vivienda subieron un 108 % entre 2013 y 2026, mientras los salarios medios subieron un 30 %, según un informe del sindicato CC OO. En Madrid, los precios subieron un 142 % frente a un 34 % de los salarios. Los sindicatos quieren que la vivienda se incluya en la negociación salarial.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/vivienda/2026-10-23/el-precio-de-la-vivienda-en-propiedad-ha-crecido-casi-cuatro-veces-mas-que-los-salarios-en-los-ultimos-13-anos.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Algunas pensiones suspendidas pueden volver a cobrarse",
+      "body": "El Real Decreto-ley 31/2026, en vigor desde el 21 de octubre, permite a algunas personas pedir el restablecimiento de una pensión de viudedad u otra pensión contributiva suspendida con las normas anteriores que impedían cobrar ambas. Los solicitantes deben cumplir los demás requisitos y presentar la solicitud antes del 21 de octubre de 2027.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/seguridad-social-permite-recuperar-pensiones-suspendidas-quien-puede-pedirlo_7052462_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Un tribunal aplica la amnistía a 12 activistas de los CDR",
+      "body": "La Audiencia Nacional ha aplicado la ley de amnistía a 12 activistas catalanes de los CDR acusados de terrorismo y ha cerrado su causa. Los jueces afirmaron que los hechos entraban en la ley y no constituían graves violaciones de derechos humanos. La decisión sigue a la sentencia del Tribunal de Justicia de la UE que avaló la ley tres meses antes.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/audiencia-nacional-amnistia-cdr-acusados-terrorismo-tres-meses-despues-sentencia-tjue_1_13501359.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Los fiscales alegan posible malversación por los regalos saudíes de Zapatero",
+      "body": "Fiscales anticorrupción sostienen que el expresidente del Gobierno José Luis Rodríguez Zapatero podría haber cometido malversación de fondos públicos. Afirman que aceptó joyas de valor de Arabia Saudí y no las entregó a la oficina de patrimonio del Estado. Su valoración se refiere a un posible delito, no a una resolución judicial.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-anticorrupcion-apunta-presunta-malversacion-zapatero-no-entregar-joyas-despacho-patrimonio-20261023145410.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Cambio en el cálculo de rentas para las pensiones no contributivas desde el 23 de octubre",
+      "body": "La Ley 4/2026 entró en vigor el 23 de octubre y excluye de los límites de ingresos de las pensiones no contributivas algunas indemnizaciones por daños personales. La exclusión cubre las cantidades reconocidas legalmente o fijadas por un tribunal, pero no las pagadas tras una sentencia o acuerdo. Puede ayudar a los beneficiarios a cumplir los requisitos para una pensión o a mantenerla.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/las-pensiones-no-contributivas-cambian-partir-hoy-asi-funciona-nuevo-calculo-para-acceder-conservar-estas-prestaciones_7052438_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Un borrador amplía la edad de la prueba de cribado del cáncer de mama",
+      "body": "El Consejo Interterritorial del Sistema Nacional de Salud aprobó el 23 de octubre un borrador de orden para ampliar el cribado del cáncer de mama de los 50-69 años a los 45-74. Las comunidades aplicarían el cambio de forma gradual, empezando en los tres años siguientes a su entrada en vigor. La cobertura de los nuevos grupos de edad debería acercarse al 100 % en seis años.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/sanidad-aprueba-ampliar-cribado-cancer-mama-mujeres-45-74-anos_7052754_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "El impuesto sobre el salario mínimo abre un debate sobre la deducción",
+      "body": "El líder del PP, Alberto Núñez Feijóo, se ha comprometido a eximir del IRPF el salario mínimo. En la práctica, quienes cobran el SMI de 2026, 17.094 € brutos al año, no pagan nada gracias a una deducción de 590,89 €. Las empresas retienen primero el impuesto y la Agencia Tributaria lo devuelve. La deducción se reduce para salarios de hasta 20.048 €.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-10-23/las-palabras-de-feijoo-sobre-el-salario-minimo-agitan-la-campana-electoral.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "El Rey pide un compromiso democrático más allá de las urnas",
+      "body": "El rey Felipe VI pidió cuidar a diario la democracia y sus instituciones en los Premios Princesa de Asturias, en Oviedo, el 23 de octubre. Dijo que el compromiso democrático no termina con las elecciones y defendió el espíritu integrador de la Constitución de 1978. Su llamamiento llega antes de las elecciones generales del 29 de noviembre.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/cultura/20261023/11666741/rey-advierte-elecciones-29-n-democracia-agota-urnas.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Si necesitaras una hipoteca, ¿qué tipo elegirías? A) Fijo B) Variable C) No lo sé 💬",
+  "subject": "Día lento en España. Casi.",
+  "lang": "es",
+  "date": "2026-10-24",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-10-24T06:02:14.983100+00:00"
+}

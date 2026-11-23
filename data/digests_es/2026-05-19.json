@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "title": "Las reservas de petróleo podrían agotarse en semanas por el bloqueo de Ormuz; la UE pide ayuda a China",
+      "body": "La AIE advierte de que las reservas comerciales de petróleo del mundo se agotarán en cuestión de semanas por el cierre del estrecho de Ormuz, que bloquea 14 millones de barriles diarios. Mientras, la UE reconoce que su influencia es insuficiente y pide a China que medie entre Estados Unidos e Irán, y el FMI considera la situación muy crítica.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/aie-preve-que-colchon-reservas-petroleo-se-agote-semanas-fmi-cree-que-situacion-es-muy-critica_6971916_0.html"
+        },
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/internacional/2026/05/19/union-europea-se-desespera-pide-ayuda-china-para-reabrir-ormuz-mientras-trump-repasa-los-planes-guerra-2021464.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "España triplica el límite legal de la UE para acceder a medicamentos críticos: los pacientes esperan 537 días de media",
+      "body": "Según el informe WAIT 2025, los pacientes españoles esperan una media de 537 días para acceder a nuevos medicamentos, casi el triple del plazo legal europeo. España financia solo el 69 % de los fármacos aprobados en Europa entre 2021 y 2024, lo que la sitúa en quinta posición, y la disponibilidad global ha bajado ligeramente desde el 71 %.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/ciencia-y-salud/salud/2026/05/19/6a0c034dfc6c831a0d8b458c.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "La Audiencia Nacional ordena a Hacienda devolver 55 millones a Shakira tras ganar el caso de residencia fiscal",
+      "body": "La Audiencia Nacional ha dictaminado que Shakira no era residente fiscal en 2011, anula la reclamación de la Agencia Tributaria y ordena devolverle 55 millones de euros. La sentencia, recurrible, se basa en sus «ausencias esporádicas» y en que permaneció menos de 183 días en España, y sienta un precedente importante en litigios de residencia.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/shakira-vencio-hacienda-residencia-fiscal-ausencias-esporadicas-relacion-gerard-pique_1_13230331.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Transparencia salarial en la UE desde el 7 de junio: las empresas deberán informar del sueldo antes de la primera entrevista",
+      "body": "A partir del 7 de junio de 2026, todas las empresas españolas deberán indicar los rangos salariales en las ofertas de empleo y antes de las entrevistas, en aplicación de una nueva directiva europea. La medida pretende acabar con la práctica de ocultar la información salarial, que genera desigualdad y pérdida de tiempo en los procesos de contratación.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/buscar-trabajo-sin-saber-sueldo-nunca-debio-ser-normal_6971881_3.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El expresidente Zapatero, investigado por organización criminal y tráfico de influencias en el rescate de Plus Ultra",
+      "body": "El juez José Luis Calama ha citado como investigado al expresidente del Gobierno José Luis Rodríguez Zapatero en el caso Plus Ultra, por delitos que incluyen organización criminal, falsedad documental y tráfico de influencias. La policía registró el martes su despacho y empresas vinculadas, en la investigación del presunto mal uso de fondos del rescate de la aerolínea Plus Ultra durante la pandemia.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/zapatero-imputado-blanqueo-capitales-caso-plus-ultra_1_13231540.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La huelga médica entra en su cuarta semana sin negociaciones y los sindicatos acusan a la ministra de mentir",
+      "body": "Las relaciones entre los sindicatos médicos y el Ministerio de Sanidad se han roto por completo, sin ningún contacto durante la última huelga de cinco días. Los sindicatos piden la dimisión de la ministra por sus «reiteradas mentiras», mientras ella les acusa de deslealtad, y el conflicto por el nuevo estatuto médico sigue sin resolverse.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/conflicto-sanidad-medicos-negociaciones-rotas-plena-huelga-solucion-vista_1_13230261.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Sigue la caída de la compraventa de viviendas: tercer mes consecutivo de descenso y la obra nueva cae un 10,2 %",
+      "body": "La compraventa de viviendas bajó un 2,2 % en marzo respecto al año anterior, el tercer descenso mensual seguido, mientras la venta de vivienda nueva se desplomó un 10,2 %. El enfriamiento llega tras un 2025 récord y se atribuye a los precios altos y a la incertidumbre económica por el conflicto con Irán.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/compraventa-viviendas-cae-tercer-mes-consecutivo-arrastrado-freno-vivienda-nueva_1_13228814.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Reforma del cálculo de las pensiones en 2026: la edad legal de jubilación llega a 66 años y 10 meses",
+      "body": "En 2026 empieza un nuevo sistema de doble cálculo para las pensiones de jubilación, con la edad legal de jubilación en 66 años y 10 meses. La reforma, explicada por el funcionario de la Seguridad Social Alfonso Muñoz, basará gradualmente las pensiones en el salario de toda la vida laboral, con excepciones para quienes tienen largas carreras de cotización.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-19/alfonso-munoz-funcionario-seguridad-social-2026-cambia-calcular-pension-jubilacion-seguridad-social-doble-calculo-1qrt_4356008/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Aranceles de EE. UU.: las exportaciones alimentarias españolas a América caen un 9,6 % en 2025",
+      "body": "Las exportaciones españolas de alimentos y bebidas a Estados Unidos cayeron un 9,6 % hasta 3.040 millones de euros en 2025, por las políticas arancelarias de Trump. Pese a ello, el sector agroalimentario registró exportaciones récord de 52.565 millones de euros, un 2,9 % más, gracias al crecimiento en otros mercados que compensó en parte la caída en EE. UU.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/aranceles-trump-golpean-campo-espanol-hunden-9-6-exportaciones-alimentarias-ano_6972158_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "🤔 ¿Crees que la victoria de Shakira por 55 millones frente a Hacienda cambia las reglas del juego para los expatriados que luchan contra las normas de residencia? Comparte tu opinión abajo.",
+  "subject": "🇪🇸 19.05.2026 — España: tu resumen de 5 minutos ☕",
+  "lang": "es",
+  "date": "2026-05-19",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-19T10:00:09.587080+00:00"
+}

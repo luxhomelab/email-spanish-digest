@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "title": "⚠️ Italia suspende Schengen con España mientras las muertes en Ceuta llegan a 67",
+      "body": "Italia ha suspendido el régimen de libre circulación de Schengen con España en sus fronteras marítimas y aéreas, con efecto desde el sábado, tras la entrada masiva de migrantes en Ceuta, que ha causado al menos 67 muertos. Unos 50.000 migrantes llegaron a la ciudad autónoma en los últimos días. España instalará boyas en el espigón de Ceuta para crear una frontera visual que permita devoluciones exprés, siguiendo una sentencia del Supremo. Giorgia Meloni anunció la suspensión de un mes por seguridad nacional, mientras Pedro Sánchez la calificó de «violación de la integridad territorial». Los viajeros entre Italia y España ahora afrontan controles adicionales.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/internacional/noticia-italia-cierra-frontera-maritima-aerea-espana-pleno-choque-crisis-ceuta-20260731184133.html"
+        },
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-numero-muertos-entrada-masiva-ceuta-asciende-67-personas-20260801095044.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/sanchez-anuncia-colocacion-boyas-espigon-ceuta-para-crear-una-barrera-visual-que-permita-repatriaciones-expres_7021358_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": true
+    },
+    {
+      "title": "El euríbor cierra julio en el 2,86 % por la inflación y encarece las hipotecas",
+      "body": "El euríbor cerró julio en el 2,855 %, su nivel más alto desde septiembre de 2024, mientras la inflación de la eurozona llegó al 2,9 % en julio, impulsada por un aumento del 10 % en los precios de la energía. La combinación hace más probable una subida del BCE en septiembre. En una hipoteca variable típica de 150.000 € a 30 años con un diferencial del 0,99 %, la cuota mensual subirá unos 65 €, es decir, 777 € al año. La inflación subyacente subió hasta el 2,5 %. El euríbor más alto grava directamente a los propietarios con préstamos a tipo variable.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/euribor-cierra-julio-2-86-nivel-alto-septiembre-2024-avanza-hipotecas-caras_1_13420632.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/inflacion-eurozona-sube-2-9-julio-abre-puerta-subida-tipos-interes-septiembre_1_13419893.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Valencia eleva la exención del impuesto sobre el patrimonio a 2 millones para 23.000 residentes ricos",
+      "body": "El Gobierno valenciano, del PP con apoyo de Vox, ha elevado la exención del impuesto sobre el patrimonio a 2 millones de euros, lo que implica que unos 8 de cada 10 ricos de la región no paguen nada. Unos 23.000 residentes adinerados quedan ahora exentos. El Gobierno autonómico también rebajó el IRPF para rentas superiores a 100.000 €, y los ahorros acumulados en sucesiones y donaciones superan los 630 millones en esta legislatura.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/comunitat-valenciana/politica/pp-vox-vuelven-bajar-impuestos-ricos-valencianos-perdonan-62-millones-patrimonio-8-10_1_13417473.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "La Seguridad Social confirma que la pensión por incapacidad permanente no se revisa al llegar a la jubilación",
+      "body": "La Seguridad Social ha confirmado que las pensiones por incapacidad permanente se convierten automáticamente en pensión de jubilación al llegar a la edad ordinaria, sin posibilidad de más revisiones médicas. El importe no cambia; por ejemplo, en una pensión total de incapacidad permanente de 1.200 € mensuales. El artículo 200.2 de la Ley General de la Seguridad Social prohíbe las revisiones a partir de ese momento. La norma da seguridad económica a los pensionistas mayores.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-08-01/seguridad-social-incapacidad-permanente_4397502/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El ICO ofrecerá 12.250 millones en préstamos para vivienda asequible desde el 1 de septiembre",
+      "body": "El ICO lanzará el 1 de septiembre préstamos por 12.250 millones de euros para construir vivienda asequible, con al menos la mitad destinada a alquiler. El programa, parte del fondo «España Crece», incluye ayudas no reembolsables para alquileres con un tope de 9 € por metro cuadrado. Solo unas diez empresas han usado antes una financiación similar del ICO, que dio lugar a 3.720 viviendas. La nueva financiación podría ampliar la oferta de vivienda asequible.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ico-activara-septiembre-prestamos-12-250-millones-construir-vivienda-asequible_1_13421261.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Los incendios queman cinco veces más superficie que el año pasado en España",
+      "body": "Los incendios forestales han destruido en la UE 457.459 hectáreas hasta el 29 de julio, un 31,8 % más que en 2025, y España es el país más afectado, con 217.609 hectáreas quemadas, cinco veces las 41.903 del año anterior. Los grandes incendios afectan al suroeste de Madrid, Ávila, Toledo, Guadalajara, Castellón y la región francesa de Gironda. Sara Aagesen, de Transición Ecológica, cita una cifra nacional de unas 180.000 hectáreas. Los incendios cada vez más intensos suponen riesgos para la salud y los bienes.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/07/31/incendios-forestales-arrasan-32-superficie-ano-2041500.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Navia, en Asturias, vivirá el eclipse total más largo de España el 12 de agosto",
+      "body": "La localidad asturiana de Navia vivirá casi 1 minuto y 50 segundos de oscuridad total durante el eclipse solar del 12 de agosto, la duración más larga de España. El eclipse parcial empieza a las 19:30, la totalidad va de 20:26 a 20:28 y el evento termina a las 21:21. Será el primer eclipse total visible desde la península Ibérica en más de un siglo. La totalidad máxima sobre la Tierra alcanza 2 minutos y 18 segundos, según el Instituto Geográfico Nacional.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/espana/2026-08-01/navia-pueblo-asturias-mas-dura-eclipse-solar-12-agosto-1qrt_4398440/"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Italia acaba de suspender Schengen con España: ¿te ha tocado alguna vez un control fronterizo repentino dentro de la UE? Cuenta tu experiencia 👇",
+  "subject": "España en 30 segundos (1 de agosto)",
+  "lang": "es",
+  "date": "2026-08-01",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-08-01T08:05:01.672421+00:00"
+}

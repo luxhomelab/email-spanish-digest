@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "⚠️ El plazo de la declaración de la Renta de 2025 vence el 30 de junio",
+      "body": "El plazo para presentar la declaración de la Renta de 2025 vence este martes, 30 de junio. La Agencia Tributaria prevé 25,25 millones de declaraciones: el 62,2 % saldrá a devolver, por un total de 13.271 millones, y el 31 % deberá pagar un total de 24.628 millones. Las citas para presentarla en persona o por teléfono se pueden solicitar hasta el 29 de junio; la opción de pago domiciliado cerró el 25 de junio. Presentarla fuera de plazo puede acarrear sanciones para todos los contribuyentes residentes fiscales.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/agencia-tributaria-culmina-proximo-martes-campana-renta_7007631_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": true
+    },
+    {
+      "title": "Las transferencias a familiares de más de 10.000 € deben declararse",
+      "body": "Según las normas fiscales españolas, las donaciones a familiares superiores a 10.000 € deben declararse a la Agencia Tributaria. Aparte, cualquier transferencia bancaria superior a 6.000 € se supervisa a efectos de prevención del blanqueo de capitales. Las sanciones por no declarar una donación empiezan en 600 € y pueden llegar al 50 % del valor de la donación. Las normas, recogidas en la Ley 10/2010, afectan a cualquiera que envíe dinero a familiares, incluidos los envíos al extranjero.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/27/cuanto-dinero-puedo-ingresar-familiar-sin-pagar-impuestos-limite-hacienda-transferencias-bancarias-1796863.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "España-Austria: primer enfrentamiento mundialista en 48 años",
+      "body": "España se enfrentará a Austria en dieciseisavos de final del Mundial 2026, organizado por EE. UU., México y Canadá. Será su primer encuentro en un Mundial desde 1978, y la primera participación de Austria en el torneo desde 1998. Es una prueba temprana y crucial para la campaña de España en la fase final.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/deportes/futbol/mundial-00639/noticia-espana-reencontrara-austria-mundial-48-anos-despues-20260628062036.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Alquilar una habitación se come más del 25 % del sueldo en las provincias más caras",
+      "body": "Un estudio de Fotocasa e Infojobs muestra que el alquiler medio mensual de una habitación en España es de 521 €, igual al 23 % del salario bruto medio (2.278 €). Son 616 € menos que alquilar un piso de 80 m², que cuesta 1.137 € y consume el 50 % de los ingresos. En las provincias más caras, incluso una habitación supera el 25 %, lo que lleva a muchos compartidores por encima del umbral recomendado del 30 % del salario.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/alquilar-una-habitacion-se-come-mas-25-sueldo-las-zonas-mas-caras-pese-salir-600-euros-mas-barato-que-un-piso-completo_7006943_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "España saca a Gibraltar de la lista de paraísos fiscales y añade a Rusia",
+      "body": "España ha retirado a Gibraltar de su lista de jurisdicciones no cooperativas tras 35 años, y a la vez ha incluido a Rusia. La orden ministerial se publicó en el BOE el sábado. El cambio altera las obligaciones de información fiscal para quienes tengan vínculos financieros con Gibraltar o Rusia, incluidos los residentes con activos, ingresos o intereses empresariales en cualquiera de los dos territorios.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/27/hacienda-saca-gibraltar-lista-paraisos-fiscales-incorpora-rusia-2032671.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Las hipotecas baratas de España, investigadas por sus productos vinculados",
+      "body": "España ofrece algunas de las hipotecas más baratas de Europa, pero la CNMC ha abierto una investigación a seis bancos del Ibex 35 por posibles prácticas anticompetitivas ligadas a productos vinculados. Las ofertas vinculadas, como exigir un seguro del hogar o planes de pensiones, están entre las más estrictas de la UE y pueden elevar mucho el coste real de un préstamo hipotecario. Los compradores extranjeros deben revisar bien estas condiciones al buscar hipoteca.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/28/espana-presume-hipotecas-baratas-pero-con-una-las-ofertas-vinculadas-mas-duras-europa-2032736.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los salarios bajos amenazan el Estado del bienestar, advierte el CES",
+      "body": "Antón Costas, presidente del Consejo Económico y Social (CES), advierte de que sin buenos salarios la presión sobre la redistribución de la renta acabará rompiendo el Estado. Describe las reformas de pensiones basadas exclusivamente en proyecciones demográficas como un «error fatal». También señala que la economía ha mostrado resiliencia, aunque el coste de la vivienda y de la vida siguen siendo problemas graves.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/anton-costas-si-no-logramos-buenos-salarios-presion-redistribucion-acabara-rompiendo_128_13334188.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Renfe cancela 320 trenes el lunes por la huelga convocada",
+      "body": "Una huelga convocada por el Sindicato Ferroviario obliga a Renfe a cancelar 98 trenes AVE y de larga distancia (circula el 73 % de los servicios) y 222 de media distancia (circula el 65 %). Los Cercanías funcionarán al 75 % en hora punta y al 50 % en el resto del día. Está prevista una segunda jornada de huelga el 15 de julio. Los viajeros deben confirmar su viaje antes de acudir a las estaciones.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/renfe-cancela-320-trenes-por-huelga-convocada-este-lunes_7007642_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Los propietarios forestales temen otra temporada severa de incendios",
+      "body": "Los propietarios de bosques privados advierten de que España corre el riesgo de repetir los devastadores incendios del año pasado porque se ha hecho poco trabajo preventivo. Cerca del 72 % del suelo forestal es privado: 20 millones de hectáreas pertenecen a 3,5 millones de personas. Los propietarios denuncian retrasos burocráticos y recursos públicos insuficientes. Describen un ciclo de financiación de emergencia seguido de abandono cuando no hay incendios, lo que deja el terreno vulnerable cada verano.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/macroeconomia/2026/06/27/6a3c017dfdddffa13e8b459c.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Nueve españoles muertos y 131 desaparecidos por los terremotos de Venezuela",
+      "body": "El Ministerio de Asuntos Exteriores confirma que nueve ciudadanos españoles han muerto y 131 siguen desaparecidos tras los devastadores terremotos de Venezuela. Las líneas consulares de emergencia siguen abiertas para las familias que buscan información. Las labores de búsqueda y rescate continúan entre los daños generalizados.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-aumentan-nueve-espanoles-fallecidos-terremotos-venezuela-20260628092819.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "¿Quién más anda con prisas para presentar la declaración de la Renta antes del plazo del martes? 💸",
+  "subject": "No ha pasado nada en España hoy. Salvo esto.",
+  "lang": "es",
+  "date": "2026-06-28",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-06-28T08:04:23.158514+00:00"
+}

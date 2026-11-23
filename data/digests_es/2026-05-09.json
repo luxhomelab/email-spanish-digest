@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "title": "Economista: 870.000 «ocupados» en España están en realidad inactivos",
+      "body": "El economista Marc Vidal ha criticado los datos de empleo: 870.000 personas registradas como fijos discontinuos están inactivas, ni trabajan ni cobran, y no se cuentan como paradas. Señala que la serie desestacionalizada muestra solo 41.753 nuevos afiliados, muy lejos de los 223.000 que celebra el Gobierno, y que solo el 16,8 % de los nuevos contratos fue indefinido a tiempo completo.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/marc-vidal-personas-espana-llevan-meses-cobrar-trabajar-no-cuentan-parados_6968224_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Hacienda envía 130.000 «cartas del miedo» a contribuyentes",
+      "body": "La Agencia Tributaria (AEAT) enviará unas 130.000 cartas preventivas durante la campaña de la Renta, popularmente conocidas como «cartas del miedo». Las cartas, en dos fases en mayo y junio, buscan que los contribuyentes corrijan voluntariamente sus errores antes de que lleguen las sanciones, que pueden oscilar entre el 50 % y el 150 % del impuesto no pagado. El año pasado, más de 45.000 personas modificaron su declaración tras recibir estos avisos.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/05/08/hacienda-enviara-unas-130-000-cartas-preventivas-los-contribuyentes-que-hayan-hecho-esto-declaracion-renta-2018548.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "La UE flexibiliza las normas aéreas para evitar cancelaciones masivas de vuelos",
+      "body": "La Comisión Europea ha adoptado directrices excepcionales para relajar temporalmente la normativa aérea y evitar cancelaciones y cierres de rutas por posibles escaseces de queroseno, derivadas de la crisis de Oriente Medio. Las directrices aclaran los derechos de compensación de los pasajeros y prohíben a las aerolíneas subir el precio de los billetes ya vendidos por el mayor coste del combustible. El doble bloqueo del estrecho de Ormuz afecta al 40 % del queroseno mundial, y la AIE advirtió de que la UE podría tener problemas de suministro a finales de mayo si el conflicto continúa.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-05-08/bruselas-flexibiliza-las-normas-del-sector-aereo-vuelos_4352137/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Posible caso de hantavirus en una mujer de Alicante",
+      "body": "Las autoridades sanitarias españolas han detectado un posible caso de hantavirus en una mujer de Alicante que viajaba en el mismo vuelo que un pasajero que murió después en Johannesburgo. La mujer está aislada y ha sido trasladada a un hospital a la espera de los resultados de la PCR. El sistema europeo de alerta temprana avisó a España de dos personas en ese vuelo con destino al país.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/mujer-aislada-espana-sintomas-hantavirus-pasar-ahora_1_13206674.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Aznar contra Vox: «¿Quién hará el trabajo de los inmigrantes si los expulsamos?»",
+      "body": "El expresidente del Gobierno José María Aznar ha criticado las propuestas de expulsión masiva de inmigrantes y sostiene que España necesita mano de obra extranjera ante el envejecimiento de la población nativa. Destaca el valor de la inmigración legal, especialmente la latinoamericana, por la lengua y la cultura compartidas, y advierte contra fomentar la llegada de personas de otras regiones por los problemas de integración que, según él, se dan en Cataluña.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/aznar-se-lanza-contra-vox-los-que-piden-expulsion-masiva-deberan-explicar-quien-hara-trabajo-los-inmigrantes_6968163_0.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    }
+  ],
+  "engagement": "💬 Si este año has recibido una «carta del miedo» de Hacienda, ¿corregirías voluntariamente tu declaración o esperarías a ver qué pasa?",
+  "subject": "🇪🇸 España — 09.05.2026",
+  "lang": "es",
+  "date": "2026-05-09",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-09T05:33:00.287429+00:00"
+}

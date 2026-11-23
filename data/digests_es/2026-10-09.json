@@ -1,0 +1,159 @@
+{
+  "items": [
+    {
+      "title": "⚠️ El decreto de vivienda entra en vigor mientras cae la oferta de alquiler",
+      "body": "El principal decreto de vivienda entró en vigor el 8 de octubre tras su publicación en el BOE. Aún necesita la convalidación de la Diputación Permanente, con las Cortes disueltas ante las elecciones del 29 de noviembre. Los anuncios de alquiler de larga duración en Idealista cayeron un 9,2 % en Madrid, un 7,5 % en Valencia y un 12,5 % en Murcia en seis días, según EsadeEcPol.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/economia/noticia-decreto-vivienda-vigor-afecta-alquiler-hoy-cambia-inquilinos-propietarios-20261008121036.html"
+        },
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-10-08/oferta-pisos-alquiler-redujo-grandes-ciudades-anuncio-decretos_4441006/"
+        }
+      ],
+      "category": "property",
+      "important": true
+    },
+    {
+      "title": "Nueva deducción por alquiler de hasta 1.163 € desde 2027",
+      "body": "El Gobierno aprobó una deducción estatal por alquiler que permitirá a los inquilinos recuperar hasta 1.163 € al año a través del IRPF desde 2027. Se aplica al alquiler pagado en 2027, no a la declaración de 2027 sobre los ingresos de 2026, y se reduce para bases imponibles superiores a 23.007,20 €, hasta desaparecer en 33.007,20 €.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/nueva-deduccion-hasta-1-163-euros-por-alquiler-quien-puede-aplicarla-cuales-son-los-limites-renta_7046425_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "El BCE evita anticipar subidas de tipos tras la última subida",
+      "body": "El BCE subió 25 puntos básicos su tipo de la facilidad de depósito, hasta el 2,5 %, en su reunión del 9 y 10 de septiembre, pero no dio pistas sobre los tipos futuros. Citó el conflicto en Oriente Medio y un shock energético que aún no se ha materializado del todo, con un IPC de agosto del 3,2 %.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/actas-bce-evitan-adelantar-movimientos_7046614_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El Ministerio de Trabajo impulsa una subida del salario mínimo por encima de la inflación",
+      "body": "El Ministerio de Trabajo abrió la comisión asesora del SMI y le pidió que recomiende una subida que al menos compense la inflación, que ya alcanza el 4,9 % interanual. El informe se pide antes de lo habitual para que el salario mínimo pueda subir antes de las elecciones del 29 de noviembre.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/yolanda-diaz-defiende-salario-minimo-suba-inflacion-empresas-repartan-riqueza_1_13572547.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El 76 % de los españoles respalda la intervención del Estado en la vivienda",
+      "body": "Una encuesta del CIS con 6.000 entrevistas revela que el 76 % es partidario de que el Estado intervenga para garantizar el acceso a la vivienda, y el 70 % apoya congelar los precios del alquiler durante dos años. También muestra que el 86 % se preocupa por la situación de la vivienda.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/espanoles-apoyan-masivamente-decretos-vivienda-76-cree-hay-intervenir-mercado_1_13572002.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Los maquinistas de Semaf convocan seis días de huelga en Ouigo",
+      "body": "El sindicato de maquinistas Semaf ha convocado seis días de huelga en Ouigo en torno a los puentes de noviembre y diciembre, con paros de 24 horas el 30 de octubre y el 2 de noviembre. La medida afecta a viajeros de alta velocidad en 15 provincias.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/maquinistas-semaf-convocan-seis-dias-huelga-ouigo-durante-puentes-noviembre-diciembre_1_13571932.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Tagliafico se suma a Messi y elogia el juego de España en la final del Mundial",
+      "body": "Nicolás Tagliafico, de Argentina, afirmó que España superó a Argentina en la final del Mundial 2026 y que fue el mejor equipo. Apuntó al cansancio físico y mental de Argentina, en la línea de las palabras de Lionel Messi, que desmintió las teorías conspirativas.",
+      "sources": [
+        {
+          "name": "Marca",
+          "url": "https://www.marca.com/futbol/argentina/2026/10/08/tagliafico-une-messi-espana-paso-encima-jugaron-mejor-nosotros.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Cambios en las cuentas bancarias básicas gratuitas en España",
+      "body": "Un nuevo real decreto cambia la forma en que los clientes acreditan que tienen derecho a una cuenta de pago básica gratuita si se encuentran en situación de vulnerabilidad económica o en riesgo de exclusión financiera. Los umbrales de ingresos siguen ligados al IPREM, y ningún miembro de la familia puede ser propietario de otro inmueble que no sea la vivienda habitual.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/cambios-cuentas-basicas-gratuitas-que-son-quienes-pueden-pedirlas_7046626_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "España facilita a las empresas cotizar en Wall Street",
+      "body": "Un real decreto publicado en el BOE permite a las empresas españolas cotizar en bolsas de fuera de la UE, como las de Nueva York o Londres, sin trasladar su sede al extranjero. Con esta norma, Ferrovial habría podido mantener su domicilio social en España.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/gobierno-facilita-empresas-espanolas-coticen-wall-street_7046678_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Bizum cumple 10 años con 310.000 millones de euros transferidos",
+      "body": "Bizum cumple 10 años con 32,5 millones de usuarios y 40 pagos por segundo en España. Alrededor del 70 % de los adultos lo usa, y el pago medio entre particulares es de 55 €.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bizum-cumple-10-anos-40-pagos-segundo-espana-han-transferido-310-000-millones-euros_1_13571317.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Decenas de miles de personas protestan en toda España por el desahucio de Maricarmen",
+      "body": "Decenas de miles de personas se manifestaron en Madrid y otras ciudades españolas en homenaje a Maricarmen, la mujer de 87 años desahuciada el 23 de septiembre, que falleció el martes. En Madrid se reunieron 20.000 personas, según la Delegación del Gobierno.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/fotos-espana-sale-calle-maricarmen-imagenes_3_13573853.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Las infecciones respiratorias siguen en nivel epidémico por segunda semana",
+      "body": "Las infecciones respiratorias se mantuvieron por encima del umbral epidémico por segunda semana, con una tasa de 493,8 casos por cada 100.000 habitantes. La bronquiolitis aumenta entre los menores de cinco años, aunque las hospitalizaciones siguen bajas, con 0,2 por cada 100.000 gracias a la inmunización.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/las-infecciones-respiratorias-encadenan-su-segunda-semana-niveles-epidemicos-sube-bronquiolitis-entre-los-menores-5-anos_7046523_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "El BCE está en el 2,5 %. ¿Cuál es tu hipoteca? A) Fija B) Variable C) Sin hipoteca 🤔",
+  "subject": "Día tranquilo en España. Luego esto.",
+  "lang": "es",
+  "date": "2026-10-09",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-10-09T06:05:10.395364+00:00"
+}

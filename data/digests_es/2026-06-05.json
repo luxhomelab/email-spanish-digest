@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "title": "Los embargos de viviendas por impago se disparan un 34,5 % con la subida del euríbor",
+      "body": "Los procedimientos de ejecución hipotecaria por impago aumentaron un 34,5 % en el primer trimestre de 2026 respecto al mismo periodo del año anterior, hasta 4.607 procedimientos, de los cuales el 72,2 % correspondía a viviendas habituales. Más de la mitad de estas ejecuciones corresponden a préstamos firmados antes de 2008, lo que arrastra el legado de la burbuja inmobiliaria agravado por las subidas del euríbor y la pérdida de poder adquisitivo. Es el mayor aumento trimestral desde 2014, excluido el periodo de la pandemia.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/los-embargos-casas-por-impago-hipotecas-crecieron-un-34-5-hasta-marzo-72-fueron-viviendas-habituales_6979000_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Hacienda recuerda que hay que declarar las criptomonedas aunque se cambien por otras",
+      "body": "La Agencia Tributaria ha incluido 1,24 millones de avisos en las declaraciones de este año a inversores en criptomonedas detectados. Las plataformas establecidas en España deben informar de saldos y operaciones, pero también las plataformas extranjeras y las basadas en blockchain deben declararse. Los asesores fiscales advierten de que no declarar puede acarrear inspecciones futuras, sobre todo para quienes deben presentar el modelo 721.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/05/cuando-declarar-criptomonedas-renta-tambien-si-se-cambian-por-otras-2026183.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Nueva ley de transparencia salarial: las empresas deberán publicar el sueldo en las ofertas de empleo",
+      "body": "La nueva Ley de Transparencia Retributiva obliga a las empresas a publicar información salarial en las ofertas de empleo, a permitir que los empleados accedan a los datos de retribución por nivel y a corregir las diferencias salariales injustificadas superiores al 5 %. Las empresas también deberán elaborar informes detallados sobre la brecha de género y aplicar sistemas objetivos de valoración de puestos. La norma busca reforzar la equidad interna y la confianza en las organizaciones.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-06-04/transparencia-salarial-igualdad-empresas-normativa-1hms-1svm_4367385/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El Tribunal de Justicia de la UE da la razón a una madre que se enfrenta a la expulsión de Países Bajos por un permiso español",
+      "body": "El Tribunal de Justicia de la UE ha dictaminado que una madre marroquí de un hijo neerlandés con discapacidad debe obtener un permiso de residencia derivado en Países Bajos, pese a tener residencia en España. El tribunal subraya la necesidad de respetar la vida familiar y el riesgo de separación, ya que el niño ha creado vínculos con ambos progenitores. La mujer, identificada como V, vivió y trabajó en España entre 1999 y 2014 antes de trasladarse a Países Bajos.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/pelea-v-madre-hijo-discapacitado-paises-bajos-quiere-expulsar-permiso-residencia-espana_1_13274528.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Da de alta al primer paciente español con hantavirus tras su recuperación",
+      "body": "El primer pasajero español del MV Hondius que dio positivo en hantavirus al llegar a Madrid el 11 de mayo ha recibido el alta tras dos pruebas PCR negativas y tres días sin síntomas. El otro paciente positivo tiene síntomas leves y sigue aislado, mientras que 12 contactos continuarán en cuarentena en su domicilio a partir del fin de semana. Sanidad ha actualizado el protocolo de gestión.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/primer-caso-hantavirus-espana-supera-enfermedad-recibido-alta_1_13276555.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Bruselas abre un nuevo expediente a España por la OPA de BBVA sobre Sabadell",
+      "body": "La Comisión Europea ha enviado una nueva carta al Gobierno español, en la que considera incompatibles con las normas europeas de fusiones bancarias las actuaciones que obstaculizaron la OPA hostil de BBVA sobre Sabadell. La Comisión sostiene que solo el BCE y la CNMC debían pronunciarse, y no el Consejo de Ministros, que impuso condiciones adicionales. La operación fracasó porque solo el 25 % de los accionistas de Sabadell la respaldó.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bruselas-abre-nuevo-expediente-espana-incumplir-normativa-bancaria-opa-bbva-sabadell_1_13274817.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "España se libra de la caída del tráfico aéreo europeo pese a la guerra de Irán",
+      "body": "Mientras los aeropuertos europeos registraron una caída del 0,7 % en el tráfico de pasajeros en abril, la primera desde la recuperación posterior a la pandemia, España se libró de ese descenso provocado por la guerra de Irán. Los aeropuertos españoles mantuvieron sus niveles de tráfico, aunque los datos continentales marcan una desaceleración histórica.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/05/turismo-espana-libra-caida-trafico-aereo-europeo-guerra-iran-2026369.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Un mes de coalición PP-Vox en Aragón: los mensajes xenófobos de la extrema derecha copan la agenda",
+      "body": "El gobierno de coalición entre PP y Vox en Aragón ha visto cómo el discurso de extrema derecha domina la agenda pública: Vox impulsa mensajes contra la inmigración y el PP parece desbordado por el discurso de su socio. Al cumplirse el primer mes, la principal oposición proviene de la Delegación del Gobierno y no de los rivales políticos.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/aragon/politica/mes-coalicion-pp-vox-aragon-extrema-derecha-avasalla-azcon-avalancha-mensajes-xenofobos_1_13274743.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Muere un casco azul serbio y dos militares españoles resultan heridos en un ataque con morteros en el Líbano",
+      "body": "Un casco azul serbio de la ONU ha muerto y dos militares españoles han sufrido heridas leves tras la caída de morteros sobre su posición cerca de Marjayoun, en el sur del Líbano. El ataque, cuyos autores no han sido identificados, se produjo en medio de enfrentamientos entre fuerzas israelíes y Hezbolá. La misión FINUL ha abierto una investigación.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/internacional/muere-casco-azul-serbio-espanoles-resultan-heridos-caida-morteros-posicion-libano_1_13274609.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El PP acusa al Gobierno de «delincuencia de Estado» por el caso Leire y eleva la presión sobre sus socios",
+      "body": "El Partido Popular ha intensificado la presión sobre el Gobierno, al considerar que la presunta red de espionaje dentro del PSOE constituye «delincuencia de Estado», y pide la dimisión del presidente Sánchez. La portavoz del PP, Alma Ezcurra, sostiene que todas las investigaciones por corrupción convergen en Sánchez. El partido advirtió a sus socios de Gobierno de que «con la mafia no hay lealtad que valga».",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/pp-ve-delincuencia-estado-caso-leire-eleva-presion-sobre-los-socios-con-mafia-no-hay-lealtad-que-valga_6979175_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Los embargos de viviendas por impago se disparan un 34,5 %: ¿es el inicio de una nueva crisis de vivienda en España? ¿Qué opinas?",
+  "subject": "🇪🇸 España: resumen de 5 minutos ☕ 05.06.2026",
+  "lang": "es",
+  "date": "2026-06-05",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-06-05T05:32:59.225450+00:00"
+}

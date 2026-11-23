@@ -1,0 +1,183 @@
+{
+  "items": [
+    {
+      "title": "Sánchez convoca elecciones generales anticipadas para el 29 de noviembre",
+      "body": "El presidente Pedro Sánchez anunció elecciones generales anticipadas para el 29 de noviembre y presenta la votación como una elección entre una «ola ultraderechista» y un Gobierno progresista. El anuncio deja en suspenso la legislación de vivienda, fiscal y migratoria durante la campaña.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-sanchez-anuncia-elecciones-anticipadas-29-noviembre-20261005090901.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La convocatoria deja en el aire las subidas de pensiones y salarios",
+      "body": "La revalorización de las pensiones, la subida pactada para los funcionarios y el incremento del IMV dependen ahora de un decreto del Gobierno, lo que deja en espera a más de 18 millones de personas. La revalorización afecta a 10,8 millones de pensionistas y a 2,7 millones de perceptores del IMV. Fuentes del Ministerio de Trabajo aseguran que el proceso de subida del SMI seguirá adelante.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/adelanto-electoral-deja-aire-subida-las-pensiones-mejora-salarial-los-funcionarios-pero-smi-seguira-adelante_7045008_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Propietarios e inquilinos cruzan burofaxes por los decretos de vivienda",
+      "body": "El Congreso rechazó los dos decretos de vivienda del Gobierno, y las elecciones anticipadas han reavivado la incertidumbre en las operaciones de alquiler. El Ejecutivo intentará reactivar ambos decretos a través de la Diputación Permanente; se espera que al menos el primero salga adelante, mientras que el segundo sería rechazado de nuevo.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/10/05/6ac384dce4d4d8f6438b45a6.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La electricidad supera los 200 €/MWh por primera vez desde 2022",
+      "body": "El mercado mayorista de electricidad promediará 201,99 €/MWh el martes, un 2,6 % más que el lunes. Es el promedio diario más alto desde el 5 de diciembre de 2022, impulsado por una mayor demanda y un gas más caro. Los hogares con tarifas variables podrían ver facturas más altas.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-10-05/precio-electricidad-mercado-mayorista-1hms_4438824/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Fijadas las fechas de la factura electrónica; Verifactu se retrasa a octubre de 2028",
+      "body": "Hacienda ha publicado la orden del BOE que fija la factura electrónica obligatoria entre empresas: las empresas que facturen más de 8 millones de euros deberán cumplirla desde el 6 de octubre de 2027, y los autónomos y las empresas más pequeñas desde el 6 de octubre de 2028. El software de facturación Verifactu se ha retrasado a octubre de 2028 para alinearse con el calendario de la factura electrónica.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/factura-electronica-obligatoria-autonomos-empresas-hacienda-activa-calendario-fechas_7044954_0.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/hacienda-retrasa-por-tercera-vez-lanzamiento-verifactu-pospone-un-ano-su-puesta-marcha_7045017_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Entran en vigor las nuevas normas de transparencia laboral",
+      "body": "Las empresas deben dar ahora más detalles a los trabajadores sobre salarios, horarios, periodos de prueba y cualquier algoritmo o inteligencia artificial que les afecte. Los trabajadores pueden solicitar la información, y las empresas deben responder en 30 días hábiles. Los nuevos contratos deben incluir estos detalles adicionales.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/nueva-informacion-deben-revelar-empresas-trabajadores-lunes_1_13547753.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El Nobel de Medicina 2026 premia la optogenética",
+      "body": "El Instituto Karolinska concedió el Premio Nobel de Fisiología o Medicina a Karl Deisseroth, Peter Hegemann y Georg Nagel por descubrimientos sobre canales iónicos activados por la luz y la optogenética. El método permite a los investigadores controlar las señales nerviosas con luz y se estudia para restaurar la visión.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/sociedad/premio-nobel-medicina-2026-creadores-optogenetica_1_13561670.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Los votantes de la ley de nietos se enfrentan a la incertidumbre antes del 29 de noviembre",
+      "body": "El Supremo ha suspendido provisionalmente el voto de los españoles nacionalizados por la ley de nietos que no han acreditado ante los consulados su descendencia de exiliados. La medida afecta al censo electoral del CERA para las elecciones generales del 29 de noviembre.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/quien-puede-votar-las-elecciones-generales-que-pasa-con-los-nacionalizados-por-ley-nietos-los-saharauis_7044997_0.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "CCOO y UGT se suman al Sindicato de Inquilinas para una huelga general de otoño",
+      "body": "CCOO y UGT han anunciado que se sumarán al Sindicato de Inquilinas para convocar una huelga general de 24 horas este otoño por la vivienda y los salarios. La fecha definitiva se decidirá con las organizaciones sociales, y el paro paralizaría el país durante la campaña electoral.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-10-05/ccoo-y-ugt-se-unen-al-sindicato-de-inquilinas-para-convocar-una-huelga-general-en-otono_4438914/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "España acude a las urnas con récords macro y una inflación cercana al 5 %",
+      "body": "Una recaudación fiscal récord, un PIB en crecimiento y cifras históricas de empleo conviven con una inflación cercana al 5 % y con la vivienda como principal preocupación de los españoles. La economía crece, pero la subida de precios y de los alquileres sigue presionando a los hogares.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/10/06/espana-llega-las-urnas-con-records-macro-bolsillo-bajo-presion-2057290.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Un juez anula por abusivas las cláusulas de renta de un alquiler social de la Sareb",
+      "body": "Un juez de Madrid dio la razón a la PAH y a la inquilina Giselle, y anuló siete cláusulas de un contrato de alquiler social de la Sareb que permitían subir la renta de forma unilateral. Su alquiler subió un 630 %, de 110 € a 693 €. La sentencia podría sentar precedente para unos 10.000 contratos similares.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/juez-da-razon-giselle-clausulas-alquiler-social-sareb-son-abusivas_1_13563697.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Trece detenidos tras la manifestación por la vivienda en Barcelona",
+      "body": "Los Mossos d'Esquadra detuvieron a 13 personas, entre ellas un menor, y 30 agentes sufrieron heridas leves tras los disturbios de una protesta por la vivienda en Barcelona. La Guardia Urbana cifró la asistencia en unas 20.000 personas, mientras los organizadores hablaron de 120.000.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/cataluna/2026/10/05/6ac3c6b7e4d4d8f67a8b45af.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "⚠️ Dos desaparecidos en la tormenta de Cataluña; se estudia declarar zona catastrófica",
+      "body": "Dos personas están desaparecidas y otras dos han muerto tras las lluvias torrenciales en Cataluña. Los alcaldes del Vallès Oriental y de la Selva han pedido al Gobierno que declare zona catastrófica; Endesa informa de 10.259 clientes sin luz, y el aeropuerto de Barcelona-El Prat ha registrado 29 vuelos cancelados.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/10/05/dos-desaparecidos-por-temporal-cataluna-que-puede-ser-declarada-zona-catastrofica-2057351.html"
+        }
+      ],
+      "category": "events",
+      "important": true
+    },
+    {
+      "title": "Semana clave para la decisión de la huelga de médicos",
+      "body": "La convocatoria de elecciones anticipadas abre un nuevo escenario para la huelga indefinida de médicos prevista desde el 28 de octubre contra el Estatuto Marco. Los técnicos sanitarios suspendieron sus paros del 13 de octubre, mientras las organizaciones médicas deciden esta semana si mantienen la huelga.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/aragon/2026/10/05/semana-clave-para-decidir-si-se-mantiene-huelga-medicos-espana-tras-adelanto-electoral-con-las-demoras-alza-aragon-2057130.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    }
+  ],
+  "engagement": "Las nuevas normas de transparencia laboral ya están en vigor. ¿Pedirás a tu empresa detalles sobre los algoritmos? A) Sí B) No C) Quizá 💬",
+  "subject": "La actualización de España que de verdad necesitas",
+  "lang": "es",
+  "date": "2026-10-06",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-10-06T06:04:11.715001+00:00"
+}

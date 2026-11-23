@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "title": "España alcanza un récord de 22,3 millones de trabajadores mientras la regularización destapa 20.000 empleos sumergidos",
+      "body": "España alcanzó en mayo un máximo histórico de 22,3 millones de afiliados a la Seguridad Social, con 232.000 empleos más, el segundo mejor mayo de la serie; los extranjeros suponen la mitad del crecimiento. Paralelamente, la regularización masiva de inmigrantes ha aflorado ya 20.000 empleos antes no declarados («empleos en b»), según Funcas, a la espera del plazo de solicitud que termina el 30 de junio.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/06/03/6a1ece12e85ece7a028b459f.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/espana-alcanza-nuevo-maximo-historico-22-3-millones-trabajadores-sumar-232-000-afiliados-mayo_1_13267591.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "La inflación de la eurozona sube al 3,2 % en mayo y aumenta la presión para subir los tipos del BCE",
+      "body": "La inflación de la eurozona llegó al 3,2 % en mayo, la cifra más alta desde septiembre de 2023, con una subida del 10,9 % en los precios de la energía por el conflicto en Oriente Medio. El BCE se reúne el 11 de junio para decidir sobre los tipos, con una presión creciente para subirlos y combatir las subidas persistentes de precios.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/inflacion-eurozona-eleva-3-2-mayo-da-alas-subida-tipos-bce_1_13268208.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Bruselas exige a nueve países eliminar los controles fronterizos internos en plena ola antiinmigración",
+      "body": "La Comisión Europea ha pedido formalmente a nueve países de la UE, entre ellos Francia, Alemania e Italia, que levanten los controles fronterizos internos que socavan la libre circulación del espacio Schengen. La petición llega cuando España avanza en la regularización de 500.000 inmigrantes indocumentados, que líderes de extrema derecha han calificado de «invasión».",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/bruselas-exige-paises-eliminacion-controles-internos-europa-fiebre-inmigracion_1_13268388.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El Gobierno transferirá 800 millones a las comunidades en julio para poner en marcha el plan de vivienda",
+      "body": "El Ministerio de Vivienda liberará en julio una primera partida de 800 millones de euros para las comunidades autónomas, para ejecutar el Plan Estatal de Vivienda 2026-2030, dotado con 7.000 millones en total. Andalucía, Madrid, Cataluña y la Comunidad Valenciana son las que más fondos reciben. El plan pretende ampliar la vivienda pública, impulsar la rehabilitación y facilitar el acceso a la vivienda a los colectivos vulnerables.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/gobierno-transferira-julio-800-millones-las-comunidades-para-empezar-ejecutar-con-inmediatez-plan-estatal-vivienda_6978107_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "La Renta vence el 30 de junio: no te pases del plazo",
+      "body": "El plazo para presentar la declaración de la Renta de 2025 es el 30 de junio de 2026. Quienes no la presenten a tiempo se enfrentan a sanciones. La campaña empezó el 8 de abril y, desde el 29 de abril, también está disponible la presentación por teléfono. La declaración puede presentarse en línea en la web de la Agencia Tributaria.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/06/02/confirmado-hacienda-hasta-que-dia-puede-hacer-declaracion-renta-2026-1493338.html"
+        }
+      ],
+      "category": "taxes",
+      "important": true
+    },
+    {
+      "title": "El Consejo de Ministros aprueba el nuevo estatuto sanitario pese a la huelga de médicos",
+      "body": "El Consejo de Ministros ha aprobado el nuevo Estatuto Marco de los profesionales sanitarios, que actualiza la ley de 2003, pese a las huelgas intermitentes de los médicos desde febrero. Los sindicatos de enfermería apoyan la reforma, pero las asociaciones médicas amenazan con intensificar el conflicto con una huelga general después del verano.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/consejo-ministros-da-luz-verde-estatuto-marco-pese-conflicto-abierto-con-los-medicos-que-mantienen-huelga_6978076_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Yolanda Díaz recomienda teletrabajar durante la visita del Papa a Madrid, Barcelona y Canarias",
+      "body": "El Ministerio de Trabajo recomienda el teletrabajo del 6 al 12 de junio en las zonas afectadas por la visita del papa León XIV a Madrid, Barcelona, Gran Canaria y Tenerife. La recomendación busca reducir los desplazamientos innecesarios y garantizar la seguridad de los trabajadores durante las alteraciones de movilidad previstas.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/yolanda-diaz-recomienda-teletrabajar-durante-visita-papa-madrid-canarias-cataluna_6978096_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "La enfermedad de Lyme aumenta en España: un médico explica cómo prevenirla",
+      "body": "Los casos de enfermedad de Lyme aumentan de forma constante en España, pero la conciencia pública sigue siendo baja. El doctor José Barberán, jefe de Medicina Interna del Hospital HM Montepríncipe, explica cómo evitar las picaduras de garrapata y reconocer los síntomas iniciales para evitar un diagnóstico tardío, que a menudo se produce cuando la infección ya ha progresado.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/consumoclaro/medico-explica-protgerse-enfermedad-lyme-transmiten-garrapatas-crece-espana-xp_1_13265090.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Las diez hipotecas a tipo fijo más baratas de junio de 2026 y qué vigilar",
+      "body": "Las hipotecas a tipo fijo vuelven a ganar terreno con la subida de los tipos, al ofrecer previsibilidad en las cuotas. Este artículo recoge las diez opciones a tipo fijo más baratas disponibles actualmente, junto con las condiciones habituales que exigen los bancos, como domiciliar la nómina, contratar un seguro o aportar a fondos de inversión para obtener los mejores tipos.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/ahorro-y-consumo/2026/06/02/6a1ecb2ce85ece45748b45a6.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    }
+  ],
+  "engagement": "El programa de regularización ya ha sacado a la luz 20.000 empleos sumergidos. ¿Crees que conseguirá que más trabajadores salgan de la economía sumergida? Cuéntanos tu opinión.",
+  "subject": "🇪🇸 España: lo que te has perdido 👀 03.06.2026",
+  "lang": "es",
+  "date": "2026-06-03",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-06-03T05:31:40.864842+00:00"
+}

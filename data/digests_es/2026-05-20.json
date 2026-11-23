@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "title": "El expresidente Zapatero, acusado de liderar una red de corrupción",
+      "body": "Un juez de la Audiencia Nacional ha situado al expresidente del Gobierno José Luis Rodríguez Zapatero al frente de una supuesta estructura estable y jerárquica de tráfico de influencias, lo que supone la primera vez que un expresidente es investigado por corrupción en democracia. El caso gira en torno al rescate de Plus Ultra.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/espana/2026/05/20/6a0c97f121efa03a598b456e.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Las donaciones se disparan un 134 % mientras siete comunidades reducen impuestos en plena crisis de vivienda",
+      "body": "España registró 225.662 donaciones en 2025, un aumento del 134 % en una década, impulsado por las rebajas fiscales de siete comunidades autónomas, que han introducido bonificaciones del 99 % o más para las donaciones directas a familiares. El auge es especialmente llamativo en Andalucía (+884 %), donde las familias intentan ayudar a los jóvenes a comprar vivienda en plena crisis.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/las-rebajas-fiscales-disparan-las-donaciones-plena-crisis-vivienda-7-comunidades-han-vaciado-impuesto-desde-2013_6972479_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "El Supremo, dividido, permite que los familiares cercanos impugnen eutanasias",
+      "body": "Por 23 votos a 9, el Tribunal Supremo ha dictaminado que los familiares con un vínculo especialmente estrecho pueden impugnar judicialmente una eutanasia aprobada por los médicos, una vía que ya han utilizado grupos ultracatólicos para retrasar muertes. La decisión fue dividida.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/supremo-dividido-abre-puerta-familiares-vinculacion-estrecha-impugnen-eutanasias-avaladas-medicos_1_13229450.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Se amplía la alerta sanitaria por listeria: más marcas de queso fresco afectadas",
+      "body": "La Agencia Española de Seguridad Alimentaria ha ampliado la alerta por listeria en queso fresco de vaca tras identificar nuevos distribuidores. Los lotes afectados, incluida la marca Goya, se han distribuido por gran parte de España. Se pide a los consumidores que no consuman el producto.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/consumoclaro/ampliada-alerta-sanitaria-presencia-listeria-queso-fresco-vaca-procedente-espana_1_13231637.html"
+        }
+      ],
+      "category": "health",
+      "important": true
+    },
+    {
+      "title": "La UE cierra el acuerdo comercial con EE. UU. mientras las exportaciones alimentarias españolas caen un 9,6 %",
+      "body": "La UE ha cerrado un acuerdo comercial con Estados Unidos a primera hora del miércoles, que amplía la protección hasta 2029 con nuevas salvaguardas, después de que Trump amenazara con aranceles del 25 % a los coches europeos. Mientras tanto, el efecto de la incertidumbre arancelaria ya es visible: las exportaciones españolas de alimentos y bebidas a EE. UU. cayeron un 9,6 %, hasta 3.041,7 millones de euros, aunque las exportaciones alimentarias totales alcanzaron un récord de 52.565 millones.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/ue-cerrar-acuerdo-comercial-eeuu-amenazas-trump_1_13234749.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/aranceles-trump-golpean-campo-espanol-hunden-9-6-exportaciones-alimentarias-ano_6972158_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Un mes de regularización de migrantes: 120.000 solicitudes, pero el Supremo podría vetarla",
+      "body": "El procedimiento extraordinario de regularización de migrantes indocumentados ha recibido 120.000 solicitudes en la primera semana de este proceso de un mes, que termina el 30 de junio. Sin embargo, el Tribunal Supremo escuchará el viernes una petición de la Comunidad de Madrid para suspender el decreto, alegando la presión sobre los servicios públicos.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/desalambre/regularizacion-migrantes-cumple-mes-cientos-miles-peticiones-temor-vista-supremo_1_13234409.html"
+        }
+      ],
+      "category": "migration",
+      "important": false
+    },
+    {
+      "title": "Guía de ayudas al alquiler 2026: hasta 350 € al mes para inquilinos en zonas tensionadas",
+      "body": "El Bono Joven se mantiene en 250 € al mes durante dos años, con umbrales de renta actualizados (máximo de 25.200 €, y hasta 33.600 € en algunas comunidades), y un nuevo complemento de hasta 100 € más si el alquiler está en una zona tensionada y supera el 30 % del salario medio. Varias comunidades autónomas ya han activado este complemento.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/guia-ayudas-alquiler-2026-como-aprovechar-nuevos-incentivos-zona-tensionada_6966471_0.html"
+        }
+      ],
+      "category": "housing",
+      "important": false
+    },
+    {
+      "title": "Primer protocolo para que las empresas apoyen a los trabajadores con cáncer",
+      "body": "La Asociación Española Contra el Cáncer (AECC) ha lanzado el primer protocolo que guía a las empresas para apoyar a sus empleados desde el diagnóstico hasta la vuelta al trabajo. Los testimonios destacan los retos ocultos de la reincorporación: «creen que eres el mismo, pero no lo eres».",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/primer-protocolo-empresas-trabajadores-cancer-crece-pelo-creen-no_1_13233351.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El coste de la construcción sube un 15 % por el conflicto en Oriente Medio",
+      "body": "Nueve de cada diez constructoras encuestadas afirman que la guerra en Oriente Medio ha afectado de forma significativa a su negocio: el 60 % de las empresas ve subir más del 20 % el precio del combustible, y los costes energéticos suben hasta un 20 %. El sector advierte de que la viabilidad está en riesgo si la situación se mantiene.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/constructoras-espanolas-calculan-mas-costes-guerra-oriente-proximo_6972297_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    }
+  ],
+  "engagement": "Con las donaciones disparadas un 134 %, ¿te ha ayudado tu familia a comprar una vivienda en España? Cuenta tu historia. 👇",
+  "subject": "🇪🇸 España: tu resumen de 5 minutos ☕ 20.05.2026",
+  "lang": "es",
+  "date": "2026-05-20",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-05-20T06:11:23.591237+00:00"
+}

@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "title": "Solo dos barrios de Madrid y Barcelona son asequibles para las rentas medias",
+      "body": "Un estudio de Tecnocasa y la UPF concluye que solo dos barrios en cada una de las grandes ciudades españolas siguen al alcance de un hogar de renta media que pide una hipoteca estándar. En todo el país, el 30 % de las personas de municipios de más de 10.000 habitantes no puede comprar con préstamo. En Palma, Madrid, San Sebastián y Barcelona, el 75 % de la población vive en zonas donde la vivienda es inasequible. Los barrios asequibles que quedan son periféricos y pequeños, lo que refleja una crisis que reduce las opciones de quien depende de una hipoteca.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/las-dificultades-para-comprar-un-piso-se-extienden-madrid-barcelona-dejan-solo-dos-barrios-alcance-las-rentas-medias_7012326_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Trump amenaza con cortar todo el comercio con España y el Ibex cae un 3 %",
+      "body": "El presidente Trump ha dado por terminado el alto el fuego con Irán, ha llamado «basura» al país y ha amenazado con romper todas las relaciones comerciales con España, a la que califica de «aliado horrible» y «causa perdida». El Ibex 35 cayó un 3 %, hasta 19.047 puntos, mientras el petróleo subió un 5 %. Están en juego casi 40.000 millones de euros de exportaciones españolas a EE. UU.; el comercio bilateral de bienes y servicios sumó 75.161 millones en 2025. El choque comercial añade volatilidad a los mercados y nubla las perspectivas económicas de España.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/bolsas-desploman-petroleo-escala-5-despues-trump-anuncie-alto-fuego-iran_1_13364462.html"
+        },
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/calenton-trump-amenaza-40-000-millones-exportaciones-estados-unidos_7012051_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El Supremo rechaza llevar la regularización de migrantes al tribunal europeo",
+      "body": "El Tribunal Supremo ha rechazado elevar al Tribunal de Justicia de la UE la regularización extraordinaria de migrantes, al considerar que en esta fase no es pertinente. Tampoco ha suspendido la medida, que sigue en vigor. Tres magistrados conservadores habían cuestionado la compatibilidad del programa con el Derecho europeo, pero la sala en pleno votó en contra de enviar el asunto a Europa. La decisión deja abierta la puerta a que muchos residentes extranjeros indocumentados obtengan un estatus legal.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/tribunal-supremo-rechaza-llevar-regularizacion-migrantes-justicia-europea_1_13365277.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "El Supremo confirma que las devoluciones «en caliente» de migrantes en el mar son ilegales",
+      "body": "El Tribunal Supremo ha confirmado que las devoluciones inmediatas de migrantes interceptados en el mar, las llamadas «devoluciones en caliente», son ilegales según la legislación española. La sentencia se refiere a un hombre argelino interceptado cuando intentaba llegar nadando a Ceuta el 14 de noviembre de 2024. El tribunal insiste en que las devoluciones deben seguir el procedimiento del artículo 58.3 de la Ley de Extranjería, que garantiza determinados derechos. La decisión refuerza las garantías jurídicas de los migrantes y sienta un precedente para el control fronterizo.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/supremo-confirma-que-es-ilegal-devolver-caliente-inmigrantes-llegados-por-mar_7012261_0.html"
+        }
+      ],
+      "category": "visa",
+      "important": false
+    },
+    {
+      "title": "El FMI mantiene el crecimiento de España en el 2,1 % y recorta el de la eurozona por la guerra de Irán",
+      "body": "El Fondo Monetario Internacional mantiene su previsión de crecimiento del PIB de España en el 2,1 % para 2026 y el 1,8 % para 2027, mientras recorta en 0,2 puntos la de la eurozona, hasta el 0,9 %, por el conflicto con Irán. La inflación mundial llegaría al 4,7 % en 2026 antes de moderarse al 3,9 % en 2027. La fortaleza relativa de España respalda la estabilidad del empleo, aunque la subida de precios globales podría encarecer el coste de vida de los residentes.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/fmi-mantiene-2-1-prevision-crecimiento-espana-recorta-eurozona-guerra-iran_1_13365165.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "España inicia el proceso para el primer pago de 800 millones del Plan Estatal de Vivienda",
+      "body": "El Ministerio de Vivienda ha iniciado los trámites para transferir a las comunidades autónomas los primeros 800 millones de euros del Plan Estatal de Vivienda 2026-2030. Para recibir los fondos, las comunidades deben aceptar condiciones que incluyen proteger de la especulación, de forma permanente, la vivienda social de nueva construcción. Madrid y Extremadura han recurrido las condiciones en los tribunales. El plan pretende movilizar 9.000 millones de inversión, y las comunidades cubrirán el 40 % de los costes.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/vivienda-arranca-proceso-primer-pago-800-millones-plan-estatal-comunidades_1_13366621.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Las bajas laborales en España se disparan un 84 % desde 2017 y cuestan 33.000 millones",
+      "body": "Los episodios de incapacidad temporal se dispararon un 84 % entre 2017 y 2024, de 4,7 a 8,6 millones de casos, según un estudio de AIReF. La incidencia por cada 1.000 trabajadores subió un 60 %, y la duración media de las bajas aumentó un 15 %, hasta 45,9 días. Las ausencias de más de un año se triplicaron, mientras que las bajas de menos de tres días crecieron un 141 %. El coste total se estima en 33.000 millones de euros, lo que alimenta el debate sobre posibles reformas de la política laboral.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/los-numeros-detras-epidemia-bajas-laborales-33-000-millones-coste-un-84-mas-episodios-desde-2017_7012104_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Los incendios confinan a 16.900 personas en Cataluña durante la ola de calor",
+      "body": "Varios incendios en Cataluña han obligado esta semana a confinar a 16.900 vecinos mientras una ola de calor recorre la región. Los fuegos de Sentmenat, Navarcles, Pla de Manlleu y Gavà están estabilizados tras quemar cientos de hectáreas. En la vecina Aragón, el incendio de Castillonroy ha motivado la activación de la Unidad Militar de Emergencias. Las autoridades siguen en alerta mientras persisten las condiciones de calor y sequedad.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/incendios-espana-directo-amplio-dispositivo-trabaja-para-mantener-perimetro-incendio-castellon_7010836_6.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Con solo dos barrios asequibles en Madrid y Barcelona, ¿estás renunciando a comprar en una gran ciudad? 💬",
+  "subject": "La actualización de España de hoy",
+  "lang": "es",
+  "date": "2026-07-09",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-07-09T06:04:06.100599+00:00"
+}

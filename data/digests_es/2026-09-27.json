@@ -1,0 +1,135 @@
+{
+  "items": [
+    {
+      "title": "El decreto de vivienda se votaría el martes tras el desahucio de Maricarmen",
+      "body": "El Gobierno prevé aprobar un decreto de vivienda el martes, tras el desahucio de Maricarmen, de 87 años, que provocó protestas. Junts y Podemos habían bloqueado un acuerdo: Junts pide ventajas fiscales para los propietarios y Podemos apoya las expropiaciones y los controles de precios. Decenas de miles de personas se manifestaron, y los campamentos del Sindicato de Inquilinas piden una prohibición de desahucios y prórrogas de los alquileres.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-moncloa-ve-muy-probable-aprobar-decreto-vivienda-martes-desahucio-maricarmen-20260926085947.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/15m-vivienda-presiona-partidos-pactar-medidas-urgentes_1_13540478.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Los compradores extranjeros pagan un 35 % más por la vivienda en España",
+      "body": "Los compradores internacionales pagaron de media 2.479 € por metro cuadrado en 2025, un 35 % más que los 1.839 € de los compradores españoles. Los residentes extranjeros supusieron el 11,6 % del mercado residencial, frente al 7,2 % de los no residentes, y gastaron de media 204.365 €. Reino Unido, Alemania y Marruecos encabezan la demanda de no residentes.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/comprador-extranjero-paga-un-35-mas-por-vivienda-espana-gana-peso-perfil-residencial_7041712_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Seguridad Social: 37 años de cotización para la pensión completa",
+      "body": "Desde 2027, los trabajadores necesitarán 37 años completos de cotización para el 100 % de la base reguladora, frente a 36 años y seis meses. Quienes tengan 38 años y seis meses o más podrán jubilarse a los 65; en otro caso, la edad ordinaria de jubilación será de 67. Una nueva fórmula permite elegir las 304 bases de cotización más altas dentro de los últimos 308 meses.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-09-26/alfonso-munoz-funcionario-de-la-seguridad-social_4428137/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "El café, los huevos y el chocolate suben hasta un 142 %",
+      "body": "La cesta de la compra en los supermercados españoles cuesta ahora un 39,5 % más que hace cinco años, según un análisis de la OCU sobre 101.520 precios. El café molido ha subido un 142 % desde 2021, los huevos talla M un 135 %, los huevos talla L un 123 % y el chocolate con leche un 101 %. El zumo de naranja, los helados y la carne para guisar también subieron con fuerza.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/consumo/cafe-huevos-chocolate-disparan-espana-cuestan-entre-101-142-mas-hace-cinco-anos_7041705_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Dónde encontrar carburante por debajo de 2 euros en España",
+      "body": "La gasolina y el diésel llevan 20 y 16 días consecutivos subiendo, con medias de 1,946 y 1,942 euros por litro. Cataluña tiene la gasolina de 95 octanos más barata, a 1,915 €, y el 72,8 % de sus estaciones están por debajo de 2 €; Navarra tiene el diésel más barato, a 1,903 €. Murcia, La Rioja, la Comunitat Valenciana y Aragón también tienen muchas estaciones por debajo de 2 €.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/repostar-menos-2-euros-litro-comunidades-espana-donde-combustible-esta-mas-barato_7041728_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Llega el depósito por botellas a bares y restaurantes",
+      "body": "España implantará sistemas de depósito y devolución según un reglamento europeo de residuos de envases en vigor desde el 12 de agosto. Bares, restaurantes y supermercados cobrarán un depósito reembolsable de unos 10 céntimos por botella y lata. La UE exige una tasa de recogida de al menos el 70 %; España solo recogió el 41,3 % de las botellas de plástico de un solo uso en 2023.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/gastronomia/2026/09/26/ya-oficial-bares-restaurantes-cobraran-suplemento-extra-botellas-debido-nueva-norma-gobierno-espana-2021183.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "España inaugura su reinado mundial con una victoria en Wembley",
+      "body": "España venció a Inglaterra en Wembley en su primer partido tras ganar el Mundial. Se adelantó pronto, perdía al descanso y falló varias ocasiones claras, mientras Kane falló un penalti. Fue un arranque ganador de su reinado como campeona.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/deportes/futbol/uefa-nations-league/2026/09/26/6ab8035efdddff97348b458e.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "¿Quién debe decidir el futuro de España tras la ley de nietos?",
+      "body": "La «ley de nietos» ha generado más de 2,4 millones de solicitudes de nacionalidad española de origen. Procede de la Ley de Memoria Democrática de 2022, como reparación histórica. Un artículo de opinión plantea qué vínculo debería exigirse para la nacionalidad, la residencia y el derecho de voto.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/opinion/tribuna-abierta/debe-decidir-espana-nacionalidad-residencia-voto-ley-nietos_129_13536207.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Las 100 horas que convirtieron Ceuta en un barril de pólvora",
+      "body": "La primera alerta de una entrada masiva planificada en Ceuta llegó por un mensaje de WhatsApp del CNI el 29 de julio. El mensaje avisaba de una convocatoria para asaltar la valla y el mar a las 20:00 del día siguiente; los grupos detrás de la convocatoria tenían unos 180.000 seguidores. Los responsables lo desestimaron como «Sus rilas».",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/09/27/politica-100-horas-convirtieron-ceuta-polvorin-2054960.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "20.000 personas marchan en Madrid por la crisis de Ceuta",
+      "body": "Unas 20.000 personas se unieron a la segunda «Marcha por la Dignidad» en Madrid para protestar por la gestión del Gobierno ante la crisis de Ceuta y exigir elecciones anticipadas. La marcha, organizada por Sociedad Civil Española, contó con la presencia del líder de Vox, Santiago Abascal, y del secretario general del PP, Miguel Tellado. Los manifestantes corearon consignas contra el ministro del Interior, Fernando Grande-Marlaska, y contra Pedro Sánchez.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-segunda-marcha-dignidad-recorre-centro-madrid-apoyo-ceuta-exigir-elecciones-ya-20260926112540.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    }
+  ],
+  "engagement": "Las normas de vivienda podrían volver a cambiar. ¿Alquilas o compras en España? A) Alquilar B) Comprar C) Esperar 💬",
+  "subject": "No pasó gran cosa en España hoy. Solo esto.",
+  "lang": "es",
+  "date": "2026-09-27",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-09-27T06:15:53.130615+00:00"
+}
