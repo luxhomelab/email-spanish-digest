@@ -5244,6 +5244,17 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 .article-body ul.el-heads a:hover > span:last-child { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .article-body .el-party-foot { display: flex; flex-wrap: wrap; gap: 0 22px; margin: 0; font-size: 14.5px; }
 .article-body .el-party-foot a { display: inline-block; padding: 11px 0; line-height: 22px; }
+/* Programme links (programmes.html): two columns from 700px. */
+.article-body ul.el-progs { margin: 0 0 1em 0; padding: 0; columns: 2 280px; column-gap: 28px; }
+.article-body ul.el-progs li { margin: 0; padding: 0; break-inside: avoid; }
+.article-body ul.el-progs li::before { content: none; }
+.article-body ul.el-progs a { display: inline-block; padding: 11px 0; line-height: 22px; text-decoration: none; }
+.article-body ul.el-progs a > span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.article-body ul.el-progs a:hover { background: none; color: #8A1019; }
+.article-body ul.el-progs a:hover > span { text-decoration-thickness: 2px; }
+.article-body ul.el-progs a:focus-visible { outline: 3px solid #F1BF00; outline-offset: 2px; border-radius: 2px; }
+.article-body ul.el-progs .el-dot { margin-right: 6px; }
+.article-body ul.el-progs a > b { color: #1A1A16; margin-right: 4px; }
 /* Links inside the election graphics: hover darkens the colour and thickens
    the underline. The article-wide tinted background is for links in running
    text; on these padded 44px links it would show as an offset box. */

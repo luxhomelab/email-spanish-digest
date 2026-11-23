@@ -63,8 +63,11 @@ def test_other_articles_graphics_are_still_inlined_as_is(tmp_path, monkeypatch):
 
 def test_article_is_listed_with_its_graphics():
     art = next(a for a in build.load_articles() if a["slug"] == SLUG)
-    for cls in ("ag-el-scale", "ag-el-ladder", "el-parties", "el-explorer"):
+    for cls in ("ag-el-scale", "ag-el-ladder", "el-parties", "el-explorer", "el-progs"):
         assert cls in art["body_html"]
+    progs = art["body_html"].split('class="el-progs"')[1].split("</ul>")[0]
+    for p in build.load_election_2026()["parties"]:
+        assert f'href="{p["programme"]}"' in progs
     assert art["faq"] and art["date"] == "2026-11-23"
 
 

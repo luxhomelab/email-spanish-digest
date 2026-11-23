@@ -109,7 +109,11 @@ The realistic promises often bring the same pros and cons. Help for buyers and r
 
 ## How we rated the promises
 
-We read the 11 programmes published for the 29 November 2026 election: PP, PSOE, Vox, Sumar (Frente Amplio), Podemos, ERC, Junts, EH Bildu, PNV, BNG and Coalición Canaria. We split them into 763 promises. Each promise got a rating, a chance for the next four years, a list of what it needs and a short critical note. For the 453 realistic promises (A or B), we also wrote their likely pros and cons. These are expert judgements based on the experience of Spain and other countries. They are not forecasts from a model.
+We read the 11 programmes published for the 29 November 2026 election. You can read each one in the original language:
+
+::: graphic programmes
+
+We split them into 763 promises. Each promise got a rating, a chance for the next four years, a list of what it needs and a short critical note. For the 453 realistic promises (A or B), we also wrote their likely pros and cons. These are expert judgements based on the experience of Spain and other countries. They are not forecasts from a model.
 
 The research went through three rounds of fact-checking, which also checked political balance. On 23 November 2026 we checked dates, laws and court decisions against the BOE (the official state gazette), government websites, the Constitutional Court and major media. Every fact in a promise links to its source. Numbers marked "in our estimate" show a rough size, not an exact calculation. The programmes are in Spanish, Catalan, Basque and Galician. The titles here are our short English summaries, with page or measure numbers so you can check the original. Things can change quickly after the vote, so read this guide as a picture of the programmes on 23 November 2026.
 
