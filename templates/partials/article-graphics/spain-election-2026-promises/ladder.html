@@ -14,10 +14,10 @@
     <span class="el-bar" role="img" aria-label="{{ p.name }}, {{ p.count }} promises: {% for r, n, pct in p.shares %}{{ n }} {{ d.ratings_by_key[r].short|lower }}{% if not loop.last %}, {% endif %}{% endfor %}">
 {% for r, n, pct in p.shares %}{% if n %}<span class="el-seg el-r-{{ r }}" style="width: {{ '%.2f'|format(pct) }}%"></span>{% endif %}{% endfor %}
     </span>
-    <span class="el-rung-pct"><b>{{ p.feasible_pct }}%</b> feasible or hard</span>
+    <span class="el-rung-pct"><b>{{ p.feasible_pct }}%</b> realistic</span>
    </li>
 {% endfor %}
   </ol>
  </div>
- <figcaption>Share of each party's programme items by rating, {{ d.total_items }} items in all, as of {{ d.as_of_display }}. Longer programmes of small technical steps score higher than programmes of structural change.</figcaption>
+ <figcaption>Share of each party's programme items by rating, {{ d.total_items }} items in all, as of {{ d.as_of_display }}. Programmes made of small practical steps score higher than programmes that want to change the system.</figcaption>
 </figure>

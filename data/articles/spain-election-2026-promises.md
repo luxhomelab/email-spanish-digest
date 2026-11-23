@@ -2,135 +2,135 @@
 slug: spain-election-2026-promises
 title: Spain's 2026 Election: What the Parties Promise and What Could Actually Happen
 meta_title: Spain Election 2026: Party Promises Rated for Feasibility
-meta_description: 763 promises from 11 parties for Spain's 29 November 2026 election, rated from feasible to not possible, with pros, cons and sources on housing, tax and immigration.
+meta_description: 763 promises from 11 parties for Spain's 29 November 2026 election, rated from realistic to not possible, with pros, cons and sources on housing, tax and immigration.
 date: 2026-11-23
 author: Dmytro Shvechikov
-excerpt: Eleven parties, 763 promises, one question: which of them could a new government actually deliver? Ratings, trade-offs and sources on housing, tax, immigration and more.
+excerpt: Eleven parties made 763 promises. Which of them could a new government really carry out? Ratings, pros and cons, and sources on housing, tax, immigration and more.
 story_keywords: general election, election programme, electoral programme, party programme, campaign promises, Ley de Vivienda, Beckham law, arraigo, regularisation, rent cap, 37.5-hour week
 story_categories: politics, housing, taxes
 related: /articles/how-spain-votes, /articles/how-spain-is-governed, /calculators/net-salary
-image_alt: Bars showing, for each of 11 Spanish parties, how many of its 2026 election promises are rated feasible, hard, unlikely, not possible or vague
+image_alt: Bars showing, for each of 11 Spanish parties, how many of its 2026 election promises are rated realistic, realistic but harder, unlikely, not possible or vague
 ---
 
-Spain votes in a snap general election on **Sunday, 29 November 2026**. Eleven parties with a realistic shot at seats in Congress have published programmes, and between them they make **763 promises**: on rent, income tax, the Beckham regime, residence permits, pensions, nuclear power and much more. We read all of them and asked one question about each: could a new government actually do this?
+Spain holds an early general election on **Sunday, 29 November 2026**. Eleven parties have a real chance of winning seats in Congress, and all of them have published a programme. Together they make **763 promises** about rent, income tax, the Beckham regime, residence permits, pensions, nuclear power and much more. We read all of them and asked the same question about each one: could a new government really do this?
 
-This guide is written for people who live in Spain without necessarily voting in it. Most foreign residents cannot vote in a general election: the Constitution reserves that for Spanish citizens ([art. 13](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a13)), and EU citizens vote only in municipal and European elections. But whoever forms the next government will decide rules you live with, from your lease to your tax return. Everything below is **as of 23 November 2026**, six days before the vote. (For how votes become seats, see our guide to [how Spain votes](/articles/how-spain-votes); for what happens after, [how Spain is governed](/articles/how-spain-is-governed).)
+This guide is for people who live in Spain, whether or not they can vote here. Most foreign residents cannot vote in a general election. The Constitution keeps that right for Spanish citizens ([art. 13](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a13)), and EU citizens can vote only in local and European elections. Still, the next government will set many rules that affect your life, from your rental contract to your tax return. All information here is **as of 23 November 2026**, six days before the vote. Our guide to [how Spain votes](/articles/how-spain-votes) explains how votes become seats, and [how Spain is governed](/articles/how-spain-is-governed) explains what happens after the election.
 
 ::: toc
 
 ## Key takeaways
 
-- **Most "tidy" programmes score high, most "big change" programmes score low.** PP, PSOE and Coalición Canaria have 81–86% of items rated feasible or hard; Sumar, Vox and BNG are at 34–42%. That measures difficulty, not quality.
-- **Constitutional reforms are promised by seven parties** (PSOE, Sumar, Podemos, ERC, EH Bildu, BNG and Vox). Each needs a three-fifths or two-thirds majority, which no reform can reach unless PP and PSOE both back it.
-- **176 votes decide a lot.** Changes to the immigration law, the judiciary council and the "gag law" are organic laws, which need an absolute majority of the 350 deputies.
-- **The regions hold the keys to housing and health.** Many national promises on rent, building and waiting lists really mean "money plus asking the regions".
-- **EU law sets hard limits**, especially on anything that treats people differently by nationality, on VAT, and on free movement of capital.
-- **Almost every party promises more than its stated sources of money cover**, while Spain is still running on an extended 2023 budget ([Finance Ministry](https://www.hacienda.gob.es/es-ES/Prensa/Noticias/Paginas/2025/20251223-NP-CM-PRORROGA-PGE.aspx)).
+- **Programmes of small steps score high, and programmes of big change score low.** PP, PSOE and Coalición Canaria have 81 to 86% of their promises rated realistic. Sumar, Vox and BNG are at 34 to 42%. This shows how hard the promises are to carry out. It does not show whether they are good.
+- **Seven parties promise to change the Constitution**: PSOE, Sumar, Podemos, ERC, EH Bildu, BNG and Vox. Each change needs a three-fifths or two-thirds majority, and that is only possible if PP and PSOE both support it.
+- **176 votes decide a lot.** Changes to the immigration law, the judges' council and the "gag law" need an organic law. An organic law needs an absolute majority: 176 of the 350 deputies.
+- **The regions control housing and health.** Many national promises on rent, building and waiting lists really mean "more money, and the regions must agree".
+- **EU law sets firm limits.** This is true especially for rules that treat people differently by nationality, for VAT and for the free movement of money between EU countries.
+- **Almost every party promises more than its planned income can pay for.** Spain is also still using an extended budget from 2023 ([Finance Ministry](https://www.hacienda.gob.es/es-ES/Prensa/Noticias/Paginas/2025/20251223-NP-CM-PRORROGA-PGE.aspx)).
 
 ## How to read the ratings
 
-Every promise got one of five labels, a chance of happening in the next four-year term, and a list of what it needs. A promise is marked **D** only when there is a legal obstacle: a clash with the Constitution, EU law or an international treaty, or a constitutional reform that PP or PSOE opposes. When only money or a majority is missing, it is a **C**, even if the odds are long.
+Every promise has one of five ratings. It also has a chance of happening in the next four years and a list of what it needs. We give a **D** only when the law stops a promise: it goes against the Constitution, EU law or an international treaty, or it needs a change to the Constitution that PP or PSOE opposes. When only money or votes are missing, the promise gets a **C**, even if the chance is small.
 
 ::: graphic scale
 
-> TAKE: Feasibility is not a verdict on whether a policy is good. A small technical step scores higher than an ambitious reform simply because it is easier to carry out. We apply the same tests to every party, state-wide or regional, right or left.
+> TAKE: A high rating does not mean a policy is good. A small technical change scores higher than a big reform only because it is easier to carry out. We use the same tests for every party, national or regional, right or left.
 
 ## How the programmes compare
 
-The bars below cover every item in every programme, not just the selection in our explorer further down.
+The bars below include every promise in every programme. They are not limited to the promises in our explorer further down.
 
 ::: graphic ladder
 
-Two things stand out. Parties that govern now or have governed recently, and the Canary regionalists, write programmes made of many concrete, mostly legal-as-is steps, which is why their bars are mostly green. Parties that want to change the system itself, from different directions (Sumar and Podemos on the left, Vox on the right, BNG and the Catalan and Basque pro-independence parties on territory), have far more items that hit the Constitution, EU law or the budget. Vox also has by far the most items with no figures, deadline or mechanism (V): 22 of 89.
+Two things are clear. The first group is the parties that govern now or governed recently, plus the Canary Islands party. Their programmes are made of many concrete steps that are mostly possible under current law, so their bars are mostly green. The second group is the parties that want to change the system itself. They come from different sides: Sumar and Podemos on the left, Vox on the right, and BNG and the Catalan and Basque independence parties on the question of the regions. Many more of their promises run into the Constitution, EU law or the budget. Vox also has by far the most promises with no numbers, dates or plan (V): 22 of 89.
 
 ## Party by party
 
-Tap a party to see its overall picture, what looks doable, where it hits limits, and three headline promises. Parties are listed state-wide first, then regional.
+Tap a party to see its overall picture, what looks possible, where it meets limits, and three of its main promises. National parties come first, then regional ones.
 
 ::: graphic parties
 
 ## Compare the parties by topic
 
-Pick a topic to see how the parties propose to tackle it. Each row is one approach, such as rent rules or help for buyers, and the columns run from feasible to not possible, so reading across a row shows whose version of an idea could realistically happen. Pick one or more parties to compare only them, and tap any promise to open its full assessment.
+Pick a topic to see how the parties want to deal with it. Each row is one approach, for example rent rules or help for buyers. The columns go from realistic to not possible, so you can read along a row and see which party's version of an idea could really happen. Pick one or more parties to compare only them. Tap any promise to read our full assessment.
 
 ::: graphic compare
 
 ## What it could mean for you
 
-Here is what matters most if you rent, own, work or hold a residence permit in Spain. Each topic links to the matching promises in the explorer, where you can open every item for its rating, trade-offs and sources.
+These are the changes that matter most if you rent, own a home, work or have a residence permit in Spain. Each topic links to its promises in the explorer. There you can open every promise to see its rating, its pros and cons, and its sources.
 
 ### Housing and rent
 
-This is where the programmes split most clearly. **PP and Vox** would repeal the 2023 Housing Law (*Ley de Vivienda*), the law that lets regions declare "stressed market areas" (*zonas tensionadas*) with rent caps; with both parties' votes that needs only an ordinary law. **PSOE** would freeze rents above the official reference index in those areas, and **Sumar** and **Podemos** go much further: a rent cap tied to local incomes, or a 40% cut by law, which we rate unlikely and not possible respectively.
+On housing, the parties are very far apart. **PP and Vox** want to cancel the 2023 Housing Law (*Ley de Vivienda*). This law lets regions name "stressed market areas" (*zonas tensionadas*), where rents have a limit. If both parties vote for it, an ordinary law is enough to cancel it. **PSOE** wants to stop rents in those areas from going above the official price index. **Sumar** and **Podemos** go much further. Sumar wants rents linked to local incomes, which we rate unlikely. Podemos wants a 40% rent cut by law, which we rate not possible.
 
-The evidence on caps is mixed. Studies of Catalonia find rents 4–6% lower under caps ([Jofre-Monseny et al., 2023](https://diposit.ub.edu/bitstreams/ef7e8e25-4e85-44d5-af74-8006deafeae2/download); [Monras and Montalvo, 2023](https://www.frbsf.org/wp-content/uploads/wp2023-28.pdf)), but they disagree on whether supply shrank, and after the 2024 caps rental listings fell by about 20% by the Fedea think tank's estimate ([Fedea](https://documentos.fedea.net/pubs/ap/2026/ap2026-15.pdf)).
+Studies do not agree on what rent limits do. Research in Catalonia found that rents were 4 to 6% lower with limits ([Jofre-Monseny et al., 2023](https://diposit.ub.edu/bitstreams/ef7e8e25-4e85-44d5-af74-8006deafeae2/download); [Monras and Montalvo, 2023](https://www.frbsf.org/wp-content/uploads/wp2023-28.pdf)). The studies disagree on whether fewer homes were offered for rent. After the 2024 limits, the number of rental ads fell by about 20%, according to the Fedea think tank ([Fedea](https://documentos.fedea.net/pubs/ap/2026/ap2026-15.pdf)).
 
-On the buying side, help for buyers is the common thread on the right and the centre: 4% VAT on a first home for under-40s and a deposit guarantee (PP), interest-free loans of up to €50,000 (PSOE), and mortgage and rent deductions (Junts). These are mostly feasible, but with Spain finishing around 100,000 homes a year ([Housing Ministry](https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/vivienda-agenda-urbana/Documents/2025/040725-ObservatoriodeviviendaysueloBoletnanual24.pdf)), in our assessment part of any demand subsidy ends up in the price. Bans on buying homes you won't live in (Podemos, EH Bildu) or on funds and banks buying (Junts) are rated not possible under EU free movement of capital. Coalición Canaria's wish to limit purchases by foreigners on the islands cannot apply to EU citizens.
+On buying, parties of the right and the centre mostly offer help to buyers. PP offers 4% VAT on a first home for people under 40 and a state guarantee for the deposit. PSOE offers loans of up to €50,000 with no interest, and Junts offers tax deductions for mortgages and rent. Most of these are realistic. But Spain finishes only about 100,000 homes a year ([Housing Ministry](https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/vivienda-agenda-urbana/Documents/2025/040725-ObservatoriodeviviendaysueloBoletnanual24.pdf)), so in our view part of any help for buyers ends up in higher prices. Some parties want to ban buying a home you will not live in (Podemos, EH Bildu), or ban funds and banks from buying homes (Junts). We rate these not possible, because EU law protects the free movement of money. Coalición Canaria wants to limit home buying by foreigners on the islands, but this cannot apply to EU citizens.
 
-Nearly everyone, from PNV to Podemos, wants to close the seasonal-let loophole (*alquiler de temporada*) used to dodge tenant protections. That is a simple change to the Urban Leases Law (*LAU*), so if you rent short-term or let a flat, expect it under almost any government. [See all housing promises](?topic=housing#explorer-app).
+Almost every party, from PNV to Podemos, wants to close a gap in the law on short-term rentals (*alquiler de temporada*). Some landlords use these contracts to avoid the rules that protect tenants. Closing the gap is a simple change to the Urban Leases Law (*LAU*). If you rent short-term or rent out a flat, expect this change under almost any government. [See all housing promises](?topic=housing#explorer-app).
 
 ### Taxes, including the Beckham regime
 
-The special regime for inbound workers (*régimen de trabajadores desplazados*, widely called the "Beckham law") would be abolished under the Podemos, Sumar and ERC programmes. It needs only an ordinary law, so it is rated feasible, but it would take a majority in Congress that those parties would have to build with others. On the other side, **PP** and **Junts** would index income tax (*IRPF*) bands to inflation, and PP offers a four-year income tax discount for workers aged 18–35.
+The special tax regime for foreign workers who move to Spain (*régimen de trabajadores desplazados*, often called the "Beckham law") would end under the Podemos, Sumar and ERC programmes. This needs only an ordinary law, so we rate it realistic. But these parties would need other parties' votes to get a majority in Congress. On the other side, **PP** and **Junts** want to raise the income tax (*IRPF*) bands each year with inflation. PP also offers young workers aged 18 to 35 a lower income tax for four years.
 
-On the left, PSOE and ERC would raise the top rate on large capital income to 35%, and Sumar would start the large fortunes tax at €1 million instead of €3 million. Junts would scrap inheritance tax, which is mostly regional. 0% VAT on basic food returns in the PP and PNV programmes; when Spain did this in 2023, the cut reached shop prices almost in full ([Banco de España](https://www.bde.es/wbe/en/publicaciones/analisis-economico-investigacion/documentos-trabajo/analysing-the-vat-cut-pass-through-in-spain-using-web-scraped-supermarket-data-and-machine-learning.html)), though half the savings went to the best-off 40% of households by Fedea's estimate ([Fedea](https://documentos.fedea.net/pubs/ap/2023/ap2023-02.pdf)). [See all tax promises](?topic=taxes#explorer-app), or try our [net salary calculator](/calculators/net-salary) for today's rules.
+On the left, PSOE and ERC want a 35% top rate on large income from savings and investments. Sumar wants the tax on large fortunes to start at €1 million instead of €3 million. Junts wants to end inheritance tax, which the regions mostly control. PP and PNV promise 0% VAT on basic food again. When Spain did this in 2023, shop prices fell by almost the full amount of the cut ([Banco de España](https://www.bde.es/wbe/en/publicaciones/analisis-economico-investigacion/documentos-trabajo/analysing-the-vat-cut-pass-through-in-spain-using-web-scraped-supermarket-data-and-machine-learning.html)). But half of the savings went to the richest 40% of households, according to Fedea ([Fedea](https://documentos.fedea.net/pubs/ap/2023/ap2023-02.pdf)). [See all tax promises](?topic=taxes#explorer-app), or use our [net salary calculator](/calculators/net-salary) to see how today's rules affect your pay.
 
 ### Immigration, *arraigo* and residence
 
-*Arraigo*, the route to residence based on settled ties to Spain, is where the camps diverge most. **Vox** would abolish it, **PP** would keep it only as a case-by-case exception and ban mass regularisations, and **Sumar, Podemos and EH Bildu** want a permanent regularisation procedure. All of these change the Immigration Law (*Ley de Extranjería*), an organic law that needs 176 votes. The 2026 extraordinary regularisation, with 1,174,978 applications ([La Moncloa](https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2026/020726-balance-regularizacion-extraordinaria.aspx)), has already taken place; the argument now is about what comes next.
+*Arraigo* is a way to get residence based on your ties to Spain, such as years lived here, work or family. The parties disagree on it more than on anything else. **Vox** would end it. **PP** would keep it only for special cases decided one by one, and would ban mass regularisations. **Sumar, Podemos and EH Bildu** want a permanent way for people without papers to get legal status. All of these plans change the Immigration Law (*Ley de Extranjería*). It is an organic law, so any change needs 176 votes. The special regularisation of 2026 is already over. It received 1,174,978 applications ([La Moncloa](https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2026/020726-balance-regularizacion-extraordinaria.aspx)). The debate now is about what comes next.
 
-Promises that favour Spanish nationals over legal residents, such as Vox's "national priority" (*prioridad nacional*) in housing and benefits or its tax on money sent abroad, are rated not possible: they conflict with the equality article of the Constitution and EU law. Practical measures exist too: Sumar's easier town-hall registration (*empadronamiento*) and faster recognition of foreign degrees, and an end to compulsory online appointments (*cita previa*) at state offices, which both Vox and PSOE promise. [See all immigration promises](?topic=immigration#explorer-app).
+Some promises put Spanish citizens before foreigners who live here legally. Examples are Vox's "national priority" (*prioridad nacional*) for housing and benefits, and its tax on money sent abroad. We rate these not possible, because they go against the equality article of the Constitution and against EU law. There are also practical promises. Sumar wants easier registration at the town hall (*empadronamiento*) and faster recognition of foreign degrees. Vox and PSOE both promise to end compulsory online appointments (*cita previa*) at state offices. [See all immigration promises](?topic=immigration#explorer-app).
 
 ### Work and self-employment
 
-If you are an *autónomo*, PP and Vox offer zero social security fees for new or low-earning self-employed people, while PSOE would carry on phasing in contributions based on real income. The shorter working week is the big labour fault line: 37.5 hours (PSOE, Sumar), 35 (BNG), 32 (EH Bildu, Sumar's goal) or 30 (Podemos). A 37.5-hour bill was already sent back to the government by Congress in September 2025 ([Congress](https://www.congreso.es/public_oficiales/L15/CONG/BOCG/A/BOCG-15-A-58-3.PDF)), so all of these are rated unlikely. Vox would repeal the 2021 labour reform, after which the share of temporary contracts fell from 25.4% to 15.1% ([INE](https://www.ine.es/daco/daco42/daco4211/epa0421.pdf); [Labour Ministry](https://www.mites.gob.es/ficheros/ministerio/sec_trabajo/analisis_mercado_trabajo/EPA/2025/Cuarto_trimestre/EPA-2025-T4-MITES-SGEAS.pdf)). [See all work promises](?topic=labour#explorer-app).
+If you are self-employed (*autónomo*), PP and Vox offer no social security fees for people who are new or earn little. PSOE would continue the slow move to fees based on real income. The parties disagree most on a shorter working week. PSOE and Sumar want 37.5 hours, BNG wants 35, EH Bildu wants 32 (Sumar's long-term goal too), and Podemos wants 30. In September 2025 Congress already rejected a bill for 37.5 hours and sent it back to the government ([Congress](https://www.congreso.es/public_oficiales/L15/CONG/BOCG/A/BOCG-15-A-58-3.PDF)), so we rate all of these unlikely. Vox would cancel the 2021 labour reform. Since that reform, the share of temporary contracts has fallen from 25.4% to 15.1% ([INE](https://www.ine.es/daco/daco42/daco4211/epa0421.pdf); [Labour Ministry](https://www.mites.gob.es/ficheros/ministerio/sec_trabajo/analisis_mercado_trabajo/EPA/2025/Cuarto_trimestre/EPA-2025-T4-MITES-SGEAS.pdf)). [See all work promises](?topic=labour#explorer-app).
 
 ### Pensions, health and energy bills
 
-Almost every pension promise raises spending; lower retirement ages (63 for Podemos, back to 65 for all with Sumar and BNG) are rated unlikely on cost. On health, more money is promised by nearly everyone, but in our assessment the real bottleneck is staff, and the regions run the service. On energy, the choice is between extending the nuclear plants (PP, Vox) and keeping the 2035 phase-out (PSOE, Sumar); nuclear supplied 19% of Spain's electricity in 2025 ([REE](https://www.ree.es/en/press-office/news/press-release/2026/03/the-spanish-electricity-system-in-2025-electricity-demand-generation-and-installed-power-capacity-increase)), and Almaraz is already extended to June 2030 ([BOE](https://www.boe.es/boe/dias/2026/08/14/pdfs/BOE-A-2026-17756.pdf)). [See pension](?topic=pensions#explorer-app), [health](?topic=health#explorer-app) and [energy](?topic=energy#explorer-app) promises.
+Almost every pension promise costs more money. Some parties want a lower retirement age: 63 for Podemos, and 65 for everyone again for Sumar and BNG. We rate these unlikely because of the cost. On health, nearly every party promises more money. In our view the real problem is the lack of doctors and nurses, and the regions run the health service. On energy, some parties want to keep the nuclear plants open longer (PP, Vox), and others want to keep the plan to close them by 2035 (PSOE, Sumar). Nuclear power produced 19% of Spain's electricity in 2025 ([REE](https://www.ree.es/en/press-office/news/press-release/2026/03/the-spanish-electricity-system-in-2025-electricity-demand-generation-and-installed-power-capacity-increase)), and the Almaraz plant can already stay open until June 2030 ([BOE](https://www.boe.es/boe/dias/2026/08/14/pdfs/BOE-A-2026-17756.pdf)). See the promises on [pensions](?topic=pensions#explorer-app), [health](?topic=health#explorer-app) and [energy](?topic=energy#explorer-app).
 
 ## Explore the promises
 
-We picked 113 of the 763 promises: the ones that matter most to residents, spread across every party in proportion to the size of its programme, including items from every rating. Filter by party, topic or rating, or search. Open any promise for what it says, what it needs, our assessment, the likely upsides and downsides if it is feasible (A or B), and the sources behind each fact.
+We chose 113 of the 763 promises. These are the ones that matter most to people who live in Spain. Each party has a share that matches the size of its programme, and every rating is included. You can filter by party, topic or rating, or search. Open any promise to see what it says, what it needs and our assessment. Realistic promises (A or B) also show their likely pros and cons. Every fact links to its source.
 
 ::: graphic explorer
 
 ## The bigger picture
 
-Five constraints shape what any government can do, whoever wins:
+Whoever wins, five limits decide what a government can do:
 
-- **Constitutional reform needs PP and PSOE together.** An amendment needs three-fifths of both chambers ([art. 167](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a167)), and changes to fundamental rights or the Crown need two-thirds, new elections and a referendum ([art. 168](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a168)).
-- **Organic laws need 176 votes** ([art. 81](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a81)): the judiciary council, the Immigration Law, the education law, the "gag law" and the Criminal Code. Whichever bloc reaches 176 seats decides them.
-- **The regions** run housing, health, education and land use, so central government often can only fund and ask.
-- **EU law** limits VAT rates, trade deals, climate targets, the Migration Pact and any discrimination by nationality.
-- **Money.** Spain is on an extended 2023 budget ([Finance Ministry](https://www.hacienda.gob.es/es-ES/Prensa/Noticias/Paginas/2025/20251223-NP-CM-PRORROGA-PGE.aspx)), and EU spending rules limit room for manoeuvre. In almost every programme, the promises cost more than the named sources raise.
+- **Changing the Constitution needs PP and PSOE together.** A change needs three-fifths of both chambers ([art. 167](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a167)). Changes to basic rights or to the Crown need two-thirds, a new election and a referendum ([art. 168](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a168)).
+- **Organic laws need 176 votes** ([art. 81](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a81)). They include the judges' council, the Immigration Law, the education law, the "gag law" and the Criminal Code. The group of parties that reaches 176 seats decides them.
+- **The regions** run housing, health, education and land use. The central government can often only give money and ask them to act.
+- **EU law** limits VAT rates, trade deals, climate goals, the EU Migration Pact and any different treatment by nationality.
+- **Money.** Spain is using an extended 2023 budget ([Finance Ministry](https://www.hacienda.gob.es/es-ES/Prensa/Noticias/Paginas/2025/20251223-NP-CM-PRORROGA-PGE.aspx)), and EU rules limit how much the state can spend. In almost every programme, the promises cost more than the planned income.
 
-Across the feasible promises, the same trade-offs keep coming back. Demand-side help for buyers and renters works fastest but, in our assessment, partly turns into higher prices while supply is short. Tax cuts from the right put money in pockets now and widen the deficit; new taxes from the left shift the load to the wealthy and large firms but, in our assessment, raise less than hoped because capital moves. Stricter immigration rules signal that irregular entry does not lead to legal status, but leave more people in the shadow economy; permanent regularisation does the reverse, with a possible "pull effect" whose size is disputed. Transfers of powers bring government closer to residents of one region and prompt others to ask for the same.
+The realistic promises often bring the same pros and cons. Help for buyers and renters works fastest. In our view, though, part of it turns into higher prices while there are too few homes. Tax cuts from the right give people more money now but make the deficit bigger. New taxes from the left ask more from rich people and large companies. In our view they bring in less than planned, because money can move to other countries. Stricter immigration rules show that entering without papers does not lead to legal status. But they leave more people working without contracts. A permanent regularisation does the opposite. It may attract more people to come, but experts disagree on how many. Giving more powers to one region brings government closer to the people there, and then other regions ask for the same.
 
 ## How we rated the promises
 
-We read the 11 programmes published for the 29 November 2026 election: PP, PSOE, Vox, Sumar (Frente Amplio), Podemos, ERC, Junts, EH Bildu, PNV, BNG and Coalición Canaria, and split them into 763 promises. Each got a feasibility label, a chance for the next term, the steps it needs and a short critical note, and the 453 feasible ones (A or B) got their likely upsides and downsides. Those consequences are expert judgement based on Spain's and other countries' experience, not a model forecast.
+We read the 11 programmes published for the 29 November 2026 election: PP, PSOE, Vox, Sumar (Frente Amplio), Podemos, ERC, Junts, EH Bildu, PNV, BNG and Coalición Canaria. We split them into 763 promises. Each promise got a rating, a chance for the next four years, a list of what it needs and a short critical note. For the 453 realistic promises (A or B), we also wrote their likely pros and cons. These are expert judgements based on the experience of Spain and other countries. They are not forecasts from a model.
 
-The research went through three rounds of fact-checking that also reviewed political balance. Dates, laws and court rulings were checked against the BOE, government websites, the Constitutional Court and major media on 23 November 2026, and every factual claim in an item links to its source; figures marked "in our estimate" give an order of magnitude, not a calculation. The programmes were in Spanish, Catalan, Basque and Galician; titles here are our English summaries, with page or measure numbers so you can check the original. Things can change quickly after the vote, so treat everything here as a snapshot of the programmes on 23 November 2026.
+The research went through three rounds of fact-checking, which also checked political balance. On 23 November 2026 we checked dates, laws and court decisions against the BOE (the official state gazette), government websites, the Constitutional Court and major media. Every fact in a promise links to its source. Numbers marked "in our estimate" show a rough size, not an exact calculation. The programmes are in Spanish, Catalan, Basque and Galician. The titles here are our short English summaries, with page or measure numbers so you can check the original. Things can change quickly after the vote, so read this guide as a picture of the programmes on 23 November 2026.
 
 ## FAQ
 
 ### When is Spain's 2026 general election?
 
-On Sunday, 29 November 2026. It is a snap election for both chambers of parliament, the Congress of Deputies and the Senate. Congress then votes on a prime minister ([art. 99](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a99)), who needs an absolute majority of 176 out of 350 in the first vote or more yes than no votes in a second.
+On Sunday, 29 November 2026. It is an early election for both chambers of parliament, the Congress of Deputies and the Senate. After it, Congress votes on a prime minister ([art. 99](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a99)). In the first vote the candidate needs an absolute majority, 176 of 350. In a second vote more yes votes than no votes are enough.
 
 ### Can foreigners vote in the Spanish general election?
 
-No. Only Spanish citizens vote in general elections ([art. 13 of the Constitution](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a13)). EU citizens registered in Spain can vote in municipal and European elections, and citizens of some countries with reciprocity agreements can vote in municipal elections (see [who can vote](/articles/how-spain-votes)).
+No. Only Spanish citizens can vote in general elections ([art. 13 of the Constitution](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a13)). EU citizens who are registered in Spain can vote in local and European elections. Citizens of some other countries can vote in local elections if their country has an agreement with Spain (see [who can vote](/articles/how-spain-votes)).
 
-### Which parties want to abolish the Beckham law?
+### Which parties want to end the Beckham law?
 
-Podemos, Sumar and ERC propose ending the special tax regime for inbound workers. It is rated feasible, since an ordinary law is enough, but it would need a majority in Congress, and none of these parties has one on its own.
+Podemos, Sumar and ERC want to end the special tax regime for foreign workers who move to Spain. We rate it realistic, because an ordinary law is enough. But it needs a majority in Congress, and none of these parties has one alone.
 
-### What does "feasible" mean in this guide?
+### What does "realistic" mean in this guide?
 
-That a promise does not clash with the Constitution or EU law and can be done with an ordinary law, a decree or affordable money. It says nothing about whether the policy is good or bad, and it is not a prediction that the promise will be kept.
+A realistic promise does not go against the Constitution or EU law. A government can carry it out with an ordinary law, a government decision or an affordable amount of money (A). Some realistic promises are harder because they need an organic law, the regions' agreement, a lot of money or several years (B). The rating does not say if a policy is good or bad, and it does not predict that a promise will be kept.
 
-### Will the rent caps in Catalonia end?
+### Will the rent limits in Catalonia end?
 
-PP and Vox promise to repeal the Housing Law that allows them, and together they would need only an ordinary law. Other parties promise to keep or tighten them. What happens depends on which bloc can form a majority after 29 November.
+PP and Vox promise to cancel the Housing Law that allows them. Together they would need only an ordinary law. Other parties promise to keep the limits or make them stricter. The result depends on which group of parties can form a majority after 29 November.
