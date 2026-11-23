@@ -4,7 +4,7 @@
    Jinja template, `d` = election data. #}
 <div class="el-explorer" id="explorer-app" data-pagefind-ignore>
  <div class="el-controls" hidden>
-  <label class="el-search"><span>Search promises</span><input type="search" id="el-q" autocomplete="off" placeholder="e.g. rent, Beckham, arraigo"></label>
+  <label class="el-search"><span>Search promises</span><input type="search" id="el-q" autocomplete="off" placeholder="e.g. rent, Beckham"></label>
   <div class="el-selects">
    <label><span>Party</span><select id="el-party"><option value="">All parties</option>{% for p in d.parties %}<option value="{{ p.key }}">{{ p.name }}</option>{% endfor %}</select></label>
    <label><span>Topic</span><select id="el-topic"><option value="">All topics</option>{% for t in d.topics %}<option value="{{ t.key }}">{{ t.label }}</option>{% endfor %}</select></label>

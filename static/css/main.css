@@ -5248,7 +5248,7 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 .article-body ul.el-progs { margin: 0 0 1em 0; padding: 0; columns: 2 280px; column-gap: 28px; }
 .article-body ul.el-progs li { margin: 0; padding: 0; break-inside: avoid; }
 .article-body ul.el-progs li::before { content: none; }
-.article-body ul.el-progs a { display: inline-block; padding: 11px 0; line-height: 22px; text-decoration: none; }
+.article-body ul.el-progs a { display: inline-block; padding: 11px 0 11px 16px; text-indent: -16px; line-height: 22px; text-decoration: none; }
 .article-body ul.el-progs a > span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .article-body ul.el-progs a:hover { background: none; color: #8A1019; }
 .article-body ul.el-progs a:hover > span { text-decoration-thickness: 2px; }
@@ -5268,6 +5268,14 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 @media (max-width: 520px) {
  .el-party > summary { grid-template-columns: minmax(0, 1fr) 64px 54px; gap: 10px; padding: 10px 14px; }
  .el-party-body { padding: 2px 14px 16px 14px; }
+}
+/* Narrow phones: the bloc line gets its own full-width row under
+   name | bar | %, so the name column is wide enough for one line. */
+@media (max-width: 420px) {
+ .el-party > summary { grid-template-columns: minmax(0, 1fr) 52px 54px; row-gap: 2px; }
+ .el-party-head { display: contents; }
+ .el-party-name { grid-column: 1; grid-row: 1; white-space: nowrap; }
+ .el-party-bloc { grid-column: 1 / -1; grid-row: 2; }
 }
 
 /* Explorer controls */
