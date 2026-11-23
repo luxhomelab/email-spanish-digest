@@ -1,0 +1,39 @@
+{# Topic comparison: for each topic, rows are the approaches parties take and
+   columns run from feasible to not possible, so you read across a row to see
+   whose version of an idea is realistic. Every chip opens its promise in the
+   explorer. Without JS all boards are listed; static/js/election-compare.js
+   turns them into tabs and adds the party highlight.
+   Jinja template, `d` = election data. #}
+<div class="el-compare" id="compare-app" data-pagefind-ignore>
+ <div class="el-cmp-controls" hidden>
+  <div class="el-cmp-tabs" role="tablist" aria-label="Topic">
+{% for c in d.compare %}
+   <button type="button" role="tab" class="el-cmp-tab" id="cmp-tab-{{ c.topic.key }}" aria-controls="cmp-{{ c.topic.key }}" aria-selected="{{ 'true' if loop.first else 'false' }}" data-topic="{{ c.topic.key }}">{{ c.topic.label }}</button>
+{% endfor %}
+  </div>
+  <label class="el-cmp-hl"><span>Highlight a party</span><select id="cmp-party"><option value="">All parties</option>{% for p in d.parties %}<option value="{{ p.key }}">{{ p.name }}</option>{% endfor %}</select></label>
+ </div>
+{% for c in d.compare %}
+ <section class="el-board" id="cmp-{{ c.topic.key }}" role="tabpanel" aria-labelledby="cmp-tab-{{ c.topic.key }}" style="--cols: {{ c.ratings|length }}">
+  <h3 class="el-board-title">{{ c.topic.label }}</h3>
+  <p class="el-board-sub">{{ c.count }} promises from {{ c.parties }} parties. Each row runs from the most to the least realistic.</p>
+  <div class="el-board-grid">
+   <div class="el-board-row el-board-head" aria-hidden="true">
+    <span class="el-board-approach"></span>
+{% for r in c.ratings %}
+    <span class="el-board-col"><span class="el-badge el-badge-sm el-r-{{ r }}">{{ r }}</span>{{ d.ratings_by_key[r].short }}</span>
+{% endfor %}
+   </div>
+{% for row in c.rows %}
+   <div class="el-board-row">
+    <p class="el-board-approach">{{ row.label|md }}</p>
+{% for r, cell in row.cells %}
+    <div class="el-board-cell el-r-{{ r }}">{% for it in cell %}<a class="el-chip" href="#p-{{ it.id }}" data-open="p-{{ it.id }}" data-party="{{ it.party }}" style="--pc: {{ it.party_color }}"><span class="el-badge el-badge-sm el-r-{{ it.f }}" aria-hidden="true">{{ it.f }}</span><span class="el-chip-text"><b><i class="el-dot"></i>{{ it.party_name }}</b> {{ it.title|md }}<span class="el-vh">, rated {{ d.ratings_by_key[it.f].label|lower }}</span></span></a>{% endfor %}</div>
+{% endfor %}
+   </div>
+{% endfor %}
+  </div>
+ </section>
+{% endfor %}
+</div>
+<script type="module" src="/static/js/election-compare.js?v={{ js_version }}"></script>

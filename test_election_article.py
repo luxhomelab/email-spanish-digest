@@ -66,3 +66,32 @@ def test_article_is_listed_with_its_graphics():
     for cls in ("ag-el-scale", "ag-el-ladder", "el-parties", "el-explorer"):
         assert cls in art["body_html"]
     assert art["faq"] and art["date"] == "2026-11-23"
+
+
+def test_compare_boards_place_every_promise_once():
+    d = build.load_election_2026()
+    out = build.article_graphic_html(SLUG, "compare")
+    in_boards = sum(c["count"] for c in d["compare"])
+    # Defence has a single promise, so it gets no comparison board.
+    assert in_boards == len(d["promises"]) - 1
+    assert out.count('class="el-chip"') == in_boards
+    housing = next(c for c in d["compare"] if c["topic"]["key"] == "housing")
+    assert housing["ratings"] == list("ABCDV")
+    # Within a cell, chips follow the party order and all share the cell's rating.
+    for row in housing["rows"]:
+        for r, cell in row["cells"]:
+            assert all(it["f"] == r for it in cell)
+
+
+def test_compare_rejects_an_unplaced_promise(monkeypatch):
+    meta = json.load(open(f"{build.ELECTION_2026_DIR}/meta.json", encoding="utf-8"))
+    meta["approaches"]["energy"][0]["items"].remove("pp-82")
+    real_load = json.load
+
+    def fake_load(fh, *a, **k):
+        data = real_load(fh, *a, **k)
+        return meta if isinstance(data, dict) and "approaches" in data else data
+
+    monkeypatch.setattr(build.json, "load", fake_load)
+    with pytest.raises(ValueError, match="energy"):
+        build.load_election_2026()

@@ -49,6 +49,12 @@ Tap a party to see its overall picture, what looks doable, where it hits limits,
 
 ::: graphic parties
 
+## Compare the parties by topic
+
+Pick a topic to see how the parties propose to tackle it. Each row is one approach, such as rent rules or help for buyers, and the columns run from feasible to not possible, so reading across a row shows whose version of an idea could realistically happen. Highlight a party to follow it across the rows, and tap any promise to open its full assessment.
+
+::: graphic compare
+
 ## What it could mean for you
 
 Here is what matters most if you rent, own, work or hold a residence permit in Spain. Each topic links to the matching promises in the explorer, where you can open every item for its rating, trade-offs and sources.

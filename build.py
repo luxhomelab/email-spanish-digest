@@ -530,6 +530,28 @@ def load_election_2026():
         it["programme"] = party["programme"]
         it["topic_label"] = topics[it["topic"]]["label"]
     by_topic = [(t, [it for it in items if it["topic"] == t["key"]]) for t in meta["topics"]]
+    # Topic comparison: each topic's promises grouped by approach (rows) and
+    # rating (columns). Every promise of a listed topic sits in exactly one row.
+    by_id = {it["id"]: it for it in items}
+    compare = []
+    for t, topic_items in by_topic:
+        rows = meta["approaches"].get(t["key"])
+        if not rows:
+            continue
+        placed = [i for row in rows for i in row["items"]]
+        expected = sorted(it["id"] for it in topic_items)
+        if sorted(placed) != expected:
+            raise ValueError(f"election approaches for {t['key']} must list each of its promises once")
+        present = [r for r in ELECTION_RATINGS if any(it["f"] == r for it in topic_items)]
+        compare.append(dict(
+            topic=t, count=len(topic_items),
+            parties=len({it["party"] for it in topic_items}),
+            ratings=present,
+            rows=[dict(label=row["label"], cells=[
+                (r, sorted((by_id[i] for i in row["items"] if by_id[i]["f"] == r),
+                           key=lambda it: party_order[it["party"]]))
+                for r in present]) for row in rows],
+        ))
     _election_cache = dict(
         meta,
         ratings_by_key={r["key"]: r for r in meta["ratings"]},
@@ -537,6 +559,7 @@ def load_election_2026():
         parties_by_feasibility=sorted(parties, key=lambda p: -p["feasible_pct"]),
         promises=items,
         by_topic=by_topic,
+        compare=compare,
         as_of_display=format_date(meta["as_of"]),
         election_display=format_date(meta["election"]),
     )
@@ -2833,7 +2856,7 @@ def js_version():
                    "quiz-logic.js", "subscribe-form.js", "subscription-store.js",
                    "electricity.js", "electricity-calc.js", "electricity-form.js",
                    "video-embed.js", "cookie-consent.js", "cookie-consent-logic.js",
-                   "election-explorer.js", "election-filter.js"):
+                   "election-explorer.js", "election-filter.js", "election-compare.js"):
         path = os.path.join(SCRIPT_DIR, "static", "js", name)
         try:
             with open(path, "rb") as fh:

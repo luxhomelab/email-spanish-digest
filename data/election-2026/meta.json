@@ -34,6 +34,56 @@
   {"key": "energy", "label": "Energy"},
   {"key": "defence", "label": "Defence"}
  ],
+ "approaches": {
+  "housing": [
+   {"label": "More homes and public housing", "items": ["pp-0", "psoe-3", "sumar-0", "psoe-0"]},
+   {"label": "Help people buy", "items": ["pp-6", "pp-7", "psoe-9", "junts-2"]},
+   {"label": "Rent rules: caps, renewals, repeal", "items": ["pp-1", "vox-3", "psoe-5", "sumar-8", "podemos-0", "bildu-0", "bildu-3", "bng-0", "bng-1", "erc-13"]},
+   {"label": "Tax breaks for landlords instead of caps", "items": ["junts-6", "cc-3"]},
+   {"label": "Tourist and seasonal lets", "items": ["podemos-9", "bildu-4", "pnv-1", "bng-4", "cc-2", "erc-17", "sumar-5", "podemos-6"]},
+   {"label": "Tax or restrict large owners and investors", "items": ["psoe-6", "sumar-13", "sumar-1", "podemos-2", "junts-3", "bildu-2"]},
+   {"label": "Limit who can buy or get housing", "items": ["vox-0", "vox-8", "cc-1"]},
+   {"label": "Squatting", "items": ["pp-10", "junts-0", "vox-4"]}
+  ],
+  "taxes": [
+   {"label": "Income tax cuts and indexation", "items": ["pp-12", "pp-13", "junts-42", "psoe-19"]},
+   {"label": "The Beckham regime", "items": ["podemos-21", "sumar-22", "erc-20"]},
+   {"label": "Taxes on capital, wealth and big firms", "items": ["psoe-14", "sumar-16", "sumar-19", "podemos-15", "bildu-7"]},
+   {"label": "VAT and electricity tax", "items": ["pp-14", "pnv-4", "podemos-23", "pnv-5"]},
+   {"label": "Regional tax regimes", "items": ["cc-6", "cc-7"]},
+   {"label": "Self-employed fees and remittances", "items": ["vox-12", "vox-17"]}
+  ],
+  "pensions": [
+   {"label": "Indexation and minimum pensions", "items": ["pnv-7", "psoe-25"]},
+   {"label": "Retirement age and early retirement", "items": ["pnv-8", "sumar-27", "podemos-66", "bng-11"]},
+   {"label": "Funding", "items": ["podemos-69"]}
+  ],
+  "labour": [
+   {"label": "Shorter working week", "items": ["psoe-36", "sumar-29", "podemos-54", "bildu-14", "bng-13"]},
+   {"label": "Minimum wage", "items": ["psoe-35", "podemos-52", "erc-23", "pnv-11"]},
+   {"label": "Self-employed contributions", "items": ["psoe-40", "pp-26"]},
+   {"label": "Labour law and red tape", "items": ["vox-21", "vox-25"]}
+  ],
+  "immigration": [
+   {"label": "Regularisation and *arraigo*", "items": ["pp-41", "vox-29", "sumar-37", "podemos-77", "bildu-19", "junts-24"]},
+   {"label": "Borders and returns", "items": ["pp-36", "vox-30"]},
+   {"label": "Reception and who manages it", "items": ["cc-16", "erc-12"]},
+   {"label": "Integration and citizenship", "items": ["sumar-38", "podemos-75"]}
+  ],
+  "health": [
+   {"label": "Staff and money", "items": ["pp-49", "psoe-53"]},
+   {"label": "Who is covered and how", "items": ["vox-37", "vox-41"]}
+  ],
+  "territorial": [
+   {"label": "Regional money and debt", "items": ["cc-26", "psoe-62", "erc-2", "pnv-27", "erc-1", "junts-37"]},
+   {"label": "Self-determination and nationhood", "items": ["erc-0", "junts-7", "bng-21"]},
+   {"label": "Amnesty", "items": ["pp-62"]}
+  ],
+  "energy": [
+   {"label": "Nuclear power", "items": ["pp-82", "psoe-81", "vox-64", "sumar-61"]},
+   {"label": "Electricity bills", "items": ["vox-61", "sumar-58"]}
+  ]
+ },
  "parties": [
   {"key": "pp", "name": "PP", "full": "Partido Popular", "color": "#1d6fb8", "bloc": "Centre-right", "programme": "https://www.pp.es/wp-content/uploads/2026/11/PROGRAMA-ELECTORAL-PP-2026-RECONSTRUCCION-NACIONAL.pdf",
    "totals": {"A": 37, "B": 58, "C": 7, "D": 0, "V": 8},
