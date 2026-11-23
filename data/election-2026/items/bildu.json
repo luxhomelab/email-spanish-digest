@@ -25,7 +25,7 @@
   "pos": "Fewer illegal tourist flats and more homes for people who live there.",
   "neg": "Platforms will challenge it under EU law. A ban on ads also hits small owners who are still waiting for a licence.",
   "s": [{"t": "Regulation (EU) 2024/1028 on short-term rental data (BOE copy of the OJEU)", "u": "https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-80593"}]},
- {"i": 7, "topic": "taxes", "f": "B", "t": "y", "n": ["law"], "ref": "p. 14",
+ {"i": 7, "topic": "taxes", "f": "B", "t": "p", "n": ["law"], "ref": "p. 14",
   "title": "Bring back the special tax on energy companies; tax banks and large fortunes",
   "detail": "Bring back the special tax on energy companies (*gravamen energético*) and make it permanent. PNV, PP, Vox, UPN and Junts voted against it. The Basque and Navarre tax offices (*Haciendas Forales*) would collect it. Raise taxes on banks and large fortunes. No amounts are given.",
   "c": "Congress did not approve the energy tax in January 2025 (165 for, 183 against). It cannot pass again without votes from the right and some nationalist parties.",
@@ -37,11 +37,11 @@
   "detail": "Cut working time to 32 hours a week, or four working days, with no loss of pay, by changing the Workers' Statute (*Estatuto de los Trabajadores*). Small and medium businesses would start at 35 hours and reach the goal within three years.",
   "c": "As with Sumar and Podemos: even 37.5 hours did not pass in 2025.",
   "s": [{"t": "Congress, BOCG 15-A-58-3: 37.5-hour bill returned to the government (10 Sep 2025)", "u": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/A/BOCG-15-A-58-3.PDF"}]},
- {"i": 19, "topic": "immigration", "f": "B", "t": "p", "n": ["lo"], "ref": "p. 20",
+ {"i": 19, "topic": "immigration", "f": "B", "t": "p", "n": ["decree", "lo"], "ref": "p. 20",
   "title": "Regularisation and a new immigration law",
   "detail": "A regularisation (*regularización*) that works, is easy to use and lasts. It would give residence and work permits and stop people from losing their legal status again. A new immigration law based on human rights. No dates, conditions or numbers are given.",
-  "c": "As with Sumar, a permanent regularisation needs an organic law, and PP and Vox are against it.",
+  "c": "As with Sumar, a permanent route could be made by royal decree, as the 2026 regularisation was (RD 316/2026). A new immigration law would need an organic law (176 votes), and PP and Vox are against it.",
   "pos": "Fewer people work without contracts, so the state gets more tax and social security payments.",
   "neg": "A permanent route may attract more people to come (experts disagree on how many). It also puts a lot of pressure on offices, as in the 2026 regularisation (1.17 million applications).",
-  "s": [{"t": "La Moncloa, 2 Jul 2026: 1,174,978 regularisation applications filed", "u": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2026/020726-balance-regularizacion-extraordinaria.aspx"}]}
+  "s": [{"t": "Real Decreto 316/2026 on the 2026 regularisation, changing the immigration regulation (BOE)", "u": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-8284"}, {"t": "La Moncloa, 2 Jul 2026: 1,174,978 regularisation applications filed", "u": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2026/020726-balance-regularizacion-extraordinaria.aspx"}]}
 ]

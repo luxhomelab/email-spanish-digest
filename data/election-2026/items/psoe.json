@@ -77,7 +77,7 @@
   "pos": "Stable money for health care and shorter waits.",
   "neg": "The regions run the system and may just use state money instead of their own. The programme names no source of money.",
   "s": [{"t": "Eurostat, gov_10a_exp: Spain's public health spending, % of GDP (2022–2024)", "u": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_exp?geo=ES&cofog99=GF07&na_item=TE&sector=S13&unit=PC_GDP&sinceTimePeriod=2022"}]},
- {"i": 62, "topic": "territorial", "f": "B", "t": "y", "n": ["lo", "eu"], "ref": "m. 231, p. 62",
+ {"i": 62, "topic": "territorial", "f": "B", "t": "p", "n": ["lo", "eu"], "ref": "m. 231, p. 62",
   "title": "The state takes over €83 billion of regional debt",
   "detail": "The state takes over part (*asunción parcial*) of the regions' debt (*deuda autonómica*), €83 billion, to help regional finances. The programme does not say how much each region gets or on what conditions.",
   "c": "In December 2025 the government sent parliament a bill to cancel €83 billion of debt. It is an organic law (176 votes). Junts has doubts, and regions run by PP say no, because they see it as a gift to ERC. State debt grows by the same amount.",

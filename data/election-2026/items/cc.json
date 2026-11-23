@@ -2,7 +2,7 @@
  {"i": 1, "topic": "housing", "f": "C", "t": "p", "n": ["eu", "courts"], "ref": "m. 26, p. 11",
   "title": "Limit home purchases by foreigners in the Canaries",
   "detail": "Changes in the national parliament to limit home buying by foreigners in the Canary Islands. They would be based on the islands' special EU status as an outermost region (*región ultraperiférica*, RUP) and follow EU law. Also EU and national changes to allow a Canary Islands residence law (*Ley Canaria de Residencia*) to control population growth. The programme does not say who exactly or what limits.",
-  "c": "Limiting home buying by EU citizens is not possible, because of the EU rules on free movement of money and the freedom to settle. In our estimate, only a few countries have exceptions, under special agreements added to the EU treaties. RUP status (art. 349 TFEU) allows some changes to EU rules, but such a limit would need a decision by the EU Council and would be challenged.",
+  "c": "Limiting home buying by EU citizens is not possible, because of the EU rules on free movement of money and the freedom to settle. In our estimate, only a few countries have exceptions, under special agreements added to the EU treaties. RUP status (art. 349 TFEU) allows some changes to EU rules, but such a limit would need a decision by the EU Council and would be challenged. We rate it C, not D, because the programme does not say whether EU citizens would be included.",
   "s": []},
  {"i": 2, "topic": "housing", "f": "A", "t": "y", "n": ["law", "eu"], "ref": "m. 27, p. 11",
   "title": "Rules for holiday rentals where housing is under pressure",
@@ -30,7 +30,7 @@
   "detail": "Keep and update the special economic and tax system (*Régimen Económico y Fiscal de Canarias*, REF), which makes up for the islands' permanent disadvantages. REF money should not count as normal funding for health, education and social services. No changes by the state without the islands' agreement.",
   "c": "The Constitution (third additional provision) and the Statute of Autonomy protect the REF. Updating it is normal.",
   "pos": "The islands keep getting help with the extra costs of island life.",
-  "neg": "The system costs the state tax money. In our estimate, some of the tax breaks (ZEC, RIC) mostly help large companies.",
+  "neg": "The system costs the state tax money. In our estimate, some of the tax breaks (the special economic zone *ZEC* and the investment reserve *RIC*) mostly help large companies.",
   "s": [{"t": "Spanish Constitution, third additional provision (BOE)", "u": "https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#tercera"}, {"t": "Ley 19/1994 on the Canary Islands economic and tax regime, REF (BOE)", "u": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-15794"}]},
  {"i": 16, "topic": "immigration", "f": "B", "t": "y", "n": ["law", "ccaa", "courts"], "ref": "m. 83, p. 19",
   "title": "Share new migrants between regions automatically",
@@ -44,6 +44,6 @@
   "detail": "Keep the 75% discount on flights and ferries for residents, watch for prices raised on purpose, protect direct links between the smaller islands, and make the state pay 100% of the real cost of the help for shipping goods.",
   "c": "The REF sets the 75% discount, and keeping it is realistic. In our estimate it costs about €600 to 700 million a year.",
   "pos": "Affordable travel between the islands and to mainland Spain.",
-  "neg": "Part of the discount may end up in higher prices. In our estimate it costs about €600 to 700 million a year.",
+  "neg": "Part of the discount may end up in higher prices.",
   "s": [{"t": "Ley 19/1994 on the Canary Islands economic and tax regime, REF (BOE)", "u": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-15794"}]}
 ]

@@ -2,7 +2,7 @@
  {"i": 0, "topic": "housing", "f": "D", "t": "n", "n": ["law", "courts"], "ref": "m. 1, p. 8",
   "title": "Cut rents by 40% by law",
   "detail": "An emergency law to cut rents by 40% for current contracts, renewals and new contracts. The new rent would be the old rent minus 40%, but not lower than 60% of the local average. Homes not rented before would start at 60% of the local average.",
-  "c": "A 40% cut in current contracts breaks agreed contracts and the right to property (art. 33 of the Constitution). Germany's Constitutional Court cancelled Berlin's rent limit in 2021. In our estimate, even if it passed, many owners would stop renting long-term.",
+  "c": "A 40% cut in current contracts breaks agreed contracts and the right to property (art. 33 of the Constitution). Germany's Constitutional Court cancelled Berlin's rent limit in 2021, because the state of Berlin had no power to pass it. In our estimate, even if it passed, many owners would stop renting long-term.",
   "s": [{"t": "Spanish Constitution, art. 33 (BOE)", "u": "https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a33"}, {"t": "Hahn, Kholodilin, Waltl, Fongoni, Management Science 70 (2024): the Berlin rent freeze", "u": "https://www.diw.de/de/diw_01.c.873005.de/publikationen/externe_referierte_aufsaetze/2024_0003/forward_to_the_past__short-term_effects_of_the_rent_freeze_in_berlin.html"}]},
  {"i": 2, "topic": "housing", "f": "D", "t": "n", "n": ["const", "eu", "courts"], "ref": "m. 3, p. 8",
   "title": "Ban buying homes you will not live in",
@@ -74,11 +74,11 @@
   "detail": "Everyone who lives and works in Spain should get a Spanish ID card (*DNI*) and the right to vote. Change art. 22 of the Civil Code so that people who prove *arraigo* (ties to Spain) need only one year of residence. End the fees that make regularisation and citizenship harder.",
   "c": "In our estimate, citizenship after one year would be faster than almost anywhere in the EU. Giving foreigners the vote in general elections needs a change to the Constitution (art. 13.2).",
   "s": [{"t": "Spanish Constitution, art. 13 (BOE)", "u": "https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229#a13"}]},
- {"i": 77, "topic": "immigration", "f": "B", "t": "p", "n": ["lo"], "ref": "m. 210–212, p. 67",
+ {"i": 77, "topic": "immigration", "f": "B", "t": "p", "n": ["decree"], "ref": "m. 210–212, p. 67",
   "title": "A permanent way to get legal status",
   "detail": "A permanent way to get legal status based on social, family and community ties, not only a job contract. More kinds of proof that a person lives in Spain (*padrón*, travel passes, medical records), as in the special regularisation of 2026. Permits would renew automatically when the office is late and the person meets the conditions.",
-  "c": "As with Sumar, it needs an organic law, and that needs PSOE and the regional nationalist parties.",
+  "c": "As with Sumar: a government that wants this route could make it by royal decree, as it did for the 2026 regularisation (RD 316/2026). PP and Vox are against it, and a later government could undo a decree the same way.",
   "pos": "Fewer people work without contracts, so the state gets more tax and social security payments, and workers are exploited less.",
   "neg": "A permanent route may attract more people to come (experts disagree on how many). It also puts a lot of pressure on offices, as in the 2026 regularisation (1.17 million applications).",
-  "s": [{"t": "La Moncloa, 2 Jul 2026: 1,174,978 regularisation applications filed", "u": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2026/020726-balance-regularizacion-extraordinaria.aspx"}]}
+  "s": [{"t": "Real Decreto 316/2026 on the 2026 regularisation, changing the immigration regulation (BOE)", "u": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-8284"}, {"t": "La Moncloa, 2 Jul 2026: 1,174,978 regularisation applications filed", "u": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2026/020726-balance-regularizacion-extraordinaria.aspx"}]}
 ]
