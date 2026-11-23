@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "title": "Las ventas de vivienda caen mientras suben los precios",
+      "body": "Las compraventas cayeron un 13,4% interanual en septiembre, hasta 54.548 viviendas, según el INE. El encarecimiento y la subida de los tipos reducen la base de compradores, según Fotocasa. País Vasco, Baleares y Madrid registraron descensos superiores al 20%, mientras el precio medio nacional subió un 14,7% interanual en el tercer trimestre.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/caida-compra-viviendas-se-agudiza-las-zonas-mas-caras-baja-mas-un-20-las-comunidades-que-pasan-2-800-m2_7062680_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "La inflación amenaza las subidas salariales de 2027",
+      "body": "El Gobierno ha aprobado para 2027 un SMI de 1.286 euros mensuales, un 5,3% más, y una subida del 4,5% para los funcionarios. Las consultoras prevén aumentos salariales medios del 3,5% al 4,2%, por debajo de la inflación del 4,9% registrada en octubre.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/negocios/2026-11-23/la-inflacion-se-come-las-subidas-salariales-y-harta-a-los-trabajadores.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Sánchez descarta conceder un referéndum en Cataluña",
+      "body": "El presidente del Gobierno y candidato del PSOE, Pedro Sánchez, asegura que no aceptaría un referéndum de autodeterminación en Cataluña. Mantiene su negativa aunque necesite los votos de Junts o ERC para gobernar tras las elecciones del 29 de noviembre de 2026.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-sanchez-dice-no-aceptara-referendum-cataluna-necesite-votos-junts-erc-gobernar-20261122231957.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Feijóo plantea condiciones para una coalición con Vox",
+      "body": "El líder del PP, Alberto Núñez Feijóo, asume que tendría que incorporar a Vox a un hipotético Gobierno tras las elecciones del 29 de noviembre de 2026. Exige ministros con experiencia y respeto a las autonomías. Busca evitar que el miedo a la ultraderecha movilice al electorado de izquierdas.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/feijoo-anticipa-condiciones-vox-si-negociar-29n-ministros-experiencia-respeto-autonomias_1_13679615.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Fitch ve poco margen para bajar impuestos",
+      "body": "Fitch considera que España tiene un margen fiscal limitado para bajar impuestos y advierte de que un déficit superior al 3% podría ser problemático. La agencia prevé un déficit del 2,3% en 2026 y mantiene la nota A con perspectiva estable. Señala las pensiones y la productividad como retos del próximo Gobierno.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://cincodias.elpais.com/mercados-financieros/2026-11-23/federico-barriga-fitch-la-flexibilidad-para-bajar-impuestos-en-espana-no-es-muy-significativa.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los donantes vivos tienen una baja sin recortes",
+      "body": "La baja especial por donación de órganos o tejidos ya está en vigor y cubre el 100% de la base reguladora, sin cotización mínima previa. Abarca la preparación, la hospitalización y el posoperatorio hasta el alta médica. La donación de sangre queda fuera.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/11/23/es-oficial-baja-laboral-cobrando-100-sueldo-se-concedera-este-tipo-concreto-trabajadores-2067867.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Marc Márquez conquista su octavo título de MotoGP",
+      "body": "El piloto de Ducati Marc Márquez se proclamó campeón de MotoGP el 22 de noviembre de 2026 tras acabar noveno en Portugal. Iguala los ocho títulos de Agostini en la categoría reina y suma diez mundiales. Remontó una desventaja de 102 puntos tras operarse y perderse dos carreras.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/deportes/motociclismo-00311/noticia-marc-marquez-campeon-mundo-motogp-octava-vez-20261122144853.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Las aerolíneas prevén billetes más caros en verano",
+      "body": "El encarecimiento del queroseno tras los ataques a Irán y el recorte de plazas llevan a las aerolíneas a anticipar tarifas más altas para el verano de 2027. Ryanair prevé subidas de hasta el 20%. La mayoría de compañías apenas tiene cubierto el 25% del combustible previsto para esa temporada.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-23/las-aerolineas-anticipan-una-subida-de-precios-y-un-recorte-de-plazas-para-el-proximo-verano.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los autónomos reclaman menos burocracia y exención del IVA",
+      "body": "Unos 600 autónomos, según Delegación de Gobierno, se manifestaron en Madrid el 22 de noviembre de 2026. Reclaman cuotas ajustadas a los ingresos reales y no repercutir IVA si ingresan menos de 85.000 euros al año. Esta exención no está vigente en España.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/cientos-autonomos-reclaman-gobierno-exencion-iva-si-ingresan-menos-85-000-euros-ano-como-dicta-bruselas_7064292_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Hernández de Cos se acerca a presidir el BCE",
+      "body": "El director gerente del Banco Internacional de Pagos, Pablo Hernández de Cos, está cerca de presidir el BCE, según El Mundo. Cuenta con el apoyo de Alemania, Francia, Italia y España. La designación sigue pendiente: hay socios molestos y otra candidatura continúa.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/11/23/6b032cffe9cf4ac8208b4576.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los gastos extra frustran un alquiler del Plan Vive",
+      "body": "Un solicitante con un sueldo de 2.300 euros mensuales fue rechazado para un piso del Plan Vive en Arganda del Rey. La oferta anunciaba 736 euros, pero los gastos extra elevaron la renta a 850 euros: el 37% de su sueldo, por encima del límite del 35% del programa.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/plan-vive-ayuso-rechaza-trabajador-gana-2-300-euros-mes-insuficientes-alquiler-asequible_1_13667373.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    }
+  ],
+  "engagement": "¿Te planteas comprar vivienda? A) Sí B) No C) Más adelante",
+  "subject": "Freno de las ventas de vivienda, salarios y 29N",
+  "lang": "es",
+  "date": "2026-11-23",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-11-23T07:04:05.239303+00:00"
+}

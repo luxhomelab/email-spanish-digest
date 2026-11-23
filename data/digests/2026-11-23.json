@@ -1,0 +1,211 @@
+{
+  "items": [
+    {
+      "title": "Home sales fall as prices keep rising",
+      "body": "Spain's home sales fell 13.4% year on year in September, while prices rose 14.7% year on year in Q3. Fotocasa research director María Matos says higher prices and interest rates are shrinking the pool of buyers. Sales fell most sharply in País Vasco, Baleares, and Madrid.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/caida-compra-viviendas-se-agudiza-las-zonas-mas-caras-baja-mas-un-20-las-comunidades-que-pasan-2-800-m2_7062680_0.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Approved wage rises face pressure from inflation",
+      "body": "The government approved Royal Decrees that would raise the SMI (minimum wage) by 5.3% to €1,286 a month in 2027 and civil servant pay by 4.5%. It also approved pay transparency rules. Forecast average pay rises of 3.5-4.2% would lag October's 4.9% inflation.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/negocios/2026-11-23/la-inflacion-se-come-las-subidas-salariales-y-harta-a-los-trabajadores.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Sánchez rules out Catalonia referendum after election",
+      "body": "Prime Minister Pedro Sánchez said on November 22 that he would not allow a Catalan self-determination referendum, even if he needs votes from Junts or ERC to govern. The general election is on November 29.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-sanchez-dice-no-aceptara-referendum-cataluna-necesite-votos-junts-erc-gobernar-20261122231957.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Feijóo sets terms for possible Vox coalition",
+      "body": "PP leader Alberto Núñez Feijóo has set conditions for a possible coalition with Vox after the November 29 election. These include experienced ministers and respect for Spain's autonomous communities. He has accepted that he will probably need Vox to govern.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/feijoo-anticipa-condiciones-vox-si-negociar-29n-ministros-experiencia-respeto-autonomias_1_13679615.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Fitch sees little room for tax cuts",
+      "body": "Ratings agency Fitch says Spain has limited room to cut taxes, with the public deficit forecast at 2.3% in 2026. It expects growth to remain more than double Europe's rate for two years. Low productivity and an ageing population leave the next government facing longer-term pressures.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://cincodias.elpais.com/mercados-financieros/2026-11-23/federico-barriga-fitch-la-flexibilidad-para-bajar-impuestos-en-espana-no-es-muy-significativa.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Living donors qualify for full-rate sick pay",
+      "body": "Under an October 2026 Royal Decree-law, living organ and tissue donors receive sick pay at 100% of the base used to calculate benefits, versus a maximum of 75% for ordinary illness. No minimum prior contributions are required. Cover runs from preparation through recovery; blood donation is excluded.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/11/23/es-oficial-baja-laboral-cobrando-100-sueldo-se-concedera-este-tipo-concreto-trabajadores-2067867.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Marc Márquez secures eighth MotoGP world title",
+      "body": "Ducati rider Marc Márquez secured his eighth MotoGP title by finishing ninth at the Portuguese Grand Prix on November 22. It is his 10th world title overall and matches former champion Giacomo Agostini's eight top-class titles. Márquez overcame a 102-point deficit after surgery and two missed races.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/deportes/motociclismo-00311/noticia-marc-marquez-campeon-mundo-motogp-octava-vez-20261122144853.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Airlines warn of higher summer 2027 fares",
+      "body": "Airlines warn of higher fares and fewer seats for summer 2027 as jet fuel costs remain high and European refining difficulties add pressure. Ryanair says fares could rise by up to 20%. Most airlines have locked in prices for only about 25% of next summer's fuel.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-23/las-aerolineas-anticipan-una-subida-de-precios-y-un-recorte-de-plazas-para-el-proximo-verano.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Madrid protesters demand small-business VAT exemption",
+      "body": "About 600 autónomos (self-employed workers) marched in Madrid on November 22, demanding a VAT exemption for annual turnover below €85,000 and contributions based on real income. The EU exemption directive is not in force in Spain. The European Commission took Spain to the EU Court of Justice in March over the delay.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/cientos-autonomos-reclaman-gobierno-exencion-iva-si-ingresan-menos-85-000-euros-ano-como-dicta-bruselas_7064292_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Hernández de Cos gains backing for ECB",
+      "body": "Bank for International Settlements chief Pablo Hernández de Cos has backing from Germany, France, Italy, and Spain to lead the ECB. Confirmation could come during the week of November 23. Other euro partners are annoyed with the Franco-German push, and Dutch rival Klaas Knot has not withdrawn.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/11/23/6b032cffe9cf4ac8208b4576.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Plan Vive charges push applicant over limit",
+      "body": "A worker earning €2,300 a month was rejected for a Plan Vive affordable rental in Arganda del Rey. Extra charges raised the advertised €736 rent to €850, or 37% of his income. The scheme caps housing costs at 35%, showing how added fees can put advertised rents out of reach.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/plan-vive-ayuso-rechaza-trabajador-gana-2-300-euros-mes-insuficientes-alquiler-asequible_1_13667373.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    }
+  ],
+  "engagement": "What's the biggest barrier to buying a home? A) Deposit B) Prices C) Mortgage",
+  "subject": "Falling home sales, wage rises and election red lines",
+  "variant": "Spain in 30s",
+  "headline": "Spain in 30s",
+  "date": "2026-11-23",
+  "engagement_source": "generated",
+  "generated_at": "2026-11-23T07:02:15.324771+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 553,
+    "items_selected_pass1": 11,
+    "fact_sheets_extracted": 11,
+    "items_after_importance_filter": 11,
+    "items_in_digest": 11
+  },
+  "selection_reasons": {
+    "114": "Home sales falling while prices rose 14.7% in a year is a core property-market trend for buyers and renters in Spain.",
+    "322": "Fitch's view on how much room there is to cut taxes bears directly on future tax policy for residents.",
+    "250": "Sick-leave rule change paying 100% of salary without a minimum contribution period is a systemic workplace and social-security change.",
+    "310": "Inflation outpacing wage rises is a national cost-of-living issue affecting all workers' purchasing power.",
+    "292": "Airlines warning of fare rises of up to 20% next summer, driven by fuel costs, affects residents and visitors alike.",
+    "115": "Hundreds of autónomos demanding a VAT exemption below €85,000 turnover touches the self-employed tax regime nationwide.",
+    "511": "Sánchez ruling out a Catalan independence referendum even for investiture votes is a key coalition and national-politics signal before the 29N election.",
+    "38": "Feijóo setting conditions for including Vox in government shapes the likely coalition and ministerial makeup after the 29N election.",
+    "10": "A Spaniard leading the ECB presidency race is a major economic development, with a decision expected this week.",
+    "509": "Madrid's Plan Vive affordable-rent rules, and a new decree curbing extra charges, affect the rental market for many residents.",
+    "516": "Marc Márquez matching Agostini's record eight MotoGP titles is a historic Spanish sporting achievement and a positive story."
+  },
+  "selection_sources": [
+    {
+      "url": "https://www.20minutos.es/nacional/caida-compra-viviendas-se-agudiza-las-zonas-mas-caras-baja-mas-un-20-las-comunidades-que-pasan-2-800-m2_7062680_0.html",
+      "reason": "Home sales falling while prices rose 14.7% in a year is a core property-market trend for buyers and renters in Spain."
+    },
+    {
+      "url": "https://cincodias.elpais.com/mercados-financieros/2026-11-23/federico-barriga-fitch-la-flexibilidad-para-bajar-impuestos-en-espana-no-es-muy-significativa.html",
+      "reason": "Fitch's view on how much room there is to cut taxes bears directly on future tax policy for residents."
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/11/23/es-oficial-baja-laboral-cobrando-100-sueldo-se-concedera-este-tipo-concreto-trabajadores-2067867.html",
+      "reason": "Sick-leave rule change paying 100% of salary without a minimum contribution period is a systemic workplace and social-security change."
+    },
+    {
+      "url": "https://elpais.com/economia/negocios/2026-11-23/la-inflacion-se-come-las-subidas-salariales-y-harta-a-los-trabajadores.html",
+      "reason": "Inflation outpacing wage rises is a national cost-of-living issue affecting all workers' purchasing power."
+    },
+    {
+      "url": "https://elpais.com/economia/2026-11-23/las-aerolineas-anticipan-una-subida-de-precios-y-un-recorte-de-plazas-para-el-proximo-verano.html",
+      "reason": "Airlines warning of fare rises of up to 20% next summer, driven by fuel costs, affects residents and visitors alike."
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/cientos-autonomos-reclaman-gobierno-exencion-iva-si-ingresan-menos-85-000-euros-ano-como-dicta-bruselas_7064292_0.html",
+      "reason": "Hundreds of autónomos demanding a VAT exemption below €85,000 turnover touches the self-employed tax regime nationwide."
+    },
+    {
+      "url": "https://www.europapress.es/nacional/noticia-sanchez-dice-no-aceptara-referendum-cataluna-necesite-votos-junts-erc-gobernar-20261122231957.html",
+      "reason": "Sánchez ruling out a Catalan independence referendum even for investiture votes is a key coalition and national-politics signal before the 29N election."
+    },
+    {
+      "url": "https://www.eldiario.es/politica/feijoo-anticipa-condiciones-vox-si-negociar-29n-ministros-experiencia-respeto-autonomias_1_13679615.html",
+      "reason": "Feijóo setting conditions for including Vox in government shapes the likely coalition and ministerial makeup after the 29N election."
+    },
+    {
+      "url": "https://www.elmundo.es/economia/2026/11/23/6b032cffe9cf4ac8208b4576.html",
+      "reason": "A Spaniard leading the ECB presidency race is a major economic development, with a decision expected this week."
+    },
+    {
+      "url": "https://www.eldiario.es/economia/plan-vive-ayuso-rechaza-trabajador-gana-2-300-euros-mes-insuficientes-alquiler-asequible_1_13667373.html",
+      "reason": "Madrid's Plan Vive affordable-rent rules, and a new decree curbing extra charges, affect the rental market for many residents."
+    },
+    {
+      "url": "https://www.europapress.es/deportes/motociclismo-00311/noticia-marc-marquez-campeon-mundo-motogp-octava-vez-20261122144853.html",
+      "reason": "Marc Márquez matching Agostini's record eight MotoGP titles is a historic Spanish sporting achievement and a positive story."
+    }
+  ]
+}
