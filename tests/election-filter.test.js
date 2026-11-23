@@ -74,3 +74,18 @@ describe('query string round trip', () => {
     assert.ok(!isEmpty({ ...emptyFilters(), topic: 'taxes' }))
   })
 })
+
+describe('party selection', () => {
+  it('toggleIn keeps the given order', async () => {
+    const { toggleIn } = await import('../static/js/election-filter.js')
+    const order = ['pp', 'psoe', 'vox']
+    assert.deepEqual(toggleIn(['vox'], 'pp', order), ['pp', 'vox'])
+    assert.deepEqual(toggleIn(['pp', 'vox'], 'vox', order), ['pp'])
+  })
+  it('partyShown: empty selection shows every party', async () => {
+    const { partyShown } = await import('../static/js/election-filter.js')
+    assert.ok(partyShown('bng', []))
+    assert.ok(partyShown('pp', ['pp', 'psoe']))
+    assert.ok(!partyShown('vox', ['pp', 'psoe']))
+  })
+})

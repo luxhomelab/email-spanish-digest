@@ -40,12 +40,22 @@ export function filterIds (items, filters) {
   return items.filter(it => matches(it, filters)).map(it => it.id)
 }
 
-/** Add or remove one rating from the selection, keeping scale order. */
-export function toggleRating (ratings, key) {
-  const set = new Set(ratings)
+/** Add or remove `key` from a selection, keeping the order of `order`. */
+export function toggleIn (selected, key, order) {
+  const set = new Set(selected)
   if (set.has(key)) set.delete(key)
   else set.add(key)
-  return RATINGS.filter(r => set.has(r))
+  return order.filter(k => set.has(k))
+}
+
+/** Add or remove one rating from the selection, keeping scale order. */
+export function toggleRating (ratings, key) {
+  return toggleIn(ratings, key, RATINGS)
+}
+
+/** Is a party shown? An empty selection means every party is. */
+export function partyShown (party, selected) {
+  return !selected.length || selected.includes(party)
 }
 
 /**

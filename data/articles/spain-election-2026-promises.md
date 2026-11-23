@@ -41,7 +41,7 @@ The bars below cover every item in every programme, not just the selection in ou
 
 ::: graphic ladder
 
-Two things stand out. Parties that govern now or have governed recently, and the Canary regionalists, write programmes made of many concrete, mostly legal-as-is steps, which is why their bars are dark. Parties that want to change the system itself, from different directions (Sumar and Podemos on the left, Vox on the right, BNG and the Catalan and Basque pro-independence parties on territory), have far more items that hit the Constitution, EU law or the budget. Vox also has by far the most items with no figures, deadline or mechanism (V): 22 of 89.
+Two things stand out. Parties that govern now or have governed recently, and the Canary regionalists, write programmes made of many concrete, mostly legal-as-is steps, which is why their bars are mostly green. Parties that want to change the system itself, from different directions (Sumar and Podemos on the left, Vox on the right, BNG and the Catalan and Basque pro-independence parties on territory), have far more items that hit the Constitution, EU law or the budget. Vox also has by far the most items with no figures, deadline or mechanism (V): 22 of 89.
 
 ## Party by party
 
@@ -51,7 +51,7 @@ Tap a party to see its overall picture, what looks doable, where it hits limits,
 
 ## Compare the parties by topic
 
-Pick a topic to see how the parties propose to tackle it. Each row is one approach, such as rent rules or help for buyers, and the columns run from feasible to not possible, so reading across a row shows whose version of an idea could realistically happen. Highlight a party to follow it across the rows, and tap any promise to open its full assessment.
+Pick a topic to see how the parties propose to tackle it. Each row is one approach, such as rent rules or help for buyers, and the columns run from feasible to not possible, so reading across a row shows whose version of an idea could realistically happen. Pick one or more parties to compare only them, and tap any promise to open its full assessment.
 
 ::: graphic compare
 

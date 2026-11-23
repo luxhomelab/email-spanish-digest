@@ -2,7 +2,7 @@
    columns run from feasible to not possible, so you read across a row to see
    whose version of an idea is realistic. Every chip opens its promise in the
    explorer. Without JS all boards are listed; static/js/election-compare.js
-   turns them into tabs and adds the party highlight.
+   turns them into tabs and filters them to the chosen parties.
    Jinja template, `d` = election data. #}
 <div class="el-compare" id="compare-app" data-pagefind-ignore>
  <div class="el-cmp-controls" hidden>
@@ -11,12 +11,19 @@
    <button type="button" role="tab" class="el-cmp-tab" id="cmp-tab-{{ c.topic.key }}" aria-controls="cmp-{{ c.topic.key }}" aria-selected="{{ 'true' if loop.first else 'false' }}" data-topic="{{ c.topic.key }}">{{ c.topic.label }}</button>
 {% endfor %}
   </div>
-  <label class="el-cmp-hl"><span>Highlight a party</span><select id="cmp-party"><option value="">All parties</option>{% for p in d.parties %}<option value="{{ p.key }}">{{ p.name }}</option>{% endfor %}</select></label>
+  <fieldset class="el-cmp-parties">
+   <legend>Compare parties <span class="el-cmp-hint">(pick one or more)</span></legend>
+{% for p in d.parties %}
+   <button type="button" class="el-pty" data-party="{{ p.key }}" aria-pressed="false" style="--pc: {{ p.color }}"><i class="el-dot"></i>{{ p.name }}</button>
+{% endfor %}
+   <button type="button" class="el-clear el-pty-all" hidden>Show all parties</button>
+  </fieldset>
  </div>
 {% for c in d.compare %}
- <section class="el-board" id="cmp-{{ c.topic.key }}" role="tabpanel" aria-labelledby="cmp-tab-{{ c.topic.key }}" style="--cols: {{ c.ratings|length }}">
+ <section class="el-board" id="cmp-{{ c.topic.key }}" role="tabpanel" aria-labelledby="cmp-tab-{{ c.topic.key }}" data-count="{{ c.count }}" style="--cols: {{ c.ratings|length }}">
   <h3 class="el-board-title">{{ c.topic.label }}</h3>
   <p class="el-board-sub">{{ c.count }} promises from {{ c.parties }} parties. Each row runs from the most to the least realistic.</p>
+  <p class="el-board-none" hidden>None of the chosen parties makes a promise on this topic in our selection. Pick another party or <a href="#explorer-app">browse all promises</a>.</p>
   <div class="el-board-grid">
    <div class="el-board-row el-board-head" aria-hidden="true">
     <span class="el-board-approach"></span>
