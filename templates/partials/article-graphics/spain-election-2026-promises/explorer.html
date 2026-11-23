@@ -22,7 +22,7 @@
  </div>
 {% for t, items in d.by_topic %}{% if items %}
  <section class="el-topic" data-topic="{{ t.key }}">
-  <h3 class="el-topic-title">{{ t.label }} <span class="el-topic-n">{{ items|length }}</span></h3>
+  <div class="el-topic-head"><h3 class="el-topic-title">{{ t.label }}</h3> <span class="el-topic-n">{{ items|length }}</span></div>
 {% for it in items %}
   <details class="el-item" id="p-{{ it.id }}" data-party="{{ it.party }}" data-topic="{{ it.topic }}" data-f="{{ it.f }}" style="--pc: {{ it.party_color }}">
    <summary>

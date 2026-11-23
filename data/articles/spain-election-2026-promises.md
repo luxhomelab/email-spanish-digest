@@ -2,7 +2,7 @@
 slug: spain-election-2026-promises
 title: Spain's 2026 Election: What the Parties Promise and What Could Actually Happen
 meta_title: Spain Election 2026: Party Promises Rated for Feasibility
-meta_description: 763 promises from 11 parties for Spain's 29 November 2026 election, rated from realistic to not possible, with pros, cons and sources on housing, tax and immigration.
+meta_description: 763 promises from 11 parties for Spain's 2026 election, rated from realistic to not possible, with pros, cons and sources on housing, tax and immigration.
 date: 2026-11-23
 author: Dmytro Shvechikov
 excerpt: Eleven parties made 763 promises. Which of them could a new government really carry out? Ratings, pros and cons, and sources on housing, tax, immigration and more.

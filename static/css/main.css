@@ -5321,7 +5321,8 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 
 /* Explorer items, grouped by topic */
 .el-topic[hidden] { display: none; }
-.article-body h3.el-topic-title { display: flex; align-items: baseline; gap: 10px; margin: 1.6em 0 0.6em 0; }
+.article-body .el-topic-head { display: flex; align-items: baseline; gap: 10px; margin: 1.6em 0 0.6em 0; }
+.article-body h3.el-topic-title { margin: 0; }
 .el-topic-n { font: 400 14px/1 Helvetica, Arial, sans-serif; color: #6C7A89; }
 .el-item {
  margin: 0 0 8px 0; background-color: #FFFDF8; scroll-margin-top: 12px;
