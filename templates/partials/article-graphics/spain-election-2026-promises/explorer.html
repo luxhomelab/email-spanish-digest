@@ -59,4 +59,29 @@
   <button type="button" class="el-clear" data-clear>Clear filters</button>
  </div>
 </div>
+{# Promise sheet: links with data-open elsewhere in the article (comparison
+   chips, headline promises) show their promise here, over the page, so
+   "Back" returns the reader to the same spot. election-explorer.js copies
+   the item's content in; without JS the links jump to the explorer. #}
+<dialog class="el-sheet" id="el-sheet" aria-labelledby="el-sheet-title" data-pagefind-ignore>
+ <div class="el-sheet-bar">
+  <button type="button" class="el-sheet-back" data-sheet-close>Back</button>
+  <span class="el-sheet-nav">
+   <span class="el-sheet-pos" aria-live="polite"></span>
+   <button type="button" class="el-sheet-step" data-step="-1" aria-label="Previous promise"><svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M12.5 4.5 7 10l5.5 5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+   <button type="button" class="el-sheet-step" data-step="1" aria-label="Next promise"><svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </span>
+ </div>
+ <div class="el-sheet-scroll">
+  <p class="el-sheet-context"></p>
+  <div class="el-sheet-head">
+   <span class="el-badge" aria-hidden="true"></span>
+   <span class="el-item-head">
+    <span class="el-sheet-title el-item-title" id="el-sheet-title"></span>
+    <span class="el-item-meta"></span>
+   </span>
+  </div>
+  <div class="el-sheet-body"></div>
+ </div>
+</dialog>
 <script type="module" src="/static/js/election-explorer.js?v={{ js_version }}"></script>

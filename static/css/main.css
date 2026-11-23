@@ -5460,3 +5460,64 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 .article-body a.el-chip[hidden], .el-board-row[hidden] { display: none; }
 .article-body .el-board-none { margin: 4px 0 0 0; padding: 16px; border: 1px dashed #C9BFAA; border-radius: 10px; font-size: 15px; color: #1A1A16; }
 .article-body .el-board-none[hidden] { display: none; }
+
+/* Promise sheet (explorer.html, election-explorer.js): a promise opened from
+   a comparison chip or a headline link shows over the page, so "Back" puts
+   the reader where they were. Phones: a sheet from the bottom. From 900px:
+   a panel on the right, so the board stays visible beside it. The left edge
+   carries the promise's rating colour, as on explorer items. */
+.el-sheet {
+ position: fixed; inset: auto 0 0 0; margin: 0; padding: 0;
+ width: 100%; max-width: none; max-height: 88vh; max-height: 88dvh;
+ display: none; flex-direction: column;
+ background-color: #FFFDF8; color: #1A1A16; border: 0;
+ border-top: 4px solid var(--rl, #C9BFAA); border-radius: 16px 16px 0 0;
+ box-shadow: 0 -8px 30px rgba(26, 26, 22, 0.18);
+}
+.el-sheet[open] { display: flex; animation: el-sheet-up 0.22s ease-out; }
+.el-sheet::backdrop { background-color: rgba(26, 26, 22, 0.38); }
+html:has(.el-sheet[open]) { overflow: hidden; }
+@keyframes el-sheet-up { from { transform: translateY(24px); opacity: 0; } }
+@keyframes el-sheet-in { from { transform: translateX(24px); opacity: 0; } }
+.el-sheet-bar {
+ flex: none; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+ padding: 8px 10px 8px 12px; border-bottom: 1px solid #EFE7D8;
+}
+.el-sheet-back {
+ min-height: 44px; padding: 8px 16px; border: 1px solid #1F3A5F; border-radius: 22px;
+ background-color: #1F3A5F; color: #FFFFFF; cursor: pointer;
+ font: 700 15px/1.2 Roboto, Helvetica, Arial, sans-serif;
+}
+.el-sheet-back:hover { background-color: #2B4D7A; }
+.el-sheet-nav { display: flex; align-items: center; gap: 4px; }
+.el-sheet-nav[hidden] { display: none; }
+.el-sheet-pos { margin-right: 4px; font-size: 13.5px; color: #5B6775; white-space: nowrap; }
+.el-sheet-step {
+ display: inline-flex; align-items: center; justify-content: center;
+ width: 44px; height: 44px; padding: 0; border: 1px solid #C9BFAA; border-radius: 50%;
+ background-color: #FFFFFF; color: #1F3A5F; cursor: pointer;
+}
+.el-sheet-step:hover:not(:disabled) { border-color: #1F3A5F; }
+.el-sheet-step:disabled { color: #C9BFAA; border-color: #EFE7D8; cursor: default; }
+.el-sheet-back:focus-visible, .el-sheet-step:focus-visible { outline: 3px solid #F1BF00; outline-offset: 2px; }
+.el-sheet-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 16px 16px 24px 16px; }
+.article-body .el-sheet-context { margin: 0 0 10px 0; font-size: 13.5px; line-height: 1.45; color: #5B6775; }
+.article-body .el-sheet-context[hidden] { display: none; }
+.el-sheet-head { display: flex; gap: 12px; align-items: flex-start; margin: 0 0 14px 0; }
+.el-sheet-head .el-badge:empty { visibility: hidden; }
+.el-sheet .el-item-title { font-size: 18px; }
+.el-sheet .el-item-body { padding: 0; }
+.el-sheet .el-facts, .el-sheet .el-pc { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) {
+ .el-sheet {
+  inset: 0 0 0 auto; width: 480px; height: 100vh; height: 100dvh; max-height: none;
+  border-top: 0; border-left: 4px solid var(--rl, #C9BFAA); border-radius: 0;
+  box-shadow: -8px 0 30px rgba(26, 26, 22, 0.18);
+ }
+ .el-sheet[open] { animation-name: el-sheet-in; }
+ .el-sheet::backdrop { background-color: rgba(26, 26, 22, 0.22); }
+ .el-sheet-scroll { padding: 20px 22px 28px 22px; }
+}
+@media (prefers-reduced-motion: reduce) { .el-sheet[open] { animation: none; } }
+/* The promise open in the sheet, marked on the board beside it. */
+.article-body a.el-chip.is-current { border-color: #1F3A5F; box-shadow: inset 0 0 0 1px #1F3A5F; color: #1A1A16; }
