@@ -234,7 +234,7 @@ That is why your doctor's appointment depends on your region's health service, w
 
 ## How often Spaniards vote
 
-- **General elections:** at least every four years, and sometimes early — like the snap election called for 29 November 2026. See [how Spain votes](/articles/how-spain-votes) for how those votes become seats.
+- **General elections:** at least every four years, and sometimes early — like the snap election called for 29 November 2026. See [how Spain votes](/articles/how-spain-votes) for how those votes become seats, and our [ratings of the 2026 election promises](/articles/spain-election-2026-promises) for what the parties plan to do.
 - **Regional elections:** every four years; dates vary by region.
 - **Municipal elections:** every four years, in May, on the same day across Spain.
 - **European elections:** every five years, for 61 MEPs.

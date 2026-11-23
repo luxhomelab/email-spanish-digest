@@ -1,0 +1,23 @@
+{# Feasibility mix of every party's whole programme (all 763 items), sorted
+   by the share rated A or B. Jinja template, `d` = election data. #}
+<figure class="ag ag-el-ladder">
+ <div class="ag-panel">
+  <div class="el-key" aria-hidden="true">
+{% for r in d.ratings %}
+   <span><i class="el-sw el-r-{{ r.key }}"></i>{{ r.short }}</span>
+{% endfor %}
+  </div>
+  <ol class="el-ladder">
+{% for p in d.parties_by_feasibility %}
+   <li class="el-rung">
+    <span class="el-rung-name"><i class="el-dot" style="--pc: {{ p.color }}"></i>{{ p.name }}</span>
+    <span class="el-bar" role="img" aria-label="{{ p.name }}, {{ p.count }} promises: {% for r, n, pct in p.shares %}{{ n }} {{ d.ratings_by_key[r].short|lower }}{% if not loop.last %}, {% endif %}{% endfor %}">
+{% for r, n, pct in p.shares %}{% if n %}<span class="el-seg el-r-{{ r }}" style="width: {{ '%.2f'|format(pct) }}%"></span>{% endif %}{% endfor %}
+    </span>
+    <span class="el-rung-pct"><b>{{ p.feasible_pct }}%</b> realistic</span>
+   </li>
+{% endfor %}
+  </ol>
+ </div>
+ <figcaption>Share of each party's programme items by rating, {{ d.total_items }} items in all, as of {{ d.as_of_display }}. Programmes made of small practical steps score higher than programmes that want to change the system.</figcaption>
+</figure>

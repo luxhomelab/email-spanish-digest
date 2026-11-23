@@ -181,7 +181,7 @@ General and regional elections, including the 29 November vote, are for Spanish 
 
 ## The short version
 
-You vote for a party list in your province. Seats are shared out province by province with the d'Hondt method, small provinces weigh more, and the Senate has rules of its own. Then Congress, not the voters, picks the prime minister.
+You vote for a party list in your province. Seats are shared out province by province with the d'Hondt method, small provinces weigh more, and the Senate has rules of its own. Then Congress, not the voters, picks the prime minister. To see what the 11 main parties promise for this election, and which promises could really happen, read our [ratings of the 2026 election promises](/articles/spain-election-2026-promises).
 
 Whether that's fair is an old debate in Spain. But now you know the rules. If you'd like to follow the election and everything after it in five minutes a day, in English, [Spain Daily](/subscribe) sends the news every morning for free.
 

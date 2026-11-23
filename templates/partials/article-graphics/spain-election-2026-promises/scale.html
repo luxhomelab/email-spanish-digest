@@ -1,0 +1,15 @@
+{# Rating scale legend. Jinja template: rendered by build.article_graphic_html
+   with the election data as `d` (data/election-2026/meta.json). Green for
+   feasible through amber to red for not possible: the scale measures how hard
+   a promise is to deliver, not whether a policy is good. #}
+<figure class="ag ag-el-scale">
+ <div class="ag-panel">
+  <ol class="el-scale">
+{% for r in d.ratings %}
+   <li><span class="el-badge el-r-{{ r.key }}" aria-hidden="true">{{ r.key }}</span><span class="el-scale-text"><b>{{ r.label }}.</b> {{ r.desc }}</span></li>
+{% endfor %}
+  </ol>
+  <p class="el-scale-note">Each promise also has a chance of happening in the next four years: <i>yes</i>, <i>partly</i> or <i>no</i>. It also has a list of what it needs, for example an organic law, the regions or EU approval.</p>
+ </div>
+ <figcaption>The rating measures how hard a promise is to carry out, not whether it is a good idea.</figcaption>
+</figure>

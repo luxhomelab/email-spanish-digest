@@ -5154,3 +5154,371 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
  .cc-table td { display: block; border: 0; padding: 2px 0; }
  .cc-table td:first-child { font-weight: 600; }
 }
+
+/* ---------- Election 2026 promises (article spain-election-2026-promises) ----------
+   Graphics partials under templates/partials/article-graphics/<slug>/ and
+   the explorer driven by static/js/election-explorer.js. Classes .el-*.
+   The feasibility scale runs green (feasible) through amber to red (not
+   possible); it measures how hard a promise is to deliver, not whether the
+   policy is good. Party colours appear only as a small dot. */
+.el-r-A { --rb: #2E7D4F; --rf: #FFFFFF; --rl: #2E7D4F; }
+.el-r-B { --rb: #94CBA5; --rf: #17432A; --rl: #94CBA5; }
+.el-r-C { --rb: #F2C55C; --rf: #4F3A00; --rl: #F2C55C; }
+.el-r-D { --rb: #C8453B; --rf: #FFFFFF; --rl: #C8453B; }
+.el-r-V { --rb: #D9D4CA; --rf: #4F4A40; --rl: #CFC6B3; }
+
+.el-badge {
+ flex: none; display: inline-flex; align-items: center; justify-content: center;
+ width: 30px; height: 30px; border-radius: 8px;
+ background: var(--rb); color: var(--rf);
+ font: 700 15px/1 Roboto, Helvetica, Arial, sans-serif;
+}
+.el-badge-sm { width: 22px; height: 22px; border-radius: 6px; font-size: 12px; }
+.el-dot {
+ display: inline-block; flex: none; width: 10px; height: 10px; border-radius: 50%;
+ background-color: var(--pc, #8592A3); margin-right: 7px; vertical-align: 0.05em;
+}
+.el-vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Scale legend */
+.article-body ol.el-scale { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.article-body ol.el-scale li { display: flex; gap: 14px; align-items: flex-start; margin: 0; padding: 0; font-size: 15.5px; line-height: 1.55; }
+.article-body ol.el-scale li::before { content: none; }
+.el-scale-text b { color: #1A1A16; }
+.article-body .el-scale-note { margin: 18px 0 0 0; padding-top: 14px; border-top: 1px dashed #EFE7D8; font-size: 14.5px; line-height: 1.6; color: #5B6775; }
+
+/* Stacked bar: one segment per rating, widths from the data */
+.el-bar { display: flex; height: 14px; border-radius: 4px; overflow: hidden; background: #F3EEE3; min-width: 0; }
+.el-seg { display: block; height: 100%; background: var(--rb); }
+.el-seg + .el-seg { box-shadow: inset 1px 0 0 #FFFDF8; }
+.el-bar-sm { height: 10px; border-radius: 3px; }
+
+/* Ladder: all parties, aligned bars, sorted by share feasible or hard */
+.el-key { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 16px; font-size: 13.5px; color: #5B6775; }
+.el-key span { display: inline-flex; align-items: center; gap: 6px; }
+.el-sw { display: inline-block; width: 14px; height: 14px; border-radius: 3px; background: var(--rb); }
+.article-body ol.el-ladder { list-style: none; margin: 0; padding: 0; }
+.article-body ol.el-ladder li.el-rung {
+ display: grid; grid-template-columns: 76px minmax(0, 1fr) 150px; align-items: center; gap: 12px;
+ margin: 0; padding: 7px 0; font-size: 14.5px; line-height: 1.3;
+}
+.article-body ol.el-ladder li.el-rung::before { content: none; }
+.el-rung-name { font-weight: 700; color: #1A1A16; white-space: nowrap; }
+.el-rung-pct { color: #5B6775; font-size: 13.5px; }
+.el-rung-pct b { color: #1A1A16; font-size: 14.5px; }
+@media (max-width: 520px) {
+ .article-body ol.el-ladder li.el-rung { grid-template-columns: 80px minmax(0, 1fr) 36px; gap: 8px; }
+ .el-rung-pct { font-size: 0; }
+ .el-rung-pct b { font-size: 14px; }
+}
+
+/* Party cards */
+.el-parties { margin: 0 0 2em 0; background-color: #FFFDF8; border: 1px solid #EFE7D8; border-radius: 12px; }
+.el-party { border-bottom: 1px dashed #EFE7D8; }
+.el-party:last-child { border-bottom: none; }
+.el-party > summary {
+ display: grid; grid-template-columns: minmax(0, 1fr) 96px 44px; align-items: center; gap: 12px;
+ min-height: 56px; padding: 10px 18px; cursor: pointer; list-style: none;
+}
+.el-party > summary::-webkit-details-marker { display: none; }
+.el-party > summary:hover .el-party-name, .el-party[open] > summary .el-party-name { color: #AA151B; }
+.el-party-head { display: flex; flex-direction: column; min-width: 0; }
+.el-party-name { font: 700 17px/1.3 Roboto, Helvetica, Arial, sans-serif; color: #1A1A16; }
+.el-party-bloc { font-size: 13.5px; line-height: 1.4; color: #5B6775; padding-left: 17px; }
+.el-party-pct { text-align: right; font-weight: 700; font-size: 14.5px; color: #1A1A16; white-space: nowrap; }
+.el-party-pct::after { content: "+"; display: inline-block; width: 16px; margin-left: 4px; text-align: center; color: #AA151B; font-weight: 400; font-size: 19px; vertical-align: -1px; }
+.el-party[open] .el-party-pct::after { content: "\2013"; }
+.el-party-body { padding: 2px 18px 18px 35px; font-size: 15.5px; line-height: 1.7; }
+.article-body .el-party-body p { margin: 0 0 0.8em 0; }
+.article-body .el-party-body .el-party-full { font-size: 14px; color: #5B6775; }
+.article-body .el-party-body .el-party-line b { color: #1A1A16; }
+.article-body .el-party-body .el-party-sub { margin: 1.1em 0 0.4em 0; font-weight: 700; color: #1A1A16; font-size: 14.5px; }
+.article-body ul.el-heads { margin: 0 0 0.9em 0; }
+.article-body ul.el-heads li { margin: 0; padding: 0; }
+.article-body ul.el-heads li::before { content: none; }
+.article-body ul.el-heads a {
+ display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 4px 0;
+ color: #1A1A16; text-decoration: none; line-height: 1.4;
+}
+.article-body ul.el-heads a:hover { background: none; color: #AA151B; }
+.article-body ul.el-heads a:hover > span:last-child { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.article-body .el-party-foot { display: flex; flex-wrap: wrap; gap: 0 22px; margin: 0; font-size: 14.5px; }
+.article-body .el-party-foot a { display: inline-block; padding: 11px 0; line-height: 22px; }
+/* Programme links (programmes.html): two columns from 700px. */
+.article-body ul.el-progs { margin: 0 0 1em 0; padding: 0; columns: 2 280px; column-gap: 28px; }
+.article-body ul.el-progs li { margin: 0; padding: 0; break-inside: avoid; }
+.article-body ul.el-progs li::before { content: none; }
+.article-body ul.el-progs a { display: inline-block; padding: 11px 0 11px 16px; text-indent: -16px; line-height: 22px; text-decoration: none; }
+.article-body ul.el-progs a > span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.article-body ul.el-progs a:hover { background: none; color: #8A1019; }
+.article-body ul.el-progs a:hover > span { text-decoration-thickness: 2px; }
+.article-body ul.el-progs a:focus-visible { outline: 3px solid #F1BF00; outline-offset: 2px; border-radius: 2px; }
+.article-body ul.el-progs .el-dot { margin-right: 6px; }
+.article-body ul.el-progs a > b { color: #1A1A16; margin-right: 4px; }
+/* Links inside the election graphics: hover darkens the colour and thickens
+   the underline. The article-wide tinted background is for links in running
+   text; on these padded 44px links it would show as an offset box. */
+.article-body .el-party-foot a:hover, .article-body .el-facts a:hover, .article-body .el-src a:hover {
+ background: none; color: #8A1019; text-decoration-thickness: 2px;
+}
+.article-body .el-party-foot a:focus-visible, .article-body .el-facts a:focus-visible,
+.article-body .el-src a:focus-visible, .article-body ul.el-heads a:focus-visible {
+ outline: 3px solid #F1BF00; outline-offset: 2px; border-radius: 2px;
+}
+@media (max-width: 520px) {
+ .el-party > summary { grid-template-columns: minmax(0, 1fr) 64px 54px; gap: 10px; padding: 10px 14px; }
+ .el-party-body { padding: 2px 14px 16px 14px; }
+}
+/* Narrow phones: the bloc line gets its own full-width row under
+   name | bar | %, so the name column is wide enough for one line. */
+@media (max-width: 420px) {
+ .el-party > summary { grid-template-columns: minmax(0, 1fr) 52px 54px; row-gap: 2px; }
+ .el-party-head { display: contents; }
+ .el-party-name { grid-column: 1; grid-row: 1; white-space: nowrap; }
+ .el-party-bloc { grid-column: 1 / -1; grid-row: 2; }
+}
+
+/* Explorer controls */
+.el-explorer { margin: 0 0 2em 0; }
+.el-controls {
+ display: grid; gap: 14px; margin: 0 0 22px 0; padding: 18px;
+ background-color: #FFFDF8; border: 1px solid #EFE7D8; border-radius: 12px;
+}
+.el-controls[hidden] { display: none; }
+.el-controls label { display: flex; flex-direction: column; gap: 5px; font-size: 13.5px; font-weight: 700; color: #1A1A16; min-width: 0; }
+.el-controls input, .el-controls select {
+ width: 100%; min-height: 46px; padding: 9px 12px;
+ border: 1px solid #C9BFAA; border-radius: 10px; background-color: #FFFFFF;
+ font: 400 16px/1.3 Helvetica, Arial, sans-serif; color: #1A1A16;
+}
+.el-controls input:focus-visible, .el-controls select:focus-visible, .el-rate:focus-visible, .el-clear:focus-visible,
+.el-item > summary:focus-visible, .el-party > summary:focus-visible { outline: 3px solid #F1BF00; outline-offset: 2px; }
+.el-selects { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.el-rates { border: 0; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; min-width: 0; }
+.el-rates legend { width: 100%; margin-bottom: 6px; font-size: 13.5px; font-weight: 700; color: #1A1A16; }
+.el-rate {
+ display: inline-flex; align-items: center; gap: 7px; min-height: 44px; padding: 6px 12px 6px 8px;
+ border: 1px solid #C9BFAA; border-radius: 22px; background-color: #FFFFFF; cursor: pointer;
+ font: 400 14.5px/1.2 Helvetica, Arial, sans-serif; color: #3C4858;
+}
+.el-rate[aria-pressed="true"] { border-color: #1F3A5F; background-color: #EBF0F6; color: #1A1A16; box-shadow: inset 0 0 0 1px #1F3A5F; }
+.el-status { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
+.article-body .el-count { margin: 0; font-size: 14.5px; color: #5B6775; }
+.el-clear {
+ min-height: 44px; padding: 8px 16px; border: 1px solid #AA151B; border-radius: 22px;
+ background-color: #FFFFFF; color: #AA151B; cursor: pointer;
+ font: 700 14px/1.2 Roboto, Helvetica, Arial, sans-serif;
+}
+.el-clear:hover { background-color: #FBEDEC; }
+.el-clear[hidden] { display: none; }
+.el-empty { padding: 22px; text-align: center; border: 1px dashed #C9BFAA; border-radius: 12px; }
+.el-empty[hidden] { display: none; }
+.article-body .el-empty p { margin: 0 0 12px 0; color: #1A1A16; }
+@media (max-width: 520px) {
+ .el-controls { padding: 14px; }
+ .el-selects { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Explorer items, grouped by topic */
+.el-topic[hidden] { display: none; }
+.article-body .el-topic-head { display: flex; align-items: baseline; gap: 10px; margin: 1.6em 0 0.6em 0; }
+.article-body h3.el-topic-title { margin: 0; }
+.el-topic-n { font: 400 14px/1 Helvetica, Arial, sans-serif; color: #6C7A89; }
+.el-item {
+ margin: 0 0 8px 0; background-color: #FFFDF8; scroll-margin-top: 12px;
+ border: 1px solid #EFE7D8; border-left: 3px solid var(--rl); border-radius: 10px;
+}
+.el-item[hidden] { display: none; }
+.el-item > summary {
+ display: flex; gap: 12px; align-items: flex-start; min-height: 56px;
+ padding: 12px 44px 12px 14px; position: relative; cursor: pointer; list-style: none;
+}
+.el-item > summary::-webkit-details-marker { display: none; }
+.el-item > summary::after {
+ content: "+"; position: absolute; right: 16px; top: 13px;
+ color: #AA151B; font-size: 21px; line-height: 1;
+}
+.el-item[open] > summary::after { content: "\2013"; }
+.el-item-head { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.el-item-title { font: 700 16px/1.4 Roboto, Helvetica, Arial, sans-serif; color: #1A1A16; overflow-wrap: anywhere; }
+.el-item > summary:hover .el-item-title, .el-item[open] .el-item-title { color: #AA151B; }
+.el-item-meta { display: flex; flex-wrap: wrap; gap: 2px 14px; font-size: 13.5px; line-height: 1.4; color: #5B6775; }
+.el-item-party { display: inline-flex; align-items: center; font-weight: 700; color: #3C4858; }
+.el-item-body { padding: 0 16px 16px 56px; font-size: 15.5px; line-height: 1.65; }
+.article-body .el-item-body p { margin: 0 0 0.8em 0; }
+.el-item-detail { color: #1A1A16; }
+.el-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 18px; margin: 0 0 14px 0; padding: 12px 0; border-top: 1px dashed #EFE7D8; border-bottom: 1px dashed #EFE7D8; }
+.el-facts dt { font-size: 12.5px; color: #6C7A89; }
+.el-facts dd { margin: 0; font-size: 14.5px; line-height: 1.45; color: #1A1A16; }
+.el-item-c b, .el-pc-h { color: #1A1A16; }
+.el-pc { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 0 12px 0; }
+.el-pos, .el-neg { padding: 12px 14px; border-radius: 8px; background-color: #FFFFFF; border: 1px solid #EFE7D8; }
+.el-pos { border-top: 3px solid #2E7D4F; }
+.el-neg { border-top: 3px solid #B8870A; }
+.article-body .el-pc p { margin: 0; font-size: 14.5px; line-height: 1.6; }
+.article-body .el-pc .el-pc-h, .article-body .el-src .el-pc-h { margin: 0 0 4px 0; font-weight: 700; font-size: 13.5px; }
+.article-body .el-src ul { margin: 0; }
+.article-body .el-src li { margin: 0 0 4px 0; padding-left: 14px; font-size: 13.5px; line-height: 1.5; }
+.article-body .el-src li::before { width: 5px; height: 5px; left: 0; top: 0.6em; box-shadow: none; background-color: #C9BFAA; }
+.article-body .el-src a { overflow-wrap: anywhere; }
+@media (max-width: 640px) {
+ .el-item-body { padding: 0 14px 14px 14px; }
+ .el-facts { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+ .el-pc { grid-template-columns: minmax(0, 1fr); }
+}
+/* Touch screens: source and programme links become full 44px rows. */
+@media (pointer: coarse) {
+ .article-body .el-facts a, .article-body .el-src li a { display: inline-block; padding: 12px 0; }
+ .article-body .el-src li { margin: 0; }
+ .article-body .el-src li::before { top: 1.25em; }
+}
+/* Keep a readable measure inside the full-width article card. */
+.el-item-body > p { max-width: 720px; }
+.el-pc, .el-src, .el-facts { max-width: 860px; }
+.el-party-body > p, .el-party-body > ul { max-width: 760px; }
+
+/* Topic comparison boards (compare.html, election-compare.js).
+   Phones: each approach is a short list of chips with rating badges.
+   Wide screens: a grid, approaches down the side and ratings across the top,
+   so the column itself says how realistic a promise is. */
+.el-compare { margin: 0 0 2.2em 0; }
+.el-cmp-controls { display: grid; gap: 14px; margin: 0 0 18px 0; }
+.el-cmp-controls[hidden] { display: none; }
+.el-cmp-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.el-cmp-tab {
+ min-height: 44px; padding: 8px 16px; border: 1px solid #C9BFAA; border-radius: 22px;
+ background-color: #FFFFFF; cursor: pointer; color: #3C4858;
+ font: 400 15px/1.2 Helvetica, Arial, sans-serif;
+}
+.el-cmp-tab[aria-selected="true"] { background-color: #1F3A5F; border-color: #1F3A5F; color: #FFFFFF; font-weight: 700; }
+.el-cmp-tab:focus-visible, .el-chip:focus-visible { outline: 3px solid #F1BF00; outline-offset: 2px; }
+.el-board { padding: 18px; background-color: #FFFDF8; border: 1px solid #EFE7D8; border-radius: 12px; margin-bottom: 16px; }
+.el-board[hidden] { display: none; }
+.el-compare.is-tabbed .el-board-title { display: none; }
+.article-body h3.el-board-title { margin: 0 0 4px 0; }
+.article-body .el-board-sub { margin: 0 0 12px 0; font-size: 14px; line-height: 1.5; color: #5B6775; }
+.el-board-head { display: none; }
+.el-board-row { padding: 12px 0; border-top: 1px dashed #EFE7D8; }
+.article-body .el-board-approach { margin: 0 0 8px 0; font: 700 15.5px/1.35 Roboto, Helvetica, Arial, sans-serif; color: #1A1A16; }
+.el-board-cell:empty, .el-board-cell.is-empty { display: none; }
+.el-board-cell { display: grid; gap: 6px; }
+.el-board-cell + .el-board-cell { margin-top: 6px; }
+.article-body a.el-chip {
+ display: flex; gap: 9px; align-items: flex-start; min-height: 44px; padding: 8px 10px;
+ background-color: #FFFFFF; border: 1px solid #EFE7D8; border-radius: 8px;
+ color: #3C4858; text-decoration: none; font-size: 14.5px; line-height: 1.4;
+ transition: border-color 0.15s;
+}
+.article-body a.el-chip::after { content: none; }
+.article-body a.el-chip:hover { background-color: #FFFFFF; border-color: #1F3A5F; color: #1A1A16; }
+.el-chip .el-badge { margin-top: 1px; }
+.el-chip-text b { display: inline-flex; align-items: center; margin-right: 4px; color: #1A1A16; }
+.el-chip-text .el-dot { width: 8px; height: 8px; margin-right: 5px; }
+@media (prefers-reduced-motion: reduce) { .article-body a.el-chip { transition: none; } }
+@media (max-width: 520px) { .el-board { padding: 14px; } }
+
+@media (min-width: 900px) {
+ .el-board-row {
+  display: grid; grid-template-columns: 180px repeat(var(--cols), minmax(0, 1fr));
+  gap: 10px; align-items: stretch;
+ }
+ .el-board-head { display: grid; padding: 0 0 8px 0; border-top: 0; }
+ .el-board-col { display: flex; align-items: center; gap: 7px; font-size: 13.5px; font-weight: 700; color: #1A1A16; }
+ .article-body .el-board-approach { margin: 4px 0 0 0; font-size: 14.5px; }
+ .el-board-cell:empty, .el-board-cell.is-empty { display: block; }
+ .el-board-cell + .el-board-cell { margin-top: 0; }
+ .el-board-cell { align-content: start; padding: 6px; border-radius: 8px; background-color: #F7F3EA; }
+ .el-board-cell:empty { background: repeating-linear-gradient(135deg, transparent 0 6px, #F3EEE3 6px 7px); }
+ .el-chip .el-badge { display: none; }
+ .article-body a.el-chip { font-size: 13.5px; padding: 7px 9px; }
+}
+@media (min-width: 900px) {
+ /* Column tint fades with the scale: darkest where promises are most realistic. */
+ .el-board-cell.el-r-A { background-color: #E3F2E8; }
+ .el-board-cell.el-r-B { background-color: #EEF7F1; }
+ .el-board-cell.el-r-C { background-color: #FCF4DE; }
+ .el-board-cell.el-r-D { background-color: #FAECEA; }
+ .el-board-cell.el-r-V { background-color: #F3F0EA; }
+}
+@media (min-width: 900px) {
+ .el-board-row .el-board-cell:empty, .el-board-row .el-board-cell.is-empty { background: repeating-linear-gradient(135deg, transparent 0 6px, #EFE9DC 6px 7px); }
+}
+@media (max-width: 520px) { .el-cmp-tab { padding: 8px 13px; font-size: 14px; } .el-cmp-tabs { gap: 6px; } }
+
+/* Party picker on the comparison boards: toggle any number of parties. */
+.el-cmp-parties { border: 0; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; min-width: 0; }
+.el-cmp-parties legend { width: 100%; margin-bottom: 6px; font-size: 14px; font-weight: 700; color: #1A1A16; }
+.el-cmp-hint { font-weight: 400; color: #6C7A89; }
+.el-pty {
+ display: inline-flex; align-items: center; min-height: 44px; padding: 6px 14px 6px 12px;
+ border: 1px solid #C9BFAA; border-radius: 22px; background-color: #FFFFFF; cursor: pointer;
+ font: 700 14.5px/1.2 Roboto, Helvetica, Arial, sans-serif; color: #3C4858;
+}
+.el-pty[aria-pressed="true"] { border-color: var(--pc); background-color: #FFFFFF; color: #1A1A16; box-shadow: inset 0 0 0 2px var(--pc); }
+.el-pty[aria-pressed="true"]::after { content: "\2713"; margin-left: 6px; color: var(--pc); }
+.el-pty:focus-visible { outline: 3px solid #F1BF00; outline-offset: 2px; }
+.el-pty-all { margin-left: 4px; }
+.article-body a.el-chip[hidden], .el-board-row[hidden] { display: none; }
+.article-body .el-board-none { margin: 4px 0 0 0; padding: 16px; border: 1px dashed #C9BFAA; border-radius: 10px; font-size: 15px; color: #1A1A16; }
+.article-body .el-board-none[hidden] { display: none; }
+
+/* Promise sheet (explorer.html, election-explorer.js): a promise opened from
+   a comparison chip or a headline link shows over the page, so "Back" puts
+   the reader where they were. Phones: a sheet from the bottom. From 900px:
+   a panel on the right, so the board stays visible beside it. The left edge
+   carries the promise's rating colour, as on explorer items. */
+.el-sheet {
+ position: fixed; inset: auto 0 0 0; margin: 0; padding: 0;
+ width: 100%; max-width: none; max-height: 88vh; max-height: 88dvh;
+ display: none; flex-direction: column;
+ background-color: #FFFDF8; color: #1A1A16; border: 0;
+ border-top: 4px solid var(--rl, #C9BFAA); border-radius: 16px 16px 0 0;
+ box-shadow: 0 -8px 30px rgba(26, 26, 22, 0.18);
+}
+.el-sheet[open] { display: flex; animation: el-sheet-up 0.22s ease-out; }
+.el-sheet::backdrop { background-color: rgba(26, 26, 22, 0.38); }
+html:has(.el-sheet[open]) { overflow: hidden; }
+@keyframes el-sheet-up { from { transform: translateY(24px); opacity: 0; } }
+@keyframes el-sheet-in { from { transform: translateX(24px); opacity: 0; } }
+.el-sheet-bar {
+ flex: none; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+ padding: 8px 10px 8px 12px; border-bottom: 1px solid #EFE7D8;
+}
+.el-sheet-back {
+ min-height: 44px; padding: 8px 16px; border: 1px solid #1F3A5F; border-radius: 22px;
+ background-color: #1F3A5F; color: #FFFFFF; cursor: pointer;
+ font: 700 15px/1.2 Roboto, Helvetica, Arial, sans-serif;
+}
+.el-sheet-back:hover { background-color: #2B4D7A; }
+.el-sheet-nav { display: flex; align-items: center; gap: 4px; }
+.el-sheet-nav[hidden] { display: none; }
+.el-sheet-pos { margin-right: 4px; font-size: 13.5px; color: #5B6775; white-space: nowrap; }
+.el-sheet-step {
+ display: inline-flex; align-items: center; justify-content: center;
+ width: 44px; height: 44px; padding: 0; border: 1px solid #C9BFAA; border-radius: 50%;
+ background-color: #FFFFFF; color: #1F3A5F; cursor: pointer;
+}
+.el-sheet-step:hover:not(:disabled) { border-color: #1F3A5F; }
+.el-sheet-step:disabled { color: #C9BFAA; border-color: #EFE7D8; cursor: default; }
+.el-sheet-back:focus-visible, .el-sheet-step:focus-visible { outline: 3px solid #F1BF00; outline-offset: 2px; }
+.el-sheet-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 16px 16px 24px 16px; }
+.article-body .el-sheet-context { margin: 0 0 10px 0; font-size: 13.5px; line-height: 1.45; color: #5B6775; }
+.article-body .el-sheet-context[hidden] { display: none; }
+.el-sheet-head { display: flex; gap: 12px; align-items: flex-start; margin: 0 0 14px 0; }
+.el-sheet-head .el-badge:empty { visibility: hidden; }
+.el-sheet .el-item-title { font-size: 18px; }
+.el-sheet .el-item-body { padding: 0; }
+.el-sheet .el-facts, .el-sheet .el-pc { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) {
+ .el-sheet {
+  inset: 0 0 0 auto; width: 480px; height: 100vh; height: 100dvh; max-height: none;
+  border-top: 0; border-left: 4px solid var(--rl, #C9BFAA); border-radius: 0;
+  box-shadow: -8px 0 30px rgba(26, 26, 22, 0.18);
+ }
+ .el-sheet[open] { animation-name: el-sheet-in; }
+ .el-sheet::backdrop { background-color: rgba(26, 26, 22, 0.22); }
+ .el-sheet-scroll { padding: 20px 22px 28px 22px; }
+}
+@media (prefers-reduced-motion: reduce) { .el-sheet[open] { animation: none; } }
+/* The promise open in the sheet, marked on the board beside it. */
+.article-body a.el-chip.is-current { border-color: #1F3A5F; box-shadow: inset 0 0 0 1px #1F3A5F; color: #1A1A16; }

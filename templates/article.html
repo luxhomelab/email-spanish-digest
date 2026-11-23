@@ -6,7 +6,10 @@
 <meta property="og:title" content="{{ article.meta_title }}">
 <meta property="og:description" content="{{ article.meta_description }}">
 <meta property="og:url" content="{{ site_url }}{{ article.url }}">
-<meta property="article:published_time" content="{{ pub_date(article.date) }}">
+<meta property="og:site_name" content="Spanified">
+<meta property="og:locale" content="en_GB">
+{% if article.story_categories %}<meta property="article:section" content="{{ article.story_categories[0]|capitalize }}">
+{% endif %}<meta property="article:published_time" content="{{ pub_date(article.date) }}">
 {% if article.updated != article.date %}<meta property="article:modified_time" content="{{ pub_date(article.updated) }}">
 {% endif %}<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ article.meta_title }}">
@@ -33,6 +36,9 @@
  "publisher": {"@type": "Organization", "name": "Spanified", "logo": {"@type": "ImageObject", "url": "{{ site_url }}/logo.jpg", "width": 640, "height": 640}},
  "inLanguage": "en",
  "wordCount": {{ article.word_count }},
+{% if article.story_categories %} "articleSection": {{ article.story_categories|map("capitalize")|list|tojson }},
+{% endif %}{% if article.story_keywords %} "keywords": {{ article.story_keywords|tojson }},
+{% endif %}
  "isAccessibleForFree": true,
  "mainEntityOfPage": "{{ site_url }}{{ article.url }}"
 }
