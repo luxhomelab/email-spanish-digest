@@ -2,57 +2,49 @@
 {# Final page after the double opt-in click. The gate form redirects here
    via /quiz/<slug>-subscribed; the result is revealed here (score comes
    from localStorage) and the opt-in record is written so the quiz page
-   unlocks on revisit. #}
+   unlocks on revisit. Rendered in English and (page_lang "es") Spanish;
+   quiz_base = /quiz/<slug> or /es/quiz/<slug>. #}
 {% block body_class %} class="page-quiz page-success"{% endblock %}
-{% block title %}Subscribed — your quiz result — Spanified{% endblock %}
-{% block description %}<meta name="description" content="You're subscribed — see your {{ quiz.title }} quiz result.">
+{% block title %}{{ t("Subscribed — your quiz result — Spanified") }}{% endblock %}
+{% block description %}<meta name="description" content="{{ t("You're subscribed — see your {title} quiz result.", title=quiz.title) }}">
 <meta name="robots" content="noindex, nofollow">{% endblock %}
 {% block content %}
 {% include "partials/breadcrumbs.html" %}
 <div class="quiz-wrap">
  <div class="quiz-card quiz-gate">
-  <p class="quiz-confirmed" role="status"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Email confirmed. Spain Daily arrives tomorrow morning.</p>
+  <p class="quiz-confirmed" role="status"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>{{ t("Email confirmed. Spain Daily arrives tomorrow morning.") }}</p>
   <div id="quiz-success-result" hidden>
    <div class="quiz-score-hero">
     <div class="quiz-score-badge" aria-hidden="true"><span class="quiz-score-num" id="quiz-success-num">–</span><span class="quiz-score-of">/10</span></div>
     <div class="quiz-score-text"><p id="quiz-success-line" class="quiz-score-title"></p></div>
    </div>
    <div class="quiz-persona">
-    <img id="quiz-success-img" class="quiz-result-img" src="/static/img/quiz/{{ quiz.slug }}/quiz-cover.jpg" alt="{{ quiz.title }} quiz result" width="1200" height="630" hidden>
-    <p class="quiz-kicker">Your persona</p>
+    <img id="quiz-success-img" class="quiz-result-img" src="/static/img/quiz/{{ quiz.slug }}/quiz-cover.jpg" alt="{{ t('{title} quiz result', title=quiz.title) }}" width="1200" height="630" hidden>
+    <p class="quiz-kicker">{{ t("Your persona") }}</p>
     <h2 id="quiz-success-title"></h2>
     <div id="quiz-success-text" class="quiz-result-text"></div>
    </div>
    <div class="quiz-share-block">
-    <p class="quiz-share-title">Think a friend would score higher? Send it.</p>
+    <p class="quiz-share-title">{{ t("Think a friend would score higher? Send it.") }}</p>
     <div class="quiz-share">{% include "partials/share.html" %}</div>
    </div>
    <div class="quiz-next-row">
-    <p class="quiz-next-text">Can't wait until tomorrow?</p>
-    <a class="quiz-next-link" href="{{ latest_digest_url | default('/archive/') }}">Read the latest digest</a>
+    <p class="quiz-next-text">{{ t("Can't wait until tomorrow?") }}</p>
+    <a class="quiz-next-link" href="{{ latest_digest_url | default(lang_url('/archive/')) }}">{{ t("Read the latest digest") }}</a>
    </div>
-   <p class="quiz-retake-wrap"><a class="quiz-retake-btn" href="/quiz/{{ quiz.slug }}">↺ Retake the quiz</a></p>
-   {% for other in other_quizzes %}
-   <a class="quiz-other" href="{{ other.url }}" aria-label="Try the other quiz: {{ other.title }}">
-    <img class="quiz-other-cover" src="{{ other.cover }}" alt="{{ other.title }}" width="1200" height="630" loading="lazy">
-    <span class="quiz-other-body">
-     <span class="quiz-other-kicker">Try the other quiz</span>
-     <span class="quiz-other-title">{{ other.title }}</span>
-     <span class="quiz-other-go">Play now →</span>
-    </span>
-   </a>
-   {% endfor %}
+   <p class="quiz-retake-wrap"><a class="quiz-retake-btn" href="{{ quiz_base }}">{{ t("↺ Retake the quiz") }}</a></p>
+   {% include "partials/quiz-other.html" %}
   </div>
   <div id="quiz-success-fallback" hidden>
-   <h1 class="quiz-gate-title">Your result is on another device</h1>
-   <p class="quiz-gate-lede">Your result lives on the device and browser where you took the quiz. Open this page from there, or retake the quiz here. It takes 2 minutes and needs no email.</p>
-   <a class="quiz-cta-btn" href="/quiz/{{ quiz.slug }}">Retake the quiz</a>
+   <h1 class="quiz-gate-title">{{ t("Your result is on another device") }}</h1>
+   <p class="quiz-gate-lede">{{ t("Your result lives on the device and browser where you took the quiz. Open this page from there, or retake the quiz here. It takes 2 minutes and needs no email.") }}</p>
+   <a class="quiz-cta-btn" href="{{ quiz_base }}">{{ t("Retake the quiz") }}</a>
   </div>
  </div>
 </div>
 <script id="quiz-success-data" type="application/json">{{ quiz_json | safe }}</script>
 <script type="module">
-import { resultForScore, personalShareText, personalLongShareText, quizResultUrl, markQuizSubscribed } from '/static/js/quiz-logic.js?v={{ js_version }}';
+import { resultForScore, personalShareText, personalLongShareText, quizResultUrl, markQuizSubscribed, quizStrings, fillText } from '/static/js/quiz-logic.js?v={{ js_version }}';
 import { trackEvent, trackPixel } from '/static/js/analytics.js?v={{ js_version }}';
 // Guard order (flag → local-origin fallback) lives in analytics.js and never
 // throws — so a broken location can't trip the fallback UI below. The build-
@@ -62,6 +54,7 @@ import { trackEvent, trackPixel } from '/static/js/analytics.js?v={{ js_version 
 try {
   const data = JSON.parse(document.getElementById('quiz-success-data').textContent);
   const TOTAL = 10;
+  const S = quizStrings(document.documentElement.lang);
   let saved = null;
   try { saved = JSON.parse(window.localStorage.getItem('spanified_quiz_{{ quiz.slug }}')); } catch (e) { saved = null; }
   if (!saved || !Number.isInteger(saved.score)) {
@@ -69,7 +62,7 @@ try {
   } else {
     const result = resultForScore(data.results, saved.score);
     document.getElementById('quiz-success-num').textContent = saved.score;
-    document.getElementById('quiz-success-line').textContent = `You scored ${saved.score} out of ${TOTAL}`;
+    document.getElementById('quiz-success-line').textContent = fillText(S.scoreLine, { score: saved.score, total: TOTAL });
     document.getElementById('quiz-success-title').textContent = result.title;
     // Persona card art — same file the static result pages use for OG.
     const simg = document.getElementById('quiz-success-img');
@@ -96,9 +89,9 @@ try {
     // Personal share → per-persona page with the exact score (?score=).
     // X gets the short line; FB gets quote (long text, sometimes pre-filled);
     // TG/WA get the longer roast text.
-    const url = quizResultUrl(`${window.location.origin}/quiz/{{ quiz.slug }}`, result.slug, saved.score);
-    const short = personalShareText(result, saved.score, TOTAL);
-    const long = personalLongShareText(result, saved.score, TOTAL);
+    const url = quizResultUrl(`${window.location.origin}{{ quiz_base }}`, result.slug, saved.score);
+    const short = personalShareText(result, saved.score, TOTAL, S);
+    const long = personalLongShareText(result, saved.score, TOTAL, S);
     const u = encodeURIComponent(url), t = encodeURIComponent(short), tl = encodeURIComponent(long);
     const wrap = document.querySelector('.quiz-share .share-wrap');
     if (wrap) {
@@ -115,11 +108,12 @@ try {
         const c = e.target.closest('.share-copy');
         if (!c) return;
         const label = c.querySelector('span');
+        const idle = label ? label.textContent : '';
         const done = () => {
-          if (label) label.textContent = 'Copied!';
+          if (label) label.textContent = S.copied;
           c.classList.add('is-copied');
           setTimeout(() => {
-            if (label) label.textContent = 'Copy';
+            if (label) label.textContent = idle;
             c.classList.remove('is-copied');
           }, 1500);
         };
