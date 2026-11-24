@@ -34,8 +34,10 @@
     <p class="el-item-detail">{{ it.detail|md }}</p>
     <dl class="el-facts">
      <div><dt>Probabilidad en esta legislatura</dt><dd>{{ d.chances[it.t] }}</dd></div>
+     {% if it.n %}
      <div><dt>Qué necesita</dt><dd>{% for n in it.n %}{{ d.needs[n] }}{% if not loop.last %}, {% endif %}{% endfor %}</dd></div>
-     <div><dt>En el programa</dt><dd><a href="{{ it.programme }}" target="_blank" rel="noopener">{{ it.ref }}</a></dd></div>
+{% endif %}
+     <div><dt>En el programa</dt><dd><a href="{{ it.url or it.programme }}" target="_blank" rel="noopener">{{ it.ref }}</a></dd></div>
     </dl>
     <p class="el-item-c"><b>Nuestra valoración.</b> {{ it.c|md }}</p>
 {% if it.pos %}
