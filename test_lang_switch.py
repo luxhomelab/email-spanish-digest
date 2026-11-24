@@ -59,8 +59,8 @@ def test_digest_with_twin_links_both_ways(site):
 
 def test_english_only_pages_link_spanish_home(site, env):
     assert _switch(site(f"archive/{EN_ONLY}.html"))[2] == {"es": "/es/"}
-    about = env.get_template("about.html").render(crumbs=[])
-    assert _switch(about) == ("Language", ["en"], {"es": "/es/"})
+    search = env.get_template("search.html").render(crumbs=[])
+    assert _switch(search) == ("Language", ["en"], {"es": "/es/"})
 
 
 def test_legal_pages_set_alt_path_for_header(env):

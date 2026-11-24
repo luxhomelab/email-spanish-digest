@@ -34,8 +34,6 @@
 {% block body_class %} class="page-subscribe"{% endblock %}
 {% block content %}
 {% include "partials/breadcrumbs.html" %}
-{# Feed labels → display names (see seo/tasks/2026-10-22-home-subscribe-copy.md). #}
-{% set brand = {"elDiario": "El Diario", "Sur": "Diario Sur"} %}
 <section class="sub-hero">
  <div class="sub-hero-main">
   <h1>Subscribe to the Spain Daily newsletter</h1>
@@ -59,32 +57,7 @@
    <li>Your email is used only to send Spain Daily (<a href="/privacy">privacy</a>)</li>
   </ul>
  </div>
- {% if latest %}
- <aside class="sub-preview" aria-labelledby="sub-preview-title">
-  <div class="sub-preview-sheet">
-   <div class="sub-preview-band">
-    <span class="sub-preview-from">Spain Daily</span>
-    <time datetime="{{ latest.date }}">{{ latest.date_display }}</time>
-   </div>
-   <div class="email-gold-band"></div>
-   <div class="sub-preview-body">
-    <p class="sub-preview-title" id="sub-preview-title">The latest edition, as it arrived in readers' inboxes</p>
-    <ul class="sub-preview-stories">
-     {% for s in latest.stories[:3] %}
-     <li>
-      <span class="sub-preview-emoji" aria-hidden="true">{{ emoji.get((s.category or '') | lower, default_emoji) }}</span>
-      <span class="sub-preview-story">
-       <strong>{{ s.title }}</strong>
-       {% if s.sources %}<span class="sub-preview-src">{% for src in s.sources[:2] %}{{ brand.get(src.name, src.name) }}{% if not loop.last %}, {% endif %}{% endfor %}</span>{% endif %}
-      </span>
-     </li>
-     {% endfor %}
-    </ul>
-    <p class="sub-preview-more">{% if latest.story_count > 3 %}And {{ latest.story_count - 3 }} more stories. {% endif %}<a href="{{ latest.url }}">Read this edition in full</a></p>
-   </div>
-  </div>
- </aside>
- {% endif %}
+ {% if latest %}{% include "partials/latest-edition-preview.html" %}{% endif %}
 </section>
 
 <section class="sub-social" aria-labelledby="sub-social-title">

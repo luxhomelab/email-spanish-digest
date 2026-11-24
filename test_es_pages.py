@@ -82,7 +82,7 @@ def test_sitemap_hreflang_pairs():
         assert f'hreflang="en" href="{build.SITE_URL}{base}"' in links
         assert f'hreflang="es" href="{build.SITE_URL}/es{base}"' in links
         assert f'hreflang="x-default" href="{build.SITE_URL}{base}"' in links
-    assert build.sitemap_hreflang(build.SITE_URL + "/about") == ""
+    assert build.sitemap_hreflang(build.SITE_URL + "/search") == ""
     assert build.sitemap_hreflang(build.SITE_URL + "/es/confirm") == ""
 
 

@@ -97,8 +97,8 @@ STATIC_PAGES = [
     "404.html",
 ]
 
-# Minimal Spanish subscribe flow (plus the privacy/terms/cookies pages it
-# links to), rendered from templates/es/<name> to
+# Spanish subscribe flow (plus the privacy/terms/cookies pages it links to
+# and the about/editor/contact pages), rendered from templates/es/<name> to
 # <out>/es/<name> (served as /es/subscribe etc.). ES_INDEXED_PAGES go into
 # sitemap.xml; the rest are noindex like their English twins.
 ES_PAGES = [
@@ -109,8 +109,12 @@ ES_PAGES = [
     "privacy.html",
     "terms.html",
     "cookies.html",
+    "about.html",
+    "editor.html",
+    "contact.html",
 ]
-ES_INDEXED_PAGES = {"subscribe.html", "privacy.html", "terms.html", "cookies.html"}
+ES_INDEXED_PAGES = {"subscribe.html", "privacy.html", "terms.html", "cookies.html",
+                    "about.html", "editor.html", "contact.html"}
 
 # Static assets copied verbatim into the output dir (hand-written pages,
 # images, domain config, localized pages).
@@ -430,6 +434,15 @@ ES_STRINGS = {
     "Join 1,000+ email subscribers. Free, one email a day, cancel anytime.":
         "Únete a más de 1.000 suscriptores. Gratis, un email al día y te das de baja cuando quieras.",
 }
+
+# --- ES: static pages -------------------------------------------------------
+# Latest-edition preview on /subscribe and /es/subscribe
+# (partials/latest-edition-preview.html).
+ES_STRINGS.update({
+    "The latest edition, as it arrived in readers' inboxes": "La última edición, tal como llegó a los lectores",
+    "And {n} more stories.": "Y {n} noticias más.",
+    "Read this edition in full": "Leer la edición completa",
+})
 
 ES_MONTHS_SHORT = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sept", "oct", "nov", "dic"]
 
@@ -1585,14 +1598,25 @@ def render_llms_txt(digests, articles=(), salary_pages=(), autonomo_pages=(), re
     print("  wrote llms.txt")
 
 
-def render_es_pages(env, proof):
+def render_es_pages(env, proof, es_digests=()):
+    """templates/es/<name> -> <out>/es/<name>. /es/subscribe previews the
+    latest Spanish edition (linking /es/archive/<date>)."""
     es_dir = os.path.join(OUT_DIR, "es")
     os.makedirs(es_dir, exist_ok=True)
+
+    def crumbs(name, path):
+        return [{"name": tr("es", "Home"), "url": "/es/"}, {"name": name, "url": path, "current": True}]
+
     contexts = {
-        "subscribe.html": {"proof": proof, "faq": ES_SUBSCRIBE_FAQ_ITEMS, "js_version": js_version()},
+        "subscribe.html": {"proof": proof, "faq": ES_SUBSCRIBE_FAQ_ITEMS, "js_version": js_version(),
+                           "latest": es_digests[0] if es_digests else None,
+                           "emoji": CATEGORY_EMOJI, "default_emoji": DEFAULT_EMOJI},
+        "about.html": {"crumbs": crumbs("Sobre nosotros", "/es/about")},
+        "editor.html": {"crumbs": crumbs("Editor", "/es/editor")},
+        "contact.html": {"crumbs": crumbs("Contacto", "/es/contact")},
     }
     for name in ES_PAGES:
-        output = env.get_template(f"es/{name}").render(**contexts.get(name, {}))
+        output = env.get_template(f"es/{name}").render(page_lang="es", **contexts.get(name, {}))
         with open(os.path.join(es_dir, name), "w", encoding="utf-8") as fh:
             fh.write(output)
         print(f"  wrote es/{name}")
@@ -1675,7 +1699,7 @@ def render_static(env, digests, es_digests=(), es_articles=()):
         with open(dest, "w", encoding="utf-8") as fh:
             fh.write(output)
         print(f"  wrote {name}")
-    render_es_pages(env, proof)
+    render_es_pages(env, proof, es_digests)
     render_es_home(env, es_digests, es_articles, proof)
     render_calculators(env)
     render_quizzes(env, proof=proof,

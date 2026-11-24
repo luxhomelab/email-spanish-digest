@@ -32,7 +32,7 @@
  "image": {"@type": "ImageObject", "url": "{{ site_url }}/og/article-{{ article.slug }}.png", "width": 1200, "height": 630},
  "datePublished": "{{ pub_date(article.date) }}",
  "dateModified": "{{ pub_date(article.updated) }}",
- "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor", "jobTitle": {{ t("Founder and Editor")|tojson }}, "image": "{{ site_url }}/static/img/editor/dmytro-shvechikov-480.jpg", "sameAs": ["https://www.linkedin.com/in/dshvechikov"]},
+ "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}{{ lang_url('/editor') }}", "jobTitle": {{ t("Founder and Editor")|tojson }}, "image": "{{ site_url }}/static/img/editor/dmytro-shvechikov-480.jpg", "sameAs": ["https://www.linkedin.com/in/dshvechikov"]},
  "publisher": {"@type": "Organization", "name": "Spanified", "logo": {"@type": "ImageObject", "url": "{{ site_url }}/logo.jpg", "width": 640, "height": 640}},
  "inLanguage": "{{ page_lang|default('en') }}",
  "wordCount": {{ article.word_count }},
