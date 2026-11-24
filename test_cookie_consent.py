@@ -8,6 +8,7 @@ import build
 
 def render_base(analytics):
     env = Environment(loader=FileSystemLoader(build.TEMPLATES_DIR), autoescape=True)
+    build.register_i18n(env)
     env.globals.update(current_year=2026, asset_version="t", js_version="t",
                        js_importmap="{}", site_url=build.SITE_URL,
                        analytics_enabled=analytics, site_socials=[])

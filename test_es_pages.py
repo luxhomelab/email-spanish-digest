@@ -26,7 +26,7 @@ def test_es_page_is_spanish(name):
     assert '<html lang="es"' in html
     assert "Rechazar" in html  # Spanish cookie banner
     assert "Reject" not in html
-    assert 'class="site-nav"' not in html  # stripped header, no English nav
+    assert ">Inicio</a>" in html and ">Home</a>" not in html  # shared header, Spanish labels
 
 
 def test_es_subscribe_form_and_hreflang():

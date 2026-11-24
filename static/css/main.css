@@ -46,7 +46,7 @@ a { color: inherit; }
  font-size: 15px;
 }
 .site-nav a {
- color: #3C4858; text-decoration: none;
+ color: #3C4858; text-decoration: none; white-space: nowrap;
 }
 .site-nav a:hover { color: #1A1A16; }
 .nav-search { display: inline-flex; align-items: center; color: #3C4858; }

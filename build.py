@@ -443,6 +443,19 @@ ES_STRINGS.update({
     "And {n} more stories.": "Y {n} noticias más.",
     "Read this edition in full": "Leer la edición completa",
 })
+# Site header (partials/header.html, shared by both languages).
+ES_STRINGS.update({
+    "Spanified home": "Spanified: página de inicio",
+    "Spain news in plain English": "Las noticias de España, cada mañana",
+    "Show menu": "Mostrar menú",
+    "Hide menu": "Ocultar menú",
+    "Calculators": "Calculadoras",
+    "Quizzes": "Tests",
+    "Real or AI? — Spain news": "¿Real o IA? Noticias de España",
+    "Real Law or Myth? — Spanish law": "¿Ley real o mito? Leyes españolas",
+    "About": "Sobre nosotros",
+    "Contact": "Contacto",
+})
 
 ES_MONTHS_SHORT = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sept", "oct", "nov", "dic"]
 
@@ -486,10 +499,27 @@ def localize_links(lang, html_text):
     return _INTERNAL_HREF_RE.sub(lambda m: f'href="{localize(lang, m.group(1))}"', html_text)
 
 
+# Social accounts per language. The Spanish edition has its own Threads
+# account and subreddit and no Facebook page; templates read the current
+# page's set via socials() (partials/social.html, the success pages).
+SOCIALS = {
+    "en": {
+        "threads": "https://www.threads.com/@spaindaily",
+        "reddit": "https://www.reddit.com/r/SpainDaily/",
+        "facebook": "https://www.facebook.com/spanified",
+    },
+    "es": {
+        "threads": "https://www.threads.com/@spaindailyes",
+        "reddit": "https://www.reddit.com/r/EspanaAlDia/",
+    },
+}
+
+
 def register_i18n(env):
-    """Expose t() and lang_url() to templates; both read page_lang."""
+    """Expose t(), lang_url() and socials() to templates; all read page_lang."""
     env.globals["t"] = pass_context(lambda ctx, text, **kw: tr(ctx.get("page_lang", "en"), text, **kw))
     env.globals["lang_url"] = pass_context(lambda ctx, path: localize(ctx.get("page_lang", "en"), path))
+    env.globals["socials"] = pass_context(lambda ctx: SOCIALS.get(ctx.get("page_lang", "en"), SOCIALS["en"]))
 
 
 # Spanish twins of CATEGORY_META / CATEGORY_DESCRIPTIONS (same slugs).
@@ -810,6 +840,15 @@ def article_inline_md(s):
 
     s = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", _link, s)
     return s
+
+
+def inline_md_plain(s):
+    """Inline markdown -> plain text: [label](url) becomes label, ** and *
+    markers drop. For JSON-LD text, which must carry no markup or URLs
+    (a raw "(/calculators/x)" there is also an unlocalized link on /es/)."""
+    s = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r"\1", s)
+    s = re.sub(r"\*\*(.+?)\*\*", r"\1", s)
+    return re.sub(r"(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)", r"\1", s)
 
 
 # "300 000 €", "1 000–6 000 €", "80 m²": glue digit groups and units with
@@ -1295,9 +1334,9 @@ def parse_faq_section(section_md):
     """Parse a '## FAQ' section into [{"q", "a", "a_html"}] items.
 
     '### ' headings are the questions; the paragraphs after a heading
-    (joined with spaces) are its answer. "a" keeps the inline markdown
-    as authored (plain text for the FAQPage JSON-LD); "a_html" is the
-    same answer rendered with article_inline_md so **bold** and links
+    (joined with spaces) are its answer. "a" is the answer as plain text
+    (inline_md_plain, for the FAQPage JSON-LD); "a_html" is the same
+    answer rendered with article_inline_md so **bold** and links
     work in the visible FAQ.
     """
     faq = []
@@ -1312,7 +1351,7 @@ def parse_faq_section(section_md):
                 current = []
             if question is not None:
                 answer = " ".join(paragraphs)
-                faq.append({"q": question, "a": answer, "a_html": nbsp_numbers(article_inline_md(answer))})
+                faq.append({"q": question, "a": inline_md_plain(answer), "a_html": nbsp_numbers(article_inline_md(answer))})
                 paragraphs = []
             question = stripped[4:].strip()
         elif not stripped:
@@ -1325,7 +1364,7 @@ def parse_faq_section(section_md):
         paragraphs.append(" ".join(current))
     if question is not None:
         answer = " ".join(paragraphs)
-        faq.append({"q": question, "a": answer, "a_html": nbsp_numbers(article_inline_md(answer))})
+        faq.append({"q": question, "a": inline_md_plain(answer), "a_html": nbsp_numbers(article_inline_md(answer))})
     return faq
 
 
@@ -4584,11 +4623,8 @@ def main():
     env.globals["analytics_enabled"] = analytics_enabled(args)
     env.globals["pub_date"] = pub_date
     env.globals["video_embed"] = video_embed
-    env.globals["site_socials"] = [
-        "https://www.threads.com/@spaindaily",
-        "https://www.reddit.com/r/SpainDaily/",
-        "https://www.facebook.com/spanified",
-    ]
+    # Organization sameAs: every account of the brand, both editions.
+    env.globals["site_socials"] = [url for accounts in SOCIALS.values() for url in accounts.values()]
 
     digests = dedupe_digest_titles([digest_context(d) for d in load_digests()])
     articles = load_articles()

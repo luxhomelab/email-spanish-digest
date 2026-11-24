@@ -62,7 +62,7 @@ def test_es_digest_page(site):
     assert 'href="/es/archive/"' in html  # breadcrumb
     assert 'href="/es/archive/2026-10-16"' in html  # day nav + related
     assert 'href="/es/privacy"' in html and 'href="/privacy"' not in html
-    assert 'class="site-nav"' not in html  # Spanish header, no English nav
+    assert ">Inicio</a>" in html and ">Home</a>" not in html  # shared header, Spanish labels
     assert "Rechazar" in html and "Reject" not in html  # Spanish cookie banner
     # Spanish subscribe form: Spanish list, lang=es, Spanish confirm page.
     assert '<input type="hidden" name="lang" value="es">' in html

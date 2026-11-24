@@ -98,6 +98,9 @@ TAG_RE = re.compile(r"""<[a-zA-Z][^>]*>""", re.S)
 ATTR_RE = re.compile(r"""\s([\w:.-]+)\s*=\s*(?:"([^"]*)"|'([^']*)')""")
 SCRIPT_RE = re.compile(r"""<script\b([^>]*)>(.*?)</script>""", re.S | re.I)
 JS_PATH_RE = re.compile(r"""["'`](/[^"'`\s]*|https://spanified\.com[^"'`\s]*)["'`]""")
+# URLs embedded inside a longer JSON-LD text value: a markdown link
+# "[label](/path)" or a bare site URL in prose (e.g. FAQ answer text).
+EMBEDDED_URL_RE = re.compile(r"""\]\((/[^)\s]*|https://spanified\.com[^)\s]*)\)|(https://spanified\.com[^\s"')\]]*[^\s"')\].,;:!?])""")
 
 
 def is_es(path):
@@ -126,7 +129,11 @@ def internal_urls(text, page_path):
     for attrs, code in SCRIPT_RE.findall(text):
         if "ld+json" in attrs:
             # "@id" fragments name graph nodes (#org, #website), not HTML ids.
-            strings = (("json-ld @id" if k == "@id" else "json-ld", v) for k, v in json_strings(json.loads(code)))
+            strings = []
+            for k, v in json_strings(json.loads(code)):
+                strings.append(("json-ld @id" if k == "@id" else "json-ld", v))
+                if not v.startswith(("/", SITE)):
+                    strings += [("json-ld text", m.group(1) or m.group(2)) for m in EMBEDDED_URL_RE.finditer(v)]
         else:
             strings = (("script", m.group(1)) for m in JS_PATH_RE.finditer(code))
         for where, u in strings:
@@ -182,7 +189,8 @@ def test_guard_catches_english_urls():
 <link rel="alternate" hreflang="en" href="https://spanified.com/">
 <link rel="alternate" type="application/rss+xml" href="/podcast.xml">
 <script type="application/ld+json">{"publisher": {"@id": "https://spanified.com/#org", "url": "https://spanified.com/"},
- "itemListElement": [{"item": "https://spanified.com/category/work"}]}</script>
+ "itemListElement": [{"item": "https://spanified.com/category/work"}],
+ "text": "Usa la [calculadora](/calculators/autonomo-tax) o https://spanified.com/articles/x."}</script>
 </head><body>
 <nav class="lang-switch" aria-label="Idioma"><a href="/subscribe" hreflang="en">EN</a></nav>
 <form action="/subscribe"><input type="hidden" name="next" value="https://spanified.com/confirm"></form>
@@ -193,6 +201,7 @@ def test_guard_catches_english_urls():
     assert found == sorted([
         ("<link href>", "/terms"), ("<meta content>", "/quiz/ai-or-real"),
         ("json-ld @id", "/"), ("json-ld", "/"), ("json-ld", "/category/work"),
+        ("json-ld text", "/calculators/autonomo-tax"), ("json-ld text", "/articles/x"),
         ("<form action>", "/subscribe"), ("<input value>", "/confirm"),
         ("<iframe src>", "/calculators/net-salary"), ("script", "/archive"),
     ])
@@ -288,3 +297,26 @@ def test_every_spanish_digest_has_the_english_suggestions(dist):
         if a["calculator line"] != b["calculator line"] or sum(b[k] for k in keys) < sum(a[k] for k in keys):
             bad.append(f"{es.stem}: en={[a[k] for k in keys]} es={[b[k] for k in keys]}")
     assert not bad, "\n".join(bad[:20])
+
+
+SITE_NAV_RE = re.compile(r"""<nav class="site-nav".*?</nav>""", re.S)
+FOOTER_SOC_RE = re.compile(r"""<a class="soc"[^>]*\shref="([^"]+)\"""")
+
+
+def test_spanish_header_and_socials(dist):
+    """Spanish pages carry the full header nav (every item an /es/ link, no
+    English-only search) and the Spanish edition's own social accounts,
+    without Facebook; English pages keep the English accounts."""
+    en_page = (dist / "archive" / "index.html").read_text(encoding="utf-8")
+    en_nav = HREF_RE.findall(SITE_NAV_RE.search(en_page).group(0))
+    for f in [dist / "es" / "index.html", dist / "es" / "archive" / "index.html",
+              dist / "es" / "calculators" / "net-salary.html", dist / "es" / "about.html"]:
+        text = f.read_text(encoding="utf-8")
+        nav = [a or b for a, b in HREF_RE.findall(SITE_NAV_RE.search(text).group(0))]
+        assert all(is_es(h) for h in nav), (f, nav)
+        assert len(nav) == len(en_nav) - 1, (f, nav)  # all but /search
+        assert FOOTER_SOC_RE.findall(text) == [
+            "https://www.threads.com/@spaindailyes", "https://www.reddit.com/r/EspanaAlDia/"], f
+    assert FOOTER_SOC_RE.findall(en_page) == [
+        "https://www.threads.com/@spaindaily", "https://www.reddit.com/r/SpainDaily/",
+        "https://www.facebook.com/spanified"]

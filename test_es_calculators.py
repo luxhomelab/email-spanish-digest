@@ -24,6 +24,9 @@ def site(tmp_path_factory):
     build.register_es_calculator_paths()
     # Pages the calculators link to whose Spanish twins the full build registers.
     build.ES_PATHS.update(a["path"] for a in build.load_articles("es"))
+    # Header nav targets (partials/header.html) the full build registers too.
+    build.ES_PATHS.update(["/", "/archive/", "/articles/", "/about", "/contact"])
+    build.register_es_quiz_paths()
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(build.TEMPLATES_DIR), autoescape=True)
     build.register_i18n(env)
     env.globals.update(site_url=SITE, pub_date=build.pub_date, video_embed=build.video_embed, asset_version="1",

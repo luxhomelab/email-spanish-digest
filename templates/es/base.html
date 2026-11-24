@@ -1,7 +1,7 @@
 {# Spanish layout for the Spanish-only /es/ templates (subscribe flow, legal).
    Sets page_lang = "es" for <html lang>, the cookie banner and any partial
-   that branches on it; base.html then swaps in the stripped-down Spanish
-   header/footer (no nav; the language switcher links the English twin). Shared templates
+   that branches on it; base.html renders the shared header in Spanish and
+   swaps in the Spanish footer. Shared templates
    rendered in Spanish (digest, archive, category) get page_lang from
    build.py instead. #}
 {% extends "base.html" %}
