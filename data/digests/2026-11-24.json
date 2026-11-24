@@ -1,0 +1,250 @@
+{
+  "items": [
+    {
+      "title": "Supreme Court grants Puigdemont amnesty, closing independence case",
+      "body": "The Supreme Court granted former Catalan president Carles Puigdemont amnesty on November 23, allowing him to return to Catalonia. It also amnestied former Catalan ministers Toni Comín and Lluís Puig. The ruling closes the 2017 independence case after the Constitutional Court corrected the court's earlier refusal.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/catalunya/amnistia-puigdemont-cierra-causa-proces-supremo-llevaba-anos-rebelion-ley_1_13599616.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Sánchez proposes tax on fortunes above €100 million",
+      "body": "Prime Minister Pedro Sánchez announced on November 23 a campaign proposal to tax fortunes above €100 million. The PSOE estimates it would raise €2 billion a year for protected housing, pensions, and a child-raising benefit. No rate has been given, and an earmarked tax like this would fit poorly in Spanish law.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-23/sanchez-propone-un-impuesto-para-ultrarricos-con-fortunas-superiores-a-100-millones-de-euros.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Cabinet considers consumer credit caps on November 24",
+      "body": "A planned Royal Decree-law would cap consumer loan rates at the Bank of Spain average plus six to 15 points and extend the bank tax by one year. Cabinet approval is expected on November 24, after Spain missed an EU deadline. Congress's standing committee would then need to validate it.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-23/el-gobierno-aprobara-la-limitacion-de-los-intereses-del-credito-al-consumo-en-un-paquete-de-medidas-que-afectan-a-la-banca.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Court order leaves citizenship-by-descent ballots on hold",
+      "body": "A Supreme Court order of October 23 suspended voting rights for Ley de Nietos citizens who cannot show political reasons for their family's departure from Spain. Their ballots stay in sealed separate boxes pending a final ruling. In Argentina, 35,000 voters are affected; consular voting runs until November 26.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/23/6b048519e85ece28708b4595.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Feijóo pledges inflation-linked pensions even in downturns",
+      "body": "Partido Popular leader Alberto Núñez Feijóo promises to raise pensions in line with CPI even if the economy struggles. If elected, he says the money would have to come from other public spending. This is a campaign pledge ahead of the November 29 general election.",
+      "sources": [
+        {
+          "name": "Europa Press",
+          "url": "https://www.europapress.es/nacional/noticia-elecciones-generales-2026-directo-ultima-hora-campana-debate-ocho-20261123092751.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Study questions Spain's reliance on higher pension contributions",
+      "body": "Spain would spend 17.3% of GDP on pensions in 2050, against a 12.1% EU average, according to European Commission forecasts cited in a Funcas study. Funcas criticizes Spain's choice of higher contributions and state transfers over automatic adjustment rules.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/economia/2026/11/24/6b04613de9cf4ac8208b45a7.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "\"La bola negra\" leads Spain's 2026 box office",
+      "body": "\"La bola negra\" has become Spain's highest-grossing film of 2026, taking more than €40.5 million. It has sold more than 5.5 million tickets and ranks third among the highest-grossing Spanish films ever. The film is also preparing an Oscar campaign.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/cultura/cine/bola-negra-pelicula-hecho-taquilla-espana-ano_1_13685417.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "S&P forecasts December ECB rate rise to 2.75%",
+      "body": "S&P Global expects the ECB to raise rates by 25 basis points to 2.75% in December. It forecasts eurozone inflation near 3% in 2027, returning to 2% only in 2028. Higher energy costs pushed eurozone inflation to 4% in October, while a hot, dry summer is raising food prices.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/s-p-global-no-descarta-que-bce-aplique-otras-dos-subidas-tipos-que-inflacion-siga-alta-hasta-2028_7064525_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Fedea proposes flexible sick leave and benefit limits",
+      "body": "Think tank Fedea proposes medically supervised part-time work, remote work, or a gradual return during sick leave. It would also ban top-ups for the first 15 days, which employers pay, and cap benefits at 85% of the calculation base from day 16 to one year. These are think-tank proposals, not government measures.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/economia/20261123/11691450/fedea-plantea-crear-baja-medica-flexible-reducir-gasto-disparado-16-500-millones.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Plus Ultra suspends last route, leaving passengers stranded",
+      "body": "Plus Ultra suspended Madrid-Caracas, its last route, on November 23, leaving hundreds of customers stranded. The airline cited higher fuel costs during restructuring. SEPI, its main creditor with €53 million in public loans, is weighing a pause, sale, or insolvency. The airline has 679 workers.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-23/plus-ultra-deja-de-vender-billetes-en-la-ruta-madrid-caracas-la-unica-que-mantenia-abierta-tras-un-drastico-recorte-de-operaciones.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Protected housing completions cover 0.7% of estimated need",
+      "body": "Spain completed 18,399 protected homes in the past year, double the 2023 figure but just 0.7% of estimated needs, according to Atlas Real Estate. Social rental housing makes up 1.1% of Spain's housing stock, against an 8% EU average. The deficit does not appear to be shrinking.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/11/24/vivienda-espana-construye-vivienda-protegida-necesita-2071219.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Plan Auto+ funds exhausted, putting buyer subsidies at risk",
+      "body": "Plan Auto+ funding for electric and plug-in hybrid cars has run out, putting subsidies of up to €4,500 at risk for buyers awaiting delivery. Applications require a purchase invoice, which buyers may not yet have. The waiting list of requests already tops €8 million.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/motor/sector_y_mercado/agotamiento-plan-auto-atrapa-limbo-ayudas-compradores-vehiculos-electricos_1_13685122.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Tax Agency won 38.2% of court cases in 2024",
+      "body": "An OECD report says Spain's Tax Agency won 38.2% of court cases in 2024, one of the lowest rates in the OECD. Spain also had the most disputes awaiting independent review: 4.5 per 1,000 taxpayers. The OECD links this to a high number of new claims.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/11/24/fiscalidad-hacienda-pierde-pleitos-resueltos-tribunales-2071200.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    }
+  ],
+  "engagement": "How do you usually pay for big purchases? A) Savings B) Credit C) Installments",
+  "subject": "Consumer credit plans, Puigdemont amnesty and cinema",
+  "variant": "Nothing happened in Spain today. Except this.",
+  "headline": "Nothing happened in Spain today. Except this.",
+  "date": "2026-11-24",
+  "engagement_source": "generated",
+  "generated_at": "2026-11-24T07:02:25.001054+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 667,
+    "items_selected_pass1": 14,
+    "fact_sheets_extracted": 14,
+    "items_after_importance_filter": 14,
+    "items_in_digest": 13
+  },
+  "selection_reasons": {
+    "613": "PSOE plans a new wealth tax on fortunes above €100M, a direct tax change that could affect future residents and investors.",
+    "391": "Government moves to cap consumer credit interest rates, a national consumer-finance rule affecting borrowers and banks.",
+    "1": "Government approves 10-day bereavement leave and reduced hours for palliative care, a national work rule taking effect the next day.",
+    "27": "PP's leader pledges to index pensions to CPI, a central pension promise in the election campaign.",
+    "9": "Funcas finds Spain's pension spending will far exceed the EU average by 2050, pointing to future pension-system pressure.",
+    "584": "S&P expects two more ECB rate hikes and high inflation until 2028, which feeds into Euribor and mortgage costs.",
+    "434": "Fedea proposes a flexible sick-leave system to cut a €16.5bn spending bill, a concrete change to workers' sick pay.",
+    "108": "Plan Auto+ EV subsidies run out, leaving buyers with orders stranded without aid, a national subsidy change.",
+    "223": "Spain's tax authority loses over 60% of resolved court cases, the worst record in the OECD, with relevance for taxpayers.",
+    "57": "Supreme Court applies the amnesty to Puigdemont and closes the procés case, a national legal precedent.",
+    "390": "Plus Ultra ceases operations and SEPI must decide whether to rescue or let the airline fail, a national public-funds decision.",
+    "597": "Live coverage of the 29 November general election, a national event days before the vote.",
+    "222": "Spain builds under 1% of the protected housing it needs, with a 1.8 million-household deficit and rents up 58% since 2020.",
+    "112": "Positive story: 'La bola negra' becomes the top-grossing film in Spain this year, a national cultural milestone."
+  },
+  "selection_sources": [
+    {
+      "url": "https://elpais.com/economia/2026-11-23/sanchez-propone-un-impuesto-para-ultrarricos-con-fortunas-superiores-a-100-millones-de-euros.html",
+      "reason": "PSOE plans a new wealth tax on fortunes above €100M, a direct tax change that could affect future residents and investors."
+    },
+    {
+      "url": "https://elpais.com/economia/2026-11-23/el-gobierno-aprobara-la-limitacion-de-los-intereses-del-credito-al-consumo-en-un-paquete-de-medidas-que-afectan-a-la-banca.html",
+      "reason": "Government moves to cap consumer credit interest rates, a national consumer-finance rule affecting borrowers and banks."
+    },
+    {
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/23/6b048519e85ece28708b4595.html",
+      "reason": "Government approves 10-day bereavement leave and reduced hours for palliative care, a national work rule taking effect the next day."
+    },
+    {
+      "url": "https://www.europapress.es/nacional/noticia-elecciones-generales-2026-directo-ultima-hora-campana-debate-ocho-20261123092751.html",
+      "reason": "PP's leader pledges to index pensions to CPI, a central pension promise in the election campaign."
+    },
+    {
+      "url": "https://www.elmundo.es/economia/2026/11/24/6b04613de9cf4ac8208b45a7.html",
+      "reason": "Funcas finds Spain's pension spending will far exceed the EU average by 2050, pointing to future pension-system pressure."
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/s-p-global-no-descarta-que-bce-aplique-otras-dos-subidas-tipos-que-inflacion-siga-alta-hasta-2028_7064525_0.html",
+      "reason": "S&P expects two more ECB rate hikes and high inflation until 2028, which feeds into Euribor and mortgage costs."
+    },
+    {
+      "url": "https://www.lavanguardia.com/economia/20261123/11691450/fedea-plantea-crear-baja-medica-flexible-reducir-gasto-disparado-16-500-millones.html",
+      "reason": "Fedea proposes a flexible sick-leave system to cut a €16.5bn spending bill, a concrete change to workers' sick pay."
+    },
+    {
+      "url": "https://www.eldiario.es/motor/sector_y_mercado/agotamiento-plan-auto-atrapa-limbo-ayudas-compradores-vehiculos-electricos_1_13685122.html",
+      "reason": "Plan Auto+ EV subsidies run out, leaving buyers with orders stranded without aid, a national subsidy change."
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/11/24/fiscalidad-hacienda-pierde-pleitos-resueltos-tribunales-2071200.html",
+      "reason": "Spain's tax authority loses over 60% of resolved court cases, the worst record in the OECD, with relevance for taxpayers."
+    },
+    {
+      "url": "https://www.eldiario.es/catalunya/amnistia-puigdemont-cierra-causa-proces-supremo-llevaba-anos-rebelion-ley_1_13599616.html",
+      "reason": "Supreme Court applies the amnesty to Puigdemont and closes the procés case, a national legal precedent."
+    },
+    {
+      "url": "https://elpais.com/economia/2026-11-23/plus-ultra-deja-de-vender-billetes-en-la-ruta-madrid-caracas-la-unica-que-mantenia-abierta-tras-un-drastico-recorte-de-operaciones.html",
+      "reason": "Plus Ultra ceases operations and SEPI must decide whether to rescue or let the airline fail, a national public-funds decision."
+    },
+    {
+      "url": "https://www.europapress.es/nacional/noticia-elecciones-generales-2026-directo-ultima-hora-campana-debate-ocho-20261123092751.html",
+      "reason": "Live coverage of the 29 November general election, a national event days before the vote."
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/11/24/vivienda-espana-construye-vivienda-protegida-necesita-2071219.html",
+      "reason": "Spain builds under 1% of the protected housing it needs, with a 1.8 million-household deficit and rents up 58% since 2020."
+    },
+    {
+      "url": "https://www.eldiario.es/cultura/cine/bola-negra-pelicula-hecho-taquilla-espana-ano_1_13685417.html",
+      "reason": "Positive story: 'La bola negra' becomes the top-grossing film in Spain this year, a national cultural milestone."
+    }
+  ]
+}
