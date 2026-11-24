@@ -402,7 +402,7 @@ ES_STRINGS = {
     "Meet the editor": "Conoce al editor",
     "editions": "ediciones",
     "since {date}": "desde el {date}",
-    "followers on Threads and Reddit": "seguidores en Threads y Reddit",
+    "followers on Threads and Reddit, all languages combined": "seguidores en Threads y Reddit, sumando todos los idiomas",
     "News by topic": "Noticias por tema",
     "Latest news by topic": "Últimas noticias por tema",
     "Interactive tools and quizzes": "Calculadoras y tests interactivos",
