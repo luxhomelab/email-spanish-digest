@@ -34,9 +34,9 @@
    'interaction-only' on every form: the widget stays hidden (no reserved
    space) unless Cloudflare needs the visitor to click. Pass '' to always
    show it. #}
-{% set success_url = success_url | default('/confirm') %}
 {% set lang = lang | default(page_lang | default('en')) %}
 {% set es = lang == 'es' %}
+{% set success_url = success_url | default('/es/confirm' if es else '/confirm') %}
 {% set btn_label = btn_label | default('Suscribirme gratis' if es else 'Subscribe free') %}
 {% set btn_icon = btn_icon | default(false) %}
 {% set field_id = field_id | default('subscribe-email') %}

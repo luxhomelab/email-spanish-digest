@@ -20,6 +20,7 @@
 {% endfor %}{% endblock %}
 
 {% block canonical %}<link rel="canonical" href="{{ site_url }}{{ digest.url }}">{% endblock %}
+{% block extra_head %}{% if alt_path %}{% include "partials/hreflang.html" %}{% endif %}{% endblock %}
 {% block og_image %}<meta property="og:image" content="{{ site_url }}/og/{{ digest.date }}.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">{% endblock %}
@@ -28,26 +29,26 @@
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "NewsArticle",
  "headline": {{ digest.meta_title|tojson }},
- "description": "Spain Daily Digest for {{ digest.date }} — the day's top stories from Spain, summarized in English.",
+ "description": {{ t("Spain Daily Digest for {date} — the day's top stories from Spain, summarized in English.", date=digest.date_display)|tojson }},
  "datePublished": "{{ pub_date(digest.date) }}",
  "dateModified": "{{ pub_date(digest.date) }}",
  "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor", "jobTitle": "Founder and Editor", "image": "{{ site_url }}/static/img/editor/dmytro-shvechikov-480.jpg", "sameAs": ["https://www.linkedin.com/in/dshvechikov"]},
  "publisher": {"@type": "Organization", "name": "Spanified", "logo": {"@type": "ImageObject", "url": "{{ site_url }}/logo.jpg", "width": 640, "height": 640}},
- "inLanguage": "en",
+ "inLanguage": "{{ page_lang|default('en') }}",
  "wordCount": {{ digest.word_count }},
  "isAccessibleForFree": true,
  "mainEntityOfPage": "{{ site_url }}{{ digest.url }}",{% if podcast %}
  "audio": {"@type": "AudioObject", "name": {{ podcast.title|tojson }}, "contentUrl": "{{ podcast.audio_url }}", "encodingFormat": "audio/mpeg", "duration": "{{ podcast.iso_duration }}"},{% endif %}
  "hasPart": [{% for item in digest.stories %}
-  {"@type": "NewsArticle", "headline": {{ item.title|tojson }}, "articleSection": {{ (item.category or "news")|tojson }}, "url": "{{ site_url + digest.url }}#news-{{ loop.index }}", "datePublished": "{{ pub_date(digest.date) }}", "image": "{{ site_url }}/og/{{ digest.date }}.png", "inLanguage": "en", "publisher": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}, "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor"}{% if item.sources %}, "isBasedOn": {"@type": "CreativeWork", "name": {{ item.sources[0].name|tojson }}, "url": {{ item.sources[0].url|tojson }}}{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}
+  {"@type": "NewsArticle", "headline": {{ item.title|tojson }}, "articleSection": {{ (t(item.category.capitalize()) if page_lang == "es" and item.category else (item.category or "news"))|tojson }}, "url": "{{ site_url + digest.url }}#news-{{ loop.index }}", "datePublished": "{{ pub_date(digest.date) }}", "image": "{{ site_url }}/og/{{ digest.date }}.png", "inLanguage": "{{ page_lang|default('en') }}", "publisher": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}, "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor"}{% if item.sources %}, "isBasedOn": {"@type": "CreativeWork", "name": {{ item.sources[0].name|tojson }}, "url": {{ item.sources[0].url|tojson }}}{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}
  ]}
 </script>
  <div class="digest" data-pagefind-sort="date:{{ digest.date }}">
   <div class="digest-card">
-   <h1 class="email-red-band">Spain Daily Digest: <time datetime="{{ pub_date(digest.date) }}">{{ digest.date_display }}</time></h1>
+   <h1 class="email-red-band">{{ t("Spain Daily Digest:") }} <time datetime="{{ pub_date(digest.date) }}">{{ digest.date_display }}</time></h1>
    <div class="email-gold-band"></div>
    <div class="email-subheader">{{ digest.headline }}</div>
-   <div class="byline"><img class="byline-avatar" src="/static/img/editor/dmytro-shvechikov-96.webp?v={{ asset_version }}" srcset="/static/img/editor/dmytro-shvechikov-48.webp?v={{ asset_version }} 48w, /static/img/editor/dmytro-shvechikov-96.webp?v={{ asset_version }} 96w, /static/img/editor/dmytro-shvechikov-160.webp?v={{ asset_version }} 160w" sizes="24px" alt="" width="24" height="24" decoding="async">Edited by <a href="/editor">Dmytro Shvechikov</a> · {{ digest.date_display }} · {{ digest.story_count }} {% if digest.story_count == 1 %}story{% else %}stories{% endif %}</div>
+   <div class="byline"><img class="byline-avatar" src="/static/img/editor/dmytro-shvechikov-96.webp?v={{ asset_version }}" srcset="/static/img/editor/dmytro-shvechikov-48.webp?v={{ asset_version }} 48w, /static/img/editor/dmytro-shvechikov-96.webp?v={{ asset_version }} 96w, /static/img/editor/dmytro-shvechikov-160.webp?v={{ asset_version }} 160w" sizes="24px" alt="" width="24" height="24" decoding="async">{{ t("Edited by") }} <a href="{{ lang_url('/editor') }}">Dmytro Shvechikov</a> · {{ digest.date_display }} · {{ t("{n} story" if digest.story_count == 1 else "{n} stories", n=digest.story_count) }}</div>
    {% if podcast %}{% include "partials/podcast-player.html" %}{% endif %}
 
    <div class="email-body">
@@ -55,8 +56,8 @@
     <article class="story" id="news-{{ loop.index }}">
      <div class="story-meta">
       <span class="story-number">{{ loop.index }}</span>
-      <span class="story-category"><a href="/category/{{ (item.category or 'news')|lower }}">{{ emoji.get(item.category, '📰') }} {{ item.category.capitalize() if item.category else 'News' }}</a></span>
-      {% if item.important %}<span class="story-important">◆ IMPORTANT</span>{% endif %}
+      <span class="story-category"><a href="{{ lang_url('/category/' ~ (item.category or 'news')|lower) }}">{{ emoji.get(item.category, '📰') }} {{ t(item.category.capitalize() if item.category else 'News') }}</a></span>
+      {% if item.important %}<span class="story-important">{{ t("◆ IMPORTANT") }}</span>{% endif %}
      </div>
      <h2 class="story-title">{{ item.title }}</h2>
      <p class="story-body">{{ item.body }}</p>
@@ -68,14 +69,14 @@
      </div>
      {% endif %}
      {% if item.guide %}
-     <div class="story-guide" data-pagefind-ignore>Explainer: <a href="{{ item.guide.url }}">{{ item.guide.title }}</a></div>
+     <div class="story-guide" data-pagefind-ignore>{{ t("Explainer:") }} <a href="{{ lang_url(item.guide.url) }}">{{ item.guide.title }}</a></div>
      {% endif %}
      {% if item.tool %}
-     <div class="story-guide story-tool" data-pagefind-ignore>Calculator: <a href="{{ item.tool.url }}">{{ item.tool.anchor }}</a></div>
+     <div class="story-guide story-tool" data-pagefind-ignore>{{ t("Calculator:") }} <a href="{{ lang_url(item.tool.url) }}">{{ item.tool.anchor }}</a></div>
      {% endif %}
      {% if item.related %}
      <div class="story-related" data-pagefind-ignore>
-      <div class="story-related-label">More news on this topic:</div>
+      <div class="story-related-label">{{ t("More news on this topic:") }}</div>
       <ul>
        {% for r in item.related %}<li><a href="{{ r.url }}">{{ r.title }}</a></li>{% endfor %}
       </ul>
@@ -85,7 +86,7 @@
     </article>
    {% endfor %}
     {% if digest.mercadona %}
-    <aside class="mercadona" aria-label="Sunday shopping reminder">
+    <aside class="mercadona" aria-label="{{ t('Sunday shopping reminder') }}">
      <div class="mercadona-sign" aria-hidden="true"><span class="mercadona-sign-word">Cerrado</span><span class="mercadona-sign-day">domingo</span></div>
      <div class="mercadona-text">
       <p class="mercadona-title">{{ digest.mercadona.title }}</p>
@@ -96,12 +97,12 @@
    </div>
 
    <div class="email-footer">
-    <div class="share-cta">Enjoyed this digest? Share it with a friend.</div>
+    <div class="share-cta">{{ t("Enjoyed this digest? Share it with a friend.") }}</div>
     {% with share=digest.share %}{% include "partials/share.html" %}{% endwith %}
-    {% with hub_cards=digest.hub_cards, hub_heading="Tools and guides for today's news" %}{% include "partials/hub-cards.html" %}{% endwith %}
-    <div class="ai-disclaimer">This digest is based on real news, created with the help of AI and reviewed by a human.</div>
+    {% with hub_cards=digest.hub_cards, hub_heading=t("Tools and guides for today's news") %}{% include "partials/hub-cards.html" %}{% endwith %}
+    <div class="ai-disclaimer">{{ t("This digest is based on real news, created with the help of AI and reviewed by a human.") }}</div>
     {% if day_nav.older or day_nav.newer %}
-    <nav class="day-nav" aria-label="More digests">
+    <nav class="day-nav" aria-label="{{ t('More digests') }}">
      {% if day_nav.older %}<a class="day-nav-older" href="{{ day_nav.older.url }}">← {{ day_nav.older.date_display }}</a>{% endif %}
      {% if day_nav.newer %}<a class="day-nav-newer" href="{{ day_nav.newer.url }}">{{ day_nav.newer.date_display }} →</a>{% endif %}
     </nav>
@@ -119,10 +120,10 @@
   if (!btn) return;
   var label = btn.querySelector('span');
   var done = function () {
-   if (label) label.textContent = 'Copied!';
+   if (label) label.textContent = {{ t("Copied!")|tojson }};
    btn.classList.add('is-copied');
    setTimeout(function () {
-    if (label) label.textContent = 'Copy';
+    if (label) label.textContent = {{ t("Copy")|tojson }};
     btn.classList.remove('is-copied');
    }, 1500);
   };

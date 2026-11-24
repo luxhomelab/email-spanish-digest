@@ -1,4 +1,6 @@
 """Minimal Spanish subscribe flow (/es/*): Spanish layout, lang=es form, links."""
+import re
+
 import jinja2
 import pytest
 
@@ -7,6 +9,7 @@ import build
 
 def _env():
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(build.TEMPLATES_DIR), autoescape=True)
+    build.register_i18n(env)
     env.globals.update(current_year=2026, asset_version="t", js_version="t", js_importmap="{}",
                        site_url=build.SITE_URL, analytics_enabled=False, site_socials=[],
                        turnstile_enabled=False, listmonk_form_action="/x", listmonk_list_uuid="u",
@@ -66,6 +69,8 @@ def test_spanish_form_links_spanish_legal_pages():
 @pytest.mark.parametrize("name", build.ES_PAGES)
 def test_es_pages_link_spanish_legal_pages(name):
     html = _env().get_template(f"es/{name}").render(proof=PROOF, faq=build.ES_SUBSCRIBE_FAQ_ITEMS)
+    # The header language switcher's EN link is the English twin on purpose.
+    html = re.sub(r'<nav class="lang-switch".*?</nav>', "", html, flags=re.S)
     for path in ("/privacy", "/terms", "/cookies"):
         assert f'href="{path}' not in html, f"{name} links English {path}"
 

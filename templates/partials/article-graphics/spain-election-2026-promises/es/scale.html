@@ -1,0 +1,12 @@
+{# Spanish copy of ../scale.html (same markup); `d` = load_election_2026("es"). #}
+<figure class="ag ag-el-scale">
+ <div class="ag-panel">
+  <ol class="el-scale">
+{% for r in d.ratings %}
+   <li><span class="el-badge el-r-{{ r.key }}" aria-hidden="true">{{ r.key }}</span><span class="el-scale-text"><b>{{ r.label }}.</b> {{ r.desc }}</span></li>
+{% endfor %}
+  </ol>
+  <p class="el-scale-note">Cada promesa tiene además una probabilidad de cumplirse en los próximos cuatro años: <i>sí</i>, <i>en parte</i> o <i>no</i>. También tiene una lista de lo que necesita, por ejemplo una ley orgánica, las comunidades autónomas o el visto bueno de la UE.</p>
+ </div>
+ <figcaption>La valoración mide lo difícil que es cumplir una promesa, no si es una buena idea.</figcaption>
+</figure>

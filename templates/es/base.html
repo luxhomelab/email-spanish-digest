@@ -1,8 +1,8 @@
-{# Spanish layout for the minimal /es/ pages (subscribe flow only).
+{# Spanish layout for the Spanish-only /es/ templates (subscribe flow, legal).
    Sets page_lang = "es" for <html lang>, the cookie banner and any partial
-   that branches on it, and swaps in a stripped-down header/footer: the rest
-   of the site is English-only, so no nav and no language switcher yet. #}
+   that branches on it; base.html then swaps in the stripped-down Spanish
+   header/footer (no nav; the language switcher links the English twin). Shared templates
+   rendered in Spanish (digest, archive, category) get page_lang from
+   build.py instead. #}
 {% extends "base.html" %}
 {% set page_lang = "es" %}
-{% block site_header %}{% include "partials/es/header.html" %}{% endblock %}
-{% block site_footer %}{% include "partials/es/footer.html" %}{% endblock %}

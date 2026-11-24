@@ -7,7 +7,8 @@ import {
   toggleRating,
   filtersFromQuery,
   filtersToQuery,
-  isEmpty
+  isEmpty,
+  fill
 } from './election-filter.js'
 
 const app = document.getElementById('explorer-app')
@@ -47,9 +48,11 @@ function init (app) {
       s.hidden = n === 0
       s.querySelector('.el-topic-n').textContent = n
     })
+    // Wording comes from the partial (data-all / data-some), so the
+    // Spanish page shows Spanish text; English is the fallback.
     count.textContent = isEmpty(filters)
-      ? `Showing all ${items.length} promises`
-      : `Showing ${shown.size} of ${items.length} promises`
+      ? fill(count.dataset.all || 'Showing all {total} promises', { total: items.length })
+      : fill(count.dataset.some || 'Showing {shown} of {total} promises', { shown: shown.size, total: items.length })
     clearBtn.hidden = isEmpty(filters)
     empty.hidden = shown.size > 0
     if (updateUrl) {
@@ -146,7 +149,8 @@ function initSheet (dlg) {
     meta.innerHTML = item.querySelector('.el-item-meta').innerHTML
     body.replaceChildren(item.querySelector('.el-item-body').cloneNode(true))
     nav.hidden = list.length < 2
-    posText.textContent = `${pos + 1} of ${list.length}`
+    posText.textContent = fill(posText.dataset.tpl || '{pos} of {total}', { pos: pos + 1, total: list.length })
+
     prev.disabled = pos === 0
     next.disabled = pos === list.length - 1
     scroll.scrollTop = 0

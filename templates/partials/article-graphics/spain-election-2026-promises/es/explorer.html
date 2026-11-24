@@ -1,0 +1,82 @@
+{# Spanish copy of ../explorer.html (same markup); `d` = load_election_2026("es").
+   data-all / data-some / data-tpl give election-explorer.js its Spanish wording. #}
+<div class="el-explorer" id="explorer-app" data-pagefind-ignore>
+ <div class="el-controls" hidden>
+  <label class="el-search"><span>Buscar promesas</span><input type="search" id="el-q" autocomplete="off" placeholder="p. ej., alquiler, Beckham"></label>
+  <div class="el-selects">
+   <label><span>Partido</span><select id="el-party"><option value="">Todos los partidos</option>{% for p in d.parties %}<option value="{{ p.key }}">{{ p.name }}</option>{% endfor %}</select></label>
+   <label><span>Tema</span><select id="el-topic"><option value="">Todos los temas</option>{% for t in d.topics %}<option value="{{ t.key }}">{{ t.label }}</option>{% endfor %}</select></label>
+  </div>
+  <fieldset class="el-rates">
+   <legend>Valoración</legend>
+{% for r in d.ratings %}
+   <button type="button" class="el-rate" data-rating="{{ r.key }}" aria-pressed="false"><span class="el-badge el-badge-sm el-r-{{ r.key }}" aria-hidden="true">{{ r.key }}</span>{{ r.short }}</button>
+{% endfor %}
+  </fieldset>
+  <div class="el-status">
+   <p class="el-count" id="el-count" aria-live="polite" data-all="Mostrando las {total} promesas" data-some="Mostrando {shown} de {total} promesas">Mostrando las {{ d.promises|length }} promesas</p>
+   <button type="button" class="el-clear" id="el-clear" hidden>Borrar filtros</button>
+  </div>
+ </div>
+{% for t, items in d.by_topic %}{% if items %}
+ <section class="el-topic" data-topic="{{ t.key }}">
+  <div class="el-topic-head"><h3 class="el-topic-title">{{ t.label }}</h3> <span class="el-topic-n">{{ items|length }}</span></div>
+{% for it in items %}
+  <details class="el-item" id="p-{{ it.id }}" data-party="{{ it.party }}" data-topic="{{ it.topic }}" data-f="{{ it.f }}" style="--pc: {{ it.party_color }}">
+   <summary>
+    <span class="el-badge el-r-{{ it.f }}" aria-hidden="true">{{ it.f }}</span>
+    <span class="el-item-head">
+     <span class="el-item-title">{{ it.title|md }}</span>
+     <span class="el-item-meta"><span class="el-item-party"><i class="el-dot"></i>{{ it.party_name }}</span><span>{{ d.ratings_by_key[it.f].label }}</span></span>
+    </span>
+   </summary>
+   <div class="el-item-body">
+    <p class="el-item-detail">{{ it.detail|md }}</p>
+    <dl class="el-facts">
+     <div><dt>Probabilidad en esta legislatura</dt><dd>{{ d.chances[it.t] }}</dd></div>
+     <div><dt>Qué necesita</dt><dd>{% for n in it.n %}{{ d.needs[n] }}{% if not loop.last %}, {% endif %}{% endfor %}</dd></div>
+     <div><dt>En el programa</dt><dd><a href="{{ it.programme }}" target="_blank" rel="noopener">{{ it.ref }}</a></dd></div>
+    </dl>
+    <p class="el-item-c"><b>Nuestra valoración.</b> {{ it.c|md }}</p>
+{% if it.pos %}
+    <div class="el-pc">
+     <div class="el-pos"><p class="el-pc-h">Ventajas probables si sale adelante</p><p>{{ it.pos|md }}</p></div>
+     <div class="el-neg"><p class="el-pc-h">Inconvenientes y riesgos</p><p>{{ it.neg|md }}</p></div>
+    </div>
+{% endif %}
+{% if it.s %}
+    <div class="el-src"><p class="el-pc-h">Fuentes</p><ul>{% for s in it.s %}<li><a href="{{ s.u }}" target="_blank" rel="noopener">{{ s.t }}</a></li>{% endfor %}</ul></div>
+{% endif %}
+   </div>
+  </details>
+{% endfor %}
+ </section>
+{% endif %}{% endfor %}
+ <div class="el-empty" id="el-empty" hidden>
+  <p>Ninguna promesa coincide con estos filtros.</p>
+  <button type="button" class="el-clear" data-clear>Borrar filtros</button>
+ </div>
+</div>
+{# Promise sheet: see ../explorer.html. #}
+<dialog class="el-sheet" id="el-sheet" aria-labelledby="el-sheet-title" data-pagefind-ignore>
+ <div class="el-sheet-bar">
+  <button type="button" class="el-sheet-back" data-sheet-close>Volver</button>
+  <span class="el-sheet-nav">
+   <span class="el-sheet-pos" aria-live="polite" data-tpl="{pos} de {total}"></span>
+   <button type="button" class="el-sheet-step" data-step="-1" aria-label="Promesa anterior"><svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M12.5 4.5 7 10l5.5 5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+   <button type="button" class="el-sheet-step" data-step="1" aria-label="Promesa siguiente"><svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </span>
+ </div>
+ <div class="el-sheet-scroll">
+  <p class="el-sheet-context"></p>
+  <div class="el-sheet-head">
+   <span class="el-badge" aria-hidden="true"></span>
+   <span class="el-item-head">
+    <span class="el-sheet-title el-item-title" id="el-sheet-title"></span>
+    <span class="el-item-meta"></span>
+   </span>
+  </div>
+  <div class="el-sheet-body"></div>
+ </div>
+</dialog>
+<script type="module" src="/static/js/election-explorer.js?v={{ js_version }}"></script>

@@ -36,13 +36,17 @@ from email.utils import format_datetime
 from urllib.parse import quote
 from zoneinfo import ZoneInfo
 
-from jinja2 import Environment, FileSystemLoader
+from jinja2 import Environment, FileSystemLoader, pass_context
 from markupsafe import Markup
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 TEMPLATES_DIR = os.path.join(SCRIPT_DIR, "templates")
 DATA_DIR = os.path.join(SCRIPT_DIR, "data", "digests")
+# Spanish translations of data/digests: same filenames and schema.
+ES_DATA_DIR = os.path.join(SCRIPT_DIR, "data", "digests_es")
 ARTICLES_SRC_DIR = os.path.join(SCRIPT_DIR, "data", "articles")
+# Spanish translations: same filenames, slugs, frontmatter keys and directives.
+ARTICLES_ES_SRC_DIR = os.path.join(SCRIPT_DIR, "data", "articles_es")
 OUT_DIR = SCRIPT_DIR
 ARCHIVE_DIR = os.path.join(OUT_DIR, "archive")
 ARTICLES_DIR = os.path.join(OUT_DIR, "articles")
@@ -174,6 +178,340 @@ CATEGORY_DESCRIPTIONS = {
 }
 
 
+# --- i18n -------------------------------------------------------------------
+# One mechanism for every Spanish (/es/) page that reuses an English template:
+#
+#   * Render the template with page_lang="es". base.html then sets
+#     <html lang="es"> and swaps in the Spanish header/footer; the cookie
+#     banner and subscribe form switch language (and Listmonk list) on it too.
+#   * UI strings: gettext-style, the English text is the key. Templates call
+#     {{ t("Share:") }} or {{ t("{n} news", n=count) }}; Python calls
+#     tr(lang, "Share:"). English pages get the key back unchanged; Spanish
+#     pages get ES_STRINGS[key]. A key missing from ES_STRINGS falls back to
+#     English and is listed as a WARN at the end of the build.
+#   * Links: {{ lang_url("/category/economy") }} / localize(lang, path) give
+#     the /es/ twin on a Spanish page when ES_PATHS has it, else the English
+#     path. ES_PATHS holds English paths whose Spanish twin is built (and
+#     both are indexable); the build registers each digest, archive page and
+#     category it renders in Spanish. The same set drives hreflang pairs
+#     (partials/hreflang.html via `alt_path`, sitemap_hreflang).
+#
+# Longer per-slug copy (category SEO titles and descriptions) lives in
+# *_ES dicts next to the English ones instead of in ES_STRINGS.
+ES_STRINGS = {
+    # Brand / breadcrumbs / navigation
+    "Home": "Inicio",
+    "Archive": "Archivo",
+    "Page {n}": "Página {n}",
+    "Spain Daily Digest": "España al Día",
+    # Category display names (slug.capitalize() is the key)
+    "Property": "Inmobiliario",
+    "Housing": "Vivienda",
+    "Economy": "Economía",
+    "Politics": "Política",
+    "Work": "Trabajo",
+    "Visa": "Visados",
+    "Health": "Sanidad",
+    "Migration": "Migración",
+    "Taxes": "Impuestos",
+    "Events": "Agenda",
+    "News": "Noticias",
+    # Digest meta (digest_meta_title / digest_meta_description)
+    "Spain News in English": "Noticias de España",
+    "Spain News in English, {day}": "Noticias de España, {day}",
+    "Spain News {day}": "Noticias de España, {day}",
+    "Spain News {day}, {year} | Spain Daily Digest": "Noticias de España, {day} de {year} | España al Día",
+    "Spain news, {date}: {title}": "Noticias de España, {date}: {title}",
+    "; plus {n} more stories": "; y {n} noticias más",
+    "Spain Daily Digest for {date} — the day's top news from Spain, summarized in English.":
+        "España al Día del {date}: las noticias más importantes de España, resumidas.",
+    # digest.html
+    "Spain Daily Digest for {date} — the day's top stories from Spain, summarized in English.":
+        "España al Día del {date}: las noticias más importantes del día en España, resumidas.",
+    "Spain Daily Digest:": "España al Día:",
+    "Edited by": "Editado por",
+    "{n} story": "{n} noticia",
+    "{n} stories": "{n} noticias",
+    "◆ IMPORTANT": "◆ IMPORTANTE",
+    "Explainer:": "Guía:",
+    "Calculator:": "Calculadora:",
+    "More news on this topic:": "Más noticias sobre este tema:",
+    "Sunday shopping reminder": "Recordatorio para las compras del domingo",
+    "Mercadona is closed tomorrow": "Mercadona cierra mañana",
+    "Most supermarkets in Spain shut on Sundays. If the fridge is looking empty, shop today.":
+        "La mayoría de los supermercados de España cierran los domingos. Si la nevera está vacía, haz la compra hoy.",
+    "Mercadona is closed today": "Mercadona cierra hoy",
+    "Corner shops, petrol-station stores and some city-centre supermarkets stay open.":
+        "Abren las tiendas de barrio, las de las gasolineras y algunos supermercados del centro.",
+    "Enjoyed this digest? Share it with a friend.": "¿Te ha gustado esta edición? Compártela con alguien.",
+    "Tools and guides for today's news": "Calculadoras y guías para las noticias de hoy",
+    "This digest is based on real news, created with the help of AI and reviewed by a human.":
+        "Esta edición se basa en noticias reales, se elabora con ayuda de IA y la revisa una persona.",
+    "More digests": "Más ediciones",
+    "Copied!": "¡Copiado!",
+    # Share (partials/share.html, attach_share)
+    "Share:": "Compartir:",
+    "Share on {network}": "Compartir en {network}",
+    "Copy link": "Copiar enlace",
+    "Copy": "Copiar",
+    "{headline} — Spain Daily Digest": "{headline} | España al Día",
+    "{title} — via Spanified": "{title}, vía Spanified",
+    # Subscribe CTA card (partials/cta-form-card.html)
+    "Free · Every morning · 5-minute read": "Gratis · Cada mañana · 5 minutos de lectura",
+    "Spain's top news, in English, every morning": "Las noticias más importantes de España, cada mañana",
+    "One short email a day — what happened in Spain and why it matters. Free, no spam, unsubscribe anytime.":
+        "Un email breve al día: qué ha pasado en España y por qué importa. Gratis, sin spam y te das de baja cuando quieras.",
+    "Join 1,000+ email subscribers · cancel anytime": "Únete a más de 1.000 suscriptores · date de baja cuando quieras",
+    "Subscribe free": "Suscribirme gratis",
+    # Hub cards (hub_card, partials/hub-cards.html)
+    "Calculator": "Calculadora",
+    "Guide": "Guía",
+    "Net Salary Calculator": "Calculadora de sueldo neto",
+    "Your payslip after IRPF and Social Security, and the Renta refund.":
+        "Tu nómina después del IRPF y la Seguridad Social, y la devolución de la Renta.",
+    "Autónomo Tax Calculator": "Calculadora de impuestos para autónomos",
+    "Social security quota and IRPF for the self-employed.": "Cuota de la Seguridad Social e IRPF de los autónomos.",
+    "Property Buying Cost Calculator": "Calculadora de gastos de compra de vivienda",
+    "ITP, IVA/IGIC, AJD, notary and registry fees by region.": "ITP, IVA/IGIC, AJD, notaría y registro por comunidad autónoma.",
+    "Rental Yield Calculator": "Calculadora de rentabilidad del alquiler",
+    "Net yield, cash flow and IRR with resident and non-resident taxes.":
+        "Rentabilidad neta, flujo de caja y TIR con impuestos de residentes y no residentes.",
+    "Electricity Bill Calculator": "Calculadora de la factura de la luz",
+    "PVPC and tariff comparison for your monthly bill.": "PVPC y comparación de tarifas para tu factura mensual.",
+    "A {n}-minute read": "{n} minutos de lectura",
+    # archive.html
+    "Spanish News in English: Daily Archive — Spain Daily": "Archivo diario de noticias de España | España al Día",
+    " — Page {n}": ", página {n}",
+    "Browse every Spain Daily edition: Spanish news in English, summarized each day from the Spanish press.":
+        "Todas las ediciones de España al Día: las noticias de España, resumidas cada día a partir de la prensa española.",
+    " Page {n}.": " Página {n}.",
+    "Spain Daily archive": "Archivo de España al Día",
+    " — page {n}": ", página {n}",
+    "Every edition of the Spain Daily digest.": "Todas las ediciones de España al Día.",
+    "Latest": "Última",
+    "{n} news": "{n} noticias",
+    "No digests yet. Check back soon.": "Todavía no hay ediciones. Vuelve pronto.",
+    "« First": "« Primera",
+    "← Prev": "← Anterior",
+    "Next →": "Siguiente →",
+    # category.html
+    "{name} News in Spain, in English — Spanified": "{name}: noticias de España | Spanified",
+    "{name} news in Spain": "{name}: noticias de España",
+    "{n} news · newest first · updated every morning": "{n} noticias · las más recientes primero · se actualiza cada mañana",
+    "Get {name} news in your inbox every morning →": "Recibe cada mañana las noticias de {name} en tu email →",
+    "{name} in Spain: calculators and guides": "{name} en España: calculadoras y guías",
+    "→ Read the full digest": "→ Leer la edición completa",
+    # Articles (article.html, articles.html, article_toc_html, load_articles)
+    "Articles": "Artículos",
+    "Articles — Spanified": "Guías prácticas para vivir en España | Spanified",
+    "Spanified articles — practical guides to living in Spain: electricity, taxes, visas, property and everyday life.":
+        "Artículos de Spanified: guías prácticas para vivir en España sobre la luz, los impuestos, los visados, la vivienda y el día a día.",
+    "Spanified articles": "Artículos de Spanified",
+    "Practical guides to living in Spain — learned by doing.": "Guías prácticas para vivir en España, aprendidas sobre el terreno.",
+    "No articles yet. Check back soon.": "Todavía no hay artículos. Vuelve pronto.",
+    "{n} min read": "{n} min de lectura",
+    "By": "Por",
+    "Founder and Editor": "Fundador y editor",
+    "In this guide": "En esta guía",
+    "Frequently asked questions": "Preguntas frecuentes",
+    "Related calculators and guides": "Calculadoras y guías relacionadas",
+    "Found this useful? Share it with a friend.": "¿Te ha resultado útil? Compártelo con alguien.",
+    "Written from first-hand experience in Spain and reviewed by a human.":
+        "Escrito a partir de la experiencia propia en España y revisado por una persona.",
+    # Video player (video_embed_html); the videos themselves are in English
+    "Video chapters": "Capítulos del vídeo",
+    "{n} chapters": "{n} capítulos",
+    "Play video": "Ver el vídeo",
+    "Play video: {caption} ({mins} min)": "Ver el vídeo (en inglés): {caption} ({mins} min)",
+    "{caption}. <a {link}>Watch on YouTube</a>": "{caption}. Vídeo en inglés. <a {link}>Verlo en YouTube</a>",
+    # Home page (index.html). Adapted for the Spanish edition: it summarizes
+    # the Spanish press in Spanish, so "in English" claims are dropped.
+    # Calculators and quizzes are English-only pages; their intros say so.
+    "Spain Daily: Spanish News in English | Spanified": "España al Día: las noticias de España, cada mañana | Spanified",
+    "Spanish news in English, every morning: Spain Daily sums up Spain's top stories on rents, taxes, visas and jobs. Read online or by email. Free.":
+        "Las noticias de España, cada mañana: España al Día resume lo más importante sobre alquileres, impuestos, visados y empleo. Léelo en la web o por email. Gratis.",
+    "Spain Daily": "España al Día",
+    "Spanified Spain Daily": "Spanified España al Día",
+    "Spain Daily newsletter": "Newsletter España al Día",
+    "Spanified: Spain Daily, a free morning newsletter with Spain's top news in plain English, plus calculators, quizzes and guides for life in Spain.":
+        "Spanified: España al Día, una newsletter gratuita cada mañana con las noticias más importantes de España en lenguaje claro, además de guías para vivir en España.",
+    "Free daily newsletter with Spain's top news in plain English, a 5-minute read.":
+        "Newsletter diaria y gratuita con las noticias más importantes de España en lenguaje claro, en 5 minutos de lectura.",
+    "Spain Daily digest": "Resumen de España al Día",
+    "Spanish news in English: Spain Daily, every morning": "Las noticias de España, cada mañana: España al Día",
+    "Spain Daily by": "España al Día, de",
+    " is a daily digest of Spanish newspapers in English: your 5-minute catch-up on what's happening in Spain.":
+        ", es un resumen diario de la prensa española: cinco minutos para ponerte al día de lo que pasa en España.",
+    "Get Spain Daily by email": "Recibir España al Día por email",
+    "Read today's edition": "Leer la edición de hoy",
+    "Free. One email around 08:00 Madrid time, seven days a week. Join 1,000+ email subscribers, cancel anytime.":
+        "Gratis. Un email sobre las 08:00, hora de Madrid, los siete días de la semana. Únete a más de 1.000 suscriptores y date de baja cuando quieras.",
+    "Read the full edition: {date}": "Leer la edición completa del {date}",
+    "Browse past editions": "Ver ediciones anteriores",
+    "How Spain Daily works": "Cómo funciona España al Día",
+    "Spanish news sources": "fuentes de noticias españolas",
+    "El País, El Mundo and 9 more": "El País, El Mundo y 9 más",
+    "email in English": "email al día",
+    "Around 08:00 Madrid time, every day": "Sobre las 08:00, hora de Madrid, cada día",
+    "minutes to read": "minutos de lectura",
+    "And you're up to speed on Spain": "Y ya estás al día de lo que pasa en España",
+    "About Spain Daily": "Sobre España al Día",
+    "What is Spain Daily?": "¿Qué es España al Día?",
+    "Spain moves fast. Every morning we read the Spanish press cover to cover and hand you only the news that affects your life.":
+        "En España pasan muchas cosas cada día. Cada mañana leemos la prensa española de arriba abajo y te contamos solo lo que afecta a tu vida.",
+    "What you get": "Qué recibes",
+    "A daily Spain news digest: short summaries in plain English, zero clickbait.":
+        "Un resumen diario de la actualidad de España: noticias breves en lenguaje claro, sin titulares engañosos.",
+    "What it covers": "De qué trata",
+    "Rents, taxes, visas, jobs and the other stories that change daily life here.":
+        "Alquileres, impuestos, visados, empleo y el resto de noticias que cambian el día a día.",
+    "Who it's for": "Para quién es",
+    "People who live in Spain, are planning the move or are watching from afar.":
+        "Para quien vive en España, prepara la mudanza o sigue el país desde fuera.",
+    "Which Spanish newspapers do we read?": "¿Qué periódicos leemos?",
+    "Spain Daily is a newsletter, not a newspaper. We do not report the news ourselves: every day we aggregate the Spanish press, translate and summarize the stories in English, and link each one to its source.":
+        "España al Día es una newsletter, no un periódico. No hacemos periodismo propio: cada día reunimos lo que publica la prensa española, lo resumimos y enlazamos cada noticia a su fuente.",
+    "Sources": "Fuentes",
+    "agency": "agencia",
+    "International news makes the cut only when it directly affects Spain. It is":
+        "Lo internacional entra solo cuando afecta directamente a España. Es",
+    "Spanish news in English": "la prensa española en cinco minutos",
+    ", built for the English-language reader who wants the Spanish press without reading it in Spanish.":
+        ", pensada para quien quiere estar al día sin leer una docena de periódicos.",
+    "How Spain Daily is made": "Cómo se hace España al Día",
+    "How it works": "Cómo funciona",
+    "We aggregate the Spanish press": "Reunimos la prensa española",
+    "National dailies, wires and regional titles. We pick what affects your life: rents, taxes, visas, jobs.":
+        "Diarios nacionales, agencias y cabeceras regionales. Elegimos lo que afecta a tu vida: alquileres, impuestos, visados y empleo.",
+    "We summarize in plain English": "Lo resumimos en lenguaje claro",
+    "Short factual briefs with links to the sources, AI-assisted and checked by":
+        "Notas breves y factuales con enlace a las fuentes, redactadas con ayuda de IA y revisadas por",
+    "the editor": "el editor",
+    " before every send.": " antes de cada envío.",
+    "You read it in 5 minutes": "Lo lees en 5 minutos",
+    "In your inbox around 08:00 Madrid time, seven days a week.":
+        "En tu bandeja de entrada sobre las 08:00, hora de Madrid, los siete días de la semana.",
+    "Who makes the digest": "Quién hace el resumen",
+    "Founder and editor, based in Spain": "Fundador y editor, vive en España",
+    "Dmytro shapes each edition himself: he checks every AI-written summary against the original reporting and cuts anything that falls short.":
+        "Dmytro prepara cada edición en persona: compara cada resumen hecho con IA con la noticia original y quita lo que no está a la altura.",
+    "Meet the editor": "Conoce al editor",
+    "editions": "ediciones",
+    "since {date}": "desde el {date}",
+    "followers on Threads and Reddit": "seguidores en Threads y Reddit",
+    "News by topic": "Noticias por tema",
+    "Latest news by topic": "Últimas noticias por tema",
+    "Interactive tools and quizzes": "Calculadoras y tests interactivos",
+    "More from Spanified": "Más de Spanified",
+    "Practical calculators, quick quizzes and guides for life in Spain. Free, no sign-up.":
+        "Calculadoras prácticas, tests rápidos y guías para vivir en España. Gratis y sin registro.",
+    "Calculators for life in Spain": "Calculadoras para vivir en España",
+    "Taxes, property and bills worked out in plain English.":
+        "Impuestos, vivienda y facturas, calculados paso a paso. Las calculadoras están en inglés.",
+    "Open calculator": "Abrir la calculadora",
+    "Quizzes, two minutes each": "Tests de dos minutos",
+    "Real stories from Spain, mixed with inventions. Can you tell which is which?":
+        "Noticias reales de España mezcladas con inventos. ¿Sabes distinguirlas? Los tests están en inglés.",
+    "Take the quiz: {title}": "Hacer el test (en inglés): {title}",
+    "{title} quiz cover": "Portada del test {title}",
+    "Take the quiz": "Hacer el test",
+    "Latest articles": "Últimos artículos",
+    "Practical guides to living in Spain — learned by doing, written in plain English.":
+        "Guías prácticas para vivir en España, aprendidas sobre el terreno y escritas en lenguaje claro.",
+    "Read the article": "Leer el artículo",
+    "All articles": "Todos los artículos",
+    "Questions": "Preguntas",
+    "Questions, answered": "Preguntas frecuentes",
+    "The short version of what readers ask us most. Anything else?":
+        "Respuestas breves a lo que más nos preguntan. ¿Tienes otra duda?",
+    "Write to us": "Escríbenos",
+    "Subscribe": "Suscribirse",
+    "Start tomorrow morning with Spain Daily": "Empieza mañana el día con España al Día",
+    "Join 1,000+ email subscribers. Free, one email a day, cancel anytime.":
+        "Únete a más de 1.000 suscriptores. Gratis, un email al día y te das de baja cuando quieras.",
+}
+
+ES_MONTHS_SHORT = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sept", "oct", "nov", "dic"]
+
+# English paths (e.g. "/archive/2026-11-23", "/archive/", "/category/work")
+# whose /es/ twin is built. Starts with the home page ("/" -> /es/) and the
+# indexed ES_PAGES; main() adds the digests, archive pages and categories
+# rendered in Spanish.
+ES_PATHS = {"/"} | {"/" + name[:-len(".html")] for name in ES_INDEXED_PAGES}
+
+_untranslated = set()
+
+
+def tr(lang, text, **kw):
+    """Translate an English UI string (the key) for `lang`, then format it."""
+    if lang == "es":
+        out = ES_STRINGS.get(text)
+        if out is None:
+            _untranslated.add(text)
+            out = text
+    else:
+        out = text
+    return out.format(**kw) if kw else out
+
+
+def localize(lang, path):
+    """The /es/ twin of an English site path on Spanish pages, when built."""
+    if lang != "es":
+        return path
+    base = path.split("#", 1)[0]
+    return "/es" + path if base in ES_PATHS else path
+
+
+_INTERNAL_HREF_RE = re.compile(r'href="(/(?!/)[^"]*)"')
+
+
+def localize_links(lang, html_text):
+    """localize() every internal href="/..." in rendered HTML (article
+    bodies, FAQ answers): Spanish pages link the /es/ twins."""
+    if lang != "es":
+        return html_text
+    return _INTERNAL_HREF_RE.sub(lambda m: f'href="{localize(lang, m.group(1))}"', html_text)
+
+
+def register_i18n(env):
+    """Expose t() and lang_url() to templates; both read page_lang."""
+    env.globals["t"] = pass_context(lambda ctx, text, **kw: tr(ctx.get("page_lang", "en"), text, **kw))
+    env.globals["lang_url"] = pass_context(lambda ctx, path: localize(ctx.get("page_lang", "en"), path))
+
+
+# Spanish twins of CATEGORY_META / CATEGORY_DESCRIPTIONS (same slugs).
+CATEGORY_META_ES = {
+    "economy": ("Economía de España: inflación, empleo y PIB | Spanified", "La economía de España, explicada: crecimiento del PIB, inflación, salarios y datos del Banco de España. Las cifras que afectan a tus precios y ahorros."),
+    "politics": ("Política en España: leyes y elecciones | Spanified", "La política española sin ruido: pactos de gobierno, elecciones autonómicas, nuevas leyes y relación con la UE. Lo que se decide en Madrid, explicado."),
+    "work": ("Empleo en España: derechos laborales, SMI y contratos | Spanified", "Empleo y trabajo en España: contratación, salario mínimo (SMI), derechos laborales, huelgas y reformas. Lectura esencial si trabajas en España."),
+    "property": ("Inmobiliario en España: precios, hipotecas y alquiler | Spanified", "El mercado inmobiliario en España: precios por comunidad, topes al alquiler, leyes de vivienda e hipotecas. Para compradores, inquilinos y caseros."),
+    "events": ("Agenda de España: festivos, fiestas y huelgas | Spanified", "Qué pasa en España: festivos nacionales, fiestas, huelgas que afectan a los viajes y grandes citas culturales. La vida diaria del país, en breve."),
+    "health": ("Sanidad en España: SNS y listas de espera | Spanified", "La sanidad en España, explicada: novedades del sistema público (SNS), listas de espera, nuevos tratamientos y alertas sanitarias."),
+    "taxes": ("Impuestos en España: IRPF, Renta y plazos | Spanified", "Los impuestos en España, claros: tramos del IRPF, plazos de la Renta y del modelo 720, deducciones y reformas de Hacienda. Qué pagas y cuándo."),
+    "visa": ("Visados y residencia en España: nómada, NIE y TIE | Spanified", "Visados y residencia en España: permiso de nómada digital, Ley Beckham, trámites de NIE y TIE y normas de extranjería. El papeleo, explicado."),
+    "housing": ("Alquiler en España: derechos del inquilino y precios | Spanified", "Alquiler y acceso a la vivienda en España: precios, derechos del inquilino (LAU), desahucios y planes autonómicos. Lo que te protege como inquilino."),
+    "migration": ("Migración en España: llegadas e integración | Spanified", "Migración y vida entre países: datos de llegadas, políticas de integración, servicios consulares e historias de quienes llegan a España o se van."),
+}
+
+CATEGORY_DESCRIPTIONS_ES = {
+    "economy": "La economía de España en lenguaje claro: crecimiento del PIB, inflación, datos de empleo, fondos europeos y lo que dice el Banco de España. Seguimos las cifras que afectan a precios, salarios y ahorros, sin jerga.",
+    "politics": "La política española sin ruido: pactos de gobierno, elecciones autonómicas, nuevas leyes y relación con la UE. Resúmenes breves de lo que se decide en Madrid y de lo que significa para quien vive en España.",
+    "work": "Empleo y trabajo en España: tendencias de contratación, derechos laborales, salario mínimo (SMI), huelgas y reformas. Lectura esencial si trabajas en España o piensas hacerlo.",
+    "property": "El mercado inmobiliario español: precios de la vivienda por comunidad, topes al alquiler, nuevas leyes de vivienda e hipotecas. Para compradores, inquilinos y caseros que siguen el ladrillo en España.",
+    "events": "Qué pasa en España: festivos nacionales, fiestas, huelgas que afectan a los viajes y grandes citas culturales y deportivas. La vida diaria del país, en breve.",
+    "health": "La sanidad en España, explicada: novedades del sistema público (SNS), listas de espera, nuevos tratamientos y alertas de salud pública. Noticias prácticas para residentes y recién llegados.",
+    "taxes": "Los impuestos en España, sin complicaciones: tramos del IRPF, plazos (Renta, modelo 720), deducciones y reformas de Hacienda. Qué debes pagar, cuándo y qué ha cambiado este año.",
+    "visa": "Visados y residencia en España: permisos de nómada digital, Ley Beckham, trámites de NIE y TIE y cambios en las normas de extranjería. El lado burocrático de vivir en España, explicado.",
+    "housing": "Alquiler y acceso a la vivienda en España: precios del alquiler, derechos del inquilino (LAU), datos de desahucios y planes autonómicos de vivienda. Hacia dónde va el mercado y qué te protege como inquilino.",
+    "migration": "Migración y vida entre países: datos de llegadas, políticas de integración, servicios consulares e historias de quienes llegan a España o se marchan. El lado humano de las estadísticas.",
+}
+
+
+def display_date(date_str, lang="en"):
+    """Long date in the page language: 'September 10, 2026' / '10 de septiembre de 2026'."""
+    return format_date_es(date_str) if lang == "es" else format_date(date_str)
+
+
 def format_date(date_str):
     """'2026-09-10' -> 'September 10, 2026'."""
     try:
@@ -196,7 +534,7 @@ def format_date_es(date_str):
         return date_str
 
 
-def mercadona_line(date_str):
+def mercadona_line(date_str, lang="en"):
     """Weekend Mercadona reminder, keyed to the edition's own date."""
     try:
         weekday = datetime.strptime(date_str, "%Y-%m-%d").weekday()
@@ -204,18 +542,23 @@ def mercadona_line(date_str):
         return None
     if weekday == 5:  # Saturday
         return {
-            "title": "Mercadona is closed tomorrow",
-            "note": "Most supermarkets in Spain shut on Sundays. If the fridge is looking empty, shop today.",
+            "title": tr(lang, "Mercadona is closed tomorrow"),
+            "note": tr(lang, "Most supermarkets in Spain shut on Sundays. If the fridge is looking empty, shop today."),
         }
     if weekday == 6:  # Sunday
         return {
-            "title": "Mercadona is closed today",
-            "note": "Corner shops, petrol-station stores and some city-centre supermarkets stay open.",
+            "title": tr(lang, "Mercadona is closed today"),
+            "note": tr(lang, "Corner shops, petrol-station stores and some city-centre supermarkets stay open."),
         }
     return None
 
 
-def top_categories(items, n=3):
+def category_name(slug, lang="en"):
+    """Display name of a category slug: 'economy' -> 'Economy' / 'Economía'."""
+    return tr(lang, (slug or "news").capitalize())
+
+
+def top_categories(items, n=3, lang="en"):
     """Most frequent categories as display strings, e.g. '💰 Economy'."""
     counts = Counter(item.get("category", "") for item in items)
     result = []
@@ -223,18 +566,20 @@ def top_categories(items, n=3):
         if not category:
             continue
         emoji = CATEGORY_EMOJI.get(category, DEFAULT_EMOJI)
-        result.append(f"{emoji} {category.capitalize()}")
+        result.append(f"{emoji} {category_name(category, lang)}")
     return result
 
 
-def load_digests():
-    """Load and sort (newest first) all digest JSON files in data/digests/."""
+def load_digests(data_dir=None):
+    """Load and sort (newest first) all digest JSON files in data/digests/
+    (or `data_dir`, e.g. ES_DATA_DIR)."""
+    data_dir = data_dir or DATA_DIR
     digests = []
-    if os.path.isdir(DATA_DIR):
-        for filename in sorted(os.listdir(DATA_DIR)):
+    if os.path.isdir(data_dir):
+        for filename in sorted(os.listdir(data_dir)):
             if not filename.endswith(".json"):
                 continue
-            path = os.path.join(DATA_DIR, filename)
+            path = os.path.join(data_dir, filename)
             try:
                 with open(path, encoding="utf-8") as fh:
                     data = json.load(fh)
@@ -248,43 +593,64 @@ def load_digests():
     return digests
 
 
-def digest_context(data):
-    """Normalize a digest dict into the context passed to digest.html."""
+def digest_context(data, lang="en", title_subject=True):
+    """Normalize a digest dict into the context passed to digest.html.
+
+    With lang="es" (data/digests_es) the page lives at /es/archive/<date>.
+    Spanish digests have no rotating headline, so the email subject stands in.
+    `title_subject=False` keeps the subject out of the meta title: older
+    Spanish subjects are translated taglines ("España hoy. Brevemente."), so
+    the title leads with the top story, as the English twin does.
+    """
     items = data.get("items", [])
     date = data.get("date", "")
-    headline = data.get("headline") or data.get("variant") or "Spain Daily Digest"
+    subject = (data.get("subject") or "").strip()
+    headline = (data.get("headline") or data.get("variant")
+                or (subject if lang == "es" else "") or tr(lang, "Spain Daily Digest"))
     words = len(headline.split()) + sum(
         len((i.get("title", "") + " " + i.get("body", "")).split()) for i in items
     )
-    tag_cats = [c.capitalize() for c in dict.fromkeys(
+    tag_cats = [category_name(c, lang) for c in dict.fromkeys(
         i.get("category", "") for i in items if i.get("category"))][:3]
     return {
+        "lang": lang,
         "date": date,
-        "date_display": format_date(date),
+        "date_display": display_date(date, lang),
         "headline": headline,
         "stories": items,
-        "mercadona": mercadona_line(date),
+        "mercadona": mercadona_line(date, lang),
         "story_count": len(items),
-        "top_categories": top_categories(items),
-        "url": f"/archive/{date}",
-        "subject": (data.get("subject") or "").strip(),
-        "meta_title": digest_meta_title(date, items, data.get("subject")),
-        "meta_description": digest_meta_description(date, headline, items),
+        "top_categories": top_categories(items, lang=lang),
+        "url": lang_path(lang, f"/archive/{date}"),
+        "subject": subject,
+        "title_subject": subject if title_subject else "",
+        "meta_title": digest_meta_title(date, items, subject if title_subject else None, lang=lang),
+        "meta_description": digest_meta_description(date, headline, items, lang=lang),
         "word_count": words,
         "tag_categories": tag_cats,
     }
 
 
-def short_date(date_str):
-    """'2026-09-10' -> 'Sep 10, 2026'."""
+def lang_path(lang, path):
+    """Path of a page built in `lang`: '/archive/' -> '/es/archive/' for es.
+
+    Unlike localize(), this does not check ES_PATHS: use it for the URL of
+    the page being rendered, not for links to other pages."""
+    return "/es" + path if lang == "es" else path
+
+
+def short_date(date_str, lang="en"):
+    """'2026-09-10' -> 'Sep 10, 2026' / '10 sept, 2026'."""
     try:
         dt = datetime.strptime(date_str, "%Y-%m-%d")
+        if lang == "es":
+            return f"{dt.day} {ES_MONTHS_SHORT[dt.month - 1]}, {dt.year}"
         return f"{dt.strftime('%b')} {dt.day}, {dt.year}"
     except (ValueError, TypeError):
         return date_str
 
 
-def digest_meta_title(date, items, subject=None, dated=False):
+def digest_meta_title(date, items, subject=None, dated=False, lang="en"):
     """Story-first title: '<email subject> | Spain News in English'.
 
     Leads with the edition's email subject (written to summarize the day's
@@ -294,16 +660,16 @@ def digest_meta_title(date, items, subject=None, dated=False):
     a subject fall back to the top story title plus the date. The lead is cut
     at a word boundary so the whole title stays under ~82 characters.
     """
-    day = short_date(date).rsplit(",", 1)[0]
+    day = short_date(date, lang).rsplit(",", 1)[0]
     subject = (subject or "").strip()
     if subject:
         top = subject
-        suffix = f"Spain News in English, {day}" if dated else "Spain News in English"
+        suffix = tr(lang, "Spain News in English, {day}", day=day) if dated else tr(lang, "Spain News in English")
     else:
         top = next((i.get("title", "").strip() for i in items if i.get("title")), "")
-        suffix = f"Spain News {day}"
+        suffix = tr(lang, "Spain News {day}", day=day)
     if not top:
-        return f"Spain News {day}, {date[:4]} | Spain Daily Digest"
+        return tr(lang, "Spain News {day}, {year} | Spain Daily Digest", day=day, year=date[:4])
     room = 82 - len(suffix) - 3
     if len(top) > room:
         top = top[:room - 1].rsplit(" ", 1)[0].rstrip(",;:") + "…"
@@ -316,40 +682,44 @@ def dedupe_digest_titles(digests):
     Without the date the subject is all that tells digest titles apart, and
     recurring stories can produce the same subject twice.
     """
-    counts = Counter(d["subject"].lower() for d in digests if d.get("subject"))
+    counts = Counter(d["title_subject"].lower() for d in digests if d.get("title_subject"))
     for d in digests:
-        if d.get("subject") and counts[d["subject"].lower()] > 1:
+        if d.get("title_subject") and counts[d["title_subject"].lower()] > 1:
             d["meta_title"] = digest_meta_title(
-                d["date"], d["stories"], d["subject"], dated=True)
+                d["date"], d["stories"], d["title_subject"], dated=True, lang=d.get("lang", "en"))
     return digests
 
 
-def digest_meta_description(date, headline, items):
+def digest_meta_description(date, headline, items, lang="en"):
     """Unique per-day description built from the day's story titles.
 
     The headline is a rotating tagline ('Spain today. Briefly.'), so it is
-    not used. Stories are added while they fit in ~155 chars, which Google
-    shows whole in the snippet.
+    not used. Stories are added in order, skipping any that would not fit in
+    ~155 chars (Google shows that much whole in the snippet); when room is
+    left, the count of the other stories closes it.
     """
     titles = [i.get("title", "").strip().rstrip(".") for i in items]
     titles = [t for t in titles if t]
     if not titles:
-        return f"Spain Daily Digest for {date} — the day's top news from Spain, summarized in English."
-    desc = f"Spain news, {format_date(date)}: {titles[0]}"
+        return tr(lang, "Spain Daily Digest for {date} — the day's top news from Spain, summarized in English.", date=date)
+    desc = tr(lang, "Spain news, {date}: {title}", date=display_date(date, lang), title=titles[0])
+    used = 1
     for t in titles[1:]:
-        if len(desc) + len(t) + 3 > 157:
-            break
-        desc += f"; {t}"
+        if len(desc) + len(t) + 2 <= 157:
+            desc += f"; {t}"
+            used += 1
+    rest = len(titles) - used
+    more = tr(lang, "; plus {n} more stories", n=rest) if rest > 1 else ""
+    if more and len(desc) + len(more) <= 157:
+        desc += more
     return desc if len(desc) <= 157 else desc[:154].rsplit(" ", 1)[0] + "…"
 
 
-def archive_url(page):
-    if page == 1:
-        return "/archive/"
-    return f"/archive/{page}"
+def archive_url(page, lang="en"):
+    return lang_path(lang, "/archive/" if page == 1 else f"/archive/{page}")
 
 
-def pagination(page, total_pages):
+def pagination(page, total_pages, lang="en"):
     # Compact window: current + up to 2 neighbours each side (max 5 numbers).
     # Near the edges the window shifts so it stays full when possible.
     start = min(max(page - 2, 1), max(total_pages - 4, 1))
@@ -357,10 +727,11 @@ def pagination(page, total_pages):
     return {
         "current": page,
         "total_pages": total_pages,
-        "prev_url": archive_url(page - 1) if page > 1 else None,
-        "next_url": archive_url(page + 1) if page < total_pages else None,
+        "first_url": archive_url(1, lang),
+        "prev_url": archive_url(page - 1, lang) if page > 1 else None,
+        "next_url": archive_url(page + 1, lang) if page < total_pages else None,
         "pages": [
-            {"number": p, "url": archive_url(p), "current": p == page}
+            {"number": p, "url": archive_url(p, lang), "current": p == page}
             for p in range(start, end + 1)
         ],
     }
@@ -372,16 +743,18 @@ def articles_url(page):
     return f"/articles/{page}"
 
 
-def articles_pagination(page, total_pages):
+def articles_pagination(page, total_pages, lang="en"):
     start = min(max(page - 2, 1), max(total_pages - 4, 1))
     end = min(start + 4, total_pages)
+    url = lambda p: lang_path(lang, articles_url(p))
     return {
         "current": page,
         "total_pages": total_pages,
-        "prev_url": articles_url(page - 1) if page > 1 else None,
-        "next_url": articles_url(page + 1) if page < total_pages else None,
+        "first_url": url(1),
+        "prev_url": url(page - 1) if page > 1 else None,
+        "next_url": url(page + 1) if page < total_pages else None,
         "pages": [
-            {"number": p, "url": articles_url(p), "current": p == page}
+            {"number": p, "url": url(p), "current": p == page}
             for p in range(start, end + 1)
         ],
     }
@@ -448,12 +821,21 @@ ARTICLE_GRAPHIC_RE = re.compile(r"^:::\s*graphic\s+([a-z0-9][a-z0-9-]*)$")
 ARTICLE_GRAPHICS_DIR = os.path.join(TEMPLATES_DIR, "partials", "article-graphics")
 
 
-def article_graphic_html(slug, name):
+def article_graphic_html(slug, name, lang="en"):
     """Read an article's HTML graphic partial; warn and return "" if missing.
 
+    Spanish pages use the translated copy <slug>/es/<name>.html (same markup,
+    Spanish text); a missing copy warns and falls back to the English one.
     Partials of an article listed in ARTICLE_GRAPHIC_DATA are Jinja templates
-    rendered with that article's data as `d`; all others are inlined as is."""
+    rendered with that article's data (in `lang`) as `d`; all others are
+    inlined as is."""
     path = os.path.join(ARTICLE_GRAPHICS_DIR, slug or "", f"{name}.html")
+    if lang == "es":
+        es_path = os.path.join(ARTICLE_GRAPHICS_DIR, slug or "", "es", f"{name}.html")
+        if os.path.isfile(es_path):
+            path = es_path
+        else:
+            print(f"WARN: no Spanish article graphic, using English: {es_path}", file=sys.stderr)
     try:
         with open(path, encoding="utf-8") as f:
             source = f.read()
@@ -466,7 +848,7 @@ def article_graphic_html(slug, name):
     env = Environment(autoescape=True, trim_blocks=True, lstrip_blocks=True)
     env.filters["md"] = lambda s: Markup(article_inline_md(s or ""))
     env.globals["js_version"] = js_version()
-    return env.from_string(source).render(d=loader()).strip()
+    return env.from_string(source).render(d=loader(lang)).strip()
 
 
 # Spain general election, 29 Nov 2026: curated promises with feasibility
@@ -475,24 +857,75 @@ def article_graphic_html(slug, name):
 # by its index `i` in the research files.
 ELECTION_2026_DIR = os.path.join(SCRIPT_DIR, "data", "election-2026")
 ELECTION_RATINGS = "ABCDV"
-_election_cache = None
+_election_cache = None  # {lang: data}
 
 
-def load_election_2026():
-    """Load and validate the election data; the build fails on bad data."""
+def _election_es_overlay(meta, raw_by_party):
+    """Swap the English text of the election data for the Spanish one, in place.
+
+    data/election-2026/es/ holds only the translated text: meta.json (rating,
+    chance, need, topic and approach labels; per-party bloc and notes) and
+    items/<party>.json ([{i, title, detail, c, ref, pos?, neg?, s: [titles]}]).
+    Ratings, numbers and URLs always come from the English files. The build
+    fails when a promise or source has no translation or the shapes differ."""
+    es_dir = os.path.join(ELECTION_2026_DIR, "es")
+    with open(os.path.join(es_dir, "meta.json"), encoding="utf-8") as fh:
+        es = json.load(fh)
+    for r in meta["ratings"]:
+        r.update(es["ratings"][r["key"]])
+    if set(es["chances"]) != set(meta["chances"]) or set(es["needs"]) != set(meta["needs"]):
+        raise ValueError("election es/meta.json: chances/needs keys differ from meta.json")
+    meta["chances"], meta["needs"] = es["chances"], es["needs"]
+    for t in meta["topics"]:
+        t["label"] = es["topics"][t["key"]]
+    for key, rows in meta["approaches"].items():
+        labels = es["approaches"][key]
+        if len(labels) != len(rows):
+            raise ValueError(f"election es/meta.json: approaches for {key} need {len(rows)} labels")
+        for row, label in zip(rows, labels):
+            row["label"] = label
+    for party in meta["parties"]:
+        party.update(es["parties"][party["key"]])
+        with open(os.path.join(es_dir, "items", f"{party['key']}.json"), encoding="utf-8") as fh:
+            tr_by_i = {it["i"]: it for it in json.load(fh)}
+        raw = raw_by_party[party["key"]]
+        if set(tr_by_i) != {it["i"] for it in raw}:
+            raise ValueError(f"election es/items/{party['key']}.json: promises differ from the English file")
+        for it in raw:
+            t = tr_by_i[it["i"]]
+            if len(t["s"]) != len(it["s"]) or any(bool(t.get(f)) != bool(it.get(f)) for f in ("pos", "neg")):
+                raise ValueError(f"election es item {party['key']}#{it['i']}: sources or pros/cons differ from English")
+            for field in ("title", "detail", "c", "ref", "pos", "neg"):
+                if it.get(field):
+                    it[field] = t[field]
+            it["s"] = [dict(src, t=title) for src, title in zip(it["s"], t["s"])]
+
+
+def load_election_2026(lang="en"):
+    """Load and validate the election data; the build fails on bad data.
+
+    lang="es" gives the same promises, ratings and numbers with the Spanish
+    text (see _election_es_overlay)."""
     global _election_cache
-    if _election_cache is not None:
-        return _election_cache
+    if _election_cache is None:
+        _election_cache = {}
+    if lang in _election_cache:
+        return _election_cache[lang]
     with open(os.path.join(ELECTION_2026_DIR, "meta.json"), encoding="utf-8") as fh:
         meta = json.load(fh)
+    raw_by_party = {}
+    for party in meta["parties"]:
+        with open(os.path.join(ELECTION_2026_DIR, "items", f"{party['key']}.json"), encoding="utf-8") as fh:
+            raw_by_party[party["key"]] = json.load(fh)
+    if lang == "es":
+        _election_es_overlay(meta, raw_by_party)
     topics = {t["key"]: t for t in meta["topics"]}
     topic_order = {t["key"]: n for n, t in enumerate(meta["topics"])}
     parties = []
     items = []
     for party in meta["parties"]:
         key = party["key"]
-        with open(os.path.join(ELECTION_2026_DIR, "items", f"{key}.json"), encoding="utf-8") as fh:
-            raw = json.load(fh)
+        raw = raw_by_party[key]
         by_i = {}
         for it in raw:
             where = f"election item {key}#{it.get('i')}"
@@ -552,7 +985,7 @@ def load_election_2026():
                            key=lambda it: party_order[it["party"]]))
                 for r in present]) for row in rows],
         ))
-    _election_cache = dict(
+    _election_cache[lang] = dict(
         meta,
         ratings_by_key={r["key"]: r for r in meta["ratings"]},
         parties=parties,
@@ -560,10 +993,10 @@ def load_election_2026():
         promises=items,
         by_topic=by_topic,
         compare=compare,
-        as_of_display=format_date(meta["as_of"]),
-        election_display=format_date(meta["election"]),
+        as_of_display=display_date(meta["as_of"], lang),
+        election_display=display_date(meta["election"], lang),
     )
-    return _election_cache
+    return _election_cache[lang]
 
 
 # Article slug -> loader of the data its "::: graphic" partials render with.
@@ -591,8 +1024,11 @@ def load_videos():
     return _videos_cache
 
 
-def video_embed_html(video_id):
-    """Facade + VideoObject JSON-LD for one video; warn and return "" if unknown."""
+def video_embed_html(video_id, lang="en"):
+    """Facade + VideoObject JSON-LD for one video; warn and return "" if unknown.
+
+    The videos are in English: Spanish pages get Spanish player labels and a
+    caption that says so, while titles, chapters and JSON-LD stay English."""
     v = load_videos().get(video_id)
     if not v:
         print(f"WARN: video not in data/videos.json: {video_id}", file=sys.stderr)
@@ -601,6 +1037,8 @@ def video_embed_html(video_id):
     mins, s = divmod(secs, 60)
     clock = f"{mins}:{s:02d}"
     watch = f"https://www.youtube.com/watch?v={video_id}"
+    watch_attrs = f'href="{watch}" target="_blank" rel="noopener"'
+
     thumb = f"https://i.ytimg.com/vi/{video_id}/maxresdefault.jpg"
     caption = html.escape(v.get("caption") or v["title"])
     ld = {
@@ -631,19 +1069,19 @@ def video_embed_html(video_id):
             for c in chapters
         )
         chapters_html = (
-            f'<nav class="ve-chapters" aria-label="Video chapters">'
-            f'<p class="ve-chapters-head">{len(chapters)} chapters</p><ol>{items}</ol></nav>\n'
+            f'<nav class="ve-chapters" aria-label="{tr(lang, "Video chapters")}">'
+            f'<p class="ve-chapters-head">{tr(lang, "{n} chapters", n=len(chapters))}</p><ol>{items}</ol></nav>\n'
         )
     return (
         f'<figure class="video-embed{" has-chapters" if chapters else ""}" data-pagefind-ignore>\n'
         f'<div class="ve-player"><a class="ve-frame" href="{watch}" target="_blank" rel="noopener" data-video-id="{video_id}"'
-        f' data-video-title="{caption}" aria-label="Play video: {caption} ({mins} min)">'
+        f' data-video-title="{caption}" aria-label="{tr(lang, "Play video: {caption} ({mins} min)", caption=caption, mins=mins)}">'
         f'<img src="{thumb}" alt="" width="1280" height="720" loading="lazy" decoding="async">'
         f'<span class="ve-play"><span class="ve-play-icon"><svg viewBox="0 0 24 24" aria-hidden="true">'
         f'<path d="M8 5.5v13l10.5-6.5z"/></svg></span>'
-        f'<span class="ve-play-label">Play video</span><span class="ve-time">{clock}</span></span></a></div>\n'
+        f'<span class="ve-play-label">{tr(lang, "Play video")}</span><span class="ve-time">{clock}</span></span></a></div>\n'
         f'{chapters_html}'
-        f'<figcaption class="ve-caption">{caption}. <a href="{watch}" target="_blank" rel="noopener">Watch on YouTube</a></figcaption>\n'
+        f'<figcaption class="ve-caption">{tr(lang, "{caption}. <a {link}>Watch on YouTube</a>", caption=caption, link=watch_attrs)}</figcaption>\n'
         f'<script type="application/ld+json">{ld_json}</script>\n'
         f'<script src="/static/js/video-embed.js?v={js_version()}" defer></script>\n'
         f"</figure>"
@@ -673,25 +1111,26 @@ def article_heading_id(text_html, used):
     return hid
 
 
-def article_toc_html(entries):
+def article_toc_html(entries, lang="en"):
     """<nav> table of contents from (id, title_html) pairs; two columns on
     wide screens, filled top to bottom (--rows sets the split)."""
     items = "\n".join(f'<li><a href="#{hid}">{title}</a></li>' for hid, title in entries)
     rows = (len(entries) + 1) // 2
     return (
         '<nav class="art-toc" aria-labelledby="art-toc-title">\n'
-        f'<p class="art-toc-title" id="art-toc-title">In this guide</p>\n'
+        f'<p class="art-toc-title" id="art-toc-title">{tr(lang, "In this guide")}</p>\n'
         f'<ol class="art-toc-list" style="--rows: {rows}">\n{items}\n</ol>\n'
         "</nav>"
     )
 
 
-def article_markdown_to_html(md, slug=None, toc_extra=()):
+def article_markdown_to_html(md, slug=None, toc_extra=(), lang="en"):
     """Minimal markdown -> HTML (stdlib only): headings, bold, italic,
     links, unordered lists, figures (16:9 images), HTML graphic partials
     ("::: graphic <name>", looked up under the article's slug), a table of
     contents ("::: toc", listing every h2 plus `toc_extra` (id, title)
-    pairs), paragraphs, hr. Input is escaped first. Every h2 gets an id."""
+    pairs), paragraphs, hr. Input is escaped first. Every h2 gets an id.
+    `lang` picks the language of the graphics and the TOC label."""
     lines = md.splitlines()
     out = []
     in_list = False
@@ -767,7 +1206,7 @@ def article_markdown_to_html(md, slug=None, toc_extra=()):
             if in_list:
                 out.append("</ul>")
                 in_list = False
-            graphic = article_graphic_html(slug, m.group(1))
+            graphic = article_graphic_html(slug, m.group(1), lang)
             if graphic:
                 out.append(graphic)
             continue
@@ -777,7 +1216,7 @@ def article_markdown_to_html(md, slug=None, toc_extra=()):
             if in_list:
                 out.append("</ul>")
                 in_list = False
-            video = video_embed_html(m.group(1))
+            video = video_embed_html(m.group(1), lang)
             if video:
                 out.append(video)
             continue
@@ -820,7 +1259,7 @@ def article_markdown_to_html(md, slug=None, toc_extra=()):
     flush_para()
     if in_list:
         out.append("</ul>")
-    toc = article_toc_html(headings + list(toc_extra))
+    toc = article_toc_html(headings + list(toc_extra), lang)
     return nbsp_numbers("\n".join(toc if part == _TOC_PLACEHOLDER else part for part in out))
 
 
@@ -877,10 +1316,15 @@ def parse_faq_section(section_md):
     return faq
 
 
-def load_articles():
-    """Load data/articles/*.md, newest first. Returns article context dicts."""
+def load_articles(lang="en"):
+    """Load data/articles/*.md (lang="es": data/articles_es/*.md), newest
+    first. Returns article context dicts.
+
+    `path` is the English path (/articles/<slug>), the key for hub cards,
+    guide links and ES_PATHS; `url` is where this language's page lives
+    (/es/articles/<slug> for Spanish, same slug)."""
     articles = []
-    src = ARTICLES_SRC_DIR
+    src = ARTICLES_ES_SRC_DIR if lang == "es" else ARTICLES_SRC_DIR
     if not os.path.isdir(src):
         return articles
     for filename in sorted(os.listdir(src)):
@@ -896,14 +1340,16 @@ def load_articles():
         slug = meta.get("slug") or filename[:-3]
         title = meta.get("title") or slug.replace("-", " ").capitalize()
         date = meta.get("date") or "2026-10-02"
-        toc_extra = [("faq", "Frequently asked questions")] if faq else []
-        body_html = article_markdown_to_html(body_md, slug, toc_extra)
+        toc_extra = [("faq", tr(lang, "Frequently asked questions"))] if faq else []
+        body_html = article_markdown_to_html(body_md, slug, toc_extra, lang)
         words = len(_article_words(body_md))
         reading_time = max(1, round(words / READING_WPM))
-        url = f"/articles/{slug}"
+        en_path = f"/articles/{slug}"
+        url = lang_path(lang, en_path)
         page_url = f"{SITE_URL}{url}"
         articles.append({
-            "src_path": f"data/articles/{filename}",
+            "lang": lang,
+            "src_path": f"data/{'articles_es' if lang == 'es' else 'articles'}/{filename}",
             "slug": slug,
             "title": title,
             "meta_title": meta.get("meta_title") or f"{title} — Spanified",
@@ -913,7 +1359,7 @@ def load_articles():
             # Optional `updated:` frontmatter (YYYY-MM-DD) for substantive
             # revisions; feeds dateModified / article:modified_time.
             "updated": max(meta.get("updated") or date, date),
-            "date_display": format_date(date),
+            "date_display": display_date(date, lang),
             "author": meta.get("author") or "Dmytro Shvechikov",
             "image_alt": meta.get("image_alt") or "",
             "story_keywords": [k.strip() for k in (meta.get("story_keywords") or "").split(",") if k.strip()],
@@ -924,6 +1370,7 @@ def load_articles():
             "body_html": body_html,
             "word_count": words,
             "reading_time": reading_time,
+            "path": en_path,
             "url": url,
             "faq": faq,
             "share": share_links(page_url, f"{title} — Spanified"),
@@ -1031,6 +1478,21 @@ FAQ_ITEMS = [
 ]
 
 
+# Spanish twin of FAQ_ITEMS for the /es/ home page. Adapted, not literal:
+# the Spanish edition summarizes the Spanish press in Spanish.
+ES_FAQ_ITEMS = [
+    ("¿Dónde puedo leer un resumen de las noticias de España?", "En España al Día: cada mañana publicamos una edición gratuita con las noticias más importantes de España, en la web y por email. Cada noticia enlaza a su fuente original, por si quieres leer el artículo completo."),
+    ("¿España al Día es un periódico o una newsletter?", "Es una newsletter, no un periódico. No hacemos periodismo propio: leemos los medios españoles, resumimos sus noticias y enlazamos cada fuente. Los resúmenes se hacen con ayuda de IA y un editor los revisa antes de cada envío."),
+    ("¿Qué periódicos españoles resume España al Día?", "Leemos medios nacionales y regionales: El País, Cinco Días, El Mundo, La Vanguardia, elDiario.es, El Confidencial, 20 Minutos, Heraldo, Diario Sur y Expansión, además de la agencia Europa Press. Lo internacional entra solo cuando afecta directamente a España. Cada noticia indica su fuente."),
+    ("¿Puede España al Día sustituir a un periódico?", "No, está pensada para complementarlo. España al Día es un resumen diario de cinco minutos con enlaces a la información original: te enteras rápido de lo que pasa con los alquileres, los impuestos, los visados y el empleo, y puedes ampliar en la fuente."),
+    ("¿Hay una buena newsletter gratuita sobre la actualidad de España?", "España al Día es una newsletter gratuita sobre España: un email al día, sobre las 08:00 hora de Madrid, los siete días de la semana, con cinco minutos de lectura sobre las noticias que afectan a la vida en España. Puedes leer la última edición en la web antes de suscribirte."),
+    ("¿Qué es Spanified?", "Spanified es el proyecto que publica España al Día, una newsletter gratuita que resume las noticias más importantes de España en lenguaje claro: alquileres, impuestos, visados, empleo y vida diaria."),
+    ("¿Cada cuánto llega el resumen?", "Cada mañana, los siete días de la semana. Cinco minutos con el café y ya estás al día."),
+    ("¿De verdad es gratis?", "Sí, y lo seguirá siendo. Sin muro de pago ni periodo de prueba: solo las noticias."),
+    ("¿En qué idioma está?", "En español claro, a partir de la prensa española que leemos de arriba abajo cada mañana. También hay una edición en inglés, Spain Daily."),
+    ("¿Dónde puedo leer ediciones anteriores?", "Todas las ediciones siguen en la web, en el archivo: puedes consultarlas por fecha."),
+]
+
 def load_quiz_cards(homepage=False):
     """Light metadata for every quiz in data/quizzes/*.json.
 
@@ -1103,6 +1565,13 @@ def render_llms_txt(digests, articles=(), salary_pages=(), autonomo_pages=(), re
         "## Guides",
         *[f"- {a['title']}: {SITE_URL}{a['url']}" for a in articles],
         "",
+        *(["## Spanish edition (España al Día)",
+            "- The same editions and guides in Spanish, under /es/. Each page names its English twin with hreflang.",
+            *[f"- {label}: {SITE_URL}{localize('es', path)}" for label, path in (
+                ("Home", "/"), ("Archive", "/archive/"), ("Articles", "/articles/"), ("Subscribe", "/subscribe"))
+              if path in ES_PATHS],
+            f"- Spanish editions: {SITE_URL}/es/archive/<YYYY-MM-DD>",
+            ""] if "/" in ES_PATHS else []),
         "## How to cite",
         f"- Link editions as {SITE_URL}/archive/<YYYY-MM-DD>#news-<N>.",
         "- Publisher: Spanified. Editor: Dmytro Shvechikov.",
@@ -1129,7 +1598,32 @@ def render_es_pages(env, proof):
         print(f"  wrote es/{name}")
 
 
-def render_static(env, digests):
+def render_es_home(env, es_digests, es_articles, proof):
+    """/es/ (<out>/es/index.html): templates/index.html with page_lang="es",
+    fed the Spanish digests and articles. Category links only list topics
+    whose Spanish page is built; the editor stats count Spanish editions."""
+    topics = [
+        {"name": category_name(slug, "es"), "slug": slug}
+        for slug in CATEGORY_EMOJI if f"/category/{slug}" in ES_PATHS
+    ]
+    es_proof = dict(proof)
+    es_proof.update({
+        "total_issues": len(es_digests),
+        "total_issues_display": f"{len(es_digests):,}".replace(",", "."),
+        "first_issue": format_date_es(es_digests[-1]["date"]) if es_digests else "",
+        "followers_display": f"{proof['threads'] + proof['reddit']:,}".replace(",", "."),
+    })
+    output = env.get_template("index.html").render(
+        page_lang="es", latest=es_digests[0] if es_digests else None, topics=topics, faq=ES_FAQ_ITEMS,
+        proof=es_proof, quizzes=load_quiz_cards(homepage=True), articles=list(es_articles)[:3],
+        alt_path=es_alt_path("/"))
+    os.makedirs(lang_out_dir("es"), exist_ok=True)
+    with open(lang_out_dir("es", "index.html"), "w", encoding="utf-8") as fh:
+        fh.write(output)
+    print("  wrote es/index.html")
+
+
+def render_static(env, digests, es_digests=(), es_articles=()):
     latest = digests[0] if digests else None
     topics = [
         {"emoji": emoji, "name": category.capitalize(), "slug": category.lower()}
@@ -1157,10 +1651,13 @@ def render_static(env, digests):
         "threads_display": f"{threads_n:,}",
         "reddit_display": f"{reddit_n:,}",
         "testimonials": testimonials,
+        # Home page editor stats (index.html).
+        "total_issues_display": total_issues,
+        "followers_display": f"{threads_n + reddit_n:,}",
     }
 
     contexts = {
-        "index.html": {"latest": latest, "topics": topics, "emoji": CATEGORY_EMOJI, "faq": FAQ_ITEMS, "proof": proof, "quizzes": load_quiz_cards(homepage=True), "articles": load_articles()[:3]},
+        "index.html": {"latest": latest, "topics": topics, "emoji": CATEGORY_EMOJI, "faq": FAQ_ITEMS, "proof": proof, "quizzes": load_quiz_cards(homepage=True), "articles": load_articles()[:3], "alt_path": es_alt_path("/")},
         "about.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "About", "url": "/about", "current": True}]},
         "contact.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Contact", "url": "/contact", "current": True}]},
         "editor.html": {"crumbs": [{"name": "Home", "url": "/"}, {"name": "Editor", "url": "/editor", "current": True}]},
@@ -1179,6 +1676,7 @@ def render_static(env, digests):
             fh.write(output)
         print(f"  wrote {name}")
     render_es_pages(env, proof)
+    render_es_home(env, es_digests, es_articles, proof)
     render_calculators(env)
     render_quizzes(env, proof=proof,
                    latest_url=f"/archive/{latest['date']}" if latest else None)
@@ -1926,12 +2424,15 @@ def attach_guides(digests, articles):
     `story_categories` limits matching to stories in those categories.
     The article matching the most distinct keywords wins; ties go to the
     earlier one in `articles` order. Stories with no match get None.
+    The link is the English path; digest.html localizes it (Spanish
+    digests matched against Spanish articles link the /es/ twins).
     """
     patterns = _keyword_patterns(articles, "story_keywords", "story_categories")
     for digest in digests:
         for item in digest.get("stories", []):
             best = _best_matches(item, patterns)
-            item["guide"] = {"title": best[0]["title"], "url": best[0]["url"]} if best else None
+            item["guide"] = ({"title": best[0]["title"], "url": best[0].get("path", best[0]["url"])}
+                             if best else None)
 
 
 def _keyword_patterns(entries, kw_key, cat_key):
@@ -2125,34 +2626,46 @@ CATEGORY_HUBS = {
 }
 
 
-def hub_card(url, articles_by_url):
-    """Card dict for a calculator or article URL, or None if unknown."""
+def hub_card(url, articles_by_url, lang="en"):
+    """Card dict for a calculator or article URL, or None if unknown.
+
+    `kind` stays English (it is also a CSS class); templates translate it."""
     if url in CALCULATOR_CARDS:
         title, desc = CALCULATOR_CARDS[url]
-        return {"url": url, "title": title, "desc": desc, "kind": "Calculator"}
+        return {"url": localize(lang, url), "title": tr(lang, title), "desc": tr(lang, desc), "kind": "Calculator"}
     a = articles_by_url.get(url)
     if a:
-        return {"url": url, "title": a["title"], "desc": f"A {a['reading_time']}-minute read", "kind": "Guide"}
+        return {"url": localize(lang, url), "title": a["title"],
+                "desc": tr(lang, "A {n}-minute read", n=a["reading_time"]), "kind": "Guide"}
     return None
 
 
-def category_hub_cards(slug, articles_by_url):
-    return [c for c in (hub_card(u, articles_by_url) for u in CATEGORY_HUBS.get(slug, [])) if c]
+def articles_by_path(articles):
+    """Articles keyed by English path (/articles/<slug>), as hub_card expects.
+
+    Spanish article dicts carry the English path in `path`; their cards get
+    the Spanish title and localize() links the /es/ twin."""
+    return {a.get("path", a["url"]): a for a in articles}
 
 
-def article_hub_cards(article, articles_by_url, limit=3):
+def category_hub_cards(slug, articles_by_url, lang="en"):
+    return [c for c in (hub_card(u, articles_by_url, lang) for u in CATEGORY_HUBS.get(slug, [])) if c]
+
+
+def article_hub_cards(article, articles_by_url, limit=3, lang="en"):
     """Calculator/guide cards for the end of an article.
 
     Uses the article's `related` URLs when set, else CATEGORY_HUBS for its
     story_categories in order. The article itself and unknown URLs are skipped.
+    `articles_by_url` is keyed by English path (articles_by_path).
     """
     urls = article.get("related") or [u for cat in article.get("story_categories", [])
                                       for u in CATEGORY_HUBS.get(cat, [])]
     cards = []
     for url in dict.fromkeys(urls):
-        if url == article["url"]:
+        if url == article.get("path", article["url"]):
             continue
-        card = hub_card(url, articles_by_url)
+        card = hub_card(url, articles_by_url, lang)
         if card:
             cards.append(card)
         if len(cards) >= limit:
@@ -2160,14 +2673,14 @@ def article_hub_cards(article, articles_by_url, limit=3):
     return cards
 
 
-def attach_digest_hubs(digests, articles, limit=3):
+def attach_digest_hubs(digests, articles, limit=3, lang="en"):
     """Pick up to `limit` calculator/guide cards for the end of each edition.
 
     Candidates come from CATEGORY_HUBS for the edition's categories, most
     frequent category first. Pages already linked from a story line
     (guide or tool) are skipped so the block adds new link targets.
     """
-    by_url = {a["url"]: a for a in articles}
+    by_url = articles_by_path(articles)
     for digest in digests:
         stories = digest.get("stories", [])
         linked = set()
@@ -2183,9 +2696,9 @@ def attach_digest_hubs(digests, articles, limit=3):
             for url in CATEGORY_HUBS.get(cat, []):
                 if len(cards) >= limit:
                     break
-                if url in linked or any(c["url"] == url for c in cards):
+                if url in linked or any(c["url"] == localize(lang, url) for c in cards):
                     continue
-                card = hub_card(url, by_url)
+                card = hub_card(url, by_url, lang)
                 if card:
                     cards.append(card)
         digest["hub_cards"] = cards
@@ -2213,13 +2726,14 @@ def share_links(abs_url, text, long_text=None):
 def attach_share(digests):
     """Attach page-level + per-story share links (absolute URLs)."""
     for digest in digests:
+        lang = digest.get("lang", "en")
         page_url = f"{SITE_URL}{digest['url']}"
         digest["share"] = share_links(
-            page_url, f"{digest['headline']} — Spain Daily Digest")
+            page_url, tr(lang, "{headline} — Spain Daily Digest", headline=digest["headline"]))
         for pos, item in enumerate(digest.get("stories", []), start=1):
             abs_url = f"{page_url}#news-{pos}"
             item["share"] = share_links(
-                abs_url, f"{item.get('title', '')} — via Spanified")
+                abs_url, tr(lang, "{title} — via Spanified", title=item.get("title", "")))
 
 
 def digest_podcast_context(ep):
@@ -2241,19 +2755,56 @@ def digest_podcast_context(ep):
     }
 
 
-def render_digests(env, digests, episodes_by_date=None):
+def lang_out_dir(lang, *parts):
+    """Output directory for a page section: <out>/<parts> or <out>/es/<parts>."""
+    return os.path.join(OUT_DIR, *(("es",) if lang == "es" else ()), *parts)
+
+
+def es_alt_path(path):
+    """`alt_path` for partials/hreflang.html: the English path when it has a
+    Spanish twin (ES_PATHS), else None (no hreflang)."""
+    return path if path in ES_PATHS else None
+
+
+def register_es_paths(es_digests, en_categories=None, es_articles=(), en_articles=()):
+    """Add the Spanish digests, archive pages, categories and articles to ES_PATHS.
+
+    Call before rendering: English pages need it for hreflang, Spanish pages
+    for their links. Spanish digests are expected to have an English twin
+    (same date); categories and articles only count when English has them too.
+    """
+    en_article_paths = {a["path"] for a in en_articles}
+    es_article_paths = [a["path"] for a in es_articles if a["path"] in en_article_paths]
+    ES_PATHS.update(es_article_paths)
+    if es_article_paths:
+        pages = (len(es_article_paths) + ARTICLES_PAGE_SIZE - 1) // ARTICLES_PAGE_SIZE
+        ES_PATHS.update(articles_url(p) for p in range(1, pages + 1))
+
+    ES_PATHS.update(f"/archive/{d['date']}" for d in es_digests)
+    if es_digests:
+        total_pages = (len(es_digests) + PAGE_SIZE - 1) // PAGE_SIZE
+        ES_PATHS.update(archive_url(p) for p in range(1, total_pages + 1))
+    es_cats = set(collect_categories(es_digests))
+    if en_categories is not None:
+        es_cats &= set(en_categories)
+    ES_PATHS.update(f"/category/{slug}" for slug in es_cats)
+
+
+def render_digests(env, digests, episodes_by_date=None, lang="en"):
     episodes_by_date = episodes_by_date or {}
-    os.makedirs(ARCHIVE_DIR, exist_ok=True)
+    out_dir = ARCHIVE_DIR if lang == "en" else lang_out_dir(lang, "archive")
+    os.makedirs(out_dir, exist_ok=True)
     # Clear previously generated HTML inside archive/ so removed digests don't linger.
-    for filename in os.listdir(ARCHIVE_DIR):
+    for filename in os.listdir(out_dir):
         if filename.endswith(".html"):
-            os.remove(os.path.join(ARCHIVE_DIR, filename))
+            os.remove(os.path.join(out_dir, filename))
 
     template = env.get_template("digest.html")
+    rel_dir = lang_path(lang, "/archive")[1:]
     for i, digest in enumerate(digests):
         crumbs = [
-            {"name": "Home", "url": "/"},
-            {"name": "Archive", "url": "/archive/"},
+            {"name": tr(lang, "Home"), "url": localize(lang, "/")},
+            {"name": tr(lang, "Archive"), "url": localize(lang, "/archive/")},
             {"name": digest["date_display"], "url": digest["url"], "current": True},
         ]
         # digests is newest-first: i-1 is the newer day, i+1 the older day.
@@ -2263,44 +2814,53 @@ def render_digests(env, digests, episodes_by_date=None):
             "older": {"url": older["url"], "date_display": older["date_display"]} if older else None,
             "newer": {"url": newer["url"], "date_display": newer["date_display"]} if newer else None,
         }
-        podcast = digest_podcast_context(episodes_by_date.get(digest["date"]))
+        # The podcast is English audio: Spanish pages leave the player out.
+        podcast = digest_podcast_context(episodes_by_date.get(digest["date"])) if lang == "en" else None
         output = template.render(digest=digest, emoji=CATEGORY_EMOJI, crumbs=crumbs, day_nav=day_nav,
-                                 podcast=podcast, js_version=js_version())
-        dest = os.path.join(ARCHIVE_DIR, f"{digest['date']}.html")
+                                 podcast=podcast, js_version=js_version(), page_lang=lang,
+                                 alt_path=es_alt_path(f"/archive/{digest['date']}"))
+        dest = os.path.join(out_dir, f"{digest['date']}.html")
         with open(dest, "w", encoding="utf-8") as fh:
             fh.write(output)
-        print(f"  wrote archive/{digest['date']}.html")
+        print(f"  wrote {rel_dir}/{digest['date']}.html")
 
 
-def render_archive(env, digests):
+def render_archive(env, digests, lang="en"):
     total = len(digests)
     total_pages = max(1, (total + PAGE_SIZE - 1) // PAGE_SIZE) if total else 1
     template = env.get_template("archive.html")
+    out_dir = ARCHIVE_DIR if lang == "en" else lang_out_dir(lang, "archive")
+    os.makedirs(out_dir, exist_ok=True)
+    rel_dir = lang_path(lang, "/archive")[1:]
 
     for page in range(1, total_pages + 1):
         start = (page - 1) * PAGE_SIZE
         page_digests = digests[start:start + PAGE_SIZE]
-        crumbs = [{"name": "Home", "url": "/"}]
+        crumbs = [{"name": tr(lang, "Home"), "url": localize(lang, "/")}]
         if page == 1:
-            crumbs.append({"name": "Archive", "url": "/archive/", "current": True})
+            crumbs.append({"name": tr(lang, "Archive"), "url": archive_url(1, lang), "current": True})
         else:
-            crumbs.append({"name": "Archive", "url": "/archive/"})
-            crumbs.append({"name": f"Page {page}", "url": f"/archive/{page}", "current": True})
-        output = template.render(digests=page_digests, pagination=pagination(page, total_pages), crumbs=crumbs)
-        dest = os.path.join(ARCHIVE_DIR, "index.html" if page == 1 else f"{page}.html")
-        with open(dest, "w", encoding="utf-8") as fh:
+            crumbs.append({"name": tr(lang, "Archive"), "url": archive_url(1, lang)})
+            crumbs.append({"name": tr(lang, "Page {n}", n=page), "url": archive_url(page, lang), "current": True})
+        output = template.render(digests=page_digests, pagination=pagination(page, total_pages, lang), crumbs=crumbs,
+                                 page_lang=lang, canonical_path=archive_url(page, lang),
+                                 alt_path=es_alt_path(archive_url(page)))
+        name = "index.html" if page == 1 else f"{page}.html"
+        with open(os.path.join(out_dir, name), "w", encoding="utf-8") as fh:
             fh.write(output)
-        print(f"  wrote {'archive/index.html' if page == 1 else f'archive/{page}.html'}")
+        print(f"  wrote {rel_dir}/{name}")
 
 
-def render_articles_list(env, articles):
+def render_articles_list(env, articles, lang="en"):
     total = len(articles)
     total_pages = max(1, (total + ARTICLES_PAGE_SIZE - 1) // ARTICLES_PAGE_SIZE) if total else 1
     template = env.get_template("articles.html")
-    os.makedirs(ARTICLES_DIR, exist_ok=True)
+    out_dir = ARTICLES_DIR if lang == "en" else lang_out_dir(lang, "articles")
+    rel_dir = lang_path(lang, "/articles")[1:]
+    os.makedirs(out_dir, exist_ok=True)
     # Clear previously generated listing pages so removed articles don't linger.
-    for filename in os.listdir(ARTICLES_DIR):
-        dest = os.path.join(ARTICLES_DIR, filename)
+    for filename in os.listdir(out_dir):
+        dest = os.path.join(out_dir, filename)
         if not os.path.isfile(dest):
             continue
         if filename == "index.html" or (filename[:-5].isdigit() and filename.endswith(".html")):
@@ -2309,24 +2869,31 @@ def render_articles_list(env, articles):
     for page in range(1, total_pages + 1):
         start = (page - 1) * ARTICLES_PAGE_SIZE
         page_articles = articles[start:start + ARTICLES_PAGE_SIZE]
-        crumbs = [{"name": "Home", "url": "/"}]
+        crumbs = [{"name": tr(lang, "Home"), "url": localize(lang, "/")}]
         if page == 1:
-            crumbs.append({"name": "Articles", "url": "/articles/", "current": True})
+            crumbs.append({"name": tr(lang, "Articles"), "url": lang_path(lang, "/articles/"), "current": True})
         else:
-            crumbs.append({"name": "Articles", "url": "/articles/"})
-            crumbs.append({"name": f"Page {page}", "url": f"/articles/{page}", "current": True})
-        output = template.render(articles=page_articles, pagination=articles_pagination(page, total_pages), crumbs=crumbs)
-        dest = os.path.join(ARTICLES_DIR, "index.html" if page == 1 else f"{page}.html")
-        with open(dest, "w", encoding="utf-8") as fh:
+            crumbs.append({"name": tr(lang, "Articles"), "url": lang_path(lang, "/articles/")})
+            crumbs.append({"name": tr(lang, "Page {n}", n=page), "url": lang_path(lang, f"/articles/{page}"), "current": True})
+        output = template.render(articles=page_articles, pagination=articles_pagination(page, total_pages, lang),
+                                 crumbs=crumbs, page_lang=lang, canonical_path=lang_path(lang, articles_url(page)),
+                                 alt_path=es_alt_path(articles_url(page)))
+        name = "index.html" if page == 1 else f"{page}.html"
+        with open(os.path.join(out_dir, name), "w", encoding="utf-8") as fh:
             fh.write(output)
-        print(f"  wrote {'articles/index.html' if page == 1 else f'articles/{page}.html'}")
+        print(f"  wrote {rel_dir}/{name}")
 
 
-def render_article_pages(env, articles):
-    os.makedirs(ARTICLES_DIR, exist_ok=True)
+def render_article_pages(env, articles, lang="en"):
+    """Render /articles/<slug> (or /es/articles/<slug> from load_articles("es")).
+
+    Spanish pages localize every internal link in the body and FAQ."""
+    out_dir = ARTICLES_DIR if lang == "en" else lang_out_dir(lang, "articles")
+    rel_dir = lang_path(lang, "/articles")[1:]
+    os.makedirs(out_dir, exist_ok=True)
     # Clear previously generated article pages (slug files), keep listing files.
-    for filename in os.listdir(ARTICLES_DIR):
-        dest = os.path.join(ARTICLES_DIR, filename)
+    for filename in os.listdir(out_dir):
+        dest = os.path.join(out_dir, filename)
         if not os.path.isfile(dest) or not filename.endswith(".html"):
             continue
         if filename == "index.html" or filename[:-5].isdigit():
@@ -2334,19 +2901,23 @@ def render_article_pages(env, articles):
         os.remove(dest)
 
     template = env.get_template("article.html")
-    articles_by_url = {a["url"]: a for a in articles}
+    by_path = articles_by_path(articles)
     for article in articles:
         crumbs = [
-            {"name": "Home", "url": "/"},
-            {"name": "Articles", "url": "/articles/"},
+            {"name": tr(lang, "Home"), "url": localize(lang, "/")},
+            {"name": tr(lang, "Articles"), "url": lang_path(lang, "/articles/")},
             {"name": article["title"], "url": article["url"], "current": True},
         ]
+        if lang != "en":
+            article = dict(article, body_html=localize_links(lang, article["body_html"]),
+                           faq=[dict(f, a_html=localize_links(lang, f["a_html"])) for f in article["faq"]])
         output = template.render(article=article, crumbs=crumbs, js_version=js_version(),
-                                 hub_cards=article_hub_cards(article, articles_by_url))
-        dest = os.path.join(ARTICLES_DIR, f"{article['slug']}.html")
+                                 hub_cards=article_hub_cards(article, by_path, lang=lang),
+                                 page_lang=lang, alt_path=es_alt_path(article["path"]))
+        dest = os.path.join(out_dir, f"{article['slug']}.html")
         with open(dest, "w", encoding="utf-8") as fh:
             fh.write(output)
-        print(f"  wrote articles/{article['slug']}.html")
+        print(f"  wrote {rel_dir}/{article['slug']}.html")
 
 
 def collect_categories(digests):
@@ -2359,10 +2930,16 @@ def collect_categories(digests):
     return cats
 
 
-def render_categories(env, digests, articles=()):
+def render_categories(env, digests, articles=(), lang="en"):
+    """Render /category/<slug> (or /es/category/<slug>); returns the slugs.
+
+    Spanish categories are rendered only when registered in ES_PATHS (an
+    English twin exists)."""
     cats = collect_categories(digests)
-    articles_by_url = {a["url"]: a for a in articles}
-    cat_dir = os.path.join(OUT_DIR, "category")
+    if lang == "es":
+        cats = {slug: v for slug, v in cats.items() if f"/category/{slug}" in ES_PATHS}
+    articles_by_url = articles_by_path(articles)
+    cat_dir = lang_out_dir(lang, "category")
     os.makedirs(cat_dir, exist_ok=True)
     # Clear previously generated pages so removed categories don't linger.
     for filename in os.listdir(cat_dir):
@@ -2370,29 +2947,37 @@ def render_categories(env, digests, articles=()):
             os.remove(os.path.join(cat_dir, filename))
 
     template = env.get_template("category.html")
+    meta = CATEGORY_META_ES if lang == "es" else CATEGORY_META
+    descriptions = CATEGORY_DESCRIPTIONS_ES if lang == "es" else CATEGORY_DESCRIPTIONS
+    rel_dir = lang_path(lang, "/category")[1:]
     for slug, stories in sorted(cats.items()):
-        name = slug.capitalize()
+        name = category_name(slug, lang)
+        path = f"/category/{slug}"
         crumbs = [
-            {"name": "Home", "url": "/"},
-            {"name": name, "url": f"/category/{slug}", "current": True},
+            {"name": tr(lang, "Home"), "url": localize(lang, "/")},
+            {"name": name, "url": lang_path(lang, path), "current": True},
         ]
-        meta_title, meta_desc = CATEGORY_META.get(slug, (name + " News in Spain, in English — Spanified", ""))
+        meta_title, meta_desc = meta.get(slug, (tr(lang, "{name} News in Spain, in English — Spanified", name=name), ""))
         output = template.render(
             category_name=name,
             slug=slug,
             emoji=CATEGORY_EMOJI.get(slug, "\U0001F4F0"),
-            category_description=CATEGORY_DESCRIPTIONS.get(slug, ""),
+            category_description=descriptions.get(slug, ""),
             meta_title=meta_title,
             meta_description=meta_desc,
             stories=stories,
-            hub_cards=category_hub_cards(slug, articles_by_url),
+            hub_cards=category_hub_cards(slug, articles_by_url, lang),
             crumbs=crumbs,
+            page_lang=lang,
+            canonical_path=lang_path(lang, path),
+            alt_path=es_alt_path(path),
         )
         dest = os.path.join(cat_dir, f"{slug}.html")
         with open(dest, "w", encoding="utf-8") as fh:
             fh.write(output)
-        print(f"  wrote category/{slug}.html ({len(stories)} stories)")
+        print(f"  wrote {rel_dir}/{slug}.html ({len(stories)} stories)")
     return sorted(cats.keys())
+
 
 
 # Source files (git pathspecs, repo-relative) behind each calculator page.
@@ -2454,41 +3039,58 @@ def sitemap_hreflang(url):
     """
     path = url[len(SITE_URL):]
     base = path[len("/es"):] if path.startswith("/es/") else path
-    if base.lstrip("/") + ".html" not in ES_INDEXED_PAGES:
+    if base not in ES_PATHS:
         return ""
     links = (("en", SITE_URL + base), ("es", SITE_URL + "/es" + base), ("x-default", SITE_URL + base))
     return "".join(f'<xhtml:link rel="alternate" hreflang="{lang}" href="{href}"/>' for lang, href in links)
 
 
-def render_sitemap(digests, categories=(), articles=(), salary_pages=(), autonomo_pages=(), rental_yield_pages=(), category_lastmod=None):
+def digest_sitemap_urls(digests, lang="en"):
+    """(url, lastmod) for the archive listing pages and every digest."""
+    latest = digests[0]["date"] if digests else None
+    total = len(digests)
+    total_pages = (total + PAGE_SIZE - 1) // PAGE_SIZE if total else 1
+    urls = [(SITE_URL + archive_url(1, lang), latest)]
+    for page in range(2, total_pages + 1):
+        page_digests = digests[(page - 1) * PAGE_SIZE:page * PAGE_SIZE]
+        urls.append((SITE_URL + archive_url(page, lang), page_digests[0]["date"] if page_digests else None))
+    for digest in digests:
+        urls.append((SITE_URL + lang_path(lang, f"/archive/{digest['date']}"), digest["date"]))
+    return urls
+
+
+def article_sitemap_urls(articles, lang="en"):
+    """(url, lastmod) for the articles listing (page 1 plus extra pages) and every article."""
+    if lang != "en" and not articles:
+        return []
+    total = len(articles)
+    total_pages = (total + ARTICLES_PAGE_SIZE - 1) // ARTICLES_PAGE_SIZE if total else 1
+    urls = [(SITE_URL + lang_path(lang, "/articles/"), articles[0]["date"] if articles else None)]
+    for page in range(2, total_pages + 1):
+        urls.append((SITE_URL + lang_path(lang, f"/articles/{page}"), None))
+    for article in articles:
+        urls.append((SITE_URL + article["url"], article_lastmod(article)))
+    return urls
+
+
+def render_sitemap(
+digests, categories=(), articles=(), salary_pages=(), autonomo_pages=(), rental_yield_pages=(), category_lastmod=None,
+                   es_digests=(), es_categories=(), es_category_lastmod=None, es_articles=()):
     # lastmod only where it is real: the newest digest drives the home page,
     # archive and category pages; articles and calculators use the last git
     # commit of their sources. Static pages get none rather than a misleading
     # build date.
     latest = digests[0]["date"] if digests else None
     category_lastmod = category_lastmod or {}
+    es_category_lastmod = es_category_lastmod or {}
     urls = [(SITE_URL + "/", latest)] + [
         (SITE_URL + "/" + name[:-len(".html")], None)
         for name in STATIC_PAGES
         if name.endswith(".html") and name != "index.html" and name not in NOINDEX_PAGES
     ]
-    # Archive listing (page 1) plus extra pages.
-    total = len(digests)
-    total_pages = (total + PAGE_SIZE - 1) // PAGE_SIZE if total else 1
-    urls.append((SITE_URL + "/archive/", latest))
-    for page in range(2, total_pages + 1):
-        page_digests = digests[(page - 1) * PAGE_SIZE:page * PAGE_SIZE]
-        urls.append((SITE_URL + f"/archive/{page}", page_digests[0]["date"] if page_digests else None))
-    for digest in digests:
-        urls.append((SITE_URL + f"/archive/{digest['date']}", digest["date"]))
-    # Articles listing (page 1) plus extra pages + every article.
-    articles_total = len(articles)
-    articles_pages = (articles_total + ARTICLES_PAGE_SIZE - 1) // ARTICLES_PAGE_SIZE if articles_total else 1
-    urls.append((SITE_URL + "/articles/", articles[0]["date"] if articles else None))
-    for page in range(2, articles_pages + 1):
-        urls.append((SITE_URL + f"/articles/{page}", None))
-    for article in articles:
-        urls.append((SITE_URL + article["url"], article_lastmod(article)))
+    # Archive listing (page 1) plus extra pages, then every digest.
+    urls.extend(digest_sitemap_urls(digests))
+    urls.extend(article_sitemap_urls(articles))
     for slug in categories:
         urls.append((SITE_URL + f"/category/{slug}", category_lastmod.get(slug)))
     urls.append((SITE_URL + "/calculators/net-salary", calc_lastmod("net-salary")))
@@ -2508,7 +3110,12 @@ def render_sitemap(digests, categories=(), articles=(), salary_pages=(), autonom
     urls.append((SITE_URL + "/quiz/ai-or-real", None))
     urls.append((SITE_URL + "/quiz/spanish-law-or-myth", None))
     # Spanish twins (/es/<page>) of indexable English pages.
+    urls.append((SITE_URL + "/es/", es_digests[0]["date"] if es_digests else None))
     urls.extend((SITE_URL + "/es/" + name[:-len(".html")], None) for name in ES_PAGES if name in ES_INDEXED_PAGES)
+    urls.extend(digest_sitemap_urls(es_digests, "es"))
+    urls.extend(article_sitemap_urls(es_articles, "es"))
+    for slug in es_categories:
+        urls.append((SITE_URL + f"/es/category/{slug}", es_category_lastmod.get(slug)))
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
@@ -2885,6 +3492,7 @@ def main():
         loader=FileSystemLoader(TEMPLATES_DIR),
         autoescape=True,
     )
+    register_i18n(env)
     env.globals["current_year"] = datetime.now().year
     env.globals["asset_version"] = css_version()
     # Default for templates not handed js_version explicitly (the cookie
@@ -2917,21 +3525,40 @@ def main():
 
     digests = dedupe_digest_titles([digest_context(d) for d in load_digests()])
     articles = load_articles()
+    # Spanish twins (/es/articles/<slug>): only slugs English has too.
+    en_slugs = {a["slug"] for a in articles}
+    es_articles = [a for a in load_articles("es") if a["slug"] in en_slugs]
     attach_guides(digests, articles)
     attach_tools(digests, amount_pages=story_amount_pages())
     attach_digest_hubs(digests, articles)
+    # Spanish twins (/es/archive/<date>): only dates English has too.
+    # Guide lines match the Spanish articles' story_keywords and link their
+    # /es/ twins; calculator lines match English keywords and anchors, so
+    # Spanish stories skip them (hub cards still carry the calculators).
+    en_dates = {d["date"] for d in digests}
+    # Meta titles follow the English twin: subject-led only where English has a subject.
+    en_subject_dates = {d["date"] for d in digests if d["subject"]}
+    es_digests = dedupe_digest_titles([digest_context(d, "es", d["date"] in en_subject_dates)
+                                       for d in load_digests(ES_DATA_DIR) if d["date"] in en_dates])
+    register_es_paths(es_digests, collect_categories(digests), es_articles, articles)
+    attach_guides(es_digests, es_articles)
+    attach_digest_hubs(es_digests, es_articles, lang="es")
     episodes = load_podcast_episodes()
 
     print("Copying static assets...")
     copy_static(out_dir)
 
     print("Building static pages...")
-    render_static(env, digests)
+    render_static(env, digests, es_digests, es_articles)
 
     print(f"Building {len(digests)} digest page(s)...")
     attach_related(digests)
     attach_share(digests)
     render_digests(env, digests, {ep["date"]: ep for ep in episodes})
+    print(f"Building {len(es_digests)} Spanish digest page(s)...")
+    attach_related(es_digests)
+    attach_share(es_digests)
+    render_digests(env, es_digests, lang="es")
 
     print("Rendering OG images...")
     from og_images import render_og_images
@@ -2939,13 +3566,18 @@ def main():
 
     print("Building archive listing...")
     render_archive(env, digests)
+    render_archive(env, es_digests, lang="es")
 
     print("Building articles...")
     render_articles_list(env, articles)
     render_article_pages(env, articles)
+    print(f"Building {len(es_articles)} Spanish article page(s)...")
+    render_articles_list(env, es_articles, lang="es")
+    render_article_pages(env, es_articles, lang="es")
 
     print("Building category pages...")
     categories = render_categories(env, digests, articles)
+    es_categories = render_categories(env, es_digests, es_articles, lang="es")
 
     print("Building net salary amount pages...")
     salary_pages = render_net_salary_pages(env)
@@ -2958,7 +3590,9 @@ def main():
 
     print("Building sitemap...")
     category_lastmod = {slug: stories[0]["date"] for slug, stories in collect_categories(digests).items()}
-    render_sitemap(digests, categories, articles, salary_pages, autonomo_pages, rental_yield_pages, category_lastmod)
+    es_category_lastmod = {slug: stories[0]["date"] for slug, stories in collect_categories(es_digests).items()}
+    render_sitemap(digests, categories, articles, salary_pages, autonomo_pages, rental_yield_pages, category_lastmod,
+                   es_digests, es_categories, es_category_lastmod, es_articles)
 
     print("Writing llms.txt...")
     render_llms_txt(digests, articles, salary_pages, autonomo_pages, rental_yield_pages)
@@ -2966,6 +3600,9 @@ def main():
     print("Building podcast feed...")
     render_podcast_feed(episodes, {d["date"] for d in digests})
 
+    if _untranslated:
+        print(f"WARN: {len(_untranslated)} UI string(s) have no Spanish in ES_STRINGS: "
+              + "; ".join(sorted(_untranslated)), file=sys.stderr)
     print("Done.")
 
 

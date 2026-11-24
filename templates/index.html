@@ -1,17 +1,26 @@
 {% extends "base.html" %}
+{# Home page, English (/) and Spanish (/es/, page_lang="es"). UI copy goes
+   through t() (see the i18n note in build.py); links to pages with a Spanish
+   twin go through lang_url(). Calculators, quizzes, about and editor pages
+   exist only in English, so they keep their English links. #}
+{% set es = page_lang == "es" %}
+{% set home = site_url ~ lang_url("/") %}
+{% set meta_title = t("Spain Daily: Spanish News in English | Spanified") %}
+{% set meta_desc = t("Spanish news in English, every morning: Spain Daily sums up Spain's top stories on rents, taxes, visas and jobs. Read online or by email. Free.") %}
 {% block body_class %} class="page-home"{% endblock %}
-{% block title %}Spain Daily: Spanish News in English | Spanified{% endblock %}
-{% block description %}<meta name="description" content="Spanish news in English, every morning: Spain Daily sums up Spain's top stories on rents, taxes, visas and jobs. Read online or by email. Free.">
+{% block title %}{{ meta_title }}{% endblock %}
+{% block description %}<meta name="description" content="{{ meta_desc }}">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Spain Daily: Spanish News in English | Spanified">
-<meta property="og:description" content="Spanish news in English, every morning: Spain Daily sums up Spain's top stories on rents, taxes, visas and jobs. Read online or by email. Free.">
-<meta property="og:url" content="{{ site_url }}/">
+<meta property="og:title" content="{{ meta_title }}">
+<meta property="og:description" content="{{ meta_desc }}">
+<meta property="og:url" content="{{ home }}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Spain Daily: Spanish News in English | Spanified">
-<meta name="twitter:description" content="Spanish news in English, every morning: Spain Daily sums up Spain's top stories on rents, taxes, visas and jobs. Read online or by email. Free.">
+<meta name="twitter:title" content="{{ meta_title }}">
+<meta name="twitter:description" content="{{ meta_desc }}">
 <meta name="robots" content="max-image-preview:large">{% endblock %}
+{% block extra_head %}{% if alt_path %}{% include "partials/hreflang.html" %}{% endif %}{% endblock %}
 
-{% block canonical %}<link rel="canonical" href="{{ site_url }}/">{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ home }}">{% endblock %}
 {% block content %}
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@graph": [
@@ -20,165 +29,170 @@
   "contactPoint": {"@type": "ContactPoint", "email": "support@spanified.com",
    "contactType": "customer support", "availableLanguage": "English"},
   "sameAs": {{ site_socials|tojson }}},
- {"@type": "WebSite", "@id": "{{ site_url }}/#website", "name": "Spanified", "alternateName": ["Spain Daily", "Spanified Spain Daily"],
-  "url": "{{ site_url }}/", "inLanguage": "en", "publisher": {"@id": "{{ site_url }}/#org"},
-  "description": "Spanified: Spain Daily, a free morning newsletter with Spain's top news in plain English, plus calculators, quizzes and guides for life in Spain."},
- {"@type": "Periodical", "@id": "{{ site_url }}/#spain-daily", "name": "Spain Daily", "alternateName": "Spain Daily newsletter",
-  "url": "{{ site_url }}/",
-  "description": "Free daily newsletter with Spain's top news in plain English, a 5-minute read.",
-  "inLanguage": "en", "isAccessibleForFree": true, "isPartOf": {"@id": "{{ site_url }}/#website"},
-  "publisher": {"@id": "{{ site_url }}/#org"}, "sameAs": {{ site_socials|tojson }}},
- {"@type": "FAQPage", "mainEntity": [{% for q, a in faq %}
+ {"@type": "WebSite", "@id": "{{ home }}#website", "name": "Spanified", "alternateName": [{{ t("Spain Daily")|tojson }}, {{ t("Spanified Spain Daily")|tojson }}],
+  "url": "{{ home }}", "inLanguage": "{{ page_lang|default('en') }}", "publisher": {"@id": "{{ site_url }}/#org"},
+  "description": {{ t("Spanified: Spain Daily, a free morning newsletter with Spain's top news in plain English, plus calculators, quizzes and guides for life in Spain.")|tojson }}},
+ {"@type": "Periodical", "@id": "{{ home }}#spain-daily", "name": {{ t("Spain Daily")|tojson }}, "alternateName": {{ t("Spain Daily newsletter")|tojson }},
+  "url": "{{ home }}",
+  "description": {{ t("Free daily newsletter with Spain's top news in plain English, a 5-minute read.")|tojson }},
+  "inLanguage": "{{ page_lang|default('en') }}", "isAccessibleForFree": true, "isPartOf": {"@id": "{{ home }}#website"},
+  "publisher": {"@id": "{{ site_url }}/#org"}{% if not es %}, "sameAs": {{ site_socials|tojson }}{% endif %}},
+ {"@type": "FAQPage", {% if es %}"inLanguage": "es", {% endif %}"mainEntity": [{% for q, a in faq %}
   {"@type": "Question", "name": {{ q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ a|tojson }}}}{% if not loop.last %},{% endif %}{% endfor %}
  ]}
 ]}
 </script>
  <div class="page hm">
   <!-- Zone A: Spain Daily -->
-  <section class="hm-hero" aria-label="Spain Daily digest">
+  <section class="hm-hero" aria-label="{{ t('Spain Daily digest') }}">
    <div class="hm-hero-text">
-    <h1>Spanish news in English: Spain Daily, every morning</h1>
-    <p class="hm-lead">Spain Daily by <a href="/about">Spanified</a> is a daily digest of Spanish newspapers in English: your 5-minute catch-up on what's happening in Spain.</p>
+    <h1>{{ t("Spanish news in English: Spain Daily, every morning") }}</h1>
+    <p class="hm-lead">{{ t("Spain Daily by") }} <a href="/about">Spanified</a>{{ t(" is a daily digest of Spanish newspapers in English: your 5-minute catch-up on what's happening in Spain.") }}</p>
     <div class="hm-actions">
-     <a href="/subscribe" class="hm-btn"><span>Get Spain Daily by email</span><svg class="hm-btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg></a>
-     {% if latest %}<a href="{{ latest.url }}" class="hm-link">Read today's edition</a>{% endif %}
+     <a href="{{ lang_url('/subscribe') }}" class="hm-btn"><span>{{ t("Get Spain Daily by email") }}</span><svg class="hm-btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg></a>
+     {% if latest %}<a href="{{ latest.url }}" class="hm-link">{{ t("Read today's edition") }}</a>{% endif %}
     </div>
-    <p class="hm-trust">Free. One email around 08:00 Madrid time, seven days a week. Join 1,000+ email subscribers, cancel anytime.</p>
+    <p class="hm-trust">{{ t("Free. One email around 08:00 Madrid time, seven days a week. Join 1,000+ email subscribers, cancel anytime.") }}</p>
    </div>
 
    {% if latest %}
    <article class="hm-edition" aria-labelledby="hm-edition-title">
-    <p class="hm-edition-date">{{ latest.date_display }}, {{ latest.story_count }} stories</p>
+    <p class="hm-edition-date">{{ latest.date_display }}, {{ t("{n} stories", n=latest.story_count) }}</p>
     <p class="hm-edition-title" id="hm-edition-title"><a href="{{ latest.url }}">{{ latest.headline }}</a></p>
     <ol class="hm-edition-list">
      {% for item in latest.stories[:4] %}<li>{{ item.title }}</li>{% endfor %}
     </ol>
-    <p class="hm-edition-foot"><a href="{{ latest.url }}">Read the full edition: {{ latest.date_display }}</a> <a href="/archive/">Browse past editions</a></p>
+    <p class="hm-edition-foot"><a href="{{ latest.url }}">{{ t("Read the full edition: {date}", date=latest.date_display) }}</a> <a href="{{ lang_url('/archive/') }}">{{ t("Browse past editions") }}</a></p>
    </article>
    {% endif %}
 
-   <ol class="hm-flow" aria-label="How Spain Daily works">
+   <ol class="hm-flow" aria-label="{{ t('How Spain Daily works') }}">
     <li>
      <svg class="hm-flow-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 7h17v18H8a2 2 0 0 1-2-2zM23 12h3v11a2 2 0 0 1-2 2h-1" /><path d="M10 11h9M10 15h9M10 19h6" /></svg>
-     <span><span class="hm-flow-big"><span class="hm-flow-num">11</span> Spanish news sources</span><span class="hm-flow-small">El País, El Mundo and 9 more</span></span>
+     <span><span class="hm-flow-big"><span class="hm-flow-num">11</span> {{ t("Spanish news sources") }}</span><span class="hm-flow-small">{{ t("El País, El Mundo and 9 more") }}</span></span>
     </li>
     <li>
      <svg class="hm-flow-icon" viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="8" width="22" height="16" rx="2" /><path d="M5 10l11 8 11-8" /></svg>
-     <span><span class="hm-flow-big"><span class="hm-flow-num">1</span> email in English</span><span class="hm-flow-small">Around 08:00 Madrid time, every day</span></span>
+     <span><span class="hm-flow-big"><span class="hm-flow-num">1</span> {{ t("email in English") }}</span><span class="hm-flow-small">{{ t("Around 08:00 Madrid time, every day") }}</span></span>
     </li>
     <li>
      <svg class="hm-flow-icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11" /><path d="M16 10v6l4 3" /></svg>
-     <span><span class="hm-flow-big"><span class="hm-flow-num">5</span> minutes to read</span><span class="hm-flow-small">And you're up to speed on Spain</span></span>
+     <span><span class="hm-flow-big"><span class="hm-flow-num">5</span> {{ t("minutes to read") }}</span><span class="hm-flow-small">{{ t("And you're up to speed on Spain") }}</span></span>
     </li>
    </ol>
   </section>
 
-  <section class="hm-about" aria-label="About Spain Daily">
+  <section class="hm-about" aria-label="{{ t('About Spain Daily') }}">
    <div>
-    <h2>What is Spain Daily?</h2>
-    <p class="hm-about-lead">Spain moves fast. Every morning we read the Spanish press cover to cover and hand you only the news that affects your life.</p>
+    <h2>{{ t("What is Spain Daily?") }}</h2>
+    <p class="hm-about-lead">{{ t("Spain moves fast. Every morning we read the Spanish press cover to cover and hand you only the news that affects your life.") }}</p>
     <ul class="hm-facts">
-     <li><strong>What you get</strong> A daily Spain news digest: short summaries in plain English, zero clickbait.</li>
-     <li><strong>What it covers</strong> Rents, taxes, visas, jobs and the other stories that change daily life here.</li>
-     <li><strong>Who it's for</strong> People who live in Spain, are planning the move or are watching from afar.</li>
+     <li><strong>{{ t("What you get") }}</strong> {{ t("A daily Spain news digest: short summaries in plain English, zero clickbait.") }}</li>
+     <li><strong>{{ t("What it covers") }}</strong> {{ t("Rents, taxes, visas, jobs and the other stories that change daily life here.") }}</li>
+     <li><strong>{{ t("Who it's for") }}</strong> {{ t("People who live in Spain, are planning the move or are watching from afar.") }}</li>
     </ul>
    </div>
    <div>
-    <h2>Which Spanish newspapers do we read?</h2>
-    <p class="hm-about-lead">Spain Daily is a newsletter, not a newspaper. We do not report the news ourselves: every day we aggregate the Spanish press, translate and summarize the stories in English, and link each one to its source.</p>
-    <ul class="hm-papers" aria-label="Sources">
-     <li>El País</li><li>El Mundo</li><li>La Vanguardia</li><li>Cinco Días</li><li>Expansión</li><li>elDiario.es</li><li>El Confidencial</li><li>20 Minutos</li><li>Heraldo</li><li>Diario Sur</li><li>Europa Press <span>agency</span></li>
+    <h2>{{ t("Which Spanish newspapers do we read?") }}</h2>
+    <p class="hm-about-lead">{{ t("Spain Daily is a newsletter, not a newspaper. We do not report the news ourselves: every day we aggregate the Spanish press, translate and summarize the stories in English, and link each one to its source.") }}</p>
+    <ul class="hm-papers" aria-label="{{ t('Sources') }}">
+     <li>El País</li><li>El Mundo</li><li>La Vanguardia</li><li>Cinco Días</li><li>Expansión</li><li>elDiario.es</li><li>El Confidencial</li><li>20 Minutos</li><li>Heraldo</li><li>Diario Sur</li><li>Europa Press <span>{{ t("agency") }}</span></li>
     </ul>
-    <p>International news makes the cut only when it directly affects Spain. It is <strong>Spanish news in English</strong>, built for the English-language reader who wants the Spanish press without reading it in Spanish.</p>
+    <p>{{ t("International news makes the cut only when it directly affects Spain. It is") }} <strong>{{ t("Spanish news in English") }}</strong>{{ t(", built for the English-language reader who wants the Spanish press without reading it in Spanish.") }}</p>
    </div>
   </section>
 
-  <section class="hm-process" aria-label="How Spain Daily is made">
+  <section class="hm-process" aria-label="{{ t('How Spain Daily is made') }}">
    <div>
-    <h2>How it works</h2>
+    <h2>{{ t("How it works") }}</h2>
     <ol class="hm-steps">
-     <li><strong>We aggregate the Spanish press</strong> National dailies, wires and regional titles. We pick what affects your life: rents, taxes, visas, jobs.</li>
-     <li><strong>We summarize in plain English</strong> Short factual briefs with links to the sources, AI-assisted and checked by <a href="/editor">the editor</a> before every send.</li>
-     <li><strong>You read it in 5 minutes</strong> In your inbox around 08:00 Madrid time, seven days a week.</li>
+     <li><strong>{{ t("We aggregate the Spanish press") }}</strong> {{ t("National dailies, wires and regional titles. We pick what affects your life: rents, taxes, visas, jobs.") }}</li>
+     <li><strong>{{ t("We summarize in plain English") }}</strong> {{ t("Short factual briefs with links to the sources, AI-assisted and checked by") }} <a href="/editor">{{ t("the editor") }}</a>{{ t(" before every send.") }}</li>
+     <li><strong>{{ t("You read it in 5 minutes") }}</strong> {{ t("In your inbox around 08:00 Madrid time, seven days a week.") }}</li>
     </ol>
    </div>
    <div class="hm-editor">
-    <h2>Who makes the digest</h2>
+    <h2>{{ t("Who makes the digest") }}</h2>
     <div class="hm-editor-id">
      <img class="hm-avatar" src="/static/img/editor/dmytro-shvechikov-96.webp?v={{ asset_version }}" srcset="/static/img/editor/dmytro-shvechikov-48.webp?v={{ asset_version }} 48w, /static/img/editor/dmytro-shvechikov-96.webp?v={{ asset_version }} 96w, /static/img/editor/dmytro-shvechikov-160.webp?v={{ asset_version }} 160w" sizes="46px" alt="" width="46" height="46" loading="lazy" decoding="async">
-     <p><span class="hm-editor-name">Dmytro Shvechikov</span> <span class="hm-editor-role">Founder and editor, based in Spain</span></p>
+     <p><span class="hm-editor-name">Dmytro Shvechikov</span> <span class="hm-editor-role">{{ t("Founder and editor, based in Spain") }}</span></p>
     </div>
-    <p>Dmytro shapes each edition himself: he checks every AI-written summary against the original reporting and cuts anything that falls short. <a class="hm-link-inline" href="/editor">Meet the editor</a></p>
+    <p>{{ t("Dmytro shapes each edition himself: he checks every AI-written summary against the original reporting and cuts anything that falls short.") }} <a class="hm-link-inline" href="/editor">{{ t("Meet the editor") }}</a></p>
     {% if proof and proof.total_issues %}
     <ul class="hm-editor-stats">
-     <li><strong>{{ proof.total_issues }}</strong> editions{% if proof.first_issue %} since {{ proof.first_issue }}{% endif %}</li>
-     <li><strong>{{ "{:,}".format(proof.threads + proof.reddit) }}</strong> followers on Threads and Reddit</li>
+     <li><strong>{{ proof.total_issues_display }}</strong> {{ t("editions") }}{% if proof.first_issue %} {{ t("since {date}", date=proof.first_issue) }}{% endif %}</li>
+     <li><strong>{{ proof.followers_display }}</strong> {{ t("followers on Threads and Reddit") }}</li>
     </ul>
     {% endif %}
    </div>
   </section>
 
-  <section class="hm-topics" aria-label="News by topic">
-   <h2>Latest news by topic</h2>
+  <section class="hm-topics" aria-label="{{ t('News by topic') }}">
+   <h2>{{ t("Latest news by topic") }}</h2>
    <ul class="hm-topic-list">
-    {% for t in topics %}<li><a href="/category/{{ t.slug }}">{{ t.name }}</a></li>{% endfor %}
+    {% for topic in topics %}<li><a href="{{ lang_url('/category/' ~ topic.slug) }}">{{ topic.name }}</a></li>{% endfor %}
    </ul>
   </section>
 
   <!-- Zone B: interactive tools and quizzes -->
-  <section class="hm-more" aria-label="Interactive tools and quizzes">
-   <h2>More from Spanified</h2>
-   <p class="hm-sub">Practical calculators, quick quizzes and guides for life in Spain. Free, no sign-up.</p>
+  <section class="hm-more" aria-label="{{ t('Interactive tools and quizzes') }}">
+   <h2>{{ t("More from Spanified") }}</h2>
+   <p class="hm-sub">{{ t("Practical calculators, quick quizzes and guides for life in Spain. Free, no sign-up.") }}</p>
 
    <div class="hm-block">
-    <h3>Calculators for life in Spain</h3>
-    <p>Taxes, property and bills worked out in plain English.</p>
+    <h3>{{ t("Calculators for life in Spain") }}</h3>
+    <p>{{ t("Taxes, property and bills worked out in plain English.") }}</p>
     <ul class="hm-calcs">
-     <li><a href="/calculators/net-salary"><span class="hm-card-title">Net Salary Calculator</span> <span>Your payslip after IRPF and Social Security, and the Renta refund.</span> <span class="hm-go">Open calculator</span></a></li>
-     <li><a href="/calculators/autonomo-tax"><span class="hm-card-title">Autónomo Tax Calculator</span> <span>Social security quota and IRPF for the self-employed.</span> <span class="hm-go">Open calculator</span></a></li>
-     <li><a href="/calculators/property-buying-cost"><span class="hm-card-title">Property Buying Cost Calculator</span> <span>ITP, IVA/IGIC, AJD, notary and registry fees by region.</span> <span class="hm-go">Open calculator</span></a></li>
-     <li><a href="/calculators/rental-yield"><span class="hm-card-title">Rental Yield Calculator</span> <span>Net yield, cash flow and IRR with resident and non-resident taxes.</span> <span class="hm-go">Open calculator</span></a></li>
-     <li><a href="/calculators/electricity-bill"><span class="hm-card-title">Electricity Bill Calculator</span> <span>PVPC and tariff comparison for your monthly bill.</span> <span class="hm-go">Open calculator</span></a></li>
+     {%- for href, title, desc in [
+       ("/calculators/net-salary", "Net Salary Calculator", "Your payslip after IRPF and Social Security, and the Renta refund."),
+       ("/calculators/autonomo-tax", "Autónomo Tax Calculator", "Social security quota and IRPF for the self-employed."),
+       ("/calculators/property-buying-cost", "Property Buying Cost Calculator", "ITP, IVA/IGIC, AJD, notary and registry fees by region."),
+       ("/calculators/rental-yield", "Rental Yield Calculator", "Net yield, cash flow and IRR with resident and non-resident taxes."),
+       ("/calculators/electricity-bill", "Electricity Bill Calculator", "PVPC and tariff comparison for your monthly bill."),
+     ] %}
+     <li><a href="{{ lang_url(href) }}"><span class="hm-card-title">{{ t(title) }}</span> <span>{{ t(desc) }}</span> <span class="hm-go">{{ t("Open calculator") }}</span></a></li>
+     {%- endfor %}
     </ul>
    </div>
 
    <div class="hm-block">
-    <h3>Quizzes, two minutes each</h3>
-    <p>Real stories from Spain, mixed with inventions. Can you tell which is which?</p>
+    <h3>{{ t("Quizzes, two minutes each") }}</h3>
+    <p>{{ t("Real stories from Spain, mixed with inventions. Can you tell which is which?") }}</p>
     <ul class="hm-quizzes">
      {% for q in quizzes %}
-     <li><a href="{{ q.url }}" aria-label="Take the quiz: {{ q.title }}">
-      <img src="{{ q.cover }}" alt="{{ q.title }} quiz cover" width="1200" height="630" loading="lazy">
+     <li><a href="{{ lang_url(q.url) }}" aria-label="{{ t('Take the quiz: {title}', title=q.title) }}">
+      <img src="{{ q.cover }}" alt="{{ t('{title} quiz cover', title=q.title) }}" width="1200" height="630" loading="lazy">
       <span class="hm-card-title">{{ q.title }}</span>
       <span>{{ q.hook }}</span>
-      <span class="hm-go">Take the quiz</span>
+      <span class="hm-go">{{ t("Take the quiz") }}</span>
      </a></li>
      {% endfor %}
     </ul>
    </div>
 
    <div class="hm-block">
-    <h3>Latest articles</h3>
-    <p>Practical guides to living in Spain — learned by doing, written in plain English.</p>
+    <h3>{{ t("Latest articles") }}</h3>
+    <p>{{ t("Practical guides to living in Spain — learned by doing, written in plain English.") }}</p>
     <ul class="hm-articles">
      {% for a in articles %}
      <li><a href="{{ a.url }}">
-      <span class="hm-meta">{{ a.date_display }}, {{ a.reading_time }} min read</span>
+      <span class="hm-meta">{{ a.date_display }}, {{ t("{n} min read", n=a.reading_time) }}</span>
       <span class="hm-card-title">{{ a.title }}</span>
       {% if a.excerpt %}<span>{{ a.excerpt[:150] }}{% if a.excerpt|length > 150 %}…{% endif %}</span>{% endif %}
-      <span class="hm-go">Read the article</span>
+      <span class="hm-go">{{ t("Read the article") }}</span>
      </a></li>
      {% endfor %}
     </ul>
-    <a class="hm-link" href="/articles/">All articles</a>
+    <a class="hm-link" href="{{ lang_url('/articles/') }}">{{ t("All articles") }}</a>
    </div>
   </section>
 
   <!-- Zone C: answers -->
-  <section class="hm-faq" aria-label="Questions">
+  <section class="hm-faq" aria-label="{{ t('Questions') }}">
    <div class="hm-faq-head">
-    <h2>Questions, answered</h2>
-    <p>The short version of what readers ask us most. Anything else? <a href="/contact">Write to us</a>.</p>
+    <h2>{{ t("Questions, answered") }}</h2>
+    {#- /contact is English-only: Spanish readers get the support address. #}
+    <p>{{ t("The short version of what readers ask us most. Anything else?") }} <a href="{{ 'mailto:support@spanified.com' if es else '/contact' }}">{{ t("Write to us") }}</a>.</p>
    </div>
    <div class="hm-faq-list">
     {% for q, a in faq %}
@@ -190,11 +204,11 @@
    </div>
   </section>
 
-  <section class="hm-close" aria-label="Subscribe">
-   <h2>Start tomorrow morning with Spain Daily</h2>
-   <p>Join 1,000+ email subscribers. Free, one email a day, cancel anytime.</p>
-   <a href="/subscribe" class="hm-btn"><span>Get Spain Daily by email</span><svg class="hm-btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg></a>
-   <p class="hm-note">This digest is based on real news, created with the help of AI and reviewed by a human.</p>
+  <section class="hm-close" aria-label="{{ t('Subscribe') }}">
+   <h2>{{ t("Start tomorrow morning with Spain Daily") }}</h2>
+   <p>{{ t("Join 1,000+ email subscribers. Free, one email a day, cancel anytime.") }}</p>
+   <a href="{{ lang_url('/subscribe') }}" class="hm-btn"><span>{{ t("Get Spain Daily by email") }}</span><svg class="hm-btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg></a>
+   <p class="hm-note">{{ t("This digest is based on real news, created with the help of AI and reviewed by a human.") }}</p>
   </section>
  </div>
 {% endblock %}

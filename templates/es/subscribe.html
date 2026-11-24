@@ -1,11 +1,11 @@
 {% extends "es/base.html" %}
+{% set alt_path = "/subscribe" %}
 {# Minimal Spanish /subscribe: hero + form, how it is made, editor, FAQ.
    Skips the English page's latest-edition preview, social counters and
    Reddit testimonials, which would show English text. #}
 {% block title %}Newsletter gratis de noticias de España | España al Día{% endblock %}
 {% block description %}<meta name="description" content="Suscríbete gratis a España al Día: las noticias más importantes de España en un email al día, 5 minutos de lectura. Sin spam y te das de baja cuando quieras.">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="es_ES">
 <meta property="og:title" content="Newsletter gratis de noticias de España | España al Día">
 <meta property="og:description" content="Suscríbete gratis a España al Día: las noticias más importantes de España en un email al día, 5 minutos de lectura. Sin spam y te das de baja cuando quieras.">
 <meta property="og:url" content="{{ site_url }}/es/subscribe">
@@ -19,11 +19,11 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="España al Día: noticias de España cada mañana, 5 minutos de lectura. Suscríbete gratis.">{% endblock %}
 {% block extra_head %}
-{% set alt_path = "/subscribe" %}{% include "partials/hreflang.html" %}
+{% include "partials/hreflang.html" %}
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "WebPage", "@id": "{{ site_url }}/es/subscribe#webpage", "name": "Suscríbete a la newsletter España al Día",
  "url": "{{ site_url }}/es/subscribe", "inLanguage": "es",
- "isPartOf": {"@id": "{{ site_url }}/#website"}, "about": {"@id": "{{ site_url }}/#spain-daily"},
+ "isPartOf": {"@id": "{{ site_url }}/es/#website"}, "about": {"@id": "{{ site_url }}/es/#spain-daily"},
  "publisher": {"@id": "{{ site_url }}/#org"}, "isAccessibleForFree": true}
 </script>
 <script type="application/ld+json">

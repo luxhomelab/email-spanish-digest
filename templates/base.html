@@ -32,7 +32,11 @@
  <meta property="og:image:width" content="1200">
  <meta property="og:image:height" content="630">{% endblock %}
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>{% block title %}Spanified — Spain Daily{% endblock %}</title>
+ {# One og:locale per page from page_lang; pages with a twin (alt_path, the
+    same value hreflang uses) name the other language as the alternate. #}
+ <meta property="og:locale" content="{{ 'es_ES' if page_lang == 'es' else 'en_GB' }}">
+{% if alt_path %} <meta property="og:locale:alternate" content="{{ 'en_GB' if page_lang == 'es' else 'es_ES' }}">
+{% endif %} <title>{% block title %}Spanified — Spain Daily{% endblock %}</title>
  {% block description %}{% endblock %}
  {% block canonical %}{% endblock %}
  <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,13 +46,15 @@
  {% block extra_head %}{% endblock %}
 </head>
 <body{% block body_class %}{% endblock %}>
-{% block site_header %}{% include "partials/header.html" %}{% endblock %}
+{# Spanish pages (page_lang "es", see the i18n note in build.py) get the
+   stripped Spanish header/footer: no English nav. -#}
+{% block site_header %}{% include "partials/es/header.html" if page_lang == "es" else "partials/header.html" %}{% endblock %}
 
  <main class="content">
 {% block content %}{% endblock %}
  </main>
 
-{% block site_footer %}{% include "partials/footer.html" %}{% endblock %}
+{% block site_footer %}{% include "partials/es/footer.html" if page_lang == "es" else "partials/footer.html" %}{% endblock %}
 {% include "partials/cookie-banner.html" %}
 </body>
 </html>

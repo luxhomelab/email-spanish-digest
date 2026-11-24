@@ -1,0 +1,57 @@
+{
+ "ratings": {
+  "A": {"label": "Realista", "short": "Realista", "desc": "Sin problemas con la Constitución ni con el derecho de la UE. Basta con una ley ordinaria, una decisión del Gobierno o un gasto asumible."},
+  "B": {"label": "Realista, pero más difícil", "short": "Más difícil", "desc": "Se puede hacer, pero exige más: una ley orgánica (176 votos), el acuerdo de las comunidades autónomas, mucho dinero o varios años."},
+  "C": {"label": "Improbable", "short": "Improbable", "desc": "Grandes obstáculos: los tribunales, el derecho de la UE, las competencias autonómicas, un coste que el presupuesto no puede pagar o la falta de mayoría en el Congreso."},
+  "D": {"label": "Imposible tal como están las cosas", "short": "Imposible", "desc": "Choca con la Constitución o con el derecho de la UE, o exige una reforma constitucional que no puede reunir la mayoría de tres quintos o dos tercios que necesita."},
+  "V": {"label": "Vaga", "short": "Vaga", "desc": "Sin cifras, fechas ni plan, así que nadie puede comprobar si se ha cumplido."}
+ },
+ "chances": {"y": "Sí", "p": "En parte", "n": "No"},
+ "needs": {
+  "law": "ley ordinaria",
+  "lo": "ley orgánica (176 votos)",
+  "const": "reforma constitucional",
+  "decree": "decisión del Gobierno",
+  "budget": "dinero",
+  "ccaa": "las comunidades autónomas",
+  "eu": "derecho de la UE",
+  "courts": "riesgo judicial",
+  "social": "sindicatos y patronal",
+  "intl": "otros países",
+  "time": "muchos años"
+ },
+ "topics": {
+  "housing": "Vivienda y alquiler",
+  "taxes": "Impuestos",
+  "pensions": "Pensiones",
+  "labour": "Trabajo y salarios",
+  "immigration": "Inmigración",
+  "health": "Sanidad",
+  "territorial": "Comunidades y Cataluña",
+  "energy": "Energía",
+  "defence": "Defensa"
+ },
+ "approaches": {
+  "housing": ["Más viviendas y vivienda pública", "Ayudas para comprar", "Reglas del alquiler: topes, prórrogas, derogar la ley", "Ventajas fiscales para caseros en lugar de topes", "Pisos turísticos y de temporada", "Impuestos o límites a grandes propietarios e inversores", "Limitar quién puede comprar o acceder a vivienda", "Okupación"],
+  "taxes": ["Rebajas del IRPF y tramos ligados a la inflación", "El régimen Beckham", "Impuestos al capital, a la riqueza y a las grandes empresas", "IVA e impuesto sobre la electricidad", "Regímenes fiscales autonómicos", "Cuotas de autónomos y remesas"],
+  "pensions": ["Pensiones ligadas a los precios y pensiones mínimas", "Edad de jubilación y jubilación anticipada", "Financiación"],
+  "labour": ["Jornada laboral más corta", "Salario mínimo", "Cotizaciones de autónomos", "Legislación laboral y trámites"],
+  "immigration": ["Regularización y *arraigo*", "Fronteras y retornos", "Ayuda a los recién llegados y quién la presta", "Integración y nacionalidad"],
+  "health": ["Personal y dinero", "A quién cubre y cómo"],
+  "territorial": ["Dinero y deuda autonómicos", "Referéndums de independencia y reconocimiento como nación", "Amnistía"],
+  "energy": ["Energía nuclear", "Factura de la luz"]
+ },
+ "parties": {
+  "pp": {"bloc": "Centroderecha", "summary": "Casi todas sus promesas son realistas por separado, pero el programa en conjunto no cuadra. Baja impuestos y cuotas: IRPF ligado a la inflación, IVA del 4 %, cuota cero para los nuevos autónomos y el fin del impuesto del 7 % a la generación eléctrica. Al mismo tiempo promete 4.500 médicos más, que el Estado pague el 50 % de la dependencia, 40.000 millones de euros para el agua y menos deuda pública.", "doable": "La mayoría de las medidas solo necesitan una ley ordinaria o una decisión del Gobierno. Muchas amplían programas que ya existen, como el aval del ICO para la entrada.", "limits": "Los puntos más débiles son el millón de viviendas (España termina ahora unas 100.000 al año), un plan de 300.000 millones de euros para carreteras, trenes y otras infraestructuras, y la derogación de la amnistía. La amnistía no se puede deshacer donde ya se ha aplicado (art. 9.3 de la Constitución)."},
+  "psoe": {"bloc": "Centroizquierda", "summary": "Muchas promesas prolongan medidas que ya existen, por eso sus valoraciones son altas. El programa no responde a la gran pregunta del próximo Gobierno: Cataluña y las condiciones de ERC y Junts.", "doable": "Por ejemplo, el salario mínimo al 60 % del salario medio, las cuotas de autónomos según ingresos reales y la empresa pública de vivienda CASA 47.", "limits": "Las reformas de la Constitución (sobre vivienda, pensiones, el Senado y los *aforamientos*, las reglas judiciales especiales para los políticos) no son posibles sin el PP. La jornada de 37,5 horas ya fracasó en el Congreso. Condonar 83.000 millones de euros de deuda autonómica exige una ley orgánica, y los 176 votos no están asegurados. \"El 1 % del PIB para vivienda\" y 21.000 millones de euros más para las comunidades no tienen una fuente de dinero concreta."},
+  "vox": {"bloc": "Derecha", "summary": "El eje del programa es la *prioridad nacional*: los españoles primero en vivienda, ingreso mínimo, colegios y ayudas. También incluye un impuesto al dinero que se envía al extranjero, la \"remigración\", salir de las normas climáticas de la UE y Gibraltar. Casi una cuarta parte de sus promesas no tiene cifras.", "doable": "Son realistas las promesas que solo necesitan una ley ordinaria u orgánica y una mayoría: que los jueces elijan el CGPJ, derogar la Ley de Vivienda y la de Memoria Democrática, y cambios en el Código Penal.", "limits": "La mayoría de sus promesas principales chocan con el art. 14 de la Constitución y con el derecho de la UE. Lo de Gibraltar no puede cambiar sin el acuerdo del Reino Unido."},
+  "sumar": {"bloc": "Izquierda (coalición Frente Amplio)", "summary": "Uno de los programas más caros. Promete el 1 % del PIB para vivienda, el 2,3 % del PIB para las comunidades, el 3,5 % para el clima, el 7 % para educación, el 8 % para sanidad y 200 euros por hijo. Según nuestro cálculo, son más de 100.000 millones de euros al año, más de lo que recaudarían sus nuevos impuestos.", "doable": "Cambios fiscales por ley ordinaria, como un mínimo del 20 % en el impuesto de sociedades y un impuesto sobre el patrimonio más amplio. También pasos prácticos para los migrantes, como un empadronamiento más fácil y una cuenta bancaria básica.", "limits": "Quitar viviendas a los grandes propietarios, prohibir comprar viviendas a quien no vaya a vivir en ellas y pasar las redes eléctricas a manos del Estado chocan con el art. 33 de la Constitución y con el derecho de la UE."},
+  "podemos": {"bloc": "Izquierda", "summary": "Es el partido con más valoraciones D (15): bajar el alquiler un 40 %, prohibir comprar viviendas en las que no vas a vivir, la república, el fin de la inviolabilidad del Rey y la neutralidad. Salir de la OTAN, una renta básica para todos, jubilarse a los 63 y la semana de 30 horas no se frenan por la ley, sino por el dinero y la falta de votos (C).", "doable": "Medidas concretas: llevar los alquileres de corta duración a la ley de alquileres normal, acabar con el régimen Beckham, bajar el IVA de algunos servicios y las prácticas remuneradas.", "limits": "Sus principales promesas de vivienda chocan con el derecho a la propiedad (art. 33) y con la norma de la UE sobre la libre circulación de capitales."},
+  "erc": {"bloc": "Izquierda, independentista catalana", "summary": "Sus promesas más realistas son las que podría arrancar en un pacto en el Congreso: condonar la deuda autonómica del *FLA*, el traspaso de Rodalies y la derogación de la *ley mordaza*.", "doable": "Lo que puede salir de un pacto en el Congreso: alivio de la deuda, el traspaso de los trenes de cercanías a Cataluña y cambios fiscales en las rentas del capital y los pisos turísticos.", "limits": "Un referéndum de independencia choca con la Constitución. Una financiación como la vasca, un salario mínimo catalán y el traspaso de las competencias de inmigración y alquiler a Cataluña tropiezan con el art. 149 de la Constitución y con sentencias del Tribunal Constitucional."},
+  "junts": {"bloc": "Centroderecha, independentista catalana", "summary": "En economía es de centroderecha: sin topes al alquiler, más deducciones y ventajas fiscales. Pero sus promesas principales van sobre las competencias de Cataluña: su propio concierto fiscal, su propia Seguridad Social, el control de la frontera Schengen y el TSJ de Cataluña como última instancia.", "doable": "Rebajas fiscales e incentivos para que los caseros alquilen sus viviendas, por ley ordinaria.", "limits": "La Constitución no permite la mayor parte de sus planes sobre las competencias de Cataluña (sentencia del Tribunal Constitucional de 2010 sobre el Estatut)."},
+  "bildu": {"bloc": "Izquierda, independentista vasca", "summary": "Mezcla medidas sociales realistas, como alquileres estables y actuar contra los pisos turísticos, con promesas de reconocer naciones, un derecho a decidir la independencia, salir de la OTAN y acabar con las reglas fiscales de la UE.", "doable": "Reglas del alquiler por ley ordinaria, como la prórroga automática de los contratos y límites a las subidas anuales.", "limits": "Reconocer naciones y un derecho a decidir la independencia exigen reformar la Constitución. Acabar con las reglas fiscales de la UE requiere el acuerdo de los demás países, y suprimir el art. 135 también exige reformar la Constitución. Un salario mínimo autonómico obligaría al Estado a cambiar la legislación laboral (el Estatuto de los Trabajadores)."},
+  "pnv": {"bloc": "Centro, nacionalista vasco", "summary": "Muchas de sus promesas desarrollan el Estatuto de Gernika y el *concierto*, el acuerdo fiscal vasco. Parte de ese trabajo ya está en marcha a través de las comisiones mixtas.", "doable": "Pequeños cambios fiscales dentro de las normas de la UE, medidas de pensiones y traspasos al País Vasco a través de las comisiones mixtas.", "limits": "El reconocimiento como \"nación\" y un salario mínimo vasco propio no son realistas."},
+  "bng": {"bloc": "Izquierda, nacionalista gallego", "summary": "Un programa corto de 10 compromisos con pocas cifras. Mezcla medidas sociales realistas con el reconocimiento de Galicia como nación, la salida de la OTAN y un salario mínimo autonómico.", "doable": "Protección para los inquilinos y límites a los pisos turísticos y de corta duración.", "limits": "El reconocimiento como nación y un derecho a decidir la independencia exigen reformar la Constitución. A las promesas de pensiones y jornada laboral les falta dinero o votos."},
+  "cc": {"bloc": "Centro, nacionalista canario", "summary": "Casi todas sus promesas tratan de dinero y de desarrollar el Estatuto de Canarias y el régimen fiscal especial de las islas (*REF*). La mayoría podría salir de negociaciones en el Congreso, donde los votos de CC pueden decidir una mayoría.", "doable": "Ventajas fiscales para las islas, el descuento del 75 % en los viajes de los residentes y normas para el alquiler vacacional. La mayoría amplía lo que ya existe.", "limits": "Hay un punto discutido: limitar la compra de vivienda a extranjeros. El derecho de la UE no lo permite para los ciudadanos de la UE."}
+ }
+}

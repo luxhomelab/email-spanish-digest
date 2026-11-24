@@ -1,4 +1,5 @@
 {% extends "es/base.html" %}
+{% set alt_path = "/cookies" %}
 {# Spanish translation of templates/cookies.html. Keep the two in sync
    (cookie names and retention periods must match). Button names quoted
    below match the Spanish banner in partials/cookie-banner.html. #}
@@ -6,7 +7,6 @@
 {% block title %}Política de cookies | Spanified{% endblock %}
 {% block description %}<meta name="description" content="Política de cookies de Spanified: qué cookies y almacenamiento del navegador usa la web, cuáles necesitan tu consentimiento y cómo cambiar tu elección.">
 <meta property="og:type" content="article">
-<meta property="og:locale" content="es_ES">
 <meta property="og:title" content="Política de cookies | Spanified">
 <meta property="og:description" content="Qué cookies usa Spanified y cómo cambiar tu elección.">
 <meta property="og:url" content="{{ site_url }}/es/cookies">
@@ -16,7 +16,7 @@
 <meta name="robots" content="max-image-preview:large">{% endblock %}
 
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/es/cookies">
-{% set alt_path = "/cookies" %}{% include "partials/hreflang.html" %}{% endblock %}
+{% include "partials/hreflang.html" %}{% endblock %}
 {% block content %}
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "WebPage",

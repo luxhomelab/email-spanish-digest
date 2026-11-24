@@ -2,7 +2,7 @@
 // stacked boards into tabs and narrows them to the parties the reader picks
 // (any number; none picked means all). Chips open their promise through the
 // data-open handler in election-explorer.js.
-import { toggleIn, partyShown } from './election-filter.js'
+import { toggleIn, partyShown, fill } from './election-filter.js'
 
 const app = document.getElementById('compare-app')
 if (app) init(app)
@@ -43,7 +43,7 @@ function init (app) {
       })
       const total = Number(board.dataset.count)
       board.querySelector('.el-board-sub').textContent = selected.length
-        ? `${shown} of ${total} promises from the chosen parties. Each row runs from the most to the least realistic.`
+        ? fill(app.dataset.subChosen || '{shown} of {total} promises from the chosen parties. Each row runs from the most to the least realistic.', { shown, total })
         : board.dataset.sub
       board.querySelector('.el-board-none').hidden = shown > 0
     })

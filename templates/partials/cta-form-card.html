@@ -21,22 +21,22 @@
 
    Whitespace is load-bearing: the leading {%- ... -%} defaults emit nothing at
    all, and the {% set %} lines below reproduce the same indented blank lines. #}
-{%- set title = title | default("Spain's top news, in English, every morning") -%}
-{%- set sub = sub | default("One short email a day — what happened in Spain and why it matters. Free, no spam, unsubscribe anytime.") -%}
-{%- set microcopy = microcopy | default("Join 1,000+ email subscribers · cancel anytime") -%}
+{%- set title = title | default(t("Spain's top news, in English, every morning")) -%}
+{%- set sub = sub | default(t("One short email a day — what happened in Spain and why it matters. Free, no spam, unsubscribe anytime.")) -%}
+{%- set microcopy = microcopy | default(t("Join 1,000+ email subscribers · cancel anytime")) -%}
 {%- set variant = variant | default('') -%}
 {%- set base_class = base_class | default('card cta-form-card') -%}
 {%- set indent = indent | default('  ') -%}
 <div class="{{ base_class }}{% if variant %} {{ variant }}{% endif %}">
 {{ indent }} <div class="cta-form-copy">
-{{ indent }}  <p class="cta-kicker">Free · Every morning · 5-minute read</p>
+{{ indent }}  <p class="cta-kicker">{{ t("Free · Every morning · 5-minute read") }}</p>
 {{ indent }}  <h2>{{ title | safe }}</h2>
 {{ indent }}  <p class="cta-sub">{{ sub | safe }}</p>
 {{ indent }} </div>
 {{ indent }} <div class="cta-form-side">
 {{ indent }} {% set field_id = field_id | default('subscribe-email') %}
 {{ indent }} {% set form_kind = form_kind | default('') %}
-{{ indent }} {% set btn_label = btn_label | default('Subscribe free') %}
+{{ indent }} {% set btn_label = btn_label | default(t('Subscribe free')) %}
 {{ indent }} {% set btn_icon = true %}
 {{ indent }} {% include "partials/subscribe-form.html" %}
 {{ indent }} <p class="cta-microcopy">{{ microcopy | safe }}</p>

@@ -1,0 +1,6 @@
+{# Spanish copy of ../programmes.html (same markup, no text of its own). #}
+<ul class="el-progs">
+{% for p in d.parties %}
+ <li style="--pc: {{ p.color }}"><a href="{{ p.programme }}" target="_blank" rel="noopener"><i class="el-dot"></i>{% if p.full != p.name %}<b>{{ p.name }}</b> <span>{{ p.full }}</span>{% else %}<span><b>{{ p.name }}</b></span>{% endif %}</a></li>
+{% endfor %}
+</ul>

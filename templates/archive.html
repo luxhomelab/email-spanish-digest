@@ -1,32 +1,42 @@
 {% extends "base.html" %}
 {% block body_class %} class="page-archive"{% endblock %}
-{% block title %}Spanish News in English: Daily Archive — Spain Daily{% if pagination.current > 1 %} — Page {{ pagination.current }}{% endif %}{% endblock %}
-{% block description %}<meta name="description" content="Browse every Spain Daily edition: Spanish news in English, summarized each day from the Spanish press.{% if pagination.current > 1 %} Page {{ pagination.current }}.{% endif %}">{% endblock %}
+{% set meta_title %}{{ t("Spanish News in English: Daily Archive — Spain Daily") }}{% if pagination.current > 1 %}{{ t(" — Page {n}", n=pagination.current) }}{% endif %}{% endset %}
+{% set meta_desc %}{{ t("Browse every Spain Daily edition: Spanish news in English, summarized each day from the Spanish press.") }}{% if pagination.current > 1 %}{{ t(" Page {n}.", n=pagination.current) }}{% endif %}{% endset %}
+{% block title %}{{ meta_title }}{% endblock %}
+{% block description %}<meta name="description" content="{{ meta_desc }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ meta_title }}">
+<meta property="og:description" content="{{ meta_desc }}">
+<meta property="og:url" content="{{ site_url }}{{ canonical_path }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ meta_title }}">
+<meta name="twitter:description" content="{{ meta_desc }}">{% endblock %}
 
-{% block canonical %}<link rel="canonical" href="{{ site_url }}/archive/{% if pagination.current > 1 %}{{ pagination.current }}{% endif %}">{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ site_url }}{{ canonical_path }}">{% endblock %}
+{% block extra_head %}{% if alt_path %}{% include "partials/hreflang.html" %}{% endif %}{% endblock %}
 {% block content %}
 {% include "partials/breadcrumbs.html" %}
 {% if digests %}
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "ItemList",
- "name": "Spain Daily archive{% if pagination.current > 1 %} — page {{ pagination.current }}{% endif %}",
+ "name": {{ (t("Spain Daily archive") ~ (t(" — page {n}", n=pagination.current) if pagination.current > 1 else ""))|tojson }},{% if page_lang == "es" %} "inLanguage": "es",{% endif %}
  "itemListElement": [{% for digest in digests %}
   {"@type": "ListItem", "position": {{ loop.index }}, "item": {"@type": "Article", "headline": {{ digest.headline|tojson }}, "url": "{{ site_url }}{{ digest.url }}", "datePublished": "{{ pub_date(digest.date) }}"}}{% if not loop.last %},{% endif %}{% endfor %}
  ]}
 </script>
 {% endif %}
  <div class="archive">
-  <h1>Archive{% if pagination.current > 1 %} — Page {{ pagination.current }}{% endif %}</h1>
-  <p class="subtitle">Every edition of the Spain Daily digest.</p>
+  <h1>{{ t("Archive") }}{% if pagination.current > 1 %}{{ t(" — Page {n}", n=pagination.current) }}{% endif %}</h1>
+  <p class="subtitle">{{ t("Every edition of the Spain Daily digest.") }}</p>
 
   {% if digests %}
   {% for digest in digests %}
   <a class="digest-card" href="{{ digest.url }}">
-   {% if loop.first and pagination.current == 1 %}<span class="latest-badge">Latest</span>{% endif %}
+   {% if loop.first and pagination.current == 1 %}<span class="latest-badge">{{ t("Latest") }}</span>{% endif %}
    <div class="digest-date">{{ digest.date_display }}</div>
    <div class="digest-headline">{{ digest.headline }}</div>
    <div class="digest-meta">
-    <span class="digest-count">{{ digest.story_count }} news</span>
+    <span class="digest-count">{{ t("{n} news", n=digest.story_count) }}</span>
     {% if digest.top_categories %}
     <span class="digest-cats">
      {% for cat in digest.top_categories %}<span class="digest-cat">{{ cat }}</span>{% endfor %}
@@ -36,18 +46,18 @@
   </a>
   {% endfor %}
   {% else %}
-  <div class="empty">No digests yet. Check back soon.</div>
+  <div class="empty">{{ t("No digests yet. Check back soon.") }}</div>
   {% endif %}
 
   {% if pagination.total_pages > 1 %}
   <nav class="pagination">
    {% if pagination.current > 1 %}
-   <a class="first" href="/archive/">« First</a>
+   <a class="first" href="{{ pagination.first_url }}">{{ t("« First") }}</a>
    {% endif %}
    {% if pagination.prev_url %}
-   <a href="{{ pagination.prev_url }}">← Prev</a>
+   <a href="{{ pagination.prev_url }}">{{ t("← Prev") }}</a>
    {% else %}
-   <span class="disabled">← Prev</span>
+   <span class="disabled">{{ t("← Prev") }}</span>
    {% endif %}
 
    {% for p in pagination.pages %}
@@ -59,9 +69,9 @@
    {% endfor %}
 
    {% if pagination.next_url %}
-   <a href="{{ pagination.next_url }}">Next →</a>
+   <a href="{{ pagination.next_url }}">{{ t("Next →") }}</a>
    {% else %}
-   <span class="disabled">Next →</span>
+   <span class="disabled">{{ t("Next →") }}</span>
    {% endif %}
   </nav>
   {% endif %}
