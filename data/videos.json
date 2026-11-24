@@ -8,59 +8,73 @@
     "chapters": [
       {
         "t": 0,
-        "title": "How does Spain vote?"
+        "title": "How does Spain vote?",
+        "title_es": "¿Cómo se vota en España?"
       },
       {
         "t": 15,
-        "title": "Two ballots: Congress and Senate"
+        "title": "Two ballots: Congress and Senate",
+        "title_es": "Dos papeletas: Congreso y Senado"
       },
       {
         "t": 43,
-        "title": "350 seats, 52 districts"
+        "title": "350 seats, 52 districts",
+        "title_es": "350 escaños, 52 circunscripciones"
       },
       {
         "t": 73,
-        "title": "Why votes weigh differently"
+        "title": "Why votes weigh differently",
+        "title_es": "Por qué los votos no pesan igual"
       },
       {
         "t": 99,
-        "title": "Closed party lists"
+        "title": "Closed party lists",
+        "title_es": "Listas cerradas"
       },
       {
         "t": 121,
-        "title": "The d'Hondt method, step by step"
+        "title": "The d'Hondt method, step by step",
+        "title_es": "La ley d'Hondt, paso a paso"
       },
       {
         "t": 177,
-        "title": "The real threshold"
+        "title": "The real threshold",
+        "title_es": "El umbral real"
       },
       {
         "t": 201,
-        "title": "Blank and spoiled votes"
+        "title": "Blank and spoiled votes",
+        "title_es": "Voto en blanco y voto nulo"
       },
       {
         "t": 254,
-        "title": "Who the system helps"
+        "title": "Who the system helps",
+        "title_es": "A quién favorece el sistema"
       },
       {
         "t": 291,
-        "title": "How the Senate is elected"
+        "title": "How the Senate is elected",
+        "title_es": "Cómo se elige el Senado"
       },
       {
         "t": 329,
-        "title": "Election day"
+        "title": "Election day",
+        "title_es": "El día de las elecciones"
       },
       {
         "t": 363,
-        "title": "After the vote: investiture"
+        "title": "After the vote: investiture",
+        "title_es": "Después del voto: la investidura"
       },
       {
         "t": 391,
-        "title": "Can you vote in Spain?"
+        "title": "Can you vote in Spain?",
+        "title_es": "¿Puedes votar en España?"
       },
       {
         "t": 419,
-        "title": "Summary"
+        "title": "Summary",
+        "title_es": "Resumen"
       }
     ]
   },
@@ -73,71 +87,88 @@
     "chapters": [
       {
         "t": 0,
-        "title": "Who runs Spain?"
+        "title": "Who runs Spain?",
+        "title_es": "¿Quién manda en España?"
       },
       {
         "t": 12,
-        "title": "The 1978 Constitution"
+        "title": "The 1978 Constitution",
+        "title_es": "La Constitución de 1978"
       },
       {
         "t": 36,
-        "title": "Separation of powers"
+        "title": "Separation of powers",
+        "title_es": "La separación de poderes"
       },
       {
         "t": 53,
-        "title": "The King"
+        "title": "The King",
+        "title_es": "El Rey"
       },
       {
         "t": 80,
-        "title": "Parliament: the Cortes Generales"
+        "title": "Parliament: the Cortes Generales",
+        "title_es": "El Parlamento: las Cortes Generales"
       },
       {
         "t": 108,
-        "title": "Congress vs Senate"
+        "title": "Congress vs Senate",
+        "title_es": "Congreso frente a Senado"
       },
       {
         "t": 140,
-        "title": "How the Prime Minister is chosen"
+        "title": "How the Prime Minister is chosen",
+        "title_es": "Cómo se elige al presidente del Gobierno"
       },
       {
         "t": 173,
-        "title": "The Government and its checks"
+        "title": "The Government and its checks",
+        "title_es": "El Gobierno y sus controles"
       },
       {
         "t": 211,
-        "title": "How a law is made"
+        "title": "How a law is made",
+        "title_es": "Cómo se hace una ley"
       },
       {
         "t": 295,
-        "title": "Decree-laws: the Government's shortcut"
+        "title": "Decree-laws: the Government's shortcut",
+        "title_es": "Decretos ley: el atajo del Gobierno"
       },
       {
         "t": 348,
-        "title": "A real example: dissolve, then decree again"
+        "title": "A real example: dissolve, then decree again",
+        "title_es": "Un caso real: disolver las Cortes y volver a aprobar por decreto"
       },
       {
         "t": 437,
-        "title": "The courts"
+        "title": "The courts",
+        "title_es": "Los tribunales"
       },
       {
         "t": 467,
-        "title": "The Constitutional Court"
+        "title": "The Constitutional Court",
+        "title_es": "El Tribunal Constitucional"
       },
       {
         "t": 500,
-        "title": "Who elects and controls whom"
+        "title": "Who elects and controls whom",
+        "title_es": "Quién elige y controla a quién"
       },
       {
         "t": 523,
-        "title": "Regions and towns"
+        "title": "Regions and towns",
+        "title_es": "Comunidades autónomas y ayuntamientos"
       },
       {
         "t": 547,
-        "title": "Election calendar"
+        "title": "Election calendar",
+        "title_es": "El calendario electoral"
       },
       {
         "t": 569,
-        "title": "Summary"
+        "title": "Summary",
+        "title_es": "Resumen"
       }
     ]
   },
@@ -150,96 +181,119 @@
     "chapters": [
       {
         "t": 0,
-        "title": "Autónomo taxes in Spain"
+        "title": "Autónomo taxes in Spain",
+        "title_es": "Los impuestos de los autónomos en España"
       },
       {
         "t": 33,
-        "title": "The three bills: Social Security, IRPF, IVA"
+        "title": "The three bills: Social Security, IRPF, IVA",
+        "title_es": "Las tres facturas: Seguridad Social, IRPF e IVA"
       },
       {
         "t": 71,
-        "title": "Everything starts from your profit"
+        "title": "Everything starts from your profit",
+        "title_es": "Todo parte de tu rendimiento"
       },
       {
         "t": 91,
-        "title": "Social Security: 15 brackets"
+        "title": "Social Security: 15 brackets",
+        "title_es": "Seguridad Social: 15 tramos"
       },
       {
         "t": 136,
-        "title": "The yearly regularización"
+        "title": "The yearly regularización",
+        "title_es": "La regularización anual"
       },
       {
         "t": 166,
-        "title": "IRPF: from profit to taxable income"
+        "title": "IRPF: from profit to taxable income",
+        "title_es": "IRPF: del rendimiento a la base imponible"
       },
       {
         "t": 218,
-        "title": "IRPF brackets and the personal allowance"
+        "title": "IRPF brackets and the personal allowance",
+        "title_es": "Tramos del IRPF y mínimo personal"
       },
       {
         "t": 259,
-        "title": "Myth: a higher bracket taxes everything"
+        "title": "Myth: a higher bracket taxes everything",
+        "title_es": "Mito: un tramo más alto lo grava todo"
       },
       {
         "t": 313,
-        "title": "Why your region matters"
+        "title": "Why your region matters",
+        "title_es": "Por qué importa tu comunidad"
       },
       {
         "t": 344,
         "title": "Example: €32,000 in Madrid, in the calculator",
-        "highlight": true
+        "highlight": true,
+        "title_es": "Ejemplo: 32.000 € en Madrid, en la calculadora"
       },
       {
         "t": 424,
-        "title": "Withholding and form 130"
+        "title": "Withholding and form 130",
+        "title_es": "Retenciones y modelo 130"
       },
       {
         "t": 478,
-        "title": "The Renta settles it"
+        "title": "The Renta settles it",
+        "title_es": "La Renta lo ajusta todo"
       },
       {
         "t": 522,
-        "title": "A private pension plan: up to €5,750 off"
+        "title": "A private pension plan: up to €5,750 off",
+        "title_es": "Un plan de pensiones privado: hasta 5.750 € menos"
       },
       {
         "t": 584,
-        "title": "IVA: who really pays it"
+        "title": "IVA: who really pays it",
+        "title_es": "IVA: quién lo paga de verdad"
       },
       {
         "t": 633,
-        "title": "IVA exceptions: EU, abroad, Canaries"
+        "title": "IVA exceptions: EU, abroad, Canaries",
+        "title_es": "Excepciones del IVA: UE, extranjero y Canarias"
       },
       {
         "t": 704,
-        "title": "What you can deduct"
+        "title": "What you can deduct",
+        "title_es": "Qué puedes deducir"
       },
       {
         "t": 758,
-        "title": "Home office, meals and the car"
+        "title": "Home office, meals and the car",
+        "title_es": "Despacho en casa, comidas y coche"
       },
       {
         "t": 805,
-        "title": "Invoices and records"
+        "title": "Invoices and records",
+        "title_es": "Facturas y libros de registro"
       },
       {
         "t": 853,
-        "title": "Tarifa plana and company directors"
+        "title": "Tarifa plana and company directors",
+        "title_es": "Tarifa plana y administradores de sociedades"
       },
       {
         "t": 889,
-        "title": "Second jobs, family, stopping"
+        "title": "Second jobs, family, stopping",
+        "title_es": "Pluriactividad, familia y baja"
       },
       {
         "t": 931,
-        "title": "The autónomo colaborador, in detail"
+        "title": "The autónomo colaborador, in detail",
+        "title_es": "El autónomo colaborador, en detalle"
       },
       {
         "t": 995,
-        "title": "The tax calendar"
+        "title": "The tax calendar",
+        "title_es": "El calendario fiscal"
       },
       {
         "t": 1034,
-        "title": "Summary"
+        "title": "Summary",
+        "title_es": "Resumen"
       }
     ]
   },
@@ -252,64 +306,79 @@
     "chapters": [
       {
         "t": 0,
-        "title": "Salary taxes in Spain: gross to net"
+        "title": "Salary taxes in Spain: gross to net",
+        "title_es": "Impuestos del sueldo en España: de bruto a neto"
       },
       {
         "t": 31,
-        "title": "From gross to net: what comes off"
+        "title": "From gross to net: what comes off",
+        "title_es": "De bruto a neto: qué se descuenta"
       },
       {
         "t": 67,
-        "title": "12 or 14 payslips"
+        "title": "12 or 14 payslips",
+        "title_es": "12 o 14 pagas"
       },
       {
         "t": 116,
-        "title": "Social Security: about 6.5% of your gross"
+        "title": "Social Security: about 6.5% of your gross",
+        "title_es": "Seguridad Social: un 6,5 % del bruto"
       },
       {
         "t": 163,
-        "title": "The ceiling and the solidarity contribution"
+        "title": "The ceiling and the solidarity contribution",
+        "title_es": "El tope y la cuota de solidaridad"
       },
       {
         "t": 196,
-        "title": "IRPF: from gross to taxable base"
+        "title": "IRPF: from gross to taxable base",
+        "title_es": "IRPF: del bruto a la base imponible"
       },
       {
         "t": 233,
-        "title": "State brackets and the personal minimum"
+        "title": "State brackets and the personal minimum",
+        "title_es": "Tramos estatales y mínimo personal"
       },
       {
         "t": 291,
-        "title": "Myth: a higher bracket taxes everything"
+        "title": "Myth: a higher bracket taxes everything",
+        "title_es": "Mito: un tramo más alto lo grava todo"
       },
       {
         "t": 328,
-        "title": "Why your region matters"
+        "title": "Why your region matters",
+        "title_es": "Por qué importa tu comunidad"
       },
       {
         "t": 399,
         "title": "Example: €30,000 in Madrid, in the calculator",
-        "highlight": true
+        "highlight": true,
+        "title_es": "Ejemplo: 30.000 € en Madrid, en la calculadora"
       },
       {
         "t": 455,
-        "title": "The retención on your payslip"
+        "title": "The retención on your payslip",
+        "title_es": "La retención de tu nómina"
       },
       {
         "t": 524,
-        "title": "The Renta settles it"
+        "title": "The Renta settles it",
+        "title_es": "La Renta lo ajusta todo"
       },
       {
         "t": 581,
-        "title": "Flexible pay and pension plans"
+        "title": "Flexible pay and pension plans",
+        "title_es": "Retribución flexible y planes de pensiones"
       },
       {
         "t": 633,
-        "title": "What the company really pays"
+        "title": "What the company really pays",
+        "title_es": "Lo que paga de verdad la empresa"
       },
       {
         "t": 661,
-        "title": "Summary"
+        "title": "Summary",
+        "title_es": "Resumen"
       }
     ]
   },
@@ -322,83 +391,103 @@
     "chapters": [
       {
         "t": 0,
-        "title": "My flat in Alicante, and the whole path"
+        "title": "My flat in Alicante, and the whole path",
+        "title_es": "Mi piso en Alicante y todo el proceso"
       },
       {
         "t": 49,
-        "title": "How much cash you really need"
+        "title": "How much cash you really need",
+        "title_es": "Cuánto dinero necesitas de verdad"
       },
       {
         "t": 85,
-        "title": "Buying costs: my €295,000 flat in Alicante"
+        "title": "Buying costs: my €295,000 flat in Alicante",
+        "title_es": "Gastos de compra: mi piso de 295.000 € en Alicante"
       },
       {
         "t": 110,
-        "title": "Transfer tax by region (ITP, IVA, AJD)"
+        "title": "Transfer tax by region (ITP, IVA, AJD)",
+        "title_es": "Impuesto de compra por comunidad (ITP, IVA, AJD)"
       },
       {
         "t": 141,
-        "title": "8 steps from decision to keys"
+        "title": "8 steps from decision to keys",
+        "title_es": "8 pasos de la decisión a las llaves"
       },
       {
         "t": 163,
-        "title": "Where to find flats, and who pays the agent"
+        "title": "Where to find flats, and who pays the agent",
+        "title_es": "Dónde buscar piso y quién paga a la agencia"
       },
       {
         "t": 221,
-        "title": "Is the price fair? Three free tools"
+        "title": "Is the price fair? Three free tools",
+        "title_es": "¿Es justo el precio? Tres herramientas gratis"
       },
       {
         "t": 267,
-        "title": "Always haggle: €309,000 to €295,000"
+        "title": "Always haggle: €309,000 to €295,000",
+        "title_es": "Negocia siempre: de 309.000 € a 295.000 €"
       },
       {
         "t": 297,
-        "title": "One flat, three sizes"
+        "title": "One flat, three sizes",
+        "title_es": "Un piso, tres superficies"
       },
       {
         "t": 339,
-        "title": "The nota simple"
+        "title": "The nota simple",
+        "title_es": "La nota simple"
       },
       {
         "t": 375,
-        "title": "Debts, derramas and the €1,600 surprise"
+        "title": "Debts, derramas and the €1,600 surprise",
+        "title_es": "Deudas, derramas y la sorpresa de 1.600 €"
       },
       {
         "t": 439,
-        "title": "The deal on a calendar"
+        "title": "The deal on a calendar",
+        "title_es": "La operación en un calendario"
       },
       {
         "t": 475,
-        "title": "The arras deposit: three kinds"
+        "title": "The arras deposit: three kinds",
+        "title_es": "Las arras: tres tipos"
       },
       {
         "t": 514,
-        "title": "Mortgage: how much the bank lends"
+        "title": "Mortgage: how much the bank lends",
+        "title_es": "Hipoteca: cuánto presta el banco"
       },
       {
         "t": 569,
-        "title": "Rates, extras and getting approved"
+        "title": "Rates, extras and getting approved",
+        "title_es": "Tipos, vinculaciones y aprobación"
       },
       {
         "t": 630,
-        "title": "Signing at the notary, and after"
+        "title": "Signing at the notary, and after",
+        "title_es": "La firma en la notaría y lo que viene después"
       },
       {
         "t": 667,
-        "title": "What it costs to own"
+        "title": "What it costs to own",
+        "title_es": "Lo que cuesta tener la vivienda"
       },
       {
         "t": 707,
-        "title": "Selling my flat 1.5 years later: what it would cost"
+        "title": "Selling my flat 1.5 years later: what it would cost",
+        "title_es": "Vender mi piso año y medio después: lo que costaría"
       },
       {
         "t": 763,
-        "title": "Gains tax: a loss means no tax, a gain is taxed"
+        "title": "Gains tax: a loss means no tax, a gain is taxed",
+        "title_es": "Impuesto sobre la ganancia: si pierdes, no pagas; si ganas, tributas"
       },
       {
         "t": 815,
-        "title": "Did I lose money? The rent I didn't pay"
+        "title": "Did I lose money? The rent I didn't pay",
+        "title_es": "¿Perdí dinero? El alquiler que no pagué"
       }
     ]
   }

@@ -10,8 +10,8 @@ export default {
     'Calculadora de gastos de compra de vivienda: ITP, IVA/IGIC y AJD por comunidad | Spanified',
   'Copied!': '¡Copiado!',
   'Copy link': 'Copiar enlace',
-  'Please enter a valid property price (minimum {amount}).': 'Introduce un precio de vivienda válido (mínimo {amount})',
-  'Unable to calculate. Please check your inputs.': 'No se ha podido calcular',
+  'Please enter a valid property price (minimum {amount}).': 'Introduce un precio de vivienda válido (mínimo {amount}).',
+  'Unable to calculate. Please check your inputs.': 'No se ha podido calcular. Revisa los datos.',
   '{pct} of property price': '{pct} del precio de la vivienda',
   '{pct} of total costs': '{pct} de los gastos totales',
 }

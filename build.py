@@ -1076,11 +1076,26 @@ def load_videos():
     return _videos_cache
 
 
+# Spanish region names that take an article mid-sentence ("el País Vasco es
+# donde...", "en la Comunidad Valenciana"). Used by the generated ES FAQs.
+ES_REGION_ARTICLE = {
+    "País Vasco": "el País Vasco",
+    "Comunidad Valenciana": "la Comunidad Valenciana",
+    "Región de Murcia": "la Región de Murcia",
+    "Illes Balears": "las Illes Balears",
+}
+
+
+def es_region(name):
+    return ES_REGION_ARTICLE.get(name, name)
+
+
 def video_embed_html(video_id, lang="en"):
     """Facade + VideoObject JSON-LD for one video; warn and return "" if unknown.
 
     The videos are in English: Spanish pages get Spanish player labels and a
-    caption that says so, while titles, chapters and JSON-LD stay English."""
+    caption that says so, and the visible chapter list uses each chapter's
+    "title_es" when present; the video title and JSON-LD stay English."""
     v = load_videos().get(video_id)
     if not v:
         print(f"WARN: video not in data/videos.json: {video_id}", file=sys.stderr)
@@ -1117,7 +1132,7 @@ def video_embed_html(video_id, lang="en"):
             f'<li{" class=\"ve-chap-key\"" if c.get("highlight") else ""}>'
             f'<a class="ve-chap" href="{watch}&amp;t={c["t"]}s" target="_blank" rel="noopener" data-start="{c["t"]}">'
             f'<span class="ve-chap-time">{c["t"] // 60}:{c["t"] % 60:02d}</span>'
-            f'<span class="ve-chap-title">{html.escape(c["title"])}</span></a></li>'
+            f'<span class="ve-chap-title">{html.escape((lang == "es" and c.get("title_es")) or c["title"])}</span></a></li>'
             for c in chapters
         )
         chapters_html = (
@@ -1599,7 +1614,7 @@ ES_STRINGS.update({
     "{result} — {quiz}": "{result}: {quiz}",
     "Can you beat {score}/10? Take the quiz": "¿Superas el {score}/10? Haz el test",
     "Subscribed — your quiz result — Spanified": "Suscripción confirmada: tu resultado del test | Spanified",
-    "You're subscribed — see your {title} quiz result.": "Suscripción confirmada. Mira tu resultado del test {title}.",
+    "You're subscribed — see your {title} quiz result.": "Suscripción confirmada. Mira tu resultado del test «{title}».",
     "Email confirmed. Spain Daily arrives tomorrow morning.": "Email confirmado. España al Día te llega mañana por la mañana.",
     "{title} quiz result": "Resultado del test {title}",
     "Can't wait until tomorrow?": "¿No puedes esperar a mañana?",
@@ -2538,6 +2553,9 @@ ES_STRINGS.update({
     "Tax": "Impuestos",
     "Cash flow": "Flujo de caja",
     "Cumulative": "Acumulado",
+    "IRR": "TIR",
+    "NOI": "Rend. neto",
+    "Net operating income": "Rendimiento neto de explotación",
     "Renting out a flat in Spain? Share this calculator.": "¿Alquilas un piso en España? Comparte esta calculadora.",
     # calculator-rental-yield-amount.html
     "Net yield, resident": "Rentabilidad neta, residente",
@@ -2767,7 +2785,7 @@ def net_salary_faqs_es(c):
          f"{c['payslip14']} durante 12 meses más dos pagas extra de {c['extra14']}, normalmente en junio y diciembre."),
         (f"¿En qué comunidad se paga menos IRPF con {g}?",
          f"Ceuta y Melilla son las que menos pagan, porque solo tributan el 40 % del IRPF ({c['ceuta_net']} netos al año). Entre las demás, "
-         f"{c['best']} es donde más te queda ({c['best_net']}) y {c['worst']} donde menos ({c['worst_net']}), una diferencia de {c['spread']} al año."),
+         f"{es_region(c['best'])} es donde más te queda ({c['best_net']}) y {es_region(c['worst'])} donde menos ({c['worst_net']}), una diferencia de {c['spread']} al año."),
         (f"¿Me saldrá a devolver la Renta con {g}?",
          refund + " El resultado depende de tu comunidad y tu situación familiar, así que usa la calculadora para tu caso."),
     ]
@@ -2990,7 +3008,7 @@ def rental_yield_faqs_es(c):
          f"un IBI de {c['ibi']} al año, una comunidad de {c['community']} al mes, un 5 % de vacío y un 5 % de mantenimiento, sin hipoteca."),
         (f"¿Cuánto dinero necesito para comprar una vivienda de {a} en España?",
          f"En Madrid, {c['tax_madrid']} de ITP y unos {c['closing']} de gastos de compraventa llevan el total a {c['upfront']}. En las comunidades peninsulares el total va "
-         f"de {c['cheapest_upfront']} en {c['cheapest_name']} a {c['dearest_upfront']} en {c['dearest_name']}, porque el impuesto de transmisiones cambia según la comunidad."),
+         f"de {c['cheapest_upfront']} en {es_region(c['cheapest_name'])} a {c['dearest_upfront']} en {es_region(c['dearest_name'])}, porque el impuesto de transmisiones cambia según la comunidad."),
         (f"¿Es buena una rentabilidad bruta del {c['gross']} en España?",
          f"Está cerca de la media nacional, en torno al 5,5 % bruto (Global Property Guide, tercer trimestre de 2026). Tras gastos e impuestos queda en un {c['net_res']} neto con {a}, "
          f"así que compara pisos por la rentabilidad neta, no por la cifra que sale en el anuncio."),
@@ -3207,7 +3225,7 @@ def autonomo_page_context(kind, item, neighbours, names, calc_year, lang="en"):
 def autonomo_faqs_es(c):
     r, y = c["revenue"], c["calc_year"]
     region_a = (f"Ceuta y Melilla son las que menos pagan, porque sus residentes solo tributan el 40 % del IRPF por lo que ganan allí ({c['ceuta_net']} netos al año con {r}). Entre las demás, "
-                f"{c['best']} es donde más te queda ({c['best_net']}) y {c['worst']} donde menos ({c['worst_net']}), una diferencia de {c['spread']} al año. La Seguridad Social es igual en todas.")
+                f"{es_region(c['best'])} es donde más te queda ({c['best_net']}) y {es_region(c['worst'])} donde menos ({c['worst_net']}), una diferencia de {c['spread']} al año. La Seguridad Social es igual en todas.")
     tp_a = (f"Los primeros 12 meses un autónomo nuevo paga la tarifa plana de 80 € más el MEI (unos 88,65 € al mes), así que la Seguridad Social es de {c['tp_ss_year']} al año en lugar de {c['quota_year']}. "
             f"Con {r} eso supone unos {c['tp_net_month']} netos al mes en lugar de {c['net_month']}, {c['tp_gain_month']} más cada mes. Pasado el primer año, la cuota va según tu tramo de rendimientos.")
     if c["kind"] == "monthly":

@@ -241,7 +241,7 @@
        <p class="sub2">{{ t("year 1, after tax") }}</p>
       </div>
       <div class="ry-kpi">
-       <p class="kicker">IRR</p>
+       <p class="kicker">{{ t("IRR") }}</p>
        <p class="val" id="r-irr">—</p>
        <p class="sub2" id="r-irr-sub">{{ t("incl. sale") }}</p>
       </div>
@@ -298,7 +298,7 @@
       <summary>{{ t("Year-by-year table") }}</summary>
       <div class="ry-table-wrap" tabindex="0" role="region" aria-label="{{ t('Year-by-year cash flow table, scrolls horizontally') }}">
        <table class="ry-table">
-        <thead><tr><th>{{ t("Year") }}</th><th class="num">{{ t("Rent") }}</th><th class="num">{{ t("Expenses") }}</th><th class="num">NOI</th><th class="num">{{ t("Mortgage") }}</th><th class="num">{{ t("Interest") }}</th><th class="num">{{ t("Tax") }}</th><th class="num">{{ t("Cash flow") }}</th><th class="num">{{ t("Cumulative") }}</th></tr></thead>
+        <thead><tr><th>{{ t("Year") }}</th><th class="num">{{ t("Rent") }}</th><th class="num">{{ t("Expenses") }}</th><th class="num" title="{{ t("Net operating income") }}">{{ t("NOI") }}</th><th class="num">{{ t("Mortgage") }}</th><th class="num">{{ t("Interest") }}</th><th class="num">{{ t("Tax") }}</th><th class="num">{{ t("Cash flow") }}</th><th class="num">{{ t("Cumulative") }}</th></tr></thead>
         <tbody id="r-years"></tbody>
        </table>
       </div>

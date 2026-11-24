@@ -169,6 +169,23 @@ def test_spanish_number_formats_and_copy(site):
     assert "Calculadora de la factura de la luz" in elec and "in English" not in elec
 
 
+def test_spanish_copy_has_no_english_labels_or_bare_region_names(site):
+    out, _ = site
+    ry = (out / "es" / "calculators" / "rental-yield.html").read_text(encoding="utf-8")
+    assert '<p class="kicker">TIR</p>' in ry and ">IRR<" not in ry and ">NOI<" not in ry
+    ns = (out / "es" / "calculators" / "net-salary-100000-euros.html").read_text(encoding="utf-8")
+    assert "el País Vasco es donde" in ns and ", País Vasco es donde" not in ns
+    chapters = re.findall(r'class="ve-chap-title">([^<]*)<', ns)
+    assert "De bruto a neto: qué se descuenta" in chapters
+    assert not any("From gross to net" in c for c in chapters)
+
+
+def test_es_region_adds_article():
+    assert build.es_region("País Vasco") == "el País Vasco"
+    assert build.es_region("Comunidad Valenciana") == "la Comunidad Valenciana"
+    assert build.es_region("Madrid") == "Madrid"
+
+
 def test_spanish_pages_load_the_calculator_scripts(site):
     """Same JS as English: calc-i18n.js picks Spanish from <html lang>."""
     out, _ = site
