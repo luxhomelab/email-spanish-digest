@@ -227,6 +227,11 @@ body.page-unsubscribe iframe, html.iframe-page .page-unsubscribe iframe {
 @media (max-width: 960px) {
  .header-inner { flex-wrap: wrap; padding: 12px 24px; gap: 0; }
  .brand-logo { width: 112px; }
+ /* Brand shrinks (tagline wraps) instead of pushing the burger onto its own
+    line: the Spanish tagline is too long for 320px next to EN/ES + burger.
+    Basis 0 keeps the row from wrapping; max-content stops the link growing. */
+ .brand { flex: 1 1 0; min-width: 0; max-width: max-content; }
+ .brand-tag { text-wrap: balance; }
  .nav-toggle { display: block; order: 1; }
  /* Brand, language codes, burger on one row; the open menu wraps below. */
  .lang-switch { margin: 0 10px 0 auto; padding-left: 0; border-left: none; }
@@ -254,6 +259,10 @@ body.page-unsubscribe iframe, html.iframe-page .page-unsubscribe iframe {
   flex-direction: column; gap: 8px; text-align: center;
  }
  .footer-social { justify-content: center; }
+}
+@media (max-width: 360px) {
+ .lang-switch { margin-right: 6px; gap: 0; }
+ .lang-switch > a, .lang-switch > span { min-width: 28px; padding: 0 4px; }
 }
 
 /* ============================================================
