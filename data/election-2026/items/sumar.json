@@ -30,7 +30,7 @@
   "c": "An EU rule sets a 15% minimum, and higher rates are allowed. Since 2024 large groups in Spain already pay at least 15% (Ley 7/2024). 20% would raise taxes for large groups, but it is realistic only with a majority.",
   "pos": "Large companies pay more and have fewer ways to lower their tax.",
   "neg": "Spain would be above the OECD global minimum (15%), so profits and investment could move to other countries.",
-  "s": [{"t": "Directive (EU) 2022/2523 on the global minimum tax (BOE copy of the OJEU)", "u": "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81923"}, {"t": "Ley 7/2024: 15% minimum tax and permanent bank levy (BOE)", "u": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-26694"}]},
+  "s": [{"t": "Directive (EU) 2022/2523 on the global minimum tax (BOE copy of the OJEU)", "u": "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81923"}, {"t": "Ley 7/2024: 15% minimum tax and bank levy for 2024–2026 (BOE)", "u": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-26694"}]},
  {"i": 19, "topic": "taxes", "f": "B", "t": "y", "n": ["law", "ccaa"], "ref": "3.2, p. 50",
   "title": "Tax on large fortunes from €1 million",
   "detail": "The tax on large fortunes (*Impuesto de Solidaridad de las Grandes Fortunas*) would start at €1 million of net wealth instead of €3 million (the first €700,000 would be tax-free). All fortunes above €1 million would pay at least 2%, with higher rates from €50 million. It would be a state tax, so regional tax cuts could not cancel it.",

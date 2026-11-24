@@ -5279,6 +5279,7 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 .article-body ul.el-progs li::before { content: none; }
 .article-body ul.el-progs a { display: inline-block; padding: 11px 0 11px 16px; text-indent: -16px; line-height: 22px; text-decoration: none; }
 .article-body ul.el-progs a > span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.article-body ul.el-progs a.el-pdf { padding-left: 0; text-indent: 0; margin-left: 6px; font-size: 14px; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .article-body ul.el-progs a:hover { background: none; color: #8A1019; }
 .article-body ul.el-progs a:hover > span { text-decoration-thickness: 2px; }
 .article-body ul.el-progs a:focus-visible { outline: 3px solid #F1BF00; outline-offset: 2px; border-radius: 2px; }
