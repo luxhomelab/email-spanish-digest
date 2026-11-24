@@ -24,19 +24,19 @@
 {% block content %}
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@graph": [
- {"@type": "Organization", "@id": "{{ site_url }}/#org", "name": "Spanified", "url": "{{ site_url }}/",
+ {"@type": "Organization", "@id": "{{ site_url }}{{ lang_url('/') }}#org", "name": "Spanified", "url": "{{ site_url }}{{ lang_url('/') }}",
   "logo": {"@type": "ImageObject", "url": "{{ site_url }}/logo.jpg"},
   "contactPoint": {"@type": "ContactPoint", "email": "support@spanified.com",
    "contactType": "customer support", "availableLanguage": "English"},
   "sameAs": {{ site_socials|tojson }}},
  {"@type": "WebSite", "@id": "{{ home }}#website", "name": "Spanified", "alternateName": [{{ t("Spain Daily")|tojson }}, {{ t("Spanified Spain Daily")|tojson }}],
-  "url": "{{ home }}", "inLanguage": "{{ page_lang|default('en') }}", "publisher": {"@id": "{{ site_url }}/#org"},
+  "url": "{{ home }}", "inLanguage": "{{ page_lang|default('en') }}", "publisher": {"@id": "{{ site_url }}{{ lang_url('/') }}#org"},
   "description": {{ t("Spanified: Spain Daily, a free morning newsletter with Spain's top news in plain English, plus calculators, quizzes and guides for life in Spain.")|tojson }}},
  {"@type": "Periodical", "@id": "{{ home }}#spain-daily", "name": {{ t("Spain Daily")|tojson }}, "alternateName": {{ t("Spain Daily newsletter")|tojson }},
   "url": "{{ home }}",
   "description": {{ t("Free daily newsletter with Spain's top news in plain English, a 5-minute read.")|tojson }},
   "inLanguage": "{{ page_lang|default('en') }}", "isAccessibleForFree": true, "isPartOf": {"@id": "{{ home }}#website"},
-  "publisher": {"@id": "{{ site_url }}/#org"}{% if not es %}, "sameAs": {{ site_socials|tojson }}{% endif %}},
+  "publisher": {"@id": "{{ site_url }}{{ lang_url('/') }}#org"}{% if not es %}, "sameAs": {{ site_socials|tojson }}{% endif %}},
  {"@type": "FAQPage", {% if es %}"inLanguage": "es", {% endif %}"mainEntity": [{% for q, a in faq %}
   {"@type": "Question", "name": {{ q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ a|tojson }}}}{% if not loop.last %},{% endif %}{% endfor %}
  ]}

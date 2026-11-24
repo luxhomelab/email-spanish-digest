@@ -30,6 +30,12 @@ export function messagesFor(lang) {
   return MESSAGES[lang] || MESSAGES.en
 }
 
+// Redirect target when a form has no `next` field: the confirm page in the
+// form's own language, so a Spanish form never lands on an English page.
+export function confirmPath(lang) {
+  return lang === 'es' ? '/es/confirm' : '/confirm'
+}
+
 const DEFAULT_ERROR = MESSAGES.en.fallback
 
 import { markSubscribed } from './subscription-store.js'
@@ -177,7 +183,7 @@ export function initSubscribeForm(form) {
 
     // Honeypot: bots fill the invisible field; mimic success without sending.
     if (fields.nonce && fields.nonce.trim() !== '') {
-      window.location.assign(fields.next || '/confirm')
+      window.location.assign(fields.next || confirmPath(fields.lang))
       return
     }
 
@@ -195,7 +201,7 @@ export function initSubscribeForm(form) {
       if (res.ok) {
         rememberSubscription(fields.email)
         trackSubscribe(fields, form)
-        window.location.assign(fields.next || '/confirm')
+        window.location.assign(fields.next || confirmPath(fields.lang))
         return
       }
       showError(res.message)

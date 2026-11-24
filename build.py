@@ -1060,7 +1060,7 @@ def video_embed_html(video_id, lang="en"):
         "thumbnailUrl": [thumb, f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg"],
         "uploadDate": v["upload_date"], "duration": f"PT{mins}M{s}S",
         "embedUrl": f"https://www.youtube.com/embed/{video_id}", "url": watch,
-        "publisher": {"@type": "Organization", "name": "Spanified", "url": f"{SITE_URL}/"},
+        "publisher": {"@type": "Organization", "name": "Spanified", "url": SITE_URL + localize(lang, "/")},
     }
     chapters = v.get("chapters") or []
     if chapters:
@@ -1747,10 +1747,14 @@ def render_es_pages(env, proof, es_digests=()):
     contexts = {
         "subscribe.html": {"proof": proof, "faq": ES_SUBSCRIBE_FAQ_ITEMS, "js_version": js_version(),
                            "latest": es_digests[0] if es_digests else None,
+                           "crumbs": crumbs("Suscribirse", "/es/subscribe"),
                            "emoji": CATEGORY_EMOJI, "default_emoji": DEFAULT_EMOJI},
         "about.html": {"crumbs": crumbs("Sobre nosotros", "/es/about")},
         "editor.html": {"crumbs": crumbs("Editor", "/es/editor")},
         "contact.html": {"crumbs": crumbs("Contacto", "/es/contact")},
+        "confirm.html": {"crumbs": crumbs("Confirmar", "/es/confirm")},
+        "success.html": {"crumbs": crumbs("Suscripción confirmada", "/es/success")},
+        "unsubscribe.html": {"crumbs": crumbs("Darse de baja", "/es/unsubscribe")},
     }
     for name in ES_PAGES:
         output = env.get_template(f"es/{name}").render(page_lang="es", **contexts.get(name, {}))
@@ -3556,31 +3560,37 @@ def story_amount_pages(ns=None, au=None, ry=None):
         "/calculators/net-salary": [
             {"amounts": ns["monthly"], "range": (600, 8000), "context": _SALARY_CTX,
              "url": lambda a: calc + net_salary_slug("monthly", a),
-             "anchor": lambda a: f"take-home pay on {eur(a)} gross a month"},
+             "anchor": _amount_anchor("take-home pay on {amount} gross a month")},
             {"amounts": ns["annual"], "range": (9000, 150000), "context": _SALARY_CTX,
              "url": lambda a: calc + net_salary_slug("annual", a),
-             "anchor": lambda a: f"net pay on a {eur(a)} gross salary in Spain"},
+             "anchor": _amount_anchor("net pay on a {amount} gross salary in Spain")},
         ],
         "/calculators/autonomo-tax": [
             {"amounts": au["monthly"], "range": (800, 6000), "context": _AUTONOMO_CTX,
              "url": lambda a: calc + autonomo_slug("monthly", a),
-             "anchor": lambda a: f"what an autónomo must bill to take home {eur(a)} a month"},
+             "anchor": _amount_anchor("what an autónomo must bill to take home {amount} a month")},
             {"amounts": au["revenue"], "range": (10000, 120000), "context": _AUTONOMO_CTX,
              "url": lambda a: calc + autonomo_slug("revenue", a),
-             "anchor": lambda a: f"autónomo net pay on {eur(a)} a year"},
+             "anchor": _amount_anchor("autónomo net pay on {amount} a year")},
         ],
         "/calculators/rental-yield": [
             {"amounts": ry["prices"], "range": (90000, 1100000), "context": _PROPERTY_CTX,
              "url": lambda a: calc + rental_yield_slug(a),
-             "anchor": lambda a: f"rental yield on a {eur(a)} property in Spain"},
+             "anchor": _amount_anchor("rental yield on a {amount} property in Spain")},
         ],
     }
 
 
-def _amount_page_link(text, groups, tolerance=0.1, window=70):
+def _amount_anchor(key):
+    """Amount-page anchor in `lang`: the English text is the ES_STRINGS key."""
+    return lambda a, lang="en": tr(lang, key, amount=eur(a, lang))
+
+
+def _amount_page_link(text, groups, tolerance=0.1, window=70, lang="en"):
     """Link to the amount page closest (within `tolerance`) to the first
     euro amount in `text` that falls in a group's range and has that
-    group's context words within `window` characters. None otherwise."""
+    group's context words within `window` characters. None otherwise.
+    `lang` only picks the anchor's language (matching reads English text)."""
     if not groups:
         return None
     for m in _EURO_AMOUNT_RE.finditer(text):
@@ -3592,8 +3602,69 @@ def _amount_page_link(text, groups, tolerance=0.1, window=70):
                 continue
             best = min(g["amounts"], key=lambda a: abs(a - value))
             if abs(best - value) <= tolerance * value:
-                return {"url": g["url"](best), "anchor": g["anchor"](best)}
+                return {"url": g["url"](best), "anchor": g["anchor"](best, lang)}
     return None
+
+
+def attach_twin_links(es_digests, en_digests, es_articles, amount_pages=None):
+    """Story lines of Spanish digests from their English twin stories.
+
+    Stories pair by a shared source URL (their stable identity across
+    languages). 'Calculadora:' lines copy the twin's calculator with a
+    Spanish anchor: STORY_TOOLS keywords and the amount regexes read
+    English text. 'Guía:' lines keep the Spanish keyword match
+    (attach_guides) and fall back to the twin's guide, with the Spanish
+    article title. digest.html localizes the URLs to the /es/ twins.
+    Run after attach_guides/attach_tools on both languages."""
+    es_by_path = articles_by_path(es_articles)
+    by_date = {d["date"]: d for d in en_digests}
+    for digest in es_digests:
+        en = by_date.get(digest["date"]) or {}
+        by_source = {s["url"]: item for item in en.get("stories", [])
+                     for s in item.get("sources") or [] if s.get("url")}
+        for item in digest.get("stories", []):
+            twin = next((by_source[s["url"]] for s in item.get("sources") or []
+                         if s.get("url") in by_source), None)
+            guide = twin and twin.get("guide")
+            if not item.get("guide") and guide and guide["url"] in es_by_path:
+                item["guide"] = {"title": es_by_path[guide["url"]]["title"], "url": guide["url"]}
+            tool = twin and twin.get("tool")
+            if not tool:
+                item["tool"] = None
+            elif tool.get("base"):
+                text = f"{twin.get('title', '')} {twin.get('body', '')}"
+                link = _amount_page_link(text, (amount_pages or {}).get(tool["base"]), lang="es")
+                item["tool"] = {**link, "base": tool["base"]}
+            else:
+                item["tool"] = {"url": tool["url"], "anchor": tr("es", tool["anchor"])}
+
+
+ES_STRINGS.update({
+    # STORY_TOOLS anchors ("Calculadora:" lines in Spanish digests)
+    "Autónomo tax calculator: your quota and IRPF": "Calculadora de impuestos de autónomos: tu cuota y el IRPF",
+    "work out what you'd pay as an autónomo": "calcula lo que pagarías como autónomo",
+    "self-employed in Spain: estimate your net income": "autónomo en España: estima tus ingresos netos",
+    "Electricity bill calculator: PVPC vs fixed tariffs": "Calculadora de la factura de la luz: PVPC frente a tarifa fija",
+    "check what your electricity bill should be": "comprueba cuánto debería costar tu factura de la luz",
+    "compare your power bill with the PVPC": "compara tu factura de la luz con el PVPC",
+    "Rental yield calculator: net yield after tax": "Calculadora de rentabilidad del alquiler: rentabilidad neta tras impuestos",
+    "does a rental flat in Spain pay off?": "¿sale a cuenta un piso de alquiler en España?",
+    "work out net rental yield and cash flow": "calcula la rentabilidad neta y el flujo de caja de un alquiler",
+    "Property buying cost calculator: ITP, IVA and fees by region":
+        "Calculadora de gastos de compra de vivienda: ITP, IVA y gastos por comunidad",
+    "what buying a home in Spain really costs": "lo que cuesta de verdad comprar una vivienda en España",
+    "estimate taxes and fees on a home purchase": "estima los impuestos y gastos de comprar una vivienda",
+    "Spain net salary calculator: take-home pay after IRPF": "Calculadora de sueldo neto: lo que cobras tras el IRPF",
+    "work out your net salary in Spain": "calcula tu sueldo neto en España",
+    "what a gross salary means after tax": "cuánto queda de un sueldo bruto tras impuestos",
+    # story_amount_pages anchors
+    "take-home pay on {amount} gross a month": "sueldo neto con {amount} brutos al mes",
+    "net pay on a {amount} gross salary in Spain": "sueldo neto con {amount} brutos al año en España",
+    "what an autónomo must bill to take home {amount} a month":
+        "cuánto debe facturar un autónomo para ganar {amount} netos al mes",
+    "autónomo net pay on {amount} a year": "ingresos netos de un autónomo que factura {amount} al año",
+    "rental yield on a {amount} property in Spain": "rentabilidad del alquiler de una vivienda de {amount} en España",
+})
 
 
 # Calculator cards for the "Tools and guides" blocks on digests and
@@ -4524,13 +4595,14 @@ def main():
     # Spanish twins (/es/articles/<slug>): only slugs English has too.
     en_slugs = {a["slug"] for a in articles}
     es_articles = [a for a in load_articles("es") if a["slug"] in en_slugs]
+    amount_pages = story_amount_pages()
     attach_guides(digests, articles)
-    attach_tools(digests, amount_pages=story_amount_pages())
+    attach_tools(digests, amount_pages=amount_pages)
     attach_digest_hubs(digests, articles)
     # Spanish twins (/es/archive/<date>): only dates English has too.
     # Guide lines match the Spanish articles' story_keywords and link their
-    # /es/ twins; calculator lines match English keywords and anchors, so
-    # Spanish stories skip them (hub cards still carry the calculators).
+    # /es/ twins (else the English twin story's guide); calculator lines copy
+    # the twin's calculator (attach_twin_links) with Spanish anchors.
     en_dates = {d["date"] for d in digests}
     # Meta titles follow the English twin: subject-led only where English has a subject.
     en_subject_dates = {d["date"] for d in digests if d["subject"]}
@@ -4540,6 +4612,7 @@ def main():
     register_es_calculator_paths()
     register_es_quiz_paths()
     attach_guides(es_digests, es_articles)
+    attach_twin_links(es_digests, digests, es_articles, amount_pages)
     attach_digest_hubs(es_digests, es_articles, lang="es")
     episodes = load_podcast_episodes()
 

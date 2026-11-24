@@ -34,7 +34,7 @@
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Quiz", "@id": "{{ quiz_url }}#quiz", "url": "{{ quiz_url }}",
  "name": {{ quiz.title|tojson }}, "description": {{ meta_desc|tojson }}, "inLanguage": "{{ page_lang | default('en') }}",
- "image": "https://spanified.com/static/img/quiz/{{ quiz.slug }}/quiz-hook.jpg", "publisher": {"@id": "{{ site_url }}/#org"}}
+ "image": "https://spanified.com/static/img/quiz/{{ quiz.slug }}/quiz-hook.jpg", "publisher": {"@id": "{{ site_url }}{{ lang_url('/') }}#org"}}
 </script>
 {% endblock %}
 {% block content %}

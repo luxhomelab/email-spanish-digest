@@ -24,7 +24,7 @@
 {"@context": "https://schema.org", "@type": "WebPage", "@id": "{{ site_url }}/es/subscribe#webpage", "name": "Suscríbete a la newsletter España al Día",
  "url": "{{ site_url }}/es/subscribe", "inLanguage": "es",
  "isPartOf": {"@id": "{{ site_url }}/es/#website"}, "about": {"@id": "{{ site_url }}/es/#spain-daily"},
- "publisher": {"@id": "{{ site_url }}/#org"}, "isAccessibleForFree": true}
+ "publisher": {"@id": "{{ site_url }}/es/#org"}, "isAccessibleForFree": true}
 </script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "@id": "{{ site_url }}/es/subscribe#faq", "inLanguage": "es", "mainEntity": [{% for q, a in faq %}
@@ -35,6 +35,7 @@
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/es/subscribe">{% endblock %}
 {% block body_class %} class="page-subscribe"{% endblock %}
 {% block content %}
+{% include "partials/breadcrumbs.html" %}
 <section class="sub-hero">
  <div class="sub-hero-main">
   <h1>Suscríbete a la newsletter España al Día</h1>
@@ -74,6 +75,8 @@
  <div class="sub-who">
   <h2>¿Para quién es España al Día?</h2>
   <p>Para quien quiere estar al día de lo que pasa en España sin leer una docena de webs: residentes, quienes preparan una mudanza y quienes siguen España desde fuera. Política, economía, sociedad, cultura y vida diaria, en cinco minutos y con enlace a cada fuente.</p>
+  {% if latest %}<p class="subscribe-sample">¿Aún lo dudas? <a href="{{ latest.url }}">Lee la última edición ({{ latest.date_display }})</a> antes, sin registrarte.</p>
+  {% else %}<p class="subscribe-sample">¿Aún lo dudas? <a href="/es/archive/">Mira las ediciones anteriores</a> antes, sin registrarte.</p>{% endif %}
  </div>
  <div class="sub-editor">
   <div class="sub-editor-top">

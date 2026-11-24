@@ -50,7 +50,7 @@
   "url": "{{ page_url }}",
   "description": {{ page_desc|tojson }},
   "inLanguage": "{{ page_lang|default('en') }}",
-  "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}},
+  "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}{{ lang_url('/') }}"}},
  {"@type": "FAQPage",{% if es %} "inLanguage": "es",{% endif %} "mainEntity": [
 {% for q, a in faqs %}  {"@type": "Question", "name": {{ q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ a|tojson }}}}{% if not loop.last %},{% endif %}
 {% endfor %} ]}

@@ -27,7 +27,7 @@
   "inLanguage": "{{ page_lang|default('en') }}",
   "dateModified": "{{ build_date }}",
   "isPartOf": {"@type": "WebPage", "name": {{ t("Spain Rental Yield Calculator")|tojson }}, "url": "{{ site_url }}{{ lang_url('/calculators/rental-yield') }}"},
-  "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}},
+  "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}{{ lang_url('/') }}"}},
  {"@type": "FAQPage",{% if es %} "inLanguage": "es",{% endif %} "mainEntity": [
 {% for q, a in p.faqs %}  {"@type": "Question", "name": {{ q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ a|tojson }}}}{% if not loop.last %},{% endif %}
 {% endfor %} ]}
