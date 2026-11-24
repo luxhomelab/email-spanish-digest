@@ -1,51 +1,43 @@
 {% extends "base.html" %}
 {# Per-persona share landing for quiz results.
-   Rendered for each persona in data/quizzes/<slug>.json.
-   URL shape: quiz/<slug>-result-<persona-slug>.html
+   Rendered for each persona in data/quizzes/<slug>.json, in English and
+   (page_lang "es") Spanish. quiz_base = /quiz/<slug> or /es/quiz/<slug>.
+   URL shape: <quiz_base>-result-<persona-slug>.html
    Friend context: ?score=<n> query param from shared link. #}
-{% block title %}{{ result.title }} — {{ quiz.title }} — Spanified{% endblock %}
+{% block title %}{{ t("{result} — {quiz} — Spanified", result=result.title, quiz=quiz.title) }}{% endblock %}
 {% block description %}<meta name="description" content="{{ result.text | replace('\n', ' ') | truncate(155, True, '…') }}">
 {# Quiz is unlisted until launch: no external links, no sitemap, no indexing. #}
 <meta name="robots" content="noindex, nofollow">{% endblock %}
-{% block canonical %}<link rel="canonical" href="https://spanified.com/quiz/{{ quiz.slug }}-result-{{ result.slug }}">{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ site_url }}{{ quiz_base }}-result-{{ result.slug }}">{% endblock %}
 {% block og_image %}<meta property="og:image" content="https://spanified.com/static/img/quiz/{{ quiz.slug }}/og-quiz-{{ result.slug }}.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">{% endblock %}
 {% block extra_head %}
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://spanified.com/quiz/{{ quiz.slug }}-result-{{ result.slug }}">
-<meta property="og:title" content="{{ result.title }} — {{ quiz.title }}">
+<meta property="og:url" content="{{ site_url }}{{ quiz_base }}-result-{{ result.slug }}">
+<meta property="og:title" content="{{ t('{result} — {quiz}', result=result.title, quiz=quiz.title) }}">
 <meta property="og:description" content="{{ result.text | replace('\n', ' ') | truncate(200, True, '…') }}">
 {% endblock %}
 {% block content %}
 <div class="quiz-result">
  <div class="quiz-result-hero">
-  <p class="confirm-kicker">Your persona</p>
+  <p class="confirm-kicker">{{ t("Your persona") }}</p>
    <h1>{{ result.title }}</h1>
    <img class="quiz-result-img" src="/static/img/quiz/{{ quiz.slug }}/og-quiz-{{ result.slug }}.jpg" alt="{{ result.title }}" width="1200" height="630" loading="eager" fetchpriority="high">
    <p class="quiz-result-score" id="quiz-friend-score" hidden></p>
-  <a class="quiz-result-cta" id="quiz-result-cta" href="/quiz/{{ quiz.slug }}">Take the quiz</a>
+  <a class="quiz-result-cta" id="quiz-result-cta" href="{{ quiz_base }}">{{ t("Take the quiz") }}</a>
  </div>
   <div class="quiz-result-body">
    {% for para in result.text.split('\n\n') %}
    <p class="quiz-result-text">{{ para }}</p>
    {% endfor %}
    <div class="quiz-result-share">
-    <p class="share-label">Share your result</p>
+    <p class="share-label">{{ t("Share your result") }}</p>
     <div class="quiz-share">{% include "partials/share.html" %}</div>
    </div>
-   <p class="quiz-retake-wrap"><a class="quiz-cta-btn" href="/quiz/{{ quiz.slug }}">Take the quiz yourself</a></p>
-   {% for other in other_quizzes %}
-   <a class="quiz-other" href="{{ other.url }}" aria-label="Try the other quiz: {{ other.title }}">
-    <img class="quiz-other-cover" src="{{ other.cover }}" alt="{{ other.title }}" width="1200" height="630" loading="lazy">
-    <span class="quiz-other-body">
-     <span class="quiz-other-kicker">Try the other quiz</span>
-     <span class="quiz-other-title">{{ other.title }}</span>
-     <span class="quiz-other-go">Play now →</span>
-    </span>
-   </a>
-   {% endfor %}
+   <p class="quiz-retake-wrap"><a class="quiz-cta-btn" href="{{ quiz_base }}">{{ t("Take the quiz yourself") }}</a></p>
+   {% include "partials/quiz-other.html" %}
  </div>
 </div>
 <script>
@@ -57,9 +49,9 @@
   var el = document.getElementById('quiz-friend-score');
   if (el) {
     el.hidden = false;
-    el.innerHTML = 'Your friend scored <strong>' + score + '/10</strong> — {{ result.title }}';
+    el.innerHTML = {{ t("Your friend scored <strong>{score}/10</strong> — {title}", score="{score}", title=result.title)|tojson }}.replace('{score}', score);
   var cta = document.getElementById('quiz-result-cta');
-  if (cta) cta.textContent = 'Can you beat ' + score + '/10? Take the quiz';
+  if (cta) cta.textContent = {{ t("Can you beat {score}/10? Take the quiz")|tojson }}.replace('{score}', score);
   }
   // The shared page carries the exact score: append ?score=<n> to every
   // share target (u/url param, or the text tail for wa.me) + copy button.
@@ -101,10 +93,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!c) return;
     var label = c.querySelector('span');
     function done() {
-      if (label) label.textContent = 'Copied!';
+      if (label) label.textContent = {{ t("Copied!")|tojson }};
       c.classList.add('is-copied');
       setTimeout(function () {
-        if (label) label.textContent = 'Copy';
+        if (label) label.textContent = {{ t("Copy")|tojson }};
         c.classList.remove('is-copied');
       }, 1500);
     }

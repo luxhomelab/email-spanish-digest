@@ -1506,27 +1506,161 @@ ES_FAQ_ITEMS = [
     ("¿Dónde puedo leer ediciones anteriores?", "Todas las ediciones siguen en la web, en el archivo: puedes consultarlas por fecha."),
 ]
 
-def load_quiz_cards(homepage=False):
-    """Light metadata for every quiz in data/quizzes/*.json.
+# --- ES: quizzes ------------------------------------------------------------
+# Spanish quizzes live at /es/quiz/<slug> (English slugs). The English quiz
+# data/quizzes/<slug>.json stays the source of truth for structure (ids,
+# isReal, sources, score bands, art); data/quizzes/es/<slug>.json overlays
+# the text only: title, card/hook copy, button labels, meta description,
+# each question's headline/summary/explanation (keyed by id) and each
+# result's title/text/shareText (keyed by slug). load_quizzes("es") fails
+# the build when the overlay's ids or slugs drift from the English file.
+# Persona and hook images are the English art (static/img/quiz/<slug>/).
+# Strings the quiz JS builds (score line, buttons, verdicts) live in
+# QUIZ_STRINGS in static/js/quiz-logic.js, picked by <html lang>.
+QUIZZES_DIR = os.path.join(SCRIPT_DIR, "data", "quizzes")
+QUIZ_TOP_TEXT = ("title", "card_kicker", "hook_sub", "real_label", "fake_label", "meta_description")
+QUIZ_QUESTION_TEXT = ("headline", "summary", "explanation")
+QUIZ_RESULT_TEXT = ("title", "text", "shareText")
 
-    Used for the homepage "Quizzes" block and the "try the other quiz"
-    cross-links (neighbours = every quiz except the current one).
-    Cover art lives at /static/img/quiz/<slug>/quiz-cover.jpg by convention;
-    on the homepage the first quiz (ai-or-real) is promoted with its OG/hook
-    art (quiz-hook.jpg) instead — cross-link cards keep the default art.
-    """
-    quizzes_dir = os.path.join(SCRIPT_DIR, "data", "quizzes")
-    cards = []
-    if not os.path.isdir(quizzes_dir):
-        return cards
-    for filename in sorted(os.listdir(quizzes_dir)):
+ES_STRINGS.update({
+    # Home page quiz block: the quizzes now have Spanish twins, so these
+    # replace the "(en inglés)" variants of the home block above.
+    "Real stories from Spain, mixed with inventions. Can you tell which is which?":
+        "Noticias y leyes reales de España mezcladas con inventos. ¿Sabes distinguirlas?",
+    "Take the quiz: {title}": "Hacer el test: {title}",
+    # Quiz pages (quiz.html, quiz-result.html, quiz-success.html, quiz-subscribed.html)
+    "Quiz": "Test",
+    "Spanified quiz": "Test de Spanified",
+    "Some of these really happened in Spain. The rest we made up. Can you guess which is which?":
+        "Algunas de estas cosas pasaron de verdad en España. El resto nos lo hemos inventado. ¿Sabes cuál es cuál?",
+    "Try the first one. Real or fake?": "Empieza por la primera. ¿Real o falsa?",
+    "Start the quiz": "Empezar el test",
+    "2 minutes · 10 questions · no email needed to play": "2 minutos · 10 preguntas · no hace falta email para jugar",
+    "Your answers": "Tus respuestas",
+    "Your persona is sealed": "Tu personaje está sellado",
+    "Open it with your email": "Ábrelo con tu email",
+    "Confirm the link we send you and your persona opens right away. You also get Spain's top news in English every morning, free.":
+        "Confirma el enlace que te enviamos y tu personaje se abre al momento. Además recibirás cada mañana las noticias más importantes de España, gratis.",
+    "Reveal my persona": "Ver mi personaje",
+    "{n} daily editions · free · unsubscribe anytime": "{n} ediciones diarias · gratis · date de baja cuando quieras",
+    "No thanks, just show my result": "No, gracias, solo quiero ver mi resultado",
+    "Your persona": "Tu personaje",
+    "Think a friend would score higher? Send it.": "¿Crees que alguien sacaría más nota? Mándaselo.",
+    "Spain's news, in plain English": "Las noticias de España, en lenguaje claro",
+    "One sharp email every morning. Free, unsubscribe anytime.":
+        "Un email claro cada mañana. Gratis y te das de baja cuando quieras.",
+    "↺ Retake the quiz": "↺ Repetir el test",
+    "Try the other quiz: {title}": "Prueba el otro test: {title}",
+    "Try the other quiz": "Prueba el otro test",
+    "Play now →": "Jugar ahora →",
+    "Take the quiz yourself": "Haz tú el test",
+    "Share your result": "Comparte tu resultado",
+    "Your friend scored <strong>{score}/10</strong> — {title}": "Te retan con un <strong>{score}/10</strong>: {title}",
+    "{result} — {quiz} — Spanified": "{result} | {quiz} | Spanified",
+    "{result} — {quiz}": "{result}: {quiz}",
+    "Can you beat {score}/10? Take the quiz": "¿Superas el {score}/10? Haz el test",
+    "Subscribed — your quiz result — Spanified": "Suscripción confirmada: tu resultado del test | Spanified",
+    "You're subscribed — see your {title} quiz result.": "Suscripción confirmada. Mira tu resultado del test {title}.",
+    "Email confirmed. Spain Daily arrives tomorrow morning.": "Email confirmado. España al Día te llega mañana por la mañana.",
+    "{title} quiz result": "Resultado del test {title}",
+    "Can't wait until tomorrow?": "¿No puedes esperar a mañana?",
+    "Read the latest digest": "Leer la última edición",
+    "Your result is on another device": "Tu resultado está en otro dispositivo",
+    "Your result lives on the device and browser where you took the quiz. Open this page from there, or retake the quiz here. It takes 2 minutes and needs no email.":
+        "Tu resultado se guarda en el dispositivo y el navegador donde hiciste el test. Abre esta página desde allí o repite el test aquí. Son 2 minutos y no hace falta email.",
+    "Retake the quiz": "Repetir el test",
+    "Quiz signup received — Spanified": "Hemos recibido tu suscripción desde el test | Spanified",
+    "Quiz signup received. Confirm your email to reveal your result.":
+        "Hemos recibido tu suscripción. Confirma tu email para ver tu resultado.",
+    "Check your inbox": "Revisa tu bandeja de entrada",
+    "One click left": "Te queda un clic",
+    "You're subscribing to <strong>Spain Daily</strong> — one free email every morning. Click the confirmation link in your email — your quiz result will open right after.":
+        "Te estás suscribiendo a <strong>España al Día</strong>, un email gratis cada mañana. Pulsa el enlace de confirmación del email y tu resultado del test se abrirá justo después.",
+    "<strong>Open the email</strong> from Spain Daily (arrives within a minute)":
+        "<strong>Abre el email</strong> de España al Día (llega en menos de un minuto)",
+    "<strong>Click the confirmation link</strong> inside": "<strong>Pulsa el enlace de confirmación</strong> que lleva dentro",
+    "<strong>Your quiz result opens</strong> — persona, score breakdown and shareable badge":
+        "<strong>Se abre tu resultado del test</strong>: personaje, desglose de la puntuación e insignia para compartir",
+    "Until you click that link, you're <strong>not</strong> subscribed yet — your result stays locked.":
+        "Hasta que pulses ese enlace, tu suscripción <strong>no</strong> estará activa y tu resultado seguirá bloqueado.",
+    "Can't find the email?": "¿No encuentras el email?",
+    "Check your <strong>Spam</strong> and <strong>Promotions</strong> tabs — it often lands there.":
+        "Mira en las pestañas de <strong>Spam</strong> y <strong>Promociones</strong>. Suele acabar ahí.",
+    "If you find it, mark it as <strong>not spam</strong> or move it to your inbox.":
+        "Si lo encuentras, márcalo como <strong>no es spam</strong> o muévelo a la bandeja de entrada.",
+    "Wrong address?": "¿Dirección equivocada?",
+    "{title} — Spanified": "{title} | Spanified",
+    "{title} — 10 questions, 2 minutes, half of it really happened in Spain. Take the quiz:":
+        "{title}: 10 preguntas, 2 minutos y la mitad es real. Haz el test:",
+})
+
+
+def _quiz_es_overlay(quiz, es):
+    """English quiz dict + Spanish text overlay -> Spanish quiz dict.
+
+    Raises ValueError when question ids or result slugs differ, so a new
+    English question can't ship on /es/ untranslated."""
+    slug = quiz["slug"]
+    q_ids = [q["id"] for q in quiz.get("questions", [])]
+    r_slugs = [r["slug"] for r in quiz.get("results", [])]
+    es_q, es_r = es.get("questions", {}), es.get("results", {})
+    if set(q_ids) != set(es_q) or set(r_slugs) != set(es_r):
+        raise ValueError(
+            f"data/quizzes/es/{slug}.json is out of sync with data/quizzes/{slug}.json: "
+            f"questions missing {sorted(set(q_ids) - set(es_q))} extra {sorted(set(es_q) - set(q_ids))}; "
+            f"results missing {sorted(set(r_slugs) - set(es_r))} extra {sorted(set(es_r) - set(r_slugs))}")
+    out = dict(quiz)
+    out.update({k: es[k] for k in QUIZ_TOP_TEXT if k in es})
+    out["questions"] = [dict(q, **{k: es_q[q["id"]][k] for k in QUIZ_QUESTION_TEXT}) for q in quiz["questions"]]
+    out["results"] = [dict(r, **{k: es_r[r["slug"]][k] for k in QUIZ_RESULT_TEXT}) for r in quiz["results"]]
+    return out
+
+
+def load_quizzes(lang="en"):
+    """Every data/quizzes/<slug>.json, sorted by file name. lang="es" returns
+    only the quizzes with a Spanish overlay (data/quizzes/es/<slug>.json),
+    their text replaced by it."""
+    quizzes = []
+    if not os.path.isdir(QUIZZES_DIR):
+        return quizzes
+    for filename in sorted(os.listdir(QUIZZES_DIR)):
         if not filename.endswith(".json"):
             continue
-        try:
-            with open(os.path.join(quizzes_dir, filename), encoding="utf-8") as fh:
-                quiz = json.load(fh)
-        except (OSError, ValueError):
-            continue
+        with open(os.path.join(QUIZZES_DIR, filename), encoding="utf-8") as fh:
+            quiz = json.load(fh)
+        if lang == "es":
+            es_file = os.path.join(QUIZZES_DIR, "es", filename)
+            if not os.path.isfile(es_file):
+                continue
+            with open(es_file, encoding="utf-8") as fh:
+                quiz = _quiz_es_overlay(quiz, json.load(fh))
+        quizzes.append(quiz)
+    return quizzes
+
+
+def register_es_quiz_paths():
+    """Add /quiz/<slug> to ES_PATHS for every quiz with a Spanish overlay
+    (hreflang, sitemap, switcher, lang_url). Call before rendering."""
+    ES_PATHS.update(f"/quiz/{q['slug']}" for q in load_quizzes("es"))
+
+
+def es_quiz_paths():
+    """English paths of the quiz pages that have a /es/ twin, sorted."""
+    return sorted(p for p in ES_PATHS if p.startswith("/quiz/"))
+
+
+def load_quiz_cards(homepage=False, lang="en"):
+    """Light metadata for every quiz (load_quizzes(lang)).
+
+    Used for the homepage "Quizzes" block and the "try the other quiz"
+    cross-links (neighbours = every quiz except the current one). `url` is
+    the English path; templates pass it through lang_url().
+    Cover art lives at /static/img/quiz/<slug>/quiz-cover.jpg by convention;
+    on the homepage the first quiz (ai-or-real) is promoted with its OG/hook
+    art (quiz-hook.jpg) instead; cross-link cards keep the default art.
+    """
+    cards = []
+    for quiz in load_quizzes(lang):
         slug = quiz.get("slug")
         title = quiz.get("title")
         if not slug or not title:
@@ -1642,7 +1776,7 @@ def render_es_home(env, es_digests, es_articles, proof):
     })
     output = env.get_template("index.html").render(
         page_lang="es", latest=es_digests[0] if es_digests else None, topics=topics, faq=ES_FAQ_ITEMS,
-        proof=es_proof, quizzes=load_quiz_cards(homepage=True), articles=list(es_articles)[:3],
+        proof=es_proof, quizzes=load_quiz_cards(homepage=True, lang="es"), articles=list(es_articles)[:3],
         alt_path=es_alt_path("/"))
     os.makedirs(lang_out_dir("es"), exist_ok=True)
     with open(lang_out_dir("es", "index.html"), "w", encoding="utf-8") as fh:
@@ -1707,6 +1841,8 @@ def render_static(env, digests, es_digests=(), es_articles=()):
     render_calculators(env)
     render_quizzes(env, proof=proof,
                    latest_url=f"/archive/{latest['date']}" if latest else None)
+    render_quizzes(env, proof=proof, lang="es",
+                   latest_url=lang_path("es", f"/archive/{es_digests[0]['date']}") if es_digests else None)
 
 
 # Calculator hubs: (template, slug under /calculators/, breadcrumb name, share text).
@@ -3150,8 +3286,8 @@ def render_autonomo_pages(env, grid=None, langs=("en", "es")):
     return urls
 
 
-def render_quizzes(env, proof=None, latest_url=None):
-    """Render quiz pages from data/quizzes/*.json (multi-quiz ready).
+def render_quizzes(env, proof=None, latest_url=None, lang="en"):
+    """Render quiz pages from load_quizzes(lang) (multi-quiz ready).
 
     ``proof`` is the social-proof dict from render_static (total_issues /
     first_issue, same data /subscribe shows) so the gate can render a live
@@ -3162,56 +3298,53 @@ def render_quizzes(env, proof=None, latest_url=None):
     (legacy Brevo confirmation snippet, kept for old links, noindex),
     quiz/<slug>-success.html (post double-opt-in page, noindex),
     quiz/<slug>-result-<persona>.html (per-persona share landing, noindex
-    until launch). Quiz pages stay out of the sitemap until launch
-    (see render_sitemap).
+    until launch). Only quiz/<slug> is indexable and in the sitemap.
+    lang="es" writes the same set under es/quiz/ with page_lang="es";
+    only quiz/<slug> has an hreflang pair (ES_PATHS), the flow pages are
+    noindex and link their own language's pages.
     """
     import json as _json
 
-    quizzes_dir = os.path.join(SCRIPT_DIR, "data", "quizzes")
-    if not os.path.isdir(quizzes_dir):
-        return
-    cards = load_quiz_cards()
-    for name in sorted(os.listdir(quizzes_dir)):
-        if not name.endswith(".json"):
-            continue
-        with open(os.path.join(quizzes_dir, name), encoding="utf-8") as fh:
-            quiz = _json.load(fh)
+    cards = load_quiz_cards(lang=lang)
+    for quiz in load_quizzes(lang):
         slug = quiz["slug"]
         others = [c for c in cards if c.get("slug") != slug]
         quiz_json = _json.dumps(quiz)
-        base = f"{SITE_URL}/quiz/{slug}"
+        quiz_base = lang_path(lang, f"/quiz/{slug}")
+        base = f"{SITE_URL}{quiz_base}"
         share = share_links(
             base,
-            f"{quiz['title']} — Spanified",
-            f"{quiz['title']} — 10 questions, 2 minutes, half of it really "
-            "happened in Spain. Take the quiz:",
+            tr(lang, "{title} — Spanified", title=quiz["title"]),
+            tr(lang, "{title} — 10 questions, 2 minutes, half of it really happened in Spain. Take the quiz:",
+               title=quiz["title"]),
         )
         crumbs = [
-            {"name": "Home", "url": "/"},
-            {"name": "Quiz", "url": f"/quiz/{slug}", "current": True},
+            {"name": tr(lang, "Home"), "url": localize(lang, "/")},
+            {"name": tr(lang, "Quiz"), "url": quiz_base, "current": True},
         ]
         ctx = dict(
             quiz=quiz, quiz_json=quiz_json, crumbs=crumbs,
             js_version=js_version(), share=share, proof=proof,
             other_quizzes=others, latest_digest_url=latest_url,
+            page_lang=lang, quiz_base=quiz_base,
         )
         pages = [
-            ("quiz.html", f"quiz/{slug}.html"),
-            ("quiz-subscribed.html", f"quiz/{slug}-subscribed.html"),
-            ("quiz-success.html", f"quiz/{slug}-success.html"),
+            ("quiz.html", f"quiz/{slug}.html", es_alt_path(f"/quiz/{slug}")),
+            ("quiz-subscribed.html", f"quiz/{slug}-subscribed.html", None),
+            ("quiz-success.html", f"quiz/{slug}-success.html", None),
         ]
-        for template_name, rel_dest in pages:
-            output = env.get_template(template_name).render(**ctx)
-            dest = os.path.join(OUT_DIR, rel_dest)
+        for template_name, rel_dest, alt_path in pages:
+            output = env.get_template(template_name).render(alt_path=alt_path, **ctx)
+            dest = lang_out_dir(lang, rel_dest)
             os.makedirs(os.path.dirname(dest), exist_ok=True)
             with open(dest, "w", encoding="utf-8") as out:
                 out.write(output)
-            print(f"  wrote {rel_dest}")
+            print(f"  wrote {'es/' if lang == 'es' else ''}{rel_dest}")
 
         # Per-persona share landing pages (static, OG-scrapeable).
         result_template = env.get_template("quiz-result.html")
         for result in quiz.get("results", []):
-            result_url = f"{SITE_URL}/quiz/{slug}-result-{result['slug']}"
+            result_url = f"{base}-result-{result['slug']}"
             share_text = result.get('shareText', f"{result['title']} — {quiz['title']} — Spanified")
             first_para = (result.get('text') or '').split('\n\n')[0].strip()
             share_long = f"{share_text}\n\n{first_para}" if first_para else share_text
@@ -3224,14 +3357,18 @@ def render_quizzes(env, proof=None, latest_url=None):
                 share=result_share,
                 crumbs=crumbs,
                 other_quizzes=others,
+                page_lang=lang,
+                quiz_base=quiz_base,
             )
             dest_path = f"quiz/{slug}-result-{result['slug']}.html"
             output = result_template.render(**result_ctx)
-            dest = os.path.join(OUT_DIR, dest_path)
+            dest = lang_out_dir(lang, dest_path)
             os.makedirs(os.path.dirname(dest), exist_ok=True)
             with open(dest, "w", encoding="utf-8") as out:
                 out.write(output)
-            print(f"  wrote {dest_path}")
+            print(f"  wrote {'es/' if lang == 'es' else ''}{dest_path}")
+
+
 def attach_related(digests, limit=2):
     """Attach same-category 'More news' links to every story.
 
@@ -3972,6 +4109,7 @@ digests, categories=(), articles=(), salary_pages=(), autonomo_pages=(), rental_
         urls.append((SITE_URL + f"/es/category/{slug}", es_category_lastmod.get(slug)))
     # Spanish calculators share their English twin's lastmod (same sources).
     urls.extend((SITE_URL + "/es" + path, lastmod) for path, lastmod in calc_urls if path in ES_PATHS)
+    urls.extend((SITE_URL + "/es" + path, None) for path in es_quiz_paths())
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
@@ -4400,6 +4538,7 @@ def main():
                                        for d in load_digests(ES_DATA_DIR) if d["date"] in en_dates])
     register_es_paths(es_digests, collect_categories(digests), es_articles, articles)
     register_es_calculator_paths()
+    register_es_quiz_paths()
     attach_guides(es_digests, es_articles)
     attach_digest_hubs(es_digests, es_articles, lang="es")
     episodes = load_podcast_episodes()

@@ -4,6 +4,68 @@
 
 import { markSubscribed, isSubscribed } from './subscription-store.js'
 
+// UI strings the quiz scripts build at runtime, per page language
+// (<html lang>: "en" on /quiz/, "es" on /es/quiz/). Quiz content (questions,
+// personas, share lines, button labels) comes from the quiz JSON instead.
+// {name} placeholders are filled by fillText().
+export const QUIZ_STRINGS = {
+  en: {
+    realLabel: 'Real — this happened',
+    fakeLabel: 'Fake — AI slop',
+    lastTime: 'Last time: <strong>{score}/{total}</strong> — {title}',
+    playAgain: 'Play again',
+    hint: 'Make your call. The verdict and the source land here.',
+    stampReal: 'Real',
+    stampFake: 'Fake',
+    right: 'You got it.',
+    wrongReal: 'Not quite. This one is real.',
+    wrongFake: 'Not quite. This one is fake.',
+    source: 'Source: ',
+    invented: 'Invented by Spanified. No source, just vibes.',
+    next: 'Next question',
+    seeResult: 'See my result',
+    step: 'Story {n} of {total}',
+    scoreLine: 'You scored {score} out of {total}',
+    copied: 'Copied!',
+    pageShare: '{title} — Spanified',
+    defaultShare: 'I took the Real or AI? quiz — telling real Spanish news from AI fakes — Spanified',
+  },
+  es: {
+    realLabel: 'Real: pasó de verdad',
+    fakeLabel: 'Falso: invento de IA',
+    lastTime: 'La última vez: <strong>{score}/{total}</strong>, {title}',
+    playAgain: 'Jugar otra vez',
+    hint: 'Elige una opción. Aquí aparecerán la respuesta y la fuente.',
+    stampReal: 'Real',
+    stampFake: 'Falso',
+    right: '¡Acertaste!',
+    wrongReal: 'Pues no. Esta es real.',
+    wrongFake: 'Pues no. Esta es falsa.',
+    source: 'Fuente: ',
+    invented: 'Inventado por Spanified. Sin fuente, solo imaginación.',
+    next: 'Siguiente pregunta',
+    seeResult: 'Ver mi resultado',
+    step: 'Pregunta {n} de {total}',
+    scoreLine: 'Has sacado {score} de {total}',
+    copied: '¡Copiado!',
+    pageShare: '{title} | Spanified',
+    defaultShare: 'He hecho el test ¿Real o IA? de Spanified, para distinguir noticias reales de España de bulos de IA',
+  },
+}
+
+// Strings for a page language ("es", "es-ES", "en"...): unknown languages
+// and missing keys fall back to English.
+export function quizStrings(lang) {
+  const base = String(lang || 'en').toLowerCase().split('-')[0]
+  return { ...QUIZ_STRINGS.en, ...(QUIZ_STRINGS[base] || {}) }
+}
+
+// fillText('Story {n} of {total}', { n: 3, total: 10 }) -> 'Story 3 of 10'.
+// Unknown placeholders stay as they are.
+export function fillText(template, vars = {}) {
+  return String(template).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? String(vars[k]) : m))
+}
+
 export function storageKey(slug) {
   return `spanified_quiz_${slug}`
 }
@@ -102,18 +164,22 @@ export function resultBySlug(results, slug) {
 
 // Personalize the share text with the exact score:
 // "I got 3-4/10 on Real or AI? — ..." → "I scored 4/10 on Real or AI? — ..."
-export function personalShareText(result, score, total = 10) {
-  const base = result && result.shareText
-    ? result.shareText
-    : 'I took the Real or AI? quiz — telling real Spanish news from AI fakes — Spanified'
-  return base.replace(/I got \d+-\d+\/\d+/, `I scored ${score}/${total}`)
+// Any other language just swaps the band for the score:
+// "He sacado 3-4/10 ..." → "He sacado 4/10 ...". `strings` (quizStrings())
+// supplies the fallback line when the result has no shareText.
+export function personalShareText(result, score, total = 10, strings = QUIZ_STRINGS.en) {
+  const base = result && result.shareText ? result.shareText : strings.defaultShare
+  const exact = `${score}/${total}`
+  return /I got \d+-\d+\/\d+/.test(base)
+    ? base.replace(/I got \d+-\d+\/\d+/, `I scored ${exact}`)
+    : base.replace(/\b\d+-\d+\/\d+/, exact)
 }
 
 // Longer share text for networks without X's 280-char limit
 // (Facebook, WhatsApp, Telegram): exact-score line + first paragraph
 // of the persona roast. X keeps personalShareText().
-export function personalLongShareText(result, score, total = 10) {
-  const short = personalShareText(result, score, total)
+export function personalLongShareText(result, score, total = 10, strings = QUIZ_STRINGS.en) {
+  const short = personalShareText(result, score, total, strings)
   const first = String((result && result.text) || '').split(/\n\n+/)[0].trim()
   return first ? `${short}\n\n${first}` : short
 }
