@@ -133,7 +133,7 @@ def test_es_graphics_are_spanish(site):
     tax = site("es/articles/autonomo-taxes-spain.html")
     assert "Te quedas con 22.420 € (70 %)" in tax and "You keep" not in tax
     election = site("es/articles/spain-election-2026-promises.html")
-    assert "Mostrando las 113 promesas" in election
+    assert "Mostrando las 127 promesas" in election
     assert 'data-some="Mostrando {shown} de {total} promesas"' in election
     assert "Derogar la Ley de Vivienda de 2023" in election
     assert "Our assessment" not in election and "Nuestra valoración." in election

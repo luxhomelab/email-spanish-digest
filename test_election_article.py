@@ -15,7 +15,7 @@ def fresh_cache(monkeypatch):
 
 def test_data_loads_and_is_consistent():
     d = build.load_election_2026()
-    assert sum(p["count"] for p in d["parties"]) == d["total_items"] == 763
+    assert sum(p["count"] for p in d["parties"]) == d["total_items"] == 865
     ids = [it["id"] for it in d["promises"]]
     assert len(ids) == len(set(ids))
     for it in d["promises"]:
@@ -27,6 +27,18 @@ def test_data_loads_and_is_consistent():
     for p in d["parties"]:
         assert p["shown"] > 0 and len(p["headline_items"]) == 3
         assert abs(sum(pct for _, _, pct in p["shares"]) - 100) < 0.01
+
+
+def test_adelante_is_the_twelfth_party_and_links_each_proposal():
+    d = build.load_election_2026()
+    assert len(d["parties"]) == 12
+    adelante = next(p for p in d["parties"] if p["key"] == "adelante")
+    assert adelante["count"] == 102 and adelante["feasible_pct"] == 40 and adelante["shown"] == 14
+    assert adelante["programme_pdf"].endswith(".pdf")
+    out = build.article_graphic_html(SLUG, "explorer")
+    # The programme has no pages: each promise links to its own proposal page.
+    assert 'href="https://programa.adelanteandalucia.org/propuesta/161/"' in out
+    assert "Adelante Andalucía" in build.article_graphic_html(SLUG, "compare")
 
 
 def test_bad_item_fails_the_build(tmp_path, monkeypatch):

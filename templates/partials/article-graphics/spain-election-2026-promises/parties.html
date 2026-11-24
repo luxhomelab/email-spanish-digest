@@ -22,7 +22,7 @@
     <li><a href="#p-{{ it.id }}" data-open="p-{{ it.id }}"><span class="el-badge el-badge-sm el-r-{{ it.f }}" aria-hidden="true">{{ it.f }}</span><span>{{ it.title|md }}<span class="el-vh">, rated {{ d.ratings_by_key[it.f].label|lower }}</span></span></a></li>
 {% endfor %}
    </ul>
-   <p class="el-party-foot"><a href="?party={{ p.key }}#explorer-app" data-filter-party="{{ p.key }}">See all {{ p.shown }} {{ p.name }} promises in the explorer</a><a href="{{ p.programme }}" target="_blank" rel="noopener">Read the programme</a></p>
+   <p class="el-party-foot"><a href="?party={{ p.key }}#explorer-app" data-filter-party="{{ p.key }}">See all {{ p.shown }} {{ p.name }} promises in the explorer</a><a href="{{ p.programme }}" target="_blank" rel="noopener">Read the programme</a>{% if p.programme_pdf %}<a href="{{ p.programme_pdf }}" target="_blank" rel="noopener">Programme PDF</a>{% endif %}</p>
   </div>
  </details>
 {% endfor %}

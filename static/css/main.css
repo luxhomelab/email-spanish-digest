@@ -5228,15 +5228,15 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 .el-sw { display: inline-block; width: 14px; height: 14px; border-radius: 3px; background: var(--rb); }
 .article-body ol.el-ladder { list-style: none; margin: 0; padding: 0; }
 .article-body ol.el-ladder li.el-rung {
- display: grid; grid-template-columns: 76px minmax(0, 1fr) 150px; align-items: center; gap: 12px;
+ display: grid; grid-template-columns: 160px minmax(0, 1fr) 150px; align-items: center; gap: 12px;
  margin: 0; padding: 7px 0; font-size: 14.5px; line-height: 1.3;
 }
 .article-body ol.el-ladder li.el-rung::before { content: none; }
-.el-rung-name { font-weight: 700; color: #1A1A16; white-space: nowrap; }
+.el-rung-name { font-weight: 700; color: #1A1A16; line-height: 1.2; overflow-wrap: anywhere; }
 .el-rung-pct { color: #5B6775; font-size: 13.5px; }
 .el-rung-pct b { color: #1A1A16; font-size: 14.5px; }
 @media (max-width: 520px) {
- .article-body ol.el-ladder li.el-rung { grid-template-columns: 80px minmax(0, 1fr) 36px; gap: 8px; }
+ .article-body ol.el-ladder li.el-rung { grid-template-columns: 88px minmax(0, 1fr) 36px; gap: 8px; }
  .el-rung-pct { font-size: 0; }
  .el-rung-pct b { font-size: 14px; }
 }
@@ -5279,6 +5279,7 @@ body.page-article .article-faq-answer a:hover { color: #8A1019; background-color
 .article-body ul.el-progs li::before { content: none; }
 .article-body ul.el-progs a { display: inline-block; padding: 11px 0 11px 16px; text-indent: -16px; line-height: 22px; text-decoration: none; }
 .article-body ul.el-progs a > span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.article-body ul.el-progs a.el-pdf { padding-left: 0; text-indent: 0; margin-left: 6px; font-size: 14px; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .article-body ul.el-progs a:hover { background: none; color: #8A1019; }
 .article-body ul.el-progs a:hover > span { text-decoration-thickness: 2px; }
 .article-body ul.el-progs a:focus-visible { outline: 3px solid #F1BF00; outline-offset: 2px; border-radius: 2px; }

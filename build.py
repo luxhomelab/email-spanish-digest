@@ -990,6 +990,8 @@ def load_election_2026(lang="en"):
             # Pros and cons exist exactly for the feasible (A/B) promises.
             if (it["f"] in "AB") != bool(it.get("pos") and it.get("neg")):
                 raise ValueError(f"{where}: pros/cons must be set for A/B items only")
+            if it.get("url") and not it["url"].startswith("https://"):
+                raise ValueError(f"{where}: url must be https")
             if any(not s.get("t") or not s.get("u", "").startswith("https://") for s in it["s"]):
                 raise ValueError(f"{where}: every source needs a title and an https URL")
             item = dict(it, party=key, id=f"{key}-{it['i']}")

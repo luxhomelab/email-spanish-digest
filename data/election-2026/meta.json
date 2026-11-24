@@ -1,7 +1,7 @@
 {
  "as_of": "2026-11-23",
  "election": "2026-11-29",
- "total_items": 763,
+ "total_items": 865,
  "ratings": [
   {"key": "A", "label": "Realistic", "short": "Realistic", "desc": "No problem with the Constitution or EU law. An ordinary law, a government decision or an affordable amount of money is enough."},
   {"key": "B", "label": "Realistic, but harder", "short": "Harder", "desc": "Can be done, but needs more: an organic law (176 votes), the regions' agreement, a lot of money or several years."},
@@ -38,50 +38,50 @@
   "housing": [
    {"label": "More homes and public housing", "items": ["pp-0", "psoe-3", "sumar-0", "psoe-0"]},
    {"label": "Help people buy", "items": ["pp-6", "pp-7", "psoe-9", "junts-2"]},
-   {"label": "Rent rules: limits, renewals, cancelling the law", "items": ["pp-1", "vox-3", "psoe-5", "sumar-8", "podemos-0", "bildu-0", "bildu-3", "bng-0", "bng-1", "erc-13"]},
+   {"label": "Rent rules: limits, renewals, cancelling the law", "items": ["pp-1", "vox-3", "psoe-5", "sumar-8", "podemos-0", "bildu-0", "bildu-3", "bng-0", "bng-1", "erc-13", "adelante-1"]},
    {"label": "Tax breaks for landlords instead of rent limits", "items": ["junts-6", "cc-3"]},
-   {"label": "Tourist and seasonal lets", "items": ["podemos-9", "bildu-4", "pnv-1", "bng-4", "cc-2", "erc-17", "sumar-5", "podemos-6"]},
-   {"label": "Taxes or limits for large owners and investors", "items": ["psoe-6", "sumar-13", "sumar-1", "podemos-2", "junts-3", "bildu-2"]},
+   {"label": "Tourist and seasonal lets", "items": ["podemos-9", "bildu-4", "pnv-1", "bng-4", "cc-2", "erc-17", "sumar-5", "podemos-6", "adelante-8"]},
+   {"label": "Taxes or limits for large owners and investors", "items": ["psoe-6", "sumar-13", "sumar-1", "podemos-2", "junts-3", "bildu-2", "adelante-6", "adelante-7"]},
    {"label": "Limit who can buy or get housing", "items": ["vox-0", "vox-8", "cc-1"]},
    {"label": "Squatting", "items": ["pp-10", "junts-0", "vox-4"]}
   ],
   "taxes": [
-   {"label": "Income tax cuts and inflation-linked bands", "items": ["pp-12", "pp-13", "junts-42", "psoe-19"]},
+   {"label": "Income tax: cuts, inflation-linked bands and higher top rates", "items": ["pp-12", "pp-13", "junts-42", "psoe-19", "adelante-13"]},
    {"label": "The Beckham regime", "items": ["podemos-21", "sumar-22", "erc-20"]},
-   {"label": "Taxes on capital, wealth and big firms", "items": ["psoe-14", "sumar-16", "sumar-19", "podemos-15", "bildu-7"]},
+   {"label": "Taxes on capital, wealth and big firms", "items": ["psoe-14", "sumar-16", "sumar-19", "podemos-15", "bildu-7", "adelante-15"]},
    {"label": "VAT and electricity tax", "items": ["pp-14", "pnv-4", "podemos-23", "pnv-5"]},
    {"label": "Regional tax regimes", "items": ["cc-6", "cc-7"]},
    {"label": "Self-employed fees and remittances", "items": ["vox-12", "vox-17"]}
   ],
   "pensions": [
-   {"label": "Pensions that rise with prices, and minimum pensions", "items": ["pnv-7", "psoe-25"]},
+   {"label": "Pensions that rise with prices, and minimum pensions", "items": ["pnv-7", "psoe-25", "adelante-24"]},
    {"label": "Retirement age and early retirement", "items": ["pnv-8", "sumar-27", "podemos-66", "bng-11"]},
    {"label": "Funding", "items": ["podemos-69"]}
   ],
   "labour": [
-   {"label": "Shorter working week", "items": ["psoe-36", "sumar-29", "podemos-54", "bildu-14", "bng-13"]},
+   {"label": "Shorter working week", "items": ["psoe-36", "sumar-29", "podemos-54", "bildu-14", "bng-13", "adelante-30"]},
    {"label": "Minimum wage", "items": ["psoe-35", "podemos-52", "erc-23", "pnv-11"]},
-   {"label": "Self-employed contributions", "items": ["psoe-40", "pp-26"]},
+   {"label": "Self-employed contributions", "items": ["psoe-40", "pp-26", "adelante-37"]},
    {"label": "Labour law and paperwork", "items": ["vox-21", "vox-25"]}
   ],
   "immigration": [
-   {"label": "Regularisation and *arraigo*", "items": ["pp-41", "vox-29", "sumar-37", "podemos-77", "bildu-19", "junts-24"]},
+   {"label": "Regularisation and *arraigo*", "items": ["pp-41", "vox-29", "sumar-37", "podemos-77", "bildu-19", "junts-24", "adelante-44"]},
    {"label": "Borders and returns", "items": ["pp-36", "vox-30"]},
    {"label": "Help for new arrivals, and who provides it", "items": ["cc-16", "erc-12"]},
    {"label": "Integration and citizenship", "items": ["sumar-38", "podemos-75"]}
   ],
   "health": [
-   {"label": "Staff and money", "items": ["pp-49", "psoe-53"]},
+   {"label": "Staff and money", "items": ["pp-49", "psoe-53", "adelante-49"]},
    {"label": "Who is covered and how", "items": ["vox-37", "vox-41"]}
   ],
   "territorial": [
-   {"label": "Regional money and debt", "items": ["cc-26", "psoe-62", "erc-2", "pnv-27", "erc-1", "junts-37"]},
-   {"label": "Independence votes and recognition as a nation", "items": ["erc-0", "junts-7", "bng-21"]},
+   {"label": "Regional money and debt", "items": ["cc-26", "psoe-62", "erc-2", "pnv-27", "erc-1", "junts-37", "adelante-60"]},
+   {"label": "Independence votes and recognition as a nation", "items": ["erc-0", "junts-7", "bng-21", "adelante-65"]},
    {"label": "Amnesty", "items": ["pp-62"]}
   ],
   "energy": [
    {"label": "Nuclear power", "items": ["pp-82", "psoe-81", "vox-64", "sumar-61"]},
-   {"label": "Electricity bills", "items": ["vox-61", "sumar-58"]}
+   {"label": "Electricity bills", "items": ["vox-61", "sumar-58", "adelante-81"]}
   ]
  },
  "parties": [
@@ -108,11 +108,11 @@
    "headline": [0, 8, 19],
    "summary": "One of the most expensive programmes. It promises 1% of GDP for housing, 2.3% of GDP for the regions, 3.5% for climate, 7% for education, 8% for health and €200 per child. In our estimate that is over €100 billion a year, more than its new taxes would bring in.",
    "doable": "Tax changes by ordinary law, such as a minimum company tax of 20% and a wider wealth tax. Also practical steps for migrants, such as easier town-hall registration and a basic bank account.",
-   "limits": "Taking homes from large owners, banning home purchases by people who will not live in them, and bringing the power grids under state ownership go against art. 33 of the Constitution and EU law."},
+   "limits": "Taking homes from large owners and banning home purchases by people who will not live in them go against art. 33 of the Constitution and EU law. Buying out the power grids is not banned by law, but it would cost tens of billions of euros (in our estimate), so it is rated unlikely."},
   {"key": "podemos", "name": "Podemos", "full": "Podemos", "color": "#7a3a9a", "bloc": "Left", "programme": "https://podemos.info/wp-content/uploads/2026/11/29N-programa-Podemos.-Paz-casa-y-trabajo.pdf",
-   "totals": {"A": 12, "B": 41, "C": 50, "D": 15, "V": 1},
+   "totals": {"A": 12, "B": 41, "C": 51, "D": 14, "V": 1},
    "headline": [0, 21, 54],
-   "summary": "It has the most D ratings of any party (15): a 40% rent cut, a ban on buying homes you will not live in, a republic, an end to the King's legal immunity, and neutrality. Leaving NATO, a basic income for everyone, retirement at 63 and a 30-hour week are blocked by money and missing votes (C), not by the law.",
+   "summary": "It has 14 D ratings, as many as Vox, the most of any party: a 40% rent cut, a ban on buying homes you will not live in, a republic, an end to the King's legal immunity, and neutrality. Leaving NATO, a basic income for everyone, retirement at 63 and a 30-hour week are blocked by money and missing votes (C), not by the law.",
    "doable": "Specific measures: putting short-term rentals under normal rental law, ending the Beckham regime, lower VAT on services and paid internships.",
    "limits": "Its main housing promises go against the right to property (art. 33) and the EU rule on free movement of money."},
   {"key": "erc", "name": "ERC", "full": "Esquerra Republicana de Catalunya", "color": "#d99a00", "bloc": "Left, Catalan pro-independence", "programme": "https://esquerrarepublicana.cat/documents/e2026-programa.pdf",
@@ -150,6 +150,12 @@
    "headline": [7, 26, 1],
    "summary": "Almost all its promises are about money and carrying out the Canary Islands Statute and the islands' special tax system (*REF*). Most of them could come through talks in Congress, where CC's votes can decide a majority.",
    "doable": "Tax breaks for the islands, the 75% travel discount for residents and rules on holiday rentals. Most of these extend what already exists.",
-   "limits": "One point is disputed: limiting home purchases by foreigners. EU law does not allow this for EU citizens."}
+   "limits": "One point is disputed: limiting home purchases by foreigners. EU law does not allow this for EU citizens."},
+  {"key": "adelante", "name": "Adelante Andalucía", "full": "Adelante Andalucía", "color": "#24c87f", "bloc": "Left, Andalusia", "programme": "https://programa.adelanteandalucia.org/", "programme_pdf": "https://programa.adelanteandalucia.org/programa-29n-adelante-andalucia.pdf",
+   "totals": {"A": 6, "B": 35, "C": 51, "D": 9, "V": 1},
+   "headline": [7, 30, 60],
+   "summary": "A programme of 29 main measures and 719 proposals, close in content to Podemos and Sumar, with an Andalusian demand on top: regional funding without *ordinalidad*, the \"historical debt\", state investment by population and moving the Cercanías commuter trains to Andalusia. Half of its promises are held back by money and missing votes (C): a 32-hour week, retirement at 64, 1.5% of GDP a year for housing, 8% of GDP for health, a basic income and buying out the power grids. Nine are rated D.",
+   "doable": "Specific measures: all SAREB homes into public rent, 21% VAT on tourist rentals, self-employed fees based on real income, an independent safety audit of the high-speed trains and a single transport pass.",
+   "limits": "The D ratings include housing as a basic right, abortion in the Constitution, taking homes from banks and funds, a ban on companies buying homes, refusing to pay \"illegitimate\" debt, ending the liberalisation of the railways, exclusive control of the Guadalquivir (the Constitutional Court struck down the same rule in 2011), direct election of the judges' council (CGPJ) and a confederation. Many of its demands to the state, such as an Andalusian police force, Cercanías and a tourist tax, would have to be requested by the Andalusian government, which PP runs."}
  ]
 }

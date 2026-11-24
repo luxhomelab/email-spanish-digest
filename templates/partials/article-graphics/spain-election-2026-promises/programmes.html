@@ -1,7 +1,7 @@
-{# Links to the 11 election programmes we read, from the party data.
+{# Links to the election programmes we read, from the party data.
    Jinja template, `d` = election data. #}
 <ul class="el-progs">
 {% for p in d.parties %}
- <li style="--pc: {{ p.color }}"><a href="{{ p.programme }}" target="_blank" rel="noopener"><i class="el-dot"></i>{% if p.full != p.name %}<b>{{ p.name }}</b> <span>{{ p.full }}</span>{% else %}<span><b>{{ p.name }}</b></span>{% endif %}</a></li>
+ <li style="--pc: {{ p.color }}"><a href="{{ p.programme }}" target="_blank" rel="noopener"><i class="el-dot"></i>{% if p.full != p.name %}<b>{{ p.name }}</b> <span>{{ p.full }}</span>{% else %}<span><b>{{ p.name }}</b></span>{% endif %}</a>{% if p.programme_pdf %} <a class="el-pdf" href="{{ p.programme_pdf }}" target="_blank" rel="noopener">PDF</a>{% endif %}</li>
 {% endfor %}
 </ul>
