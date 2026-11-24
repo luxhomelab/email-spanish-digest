@@ -1,0 +1,59 @@
+{% extends "es/base.html" %}
+{% set alt_path = "/editor" %}
+{% block body_class %} class="page-editor"{% endblock %}
+{% block title %}Dmytro Shvechikov, fundador y editor | Spanified{% endblock %}
+{% block description %}<meta name="description" content="Dmytro Shvechikov edita España al Día, de Spanified: elige las noticias, revisa los resúmenes hechos con IA y los compara con la información original.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Dmytro Shvechikov, fundador y editor de Spanified">
+<meta property="og:description" content="Ingeniero de software que vive en España y edita cada día el resumen de la prensa española.">
+<meta property="og:url" content="{{ site_url }}/es/editor">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dmytro Shvechikov, fundador y editor de Spanified">
+<meta name="twitter:description" content="Ingeniero de software que vive en España y edita cada día el resumen de la prensa española.">
+<meta name="twitter:image" content="{{ site_url }}/static/img/editor/dmytro-shvechikov-480.jpg">
+<meta name="twitter:image:alt" content="Retrato de Dmytro Shvechikov">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+
+{% block og_image %}<meta property="og:image" content="{{ site_url }}/static/img/editor/dmytro-shvechikov-480.jpg">
+ <meta property="og:image:width" content="480">
+ <meta property="og:image:height" content="480">
+ <meta property="og:image:alt" content="Retrato de Dmytro Shvechikov">{% endblock %}
+{% block extra_head %}{% include "partials/hreflang.html" %}{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/es/editor">{% endblock %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "ProfilePage",
+ "name": "Dmytro Shvechikov, fundador y editor de Spanified",
+ "url": "{{ site_url }}/es/editor",
+ "inLanguage": "es",
+ "isPartOf": {"@id": "{{ site_url }}/es/#website"},
+ "mainEntity": {"@type": "Person", "name": "Dmytro Shvechikov",
+  "jobTitle": "Fundador y editor",
+  "image": "{{ site_url }}/static/img/editor/dmytro-shvechikov-480.jpg",
+  "description": "Ingeniero de software sénior con más de 10 años de experiencia en desarrollo de software en producción. Vive en España e invierte en el mercado inmobiliario del país. Edita España al Día, de Spanified.",
+  "url": "{{ site_url }}/es/editor",
+  "sameAs": ["https://www.linkedin.com/in/dshvechikov"],
+  "worksFor": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/es/"}}}
+</script>
+ <div class="editor">
+  <img class="editor-photo" src="/static/img/editor/dmytro-shvechikov-320.webp?v={{ asset_version }}" srcset="/static/img/editor/dmytro-shvechikov-160.webp?v={{ asset_version }} 160w, /static/img/editor/dmytro-shvechikov-320.webp?v={{ asset_version }} 320w, /static/img/editor/dmytro-shvechikov-480.webp?v={{ asset_version }} 480w" sizes="160px" alt="Retrato de Dmytro Shvechikov" width="160" height="160" fetchpriority="high" decoding="async">
+  <h1>Dmytro Shvechikov</h1>
+  <p class="subtitle">Fundador y editor de España al Día, de Spanified</p>
+
+  <div class="card">
+   <h2>Quién soy</h2>
+   <p>Soy ingeniero de software sénior y llevo más de 10 años desarrollando software en producción. Vivo en España y sigo de cerca la actualidad del país, también el mercado inmobiliario, en el que invierto. Creé Spanified para convertir mi costumbre de leer la prensa española cada día en un resumen de cinco minutos.</p>
+  </div>
+
+  <div class="card">
+   <h2>Qué hago aquí</h2>
+   <p>Cada mañana preparo <a href="/es/">España al Día</a>: reviso las noticias elegidas, comparo los resúmenes hechos con IA con la información original y quito lo que no está a la altura. La IA ayuda a redactar, pero lo que llega a tu bandeja de entrada lo ha revisado una persona que vive las noticias que edita. <a href="/es/about">Cómo se hace España al Día</a>.</p>
+  </div>
+
+  <div class="card">
+   <h2>Contacto</h2>
+   <p>¿Has visto un error o quieres que tratemos algún tema? <a href="/es/contact">Escríbenos</a>, leo todos los mensajes. También estoy en <a href="https://www.linkedin.com/in/dshvechikov" target="_blank" rel="noopener">LinkedIn</a>.</p>
+  </div>
+ </div>
+{% endblock %}

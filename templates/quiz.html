@@ -1,40 +1,52 @@
 {% extends "base.html" %}
-{# Quiz app — multi-quiz ready. One template renders every data/quizzes/*.json. #}
+{# Quiz app — multi-quiz ready. One template renders every data/quizzes/*.json,
+   in English (/quiz/<slug>) and Spanish (/es/quiz/<slug>, page_lang "es",
+   text from data/quizzes/es/<slug>.json). quiz_base is this page's own path. #}
 {# SUBSCRIBE FORM: native Listmonk form (partials/subscribe-form.html).
    Same flow as the main /subscribe page: on success redirect to the
-   quiz-specific confirm page (/quiz/<slug>-subscribed), result stays
-   LOCKED until the double opt-in click lands on /quiz/<slug>-success,
-   which reveals the result (score comes from localStorage). #}
-{% block title %}{{ quiz.title }} — Spanified{% endblock %}
-{% block description %}<meta name="description" content="{{ quiz.title }} — a 2-minute, 10-question quiz. Half of it really happened in Spain. Can you tell which half?">
+   quiz-specific confirm page (<quiz_base>-subscribed), result stays
+   LOCKED until the double opt-in click lands on <quiz_base>-success,
+   which reveals the result (score comes from localStorage). Spanish pages
+   post to the Spanish list (the form follows page_lang). #}
+{% set quiz_url = site_url ~ quiz_base %}
+{% set meta_desc = quiz.meta_description or (quiz.title ~ " — a 2-minute, 10-question quiz. Half of it really happened in Spain. Can you tell which half?") %}
+{% set og_desc = quiz.meta_description or (quiz.title ~ " — 10 questions, 2 minutes. Half of it really happened in Spain. Can you tell which half?") %}
+{% block title %}{{ t("{title} — Spanified", title=quiz.title) }}{% endblock %}
+{% block description %}<meta name="description" content="{{ meta_desc }}">
 {# Canonical quiz page is indexable and listed in sitemap.xml.
    The flow pages (-success / -subscribed / -result-*) stay noindex,nofollow. #}
 <meta name="robots" content="index, follow">{% endblock %}
-{% block canonical %}<link rel="canonical" href="https://spanified.com/quiz/{{ quiz.slug }}">{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ quiz_url }}">{% endblock %}
 {% block og_image %}<meta property="og:image" content="https://spanified.com/static/img/quiz/{{ quiz.slug }}/quiz-hook.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="805">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://spanified.com/quiz/{{ quiz.slug }}">
-<meta property="og:title" content="{{ quiz.title }} — Spanified">
-<meta property="og:description" content="{{ quiz.title }} — 10 questions, 2 minutes. Half of it really happened in Spain. Can you tell which half?">
+<meta property="og:url" content="{{ quiz_url }}">
+<meta property="og:title" content="{{ t('{title} — Spanified', title=quiz.title) }}">
+<meta property="og:description" content="{{ og_desc }}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ quiz.title }} — Spanified">
-<meta name="twitter:description" content="{{ quiz.title }} — 10 questions, 2 minutes. Half of it really happened in Spain. Can you tell which half?">{% endblock %}
+<meta name="twitter:title" content="{{ t('{title} — Spanified', title=quiz.title) }}">
+<meta name="twitter:description" content="{{ og_desc }}">{% endblock %}
 {% block body_class %} class="page-quiz"{% endblock %}
 {% block extra_head %}
+{% if alt_path %}{% include "partials/hreflang.html" %}{% endif %}
 <script id="quiz-data" type="application/json">{{ quiz_json | safe }}</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Quiz", "@id": "{{ quiz_url }}#quiz", "url": "{{ quiz_url }}",
+ "name": {{ quiz.title|tojson }}, "description": {{ meta_desc|tojson }}, "inLanguage": "{{ page_lang | default('en') }}",
+ "image": "https://spanified.com/static/img/quiz/{{ quiz.slug }}/quiz-hook.jpg", "publisher": {"@id": "{{ site_url }}{{ lang_url('/') }}#org"}}
+</script>
 {% endblock %}
 {% block content %}
 {% include "partials/breadcrumbs.html" %}
 <div class="quiz-wrap">
  <div id="quiz-hook" class="quiz-card quiz-hook">
-  <p class="quiz-kicker">Spanified quiz</p>
+  <p class="quiz-kicker">{{ t("Spanified quiz") }}</p>
   <h1 class="quiz-hook-headline">{{ quiz.title }}</h1>
   <img class="quiz-hook-img" src="/static/img/quiz/{{ quiz.slug }}/quiz-hook.jpg" alt="" width="1200" height="805" fetchpriority="high">
-  <p class="quiz-hook-sub">{{ quiz.hook_sub | default("Some of these really happened in Spain. The rest we made up. Can you guess which is which?", true) }}</p>
+  <p class="quiz-hook-sub">{{ quiz.hook_sub | default(t("Some of these really happened in Spain. The rest we made up. Can you guess which is which?"), true) }}</p>
   <div id="quiz-teaser" class="quiz-teaser">
-   <p class="quiz-teaser-label">Try the first one. Real or fake?</p>
+   <p class="quiz-teaser-label">{{ t("Try the first one. Real or fake?") }}</p>
    <p id="quiz-teaser-q" class="quiz-teaser-q"></p>
    <div class="quiz-choices">
     <button type="button" id="quiz-teaser-real" class="quiz-choice"></button>
@@ -42,8 +54,8 @@
    </div>
   </div>
   <p id="quiz-last" class="quiz-hook-last" hidden></p>
-  <button id="quiz-start" class="quiz-start-btn" type="button" hidden>Start the quiz</button>
-  <p class="quiz-hook-time">2 minutes &middot; 10 questions &middot; no email needed to play</p>
+  <button id="quiz-start" class="quiz-start-btn" type="button" hidden>{{ t("Start the quiz") }}</button>
+  <p class="quiz-hook-time">{{ t("2 minutes · 10 questions · no email needed to play") }}</p>
  </div>
 
  <div id="quiz-play" class="quiz-card quiz-play" hidden>
@@ -59,50 +71,41 @@
    <div class="quiz-score-badge" aria-hidden="true"><span class="quiz-score-num" id="quiz-score-num">–</span><span class="quiz-score-of">/10</span></div>
    <div class="quiz-score-text">
     <p id="quiz-score-line" class="quiz-score-title"></p>
-    <ol id="quiz-gate-segs" class="quiz-segs quiz-segs--small" aria-label="Your answers"></ol>
+    <ol id="quiz-gate-segs" class="quiz-segs quiz-segs--small" aria-label="{{ t('Your answers') }}"></ol>
    </div>
   </div>
   <div id="quiz-blur" class="quiz-locked">
    <img id="quiz-locked-img" class="quiz-locked-img" alt="" width="1200" height="630">
-   <p class="quiz-locked-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2" /><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" /></svg>Your persona is sealed</p>
+   <p class="quiz-locked-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2" /><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" /></svg>{{ t("Your persona is sealed") }}</p>
   </div>
   <div id="quiz-gate-form">
-   <h2 class="quiz-gate-title">Open it with your email</h2>
-   <p class="quiz-gate-lede">Confirm the link we send you and your persona opens right away. You also get Spain's top news in English every morning, free.</p>
-   {% set success_url = "/quiz/" ~ quiz.slug ~ "-subscribed" %}{% set btn_label = "Reveal my persona" %}{% set btn_icon = true %}{% set field_id = "quiz-subscribe-email" %}
+   <h2 class="quiz-gate-title">{{ t("Open it with your email") }}</h2>
+   <p class="quiz-gate-lede">{{ t("Confirm the link we send you and your persona opens right away. You also get Spain's top news in English every morning, free.") }}</p>
+   {% set success_url = quiz_base ~ "-subscribed" %}{% set btn_label = t("Reveal my persona") %}{% set btn_icon = true %}{% set field_id = "quiz-subscribe-email" %}
    {% include "partials/subscribe-form.html" %}
-   <p class="quiz-gate-proof">{% if proof and proof.total_issues %}{{ proof.total_issues }}{% else %}142{% endif %} daily editions &middot; free &middot; unsubscribe anytime</p>
-   <button id="quiz-skip" class="quiz-skip" type="button">No thanks, just show my result</button>
+   <p class="quiz-gate-proof">{{ t("{n} daily editions · free · unsubscribe anytime", n=(proof.total_issues if proof and proof.total_issues else 142)) }}</p>
+   <button id="quiz-skip" class="quiz-skip" type="button">{{ t("No thanks, just show my result") }}</button>
   </div>
   <div id="quiz-result-full" hidden>
    <div class="quiz-persona">
     <img id="quiz-result-img" class="quiz-result-img" src="/static/img/quiz/{{ quiz.slug }}/quiz-cover.jpg" alt="{{ quiz.title }}" width="1200" height="630" hidden>
-    <p class="quiz-kicker">Your persona</p>
+    <p class="quiz-kicker">{{ t("Your persona") }}</p>
     <h2 id="quiz-result-title"></h2>
     <div id="quiz-result-text" class="quiz-result-text"></div>
    </div>
    <div class="quiz-share-block">
-    <p class="quiz-share-title">Think a friend would score higher? Send it.</p>
+    <p class="quiz-share-title">{{ t("Think a friend would score higher? Send it.") }}</p>
     <div class="quiz-share">{% include "partials/share.html" %}</div>
    </div>
    <div id="quiz-sub-cta" class="quiz-sub-cta">
     <div class="quiz-sub-copy">
-     <p class="quiz-sub-title">Spain's news, in plain English</p>
-     <p class="quiz-sub-text">One sharp email every morning. Free, unsubscribe anytime.</p>
+     <p class="quiz-sub-title">{{ t("Spain's news, in plain English") }}</p>
+     <p class="quiz-sub-text">{{ t("One sharp email every morning. Free, unsubscribe anytime.") }}</p>
     </div>
-    <a class="quiz-sub-btn" href="/subscribe">Subscribe free<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6.5L20.5 7"/></svg></a>
+    <a class="quiz-sub-btn" href="{{ lang_url('/subscribe') }}">{{ t("Subscribe free") }}<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6.5L20.5 7"/></svg></a>
    </div>
-   <p class="quiz-retake-wrap"><button id="quiz-retake" class="quiz-retake-btn" type="button">↺ Retake the quiz</button></p>
-   {% for other in other_quizzes %}
-   <a class="quiz-other" href="{{ other.url }}" aria-label="Try the other quiz: {{ other.title }}">
-    <img class="quiz-other-cover" src="{{ other.cover }}" alt="{{ other.title }}" width="1200" height="630" loading="lazy">
-    <span class="quiz-other-body">
-     <span class="quiz-other-kicker">Try the other quiz</span>
-     <span class="quiz-other-title">{{ other.title }}</span>
-     <span class="quiz-other-go">Play now →</span>
-    </span>
-   </a>
-   {% endfor %}
+   <p class="quiz-retake-wrap"><button id="quiz-retake" class="quiz-retake-btn" type="button">{{ t("↺ Retake the quiz") }}</button></p>
+   {% include "partials/quiz-other.html" %}
   </div>
  </div>
 </div>

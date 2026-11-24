@@ -46,7 +46,7 @@ a { color: inherit; }
  font-size: 15px;
 }
 .site-nav a {
- color: #3C4858; text-decoration: none;
+ color: #3C4858; text-decoration: none; white-space: nowrap;
 }
 .site-nav a:hover { color: #1A1A16; }
 .nav-search { display: inline-flex; align-items: center; color: #3C4858; }
@@ -83,6 +83,29 @@ a { color: inherit; }
  line-height: 0;
 }
 .nav-toggle:hover { background: #f0f3f6; }
+/* Language switcher (partials/lang-switch.html): quiet text codes after the
+   nav, set apart by a hairline. The current language carries the wordmark
+   red as an underline; the other is a plain muted link. */
+.lang-switch {
+ display: flex; align-items: center; gap: 2px;
+ padding-left: 14px; margin-left: -14px; border-left: 1px solid #C0CCD9;
+ font-size: 13px; font-weight: 700; letter-spacing: .06em; line-height: 1;
+}
+/* Spanish header: no nav to separate from. */
+.brand + .lang-switch { margin-left: 0; padding-left: 0; border-left: none; }
+.lang-switch > a, .lang-switch > span {
+ display: inline-flex; align-items: center; justify-content: center;
+ min-width: 32px; min-height: 32px; padding: 0 6px;
+ border-radius: 4px; text-decoration: none;
+}
+.lang-switch > a { color: #5F6B7A; }
+.lang-switch > a:hover { color: #1A1A16; background: #f0f3f6; }
+.lang-switch > a:focus-visible { outline: 3px solid rgba(170,21,27,0.4); outline-offset: 1px; }
+.lang-switch > [aria-current] {
+ color: var(--heading-color);
+ text-decoration: underline; text-decoration-color: #AA151B;
+ text-decoration-thickness: 2px; text-underline-offset: 5px;
+}
 
 /* ---------- Content ---------- */
 .content {
@@ -189,23 +212,31 @@ body.page-unsubscribe iframe, html.iframe-page .page-unsubscribe iframe {
 }
 
 /* ---------- Header breakpoints ----------
-   The desktop row (brand + 7 links + 2 dropdowns + search + Subscribe)
-   measures ~880px wide at the 22px item gap — it cannot survive tablet
-   widths without wrapping carets or touching the logo.
-   901–1000px: same row, denser item gaps. ≤900px: burger menu. */
-@media (min-width: 901px) and (max-width: 1000px) {
+   The desktop row (brand + 7 links + 2 dropdowns + search + Subscribe +
+   EN/ES codes) needs ~930px of content width even at the denser gaps below —
+   narrower, it wraps the tagline, the carets or touches the logo.
+   961–1000px: same row, denser item gaps. ≤960px: burger menu, with the
+   EN/ES codes kept on the brand row. */
+@media (min-width: 961px) and (max-width: 1000px) {
  .site-nav { gap: 14px; }
+ /* Room for the language codes without squeezing the brand tagline. */
+ .header-inner { gap: 20px; }
+ .lang-switch { padding-left: 6px; margin-left: -12px; }
+ .lang-switch > a, .lang-switch > span { min-width: 28px; padding: 0 4px; }
 }
-@media (max-width: 900px) {
+@media (max-width: 960px) {
  .header-inner { flex-wrap: wrap; padding: 12px 24px; gap: 0; }
  .brand-logo { width: 112px; }
- .nav-toggle { display: block; }
+ .nav-toggle { display: block; order: 1; }
+ /* Brand, language codes, burger on one row; the open menu wraps below. */
+ .lang-switch { margin: 0 10px 0 auto; padding-left: 0; border-left: none; }
  .site-nav {
   display: none;
   flex-basis: 100%; flex-direction: column; align-items: stretch;
   gap: 0; font-size: 15px;
   border-top: 1px solid #e3e8ee; margin-top: 8px; padding-top: 4px;
  }
+ .site-nav { order: 2; }
  .site-nav.open { display: flex; }
  .site-nav a { padding: 10px 4px; border-bottom: 1px solid #eef1f4; }
  .nav-drop summary { padding: 10px 4px; border-bottom: 1px solid #eef1f4; }
@@ -1557,17 +1588,6 @@ body.page-subscribe .testimonials { max-width: 1200px; padding-left: 0; padding-
 body.page-subscribe .testimonials h2 { line-height: 1.25; text-wrap: balance; }
 body.page-subscribe .sub-nowrap { white-space: nowrap; }
 body.page-subscribe .sub-preview-more { font-size: 14px; color: #3C4858; margin: 14px 0 0; }
-/* Spanish /es/subscribe: the sheet lists an edition's sections instead of
-   stories, so rows are tighter and the reveal runs down all six. */
-body.page-subscribe .sub-preview-time { font-size: 13px; color: #FBE3E4; font-variant-numeric: tabular-nums; }
-body.page-subscribe .sub-preview-topics li { padding: 11px 0; align-items: baseline; }
-body.page-subscribe .sub-preview-topics li:last-child { border-bottom: 0; }
-body.page-subscribe .sub-preview-topics .sub-preview-emoji { font-size: 18px; }
-body.page-subscribe .sub-preview-topics .sub-preview-story strong { font-size: 15px; }
-body.page-subscribe .sub-preview-topics .sub-preview-src { margin-top: 2px; }
-body.page-subscribe .sub-preview-topics li:nth-child(4) { animation-delay: 0.45s; }
-body.page-subscribe .sub-preview-topics li:nth-child(5) { animation-delay: 0.6s; }
-body.page-subscribe .sub-preview-topics li:nth-child(6) { animation-delay: 0.75s; }
 @keyframes sub-story-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) {
  body.page-subscribe .sub-preview-stories li { animation: none; }

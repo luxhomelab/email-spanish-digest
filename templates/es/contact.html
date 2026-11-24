@@ -1,0 +1,37 @@
+{% extends "es/base.html" %}
+{% set alt_path = "/contact" %}
+{% block body_class %} class="page-contact"{% endblock %}
+{% block title %}Contacto: escribe a la redacción de España al Día | Spanified{% endblock %}
+{% block description %}<meta name="description" content="Escribe a Spanified con preguntas, correcciones, comentarios, pistas o consultas de prensa. Lo leemos todo y solemos responder en un par de días.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contacto: escribe a la redacción de España al Día | Spanified">
+<meta property="og:description" content="Preguntas, correcciones, comentarios o prensa: escríbenos a support@spanified.com. Solemos responder en un par de días.">
+<meta property="og:url" content="{{ site_url }}/es/contact">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Contacto: escribe a la redacción de España al Día | Spanified">
+<meta name="twitter:description" content="Preguntas, correcciones, comentarios o prensa: escríbenos a support@spanified.com. Solemos responder en un par de días.">
+<meta name="twitter:image" content="https://spanified.com/logo.jpg">{% endblock %}
+{% block extra_head %}{% include "partials/hreflang.html" %}{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/es/contact">{% endblock %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "ContactPage",
+ "name": "Contacto: escribe a la redacción de España al Día | Spanified",
+ "url": "{{ site_url }}/es/contact",
+ "description": "Escribe a Spanified con preguntas, correcciones, comentarios, pistas o consultas de prensa. Lo leemos todo y solemos responder en un par de días.",
+ "inLanguage": "es",
+ "isPartOf": {"@id": "{{ site_url }}/es/#website"},
+ "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/es/",
+  "contactPoint": {"@type": "ContactPoint", "email": "support@spanified.com",
+   "contactType": "customer support", "availableLanguage": ["Spanish", "English"]}}}
+</script>
+ <div class="contact">
+  <h1>Contacto</h1>
+  <p class="subtitle">Preguntas, comentarios, correcciones o prensa: lo leemos todo.</p>
+  <div class="card">
+   <a class="mail-link" href="mailto:support@spanified.com">support@spanified.com</a>
+   <p class="note">Solemos responder en un par de días.</p>
+  </div>
+ </div>
+{% endblock %}

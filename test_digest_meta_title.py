@@ -1,4 +1,4 @@
-from build import dedupe_digest_titles, digest_context, digest_meta_title
+from build import dedupe_digest_titles, digest_context, digest_meta_description, digest_meta_title
 
 ITEMS = [{"title": "Housing decrees face November 12 survival vote", "body": "x"}]
 
@@ -42,3 +42,22 @@ def test_repeated_subject_gets_the_date():
         "Rents fall 19% | Spain News in English",
         "Housing decrees face November 12 survival vote | Spain News Oct 1",
     ]
+
+
+def test_description_skips_long_titles_and_counts_the_rest():
+    items = [{"title": "Rents rise again"}, {"title": "x" * 150}, {"title": "Strike on Monday"},
+             {"title": "Short one"}, {"title": "Another one"}]
+    desc = digest_meta_description("2026-11-09", "", items)
+    assert desc == ("Spain news, November 9, 2026: Rents rise again; Strike on Monday; Short one; "
+                    "Another one")
+    many = [{"title": f"Story number {n} about something long enough"} for n in range(6)]
+    desc = digest_meta_description("2026-11-09", "", many)
+    assert desc.endswith("; plus 4 more stories") and len(desc) <= 157
+
+
+def test_es_title_can_skip_a_tagline_subject():
+    raw = {"date": "2026-06-17", "items": ITEMS, "subject": "España hoy. Brevemente."}
+    assert digest_context(raw, "es")["meta_title"].startswith("España hoy. Brevemente. |")
+    ctx = digest_context(raw, "es", title_subject=False)
+    assert ctx["meta_title"] == "Housing decrees face November 12 survival vote | Noticias de España, 17 jun"
+    assert ctx["subject"] == "España hoy. Brevemente."  # still the on-page subheader

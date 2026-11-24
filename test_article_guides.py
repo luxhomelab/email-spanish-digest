@@ -109,3 +109,33 @@ def test_digest_hubs_skip_linked_pages_and_follow_categories():
     assert [c["url"] for c in d["hub_cards"]] == [
         "/articles/spain-property-guide", "/calculators/rental-yield", "/calculators/net-salary"]
     assert d["hub_cards"][0]["desc"] == "A 20-minute read"
+
+
+from build import attach_twin_links
+
+
+def test_twin_links_pair_by_source_and_translate_anchors():
+    src = lambda u: [{"name": "X", "url": u}]
+    en = {"date": "2026-11-06", "stories": [
+        {"title": "SMI rises to €1,184 a month", "body": "The minimum wage...", "sources": src("https://a/1"),
+         "guide": {"title": "Guide", "url": "/articles/autonomo-taxes-spain"},
+         "tool": {"url": "/calculators/net-salary-1200-euros-per-month", "anchor": "take-home pay on €1,200 gross a month",
+                  "base": "/calculators/net-salary"}},
+        {"title": "Power bills", "body": "", "sources": src("https://a/2"), "guide": None,
+         "tool": {"url": "/calculators/electricity-bill", "anchor": "check what your electricity bill should be"}},
+    ]}
+    es = {"date": "2026-11-06", "stories": [  # reordered: pairing ignores position
+        {"title": "La luz", "sources": src("https://a/2"), "guide": None},
+        {"title": "El SMI", "sources": src("https://a/1"), "guide": None},
+        {"title": "Sin pareja", "sources": src("https://a/9"), "guide": None},
+    ]}
+    es_articles = [{"title": "Guía de autónomos", "url": "/es/articles/autonomo-taxes-spain",
+                    "path": "/articles/autonomo-taxes-spain"}]
+    attach_twin_links([es], [en], es_articles, AMOUNTS)
+    luz, smi, other = es["stories"]
+    assert luz["tool"] == {"url": "/calculators/electricity-bill",
+                           "anchor": "comprueba cuánto debería costar tu factura de la luz"}
+    assert smi["tool"] == {"url": "/calculators/net-salary-1200-euros-per-month",
+                           "anchor": "sueldo neto con 1.200 € brutos al mes", "base": "/calculators/net-salary"}
+    assert smi["guide"] == {"title": "Guía de autónomos", "url": "/articles/autonomo-taxes-spain"}
+    assert other["tool"] is None and other["guide"] is None

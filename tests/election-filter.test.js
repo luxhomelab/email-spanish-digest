@@ -8,7 +8,8 @@ import {
   toggleRating,
   filtersFromQuery,
   filtersToQuery,
-  isEmpty
+  isEmpty,
+  fill
 } from '../static/js/election-filter.js'
 
 const items = [
@@ -87,5 +88,15 @@ describe('party selection', () => {
     assert.ok(partyShown('bng', []))
     assert.ok(partyShown('pp', ['pp', 'psoe']))
     assert.ok(!partyShown('vox', ['pp', 'psoe']))
+  })
+})
+
+describe('fill', () => {
+  it('puts values into a page-supplied template, in any language', () => {
+    assert.equal(fill('Mostrando {shown} de {total} promesas', { shown: 3, total: 113 }), 'Mostrando 3 de 113 promesas')
+    assert.equal(fill('{pos} of {total}', { pos: 1, total: 2 }), '1 of 2')
+  })
+  it('leaves unknown placeholders as they are', () => {
+    assert.equal(fill('{a} {b}', { a: 1 }), '1 {b}')
   })
 })

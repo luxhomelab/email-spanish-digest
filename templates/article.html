@@ -7,8 +7,7 @@
 <meta property="og:description" content="{{ article.meta_description }}">
 <meta property="og:url" content="{{ site_url }}{{ article.url }}">
 <meta property="og:site_name" content="Spanified">
-<meta property="og:locale" content="en_GB">
-{% if article.story_categories %}<meta property="article:section" content="{{ article.story_categories[0]|capitalize }}">
+{% if article.story_categories %}<meta property="article:section" content="{{ t(article.story_categories[0]|capitalize) }}">
 {% endif %}<meta property="article:published_time" content="{{ pub_date(article.date) }}">
 {% if article.updated != article.date %}<meta property="article:modified_time" content="{{ pub_date(article.updated) }}">
 {% endif %}<meta name="twitter:card" content="summary_large_image">
@@ -19,6 +18,7 @@
 {% endblock %}
 
 {% block canonical %}<link rel="canonical" href="{{ site_url }}{{ article.url }}">{% endblock %}
+{% block extra_head %}{% if alt_path %}{% include "partials/hreflang.html" %}{% endif %}{% endblock %}
 {% block og_image %}<meta property="og:image" content="{{ site_url }}/og/article-{{ article.slug }}.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -32,11 +32,11 @@
  "image": {"@type": "ImageObject", "url": "{{ site_url }}/og/article-{{ article.slug }}.png", "width": 1200, "height": 630},
  "datePublished": "{{ pub_date(article.date) }}",
  "dateModified": "{{ pub_date(article.updated) }}",
- "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}/editor", "jobTitle": "Founder and Editor", "image": "{{ site_url }}/static/img/editor/dmytro-shvechikov-480.jpg", "sameAs": ["https://www.linkedin.com/in/dshvechikov"]},
+ "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}{{ lang_url('/editor') }}", "jobTitle": {{ t("Founder and Editor")|tojson }}, "image": "{{ site_url }}/static/img/editor/dmytro-shvechikov-480.jpg", "sameAs": ["https://www.linkedin.com/in/dshvechikov"]},
  "publisher": {"@type": "Organization", "name": "Spanified", "logo": {"@type": "ImageObject", "url": "{{ site_url }}/logo.jpg", "width": 640, "height": 640}},
- "inLanguage": "en",
+ "inLanguage": "{{ page_lang|default('en') }}",
  "wordCount": {{ article.word_count }},
-{% if article.story_categories %} "articleSection": {{ article.story_categories|map("capitalize")|list|tojson }},
+{% if article.story_categories %} "articleSection": [{% for c in article.story_categories %}{{ t(c|capitalize)|tojson }}{% if not loop.last %}, {% endif %}{% endfor %}],
 {% endif %}{% if article.story_keywords %} "keywords": {{ article.story_keywords|tojson }},
 {% endif %}
  "isAccessibleForFree": true,
@@ -45,7 +45,7 @@
 </script>
 {% if article.faq %}
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage",
+{"@context": "https://schema.org", "@type": "FAQPage",{% if page_lang == "es" %} "inLanguage": "es",{% endif %}
  "mainEntity": [{% for faq in article.faq %}
   {"@type": "Question", "name": {{ faq.q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ faq.a|tojson }}} }{% if not loop.last %},{% endif %}{% endfor %}
  ]}
@@ -55,11 +55,11 @@
   <div class="digest-card">
    <h1 class="email-red-band">{{ article.title }}</h1>
    <div class="byline">
-    <span class="byline-part byline-author"><img class="byline-avatar" src="/static/img/editor/dmytro-shvechikov-96.webp?v={{ asset_version }}" srcset="/static/img/editor/dmytro-shvechikov-48.webp?v={{ asset_version }} 48w, /static/img/editor/dmytro-shvechikov-96.webp?v={{ asset_version }} 96w, /static/img/editor/dmytro-shvechikov-160.webp?v={{ asset_version }} 160w" sizes="28px" alt="" width="28" height="28" decoding="async">By <a href="/editor">Dmytro Shvechikov</a></span>
+    <span class="byline-part byline-author"><img class="byline-avatar" src="/static/img/editor/dmytro-shvechikov-96.webp?v={{ asset_version }}" srcset="/static/img/editor/dmytro-shvechikov-48.webp?v={{ asset_version }} 48w, /static/img/editor/dmytro-shvechikov-96.webp?v={{ asset_version }} 96w, /static/img/editor/dmytro-shvechikov-160.webp?v={{ asset_version }} 160w" sizes="28px" alt="" width="28" height="28" decoding="async">{{ t("By") }} <a href="{{ lang_url('/editor') }}">Dmytro Shvechikov</a></span>
     <span class="byline-dot" aria-hidden="true"></span>
     <span class="byline-part">{{ article.date_display }}</span>
     <span class="byline-dot" aria-hidden="true"></span>
-    <span class="byline-read">{{ article.reading_time }} min read</span>
+    <span class="byline-read">{{ t("{n} min read", n=article.reading_time) }}</span>
    </div>
    <div class="email-gold-band"></div>
 
@@ -84,7 +84,7 @@
       visible block and the FAQPage JSON-LD above. #}
    {% if article.faq %}
    <section class="article-faq" id="faq">
-    <h2 class="article-faq-title">Frequently asked questions</h2>
+    <h2 class="article-faq-title">{{ t("Frequently asked questions") }}</h2>
     <div class="article-faq-list">
      {% for faq in article.faq %}
      <details class="article-faq-item"{% if loop.first %} open{% endif %}>
@@ -96,12 +96,12 @@
    </section>
    {% endif %}
 
-   {% with hub_heading="Related calculators and guides" %}{% include "partials/hub-cards.html" %}{% endwith %}
+   {% with hub_heading=t("Related calculators and guides") %}{% include "partials/hub-cards.html" %}{% endwith %}
 
    <div class="email-footer">
-    <div class="share-cta">Found this useful? Share it with a friend.</div>
+    <div class="share-cta">{{ t("Found this useful? Share it with a friend.") }}</div>
     {% with share=article.share %}{% include "partials/share.html" %}{% endwith %}
-    <div class="ai-disclaimer">Written from first-hand experience in Spain and reviewed by a human.</div>
+    <div class="ai-disclaimer">{{ t("Written from first-hand experience in Spain and reviewed by a human.") }}</div>
    </div>
   </div>
   {% set field_id = "article-subscribe-email" %}{% set form_kind = "article" %}{% set base_class = "cta-form-card" %}{% set indent = "   " %}{% include "partials/cta-form-card.html" %}
@@ -115,10 +115,10 @@
   if (!btn) return;
   var label = btn.querySelector('span');
   var done = function () {
-   if (label) label.textContent = 'Copied!';
+   if (label) label.textContent = '{{ t("Copied!") }}';
    btn.classList.add('is-copied');
    setTimeout(function () {
-    if (label) label.textContent = 'Copy';
+    if (label) label.textContent = '{{ t("Copy") }}';
     btn.classList.remove('is-copied');
    }, 1500);
   };

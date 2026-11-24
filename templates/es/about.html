@@ -1,0 +1,80 @@
+{% extends "es/base.html" %}
+{% set alt_path = "/about" %}
+{% block body_class %} class="page-about"{% endblock %}
+{% block title %}Sobre España al Día: la prensa española en 5 minutos | Spanified{% endblock %}
+{% block description %}<meta name="description" content="Qué es España al Día, el resumen gratuito de la prensa española: cómo lo hacemos, qué fuentes leemos, quién lo revisa y cómo usamos la IA.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sobre España al Día: la prensa española en 5 minutos | Spanified">
+<meta property="og:description" content="Cómo convertimos la prensa española en un resumen gratuito de cinco minutos: fuentes, revisión humana, uso de la IA y edición por email.">
+<meta property="og:url" content="{{ site_url }}/es/about">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sobre España al Día: la prensa española en 5 minutos | Spanified">
+<meta name="twitter:description" content="Cómo convertimos la prensa española en un resumen gratuito de cinco minutos: fuentes, revisión humana, uso de la IA y edición por email.">
+<meta name="twitter:image" content="https://spanified.com/logo.jpg">
+<meta name="robots" content="max-image-preview:large">{% endblock %}
+{% block extra_head %}{% include "partials/hreflang.html" %}{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ site_url }}/es/about">{% endblock %}
+{% block content %}
+{% include "partials/breadcrumbs.html" %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "AboutPage",
+ "name": "Sobre nosotros | Spanified",
+ "url": "{{ site_url }}/es/about",
+ "description": "Cómo convertimos la prensa española en un resumen gratuito de cinco minutos: fuentes, revisión humana, uso de la IA y edición por email.",
+ "inLanguage": "es",
+ "isPartOf": {"@id": "{{ site_url }}/es/#website"},
+ "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/es/",
+  "contactPoint": {"@type": "ContactPoint", "email": "support@spanified.com",
+   "contactType": "customer support", "availableLanguage": ["Spanish", "English"]}}}
+</script>
+ <div class="about">
+  <h1>Sobre Spanified</h1>
+  <p class="subtitle">Lo que pasa en España, contado en cinco minutos al día.</p>
+
+  <div class="card">
+   <h2>Quiénes somos</h2>
+   <p>Spanified es un medio independiente para quien vive en España, prepara la mudanza o sigue el país desde fuera. Alquileres, impuestos, visados, empleo: en España pasan muchas cosas cada día, y las resumimos en notas breves, en lenguaje claro y sin titulares engañosos.</p>
+  </div>
+
+  <div class="card" id="products">
+   <h2>Qué hacemos</h2>
+   <p><strong><a href="/es/">España al Día</a></strong> es nuestro producto principal: un resumen gratuito cada mañana con las noticias más importantes de España. Sale todos los días sobre las 08:00, hora de Madrid, en esta web y por email para quien se <a href="/es/subscribe">suscribe</a>. Las ediciones anteriores están en el <a href="/es/archive/">archivo</a>.</p>
+   <p><strong><a href="{{ lang_url('/calculators/autonomo-tax') }}">Calculadora de impuestos para autónomos</a></strong>: calcula la cuota de la Seguridad Social y el IRPF de un autónomo según la comunidad, los ingresos y la situación familiar. Gratis y sin registro.</p>
+   <p>Estamos preparando más guías y herramientas prácticas para vivir en España.</p>
+  </div>
+
+  <div class="card">
+   <h2>Cómo trabajamos</h2>
+   <ol class="steps">
+    <li><strong>Leemos.</strong> Cada mañana repasamos los principales medios de España: diarios nacionales, agencias y prensa regional.</li>
+    <li><strong>Elegimos.</strong> Nos quedamos con las noticias más relevantes del día en política, economía, migración, cultura y deporte.</li>
+    <li><strong>Resumimos.</strong> Con ayuda de IA, cada noticia queda en un resumen corto. Solo hechos, sin opinión.</li>
+    <li><strong>Enlazamos las fuentes.</strong> Cada noticia lleva el enlace a la información original, para que puedas comprobarla con un clic.</li>
+    <li><strong>Revisamos.</strong> <a href="/es/editor">El editor</a> lee cada edición antes de enviarla: comprueba las noticias, los resúmenes y las fuentes, y quita lo que no está a la altura.</li>
+   </ol>
+  </div>
+
+  <div class="card pipeline-card">
+   <h2>El proceso</h2>
+   <div class="flow">
+    <div class="flow-node"><span class="flow-ico">📰</span><strong>Fuentes</strong><span>20 Minutos, elDiario.es, El Confidencial, Europa Press, El Mundo y más</span></div>
+    <div class="flow-arrow" aria-hidden="true">→</div>
+    <div class="flow-node"><span class="flow-ico">🤖</span><strong>IA</strong><span>Elige y resume las noticias</span></div>
+    <div class="flow-arrow" aria-hidden="true">→</div>
+    <div class="flow-node"><span class="flow-ico">🧑‍💻</span><strong>Revisión humana</strong><span><a href="/es/editor">El editor</a> revisa cada noticia</span></div>
+    <div class="flow-arrow" aria-hidden="true">→</div>
+    <div class="flow-node flow-node-last"><span class="flow-ico">📢</span><strong>Publicación</strong><span>Web y email</span></div>
+   </div>
+  </div>
+
+  <div class="card">
+   <h2>Cómo usamos la IA</h2>
+   <p>Cada edición lo dice claramente: los resúmenes se basan en noticias reales, se hacen con ayuda de IA y los revisa una persona. Nunca inventamos hechos, citas ni cifras, y las fuentes enlazadas siempre están ahí para comprobarlo. Si ves un error, <a href="/es/contact">avísanos</a> y lo corregimos.</p>
+  </div>
+
+  <div class="card">
+   <h2>Gratis y sin cuenta</h2>
+   <p>La web y el archivo se leen gratis. La edición por email también es gratuita: te <a href="/es/subscribe">suscribes</a> en un paso y te <a href="/es/unsubscribe">das de baja</a> cuando quieras.</p>
+  </div>
+ </div>
+{% endblock %}

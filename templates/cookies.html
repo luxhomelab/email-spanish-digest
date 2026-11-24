@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% set alt_path = "/cookies" %}
 {% block body_class %} class="page-legal"{% endblock %}
 {% block title %}Cookie Policy — Spanified{% endblock %}
 {% block description %}<meta name="description" content="Cookie Policy of Spanified — which cookies and browser storage the site uses, which need your consent, and how to change your choice.">
@@ -12,7 +13,7 @@
 <meta name="robots" content="max-image-preview:large">{% endblock %}
 
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/cookies">
-{% set alt_path = "/cookies" %}{% include "partials/hreflang.html" %}{% endblock %}
+{% include "partials/hreflang.html" %}{% endblock %}
 {% block content %}
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "WebPage",
@@ -20,7 +21,7 @@
  "url": "{{ site_url }}/cookies",
  "description": "Which cookies and browser storage Spanified uses, which need your consent, and how to change your choice.",
  "inLanguage": "en",
- "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}}
+ "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}{{ lang_url('/') }}"}}
 </script>
  <div class="legal">
   <h1>Cookie Policy</h1>

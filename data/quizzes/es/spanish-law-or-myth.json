@@ -1,0 +1,337 @@
+{
+  "title": "¿Ley española o invento nuestro? ¿Sabes distinguirlas?",
+  "meta_description": "Diez normas españolas en dos minutos: la mitad son ley de verdad y la otra mitad nos las hemos inventado. ¿Sabes cuáles son reales?",
+  "card_kicker": "Test de leyes",
+  "hook_sub": "La mitad son leyes españolas reales y la otra mitad nos las hemos inventado. ¿Sabes cuál es cuál?",
+  "real_label": "Real: es ley",
+  "fake_label": "Falso: inventada",
+  "questions": {
+    "r1": {
+      "headline": "En España te pueden multar con 600 euros por beber en la calle",
+      "summary": "Una ley estatal de seguridad ciudadana permite a la policía multar a quien beba alcohol en la calle cuando el ruido, la aglomeración o la basura alteran la convivencia. La franja básica va de 100 a 600 euros, con importes mayores para reincidentes o casos agravados. La norma apunta al botellón, las quedadas masivas en parques y plazas antes de salir, no a una copa de vino en la cena. La mayoría de los municipios la aplican con sus propias ordenanzas, además de la ley estatal.",
+      "explanation": "Parece folclore para asustar a turistas, pero la prohibición del botellón está en la ley estatal de seguridad ciudadana."
+    },
+    "r2": {
+      "headline": "Hasta 60.000 euros por llevarse arena o conchas de la playa",
+      "summary": "La Ley de Costas considera la arena, los cantos y las conchas de las playas bienes protegidos de dominio público que los visitantes no pueden llevarse. Las multas pueden llegar a 60.000 euros en los casos más graves. En los aeropuertos, los agentes de aduanas han encontrado una y otra vez maletas llenas de arena y conchas. El objetivo es sencillo: que las playas no desaparezcan grano a grano como recuerdo.",
+      "explanation": "Parece absurdo, pero la Ley de Costas fija de verdad un tope de 60.000 euros por llevarse arena de recuerdo."
+    },
+    "r3": {
+      "headline": "Hacer autostop en una autopista es ilegal: 80 euros de multa",
+      "summary": "Las normas de tráfico prohíben a los peatones andar, esperar o hacer autostop en autopistas y autovías. Intentarlo cuesta 80 euros, además del peligro evidente de seis carriles. Las mismas normas dejan fuera de estas vías a ciclistas, caballos y tractores. Las autopistas son solo para vehículos de motor, y el reglamento lo dice bien claro.",
+      "explanation": "Que los peatones no anden por la autopista parece puro sentido común, pero además es una infracción de 80 euros."
+    },
+    "r4": {
+      "headline": "La nueva ley antitabaco prohíbe fumar en playas y terrazas",
+      "summary": "La ley del tabaco actualizada amplía los espacios sin humo a las playas, las terrazas de bares y restaurantes, los campus universitarios y cualquier coche en el que viajen menores. Las multas empiezan en 200 euros. Los legisladores la presentaron como una protección frente al humo ajeno y una forma de que los adolescentes no vean el tabaco como algo normal. Llega después de las prohibiciones autonómicas que ya cubren cientos de playas españolas.",
+      "explanation": "Parece sacado de un generador de titulares, pero la ley actualizada lleva esas prohibiciones a la norma estatal."
+    },
+    "r5": {
+      "headline": "Patinetes eléctricos fuera de las aceras: solo por carril y a 25 km/h",
+      "summary": "Las normas de tráfico sacan de las aceras a los vehículos de movilidad personal y los mandan al carril bici y a la calzada, con un límite de 25 km/h. Hay que tener al menos 15 años y un seguro de responsabilidad civil. Desde 2026, ese seguro es obligatorio para todos los patinetes eléctricos. La policía hace controles en la calle para pillar a quien circula sin seguro.",
+      "explanation": "Parece una fantasía de mano dura, pero tanto la prohibición en aceras como el seguro obligatorio son normas oficiales de la DGT."
+    },
+    "r6": {
+      "headline": "Los músicos callejeros de Madrid necesitan una audición y respetar la siesta",
+      "summary": "Madrid obliga a los artistas callejeros, cantantes incluidos, a pasar una audición municipal antes de tocar a cambio de dinero. Quien tiene permiso debe bajar el volumen entre las 15:00 y las 17:00, las horas de siesta de la ciudad. Tocar sin papeles o en la franja de silencio cuesta el permiso y una multa. Las audiciones se crearon para descongestionar las plazas y subir el nivel medio.",
+      "explanation": "Parece mucha burocracia para unos músicos callejeros, pero Madrid de verdad les pone nota."
+    },
+    "r7": {
+      "headline": "Dar de comer a las palomas de Madrid te puede costar 1.500 euros",
+      "summary": "Madrid considera un acto incívico dar de comer a las palomas en la vía pública, con multas de hasta 1.500 euros. El ayuntamiento sostiene que la comida mantiene bandadas enormes y llena las plazas de excrementos. Los agentes avisan a los turistas que llevan pan antes de multarlos. La norma va junto a las multas por tirar basura y por dejar que los perros ensucien la acera.",
+      "explanation": "Darles pan a las palomas parece inofensivo, pero la ordenanza de Madrid lo castiga con hasta 1.500 euros."
+    },
+    "r8": {
+      "headline": "En Madrid, no recoger la caca del perro es una falta grave: hasta 1.500 euros",
+      "summary": "Madrid considera que no recoger los excrementos del perro es una infracción grave de sus normas de limpieza, no un despiste sin importancia. Las sanciones van de 751 a 1.500 euros, muy por encima de la franja de las faltas leves. La ciudad pone miles de multas al año y vigila de cerca los parques. También se espera que los dueños lleven agua para limpiar la zona.",
+      "explanation": "Parece una leyenda urbana, pero la franja de falta grave sale tal cual de la ordenanza de Madrid."
+    },
+    "r9": {
+      "headline": "Barcelona multa con entre 120 y 300 euros por ir sin camiseta por la calle",
+      "summary": "Las normas de civismo de Barcelona sancionan ir por la calle en bañador o con el torso desnudo lejos de la playa. La multa va de 120 a 300 euros, junto a las sanciones por orinar en la calle y otras conductas incívicas. El objetivo es la costumbre de quitarse la ropa en la Barceloneta, donde los turistas se desvisten nada más salir de la arena. La policía primero avisa y después multa.",
+      "explanation": "Parece un mito de la policía de la moda, pero Barcelona multa de verdad con hasta 300 euros por pasear sin camiseta."
+    },
+    "r10": {
+      "headline": "Multas de 750 euros por fumar en 14 playas cerca de Barcelona",
+      "summary": "Catorce municipios del entorno de Barcelona han prohibido fumar en sus playas, con multas de hasta 750 euros. Los agentes patrullan la arena y avisan antes de multar. Las prohibiciones citan las colillas como basura marina tanto como el humo ajeno. Badalona y Sant Adrià fueron de los primeros.",
+      "explanation": "Parece algo simbólico, pero la prohibición y las multas de 750 euros están en vigor en 14 municipios costeros."
+    },
+    "r11": {
+      "headline": "Barcelona: orinar en la calle cuesta entre 750 y 1.500 euros",
+      "summary": "La ordenanza de convivencia de Barcelona pone orinar en la vía pública en la misma franja que otras conductas incívicas graves: de 750 a 1.500 euros. Las denuncias por orinar en la calle subieron tras la entrada en vigor de la norma, sobre todo en las calles de ocio nocturno. Los agentes avisan primero y multan a quien pillan en plena faena. El ayuntamiento lo presenta como una medida de limpieza y salud pública.",
+      "explanation": "Parece moralina, pero la multa por un pis de madrugada está en la ordenanza municipal."
+    },
+    "r12": {
+      "headline": "Sevilla prohíbe el dominó en las terrazas de los bares: multas desde 300 euros",
+      "summary": "La ordenanza de vía pública de Sevilla prohíbe jugar al dominó en las terrazas de los bares, con multas desde 300 euros. La ciudad argumenta que el golpeteo de las fichas y los codazos molestan a los vecinos y a las mesas de al lado. Los camareros deben retirar los tableros y quitarles las fichas a los grupos. La prohibición está junto a las normas sobre beber de pie y rodar barriles de cerveza.",
+      "explanation": "Parece inventado para fastidiar a los turistas, pero Sevilla prohibió de verdad el dominó en las terrazas."
+    },
+    "r13": {
+      "headline": "Sevilla también prohíbe beber de pie y rodar barriles por la acera",
+      "summary": "Sevilla prohíbe beber o comer de pie junto al mobiliario urbano, como farolas y bolardos. En la misma cláusula prohíbe rodar barriles de cerveza por la acera o la terraza. La ciudad dice que quien bebe de pie bloquea las aceras y se choca con los peatones. Los bares pueden ser multados junto con sus clientes.",
+      "explanation": "Parece una sátira contra la hora del aperitivo, pero las dos normas están tal cual en la ordenanza."
+    },
+    "r14": {
+      "headline": "Rebuscar en los contenedores de Sevilla: de 90 a 750 euros",
+      "summary": "La ordenanza de limpieza de Sevilla convierte en infracción rebuscar en los contenedores públicos, con multas de 90 a 750 euros. El ayuntamiento dice que rebuscar esparce la basura, atrae plagas y entorpece la recogida. Sacar bolsas o volcar contenedores entra en la misma cláusula. La alternativa permitida son los puntos limpios oficiales.",
+      "explanation": "Parece duro, pero la norma de los contenedores está escrita en la ordenanza de limpieza de Sevilla."
+    },
+    "r15": {
+      "headline": "Sevilla exigirá licencia para hacer flamenco en la calle",
+      "summary": "Las normas de Sevilla para artistas callejeros obligarían a cantaores, bailaores y guitarristas de flamenco a tener una licencia municipal antes de actuar a cambio de dinero. Habría audiciones y un calendario de turnos para decidir quién toca y dónde. Según el ayuntamiento, los grupos sin licencia se han adueñado de las esquinas más concurridas de Santa Cruz. El borrador también fija horas de silencio y un máximo de personas por grupo.",
+      "explanation": "Parece imposible de controlar, pero Sevilla dio pasos reales para dar licencias al flamenco callejero."
+    },
+    "r16": {
+      "headline": "Zamora prohíbe gritar en la calle a cualquier hora",
+      "summary": "La ordenanza de convivencia de Zamora prohíbe gritar, cantar o armar jaleo en la calle a cualquier hora del día o de la noche. Regar balcones y fachadas solo se permite entre las 23:00 y las 9:00, cuando es menos probable que el agua caiga sobre alguien. Las multas empiezan siendo bajas y suben con la reincidencia. La misma ordenanza regula la música alta en casas y coches.",
+      "explanation": "Parece imposible de hacer cumplir, pero tanto la prohibición de gritar como el horario de riego están en la ordenanza de Zamora."
+    },
+    "r17": {
+      "headline": "Un pueblo prohibió dejar la fregona en el balcón",
+      "summary": "Villanueva de la Torre, en Guadalajara, prohibió dejar la fregona y el cubo en la barandilla del balcón. El ayuntamiento dice que las fregonas que gotean manchan las fachadas y mojan a quien pasa por debajo. La prohibición llegó dentro de una larga lista de normas sobre balcones redactada tras las quejas de los vecinos. Los vecinos tuvieron un periodo de gracia para despejar las barandillas.",
+      "explanation": "Parece una sátira de pueblo, pero la prohibición de la fregona está en el texto de la ordenanza."
+    },
+    "r18": {
+      "headline": "En un pueblo, los perros solo pueden ladrar fuera de la noche y la siesta",
+      "summary": "En Villanueva de la Torre, los perros no pueden ladrar entre las 22:00 y las 8:00, ni durante la siesta, de 15:00 a 17:00. Los dueños deben hacerlos callar o se arriesgan a una multa. La norma llegó tras las quejas por los ladridos durante el confinamiento, que se habían vuelto insoportables. También incluye gallos, loros y otras mascotas ruidosas.",
+      "explanation": "Parece imposible de aplicar, pero el toque de queda de los ladridos está escrito en la ordenanza del pueblo."
+    },
+    "r19": {
+      "headline": "Este pueblo prohíbe tender la ropa en los balcones que se ven desde la calle",
+      "summary": "Villanueva de la Torre también prohíbe tender la ropa en los balcones que dan a la calle. El ayuntamiento quiere una imagen cuidada en el centro del pueblo. Los vecinos pueden secar la ropa en la azotea o en patios interiores. Tras un primer aviso, a los reincidentes se les multa.",
+      "explanation": "Parece un exceso estético, pero la prohibición de tender existe de verdad."
+    },
+    "r20": {
+      "headline": "Reservar sitio en la arena con una toalla: hasta 3.000 euros en Cullera",
+      "summary": "Cullera multa con hasta 3.000 euros a quien reserve un trozo de arena con toallas, sillas o sombrillas y luego lo deje vacío. Los vigilantes recorren la playa y retiran lo que encuentran abandonado. El municipio declaró la guerra a los guerrilleros de la toalla que guardan los mejores sitios desde el amanecer. Las playas vecinas copiaron la norma.",
+      "explanation": "Parece una broma para turistas, pero Cullera puso de verdad un precio de 3.000 euros a guardar sitio."
+    },
+    "r21": {
+      "headline": "Calp prohíbe plantar la sombrilla antes de las 9:30 de la mañana",
+      "summary": "Calp prohíbe poner sombrillas, sillas y tumbonas en sus playas antes de las 9:30. Según el ayuntamiento, los más madrugadores plantaban jardines enteros de sombrillas al amanecer y bloqueaban los accesos. Los vigilantes retiran el material o multan a los primeros en llegar. La norma se aplica durante toda la temporada de baño.",
+      "explanation": "Parece arbitrario, pero la ordenanza de playas de Calp tiene de verdad ese límite de las 9:30."
+    },
+    "r22": {
+      "headline": "Ir desnudo por la calle en Valencia: de 1.500 a 3.000 euros",
+      "summary": "Valencia considera falta muy grave ir completamente desnudo por la calle, con multas de 1.500 a 3.000 euros. Las normas de convivencia se endurecieron antes de la temporada turística de verano. Otras franjas cubren el ruido, los pisos turísticos ilegales y la venta ambulante sin licencia. A los reincidentes se les aplica lo más alto de la escala.",
+      "explanation": "Parece puritano, pero la franja de falta muy grave por desnudez está en las normas municipales de Valencia."
+    },
+    "r23": {
+      "headline": "Benidorm prohíbe las palas en el agua: hasta 3.000 euros",
+      "summary": "Benidorm prohíbe jugar con raquetas o palas en el mar, con multas de 700 a 3.000 euros. La ciudad dice que las pelotas perdidas y las raquetas al aire hieren a los bañistas cuando el agua está llena. Se puede jugar en las zonas de arena señaladas, lejos de los bañistas. Socorristas y policía local se reparten la vigilancia.",
+      "explanation": "Parece inventado para turistas, pero la prohibición de las palas y la multa de hasta 3.000 euros son normas oficiales de Benidorm."
+    },
+    "r24": {
+      "headline": "Ni hogueras ni barbacoas en las playas de Ceuta: de 150 a 450 euros",
+      "summary": "La ordenanza de playas de Ceuta prohíbe encender hogueras, barbacoas o cualquier fuego en la orilla. La multa va de 150 a 450 euros. El ayuntamiento señala la arena quemada, las dunas dañadas y las papeleras humeantes. En verano, los kits de carbón se requisan en cuanto se ven.",
+      "explanation": "Parece de sentido común, pero la prohibición y sus multas están tal cual en la ordenanza de playas de Ceuta."
+    },
+    "r25": {
+      "headline": "Prohibido jugar a la pelota en la orilla en Ceuta",
+      "summary": "La ordenanza de playas de Ceuta prohíbe los juegos de pelota o de raqueta justo en la orilla. La multa llega a 150 euros para quien insista. La norma existe porque los lanzamientos caen sobre los bañistas y las toallas acaban en el agua. Los juegos tienen que irse a la arena despejada, lejos de los bañistas.",
+      "explanation": "Parece quisquilloso, pero la prohibición de jugar en la orilla está en esa misma ordenanza de Ceuta."
+    },
+    "r26": {
+      "headline": "En temporada de baño, ningún animal puede pisar las playas de Ceuta",
+      "summary": "La ordenanza de playas de Ceuta prohíbe la entrada de cualquier animal en la arena durante la temporada de baño, no solo de perros. Incluye gatos, pájaros y cualquier animal que se lleve en una cesta. Los animales de asistencia solo están exentos en las zonas señaladas. Se impone multa y se pide al dueño que se vaya.",
+      "explanation": "Parece selectivo, pero la ordenanza prohíbe de verdad todos los animales, no solo los perros."
+    },
+    "r27": {
+      "headline": "San Sebastián prohíbe fumar y los altavoces en sus playas",
+      "summary": "San Sebastián multa con entre 100 y 750 euros a quien fume en La Concha, Ondarreta o Zurriola. La misma ordenanza prohíbe los altavoces y la música alta en la arena. Los vigilantes primero avisan y luego multan. Las normas van contra las colillas y contra las guerras de música entre grupos.",
+      "explanation": "Parece demasiado cuidado, pero la prohibición de fumar y la de los altavoces son normas municipales."
+    },
+    "r28": {
+      "headline": "Prohibidos los perros en varias playas de Agüimes, en Gran Canaria",
+      "summary": "La ordenanza de playas de Agüimes prohíbe los perros en Arinaga, Vargas y otras playas del municipio. Hay carteles en cada tramo cerrado y la policía local puede multar a los dueños. El ayuntamiento alega la limpieza de la arena y la nidificación de aves. A quien pasea con su perro se le manda a los tramos permitidos fuera de las zonas protegidas.",
+      "explanation": "Parece una norma genérica para turistas, pero la prohibición está en la ordenanza de playas de Agüimes de 2022."
+    },
+    "r29": {
+      "headline": "Nudismo fuera de las playas naturistas: de 750 a 3.000 euros en Murcia",
+      "summary": "Murcia limita el nudismo y el intercambio de parejas a unas pocas playas naturistas oficiales. En cualquier otro sitio, ir desnudo cuesta de 750 a 3.000 euros según la gravedad. La norma también incluye el desnudo parcial en aparcamientos y caminos de la playa. En las entradas de las playas familiares, la policía pide que se lleve bañador.",
+      "explanation": "Parece mojigato, pero la franja de multas es una norma autonómica real."
+    },
+    "r30": {
+      "headline": "Las despedidas de soltero pueden costar hasta 3.000 euros en Granada",
+      "summary": "La ordenanza de convivencia de Granada pone las despedidas de soltero y soltera organizadas en la franja de multas más alta, hasta 3.000 euros. Va contra los grupos disfrazados que llegan en autobús y van de bar en bar con música amplificada. Los organizadores necesitan autorización para actividades de grupo en la vía pública. Los locales que acogen a estos grupos ruidosos se arriesgan a sanciones paralelas.",
+      "explanation": "Parece una guerra contra la diversión, pero Granada metió de verdad las despedidas en su ordenanza."
+    },
+    "f1": {
+      "headline": "Valencia prohíbe servir paella después de las tres de la tarde",
+      "summary": "Según un borrador de norma gastronómica, los restaurantes valencianos solo podrían servir paella antes de las 15:00 para proteger la reputación del plato. Pasada esa hora, las cocinas tendrían que pasarse a otros arroces o pagar una multa de 600 euros. Los inspectores comprobarían la hora de los tiques. La norma se presentó como una defensa de la tradición frente a las paellas tardías para turistas.",
+      "explanation": "Pista: en Valencia se discute sin fin sobre la paella, pero ninguna ciudad ha puesto nunca un horario límite para servirla."
+    },
+    "f2": {
+      "headline": "Madrid multa las risas de más de 60 decibelios en el cine de verano",
+      "summary": "Una norma sobre ruido para las sesiones de cine de verano en Madrid fija en 60 decibelios el límite de las risas del público. Los acomodadores llevan sonómetros, y los grupos que se ríen por encima de esa línea reciben un aviso de 150 euros. La medida se presentó como una protección para los vecinos que viven detrás de la pantalla. A quien se ríe una y otra vez se le pide que se pase a las últimas filas.",
+      "explanation": "Pista: Madrid sí vigila el ruido del ocio nocturno, pero nadie mide las risas del público."
+    },
+    "f3": {
+      "headline": "Sevilla obliga a los bailaores a parar a beber agua cada 20 minutos",
+      "summary": "Las normas propuestas en Sevilla para los espectáculos callejeros obligarían a los bailaores de flamenco a parar cinco minutos para beber agua cada veinte. Los organizadores tendrían que poner zonas de descanso a la sombra y anotar cada pausa. Habría multas para los grupos que se saltaran el calendario de descansos. La cláusula se justificó para evitar golpes de calor en bailaores con traje completo.",
+      "explanation": "Pista: a la ciudad le importan sus artistas, pero ninguna ordenanza les controla cuándo tienen que beber agua."
+    },
+    "f4": {
+      "headline": "Mallorca prohíbe los hoyos en la arena más hondos que tu palma",
+      "summary": "Las normas de playa de Mallorca prohíben cavar hoyos más hondos que una mano abierta, unos quince centímetros. Los vigilantes llevan plantillas plastificadas con forma de mano para comprobar la profundidad. Las multas empiezan en 90 euros para quien cave con intención. La norma se justificó por los rescates en arena mojada que se derrumba.",
+      "explanation": "Pista: los socorristas avisan del peligro de los hoyos profundos, pero ninguna ordenanza los mide con la palma de la mano."
+    },
+    "f5": {
+      "headline": "Granada examina a los taxistas de tres estrofas de flamenco",
+      "summary": "Antes de obtener la licencia, los aspirantes a taxista en Granada tienen que recitar tres estrofas de una copla flamenca y decir a qué palo pertenece. Un músico local del tribunal puntúa el examen oral. Si suspendes dos veces, esperas seis meses para volver a presentarte. Según el ayuntamiento, la norma une a los conductores con el patrimonio de Granada.",
+      "explanation": "Pista: Granada examina a los taxistas de rutas y tarifas, nunca de poesía."
+    },
+    "f6": {
+      "headline": "Barcelona multa las tapas que pasen 10 minutos en el alféizar",
+      "summary": "Una cláusula de higiene del borrador de ordenanza de Barcelona prohíbe dejar platos de comida en el alféizar de la ventana más de diez minutos. Se pide a los vecinos que denuncien con fotos las tapas expuestas. Los infractores reciben una multa de 120 euros y un sermón sobre el aceite de oliva que se pone rancio al sol. La norma se presentó como control de plagas contra palomas y hormigas.",
+      "explanation": "Pista: Barcelona regula los bares, no tu comida en la ventana."
+    },
+    "f7": {
+      "headline": "Alicante prohíbe el bañador en el centro desde junio",
+      "summary": "Las normas de verano de Alicante prohibirían, en teoría, pasear por el centro en bañador o en chanclas con la toalla al hombro de junio a septiembre. Habría que taparse antes de entrar en las calles del mercado. Las multas irían de 100 a 300 euros, con avisos para los bañistas despistados. Carteles en cinco idiomas marcarían la zona en la que hay que ir vestido.",
+      "explanation": "Pista: cada verano se discute cómo deben vestir los turistas, pero ninguna ciudad ha trazado una frontera del bañador."
+    },
+    "f8": {
+      "headline": "No puedes llamar Señor a tu perro en los parques públicos",
+      "summary": "Una norma municipal prohibiría, en teoría, llamar Señor a un perro macho porque los avisos por megafonía en el parque confunden a otros paseantes. Los dueños tendrían que cambiarle el nombre en los treinta días siguientes al registro. Las multas llegarían a 90 euros si el nombre aparece en la chapa del perro. El ayuntamiento alegó que el tratamiento lía al personal a la hora de dirigirse a los visitantes.",
+      "explanation": "Pista: los registros aceptan casi cualquier nombre, y ningún registro controla lo que gritas en el parque."
+    },
+    "f9": {
+      "headline": "Toledo prohíbe las campanas antes de las ocho y media",
+      "summary": "La ordenanza de ruido de Toledo fijaría, en teoría, las 8:30 como la hora más temprana para tocar las campanas, lo que retrasaría una hora el toque de la mañana. Se pidió a los monasterios que esperaran si el sonido llegaba a ventanas de viviendas. Los grupos de peregrinos se quejaron de que el cambio les desbarataba el oficio temprano. Las multas llegarían a 300 euros para quien repita.",
+      "explanation": "Pista: en Toledo las campanas siguen dando las horas, y ninguna ordenanza ha domado a la catedral."
+    },
+    "f10": {
+      "headline": "Bilbao te multa por abrir el paraguas cerca de desconocidos",
+      "summary": "Las normas para aceras de Bilbao prohibirían, en teoría, abrir el paraguas a menos de cincuenta centímetros de otro peatón. Los infractores pagarían 60 euros en el acto, y más si le dan a alguien. Los comerciantes repartirían capuchas de lluvia desechables a cambio. La cláusula cita lesiones en los ojos registradas en el lluvioso casco viejo.",
+      "explanation": "Pista: en Bilbao se quejan de la lluvia sin parar, pero ninguna norma mide el radio del paraguas."
+    },
+    "f11": {
+      "headline": "Cádiz limita las agrupaciones de carnaval a una canción de cuatro minutos",
+      "summary": "Las normas del carnaval de Cádiz limitarían, en teoría, cada chirigota a cuatro minutos por canción, con penalización para los números más largos. El jurado pararía el reloj en mitad de la estrofa y restaría puntos por pasarse. Las agrupaciones dicen que el límite les mata los mejores remates. Las multas empezarían en 150 euros por tocar dos veces la versión larga.",
+      "explanation": "Pista: en Cádiz se cronometran las fases del concurso, pero nunca la duración de una canción."
+    },
+    "f12": {
+      "headline": "Almería prohíbe tomar el sol boca arriba más de 30 minutos",
+      "summary": "El código de playas de Almería limitaría, en teoría, el sol boca arriba a media hora para evitar insolaciones entre los turistas. Los vigilantes pedirían a los bañistas que se den la vuelta o se pongan a la sombra. Las multas llegarían a 120 euros para los adoradores del sol más tozudos. La norma también limitaría a noventa minutos seguidos el tiempo total de bronceado.",
+      "explanation": "Pista: los socorristas avisan del sol del mediodía, pero no llevan un cronómetro de bronceado."
+    },
+    "f13": {
+      "headline": "Valladolid obliga a tocar el timbre de la bici cada 200 metros",
+      "summary": "Las normas ciclistas de Valladolid obligarían, en teoría, a tocar el timbre al menos cada doscientos metros, o siempre que haya un peatón al alcance del oído. La policía multaría a los ciclistas silenciosos con una cláusula de prevención de ruidos. Los grupos de más de cuatro tendrían una excepción: deberían tocar el timbre en fila india. La norma se presentó como una forma de tranquilizar a los peatones.",
+      "explanation": "Pista: Valladolid anima a usar el timbre, pero ningún agente cuenta cuántas veces lo tocas."
+    },
+    "f14": {
+      "headline": "Ibiza obliga a colocar las tumbonas paralelas a la orilla",
+      "summary": "Las normas de concesiones de playa de Ibiza exigirían, en teoría, que las tumbonas de alquiler miren al mar en filas perfectamente paralelas. Una tumbona torcida le costaría al concesionario una multa de 500 euros y una carta de advertencia. Cada mañana, los equipos revisarían las filas con cuerda y estacas. Los bañistas que traigan su propia silla también tendrían que alinearse.",
+      "explanation": "Pista: los concesionarios respetan los límites de su permiso, pero nadie multa una toalla torcida."
+    },
+    "f15": {
+      "headline": "Murcia limita la venta de empanadas a tres por cliente",
+      "summary": "Una norma de protección de las panaderías pequeñas limitaría, en teoría, la venta de empanadas a tres por compra durante las fiestas. Los panaderos tendrían que pedir el DNI en los pedidos grandes y apuntar cada negativa. Las multas llegarían a 200 euros por venderle una cuarta a la misma persona. El ayuntamiento alegó que así las colas avanzan y se frena a los revendedores.",
+      "explanation": "Pista: a las panaderías les encantan los pedidos grandes, y ninguna región pone tope a las empanadas."
+    },
+    "f16": {
+      "headline": "Jerez multa a quien silbe por la calle a la hora de la siesta",
+      "summary": "Las normas de convivencia de Jerez prohibirían, en teoría, silbar, tararear y silbar con los dedos entre las 15:00 y las 19:00 en el casco antiguo. Los infractores pagarían 90 euros la primera vez y el doble si repiten. Se pediría a los dueños de los bares que denuncien a los silbadores insistentes. La cláusula cita a los vecinos obsesionados con la siesta en calles estrechas.",
+      "explanation": "Pista: la siesta es sagrada, pero ninguna ciudad andaluza te multa por silbar."
+    },
+    "f17": {
+      "headline": "Jabugo exige licencia para cortar jamón en público",
+      "summary": "Jabugo exigiría, en teoría, una licencia municipal de jamón a quien corte jamón en las ferias. Los aspirantes demostrarían un corte con hueso ante tres jueces. Cortar sin licencia supondría una multa de 150 euros y la retirada del cuchillo. La licencia se renovaría cada dos años con un examen de cata.",
+      "explanation": "Pista: los maestros cortadores tienen certificados, pero los pueblos no dan licencias para cortar jamón en la calle."
+    },
+    "f18": {
+      "headline": "Los bares de Salamanca deben servir la sangría con pajita",
+      "summary": "Una norma del barrio universitario obligaría, en teoría, a servir la sangría con una pajita de papel, bajo multa de 90 euros. Los camareros tendrían que cambiar la pajita a los treinta minutos. Los bares dicen que así la bebida sabe a cartón y los clientes no la quieren. La cláusula se presentó como una medida de higiene para las jarras compartidas.",
+      "explanation": "Pista: ninguna ordenanza dicta cómo te bebes la sangría."
+    },
+    "f19": {
+      "headline": "Oviedo obliga a pasear al perro por la izquierda",
+      "summary": "Las normas urbanas de Oviedo obligarían, en teoría, a llevar al perro por el lado izquierdo de la acera. Cambiar de lado a menos de cinco metros de otro perro supondría un aviso. Las multas llegarían a 100 euros tras dos infracciones. El ayuntamiento dijo que un lado fijo evita que las correas se enreden entre la gente.",
+      "explanation": "Pista: las normas sobre la correa existen, pero nunca te dicen por qué lado de la calle ir."
+    },
+    "f20": {
+      "headline": "El metro de Madrid prohíbe comer helado, con multas de 300 euros",
+      "summary": "El metro de Madrid prohibiría, en teoría, los helados por completo, por las gotas en los asientos y en los túneles. Los interventores pondrían multas de 300 euros a quien desenvuelva un cucurucho a bordo. Las tiendas pasados los tornos no podrían vender cucuruchos a los viajeros. A los reincidentes se les suspendería el abono mensual.",
+      "explanation": "Pista: el metro prohíbe comer y beber en general, pero no existe ninguna norma de 300 euros para los cucuruchos."
+    },
+    "f21": {
+      "headline": "Toledo prohíbe las bolsas de la compra de más de cinco kilos en el casco antiguo",
+      "summary": "Las normas de seguridad en las cuestas de Toledo limitarían, en teoría, las bolsas de la compra a cinco kilos dentro de las murallas. Agentes con básculas de muelle revisarían bolsas al azar en las puertas principales. Las multas llegarían a 80 euros por cargas más pesadas, y más si algo se cae. Los repartidores tendrían que dividir la carga en sacos más pequeños.",
+      "explanation": "Pista: las bolsas pesadas son una queja local, no una infracción que se pese."
+    },
+    "f22": {
+      "headline": "Cuenca obliga a los bares a cerrar dos horas para una siesta en silencio",
+      "summary": "El borrador de ordenanza de Cuenca obligaría, en teoría, a todos los bares a cerrar de 14:00 a 16:00 y a mantener la terraza en silencio. A quien se quede se le pediría que se vaya sin servirle. Las multas llegarían a 300 euros para los bares que mantengan encendida la cafetera. La norma se presentó como una protección para los vecinos de las casas colgadas.",
+      "explanation": "Pista: la hora de comer es sagrada en España, pero ninguna ciudad cierra sus bares a toque de reloj."
+    },
+    "f23": {
+      "headline": "Córdoba limita a los guitarristas callejeros a quince minutos por hora",
+      "summary": "Las normas para músicos callejeros de Córdoba limitarían, en teoría, la guitarra a quince minutos por hora, controlados con una tarjeta con horario. Los músicos tendrían que enseñar la tarjeta y pasársela al siguiente. Tocar más de la cuenta supondría una multa de 100 euros. La medida buscaba repartir con justicia el espacio sonoro de los patios.",
+      "explanation": "Pista: se organizan turnos, pero nadie les da a los guitarristas una tarjeta para fichar."
+    },
+    "f24": {
+      "headline": "Gijón exige permiso para los castillos de arena de más de 30 cm",
+      "summary": "Las normas de playa de Gijón exigirían, en teoría, un permiso gratuito para cualquier castillo de arena de más de treinta centímetros. La solicitud tendría que incluir un boceto y un plano de los hoyos. Los vigilantes allanarían las torres sin permiso, y los constructores se arriesgarían a una multa de 60 euros. Las torres que bloqueen los accesos se retirarían de inmediato.",
+      "explanation": "Pista: los vigilantes retiran lo que es peligroso, pero nadie da permisos para castillos de arena."
+    },
+    "f25": {
+      "headline": "Los corredores de San Fermín deben vestir exactamente dos colores",
+      "summary": "Las normas de las fiestas de Pamplona obligarían, en teoría, a los corredores a vestir solo de rojo y blanco, con el pañuelo atado de la forma oficial. Una camiseta de colores supondría una multa de 200 euros en las puertas del vallado. Los pastores revisarían la ropa antes de que empiece el encierro. A los reincidentes se les prohibiría correr durante tres años.",
+      "explanation": "Pista: el blanco y rojo es tradición, nunca un código de vestimenta con multas."
+    },
+    "f26": {
+      "headline": "Málaga limita las copas a tres cubitos de hielo en verano",
+      "summary": "Una norma de ahorro de agua limitaría, en teoría, cada combinado a tres cubitos de hielo entre junio y septiembre. Los camareros tendrían que contarlos delante del cliente. Cada ronda con vasos de más les costaría a los bares 120 euros. La cláusula se presentó como una protección de los embalses de la ciudad en alerta por sequía.",
+      "explanation": "Pista: los bares reciben consejos para ahorrar agua, nunca un cupo de cubitos."
+    },
+    "f27": {
+      "headline": "Los taxis de Bilbao deben saludar a los pasajeros en euskera",
+      "summary": "Bilbao obligaría, en teoría, a los taxistas a empezar con un saludo en euskera y a nombrar tres lugares emblemáticos de la ciudad antes de terminar la carrera. Los inspectores viajarían sin avisar para comprobar la pronunciación. Un saludo mal dicho o que falte supondría una falta, y tres faltas, una multa de 300 euros. Los taxistas nuevos tendrían que aprobar un examen de frases en la parada.",
+      "explanation": "Pista: los taxistas aprenden frases de cortesía, pero ningún inspector puntúa su saludo."
+    },
+    "f28": {
+      "headline": "Cartagena multa a quien tome el sol encima de coches aparcados",
+      "summary": "Las normas de vía pública de Cartagena prohibirían, en teoría, tumbarse encima de los coches aparcados para broncearse, con multas desde 150 euros. Los agentes citan techos abollados y capós que queman. Extender una toalla de playa sobre el parabrisas contaría como tentativa. La norma se aplicaría también a autobuses y motos.",
+      "explanation": "Pista: nadie da permisos para tomar el sol, y nadie te multa por echarte la siesta en el capó."
+    },
+    "f29": {
+      "headline": "En la Alhambra solo se pueden hacer cuatro fotos por sala",
+      "summary": "Una norma para visitantes limitaría, en teoría, las fotos a cuatro por sala en los Palacios Nazaríes. Los vigilantes levantarían cuatro dedos y harían bajar los móviles. Cada foto de más supondría una multa de 100 euros a pagar a la salida. Los palos de selfi estarían prohibidos del todo, y los trípodes solo se permitirían en los patios.",
+      "explanation": "Pista: la Alhambra limita el aforo y los trípodes, nunca cuántas fotos haces."
+    },
+    "f30": {
+      "headline": "Las discotecas de Ibiza deben quedarse en silencio en 60 segundos al dar las 6:00",
+      "summary": "Las normas de licencias de Ibiza exigirían, en teoría, que la música llegue a cero en los sesenta segundos siguientes a las seis de la mañana. Si el DJ sigue pinchando a las 6:01, el local se enfrenta a una multa de 2.000 euros. Los técnicos de sonido anotarían cada mañana el fundido en un formulario municipal. Las discotecas dicen que un fundido lento cuida tanto los oídos como a los vecinos.",
+      "explanation": "Pista: los horarios de cierre son reales, pero ningún ayuntamiento mide tu último fundido."
+    }
+  },
+  "results": {
+    "lawless-guiri": {
+      "title": "Guiri sin ley",
+      "text": "Te creíste lo del horario de la paella y el cupo de cubitos sin pestañear. España tiene normas de verdad disparatadas, pero las que elegiste no están entre ellas: te ha engañado nuestra mejor ficción burocrática.\n\nUn mes de España al Día y olerás una ordenanza inventada antes de que se te enfríe el café con leche.",
+      "shareText": "He sacado 0-2/10 distinguiendo leyes españolas reales de los inventos de Spanified: ¡guiri sin ley! ¿Puedes superar mi glorioso fracaso?"
+    },
+    "petty-offender": {
+      "title": "Infractor de poca monta",
+      "text": "Clavaste los delitos playeros, pero caíste con la policía del silbido y el tope de empanadas. La mitad de tu instinto es fino; la otra mitad todavía cree que un ayuntamiento puede medirte las risas.\n\nLee el resumen una semana y empezarás a mirar la letra pequeña antes de reírte.",
+      "shareText": "He sacado 3-4/10 distinguiendo leyes españolas reales de los inventos de Spanified: infractor de poca monta. ¿Lo haces mejor?"
+    },
+    "suspicious-vecino": {
+      "title": "Vecino desconfiado",
+      "text": "Mitad y mitad: lo cuestionas todo como el vecino que mira por la persiana, pero la licencia del jamón se te escapó. Ya das por hecho que todas las ordenanzas son inventadas; solo te falta averiguar cuáles lo son de verdad.\n\nUnas cuantas mañanas más con España al Día y nadie te volverá a colar una ordenanza falsa.",
+      "shareText": "He sacado 5-6/10 distinguiendo leyes españolas reales de los inventos de Spanified: vecino desconfiado. ¿Me superas?"
+    },
+    "model-citizen": {
+      "title": "Ciudadano ejemplar",
+      "text": "Cazaste la prohibición de la fregona y la guerra de las toallas como quien se ha leído mil tablones de anuncios del ayuntamiento. Solo se te escaparon nuestros inventos más tontos, que son lo difícil, porque en España las normas reales ya parecen de broma.\n\nSuscríbete y mantén tu historial limpio: el resumen de la semana que viene trae más cotilleos de ordenanzas.",
+      "shareText": "He sacado 7-8/10 distinguiendo leyes españolas reales de los inventos de Spanified: ciudadano ejemplar. A que no me superas."
+    },
+    "honorary-funcionario": {
+      "title": "Funcionario honorario",
+      "text": "No hubo quien te engañara: ni el cupo de cubitos, ni la prohibición de gritar, ni el permiso para castillos de arena. Lees ordenanzas como otros leen cotilleos, y acertaste casi siempre.\n\nPor la presente te nombramos funcionario honorario. Suscríbete y te seguiremos pasando el papeleo que nadie más tiene paciencia de leer.",
+      "shareText": "He sacado 9-10/10 distinguiendo leyes españolas reales de los inventos de Spanified: ¡funcionario honorario! ¿Alguien me supera?"
+    }
+  }
+}

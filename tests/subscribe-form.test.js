@@ -1,6 +1,6 @@
 import { describe, it, after } from 'node:test'
 import assert from 'node:assert/strict'
-import { errorMessage, collectFields, postForm, initSubscribeForm } from '../static/js/subscribe-form.js'
+import { errorMessage, collectFields, postForm, initSubscribeForm, confirmPath } from '../static/js/subscribe-form.js'
 
 // ── errorMessage ────────────────────────────────────────────────────────
 describe('errorMessage', () => {
@@ -220,5 +220,14 @@ describe('initSubscribeForm', () => {
   after(() => {
     global.fetch = originalFetch
     global.window = originalWindow
+  })
+})
+
+// ── confirmPath ─────────────────────────────────────────────────────────
+describe('confirmPath', () => {
+  it('keeps a Spanish form on the Spanish confirm page when `next` is missing', () => {
+    assert.equal(confirmPath('es'), '/es/confirm')
+    assert.equal(confirmPath('en'), '/confirm')
+    assert.equal(confirmPath(undefined), '/confirm')
   })
 })

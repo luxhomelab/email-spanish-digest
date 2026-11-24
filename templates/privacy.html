@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% set alt_path = "/privacy" %}
 {% block body_class %} class="page-legal"{% endblock %}
 {% block title %}Privacy Policy — Spanified{% endblock %}
 {% block description %}<meta name="description" content="Privacy Policy of Spanified — what data we collect (newsletter email, consent-based analytics), why, and your rights under GDPR.">
@@ -12,7 +13,7 @@
 <meta name="robots" content="max-image-preview:large">{% endblock %}
 
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/privacy">
-{% set alt_path = "/privacy" %}{% include "partials/hreflang.html" %}{% endblock %}
+{% include "partials/hreflang.html" %}{% endblock %}
 {% block content %}
 {% include "partials/breadcrumbs.html" %}
 <script type="application/ld+json">
@@ -21,7 +22,7 @@
  "url": "{{ site_url }}/privacy",
  "description": "Privacy Policy of Spanified — what data we collect, why, and your rights under GDPR.",
  "inLanguage": "en",
- "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}}
+ "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}{{ lang_url('/') }}"}}
 </script>
  <div class="legal">
   <h1>Privacy Policy</h1>

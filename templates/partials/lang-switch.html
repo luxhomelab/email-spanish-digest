@@ -1,0 +1,16 @@
+{# Language switcher (both headers). The target comes from `alt_path`, the
+   same value that drives the hreflang tags: the English path of a page whose
+   /es/ twin exists (ES_PATHS, see the i18n note in build.py). Pages without
+   a twin (calculators, quizzes, about...) have no alt_path, so the other
+   language's link goes to its home page. Plain links, no redirect.
+   Visible text is the language code; screen readers get the full name. -#}
+{% set _es = page_lang == "es" -%}
+<nav class="lang-switch" aria-label="{{ 'Idioma' if _es else 'Language' }}">
+ {% if _es -%}
+ <a href="{{ alt_path or '/' }}" hreflang="en" lang="en" aria-label="English">EN</a>
+ <span aria-current="true" lang="es"><span aria-hidden="true">ES</span><span class="sr-only">Español</span></span>
+ {%- else -%}
+ <span aria-current="true" lang="en"><span aria-hidden="true">EN</span><span class="sr-only">English</span></span>
+ <a href="{{ '/es' ~ alt_path if alt_path else '/es/' }}" hreflang="es" lang="es" aria-label="Español">ES</a>
+ {%- endif %}
+</nav>

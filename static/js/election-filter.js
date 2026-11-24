@@ -88,3 +88,9 @@ export function filtersToQuery (filters) {
 export function isEmpty (filters) {
   return !filters.party && !filters.topic && !filters.ratings.length && !filters.q.trim()
 }
+
+// Fill a UI string template from the page ("{shown} of {total} promises")
+// with values; the partials carry the wording so each language page has its own.
+export function fill (template, values) {
+  return template.replace(/\{(\w+)\}/g, (m, key) => (key in values ? String(values[key]) : m))
+}

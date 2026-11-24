@@ -1,5 +1,24 @@
 {% extends "base.html" %}
 {% block body_class %} class="page-calculator"{% endblock %}
+{# Shared by /calculators/rental-yield and /es/calculators/rental-yield (page_lang).
+   Short UI strings go through t() (ES_STRINGS, "ES: calculators" block in build.py);
+   the long copy (meta, FAQ, explainer) is written per language below.
+   Region <option> labels stay {{ t("English") }}: build.py parses them (select_options). #}
+{% set es = page_lang == "es" %}
+{% if es %}
+{% set page_title = "Calculadora de rentabilidad del alquiler " ~ calc_year ~ " | Spanified" %}
+{% set page_desc = "Calcula la rentabilidad bruta y neta de un piso en alquiler en España, el flujo de caja y la TIR tras IBI, ITP, hipoteca e impuestos. Datos de " ~ calc_year ~ "." %}
+{% set og_desc = "Rentabilidad bruta y neta, rentabilidad sobre lo invertido, TIR y flujo de caja de un piso en alquiler en España, después de impuestos de residentes o no residentes." %}
+{% set faqs = [
+ ("¿Cómo se calcula la rentabilidad de un alquiler?", "Rentabilidad bruta = alquiler anual ÷ precio de compra. Rentabilidad neta = (alquiler anual tras los meses vacíos − gastos de explotación − impuestos sobre el alquiler) ÷ (precio + impuestos de compra + gastos de compraventa + reforma). Rentabilidad sobre lo invertido (cash-on-cash) = flujo de caja del primer año tras la hipoteca ÷ el dinero que pones tú. La TIR usa los flujos de cada año más lo que obtienes al vender al final. Ejemplo: 250.000 € en Madrid alquilados a 1.200 € al mes dan un 5,76 % bruto."),
+ ("¿Qué impuestos de compra usa la calculadora?", "Segunda mano: el ITP al tipo de la comunidad (progresivo en ocho comunidades; por ejemplo, el 6 % en Madrid, 15.000 € sobre 250.000 €). Obra nueva: un 10 % de IVA (un 7 % de IGIC en Canarias) más el AJD al tipo de la comunidad (por ejemplo, el 0,75 % en Madrid). Los tipos son los mismos que en nuestra calculadora de gastos de compra de vivienda."),
+ ("¿Cómo tributa el alquiler para un residente?", "Los residentes pagan IRPF por el rendimiento neto del alquiler: la renta menos los gastos deducibles (IBI, comunidad, seguros, reparaciones, gestión), los intereses de la hipoteca y la amortización del inmueble. El art. 23.2 LIRPF aplica una reducción en los alquileres de vivienda habitual: el 50 % en general, el 60 % si la vivienda se ha rehabilitado en los dos últimos años o el contrato es anterior al 26 de mayo de 2023, y el 70 % o el 90 % en zonas tensionadas si se cumplen las condiciones. La calculadora te deja elegir la reducción (50 % por defecto) y aplica tu tipo marginal. El Real Decreto-ley 29/2026 (BOE-A-2026-20823, en vigor desde el 8 de octubre de 2026) crea una nueva escala del 15 al 100 % según cómo se compare la nueva renta con la del contrato anterior, el tope del alquiler, la edad del inquilino y la zona. Todavía tienen que convalidarlo las Cortes en 30 días y hay normas transitorias para los contratos en vigor, así que comprueba la situación antes de contar con ello. La calculadora no aplica la nueva escala: elige la reducción que corresponda a tu contrato."),
+ ("¿Cómo tributan los no residentes por el alquiler?", "Los no residentes pagan el IRNR. Si vives en la UE o el EEE, el tipo es del 19 % sobre la renta menos los gastos, los intereses de la hipoteca y la amortización (art. 24.6 TRLIRNR), sin la reducción del 50 %. Si vives fuera de la UE o el EEE, el tipo es del 24 % sobre la renta bruta, sin deducciones. La Audiencia Nacional (28 de julio de 2025, rec. 636/2021) admitió las deducciones para los propietarios de fuera de la UE, pero el Tribunal Supremo ha admitido un recurso, así que no es firme. Marca la casilla para ver ese caso más favorable."),
+ ("¿Cómo tributa la ganancia al vender?", "Los residentes tributan por la escala del ahorro de 2026: un 19 % hasta 6.000 €, un 21 % hasta 50.000 €, un 23 % hasta 200.000 €, un 27 % hasta 300.000 € y un 30 % por encima. Los no residentes pagan un 19 % fijo (art. 25.1.f TRLIRNR). El comprador retiene además el 3 % del precio para Hacienda (modelo 211) como pago a cuenta; no es un coste extra y recuperas lo que sobre en tu declaración, así que la calculadora no lo incluye. No se calcula la plusvalía municipal: pon tu propia estimación en el apartado Venta."),
+ ("¿Cómo funciona la amortización?", "Las normas fiscales (art. 14 RIRPF) permiten amortizar el edificio al 3 % anual sobre el mayor entre el coste de adquisición (precio + impuestos + gastos) y el valor catastral, sin contar el suelo. La calculadora usa (precio + impuestos de compra + gastos de compraventa) × el porcentaje de construcción, más la reforma si la hay, y limita la amortización total a esa base. El porcentaje de construcción es la parte del valor catastral que corresponde a la construcción en tu recibo del IBI (70 % por defecto). La amortización que hayas aplicado también reduce el valor de adquisición al vender, lo que aumenta la ganancia que tributa."),
+ ("¿Qué precisión tienen estos resultados?", "Es un modelo orientativo, no asesoramiento fiscal. No tiene en cuenta las deducciones autonómicas, las normas locales, los convenios de doble imposición ni el detalle de tu declaración. Última revisión de los datos fiscales: octubre de 2026."),
+] %}
+{% else %}
 {% set page_title = "Spain Rental Yield Calculator " ~ calc_year ~ ": Net Yield After Tax | Spanified" %}
 {% set page_desc = "Free Spain rental yield calculator: gross and net rental yield, cash-on-cash, IRR and monthly cash flow after IBI, ITP, mortgage and resident or non-resident tax. Updated for " ~ calc_year ~ "." %}
 {% set faqs = [
@@ -11,18 +30,21 @@
  ("How does amortization work?", "The tax rules (art. 14 RIRPF) let you depreciate the building at 3% a year of the larger of the acquisition cost (price + taxes + costs) and the cadastral value, excluding land. The calculator uses (price + purchase taxes + closing costs) × the construction share, plus any renovation cost, and caps total amortization at that base. The construction share is the building part of the cadastral value on your IBI bill (default 70%). Amortization you used also reduces the cost basis when you sell, which raises the taxable gain."),
  ("How accurate are these results?", "This is an educational model, not tax advice. It ignores regional deductions, local rules, treaty provisions and the detail of your personal tax return. Last tax data verification: October 2026."),
 ] %}
+{% set og_desc = "Work out the gross and net rental yield, cash-on-cash return, IRR and cash flow of a Spanish rental property after resident or non-resident tax." %}
+{% endif %}
 {% block title %}{{ page_title }}{% endblock %}
 {% block description %}<meta name="description" content="{{ page_desc }}">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ page_title }}">
-<meta property="og:description" content="Work out the gross and net rental yield, cash-on-cash return, IRR and cash flow of a Spanish rental property after resident or non-resident tax.">
-<meta property="og:url" content="{{ site_url }}/calculators/rental-yield">
+<meta property="og:description" content="{{ og_desc }}">
+<meta property="og:url" content="{{ page_url }}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ page_title }}">
-<meta name="twitter:description" content="Work out the gross and net rental yield, cash-on-cash return, IRR and cash flow of a Spanish rental property after resident or non-resident tax.">
+<meta name="twitter:description" content="{{ og_desc }}">
 <meta name="robots" content="max-image-preview:large">{% endblock %}
 
-{% block canonical %}<link rel="canonical" href="{{ site_url }}/calculators/rental-yield">{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ page_url }}">{% endblock %}
+{% block extra_head %}{% if alt_path %}{% include "partials/hreflang.html" %}{% endif %}{% endblock %}
 {# The label's last word and its "?" mark are glued (.tip-unit) so the mark never wraps onto its own line; the unit wraps as one piece. #}
 {% macro lbl(label, tip='', unit='') %}{% set words = label.split(' ') %}{% if words|length > 1 %}{{ words[:-1]|join(' ') }} {% endif %}<span class="tip-unit">{{ words[-1] }}{% if tip %} <span class="tip" title="{{ tip }}">?</span>{% endif %}</span>{% if unit %} <span class="sub">{{ unit }}</span>{% endif %}{% endmacro %}
 {% macro num(key, label, tip='', unit='', step='any', data_show='', err=false) %}
@@ -41,125 +63,125 @@
 {"@context": "https://schema.org", "@graph": [
  {"@type": "WebPage",
   "name": {{ page_title|tojson }},
-  "url": "{{ site_url }}/calculators/rental-yield",
+  "url": "{{ page_url }}",
   "description": {{ page_desc|tojson }},
-  "inLanguage": "en",
-  "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}},
- {"@type": "FAQPage", "mainEntity": [
+  "inLanguage": "{{ page_lang|default('en') }}",
+  "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}{{ lang_url('/') }}"}},
+ {"@type": "FAQPage",{% if es %} "inLanguage": "es",{% endif %} "mainEntity": [
 {% for q, a in faqs %}  {"@type": "Question", "name": {{ q|tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ a|tojson }}}}{% if not loop.last %},{% endif %}
 {% endfor %} ]}
 ]}
 </script>
  <div class="calc ry-calc">
-  <h1>Spain Rental Yield Calculator <span class="calc-year">{{ calc_year }}</span></h1>
-  <p class="subtitle">Net rental yield after tax, gross yield, cash-on-cash, IRR and monthly cash flow — for residents and non-residents, with Spanish purchase, rental and sale taxes.</p>
+  <h1>{{ t("Spain Rental Yield Calculator") }} <span class="calc-year">{{ calc_year }}</span></h1>
+  <p class="subtitle">{{ t("Net rental yield after tax, gross yield, cash-on-cash, IRR and monthly cash flow — for residents and non-residents, with Spanish purchase, rental and sale taxes.") }}</p>
 
   <div class="calc-grid ry-grid">
    <div class="card calc-form ry-form">
-    <a class="ry-jump" href="#r-kpis">Jump to results ↓</a>
+    <a class="ry-jump" href="#r-kpis">{{ t("Jump to results ↓") }}</a>
 
     <details class="ry-group" open>
-     <summary>Purchase</summary>
+     <summary>{{ t("Purchase") }}</summary>
      <div class="ry-group-body">
-      {{ num('purchasePrice', 'Purchase price', 'The agreed price of the property. Purchase taxes are calculated on it. Minimum €10,000.', '€', '1000', err=true) }}
+      {{ num('purchasePrice', t('Purchase price'), t('The agreed price of the property. Purchase taxes are calculated on it. Minimum €10,000.'), '€', '1000', err=true) }}
       <div class="field">
-       <label for="f-regionId">{{ lbl('Region', 'Your autonomous community sets the ITP transfer-tax rate (3–13%) and the AJD stamp-duty rate (0–1.5%) used for the purchase.') }}</label>
+       <label for="f-regionId">{{ lbl(t('Region'), t('Your autonomous community sets the ITP transfer-tax rate (3–13%) and the AJD stamp-duty rate (0–1.5%) used for the purchase.')) }}</label>
        <select id="f-regionId">
-        <option value="andalucia">Andalusia</option>
-        <option value="aragon">Aragon</option>
-        <option value="asturias">Asturias</option>
-        <option value="baleares">Balearic Islands</option>
-        <option value="pais_vasco">Basque Country</option>
-        <option value="canarias">Canary Islands</option>
-        <option value="cantabria">Cantabria</option>
-        <option value="castilla_leon">Castilla and Leon</option>
-        <option value="castilla_la_mancha">Castilla-La Mancha</option>
-        <option value="catalunya">Catalonia</option>
-        <option value="ceuta">Ceuta</option>
-        <option value="extremadura">Extremadura</option>
-        <option value="galicia">Galicia</option>
-        <option value="la_rioja">La Rioja</option>
-        <option value="madrid" selected>Madrid</option>
-        <option value="melilla">Melilla</option>
-        <option value="murcia">Murcia</option>
-        <option value="navarra">Navarre</option>
-        <option value="comunidad_valenciana">Valencian Community</option>
+        <option value="andalucia">{{ t("Andalusia") }}</option>
+        <option value="aragon">{{ t("Aragon") }}</option>
+        <option value="asturias">{{ t("Asturias") }}</option>
+        <option value="baleares">{{ t("Balearic Islands") }}</option>
+        <option value="pais_vasco">{{ t("Basque Country") }}</option>
+        <option value="canarias">{{ t("Canary Islands") }}</option>
+        <option value="cantabria">{{ t("Cantabria") }}</option>
+        <option value="castilla_leon">{{ t("Castilla and Leon") }}</option>
+        <option value="castilla_la_mancha">{{ t("Castilla-La Mancha") }}</option>
+        <option value="catalunya">{{ t("Catalonia") }}</option>
+        <option value="ceuta">{{ t("Ceuta") }}</option>
+        <option value="extremadura">{{ t("Extremadura") }}</option>
+        <option value="galicia">{{ t("Galicia") }}</option>
+        <option value="la_rioja">{{ t("La Rioja") }}</option>
+        <option value="madrid" selected>{{ t("Madrid") }}</option>
+        <option value="melilla">{{ t("Melilla") }}</option>
+        <option value="murcia">{{ t("Murcia") }}</option>
+        <option value="navarra">{{ t("Navarre") }}</option>
+        <option value="comunidad_valenciana">{{ t("Valencian Community") }}</option>
        </select>
       </div>
       <div class="field">
-       <span class="flabel">{{ lbl('Property type', 'Resale homes pay ITP transfer tax. New builds pay 10% IVA (7% IGIC in the Canary Islands) plus AJD stamp duty. You never pay both.') }}</span>
-       <div class="seg ry-seg" id="f-propertyType" role="group" aria-label="Property type">
-        <button type="button" data-v="resale" class="on" aria-pressed="true">Resale <small>ITP</small></button>
-        <button type="button" data-v="new" aria-pressed="false">New build <small id="f-newbuild-tax">IVA + AJD</small></button>
+       <span class="flabel">{{ lbl(t('Property type'), t('Resale homes pay ITP transfer tax. New builds pay 10% IVA (7% IGIC in the Canary Islands) plus AJD stamp duty. You never pay both.')) }}</span>
+       <div class="seg ry-seg" id="f-propertyType" role="group" aria-label="{{ t('Property type') }}">
+        <button type="button" data-v="resale" class="on" aria-pressed="true">{{ t("Resale") }} <small>ITP</small></button>
+        <button type="button" data-v="new" aria-pressed="false">{{ t("New build") }} <small id="f-newbuild-tax">IVA + AJD</small></button>
        </div>
       </div>
-      {{ num('closingCostsPct', 'Closing costs', 'Notary, land registry, gestoría and valuation, as a percentage of the price. Purchase tax is added separately. 1.5–2.5% is typical.', '% of price', '0.1') }}
-      {{ check('useRenovation', 'Include renovation', 'Add an initial renovation. It is added to your cash outlay and amortized separately, and the flat is not rented during the works.') }}
+      {{ num('closingCostsPct', t('Closing costs'), t('Notary, land registry, gestoría and valuation, as a percentage of the price. Purchase tax is added separately. 1.5–2.5% is typical.'), t('% of price'), '0.1') }}
+      {{ check('useRenovation', t('Include renovation'), t('Add an initial renovation. It is added to your cash outlay and amortized separately, and the flat is not rented during the works.')) }}
       <div class="ry-sub" data-show="renovation" hidden>
-       {{ num('renovationCost', 'Renovation cost', '', '€', '1000') }}
-       {{ num('renovationDurationMonths', 'Works duration', 'Months of the first year without rent.', 'months', '1') }}
-       {{ num('valueAfterRepairs', 'Value after repairs', 'Estimated market value once the works are done. The sale price grows from this value.', '€', '1000') }}
+       {{ num('renovationCost', t('Renovation cost'), '', '€', '1000') }}
+       {{ num('renovationDurationMonths', t('Works duration'), t('Months of the first year without rent.'), t('months'), '1') }}
+       {{ num('valueAfterRepairs', t('Value after repairs'), t('Estimated market value once the works are done. The sale price grows from this value.'), '€', '1000') }}
       </div>
      </div>
     </details>
 
     <details class="ry-group" open>
-     <summary>Rent &amp; costs</summary>
+     <summary>{{ t("Rent & costs") }}</summary>
      <div class="ry-group-body">
-      {{ num('monthlyRent', 'Monthly rent', 'Rent you charge per month in year 1, before vacancy.', '€', '10') }}
+      {{ num('monthlyRent', t('Monthly rent'), t('Rent you charge per month in year 1, before vacancy.'), '€', '10') }}
       <div class="field-row">
-       {{ num('vacancyRatePct', 'Vacancy', 'Share of the year the flat stands empty or unpaid.', '%', '0.5') }}
-       {{ num('rentGrowthPct', 'Rent growth', 'Yearly rent increase. Regulated residential leases are limited by the rent-update index.', '%/yr', '0.1') }}
+       {{ num('vacancyRatePct', t('Vacancy'), t('Share of the year the flat stands empty or unpaid.'), '%', '0.5') }}
+       {{ num('rentGrowthPct', t('Rent growth'), t('Yearly rent increase. Regulated residential leases are limited by the rent-update index.'), t('%/yr'), '0.1') }}
       </div>
       <div class="field-row">
-       {{ num('annualIBI', 'IBI', 'Annual municipal property tax (Impuesto sobre Bienes Inmuebles).', '€/yr', '10') }}
-       {{ num('monthlyCommunity', 'Community fee', 'Monthly homeowners association fee.', '€/mo', '5') }}
+       {{ num('annualIBI', t('IBI'), t('Annual municipal property tax (Impuesto sobre Bienes Inmuebles).'), t('€/yr'), '10') }}
+       {{ num('monthlyCommunity', t('Community fee'), t('Monthly homeowners association fee.'), t('€/mo'), '5') }}
       </div>
       <div class="field-row">
-       {{ num('annualHomeInsurance', 'Home insurance', '', '€/yr', '10') }}
-       {{ num('annualRentalInsurance', 'Rent insurance', 'Optional non-payment insurance.', '€/yr', '10') }}
+       {{ num('annualHomeInsurance', t('Home insurance'), '', t('€/yr'), '10') }}
+       {{ num('annualRentalInsurance', t('Rent insurance'), t('Optional non-payment insurance.'), t('€/yr'), '10') }}
       </div>
       <div class="field-row">
-       {{ num('maintenanceRatePct', 'Maintenance', 'Repairs and upkeep as a percentage of rent.', '% of rent', '0.5') }}
-       {{ num('managementFeePct', 'Management', 'Property manager fee as a percentage of rent. 0 if you self-manage.', '% of rent', '0.5') }}
+       {{ num('maintenanceRatePct', t('Maintenance'), t('Repairs and upkeep as a percentage of rent.'), t('% of rent'), '0.5') }}
+       {{ num('managementFeePct', t('Management'), t('Property manager fee as a percentage of rent. 0 if you self-manage.'), t('% of rent'), '0.5') }}
       </div>
-      {{ num('expenseGrowthRatePct', 'Expense growth', 'Yearly increase of IBI, community fee and insurance. Maintenance and management follow the rent.', '%/yr', '0.1') }}
-      <p class="field-note">Rent and expense growth start in year 2, so the year-1 yields and monthly cash flow stay the same. They move the IRR, profit when sold, the chart and the year-by-year table.</p>
+      {{ num('expenseGrowthRatePct', t('Expense growth'), t('Yearly increase of IBI, community fee and insurance. Maintenance and management follow the rent.'), t('%/yr'), '0.1') }}
+      <p class="field-note">{{ t("Rent and expense growth start in year 2, so the year-1 yields and monthly cash flow stay the same. They move the IRR, profit when sold, the chart and the year-by-year table.") }}</p>
      </div>
     </details>
 
     <details class="ry-group">
-     <summary>Financing</summary>
+     <summary>{{ t("Financing") }}</summary>
      <div class="ry-group-body">
-      {{ check('useLoan', 'Use a mortgage') }}
+      {{ check('useLoan', t('Use a mortgage')) }}
       <div class="ry-sub" data-show="loan" hidden>
        <div class="field-row">
-        {{ num('downPaymentPct', 'Down payment', 'Share of the price paid in cash. Taxes and costs are paid in cash on top.', '%', '1') }}
-        {{ num('interestRateAnnual', 'Interest rate', 'Fixed annual rate.', '%/yr', '0.05') }}
+        {{ num('downPaymentPct', t('Down payment'), t('Share of the price paid in cash. Taxes and costs are paid in cash on top.'), '%', '1') }}
+        {{ num('interestRateAnnual', t('Interest rate'), t('Fixed annual rate.'), t('%/yr'), '0.05') }}
        </div>
        <div class="field-row">
-        {{ num('loanTermYears', 'Term', '', 'years', '1') }}
-        {{ num('loanOpeningFee', 'Opening fee', 'One-off bank fee, paid in cash.', '€', '100') }}
+        {{ num('loanTermYears', t('Term'), '', t('years'), '1') }}
+        {{ num('loanOpeningFee', t('Opening fee'), t('One-off bank fee, paid in cash.'), '€', '100') }}
        </div>
       </div>
      </div>
     </details>
 
     <details class="ry-group" open>
-     <summary>Taxes</summary>
+     <summary>{{ t("Taxes") }}</summary>
      <div class="ry-group-body">
       <div class="field">
-       <label for="f-taxStatus">{{ lbl('Tax residency', 'Residents pay IRPF at their marginal rate. Non-residents pay IRNR: 19% (EU/EEA, on net income) or 24% (outside the EU/EEA, on gross rent).') }}</label>
+       <label for="f-taxStatus">{{ lbl(t('Tax residency'), t('Residents pay IRPF at their marginal rate. Non-residents pay IRNR: 19% (EU/EEA, on net income) or 24% (outside the EU/EEA, on gross rent).')) }}</label>
        <select id="f-taxStatus">
-        <option value="resident" selected>Spanish resident</option>
-        <option value="non_resident_eu">Non-resident (EU/EEA)</option>
-        <option value="non_resident_non_eu">Non-resident (outside EU/EEA)</option>
+        <option value="resident" selected>{{ t("Spanish resident") }}</option>
+        <option value="non_resident_eu">{{ t("Non-resident (EU/EEA)") }}</option>
+        <option value="non_resident_non_eu">{{ t("Non-resident (outside EU/EEA)") }}</option>
        </select>
       </div>
       <div class="field-row" data-show="resident">
-       {{ num('personalTaxRatePct', 'Marginal IRPF rate', 'The rate on your next euro of income (state + regional), typically 19–47%. Rental income is added on top of your other income.', '%', '0.5') }}
+       {{ num('personalTaxRatePct', t('Marginal IRPF rate'), t('The rate on your next euro of income (state + regional), typically 19–47%. Rental income is added on top of your other income.'), '%', '0.5') }}
        <div class="field">
-        <label for="f-rentalReductionPct">{{ lbl('Rental reduction', '50%: standard long-term home let. 60%: renovated in the last 2 years, or lease signed before 26 May 2023. 70% / 90%: stressed housing zones, if conditions are met. A new 15–100% scale (RDL 29/2026) still awaits validation and is not modelled — see the FAQ.') }}</label>
+        <label for="f-rentalReductionPct">{{ lbl(t('Rental reduction'), t('50%: standard long-term home let. 60%: renovated in the last 2 years, or lease signed before 26 May 2023. 70% / 90%: stressed housing zones, if conditions are met. A new 15–100% scale (RDL 29/2026) still awaits validation and is not modelled — see the FAQ.')) }}</label>
         <select id="f-rentalReductionPct">
          <option value="0">0%</option>
          <option value="50" selected>50%</option>
@@ -171,26 +193,26 @@
        </div>
       </div>
       <div class="field" data-show="noneu" hidden>
-       {{ check('useNonEuDeductions', 'Apply the Audiencia Nacional 2025 ruling (net base, under appeal)', 'Judgment of 28 July 2025 (rec. 636/2021) lets non-EU owners deduct expenses. The Supreme Court has admitted an appeal, so the current rule is 24% on gross rent. Tick to see the best case: 24% on net income.') }}
+       {{ check('useNonEuDeductions', t('Apply the Audiencia Nacional 2025 ruling (net base, under appeal)'), t('Judgment of 28 July 2025 (rec. 636/2021) lets non-EU owners deduct expenses. The Supreme Court has admitted an appeal, so the current rule is 24% on gross rent. Tick to see the best case: 24% on net income.')) }}
       </div>
-      {{ num('constructionSharePct', 'Building share of value', 'Amortization applies to the building only, not the land. Use the construction value ÷ total cadastral value from your IBI bill (valor catastral). 70% is a common default.', '%', '1') }}
+      {{ num('constructionSharePct', t('Building share of value'), t('Amortization applies to the building only, not the land. Use the construction value ÷ total cadastral value from your IBI bill (valor catastral). 70% is a common default.'), '%', '1') }}
      </div>
     </details>
 
     <details class="ry-group">
-     <summary>Exit</summary>
+     <summary>{{ t("Exit") }}</summary>
      <div class="ry-group-body">
       <div class="field-row">
-       {{ num('holdYears', 'Holding period', 'Years until you sell (1–50).', 'years', '1') }}
-       {{ num('appreciationRatePct', 'Property value growth', 'Average yearly increase of the property value.', '%/yr', '0.1') }}
+       {{ num('holdYears', t('Holding period'), t('Years until you sell (1–50).'), t('years'), '1') }}
+       {{ num('appreciationRatePct', t('Property value growth'), t('Average yearly increase of the property value.'), t('%/yr'), '0.1') }}
       </div>
       <div class="field-row">
-       {{ num('costToSellPct', 'Selling costs', 'Agent fee and other costs of selling, as a percentage of the sale price.', '% of price', '0.1') }}
-       {{ num('plusvalia', 'Municipal plusvalía', 'Local land-value gain tax (plusvalía municipal), paid by the seller. Depends on your town and cadastral data; enter your own estimate.', '€', '100') }}
+       {{ num('costToSellPct', t('Selling costs'), t('Agent fee and other costs of selling, as a percentage of the sale price.'), t('% of price'), '0.1') }}
+       {{ num('plusvalia', t('Municipal plusvalía'), t('Local land-value gain tax (plusvalía municipal), paid by the seller. Depends on your town and cadastral data; enter your own estimate.'), '€', '100') }}
       </div>     </div>
     </details>
 
-    <button type="button" id="r-reset" class="ry-reset">Reset to defaults</button>
+    <button type="button" id="r-reset" class="ry-reset">{{ t("Reset to defaults") }}</button>
    </div>
 
    <div class="calc-results ry-results">
@@ -199,63 +221,63 @@
     <div id="r-results">
      <div class="ry-kpis" id="r-kpis">
       <div class="ry-kpi">
-       <p class="kicker">Net yield</p>
+       <p class="kicker">{{ t("Net yield") }}</p>
        <p class="val" id="r-net">—</p>
-       <p class="sub2">after expenses &amp; tax, year 1</p>
+       <p class="sub2">{{ t("after expenses & tax, year 1") }}</p>
       </div>
       <div class="ry-kpi">
-       <p class="kicker">Gross yield</p>
+       <p class="kicker">{{ t("Gross yield") }}</p>
        <p class="val" id="r-gross">—</p>
-       <p class="sub2">rent ÷ price</p>
+       <p class="sub2">{{ t("rent ÷ price") }}</p>
       </div>
       <div class="ry-kpi" data-show="loan" hidden>
-       <p class="kicker">Cash-on-cash</p>
+       <p class="kicker">{{ t("Cash-on-cash") }}</p>
        <p class="val" id="r-coc">—</p>
-       <p class="sub2">year 1, on cash invested</p>
+       <p class="sub2">{{ t("year 1, on cash invested") }}</p>
       </div>
       <div class="ry-kpi">
-       <p class="kicker">Cash flow / month</p>
+       <p class="kicker">{{ t("Cash flow / month") }}</p>
        <p class="val" id="r-monthly">—</p>
-       <p class="sub2">year 1, after tax</p>
+       <p class="sub2">{{ t("year 1, after tax") }}</p>
       </div>
       <div class="ry-kpi">
-       <p class="kicker">IRR</p>
+       <p class="kicker">{{ t("IRR") }}</p>
        <p class="val" id="r-irr">—</p>
-       <p class="sub2" id="r-irr-sub">incl. sale</p>
+       <p class="sub2" id="r-irr-sub">{{ t("incl. sale") }}</p>
       </div>
      </div>
 
      <div class="duo">
       <div class="mini mini-ss">
-       <p class="kicker">Cash needed up front</p>
+       <p class="kicker">{{ t("Cash needed up front") }}</p>
        <p class="val" id="r-outlay">—</p>
        <p class="sub2" id="r-outlay-sub">—</p>
       </div>
       <div class="mini mini-profit">
-       <p class="kicker">Profit when sold</p>
+       <p class="kicker">{{ t("Profit when sold") }}</p>
        <p class="val" id="r-profit">—</p>
        <p class="sub2" id="r-roi">—</p>
       </div>
      </div>
 
      <div class="card ry-chart-card">
-      <p class="calc-kicker">Your position year by year</p>
+      <p class="calc-kicker">{{ t("Your position year by year") }}</p>
       <div class="ry-chart" id="r-chart"></div>
       <p class="ry-chart-read" id="r-chart-read" aria-live="polite"></p>
       <ul class="ry-legend">
-       <li><span class="ry-lg-mark ry-lg-net"></span><span class="ry-lg-t">Total net position (cash + property)</span><b class="ry-lg-v" id="r-lg-net">—</b><span class="ry-lg-d">Cumulative net cash flow + net equity (value − mortgage).</span></li>
-       <li><span class="ry-lg-mark ry-lg-equity"></span><span class="ry-lg-t">Total equity / asset value</span><b class="ry-lg-v" id="r-lg-equity">—</b><span class="ry-lg-d">Property value with yearly appreciation, minus the mortgage still owed.</span></li>
-       <li><span class="ry-lg-mark ry-lg-cash"></span><span class="ry-lg-t">Cumulative net cash flow</span><b class="ry-lg-v" id="r-lg-cash">—</b><span class="ry-lg-d">Rent after costs, mortgage and tax, minus the cash you put in up front.</span></li>
-       <li><span class="ry-lg-mark ry-lg-invested"></span><span class="ry-lg-t">Invested capital</span><b class="ry-lg-v" id="r-lg-invested">—</b><span class="ry-lg-d">Initial cash outlay + mortgage principal repaid to date.</span></li>
+       <li><span class="ry-lg-mark ry-lg-net"></span><span class="ry-lg-t">{{ t("Total net position (cash + property)") }}</span><b class="ry-lg-v" id="r-lg-net">—</b><span class="ry-lg-d">{{ t("Cumulative net cash flow + net equity (value − mortgage).") }}</span></li>
+       <li><span class="ry-lg-mark ry-lg-equity"></span><span class="ry-lg-t">{{ t("Total equity / asset value") }}</span><b class="ry-lg-v" id="r-lg-equity">—</b><span class="ry-lg-d">{{ t("Property value with yearly appreciation, minus the mortgage still owed.") }}</span></li>
+       <li><span class="ry-lg-mark ry-lg-cash"></span><span class="ry-lg-t">{{ t("Cumulative net cash flow") }}</span><b class="ry-lg-v" id="r-lg-cash">—</b><span class="ry-lg-d">{{ t("Rent after costs, mortgage and tax, minus the cash you put in up front.") }}</span></li>
+       <li><span class="ry-lg-mark ry-lg-invested"></span><span class="ry-lg-t">{{ t("Invested capital") }}</span><b class="ry-lg-v" id="r-lg-invested">—</b><span class="ry-lg-d">{{ t("Initial cash outlay + mortgage principal repaid to date.") }}</span></li>
       </ul>
-      <p class="field-note">Years since purchase. Tap or hover the chart to read a year.</p>
+      <p class="field-note">{{ t("Years since purchase. Tap or hover the chart to read a year.") }}</p>
      </div>
 
      <div class="card burden ry-summary">
-      <p class="calc-kicker">Year-1 rental tax</p>
+      <p class="calc-kicker">{{ t("Year-1 rental tax") }}</p>
       <div class="card sheet">
        <table>
-        <thead><tr><th>Item</th><th class="num">Amount</th></tr></thead>
+        <thead><tr><th>{{ t("Item") }}</th><th class="num">{{ t("Amount") }}</th></tr></thead>
         <tbody id="r-taxrows"></tbody>
        </table>
       </div>
@@ -263,20 +285,20 @@
      </div>
 
      <div class="card burden ry-summary">
-      <p class="calc-kicker">Over <span id="r-hold-label">30</span> years</p>
+      <p class="calc-kicker">{{ t("Over") }} <span id="r-hold-label">30</span> {{ t("years") }}</p>
       <div class="card sheet">
        <table>
-        <thead><tr><th>Item</th><th class="num">Amount</th></tr></thead>
+        <thead><tr><th>{{ t("Item") }}</th><th class="num">{{ t("Amount") }}</th></tr></thead>
         <tbody id="r-summary"></tbody>
        </table>
       </div>
      </div>
 
      <details class="card ry-years">
-      <summary>Year-by-year table</summary>
-      <div class="ry-table-wrap" tabindex="0" role="region" aria-label="Year-by-year cash flow table, scrolls horizontally">
+      <summary>{{ t("Year-by-year table") }}</summary>
+      <div class="ry-table-wrap" tabindex="0" role="region" aria-label="{{ t('Year-by-year cash flow table, scrolls horizontally') }}">
        <table class="ry-table">
-        <thead><tr><th>Year</th><th class="num">Rent</th><th class="num">Expenses</th><th class="num">NOI</th><th class="num">Mortgage</th><th class="num">Interest</th><th class="num">Tax</th><th class="num">Cash flow</th><th class="num">Cumulative</th></tr></thead>
+        <thead><tr><th>{{ t("Year") }}</th><th class="num">{{ t("Rent") }}</th><th class="num">{{ t("Expenses") }}</th><th class="num" title="{{ t("Net operating income") }}">{{ t("NOI") }}</th><th class="num">{{ t("Mortgage") }}</th><th class="num">{{ t("Interest") }}</th><th class="num">{{ t("Tax") }}</th><th class="num">{{ t("Cash flow") }}</th><th class="num">{{ t("Cumulative") }}</th></tr></thead>
         <tbody id="r-years"></tbody>
        </table>
       </div>
@@ -290,27 +312,34 @@
 {% include "partials/rental-yield-links.html" %}
 
   <div class="card seobox">
+{% if es %}
+   <h2>¿Qué rentabilidad deberías mirar?</h2>
+   <p>La <strong>rentabilidad bruta</strong> (alquiler ÷ precio) es la que dan los anuncios, así que sirve para comparar ofertas. No tiene en cuenta impuestos, gastos ni meses vacíos, por lo que exagera lo que te queda. La <strong>rentabilidad neta</strong> divide el alquiler tras los meses vacíos, los gastos y el impuesto sobre la renta entre todo lo que has pagado (precio, impuesto de compra, gastos de compraventa, reforma), y por eso es la cifra justa para comparar un piso en Madrid con otro en Valencia. La <strong>rentabilidad sobre lo invertido</strong> y la <strong>TIR</strong> importan cuando hay hipoteca o piensas vender: miden lo que rinde el dinero que pones de verdad, y la TIR suma la revalorización de la vivienda y el impuesto de la venta.</p>
+   <p>Dos cosas son las que más mueven el resultado en España: el impuesto de compra (el ITP es del 6 % en Madrid, pero llega al 10 u 11 % en algunas comunidades) y tu residencia fiscal. Los residentes pagan IRPF tras una reducción por alquiler de vivienda habitual; los no residentes pagan un 19 % fijo (UE/EEE, sobre el rendimiento neto) o un 24 % (resto del mundo, sobre la renta bruta), así que el mismo piso puede dejar cifras muy distintas a cada propietario. Antes de comprar para alquilar, nuestra <a href="{{ lang_url('/articles/spain-property-guide') }}">guía para comprar vivienda en España</a> repasa los documentos que hay que revisar, la hipoteca, los impuestos de compra y las normas de los pisos turísticos.</p>
+   <p class="src">Fuentes: BOE-A-2026-20823 (RDL 29/2026); art. 23.2 LIRPF; arts. 24.6 y 25 TRLIRNR; art. 14 RIRPF (<a href="https://www.boe.es/buscar/act.php?id=BOE-A-2007-6820" target="_blank" rel="noopener">RD 439/2007</a>); criterios de la AEAT sobre la <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/irpf-2025/c04-rendimientos-capital-inmobiliario/gastos-deducibles/cantidades-destinadas-amortizacion.html" target="_blank" rel="noopener">amortización del alquiler</a> y la <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/irpf-2025/c11-ganancias-perdidas-patrimoniales/determinacion-importe-ganancias-perdidas-patrimon-generales/derivadas-transmisiones-onerosas-lucrativas/reglas-generales-calculo.html" target="_blank" rel="noopener">ganancia patrimonial en la venta</a>; Audiencia Nacional 28.07.2025 (rec. 636/2021); escala del ahorro 2026 (guiafiscal.es). Última revisión de los datos fiscales: octubre de 2026. Esta calculadora es una simulación orientativa, no asesoramiento fiscal ni jurídico.</p>
+{% else %}
    <h2>Which yield number should you use?</h2>
    <p><strong>Gross yield</strong> (rent ÷ price) is what listings quote, so use it to compare ads. It ignores taxes, costs and vacancy, so it overstates what you keep. <strong>Net yield</strong> divides your rent after vacancy, running costs and income tax by everything you paid (price, purchase tax, closing costs, renovation), which makes it the fair number for comparing a flat in Madrid with one in Valencia. <strong>Cash-on-cash</strong> and <strong>IRR</strong> matter once you use a mortgage or plan to sell: they measure the return on the cash you actually put in, and IRR adds property value growth and the tax on the sale.</p>
    <p>Two things move the result most in Spain: the purchase tax (ITP is 6% in Madrid but up to 10–11% in some regions) and your tax status. Residents pay IRPF after a reduction on long-term home lets; non-residents pay a flat 19% (EU/EEA, on net income) or 24% (elsewhere, on gross rent), so the same flat can net very different amounts to different owners. Before you buy to let, our <a href="/articles/spain-property-guide">guide to buying property in Spain</a> covers the documents to check, the mortgage, the purchase taxes and the rules on holiday lets.</p>
    <p class="src">Sources: BOE-A-2026-20823 (RDL 29/2026); art. 23.2 LIRPF; arts. 24.6 and 25 TRLIRNR; art. 14 RIRPF (<a href="https://www.boe.es/buscar/act.php?id=BOE-A-2007-6820" target="_blank" rel="noopener">RD 439/2007</a>); AEAT guidance on <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/irpf-2025/c04-rendimientos-capital-inmobiliario/gastos-deducibles/cantidades-destinadas-amortizacion.html" target="_blank" rel="noopener">rental amortization</a> and on the <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/irpf-2025/c11-ganancias-perdidas-patrimoniales/determinacion-importe-ganancias-perdidas-patrimon-generales/derivadas-transmisiones-onerosas-lucrativas/reglas-generales-calculo.html" target="_blank" rel="noopener">capital gain on a sale</a>; Audiencia Nacional 28.07.2025 (rec. 636/2021); savings scale 2026 (guiafiscal.es). Last tax data verification: October 2026. This calculator is an educational simulation and not tax or legal advice.</p>
+{% endif %}
   </div>
 
   <div class="card seobox">
-   <h2>More Spain calculators</h2>
+   <h2>{{ t("More Spain calculators") }}</h2>
    <ul class="related-calcs">
-    <li><a href="/calculators/net-salary">Net Salary Calculator</a> — your payslip after IRPF and Social Security, the Renta refund and every region compared.</li>
-    <li><a href="/calculators/property-buying-cost">Property Buying Cost Calculator</a> — ITP, IVA/IGIC, AJD, notary and registry fees by region, before you buy.</li>
-    <li><a href="/calculators/autonomo-tax">Autónomo Tax Calculator</a> — social security quota and IRPF if you are self-employed, or run your lets as a business.</li>
-    <li><a href="/calculators/electricity-bill">Electricity Bill Calculator</a> — estimate the monthly bill and compare tariffs, useful for the running costs of a rental.</li>
+    <li><a href="{{ lang_url('/calculators/net-salary') }}">{{ t("Net Salary Calculator") }}</a>{{ t(" — your payslip after IRPF and Social Security, the Renta refund and every region compared.") }}</li>
+    <li><a href="{{ lang_url('/calculators/property-buying-cost') }}">{{ t("Property Buying Cost Calculator") }}</a>{{ t(" — ITP, IVA/IGIC, AJD, notary and registry fees by region, before you buy.") }}</li>
+    <li><a href="{{ lang_url('/calculators/autonomo-tax') }}">{{ t("Autónomo Tax Calculator") }}</a>{{ t(" — social security quota and IRPF if you are self-employed, or run your lets as a business.") }}</li>
+    <li><a href="{{ lang_url('/calculators/electricity-bill') }}">{{ t("Electricity Bill Calculator") }}</a>{{ t(" — estimate the monthly bill and compare tariffs, useful for the running costs of a rental.") }}</li>
    </ul>
   </div>
 
   <div class="card faq-card">
-   <h2>Frequently Asked Questions</h2>
+   <h2>{{ t("Frequently Asked Questions") }}</h2>
 {% for q, a in faqs %}   <details class="faq-item"><summary>{{ q }}</summary><p>{{ a }}</p></details>
 {% endfor %}   <div class="calc-share">
-    <div class="share-cta">Renting out a flat in Spain? Share this calculator.</div>
+    <div class="share-cta">{{ t("Renting out a flat in Spain? Share this calculator.") }}</div>
     {% with share=share %}{% include "partials/share.html" %}{% endwith %}
    </div>
   </div>

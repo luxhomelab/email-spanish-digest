@@ -4,6 +4,7 @@
 {% block description %}<meta name="description" content="Cómo darse de baja de España al Día: usa el enlace que hay al final de cualquier email.">
 <meta name="robots" content="noindex, follow">{% endblock %}
 {% block content %}
+{% include "partials/breadcrumbs.html" %}
  <div class="subscribe-intro">
   <p class="subscribe-kicker">Sentimos que te vayas</p>
   <h1>Cómo <span class="accent">darse de baja</span></h1>
@@ -18,6 +19,6 @@
    <li><div><strong>Haz clic en el enlace de baja</strong> al final del email.</div></li>
    <li><div><strong>Confírmalo en la página que se abre</strong> y listo.</div></li>
   </ol>
-  <p class="confirm-trouble">¿Has perdido el email o nunca te llegó? Escribe a <a href="mailto:support@spanified.com">support@spanified.com</a> y te daremos de baja a mano.</p>
+  <p class="confirm-trouble">¿Has perdido el email o nunca te llegó? <a href="/es/contact">Escríbenos</a> y te daremos de baja a mano.</p>
  </div>
 {% endblock %}

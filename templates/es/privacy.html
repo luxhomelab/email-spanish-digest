@@ -1,11 +1,11 @@
 {% extends "es/base.html" %}
+{% set alt_path = "/privacy" %}
 {# Spanish translation of templates/privacy.html.
    Keep the two in sync. #}
 {% block body_class %} class="page-legal"{% endblock %}
 {% block title %}Política de privacidad | Spanified{% endblock %}
-{% block description %}<meta name="description" content="Política de privacidad de Spanified: qué datos recogemos (el email de la newsletter y analítica solo con tu consentimiento), para qué y tus derechos según el RGPD.">
+{% block description %}<meta name="description" content="Política de privacidad de Spanified: qué datos recogemos (el email de la newsletter y analítica solo con tu consentimiento), para qué y tus derechos (RGPD).">
 <meta property="og:type" content="article">
-<meta property="og:locale" content="es_ES">
 <meta property="og:title" content="Política de privacidad | Spanified">
 <meta property="og:description" content="Qué datos recoge Spanified, para qué y cuáles son tus derechos según el RGPD.">
 <meta property="og:url" content="{{ site_url }}/es/privacy">
@@ -15,7 +15,7 @@
 <meta name="robots" content="max-image-preview:large">{% endblock %}
 
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/es/privacy">
-{% set alt_path = "/privacy" %}{% include "partials/hreflang.html" %}{% endblock %}
+{% include "partials/hreflang.html" %}{% endblock %}
 {% block content %}
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "WebPage",
@@ -23,7 +23,7 @@
  "url": "{{ site_url }}/es/privacy",
  "description": "Qué datos recoge Spanified, para qué y cuáles son tus derechos según el RGPD.",
  "inLanguage": "es",
- "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/"}}
+ "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/es/"}}
 </script>
  <div class="legal">
   <h1>Política de privacidad</h1>

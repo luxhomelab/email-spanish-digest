@@ -9,6 +9,8 @@ import {
   saveQuizResult,
   loadQuizResult,
   isQuizSubscribed,
+  quizStrings,
+  fillText,
 } from './quiz-logic.js'
 // Shared analytics gate (flag → hostname fallback) + gtag wrapper — the local
 // isLocal() + track() duplicates of subscribe-form.js now live in analytics.js.
@@ -16,6 +18,8 @@ import { trackEvent } from './analytics.js'
 
 const $ = id => document.getElementById(id)
 const TOTAL = 10
+// Runtime UI strings in the page language (<html lang="es"> on /es/quiz/).
+const S = quizStrings(document.documentElement.lang)
 
 // Event name/params unchanged; the guard chain (window.SPANIFIED_ANALYTICS
 // flag → local-origin probe → gtag present) is shared with every other tracker.
@@ -50,11 +54,12 @@ function wireShareCopy() {
     const btn = e.target.closest('.share-copy')
     if (!btn) return
     const label = btn.querySelector('span')
+    const idle = label ? label.textContent : ''
     const done = () => {
-      if (label) label.textContent = 'Copied!'
+      if (label) label.textContent = S.copied
       btn.classList.add('is-copied')
       setTimeout(() => {
-        if (label) label.textContent = 'Copy link'
+        if (label) label.textContent = idle
         btn.classList.remove('is-copied')
       }, 1500)
     }
@@ -89,8 +94,8 @@ function init() {
   // "Start" wall); returning players get their last score + "Play again".
   function renderTeaser() {
     $('quiz-teaser-q').textContent = questions[0].headline
-    $('quiz-teaser-real').textContent = real_label || 'Real — this happened'
-    $('quiz-teaser-fake').textContent = fake_label || 'Fake — AI slop'
+    $('quiz-teaser-real').textContent = real_label || S.realLabel
+    $('quiz-teaser-fake').textContent = fake_label || S.fakeLabel
   }
 
   function showLast() {
@@ -100,11 +105,11 @@ function init() {
       const persona = prev && prev.resultSlug ? resultBySlug(results, prev.resultSlug) : null
       const last = $('quiz-last')
       if (prev && Number.isInteger(prev.score) && persona && last) {
-        last.innerHTML = `Last time: <strong>${prev.score}/${TOTAL}</strong> — ${persona.title}`
+        last.innerHTML = fillText(S.lastTime, { score: prev.score, total: TOTAL, title: persona.title })
         last.hidden = false
       }
       returning = !!(prev && Number.isInteger(prev.score) && persona)
-      if (returning && startBtn) startBtn.textContent = 'Play again'
+      if (returning && startBtn) startBtn.textContent = S.playAgain
     } catch { /* first visit: keep default hook copy */ }
     renderTeaser()
     $('quiz-teaser').hidden = returning
@@ -190,7 +195,7 @@ function init() {
           <button type="button" class="quiz-choice" data-real="0"></button>
         </div>
         <div class="quiz-reveal">
-        <p class="quiz-hint">Make your call. The verdict and the source land here.</p>
+        <p class="quiz-hint"></p>
         <div class="quiz-feedback" role="status">
           <div class="quiz-fb-head">
             <span class="quiz-stamp" aria-hidden="true"></span>
@@ -201,11 +206,12 @@ function init() {
           <button type="button" class="quiz-next"></button>
         </div>
         </div>`
+      slide.querySelector('.quiz-hint').textContent = S.hint
       slide.querySelector('.quiz-headline').textContent = q.headline
       slide.querySelector('.quiz-summary').textContent = q.summary
       const [realBtn, fakeBtn] = slide.querySelectorAll('.quiz-choice')
-      realBtn.textContent = real_label || 'Real — this happened'
-      fakeBtn.textContent = fake_label || 'Fake — AI slop'
+      realBtn.textContent = real_label || S.realLabel
+      fakeBtn.textContent = fake_label || S.fakeLabel
       realBtn.addEventListener('click', () => answer(i, true))
       fakeBtn.addEventListener('click', () => answer(i, false))
       fillFeedback(slide, q, i)
@@ -218,12 +224,12 @@ function init() {
   // towards the stage size before anyone answers.
   function fillFeedback(slide, q, i) {
     const fb = slide.querySelector('.quiz-feedback')
-    fb.querySelector('.quiz-stamp').textContent = q.isReal ? 'Real' : 'Fake'
-    fb.querySelector('.quiz-verdict').textContent = 'Not quite. This one is real.'
+    fb.querySelector('.quiz-stamp').textContent = q.isReal ? S.stampReal : S.stampFake
+    fb.querySelector('.quiz-verdict').textContent = S.wrongReal
     fb.querySelector('.quiz-explain').textContent = q.explanation
     const src = fb.querySelector('.quiz-source')
     if (q.isReal && q.source) {
-      src.textContent = 'Source: '
+      src.textContent = S.source
       if (q.source_url) {
         const a = document.createElement('a')
         a.href = q.source_url
@@ -235,11 +241,11 @@ function init() {
         src.appendChild(document.createTextNode(q.source))
       }
     } else if (!q.isReal) {
-      src.textContent = 'Invented by Spanified. No source, just vibes.'
+      src.textContent = S.invented
     } else {
       src.hidden = true
     }
-    fb.querySelector('.quiz-next').textContent = i === TOTAL - 1 ? 'See my result' : 'Next question'
+    fb.querySelector('.quiz-next').textContent = i === TOTAL - 1 ? S.seeResult : S.next
   }
 
   function showStep(i) {
@@ -249,7 +255,7 @@ function init() {
       s.classList.remove('is-entering')
     })
     const slide = stage.children[i]
-    $('quiz-step').textContent = `Story ${i + 1} of ${TOTAL}`
+    $('quiz-step').textContent = fillText(S.step, { n: i + 1, total: TOTAL })
     paintSegs($('quiz-segs'), i)
     if (i > 0) {
       slide.classList.add('is-entering')
@@ -277,8 +283,8 @@ function init() {
     const fb = slide.querySelector('.quiz-feedback')
     slide.classList.add('is-answered', correct ? 'is-right' : 'is-wrong')
     fb.querySelector('.quiz-verdict').textContent = correct
-      ? 'You got it.'
-      : (q.isReal ? 'Not quite. This one is real.' : 'Not quite. This one is fake.')
+      ? S.right
+      : (q.isReal ? S.wrongReal : S.wrongFake)
     const nx = fb.querySelector('.quiz-next')
     paintSegs($('quiz-segs'), i)
     nx.focus({ preventScroll: true })
@@ -297,7 +303,7 @@ function init() {
     $('quiz-gate').hidden = false
     // Persona title stays sealed; only the score and the blurred art show yet.
     $('quiz-score-num').textContent = score
-    $('quiz-score-line').textContent = `You scored ${score} out of ${TOTAL}`
+    $('quiz-score-line').textContent = fillText(S.scoreLine, { score, total: TOTAL })
     const segs = $('quiz-gate-segs')
     segs.hidden = !showBreakdown
     if (showBreakdown) {
@@ -413,14 +419,14 @@ function init() {
     // X gets the short line; FB/TG/WA get the longer roast text.
     const base = `${window.location.origin}${window.location.pathname}`
     syncShareLinks(
-      personalShareText(result, score, TOTAL),
+      personalShareText(result, score, TOTAL, S),
       quizResultUrl(base, result.slug, score),
-      personalLongShareText(result, score, TOTAL),
+      personalLongShareText(result, score, TOTAL, S),
     )
   }
 
   wireShareCopy()
-  syncShareLinks(title ? `${title} — Spanified` : document.title)
+  syncShareLinks(title ? fillText(S.pageShare, { title }) : document.title)
 }
 
 if (document.readyState === 'loading') {

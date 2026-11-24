@@ -5,28 +5,29 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ meta_title|safe }}">
 <meta property="og:description" content="{{ meta_description|safe }}">
-<meta property="og:url" content="{{ site_url }}/category/{{ slug }}">
+<meta property="og:url" content="{{ site_url }}{{ canonical_path }}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ meta_title|safe }}">
 <meta name="twitter:description" content="{{ meta_description|safe }}">
 <meta name="robots" content="max-image-preview:large">{% endblock %}
 
-{% block canonical %}<link rel="canonical" href="{{ site_url }}/category/{{ slug }}">{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ site_url }}{{ canonical_path }}">{% endblock %}
+{% block extra_head %}{% if alt_path %}{% include "partials/hreflang.html" %}{% endif %}{% endblock %}
 {% block content %}
 {% include "partials/breadcrumbs.html" %}
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "ItemList",
- "name": {{ (category_name + " news in Spain")|tojson }},
+ "name": {{ t("{name} news in Spain", name=category_name)|tojson }},{% if page_lang == "es" %} "inLanguage": "es",{% endif %}
  "itemListElement": [{% for s in stories %}
-  {"@type": "ListItem", "position": {{ loop.index }}, "item": {"@type": "NewsArticle", "headline": {{ s.title|tojson }}, "url": "{{ site_url }}/archive/{{ s.date }}", "datePublished": "{{ pub_date(s.date) }}"}}{% if not loop.last %},{% endif %}{% endfor %}
+  {"@type": "ListItem", "position": {{ loop.index }}, "item": {"@type": "NewsArticle", "headline": {{ s.title|tojson }}, "url": "{{ site_url }}{{ lang_url('/archive/' ~ s.date) }}", "datePublished": "{{ pub_date(s.date) }}"}}{% if not loop.last %},{% endif %}{% endfor %}
  ]}
 </script>
  <div class="cat-list">
   <h1>{{ category_name }}</h1>
-  <p class="cat-sub">{{ stories|length }} news · newest first · updated every morning</p>
+  <p class="cat-sub">{{ t("{n} news · newest first · updated every morning", n=stories|length) }}</p>
   {% if category_description %}<p class="cat-desc">{{ category_description }}</p>{% endif %}
-  <a class="cat-subscribe" href="/subscribe">Get {{ category_name|lower }} news in your inbox every morning →</a>
-  {% with hub_heading=category_name ~ " in Spain: calculators and guides" %}{% include "partials/hub-cards.html" %}{% endwith %}
+  <a class="cat-subscribe" href="{{ lang_url('/subscribe') }}">{{ t("Get {name} news in your inbox every morning →", name=category_name|lower) }}</a>
+  {% with hub_heading=t("{name} in Spain: calculators and guides", name=category_name) %}{% include "partials/hub-cards.html" %}{% endwith %}
   {% for s in stories %}
   <article class="cat-item">
    <div class="cat-meta">{{ s.date_display }}</div>
@@ -37,7 +38,7 @@
     {% for src in s.sources %}<a href="{{ src.url }}" target="_blank" rel="noopener">{{ src.name }}</a>{% if not loop.last %} · {% endif %}{% endfor %}
    </div>
    {% endif %}
-   <a class="cat-digest-cta" href="/archive/{{ s.date }}">→ Read the full digest</a>
+   <a class="cat-digest-cta" href="{{ lang_url('/archive/' ~ s.date) }}">{{ t("→ Read the full digest") }}</a>
   </article>
   {% endfor %}
  </div>

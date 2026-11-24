@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% set alt_path = "/about" %}
 {% block body_class %} class="page-about"{% endblock %}
 {% block title %}About Spain Daily: Spanish News in English | Spanified{% endblock %}
 {% block description %}<meta name="description" content="About Spain Daily, a free digest of Spanish newspapers in English: how we turn the Spanish press into a 5-minute briefing, our sources, human review and AI policy.">
@@ -12,6 +13,7 @@
 <meta name="twitter:image" content="https://spanified.com/logo.jpg">
 <meta name="robots" content="max-image-preview:large">{% endblock %}
 
+{% block extra_head %}{% include "partials/hreflang.html" %}{% endblock %}
 {% block canonical %}<link rel="canonical" href="{{ site_url }}/about">{% endblock %}
 {% block content %}
 {% include "partials/breadcrumbs.html" %}
@@ -21,7 +23,7 @@
  "url": "{{ site_url }}/about",
  "description": "How the free Spain Daily digest turns the Spanish press into a 5-minute English briefing: our sources, human review, AI policy and free email edition.",
  "inLanguage": "en",
- "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}/",
+ "about": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}{{ lang_url('/') }}",
   "contactPoint": {"@type": "ContactPoint", "email": "support@spanified.com",
    "contactType": "customer support", "availableLanguage": "English"}}}
 </script>

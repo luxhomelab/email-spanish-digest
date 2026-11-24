@@ -1,0 +1,28 @@
+{# Spanish copy of ../parties.html (same markup); `d` = load_election_2026("es"). #}
+<div class="el-parties" data-pagefind-ignore>
+{% for p in d.parties %}
+ <details class="el-party" id="party-{{ p.key }}" style="--pc: {{ p.color }}">
+  <summary>
+   <span class="el-party-head">
+    <span class="el-party-name"><i class="el-dot"></i>{{ p.name }}</span>
+    <span class="el-party-bloc">{{ p.bloc }}</span>
+   </span>
+   <span class="el-bar el-bar-sm" aria-hidden="true">{% for r, n, pct in p.shares %}{% if n %}<span class="el-seg el-r-{{ r }}" style="width: {{ '%.2f'|format(pct) }}%"></span>{% endif %}{% endfor %}</span>
+   <span class="el-party-pct">{{ p.feasible_pct }} %</span>
+  </summary>
+  <div class="el-party-body">
+   <p class="el-party-full">{{ p.full }}: {{ p.count }} medidas del programa valoradas: {% for r, n, pct in p.shares %}{{ n }} {{ r }}{% if not loop.last %}, {% endif %}{% endfor %}.</p>
+   <p>{{ p.summary|md }}</p>
+   <p class="el-party-line"><b>Lo que parece viable.</b> {{ p.doable|md }}</p>
+   <p class="el-party-line"><b>Dónde choca con los límites.</b> {{ p.limits|md }}</p>
+   <p class="el-party-sub">Promesas estrella</p>
+   <ul class="el-heads">
+{% for it in p.headline_items %}
+    <li><a href="#p-{{ it.id }}" data-open="p-{{ it.id }}"><span class="el-badge el-badge-sm el-r-{{ it.f }}" aria-hidden="true">{{ it.f }}</span><span>{{ it.title|md }}<span class="el-vh">, valorada como {{ d.ratings_by_key[it.f].label|lower }}</span></span></a></li>
+{% endfor %}
+   </ul>
+   <p class="el-party-foot"><a href="?party={{ p.key }}#explorer-app" data-filter-party="{{ p.key }}">Ver las {{ p.shown }} promesas de {{ p.name }} en el buscador</a><a href="{{ p.programme }}" target="_blank" rel="noopener">Leer el programa</a></p>
+  </div>
+ </details>
+{% endfor %}
+</div>

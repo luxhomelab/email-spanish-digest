@@ -1,0 +1,337 @@
+{
+  "title": "¿Real o IA? Detecta las noticias falsas de España",
+  "meta_description": "Diez titulares de España en dos minutos: la mitad pasaron de verdad y la otra mitad son inventos. ¿Sabes cuáles son falsos?",
+  "card_kicker": "Test de noticias",
+  "hook_sub": "10 titulares de España: la mitad pasaron de verdad y la otra mitad nos los hemos inventado. ¿Sabes cuál es cuál?",
+  "real_label": "Real: pasó de verdad",
+  "fake_label": "Falso: invento de IA",
+  "questions": {
+    "r1": {
+      "headline": "Un pueblo español devolvió por correo las cacas de perro a sus dueños",
+      "summary": "Brunete, cerca de Madrid, contrató a voluntarios para vigilar a los dueños que no recogían. Charlaban con ellos para sacarles el nombre del perro, lo cruzaban con el censo de mascotas y luego les mandaban la caca a casa en una caja con la etiqueta \"Objetos perdidos\". Tras 147 envíos, las infracciones bajaron un 70 %, según el ayuntamiento.",
+      "explanation": "Parece una broma, pero Brunete sí que empaquetó cacas como \"objetos perdidos\" para avergonzar a los dueños."
+    },
+    "r2": {
+      "headline": "Málaga analiza el ADN de las cacas de perro para multar a quien no las recoge",
+      "summary": "Málaga obliga a registrar a los perros con un perfil de ADN para poder identificar a sus dueños a partir de las muestras de la calle. Los técnicos recogen las heces de las aceras y cruzan los resultados del laboratorio con la base de datos municipal. Los infractores se arriesgan a multas de hasta 500 euros dentro de la campaña de limpieza.",
+      "explanation": "Suena a parodia de CSI, pero Málaga montó de verdad un censo de ADN canino para rastrear excrementos."
+    },
+    "r3": {
+      "headline": "1.200 ovejas cortan el centro de Madrid en un desfile por un derecho antiguo",
+      "summary": "Durante la Fiesta de la Trashumancia, los pastores guían a más de mil ovejas merinas y varias cabras por la Puerta del Sol y la Plaza Mayor. La fiesta defiende las cañadas reales medievales, que cruzan la capital por ley. Los organizadores incluso pagan al Ayuntamiento 50 maravedíes por el paso, como marca un acuerdo de 1418.",
+      "explanation": "Parece un bulo sobre el tráfico, pero Madrid corta las calles cada octubre para que pasen las ovejas."
+    },
+    "r4": {
+      "headline": "22.000 personas se lanzaron 150 toneladas de tomates en Buñol",
+      "summary": "La Tomatina llena un pueblo de nueve mil habitantes con más de veinte mil participantes con entrada para una batalla de una hora. Siete camiones descargan en las calles tomates de pera no comestibles, cultivados para la ocasión. Después los bomberos limpian el pueblo con mangueras, y el ácido del tomate deja algunas fachadas más limpias que antes.",
+      "explanation": "Una hora y 150 toneladas de tomates suena a invento, pero Buñol lo hace cada agosto."
+    },
+    "r5": {
+      "headline": "Hombres disfrazados de diablo saltan sobre bebés para limpiarles el pecado",
+      "summary": "En Castrillo de Murcia, el Colacho persigue con un látigo a los vecinos antes de saltar sobre colchones llenos de bebés nacidos ese año. El salto se lleva simbólicamente el pecado original y protege a los niños de las enfermedades. Después los padres recogen a sus hijos, a los que cubren de pétalos de rosa. No se conocen heridos.",
+      "explanation": "Un diablo saltando recién nacidos parece falso, pero este pueblo de Burgos lo hace desde el siglo XVII."
+    },
+    "r6": {
+      "headline": "Vecinos de Barcelona dispararon con pistolas de agua a los turistas en una protesta",
+      "summary": "Unas 2.800 personas recorrieron Las Ramblas al grito de \"tourists go home\" en una manifestación contra el turismo masivo. Algunos mojaron a los clientes de las terrazas y precintaron entradas de hoteles. Los organizadores pedían limitar las visitas por el precio de la vivienda, y el alcalde prometió acabar con las licencias de pisos turísticos.",
+      "explanation": "Lo de las pistolas de agua parece sátira, pero los manifestantes de Barcelona lo hicieron de verdad en 2024."
+    },
+    "r7": {
+      "headline": "Marbella niega que vaya a multar con 750 euros a quien orine en el mar",
+      "summary": "El Ayuntamiento de Marbella aprobó unas normas de playa que mencionaban multas de hasta 750 euros por \"evacuaciones fisiológicas\" en el mar o en la arena, y de 1.500 para los reincidentes. Tras las burlas en todo el país (\"¿Quién se va a enterar? ¿Las medusas?\"), el ayuntamiento escribió a The Guardian para aclarar que la ordenanza no se aplica en el agua, solo en la orilla.",
+      "explanation": "Parece sátira, pero el ayuntamiento tuvo que desmentirlo de verdad. El mismo artículo confirma que en Vigo la multa de 750 euros sí está en vigor."
+    },
+    "r8": {
+      "headline": "Un trabajador faltó seis años y lo descubrieron por un premio a su antigüedad",
+      "summary": "Joaquín García, supervisor de una empresa de aguas en Cádiz, dejó de ir a trabajar mientras seguía cobrando unos 37.000 euros al año. Sus jefes, en la oficina de enfrente, creían que estaba en otro sitio. Su ausencia salió a la luz cuando le tocaba una placa por veinte años de servicio, y un juez le obligó a devolver casi 27.000 euros.",
+      "explanation": "Seis años de ausencia sin que nadie se dé cuenta parece imposible, pero un juzgado de Cádiz lo confirmó en 2016."
+    },
+    "r9": {
+      "headline": "Los niños catalanes golpean un tronco hasta que caga los regalos de Navidad",
+      "summary": "Las familias tienen en casa un tronco hueco y sonriente, el Caga Tió, al que dan de comer sobras desde principios de diciembre y tapan con una manta en Nochebuena. Los niños cantan y le pegan con palos mientras los mayores esconden los regalos debajo. Al final el tronco \"caga\" turrones, juguetes y caramelos.",
+      "explanation": "Pegar a un tronco hasta que defeca regalos parece inventado, pero los niños catalanes lo hacen cada Navidad."
+    },
+    "r10": {
+      "headline": "Los belenes esconden a un campesino haciendo de vientre para dar buena suerte",
+      "summary": "El caganer es una figura de un campesino en plena faena, escondida detrás del pesebre en los belenes catalanes. Según la tradición, su abono trae prosperidad para el año nuevo. Hoy hay versiones de famosos y futbolistas, y buscarlo es uno de los juegos navideños favoritos de los niños.",
+      "explanation": "Un campesino haciendo caca en el belén parece una falta de respeto, pero los catalanes esconden uno con orgullo cada año."
+    },
+    "r11": {
+      "headline": "Un pueblo celebró el entierro de un tomate para salvar su fiesta",
+      "summary": "Cuando las autoridades prohibieron La Tomatina en los años cincuenta por no tener carácter religioso, los vecinos protestaron en 1957 con un entierro en toda regla. Llevaron un ataúd con un tomate gigante mientras una banda tocaba marchas fúnebres. La ocurrencia funcionó y volvieron a permitir la batalla.",
+      "explanation": "El entierro de un tomate suena a comedia, pero Buñol lo organizó de verdad para salvar su fiesta."
+    },
+    "r12": {
+      "headline": "Un pueblo español da un golpe de Estado de harina con huevos y petardos",
+      "summary": "En Ibi (Alicante), durante la fiesta de Els Enfarinats, unos rebeldes vestidos de militares toman el ayuntamiento en un golpe de broma. Ponen multas absurdas que hay que pagar en el acto y luego se enfrentan a la oposición con cien sacos de harina, miles de huevos y petardos. Lo recaudado va a asociaciones benéficas del pueblo.",
+      "explanation": "Un golpe de Estado a harinazos parece montado, pero Ibi lo repite cada diciembre."
+    },
+    "r13": {
+      "headline": "Valencia quema cada marzo esculturas gigantes que valen millones",
+      "summary": "Las Fallas llenan Valencia de ninots enormes, esculturas satíricas de madera y cartón piedra que a veces miden varios pisos. Tras días de desfiles, fuegos artificiales y ofrenda de flores, todas menos la figura indultada arden el 19 de marzo. El rito, Patrimonio de la UNESCO, simboliza la renovación, y los bomberos mojan los balcones cercanos durante la cremà.",
+      "explanation": "Quemar arte de un millón de euros tras cuatro días parece un despilfarro, pero Valencia lo prepara todo el año."
+    },
+    "r14": {
+      "headline": "En España se levantan torres humanas de diez pisos coronadas por niños",
+      "summary": "Los castellers de Cataluña y Valencia apilan a cientos de personas en castillos humanos altísimos, y arriba del todo un niño pequeño levanta la mano. Los grupos entrenan todo el año el equilibrio, la fuerza y la técnica. La tradición, reconocida por la UNESCO, llena las plazas en fiestas y obliga a los más pequeños, los enxanetes, a llevar casco.",
+      "explanation": "Torres humanas de diez pisos con críos en lo alto parecen efectos especiales, pero en Cataluña se hacen cada semana."
+    },
+    "r15": {
+      "headline": "Miles de personas corren delante de toros por el casco viejo de Pamplona",
+      "summary": "Cada mañana de julio, en San Fermín, seis toros bravos y los cabestros recorren 849 metros hasta la plaza mientras los corredores, vestidos de blanco y rojo, corren delante. El encierro dura unos tres minutos y atrae a aventureros de todo el mundo. Los médicos atienden cornadas, caídas y montoneras en la estrecha curva de Estafeta.",
+      "explanation": "Correr delante de toros de media tonelada por calles estrechas parece una locura, pero Pamplona se llena cada año."
+    },
+    "r16": {
+      "headline": "La Sagrada Família pasó 137 años sin licencia de obras",
+      "summary": "La basílica de Gaudí empezó a construirse en 1882 y recibía millones de visitas al año sin tener, en sentido estricto, licencia municipal de obras. En 2019 el ayuntamiento por fin la regularizó, y el templo se comprometió a pagar 36 millones de euros en diez años. El dinero se destina al transporte, la limpieza y la accesibilidad alrededor de la obra inacabada.",
+      "explanation": "Una basílica famosa en todo el mundo sin licencia de obras suena absurdo, pero Barcelona lo reconoció en 2019."
+    },
+    "r17": {
+      "headline": "Un restaurante de Madrid sirve cochinillo asado desde 1725",
+      "summary": "Sobrino de Botín, junto a la Plaza Mayor, tiene el récord de restaurante más antiguo del mundo en funcionamiento continuo. Dicen que su horno de leña no se ha apagado en tres siglos. Hemingway bebió allí y lo sacó en Fiesta, y todavía hay cola para comer cochinillo y cordero.",
+      "explanation": "Un restaurante abierto desde antes de Mozart suena a leyenda, pero Botín conserva su fuego original."
+    },
+    "r18": {
+      "headline": "Sevilla recoge 5 millones de kilos de naranjas demasiado amargas para comer",
+      "summary": "Los cincuenta mil naranjos amargos de Sevilla perfuman las calles en primavera, pero su fruta no se come. Cada invierno, las cuadrillas recogen miles de toneladas para que las aceras no resbalen. Gran parte acaba en mermelada británica, compost o licor, y hay proyectos piloto que convierten el metano de las cáscaras en electricidad para la empresa de aguas.",
+      "explanation": "Cinco millones de kilos de naranjas inútiles parecen un fracaso, pero Sevilla saca provecho del amargor."
+    },
+    "r19": {
+      "headline": "Sevilla propuso cobrar entrada para visitar su plaza más famosa",
+      "summary": "El alcalde José Luis Sanz dijo que los bancos de azulejos y el canal de la Plaza de España atraen a millones de personas y castigan la cerámica y el presupuesto de seguridad. Propuso cobrar a los turistas y que la entrada siguiera siendo gratis para los vecinos. La idea llegó en pleno debate sobre el turismo masivo al estilo de Venecia y tras quejas por los vendedores ambulantes, los retratistas y los coches de caballos.",
+      "explanation": "Cobrar por entrar en una plaza abierta suena a codicia, pero Sevilla lo propuso para frenar las aglomeraciones."
+    },
+    "r20": {
+      "headline": "Mallorca multa con miles de euros a los turistas que saltan desde los balcones de los hoteles",
+      "summary": "Baleares prohibió el balconing, saltar de un balcón a otro o a la piscina, tras varias caídas mortales ligadas al turismo de fiesta. Los infractores y los hoteles que permitan conductas peligrosas se arriesgan a multas de decenas de miles de euros. En Magaluf, la Playa de Palma y Sant Antoni, el todo incluido también tiene límite de copas.",
+      "explanation": "Multar por saltar desde el balcón suena muy concreto, y es que Mallorca tenía que frenar las muertes."
+    },
+    "r21": {
+      "headline": "Un pueblo tiraba una cabra desde el campanario y ahora lanza un peluche",
+      "summary": "Manganeses de la Polvorosa celebraba sus fiestas de enero tirando una cabra viva desde el campanario a una lona que sujetaban abajo. La presión de los defensores de los animales acabó con el rito en 2002. Ahora el pueblo pasea y lanza una cabra de peluche, y mantiene la fiesta, la música y el gentío sin poner en peligro a ningún animal.",
+      "explanation": "Tirar una cabra viva desde un campanario suena medieval, y lo era, hasta que se prohibió."
+    },
+    "r22": {
+      "headline": "El polvo del Sáhara tiñó de naranja el cielo de España de la noche a la mañana",
+      "summary": "En marzo de 2022, una calima enorme trajo arena del Sáhara a la península y tiñó de un naranja inquietante Madrid, Andalucía y el sureste. Las alertas de calidad del aire pidieron a los asmáticos que no salieran de casa, mientras coches, balcones y pistas de esquí se cubrían de barro rojo. Las imágenes de satélite mostraban la nube desde África hasta Francia.",
+      "explanation": "Un cielo naranja parece un filtro de Instagram, pero el polvo del Sáhara tiñe de verdad el cielo de España."
+    },
+    "r23": {
+      "headline": "Los jabalíes pasean por los barrios de Barcelona y asaltan los contenedores",
+      "summary": "La sequía y la cercanía del monte empujan a los jabalíes hambrientos hacia Sarrià, Vallvidrera e incluso los paseos marítimos cuando anochece. Los vecinos los graban trotando por las rotondas, volcando contenedores y asustando a quien pasea al perro. El ayuntamiento usa vallas, esterilización y capturas nocturnas, y pide que nadie les dé de comer.",
+      "explanation": "Jabalíes asaltando a corredores parece un dibujo animado, pero los de Collserola bajan cada noche a los barrios de Barcelona."
+    },
+    "r24": {
+      "headline": "Madrid ordenó sacrificar a miles de cotorras verdes y chillonas",
+      "summary": "Las cotorras argentinas colonizaron El Retiro y la Casa de Campo, con nidos comunales enormes que tiraban ramas y echaban a los gorriones. El ayuntamiento calculó que había doce mil y aprobó retirar nidos y esterilizar a las aves, con un coste de millones. Alegó el ruido, los excrementos, los daños a cultivos y el riesgo para la fauna autóctona.",
+      "explanation": "Declarar la guerra a las cotorras parece una exageración, pero Madrid acabó con miles de estas invasoras ruidosas."
+    },
+    "r25": {
+      "headline": "La Lotería de Navidad reparte miles de millones en una sola mañana de televisión",
+      "summary": "El Gordo de Navidad reparte miles de premios por unos 2.600 millones de euros, y el primero paga cuatro millones por billete entero. El 22 de diciembre, los niños de San Ildefonso cantan en directo los números premiados durante horas. Amigos, oficinas y pueblos enteros comparten décimos por tradición.",
+      "explanation": "Una lotería que reparte más de dos mil millones antes de comer parece falsa, pero El Gordo lo hace."
+    },
+    "r26": {
+      "headline": "Un pueblo que se queda vacío paga 3.000 euros a las familias por cada bebé",
+      "summary": "Ponga, en Asturias, con unos pocos cientos de vecinos repartidos por aldeas de montaña, ofrece tres mil euros por cada recién nacido y más si la familia sigue allí a los tres años. El ayuntamiento espera que los teletrabajadores jóvenes vuelvan a llenar las escuelas vacías. Hay que empadronarse y vivir allí todo el año.",
+      "explanation": "Pagar a las parejas por tener hijos parece desesperado, pero el pequeño Ponga da dinero por cada niño."
+    },
+    "r27": {
+      "headline": "En España hay máquinas expendedoras que venden jamones enteros",
+      "summary": "Artesanos y tiendas rurales instalaron expendedoras refrigeradas que venden jamón, queso y chorizo envasados al vacío a cualquier hora. Las máquinas ayudaron a los productores a llegar a sus clientes durante los confinamientos y tras el cierre de tiendas en la España vaciada. Eliges el tamaño, pagas con tarjeta y te llevas una pata entera lista para cortar.",
+      "explanation": "Un jamón de máquina expendedora suena a chiste, pero en España se instalaron para salir del paso."
+    },
+    "r28": {
+      "headline": "Una playa española prohíbe guardar sitio dejando la toalla al amanecer",
+      "summary": "San Pedro del Pinatar prohibió reservar arena con toallas, sillas o sombrillas sin nadie al lado antes de que lleguen los bañistas. La policía puede retirar los objetos y multar a quien bloquee el acceso público y el paso de los equipos de limpieza. La norma está junto a la prohibición del nudismo fuera de las zonas señaladas, los juegos de pelota cerca de la gente y las barbacoas en la orilla.",
+      "explanation": "Prohibir las toallas en la playa suena tiránico, pero un pueblo multa a quien guarda sitio al amanecer."
+    },
+    "r29": {
+      "headline": "Magaluf prohibió las happy hours y beber en la calle para frenar el desmadre",
+      "summary": "Las normas de Baleares contra el turismo de excesos prohíben las happy hours, las ofertas de dos por uno, las rutas de bares y la venta nocturna de alcohol en tiendas en Magaluf, la Playa de Palma y zonas de Ibiza. Las multas por beber en la calle o insultar a los vecinos llegan a miles de euros. Los hoteles también deben retirar los dispensadores de alcohol de libre servicio.",
+      "explanation": "Prohibir las fiestas del todo incluido suena puritano, pero Magaluf limitó las copas para frenar el caos."
+    },
+    "r30": {
+      "headline": "Un pueblo español votó quitarse un nombre que significaba \"matar judíos\"",
+      "summary": "Castrillo Matajudíos, cerca de Burgos, llevaba ese nombre desde el siglo XVII y probablemente recogía un insulto de la época de los pogromos. Los vecinos votaron cambiarlo por Castrillo Mota de Judíos, en recuerdo de la comunidad judía medieval. El ayuntamiento alegó la dignidad y el rigor histórico tras una consulta vecinal y la aprobación de la Junta.",
+      "explanation": "Un pueblo llamado literalmente \"matar judíos\" parece impensable, pero cambió de nombre en 2015."
+    },
+    "f1": {
+      "headline": "Benidorm contrata una policía de la siesta para multar a los turistas ruidosos a las tres",
+      "summary": "Benidorm desplegará este verano a 20 agentes de la siesta uniformados para patrullar playas, balcones y piscinas cada día entre las 15:00 y las 17:00. Al turista que pillen con música o gritando le caerá en el acto una multa de 50 euros por interrumpir la siesta. A los reincidentes los llevarán a una habitación oscura y en silencio, con las persianas bien bajadas.",
+      "explanation": "Pista: Benidorm tiene ordenanzas contra el ruido, pero no existe ninguna brigada municipal de la siesta."
+    },
+    "f2": {
+      "headline": "Mercadona venderá pases de siesta los domingos para evitar las colas del lunes",
+      "summary": "Mercadona ha anunciado una prueba piloto este otoño en tiendas de Valencia y Madrid: pases de siesta dominical a 5 euros. Con el pase podrás echarte una cabezada en un rincón acordonado del pasillo mientras el personal te prepara la compra de la semana para recogerla el lunes. La cadena insiste en que el mostrador del jamón y los congelados seguirán siendo zonas sin siesta.",
+      "explanation": "Pista: Mercadona cierra los domingos en toda España, pero nunca ha vendido turnos de siesta."
+    },
+    "f3": {
+      "headline": "Valencia exigirá licencia para cocinar paella tras un escándalo de arroces turísticos",
+      "summary": "Valencia exigirá una licencia de paella de 30 euros a quien cocine el plato para más de diez personas a la vez. Habrá que aprobar una prueba práctica de diez minutos sobre el arroz, el conejo, el garrofó y el tamaño correcto de la paellera. Echar chorizo supondrá el suspenso automático y una charla muy seria de quince minutos.",
+      "explanation": "Pista: en España nos encantan las normas sobre la paella, pero ningún municipio ha pedido nunca licencia para cocinarla."
+    },
+    "f4": {
+      "headline": "Barcelona cobra una tasa de 2 euros por selfi en los miradores del Park Güell",
+      "summary": "A partir de julio, Barcelona cobrará 2 euros por cada foto posada en tres miradores del Park Güell. Un nuevo selfímetro detecta trípodes y brazos estirados y suma la tasa automáticamente a la entrada. El ayuntamiento dice que el dinero servirá para arreglar los bancos de mosaico que han doblado los influencers más ambiciosos.",
+      "explanation": "Pista: las tasas turísticas existen, pero ninguna ciudad cobra por cada selfi."
+    },
+    "f5": {
+      "headline": "Madrid subasta cada viernes 500 citas para el NIE en una puja en directo",
+      "summary": "La oficina de extranjería de Madrid subastará cada viernes por la mañana 500 codiciadas citas para el NIE al mejor postor en la sala de espera. Las pujas empiezan en 10 euros, y se espera que las citas de primera hora superen los 80. Según los responsables, lo recaudado servirá para comprar más sillas y cafeteras más potentes.",
+      "explanation": "Pista: el sistema del NIE es lento, pero nunca se han subastado citas con paletas de puja."
+    },
+    "f6": {
+      "headline": "La nueva ley de alquiler limita a dos sangrías por semana en los pisos compartidos",
+      "summary": "Un borrador de reforma del alquiler limitaría a dos sangrías por semana en el balcón o la terraza a quienes viven en pisos compartidos. Una nueva cláusula de convivencia en el contrato permitiría al casero revisar el cubo del vidrio en busca de botellas de más. Los sindicatos de inquilinos dicen que la norma no hay quien la aplique, aunque admiten que es curiosamente concreta y muy española.",
+      "explanation": "Pista: los caseros piden papeles raros, pero ninguna comunidad limita a dos sangrías por inquilino."
+    },
+    "f7": {
+      "headline": "Sevilla raciona el aire acondicionado a 6 horas al día en pleno agosto",
+      "summary": "Un nuevo decreto municipal de energía limitará en agosto el aire acondicionado de los hogares sevillanos a seis horas diarias. Los contadores inteligentes cortarán el frío al llegar al límite y regalarán una hora extra a las casas con cortinas opacas. Los jubilados, los recién nacidos y quien ensaye flamenco en casa quedan exentos.",
+      "explanation": "Pista: las olas de calor traen campañas de consejos, pero en España nunca se han racionado los minutos de aire acondicionado."
+    },
+    "f8": {
+      "headline": "La oficina del TIE de Alicante regala churros a quien espere más de 4 horas",
+      "summary": "La oficina de extranjería de Alicante repartirá churros con chocolate espeso a quien lleve más de cuatro horas en la cola. El contrato de catering cubre 200 raciones diarias del quiosco Expats Corner, aparcado junto a la puerta. El personal asegura que el nivel de azúcar va muy ligado a la paciencia y a que las huellas salgan bien a la primera.",
+      "explanation": "Pista: para el TIE hay que dar las huellas, pero ninguna oficina premia la espera con churros."
+    },
+    "f9": {
+      "headline": "San Sebastián multa con 100 euros a quien lleve tortilla fría a la playa",
+      "summary": "Este verano, San Sebastián multará con 100 euros a quien saque tortilla fría a menos de dos metros de la orilla. Los concejales dicen que el olor vuelve locas a las gaviotas y fastidia el ambiente a todo el que toma el sol cerca. Los bocadillos calientes, los pintxos y el gazpacho frío siguen siendo legales en la arena.",
+      "explanation": "Pista: hay playas sin humo, pero ningún municipio multa por llevar tortilla fría."
+    },
+    "f10": {
+      "headline": "Renfe lanza una suscripción para saltarse colas para extranjeros a 19,99 al mes",
+      "summary": "Renfe venderá un pase Salta Colas de 19,99 euros al mes pensado para los extranjeros que se mueven entre estaciones, oficinas de Correos y de extranjería en seis ciudades piloto. Basta con escanear un código QR dorado para pasar por delante de todas las colas burocráticas mientras los demás miran sin dar crédito.",
+      "explanation": "Pista: Renfe vende abonos, pero ninguna suscripción te deja saltarte una cola de forma legal."
+    },
+    "f11": {
+      "headline": "Correos repartirá paquetes en burro por los pueblos blancos este verano",
+      "summary": "Correos probará el reparto en burro en 12 pueblos blancos de Andalucía donde las furgonetas no pueden subir por las cuestas empedradas. Cada animal llevará hasta 15 paquetes y un sombrero de paja con el logo de Correos para que se le vea bien. Los plazos de entrega se duplicarán, pero los responsables admiten que las fotos se triplicarán.",
+      "explanation": "Pista: Correos es lento, pero nunca ha repartido paquetes en burro por decreto."
+    },
+    "f12": {
+      "headline": "España fija el temblor oficial del flan en los postres del menú del día",
+      "summary": "La agencia española de alimentación ha fijado el temblor oficial del flan en exactamente tres oscilaciones por golpecito de cuchara en todos los postres del menú del día. Los inspectores llevarán una cuchara homologada y un cronómetro para hacer controles sorpresa en todo el país. El flan que no se mueva pasará a ser natillas, sin derecho a recurso.",
+      "explanation": "Pista: el menú del día es sagrado, pero ninguna ley fija cuánto debe temblar el flan."
+    },
+    "f13": {
+      "headline": "Pamplona prueba toros en patinete eléctrico silencioso para corredores sensibles al ruido",
+      "summary": "Pamplona probará toros de patinete eléctrico que persiguen a los corredores por el casco viejo a 15 km/h sin hacer ruido. Los e-toros llevan luces rojas y emiten bramidos grabados a un volumen bajo, por respeto a los vecinos. Los tradicionalistas lo ven indignante, y los primerizos nerviosos lo ven de lo más compasivo.",
+      "explanation": "Pista: los encierros tienen normas estrictas, pero ningún pueblo usa patinetes como toros."
+    },
+    "f14": {
+      "headline": "Málaga cobra las toallas de playa por centímetro con una nueva app de la arena",
+      "summary": "Desde junio, Málaga cobrará a los bañistas de las playas del centro según el tamaño de su toalla con la nueva ArenaApp. Una toalla normal costará 3 euros al día, y las sábanas familiares XXL, 7 euros, con suplemento opcional de sombra. Los socorristas medirán con cintas láser oficiales las mantas de pícnic sospechosamente grandes.",
+      "explanation": "Pista: se debatió reservar sitio en la playa, pero ninguna app cobra la toalla por centímetro."
+    },
+    "f15": {
+      "headline": "El certificado digital ahora exige un sello de abrazo de tu funcionario",
+      "summary": "El trámite del certificado digital añade un último paso antes de activarlo: el sello de abrazo de tu funcionario asignado. Hay que ir en persona para un breve apretón de manos, un abrazo oficial y un certificado sellado de calidez. El ministerio asegura que el contacto humano reduce de forma medible el fraude y las lágrimas en la sala de espera.",
+      "explanation": "Pista: a la burocracia española le encantan los sellos, pero ningún ministerio los pone por cariño."
+    },
+    "f16": {
+      "headline": "Los supermercados ponen tapones con huella dactilar al aceite de oliva tras varios robos",
+      "summary": "Los supermercados españoles pondrán tapones con lector de huella a las botellas de aceite de oliva virgen extra tras una ola de robos en Andalucía. El cliente desbloquea una sola botella en caja con el dedo índice, bajo la mirada solemne del cajero. La reposición se limita a un litro por hogar y semana, sin excepciones.",
+      "explanation": "Pista: el precio del aceite se disparó, pero ningún súper bloquea las botellas con la huella."
+    },
+    "f17": {
+      "headline": "Los chiringuitos deberán poner flamenco 8 horas al día por un nuevo decreto cultural",
+      "summary": "Un nuevo decreto cultural autonómico obligará a los chiringuitos de la Costa del Sol a poner flamenco al menos ocho horas diarias. Los inspectores anotarán las horas de guitarra junto a la higiene, el precio de los cócteles y el entusiasmo de las palmas. El reguetón solo se permitirá a partir de medianoche y a un volumen respetuoso.",
+      "explanation": "Pista: los chiringuitos tienen sus normas, pero ninguna ley les obliga a poner flamenco en bucle."
+    },
+    "f18": {
+      "headline": "España se divide en dos husos horarios: zona con siesta y zona sin siesta",
+      "summary": "España se dividirá en dos husos horarios, con siesta y sin siesta, y el sur soleado irá una hora por detrás del norte. En las regiones con siesta, las tiendas cerrarán de 14:00 a 17:00 mientras las oficinas del norte aguantan la tarde como héroes. Los horarios de tren mostrarán la hora de la siesta y la hora normal para evitar el lío en todo el país.",
+      "explanation": "Pista: España lleva años debatiendo el cambio de huso horario, pero nunca se han propuesto dos zonas de siesta."
+    },
+    "f19": {
+      "headline": "Un pueblo paga 200 euros en vales de tapas a quien se empadrone",
+      "summary": "Un pueblo diminuto de Teruel ofrece 200 euros en vales de tapas a quien se empadrone este año. Los recién llegados reciben una tarjeta de sellos válida en los cuatro bares del pueblo para bravas, croquetas, migas y vermut. El alcalde presume de que ya se han apuntado doce personas y un perro muy fiel.",
+      "explanation": "Pista: empadronarse importa, pero ningún pueblo paga a sus vecinos en vales de tapas."
+    },
+    "f20": {
+      "headline": "El aeropuerto de Málaga ofrece flamenco para colarse a los pasajeros con retraso",
+      "summary": "Este verano, el aeropuerto de Málaga montará espectáculos de flamenco en directo dentro de la cola del control de seguridad cuando los retrasos pasen de 40 minutos. Los bailaores actuarán entre las bandejas y el escáner para calmar los nervios y a los niños inquietos. Quien dé palmas a compás embarcará dos minutos antes.",
+      "explanation": "Pista: hay huelgas en los aeropuertos, pero ninguno ofrece flamenco para saltarse la cola."
+    },
+    "f21": {
+      "headline": "Una nueva ley prohíbe los cubos de sangría de más de un litro en los barcos de fiesta",
+      "summary": "Una nueva ley de costas prohíbe los cubos de sangría de más de un litro en los barcos de fiesta de Mallorca e Ibiza. Los barcos tendrán que servir jarras medidas, con una proporción de fruta que aprobarán cada mañana los inspectores de sanidad. A los infractores les esperan multas altas y la retirada inmediata de todos los flamencos hinchables a bordo.",
+      "explanation": "Pista: hay normas sobre la sangría en zonas turísticas, pero ningún laboratorio homologa el tamaño del cubo."
+    },
+    "f22": {
+      "headline": "La Universidad de Salamanca estrena este otoño un grado en corte de jamón",
+      "summary": "La Universidad de Salamanca lanza un grado de tres años en corte de jamón con anatomía de la pata, física del cuchillo y emplatado artístico. Los graduados reciben el título de Doctor en Jamón y una piedra de afilar grabada con su nombre en la ceremonia. Solo hay 40 plazas, y ya se han presentado más de 3.000 aspirantes con hambre.",
+      "explanation": "Pista: el jamón es cosa seria, pero ninguna universidad da doctorados en cortarlo."
+    },
+    "f23": {
+      "headline": "Madrid grava las terrazas según los decibelios del cotilleo de los clientes",
+      "summary": "Madrid cobrará a las terrazas de los bares según los decibelios del cotilleo de sus clientes, medidos los viernes por la noche. Las terrazas tranquilas de vermut pagarán solo 50 euros al año, y las más escandalosas de madrugada, 400. Los micrófonos irán en las sombrillas, camuflados con astucia como aceitunas gigantes.",
+      "explanation": "Pista: las terrazas están reguladas, pero ninguna ciudad cobra por los decibelios del cotilleo."
+    },
+    "f24": {
+      "headline": "Las empresas deberán poner hamacas para la siesta por un nuevo convenio",
+      "summary": "Un nuevo convenio laboral estatal obliga a las empresas de más de 50 trabajadores a poner hamacas para siestas de veinte minutos por la tarde. Las salas de siesta tendrán que estar a oscuras, en silencio y oler siempre un poco a lavanda. Los sindicatos lo celebran como su mayor victoria desde la invención de la pausa para comer.",
+      "explanation": "Pista: la siesta es parte de la cultura, pero nunca se ha obligado a las empresas a poner hamacas."
+    },
+    "f25": {
+      "headline": "Los permisos de fiestas exigen ahora un seguro de karaoke de hasta 10.000 euros",
+      "summary": "Los ayuntamientos exigirán a los organizadores de fiestas un seguro de karaoke de hasta 10.000 euros por evento. La póliza cubre tímpanos reventados, micrófonos rotos y lesiones bailando la Macarena a medianoche. Solo en Benalmádena ya se prevén tres siniestros por verano, casi todos de tíos.",
+      "explanation": "Pista: los permisos para fiestas existen, pero ningún ayuntamiento pide un seguro de karaoke."
+    },
+    "f26": {
+      "headline": "Un pueblo con sequía nombra a vecinos para denunciar a quien llene piscinas hinchables",
+      "summary": "Un pueblo de Murcia castigado por la sequía nombra a vecinos para denunciar a quien llene a escondidas piscinas hinchables por la noche. Los sheriffs voluntarios de las piscinas patrullan con silbato y tarjetas plastificadas con las normas de la manguera. La recompensa: una ducha pública gratis y una gorra oficial de héroe de la sequía con chapa.",
+      "explanation": "Pista: la falta de agua trae restricciones a las mangueras, pero ningún pueblo ha creado patrullas de piscinas."
+    },
+    "f27": {
+      "headline": "El examen de nacionalidad española añade una prueba de karaoke con \"Guantanamera\"",
+      "summary": "El examen de nacionalidad española incluirá una estrofa de \"Guantanamera\" en karaoke en la parte de lengua y cultura. Habrá que cantarla entera y con sentimiento, y después nombrar bien tres tapas regionales. Los examinadores podrán dar puntos extra por castañuelas, miradas emotivas o bailes valientes.",
+      "explanation": "Pista: para la nacionalidad cuentan los certificados de idioma, pero ningún examen incluye karaoke."
+    },
+    "f28": {
+      "headline": "Una aerolínea low cost cobra 8 euros por llevar sombrero de ala ancha a bordo",
+      "summary": "Este verano, una aerolínea de bajo coste que vuela a Alicante cobrará 8 euros por llevar sombrero de ala ancha a bordo. La tripulación dice que las alas grandes bloquean el pasillo y montan un caos cada vez que suena la señal del cinturón. Las gorras plegables, los ventiladores diminutos y las gafas de sol minúsculas siguen siendo gratis.",
+      "explanation": "Pista: las normas de equipaje cambian a menudo, pero ninguna aerolínea pesa los sombreros aparte."
+    },
+    "f29": {
+      "headline": "La catedral de Santiago vende una compostela para saltarse la cola",
+      "summary": "La catedral de Santiago venderá por 15 euros una compostela exprés para peregrinos con muchísima prisa. Con ella te saltas la larga cola del certificado y te llevas un selfi sellado junto al botafumeiro. Los peregrinos de siempre seguirán recibiendo gratis el certificado lento y sudado, ampollas incluidas.",
+      "explanation": "Pista: a los peregrinos les encantan los sellos, pero ninguna catedral vende indulgencias para saltarse la cola."
+    },
+    "f30": {
+      "headline": "Un pueblo vota en referéndum la cebolla en la tortilla y cierra los bares durante el recuento",
+      "summary": "Un pueblo de La Rioja celebrará un referéndum vinculante sobre la cebolla en la tortilla, con todos los bares cerrados durante el recuento. Los vecinos elegirán con o sin cebolla en papeletas con un ligero aroma a aceite de oliva. El bando perdedor tendrá que preparar el desayuno a toda la plaza el domingo siguiente.",
+      "explanation": "Pista: todo el mundo discute por la tortilla, pero ningún referéndum sobre la cebolla ha cerrado nunca los bares."
+    }
+  },
+  "results": {
+    "certified-guiri": {
+      "title": "Guiri certificado",
+      "text": "Te creíste lo de la policía de la siesta Y lo de los carteros en burro. Hay que reconocerte el mérito: España es rara, pero no tanto.\n\nLa buena noticia es que así se aprende más rápido. Un mes de España al Día en tu email y olerás un titular falso antes de que se te enfríe el café con leche.",
+      "shareText": "He sacado 0-2/10 distinguiendo noticias reales de España de bulos de IA: ¡guiri certificado! ¿Puedes superar mi glorioso fracaso?"
+    },
+    "suspicious-tourist": {
+      "title": "Turista con sospechas",
+      "text": "Detectas un crimen contra la paella, pero te tragaste lo del seguro de karaoke. Llevas en España lo bastante para pedir unas bravas, pero no para discutir si llevan alioli o no.\n\nSigue leyendo España al Día y pronto serás tú quien les explique a los recién llegados por qué un pueblo devolvió por correo las cacas de perro a sus dueños (es verdad, por cierto).",
+      "shareText": "He sacado 3-4/10 distinguiendo noticias reales de España de bulos de IA: turista con sospechas. ¿Lo haces mejor?"
+    },
+    "half-spanish": {
+      "title": "Medio español, medio escéptico",
+      "text": "¡Mitad y mitad! Lo cuestionas todo como un buen funcionario, pero el doctorado en jamón te la coló. Media cabeza ya funciona con lógica burocrática española; la otra media todavía se fía demasiado de los titulares.\n\nUn verano más de cotilleos de terraza, colas del NIE y nuestro resumen de cada mañana, y nadie te volverá a colar un bulo.",
+      "shareText": "He sacado 5-6/10 distinguiendo noticias reales de España de bulos de IA: medio español. ¿Me superas?"
+    },
+    "almost-spanish": {
+      "title": "Casi español",
+      "text": "Cazaste la policía del temblor del flan y la prohibición de los cubos de sangría como alguien de aquí. Solo se te escaparon los titulares más disparatados, y en España, la verdad, \"disparatado\" no descarta casi nada.\n\nDefiende tu honor: suscríbete y la edición de la semana que viene te dará munición nueva para las discusiones de terraza.",
+      "shareText": "He sacado 7-8/10 distinguiendo noticias reales de España de bulos de IA: casi español. A que no me superas."
+    },
+    "paella-detector": {
+      "title": "Detector de paellas intacto",
+      "text": "No hay quien te la cuele: ni subastas falsas de citas del NIE, ni tasas por selfi, ni sellos de abrazo. Eres oficialmente el amigo al que todos escriben antes de creerse una noticia de España, el verificador humano de la sobremesa.\n\nApúntate a la newsletter y presume delante de todos. Te has ganado el derecho a ir de listo.",
+      "shareText": "He sacado 9-10/10 distinguiendo noticias reales de España de bulos de IA: detector de paellas intacto. ¿Alguien me supera?"
+    }
+  }
+}
