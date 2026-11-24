@@ -4,6 +4,13 @@ import {
   sanitizeState, parseStateFromParams, stateToParams, clampField,
   DEFAULTS, FIELD_LIMITS,
 } from './rental-yield-form.js'
+import { createI18n, pageLang, loadDict } from './calc-i18n.js'
+
+const LANG = pageLang()
+const I = createI18n(LANG, await loadDict(LANG, () => import('./rental-yield-es.js')))
+const { t } = I
+// A percentage typed by the user (tax rate, reduction), shown as entered.
+const rawPct = v => (I.es ? `${I.num(Number(v), 0, 2)}${I.NBSP}%` : `${v}%`)
 
 const STORAGE_KEY = 'ry-calculator-state'
 const MIN_PRICE = 10000
@@ -25,18 +32,18 @@ function fmtEur(n) {
   const num = Number(n)
   if (!Number.isFinite(num)) return '—'
   const r = Math.round(num)
-  return `${(r < 0 ? '−' : '')}${Math.abs(r).toLocaleString('en-US')} €`
+  return `${(r < 0 ? '−' : '')}${I.num(Math.abs(r), 0)}${I.es ? I.NBSP : ' '}€`
 }
 
 function fmtPct(n, digits = 1) {
   if (typeof n !== 'number' || !Number.isFinite(n)) return '—'
-  return `${n.toFixed(digits)}%`
+  return I.pctOf(n, digits)
 }
 
 function fmtCompact(n) {
   const abs = Math.abs(n)
   const sign = n < 0 ? '−' : ''
-  if (abs >= 1e6) return `${sign}${(abs / 1e6).toFixed(abs >= 1e7 ? 0 : 1).replace(/\.0$/, '')}M`
+  if (abs >= 1e6) return `${sign}${I.fixed(abs / 1e6, abs >= 1e7 ? 0 : 1).replace(/[.,]0$/, '')}M`
   if (abs >= 1e3) return `${sign}${Math.round(abs / 1e3)}k`
   return `${sign}${Math.round(abs)}`
 }
@@ -163,80 +170,82 @@ function setSigned(el, value) {
 
 function taxNote(state, r) {
   const sale = state.taxStatus === 'resident'
-    ? 'Sale gain is taxed on the 2026 savings scale (19–30%).'
-    : 'Sale gain is taxed at a flat 19% for non-residents.'
+    ? t('Sale gain is taxed on the 2026 savings scale (19–30%).')
+    : t('Sale gain is taxed at a flat 19% for non-residents.')
   if (state.taxStatus === 'resident') {
     const red = state.rentalReductionPct
-    return `Resident: IRPF on net rental income (rent − expenses − mortgage interest − amortization), `
-      + `${red ? `reduced by ${red}%` : 'with no reduction'}, taxed at your ${state.personalTaxRatePct}% marginal rate. ${sale}`
+    return t('Resident: IRPF on net rental income (rent − expenses − mortgage interest − amortization), {reduction}, taxed at your {rate} marginal rate.', {
+      reduction: red ? t('reduced by {pct}', { pct: rawPct(red) }) : t('with no reduction'),
+      rate: rawPct(state.personalTaxRatePct),
+    }) + ` ${sale}`
   }
   if (state.taxStatus === 'non_resident_eu') {
-    return `Non-resident EU/EEA: 19% of net rental income (rent − expenses − mortgage interest − amortization). No reduction applies. ${sale}`
+    return t('Non-resident EU/EEA: 19% of net rental income (rent − expenses − mortgage interest − amortization). No reduction applies.') + ` ${sale}`
   }
   if (state.useNonEuDeductions) {
-    return `Non-resident outside the EU/EEA, Audiencia Nacional 2025 ruling applied: 24% of net rental income. The ruling is under appeal, so treat this as a best case. ${sale}`
+    return t('Non-resident outside the EU/EEA, Audiencia Nacional 2025 ruling applied: 24% of net rental income. The ruling is under appeal, so treat this as a best case.') + ` ${sale}`
   }
-  return `Non-resident outside the EU/EEA: 24% of gross rent, no deductions (current rule). ${sale}`
+  return t('Non-resident outside the EU/EEA: 24% of gross rent, no deductions (current rule).') + ` ${sale}`
 }
 
 function summaryRows(r, state) {
   const rows = [
-    ['Purchase price', fmtEur(state.purchasePrice)],
-    [`Purchase tax (${r.taxType}, ${fmtPct(r.effectiveTaxRate, 2)})`, fmtEur(r.purchaseTax)],
-    ['Closing costs', fmtEur(r.closingCosts)],
+    [t('Purchase price'), fmtEur(state.purchasePrice)],
+    [t('Purchase tax ({type}, {rate})', { type: r.taxType, rate: fmtPct(r.effectiveTaxRate, 2) }), fmtEur(r.purchaseTax)],
+    [t('Closing costs'), fmtEur(r.closingCosts)],
   ]
   if (state.useRenovation) {
-    rows.push(['Renovation', fmtEur(state.renovationCost)])
-    rows.push(['Value after works', fmtEur(r.valueAfterRepairs)])
+    rows.push([t('Renovation'), fmtEur(state.renovationCost)])
+    rows.push([t('Value after works'), fmtEur(r.valueAfterRepairs)])
   }
   if (state.useLoan) {
-    rows.push(['Total investment (incl. loan)', fmtEur(r.totalInvestment)])
-    rows.push(['Loan amount', fmtEur(r.loanAmount)])
-    rows.push(['Monthly mortgage payment', fmtEur(r.schedule.monthlyPayment)])
+    rows.push([t('Total investment (incl. loan)'), fmtEur(r.totalInvestment)])
+    rows.push([t('Loan amount'), fmtEur(r.loanAmount)])
+    rows.push([t('Monthly mortgage payment'), fmtEur(r.schedule.monthlyPayment)])
   }
-  rows.push(['Cash needed up front', fmtEur(r.initialCashOutlay), 'b'])
-  rows.push([`Rental income, ${r.holdYears} yrs`, fmtEur(r.totalRentalIncome)])
-  rows.push(['Operating expenses', fmtEur(-r.totalExpenses)])
-  rows.push(['Net operating income', fmtEur(r.totalNetOperatingIncome)])
-  if (state.useLoan) rows.push(['Mortgage payments', fmtEur(-r.totalMortgagePayments)])
-  rows.push(['Rental income tax', fmtEur(-r.totalIncomeTaxes)])
-  rows.push(['Net cash flow from rent', fmtEur(r.totalNetCashFlow), 'b'])
-  rows.push([`Sale price after ${r.holdYears} yrs`, fmtEur(r.priceAfterHold)])
-  rows.push(['Selling costs (incl. plusvalía)', fmtEur(-r.sellingCostsAmount)])
-  rows.push(['Net sale price', fmtEur(r.netSalePrice)])
-  rows.push(['Capital gains tax', fmtEur(-r.exitTax)])
+  rows.push([t('Cash needed up front'), fmtEur(r.initialCashOutlay), 'b'])
+  rows.push([t('Rental income, {n} yrs', { n: r.holdYears }), fmtEur(r.totalRentalIncome)])
+  rows.push([t('Operating expenses'), fmtEur(-r.totalExpenses)])
+  rows.push([t('Net operating income'), fmtEur(r.totalNetOperatingIncome)])
+  if (state.useLoan) rows.push([t('Mortgage payments'), fmtEur(-r.totalMortgagePayments)])
+  rows.push([t('Rental income tax'), fmtEur(-r.totalIncomeTaxes)])
+  rows.push([t('Net cash flow from rent'), fmtEur(r.totalNetCashFlow), 'b'])
+  rows.push([t('Sale price after {n} yrs', { n: r.holdYears }), fmtEur(r.priceAfterHold)])
+  rows.push([t('Selling costs (incl. plusvalía)'), fmtEur(-r.sellingCostsAmount)])
+  rows.push([t('Net sale price'), fmtEur(r.netSalePrice)])
+  rows.push([t('Capital gains tax'), fmtEur(-r.exitTax)])
   if (state.useLoan) {
-    rows.push(['Sale proceeds after tax', fmtEur(r.netSaleAfterTax)])
-    rows.push([`Mortgage payoff (${fmtPct(r.principalRepaidPct, 0)} repaid)`, fmtEur(-r.remainingMortgagePrincipal)])
+    rows.push([t('Sale proceeds after tax'), fmtEur(r.netSaleAfterTax)])
+    rows.push([t('Mortgage payoff ({pct} repaid)', { pct: fmtPct(r.principalRepaidPct, 0) }), fmtEur(-r.remainingMortgagePrincipal)])
   }
-  rows.push(['Cash from sale', fmtEur(r.netFromSale), 'b'])
-  rows.push(['Total cash received (rent + sale)', fmtEur(r.totalCashReceivedAfterTax)])
-  rows.push(['Cash put in up front', fmtEur(-r.initialCashOutlay)])
-  rows.push(['Total profit when sold', fmtEur(r.totalNetProfit), 'total'])
+  rows.push([t('Cash from sale'), fmtEur(r.netFromSale), 'b'])
+  rows.push([t('Total cash received (rent + sale)'), fmtEur(r.totalCashReceivedAfterTax)])
+  rows.push([t('Cash put in up front'), fmtEur(-r.initialCashOutlay)])
+  rows.push([t('Total profit when sold'), fmtEur(r.totalNetProfit), 'total'])
   return rows
 }
 
 // Year-1 rental tax, step by step (the original's "tax breakdown, year 1" block).
 function taxRows(r, state) {
-  const rows = [['Rent after vacancy', fmtEur(r.effectiveGrossIncomes[0])]]
+  const rows = [[t('Rent after vacancy'), fmtEur(r.effectiveGrossIncomes[0])]]
   const grossOnly = state.taxStatus === 'non_resident_non_eu' && !state.useNonEuDeductions
   if (!grossOnly) {
-    rows.push(['Operating expenses', fmtEur(-r.operatingExpensesByYear[0])])
-    if (state.useLoan) rows.push(['Mortgage interest', fmtEur(-(r.schedule.interestByYear[0] || 0))])
-    rows.push(['Amortization (3% of building value)', fmtEur(-r.amortizationByYear[0])])
-    rows.push(['Net rental income (not below 0)', fmtEur(r.netBaseByYear[0]), 'b'])
+    rows.push([t('Operating expenses'), fmtEur(-r.operatingExpensesByYear[0])])
+    if (state.useLoan) rows.push([t('Mortgage interest'), fmtEur(-(r.schedule.interestByYear[0] || 0))])
+    rows.push([t('Amortization (3% of building value)'), fmtEur(-r.amortizationByYear[0])])
+    rows.push([t('Net rental income (not below 0)'), fmtEur(r.netBaseByYear[0]), 'b'])
   }
   let rate
   if (state.taxStatus === 'resident') {
     const red = state.rentalReductionPct
-    rows.push([`Reduction (${red}%)`, fmtEur(-(r.netBaseByYear[0] - r.taxBaseByYear[0]))])
-    rate = `IRPF at ${state.personalTaxRatePct}%`
+    rows.push([t('Reduction ({pct})', { pct: rawPct(red) }), fmtEur(-(r.netBaseByYear[0] - r.taxBaseByYear[0]))])
+    rate = t('IRPF at {rate}', { rate: rawPct(state.personalTaxRatePct) })
   } else {
-    rate = state.taxStatus === 'non_resident_eu' ? 'IRNR at 19%' : 'IRNR at 24%'
+    rate = state.taxStatus === 'non_resident_eu' ? t('IRNR at 19%') : t('IRNR at 24%')
   }
-  rows.push(['Taxable base', fmtEur(r.taxBaseByYear[0]), 'b'])
+  rows.push([t('Taxable base'), fmtEur(r.taxBaseByYear[0]), 'b'])
   rows.push([rate, fmtEur(r.firstYearTax), 'total'])
-  if (!grossOnly) rows.push([`Amortization deducted over ${r.holdYears} yrs`, fmtEur(r.amortizationUsed)])
+  if (!grossOnly) rows.push([t('Amortization deducted over {n} yrs', { n: r.holdYears }), fmtEur(r.amortizationUsed)])
   return rows
 }
 
@@ -354,7 +363,7 @@ function renderChart(r) {
     : ''
   const line = (arr, color, extra = '') => `<path d="${path(arr)}" fill="none" stroke="${color}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"${extra}/>`
 
-  host.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" role="img" aria-label="Chart: total net position, equity, cumulative net cash flow and invested capital by year" preserveAspectRatio="xMidYMid meet">`
+  host.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" role="img" aria-label="${t('Chart: total net position, equity, cumulative net cash flow and invested capital by year')}" preserveAspectRatio="xMidYMid meet">`
     + grid
     + `<line x1="${m.l}" x2="${W - m.r}" y1="${yv(0).toFixed(1)}" y2="${yv(0).toFixed(1)}" stroke="${COLOR_AXIS}" stroke-width="1" stroke-dasharray="4 3"/>`
     + line(invested, COLOR_INVESTED, ' stroke-dasharray="6 4"')
@@ -365,10 +374,10 @@ function renderChart(r) {
     + `<rect class="ry-hit" x="${m.l}" y="${m.t}" width="${pw}" height="${ph}" fill="transparent"/>`
     + `</svg>`
 
-  const breakText = breakEven === 0 ? 'net position positive from day one'
-    : breakEven > 0 ? `break-even in year ${breakEven}`
-    : `no break-even within ${n} years`
-  $('r-chart-read').textContent = `Year ${sel} · ${breakText}`
+  const breakText = breakEven === 0 ? t('net position positive from day one')
+    : breakEven > 0 ? t('break-even in year {n}', { n: breakEven })
+    : t('no break-even within {n} years', { n })
+  $('r-chart-read').textContent = `${t('Year {n}', { n: sel })} · ${breakText}`
   $('r-lg-net').textContent = fmtEur(net[sel])
   $('r-lg-equity').textContent = fmtEur(equity[sel])
   $('r-lg-cash').textContent = fmtEur(cash[sel])
@@ -389,9 +398,9 @@ function render(state) {
   applyVisibility(state)
   syncNewBuildLabel(state.regionId)
   if (!(state.purchasePrice >= MIN_PRICE)) {
-    const min = `${MIN_PRICE.toLocaleString('en-US')} €`
-    setPriceError(`Minimum ${min}.`)
-    showError(`Enter a purchase price of at least ${min} to see the results.`)
+    const min = fmtEur(MIN_PRICE)
+    setPriceError(t('Minimum {amount}.', { amount: min }))
+    showError(t('Enter a purchase price of at least {amount} to see the results.', { amount: min }))
     return
   }
   setPriceError('')
@@ -399,7 +408,7 @@ function render(state) {
   try {
     r = simulateProjection(state)
   } catch (e) {
-    showError(`Calculation error: ${e.message}.`)
+    showError(t('Calculation error: {message}.', { message: e.message }))
     return
   }
   lastResult = r
@@ -411,7 +420,7 @@ function render(state) {
   $('r-coc').textContent = fmtPct(r.cashOnCashReturn, 2)
   $('r-monthly').textContent = fmtEur(r.monthlyCashFlow)
   $('r-irr').textContent = fmtPct(r.irr, 2)
-  $('r-irr-sub').textContent = `over ${r.holdYears} yrs, incl. sale`
+  $('r-irr-sub').textContent = t('over {n} yrs, incl. sale', { n: r.holdYears })
   setSigned($('r-monthly'), r.monthlyCashFlow)
   setSigned($('r-coc'), r.cashOnCashReturn)
   setSigned($('r-net'), r.netYield)
@@ -421,9 +430,9 @@ function render(state) {
 
   $('r-profit').textContent = fmtEur(r.totalNetProfit)
   setSigned($('r-profit'), r.totalNetProfit)
-  $('r-roi').textContent = `${fmtPct(r.totalRoi, 0)} total return on cash invested`
+  $('r-roi').textContent = t('{pct} total return on cash invested', { pct: fmtPct(r.totalRoi, 0) })
   $('r-outlay').textContent = fmtEur(r.initialCashOutlay)
-  $('r-outlay-sub').textContent = `incl. ${fmtEur(r.purchaseTax)} ${r.taxType}`
+  $('r-outlay-sub').textContent = t('incl. {amount} {tax}', { amount: fmtEur(r.purchaseTax), tax: r.taxType })
 
   $('r-taxnote').textContent = taxNote(state, r)
   $('r-hold-label').textContent = String(r.holdYears)
@@ -440,14 +449,14 @@ function syncShareLinks() {
   const wrap = document.querySelector('.calc-share .share-wrap')
   if (!wrap) return
   const pageUrl = window.location.href
-  const text = 'Spain Rental Yield Calculator — net yield, cash-on-cash, IRR & taxes — Spanified'
+  const text = t('Spain Rental Yield Calculator — net yield, cash-on-cash, IRR & taxes — Spanified')
   const u = encodeURIComponent(pageUrl)
-  const t = encodeURIComponent(text)
+  const tx = encodeURIComponent(text)
   const set = (sel, href) => { const a = wrap.querySelector(sel); if (a) a.href = href }
-  set('a[href*="x.com/intent"]', `https://x.com/intent/tweet?text=${t}&url=${u}`)
+  set('a[href*="x.com/intent"]', `https://x.com/intent/tweet?text=${tx}&url=${u}`)
   set('a[href*="facebook.com/sharer"]', `https://www.facebook.com/sharer/sharer.php?u=${u}`)
-  set('a[href*="t.me/share"]', `https://t.me/share/url?url=${u}&text=${t}`)
-  set('a[href*="wa.me"]', `https://wa.me/?text=${t}%20${u}`)
+  set('a[href*="t.me/share"]', `https://t.me/share/url?url=${u}&text=${tx}`)
+  set('a[href*="wa.me"]', `https://wa.me/?text=${tx}%20${u}`)
   const copy = wrap.querySelector('.share-copy')
   if (copy) copy.dataset.url = pageUrl
 }
@@ -460,10 +469,10 @@ function wireShareCopy() {
     if (!btn) return
     const label = btn.querySelector('span')
     const done = () => {
-      if (label) label.textContent = 'Copied!'
+      if (label) label.textContent = t('Copied!')
       btn.classList.add('is-copied')
       setTimeout(() => {
-        if (label) label.textContent = 'Copy link'
+        if (label) label.textContent = t('Copy link')
         btn.classList.remove('is-copied')
       }, 1500)
     }
