@@ -326,7 +326,7 @@ ES_STRINGS = {
     "{caption}. <a {link}>Watch on YouTube</a>": "{caption}. Vídeo en inglés. <a {link}>Verlo en YouTube</a>",
     # Home page (index.html). Adapted for the Spanish edition: it summarizes
     # the Spanish press in Spanish, so "in English" claims are dropped.
-    # Calculators and quizzes are English-only pages; their intros say so.
+    # Quizzes are English-only pages; their intro says so (calculators have /es/ twins).
     "Spain Daily: Spanish News in English | Spanified": "España al Día: las noticias de España, cada mañana | Spanified",
     "Spanish news in English, every morning: Spain Daily sums up Spain's top stories on rents, taxes, visas and jobs. Read online or by email. Free.":
         "Las noticias de España, cada mañana: España al Día resume lo más importante sobre alquileres, impuestos, visados y empleo. Léelo en la web o por email. Gratis.",
@@ -407,7 +407,7 @@ ES_STRINGS = {
         "Calculadoras prácticas, tests rápidos y guías para vivir en España. Gratis y sin registro.",
     "Calculators for life in Spain": "Calculadoras para vivir en España",
     "Taxes, property and bills worked out in plain English.":
-        "Impuestos, vivienda y facturas, calculados paso a paso. Las calculadoras están en inglés.",
+        "Impuestos, vivienda y facturas, calculados paso a paso.",
     "Open calculator": "Abrir la calculadora",
     "Quizzes, two minutes each": "Tests de dos minutos",
     "Real stories from Spain, mixed with inventions. Can you tell which is which?":
@@ -1089,9 +1089,9 @@ def video_embed_html(video_id, lang="en"):
 
 
 
-def video_embed(video_id):
-    """Jinja global: {{ video_embed("<id>") }} in templates."""
-    return Markup(video_embed_html(video_id))
+def video_embed(video_id, lang="en"):
+    """Jinja global: {{ video_embed("<id>", page_lang) }} in templates."""
+    return Markup(video_embed_html(video_id, lang or "en"))
 
 # "::: toc" on its own line -> table of contents of every h2 in the article.
 ARTICLE_TOC_MARKER = "::: toc"
@@ -1568,7 +1568,10 @@ def render_llms_txt(digests, articles=(), salary_pages=(), autonomo_pages=(), re
         *(["## Spanish edition (España al Día)",
             "- The same editions and guides in Spanish, under /es/. Each page names its English twin with hreflang.",
             *[f"- {label}: {SITE_URL}{localize('es', path)}" for label, path in (
-                ("Home", "/"), ("Archive", "/archive/"), ("Articles", "/articles/"), ("Subscribe", "/subscribe"))
+                ("Home", "/"), ("Archive", "/archive/"), ("Articles", "/articles/"), ("Subscribe", "/subscribe"),
+                ("Net salary calculator", "/calculators/net-salary"), ("Autónomo tax calculator", "/calculators/autonomo-tax"),
+                ("Property buying cost calculator", "/calculators/property-buying-cost"),
+                ("Rental yield calculator", "/calculators/rental-yield"), ("Electricity bill calculator", "/calculators/electricity-bill"))
               if path in ES_PATHS],
             f"- Spanish editions: {SITE_URL}/es/archive/<YYYY-MM-DD>",
             ""] if "/" in ES_PATHS else []),
@@ -1682,45 +1685,691 @@ def render_static(env, digests, es_digests=(), es_articles=()):
                    latest_url=f"/archive/{latest['date']}" if latest else None)
 
 
-def render_calculators(env):
-    """Render calculator pages (static shell, logic runs client-side)."""
-    calcs = [
-        ("calculator-net-salary.html", "calculators/net-salary.html", [
-            {"name": "Home", "url": "/"},
-            {"name": "Net Salary", "url": "/calculators/net-salary", "current": True},
-        ], "Spain Net Salary Calculator — payslip, IRPF and Renta refund by region — Spanified"),
-        ("calculator-autonomo.html", "calculators/autonomo-tax.html", [
-            {"name": "Home", "url": "/"},
-            {"name": "Autónomo Tax", "url": "/calculators/autonomo-tax", "current": True},
-        ], "Autónomo Tax Calculator — Spain self-employed taxes — Spanified"),
-        ("calculator-property-buying-cost.html", "calculators/property-buying-cost.html", [
-            {"name": "Home", "url": "/"},
-            {"name": "Property Buying Cost", "url": "/calculators/property-buying-cost", "current": True},
-        ], "Spain Property Buying Cost Calculator — ITP, IVA/IGIC & AJD by region — Spanified"),
-        ("calculator-rental-yield.html", "calculators/rental-yield.html", [
-            {"name": "Home", "url": "/"},
-            {"name": "Rental Yield", "url": "/calculators/rental-yield", "current": True},
-        ], "Spain Rental Yield Calculator — net yield after tax — Spanified"),
-        ("calculator-electricity.html", "calculators/electricity-bill.html", [
-            {"name": "Home", "url": "/"},
-            {"name": "Electricity Bill", "url": "/calculators/electricity-bill", "current": True},
-        ], "Spain Electricity Bill Calculator — PVPC & Tariff Comparison — Spanified"),
-    ]
-    for template_name, rel_dest, crumbs, share_text in calcs:
-        template = env.get_template(template_name)
-        calc_url = f"{SITE_URL}/{rel_dest.replace('.html', '')}"
-        share = share_links(calc_url, share_text)
-        # Fiscal year of the calculator data (SS quotas, IRPF scales). Bump ONLY
-        # together with the engine data (quotas/brackets/deductions), never alone.
-        calc_year = 2026
-        output = template.render(crumbs=crumbs, js_version=js_version(), share=share, calc_year=calc_year,
-                                 ns_links=net_salary_links(), au_links=autonomo_links(), ry_links=rental_yield_links(),
-                                 current_slug="")
-        dest = os.path.join(OUT_DIR, rel_dest)
-        os.makedirs(os.path.dirname(dest), exist_ok=True)
-        with open(dest, "w", encoding="utf-8") as fh:
-            fh.write(output)
-        print(f"  wrote {rel_dest}")
+# Calculator hubs: (template, slug under /calculators/, breadcrumb name, share text).
+CALCULATOR_PAGES = [
+    ("calculator-net-salary.html", "net-salary", "Net Salary",
+     "Spain Net Salary Calculator — payslip, IRPF and Renta refund by region — Spanified"),
+    ("calculator-autonomo.html", "autonomo-tax", "Autónomo Tax",
+     "Autónomo Tax Calculator — Spain self-employed taxes — Spanified"),
+    ("calculator-property-buying-cost.html", "property-buying-cost", "Property Buying Cost",
+     "Spain Property Buying Cost Calculator — ITP, IVA/IGIC & AJD by region — Spanified"),
+    ("calculator-rental-yield.html", "rental-yield", "Rental Yield",
+     "Spain Rental Yield Calculator — net yield after tax — Spanified"),
+    ("calculator-electricity.html", "electricity-bill", "Electricity Bill",
+     "Spain Electricity Bill Calculator — PVPC & Tariff Comparison — Spanified"),
+]
+
+
+def render_calculators(env, langs=("en", "es")):
+    """Render calculator pages (static shell, logic runs client-side), in
+    English and, under /es/calculators/, in Spanish (same template, page_lang)."""
+    for lang in langs:
+        calc_dir = lang_out_dir(lang, "calculators")
+        os.makedirs(calc_dir, exist_ok=True)
+        for template_name, slug, crumb, share_text in CALCULATOR_PAGES:
+            path = f"/calculators/{slug}"
+            crumbs = [
+                {"name": tr(lang, "Home"), "url": localize(lang, "/")},
+                {"name": tr(lang, crumb), "url": lang_path(lang, path), "current": True},
+            ]
+            page_url = SITE_URL + lang_path(lang, path)
+            share = share_links(page_url, tr(lang, share_text))
+            output = env.get_template(template_name).render(
+                page_lang=lang, page_url=page_url, alt_path=es_alt_path(path),
+                crumbs=crumbs, js_version=js_version(), share=share, calc_year=CALC_YEAR,
+                ns_links=net_salary_links(lang=lang), au_links=autonomo_links(lang=lang),
+                ry_links=rental_yield_links(lang=lang), current_slug="")
+            with open(os.path.join(calc_dir, f"{slug}.html"), "w", encoding="utf-8") as fh:
+                fh.write(output)
+            print(f"  wrote {lang_path(lang, path)[1:]}.html")
+
+
+# Fiscal year of the calculator data (SS quotas, IRPF scales). Bump ONLY
+# together with the engine data (quotas/brackets/deductions), never alone.
+CALC_YEAR = 2026
+
+
+# --- ES: calculators ----------------------------------------------------------
+# Spanish twins of every calculator page under /es/calculators/<English slug>:
+# the five hubs and the programmatic amount pages. Same templates with
+# page_lang="es": short UI strings go through t()/tr() (the ES_STRINGS block
+# below), long copy (meta, FAQ, explainers) is written per language in the
+# template, and the amount pages build their Spanish copy in the *_page_context
+# functions. Numbers use Spanish format (30.000 €, 7,7 %). Browser-side text
+# (static/js/*.js) is translated by static/js/calc-i18n.js and the
+# static/js/<calc>-es.js dictionaries.
+
+NBSP = "\u00a0"
+# 1,234.5 -> 1.234,5
+ES_NUMBER_MARKS = str.maketrans(",.", ".,")
+
+
+def calculator_paths():
+    """English paths of every calculator page (hubs and amount pages)."""
+    ns, au, ry = load_net_salary_pages(), load_autonomo_pages(), load_rental_yield_pages()
+    return ([f"/calculators/{slug}" for _, slug, _, _ in CALCULATOR_PAGES]
+            + [f"/calculators/{net_salary_slug('annual', a)}" for a in ns["annual"]]
+            + [f"/calculators/{net_salary_slug('monthly', m)}" for m in ns["monthly"]]
+            + [f"/calculators/{autonomo_slug('revenue', a)}" for a in au["revenue"]]
+            + [f"/calculators/{autonomo_slug('monthly', m)}" for m in au["monthly"]]
+            + [f"/calculators/{rental_yield_slug(p)}" for p in ry["prices"]])
+
+
+def register_es_calculator_paths():
+    """Add every calculator page to ES_PATHS (all have a Spanish twin)."""
+    ES_PATHS.update(calculator_paths())
+
+
+ES_STRINGS.update({
+    # Breadcrumbs and share texts (render_calculators)
+    "Net Salary": "Sueldo neto",
+    "Autónomo Tax": "Impuestos de autónomos",
+    "Property Buying Cost": "Gastos de compra de vivienda",
+    "Rental Yield": "Rentabilidad del alquiler",
+    "Electricity Bill": "Factura de la luz",
+    "Spain Net Salary Calculator — payslip, IRPF and Renta refund by region — Spanified":
+        "Calculadora de sueldo neto: nómina, IRPF y Renta por comunidad | Spanified",
+    "Autónomo Tax Calculator — Spain self-employed taxes — Spanified":
+        "Calculadora de impuestos para autónomos en España | Spanified",
+    "Spain Property Buying Cost Calculator — ITP, IVA/IGIC & AJD by region — Spanified":
+        "Calculadora de gastos de compra de vivienda: ITP, IVA/IGIC y AJD | Spanified",
+    "Spain Rental Yield Calculator — net yield after tax — Spanified":
+        "Calculadora de rentabilidad del alquiler después de impuestos | Spanified",
+    "Spain Electricity Bill Calculator — PVPC & Tariff Comparison — Spanified":
+        "Calculadora de la factura de la luz: PVPC y comparador de tarifas | Spanified",
+    # Shared by the calculator templates
+    "Frequently Asked Questions": "Preguntas frecuentes",
+    "More Spain calculators": "Más calculadoras para España",
+    " — your payslip after IRPF and Social Security, the Renta refund and every region compared.":
+        ": tu nómina después del IRPF y la Seguridad Social, la devolución de la Renta y todas las comunidades comparadas.",
+    " — social security quota and IRPF if you are self-employed.":
+        ": la cuota de la Seguridad Social y el IRPF si trabajas por cuenta propia.",
+    " — ITP, IVA/IGIC, AJD, notary and registry fees by region, before you buy.":
+        ": ITP, IVA/IGIC, AJD, notaría y registro por comunidad, antes de comprar.",
+    " — net yield, cash-on-cash and IRR of a Spanish rental, with resident and non-resident taxes.":
+        ": rentabilidad neta, rentabilidad sobre lo invertido y TIR de un alquiler en España, con impuestos de residentes y no residentes.",
+    "Calculation Error:": "Error de cálculo:",
+    "Please check your inputs or contact support if the problem persists.":
+        "Revisa los datos o escríbenos si el problema continúa.",
+    # calculator-electricity.html
+    "Spain Electricity Bill Calculator": "Calculadora de la factura de la luz",
+    "Monthly electricity bill + supplier comparison — contracted power, kWh, taxes and VAT, in English.":
+        "Tu factura de la luz mensual y una comparativa de comercializadoras: potencia contratada, kWh, impuestos e IVA.",
+    "Consumption": "Consumo",
+    "Billing period": "Periodo de facturación",
+    "Length of the bill you are modelling. Most Spanish bills cover 30 days (some meters bill bimonthly — use 60 then).":
+        "Duración de la factura que quieres simular. La mayoría de las facturas en España son de 30 días (algunas son bimestrales: usa entonces 60).",
+    "days ·": "días ·",
+    "Contracted power": "Potencia contratada",
+    "Your contracted capacity in kW (potencia contratada). You pay the capacity charge for it every day — see the supplier cards for the €/kW/day rate. Typical flats: 3.45–5.75 kW.":
+        "Tu potencia contratada en kW. Pagas el término de potencia por ella todos los días: el precio en €/kW/día está en las fichas de las comercializadoras. Lo habitual en un piso: de 3,45 a 5,75 kW.",
+    "Total kWh used during the billing period on a flat (fv) tariff. Check the number on your bill — it is the 'energía consumida' figure.":
+        "Total de kWh consumidos en el periodo con una tarifa fija. Lo encontrarás en tu factura como «energía consumida».",
+    "kWh / period ·": "kWh / periodo ·",
+    "Punta (peak)": "Punta",
+    "kWh consumed during peak hours (typically weekdays 10:00–14:00 and 18:00–22:00). The most expensive period on time-of-use tariffs.":
+        "kWh consumidos en horas punta (normalmente de lunes a viernes de 10:00 a 14:00 y de 18:00 a 22:00). Es el periodo más caro en las tarifas por franjas.",
+    "Llano (shoulder)": "Llano",
+    "kWh consumed during shoulder hours — usually early morning and midday, priced between punta and valle.":
+        "kWh consumidos en horas llano, normalmente a primera hora y a mediodía, con un precio entre punta y valle.",
+    "Valle (off-peak)": "Valle",
+    "kWh consumed during off-peak hours — nights and weekends. The cheapest period; shift laundry, dishwasher and EV charging here.":
+        "kWh consumidos en horas valle: noches y fines de semana. Es el periodo más barato, así que conviene poner aquí la lavadora, el lavavajillas y la carga del coche eléctrico.",
+    "Total consumption:": "Consumo total:",
+    "Lowest estimated bill": "Factura estimada más baja",
+    "Suppliers": "Comercializadoras",
+    "+ Add supplier (up to 5)": "+ Añadir comercializadora (hasta 5)",
+    "Default rates are illustrative figures based on typical Spanish market offers — always check the current tariff sheet (hoja de información) before switching supplier.":
+        "Los precios por defecto son orientativos y se basan en ofertas habituales del mercado español. Antes de cambiar de comercializadora, revisa siempre la hoja de información de la tarifa actual.",
+    "Supplier comparison": "Comparativa de comercializadoras",
+    "Supplier": "Comercializadora",
+    "Power": "Potencia",
+    "Energy": "Energía",
+    "Tax (5.11%)": "Impuesto (5,11 %)",
+    "VAT": "IVA",
+    "Saving": "Ahorro",
+    "Bill breakdown": "Desglose de la factura",
+    "Results are estimates for educational purposes. Regulated charges (electricity tax, network access, metering) change over time and your actual bill may differ.":
+        "Los resultados son estimaciones con fines informativos. Los cargos regulados (impuesto eléctrico, peajes de acceso, medida) cambian con el tiempo y tu factura real puede ser distinta.",
+    "Paying too much for electricity? Share this calculator.": "¿Pagas demasiado de luz? Comparte esta calculadora.",
+    # "More Spain calculators" lists (the English keys start with " — ")
+    " — ITP, IVA, AJD, notary and registry fees by region.": ": ITP, IVA, AJD, notaría y registro por comunidad.",
+    " — ITP, IVA/IGIC, AJD, notary and registry fees by region.": ": ITP, IVA/IGIC, AJD, notaría y registro por comunidad.",
+    " — compare with a payslip: IRPF, Social Security and the Renta refund.":
+        ": compáralo con una nómina: IRPF, Seguridad Social y devolución de la Renta.",
+    " — compare your salary with working as self-employed: quota and IRPF.":
+        ": compara tu sueldo con trabajar por cuenta propia: cuota e IRPF.",
+    " — estimate the monthly bill and compare tariffs, useful for the running costs of a rental.":
+        ": calcula la factura mensual y compara tarifas, útil para los gastos de un piso en alquiler.",
+    " — estimate the monthly bill and compare tariffs.": ": calcula la factura mensual y compara tarifas.",
+    " — estimate your monthly bill and compare tariffs.": ": calcula tu factura mensual y compara tarifas.",
+    " — net yield, cash flow and IRR of a rental flat after tax.":
+        ": rentabilidad neta, flujo de caja y TIR de un piso en alquiler después de impuestos.",
+    " — quota and IRPF if you are self-employed.": ": cuota e IRPF si trabajas por cuenta propia.",
+    " — social security quota and IRPF if you are self-employed, or run your lets as a business.":
+        ": cuota de la Seguridad Social e IRPF si trabajas por cuenta propia o gestionas tus alquileres como actividad económica.",
+    " — what changes if you go freelance: Social Security brackets, form 130, IVA and deductions.":
+        ": qué cambia si te haces autónomo: tramos de la Seguridad Social, modelo 130, IVA y deducciones.",
+    " — your own region, age, family and months as autónomo.": ": con tu comunidad, tu edad, tu familia y tu antigüedad como autónomo.",
+    " — your own region, family, flexible pay and the Beckham law.":
+        ": con tu comunidad, tu familia, la retribución flexible y la Ley Beckham.",
+    " — your own rent, mortgage, tax status, cash-on-cash and IRR.":
+        ": con tu alquiler, tu hipoteca, tu residencia fiscal, la rentabilidad sobre lo invertido y la TIR.",
+    " — your payslip after IRPF and Social Security, every region compared.":
+        ": tu nómina después del IRPF y la Seguridad Social, con todas las comunidades comparadas.",
+    "Autónomo taxes in Spain: the complete guide": "Impuestos de autónomos en España: la guía completa",
+    # Region names (the <option> labels; build.py parses the English ones)
+    "Andalusia": "Andalucía",
+    "Aragon": "Aragón",
+    "Asturias": "Asturias",
+    "Balearic Islands": "Illes Balears",
+    "Basque Country": "País Vasco",
+    "Canary Islands": "Canarias",
+    "Cantabria": "Cantabria",
+    "Castilla and Leon": "Castilla y León",
+    "Castilla-La Mancha": "Castilla-La Mancha",
+    "Catalonia": "Cataluña",
+    "Ceuta": "Ceuta",
+    "Extremadura": "Extremadura",
+    "Galicia": "Galicia",
+    "La Rioja": "La Rioja",
+    "Madrid": "Madrid",
+    "Melilla": "Melilla",
+    "Murcia": "Región de Murcia",
+    "Navarre": "Navarra",
+    "Valencian Community": "Comunidad Valenciana",
+    # Shared calculator UI
+    "Item": "Concepto",
+    "Amount": "Importe",
+    "Per month": "Al mes",
+    "Per year": "Al año",
+    "Region": "Comunidad",
+    "Parameters": "Datos",
+    "Property type": "Tipo de vivienda",
+    "Reset to defaults": "Volver a los valores iniciales",
+    "Personalise this calculation": "Personaliza este cálculo",
+    "Versus Madrid": "Frente a Madrid",
+    "reference": "referencia",
+    "Lower": "Menos",
+    "Higher": "Más",
+    "Lower price": "Más barata",
+    "Higher price": "Más cara",
+    "Net a month": "Neto al mes",
+    "Net a year": "Neto al año",
+    "month": "mes",
+    "months": "meses",
+    "years": "años",
+    "yr": "año",
+    "a month": "al mes",
+    "a year": "al año",
+    "{amount} a month": "{amount} al mes",
+    "€/mo": "€/mes",
+    "€/yr": "€/año",
+    "%/yr": "%/año",
+    "€ / yr ·": "€ / año ·",
+    "% of price": "% del precio",
+    "% of rent": "% del alquiler",
+    # Link grids (partials/*-links.html, *_links())
+    "Net salary for other common wages": "Sueldo neto para otros sueldos habituales",
+    "Net salary by monthly wage": "Sueldo neto según el sueldo mensual",
+    "{amount} gross to net in Spain": "{amount} brutos en neto en España",
+    "{amount} gross per month to net in Spain": "{amount} brutos al mes en neto en España",
+    "Autónomo net pay by annual net revenue": "Lo que le queda a un autónomo según su rendimiento neto anual",
+    "What an autónomo must earn to take home...": "Lo que tiene que ganar un autónomo para llevarse...",
+    "Autónomo net pay on {amount} a year in Spain": "Neto de un autónomo con {amount} al año en España",
+    "What an autónomo must earn to take home {amount} a month": "Lo que tiene que ganar un autónomo para llevarse {amount} al mes",
+    "Rental yield by purchase price": "Rentabilidad del alquiler según el precio de compra",
+    "Rental yield on a {amount} property in Spain": "Rentabilidad del alquiler de una vivienda de {amount} en España",
+    # calculator-net-salary.html
+    "Spain Net Salary Calculator": "Calculadora de sueldo neto",
+    "Your payslip after Social Security and IRPF, what the Renta will refund or charge, and how your take-home pay compares across every region, including the foral Navarre and Basque Country.":
+        "Tu nómina después de la Seguridad Social y el IRPF, lo que te devolverá o te cobrará la Renta y cómo queda tu sueldo neto en cada comunidad, incluidas las forales Navarra y País Vasco.",
+    "Calculator views": "Vistas de la calculadora",
+    "Calculator": "Calculadora",
+    "Tax brackets by region": "Tramos del IRPF por comunidad",
+    "Jump to your payslip ↓": "Ir a tu nómina ↓",
+    "Salary": "Sueldo",
+    "I know my": "Conozco mi",
+    "Gross salary": "Sueldo bruto",
+    "Target net pay": "Neto que quiero",
+    "Gross: work out your net pay. Target net: work out the gross salary you need to take home that amount.":
+        "Bruto: calcula tu sueldo neto. Neto que quiero: calcula el bruto que necesitas para cobrar esa cantidad.",
+    "Amount per": "Importe por",
+    "Adjust the amount": "Ajusta el importe",
+    "Payslips a year": "Pagas al año",
+    "14 prorated": "14 prorrateadas",
+    "14: two extra payslips, usually in June and December. Prorated: the two extras are spread over 12 equal payslips. Your yearly total is the same.":
+        "14: dos pagas extra, normalmente en junio y diciembre. Prorrateadas: las dos extras se reparten en 12 nóminas iguales. El total del año es el mismo.",
+    "Where you live": "Dónde vives",
+    "Your tax residence is the region where you spent the most days of the year; it sets the regional half of IRPF. Ceuta and Melilla residents pay 40% of the IRPF.":
+        "Tu residencia fiscal es la comunidad donde pasaste más días del año; marca la mitad autonómica del IRPF. Los residentes en Ceuta y Melilla pagan el 40 % del IRPF.",
+    "Payslip withholding uses one national table, so it is the same in every region; the regional difference shows up at the Renta. The Basque Country and Navarre are different: they run their own (foral) IRPF and withholding tables, and the Beckham law does not apply there.":
+        "La retención de la nómina usa una única tabla estatal, así que es igual en todas las comunidades; la diferencia autonómica aparece en la Renta. El País Vasco y Navarra son distintos: tienen su propio IRPF foral y sus tablas de retención, y allí no se aplica la Ley Beckham.",
+    "Tax regime": "Régimen fiscal",
+    "Standard": "General",
+    "Beckham law": "Ley Beckham",
+    "Beckham law: special regime for people who moved to Spain for work (art. 93 LIRPF). 24% flat up to €600,000, 47% above, no deductions. Region and family do not change the tax. Not available in Navarre or the Basque Country.":
+        "Ley Beckham: régimen especial para quien se traslada a España por trabajo (art. 93 LIRPF). Un 24 % fijo hasta 600.000 € y un 47 % por encima, sin deducciones. La comunidad y la familia no cambian el impuesto. No se aplica en Navarra ni en el País Vasco.",
+    "About you": "Sobre ti",
+    "Age": "Edad",
+    "Under 65": "Menos de 65",
+    "From 65 your personal minimum rises by €1,150, and by €1,400 more from 75.":
+        "A partir de los 65 años tu mínimo personal sube 1.150 €, y 1.400 € más a partir de los 75.",
+    "Contract": "Contrato",
+    "Permanent": "Indefinido",
+    "Temporary (under 1 year)": "Temporal (menos de 1 año)",
+    "Temporary contracts pay 1.60% unemployment contribution instead of 1.55%, and contracts under a year have a 2% minimum withholding.":
+        "Los contratos temporales cotizan un 1,60 % por desempleo en lugar de un 1,55 %, y los de menos de un año tienen una retención mínima del 2 %.",
+    "Your disability": "Tu discapacidad",
+    'Officially recognised degree. It raises your minimum and your deductible expenses. "With help" means you need assistance from others or have reduced mobility.':
+        "Grado reconocido oficialmente. Sube tu mínimo y tus gastos deducibles. «Con ayuda» significa que necesitas ayuda de terceras personas o tienes movilidad reducida.",
+    "None or under 33%": "Ninguna o menos del 33 %",
+    "33% to 64%": "Del 33 al 64 %",
+    "33% to 64%, with help or reduced mobility": "Del 33 al 64 %, con ayuda o movilidad reducida",
+    "65% or more": "65 % o más",
+    "Joint tax return": "Declaración conjunta",
+    "Joint return (tributación conjunta): €3,400 off the base for a married couple, assumed here with a spouse without income; €2,150 for a single parent living with their children. On the payslip this only changes the income below which nothing is withheld, so above about €17,000 the withholding stays the same and the saving comes at the Renta. Basque Country: 4,896 € off the base for any family unit. Navarre: your spouse’s own personal minimum (2,364 €) or +668 € for a single parent, taken off the tax.":
+        "Tributación conjunta: 3.400 € menos de base para un matrimonio, aquí con el cónyuge sin ingresos; 2.150 € para una familia monoparental que vive con sus hijos. En la nómina solo cambia el límite por debajo del cual no se retiene nada, así que a partir de unos 17.000 € la retención es la misma y el ahorro llega en la Renta. País Vasco: 4.896 € menos de base para cualquier unidad familiar. Navarra: el mínimo personal propio del cónyuge (2.364 €) o 668 € más para familias monoparentales, restados del impuesto.",
+    "No, individual return": "No, declaración individual",
+    "Married, spouse without income": "Casado/a, cónyuge sin ingresos",
+    "Single parent with children": "Familia monoparental con hijos",
+    "Moved town for this job": "Me he mudado por este trabajo",
+    "Geographic mobility: if you accepted a job that made you move your home to another municipality, you deduct €2,000 more in the year of the move and the next one.":
+        "Movilidad geográfica: si aceptaste un trabajo que te obligó a trasladar tu residencia a otro municipio, deduces 2.000 € más el año del traslado y el siguiente.",
+    "Family": "Familia",
+    "Children under 3": "Hijos menores de 3",
+    "Children (and adopted or fostered children) under 3 who live with you. Each adds an extra €2,800 to the minimum.":
+        "Hijos (también adoptados o en acogida) menores de 3 años que viven contigo. Cada uno suma 2.800 € más al mínimo.",
+    "Children 3–24": "Hijos de 3 a 24",
+    "Children aged 3 to 24 who live with you and earn under €8,000 a year. Disabled children count at any age.":
+        "Hijos de 3 a 24 años que viven contigo y ganan menos de 8.000 € al año. Con discapacidad cuentan a cualquier edad.",
+    "Shared with the other parent": "Compartidos con el otro progenitor",
+    "Each parent applies half of the child minimum when both are entitled to it, e.g. with shared custody or separate tax returns.":
+        "Cada progenitor aplica la mitad del mínimo por hijos cuando los dos tienen derecho, por ejemplo con custodia compartida o declaraciones separadas.",
+    "Children with a disability": "Hijos con discapacidad",
+    "Add a child with an officially recognised disability. They must also be counted above.":
+        "Añade un hijo con una discapacidad reconocida oficialmente. También tiene que estar contado arriba.",
+    "Add child": "Añadir hijo",
+    "Parents 65–74": "Ascendientes de 65 a 74",
+    "Parents or grandparents aged 65 to 74 who live with you at least half the year and earn under €8,000.":
+        "Padres o abuelos de 65 a 74 años que viven contigo al menos medio año y ganan menos de 8.000 €.",
+    "Parents 75+": "Ascendientes de 75+",
+    "Parents or grandparents aged 75 or older who live with you. Each adds €1,400 on top.":
+        "Padres o abuelos de 75 años o más que viven contigo. Cada uno suma 1.400 € más.",
+    "Parents with a disability": "Ascendientes con discapacidad",
+    "Add a parent or grandparent with an officially recognised disability who lives with you. Count them above if 65 or older; a younger one is counted automatically.":
+        "Añade a un padre o abuelo con una discapacidad reconocida oficialmente que viva contigo. Si tiene 65 años o más, cuéntalo también arriba; si es más joven, se cuenta solo.",
+    "Add parent": "Añadir ascendiente",
+    "Flexible pay": "Retribución flexible",
+    "Benefits paid instead of salary are free of IRPF up to a limit, but still pay Social Security.":
+        "Las ventajas que se cobran en lugar de sueldo están exentas de IRPF hasta un límite, pero siguen cotizando a la Seguridad Social.",
+    "Health insurance": "Seguro médico",
+    "Private health insurance through your employer. Tax-free up to €500 per insured person (€1,500 if disabled).":
+        "Seguro médico privado a través de tu empresa. Exento hasta 500 € por persona asegurada (1.500 € con discapacidad).",
+    "People": "Personas",
+    "Insured people: you, your spouse and children. €500 each is tax-free.":
+        "Personas aseguradas: tú, tu cónyuge y tus hijos. 500 € por cada una están exentos.",
+    "{label}: how it is paid": "{label}: cómo se paga",
+    "From my salary": "Sale de mi sueldo",
+    "On top of salary": "Además del sueldo",
+    "Meal card": "Tarjeta restaurante",
+    "Ticket or card for meals on working days. Tax-free up to €11 a day (about €2,420 a year).":
+        "Tique o tarjeta para comidas en días laborables. Exento hasta 11 € al día (unos 2.420 € al año).",
+    "Public transport": "Transporte público",
+    "Transport card for commuting. Tax-free up to €1,500 a year.": "Tarjeta de transporte para ir al trabajo. Exenta hasta 1.500 € al año.",
+    "Nursery": "Guardería",
+    "Nursery school fees for children under 3, paid to the school. Fully tax-free.":
+        "Cuotas de guardería de hijos menores de 3 años, pagadas al centro. Totalmente exentas.",
+    "Pension and more": "Pensiones y más",
+    "Your pension plan": "Tu plan de pensiones",
+    "What you pay into a pension plan. It reduces your taxable base by up to €1,500, or more through a company plan.":
+        "Lo que aportas a un plan de pensiones. Reduce tu base imponible hasta 1.500 €, o más con un plan de empresa.",
+    "Employer pension": "Aportación de la empresa",
+    "What your employer pays into your company pension plan. It is taxable pay, but you deduct it again, up to €8,500.":
+        "Lo que tu empresa aporta a tu plan de pensiones de empleo. Tributa como sueldo, pero lo vuelves a deducir, hasta 8.500 €.",
+    "Hours a week": "Horas a la semana",
+    "Used for your net hourly pay (hours × 52 weeks).": "Sirve para calcular tu neto por hora (horas × 52 semanas).",
+    "Accident insurance": "Accidentes de trabajo",
+    "Workplace accident premium (AT/EP) your employer pays. It depends on the activity: about 1.5% for offices, up to 7% for construction.":
+        "Cotización por accidentes de trabajo y enfermedades profesionales (AT/EP) que paga tu empresa. Depende de la actividad: un 1,5 % en oficinas y hasta un 7 % en la construcción.",
+    "Your monthly payslip": "Tu nómina mensual",
+    "Monthly payslip breakdown": "Desglose de la nómina mensual",
+    "You keep": "Te quedas",
+    "At the Renta": "En la Renta",
+    "Payslip withholding vs the tax you really owe": "La retención de la nómina frente al impuesto que debes de verdad",
+    "Where your employer's money goes": "Adónde va el dinero que paga tu empresa",
+    "How it's calculated": "Cómo se calcula",
+    "Social Security": "Seguridad Social",
+    "Annual IRPF (your Renta)": "IRPF anual (tu Renta)",
+    "Tax brackets": "Tramos del IRPF",
+    "Combine state and regional": "Sumar estatal y autonómico",
+    "Tax brackets, scrolls horizontally": "Tramos del IRPF, se desplaza en horizontal",
+    "Payslip withholding": "Retención de la nómina",
+    "Employer cost": "Coste para la empresa",
+    "The same salary in every region": "El mismo sueldo en cada comunidad",
+    "Net pay by region, scrolls horizontally": "Neto por comunidad, se desplaza en horizontal",
+    "Difference": "Diferencia",
+    "IRPF brackets, scrolls horizontally": "Tramos del IRPF, se desplaza en horizontal",
+    "Taxable base": "Base liquidable",
+    "State": "Estatal",
+    "Regional": "Autonómico",
+    "Every region at a glance": "Todas las comunidades de un vistazo",
+    "Combined state and regional rate on the first euro, at 30,000 €, at 60,000 € and at the top. Click a region to see its full scale.":
+        "Tipo estatal más autonómico en el primer euro, a 30.000 €, a 60.000 € y en el tramo más alto. Pulsa una comunidad para ver su escala completa.",
+    "Rates by region, scrolls horizontally": "Tipos por comunidad, se desplaza en horizontal",
+    "First €": "Primer €",
+    "30,000 €": "30.000 €",
+    "60,000 €": "60.000 €",
+    "Top": "Máximo",
+    "Top from": "Máximo desde",
+    "Share your calculation: the link keeps every setting.": "Comparte tu cálculo: el enlace guarda todos los datos.",
+    # calculator-net-salary-amount.html
+    "Net a month, 12 payments": "Neto al mes, 12 pagas",
+    "{amount} on the payslip": "{amount} en la nómina",
+    "Net a month, 14 payments": "Neto al mes, 14 pagas",
+    "plus 2 extra payslips of {amount}": "más 2 pagas extra de {amount}",
+    "from {amount} gross": "de {amount} brutos",
+    "From {amount} gross to net": "De {amount} brutos a neto",
+    "Employee Social Security (6.5%)": "Seguridad Social del trabajador (6,5 %)",
+    "IRPF income tax": "IRPF",
+    "Net pay after the Renta": "Neto después de la Renta",
+    "Effective rate (Social Security + IRPF)": "Tipo efectivo (Seguridad Social + IRPF)",
+    "Tax on your next euro (IRPF)": "Impuesto sobre tu próximo euro (IRPF)",
+    "IRPF withheld on your payslips": "Retención de IRPF en tus nóminas",
+    "Expected Renta refund": "Devolución prevista de la Renta",
+    "Expected Renta payment": "Pago previsto en la Renta",
+    "What the employer pays in total": "Lo que paga la empresa en total",
+    "{amount} gross in every region": "{amount} brutos en cada comunidad",
+    "Net pay after the Renta, best first. Madrid is highlighted.": "Neto después de la Renta, de mayor a menor. Madrid aparece destacada.",
+    "How salary tax works, on video": "Cómo tributa el sueldo, en vídeo",
+    "The Social Security contribution, IRPF withholding, 12 or 14 payslips and the Renta behind these figures, with one worked salary.":
+        "La cotización a la Seguridad Social, la retención de IRPF, las 12 o 14 pagas y la Renta que hay detrás de estas cifras, con un sueldo de ejemplo.",
+    "Neighbouring wages": "Sueldos cercanos",
+    "Estimate based on the {year} Social Security rates and AEAT IRPF scales; regional deductions are not included. Not tax advice.":
+        "Estimación basada en los tipos de cotización de {year} y en las escalas de IRPF de la AEAT; no incluye las deducciones autonómicas. No es asesoramiento fiscal.",
+    # calculator-autonomo.html
+    "Autónomo Tax Calculator Spain": "Calculadora de impuestos para autónomos",
+    "Taxes for autónomos in Spain, whether you freelance or are self-employed: Social Security quota + IRPF by region, income and family situation.":
+        "Los impuestos de los autónomos en España: cuota de la Seguridad Social e IRPF según tu comunidad, tus ingresos y tu situación familiar.",
+    "Annual net revenues": "Rendimiento neto anual",
+    "Your total annual net revenue before any deductions. This is the starting point for all calculations — SS bracket, expenses deduction, and IRPF base are all derived from this figure.":
+        "Tu rendimiento neto anual, antes de cualquier reducción. Todo el cálculo parte de esta cifra: el tramo de la Seguridad Social, la deducción de gastos y la base del IRPF.",
+    "Tax region": "Comunidad autónoma",
+    "Your autonomous community determines the regional half of your IRPF. Each region sets its own tax brackets and rates independently. Madrid is the lowest (top rate ~20.5%), Valencia among the highest (top rate ~29.5%).":
+        "Tu comunidad autónoma marca la mitad autonómica de tu IRPF. Cada una fija sus propios tramos y tipos. Madrid es la más baja (tipo máximo de un 20,5 %) y la Comunidad Valenciana, de las más altas (tipo máximo de un 29,5 %).",
+    "Navarre and the Basque Country use a separate foral tax system and aren't supported yet.":
+        "Navarra y el País Vasco tienen un sistema fiscal foral propio y todavía no están incluidos.",
+    "Autónomo type": "Tipo de autónomo",
+    "Affects the SS bracket deduction: Individual = 7% of revenue (no cap). Director of your own SL = 3% (no cap). IRPF always uses a flat 5% deduction for everyone, on net profit after Social Security (max €2,000).":
+        "Cambia la deducción para el tramo de la Seguridad Social: persona física = 7 % de los ingresos (sin límite); administrador de tu propia SL = 3 % (sin límite). En el IRPF todos aplican un 5 % fijo sobre el rendimiento neto tras la Seguridad Social (máximo 2.000 €).",
+    "Individual freelancer": "Autónomo persona física",
+    "Company director / shareholder": "Administrador o socio de una sociedad",
+    "Time as autónomo": "Antigüedad como autónomo",
+    "New autonomos (first 12 months) pay a flat Tarifa Plana of €80/month plus the MEI levy, about €88.65/month in 2026. After month 12, the standard bracket-based quota applies.":
+        "Los autónomos nuevos (primeros 12 meses) pagan una tarifa plana de 80 € al mes más el MEI, unos 88,65 € al mes en 2026. Pasado el mes 12 se aplica la cuota normal por tramos.",
+    "< 1 year (tarifa plana ≈ €89/mo)": "< 1 año (tarifa plana ≈ 89 €/mes)",
+    "1–2 years": "1 a 2 años",
+    "> 2 years": "> 2 años",
+    "Personal circumstances (optional)": "Situación personal (opcional)",
+    "Age affects your personal minimum allowance, which reduces IRPF. Under 65: base €5,550. Age 65–74: +€1,150. Age 75+: +€1,400 additional. These are the state amounts; Madrid, Valencia, Andalucía and some other regions use higher ones for the regional half.":
+        "La edad cambia tu mínimo personal, que reduce el IRPF. Menos de 65 años: 5.550 €. De 65 a 74: +1.150 €. Desde 75: +1.400 € más. Son los importes estatales; Madrid, la Comunidad Valenciana, Andalucía y otras comunidades usan importes más altos para la mitad autonómica.",
+    "Dependent children": "Hijos a cargo",
+    "Dependent children (under 25, living with you, income under €8,000/yr) increase your personal minimum: 1st child +€2,400 · 2nd +€2,700 · 3rd +€4,000 · 4th+ +€4,500 each (state amounts; several regions use higher ones for the regional half).":
+        "Los hijos a cargo (menores de 25, que viven contigo y ganan menos de 8.000 € al año) suben tu mínimo: 1.º hijo +2.400 € · 2.º +2.700 € · 3.º +4.000 € · 4.º y siguientes +4.500 € cada uno (importes estatales; varias comunidades usan importes más altos para la mitad autonómica).",
+    "Of which under 3 years old": "De ellos, menores de 3 años",
+    "Each child under 3 adds an extra €2,800 (state amount; higher in some regions) to your personal minimum on top of the base child allowance. Must not exceed the total number of dependent children.":
+        "Cada hijo menor de 3 años suma 2.800 € más a tu mínimo (importe estatal; más alto en algunas comunidades), además del mínimo por hijo. No puede superar el número total de hijos a cargo.",
+    "Disability level": "Grado de discapacidad",
+    "Disability allowances added to your personal minimum: 33–64% disability +€3,000 (plus €3,000 more with reduced mobility, total €6,000) · 65%+ disability +€12,000 always (€9,000 + €3,000 mobility supplement).":
+        "Mínimo por discapacidad que se suma al tuyo: del 33 al 64 %, +3.000 € (y 3.000 € más con movilidad reducida, 6.000 € en total) · 65 % o más, siempre +12.000 € (9.000 € + 3.000 € por asistencia).",
+    "None": "Ninguna",
+    "33%+ (moderate)": "33 %+ (moderada)",
+    "65%+ (severe)": "65 %+ (grave)",
+    "Reduced mobility": "Movilidad reducida",
+    "Reduced mobility (movilidad reducida) or need for third-party assistance: adds €3,000 on top of a 33–64% disability allowance (total €6,000). At 65%+ disability the €3,000 supplement applies automatically.":
+        "Movilidad reducida o necesidad de ayuda de terceras personas: suma 3.000 € al mínimo por una discapacidad del 33 al 64 % (6.000 € en total). Con un 65 % o más, esos 3.000 € se aplican siempre.",
+    "Dependent parents 65+": "Ascendientes de 65+",
+    "Each cohabiting parent over 65 (or disabled, any age) adds €1,150. They must live with you and have annual income under €8,000 (excl. exempt income).":
+        "Cada ascendiente mayor de 65 años que vive contigo (o con discapacidad, a cualquier edad) suma 1.150 €. Debe convivir contigo y tener rentas anuales inferiores a 8.000 € (sin contar las exentas).",
+    "Of which over 75": "De ellos, mayores de 75",
+    "Each cohabiting parent over 75 adds an extra €1,400 on top of the €1,150 above. Cannot exceed the number of dependent parents 65+. Same cohabitation and income conditions apply.":
+        "Cada ascendiente mayor de 75 años suma 1.400 € más, además de los 1.150 € anteriores. No puede superar el número de ascendientes de 65+. Se aplican las mismas condiciones de convivencia y rentas.",
+    "Tarifa plana — flat €80/month for first 12 months, plus the MEI levy (≈ €88.65/month charged). €80 was set for 2023–2025; no 2026 rule has fixed a new amount yet, so this is an estimate.":
+        "Tarifa plana: 80 € al mes durante los primeros 12 meses, más el MEI (se cobran ≈ 88,65 € al mes). Los 80 € se fijaron para 2023-2025 y ninguna norma de 2026 ha fijado todavía un importe nuevo, así que es una estimación.",
+    "60% Ceuta/Melilla reduction applied (art. 68.4 LIRPF). It covers income earned in Ceuta or Melilla, so this assumes your activity is carried on there.":
+        "Se aplica la bonificación del 60 % de Ceuta y Melilla (art. 68.4 LIRPF). Cubre las rentas obtenidas en Ceuta o Melilla, así que se supone que tu actividad se desarrolla allí.",
+    "Net take-home": "Neto que te queda",
+    "Monthly SS": "Cuota mensual",
+    "SS bracket": "tramo",
+    "Total IRPF": "IRPF total",
+    "effective rate": "tipo efectivo",
+    "Total tax burden": "Carga fiscal total",
+    "SS": "SS",
+    "Net": "Neto",
+    "Gross revenues": "Rendimiento bruto",
+    "Social Security (annual)": "Seguridad Social (anual)",
+    "General expenses deduction (IRPF · 5% after SS)": "Gastos de difícil justificación (IRPF · 5 % tras la SS)",
+    "SS bracket basis (expenses deduction)": "Base para el tramo de la SS (deducción de gastos)",
+    "Reduced net income": "Rendimiento neto reducido",
+    "IRPF — state component": "IRPF, parte estatal",
+    "IRPF — regional component": "IRPF, parte autonómica",
+    "How IRPF is calculated": "Cómo se calcula el IRPF",
+    "Effective SS rate:": "Tipo efectivo de la SS:",
+    "Effective IRPF rate:": "Tipo efectivo del IRPF:",
+    "Total tax burden:": "Carga fiscal total:",
+    "Results are approximate and for educational purposes only. Tax rules change frequently. Consult a gestor or tax advisor for professional advice.":
+        "Los resultados son aproximados y solo orientativos. Las normas fiscales cambian a menudo. Para tu caso, consulta a un gestor o asesor fiscal.",
+    "Know a fellow autónomo? Share this calculator.": "¿Conoces a otro autónomo? Comparte esta calculadora.",
+    # calculator-autonomo-amount.html
+    "Assumes {year} rules, an established autónomo (2+ years), individual, living in Madrid, age 35, no dependants. Net revenue means income after business expenses, before Social Security and IRPF.":
+        "Con las normas de {year}, un autónomo consolidado (más de 2 años), persona física, que vive en Madrid, de 35 años y sin hijos. El rendimiento neto son los ingresos menos los gastos del negocio, antes de la Seguridad Social y el IRPF.",
+    "Net revenue needed a year": "Rendimiento neto necesario al año",
+    "First year, tarifa plana": "Primer año, con tarifa plana",
+    "You take home": "Te llevas",
+    "a month after quota and IRPF": "al mes después de la cuota y el IRPF",
+    "Net a month, established": "Neto al mes, consolidado",
+    "{amount} quota a month": "{amount} de cuota al mes",
+    "Net a month, tarifa plana": "Neto al mes, con tarifa plana",
+    "first 12 months, €80 + MEI quota": "primeros 12 meses, cuota de 80 € + MEI",
+    "from {amount} net revenue": "de {amount} de rendimiento neto",
+    "From {amount} net revenue to take-home pay": "De {amount} de rendimiento neto a lo que te queda",
+    "Net revenue": "Rendimiento neto",
+    "Social Security quota ({amount} a month, bracket {bracket})": "Cuota de la Seguridad Social ({amount} al mes, tramo {bracket})",
+    "IRPF income tax ({rate} of revenue)": "IRPF ({rate} del rendimiento)",
+    "Take-home pay": "Lo que te queda",
+    "Total burden (Social Security + IRPF)": "Carga total (Seguridad Social + IRPF)",
+    "IRPF taxable base (after quota and {amount} allowance)": "Base del IRPF (tras la cuota y la reducción de {amount})",
+    "Personal minimum": "Mínimo personal",
+    "{amount} net revenue in every region": "{amount} de rendimiento neto en cada comunidad",
+    "Take-home pay after Social Security and IRPF, best first. Madrid is highlighted.":
+        "Lo que te queda después de la Seguridad Social y el IRPF, de mayor a menor. Madrid aparece destacada.",
+    "Take-home pay by region, scrolls horizontally": "Neto por comunidad, se desplaza en horizontal",
+    "How autónomo tax works, on video": "Cómo tributa un autónomo, en vídeo",
+    "The Social Security brackets, tarifa plana and IRPF behind these figures, with worked examples at different revenues.":
+        "Los tramos de la Seguridad Social, la tarifa plana y el IRPF que hay detrás de estas cifras, con ejemplos para distintos rendimientos.",
+    "Neighbouring amounts": "Importes cercanos",
+    # calculator-property-buying-cost.html
+    "Spain Property Buying Cost Calculator": "Calculadora de gastos de compra de vivienda",
+    "ITP, IVA/IGIC & AJD stamp duty plus notary and registry fees — by region.":
+        "ITP, IVA o IGIC y AJD, más notaría y registro, por comunidad autónoma.",
+    "Property price": "Precio de la vivienda",
+    "The agreed purchase price of the property. All taxes (ITP, IVA/IGIC, AJD) are calculated as a percentage of this figure. Minimum €10,000.":
+        "El precio de compra pactado. Todos los impuestos (ITP, IVA/IGIC, AJD) se calculan como un porcentaje de esta cifra. Mínimo 10.000 €.",
+    "Your autonomous community sets the ITP transfer-tax rate (3–13%) and the AJD stamp-duty rate (0–1.5%). Madrid and Navarre are among the cheapest at 6% ITP; Catalunya tops out at 13% on high-value resales.":
+        "Tu comunidad autónoma fija el tipo del ITP (del 3 al 13 %) y el del AJD (del 0 al 1,5 %). Madrid y Navarra están entre las más baratas, con un 6 % de ITP; Cataluña llega al 13 % en las viviendas de segunda mano más caras.",
+    "ITP rates shown are general rates — reduced rates may apply for first homes, under-35s, families and rural areas.":
+        "Los tipos de ITP son los generales; puede haber tipos reducidos para la primera vivienda, menores de 35 años, familias y zonas rurales.",
+    "Resale (second-hand) homes pay ITP transfer tax. New builds pay VAT — 10% IVA everywhere except the Canary Islands (7% IGIC) — plus AJD stamp duty. You never pay both.":
+        "La vivienda de segunda mano paga ITP. La obra nueva paga un 10 % de IVA en toda España salvo en Canarias (7 % de IGIC), más el AJD. Nunca se pagan los dos.",
+    "Resale (second-hand)": "Segunda mano",
+    "New build": "Obra nueva",
+    "Calculate buying costs": "Calcular los gastos de compra",
+    "Total buying costs": "Gastos de compra totales",
+    "Total taxes": "Impuestos totales",
+    "Notary & Registry": "Notaría y registro",
+    "Cost breakdown": "Desglose de los gastos",
+    "You may qualify for a reduced rate": "Puede que tengas derecho a un tipo reducido",
+    "Reduced ITP or AJD rates may apply if: you are under 35, this is your first home, you have a large family (3+ children) or a disability ≥33%. Check with your regional tax authority (comunidad autónoma).":
+        "Puede haber tipos reducidos de ITP o AJD si tienes menos de 35 años, es tu primera vivienda, eres familia numerosa (3 hijos o más) o tienes una discapacidad igual o superior al 33 %. Consúltalo con la hacienda de tu comunidad autónoma.",
+    "Buying in Spain? Share this calculator.": "¿Compras casa en España? Comparte esta calculadora.",
+    # calculator-rental-yield.html
+    "Spain Rental Yield Calculator": "Calculadora de rentabilidad del alquiler",
+    "Net rental yield after tax, gross yield, cash-on-cash, IRR and monthly cash flow — for residents and non-residents, with Spanish purchase, rental and sale taxes.":
+        "Rentabilidad neta después de impuestos, rentabilidad bruta, rentabilidad sobre lo invertido, TIR y flujo de caja mensual, para residentes y no residentes, con los impuestos españoles de compra, alquiler y venta.",
+    "Jump to results ↓": "Ir a los resultados ↓",
+    "Purchase": "Compra",
+    "Purchase price": "Precio de compra",
+    "The agreed price of the property. Purchase taxes are calculated on it. Minimum €10,000.":
+        "El precio pactado de la vivienda. Los impuestos de compra se calculan sobre él. Mínimo 10.000 €.",
+    "Your autonomous community sets the ITP transfer-tax rate (3–13%) and the AJD stamp-duty rate (0–1.5%) used for the purchase.":
+        "Tu comunidad autónoma fija el tipo del ITP (del 3 al 13 %) y el del AJD (del 0 al 1,5 %) que se aplican a la compra.",
+    "Resale homes pay ITP transfer tax. New builds pay 10% IVA (7% IGIC in the Canary Islands) plus AJD stamp duty. You never pay both.":
+        "La segunda mano paga ITP. La obra nueva paga un 10 % de IVA (7 % de IGIC en Canarias) más el AJD. Nunca se pagan los dos.",
+    "Resale": "Segunda mano",
+    "Closing costs": "Gastos de compraventa",
+    "Notary, land registry, gestoría and valuation, as a percentage of the price. Purchase tax is added separately. 1.5–2.5% is typical.":
+        "Notaría, registro, gestoría y tasación, como porcentaje del precio. El impuesto de compra se suma aparte. Lo habitual es un 1,5-2,5 %.",
+    "Include renovation": "Incluir reforma",
+    "Add an initial renovation. It is added to your cash outlay and amortized separately, and the flat is not rented during the works.":
+        "Añade una reforma inicial. Se suma al dinero que pones y se amortiza aparte, y el piso no se alquila mientras duran las obras.",
+    "Renovation cost": "Coste de la reforma",
+    "Works duration": "Duración de las obras",
+    "Months of the first year without rent.": "Meses del primer año sin alquiler.",
+    "Value after repairs": "Valor tras la reforma",
+    "Estimated market value once the works are done. The sale price grows from this value.":
+        "Valor de mercado estimado al terminar las obras. El precio de venta se revaloriza a partir de este valor.",
+    "Rent & costs": "Alquiler y gastos",
+    "Monthly rent": "Alquiler mensual",
+    "Rent you charge per month in year 1, before vacancy.": "El alquiler que cobras cada mes el primer año, antes de los meses vacíos.",
+    "Vacancy": "Vacío",
+    "Share of the year the flat stands empty or unpaid.": "Parte del año en que el piso está vacío o sin cobrar.",
+    "Rent growth": "Subida del alquiler",
+    "Yearly rent increase. Regulated residential leases are limited by the rent-update index.":
+        "Subida anual del alquiler. En los alquileres de vivienda la actualización está limitada por el índice de referencia.",
+    "IBI": "IBI",
+    "Annual municipal property tax (Impuesto sobre Bienes Inmuebles).": "Impuesto municipal anual sobre la vivienda (Impuesto sobre Bienes Inmuebles).",
+    "Community fee": "Comunidad",
+    "Monthly homeowners association fee.": "Cuota mensual de la comunidad de propietarios.",
+    "Home insurance": "Seguro de hogar",
+    "Rent insurance": "Seguro de impago",
+    "Optional non-payment insurance.": "Seguro opcional contra el impago del alquiler.",
+    "Maintenance": "Mantenimiento",
+    "Repairs and upkeep as a percentage of rent.": "Reparaciones y mantenimiento, como porcentaje del alquiler.",
+    "Management": "Gestión",
+    "Property manager fee as a percentage of rent. 0 if you self-manage.": "Honorarios de la gestora como porcentaje del alquiler. 0 si lo gestionas tú.",
+    "Expense growth": "Subida de los gastos",
+    "Yearly increase of IBI, community fee and insurance. Maintenance and management follow the rent.":
+        "Subida anual del IBI, la comunidad y los seguros. El mantenimiento y la gestión siguen al alquiler.",
+    "Rent and expense growth start in year 2, so the year-1 yields and monthly cash flow stay the same. They move the IRR, profit when sold, the chart and the year-by-year table.":
+        "Las subidas del alquiler y de los gastos empiezan el segundo año, así que la rentabilidad y el flujo de caja del primer año no cambian. Sí mueven la TIR, el beneficio al vender, el gráfico y la tabla año a año.",
+    "Financing": "Financiación",
+    "Use a mortgage": "Con hipoteca",
+    "Down payment": "Entrada",
+    "Share of the price paid in cash. Taxes and costs are paid in cash on top.":
+        "Parte del precio que pagas con ahorros. Los impuestos y gastos se pagan aparte, también con ahorros.",
+    "Interest rate": "Tipo de interés",
+    "Fixed annual rate.": "Tipo fijo anual.",
+    "Term": "Plazo",
+    "Opening fee": "Comisión de apertura",
+    "One-off bank fee, paid in cash.": "Comisión única del banco, que pagas con ahorros.",
+    "Taxes": "Impuestos",
+    "Tax residency": "Residencia fiscal",
+    "Residents pay IRPF at their marginal rate. Non-residents pay IRNR: 19% (EU/EEA, on net income) or 24% (outside the EU/EEA, on gross rent).":
+        "Los residentes pagan IRPF a su tipo marginal. Los no residentes pagan IRNR: un 19 % (UE/EEE, sobre el rendimiento neto) o un 24 % (fuera de la UE/EEE, sobre la renta bruta).",
+    "Spanish resident": "Residente en España",
+    "Non-resident (EU/EEA)": "No residente (UE/EEE)",
+    "Non-resident (outside EU/EEA)": "No residente (fuera de la UE/EEE)",
+    "Marginal IRPF rate": "Tipo marginal del IRPF",
+    "The rate on your next euro of income (state + regional), typically 19–47%. Rental income is added on top of your other income.":
+        "El tipo de tu próximo euro de renta (estatal + autonómico), normalmente del 19 al 47 %. El alquiler se suma al resto de tus ingresos.",
+    "Rental reduction": "Reducción por alquiler",
+    "50%: standard long-term home let. 60%: renovated in the last 2 years, or lease signed before 26 May 2023. 70% / 90%: stressed housing zones, if conditions are met. A new 15–100% scale (RDL 29/2026) still awaits validation and is not modelled — see the FAQ.":
+        "50 %: alquiler de vivienda habitual. 60 %: vivienda rehabilitada en los 2 últimos años o contrato anterior al 26 de mayo de 2023. 70 % / 90 %: zonas tensionadas, si se cumplen las condiciones. La nueva escala del 15 al 100 % (RDL 29/2026) aún no está convalidada y no se incluye; mira las preguntas frecuentes.",
+    "Apply the Audiencia Nacional 2025 ruling (net base, under appeal)": "Aplicar la sentencia de la Audiencia Nacional de 2025 (base neta, recurrida)",
+    "Judgment of 28 July 2025 (rec. 636/2021) lets non-EU owners deduct expenses. The Supreme Court has admitted an appeal, so the current rule is 24% on gross rent. Tick to see the best case: 24% on net income.":
+        "La sentencia de 28 de julio de 2025 (rec. 636/2021) permite a los propietarios de fuera de la UE deducir gastos. El Tribunal Supremo ha admitido un recurso, así que la norma vigente sigue siendo el 24 % sobre la renta bruta. Márcala para ver el mejor caso: un 24 % sobre el rendimiento neto.",
+    "Building share of value": "Parte del valor que es construcción",
+    "Amortization applies to the building only, not the land. Use the construction value ÷ total cadastral value from your IBI bill (valor catastral). 70% is a common default.":
+        "Solo se amortiza la construcción, no el suelo. Usa el valor catastral de la construcción ÷ el valor catastral total de tu recibo del IBI. Un 70 % es un valor habitual.",
+    "Exit": "Venta",
+    "Holding period": "Años hasta vender",
+    "Years until you sell (1–50).": "Años hasta que vendes (de 1 a 50).",
+    "Property value growth": "Revalorización de la vivienda",
+    "Average yearly increase of the property value.": "Subida media anual del valor de la vivienda.",
+    "Selling costs": "Gastos de venta",
+    "Agent fee and other costs of selling, as a percentage of the sale price.": "Honorarios de la inmobiliaria y otros gastos de la venta, como porcentaje del precio de venta.",
+    "Municipal plusvalía": "Plusvalía municipal",
+    "Local land-value gain tax (plusvalía municipal), paid by the seller. Depends on your town and cadastral data; enter your own estimate.":
+        "Impuesto municipal sobre el incremento de valor de los terrenos (plusvalía municipal), que paga quien vende. Depende de tu municipio y de los datos catastrales; pon tu propia estimación.",
+    "Net yield": "Rentabilidad neta",
+    "after expenses & tax, year 1": "tras gastos e impuestos, primer año",
+    "Gross yield": "Rentabilidad bruta",
+    "rent ÷ price": "alquiler ÷ precio",
+    "Cash-on-cash": "Sobre lo invertido",
+    "year 1, on cash invested": "primer año, sobre tu dinero",
+    "Cash flow / month": "Flujo de caja / mes",
+    "year 1, after tax": "primer año, tras impuestos",
+    "incl. sale": "con la venta",
+    "Cash needed up front": "Dinero necesario al comprar",
+    "Profit when sold": "Beneficio al vender",
+    "Your position year by year": "Tu posición año a año",
+    "Total net position (cash + property)": "Posición neta total (dinero + vivienda)",
+    "Cumulative net cash flow + net equity (value − mortgage).": "Flujo de caja neto acumulado + patrimonio neto (valor − hipoteca).",
+    "Total equity / asset value": "Patrimonio total / valor del inmueble",
+    "Property value with yearly appreciation, minus the mortgage still owed.": "Valor de la vivienda con su revalorización anual, menos la hipoteca pendiente.",
+    "Cumulative net cash flow": "Flujo de caja neto acumulado",
+    "Rent after costs, mortgage and tax, minus the cash you put in up front.":
+        "El alquiler tras gastos, hipoteca e impuestos, menos el dinero que pusiste al comprar.",
+    "Invested capital": "Capital invertido",
+    "Initial cash outlay + mortgage principal repaid to date.": "Dinero inicial + capital de la hipoteca amortizado hasta la fecha.",
+    "Years since purchase. Tap or hover the chart to read a year.": "Años desde la compra. Toca o pasa el ratón por el gráfico para ver un año.",
+    "Year-1 rental tax": "Impuestos del alquiler, primer año",
+    "Over": "En",
+    "Year-by-year table": "Tabla año a año",
+    "Year-by-year cash flow table, scrolls horizontally": "Tabla del flujo de caja año a año, se desplaza en horizontal",
+    "Year": "Año",
+    "Rent": "Alquiler",
+    "Expenses": "Gastos",
+    "Mortgage": "Hipoteca",
+    "Interest": "Intereses",
+    "Tax": "Impuestos",
+    "Cash flow": "Flujo de caja",
+    "Cumulative": "Acumulado",
+    "Renting out a flat in Spain? Share this calculator.": "¿Alquilas un piso en España? Comparte esta calculadora.",
+    # calculator-rental-yield-amount.html
+    "Net yield, resident": "Rentabilidad neta, residente",
+    "after costs and tax, year 1": "tras gastos e impuestos, primer año",
+    "{rent} a month, {annual} a year": "{rent} al mes, {annual} al año",
+    "Cash flow a month": "Flujo de caja al mes",
+    "after costs and tax, no mortgage": "tras gastos e impuestos, sin hipoteca",
+    "Rent needed on a {amount} property": "Alquiler necesario para una vivienda de {amount}",
+    "Monthly rent for each target gross yield and the net yield it leaves, by tax status. The {pct} row is the Spanish average.":
+        "Alquiler mensual para cada rentabilidad bruta objetivo y la rentabilidad neta que deja, según la residencia fiscal. La fila del {pct} es la media española.",
+    "Rent needed by target yield, scrolls horizontally": "Alquiler necesario según la rentabilidad, se desplaza en horizontal",
+    "Rent a month": "Alquiler al mes",
+    "Rent a year": "Alquiler al año",
+    "Net, resident": "Neta, residente",
+    "Net, EU/EEA": "Neta, UE/EEE",
+    "Net, non-EU": "Neta, fuera de la UE",
+    "From {rent} a month to net yield": "De {rent} al mes a la rentabilidad neta",
+    "Rent after 5% vacancy, minus running costs": "Alquiler tras un 5 % de vacío, menos los gastos",
+    "Rental tax, Spanish resident": "Impuesto sobre el alquiler, residente en España",
+    "Rental tax, EU/EEA non-resident (19%)": "Impuesto sobre el alquiler, no residente UE/EEE (19 %)",
+    "Rental tax, non-EU non-resident (24% on gross rent)": "Impuesto sobre el alquiler, no residente fuera de la UE (24 % sobre la renta bruta)",
+    "Net yield: resident / EU/EEA / non-EU": "Rentabilidad neta: residente / UE/EEE / fuera de la UE",
+    "Purchase tax (ITP, Madrid)": "Impuesto de compra (ITP, Madrid)",
+    "Closing costs (2%)": "Gastos de compraventa (2 %)",
+    "Total invested": "Inversión total",
+    "IRR over 30 years, incl. sale": "TIR a 30 años, con la venta",
+    "{amount} property in every region": "Una vivienda de {amount} en cada comunidad",
+    "Net yield for a resident at {rent} a month, best first. Madrid is highlighted. Only the purchase tax changes.":
+        "Rentabilidad neta para un residente con {rent} al mes, de mayor a menor. Madrid aparece destacada. Solo cambia el impuesto de compra.",
+    "Net yield by region, scrolls horizontally": "Rentabilidad neta por comunidad, se desplaza en horizontal",
+    "Purchase tax": "Impuesto de compra",
+    "Neighbouring prices": "Precios cercanos",
+    "Estimate based on {year} rules: regional ITP tables, art. 23.2 LIRPF reduction, IRNR rates of 19% and 24%. Rent is rounded to €5. Not tax advice. Last tax data verification: October 2026.":
+        "Estimación con las normas de {year}: tablas autonómicas del ITP, reducción del art. 23.2 LIRPF y tipos del IRNR del 19 % y el 24 %. El alquiler se redondea a 5 €. No es asesoramiento fiscal. Última revisión de los datos fiscales: octubre de 2026.",
+})
 
 
 NET_SALARY_PAGES_JSON = os.path.join(SCRIPT_DIR, "data", "net-salary-pages.json")
@@ -1733,13 +2382,17 @@ def net_salary_slug(kind, amount):
     return f"net-salary-{amount}-euros" if kind == "annual" else f"net-salary-{amount}-euros-per-month"
 
 
-def eur(x):
-    """English-style whole-euro amount: 30000 -> '€30,000'."""
-    return f"€{int(round(x)):,}"
+def eur(x, lang="en"):
+    """Whole-euro amount: 30000 -> '€30,000' (en) / '30.000 €' (es, NBSP before €)."""
+    n = int(round(x))
+    if lang == "es":
+        return f"{n:,}".replace(",", ".") + NBSP + "€"
+    return f"€{n:,}"
 
 
-def pct(x, digits=1):
-    return f"{x * 100:.{digits}f}%"
+def pct(x, digits=1, lang="en"):
+    """Fraction as percent: 0.077 -> '7.7%' (en) / '7,7 %' (es)."""
+    return ypct(x * 100, digits, lang)
 
 
 def load_net_salary_pages():
@@ -1748,29 +2401,42 @@ def load_net_salary_pages():
         return json.load(fh)
 
 
-def net_salary_links(pages=None):
+def per_month(label, lang="en"):
+    """'€2,000' -> '€2,000/mo' (en) / '2.000 €/mes' (es)."""
+    return label + ("/mes" if lang == "es" else "/mo")
+
+
+def net_salary_links(pages=None, lang="en"):
     """Link-grid items for partials/net-salary-links.html (annual and monthly chips)."""
     pages = pages or load_net_salary_pages()
     return {
         "annual": [
-            {"amount": a, "slug": net_salary_slug("annual", a), "label": eur(a),
-             "title": f"{eur(a)} gross to net in Spain"}
+            {"amount": a, "slug": net_salary_slug("annual", a), "label": eur(a, lang),
+             "title": tr(lang, "{amount} gross to net in Spain", amount=eur(a, lang))}
             for a in pages["annual"]
         ],
         "monthly": [
-            {"amount": m, "slug": net_salary_slug("monthly", m), "label": f"{eur(m)}/mo",
-             "title": f"{eur(m)} gross per month to net in Spain"}
+            {"amount": m, "slug": net_salary_slug("monthly", m), "label": per_month(eur(m, lang), lang),
+             "title": tr(lang, "{amount} gross per month to net in Spain", amount=eur(m, lang))}
             for m in pages["monthly"]
         ],
     }
 
 
-def net_salary_region_names():
-    """Region id -> display name, parsed from the hub's <select id="f-region"> (single mapping)."""
-    with open(NET_SALARY_TEMPLATE, encoding="utf-8") as fh:
+def select_options(template_path, select_id):
+    """value -> English label of a <select>'s options in a calculator template.
+
+    Labels may be wrapped in {{ t("...") }}; the English key is returned."""
+    with open(template_path, encoding="utf-8") as fh:
         text = fh.read()
-    select = re.search(r'<select id="f-region">(.*?)</select>', text, re.S).group(1)
-    return dict(re.findall(r'<option value="([^"]+)"[^>]*>([^<]+)</option>', select))
+    select = re.search(rf'<select id="{select_id}">(.*?)</select>', text, re.S).group(1)
+    return {value: re.sub(r'^\{\{ t\("(.*)"\) \}\}$', r"\1", label.strip())
+            for value, label in re.findall(r'<option value="([^"]+)"[^>]*>([^<]+)</option>', select)}
+
+
+def net_salary_region_names(lang="en"):
+    """Region id -> display name, parsed from the hub's <select id="f-region"> (single mapping)."""
+    return {k: tr(lang, v) for k, v in select_options(NET_SALARY_TEMPLATE, "f-region").items()}
 
 
 def compute_net_salary_grid():
@@ -1786,58 +2452,80 @@ def compute_net_salary_grid():
     return json.loads(res.stdout)
 
 
-def _net_salary_regions(entry, names, calc_year):
+def _signed_eur(value, lang="en"):
+    """'+€1,234' / '−€1,234' (en), '+1.234 €' / '−1.234 €' (es)."""
+    return ("+" if value >= 0 else "−") + eur(abs(value), lang)
+
+
+def _net_salary_regions(entry, names, calc_year, lang="en"):
     regions = entry["regions"]
     ref = next(r for r in regions if r["region"] == "madrid")
     rows = []
     for r in regions:
         rows.append({
             "id": r["region"], "name": names.get(r["region"], r["region"]),
-            "net_year": eur(r["annualTaxNet"]), "net_month": eur(r["monthlyNet"]),
-            "irpf": eur(r["irpf"]),
-            "diff": (("+" if r["annualTaxNet"] >= ref["annualTaxNet"] else "−")
-                     + eur(abs(r["annualTaxNet"] - ref["annualTaxNet"]))) if r["region"] != "madrid" else "reference",
+            "net_year": eur(r["annualTaxNet"], lang), "net_month": eur(r["monthlyNet"], lang),
+            "irpf": eur(r["irpf"], lang),
+            "diff": _signed_eur(r["annualTaxNet"] - ref["annualTaxNet"], lang)
+            if r["region"] != "madrid" else tr(lang, "reference"),
             "is_ref": r["region"] == "madrid",
         })
     common = [r for r in regions if r["region"] not in ("ceuta", "melilla")]
     return rows, names.get(common[0]["region"]), names.get(common[-1]["region"]), common[0], common[-1], ref
 
 
-def net_salary_page_context(kind, item, neighbours, names, calc_year):
+def net_salary_page_context(kind, item, neighbours, names, calc_year, lang="en"):
     """Everything the amount template shows, computed once and formatted here."""
     amount = item["amount"]
     monthly = kind == "monthly"
     e = item["x12"] if monthly else item
     p12, p14 = e["p12"], e["p14"]
     gross = e["gross"]
-    rows, best_name, worst_name, best, worst, ref = _net_salary_regions(e, names, calc_year)
+    rows, best_name, worst_name, best, worst, ref = _net_salary_regions(e, names, calc_year, lang)
     m_net = p12["annualTaxNet"] / 12
+    E = lambda x: eur(x, lang)  # noqa: E731
+    es = lang == "es"
     ctx = {
         "kind": kind, "amount": amount, "slug": net_salary_slug(kind, amount),
-        "amount_label": eur(amount) + ("/mo" if monthly else ""),
-        "crumb_label": eur(amount) + (" per month" if monthly else ""),
-        "gross": eur(gross), "gross_month": eur(gross / 12),
-        "net_month": eur(m_net), "net_year": eur(p12["annualTaxNet"]),
-        "payslip12": eur(p12["payslipRegular"]), "payslip14": eur(p14["payslipRegular"]),
-        "extra14": eur(p14["payslipExtra"]),
-        "ss": eur(p12["ssTotal"]), "irpf": eur(p12["irpfTotal"]), "withheld": eur(gross - p12["ssTotal"] - p12["netAnnual"]),
-        "effective": pct(p12["effectiveRate"]), "marginal": pct(p12["marginalRate"]) if p12["marginalRate"] is not None else None,
-        "withholding": f"{p12['withholdingRate']:.2f}%".rstrip("0").rstrip("."),
-        "employer": eur(p12["employerCost"]),
-        "refund_value": p12["refund"], "refund": eur(abs(p12["refund"])),
+        "amount_label": per_month(E(amount), lang) if monthly else E(amount),
+        "crumb_label": E(amount) + ((" al mes" if es else " per month") if monthly else ""),
+        "gross": E(gross), "gross_month": E(gross / 12),
+        "net_month": E(m_net), "net_year": E(p12["annualTaxNet"]),
+        "payslip12": E(p12["payslipRegular"]), "payslip14": E(p14["payslipRegular"]),
+        "extra14": E(p14["payslipExtra"]),
+        "ss": E(p12["ssTotal"]), "irpf": E(p12["irpfTotal"]), "withheld": E(gross - p12["ssTotal"] - p12["netAnnual"]),
+        "effective": pct(p12["effectiveRate"], lang=lang),
+        "marginal": pct(p12["marginalRate"], lang=lang) if p12["marginalRate"] is not None else None,
+        "withholding": (f"{p12['withholdingRate']:.2f}".rstrip("0").rstrip(".").replace(".", ",") + NBSP + "%" if es
+                        else f"{p12['withholdingRate']:.2f}%".rstrip("0").rstrip(".")),
+        "employer": E(p12["employerCost"]),
+        "refund_value": p12["refund"], "refund": E(abs(p12["refund"])),
         "regions": rows, "best": best_name, "worst": worst_name,
-        "best_net": eur(best["annualTaxNet"]), "worst_net": eur(worst["annualTaxNet"]),
-        "spread": eur(best["annualTaxNet"] - worst["annualTaxNet"]),
-        "ceuta_net": eur(next(r for r in e["regions"] if r["region"] == "ceuta")["annualTaxNet"]),
+        "best_net": E(best["annualTaxNet"]), "worst_net": E(worst["annualTaxNet"]),
+        "spread": E(best["annualTaxNet"] - worst["annualTaxNet"]),
+        "ceuta_net": E(next(r for r in e["regions"] if r["region"] == "ceuta")["annualTaxNet"]),
         "query": item["query"], "calc_year": calc_year,
         "prev": neighbours[0], "next": neighbours[1],
     }
     if monthly:
         a14 = item["x14"]["p14"]
         ctx["alt"] = {
-            "gross": eur(a14["gross"]), "payslip": eur(a14["payslipRegular"]), "extra": eur(a14["payslipExtra"]),
-            "net_year": eur(a14["annualTaxNet"]), "net_month": eur(a14["annualTaxNet"] / 12),
+            "gross": E(a14["gross"]), "payslip": E(a14["payslipRegular"]), "extra": E(a14["payslipExtra"]),
+            "net_year": E(a14["annualTaxNet"]), "net_month": E(a14["annualTaxNet"] / 12),
         }
+    if es and monthly:
+        title_core = f"{E(amount)} brutos al mes: {E(m_net)} netos en España ({calc_year})"
+        desc = (f"{E(amount)} brutos al mes ({E(gross)} al año) dejan {E(m_net)} netos al mes tras la "
+                f"Seguridad Social y el IRPF. Madrid, sin hijos. Con 14 pagas y por comunidad.")
+        ctx["answer"] = (f"{E(amount)} brutos al mes, en 12 pagas, son {E(gross)} al año y dejan unos "
+                         f"{E(m_net)} netos al mes en {calc_year}.")
+    elif es:
+        title_core = f"{E(amount)} brutos al año: {E(m_net)} netos al mes ({calc_year})"
+        desc = (f"{E(amount)} brutos al año dejan {E(m_net)} netos al mes en 12 pagas, o {E(p14['payslipRegular'])} más "
+                f"dos pagas extra de {E(p14['payslipExtra'])} en 14. Madrid, sin hijos. Mira tu comunidad.")
+        ctx["answer"] = (f"{E(amount)} brutos al año dejan unos {E(m_net)} netos al mes en 12 pagas en {calc_year}, "
+                         f"o {E(p12['annualTaxNet'])} al año.")
+    elif monthly:
         title_core = f"{eur(amount)} Gross per Month to Net in Spain ({calc_year}): {eur(m_net)}"
         desc = (f"{eur(amount)} gross a month ({eur(gross)} a year) leaves {eur(m_net)} net a month in Spain "
                 f"after Social Security and IRPF. Madrid, no dependants. Compare 14 payments and every region.")
@@ -1852,8 +2540,34 @@ def net_salary_page_context(kind, item, neighbours, names, calc_year):
     ctx["title"] = title_core + " | Spanified"
     ctx["h1"] = title_core
     ctx["description"] = desc
-    ctx["faqs"] = net_salary_faqs(ctx, p12, p14)
+    ctx["faqs"] = net_salary_faqs_es(ctx) if es else net_salary_faqs(ctx, p12, p14)
     return ctx
+
+
+def net_salary_faqs_es(c):
+    a = c["gross"] if c["kind"] == "annual" else eur(c["amount"], "es") + " al mes"
+    g = c["gross"]
+    if abs(c["refund_value"]) < 1:
+        refund = f"Más o menos sales a cero. Con un sueldo de {g}, la retención de la nómina es casi exactamente el impuesto que debes en Madrid."
+    elif c["refund_value"] > 0:
+        refund = (f"Seguramente sí. Con un sueldo de {g}, la retención de la nómina es algo mayor que el impuesto que debes, así que la Renta "
+                  f"te devuelve unos {c['refund']} al año en Madrid.")
+    else:
+        refund = (f"Seguramente no. Con un sueldo de {g}, la retención de la nómina es algo menor que el impuesto que debes, así que cuenta con "
+                  f"pagar unos {c['refund']} en la Renta en Madrid.")
+    return [
+        (f"¿Cuánto son {a} brutos en neto en España?",
+         f"{g} brutos al año dejan {c['net_year']} netos al año, unos {c['net_month']} al mes en 12 pagas, después de "
+         f"{c['ss']} de Seguridad Social del trabajador y {c['irpf']} de IRPF (normas de {c['calc_year']}, Madrid, sin hijos, contrato indefinido)."),
+        (f"¿Qué es mejor con {g}, 12 o 14 pagas?",
+         f"El total del año es el mismo. En 12 pagas cobras {c['payslip12']} al mes en la nómina. En 14 pagas cobras "
+         f"{c['payslip14']} durante 12 meses más dos pagas extra de {c['extra14']}, normalmente en junio y diciembre."),
+        (f"¿En qué comunidad se paga menos IRPF con {g}?",
+         f"Ceuta y Melilla son las que menos pagan, porque solo tributan el 40 % del IRPF ({c['ceuta_net']} netos al año). Entre las demás, "
+         f"{c['best']} es donde más te queda ({c['best_net']}) y {c['worst']} donde menos ({c['worst_net']}), una diferencia de {c['spread']} al año."),
+        (f"¿Me saldrá a devolver la Renta con {g}?",
+         refund + " El resultado depende de tu comunidad y tu situación familiar, así que usa la calculadora para tu caso."),
+    ]
 
 
 def net_salary_faqs(c, p12, p14):
@@ -1879,13 +2593,14 @@ def net_salary_faqs(c, p12, p14):
     ]
 
 
-def render_net_salary_pages(env, grid=None):
-    """Render calculators/net-salary-{N}-euros[-per-month].html for every amount.
+def render_net_salary_pages(env, grid=None, langs=("en", "es")):
+    """Render calculators/net-salary-{N}-euros[-per-month].html for every amount,
+    in English and under es/calculators/ in Spanish.
 
     Figures come from scripts/net-salary-grid.mjs (the browser calculator modules run in
     node), so the tax engine stays a single source of truth. Raises when node is missing:
     the build must never silently drop these pages from the sitemap.
-    Returns the list of URL paths (e.g. "/calculators/net-salary-30000-euros").
+    Returns the English URL paths (e.g. "/calculators/net-salary-30000-euros").
     """
     import glob
 
@@ -1896,35 +2611,47 @@ def render_net_salary_pages(env, grid=None):
         os.remove(path)
 
     grid = grid or compute_net_salary_grid()
-    names = net_salary_region_names()
-    links = net_salary_links()
-    calc_year = 2026
+    calc_year = CALC_YEAR
     template = env.get_template("calculator-net-salary-amount.html")
     urls = []
-    for kind in ("annual", "monthly"):
-        items = grid[kind]
-        for i, item in enumerate(items):
-            def nb(j):
-                if 0 <= j < len(items):
-                    return {"label": eur(items[j]["amount"]) + ("/mo" if kind == "monthly" else ""),
-                            "slug": net_salary_slug(kind, items[j]["amount"])}
-                return None
-            ctx = net_salary_page_context(kind, item, (nb(i - 1), nb(i + 1)), names, calc_year)
-            crumbs = [
-                {"name": "Home", "url": "/"},
-                {"name": "Net Salary Calculator", "url": "/calculators/net-salary"},
-                {"name": ctx["crumb_label"], "url": f"/calculators/{ctx['slug']}", "current": True},
-            ]
-            calc_url = f"{SITE_URL}/calculators/{ctx['slug']}"
-            output = template.render(
-                p=ctx, crumbs=crumbs, js_version=js_version(), calc_year=calc_year,
-                share=share_links(calc_url, ctx["title"]), ns_links=links, current_slug=ctx["slug"],
-                build_date=datetime.now().strftime("%Y-%m-%d"),
-            )
-            with open(os.path.join(calc_dir, ctx["slug"] + ".html"), "w", encoding="utf-8") as fh:
-                fh.write(output)
-            urls.append(f"/calculators/{ctx['slug']}")
-    print(f"  wrote {len(urls)} net salary amount pages")
+    for lang in langs:
+        out_dir = lang_out_dir(lang, "calculators")
+        os.makedirs(out_dir, exist_ok=True)
+        if lang != "en":
+            for path in glob.glob(os.path.join(out_dir, "net-salary-*-euros*.html")):
+                os.remove(path)
+        names = net_salary_region_names(lang)
+        links = net_salary_links(lang=lang)
+        count = 0
+        for kind in ("annual", "monthly"):
+            items = grid[kind]
+            for i, item in enumerate(items):
+                def nb(j):
+                    if 0 <= j < len(items):
+                        label = eur(items[j]["amount"], lang)
+                        return {"label": per_month(label, lang) if kind == "monthly" else label,
+                                "slug": net_salary_slug(kind, items[j]["amount"])}
+                    return None
+                ctx = net_salary_page_context(kind, item, (nb(i - 1), nb(i + 1)), names, calc_year, lang)
+                path = f"/calculators/{ctx['slug']}"
+                crumbs = [
+                    {"name": tr(lang, "Home"), "url": localize(lang, "/")},
+                    {"name": tr(lang, "Net Salary Calculator"), "url": localize(lang, "/calculators/net-salary")},
+                    {"name": ctx["crumb_label"], "url": lang_path(lang, path), "current": True},
+                ]
+                page_url = SITE_URL + lang_path(lang, path)
+                output = template.render(
+                    p=ctx, crumbs=crumbs, js_version=js_version(), calc_year=calc_year,
+                    page_lang=lang, page_url=page_url, alt_path=es_alt_path(path),
+                    share=share_links(page_url, ctx["title"]), ns_links=links, current_slug=ctx["slug"],
+                    build_date=datetime.now().strftime("%Y-%m-%d"),
+                )
+                with open(os.path.join(out_dir, ctx["slug"] + ".html"), "w", encoding="utf-8") as fh:
+                    fh.write(output)
+                count += 1
+                if lang == "en":
+                    urls.append(path)
+        print(f"  wrote {count} net salary amount pages ({lang})")
     return urls
 
 
@@ -1938,8 +2665,10 @@ def rental_yield_slug(price):
     return f"rental-yield-{price}-euros-property"
 
 
-def ypct(x, digits=1):
-    """Format a yield already expressed in percent: 3.577 -> '3.6%'."""
+def ypct(x, digits=1, lang="en"):
+    """Format a yield already expressed in percent: 3.577 -> '3.6%' (en) / '3,6 %' (es)."""
+    if lang == "es":
+        return f"{x:,.{digits}f}".translate(ES_NUMBER_MARKS) + NBSP + "%"
     return f"{x:.{digits}f}%"
 
 
@@ -1949,21 +2678,19 @@ def load_rental_yield_pages():
         return json.load(fh)
 
 
-def rental_yield_links(pages=None):
+def rental_yield_links(pages=None, lang="en"):
     """Link-grid items for partials/rental-yield-links.html."""
     pages = pages or load_rental_yield_pages()
     return [
-        {"amount": p, "slug": rental_yield_slug(p), "label": eur(p), "title": f"Rental yield on a {eur(p)} property in Spain"}
+        {"amount": p, "slug": rental_yield_slug(p), "label": eur(p, lang),
+         "title": tr(lang, "Rental yield on a {amount} property in Spain", amount=eur(p, lang))}
         for p in pages["prices"]
     ]
 
 
-def rental_yield_region_names():
+def rental_yield_region_names(lang="en"):
     """Region id -> display name, parsed from the hub's <select id="f-regionId"> (single mapping)."""
-    with open(RENTAL_YIELD_TEMPLATE, encoding="utf-8") as fh:
-        text = fh.read()
-    select = re.search(r'<select id="f-regionId">(.*?)</select>', text, re.S).group(1)
-    return dict(re.findall(r'<option value="([^"]+)"[^>]*>([^<]+)</option>', select))
+    return {k: tr(lang, v) for k, v in select_options(RENTAL_YIELD_TEMPLATE, "f-regionId").items()}
 
 
 def compute_rental_yield_grid():
@@ -1979,21 +2706,31 @@ def compute_rental_yield_grid():
     return json.loads(res.stdout)
 
 
-def rental_yield_page_context(item, neighbours, names, calc_year, ref_pct):
+def rental_yield_page_context(item, neighbours, names, calc_year, ref_pct, lang="en"):
     """Everything the rental-yield amount template shows, computed once and formatted here."""
+    es = lang == "es"
+    E = lambda x: eur(x, lang)  # noqa: E731
+    P = lambda x, d=1: ypct(x, d, lang)  # noqa: E731
+    G = lambda x: f"{x:g}".replace(".", ",") + NBSP + "%" if es else f"{x:g}%"  # noqa: E731
     price = item["amount"]
     res, eu, non_eu = item["byStatus"]["resident"], item["byStatus"]["non_resident_eu"], item["byStatus"]["non_resident_non_eu"]
     madrid = next(r for r in item["regions"] if r["region"] == "madrid")
     targets = [{
-        "label": f"{t['targetPct']:g}%", "rent": eur(t["resident"]["rent"]), "annual": eur(t["resident"]["annualRent"]),
-        "net_res": ypct(t["resident"]["netYield"]), "net_eu": ypct(t["non_resident_eu"]["netYield"]),
-        "net_non_eu": ypct(t["non_resident_non_eu"]["netYield"]), "is_ref": t["targetPct"] == ref_pct,
+        "label": G(t["targetPct"]), "rent": E(t["resident"]["rent"]), "annual": E(t["resident"]["annualRent"]),
+        "net_res": P(t["resident"]["netYield"]), "net_eu": P(t["non_resident_eu"]["netYield"]),
+        "net_non_eu": P(t["non_resident_non_eu"]["netYield"]), "is_ref": t["targetPct"] == ref_pct,
     } for t in item["targets"]]
     by_net = sorted(item["regions"], key=lambda r: -r["netYield"])
+
+    def diff(r):
+        if r["region"] == "madrid":
+            return tr(lang, "reference")
+        d = f"{r['netYield'] - madrid['netYield']:+.2f}".replace("-", "−")
+        return d.replace(".", ",") + NBSP + "p. p." if es else d + " pp"
+
     rows = [{
-        "name": names.get(r["region"], r["region"]), "tax": eur(r["purchaseTax"]), "upfront": eur(r["totalInvestment"]),
-        "net": ypct(r["netYield"], 2),
-        "diff": "reference" if r["region"] == "madrid" else f"{r['netYield'] - madrid['netYield']:+.2f} pp".replace("-", "−"),
+        "name": names.get(r["region"], r["region"]), "tax": E(r["purchaseTax"]), "upfront": E(r["totalInvestment"]),
+        "net": P(r["netYield"], 2), "diff": diff(r),
         "is_ref": r["region"] == "madrid", "up": r["region"] != "madrid" and r["netYield"] > madrid["netYield"],
         "down": r["region"] != "madrid" and r["netYield"] < madrid["netYield"],
     } for r in by_net]
@@ -2002,21 +2739,31 @@ def rental_yield_page_context(item, neighbours, names, calc_year, ref_pct):
     dearest = max(common, key=lambda r: r["totalInvestment"])
     rent6 = next(t for t in item["targets"] if t["targetPct"] == 6)["resident"]["rent"] if any(t["targetPct"] == 6 for t in item["targets"]) else None
     ctx = {
-        "amount": price, "slug": rental_yield_slug(price), "amount_label": eur(price), "calc_year": calc_year,
-        "ref_pct": f"{ref_pct:g}%", "rent": eur(item["refRent"]), "annual_rent": eur(res["annualRent"]),
-        "gross": ypct(res["grossYield"]), "net_res": ypct(res["netYield"]), "net_eu": ypct(eu["netYield"]), "net_non_eu": ypct(non_eu["netYield"]),
-        "cash_flow": eur(res["monthlyCashFlow"]), "irr": ypct(res["irr"]),
-        "tax_madrid": eur(res["purchaseTax"]), "closing": eur(res["closingCosts"]), "upfront": eur(res["totalInvestment"]),
-        "ibi": eur(item["costs"]["annualIBI"]), "community": eur(item["costs"]["monthlyCommunity"]),
-        "noi": eur(res["firstYearNOI"]), "tax_res": eur(res["firstYearTax"]), "tax_eu": eur(eu["firstYearTax"]), "tax_non_eu": eur(non_eu["firstYearTax"]),
-        "rent6": eur(rent6) if rent6 else None,
+        "amount": price, "slug": rental_yield_slug(price), "amount_label": E(price), "calc_year": calc_year,
+        "ref_pct": G(ref_pct), "rent": E(item["refRent"]), "annual_rent": E(res["annualRent"]),
+        "gross": P(res["grossYield"]), "net_res": P(res["netYield"]), "net_eu": P(eu["netYield"]), "net_non_eu": P(non_eu["netYield"]),
+        "cash_flow": E(res["monthlyCashFlow"]), "irr": P(res["irr"]),
+        "tax_madrid": E(res["purchaseTax"]), "closing": E(res["closingCosts"]), "upfront": E(res["totalInvestment"]),
+        "ibi": E(item["costs"]["annualIBI"]), "community": E(item["costs"]["monthlyCommunity"]),
+        "noi": E(res["firstYearNOI"]), "tax_res": E(res["firstYearTax"]), "tax_eu": E(eu["firstYearTax"]), "tax_non_eu": E(non_eu["firstYearTax"]),
+        "rent6": E(rent6) if rent6 else None,
         "targets": targets, "regions": rows,
-        "cheapest_name": names.get(cheapest["region"], cheapest["region"]), "cheapest_upfront": eur(cheapest["totalInvestment"]),
-        "dearest_name": names.get(dearest["region"], dearest["region"]), "dearest_upfront": eur(dearest["totalInvestment"]),
-        "best_name": names.get(common[0]["region"]), "best_net": ypct(common[0]["netYield"], 2),
-        "worst_name": names.get(common[-1]["region"]), "worst_net": ypct(common[-1]["netYield"], 2),
+        "cheapest_name": names.get(cheapest["region"], cheapest["region"]), "cheapest_upfront": E(cheapest["totalInvestment"]),
+        "dearest_name": names.get(dearest["region"], dearest["region"]), "dearest_upfront": E(dearest["totalInvestment"]),
+        "best_name": names.get(common[0]["region"]), "best_net": P(common[0]["netYield"], 2),
+        "worst_name": names.get(common[-1]["region"]), "worst_net": P(common[-1]["netYield"], 2),
         "query": item["query"], "prev": neighbours[0], "next": neighbours[1],
     }
+    if es:
+        ctx["h1"] = f"Rentabilidad del alquiler de una vivienda de {E(price)} en España ({calc_year})"
+        ctx["title"] = f"Rentabilidad de un piso de {E(price)} en España ({calc_year}) | Spanified"
+        ctx["description"] = (f"Un piso de {E(price)} alquilado por {E(item['refRent'])} al mes rinde un {ctx['gross']} bruto y un "
+                              f"{ctx['net_res']} neto tras gastos e impuestos en Madrid. Alquiler para sacar del 4 al 8 %.")
+        ctx["answer"] = (f"Un piso de {E(price)} alquilado por {E(item['refRent'])} al mes rinde un {ctx['gross']} bruto, unos "
+                         f"{ctx['net_res']} netos tras gastos e impuestos para un residente en Madrid"
+                         + (f". Para llegar al 6 % bruto necesitas {ctx['rent6']} al mes." if rent6 else "."))
+        ctx["faqs"] = rental_yield_faqs_es(ctx)
+        return ctx
     ctx["h1"] = f"Rental Yield on a {eur(price)} Property in Spain ({calc_year})"
     ctx["title"] = f"{eur(price)} Property in Spain: Rental Yield and Rent Needed ({calc_year}) | Spanified"
     ctx["description"] = (f"A {eur(price)} flat renting for {eur(item['refRent'])} a month is a {ctx['gross']} gross yield and about "
@@ -2026,6 +2773,25 @@ def rental_yield_page_context(item, neighbours, names, calc_year, ref_pct):
                      + (f". To reach 6% gross you need {ctx['rent6']} a month." if rent6 else "."))
     ctx["faqs"] = rental_yield_faqs(ctx)
     return ctx
+
+
+def rental_yield_faqs_es(c):
+    a = c["amount_label"]
+    return [
+        (f"¿Qué alquiler necesito para que una vivienda de {a} sea rentable?",
+         "Alquiler anual = precio × rentabilidad bruta objetivo. Con " + a + ": " + "; ".join(
+             f"un {t['label']} pide {t['rent']} al mes" for t in c["targets"]) + ". La rentabilidad neta es menor por los meses vacíos, el IBI, la comunidad, el seguro, el mantenimiento y los impuestos."),
+        (f"¿Cuál es la rentabilidad neta de una vivienda de {a} en España?",
+         f"Con {c['rent']} al mes ({c['gross']} bruto), la rentabilidad neta es del {c['net_res']} para un residente en España, del {c['net_eu']} para un no residente de la UE/EEE "
+         f"y del {c['net_non_eu']} para un no residente de fuera de la UE/EEE, que tributa sobre el alquiler bruto. Las cifras suponen un piso de segunda mano en Madrid, "
+         f"un IBI de {c['ibi']} al año, una comunidad de {c['community']} al mes, un 5 % de vacío y un 5 % de mantenimiento, sin hipoteca."),
+        (f"¿Cuánto dinero necesito para comprar una vivienda de {a} en España?",
+         f"En Madrid, {c['tax_madrid']} de ITP y unos {c['closing']} de gastos de compraventa llevan el total a {c['upfront']}. En las comunidades peninsulares el total va "
+         f"de {c['cheapest_upfront']} en {c['cheapest_name']} a {c['dearest_upfront']} en {c['dearest_name']}, porque el impuesto de transmisiones cambia según la comunidad."),
+        (f"¿Es buena una rentabilidad bruta del {c['gross']} en España?",
+         f"Está cerca de la media nacional, en torno al 5,5 % bruto (Global Property Guide, tercer trimestre de 2026). Tras gastos e impuestos queda en un {c['net_res']} neto con {a}, "
+         f"así que compara pisos por la rentabilidad neta, no por la cifra que sale en el anuncio."),
+    ]
 
 
 def rental_yield_faqs(c):
@@ -2047,12 +2813,12 @@ def rental_yield_faqs(c):
     ]
 
 
-def render_rental_yield_pages(env, grid=None):
+def render_rental_yield_pages(env, grid=None, langs=("en", "es")):
     """Render calculators/rental-yield-{N}-euros-property.html for every purchase price.
 
     Figures come from scripts/rental-yield-grid.mjs (the browser calculator modules run in
     node), so the yield engine stays a single source of truth. Raises when node is missing.
-    Returns the list of URL paths (e.g. "/calculators/rental-yield-200000-euros-property").
+    Returns the English URL paths (e.g. "/calculators/rental-yield-200000-euros-property").
     """
     import glob
 
@@ -2063,33 +2829,42 @@ def render_rental_yield_pages(env, grid=None):
 
     grid = grid or compute_rental_yield_grid()
     config = load_rental_yield_pages()
-    names = rental_yield_region_names()
-    links = rental_yield_links()
-    calc_year = 2026
+    calc_year = CALC_YEAR
     template = env.get_template("calculator-rental-yield-amount.html")
     items = grid["prices"]
     urls = []
-    for i, item in enumerate(items):
-        def nb(j):
-            if 0 <= j < len(items):
-                return {"label": eur(items[j]["amount"]), "slug": rental_yield_slug(items[j]["amount"])}
-            return None
-        ctx = rental_yield_page_context(item, (nb(i - 1), nb(i + 1)), names, calc_year, config["referenceGrossPct"])
-        crumbs = [
-            {"name": "Home", "url": "/"},
-            {"name": "Rental Yield Calculator", "url": "/calculators/rental-yield"},
-            {"name": ctx["amount_label"], "url": f"/calculators/{ctx['slug']}", "current": True},
-        ]
-        calc_url = f"{SITE_URL}/calculators/{ctx['slug']}"
-        output = template.render(
-            p=ctx, crumbs=crumbs, js_version=js_version(), calc_year=calc_year,
-            share=share_links(calc_url, ctx["title"]), ry_links=links, current_slug=ctx["slug"],
-            build_date=datetime.now().strftime("%Y-%m-%d"),
-        )
-        with open(os.path.join(calc_dir, ctx["slug"] + ".html"), "w", encoding="utf-8") as fh:
-            fh.write(output)
-        urls.append(f"/calculators/{ctx['slug']}")
-    print(f"  wrote {len(urls)} rental yield amount pages")
+    for lang in langs:
+        out_dir = lang_out_dir(lang, "calculators")
+        os.makedirs(out_dir, exist_ok=True)
+        if lang != "en":
+            for path in glob.glob(os.path.join(out_dir, "rental-yield-*-euros-property.html")):
+                os.remove(path)
+        names = rental_yield_region_names(lang)
+        links = rental_yield_links(lang=lang)
+        for i, item in enumerate(items):
+            def nb(j):
+                if 0 <= j < len(items):
+                    return {"label": eur(items[j]["amount"], lang), "slug": rental_yield_slug(items[j]["amount"])}
+                return None
+            ctx = rental_yield_page_context(item, (nb(i - 1), nb(i + 1)), names, calc_year, config["referenceGrossPct"], lang)
+            path = f"/calculators/{ctx['slug']}"
+            crumbs = [
+                {"name": tr(lang, "Home"), "url": localize(lang, "/")},
+                {"name": tr(lang, "Rental Yield Calculator"), "url": localize(lang, "/calculators/rental-yield")},
+                {"name": ctx["amount_label"], "url": lang_path(lang, path), "current": True},
+            ]
+            page_url = SITE_URL + lang_path(lang, path)
+            output = template.render(
+                p=ctx, crumbs=crumbs, js_version=js_version(), calc_year=calc_year,
+                page_lang=lang, page_url=page_url, alt_path=es_alt_path(path),
+                share=share_links(page_url, ctx["title"]), ry_links=links, current_slug=ctx["slug"],
+                build_date=datetime.now().strftime("%Y-%m-%d"),
+            )
+            with open(os.path.join(out_dir, ctx["slug"] + ".html"), "w", encoding="utf-8") as fh:
+                fh.write(output)
+            if lang == "en":
+                urls.append(path)
+        print(f"  wrote {len(items)} rental yield amount pages ({lang})")
     return urls
 
 
@@ -2109,29 +2884,26 @@ def load_autonomo_pages():
         return json.load(fh)
 
 
-def autonomo_links(pages=None):
+def autonomo_links(pages=None, lang="en"):
     """Link-grid items for partials/autonomo-links.html (revenue and take-home chips)."""
     pages = pages or load_autonomo_pages()
     return {
         "revenue": [
-            {"amount": a, "slug": autonomo_slug("revenue", a), "label": eur(a),
-             "title": f"Autónomo net pay on {eur(a)} a year in Spain"}
+            {"amount": a, "slug": autonomo_slug("revenue", a), "label": eur(a, lang),
+             "title": tr(lang, "Autónomo net pay on {amount} a year in Spain", amount=eur(a, lang))}
             for a in pages["revenue"]
         ],
         "monthly": [
-            {"amount": m, "slug": autonomo_slug("monthly", m), "label": f"{eur(m)}/mo",
-             "title": f"What an autónomo must earn to take home {eur(m)} a month"}
+            {"amount": m, "slug": autonomo_slug("monthly", m), "label": per_month(eur(m, lang), lang),
+             "title": tr(lang, "What an autónomo must earn to take home {amount} a month", amount=eur(m, lang))}
             for m in pages["monthly"]
         ],
     }
 
 
-def autonomo_region_names():
+def autonomo_region_names(lang="en"):
     """Region id -> display name, parsed from the hub's <select id="f-region"> (single mapping)."""
-    with open(AUTONOMO_TEMPLATE, encoding="utf-8") as fh:
-        text = fh.read()
-    select = re.search(r'<select id="f-region">(.*?)</select>', text, re.S).group(1)
-    return dict(re.findall(r'<option value="([^"]+)"[^>]*>([^<]+)</option>', select))
+    return {k: tr(lang, v) for k, v in select_options(AUTONOMO_TEMPLATE, "f-region").items()}
 
 
 def compute_autonomo_grid():
@@ -2147,8 +2919,10 @@ def compute_autonomo_grid():
     return json.loads(res.stdout)
 
 
-def autonomo_page_context(kind, item, neighbours, names, calc_year):
+def autonomo_page_context(kind, item, neighbours, names, calc_year, lang="en"):
     """Everything the autónomo amount template shows, computed once and formatted here."""
+    es = lang == "es"
+    E = lambda x: eur(x, lang)  # noqa: E731
     monthly = kind == "monthly"
     amount = item["amount"]
     e, t = item["established"], item["tarifaPlana"]
@@ -2157,60 +2931,106 @@ def autonomo_page_context(kind, item, neighbours, names, calc_year):
     ref = next(r for r in regions if r["region"] == "madrid")
     rows = [{
         "name": names.get(r["region"], r["region"]),
-        "net_year": eur(r["netYear"]), "net_month": eur(r["netMonth"]), "irpf": eur(r["irpf"]),
-        "diff": "reference" if r["region"] == "madrid"
-        else ("+" if r["netYear"] >= ref["netYear"] else "−") + eur(abs(r["netYear"] - ref["netYear"])),
+        "net_year": E(r["netYear"]), "net_month": E(r["netMonth"]), "irpf": E(r["irpf"]),
+        "diff": tr(lang, "reference") if r["region"] == "madrid" else _signed_eur(r["netYear"] - ref["netYear"], lang),
         "is_ref": r["region"] == "madrid",
     } for r in regions]
     common = [r for r in regions if r["region"] not in ("ceuta", "melilla")]
     best, worst = common[0], common[-1]
     ceuta = next(r for r in regions if r["region"] == "ceuta")
-    rev_label, rev_month = eur(revenue), eur(revenue / 12)
+    rev_label, rev_month = E(revenue), E(revenue / 12)
     ctx = {
         "kind": kind, "amount": amount, "slug": autonomo_slug(kind, amount), "calc_year": calc_year,
         "revenue": rev_label, "revenue_month": rev_month,
-        "quota": eur(e["monthlyQuota"]), "quota_year": eur(e["annualSS"]), "bracket": e["bracketId"],
-        "irpf": eur(e["irpfTotal"]), "irpf_month": eur(e["irpfTotal"] / 12),
-        "irpf_deduction": eur(e["irpfDeduction"]), "personal_minimum": eur(e["personalMinimum"]),
-        "irpf_base": eur(e["irpfBase"]),
-        "burden": eur(e["totalBurden"]), "burden_rate": pct(e["effectiveTotalRate"]), "irpf_rate": pct(e["effectiveIrpfRate"]),
-        "net_year": eur(e["netYear"]), "net_month": eur(e["netMonth"]),
-        "tp_net_year": eur(t["netYear"]), "tp_net_month": eur(t["netMonth"]), "tp_irpf": eur(t["irpfTotal"]),
-        "tp_gain_month": eur(t["netMonth"] - e["netMonth"]), "tp_ss_year": eur(t["annualSS"]),
+        "quota": E(e["monthlyQuota"]), "quota_year": E(e["annualSS"]), "bracket": e["bracketId"],
+        "irpf": E(e["irpfTotal"]), "irpf_month": E(e["irpfTotal"] / 12),
+        "irpf_deduction": E(e["irpfDeduction"]), "personal_minimum": E(e["personalMinimum"]),
+        "irpf_base": E(e["irpfBase"]),
+        "burden": E(e["totalBurden"]), "burden_rate": pct(e["effectiveTotalRate"], lang=lang),
+        "irpf_rate": pct(e["effectiveIrpfRate"], lang=lang),
+        "net_year": E(e["netYear"]), "net_month": E(e["netMonth"]),
+        "tp_net_year": E(t["netYear"]), "tp_net_month": E(t["netMonth"]), "tp_irpf": E(t["irpfTotal"]),
+        "tp_gain_month": E(t["netMonth"] - e["netMonth"]), "tp_ss_year": E(t["annualSS"]),
         "regions": rows, "best": names.get(best["region"]), "worst": names.get(worst["region"]),
-        "best_net": eur(best["netYear"]), "worst_net": eur(worst["netYear"]),
-        "spread": eur(best["netYear"] - worst["netYear"]), "ceuta_net": eur(ceuta["netYear"]),
+        "best_net": E(best["netYear"]), "worst_net": E(worst["netYear"]),
+        "spread": E(best["netYear"] - worst["netYear"]), "ceuta_net": E(ceuta["netYear"]),
         "prev": neighbours[0], "next": neighbours[1],
     }
     if monthly:
-        target = eur(amount)
+        target = E(amount)
         ctx.update({
-            "amount_label": f"{target}/mo", "crumb_label": f"Take home {target} a month",
+            "amount_label": per_month(target, lang),
+            "crumb_label": f"Llevarte {target} al mes" if es else f"Take home {target} a month",
             "query": f"aut_r={revenue}", "target": target,
-            "tp_needed": eur(item["neededTarifaPlana"]), "tp_needed_month": eur(item["neededTarifaPlana"] / 12),
-            "tp_saving": eur(item["needed"] - item["neededTarifaPlana"]),
-            "example_costs": 500, "example_invoice": eur(revenue / 12 + 500),
+            "tp_needed": E(item["neededTarifaPlana"]), "tp_needed_month": E(item["neededTarifaPlana"] / 12),
+            "tp_saving": E(item["needed"] - item["neededTarifaPlana"]),
+            "example_costs": 500, "example_invoice": E(revenue / 12 + 500),
         })
-        title_core = f"Take Home {target} a Month as an Autónomo (Spain {calc_year}): Earn {rev_label} a Year"
-        ctx["answer"] = (f"To take home {target} a month as an established autónomo in Madrid in {calc_year}, you need about "
-                         f"{rev_label} of annual net revenue ({rev_month} a month), before {ctx['quota']} a month of Social Security and {ctx['irpf']} a year of IRPF.")
-        ctx["description"] = (f"A freelance autónomo needs about {rev_label} a year in net revenue ({rev_month} a month) to keep {target} a month after "
-                              f"Social Security and IRPF in Spain ({calc_year}). Tarifa plana first year: {eur(item['neededTarifaPlana'])}.")
+        if es:
+            title_core = f"Autónomo: cuánto facturar para ganar {target} al mes ({calc_year})"
+            ctx["answer"] = (f"Para llevarte {target} al mes como autónomo consolidado en Madrid en {calc_year} necesitas unos "
+                             f"{rev_label} de rendimiento neto al año ({rev_month} al mes), antes de {ctx['quota']} al mes de Seguridad Social y {ctx['irpf']} al año de IRPF.")
+            ctx["description"] = (f"Para quedarte {target} al mes como autónomo necesitas unos {rev_label} al año de rendimiento neto ({rev_month} al mes) "
+                                  f"tras cuota e IRPF ({calc_year}). Tarifa plana: {E(item['neededTarifaPlana'])}.")
+        else:
+            title_core = f"Take Home {target} a Month as an Autónomo (Spain {calc_year}): Earn {rev_label} a Year"
+            ctx["answer"] = (f"To take home {target} a month as an established autónomo in Madrid in {calc_year}, you need about "
+                             f"{rev_label} of annual net revenue ({rev_month} a month), before {ctx['quota']} a month of Social Security and {ctx['irpf']} a year of IRPF.")
+            ctx["description"] = (f"A freelance autónomo needs about {rev_label} a year in net revenue ({rev_month} a month) to keep {target} a month after "
+                                  f"Social Security and IRPF in Spain ({calc_year}). Tarifa plana first year: {eur(item['neededTarifaPlana'])}.")
     else:
         ctx.update({
             "amount_label": rev_label, "crumb_label": rev_label,
             "query": f"aut_r={revenue}",
         })
-        title_core = f"Autónomo on {rev_label} a Year in Spain ({calc_year}): {ctx['net_month']}/month Net"
-        ctx["answer"] = (f"An established autónomo in Madrid with {rev_label} of annual net revenue keeps about {ctx['net_month']} a month "
-                         f"({ctx['net_year']} a year) in {calc_year}, after {ctx['quota_year']} of Social Security and {ctx['irpf']} of IRPF.")
-        ctx["description"] = (f"{rev_label} of annual net revenue leaves a self-employed autónomo {ctx['net_month']} a month in Spain ({calc_year}) after "
-                              f"{ctx['quota']}/month Social Security and {ctx['irpf']} IRPF. First year on tarifa plana: {ctx['tp_net_month']} a month.")
+        if es:
+            title_core = f"Autónomo con {rev_label} al año: {ctx['net_month']} netos al mes ({calc_year})"
+            ctx["answer"] = (f"Un autónomo consolidado en Madrid con {rev_label} de rendimiento neto al año se queda unos {ctx['net_month']} al mes "
+                             f"({ctx['net_year']} al año) en {calc_year}, después de {ctx['quota_year']} de Seguridad Social y {ctx['irpf']} de IRPF.")
+            ctx["description"] = (f"{rev_label} de rendimiento neto al año dejan a un autónomo {ctx['net_month']} al mes ({calc_year}) tras "
+                                  f"{ctx['quota']}/mes de cuota y {ctx['irpf']} de IRPF. Tarifa plana: {ctx['tp_net_month']} al mes.")
+        else:
+            title_core = f"Autónomo on {rev_label} a Year in Spain ({calc_year}): {ctx['net_month']}/month Net"
+            ctx["answer"] = (f"An established autónomo in Madrid with {rev_label} of annual net revenue keeps about {ctx['net_month']} a month "
+                             f"({ctx['net_year']} a year) in {calc_year}, after {ctx['quota_year']} of Social Security and {ctx['irpf']} of IRPF.")
+            ctx["description"] = (f"{rev_label} of annual net revenue leaves a self-employed autónomo {ctx['net_month']} a month in Spain ({calc_year}) after "
+                                  f"{ctx['quota']}/month Social Security and {ctx['irpf']} IRPF. First year on tarifa plana: {ctx['tp_net_month']} a month.")
     ctx["title"] = title_core + " | Spanified"
     ctx["h1"] = title_core
-    ctx["faqs"] = autonomo_faqs(ctx)
+    ctx["faqs"] = autonomo_faqs_es(ctx) if es else autonomo_faqs(ctx)
     return ctx
 
+
+def autonomo_faqs_es(c):
+    r, y = c["revenue"], c["calc_year"]
+    region_a = (f"Ceuta y Melilla son las que menos pagan, porque sus residentes solo tributan el 40 % del IRPF por lo que ganan allí ({c['ceuta_net']} netos al año con {r}). Entre las demás, "
+                f"{c['best']} es donde más te queda ({c['best_net']}) y {c['worst']} donde menos ({c['worst_net']}), una diferencia de {c['spread']} al año. La Seguridad Social es igual en todas.")
+    tp_a = (f"Los primeros 12 meses un autónomo nuevo paga la tarifa plana de 80 € más el MEI (unos 88,65 € al mes), así que la Seguridad Social es de {c['tp_ss_year']} al año en lugar de {c['quota_year']}. "
+            f"Con {r} eso supone unos {c['tp_net_month']} netos al mes en lugar de {c['net_month']}, {c['tp_gain_month']} más cada mes. Pasado el primer año, la cuota va según tu tramo de rendimientos.")
+    if c["kind"] == "monthly":
+        return [
+            (f"¿Cuánto tiene que ganar un autónomo para llevarse {c['target']} al mes en España?",
+             f"Unos {r} al año ({c['revenue_month']} al mes) de rendimiento neto, es decir, ingresos menos gastos del negocio y antes de la Seguridad Social y el IRPF. "
+             f"De ahí pagas {c['quota']} al mes de cuota (tramo {c['bracket']}) y {c['irpf']} al año de IRPF (normas de {y}, autónomo consolidado, Madrid, sin hijos)."),
+            (f"¿Cuánto tengo que facturar para llevarme {c['target']} al mes?",
+             f"Suma tus gastos del negocio a los {c['revenue_month']} al mes de rendimiento neto y añade el IVA si lo cobras. Por ejemplo, con {eur(c['example_costs'], 'es')} al mes de gastos "
+             f"facturarías unos {c['example_invoice']} al mes sin IVA. La calculadora pide el rendimiento neto, así que resta los gastos antes de poner tu cifra."),
+            (f"¿Es más fácil llegar a {c['target']} al mes con tarifa plana?",
+             f"Sí. Durante los primeros 12 meses te bastan {c['tp_needed']} al año ({c['tp_needed_month']} al mes), {c['tp_saving']} menos que los {r} que necesita un autónomo consolidado, porque la cuota es de unos 88,65 € al mes (80 € más el MEI). "
+             f"A partir del mes 13 se aplica la cuota normal."),
+            (f"¿Cambia según la comunidad lo que me queda de {r} de rendimiento neto?",
+             region_a),
+        ]
+    return [
+        (f"¿Cuántos impuestos paga un autónomo con {r} en España?",
+         f"Con {r} de rendimiento neto al año, un autónomo consolidado en Madrid paga {c['quota_year']} de Seguridad Social ({c['quota']} al mes, tramo {c['bracket']}) y {c['irpf']} de IRPF: "
+         f"{c['burden']} en total, el {c['burden_rate']} del rendimiento (normas de {y}, sin hijos, 35 años)."),
+        (f"¿Cuánto le queda a un autónomo de {r} al año?",
+         f"Unos {c['net_year']} al año, o {c['net_month']} al mes, después de la Seguridad Social y el IRPF. Aquí el rendimiento neto son los ingresos menos los gastos del negocio, antes de la Seguridad Social y el IRPF. "
+         f"El IRPF se calcula sobre {c['irpf_base']}, tras restar la Seguridad Social y una reducción de {c['irpf_deduction']}, menos el mínimo personal de {c['personal_minimum']}."),
+        (f"¿Cambian las cifras con tarifa plana con {r}?", tp_a),
+        (f"¿Qué comunidad sale más barata a un autónomo con {r}?", region_a),
+    ]
 
 def autonomo_faqs(c):
     r, y = c["revenue"], c["calc_year"]
@@ -2245,13 +3065,13 @@ def autonomo_faqs(c):
     ]
 
 
-def render_autonomo_pages(env, grid=None):
+def render_autonomo_pages(env, grid=None, langs=("en", "es")):
     """Render calculators/autonomo-tax-{N}-euros.html and autonomo-take-home-{N}-euros-per-month.html.
 
     Figures come from scripts/autonomo-grid.mjs (the browser calculator modules run in node),
     so the tax engine stays a single source of truth. Raises when node is missing: the build
     must never silently drop these pages from the sitemap.
-    Returns the list of URL paths (e.g. "/calculators/autonomo-tax-30000-euros").
+    Returns the English URL paths (e.g. "/calculators/autonomo-tax-30000-euros").
     """
     import glob
 
@@ -2262,35 +3082,47 @@ def render_autonomo_pages(env, grid=None):
         os.remove(path)
 
     grid = grid or compute_autonomo_grid()
-    names = autonomo_region_names()
-    links = autonomo_links()
-    calc_year = 2026
+    calc_year = CALC_YEAR
     template = env.get_template("calculator-autonomo-amount.html")
     urls = []
-    for kind in ("revenue", "monthly"):
-        items = grid[kind]
-        for i, item in enumerate(items):
-            def nb(j):
-                if 0 <= j < len(items):
-                    return {"label": eur(items[j]["amount"]) + ("/mo" if kind == "monthly" else ""),
-                            "slug": autonomo_slug(kind, items[j]["amount"])}
-                return None
-            ctx = autonomo_page_context(kind, item, (nb(i - 1), nb(i + 1)), names, calc_year)
-            crumbs = [
-                {"name": "Home", "url": "/"},
-                {"name": "Autónomo Tax Calculator", "url": "/calculators/autonomo-tax"},
-                {"name": ctx["crumb_label"], "url": f"/calculators/{ctx['slug']}", "current": True},
-            ]
-            calc_url = f"{SITE_URL}/calculators/{ctx['slug']}"
-            output = template.render(
-                p=ctx, crumbs=crumbs, js_version=js_version(), calc_year=calc_year,
-                share=share_links(calc_url, ctx["title"]), au_links=links, current_slug=ctx["slug"],
-                build_date=datetime.now().strftime("%Y-%m-%d"),
-            )
-            with open(os.path.join(calc_dir, ctx["slug"] + ".html"), "w", encoding="utf-8") as fh:
-                fh.write(output)
-            urls.append(f"/calculators/{ctx['slug']}")
-    print(f"  wrote {len(urls)} autónomo amount pages")
+    for lang in langs:
+        out_dir = lang_out_dir(lang, "calculators")
+        os.makedirs(out_dir, exist_ok=True)
+        if lang != "en":
+            for path in glob.glob(os.path.join(out_dir, "autonomo-*-euros*.html")):
+                os.remove(path)
+        names = autonomo_region_names(lang)
+        links = autonomo_links(lang=lang)
+        count = 0
+        for kind in ("revenue", "monthly"):
+            items = grid[kind]
+            for i, item in enumerate(items):
+                def nb(j):
+                    if 0 <= j < len(items):
+                        label = eur(items[j]["amount"], lang)
+                        return {"label": per_month(label, lang) if kind == "monthly" else label,
+                                "slug": autonomo_slug(kind, items[j]["amount"])}
+                    return None
+                ctx = autonomo_page_context(kind, item, (nb(i - 1), nb(i + 1)), names, calc_year, lang)
+                path = f"/calculators/{ctx['slug']}"
+                crumbs = [
+                    {"name": tr(lang, "Home"), "url": localize(lang, "/")},
+                    {"name": tr(lang, "Autónomo Tax Calculator"), "url": localize(lang, "/calculators/autonomo-tax")},
+                    {"name": ctx["crumb_label"], "url": lang_path(lang, path), "current": True},
+                ]
+                page_url = SITE_URL + lang_path(lang, path)
+                output = template.render(
+                    p=ctx, crumbs=crumbs, js_version=js_version(), calc_year=calc_year,
+                    page_lang=lang, page_url=page_url, alt_path=es_alt_path(path),
+                    share=share_links(page_url, ctx["title"]), au_links=links, current_slug=ctx["slug"],
+                    build_date=datetime.now().strftime("%Y-%m-%d"),
+                )
+                with open(os.path.join(out_dir, ctx["slug"] + ".html"), "w", encoding="utf-8") as fh:
+                    fh.write(output)
+                count += 1
+                if lang == "en":
+                    urls.append(path)
+        print(f"  wrote {count} autónomo amount pages ({lang})")
     return urls
 
 
@@ -3093,17 +3925,15 @@ digests, categories=(), articles=(), salary_pages=(), autonomo_pages=(), rental_
     urls.extend(article_sitemap_urls(articles))
     for slug in categories:
         urls.append((SITE_URL + f"/category/{slug}", category_lastmod.get(slug)))
-    urls.append((SITE_URL + "/calculators/net-salary", calc_lastmod("net-salary")))
-    for path in salary_pages:
-        urls.append((SITE_URL + path, calc_lastmod("net-salary", amount_page=True)))
-    urls.append((SITE_URL + "/calculators/autonomo-tax", calc_lastmod("autonomo-tax")))
-    for path in autonomo_pages:
-        urls.append((SITE_URL + path, calc_lastmod("autonomo-tax", amount_page=True)))
-    urls.append((SITE_URL + "/calculators/property-buying-cost", calc_lastmod("property-buying-cost")))
-    urls.append((SITE_URL + "/calculators/rental-yield", calc_lastmod("rental-yield")))
-    for path in rental_yield_pages:
-        urls.append((SITE_URL + path, calc_lastmod("rental-yield", amount_page=True)))
-    urls.append((SITE_URL + "/calculators/electricity-bill", calc_lastmod("electricity-bill")))
+    calc_urls = [("/calculators/net-salary", calc_lastmod("net-salary"))]
+    calc_urls += [(path, calc_lastmod("net-salary", amount_page=True)) for path in salary_pages]
+    calc_urls.append(("/calculators/autonomo-tax", calc_lastmod("autonomo-tax")))
+    calc_urls += [(path, calc_lastmod("autonomo-tax", amount_page=True)) for path in autonomo_pages]
+    calc_urls.append(("/calculators/property-buying-cost", calc_lastmod("property-buying-cost")))
+    calc_urls.append(("/calculators/rental-yield", calc_lastmod("rental-yield")))
+    calc_urls += [(path, calc_lastmod("rental-yield", amount_page=True)) for path in rental_yield_pages]
+    calc_urls.append(("/calculators/electricity-bill", calc_lastmod("electricity-bill")))
+    urls.extend((SITE_URL + path, lastmod) for path, lastmod in calc_urls)
     # Only the canonical quiz landing page is indexable (quiz.html ships
     # index,follow). The -success / -subscribed / -result-* variants stay
     # noindex,nofollow and must never enter the sitemap.
@@ -3116,6 +3946,8 @@ digests, categories=(), articles=(), salary_pages=(), autonomo_pages=(), rental_
     urls.extend(article_sitemap_urls(es_articles, "es"))
     for slug in es_categories:
         urls.append((SITE_URL + f"/es/category/{slug}", es_category_lastmod.get(slug)))
+    # Spanish calculators share their English twin's lastmod (same sources).
+    urls.extend((SITE_URL + "/es" + path, lastmod) for path, lastmod in calc_urls if path in ES_PATHS)
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
@@ -3466,7 +4298,9 @@ def js_version():
                    "quiz-logic.js", "subscribe-form.js", "subscription-store.js",
                    "electricity.js", "electricity-calc.js", "electricity-form.js",
                    "video-embed.js", "cookie-consent.js", "cookie-consent-logic.js",
-                   "election-explorer.js", "election-filter.js", "election-compare.js"):
+                   "election-explorer.js", "election-filter.js", "election-compare.js",
+                   "calc-i18n.js", "tooltips.js", "net-salary-es.js", "autonomo-es.js",
+                   "property-buying-cost-es.js", "rental-yield-es.js", "electricity-es.js"):
         path = os.path.join(SCRIPT_DIR, "static", "js", name)
         try:
             with open(path, "rb") as fh:
@@ -3541,6 +4375,7 @@ def main():
     es_digests = dedupe_digest_titles([digest_context(d, "es", d["date"] in en_subject_dates)
                                        for d in load_digests(ES_DATA_DIR) if d["date"] in en_dates])
     register_es_paths(es_digests, collect_categories(digests), es_articles, articles)
+    register_es_calculator_paths()
     attach_guides(es_digests, es_articles)
     attach_digest_hubs(es_digests, es_articles, lang="es")
     episodes = load_podcast_episodes()

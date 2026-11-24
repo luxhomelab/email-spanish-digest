@@ -1,5 +1,10 @@
 import { calculateAutonomo } from './autonomo-calc.js'
 import { sanitizeState, parseStateFromParams, personalMinimumText, DEFAULTS, QUERY_KEYS } from './autonomo-form.js'
+import { createI18n, pageLang, loadDict } from './calc-i18n.js'
+
+const LANG = pageLang()
+const I = createI18n(LANG, await loadDict(LANG, () => import('./autonomo-es.js')))
+const { t } = I
 
 const STORAGE_KEY = 'aut-calculator-state'
 const $ = id => document.getElementById(id)
@@ -7,12 +12,12 @@ const $ = id => document.getElementById(id)
 function fmtEur(n) {
   const num = Number(n)
   if (Number.isNaN(num)) return '—'
-  return `${num.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })} €`
+  return `${I.num(num, 0)}${I.es ? I.NBSP : ' '}€`
 }
 
 function fmtPct(n) {
   if (typeof n !== 'number' || Number.isNaN(n)) return '—'
-  return `${(n * 100).toFixed(1)}%`
+  return I.pct(n, 1)
 }
 
 function regionIds() {
@@ -140,17 +145,17 @@ function syncShareLinks() {
   const wrap = document.querySelector('.calc-share .share-wrap')
   if (!wrap) return
   const pageUrl = window.location.href
-  const text = 'Autónomo Tax Calculator — Spain self-employed taxes — Spanified'
+  const text = t('Autónomo Tax Calculator — Spain self-employed taxes — Spanified')
   const u = encodeURIComponent(pageUrl)
-  const t = encodeURIComponent(text)
+  const tx = encodeURIComponent(text)
   const set = (sel, href) => {
     const a = wrap.querySelector(sel)
     if (a) a.href = href
   }
-  set('a[href*="x.com/intent"]', `https://x.com/intent/tweet?text=${t}&url=${u}`)
+  set('a[href*="x.com/intent"]', `https://x.com/intent/tweet?text=${tx}&url=${u}`)
   set('a[href*="facebook.com/sharer"]', `https://www.facebook.com/sharer/sharer.php?u=${u}`)
-  set('a[href*="t.me/share"]', `https://t.me/share/url?url=${u}&text=${t}`)
-  set('a[href*="wa.me"]', `https://wa.me/?text=${t}%20${u}`)
+  set('a[href*="t.me/share"]', `https://t.me/share/url?url=${u}&text=${tx}`)
+  set('a[href*="wa.me"]', `https://wa.me/?text=${tx}%20${u}`)
   const copy = wrap.querySelector('.share-copy')
   if (copy) copy.dataset.url = pageUrl
 }
@@ -163,10 +168,10 @@ function wireShareCopy() {
     if (!btn) return
     const label = btn.querySelector('span')
     const done = () => {
-      if (label) label.textContent = 'Copied!'
+      if (label) label.textContent = t('Copied!')
       btn.classList.add('is-copied')
       setTimeout(() => {
-        if (label) label.textContent = 'Copy link'
+        if (label) label.textContent = t('Copy link')
         btn.classList.remove('is-copied')
       }, 1500)
     }
@@ -257,11 +262,11 @@ function render(state) {
   $('b-net').textContent = fmtEur(result.netTakeHome)
 
   const saving = $('irpf-saving')
-  saving.textContent = personalMinimumText(result)
+  saving.textContent = personalMinimumText(result, I)
   saving.hidden = !saving.textContent
   const base = $('irpf-base')
   if (result.irpfBase > 0) {
-    base.textContent = `Your current taxable base: ${result.irpfBase.toLocaleString('en-US', { maximumFractionDigits: 0 })} €`
+    base.textContent = t('Your current taxable base: {amount}', { amount: fmtEur(result.irpfBase) })
     base.hidden = false
   } else {
     base.hidden = true

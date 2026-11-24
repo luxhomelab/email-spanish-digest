@@ -4,6 +4,11 @@ import {
   sanitizeState, parseStateFromParams, stateToParams, clampField, inputValue,
   DEFAULTS, FIELD_LIMITS, QUERY_KEYS, MAX_DESC_DISAB, MAX_ASC_DISAB,
 } from './net-salary-form.js'
+import { createI18n, pageLang, loadDict } from './calc-i18n.js'
+
+const LANG = pageLang()
+const I = createI18n(LANG, await loadDict(LANG, () => import('./net-salary-es.js')))
+const { t } = I
 
 const STORAGE_KEY = 'ns-calculator-state'
 const $ = id => document.getElementById(id)
@@ -12,7 +17,7 @@ const COLOR = { net: '#2FA35F', irpf: '#D95D5D', ss: '#E8933C', employer: '#B0B9
 const SEGS = ['mode', 'period', 'payments', 'regime', 'age', 'contract', 'healthMode', 'mealsMode', 'transportMode', 'nurseryMode']
 const SELECTS = ['region', 'disability', 'joint']
 const CHECKS = ['mobility', 'sharedCustody']
-const DIS_LABELS = { 33: '33–64%', '33h': '33–64% with help', 65: '65% or more' }
+const DIS_LABELS = { 33: t('33–64%'), '33h': t('33–64% with help'), 65: t('65% or more') }
 const LIST_MAX = { descDisab: MAX_DESC_DISAB, ascDisab: MAX_ASC_DISAB }
 
 let combineBrackets = false
@@ -22,11 +27,13 @@ let lastResult = null
 function fmtEur(n, digits = 0) {
   const num = Number(n)
   if (!Number.isFinite(num)) return '—'
-  const abs = Math.abs(num).toLocaleString('en-US', { minimumFractionDigits: digits, maximumFractionDigits: digits })
-  return `${num < -0.004 ? '−' : ''}${abs} €`
+  const abs = I.num(Math.abs(num), digits)
+  return `${num < -0.004 ? '−' : ''}${abs}${I.es ? I.NBSP : ' '}€`
 }
 const fmtEur2 = n => fmtEur(n, 2)
-const fmtPct = (n, digits = 1) => (Number.isFinite(n) ? `${(n * 100).toFixed(digits)}%` : '—')
+const fmtPct = (n, digits = 1) => I.pct(n, digits)
+// A percentage typed by the user (e.g. the AT/EP rate), shown as entered.
+const rawPct = v => (I.es ? `${I.num(Number(v), 0, 2)}${I.NBSP}%` : `${v}%`)
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]))
 
 function regionName(id) {
@@ -76,9 +83,9 @@ function sliderRange(state) {
 
 function syncAmountUi(state) {
   const net = state.mode === 'net'
-  const per = state.period === 'm' ? (net ? 'a payslip' : 'a month') : 'a year'
-  $('l-amount').textContent = net ? 'Net pay you want' : 'Gross salary'
-  $('f-amount').setAttribute('aria-label', `${net ? 'Target net pay' : 'Gross salary'}, € ${per}`)
+  const per = state.period === 'm' ? (net ? t('a payslip') : t('a month')) : t('a year')
+  $('l-amount').textContent = net ? t('Net pay you want') : t('Gross salary')
+  $('f-amount').setAttribute('aria-label', `${net ? t('Target net pay') : t('Gross salary')}, € ${per}`)
   const { max, step } = sliderRange(state)
   const slider = $('f-slider')
   slider.max = String(max)
@@ -100,14 +107,14 @@ function renderList(key, state) {
   const root = $(`f-${key}`)
   const items = state[key]
   const ol = root.querySelector('ol')
-  const who = key === 'descDisab' ? 'Child' : 'Parent'
+  const who = key === 'descDisab' ? t('Child {n}') : t('Parent {n}')
   ol.innerHTML = items.map((level, i) => `
    <li class="ns-dis-item">
-    <span class="ns-dis-name">${who} ${i + 1}</span>
-    <select data-list="${key}" data-i="${i}" aria-label="${who} ${i + 1}: disability degree">
-     ${Object.entries(DIS_LABELS).map(([v, t]) => `<option value="${v}"${v === level ? ' selected' : ''}>${t}</option>`).join('')}
+    <span class="ns-dis-name">${who.replace('{n}', i + 1)}</span>
+    <select data-list="${key}" data-i="${i}" aria-label="${t('{who}: disability degree', { who: who.replace('{n}', i + 1) })}">
+     ${Object.entries(DIS_LABELS).map(([v, label]) => `<option value="${v}"${v === level ? ' selected' : ''}>${label}</option>`).join('')}
     </select>
-    <button type="button" class="ns-remove" data-remove="${key}" data-i="${i}" aria-label="Remove ${who.toLowerCase()} ${i + 1}">Remove</button>
+    <button type="button" class="ns-remove" data-remove="${key}" data-i="${i}" aria-label="${t('Remove {who}', { who: who.replace('{n}', i + 1) })}">${t('Remove')}</button>
    </li>`).join('')
   root.querySelector('.ns-add').hidden = items.length >= LIST_MAX[key]
 }
@@ -209,65 +216,68 @@ function convertAmountForPeriod(state, prev) {
 }
 
 // ── rendering ───────────────────────────────────────────────────────────────
+// Spanish payslip term shown under the English label; dropped on Spanish pages,
+// where the label itself is already the Spanish term.
+const es = term => (I.es ? '' : term)
 const row = (label, value, cls = '', sub = '') => `<tr class="${cls}"><td>${label}${sub ? `<span class="ns-formula">${sub}</span>` : ''}</td><td class="num">${value}</td></tr>`
 
 function renderPayslip(r, s) {
   const p = r.payslip
-  const monthly = s.payments === '14' ? 'Ordinary month, one of 12' : s.payments === '14p' ? '12 payslips, extras prorated' : '12 payslips a year'
-  $('r-ps-meta').textContent = `${monthly}, ${regionName(s.region)}${s.regime === 'beckham' ? ', Beckham law' : ''}`
+  const monthly = s.payments === '14' ? t('Ordinary month, one of 12') : s.payments === '14p' ? t('12 payslips, extras prorated') : t('12 payslips a year')
+  $('r-ps-meta').textContent = `${monthly}, ${regionName(s.region)}${s.regime === 'beckham' ? `, ${t('Beckham law')}` : ''}`
   const n = 12
   const flexMonthly = r.flex.total / n
   const ssLines = r.ss.lines
   const earn = [
-    row('Base salary', fmtEur2(p.grossRegular), 'ns-ps-h', 'Salario base'),
+    row(t('Base salary'), fmtEur2(p.grossRegular), 'ns-ps-h', es('Salario base')),
   ]
-  if (r.flex.total > 0) earn.push(row('Benefits in kind', fmtEur2(flexMonthly), 'ns-ps-kind', 'Retribución en especie'))
+  if (r.flex.total > 0) earn.push(row(t('Benefits in kind'), fmtEur2(flexMonthly), 'ns-ps-kind', es('Retribución en especie')))
   const ded = [
-    `<tr class="ns-ps-sec"><th colspan="2" scope="rowgroup">Deductions <span lang="es">deducciones</span></th></tr>`,
-    row('Social Security', `−${fmtEur2(r.ss.total / n)}`, 'ns-ps-ss', `${fmtPct((r.ss.total - ssLines.solidarity) / (r.ss.monthlyBase * 12 || 1), 2)} of ${fmtEur2(r.ss.monthlyBase)} base`),
-    row(`IRPF withholding ${r.withholding.rate.toFixed(2)}%`, `−${fmtEur2(p.grossRegular - r.ss.total / n - r.pensionEmployee / n - p.regular)}`, 'ns-ps-irpf', 'Retención IRPF'),
+    `<tr class="ns-ps-sec"><th colspan="2" scope="rowgroup">${I.es ? 'Deducciones' : 'Deductions <span lang="es">deducciones</span>'}</th></tr>`,
+    row(t('Social Security'), `−${fmtEur2(r.ss.total / n)}`, 'ns-ps-ss', t('{pct} of {base} base', { pct: fmtPct((r.ss.total - ssLines.solidarity) / (r.ss.monthlyBase * 12 || 1), 2), base: fmtEur2(r.ss.monthlyBase) })),
+    row(t('IRPF withholding {rate}', { rate: I.pctOf(r.withholding.rate, 2) }), `−${fmtEur2(p.grossRegular - r.ss.total / n - r.pensionEmployee / n - p.regular)}`, 'ns-ps-irpf', es('Retención IRPF')),
   ]
-  if (r.flex.total > 0) ded.push(row('Benefits already received', `−${fmtEur2(flexMonthly)}`, 'ns-ps-kind', 'Paid as the benefit, not in cash'))
-  if (r.pensionEmployee > 0) ded.push(row('Your pension plan', `−${fmtEur2(r.pensionEmployee / n)}`, '', 'Aportación a plan de pensiones'))
-  $('r-ps-earn').innerHTML = `<tr class="ns-ps-sec"><th colspan="2" scope="rowgroup">Earnings <span lang="es">devengos</span></th></tr>` + earn.join('')
+  if (r.flex.total > 0) ded.push(row(t('Benefits already received'), `−${fmtEur2(flexMonthly)}`, 'ns-ps-kind', t('Paid as the benefit, not in cash')))
+  if (r.pensionEmployee > 0) ded.push(row(t('Your pension plan'), `−${fmtEur2(r.pensionEmployee / n)}`, '', es('Aportación a plan de pensiones')))
+  $('r-ps-earn').innerHTML = `<tr class="ns-ps-sec"><th colspan="2" scope="rowgroup">${I.es ? 'Devengos' : 'Earnings <span lang="es">devengos</span>'}</th></tr>` + earn.join('')
   $('r-ps-ded').innerHTML = ded.join('')
   $('r-ps-net').textContent = fmtEur2(p.regular)
   $('r-ps-extra').textContent = p.extra != null
-    ? `Plus 2 extra payslips of ${fmtEur2(p.extra)} in June and December`
+    ? t('Plus 2 extra payslips of {amount} in June and December', { amount: fmtEur2(p.extra) })
     : ''
 }
 
 function renderKpis(r, s) {
   $('r-net-year').textContent = fmtEur(r.netAnnual)
   $('r-net-year-sub').textContent = r.hourly != null
-    ? `${fmtEur2(r.hourly)} an hour at ${s.hoursPerWeek} h a week`
-    : 'Enter your hours a week to see hourly pay'
+    ? t('{amount} an hour at {hours} h a week', { amount: fmtEur2(r.hourly), hours: I.es ? I.num(Number(s.hoursPerWeek), 0, 2) : s.hoursPerWeek })
+    : t('Enter your hours a week to see hourly pay')
   const warn = []
-  if (r.warnings.includes('pensionAboveCash')) warn.push(`Your pension plan is more than the salary left after tax; counted as ${fmtEur(r.pensionEmployee)}.`)
-  if (r.warnings.includes('pensionAboveLimit')) warn.push('Only €1,500 a year of your own pension contributions (more with employer contributions to a company plan) reduces your tax.')
+  if (r.warnings.includes('pensionAboveCash')) warn.push(t('Your pension plan is more than the salary left after tax; counted as {amount}.', { amount: fmtEur(r.pensionEmployee) }))
+  if (r.warnings.includes('pensionAboveLimit')) warn.push(t('Only €1,500 a year of your own pension contributions (more with employer contributions to a company plan) reduces your tax.'))
   $('r-pension-warn').textContent = warn.join(' ')
   $('r-pension-warn').hidden = warn.length === 0
   const gross = r.totalComp || 1
   $('r-keep').textContent = fmtPct(r.annualTaxNet / gross, 1)
   $('r-keep-sub').textContent = r.marginalKeep != null
-    ? `of your pay; ${Math.round(r.marginalKeep * 100)} € of every extra 100 €`
-    : 'of your pay'
+    ? t('of your pay; {n} € of every extra 100 €', { n: Math.round(r.marginalKeep * 100) })
+    : t('of your pay')
   const refund = r.refund
   const kpi = $('r-renta-kpi')
   kpi.classList.toggle('ns-pos', refund > 0.5)
   kpi.classList.toggle('ns-neg', refund < -0.5)
   if (Math.abs(refund) <= 0.5) {
-    $('r-renta-kicker').textContent = 'At the Renta'
-    $('r-renta').textContent = 'About even'
-    $('r-renta-sub').textContent = 'withholding matches your tax'
+    $('r-renta-kicker').textContent = t('At the Renta')
+    $('r-renta').textContent = t('About even')
+    $('r-renta-sub').textContent = t('withholding matches your tax')
   } else if (refund > 0) {
-    $('r-renta-kicker').textContent = 'Refund at the Renta'
+    $('r-renta-kicker').textContent = t('Refund at the Renta')
     $('r-renta').textContent = fmtEur(refund)
-    $('r-renta-sub').textContent = 'withheld more than you owe'
+    $('r-renta-sub').textContent = t('withheld more than you owe')
   } else {
-    $('r-renta-kicker').textContent = 'To pay at the Renta'
+    $('r-renta-kicker').textContent = t('To pay at the Renta')
     $('r-renta').textContent = fmtEur(-refund)
-    $('r-renta-sub').textContent = 'withheld less than you owe'
+    $('r-renta-sub').textContent = t('withheld less than you owe')
   }
 }
 
@@ -281,27 +291,29 @@ function renderRenta(r, s) {
     <span class="ns-rb-track"><span class="ns-rb-fill ${cls}" style="width:${(v / max * 100).toFixed(1)}%"></span></span>
     <b class="ns-rb-v">${fmtEur(v)}</b>
    </div>`
-  $('r-renta-bars').innerHTML = bar('Withheld from your payslips', wh, 'ns-rb-wh') + bar('Tax you owe for the year', tax, 'ns-rb-tax')
+  $('r-renta-bars').innerHTML = bar(t('Withheld from your payslips'), wh, 'ns-rb-wh') + bar(t('Tax you owe for the year'), tax, 'ns-rb-tax')
   let text
   if (s.regime === 'beckham') {
-    text = 'Under the Beckham law the 24% withheld is final for salaries up to €600,000, so there is nothing to settle.'
+    text = t('Under the Beckham law the 24% withheld is final for salaries up to €600,000, so there is nothing to settle.')
   } else if (Math.abs(r.refund) <= 0.5) {
-    text = 'Your withholding already matches the tax you owe for the year.'
+    text = t('Your withholding already matches the tax you owe for the year.')
   } else {
     const why = []
-    if (r.irpf.smiDeduction > 0) why.push(`the ${fmtEur(r.irpf.smiDeduction)} deduction for low earners`)
-    if (r.irpf.minimums.regional !== r.irpf.minimums.state) why.push(`${regionName(s.region)}'s higher personal minimums`)
-    if (r.irpf.jointReduction > 0) why.push('the joint return')
-    if (r.irpf.pensionReduction > 0) why.push('your pension contributions')
+    if (r.irpf.smiDeduction > 0) why.push(t('the {amount} deduction for low earners', { amount: fmtEur(r.irpf.smiDeduction) }))
+    if (r.irpf.minimums.regional !== r.irpf.minimums.state) why.push(t("{region}'s higher personal minimums", { region: regionName(s.region) }))
+    if (r.irpf.jointReduction > 0) why.push(t('the joint return'))
+    if (r.irpf.pensionReduction > 0) why.push(t('your pension contributions'))
     const foral = r.irpf.regime === 'foral'
     const base = foral
       ? (r.refund > 0
-        ? `Your employer withholds with the ${regionName(s.region)} percentage table, so you get about ${fmtEur(r.refund)} back when you file the Renta.`
-        : `The ${regionName(s.region)} withholding table falls short of your tax for the year, so expect to pay about ${fmtEur(-r.refund)} with the Renta.`)
+        ? t('Your employer withholds with the {region} percentage table, so you get about {amount} back when you file the Renta.', { region: regionName(s.region), amount: fmtEur(r.refund) })
+        : t('The {region} withholding table falls short of your tax for the year, so expect to pay about {amount} with the Renta.', { region: regionName(s.region), amount: fmtEur(-r.refund) }))
       : r.refund > 0
-      ? `Your employer withholds with the national algorithm, so you get about ${fmtEur(r.refund)} back when you file the Renta in spring.`
-      : `The national withholding falls short of what ${regionName(s.region)} charges, so expect to pay about ${fmtEur(-r.refund)} with the Renta in spring.`
-    text = foral ? base : base + (why.length ? ` It comes from ${why.join(', ')} and your region's own tax scale.` : ` It comes from ${regionName(s.region)}'s own tax scale.`)
+      ? t('Your employer withholds with the national algorithm, so you get about {amount} back when you file the Renta in spring.', { amount: fmtEur(r.refund) })
+      : t('The national withholding falls short of what {region} charges, so expect to pay about {amount} with the Renta in spring.', { region: regionName(s.region), amount: fmtEur(-r.refund) })
+    text = foral ? base : base + (why.length
+      ? t(" It comes from {reasons} and your region's own tax scale.", { reasons: why.join(', ') })
+      : t(" It comes from {region}'s own tax scale.", { region: regionName(s.region) }))
   }
   $('r-renta-text').textContent = text
 }
@@ -309,105 +321,105 @@ function renderRenta(r, s) {
 function renderCost(r) {
   const total = r.employer.totalCost || 1
   const parts = [
-    [r.flex.total > 0 ? 'Your net pay and benefits' : 'Your net pay', r.annualTaxNet + r.flex.total, COLOR.net, 'net'],
+    [r.flex.total > 0 ? t('Your net pay and benefits') : t('Your net pay'), r.annualTaxNet + r.flex.total, COLOR.net, 'net'],
     ['IRPF', r.irpf.total, COLOR.irpf, 'irpf'],
-    ['Your Social Security', r.ss.total, COLOR.ss, 'ss'],
-    ['Employer Social Security', r.employer.total, COLOR.employer, 'employer'],
+    [t('Your Social Security'), r.ss.total, COLOR.ss, 'ss'],
+    [t('Employer Social Security'), r.employer.total, COLOR.employer, 'employer'],
   ]
   const pension = (lastState.pensionEmployee || 0) + (lastState.pensionEmployer || 0)
-  if (pension > 0) parts.splice(1, 0, ['Your pension plan', pension, COLOR.net, 'pension'])
+  if (pension > 0) parts.splice(1, 0, [t('Your pension plan'), pension, COLOR.net, 'pension'])
   if (r.irpf.total === 0) parts.splice(parts.findIndex(x => x[3] === 'irpf'), 1)
   $('r-bar').innerHTML = parts.map(([label, v, , k]) => {
     const pct = v / total * 100
-    return `<div class="ns-bar-${k}" style="width:${pct.toFixed(2)}%">${pct >= 9 ? `${Math.round(pct)}%` : ''}</div>`
+    return `<div class="ns-bar-${k}" style="width:${pct.toFixed(2)}%">${pct >= 9 ? I.pctOf(Math.round(pct), 0) : ''}</div>`
   }).join('')
-  $('r-bar').setAttribute('aria-label', parts.map(([l, v]) => `${l} ${Math.round(v / total * 100)}%`).join(', '))
+  $('r-bar').setAttribute('aria-label', parts.map(([l, v]) => `${l} ${I.pctOf(Math.round(v / total * 100), 0)}`).join(', '))
   $('r-legend').innerHTML = parts.map(([label, v, , k]) => `<li><span class="dot ns-dot-${k}"></span>${label} <b>${fmtEur(v)}</b></li>`).join('')
-    + `<li class="ns-legend-total">Total cost to your employer <b>${fmtEur(total)}</b></li>`
+    + `<li class="ns-legend-total">${t('Total cost to your employer')} <b>${fmtEur(total)}</b></li>`
 }
 
 function renderDetails(r, s) {
   const ss = r.ss
   $('r-d-ss').innerHTML = [
-    row('Monthly contribution base', fmtEur2(ss.monthlyBase), '', ss.capped ? 'Capped at the 5,101.20 € ceiling' : 'Yearly pay ÷ 12, extras included'),
-    row('Common contingencies 4.70%', fmtEur2(ss.lines.cc), 'ind'),
-    row(`Unemployment ${s.contract === 'temporary' ? '1.60' : '1.55'}%`, fmtEur2(ss.lines.unemployment), 'ind'),
-    row('Training 0.10%', fmtEur2(ss.lines.fp), 'ind'),
-    row('Intergenerational equity (MEI) 0.15%', fmtEur2(ss.lines.mei), 'ind'),
-    ss.lines.solidarity > 0 ? row('Solidarity fee', fmtEur2(ss.lines.solidarity), 'ind', 'On pay above the ceiling, your 16.6% share') : '',
-    row('Your Social Security a year', fmtEur2(ss.total), 'total b'),
+    row(t('Monthly contribution base'), fmtEur2(ss.monthlyBase), '', ss.capped ? t('Capped at the 5,101.20 € ceiling') : t('Yearly pay ÷ 12, extras included')),
+    row(t('Common contingencies {rate}', { rate: I.pctOf(4.7, 2) }), fmtEur2(ss.lines.cc), 'ind'),
+    row(t('Unemployment {rate}', { rate: I.pctOf(s.contract === 'temporary' ? 1.6 : 1.55, 2) }), fmtEur2(ss.lines.unemployment), 'ind'),
+    row(t('Training {rate}', { rate: I.pctOf(0.1, 2) }), fmtEur2(ss.lines.fp), 'ind'),
+    row(t('Intergenerational equity (MEI) {rate}', { rate: I.pctOf(0.15, 2) }), fmtEur2(ss.lines.mei), 'ind'),
+    ss.lines.solidarity > 0 ? row(t('Solidarity fee'), fmtEur2(ss.lines.solidarity), 'ind', t('On pay above the ceiling, your 16.6% share')) : '',
+    row(t('Your Social Security a year'), fmtEur2(ss.total), 'total b'),
   ].join('')
 
   const i = r.irpf
   if (i.regime === 'beckham') {
     $('r-d-irpf').innerHTML = [
-      row('Taxable pay', fmtEur2(i.rit), '', 'Salary and taxable benefits, no deductions'),
-      row('24% up to 600,000 €', fmtEur2(Math.min(i.rit, 600000) * 0.24), 'ind'),
-      i.rit > 600000 ? row('47% above 600,000 €', fmtEur2((i.rit - 600000) * 0.47), 'ind') : '',
-      row('IRPF for the year', fmtEur2(i.total), 'total b'),
+      row(t('Taxable pay'), fmtEur2(i.rit), '', t('Salary and taxable benefits, no deductions')),
+      row(t('24% up to 600,000 €'), fmtEur2(Math.min(i.rit, 600000) * 0.24), 'ind'),
+      i.rit > 600000 ? row(t('47% above 600,000 €'), fmtEur2((i.rit - 600000) * 0.47), 'ind') : '',
+      row(t('IRPF for the year'), fmtEur2(i.total), 'total b'),
     ].join('')
   } else if (i.regime === 'foral') {
     $('r-d-irpf').innerHTML = [
-      row('Taxable pay', fmtEur2(i.rit), '', 'Rendimiento íntegro del trabajo'),
-      row('− Social Security', fmtEur2(-ss.total), 'ind'),
-      ...i.lines.map(([label, v, note, cls]) => row(label, fmtEur2(v), cls || 'ind', note || '')),
-      row('IRPF for the year', fmtEur2(i.total), 'total b', `${regionName(s.region)} foral IRPF, no state share`),
-      row('Effective rate', fmtPct(i.total / (r.totalComp || 1), 2), 'ind'),
-      row('Marginal rate', fmtPct(i.marginalRate, 1), 'ind', 'On your next euro of taxable base'),
+      row(t('Taxable pay'), fmtEur2(i.rit), '', es('Rendimiento íntegro del trabajo')),
+      row(t('− Social Security'), fmtEur2(-ss.total), 'ind'),
+      ...i.lines.map(([label, v, note, cls]) => row(t(label), fmtEur2(v), cls || 'ind', note ? t(note) : '')),
+      row(t('IRPF for the year'), fmtEur2(i.total), 'total b', t('{region} foral IRPF, no state share', { region: regionName(s.region) })),
+      row(t('Effective rate'), fmtPct(i.total / (r.totalComp || 1), 2), 'ind'),
+      row(t('Marginal rate'), fmtPct(i.marginalRate, 1), 'ind', t('On your next euro of taxable base')),
     ].join('')
   } else {
     $('r-d-irpf').innerHTML = [
-      row('Taxable pay', fmtEur2(i.rit), '', r.flex.exempt > 0 ? `Excludes ${fmtEur(r.flex.exempt)} of tax-free benefits` : 'Rendimiento íntegro del trabajo'),
-      row('− Social Security', fmtEur2(-ss.total), 'ind'),
-      row('− Other deductible expenses', fmtEur2(-i.otherExpenses), 'ind', 'Art. 19.2.f: 2,000 €, more for mobility or disability'),
-      i.workReduction > 0 ? row('− Work income reduction', fmtEur2(-i.workReduction), 'ind', 'Art. 20: up to 7,302 € on net pay under 19,747.50 €') : '',
-      row('Taxable base', fmtEur2(i.baseImponible), 'b'),
-      i.pensionReduction > 0 ? row('− Pension contributions', fmtEur2(-i.pensionReduction), 'ind') : '',
-      i.jointReduction > 0 ? row('− Joint return', fmtEur2(-i.jointReduction), 'ind') : '',
-      row('Base for the tax scales', fmtEur2(i.baseLiquidable), 'b', 'Base liquidable general'),
-      row('State tax on the base', fmtEur2(i.stateGross), 'ind'),
-      row('− State tax on your personal minimum', fmtEur2(-i.stateMin), 'ind', `Minimum ${fmtEur2(i.minimums.state)} taxed at 0%`),
-      row(`${regionName(s.region)} tax on the base`, fmtEur2(i.regionalGross), 'ind'),
-      row(`− ${regionName(s.region)} tax on your minimum`, fmtEur2(-i.regionalMin), 'ind', `Minimum ${fmtEur2(i.minimums.regional)}`),
-      row('Gross tax', fmtEur2(i.cuotaIntegra), 'b', 'Cuota íntegra'),
-      i.ceutaDeduction > 0 ? row('− Ceuta and Melilla deduction 60%', fmtEur2(-i.ceutaDeduction), 'ind') : '',
-      i.smiDeduction > 0 ? row('− Deduction for low earners', fmtEur2(-i.smiDeduction), 'ind', 'Up to 590.89 € on pay under 20,048.45 €') : '',
-      row('IRPF for the year', fmtEur2(i.total), 'total b', `State ${fmtEur2(i.state)}, regional ${fmtEur2(i.regional)}`),
-      row('Effective rate', fmtPct(i.total / (r.totalComp || 1), 2), 'ind'),
-      row('Marginal rate', fmtPct(i.marginalRate, 1), 'ind', 'On your next euro of taxable base'),
+      row(t('Taxable pay'), fmtEur2(i.rit), '', r.flex.exempt > 0 ? t('Excludes {amount} of tax-free benefits', { amount: fmtEur(r.flex.exempt) }) : es('Rendimiento íntegro del trabajo')),
+      row(t('− Social Security'), fmtEur2(-ss.total), 'ind'),
+      row(t('− Other deductible expenses'), fmtEur2(-i.otherExpenses), 'ind', t('Art. 19.2.f: 2,000 €, more for mobility or disability')),
+      i.workReduction > 0 ? row(t('− Work income reduction'), fmtEur2(-i.workReduction), 'ind', t('Art. 20: up to 7,302 € on net pay under 19,747.50 €')) : '',
+      row(t('Taxable base'), fmtEur2(i.baseImponible), 'b'),
+      i.pensionReduction > 0 ? row(t('− Pension contributions'), fmtEur2(-i.pensionReduction), 'ind') : '',
+      i.jointReduction > 0 ? row(t('− Joint return'), fmtEur2(-i.jointReduction), 'ind') : '',
+      row(t('Base for the tax scales'), fmtEur2(i.baseLiquidable), 'b', es('Base liquidable general')),
+      row(t('State tax on the base'), fmtEur2(i.stateGross), 'ind'),
+      row(t('− State tax on your personal minimum'), fmtEur2(-i.stateMin), 'ind', t('Minimum {amount} taxed at 0%', { amount: fmtEur2(i.minimums.state) })),
+      row(t('{region} tax on the base', { region: regionName(s.region) }), fmtEur2(i.regionalGross), 'ind'),
+      row(t('− {region} tax on your minimum', { region: regionName(s.region) }), fmtEur2(-i.regionalMin), 'ind', t('Minimum {amount}', { amount: fmtEur2(i.minimums.regional) })),
+      row(t('Gross tax'), fmtEur2(i.cuotaIntegra), 'b', es('Cuota íntegra')),
+      i.ceutaDeduction > 0 ? row(t('− Ceuta and Melilla deduction 60%'), fmtEur2(-i.ceutaDeduction), 'ind') : '',
+      i.smiDeduction > 0 ? row(t('− Deduction for low earners'), fmtEur2(-i.smiDeduction), 'ind', t('Up to 590.89 € on pay under 20,048.45 €')) : '',
+      row(t('IRPF for the year'), fmtEur2(i.total), 'total b', t('State {state}, regional {regional}', { state: fmtEur2(i.state), regional: fmtEur2(i.regional) })),
+      row(t('Effective rate'), fmtPct(i.total / (r.totalComp || 1), 2), 'ind'),
+      row(t('Marginal rate'), fmtPct(i.marginalRate, 1), 'ind', t('On your next euro of taxable base')),
     ].join('')
   }
 
   const w = r.withholding
   $('r-d-wh').innerHTML = w.regime === 'beckham'
-    ? [row('Flat withholding', `${w.rate.toFixed(2)}%`, 'b'), row('Withheld a year', fmtEur2(w.annual), 'total b')].join('')
+    ? [row(t('Flat withholding'), I.pctOf(w.rate, 2), 'b'), row(t('Withheld a year'), fmtEur2(w.annual), 'total b')].join('')
     : w.regime === 'foral' ? [
-      row('Pay for withholding', fmtEur2(w.retrib)),
+      row(t('Pay for withholding'), fmtEur2(w.retrib)),
       w.exempt
-        ? row('No withholding', `Up to ${fmtEur(w.limit)}`, 'b', `${regionName(s.region)} 2026 table`)
-        : row('Withholding rate', `${w.rate.toFixed(2)}%`, 'b', `${regionName(s.region)} 2026 table, by pay and number of children`),
-      row('Withheld a year', fmtEur2(w.annual), 'total b'),
+        ? row(t('No withholding'), t('Up to {amount}', { amount: fmtEur(w.limit) }), 'b', t('{region} 2026 table', { region: regionName(s.region) }))
+        : row(t('Withholding rate'), I.pctOf(w.rate, 2), 'b', t('{region} 2026 table, by pay and number of children', { region: regionName(s.region) })),
+      row(t('Withheld a year'), fmtEur2(w.annual), 'total b'),
     ].join('')
     : [
-      row('Pay for withholding', fmtEur2(w.retrib)),
-      row('Base after deductions', fmtEur2(w.base), 'ind', w.largeFamilyReduction ? 'Includes −600 € for 3+ children' : 'Same deductions, national rules'),
-      row('Personal and family minimum', fmtEur2(w.minimum), 'ind', 'State amounts only'),
+      row(t('Pay for withholding'), fmtEur2(w.retrib)),
+      row(t('Base after deductions'), fmtEur2(w.base), 'ind', w.largeFamilyReduction ? t('Includes −600 € for 3+ children') : t('Same deductions, national rules')),
+      row(t('Personal and family minimum'), fmtEur2(w.minimum), 'ind', t('State amounts only')),
       w.exempt
-        ? row('No withholding', `Below ${fmtEur(w.limit)}`, 'b', 'Límite excluyente, art. 81 RIRPF')
-        : row('Withholding tax', fmtEur2(w.cuota), 'ind', 'Withholding scale 19–47%, capped at 43% of pay above the exempt limit'),
-      row('Withholding rate', `${w.rate.toFixed(2)}%`, 'b', 'Truncated to 2 decimals'),
-      row('Withheld a year', fmtEur2(w.annual), 'total b'),
+        ? row(t('No withholding'), t('Below {amount}', { amount: fmtEur(w.limit) }), 'b', 'Límite excluyente, art. 81 RIRPF')
+        : row(t('Withholding tax'), fmtEur2(w.cuota), 'ind', t('Withholding scale 19–47%, capped at 43% of pay above the exempt limit')),
+      row(t('Withholding rate'), I.pctOf(w.rate, 2), 'b', t('Truncated to 2 decimals')),
+      row(t('Withheld a year'), fmtEur2(w.annual), 'total b'),
     ].join('')
 
   const er = r.employer
   $('r-d-er').innerHTML = [
-    row('Your gross pay and benefits', fmtEur2(r.totalComp + (s.pensionEmployer || 0))),
-    row('Common contingencies 23.60%', fmtEur2(er.lines.cc), 'ind'),
-    row(`Unemployment ${s.contract === 'temporary' ? '6.70' : '5.50'}%`, fmtEur2(er.lines.unemployment), 'ind'),
-    row('FOGASA 0.20%, training 0.60%, MEI 0.75%', fmtEur2(er.lines.fogasa + er.lines.fp + er.lines.mei), 'ind'),
-    row(`Accident insurance ${s.atRate}%`, fmtEur2(er.lines.atep), 'ind'),
-    er.lines.solidarity > 0 ? row('Solidarity fee, employer share', fmtEur2(er.lines.solidarity), 'ind') : '',
-    row('Total cost to your employer', fmtEur2(er.totalCost), 'total b'),
+    row(t('Your gross pay and benefits'), fmtEur2(r.totalComp + (s.pensionEmployer || 0))),
+    row(t('Common contingencies {rate}', { rate: I.pctOf(23.6, 2) }), fmtEur2(er.lines.cc), 'ind'),
+    row(t('Unemployment {rate}', { rate: I.pctOf(s.contract === 'temporary' ? 6.7 : 5.5, 2) }), fmtEur2(er.lines.unemployment), 'ind'),
+    row(t('FOGASA 0.20%, training 0.60%, MEI 0.75%'), fmtEur2(er.lines.fogasa + er.lines.fp + er.lines.mei), 'ind'),
+    row(t('Accident insurance {rate}', { rate: rawPct(s.atRate) }), fmtEur2(er.lines.atep), 'ind'),
+    er.lines.solidarity > 0 ? row(t('Solidarity fee, employer share'), fmtEur2(er.lines.solidarity), 'ind') : '',
+    row(t('Total cost to your employer'), fmtEur2(er.totalCost), 'total b'),
   ].join('')
   renderBrackets(r)
 }
@@ -418,7 +430,7 @@ function renderBrackets(r) {
   const body = $('r-d-br')
   if (i.regime === 'beckham') {
     head.innerHTML = ''
-    body.innerHTML = '<tr><td>Flat 24% under the Beckham law, no brackets.</td></tr>'
+    body.innerHTML = `<tr><td>${t('Flat 24% under the Beckham law, no brackets.')}</td></tr>`
     return
   }
   const rangeLabel = b => `${fmtEur(b.from)} – ${b.to == null ? '…' : fmtEur(b.to)}`
@@ -427,49 +439,49 @@ function renderBrackets(r) {
     const edges = [...new Set([0, ...i.stateBrackets.map(b => b.to), ...i.regionalBrackets.map(b => b.to)]
       .filter(v => v != null && v < i.baseLiquidable))].sort((a, b) => a - b)
     const rateAt = (brackets, x) => (brackets.find(b => b.to == null || x < b.to) || brackets[brackets.length - 1]).rate
-    head.innerHTML = '<tr><th>Taxable base</th><th class="num">Combined rate</th><th class="num">Tax</th></tr>'
+    head.innerHTML = `<tr><th>${t('Taxable base')}</th><th class="num">${t('Combined rate')}</th><th class="num">${t('Tax')}</th></tr>`
     body.innerHTML = edges.map((from, k) => {
       const to = k + 1 < edges.length ? edges[k + 1] : i.baseLiquidable
       const rate = rateAt(i.stateBrackets, from) + rateAt(i.regionalBrackets, from)
-      return `<tr><td>${fmtEur(from)} – ${fmtEur(to)}</td><td class="num">${(rate * 100).toFixed(2)}%</td><td class="num">${fmtEur2((to - from) * rate)}</td></tr>`
+      return `<tr><td>${fmtEur(from)} – ${fmtEur(to)}</td><td class="num">${I.pct(rate, 2)}</td><td class="num">${fmtEur2((to - from) * rate)}</td></tr>`
     }).join('')
     return
   }
-  head.innerHTML = '<tr><th>Scale</th><th>Bracket</th><th class="num">Rate</th><th class="num">Tax</th></tr>'
-  const rows = (name, list) => list.map((b, k) => `<tr><td>${k === 0 ? name : ''}</td><td>${rangeLabel(b)}</td><td class="num">${(b.rate * 100).toFixed(2)}%</td><td class="num">${fmtEur2(b.taxAmount)}</td></tr>`).join('')
-  body.innerHTML = rows('State', i.stateBrackets) + rows(regionName(lastState.region), i.regionalBrackets)
+  head.innerHTML = `<tr><th>${t('Scale')}</th><th>${t('Bracket')}</th><th class="num">${t('Rate')}</th><th class="num">${t('Tax')}</th></tr>`
+  const rows = (name, list) => list.map((b, k) => `<tr><td>${k === 0 ? name : ''}</td><td>${rangeLabel(b)}</td><td class="num">${I.pct(b.rate, 2)}</td><td class="num">${fmtEur2(b.taxAmount)}</td></tr>`).join('')
+  body.innerHTML = rows(t('State'), i.stateBrackets) + rows(regionName(lastState.region), i.regionalBrackets)
 }
 
 function renderRegions(s, r) {
   const rows = compareRegions({ ...s, gross: r.gross })
   const mine = rows.find(x => x.region === s.region)
   $('r-regions-note').textContent = s.regime === 'beckham'
-    ? 'Under the Beckham law the region does not change your tax.'
-    : 'Net pay after the Renta settles your tax for the year, highest first. Per month is the yearly net ÷ 12.'
+    ? t('Under the Beckham law the region does not change your tax.')
+    : t('Net pay after the Renta settles your tax for the year, highest first. Per month is the yearly net ÷ 12.')
   $('r-regions').innerHTML = rows.map(x => {
     const diff = x.annualTaxNet - mine.annualTaxNet
     const cur = x.region === s.region
-    const d = cur ? 'Your region' : Math.abs(diff) < 1 ? 'Same' : `${diff > 0 ? '+' : '−'}${fmtEur(Math.abs(diff) / 12)}/mo`
+    const d = cur ? t('Your region') : Math.abs(diff) < 1 ? t('Same') : `${diff > 0 ? '+' : '−'}${fmtEur(Math.abs(diff) / 12)}${t('/mo')}`
     return `<tr class="${cur ? 'ns-cur' : ''}"><td>${esc(regionName(x.region))}</td><td class="num">${fmtEur(x.annualTaxNet / 12)}</td><td class="num">${fmtEur(x.annualTaxNet)}</td><td class="num ${diff > 0.5 && !cur ? 'ns-up' : diff < -0.5 && !cur ? 'ns-down' : ''}">${d}</td></tr>`
   }).join('')
 }
 
 // ── tax brackets by region tab ──────────────────────────────────────────────
-const pct = r => `${(r * 100).toFixed(2).replace(/\.?0+$/, '')}%`
+const pct = r => (I.es ? `${I.num(r * 100, 0, 2)}${I.NBSP}%` : `${(r * 100).toFixed(2).replace(/\.?0+$/, '')}%`)
 const rateAtBase = (slices, x) => slices.find(sl => sl.to == null || x < sl.to).rate
 
 function renderScale(region) {
   const { slices, foral, share } = combinedScale(region)
   const name = regionName(region)
   $('r-scale-note').textContent = foral
-    ? `${name} runs its own (foral) IRPF: one scale, no state half.`
+    ? t('{name} runs its own (foral) IRPF: one scale, no state half.', { name })
     : share < 1
-      ? `${name} applies the state scale to both halves, then a 60% deduction: you pay ${share * 100}% of the combined rate shown.`
-      : `The state scale is the same everywhere; the regional half is set by ${name}. Applied to the taxable base after your personal minimum.`
+      ? t('{name} applies the state scale to both halves, then a 60% deduction: you pay {share} of the combined rate shown.', { name, share: I.pctOf(share * 100, 0) })
+      : t('The state scale is the same everywhere; the regional half is set by {name}. Applied to the taxable base after your personal minimum.', { name })
   const top = slices.at(-1).rate
   $('r-scale').innerHTML = slices.map(sl => {
     const nb = n => fmtEur(n).replace(/ /g, ' ')
-    const range = sl.to == null ? `From ${nb(sl.from)}` : `${nb(sl.from)} – ${nb(sl.to)}`
+    const range = sl.to == null ? t('From {amount}', { amount: nb(sl.from) }) : `${nb(sl.from)} – ${nb(sl.to)}`
     const w = r => `${(r / Math.max(top, 0.5)) * 100}%`
     return `<tr><td>${range}</td><td class="num">${foral ? '—' : pct(sl.state)}</td><td class="num">${pct(sl.regional)}</td>`
       + `<td class="num b">${pct(sl.rate * share)}</td>`
@@ -524,18 +536,18 @@ function initScales() {
 function renderSummaries(s) {
   const you = []
   if (s.age !== 'u65') you.push(s.age === '75plus' ? '75+' : '65–74')
-  if (s.contract === 'temporary') you.push('temporary')
-  if (s.disability !== '0') you.push('disability')
-  if (s.joint !== 'none') you.push('joint return')
-  if (s.mobility) you.push('moved')
+  if (s.contract === 'temporary') you.push(t('temporary'))
+  if (s.disability !== '0') you.push(t('disability'))
+  if (s.joint !== 'none') you.push(t('joint return'))
+  if (s.mobility) you.push(t('moved'))
   const kids = s.kids + s.kidsU3
   const fam = []
-  if (kids) fam.push(`${kids} ${kids === 1 ? 'child' : 'children'}`)
+  if (kids) fam.push(`${kids} ${kids === 1 ? t('child') : t('children')}`)
   const asc = s.asc65 + s.asc75
-  if (asc) fam.push(`${asc} ${asc === 1 ? 'parent' : 'parents'}`)
+  if (asc) fam.push(`${asc} ${asc === 1 ? t('parent') : t('parents')}`)
   const flexTotal = s.health + s.meals + s.transport + s.nursery
   const more = []
-  if (s.pensionEmployee + s.pensionEmployer > 0) more.push('pension')
+  if (s.pensionEmployee + s.pensionEmployer > 0) more.push(t('pension'))
   $('s-you').textContent = you.join(', ')
   $('s-family').textContent = fam.join(', ')
   $('s-flex').textContent = flexTotal > 0 ? fmtEur(flexTotal) : ''
@@ -550,11 +562,11 @@ function render(state) {
   lastResult = r
   lastState = state
   const note = state.mode === 'net'
-    ? `You need ${fmtEur(gross)} gross a year${state.payments === '14' ? ` (${fmtEur(gross / 14)} × 14)` : ''}.`
-    : state.period === 'm' ? `${fmtEur(gross)} a year.` : `${fmtEur(gross / (state.payments === '14' ? 14 : 12))} gross a month${state.payments === '14' ? ', 14 payslips' : ''}.`
+    ? t('You need {amount} gross a year', { amount: fmtEur(gross) }) + `${state.payments === '14' ? ` (${fmtEur(gross / 14)} × 14)` : ''}.`
+    : state.period === 'm' ? t('{amount} a year.', { amount: fmtEur(gross) }) : t('{amount} gross a month', { amount: fmtEur(gross / (state.payments === '14' ? 14 : 12)) }) + `${state.payments === '14' ? t(', 14 payslips') : ''}.`
   $('f-amount-note').textContent = note
   if (r.flex.total > 0.3 * Math.max(gross, 1)) {
-    $('f-amount-note').textContent += ' Benefits in kind above 30% of pay are not allowed (art. 26 ET).'
+    $('f-amount-note').textContent += t(' Benefits in kind above 30% of pay are not allowed (art. 26 ET).')
   }
   applyVisibility(state)
   renderSummaries(state)
@@ -572,15 +584,15 @@ function syncShareLinks() {
   const wrap = document.querySelector('.calc-share .share-wrap')
   if (!wrap) return
   const pageUrl = window.location.href
-  const text = 'My Spanish net salary, payslip and Renta refund — Spanified calculator'
+  const text = t('My Spanish net salary, payslip and Renta refund — Spanified calculator')
   const u = encodeURIComponent(pageUrl)
-  const t = encodeURIComponent(text)
+  const tx = encodeURIComponent(text)
   const set = (sel, href) => { const a = wrap.querySelector(sel); if (a) a.href = href }
-  set('a[href*="x.com/intent"]', `https://x.com/intent/tweet?text=${t}&url=${u}`)
+  set('a[href*="x.com/intent"]', `https://x.com/intent/tweet?text=${tx}&url=${u}`)
   set('a[href*="facebook.com/sharer"]', `https://www.facebook.com/sharer/sharer.php?u=${u}`)
-  set('a[href*="t.me/share"]', `https://t.me/share/url?url=${u}&text=${t}`)
-  set('a[href*="wa.me"]', `https://wa.me/?text=${t}%20${u}`)
-  set('a[href*="threads"]', `https://www.threads.net/intent/post?text=${t}%20${u}`)
+  set('a[href*="t.me/share"]', `https://t.me/share/url?url=${u}&text=${tx}`)
+  set('a[href*="wa.me"]', `https://wa.me/?text=${tx}%20${u}`)
+  set('a[href*="threads"]', `https://www.threads.net/intent/post?text=${tx}%20${u}`)
   const copy = wrap.querySelector('.share-copy')
   if (copy) copy.dataset.url = pageUrl
 }
@@ -593,10 +605,10 @@ function wireShareCopy() {
     if (!btn) return
     const label = btn.querySelector('span')
     const done = () => {
-      if (label) label.textContent = 'Copied!'
+      if (label) label.textContent = t('Copied!')
       btn.classList.add('is-copied')
       setTimeout(() => {
-        if (label) label.textContent = 'Copy'
+        if (label) label.textContent = t('Copy')
         btn.classList.remove('is-copied')
       }, 1500)
     }

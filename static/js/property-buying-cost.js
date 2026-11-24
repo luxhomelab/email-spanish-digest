@@ -1,16 +1,21 @@
 import { calculateBuyingCost, MIN_PRICE } from './property-buying-cost-calc.js'
 import { sanitizeState, parseStateFromParams, DEFAULTS, QUERY_KEYS } from './property-buying-cost-form.js'
+import { createI18n, pageLang, loadDict } from './calc-i18n.js'
+
+const LANG = pageLang()
+const I = createI18n(LANG, await loadDict(LANG, () => import('./property-buying-cost-es.js')))
+const { t } = I
 
 const STORAGE_KEY = 'pbc-calculator-state'
 const $ = id => document.getElementById(id)
 
 const LABELS = {
-  itp: 'ITP (Transfer Tax)',
-  iva: 'VAT (IVA)',
-  igic: 'IGIC (Canary Islands VAT)',
-  ajd: 'Stamp Duty (AJD)',
-  notary: 'Notary fees (est.)',
-  registry: 'Land registry (est.)',
+  itp: t('ITP (Transfer Tax)'),
+  iva: t('VAT (IVA)'),
+  igic: t('IGIC (Canary Islands VAT)'),
+  ajd: t('Stamp Duty (AJD)'),
+  notary: t('Notary fees (est.)'),
+  registry: t('Land registry (est.)'),
 }
 
 const BAR_COLORS = {
@@ -21,12 +26,12 @@ const BAR_COLORS = {
 function fmtEur(n) {
   const num = Number(n)
   if (Number.isNaN(num)) return '—'
-  return `${num.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })} €`
+  return `${I.num(num, 0)}${I.es ? I.NBSP : ' '}€`
 }
 
 function fmtPct(n) {
   if (typeof n !== 'number' || Number.isNaN(n)) return '—'
-  return `${n.toFixed(1)}%`
+  return I.pctOf(n, 1)
 }
 
 function regionIds() {
@@ -115,17 +120,17 @@ function syncShareLinks() {
   const wrap = document.querySelector('.calc-share .share-wrap')
   if (!wrap) return
   const pageUrl = window.location.href
-  const text = 'Spain Property Buying Cost Calculator — ITP, IVA/IGIC & AJD by region — Spanified'
+  const text = t('Spain Property Buying Cost Calculator — ITP, IVA/IGIC & AJD by region — Spanified')
   const u = encodeURIComponent(pageUrl)
-  const t = encodeURIComponent(text)
+  const tx = encodeURIComponent(text)
   const set = (sel, href) => {
     const a = wrap.querySelector(sel)
     if (a) a.href = href
   }
-  set('a[href*="x.com/intent"]', `https://x.com/intent/tweet?text=${t}&url=${u}`)
+  set('a[href*="x.com/intent"]', `https://x.com/intent/tweet?text=${tx}&url=${u}`)
   set('a[href*="facebook.com/sharer"]', `https://www.facebook.com/sharer/sharer.php?u=${u}`)
-  set('a[href*="t.me/share"]', `https://t.me/share/url?url=${u}&text=${t}`)
-  set('a[href*="wa.me"]', `https://wa.me/?text=${t}%20${u}`)
+  set('a[href*="t.me/share"]', `https://t.me/share/url?url=${u}&text=${tx}`)
+  set('a[href*="wa.me"]', `https://wa.me/?text=${tx}%20${u}`)
   const copy = wrap.querySelector('.share-copy')
   if (copy) copy.dataset.url = pageUrl
 }
@@ -138,10 +143,10 @@ function wireShareCopy() {
     if (!btn) return
     const label = btn.querySelector('span')
     const done = () => {
-      if (label) label.textContent = 'Copied!'
+      if (label) label.textContent = t('Copied!')
       btn.classList.add('is-copied')
       setTimeout(() => {
-        if (label) label.textContent = 'Copy link'
+        if (label) label.textContent = t('Copy link')
         btn.classList.remove('is-copied')
       }, 1500)
     }
@@ -168,7 +173,7 @@ function showError(msg) {
 function render(state) {
   const price = Number(state.price)
   if (!Number.isFinite(price) || price < MIN_PRICE) {
-    showError(`Please enter a valid property price (minimum ${MIN_PRICE.toLocaleString('en-US')} €).`)
+    showError(t('Please enter a valid property price (minimum {amount}).', { amount: fmtEur(MIN_PRICE) }))
     return
   }
   let result
@@ -179,19 +184,19 @@ function render(state) {
     return
   }
   if (!result) {
-    showError('Unable to calculate. Please check your inputs.')
+    showError(t('Unable to calculate. Please check your inputs.'))
     return
   }
   $('r-error').hidden = true
   $('r-results').hidden = false
 
   $('r-total').textContent = fmtEur(result.totalCosts)
-  $('r-total-pct').textContent = `${fmtPct(result.totalPct)} of property price`
+  $('r-total-pct').textContent = t('{pct} of property price', { pct: fmtPct(result.totalPct) })
   $('r-tax').textContent = fmtEur(result.totalTax)
-  $('r-tax-pct').textContent = `${fmtPct((result.totalTax / result.totalCosts) * 100)} of total costs`
+  $('r-tax-pct').textContent = t('{pct} of total costs', { pct: fmtPct((result.totalTax / result.totalCosts) * 100) })
   const fees = result.notaryFee + result.registryFee
   $('r-fees').textContent = fmtEur(fees)
-  $('r-fees-pct').textContent = `${fmtPct((fees / result.totalCosts) * 100)} of total costs`
+  $('r-fees-pct').textContent = t('{pct} of total costs', { pct: fmtPct((fees / result.totalCosts) * 100) })
   $('r-taxtype').textContent = result.taxType
 
   const bar = $('r-bar')
@@ -215,7 +220,7 @@ function render(state) {
     if (item.rate != null) {
       const span = document.createElement('span')
       span.className = 'rate'
-      span.textContent = ` (${Number(item.rate).toFixed(2)}%)`
+      span.textContent = ` (${I.pctOf(Number(item.rate), 2)})`
       tdLabel.appendChild(span)
     }
     const tdAmount = document.createElement('td')

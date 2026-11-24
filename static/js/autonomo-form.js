@@ -1,5 +1,8 @@
 // Pure state validation for the Spanified autónomo calculator.
 // No DOM access here — unit-tested with node:test, reused by autonomo.js.
+import { createI18n } from './calc-i18n.js'
+
+const EN = createI18n('en')
 
 export const CURRENT_YEAR = 2026
 export const YEARS = [CURRENT_YEAR]
@@ -102,14 +105,19 @@ export function parseStateFromParams(search, regions = null) {
  * is no minimum to show.
  *
  * @param {{ personalMinimum:number, regionalPersonalMinimum?:number }} result
+ * @param {ReturnType<typeof createI18n>} [i18n] page language (calc-i18n.js); English by default
  * @returns {string}
  */
-export function personalMinimumText({ personalMinimum, regionalPersonalMinimum }) {
+export function personalMinimumText({ personalMinimum, regionalPersonalMinimum }, i18n = EN) {
   if (!(personalMinimum > 0)) return ''
-  const lo = Math.round(personalMinimum * 0.19).toLocaleString('en-US')
-  const hi = Math.round(personalMinimum * 0.37).toLocaleString('en-US')
+  const { t } = i18n
+  const fmt = n => i18n.num(n, 0, 3)
+  const sp = i18n.es ? i18n.NBSP : ' '
+  const lo = fmt(Math.round(personalMinimum * 0.19))
+  const hi = fmt(Math.round(personalMinimum * 0.37))
   const regional = regionalPersonalMinimum !== undefined && regionalPersonalMinimum !== personalMinimum
-    ? `; your region's own mínimo for the regional half: ${regionalPersonalMinimum.toLocaleString('en-US')} €`
+    ? t("; your region's own mínimo for the regional half: {amount}", { amount: `${fmt(regionalPersonalMinimum)}${sp}€` })
     : ''
-  return `Your personal minimum: ${personalMinimum.toLocaleString('en-US')} € (saving you roughly ${lo}–${hi} € in taxes depending on your bracket)${regional}.`
+  return t('Your personal minimum: {amount} (saving you roughly {lo}–{hi} in taxes depending on your bracket)',
+    { amount: `${fmt(personalMinimum)}${sp}€`, lo, hi: `${hi}${sp}€` }) + `${regional}.`
 }

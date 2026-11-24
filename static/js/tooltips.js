@@ -43,7 +43,11 @@
     el.setAttribute('tabindex', '0');
     el.setAttribute('role', 'button');
     el.setAttribute('aria-expanded', 'false');
-    if (!el.getAttribute('aria-label')) el.setAttribute('aria-label', 'Show hint');
+    if (!el.getAttribute('aria-label')) {
+      // Spanish calculator pages (/es/) render with <html lang="es">.
+      var es = (document.documentElement.lang || '').toLowerCase().indexOf('es') === 0;
+      el.setAttribute('aria-label', es ? 'Ver ayuda' : 'Show hint');
+    }
   }
 
   function findTip(node) {

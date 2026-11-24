@@ -3,6 +3,11 @@ import {
   sanitizeState, parseStateFromParams, encodeProviders,
   DEFAULTS, QUERY_KEYS, EMPTY_PROVIDER, MAX_PROVIDERS,
 } from './electricity-form.js'
+import { createI18n, pageLang, loadDict } from './calc-i18n.js'
+
+const LANG = pageLang()
+const I = createI18n(LANG, await loadDict(LANG, () => import('./electricity-es.js')))
+const { t } = I
 
 const STORAGE_KEY = 'elec-calculator-state'
 const $ = id => document.getElementById(id)
@@ -23,13 +28,19 @@ function escapeHtml(v) {
 function fmtEur(n) {
   const num = Number(n)
   if (Number.isNaN(num)) return '—'
-  return `${num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} €`
+  return `${I.num(num, 2)}${I.es ? I.NBSP : ' '}€`
 }
 
 function fmtNum(n, decimals = 5) {
   const num = Number(n)
   if (Number.isNaN(num)) return '0'
   return String(Number(num.toFixed(decimals)))
+}
+
+// fmtNum for display (labels): decimal comma on Spanish pages.
+function showNum(n, decimals = 5) {
+  const v = Number(fmtNum(n, decimals))
+  return I.es ? I.num(v, 0, decimals) : String(v)
 }
 
 // ── State persistence (URL → localStorage → defaults) ────────────────────────
@@ -66,22 +77,22 @@ function persist() {
 function energyFieldHtml(p, i) {
   if (p.energyType === 'flat') {
     return `<div class="field">
-     <label for="f-eflat-${i}">Energy price <span class="tip-unit"><span class="tip" title="Price per kWh on a flat tariff — the same price at any hour of the day.">?</span> <span class="sub">€ / kWh ·</span></span></label>
+     <label for="f-eflat-${i}">${t('Energy price')} <span class="tip-unit"><span class="tip" title="${t('Price per kWh on a flat tariff — the same price at any hour of the day.')}">?</span> <span class="sub">${t('€ / kWh ·')}</span></span></label>
      <input id="f-eflat-${i}" type="number" min="0" max="100" step="0.00001" data-field="energiaFlat" value="${fmtNum(p.energiaFlat)}">
     </div>`
   }
   return `<div class="field-row">
     <div class="field">
-     <label for="f-epunta-${i}">Punta <span class="tip-unit"><span class="tip" title="Peak period energy price (€/kWh). Typically weekdays 10:00–14:00 and 18:00–22:00.">?</span> <span class="sub">€ / kWh ·</span></span></label>
+     <label for="f-epunta-${i}">Punta <span class="tip-unit"><span class="tip" title="${t('Peak period energy price (€/kWh). Typically weekdays 10:00–14:00 and 18:00–22:00.')}">?</span> <span class="sub">${t('€ / kWh ·')}</span></span></label>
      <input id="f-epunta-${i}" type="number" min="0" max="100" step="0.00001" data-field="energiaPunta" value="${fmtNum(p.energiaPunta)}">
     </div>
     <div class="field">
-     <label for="f-ellano-${i}">Llano <span class="tip-unit"><span class="tip" title="Shoulder-period energy price (€/kWh). Usually early morning and midday hours.">?</span> <span class="sub">€ / kWh ·</span></span></label>
+     <label for="f-ellano-${i}">Llano <span class="tip-unit"><span class="tip" title="${t('Shoulder-period energy price (€/kWh). Usually early morning and midday hours.')}">?</span> <span class="sub">${t('€ / kWh ·')}</span></span></label>
      <input id="f-ellano-${i}" type="number" min="0" max="100" step="0.00001" data-field="energiaLlano" value="${fmtNum(p.energiaLlano)}">
     </div>
    </div>
    <div class="field">
-    <label for="f-evalle-${i}">Valle <span class="tip-unit"><span class="tip" title="Off-peak period energy price (€/kWh). Typically nights and weekends — the cheapest hours.">?</span> <span class="sub">€ / kWh ·</span></span></label>
+    <label for="f-evalle-${i}">Valle <span class="tip-unit"><span class="tip" title="${t('Off-peak period energy price (€/kWh). Typically nights and weekends — the cheapest hours.')}">?</span> <span class="sub">${t('€ / kWh ·')}</span></span></label>
     <input id="f-evalle-${i}" type="number" min="0" max="100" step="0.00001" data-field="energiaValle" value="${fmtNum(p.energiaValle)}">
    </div>`
 }
@@ -91,43 +102,43 @@ function providerCardHtml(p, i, canRemove) {
   const open = advancedOpen.has(p.id)
   return `<div class="prov" data-i="${i}" data-id="${escapeHtml(p.id)}">
    <div class="prov-head">
-    <p class="prov-title">Supplier ${i + 1} <span>${p.name ? escapeHtml(p.name) : '—'}</span></p>
+    <p class="prov-title">${t('Supplier {n}', { n: i + 1 })} <span>${p.name ? escapeHtml(p.name) : '—'}</span></p>
     <span class="prov-badge" data-role="badge" hidden></span>
-    ${canRemove ? '<button type="button" class="prov-remove" data-act="remove">✕ Remove</button>' : ''}
+    ${canRemove ? `<button type="button" class="prov-remove" data-act="remove">✕ ${t('Remove')}</button>` : ''}
    </div>
-   <p class="prov-total"><span data-role="total">—</span><span class="prov-per"> / month</span></p>
+   <p class="prov-total"><span data-role="total">—</span><span class="prov-per"> / ${t('month')}</span></p>
    <div class="field">
-    <label for="f-pname-${i}">Supplier name</label>
-    <input id="f-pname-${i}" type="text" maxlength="40" data-field="name" value="${escapeHtml(p.name)}" placeholder="Naturgy, Octopus…">
+    <label for="f-pname-${i}">${t('Supplier name')}</label>
+    <input id="f-pname-${i}" type="text" maxlength="40" data-field="name" value="${escapeHtml(p.name)}" placeholder="${t('Naturgy, Octopus…')}">
    </div>
    <div class="field-row">
     <div class="field">
-     <label for="f-pp1-${i}">Power P1 <span class="tip-unit"><span class="tip" title="Peak-period capacity charge: € per kW of contracted power per day (P1 = peak hours).">?</span> <span class="sub">€ / kW/day ·</span></span></label>
+     <label for="f-pp1-${i}">${t('Power P1')} <span class="tip-unit"><span class="tip" title="${t('Peak-period capacity charge: € per kW of contracted power per day (P1 = peak hours).')}">?</span> <span class="sub">${t('€ / kW/day ·')}</span></span></label>
      <input id="f-pp1-${i}" type="number" min="0" max="10" step="0.00001" data-field="potenciaP1" value="${fmtNum(p.potenciaP1)}">
     </div>
     <div class="field">
-     <label for="f-pp2-${i}">Power P2 <span class="tip-unit"><span class="tip" title="Off-peak capacity charge: € per kW of contracted power per day (P2 = valle hours). Two-period tariffs bill both.">?</span> <span class="sub">€ / kW/day ·</span></span></label>
+     <label for="f-pp2-${i}">${t('Power P2')} <span class="tip-unit"><span class="tip" title="${t('Off-peak capacity charge: € per kW of contracted power per day (P2 = valle hours). Two-period tariffs bill both.')}">?</span> <span class="sub">${t('€ / kW/day ·')}</span></span></label>
      <input id="f-pp2-${i}" type="number" min="0" max="10" step="0.00001" data-field="potenciaP2" value="${fmtNum(p.potenciaP2)}">
     </div>
    </div>
    <div class="field">
-    <span class="flabel">Tariff type <span class="tip" title="Flat = one €/kWh all day. Punta/llano/valle = time-of-use pricing with three daily periods. This also switches the consumption fields on the left.">?</span></span>
+    <span class="flabel">${t('Tariff type')} <span class="tip" title="${t('Flat = one €/kWh all day. Punta/llano/valle = time-of-use pricing with three daily periods. This also switches the consumption fields on the left.')}">?</span></span>
     <div class="seg" data-seg="energyType">
-     <button type="button" data-v="flat" class="${isFlat ? 'on' : ''}">Flat</button>
+     <button type="button" data-v="flat" class="${isFlat ? 'on' : ''}">${t('Flat')}</button>
      <button type="button" data-v="punta_llano_valle" class="${isFlat ? '' : 'on'}">Punta · Llano · Valle</button>
     </div>
    </div>
    ${energyFieldHtml(p, i)}
    <div class="prov-adv">
-    <button type="button" class="prov-adv-btn${open ? ' open' : ''}" data-act="advanced" aria-expanded="${open}"><span>Tariff extras (optional)</span><span class="chev" aria-hidden="true">›</span></button>
+    <button type="button" class="prov-adv-btn${open ? ' open' : ''}" data-act="advanced" aria-expanded="${open}"><span>${t('Tariff extras (optional)')}</span><span class="chev" aria-hidden="true">›</span></button>
     <div class="prov-adv-body" ${open ? '' : 'hidden'}>
      <div class="field-row">
       <div class="field">
-       <label for="f-bono-${i}">Bono Social <span class="tip-unit"><span class="tip" title="Social-bonus discount for vulnerable households, billed as € per day. Leave 0 if it does not apply to you.">?</span> <span class="sub">€ / day ·</span></span></label>
+       <label for="f-bono-${i}">Bono Social <span class="tip-unit"><span class="tip" title="${t('Social-bonus discount for vulnerable households, billed as € per day. Leave 0 if it does not apply to you.')}">?</span> <span class="sub">${t('€ / day ·')}</span></span></label>
        <input id="f-bono-${i}" type="number" min="0" max="10" step="0.001" data-field="bonoSocialDaily" value="${fmtNum(p.bonoSocialDaily)}">
       </div>
       <div class="field">
-       <label for="f-alq-${i}">Meter rental <span class="tip-unit"><span class="tip" title="Alquiler de contador: optional regulated meter-rental fee billed per day (usually €0.016–0.025/day).">?</span> <span class="sub">€ / day ·</span></span></label>
+       <label for="f-alq-${i}">${t('Meter rental')} <span class="tip-unit"><span class="tip" title="${t('Alquiler de contador: optional regulated meter-rental fee billed per day (usually €0.016–0.025/day).')}">?</span> <span class="sub">${t('€ / day ·')}</span></span></label>
        <input id="f-alq-${i}" type="number" min="0" max="10" step="0.001" data-field="alquilerContadorDaily" value="${fmtNum(p.alquilerContadorDaily)}">
       </div>
      </div>
@@ -156,11 +167,11 @@ function syncConsumptionMode() {
   $('wrap-flat').hidden = !flat
   $('wrap-plv').hidden = flat
   // getTotalKwh sums the three periods when kwhFlat is absent (PLV mode)
-  $('plv-total').textContent = String(getTotalKwh({
+  $('plv-total').textContent = showNum(getTotalKwh({
     kwhPunta: state.consumption.kwhPunta,
     kwhLlano: state.consumption.kwhLlano,
     kwhValle: state.consumption.kwhValle,
-  }))
+  }), 0)
 }
 
 function syncConsumptionInputs() {
@@ -213,33 +224,33 @@ function breakdownRows(p, b) {
   const c = state.consumption
   const rows = [
     {
-      label: `Power term P1 (${fmtNum(p.potenciaP1)} €/kW/day × ${fmtNum(c.days, 0)} days × ${fmtNum(c.contractedKw, 2)} kW)`,
+      label: t('Power term P1 ({rate} €/kW/day × {days} days × {kw} kW)', { rate: showNum(p.potenciaP1), days: showNum(c.days, 0), kw: showNum(c.contractedKw, 2) }),
       value: b.terminoPotenciaP1,
     },
     {
-      label: `Power term P2 (${fmtNum(p.potenciaP2)} €/kW/day × ${fmtNum(c.days, 0)} days × ${fmtNum(c.contractedKw, 2)} kW)`,
+      label: t('Power term P2 ({rate} €/kW/day × {days} days × {kw} kW)', { rate: showNum(p.potenciaP2), days: showNum(c.days, 0), kw: showNum(c.contractedKw, 2) }),
       value: b.terminoPotenciaP2,
     },
     p.energyType === 'flat'
       ? {
-          label: `Energy term (${fmtNum(c.kwhFlat, 0)} kWh × ${fmtNum(p.energiaFlat)} €/kWh)`,
+          label: t('Energy term ({kwh} kWh × {price} €/kWh)', { kwh: showNum(c.kwhFlat, 0), price: showNum(p.energiaFlat) }),
           value: b.terminoEnergia,
         }
       : {
-          label: 'Energy term (time-of-use)',
+          label: t('Energy term (time-of-use)'),
           value: b.terminoEnergia,
           detail: [
-            `Punta: ${fmtNum(c.kwhPunta, 0)} kWh × ${fmtNum(p.energiaPunta)}`,
-            `Llano: ${fmtNum(c.kwhLlano, 0)} kWh × ${fmtNum(p.energiaLlano)}`,
-            `Valle: ${fmtNum(c.kwhValle, 0)} kWh × ${fmtNum(p.energiaValle)}`,
+            `Punta: ${showNum(c.kwhPunta, 0)} kWh × ${showNum(p.energiaPunta)}`,
+            `Llano: ${showNum(c.kwhLlano, 0)} kWh × ${showNum(p.energiaLlano)}`,
+            `Valle: ${showNum(c.kwhValle, 0)} kWh × ${showNum(p.energiaValle)}`,
           ].join(' · '),
         },
     b.bonoSocial > 0 ? { label: 'Bono Social', value: b.bonoSocial } : null,
-    { label: 'Subtotal', value: b.subtotal, bold: true },
-    { label: `Electricity special tax (${(ELECTRICITY_TAX_RATE * 100).toFixed(6)}%)`, value: b.impuestoElectricidad, muted: true },
-    b.alquilerContador > 0 ? { label: 'Meter rental (alquiler de contador)', value: b.alquilerContador, muted: true } : null,
-    { label: 'Electricity total (before VAT)', value: b.totalElectricidad, bold: true },
-    { label: `VAT (IVA ${(VAT_RATE * 100).toFixed(0)}%)`, value: b.iva, muted: true },
+    { label: t('Subtotal'), value: b.subtotal, bold: true },
+    { label: t('Electricity special tax ({rate})', { rate: I.pctOf(ELECTRICITY_TAX_RATE * 100, 6) }), value: b.impuestoElectricidad, muted: true },
+    b.alquilerContador > 0 ? { label: t('Meter rental (alquiler de contador)'), value: b.alquilerContador, muted: true } : null,
+    { label: t('Electricity total (before VAT)'), value: b.totalElectricidad, bold: true },
+    { label: t('VAT (IVA {rate})', { rate: I.pctOf(VAT_RATE * 100, 0) }), value: b.iva, muted: true },
   ].filter(Boolean)
   return rows
 }
@@ -248,7 +259,7 @@ function breakdownHtml(p, b, i, isCheapest) {
   const rows = breakdownRows(p, b)
   return `<details class="card elec-bd${isCheapest ? ' is-best' : ''}"${isCheapest ? ' open' : ''}>
    <summary class="elec-bd-sum">
-    <span class="elec-bd-name">${isCheapest ? '★ ' : ''}${escapeHtml(p.name || `Supplier ${i + 1}`)} — bill breakdown</span>
+    <span class="elec-bd-name">${isCheapest ? '★ ' : ''}${escapeHtml(t('{name} — bill breakdown', { name: p.name || t('Supplier {n}', { n: i + 1 }) }))}</span>
     <b class="elec-bd-total">${fmtEur(b.total)}</b>
    </summary>
    <div class="sheet">
@@ -260,28 +271,28 @@ function breakdownHtml(p, b, i, isCheapest) {
        </tr>`).join('')}
      </tbody>
     </table>
-    <div class="total-strip"><span>Total to pay</span><b>${fmtEur(b.total)}</b></div>
+    <div class="total-strip"><span>${t('Total to pay')}</span><b>${fmtEur(b.total)}</b></div>
    </div>
   </details>`
 }
 
 function compareCardHtml(provider, breakdown, rank, isCheapest, savings, count) {
-  const typeLabel = provider.energyType === 'flat' ? 'Flat' : 'Punta · Llano · Valle'
+  const typeLabel = provider.energyType === 'flat' ? t('Flat') : 'Punta · Llano · Valle'
   return `<article class="elec-card${isCheapest ? ' win' : ''}">
    <div class="elec-card-top">
     <div>
-     <p class="elec-card-name">${isCheapest ? '★ ' : ''}${escapeHtml(provider.name || `Supplier ${rank}`)}</p>
+     <p class="elec-card-name">${isCheapest ? '★ ' : ''}${escapeHtml(provider.name || t('Supplier {n}', { n: rank }))}</p>
      <p class="elec-card-type">${escapeHtml(typeLabel)}</p>
     </div>
     <p class="elec-card-total">${fmtEur(breakdown.total)}</p>
    </div>
    <div class="elec-card-grid">
-    <div><span>Power</span><b>${fmtEur(breakdown.terminoPotencia)}</b></div>
-    <div><span>Energy</span><b>${fmtEur(breakdown.terminoEnergia)}</b></div>
-    <div><span>Subtotal</span><b>${fmtEur(breakdown.subtotal)}</b></div>
-    <div><span>Tax + VAT</span><b>${fmtEur(breakdown.impuestoElectricidad + breakdown.iva)}</b></div>
+    <div><span>${t('Power')}</span><b>${fmtEur(breakdown.terminoPotencia)}</b></div>
+    <div><span>${t('Energy')}</span><b>${fmtEur(breakdown.terminoEnergia)}</b></div>
+    <div><span>${t('Subtotal')}</span><b>${fmtEur(breakdown.subtotal)}</b></div>
+    <div><span>${t('Tax + VAT')}</span><b>${fmtEur(breakdown.impuestoElectricidad + breakdown.iva)}</b></div>
    </div>
-   <p class="elec-card-save">${count > 1 ? (isCheapest ? 'Cheapest option' : `+${fmtEur(savings)} vs cheapest`) : ''}</p>
+   <p class="elec-card-save">${count > 1 ? (isCheapest ? t('Cheapest option') : t('+{amount} vs cheapest', { amount: fmtEur(savings) })) : ''}</p>
   </article>`
 }
 
@@ -298,7 +309,7 @@ function syncProviderBadges(results) {
     if (!badge) return
     if (r.rank === 1 && results.length > 1) {
       badge.hidden = false
-      badge.textContent = '★ Cheapest'
+      badge.textContent = `★ ${t('Cheapest')}`
       card.classList.add('is-best')
     } else {
       badge.hidden = true
@@ -315,25 +326,25 @@ function renderResults() {
   const spread = dearest.breakdown.total - cheapest.breakdown.total
 
   $('r-total').textContent = fmtEur(cheapest.breakdown.total)
-  $('r-best').textContent = cheapest.provider.name || 'Supplier 1'
+  $('r-best').textContent = cheapest.provider.name || t('Supplier {n}', { n: 1 })
   const saving = $('r-saving')
   saving.hidden = results.length < 2
   if (results.length >= 2) {
-    saving.textContent = `— save ${fmtEur(spread)} vs the dearest of ${results.length}`
+    saving.textContent = t('— save {amount} vs the dearest of {n}', { amount: fmtEur(spread), n: results.length })
   }
 
   $('r-compare').innerHTML = results.map(({ provider, breakdown, rank }) => {
     const isCheapest = rank === 1
     const savings = dearest.breakdown.total - breakdown.total
     return `<tr class="${isCheapest ? 'win' : ''}">
-     <td>${isCheapest ? '★ ' : ''}${escapeHtml(provider.name || `Supplier ${rank}`)}</td>
+     <td>${isCheapest ? '★ ' : ''}${escapeHtml(provider.name || t('Supplier {n}', { n: rank }))}</td>
      <td class="num">${fmtEur(breakdown.terminoPotencia)}</td>
      <td class="num">${fmtEur(breakdown.terminoEnergia)}</td>
      <td class="num">${fmtEur(breakdown.subtotal)}</td>
      <td class="num tax">${fmtEur(breakdown.impuestoElectricidad)}</td>
      <td class="num tax">${fmtEur(breakdown.iva)}</td>
      <td class="num b">${fmtEur(breakdown.total)}</td>
-     <td class="num save">${results.length > 1 ? (isCheapest ? 'Cheapest' : `−${fmtEur(savings)}`) : '—'}</td>
+     <td class="num save">${results.length > 1 ? (isCheapest ? t('Cheapest') : `−${fmtEur(savings)}`) : '—'}</td>
     </tr>`
   }).join('')
 
@@ -371,17 +382,17 @@ function syncShareLinks() {
   const wrap = document.querySelector('.calc-share .share-wrap')
   if (!wrap) return
   const pageUrl = window.location.href
-  const text = 'Spain Electricity Bill Calculator — compare electricity tariffs in Spain — Spanified'
+  const text = t('Spain Electricity Bill Calculator — compare electricity tariffs in Spain — Spanified')
   const u = encodeURIComponent(pageUrl)
-  const t = encodeURIComponent(text)
+  const tx = encodeURIComponent(text)
   const set = (sel, href) => {
     const a = wrap.querySelector(sel)
     if (a) a.href = href
   }
-  set('a[href*="x.com/intent"]', `https://x.com/intent/tweet?text=${t}&url=${u}`)
+  set('a[href*="x.com/intent"]', `https://x.com/intent/tweet?text=${tx}&url=${u}`)
   set('a[href*="facebook.com/sharer"]', `https://www.facebook.com/sharer/sharer.php?u=${u}`)
-  set('a[href*="t.me/share"]', `https://t.me/share/url?url=${u}&text=${t}`)
-  set('a[href*="wa.me"]', `https://wa.me/?text=${t}%20${u}`)
+  set('a[href*="t.me/share"]', `https://t.me/share/url?url=${u}&text=${tx}`)
+  set('a[href*="wa.me"]', `https://wa.me/?text=${tx}%20${u}`)
   const copy = wrap.querySelector('.share-copy')
   if (copy) copy.dataset.url = pageUrl
 }
@@ -394,10 +405,10 @@ function wireShareCopy() {
     if (!btn) return
     const label = btn.querySelector('span')
     const done = () => {
-      if (label) label.textContent = 'Copied!'
+      if (label) label.textContent = t('Copied!')
       btn.classList.add('is-copied')
       setTimeout(() => {
-        if (label) label.textContent = 'Copy link'
+        if (label) label.textContent = t('Copy link')
         btn.classList.remove('is-copied')
       }, 1500)
     }
