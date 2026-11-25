@@ -11,7 +11,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ digest.meta_title }}">
 <meta name="twitter:description" content="{{ digest.meta_description }}">
-<meta name="twitter:image" content="{{ site_url }}/og/{{ digest.date }}.png">
+<meta name="twitter:image" content="{{ site_url }}/og/{{ 'es/' if page_lang == 'es' }}{{ digest.date }}.png">
 <meta name="robots" content="max-image-preview:large">
 {% if podcast %}<meta property="og:audio" content="{{ podcast.audio_url }}">
 <meta property="og:audio:type" content="audio/mpeg">{% endif %}
@@ -21,7 +21,7 @@
 
 {% block canonical %}<link rel="canonical" href="{{ site_url }}{{ digest.url }}">{% endblock %}
 {% block extra_head %}{% if alt_path %}{% include "partials/hreflang.html" %}{% endif %}{% endblock %}
-{% block og_image %}<meta property="og:image" content="{{ site_url }}/og/{{ digest.date }}.png">
+{% block og_image %}<meta property="og:image" content="{{ site_url }}/og/{{ 'es/' if page_lang == 'es' }}{{ digest.date }}.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">{% endblock %}
 {% block content %}
@@ -40,7 +40,7 @@
  "mainEntityOfPage": "{{ site_url }}{{ digest.url }}",{% if podcast %}
  "audio": {"@type": "AudioObject", "name": {{ podcast.title|tojson }}, "contentUrl": "{{ podcast.audio_url }}", "encodingFormat": "audio/mpeg", "duration": "{{ podcast.iso_duration }}"},{% endif %}
  "hasPart": [{% for item in digest.stories %}
-  {"@type": "NewsArticle", "headline": {{ item.title|tojson }}, "articleSection": {{ (t(item.category.capitalize()) if page_lang == "es" and item.category else (item.category or "news"))|tojson }}, "url": "{{ site_url + digest.url }}#news-{{ loop.index }}", "datePublished": "{{ pub_date(digest.date) }}", "image": "{{ site_url }}/og/{{ digest.date }}.png", "inLanguage": "{{ page_lang|default('en') }}", "publisher": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}{{ lang_url('/') }}"}, "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}{{ lang_url('/editor') }}"}{% if item.sources %}, "isBasedOn": {"@type": "CreativeWork", "name": {{ item.sources[0].name|tojson }}, "url": {{ item.sources[0].url|tojson }}}{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}
+  {"@type": "NewsArticle", "headline": {{ item.title|tojson }}, "articleSection": {{ (t(item.category.capitalize()) if page_lang == "es" and item.category else (item.category or "news"))|tojson }}, "url": "{{ site_url + digest.url }}#news-{{ loop.index }}", "datePublished": "{{ pub_date(digest.date) }}", "image": "{{ site_url }}/og/{{ 'es/' if page_lang == 'es' }}{{ digest.date }}.png", "inLanguage": "{{ page_lang|default('en') }}", "publisher": {"@type": "Organization", "name": "Spanified", "url": "{{ site_url }}{{ lang_url('/') }}"}, "author": {"@type": "Person", "name": "Dmytro Shvechikov", "url": "{{ site_url }}{{ lang_url('/editor') }}"}{% if item.sources %}, "isBasedOn": {"@type": "CreativeWork", "name": {{ item.sources[0].name|tojson }}, "url": {{ item.sources[0].url|tojson }}}{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}
  ]}
 </script>
  <div class="digest" data-pagefind-sort="date:{{ digest.date }}">

@@ -1920,6 +1920,22 @@ CALCULATOR_PAGES = [
 ]
 
 
+# OG card per calculator hub: (H1, tagline), both through tr().
+CALCULATOR_OG = {
+    "net-salary": ("Spain Net Salary Calculator", "IRPF, Social Security & Renta, by region"),
+    "autonomo-tax": ("Autónomo Tax Calculator", "Cuota, IRPF & take-home pay, by region"),
+    "property-buying-cost": ("Spain Property Buying Cost Calculator", "ITP, IVA/IGIC & AJD, by region"),
+    "rental-yield": ("Spain Rental Yield Calculator", "Net yield after costs & tax"),
+    "electricity-bill": ("Spain Electricity Bill Calculator", "PVPC vs fixed-price tariffs"),
+}
+
+
+def calculator_og_image(lang, slug, title, summary):
+    """Render the calculator page's OG card; returns its absolute URL."""
+    from og_images import save_calculator_card
+    return SITE_URL + save_calculator_card(OUT_DIR, lang, slug, title, summary)
+
+
 def render_calculators(env, langs=("en", "es")):
     """Render calculator pages (static shell, logic runs client-side), in
     English and, under /es/calculators/, in Spanish (same template, page_lang)."""
@@ -1934,7 +1950,10 @@ def render_calculators(env, langs=("en", "es")):
             ]
             page_url = SITE_URL + lang_path(lang, path)
             share = share_links(page_url, tr(lang, share_text))
+            h1, tagline = CALCULATOR_OG[slug]
+            og_image = calculator_og_image(lang, slug, f"{tr(lang, h1)} {CALC_YEAR}", tr(lang, tagline))
             output = env.get_template(template_name).render(
+                og_image=og_image,
                 page_lang=lang, page_url=page_url, alt_path=es_alt_path(path),
                 crumbs=crumbs, js_version=js_version(), share=share, calc_year=CALC_YEAR,
                 ns_links=net_salary_links(lang=lang), au_links=autonomo_links(lang=lang),
@@ -1981,6 +2000,15 @@ def register_es_calculator_paths():
 
 
 ES_STRINGS.update({
+    # OG cards (CALCULATOR_OG and the amount pages)
+    "IRPF, Social Security & Renta, by region": "IRPF, Seguridad Social y Renta, por comunidad",
+    "Cuota, IRPF & take-home pay, by region": "Cuota, IRPF y sueldo neto, por comunidad",
+    "ITP, IVA/IGIC & AJD, by region": "ITP, IVA/IGIC y AJD, por comunidad",
+    "Net yield after costs & tax": "Rentabilidad neta tras gastos e impuestos",
+    "PVPC vs fixed-price tariffs": "PVPC frente a tarifas de precio fijo",
+    "{net} net a year  •  {rate} effective rate": "{net} netos al año  •  tipo efectivo {rate}",
+    "Cuota {quota} a month  •  {rate} total burden": "Cuota de {quota} al mes  •  {rate} de carga total",
+    "{gross} gross  •  {net} net yield": "{gross} bruta  •  {net} neta",
     # Breadcrumbs and share texts (render_calculators)
     "Net Salary": "Sueldo neto",
     "Autónomo Tax": "Impuestos de autónomos",
@@ -2863,8 +2891,11 @@ def render_net_salary_pages(env, grid=None, langs=("en", "es")):
                     {"name": ctx["crumb_label"], "url": lang_path(lang, path), "current": True},
                 ]
                 page_url = SITE_URL + lang_path(lang, path)
+                og_summary = tr(lang, "{net} net a year  •  {rate} effective rate",
+                                net=ctx["net_year"], rate=ctx["effective"])
+                og_image = calculator_og_image(lang, ctx["slug"], ctx["h1"], og_summary)
                 output = template.render(
-                    p=ctx, crumbs=crumbs, js_version=js_version(), calc_year=calc_year,
+                    p=ctx, crumbs=crumbs, js_version=js_version(), calc_year=calc_year, og_image=og_image,
                     page_lang=lang, page_url=page_url, alt_path=es_alt_path(path),
                     share=share_links(page_url, ctx["title"]), ns_links=links, current_slug=ctx["slug"],
                     build_date=datetime.now().strftime("%Y-%m-%d"),
@@ -3077,8 +3108,10 @@ def render_rental_yield_pages(env, grid=None, langs=("en", "es")):
                 {"name": ctx["amount_label"], "url": lang_path(lang, path), "current": True},
             ]
             page_url = SITE_URL + lang_path(lang, path)
+            og_image = calculator_og_image(lang, ctx["slug"], ctx["h1"],
+                                           tr(lang, "{gross} gross  •  {net} net yield", gross=ctx["gross"], net=ctx["net_res"]))
             output = template.render(
-                p=ctx, crumbs=crumbs, js_version=js_version(), calc_year=calc_year,
+                p=ctx, crumbs=crumbs, js_version=js_version(), calc_year=calc_year, og_image=og_image,
                 page_lang=lang, page_url=page_url, alt_path=es_alt_path(path),
                 share=share_links(page_url, ctx["title"]), ry_links=links, current_slug=ctx["slug"],
                 build_date=datetime.now().strftime("%Y-%m-%d"),
@@ -3334,8 +3367,11 @@ def render_autonomo_pages(env, grid=None, langs=("en", "es")):
                     {"name": ctx["crumb_label"], "url": lang_path(lang, path), "current": True},
                 ]
                 page_url = SITE_URL + lang_path(lang, path)
+                og_summary = tr(lang, "Cuota {quota} a month  •  {rate} total burden",
+                                quota=ctx["quota"], rate=ctx["burden_rate"])
+                og_image = calculator_og_image(lang, ctx["slug"], ctx["h1"], og_summary)
                 output = template.render(
-                    p=ctx, crumbs=crumbs, js_version=js_version(), calc_year=calc_year,
+                    p=ctx, crumbs=crumbs, js_version=js_version(), calc_year=calc_year, og_image=og_image,
                     page_lang=lang, page_url=page_url, alt_path=es_alt_path(path),
                     share=share_links(page_url, ctx["title"]), au_links=links, current_slug=ctx["slug"],
                     build_date=datetime.now().strftime("%Y-%m-%d"),
@@ -4690,6 +4726,7 @@ def main():
     print("Rendering OG images...")
     from og_images import render_og_images
     render_og_images(digests, articles, out_dir)
+    render_og_images(es_digests, es_articles, out_dir, lang="es")
 
     print("Building archive listing...")
     render_archive(env, digests)

@@ -48,6 +48,35 @@ FONT_REGULAR = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 FONT_BOLD_CANDIDATES = (FONT_BOLD, r"C:\Windows\Fonts\DejaVuSans-Bold.ttf")
 FONT_REGULAR_CANDIDATES = (FONT_REGULAR, r"C:\Windows\Fonts\DejaVuSans.ttf")
 
+# Card copy per edition. Spanish cards are written to og/es/ (see
+# render_og_images) so /es/ pages never share the English image.
+LABELS = {
+    "en": {
+        "brand": "SPAIN DAILY",
+        "guide": "GUIDE",
+        "calculator": "CALCULATOR",
+        "story": "story",
+        "stories": "stories",
+        "read": "5-minute read",
+        "article_read": "{n}-minute read",
+        "default_date": "Every morning",
+        "default_headline": "Spain's top news, in English.",
+        "default_stories": ["Curated and summarized", "Free forever, 5-minute read"],
+    },
+    "es": {
+        "brand": "ESPAÑA AL DÍA",
+        "guide": "GUÍA",
+        "calculator": "CALCULADORA",
+        "story": "noticia",
+        "stories": "noticias",
+        "read": "5 minutos de lectura",
+        "article_read": "{n} min de lectura",
+        "default_date": "Cada mañana",
+        "default_headline": "Las noticias de España, resumidas.",
+        "default_stories": ["Seleccionadas y resumidas", "Gratis, 5 minutos de lectura"],
+    },
+}
+
 _font_cache = {}
 
 
@@ -99,7 +128,9 @@ SAFE_LEFT, SAFE_RIGHT = 285, 915
 def _wrap_to_width(draw, text, font, max_width):
     """Greedy word-wrap returning lines that each fit max_width."""
     lines, current = [], ""
-    for word in text.split():
+    # Split on plain spaces only: str.split() would also break at the
+    # no-break space in Spanish amounts ("100.000\xa0€").
+    for word in filter(None, text.split(" ")):
         trial = (current + " " + word).strip()
         if draw.textlength(trial, font=font) <= max_width:
             current = trial
@@ -112,7 +143,7 @@ def _wrap_to_width(draw, text, font, max_width):
     return lines
 
 
-def render_digest_card(date_display, headline, stories, topics=None):
+def render_digest_card(date_display, headline, stories, topics=None, lang="en"):
     """Render a 1200x630 OG card built for Reddit-cropped link previews.
 
     Same visual language as render_subscribe_card(): kicker, compact date
@@ -125,6 +156,7 @@ def render_digest_card(date_display, headline, stories, topics=None):
     date_display = _strip_emoji(date_display)
     stories = [_strip_emoji(t) for t in (stories or [])]
     topics = [t for t in (_strip_emoji(t) for t in (topics or [])) if t]
+    labels = LABELS[lang]
     img = Image.new("RGB", (W, H), CREAM)
     draw = ImageDraw.Draw(img)
     cx = W // 2
@@ -139,7 +171,7 @@ def render_digest_card(date_display, headline, stories, topics=None):
     draw.line([SAFE_RIGHT, 26, SAFE_RIGHT, H - 26], fill=GOLD, width=3)
 
     # Kicker, centred.
-    kicker = "SPAIN DAILY"
+    kicker = labels["brand"]
     kf = _font(True, 30)
     tracking = 6
     kw = sum(draw.textlength(ch, font=kf) for ch in kicker) + tracking * (len(kicker) - 1)
@@ -164,7 +196,7 @@ def render_digest_card(date_display, headline, stories, topics=None):
         font = _font(True, 40)
         lines = _wrap_to_width(draw, headline, font, max_w)
         if len(lines) > 3:
-            words, idx, cut = headline.split(), 0, []
+            words, idx, cut = [w for w in headline.split(" ") if w], 0, []
             for n in range(3):
                 cur = ""
                 while idx < len(words):
@@ -185,13 +217,13 @@ def render_digest_card(date_display, headline, stories, topics=None):
     # Summary: one centred line — count plus topics, or reading time.
     # (Replaces the 26pt 3-bullet list, unreadable in feed crops.)
     count = len(stories)
-    noun = "story" if count == 1 else "stories"
+    noun = labels["story"] if count == 1 else labels["stories"]
     if topics:
         summary = f"{count} {noun}  •  " + ", ".join(t.lower() for t in topics[:3])
         if draw.textlength(summary, font=_font(False, 32)) > max_w:
             summary = f"{count} {noun}  •  " + ", ".join(t.lower() for t in topics[:2])
     else:
-        summary = f"{count} {noun}  •  5-minute read"
+        summary = f"{count} {noun}  •  {labels['read']}"
     sum_font = _font(False, 32)
     if draw.textlength(summary, font=sum_font) > max_w:
         sum_font = _font(False, 28)
@@ -229,8 +261,21 @@ def render_digest_card(date_display, headline, stories, topics=None):
     return img
 
 
-def render_article_card(title, reading_time, date_display):
-    """Render a 1200x630 OG card for a guide article, in the same visual
+def render_article_card(title, reading_time, date_display, lang="en"):
+    """OG card for a guide article: GUIDE kicker, title, "X-minute read • date"."""
+    labels = LABELS[lang]
+    summary = labels["article_read"].format(n=reading_time) + f"  •  {_strip_emoji(date_display)}"
+    return _render_titled_card(labels["guide"], title, summary)
+
+
+def render_calculator_card(title, summary, lang="en"):
+    """OG card for a calculator page: CALCULATOR kicker, page title, key result
+    or tagline as the summary line (built in build.py, already localized)."""
+    return _render_titled_card(LABELS[lang]["calculator"], title, summary)
+
+
+def _render_titled_card(kicker, title, summary):
+    """Render a 1200x630 OG card (guide articles, calculators), in the same visual
     language as render_digest_card(): crop-safe centred column, red/gold
     edge decor, letterspaced kicker, auto-fit headline, red/gold divider,
     one summary line and the domain footer.
@@ -242,7 +287,7 @@ def render_article_card(title, reading_time, date_display):
     headline, which buys the headline its extra line.
     """
     title = _strip_emoji(title)
-    date_display = _strip_emoji(date_display)
+    summary = _strip_emoji(summary)
     img = Image.new("RGB", (W, H), CREAM)
     draw = ImageDraw.Draw(img)
     cx = W // 2
@@ -257,7 +302,6 @@ def render_article_card(title, reading_time, date_display):
     draw.line([SAFE_RIGHT, 26, SAFE_RIGHT, H - 26], fill=GOLD, width=3)
 
     # Kicker, centred.
-    kicker = "GUIDE"
     kf = _font(True, 30)
     tracking = 6
     kw = sum(draw.textlength(ch, font=kf) for ch in kicker) + tracking * (len(kicker) - 1)
@@ -276,7 +320,7 @@ def render_article_card(title, reading_time, date_display):
         font = _font(True, 28)
         lines = _wrap_to_width(draw, title, font, max_w)
         if len(lines) > 3:
-            words, idx, cut = title.split(), 0, []
+            words, idx, cut = [w for w in title.split(" ") if w], 0, []
             for n in range(3):
                 cur = ""
                 while idx < len(words):
@@ -294,11 +338,12 @@ def render_article_card(title, reading_time, date_display):
     font, lines = best
     line_h = int(font.size * 1.18)
 
-    # Summary: one centred line — reading time + date.
-    summary = f"{reading_time}-minute read  •  {date_display}"
-    sum_font = _font(False, 32)
-    if draw.textlength(summary, font=sum_font) > max_w:
-        sum_font = _font(False, 28)
+    # Summary: one centred line (reading time + date, or a calculator result).
+    # Spanish dates ("23 de noviembre de 2026") need the 24pt step.
+    for size in (32, 28, 24):
+        sum_font = _font(False, size)
+        if draw.textlength(summary, font=sum_font) <= max_w:
+            break
     while draw.textlength(summary, font=sum_font) > max_w and len(summary) > 24:
         summary = summary[:-2] + "…"
 
@@ -407,19 +452,28 @@ def render_subscribe_card():
     return img
 
 
-def render_default_card():
+def render_default_card(lang="en"):
     """Fallback OG card for homepage / static pages."""
-    return render_digest_card(
-        "Every morning",
-        "Spain's top news, in English.",
-        ["Curated and summarized", "Free forever, 5-minute read"],
-    )
+    labels = LABELS[lang]
+    return render_digest_card(labels["default_date"], labels["default_headline"],
+                              labels["default_stories"], lang=lang)
 
 
-def render_og_images(digests, articles, out_dir):
-    """Render per-digest + per-article cards + default card into <out_dir>/og/.
-    Returns total count."""
-    og_dir = os.path.join(out_dir, "og")
+def save_calculator_card(out_dir, lang, slug, title, summary):
+    """Write og/[es/]calc-<slug>.png and return its site path."""
+    if not SLUG_RE.match(slug):
+        raise ValueError(f"bad calculator slug for og card: {slug!r}")
+    rel = "/".join(["og"] + (["es"] if lang == "es" else []) + [f"calc-{slug}.png"])
+    path = os.path.join(out_dir, *rel.split("/"))
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    render_calculator_card(title, summary, lang).save(path)
+    return "/" + rel
+
+
+def render_og_images(digests, articles, out_dir, lang="en"):
+    """Render per-digest + per-article cards + default card into <out_dir>/og/
+    (lang="es": <out_dir>/og/es/, same file names). Returns total count."""
+    og_dir = os.path.join(out_dir, "og", *(["es"] if lang == "es" else []))
     os.makedirs(og_dir, exist_ok=True)
     count = 0
     for digest in digests:
@@ -430,7 +484,7 @@ def render_og_images(digests, articles, out_dir):
             continue
         stories = [s.get("title", "") for s in digest.get("stories", [])]
         img = render_digest_card(digest["date_display"], digest["headline"], stories,
-                                 topics=digest.get("tag_categories"))
+                                 topics=digest.get("tag_categories"), lang=lang)
         img.save(os.path.join(og_dir, f"{digest['date']}.png"))
         count += 1
     for article in articles or []:
@@ -440,10 +494,14 @@ def render_og_images(digests, articles, out_dir):
             print(f"  WARN: skipping article og card, bad slug: {article.get('slug')!r}")
             continue
         img = render_article_card(article["title"], article["reading_time"],
-                                  article["date_display"])
+                                  article["date_display"], lang=lang)
         img.save(os.path.join(og_dir, f"article-{article['slug']}.png"))
         count += 1
-    render_default_card().save(os.path.join(og_dir, "og-default.png"))
+    render_default_card(lang).save(os.path.join(og_dir, "og-default.png"))
+    if lang == "es":
+        # /es/subscribe uses static/img/social/subscribe-es.jpg instead.
+        print(f"  wrote {count} Spanish og cards + og-default.png into og/es/")
+        return count
     render_subscribe_card().save(os.path.join(og_dir, "og-subscribe.png"))
     print(f"  wrote {count} og cards + og-default.png + og-subscribe.png")
     return count
