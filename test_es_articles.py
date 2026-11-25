@@ -64,8 +64,9 @@ def test_es_article_page(site):
     assert f'<link rel="canonical" href="{SITE}/es/articles/how-spain-votes">' in html
     assert _pair(html, "/articles/how-spain-votes")
     assert '<meta property="og:locale" content="es_ES">' in html
-    # The OG card is shared with the English page.
-    assert f'{SITE}/og/article-how-spain-votes.png' in html
+    # Spanish OG card (og/es/), not the English page's card.
+    assert f'{SITE}/og/es/article-how-spain-votes.png' in html
+    assert f'{SITE}/og/article-how-spain-votes.png' not in html
     toc = site("es/articles/spain-property-guide.html")
     assert "En esta guía" in toc and "In this guide" not in toc
     assert '<a href="#faq">Preguntas frecuentes</a>' in toc

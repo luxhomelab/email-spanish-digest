@@ -4688,6 +4688,7 @@ def main():
     print("Rendering OG images...")
     from og_images import render_og_images
     render_og_images(digests, articles, out_dir)
+    render_og_images(es_digests, es_articles, out_dir, lang="es")
 
     print("Building archive listing...")
     render_archive(env, digests)
