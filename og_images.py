@@ -54,6 +54,7 @@ LABELS = {
     "en": {
         "brand": "SPAIN DAILY",
         "guide": "GUIDE",
+        "calculator": "CALCULATOR",
         "story": "story",
         "stories": "stories",
         "read": "5-minute read",
@@ -65,6 +66,7 @@ LABELS = {
     "es": {
         "brand": "ESPAÑA AL DÍA",
         "guide": "GUÍA",
+        "calculator": "CALCULADORA",
         "story": "noticia",
         "stories": "noticias",
         "read": "5 minutos de lectura",
@@ -126,7 +128,9 @@ SAFE_LEFT, SAFE_RIGHT = 285, 915
 def _wrap_to_width(draw, text, font, max_width):
     """Greedy word-wrap returning lines that each fit max_width."""
     lines, current = [], ""
-    for word in text.split():
+    # Split on plain spaces only: str.split() would also break at the
+    # no-break space in Spanish amounts ("100.000\xa0€").
+    for word in filter(None, text.split(" ")):
         trial = (current + " " + word).strip()
         if draw.textlength(trial, font=font) <= max_width:
             current = trial
@@ -192,7 +196,7 @@ def render_digest_card(date_display, headline, stories, topics=None, lang="en"):
         font = _font(True, 40)
         lines = _wrap_to_width(draw, headline, font, max_w)
         if len(lines) > 3:
-            words, idx, cut = headline.split(), 0, []
+            words, idx, cut = [w for w in headline.split(" ") if w], 0, []
             for n in range(3):
                 cur = ""
                 while idx < len(words):
@@ -258,7 +262,20 @@ def render_digest_card(date_display, headline, stories, topics=None, lang="en"):
 
 
 def render_article_card(title, reading_time, date_display, lang="en"):
-    """Render a 1200x630 OG card for a guide article, in the same visual
+    """OG card for a guide article: GUIDE kicker, title, "X-minute read • date"."""
+    labels = LABELS[lang]
+    summary = labels["article_read"].format(n=reading_time) + f"  •  {_strip_emoji(date_display)}"
+    return _render_titled_card(labels["guide"], title, summary)
+
+
+def render_calculator_card(title, summary, lang="en"):
+    """OG card for a calculator page: CALCULATOR kicker, page title, key result
+    or tagline as the summary line (built in build.py, already localized)."""
+    return _render_titled_card(LABELS[lang]["calculator"], title, summary)
+
+
+def _render_titled_card(kicker, title, summary):
+    """Render a 1200x630 OG card (guide articles, calculators), in the same visual
     language as render_digest_card(): crop-safe centred column, red/gold
     edge decor, letterspaced kicker, auto-fit headline, red/gold divider,
     one summary line and the domain footer.
@@ -270,8 +287,7 @@ def render_article_card(title, reading_time, date_display, lang="en"):
     headline, which buys the headline its extra line.
     """
     title = _strip_emoji(title)
-    date_display = _strip_emoji(date_display)
-    labels = LABELS[lang]
+    summary = _strip_emoji(summary)
     img = Image.new("RGB", (W, H), CREAM)
     draw = ImageDraw.Draw(img)
     cx = W // 2
@@ -286,7 +302,6 @@ def render_article_card(title, reading_time, date_display, lang="en"):
     draw.line([SAFE_RIGHT, 26, SAFE_RIGHT, H - 26], fill=GOLD, width=3)
 
     # Kicker, centred.
-    kicker = labels["guide"]
     kf = _font(True, 30)
     tracking = 6
     kw = sum(draw.textlength(ch, font=kf) for ch in kicker) + tracking * (len(kicker) - 1)
@@ -305,7 +320,7 @@ def render_article_card(title, reading_time, date_display, lang="en"):
         font = _font(True, 28)
         lines = _wrap_to_width(draw, title, font, max_w)
         if len(lines) > 3:
-            words, idx, cut = title.split(), 0, []
+            words, idx, cut = [w for w in title.split(" ") if w], 0, []
             for n in range(3):
                 cur = ""
                 while idx < len(words):
@@ -323,8 +338,7 @@ def render_article_card(title, reading_time, date_display, lang="en"):
     font, lines = best
     line_h = int(font.size * 1.18)
 
-    # Summary: one centred line — reading time + date.
-    summary = labels["article_read"].format(n=reading_time) + f"  •  {date_display}"
+    # Summary: one centred line (reading time + date, or a calculator result).
     # Spanish dates ("23 de noviembre de 2026") need the 24pt step.
     for size in (32, 28, 24):
         sum_font = _font(False, size)
@@ -443,6 +457,17 @@ def render_default_card(lang="en"):
     labels = LABELS[lang]
     return render_digest_card(labels["default_date"], labels["default_headline"],
                               labels["default_stories"], lang=lang)
+
+
+def save_calculator_card(out_dir, lang, slug, title, summary):
+    """Write og/[es/]calc-<slug>.png and return its site path."""
+    if not SLUG_RE.match(slug):
+        raise ValueError(f"bad calculator slug for og card: {slug!r}")
+    rel = "/".join(["og"] + (["es"] if lang == "es" else []) + [f"calc-{slug}.png"])
+    path = os.path.join(out_dir, *rel.split("/"))
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    render_calculator_card(title, summary, lang).save(path)
+    return "/" + rel
 
 
 def render_og_images(digests, articles, out_dir, lang="en"):

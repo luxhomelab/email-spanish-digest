@@ -28,7 +28,7 @@
  <link rel="icon" type="image/png" href="/favicon.png?v={{ asset_version }}">
  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v={{ asset_version }}">
  <link rel="alternate" type="application/rss+xml" title="{{ 'Podcast Spain Daily (en inglés)' if page_lang == 'es' else 'Spain Daily podcast' }}" href="/podcast.xml">
- {% block og_image %}<meta property="og:image" content="https://spanified.com/og/{{ 'es/' if page_lang == 'es' }}og-default.png">
+ {% block og_image %}<meta property="og:image" content="{{ og_image or 'https://spanified.com/og/' ~ ('es/' if page_lang == 'es' else '') ~ 'og-default.png' }}">
  <meta property="og:image:width" content="1200">
  <meta property="og:image:height" content="630">{% endblock %}
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
