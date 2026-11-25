@@ -2348,8 +2348,8 @@ ES_STRINGS.update({
     "Navarre and the Basque Country use a separate foral tax system and aren't supported yet.":
         "Navarra y el País Vasco tienen un sistema fiscal foral propio y todavía no están incluidos.",
     "Autónomo type": "Tipo de autónomo",
-    "Affects the SS bracket deduction: Individual = 7% of revenue (no cap). Director of your own SL = 3% (no cap). IRPF always uses a flat 5% deduction for everyone, on net profit after Social Security (max €2,000).":
-        "Cambia la deducción para el tramo de la Seguridad Social: persona física = 7 % de los ingresos (sin límite); administrador de tu propia SL = 3 % (sin límite). En el IRPF todos aplican un 5 % fijo sobre el rendimiento neto tras la Seguridad Social (máximo 2.000 €).",
+    "Affects the SS bracket deduction: Individual = 7% of revenue (no cap). Director of your own SL = 3% (no cap). IRPF always uses a flat 10% deduction for everyone, on net profit after Social Security (max €3,000 in 2026).":
+        "Cambia la deducción para el tramo de la Seguridad Social: persona física = 7 % de los ingresos (sin límite); administrador de tu propia SL = 3 % (sin límite). En el IRPF todos aplican un 10 % fijo sobre el rendimiento neto tras la Seguridad Social (máximo 3.000 € en 2026).",
     "Individual freelancer": "Autónomo persona física",
     "Company director / shareholder": "Administrador o socio de una sociedad",
     "Time as autónomo": "Antigüedad como autónomo",
@@ -2396,7 +2396,7 @@ ES_STRINGS.update({
     "Net": "Neto",
     "Gross revenues": "Rendimiento bruto",
     "Social Security (annual)": "Seguridad Social (anual)",
-    "General expenses deduction (IRPF · 5% after SS)": "Gastos de difícil justificación (IRPF · 5 % tras la SS)",
+    "General expenses deduction (IRPF · 10% after SS)": "Gastos de difícil justificación (IRPF · 10 % tras la SS)",
     "SS bracket basis (expenses deduction)": "Base para el tramo de la SS (deducción de gastos)",
     "Reduced net income": "Rendimiento neto reducido",
     "IRPF — state component": "IRPF, parte estatal",

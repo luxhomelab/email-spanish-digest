@@ -12,8 +12,8 @@
 {% set faqs = [
  ("¿Cómo se calcula la cuota de autónomos?", "Desde 2023 los autónomos cotizan a la Seguridad Social en 15 tramos según sus rendimientos netos reales. Tu cuota mensual depende del tramo en el que caiga tu rendimiento neto anual previsto. Las cuotas oficiales de 2026 las fija la Orden PJC/297/2026."),
  ("¿Qué es la tarifa plana?", "La tarifa plana es una cuota reducida de 80 € al mes para los autónomos que se dan de alta, durante sus primeros 12 meses, más el MEI (unos 8,65 €), así que en 2026 se cobran unos 88,65 € al mes. Aligera el arranque de los nuevos autónomos. Pasado el primer año pagas la cuota normal según tu tramo de rendimientos."),
- ("¿Qué deducciones tienen los autónomos?", "Para la Seguridad Social, los autónomos personas físicas restan un 7 % de sus rendimientos netos (sin límite) al calcular su tramo; los administradores de sociedades aplican un 3 %. Para el IRPF, todos los autónomos restan primero sus cuotas anuales a la Seguridad Social y después un 5 % fijo por gastos de difícil justificación, calculado sobre ese rendimiento neto tras la Seguridad Social (con un máximo de 2.000 € al año)."),
- ("¿Cómo se calcula el IRPF de un autónomo?", "El IRPF es el impuesto sobre la renta. En los autónomos, la base imponible es el rendimiento neto menos las cuotas a la Seguridad Social, menos un 5 % de gastos de difícil justificación sobre lo que queda (máximo 2.000 €), y después se aplica el mínimo personal. Esa base tributa con tramos progresivos repartidos entre una parte estatal y otra autonómica que fija cada comunidad."),
+ ("¿Qué deducciones tienen los autónomos?", "Para la Seguridad Social, los autónomos personas físicas restan un 7 % de sus rendimientos netos (sin límite) al calcular su tramo; los administradores de sociedades aplican un 3 %. Para el IRPF, todos los autónomos restan primero sus cuotas anuales a la Seguridad Social y después un 10 % fijo por gastos de difícil justificación, calculado sobre ese rendimiento neto tras la Seguridad Social (con un máximo de 3.000 € al año en 2026)."),
+ ("¿Cómo se calcula el IRPF de un autónomo?", "El IRPF es el impuesto sobre la renta. En los autónomos, la base imponible es el rendimiento neto menos las cuotas a la Seguridad Social, menos un 10 % de gastos de difícil justificación sobre lo que queda (máximo 3.000 € en 2026), y después se aplica el mínimo personal. Esa base tributa con tramos progresivos repartidos entre una parte estatal y otra autonómica que fija cada comunidad."),
  ("¿Los padres a cargo y la discapacidad reducen el IRPF?", "Sí. Cada ascendiente mayor de 65 años (o con discapacidad, a cualquier edad) que conviva contigo suma 1.150 € a tu mínimo personal, y 1.400 € más si tiene más de 75 (debe vivir contigo y ganar menos de 8.000 € al año). La discapacidad suma 3.000 € a partir del 33 % (6.000 € con movilidad reducida) y 12.000 € a partir del 65 %. Los residentes en Ceuta y Melilla pagan solo el 40 % del IRPF (bonificación del 60 %, art. 68.4 LIRPF)."),
 ] %}
 {% else %}
@@ -23,8 +23,8 @@
 {% set faqs = [
  ("How are autónomo SS quotas calculated?", "Since 2023, Spain introduced a 15-bracket social security system for autónomos based on actual net income. Your monthly quota depends on which bracket your estimated annual net income falls into. Official quotas for 2026 are set by Orden PJC/297/2026."),
  ("What is tarifa plana?", "Tarifa plana is a reduced flat rate of €80/month for newly registered autónomos during their first 12 months, plus the MEI levy (about €8.65), so about €88.65/month is charged in 2026. It reduces the initial burden for new self-employed workers. After the first year, you pay the regular quota based on your income bracket."),
- ("What deductions can autónomos claim?", "For Social Security, individual autónomos deduct 7% of net revenues (no cap) when determining their SS bracket; company directors apply a 3% rate. For IRPF, all autónomos first deduct their annual SS contributions, then a flat 5% allowance for hard-to-justify expenses, calculated on that net profit after Social Security (capped at €2,000/year)."),
- ("How is IRPF calculated for autónomos?", "IRPF is Spain's income tax. For autónomos, the taxable base is net revenue minus SS contributions, minus a 5% general expenses allowance on what remains (max €2,000), reduced further by the personal minimum allowance. The resulting base is taxed using progressive brackets split between a state component and a regional component set by each community."),
+ ("What deductions can autónomos claim?", "For Social Security, individual autónomos deduct 7% of net revenues (no cap) when determining their SS bracket; company directors apply a 3% rate. For IRPF, all autónomos first deduct their annual SS contributions, then a flat 10% allowance for hard-to-justify expenses, calculated on that net profit after Social Security (capped at €3,000/year in 2026)."),
+ ("How is IRPF calculated for autónomos?", "IRPF is Spain's income tax. For autónomos, the taxable base is net revenue minus SS contributions, minus a 10% general expenses allowance on what remains (max €3,000 in 2026), reduced further by the personal minimum allowance. The resulting base is taxed using progressive brackets split between a state component and a regional component set by each community."),
  ("Do dependent parents and disability reduce IRPF?", "Yes. Each cohabiting parent over 65 (or disabled, any age) adds €1,150 to your personal minimum, plus €1,400 more if over 75 (they must live with you and earn under €8,000/year). Disability adds €3,000 at 33%+ (€6,000 with reduced mobility) and €12,000 at 65%+. Ceuta and Melilla residents pay only 40% of the full IRPF (60% reduction, art. 68.4 LIRPF)."),
 ] %}
 {% endif %}
@@ -94,7 +94,7 @@
     </div>
 
     <div class="field">
-     <span class="flabel">{{ t("Autónomo type") }} <span class="tip" title="{{ t('Affects the SS bracket deduction: Individual = 7% of revenue (no cap). Director of your own SL = 3% (no cap). IRPF always uses a flat 5% deduction for everyone, on net profit after Social Security (max €2,000).') }}">?</span></span>
+     <span class="flabel">{{ t("Autónomo type") }} <span class="tip" title="{{ t('Affects the SS bracket deduction: Individual = 7% of revenue (no cap). Director of your own SL = 3% (no cap). IRPF always uses a flat 10% deduction for everyone, on net profit after Social Security (max €3,000 in 2026).') }}">?</span></span>
      <div class="seg" id="f-type" role="group" aria-label="{{ t('Autónomo type') }}">
       <button type="button" data-v="individual" class="on">{{ t("Individual freelancer") }}</button>
       <button type="button" data-v="director">{{ t("Company director / shareholder") }}</button>
@@ -196,7 +196,7 @@
       <tbody>
        <tr><td class="row-h">{{ t("Gross revenues") }}</td><td class="num"></td><td class="num b" id="b-gross">—</td></tr>
        <tr class="tint-o"><td class="ind">{{ t("Social Security (annual)") }}</td><td class="num" id="b-ss-p"></td><td class="num o" id="b-ss">—</td></tr>
-       <tr class="tint-o"><td class="ind">{{ t("General expenses deduction (IRPF · 5% after SS)") }}</td><td class="num" id="b-exp-p"></td><td class="num o" id="b-exp">—</td></tr>
+       <tr class="tint-o"><td class="ind">{{ t("General expenses deduction (IRPF · 10% after SS)") }}</td><td class="num" id="b-exp-p"></td><td class="num o" id="b-exp">—</td></tr>
        <tr class="tint-o"><td class="ind">{{ t("SS bracket basis (expenses deduction)") }}</td><td class="num" id="b-ssd-p"></td><td class="num o" id="b-ssd">—</td></tr>
        <tr><td class="row-h">{{ t("Reduced net income") }}</td><td class="num"></td><td class="num b" id="b-taxable">—</td></tr>
        <tr class="tint-r"><td class="ind">{{ t("IRPF — state component") }}</td><td class="num" id="b-st-p"></td><td class="num r" id="b-st">—</td></tr>
@@ -222,7 +222,7 @@
       <h4>Deducciones propias de los autónomos</h4>
       <p>Antes de calcular el IRPF, tu base imponible se reduce con:</p>
       <ul>
-       <li>Gastos generales: un 7 % de los ingresos (sin límite) para los autónomos personas físicas y un 3 % para los administradores. Esto fija el tramo de rendimientos para la Seguridad Social. Para el IRPF, todos aplican aparte un 5 % fijo sobre el rendimiento neto tras la Seguridad Social (máximo 2.000 €).</li>
+       <li>Gastos generales: un 7 % de los ingresos (sin límite) para los autónomos personas físicas y un 3 % para los administradores. Esto fija el tramo de rendimientos para la Seguridad Social. Para el IRPF, todos aplican aparte un 10 % fijo sobre el rendimiento neto tras la Seguridad Social (máximo 3.000 €; en 2026, por el Real Decreto-ley 43/2026).</li>
        <li>Cuotas a la Seguridad Social: toda tu cuota anual se deduce al 100 % de la base del IRPF.</li>
       </ul>
       <p class="curbase" id="irpf-base" hidden></p>
@@ -240,7 +240,7 @@
       <h4>Autonomo-specific deductions</h4>
       <p>Before IRPF is calculated, your taxable base is reduced by:</p>
       <ul>
-       <li>General expenses: 7% of revenue (no cap) for individual autonomos and 3% for directors — this sets the income bracket for Social Security. For IRPF, a separate flat 5% deduction applies to everyone, calculated on net profit after Social Security (max €2,000).</li>
+       <li>General expenses: 7% of revenue (no cap) for individual autonomos and 3% for directors — this sets the income bracket for Social Security. For IRPF, a separate flat 10% deduction applies to everyone, calculated on net profit after Social Security (max €3,000; for 2026, under Real Decreto-ley 43/2026).</li>
        <li>Social Security contributions: your full annual SS quota is 100% deductible from the IRPF base.</li>
       </ul>
       <p class="curbase" id="irpf-base" hidden></p>
@@ -266,13 +266,13 @@
    <ul class="related-calcs">
     <li><a href="{{ lang_url('/articles/autonomo-taxes-spain') }}#seguridad-social-los-15-tramos">Los 15 tramos de la Seguridad Social</a>, de 205,88 € a 607,35 € al mes, y cómo la reducción del 7 % elige el tuyo.</li>
     <li><a href="{{ lang_url('/articles/autonomo-taxes-spain') }}#la-regularizacion-anual">La regularización anual</a>: la devolución o el cargo que llega un año después.</li>
-    <li><a href="{{ lang_url('/articles/autonomo-taxes-spain') }}#irpf-del-rendimiento-a-la-base-imponible">Del rendimiento a la base imponible</a>: la reducción del 5 % y la del 20 % por inicio de actividad, que esta calculadora no incluye.</li>
+    <li><a href="{{ lang_url('/articles/autonomo-taxes-spain') }}#irpf-del-rendimiento-a-la-base-imponible">Del rendimiento a la base imponible</a>: la reducción del 10 % de 2026 y la del 20 % por inicio de actividad, que esta calculadora no incluye.</li>
     <li><a href="{{ lang_url('/articles/autonomo-taxes-spain') }}#por-que-importa-tu-comunidad-autonoma">Por qué tu comunidad cambia el IRPF</a>, más el País Vasco, Navarra, Ceuta, Melilla y Canarias.</li>
     <li><a href="{{ lang_url('/articles/autonomo-taxes-spain') }}#que-puedes-deducir">Qué puedes deducir</a>: despacho en casa, comidas, el coche, el equipo.</li>
     <li><a href="{{ lang_url('/articles/autonomo-taxes-spain') }}#pagar-durante-el-ano-retenciones-y-modelo-130">Retenciones y modelo 130</a>, y <a href="{{ lang_url('/articles/autonomo-taxes-spain') }}#iva-quien-lo-paga-de-verdad">el IVA con el modelo 303</a>.</li>
     <li><a href="{{ lang_url('/articles/autonomo-taxes-spain') }}#la-tarifa-plana-para-nuevos-autonomos">La tarifa plana para nuevos autónomos</a> y las ayudas autonómicas que la devuelven.</li>
    </ul>
-   <p class="src">Fuente de las cuotas: <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296" target="_blank" rel="noopener">Orden PJC/297/2026 (BOE-A-2026-7296)</a></p>
+   <p class="src">Fuente de las cuotas: <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296" target="_blank" rel="noopener">Orden PJC/297/2026 (BOE-A-2026-7296)</a>. Gastos de difícil justificación: <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24701" target="_blank" rel="noopener">Real Decreto-ley 43/2026 (BOE-A-2026-24701)</a></p>
 {% else %}
    <h2>How autónomo taxes work in Spain</h2>
    <p>Since 2023, Spanish autónomos pay social security contributions based on their actual net income through a 15-bracket system. On top of SS, autónomos pay IRPF (income tax) on their remaining net income. This calculator estimates both SS contributions and IRPF for any region in Spain.</p>
@@ -281,13 +281,13 @@
    <ul class="related-calcs">
     <li><a href="/articles/autonomo-taxes-spain#social-security-the-15-brackets">The 15 Social Security brackets</a>, from €205.88 to €607.35 a month, and how the 7% allowance picks yours.</li>
     <li><a href="/articles/autonomo-taxes-spain#the-yearly-regularizacion">The yearly regularización</a>: the refund or bill that comes a year later.</li>
-    <li><a href="/articles/autonomo-taxes-spain#income-tax-from-profit-to-taxable-income">From profit to taxable income</a>: the 5% allowance and the 20% start-up reduction this calculator leaves out.</li>
+    <li><a href="/articles/autonomo-taxes-spain#income-tax-from-profit-to-taxable-income">From profit to taxable income</a>: the 10% allowance for 2026 and the 20% start-up reduction this calculator leaves out.</li>
     <li><a href="/articles/autonomo-taxes-spain#why-your-region-matters">Why your region changes the IRPF</a>, plus the Basque Country, Navarre, Ceuta, Melilla and the Canaries.</li>
     <li><a href="/articles/autonomo-taxes-spain#what-you-can-deduct">What you can deduct</a>: home office, meals, the car, equipment.</li>
     <li><a href="/articles/autonomo-taxes-spain#paying-during-the-year-withholding-and-form-130">Withholding and form 130</a>, and <a href="/articles/autonomo-taxes-spain#iva-who-really-pays-it">IVA with form 303</a>.</li>
     <li><a href="/articles/autonomo-taxes-spain#the-tarifa-plana-for-new-autonomos">The tarifa plana for new autónomos</a> and regional refunds of it.</li>
    </ul>
-   <p class="src">SS data source: <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296" target="_blank" rel="noopener">Orden PJC/297/2026 (BOE-A-2026-7296)</a></p>
+   <p class="src">SS data source: <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2026-7296" target="_blank" rel="noopener">Orden PJC/297/2026 (BOE-A-2026-7296)</a>. 10% IRPF allowance: <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24701" target="_blank" rel="noopener">Real Decreto-ley 43/2026 (BOE-A-2026-24701)</a></p>
 {% endif %}
   </div>
 

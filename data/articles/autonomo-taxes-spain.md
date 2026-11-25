@@ -4,6 +4,7 @@ title: Autónomo Taxes in Spain 2026: The Complete Guide for Freelancers
 meta_title: Autónomo Taxes in Spain 2026: Cuota, IRPF and IVA Explained
 meta_description: Autónomo taxes in Spain for 2026: the 15 Social Security brackets, IRPF, IVA, forms 130 and 303, deductions and tarifa plana, with a worked example.
 date: 2026-11-09
+updated: 2026-11-25
 author: Dmytro Shvechikov
 excerpt: You invoice €40,000 as a freelancer in Spain. How much do you keep? Social Security, income tax and IVA explained step by step with 2026 figures, a worked example, deductions, the tax calendar and one legal move that can cut your IRPF by about €2,000.
 image_alt: Where 40,000 euros invoiced by a freelancer in Madrid go: expenses, Social Security, income tax and what is kept
@@ -27,7 +28,7 @@ Here's the short answer. A freelance designer in Madrid who invoices **€40,000
 - **Social Security (cuota de autónomos)** A monthly payment of €205.88 to €607.35 in 2026, depending on your profit, or a flat €80 (about €88.65 with the MEI levy) in your first year with the tarifa plana.
 - **Income tax (IRPF)** Charged on your profit after expenses and Social Security, at progressive rates of about 19% to 47%. Half goes to the state, half to your region. You prepay it during the year through withholding on invoices (15%, or 7% when you start) or quarterly with form 130, and settle it in the annual return, the Renta.
 - **IVA (VAT)** Usually 21% added to your invoices. It isn't your money: you collect it, subtract the IVA on your business purchases and pay the difference every quarter with form 303.
-- **What's left** For a typical freelancer, Social Security and IRPF together take about 25-35% of the profit. On €32,000 of profit in Madrid it's 30%.
+- **What's left** For a typical freelancer, Social Security and IRPF together take about 25-35% of the profit. On €32,000 of profit in Madrid it's 29%.
 
 ::: graphic where-it-goes
 
@@ -111,10 +112,10 @@ Practical tip: if you're unsure, pick a bracket that matches your realistic prof
 Now, income tax: the IRPF. How do you get from profit to the amount that's actually taxed?
 
 - **Income minus expenses** Here the Social Security quota counts as an expense too, all of it.
-- **Minus 5% for hard-to-prove expenses** Under the simplified direct method you get this allowance on top of your real expenses: 5% of the profit after Social Security, up to €2,000 a year. You don't need receipts for it.
+- **Minus 10% for hard-to-prove expenses** Under the simplified direct method you get this allowance on top of your real expenses: 10% of the profit after Social Security, up to €3,000 a year. You don't need receipts for it. The usual rule is 5% and €2,000; [Real Decreto-ley 43/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24701) doubled it for tax year 2026 only.
 - **Equals your taxable business income** It goes into your annual return together with any other income you have: a salary, rent from a flat, interest.
 
-Our designer: €32,000 minus €5,126.52 of Social Security is €26,873.48. Five percent of that is €1,343.67, which leaves **€25,529.81 of taxable income**.
+Our designer: €32,000 minus €5,126.52 of Social Security is €26,873.48. Ten percent of that is €2,687.35, which leaves **€24,186.13 of taxable income**.
 
 ::: graphic profit-path
 
@@ -140,7 +141,7 @@ The allowance grows with your family and situation. The state figures:
 - **Parents living with you** €1,150 for each parent over 65 who lives with you and earns under €8,000 a year, plus €1,400 if they're over 75.
 - **Disability** €3,000 at 33% or more (€6,000 if you need help to get around or have reduced mobility), and €12,000 at 65% or more.
 
-With two children, one of them under 3, our designer's IRPF in Madrid drops from €4,453 to about **€2,934**.
+With two children, one of them under 3, our designer's IRPF in Madrid drops from €4,080 to about **€2,560**.
 
 ## Myth: a higher bracket taxes all your income
 
@@ -178,14 +179,14 @@ Let's put it all together, the way the calculator does. A freelance designer in 
 - **Profit for the Social Security bracket** €32,000 − 7% = €29,760, or €2,480 a month
 - **Social Security** Bracket 10: €427.21 × 12 = €5,126.52
 - **Profit after Social Security** €32,000 − €5,126.52 = €26,873.48
-- **5% hard-to-prove expenses** €1,343.67 (under the €2,000 cap)
-- **Taxable income** €25,529.81
-- **State half of IRPF** €2,384.97
-- **Madrid half of IRPF** €2,068.43
-- **Total IRPF** €4,453.40
-- **Kept for the year** €22,420.08, about €1,868 a month
+- **10% hard-to-prove expenses** €2,687.35 (under the €3,000 cap)
+- **Taxable income** €24,186.13
+- **State half of IRPF** €2,183.42
+- **Madrid half of IRPF** €1,896.44
+- **Total IRPF** €4,079.86
+- **Kept for the year** €22,793.62, about €1,899 a month
 
-About 30% of the profit went to Social Security and IRPF, and 14% of it to IRPF alone. That 14% is the *effective* rate, very different from the 30% marginal rate.
+About 29% of the profit went to Social Security and IRPF, and 13% of it to IRPF alone. That 13% is the *effective* rate, very different from the 30% marginal rate.
 
 The same freelancer at other levels, in Madrid, 2026. The share that goes to Social Security falls as profit grows, and the share that goes to income tax rises:
 
@@ -214,7 +215,7 @@ Private clients and foreign clients don't withhold. Most trades that aren't "pro
 
 ### Form 130: quarterly prepayment
 
-Without withholding, you prepay income tax yourself every quarter, with **form 130**: **20% of your profit so far this year**, minus what you've already paid in earlier quarters and minus any withholding you've had. The quarters are cumulative, so a bad quarter after a good one can bring the payment to zero.
+Without withholding, you prepay income tax yourself every quarter, with **form 130**: **20% of your profit so far this year**, minus what you've already paid in earlier quarters and minus any withholding you've had. The quarters are cumulative, so a bad quarter after a good one can bring the payment to zero. From 2027 the rate drops to **19%** if last year's turnover was under €250,000, and you can skip the 130 altogether if it was under €85,000 and all of last year's 130 payments came back to you in the Renta ([Real Decreto-ley 43/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24701)).
 
 If **at least 70%** of last year's business income already had withholding, you don't file the 130 at all. In your first year, it's this year's income that counts. Many freelancers who work only for Spanish companies never file one.
 
@@ -226,7 +227,7 @@ Either way, these are only advance payments. The final bill comes in the annual 
 
 The Renta, the annual income tax return, is where everything gets settled. You file it between early April and **30 June** of the following year, online, with the tax agency's Renta Web. Unlike many employees, **almost every autónomo has to file the Renta**, whatever their profit: the income thresholds that let many employees skip it don't apply to business income (only total income under €1,000 a year is exempt).
 
-Say all your clients are Spanish businesses and you invoice €40,000 in a year. Fifteen percent is kept back: **€6,000**. But your real income tax for the year comes to only about €4,450. So the Renta gives you about **€1,550 back**.
+Say all your clients are Spanish businesses and you invoice €40,000 in a year. Fifteen percent is kept back: **€6,000**. But your real income tax for the year comes to only about €4,080. So the Renta gives you about **€1,920 back**.
 
 With no withholding, the quarterly form 130 payments do the same job, and the Renta settles the difference. At 20% of profit, the 130 often overshoots a little at middle incomes, so a refund is common too.
 
@@ -247,7 +248,7 @@ One of the best tax breaks an autónomo has: a private pension plan. You can put
 
 There's one cap: the reduction can't be more than **30% of your net income from work and business**. On a €15,000 profit that limits you to about €3,400.
 
-You save at your top tax rate. For our designer in Madrid, with €25,530 of taxable income, putting in the full €5,750 cuts IRPF by about **€1,590**. At €60,000 of profit, where the marginal rate is about 36%, it saves about **€2,060** a year.
+You save at your top tax rate. For our designer in Madrid, with €24,186 of taxable income, putting in the full €5,750 cuts IRPF by about **€1,530**. At €60,000 of profit, where the marginal rate is about 36%, it saves about **€2,060** a year.
 
 ::: graphic pension
 
@@ -268,7 +269,7 @@ Say you invoice €1,000 for a design job. Your client pays €1,210. Those €2
 
 But you can subtract the IVA you paid on your own business purchases. Buy a €1,000 laptop for the business and you pay €210 of IVA on it, which you get back by subtracting it from the IVA you collected.
 
-Every quarter you file **form 303** and pay the difference. If you paid more IVA than you charged, the difference carries over to the next quarter, or comes back at the end of the year (in the last quarter you choose a refund). In January you also file **form 390**, the annual IVA summary.
+Every quarter you file **form 303** and pay the difference. If you paid more IVA than you charged, the difference carries over to the next quarter, or comes back at the end of the year (in the last quarter you choose a refund). In January you also file **form 390**, the annual IVA summary. From 2027, if your turnover the year before was under €85,000, you can opt into a new regime with a single annual IVA return instead of four, paying three advances in April, July and October based on the previous year.
 
 ::: graphic iva-quarter
 
@@ -421,8 +422,8 @@ Missing a deadline without being asked costs a surcharge of 1% plus 1% per full 
 
 - Everything starts from your profit: what you invoiced without IVA, minus deductible expenses.
 - Social Security: 15 brackets on your profit minus 7%, €205.88 to €607.35 a month in 2026, settled a year later in the regularización. €80 a month in your first year with the tarifa plana.
-- IRPF: profit minus Social Security, minus 5% (max €2,000), minus 20% in your first two profitable years, taxed at about 19-47% with the personal allowance on top. Half state, half region.
-- You prepay IRPF by withholding (15%, or 7% when new) or with form 130 (20% of profit), and settle it in the Renta by 30 June.
+- IRPF: profit minus Social Security, minus 10% in 2026 (max €3,000; normally 5% and €2,000), minus 20% in your first two profitable years, taxed at about 19-47% with the personal allowance on top. Half state, half region.
+- You prepay IRPF by withholding (15%, or 7% when new) or with form 130 (20% of profit; 19% from 2027 for most), and settle it in the Renta by 30 June.
 - A pension plan can take up to €5,750 a year off your taxable income.
 - IVA is collected, not earned: 21% on most invoices, form 303 every quarter, with exceptions for EU and foreign clients and the Canaries.
 - Keep proper invoices for every expense and every sale for six years.
@@ -433,7 +434,7 @@ Try your own numbers, for your region and family, in the free [autónomo tax cal
 
 ### How much tax does an autónomo pay in Spain?
 
-Social Security plus IRPF usually take about 25-35% of a freelancer's profit. A freelancer in Madrid with €32,000 of profit (€40,000 invoiced, €8,000 in expenses) pays €5,127 in Social Security and €4,453 in IRPF in 2026 and keeps about €22,420, or 70% of the profit. IVA comes on top but is paid by clients. Work out your own figure with the [autónomo tax calculator](/calculators/autonomo-tax).
+Social Security plus IRPF usually take about 25-35% of a freelancer's profit. A freelancer in Madrid with €32,000 of profit (€40,000 invoiced, €8,000 in expenses) pays €5,127 in Social Security and €4,080 in IRPF in 2026 and keeps about €22,794, or 71% of the profit. IVA comes on top but is paid by clients. Work out your own figure with the [autónomo tax calculator](/calculators/autonomo-tax).
 
 ### How much is the autónomo Social Security quota in 2026?
 
@@ -465,7 +466,7 @@ Freelancers on the digital nomad visa do: they register as autónomos, pay the S
 
 ### How can an autónomo legally pay less tax?
 
-Claim every real business expense with a proper invoice, the 5% allowance for hard-to-prove expenses, the 20% start-up reduction in your first two profitable years, the tarifa plana and any regional refund of it, and private health insurance (€500 per person). A pension plan takes up to €5,750 a year off your taxable income, saving about €1,600-2,100 at typical freelance incomes.
+Claim every real business expense with a proper invoice, the 10% allowance for hard-to-prove expenses (5% outside 2026), the 20% start-up reduction in your first two profitable years, the tarifa plana and any regional refund of it, and private health insurance (€500 per person). A pension plan takes up to €5,750 a year off your taxable income, saving about €1,500-2,100 at typical freelance incomes.
 
 ### Do I need a gestor as an autónomo?
 
