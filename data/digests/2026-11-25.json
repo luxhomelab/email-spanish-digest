@@ -1,0 +1,254 @@
+{
+  "items": [
+    {
+      "title": "Cabinet approves tax cuts for self-employed workers",
+      "body": "The cabinet approved IRPF (personal income tax) cuts for self-employed workers on November 24. The expenses deduction would rise from 5% to 10%, with its cap rising from €2,000 to €3,000. A voluntary filing regime would cover eligible businesses billing under €85,000; Verifactu invoicing controls would move to October 2028.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/hacienda-aprueba-una-rebaja-para-los-autonomos-irpf-465-millones-un-nuevo-regimen-iva_7065106_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Cabinet approves consumer credit cap and bank levy",
+      "body": "The cabinet approved a decree-law that would cap consumer credit at 22% APR, including existing revolving cards. It also approved extending the bank levy through 2027 to fund housing. The levy extension still needs validation by Parliament's standing body.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/gobierno-prorroga-impuesto-banca_7065091_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Record migrant arrivals strain El Hierro reception",
+      "body": "Maritime rescuers brought more than 2,100 migrants to El Hierro on November 24, Spain's highest recorded daily arrival total. They included 127 children. Canary Islands president Fernando Clavijo warned that the islands' 7,000-place reception network could be overwhelmed and asked the European Commission to help get joint patrols.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-11-24/seis-nuevos-cayucos-llegan-a-canarias-con-900-personas.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Cabinet approves transport discounts for 2027",
+      "body": "The cabinet approved a Royal Decree-law that would extend public transport discounts through 2027. Monthly Cercanías and Rodalies passes would remain €20, or €10 for young people, with free travel up to age 14. The single pass would also extend to regional and local networks.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gobierno-prorroga-ayudas-transporte-mantiene-abono-unico-jovenes_1_13688832.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Brussels warns Spain over excessive deficit risk",
+      "body": "The European Commission warned that Spain risks an excessive deficit in 2026 and 2027, even with a defence-spending exemption. Commission sources cited extended energy aid and higher public-sector pay as the main spending pressures. Staff forecast deviations of 0.9% in 2026 and 1.3% in 2027.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/comision-europea-advierte-espana-riesgo-deficit-excesivo-2026-2027_1_13688720.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Full pension requires 37 contribution years from 2027",
+      "body": "Under the existing pension reform, January 2027 brings a requirement for 37 years of contributions to receive 100% of the pension calculation base. Retirement at 65 will require at least 38 years and six months of contributions. Those with shorter records must retire at 67.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/11/25/alfonso-munoz-funcionario-seguridad-social-jubilacion-seran-necesarios-anos-completos-cotizacion-tener-derecho-base-reguladora-2071433.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Torrevieja and Benidorm lead large-town population growth",
+      "body": "Torrevieja grew 4.6% and Benidorm 4.1% in 2025, leading Spain's large municipalities. The INE (national statistics institute) census put Spain's population at 49,618,622 on January 1, 2026, up 1%. Foreign nationals accounted for 14.7% of residents.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/torrevieja-benidorm-son-los-municipios-donde-mas-crece-poblacion-mientras-coslada-cadiz-lideran-los-descensos_7065144_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Plus Ultra suspends flights after financing talks fail",
+      "body": "Plus Ultra suspended operations after talks to strengthen its finances failed, leaving thousands of passengers without flights. The airline serves Peru, Argentina, and Venezuela. Many travellers await refunds or alternatives; EU rules require the airline to provide written information on compensation and assistance.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/economia/20261124/11691833/plus-ultra-deja-miles-personas-vuelo-sepi-atolladero.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Spain spends less on health but leads on life expectancy",
+      "body": "Spain spends €3,319 per person on healthcare, about 16% below the EU average, an OECD and European Commission report shows. Households pay 21% of health costs directly, against 16% across the EU. Life expectancy remains the EU's highest at 84 years.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/tiron-orejas-ocde-espana-gasto-sanitario-se-situa-3-319-por-habitante-un-16-menos-que-media-europea_7065115_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Balearic Parliament approves law to limit vehicles on Mallorca, Menorca",
+      "body": "The Balearic Parliament approved a law allowing vehicle-entry limits on Mallorca and Menorca before next summer, following overcrowding protests. Island councils still have to set the caps, including rental-car limits. Island residents will not be affected.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/vida/20261124/11692259/mallorca-menorca-limitaran-entrada-vehiculos-partir-proximo-verano.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Housing shortage drives election debate over expropriation",
+      "body": "Spain needs 750,000 homes, the Banco de España estimates. In election proposals, Frente Amplio would expropriate homes from funds holding over 1,000, then 700, then 50 properties; Podemos would target companies, funds, and banks with over 10. PSOE excludes expropriation from its programme, and employers oppose it.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/videos/2026-11-25/que-proponen-los-partidos-para-abordar-la-escasez-de-vivienda-en-espana-las-medidas-clave-para-el-29n.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/expropiacion-200-000-casas-fondos-propuesta-frente-amplio-ataca-sector_1_13681788.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Bank investigated over online account closure barriers",
+      "body": "Consumer authorities opened proceedings against an unnamed nationwide bank after an OCU complaint about barriers to closing accounts online. Customers have the right to end contracts through the same channel used to open them. The investigation does not prejudge whether the bank broke the rules.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/economia/20261124/11691576/consumo-abre-expediente-banco-trabas-cerrar-cuentas-abiertas-online.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Marc Márquez claims tenth motorcycle world title",
+      "body": "Spanish rider Marc Márquez won his 10th world title at the MotoGP Portuguese Grand Prix. His eighth premier-class championship equals former champion Giacomo Agostini's record. Márquez recovered from a 102-point deficit, the biggest points comeback in the sport's history.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/spin/deportes/futuro-marc-marquez-piloto-responde-cabeza-no-nadie-pm_1_13690362.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "How often do you use public transport? A) Daily B) Weekly C) Rarely",
+  "subject": "Consumer credit cap, transport discounts and tax cuts",
+  "variant": "What everyone in Spain is talking about today",
+  "headline": "What everyone in Spain is talking about today",
+  "date": "2026-11-25",
+  "engagement_source": "generated",
+  "generated_at": "2026-11-25T07:02:46.663959+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 689,
+    "items_selected_pass1": 14,
+    "fact_sheets_extracted": 14,
+    "items_after_importance_filter": 14,
+    "items_in_digest": 13
+  },
+  "selection_reasons": {
+    "596": "Autónomos get an IRPF cut of €465M and a new simplified IVA regime for businesses under €85,000, with fewer quarterly payments and declarations. This directly affects residents who are self-employed.",
+    "610": "Public transport aid and the single youth pass are extended through 2027, with €1.2bn committed. This affects commuters across Spain.",
+    "594": "The bank tax is extended to 2027, with €1.4bn earmarked for housing. The Cabinet also sets a transitional 22% TAE cap on consumer credit, including revolving cards.",
+    "248": "The 2027 pension changes end the transitional period: the retirement age rises and 37 contribution years are needed for 100% of the base. This is a systemic pension reform.",
+    "604": "Brussels warns Spain of an excessive deficit procedure for 2026–2027, with a cumulative gap of €5.1bn and €12bn. This points to future tax and spending pressure for the next government.",
+    "309": "A guide to the parties' housing proposals for the 29-N election. Housing is the central issue of this campaign and affects renters and buyers.",
+    "156": "Spain's population grew about 1% in 2025, with foreign residents up 5.3% to 14.7% of the total. This is directly relevant to the expat and immigrant audience.",
+    "318": "A record 2,100 migrants arrived in El Hierro in one day, with a national-level impact on migration policy and Canarias.",
+    "477": "Plus Ultra's collapse leaves thousands of passengers without flights and puts SEPI's rescue exposure in question. Travelers and Latin American connections are affected.",
+    "478": "Consumo opens a file against a bank for blocking online account closures, a consumer-rights precedent that affects all digital bank customers.",
+    "147": "OECD data show Spain spends 16% less per capita on health than the EU average, and households pay 21% of costs directly. This matters for healthcare users and expats relying on private care.",
+    "439": "Mallorca and Menorca must set a maximum number of vehicles allowed from next summer. This is a regional precedent for limiting access, and it matters for island residents.",
+    "115": "Marc Márquez wins his tenth motorcycle world title, a Spanish sporting outcome the whole country talks about and a positive story.",
+    "602": "Frente Amplio and Podemos propose expropriating more than 200,000 homes from investment funds. The proposal is a major housing-policy debate in the election campaign."
+  },
+  "selection_sources": [
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/hacienda-aprueba-una-rebaja-para-los-autonomos-irpf-465-millones-un-nuevo-regimen-iva_7065106_0.html",
+      "reason": "Autónomos get an IRPF cut of €465M and a new simplified IVA regime for businesses under €85,000, with fewer quarterly payments and declarations. This directly affects residents who are self-employed."
+    },
+    {
+      "url": "https://www.eldiario.es/economia/gobierno-prorroga-ayudas-transporte-mantiene-abono-unico-jovenes_1_13688832.html",
+      "reason": "Public transport aid and the single youth pass are extended through 2027, with €1.2bn committed. This affects commuters across Spain."
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/gobierno-prorroga-impuesto-banca_7065091_0.html",
+      "reason": "The bank tax is extended to 2027, with €1.4bn earmarked for housing. The Cabinet also sets a transitional 22% TAE cap on consumer credit, including revolving cards."
+    },
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/11/25/alfonso-munoz-funcionario-seguridad-social-jubilacion-seran-necesarios-anos-completos-cotizacion-tener-derecho-base-reguladora-2071433.html",
+      "reason": "The 2027 pension changes end the transitional period: the retirement age rises and 37 contribution years are needed for 100% of the base. This is a systemic pension reform."
+    },
+    {
+      "url": "https://www.eldiario.es/economia/comision-europea-advierte-espana-riesgo-deficit-excesivo-2026-2027_1_13688720.html",
+      "reason": "Brussels warns Spain of an excessive deficit procedure for 2026–2027, with a cumulative gap of €5.1bn and €12bn. This points to future tax and spending pressure for the next government."
+    },
+    {
+      "url": "https://elpais.com/videos/2026-11-25/que-proponen-los-partidos-para-abordar-la-escasez-de-vivienda-en-espana-las-medidas-clave-para-el-29n.html",
+      "reason": "A guide to the parties' housing proposals for the 29-N election. Housing is the central issue of this campaign and affects renters and buyers."
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/torrevieja-benidorm-son-los-municipios-donde-mas-crece-poblacion-mientras-coslada-cadiz-lideran-los-descensos_7065144_0.html",
+      "reason": "Spain's population grew about 1% in 2025, with foreign residents up 5.3% to 14.7% of the total. This is directly relevant to the expat and immigrant audience."
+    },
+    {
+      "url": "https://elpais.com/espana/2026-11-24/seis-nuevos-cayucos-llegan-a-canarias-con-900-personas.html",
+      "reason": "A record 2,100 migrants arrived in El Hierro in one day, with a national-level impact on migration policy and Canarias."
+    },
+    {
+      "url": "https://www.lavanguardia.com/economia/20261124/11691833/plus-ultra-deja-miles-personas-vuelo-sepi-atolladero.html",
+      "reason": "Plus Ultra's collapse leaves thousands of passengers without flights and puts SEPI's rescue exposure in question. Travelers and Latin American connections are affected."
+    },
+    {
+      "url": "https://www.lavanguardia.com/economia/20261124/11691576/consumo-abre-expediente-banco-trabas-cerrar-cuentas-abiertas-online.html",
+      "reason": "Consumo opens a file against a bank for blocking online account closures, a consumer-rights precedent that affects all digital bank customers."
+    },
+    {
+      "url": "https://www.20minutos.es/nacional/tiron-orejas-ocde-espana-gasto-sanitario-se-situa-3-319-por-habitante-un-16-menos-que-media-europea_7065115_0.html",
+      "reason": "OECD data show Spain spends 16% less per capita on health than the EU average, and households pay 21% of costs directly. This matters for healthcare users and expats relying on private care."
+    },
+    {
+      "url": "https://www.lavanguardia.com/vida/20261124/11692259/mallorca-menorca-limitaran-entrada-vehiculos-partir-proximo-verano.html",
+      "reason": "Mallorca and Menorca must set a maximum number of vehicles allowed from next summer. This is a regional precedent for limiting access, and it matters for island residents."
+    },
+    {
+      "url": "https://www.eldiario.es/spin/deportes/futuro-marc-marquez-piloto-responde-cabeza-no-nadie-pm_1_13690362.html",
+      "reason": "Marc Márquez wins his tenth motorcycle world title, a Spanish sporting outcome the whole country talks about and a positive story."
+    },
+    {
+      "url": "https://www.eldiario.es/economia/expropiacion-200-000-casas-fondos-propuesta-frente-amplio-ataca-sector_1_13681788.html",
+      "reason": "Frente Amplio and Podemos propose expropriating more than 200,000 homes from investment funds. The proposal is a major housing-policy debate in the election campaign."
+    }
+  ]
+}

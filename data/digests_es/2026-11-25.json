@@ -1,0 +1,171 @@
+{
+  "items": [
+    {
+      "title": "El Gobierno aprueba rebajas fiscales para los autónomos",
+      "body": "El Consejo de Ministros ha aprobado una rebaja del IRPF de 465 millones de euros para autónomos. La deducción por gastos de difícil justificación sube del 5 al 10%, con un límite de 3.000 euros. Verifactu se retrasa hasta octubre de 2028. ATA critica el momento electoral y UPTA considera que la rebaja llega tarde.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/hacienda-aprueba-una-rebaja-para-los-autonomos-irpf-465-millones-un-nuevo-regimen-iva_7065106_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Prórroga del impuesto bancario y límites al crédito",
+      "body": "El Consejo de Ministros ha aprobado un decreto-ley que prevé un límite general transitorio del 22% TAE al crédito al consumo, incluidas las tarjetas revolving existentes. También ha aprobado prorrogar un año el impuesto a la banca, con 1.400 millones previstos para vivienda. La prórroga sigue pendiente de convalidación en la Diputación Permanente.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/gobierno-prorroga-impuesto-banca_7065091_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El Hierro recibe más de 2.100 inmigrantes en un día",
+      "body": "Salvamento Marítimo rescató el 24 de noviembre a más de 2.100 inmigrantes en 14 cayucos llegados a El Hierro, el máximo diario en España. Entre ellos había 127 niños. El presidente canario, Fernando Clavijo, advierte de que las 7.000 plazas de acogida pueden desbordarse y plantea pedir a la Fiscalía instrucciones para agilizar los traslados.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-11-24/seis-nuevos-cayucos-llegan-a-canarias-con-900-personas.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Aprobada la prórroga de las ayudas al transporte",
+      "body": "El Consejo de Ministros ha aprobado el Real Decreto-ley que prolongará las ayudas al transporte público en 2027, con 1.200 millones de euros. Cercanías y Rodalies mantendrán el abono mensual de 20 euros, de 10 euros para jóvenes y gratuito hasta los 14 años. El Abono Único se extenderá a las redes autonómicas y locales.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/gobierno-prorroga-ayudas-transporte-mantiene-abono-unico-jovenes_1_13688832.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Bruselas advierte del riesgo de déficit excesivo",
+      "body": "La Comisión Europea alerta del riesgo de déficit excesivo en España en 2026 y 2027, con una desviación acumulada del 0,9% en 2026 y del 1,3% en 2027. Fuentes de la Comisión lo atribuyen a la extensión de las ayudas energéticas y al aumento de la compensación de empleados públicos, sobre todo en regiones.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/comision-europea-advierte-espana-riesgo-deficit-excesivo-2026-2027_1_13688720.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "La jubilación exigirá más cotización en 2027",
+      "body": "En 2027 harán falta 37 años cotizados para cobrar el 100 % de la base reguladora, frente a los 36 años y 6 meses exigidos hasta 2026, según el funcionario de la Seguridad Social Alfonso Muñoz. Para jubilarse a los 65 años se necesitarán al menos 38 años y 6 meses cotizados; sin ellos, la edad ordinaria será de 67 años.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/11/25/alfonso-munoz-funcionario-seguridad-social-jubilacion-seran-necesarios-anos-completos-cotizacion-tener-derecho-base-reguladora-2071433.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Torrevieja y Benidorm encabezan el crecimiento demográfico",
+      "body": "Torrevieja creció un 4,6% y Benidorm un 4,1% en 2025, los mayores aumentos entre los grandes municipios, según el INE. España alcanzó los 49.618.622 habitantes a 1 de enero de 2026, 490.325 más que un año antes. Los mayores de 64 años ya representan el 21% de la población, mientras disminuyen los menores de 16.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/torrevieja-benidorm-son-los-municipios-donde-mas-crece-poblacion-mientras-coslada-cadiz-lideran-los-descensos_7065144_0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Plus Ultra suspende vuelos y deja pasajeros sin reembolso",
+      "body": "Plus Ultra ha suspendido sus operaciones «hasta nuevo aviso» tras no concretarse las negociaciones para reforzar sus finanzas. Miles de pasajeros con billetes para Navidad se quedan sin vuelo y, por ahora, sin reembolso. La compañía ha informado a sus más de 600 empleados de que aplicará un ERE; la SEPI le prestó 53 millones de euros.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/economia/20261124/11691833/plus-ultra-deja-miles-personas-vuelo-sepi-atolladero.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Los hogares asumen más gasto sanitario que en Europa",
+      "body": "Los hogares pagaron directamente el 21% del gasto sanitario en 2024, frente al 16% de media en la UE, según la OCDE y la Comisión Europea. La atención bucodental supone un tercio de ese desembolso. España gastó 3.319 euros por habitante, un 16% menos que la media de la UE, aunque alcanzó una esperanza de vida de 84 años.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/nacional/tiron-orejas-ocde-espana-gasto-sanitario-se-situa-3-319-por-habitante-un-16-menos-que-media-europea_7065115_0.html"
+        }
+      ],
+      "category": "health",
+      "important": false
+    },
+    {
+      "title": "Mallorca y Menorca podrán limitar la entrada de vehículos",
+      "body": "El Parlament balear ha aprobado la ley que permitirá limitar la entrada de vehículos en Mallorca y Menorca antes del verano de 2027. Los residentes quedarán exentos y los consells aún deben fijar los cupos, con un techo específico para coches de alquiler. Vox votó en contra; PP, PSOE, Més y Unidas Podemos apoyaron la norma.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/vida/20261124/11692259/mallorca-menorca-limitaran-entrada-vehiculos-partir-proximo-verano.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "La expropiación de viviendas entra en el debate electoral",
+      "body": "El Banco de España cifra la falta de vivienda en 750.000 unidades. Ante las elecciones del 29 de noviembre, Frente Amplio y Podemos proponen expropiar viviendas de grandes propietarios para ampliar el parque público, con umbrales distintos. El PSOE no incluye la medida en su programa y la patronal la tacha de «disparate».",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/videos/2026-11-25/que-proponen-los-partidos-para-abordar-la-escasez-de-vivienda-en-espana-las-medidas-clave-para-el-29n.html"
+        },
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/expropiacion-200-000-casas-fondos-propuesta-frente-amplio-ataca-sector_1_13681788.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Consumo investiga trabas para cerrar cuentas por internet",
+      "body": "Consumo ha abierto un expediente sancionador a un banco no identificado tras una denuncia de la OCU. Investiga si impedía cancelar por internet cuentas contratadas por esa vía, un derecho reconocido por ley. La apertura del expediente no prejuzga el resultado final.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/economia/20261124/11691576/consumo-abre-expediente-banco-trabas-cerrar-cuentas-abiertas-online.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Marc Márquez conquista su décimo título mundial",
+      "body": "El piloto Marc Márquez ha ganado su décimo Mundial en el Gran Premio de Portugal, el octavo en la categoría reina. Lo logró con la mayor remontada de puntos de la historia, desde 102 de desventaja. Es el tercer piloto más laureado de la historia y, tras las dificultades físicas de la temporada, afirma que ahora quiere disfrutar.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/spin/deportes/futuro-marc-marquez-piloto-responde-cabeza-no-nadie-pm_1_13690362.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "¿Usas el transporte público a diario? A) Sí B) No",
+  "subject": "Crédito al consumo, autónomos y transporte",
+  "lang": "es",
+  "date": "2026-11-25",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-11-25T07:05:44.915501+00:00"
+}
