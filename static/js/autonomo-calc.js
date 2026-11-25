@@ -7,7 +7,7 @@
  * - IRPF: state + regional components
  * - Personal minimum allowances (age, children, disability), state and regional
  * - General expenses deduction (7% individual, 3% director, no cap) — for SS bracket only
- * - IRPF deduction (5% flat on revenue after SS, estimación directa simplificada)
+ * - IRPF deduction (10% flat on revenue after SS, max €3,000, estimación directa simplificada, 2026)
  *
  * Data sources:
  * - SS quotas 2026: Orden PJC/297/2026 (BOE-A-2026-7296, art. 18: bases × 31.50% tipo total)
@@ -464,7 +464,7 @@ export function calcIrpfRegionalWithBreakdown(base, region) {
 // ── Deductions ────────────────────────────────────────────────────────────────
 
 /** General expenses deduction for SS bracket — 7% for individuals, 3% for directors.
- *  Art. 308.1.c regla 2ª LGSS: no cap (the €2,000 cap belongs only to the IRPF 5%). */
+ *  Art. 308.1.c regla 2ª LGSS: no cap (the €3,000 cap belongs only to the IRPF 10%). */
 const GENERAL_EXPENSES_RATE = { individual: 0.07, director: 0.03 }
 
 /**
@@ -480,12 +480,15 @@ export function calcGeneralExpenses(annualNetRevenue, autonomoType) {
   return Math.round(Math.max(0, annualNetRevenue) * (rate ?? 0.07) * 100) / 100
 }
 
-/** IRPF deduction under estimación directa simplificada — 5% flat for everyone (max €2,000).
- *  Gastos de difícil justificación (Art. 30.2.4ª RIRPF). It applies to the rendimiento neto
+/** IRPF deduction under estimación directa simplificada — 10% flat for everyone (max €3,000).
+ *  Gastos de difícil justificación (Art. 30.2.4ª RIRPF: 5%, max €2,000). For tax year 2026 only,
+ *  DA 67ª LIRPF (added by Real Decreto-ley 43/2026, BOE-A-2026-24701) raises it by 5 points and
+ *  the cap to €3,000. The RDL needs convalidación; if it lapses, revert to 0.05 / 2000.
+ *  It applies to the rendimiento neto
  *  previo: revenue after all deductible expenses INCLUDING the annual SS quota.
  *  Unlike the SS deduction, the autonomo type (individual vs director) does NOT change this rate. */
-const IRPF_DEDUCTION_RATE = 0.05
-const IRPF_DEDUCTION_MAX = 2000
+const IRPF_DEDUCTION_RATE = 0.10
+const IRPF_DEDUCTION_MAX = 3000
 
 /**
  * @param {number} rendimientoPrevio - annual net revenue minus the annual SS quota
@@ -659,8 +662,8 @@ export function calculateAutonomo({
     findSSQuota(monthlyIncomeForSS, year, timeAsAutonomo, autonomoType)
   const annualSSTotal = Math.round(monthlySSQuota * 12 * 100) / 100
 
-  // Rendimiento neto previo = revenue after SS contributions. The 5% IRPF deduction
-  // (flat for everyone, cap €2,000) is computed on it, and the rest is the IRPF base.
+  // Rendimiento neto previo = revenue after SS contributions. The 10% IRPF deduction
+  // (flat for everyone, cap €3,000) is computed on it, and the rest is the IRPF base.
   const rendimientoPrevio = Math.max(0, revenue - annualSSTotal)
   const irpfDeduction = calcIrpfDeduction(rendimientoPrevio)
   const reducedNetIncome = Math.max(0, rendimientoPrevio - irpfDeduction)

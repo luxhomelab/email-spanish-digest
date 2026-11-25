@@ -82,7 +82,7 @@ def test_amount_page_ceuta_wording(site):
 
 
 def test_amount_page_uses_regional_minimo_figures(site):
-    # Madrid €32k with the Madrid regional mínimo: IRPF €4,453, net €22,420 (fact-check figures)
+    # Madrid €32k with the Madrid regional mínimo: IRPF €4,080, net €22,794 (2026, 10% allowance)
     page = _read(site, "autonomo-tax-32000-euros")
-    assert "€22,420" in page
-    assert "€4,453" in page
+    assert "€22,794" in page
+    assert "€4,080" in page

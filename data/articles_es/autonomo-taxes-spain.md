@@ -4,6 +4,7 @@ title: Impuestos de autónomos en España 2026: guía completa para freelance
 meta_title: Impuestos de autónomos 2026: cuota, IRPF e IVA explicados
 meta_description: Impuestos de autónomos en 2026: los 15 tramos de la cuota, el IRPF, el IVA, los modelos 130 y 303, deducciones y tarifa plana, con un ejemplo resuelto.
 date: 2026-11-09
+updated: 2026-11-25
 author: Dmytro Shvechikov
 excerpt: Facturas 40.000 € como autónomo en España. ¿Cuánto te queda? Seguridad Social, IRPF e IVA paso a paso con las cifras de 2026, un ejemplo resuelto, deducciones, el calendario fiscal y una vía legal que puede bajarte el IRPF unos 2.000 €.
 image_alt: Adónde van los 40.000 euros que factura un autónomo en Madrid: gastos, Seguridad Social, IRPF y lo que le queda
@@ -27,7 +28,7 @@ La respuesta corta: una diseñadora autónoma en Madrid que factura **40.000 €
 - **Seguridad Social (cuota de autónomos)** Un pago mensual de 205,88 € a 607,35 € en 2026, según tu rendimiento, o 80 € fijos (unos 88,65 € con el MEI) el primer año con la tarifa plana.
 - **IRPF** Se paga sobre el rendimiento después de gastos y Seguridad Social, con tipos progresivos de entre el 19 % y el 47 %, aproximadamente. La mitad va al Estado y la mitad a tu comunidad. Lo adelantas durante el año con las retenciones de tus facturas (15 %, o 7 % al empezar) o cada trimestre con el modelo 130, y lo liquidas en la declaración anual, la Renta.
 - **IVA** Normalmente, un 21 % que sumas a tus facturas. No es tu dinero: lo cobras, restas el IVA de tus compras del negocio y pagas la diferencia cada trimestre con el modelo 303.
-- **Lo que queda** Para un autónomo típico, Seguridad Social e IRPF se llevan juntos entre el 25 % y el 35 % del rendimiento. Con 32.000 € de rendimiento en Madrid, el 30 %.
+- **Lo que queda** Para un autónomo típico, Seguridad Social e IRPF se llevan juntos entre el 25 % y el 35 % del rendimiento. Con 32.000 € de rendimiento en Madrid, el 29 %.
 
 ::: graphic where-it-goes
 
@@ -111,10 +112,10 @@ Consejo práctico: si no lo tienes claro, elige un tramo que encaje con tu rendi
 Vamos con el IRPF. ¿Cómo se pasa del rendimiento a la cantidad que de verdad tributa?
 
 - **Ingresos menos gastos** Aquí la cuota de la Seguridad Social también cuenta como gasto, entera.
-- **Menos un 5 % de gastos de difícil justificación** En la estimación directa simplificada tienes esta reducción además de tus gastos reales: el 5 % del rendimiento después de la cuota, con un máximo de 2.000 € al año. No necesitas facturas para aplicarla.
+- **Menos un 10 % de gastos de difícil justificación** En la estimación directa simplificada tienes esta reducción además de tus gastos reales: el 10 % del rendimiento después de la cuota, con un máximo de 3.000 € al año. No necesitas facturas para aplicarla. La regla habitual es un 5 % con un máximo de 2.000 €; el [Real Decreto-ley 43/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24701) la duplicó solo para el ejercicio 2026.
 - **Igual a tu rendimiento neto de la actividad** Va a tu declaración anual junto con cualquier otro ingreso que tengas: un sueldo, el alquiler de un piso, intereses.
 
-Nuestra diseñadora: 32.000 € menos 5.126,52 € de cuota son 26.873,48 €. El 5 % de eso son 1.343,67 €, lo que deja **25.529,81 € de base imponible**.
+Nuestra diseñadora: 32.000 € menos 5.126,52 € de cuota son 26.873,48 €. El 10 % de eso son 2.687,35 €, lo que deja **24.186,13 € de base imponible**.
 
 ::: graphic profit-path
 
@@ -140,7 +141,7 @@ El mínimo crece según tu familia y tu situación. Las cifras estatales:
 - **Ascendientes que viven contigo** 1.150 € por cada ascendiente mayor de 65 años que conviva contigo y gane menos de 8.000 € al año, más 1.400 € si tiene más de 75.
 - **Discapacidad** 3.000 € con un grado del 33 % o más (6.000 € si necesitas ayuda de terceros o tienes movilidad reducida), y 12.000 € con un 65 % o más.
 
-Con dos hijos, uno de ellos menor de 3 años, el IRPF de nuestra diseñadora en Madrid baja de 4.453 € a unos **2.934 €**.
+Con dos hijos, uno de ellos menor de 3 años, el IRPF de nuestra diseñadora en Madrid baja de 4.080 € a unos **2.560 €**.
 
 ## Mito: pasar de tramo hace tributar todos tus ingresos más
 
@@ -178,14 +179,14 @@ Juntemos todo, igual que hace la calculadora. Una diseñadora autónoma en Madri
 - **Rendimiento para el tramo de cotización** 32.000 € − 7 % = 29.760 €, es decir, 2.480 € al mes
 - **Seguridad Social** Tramo 10: 427,21 € × 12 = 5.126,52 €
 - **Rendimiento después de la cuota** 32.000 € − 5.126,52 € = 26.873,48 €
-- **5 % de gastos de difícil justificación** 1.343,67 € (por debajo del límite de 2.000 €)
-- **Base imponible** 25.529,81 €
-- **Mitad estatal del IRPF** 2.384,97 €
-- **Mitad madrileña del IRPF** 2.068,43 €
-- **IRPF total** 4.453,40 €
-- **Lo que le queda en el año** 22.420,08 €, unos 1.868 € al mes
+- **10 % de gastos de difícil justificación** 2.687,35 € (por debajo del límite de 3.000 €)
+- **Base imponible** 24.186,13 €
+- **Mitad estatal del IRPF** 2.183,42 €
+- **Mitad madrileña del IRPF** 1.896,44 €
+- **IRPF total** 4.079,86 €
+- **Lo que le queda en el año** 22.793,62 €, unos 1.899 € al mes
 
-Alrededor del 30 % del rendimiento se fue en Seguridad Social e IRPF, y un 14 % solo en IRPF. Ese 14 % es el tipo *efectivo*, muy distinto del 30 % marginal.
+Alrededor del 29 % del rendimiento se fue en Seguridad Social e IRPF, y un 13 % solo en IRPF. Ese 13 % es el tipo *efectivo*, muy distinto del 30 % marginal.
 
 La misma autónoma con otros niveles de rendimiento, en Madrid, en 2026. La parte que se lleva la Seguridad Social baja a medida que crece el rendimiento, y la del IRPF sube:
 
@@ -214,7 +215,7 @@ Los particulares y los clientes extranjeros no practican retención. La mayoría
 
 ### Modelo 130: pago fraccionado trimestral
 
-Sin retenciones, adelantas tú mismo el IRPF cada trimestre con el **modelo 130**: **el 20 % de tu rendimiento acumulado en el año**, menos lo que ya pagaste en trimestres anteriores y menos las retenciones que te hayan practicado. Los trimestres son acumulativos, así que un mal trimestre después de uno bueno puede dejar el pago a cero.
+Sin retenciones, adelantas tú mismo el IRPF cada trimestre con el **modelo 130**: **el 20 % de tu rendimiento acumulado en el año**, menos lo que ya pagaste en trimestres anteriores y menos las retenciones que te hayan practicado. Los trimestres son acumulativos, así que un mal trimestre después de uno bueno puede dejar el pago a cero. Desde 2027 el porcentaje baja al **19 %** si el año anterior facturaste menos de 250.000 €, y no tienes que presentar el 130 si facturaste menos de 85.000 € y en la Renta te devolvieron todos los pagos fraccionados del año anterior ([Real Decreto-ley 43/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24701)).
 
 Si **al menos el 70 %** de tus ingresos de la actividad del año anterior ya llevaba retención, no presentas el 130. El primer año, cuentan los ingresos de ese mismo año. Muchos autónomos que solo trabajan para empresas españolas no presentan nunca uno.
 
@@ -226,7 +227,7 @@ En cualquier caso, son solo pagos a cuenta. La cuenta final llega con la declara
 
 La Renta, la declaración anual del IRPF, es donde se liquida todo. Se presenta entre principios de abril y el **30 de junio** del año siguiente, por internet, con Renta Web de la Agencia Tributaria. A diferencia de muchos asalariados, **casi todos los autónomos tienen que presentar la Renta**, ganen lo que ganen: los umbrales que libran a muchos asalariados no se aplican a los rendimientos de actividades económicas (solo quedan exentos quienes tienen ingresos totales de menos de 1.000 € al año).
 
-Supón que todos tus clientes son empresas españolas y facturas 40.000 € en un año. Te retienen el 15 %: **6.000 €**. Pero tu IRPF real del año es de solo unos 4.450 €. Así que la Renta te devuelve unos **1.550 €**.
+Supón que todos tus clientes son empresas españolas y facturas 40.000 € en un año. Te retienen el 15 %: **6.000 €**. Pero tu IRPF real del año es de solo unos 4.080 €. Así que la Renta te devuelve unos **1.920 €**.
 
 Sin retenciones, los pagos trimestrales del modelo 130 hacen lo mismo, y la Renta ajusta la diferencia. Al 20 % del rendimiento, el 130 suele pasarse un poco en ingresos medios, así que también es habitual que salga a devolver.
 
@@ -247,7 +248,7 @@ Una de las mejores ventajas fiscales de un autónomo: un plan de pensiones priva
 
 Hay un límite: la reducción no puede superar **el 30 % de la suma de tus rendimientos netos del trabajo y de actividades económicas**. Con 15.000 € de rendimiento, eso te limita a unos 3.400 €.
 
-Ahorras a tu tipo más alto. Para nuestra diseñadora en Madrid, con 25.530 € de base imponible, aportar los 5.750 € completos le baja el IRPF unos **1.590 €**. Con 60.000 € de rendimiento, donde el tipo marginal ronda el 36 %, ahorra unos **2.060 €** al año.
+Ahorras a tu tipo más alto. Para nuestra diseñadora en Madrid, con 24.186 € de base imponible, aportar los 5.750 € completos le baja el IRPF unos **1.530 €**. Con 60.000 € de rendimiento, donde el tipo marginal ronda el 36 %, ahorra unos **2.060 €** al año.
 
 ::: graphic pension
 
@@ -268,7 +269,7 @@ Supón que facturas 1.000 € por un trabajo de diseño. Tu cliente paga 1.210 �
 
 Pero puedes restar el IVA que pagaste en tus propias compras del negocio. Si compras un portátil de 1.000 € para el negocio, pagas 210 € de IVA, que recuperas restándolo del IVA que cobraste.
 
-Cada trimestre presentas el **modelo 303** y pagas la diferencia. Si soportaste más IVA del que repercutiste, la diferencia se compensa en el trimestre siguiente o se devuelve a final de año (en el último trimestre eliges la devolución). En enero presentas también el **modelo 390**, el resumen anual del IVA.
+Cada trimestre presentas el **modelo 303** y pagas la diferencia. Si soportaste más IVA del que repercutiste, la diferencia se compensa en el trimestre siguiente o se devuelve a final de año (en el último trimestre eliges la devolución). En enero presentas también el **modelo 390**, el resumen anual del IVA. Desde 2027, si el año anterior facturaste menos de 85.000 €, puedes acogerte a un régimen nuevo con una sola declaración anual de IVA en lugar de cuatro y tres pagos a cuenta en abril, julio y octubre calculados sobre el año anterior.
 
 ::: graphic iva-quarter
 
@@ -421,8 +422,8 @@ Presentar fuera de plazo sin requerimiento previo cuesta un recargo del 1 % más
 
 - Todo parte de tu rendimiento: lo que facturaste sin IVA menos los gastos deducibles.
 - Seguridad Social: 15 tramos según tu rendimiento menos el 7 %, de 205,88 € a 607,35 € al mes en 2026, con regularización un año después. 80 € al mes el primer año con la tarifa plana.
-- IRPF: rendimiento menos cuota, menos el 5 % (máximo 2.000 €), menos el 20 % en tus dos primeros años con beneficios, con tipos de entre el 19 % y el 47 %, aproximadamente, y el mínimo personal además. Mitad para el Estado y mitad para la comunidad.
-- El IRPF se adelanta con retenciones (15 %, o 7 % al empezar) o con el modelo 130 (20 % del rendimiento), y se liquida en la Renta antes del 30 de junio.
+- IRPF: rendimiento menos cuota, menos el 10 % en 2026 (máximo 3.000 €; normalmente, el 5 % y 2.000 €), menos el 20 % en tus dos primeros años con beneficios, con tipos de entre el 19 % y el 47 %, aproximadamente, y el mínimo personal además. Mitad para el Estado y mitad para la comunidad.
+- El IRPF se adelanta con retenciones (15 %, o 7 % al empezar) o con el modelo 130 (20 % del rendimiento; 19 % desde 2027 para la mayoría), y se liquida en la Renta antes del 30 de junio.
 - Un plan de pensiones puede restar hasta 5.750 € al año de tu base imponible.
 - El IVA se recauda, no se gana: 21 % en casi todas las facturas, modelo 303 cada trimestre, con excepciones para clientes de la UE y del extranjero y para Canarias.
 - Guarda facturas completas de cada gasto y cada venta durante seis años.
@@ -433,7 +434,7 @@ Prueba tus propias cifras, con tu comunidad y tu familia, en la [calculadora de 
 
 ### ¿Cuántos impuestos paga un autónomo en España?
 
-La Seguridad Social y el IRPF suelen llevarse entre el 25 % y el 35 % del rendimiento de un autónomo. Un autónomo en Madrid con 32.000 € de rendimiento (40.000 € facturados y 8.000 € de gastos) paga 5.127 € de Seguridad Social y 4.453 € de IRPF en 2026 y se queda con unos 22.420 €, el 70 % del rendimiento. El IVA va aparte, pero lo pagan los clientes. Calcula tu propia cifra con la [calculadora de impuestos para autónomos](/calculators/autonomo-tax).
+La Seguridad Social y el IRPF suelen llevarse entre el 25 % y el 35 % del rendimiento de un autónomo. Un autónomo en Madrid con 32.000 € de rendimiento (40.000 € facturados y 8.000 € de gastos) paga 5.127 € de Seguridad Social y 4.080 € de IRPF en 2026 y se queda con unos 22.794 €, el 71 % del rendimiento. El IVA va aparte, pero lo pagan los clientes. Calcula tu propia cifra con la [calculadora de impuestos para autónomos](/calculators/autonomo-tax).
 
 ### ¿Cuánto es la cuota de autónomos en 2026?
 
@@ -465,7 +466,7 @@ Los que tienen el visado de nómada digital como profesionales, sí: se dan de a
 
 ### ¿Cómo puede un autónomo pagar menos impuestos de forma legal?
 
-Deduce todos los gastos reales del negocio con factura completa, el 5 % de gastos de difícil justificación, la reducción del 20 % en tus dos primeros años con beneficios, la tarifa plana y cualquier devolución autonómica de esta, y el seguro médico privado (500 € por persona). Un plan de pensiones resta hasta 5.750 € al año de tu base imponible y ahorra entre 1.600 € y 2.100 €, aproximadamente, con ingresos típicos de un autónomo.
+Deduce todos los gastos reales del negocio con factura completa, el 10 % de gastos de difícil justificación (5 % fuera de 2026), la reducción del 20 % en tus dos primeros años con beneficios, la tarifa plana y cualquier devolución autonómica de esta, y el seguro médico privado (500 € por persona). Un plan de pensiones resta hasta 5.750 € al año de tu base imponible y ahorra entre 1.500 € y 2.100 €, aproximadamente, con ingresos típicos de un autónomo.
 
 ### ¿Necesito un gestor siendo autónomo?
 

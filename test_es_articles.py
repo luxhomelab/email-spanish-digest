@@ -132,7 +132,7 @@ def test_es_graphics_are_spanish(site):
     assert "Papeleta blanca" in votes and "White ballot" not in votes
     assert "100.000 votos válidos" in votes
     tax = site("es/articles/autonomo-taxes-spain.html")
-    assert "Te quedas con 22.420 € (70 %)" in tax and "You keep" not in tax
+    assert "Te quedas con 22.794 € (71 %)" in tax and "You keep" not in tax
     election = site("es/articles/spain-election-2026-promises.html")
     assert "Mostrando las 127 promesas" in election
     assert 'data-some="Mostrando {shown} de {total} promesas"' in election
