@@ -1,0 +1,127 @@
+{
+  "items": [
+    {
+      "title": "Entran en vigor los nuevos permisos laborales",
+      "body": "El real decreto-ley publicado en el BOE entra en vigor el 26 de noviembre de 2026: amplía el permiso por nacimiento a 20 semanas, 34 en familias monoparentales, y el de duelo a 10 días laborables. Está pendiente de convalidación por la Diputación Permanente del Congreso y el PP amenaza con derogarlo.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/20-semanas-permiso-nacimiento-10-dias-duelo-entran-vigor-jueves_1_13691325.html"
+        }
+      ],
+      "category": "work",
+      "important": true
+    },
+    {
+      "title": "El Gobierno aprueba eliminar las retenciones del SMI",
+      "body": "El Consejo de Ministros ha aprobado el Real Decreto-ley 38/2026, que prevé dejar sin retención de IRPF las nóminas del SMI desde el 1 de enero de 2027. El salario mínimo subirá a 18.004 euros brutos anuales, un 5,3% más. La rebaja fiscal está pendiente de convalidación en el Congreso.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/11/25/es-oficial-gobierno-cambia-irpf-desde-1-enero-2027-los-trabajadores-que-cobren-salario-minimo-ya-no-tendran-retenciones-este-impuesto-su-nomina-2071667.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "El euríbor supera el 3,3% en noviembre",
+      "body": "La media provisional del euríbor supera el 3,3% ante la expectativa de una subida de tipos del BCE en diciembre. Una hipoteca variable de 150.000 euros a 25 años, con diferencial de un punto y revisión anual, pagaría unos 90 euros más al mes. En septiembre se firmaron 46.469 hipotecas sobre viviendas, un 2,3% más interanual.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/euribor-encarece-hipotecas-aguarda-subida-tipos-bce_7065672_0.html"
+        },
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/vivienda/2026-11-25/las-hipotecas-mantienen-el-pulso-y-crecen-un-23-en-septiembre-pese-al-enfriamiento-general-de-las-ventas.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "El modelo electoral favorece a PP y Vox",
+      "body": "El modelo de El País da mayoría absoluta a PP y Vox en el 87% de las simulaciones para las elecciones del 29 de noviembre. La estimación central les atribuye unos 190 escaños, frente a los 176 necesarios. El PSOE ha recortado distancias durante la campaña y los autores creen que la tendencia mejora las opciones de la izquierda.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/elecciones-generales/2026-11-26/quien-va-a-ganar-las-elecciones-la-probabilidad-de-cada-mayoria-segun-las-encuestas.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "La UME prestará asistencia sanitaria en El Hierro",
+      "body": "Fuentes de Defensa confirman que la UME viajará a El Hierro el 26 de noviembre para prestar asistencia sanitaria. Canarias declaró el nivel 2 de emergencia tras recibir la isla más de 3.000 migrantes en tres días. El presidente, Fernando Clavijo, habla de «desborde» de medios y recursos.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-11-25/sin-pausa-en-la-ruta-canaria-190-personas-mas-llegan-en-dos-cayucos-a-el-hierro.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Los autónomos cuestionan la declaración anual de IVA",
+      "body": "El Consejo de Ministros ha aprobado una declaración anual de IVA para autónomos que facturen menos de 85.000 euros. ATA y Uatae advierten de que acogerse exigiría anticipos en abril, julio y octubre y renunciar a aplazamientos o fraccionamientos. UPTA alerta del riesgo para la liquidez de los pequeños negocios.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/los-autonomos-alertan-que-tendran-que-anticipar-iva-tres-veces-ano-aunque-se-acojan-declaracion-anual_7065774_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Grosso Napoletano, mejor cadena de pizzas artesanas",
+      "body": "La española Grosso Napoletano vuelve a liderar el ranking 50 Top World Artisan Pizza Chains 2026, presentado en Milán. Tiene 45 establecimientos en España y produce más de dos millones de pizzas al año. Otras cinco cadenas españolas figuran entre las 50 primeras.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/metropoli/gastronomia/2026/11/25/6b06e714e85ecebd1a8b45ba.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "La investigación de Adamuz señala fallos de detección",
+      "body": "El borrador de la Aitat señala que Adif validó en 2020 un sistema que no garantiza detectar roturas de carril, pese a conocer sus limitaciones. La vía se rompió 22 horas antes del accidente de Adamuz, que dejó 46 muertos. Los investigadores advierten de que el siniestro podría repetirse.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/andalucia/2026/11/25/6b06d406fdddffe3308b45b0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Menos anuncios de alquiler, más viviendas arrendadas",
+      "body": "Menos anuncios no implica menos pisos alquilados: la Agencia Tributaria registra cerca de 475.000 viviendas más entre 2021 y 2025. El decreto, convalidado y en vigor, prorroga dos años los contratos que expiren antes del 31 de diciembre de 2028. La Comunidad de Madrid anuncia un recurso ante el Constitucional por invasión de competencias.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/vivienda/2026-11-26/han-desaparecido-400000-pisos-de-alquiler-en-espana-hay-menos-anuncios-pero-mas-casas-alquiladas.html"
+        },
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/madrid/2026-11-25/el-gobierno-de-ayuso-interpondra-un-recurso-de-inconstitucionalidad-contra-el-decreto-de-vivienda.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    }
+  ],
+  "engagement": "¿Te preocupa la subida de las hipotecas? A) Mucho B) Poco C) Nada",
+  "subject": "Nuevos permisos, IRPF del SMI y euríbor al alza",
+  "lang": "es",
+  "date": "2026-11-26",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-11-26T07:05:22.988744+00:00"
+}

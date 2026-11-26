@@ -1,0 +1,203 @@
+{
+  "items": [
+    {
+      "title": "Longer family leave takes effect November 26",
+      "body": "Birth leave rises to 20 weeks, or 34 for single-parent families, from November 26 under a Royal Decree-law. Bereavement leave rises to 10 working days. Congress's standing committee must still validate it. PP secretary general Miguel Tellado called the new rights \"papel mojado\" (worthless).",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/economia/20-semanas-permiso-nacimiento-10-dias-duelo-entran-vigor-jueves_1_13691325.html"
+        }
+      ],
+      "category": "work",
+      "important": true
+    },
+    {
+      "title": "Cabinet approves minimum-wage tax withholding cut for 2027",
+      "body": "The cabinet approved Royal Decree-law 38/2026, pending Congress validation. From January 1, 2027, it would end IRPF (personal income tax) withholding for SMI (minimum wage) earners and cut it for pay below €23,171.89 a year. The SMI would rise 5.3% to €18,004 gross a year. Workers would no longer wait for a refund.",
+      "sources": [
+        {
+          "name": "Heraldo",
+          "url": "https://www.heraldo.es/noticias/economia/2026/11/25/es-oficial-gobierno-cambia-irpf-desde-1-enero-2027-los-trabajadores-que-cobren-salario-minimo-ya-no-tendran-retenciones-este-impuesto-su-nomina-2071667.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Euribor rises above 3.3% as mortgages climb",
+      "body": "November's Euribor average is above 3.3% as markets expect a December ECB rate rise to 2.75%. An annual review of a €150,000 mortgage over 25 years with a one-point spread would add about €90 a month. Higher energy prices from the Middle East war have pushed eurozone CPI inflation to 4%.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/euribor-encarece-hipotecas-aguarda-subida-tipos-bce_7065672_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Election model favours PP–Vox majority on November 29",
+      "body": "El País's model gives PP and Vox an 83% chance of a majority in the November 29 election after allowing for a leftward polling trend. Its central estimate gives them about 190 seats; 176 are needed. The PSOE has narrowed the PP's polling lead to just over two points. These are simulations, not election results.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/elecciones-generales/2026-11-26/quien-va-a-ganar-las-elecciones-la-probabilidad-de-cada-mayoria-segun-las-encuestas.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Canary Islands declare emergency over sea arrivals",
+      "body": "The Canary Islands declared a level 2 emergency on November 25 after more than 3,000 migrants arrived by sea in three days. The military emergency unit (UME) travels to El Hierro on November 26 to provide triage and primary care. Regional authorities say healthcare and child-care capacity is overstretched.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2026-11-25/sin-pausa-en-la-ruta-canaria-190-personas-mas-llegan-en-dos-cayucos-a-el-hierro.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Annual VAT filing plan draws cash-flow warnings",
+      "body": "The cabinet approved an annual VAT return option on November 24 for autónomos (self-employed) billing under €85,000. Those opting in would still make advances in April, July, and October and lose the right to defer or split payments. Trade groups warn that advances based on the previous year's quota could strain struggling businesses.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/los-autonomos-alertan-que-tendran-que-anticipar-iva-tres-veces-ano-aunque-se-acojan-declaracion-anual_7065774_0.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Grosso Napoletano wins world pizza chain title",
+      "body": "Madrid-founded Grosso Napoletano topped the 50 Top World Artisan Pizza Chains 2026 ranking for the third time, after wins in 2023 and 2024. It has 45 venues across Spain. Five other Spanish chains made the top 50, so six Spanish chains are on the list.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/metropoli/gastronomia/2026/11/25/6b06e714e85ecebd1a8b45ba.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Draft report flags high-speed rail detection gaps",
+      "body": "A draft rail accident report says public rail company Adif approved a system in 2020 despite knowing it could not detect rail breaks. Investigators urge urgent safety measures on the Madrid–Andalucía high-speed line after the Adamuz crash killed 46. They say the rail broke 22 hours before the crash.",
+      "sources": [
+        {
+          "name": "El Mundo",
+          "url": "https://www.elmundo.es/andalucia/2026/11/25/6b06d406fdddffe3308b45b0.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Rental data dispute accompanies Madrid decree challenge",
+      "body": "The Housing Ministry says Tax Agency data show about 475,000 more rental homes in 2021–2025, despite fewer ads. Madrid's government will appeal the housing decree validated November 12 as unconstitutional. It extends by two years contracts expiring before the end of 2028 and suspends evictions of vulnerable tenants without alternative housing.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/vivienda/2026-11-26/han-desaparecido-400000-pisos-de-alquiler-en-espana-hay-menos-anuncios-pero-mas-casas-alquiladas.html"
+        },
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/madrid/2026-11-25/el-gobierno-de-ayuso-interpondra-un-recurso-de-inconstitucionalidad-contra-el-decreto-de-vivienda.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Mortgage signings rise while home sales fall",
+      "body": "September home mortgage signings rose 2.3% to 46,469, while sales fell 13.4%, according to INE (national statistics institute). The average loan reached €178,352, and the average interest rate rose to 3.05%. January–September signings reached 383,366, the highest total for that period since 2010.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/vivienda/2026-11-25/las-hipotecas-mantienen-el-pulso-y-crecen-un-23-en-septiembre-pese-al-enfriamiento-general-de-las-ventas.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    }
+  ],
+  "engagement": "What's your view on longer family leave? A) Welcome B) Insufficient C) Unsure",
+  "subject": "Longer family leave, tax relief and Euribor rises",
+  "variant": "What mattered in Spain today",
+  "headline": "What mattered in Spain today",
+  "date": "2026-11-26",
+  "engagement_source": "generated",
+  "generated_at": "2026-11-26T07:02:34.015772+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 692,
+    "items_selected_pass1": 11,
+    "fact_sheets_extracted": 11,
+    "items_after_importance_filter": 11,
+    "items_in_digest": 10
+  },
+  "selection_reasons": {
+    "300": "Tax change: from 1 January 2027, minimum-wage earners will have no IRPF withholding, affecting a large share of workers and residents' payslips",
+    "597": "Changes to the IVA regime for autónomos: mandatory payment is criticised as losing deferral rights, affecting a large self-employed group and their tax obligations",
+    "586": "Euribor above 3.3% raises mortgage costs by over €1,000 a year; direct impact on homeowners and mortgage holders",
+    "5": "Draft report from the rail accident investigators (Adamuz, 46 dead) says the accident could repeat and recommends urgent measures; major national safety story",
+    "312": "Election outlook with probabilities for each majority ahead of 29N; the general election is the top national political event this week",
+    "395": "UME deployed to El Hierro after Canarias declared an emergency over record migrant arrivals (over 2,100 in one day); national migration policy story",
+    "22": "Positive news: Spanish chain Grosso Napoletano named the world's best artisan pizza chain for a third time",
+    "324": "Rental market data: fewer listings but about half a million more rented homes than 2021, relevant to renters and the housing debate",
+    "358": "Madrid regional government will challenge the national housing decree (rent extensions, eviction suspension) at the Constitutional Court; affects tenants and landlords nationwide",
+    "614": "The 20-week birth leave and 10-day bereavement leave take effect today; a direct labour-rights change for workers",
+    "639": "INE data: mortgage lending up 2.3% in September with the average loan reaching €178,352, relevant to buyers and borrowers"
+  },
+  "selection_sources": [
+    {
+      "url": "https://www.heraldo.es/noticias/economia/2026/11/25/es-oficial-gobierno-cambia-irpf-desde-1-enero-2027-los-trabajadores-que-cobren-salario-minimo-ya-no-tendran-retenciones-este-impuesto-su-nomina-2071667.html",
+      "reason": "Tax change: from 1 January 2027, minimum-wage earners will have no IRPF withholding, affecting a large share of workers and residents' payslips"
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/los-autonomos-alertan-que-tendran-que-anticipar-iva-tres-veces-ano-aunque-se-acojan-declaracion-anual_7065774_0.html",
+      "reason": "Changes to the IVA regime for autónomos: mandatory payment is criticised as losing deferral rights, affecting a large self-employed group and their tax obligations"
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/euribor-encarece-hipotecas-aguarda-subida-tipos-bce_7065672_0.html",
+      "reason": "Euribor above 3.3% raises mortgage costs by over €1,000 a year; direct impact on homeowners and mortgage holders"
+    },
+    {
+      "url": "https://www.elmundo.es/andalucia/2026/11/25/6b06d406fdddffe3308b45b0.html",
+      "reason": "Draft report from the rail accident investigators (Adamuz, 46 dead) says the accident could repeat and recommends urgent measures; major national safety story"
+    },
+    {
+      "url": "https://elpais.com/espana/elecciones-generales/2026-11-26/quien-va-a-ganar-las-elecciones-la-probabilidad-de-cada-mayoria-segun-las-encuestas.html",
+      "reason": "Election outlook with probabilities for each majority ahead of 29N; the general election is the top national political event this week"
+    },
+    {
+      "url": "https://elpais.com/espana/2026-11-25/sin-pausa-en-la-ruta-canaria-190-personas-mas-llegan-en-dos-cayucos-a-el-hierro.html",
+      "reason": "UME deployed to El Hierro after Canarias declared an emergency over record migrant arrivals (over 2,100 in one day); national migration policy story"
+    },
+    {
+      "url": "https://www.elmundo.es/metropoli/gastronomia/2026/11/25/6b06e714e85ecebd1a8b45ba.html",
+      "reason": "Positive news: Spanish chain Grosso Napoletano named the world's best artisan pizza chain for a third time"
+    },
+    {
+      "url": "https://elpais.com/economia/vivienda/2026-11-26/han-desaparecido-400000-pisos-de-alquiler-en-espana-hay-menos-anuncios-pero-mas-casas-alquiladas.html",
+      "reason": "Rental market data: fewer listings but about half a million more rented homes than 2021, relevant to renters and the housing debate"
+    },
+    {
+      "url": "https://elpais.com/espana/madrid/2026-11-25/el-gobierno-de-ayuso-interpondra-un-recurso-de-inconstitucionalidad-contra-el-decreto-de-vivienda.html",
+      "reason": "Madrid regional government will challenge the national housing decree (rent extensions, eviction suspension) at the Constitutional Court; affects tenants and landlords nationwide"
+    },
+    {
+      "url": "https://www.eldiario.es/economia/20-semanas-permiso-nacimiento-10-dias-duelo-entran-vigor-jueves_1_13691325.html",
+      "reason": "The 20-week birth leave and 10-day bereavement leave take effect today; a direct labour-rights change for workers"
+    },
+    {
+      "url": "https://elpais.com/economia/vivienda/2026-11-25/las-hipotecas-mantienen-el-pulso-y-crecen-un-23-en-septiembre-pese-al-enfriamiento-general-de-las-ventas.html",
+      "reason": "INE data: mortgage lending up 2.3% in September with the average loan reaching €178,352, relevant to buyers and borrowers"
+    }
+  ]
+}
