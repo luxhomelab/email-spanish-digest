@@ -2,7 +2,7 @@
   "items": [
     {
       "title": "Entran en vigor los nuevos permisos laborales",
-      "body": "El real decreto-ley publicado en el BOE entra en vigor el 26 de noviembre de 2026: amplía el permiso por nacimiento a 20 semanas, 34 en familias monoparentales, y el de duelo a 10 días laborables. Está pendiente de convalidación por la Diputación Permanente del Congreso y el PP amenaza con derogarlo.",
+      "body": "Desde el 26 de noviembre de 2026, el permiso por nacimiento alcanza 20 semanas y el de duelo, 10 días laborables. Las familias monoparentales disponen de 34 semanas por nacimiento. El decreto está en vigor, pero sigue pendiente de convalidación por la Diputación Permanente; el PP amenaza con derogarlo.",
       "sources": [
         {
           "name": "El Diario",
@@ -14,7 +14,7 @@
     },
     {
       "title": "El Gobierno aprueba eliminar las retenciones del SMI",
-      "body": "El Consejo de Ministros ha aprobado el Real Decreto-ley 38/2026, que prevé dejar sin retención de IRPF las nóminas del SMI desde el 1 de enero de 2027. El salario mínimo subirá a 18.004 euros brutos anuales, un 5,3% más. La rebaja fiscal está pendiente de convalidación en el Congreso.",
+      "body": "El Consejo de Ministros ha aprobado que quienes cobren el SMI no tengan retenciones de IRPF desde el 1 de enero de 2027. La medida prevé elevar el neto mensual sin esperar a la declaración de la renta y debe convalidarse en el Congreso. El SMI subirá a 18.004 euros brutos anuales.",
       "sources": [
         {
           "name": "Heraldo",
@@ -26,23 +26,19 @@
     },
     {
       "title": "El euríbor supera el 3,3% en noviembre",
-      "body": "La media provisional del euríbor supera el 3,3% ante la expectativa de una subida de tipos del BCE en diciembre. Una hipoteca variable de 150.000 euros a 25 años, con diferencial de un punto y revisión anual, pagaría unos 90 euros más al mes. En septiembre se firmaron 46.469 hipotecas sobre viviendas, un 2,3% más interanual.",
+      "body": "La media provisional del euríbor supera el 3,3% ante la expectativa de que el BCE suba los tipos en diciembre. Una hipoteca variable de 150.000 euros a 25 años y con un diferencial de un punto podría encarecerse unos 90 euros al mes con revisión anual.",
       "sources": [
         {
           "name": "20 Minutos",
           "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/euribor-encarece-hipotecas-aguarda-subida-tipos-bce_7065672_0.html"
-        },
-        {
-          "name": "El País",
-          "url": "https://elpais.com/economia/vivienda/2026-11-25/las-hipotecas-mantienen-el-pulso-y-crecen-un-23-en-septiembre-pese-al-enfriamiento-general-de-las-ventas.html"
         }
       ],
       "category": "economy",
       "important": false
     },
     {
-      "title": "El modelo electoral favorece a PP y Vox",
-      "body": "El modelo de El País da mayoría absoluta a PP y Vox en el 87% de las simulaciones para las elecciones del 29 de noviembre. La estimación central les atribuye unos 190 escaños, frente a los 176 necesarios. El PSOE ha recortado distancias durante la campaña y los autores creen que la tendencia mejora las opciones de la izquierda.",
+      "title": "El País ve probable la mayoría PP-Vox",
+      "body": "El análisis electoral de El País estima en un 83% la probabilidad final de una mayoría absoluta de PP y Vox. La estimación central les da 190 escaños: 129 al PP y 61 a Vox. El PSOE alcanzaría 116 y ha recortado la distancia durante la campaña.",
       "sources": [
         {
           "name": "El País",
@@ -54,7 +50,7 @@
     },
     {
       "title": "La UME prestará asistencia sanitaria en El Hierro",
-      "body": "Fuentes de Defensa confirman que la UME viajará a El Hierro el 26 de noviembre para prestar asistencia sanitaria. Canarias declaró el nivel 2 de emergencia tras recibir la isla más de 3.000 migrantes en tres días. El presidente, Fernando Clavijo, habla de «desborde» de medios y recursos.",
+      "body": "La UME tiene previsto viajar a El Hierro el 26 de noviembre de 2026 para prestar atención sanitaria, realizar triajes y derivar pacientes. Canarias declaró el nivel 2 de emergencia tras recibir la isla a más de 3.000 inmigrantes en tres días, ante el desborde de medios y recursos.",
       "sources": [
         {
           "name": "El País",
@@ -66,7 +62,7 @@
     },
     {
       "title": "Los autónomos cuestionan la declaración anual de IVA",
-      "body": "El Consejo de Ministros ha aprobado una declaración anual de IVA para autónomos que facturen menos de 85.000 euros. ATA y Uatae advierten de que acogerse exigiría anticipos en abril, julio y octubre y renunciar a aplazamientos o fraccionamientos. UPTA alerta del riesgo para la liquidez de los pequeños negocios.",
+      "body": "El Consejo de Ministros ha aprobado una declaración anual de IVA para quienes facturen menos de 85.000 euros. Según ATA y Uatae, el sistema exigiría tres anticipos al año y renunciar a aplazamientos o fraccionamientos. UPTA advierte de que podría comprometer la liquidez de los pequeños negocios.",
       "sources": [
         {
           "name": "20 Minutos",
@@ -77,8 +73,8 @@
       "important": false
     },
     {
-      "title": "Grosso Napoletano, mejor cadena de pizzas artesanas",
-      "body": "La española Grosso Napoletano vuelve a liderar el ranking 50 Top World Artisan Pizza Chains 2026, presentado en Milán. Tiene 45 establecimientos en España y produce más de dos millones de pizzas al año. Otras cinco cadenas españolas figuran entre las 50 primeras.",
+      "title": "Grosso Napoletano, de nuevo mejor cadena de pizzas artesanas",
+      "body": "Grosso Napoletano ha sido elegida mejor cadena de pizzas artesanas del mundo en el ranking 50 Top World Artisan Pizza Chains 2026. Ya lideró la lista en 2023 y 2024. La cadena tiene 45 establecimientos en España y otras cinco cadenas españolas figuran entre las 50 primeras.",
       "sources": [
         {
           "name": "El Mundo",
@@ -89,8 +85,8 @@
       "important": false
     },
     {
-      "title": "La investigación de Adamuz señala fallos de detección",
-      "body": "El borrador de la Aitat señala que Adif validó en 2020 un sistema que no garantiza detectar roturas de carril, pese a conocer sus limitaciones. La vía se rompió 22 horas antes del accidente de Adamuz, que dejó 46 muertos. Los investigadores advierten de que el siniestro podría repetirse.",
+      "title": "Adif validó un sistema incapaz de detectar roturas",
+      "body": "Según el borrador de la Aitat, Adif validó en 2020 un sistema que no garantiza detectar roturas de carril, pese a conocer sus lagunas. Los investigadores advierten de que podría repetirse un accidente como el de Adamuz, con 46 muertos. El carril se rompió 22 horas antes del siniestro.",
       "sources": [
         {
           "name": "El Mundo",
@@ -101,8 +97,8 @@
       "important": false
     },
     {
-      "title": "Menos anuncios de alquiler, más viviendas arrendadas",
-      "body": "Menos anuncios no implica menos pisos alquilados: la Agencia Tributaria registra cerca de 475.000 viviendas más entre 2021 y 2025. El decreto, convalidado y en vigor, prorroga dos años los contratos que expiren antes del 31 de diciembre de 2028. La Comunidad de Madrid anuncia un recurso ante el Constitucional por invasión de competencias.",
+      "title": "Menos anuncios no equivalen a menos pisos alquilados",
+      "body": "Idealista registra 393.000 anuncios menos desde 2018; la Agencia Tributaria, cerca de 475.000 viviendas más en alquiler habitual entre 2021 y 2025. Son indicadores distintos, no una prueba de desaparición de pisos. El decreto de vivienda está convalidado y en vigor, pero Madrid anuncia un recurso por invasión de competencias.",
       "sources": [
         {
           "name": "El País",
@@ -115,13 +111,25 @@
       ],
       "category": "property",
       "important": false
+    },
+    {
+      "title": "Las hipotecas crecen pese al descenso de compraventas",
+      "body": "En septiembre se firmaron 46.469 hipotecas sobre viviendas, un 2,3% más interanual, aunque las compraventas cayeron un 13,4%, según el INE. El importe medio subió un 3,7%, hasta 178.352 euros, y el tipo de interés medio fue del 3,05%.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/vivienda/2026-11-25/las-hipotecas-mantienen-el-pulso-y-crecen-un-23-en-septiembre-pese-al-enfriamiento-general-de-las-ventas.html"
+        }
+      ],
+      "category": "property",
+      "important": false
     }
   ],
-  "engagement": "¿Te preocupa la subida de las hipotecas? A) Mucho B) Poco C) Nada",
-  "subject": "Nuevos permisos, IRPF del SMI y euríbor al alza",
+  "engagement": "¿Qué permiso ampliarías más? A) Nacimiento B) Duelo C) Cuidados",
+  "subject": "Nuevos permisos, retenciones del SMI y euríbor",
   "lang": "es",
   "date": "2026-11-26",
   "engagement_source": "generated",
   "editor_skipped": false,
-  "generated_at": "2026-11-26T07:05:22.988744+00:00"
+  "generated_at": "2026-11-26T07:19:28.191879+00:00"
 }
