@@ -1,0 +1,211 @@
+{
+  "items": [
+    {
+      "title": "Flat prices hit record as home sales fall",
+      "body": "Flat prices rose 15.6% year on year in October to a record €2,582/m², notaries report. Home sales fell 15.4% to 54,823. Limited supply and owners holding out for high prices are pushing prices up while discouraging purchases, a Notaries' statistics adviser says.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/economia/20261126/11694154/precio-pisos-dispara-15-6-octubre-mayor-crecimiento-burbuja.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "Court upholds voting suspension for Ley de Nietos citizens",
+      "body": "The Supreme Court rejected the final appeal against suspending voting rights for more than 163,000 Ley de Nietos citizens in the November 29 election. Only 901 who supplied consular proof of descent from someone persecuted during the war or dictatorship may vote. The precautionary suspension remains in place.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/supremo-confirma-tres-dias-elecciones-163-000-nacionalizados-ley-nietos-no-podran-votar_1_13696267.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Congress backs public pay rise and wage tax exemption",
+      "body": "Congress's standing committee unanimously validated three Royal Decree-laws on November 26. They provide a 4.5% public-sector pay rise in 2027, IRPF (personal income tax) exemption for the new SMI (minimum wage), and an end to salary secrecy. The PP criticised the fast-track process during the election campaign.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-11-26/congreso-convalida-decretos-salarios-publicos-1tps_4473240/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "ECB minutes reveal support for higher interest rates",
+      "body": "Many ECB policymakers could have backed a rate rise on October 29 because the inflation outlook had worsened, minutes published on November 26 show. The bank instead held rates at 2.5%. It had raised rates by 25 basis points in June and again in September.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-11-26/bce-preve-subida-tipos-inflacion-1hms_4473410/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Hernández de Cos designated as next ECB president",
+      "body": "The EU's 27 member states have designated Bank for International Settlements president Pablo Hernández de Cos to lead the ECB from February 7, taking over from Christine Lagarde. He would be the first Spaniard in the role. EU recommendations, consultations, and a final European Council vote are still required.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/pablo-hernandez-cos-hace-historia-como-primer-presidente-espanol-que-presidira-banco-central-europeo_7062061_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Vox remittance tax proposal faces legal hurdles",
+      "body": "Vox's election programme proposes taxing money foreign workers send home; it is not law or before parliament. Analysts warn it could conflict with EU rules on capital movements and Spanish protections for transfers abroad. It would add costs to sending income that has already been taxed.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-27/trabas-legales-y-dudas-sobre-su-efectividad-se-pueden-gravar-las-remesas-de-los-trabajadores-extranjeros-como-propone-vox.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Vox proposes €112 billion public spending cut",
+      "body": "Vox's election proposal would cut €112 billion, or 50% of spending it wants reviewed. The party says it would protect healthcare, education, and other essential services. Economists question whether cuts exceeding 10% of total public spending could avoid affecting those services.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/politica/20261126/11694309/vox-plantea-recorte-moderado-112-000-millones-gasto-publico.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Fuel tanker capsizes near Ibiza, killing crew member",
+      "body": "The MED EMRE capsized about 25 miles north of Ibiza on November 25, killing one crew member. It carries 7,000 metric tons of diesel and jet kerosene. Officials say its tanks remain intact and rule out a spill, while environmental groups warn of risks to marine life.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/vida/20261126/11693983/gobierno-descarta-vertidos-buque-naufragado-entidades-ecologistas-alertan-riesgo-medioambiental.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Feijóo pledges resignation if he cannot become premier",
+      "body": "PP prime ministerial candidate Alberto Núñez Feijóo says he would resign and leave parliament if he cannot form a government after the November 29 election. He challenged Prime Minister Pedro Sánchez to make the same pledge if he fails to retain office.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/elecciones-generales/2026-11-26/feijoo-se-compromete-a-dimitir-si-no-puede-asumir-la-presidencia-del-gobierno.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "State job applications open on November 27",
+      "body": "The BOE (official state gazette) published a call on November 26 for 14,373 state administration places: 6,508 open-entry and 7,865 internal-promotion places. Applicants have 20 working days from November 27 to apply online using form 790. Required qualifications range from secondary education to a university degree.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/boe-publica-convocatoria-14-373-plazas-empleo-publico-administracion-general-estado_7066028_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Spain reaches Davis Cup semifinal, faces Britain Saturday",
+      "body": "Spain beat Austria in Bologna on November 26 to reach the Davis Cup semifinals. Spanish players Dani Mérida and Rafa Jódar won their singles matches, with Jódar taking the decisive set 6-1. Spain faces Great Britain on Saturday, November 28.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/deportes/tenis/20261126/11694412/son-tiempos-vacas-gordas-espana-semifinal-copa-davis.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "Would you move to a cheaper region to afford a home? A) Yes B) No C) Maybe",
+  "subject": "Record flat prices, public pay and ECB succession",
+  "variant": "Here's Spain today, in under a minute",
+  "headline": "Here's Spain today, in under a minute",
+  "date": "2026-11-27",
+  "engagement_source": "generated",
+  "generated_at": "2026-11-27T07:02:18.026899+00:00",
+  "source_stats": {
+    "feeds_ok": 18,
+    "feeds_total": 18,
+    "items_fetched": 742,
+    "items_selected_pass1": 11,
+    "fact_sheets_extracted": 11,
+    "items_after_importance_filter": 11,
+    "items_in_digest": 11
+  },
+  "selection_reasons": {
+    "618": "Congress validated the 4.5% public-sector pay rise and the IRPF exemption for the new minimum wage (SMI), a development of yesterday's cabinet decree that affects workers' take-home pay from 2027.",
+    "515": "Home prices rose 15.6% in October, the largest increase since the housing bubble, with direct impact on buyers, renters and mortgage costs.",
+    "615": "ECB minutes show many governing council members backed a rate hike in October, which bears directly on Euribor and variable-rate mortgages.",
+    "625": "Spaniard Pablo Hernández de Cos will become ECB president in February 2027, a nationally significant appointment that shapes eurozone rates and mortgage costs.",
+    "683": "Vox proposes taxing remittances of foreign workers; analysts say it would conflict with EU law and drive informal activity, which directly concerns immigrants and expats.",
+    "506": "Vox's proposed 112,000-million-euro public spending cut, including pension and IRPF implications, is a major platform item in the 29-N election.",
+    "330": "Feijóo commits to resign his seat and waive immunity if he fails to become PM, a key moment in the national election campaign ahead of 29-N.",
+    "90": "The Supreme Court confirmed that about 163,000 citizens naturalised under the 'ley de nietos' cannot vote on 29-N, a legal precedent affecting a large group of Spanish nationals abroad and in Spain.",
+    "645": "The BOE published 14,373 public-sector job openings with a 20-working-day application window, relevant to job seekers and residents considering public employment.",
+    "531": "Positive news: Spain's Davis Cup team beat Austria 2-0 and advances to the semifinals against Great Britain.",
+    "444": "The Med Emre tanker sinking off Ibiza with 7,000 tonnes of diesel is a major environmental threat to the Balearic coast and marine life."
+  },
+  "selection_sources": [
+    {
+      "url": "https://www.elconfidencial.com/economia/2026-11-26/congreso-convalida-decretos-salarios-publicos-1tps_4473240/",
+      "reason": "Congress validated the 4.5% public-sector pay rise and the IRPF exemption for the new minimum wage (SMI), a development of yesterday's cabinet decree that affects workers' take-home pay from 2027."
+    },
+    {
+      "url": "https://www.lavanguardia.com/economia/20261126/11694154/precio-pisos-dispara-15-6-octubre-mayor-crecimiento-burbuja.html",
+      "reason": "Home prices rose 15.6% in October, the largest increase since the housing bubble, with direct impact on buyers, renters and mortgage costs."
+    },
+    {
+      "url": "https://www.elconfidencial.com/economia/2026-11-26/bce-preve-subida-tipos-inflacion-1hms_4473410/",
+      "reason": "ECB minutes show many governing council members backed a rate hike in October, which bears directly on Euribor and variable-rate mortgages."
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/pablo-hernandez-cos-hace-historia-como-primer-presidente-espanol-que-presidira-banco-central-europeo_7062061_0.html",
+      "reason": "Spaniard Pablo Hernández de Cos will become ECB president in February 2027, a nationally significant appointment that shapes eurozone rates and mortgage costs."
+    },
+    {
+      "url": "https://elpais.com/economia/2026-11-27/trabas-legales-y-dudas-sobre-su-efectividad-se-pueden-gravar-las-remesas-de-los-trabajadores-extranjeros-como-propone-vox.html",
+      "reason": "Vox proposes taxing remittances of foreign workers; analysts say it would conflict with EU law and drive informal activity, which directly concerns immigrants and expats."
+    },
+    {
+      "url": "https://www.lavanguardia.com/politica/20261126/11694309/vox-plantea-recorte-moderado-112-000-millones-gasto-publico.html",
+      "reason": "Vox's proposed 112,000-million-euro public spending cut, including pension and IRPF implications, is a major platform item in the 29-N election."
+    },
+    {
+      "url": "https://elpais.com/espana/elecciones-generales/2026-11-26/feijoo-se-compromete-a-dimitir-si-no-puede-asumir-la-presidencia-del-gobierno.html",
+      "reason": "Feijóo commits to resign his seat and waive immunity if he fails to become PM, a key moment in the national election campaign ahead of 29-N."
+    },
+    {
+      "url": "https://www.eldiario.es/politica/supremo-confirma-tres-dias-elecciones-163-000-nacionalizados-ley-nietos-no-podran-votar_1_13696267.html",
+      "reason": "The Supreme Court confirmed that about 163,000 citizens naturalised under the 'ley de nietos' cannot vote on 29-N, a legal precedent affecting a large group of Spanish nationals abroad and in Spain."
+    },
+    {
+      "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/boe-publica-convocatoria-14-373-plazas-empleo-publico-administracion-general-estado_7066028_0.html",
+      "reason": "The BOE published 14,373 public-sector job openings with a 20-working-day application window, relevant to job seekers and residents considering public employment."
+    },
+    {
+      "url": "https://www.lavanguardia.com/deportes/tenis/20261126/11694412/son-tiempos-vacas-gordas-espana-semifinal-copa-davis.html",
+      "reason": "Positive news: Spain's Davis Cup team beat Austria 2-0 and advances to the semifinals against Great Britain."
+    },
+    {
+      "url": "https://www.lavanguardia.com/vida/20261126/11693983/gobierno-descarta-vertidos-buque-naufragado-entidades-ecologistas-alertan-riesgo-medioambiental.html",
+      "reason": "The Med Emre tanker sinking off Ibiza with 7,000 tonnes of diesel is a major environmental threat to the Balearic coast and marine life."
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "title": "Convalidados los decretos sobre salarios públicos y SMI",
+      "body": "La Diputación Permanente convalidó por unanimidad tres reales decretos ley: subida del 4,5% en 2027 para tres millones de empleados públicos, exención del IRPF para el nuevo SMI y fin del secreto salarial. El PP criticó la tramitación acelerada en campaña electoral.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-11-26/congreso-convalida-decretos-salarios-publicos-1tps_4473240/"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "Los pisos suben un 15,6% y marcan máximos",
+      "body": "El precio de los pisos alcanzó los 2.582 euros/m² en octubre, un 15,6% más interanual, según el Notariado. Las compraventas de vivienda cayeron un 15,4%. El catedrático y asesor del Notariado José García Montalvo atribuye el encarecimiento y el freno de las ventas a una oferta muy limitada.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/economia/20261126/11694154/precio-pisos-dispara-15-6-octubre-mayor-crecimiento-burbuja.html"
+        }
+      ],
+      "category": "property",
+      "important": false
+    },
+    {
+      "title": "El Supremo impide votar a más de 163.000 nacionalizados",
+      "body": "El Supremo rechazó el último recurso de la Abogacía del Estado: más de 163.000 nacionalizados por la ley de nietos no podrán votar el 29 de noviembre. Solo podrán hacerlo las 901 personas que acreditaron mediante certificación consular que descienden de un represaliado por la guerra o la dictadura.",
+      "sources": [
+        {
+          "name": "El Diario",
+          "url": "https://www.eldiario.es/politica/supremo-confirma-tres-dias-elecciones-163-000-nacionalizados-ley-nietos-no-podran-votar_1_13696267.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Muchos miembros del BCE apoyaban subir tipos",
+      "body": "Las actas de la reunión del BCE del 29 de octubre indican que un gran número de miembros del Consejo de Gobierno habría apoyado subir los tipos por el deterioro de la perspectiva de inflación. Finalmente se mantuvieron en el 2,5%. Antes subieron 25 puntos básicos en junio y en septiembre.",
+      "sources": [
+        {
+          "name": "El Confidencial",
+          "url": "https://www.elconfidencial.com/economia/2026-11-26/bce-preve-subida-tipos-inflacion-1hms_4473410/"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Hernández de Cos, elegido para presidir el BCE",
+      "body": "Los Veintisiete han designado al presidente del Banco de Pagos Internacionales, Pablo Hernández de Cos, para presidir el BCE desde el 7 de febrero. Sería el primer español al frente de la institución. Aún quedan consultas y la decisión formal del Consejo Europeo.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/pablo-hernandez-cos-hace-historia-como-primer-presidente-espanol-que-presidira-banco-central-europeo_7062061_0.html"
+        }
+      ],
+      "category": "economy",
+      "important": false
+    },
+    {
+      "title": "Dudas legales sobre gravar las remesas, como propone Vox",
+      "body": "Vox propone en su programa electoral gravar las remesas de trabajadores extranjeros; no hay una medida en tramitación. Analistas advierten de posibles choques con el derecho comunitario y del riesgo de desviar los envíos a canales informales. Según el profesor Jorge Onrubia (Complutense), ese dinero ya tributó vía IRPF y cotizaciones.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/economia/2026-11-27/trabas-legales-y-dudas-sobre-su-efectividad-se-pueden-gravar-las-remesas-de-los-trabajadores-extranjeros-como-propone-vox.html"
+        }
+      ],
+      "category": "taxes",
+      "important": false
+    },
+    {
+      "title": "Vox propone recortar 112.000 millones de gasto público",
+      "body": "Vox plantea recortar 112.000 millones de euros revisando subvenciones y transferencias a las comunidades autónomas. Su responsable de economía, José María Figaredo, asegura que protegería los servicios esenciales. Varios economistas cuestionan que ese ahorro sea viable sin afectar a los servicios públicos.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/politica/20261126/11694309/vox-plantea-recorte-moderado-112-000-millones-gasto-publico.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "Un muerto en el naufragio frente a Eivissa",
+      "body": "Un marinero murió en el naufragio del MED EMRE el 25 de noviembre, a unas 25 millas al norte de Eivissa. Transportaba 7.000 toneladas métricas de gasóleo y queroseno. El Gobierno descarta por ahora vertidos de la carga, aunque se detectaron pequeñas manchas de combustible y los ecologistas alertan del riesgo ambiental.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/vida/20261126/11693983/gobierno-descarta-vertidos-buque-naufragado-entidades-ecologistas-alertan-riesgo-medioambiental.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    },
+    {
+      "title": "Feijóo promete dimitir si no logra la presidencia",
+      "body": "El candidato del PP, Alberto Núñez Feijóo, se comprometió a dimitir, dejar el acta de diputado y renunciar al aforamiento si no llega a presidente tras las elecciones del 29 de noviembre. Reclamó el mismo compromiso al presidente del Gobierno, Pedro Sánchez, que no ha respondido.",
+      "sources": [
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/elecciones-generales/2026-11-26/feijoo-se-compromete-a-dimitir-si-no-puede-asumir-la-presidencia-del-gobierno.html"
+        }
+      ],
+      "category": "politics",
+      "important": false
+    },
+    {
+      "title": "El BOE convoca 14.373 plazas de empleo público",
+      "body": "El BOE publicó el 26 de noviembre la convocatoria de 14.373 plazas en la Administración General del Estado: 6.508 de turno libre y 7.865 de promoción interna. El plazo es de 20 días hábiles desde el 27 de noviembre, mediante el modelo 790 en el Punto de Acceso General. CSIF critica que son apenas la mitad de las aprobadas en mayo.",
+      "sources": [
+        {
+          "name": "20 Minutos",
+          "url": "https://www.20minutos.es/lainformacion/economia-y-finanzas/boe-publica-convocatoria-14-373-plazas-empleo-publico-administracion-general-estado_7066028_0.html"
+        }
+      ],
+      "category": "work",
+      "important": false
+    },
+    {
+      "title": "España alcanza las semifinales de la Copa Davis",
+      "body": "España superó a Austria en Bolonia gracias a las victorias de los tenistas Dani Mérida y Rafa Jódar, sin que el tenista Carlos Alcaraz tuviera que jugar. El equipo se medirá a Gran Bretaña el 28 de noviembre de 2026 por un puesto en la final de la Copa Davis.",
+      "sources": [
+        {
+          "name": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/deportes/tenis/20261126/11694412/son-tiempos-vacas-gordas-espana-semifinal-copa-davis.html"
+        }
+      ],
+      "category": "events",
+      "important": false
+    }
+  ],
+  "engagement": "¿Qué gasto te preocupa más? A) Vivienda B) Alimentación C) Energía",
+  "subject": "Vivienda en máximos, salarios públicos y BCE",
+  "lang": "es",
+  "date": "2026-11-27",
+  "engagement_source": "generated",
+  "editor_skipped": false,
+  "generated_at": "2026-11-27T07:04:32.711783+00:00"
+}
